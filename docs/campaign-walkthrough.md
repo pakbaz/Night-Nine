@@ -2,30 +2,16 @@
 
 Spoilers for the entire game.
 
-## The last wind
-
-- Wind screen: Fit the felt sleeve
-- Recording levels: Lower the gain until peaks stay below red
-  Settings: Gain adjustment: -6 dB
-- Departure recorder: Record the whole passage
-
-## A careful translation
-
-- Interpreter’s notebook: You propose discussing what was demonstrated
-- Joint statement: Ask both delegates about their own apparatus
-  Settings: Question for both delegates: What produced the ring in your room?; Entry in the joint minutes: Both observers saw a ring
-- Private record: Separately attributed remarks and the final agreement
-
 ## The bay is singing
 
 - Frank’s radio: Tune between the stations and narrow the band
-- Phone and notebook: Leave Steve a message
+- Helen’s phone: Leave Steve a voicemail
 
 ## Good Morning, Sleepyhead
 
-- Saturday take: Keep the original recording
-- Sunday take: Record the greeting without prompting her
-- Recorder control test: The transport loops the last input on every pass
+- Saturday take: Keep the original Saturday reel
+- Sunday take: Record her without saying anything first
+- Recorder control test: That the recorder just replays old sound
 - Compare greetings: An identical performance
   Settings: Sunday offset: -0.35 s; Conclusion: Identical performance
 
@@ -104,6 +90,13 @@ Spoilers for the entire game.
   - Assign the three surviving records to the lawful operations without overwriting the oldest one. Read from → Sealed stone source · Restore into → Gus’s working echo · Write the account in → Separate witness ledger
 - Meridian test archive: Flag one performance filed twice
 - Sealed surveys: Keep the sealed survey separate and visit Row Zero
+
+## The last wind
+
+- Wind screen: Fit the felt sleeve
+- Recording levels: Lower the gain until peaks stay below red
+  Settings: Gain adjustment: −6 dB
+- Departure recorder: Record the whole passage, silence included
 
 ## Federal Hospitality
 
@@ -205,6 +198,13 @@ Spoilers for the entire game.
   Settings: Tone send: Blue; Recovery-team return: Slate
 - Ceremony cue: 11:58:15 (as Steve Mercer)
 
+## A careful translation
+
+- Interpreter’s notebook: You propose discussing what was demonstrated
+- Joint statement: Ask both delegates about their own apparatus
+  Settings: Question for both delegates: What produced the ring in your room?; Entry in the joint minutes: Both observers saw a ring
+- Private record: Who said what in private, and the final agreement
+
 ## The Biggest Lie on Earth
 
 - Helen’s shorthand: Our test, their test, table
@@ -303,13 +303,13 @@ Spoilers for the entire game.
 
 ## A place to live
 
-- The new neighbors: Pell, beside his bag
-- Two Agneses: Two prices at the shop; one traveler at the ferry
+- The new neighbors: Say good morning to everyone
+- Two Mrs. Penhallows: Visit the bait shop, then the ferry
 - A new morning: Answer Mom, then go with Nora for coffee
 
 ## Good morning
 
-- A message from the fleet: Play the new arrival, then open the brothers’ microphones
+- A message from the fleet: Play the new wind, then open the microphones
 
 ## We heard the singing
 

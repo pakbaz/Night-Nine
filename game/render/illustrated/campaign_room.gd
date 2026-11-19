@@ -634,8 +634,8 @@ func outgoing_frame() -> Dictionary:
 	var last: TextureRect=chapter_frames.back()
 	var state := {"texture":last.texture,"scale":last.scale}
 	if is_instance_valid(chapter_film) and chapter_film.visible:
-		# Retain the final animated pose across the change of rooms.
-		chapter_film.get_parent().remove_child(chapter_film)
+		# Keep ownership until another room consumes the pose. Storybooks and
+		# flashbacks have no dissolve, so the departing stage must free its film.
 		state.film = chapter_film
 		state.scale = Vector2.ONE
 	return state
@@ -645,7 +645,7 @@ func receive_frame(state: Dictionary) -> void:
 	incoming_frame.pivot_offset=frame.size*.5
 	incoming_frame.scale=state.scale
 	if state.has("film"):
-		incoming_frame.add_child(state.film)
+		state.film.reparent(incoming_frame, false)
 		state.film.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	incoming_time=0.0
 	incoming_duration=.62 if high_detail else .24

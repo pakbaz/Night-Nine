@@ -9,6 +9,8 @@ var data: Dictionary
 var task_index: Dictionary = {}
 var task_scene: Dictionary = {}
 const NOTE_LIMIT := 240
+## Saves made before the story reorder ("campaign-1") count scenes in this order.
+const ORDER_V1 := ["p_veyr", "p_meeting", "p_bay", "c1_flat", "c1_pier", "c1_dinner", "c1_escape", "c2_aquarium", "c2_ship", "c3_house", "c3_archive", "i1_archive", "c4_safe", "c4_escape", "c5_shack", "c5_station", "c6_iris", "c6_jail", "i2_nora", "c7_gate", "c7_swap", "c8_lab", "c8_beach", "c8_rig", "c9_gallery", "c9_wake", "c9_choir", "c10_station", "c10_town", "c10_live", "c10_report", "epilogue", "one_year", "postcredits"]
 
 func _init() -> void:
 	content = JSON.parse_string(FileAccess.get_file_as_string("res://content/campaign.json"))
@@ -121,7 +123,66 @@ func hint(task_id: String) -> String:
 		return answer
 	return "Try: " + task.options[int(task.answer)]
 
+## Carry a campaign-1 save into the new order. A player in the old three-night
+## prologue starts at the bay. Later players keep their place; flashbacks they
+## have not reached in the new order are simply played again when they arrive.
+func migrate(candidate: Variant) -> Variant:
+	if not candidate is Dictionary or candidate.get("content") != "campaign-1" or candidate.get("schema") != 2 or content.version == "campaign-1":
+		return candidate
+	var old: Variant = candidate.get("scene")
+	if not (old is int or old is float) or old != int(old) or int(old) < 0 or int(old) >= ORDER_V1.size():
+		return candidate
+	var order: Array = []
+	for scene: Dictionary in content.scenes:
+		order.append(scene.id)
+	var scene_id: String = ORDER_V1[int(old)]
+	var target: int = 0 if int(old) < 3 else order.find(scene_id)
+	if target < 0:
+		return candidate
+	var moved: Dictionary = candidate.duplicate(true)
+	moved.content = content.version
+	moved.scene = target
+	var done: Array = []
+	if moved.get("done") is Array:
+		for id: Variant in moved.done:
+			if id is String and task_index.has(id) and int(task_scene[id]) <= target:
+				done.append(id)
+	moved.done = done
+	var seen: Array = []
+	if moved.get("seen") is Array:
+		for id: Variant in moved.seen:
+			if id is String and content.lines.has(id) and order.find(id.get_slice(".", 0)) <= target:
+				seen.append(id)
+	moved.seen = seen
+	var hints: Dictionary = {}
+	if moved.get("hints") is Dictionary:
+		for id: Variant in moved.hints:
+			if id is String and task_index.has(id) and int(task_scene[id]) <= target:
+				hints[id] = moved.hints[id]
+	moved.hints = hints
+	if moved.get("actor") not in content.scenes[target].actors:
+		moved.actor = content.scenes[target].actors[0]
+	if ORDER_V1[int(old)] != content.scenes[target].id:
+		moved.walk_positions = {}
+		moved.case_boards = {}
+	if moved.get("notebook") is Dictionary:
+		var completed: Dictionary = {}
+		for id: String in done:
+			completed[id] = true
+		var marks: Dictionary = {}
+		var notes: Dictionary = {}
+		for case_id: String in content.get("notebook_cases", {}):
+			var theories := available_theories(case_id, completed)
+			if not theories.is_empty() and moved.notebook.get("notes", {}).has(case_id):
+				notes[case_id] = moved.notebook.notes[case_id]
+			for theory: Dictionary in theories:
+				if moved.notebook.get("marks", {}).has(theory.id):
+					marks[theory.id] = moved.notebook.marks[theory.id]
+		moved.notebook = {"marks": marks, "notes": notes}
+	return moved
+
 func restore(candidate: Variant) -> bool:
+	candidate = migrate(candidate)
 	if not validate(candidate).is_empty():
 		return false
 	data = candidate.duplicate(true)
@@ -135,6 +196,7 @@ func restore(candidate: Variant) -> bool:
 	return true
 
 func validate(candidate: Variant) -> String:
+	candidate = migrate(candidate)
 	if not candidate is Dictionary or candidate.size() != 9 + int(candidate.has("walk_positions")) + int(candidate.has("notebook")) + int(candidate.has("case_boards")):
 		return "Invalid campaign state."
 	for key: String in ["schema", "game", "content", "scene", "actor", "done", "seen", "finished", "hints"]:

@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "version": "campaign-1",
+  "version": "campaign-2",
   "title": "Night Nine",
   "source": "Night Nine original story",
   "adaptation_status": "Playable illustrated campaign checkpoint.",
@@ -40,276 +40,6 @@
   },
   "scenes": [
     {
-      "id": "p_veyr",
-      "chapter": "Prologue",
-      "title": "The last wind",
-      "place": "Veyr, 900 years ago",
-      "style": "veyr",
-      "actors": [
-        "archivist"
-      ],
-      "objective": "Preserve the sound of home before departure.",
-      "tasks": [
-        {
-          "id": "p_veyr.shield",
-          "title": "Wind screen",
-          "prompt": "Knocks vanish when the Archivist shelters the microphone with her hand. The distant towers are still audible. What can she leave in place when she lets go?",
-          "options": [
-            "Fit the felt sleeve",
-            "Set the recorder on a folded cloth",
-            "Lower the gain one division"
-          ],
-          "answer": 0,
-          "lines": [
-            "p_veyr.shield.01"
-          ],
-          "note": "Shielded the microphone against wind noise.",
-          "requires": [],
-          "actor": "",
-          "kind": "choice",
-          "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach.",
-          "hints": [
-            "What changed when she used her hand?",
-            "Air hitting the capsule and vibration travelling up the stand have different remedies.",
-            "Choose “Fit the felt sleeve”. Shielded the microphone against wind noise."
-          ]
-        },
-        {
-          "id": "p_veyr.levels",
-          "title": "Recording levels",
-          "prompt": "The meter reaches the red mark on every gust. The quiet passages are still audible.",
-          "options": [
-            "Turn gain to maximum",
-            "Lower the gain until peaks stay below red",
-            "Stop recording between gusts"
-          ],
-          "answer": 1,
-          "lines": [
-            "p_veyr.levels.01"
-          ],
-          "note": "Set recording headroom.",
-          "requires": [
-            "p_veyr.shield"
-          ],
-          "actor": "",
-          "kind": "choice",
-          "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach.",
-          "puzzle": {
-            "instruction": "Set the recorder without clipping. The gust is 6 dB louder than the current peak at -3 dB. Make the smallest gain change that leaves at least 3 dB of headroom.",
-            "rows": [
-              {
-                "label": "Gain adjustment",
-                "options": [
-                  "+6 dB",
-                  "0 dB",
-                  "-6 dB",
-                  "-12 dB"
-                ]
-              }
-            ],
-            "solution": [
-              2
-            ]
-          },
-          "hints": [
-            "Start by working out where the louder gust would peak at the current setting.",
-            "The next peak would be +3 dB. Count how far it must move to reach -3 dB.",
-            "Choose -6 dB. A bigger reduction also avoids clipping, but loses more level than necessary."
-          ]
-        },
-        {
-          "id": "p_veyr.record",
-          "title": "Departure recorder",
-          "prompt": "The departure has three sounds in order: the tower wind, an engine lifting, then a silence where the engine was. What would preserve their timing for someone who never heard them?",
-          "options": [
-            "Record the whole passage",
-            "Make a separate reel for each sound",
-            "Stop the tape during the quiet passage"
-          ],
-          "answer": 0,
-          "lines": [
-            "p_veyr.record.01"
-          ],
-          "note": "Preserved the wind on Veyr.",
-          "requires": [
-            "p_veyr.levels"
-          ],
-          "actor": "",
-          "kind": "record",
-          "sounds": [
-            "effect.veyr_wind"
-          ],
-          "hint": "Look at the evidence in the description, then try another approach.",
-          "hints": [
-            "Consider what a listener can learn from the silence.",
-            "A splice can preserve the order of events while losing their spacing.",
-            "Choose “Record the whole passage”. Preserved the wind on Veyr."
-          ]
-        }
-      ],
-      "intro": [
-        "p_veyr.in.01",
-        "p_veyr.in.02"
-      ],
-      "outro": [
-        "p_veyr.out.01",
-        "p_veyr.out.02"
-      ],
-      "shots": [
-        {
-          "duration": 5.0,
-          "move": "establish",
-          "direction": "Track upward through glass towers to a dying red sun and departing lights."
-        },
-        {
-          "duration": 6.0,
-          "move": "push",
-          "direction": "Move toward the active interaction."
-        }
-      ]
-    },
-    {
-      "id": "p_meeting",
-      "chapter": "Prologue",
-      "title": "A careful translation",
-      "place": "Sentinel Point, nine years ago",
-      "style": "meeting",
-      "actors": [
-        "helen"
-      ],
-      "objective": "Keep both delegations talking.",
-      "tasks": [
-        {
-          "id": "p_meeting.terms",
-          "title": "Interpreter’s notebook",
-          "prompt": "The delegate says “compare our demonstrations.” One interpreter’s draft uses “prove”; another adds “which was stronger.” Helen needs to translate the proposal without adding a claim.",
-          "options": [
-            "You propose a test of which field was stronger",
-            "You propose discussing what was demonstrated",
-            "You propose proving the apparatus can work"
-          ],
-          "answer": 1,
-          "lines": [
-            "p_meeting.terms.01",
-            "p_meeting.terms.02"
-          ],
-          "note": "Kept the translation neutral.",
-          "requires": [],
-          "actor": "",
-          "kind": "choice",
-          "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach.",
-          "hints": [
-            "Listen for the verb the delegate actually used.",
-            "Comparing observations leaves their explanation open. Ranking or proving them adds a promise.",
-            "Choose “You propose discussing what was demonstrated”. Kept the translation neutral."
-          ]
-        },
-        {
-          "id": "p_meeting.confess",
-          "title": "Joint statement",
-          "prompt": "The interpreters have two records to fill. Helen must leave each delegate room to speak for their own team.",
-          "options": [
-            "Ask both delegates about their own apparatus",
-            "Ask about the other demonstration",
-            "Record a shared conclusion about the mechanism"
-          ],
-          "answer": 0,
-          "lines": [
-            "p_meeting.confess.01",
-            "p_meeting.confess.02",
-            "p_meeting.confess.03"
-          ],
-          "note": "Both Meridian demonstrations were staged.",
-          "requires": [
-            "p_meeting.terms"
-          ],
-          "actor": "",
-          "kind": "choice",
-          "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach.",
-          "puzzle": {
-            "instruction": "The American observer saw a ring on the Chinese screen. The Chinese observer saw a ring on the American screen. Neither inspected the other room. Each engineering team brought its own projection diagram. The joint minutes are public; the diagrams were offered in the closed session.",
-            "rows": [
-              {
-                "label": "Question for both delegates",
-                "options": [
-                  "What produced the ring in your room?",
-                  "How did the other team produce its ring?",
-                  "How far did the other team move the target?"
-                ]
-              },
-              {
-                "label": "Entry in the joint minutes",
-                "options": [
-                  "Two projectors, one in each room",
-                  "Both observers saw a ring",
-                  "Both targets moved the same distance"
-                ]
-              }
-            ],
-            "solution": [
-              0,
-              1
-            ]
-          },
-          "hints": [
-            "Separate what an observer saw from what an engineer did.",
-            "Each delegate can explain one apparatus in private. Both can attest to one visible feature in public.",
-            "Ask what produced the ring in each delegate’s own room. Record only that both observers saw a ring in the joint minutes."
-          ]
-        },
-        {
-          "id": "p_meeting.record",
-          "title": "Private record",
-          "prompt": "The two delegates approve the same public sentence. Helen also heard each private admission. What belongs in the notebook she keeps for herself?",
-          "options": [
-            "The printed joint sentence alone",
-            "Separately attributed remarks and the final agreement",
-            "A single admission credited to both delegates"
-          ],
-          "answer": 1,
-          "lines": [
-            "p_meeting.record.01"
-          ],
-          "note": "Helen preserved the truth in Mandarin shorthand.",
-          "requires": [
-            "p_meeting.confess"
-          ],
-          "actor": "",
-          "kind": "choice",
-          "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach.",
-          "hints": [
-            "The notebook may be read years after the speakers are gone.",
-            "A reader should be able to distinguish who spoke in private from what both signed.",
-            "Choose “Separately attributed remarks and the final agreement”. Helen preserved the truth in Mandarin shorthand."
-          ]
-        }
-      ],
-      "intro": [
-        "p_meeting.in.01",
-        "p_meeting.in.02"
-      ],
-      "outro": [
-        "p_meeting.out.01"
-      ],
-      "shots": [
-        {
-          "duration": 5.0,
-          "move": "establish",
-          "direction": "Push across an empty conference table toward a notebook, then the pulse outside."
-        },
-        {
-          "duration": 6.0,
-          "move": "push",
-          "direction": "Move toward the active interaction."
-        }
-      ]
-    },
-    {
       "id": "p_bay",
       "chapter": "Prologue",
       "title": "The bay is singing",
@@ -318,12 +48,12 @@
       "actors": [
         "frank"
       ],
-      "objective": "Find the hum beneath the radio static.",
+      "objective": "Help Frank find the strange hum on his radio.",
       "tasks": [
         {
           "id": "p_bay.tune",
           "title": "Frank’s radio",
-          "prompt": "A low musical hum sits between two loud stations. Narrow the receiver bandwidth.",
+          "prompt": "Two stations crackle on Frank’s radio: a time signal on one side, a chime on the other. Something hums in between. Drag the dial until both stations fade, switch on Narrow bandwidth, then record.",
           "options": [
             "Broadcast a distress call",
             "Tune between the stations and narrow the band",
@@ -340,25 +70,25 @@
           "sounds": [],
           "hint": "Look at the evidence in the description, then try another approach.",
           "hints": [
-            "Move the dial between the two clear broadcasts and listen for a third sound.",
-            "The hum is near 815 kHz. A broad setting still lets the adjacent stations through.",
-            "Set 815 kHz, choose the narrow bandwidth, then record."
+            "Drag the dial toward the middle, away from both stations.",
+            "The hum sits at 815 kHz. Narrow bandwidth shuts out the stations on either side.",
+            "Set the dial to 815 kHz, switch on Narrow bandwidth, then press Record the signal."
           ]
         },
         {
           "id": "p_bay.message",
-          "title": "Phone and notebook",
-          "prompt": "Frank needs both hands on the set. Helen has a dry notebook in the boat. Steve’s recorded greeting ends with a beep. Which record could Steve find at home tonight?",
+          "title": "Helen’s phone",
+          "prompt": "Steve stayed ashore for his shift. Helen wants him to hear this too. How can she reach him tonight?",
           "options": [
-            "Leave Steve a message",
-            "Write a second copy in the boat log",
-            "Call the Thursday club from Frank’s receiver"
+            "Leave Steve a voicemail",
+            "Write it in the boat’s logbook",
+            "Call Frank’s radio club"
           ],
           "answer": 0,
           "lines": [
             "p_bay.message.01"
           ],
-          "note": "Helen called Steve before the boat disappeared.",
+          "note": "Helen left Steve a voicemail.",
           "requires": [
             "p_bay.tune"
           ],
@@ -367,9 +97,9 @@
           "sounds": [],
           "hint": "Look at the evidence in the description, then try another approach.",
           "hints": [
-            "Where will each record be when the boat leaves?",
-            "Steve can retrieve something left on his own phone.",
-            "Choose “Leave Steve a message”. Helen called Steve before the boat disappeared."
+            "Steve is at work, far from the boat.",
+            "Which of these will Steve find without coming out on the water?",
+            "Choose “Leave Steve a voicemail”."
           ]
         }
       ],
@@ -392,7 +122,15 @@
           "move": "push",
           "direction": "Move toward the active interaction."
         }
-      ]
+      ],
+      "card": {
+        "chapter": {
+          "kicker": "Prologue",
+          "title": "The Bay Is Singing",
+          "goal": "Frank and Helen Mercer row out to listen to the bay."
+        }
+      },
+      "coach": "Click the glowing radio to begin. Press I for a list of things to look at."
     },
     {
       "id": "c1_flat",
@@ -403,16 +141,16 @@
       "actors": [
         "steve"
       ],
-      "objective": "Find out whether the repeated greeting is a fault in the recorder.",
+      "objective": "Nora’s “good morning” sounds exactly the same every day. Record it and find out why.",
       "tasks": [
         {
           "id": "c1_flat.saturday",
           "title": "Saturday take",
-          "prompt": "The leader reads SAT. A loose work reel holds an earlier kitchen test. Steve wants evidence he can date without relying on memory.",
+          "prompt": "Dad’s recorder was running when Nora said good morning. The reel is labeled SAT. Keep it as evidence.",
           "options": [
-            "Keep the original recording",
-            "Copy both takes onto the work reel without markers",
-            "Use the kitchen test as the Saturday reference"
+            "Keep the original Saturday reel",
+            "Record something new over it",
+            "Copy it to a loose reel with no label"
           ],
           "answer": 0,
           "lines": [
@@ -427,19 +165,19 @@
           ],
           "hint": "Look at the evidence in the description, then try another approach.",
           "hints": [
-            "The date has to stay attached to the sound.",
-            "An earlier recording from the same room does not establish what Steve heard on Saturday.",
-            "Choose “Keep the original recording”. Preserved Saturday’s greeting."
+            "Evidence is only useful if you know when it was made.",
+            "The original reel already has the day written on it.",
+            "Choose “Keep the original Saturday reel”."
           ]
         },
         {
           "id": "c1_flat.sunday",
           "title": "Sunday take",
-          "prompt": "On Sunday Steve can set the recorder running before Nora comes in. How could he compare an ordinary morning with Saturday without teaching her the rhythm he remembers?",
+          "prompt": "Sunday morning. Steve sets the recorder running before Nora walks in, so she says it the way she always does.",
           "options": [
-            "Play Saturday first and ask for another greeting",
-            "Record the greeting without prompting her",
-            "Say the greeting first and ask her to reply"
+            "Play Saturday’s tape to her first",
+            "Record her without saying anything first",
+            "Say good morning first and wait for her reply"
           ],
           "answer": 1,
           "lines": [
@@ -457,19 +195,19 @@
           ],
           "hint": "Look at the evidence in the description, then try another approach.",
           "hints": [
-            "Keep the conditions of the two mornings as similar as possible.",
-            "A demonstration or a verbal cue can change the second performance.",
-            "Choose “Record the greeting without prompting her”. Preserved Sunday’s greeting."
+            "Keep the two mornings as alike as possible.",
+            "If Steve says or plays something first, she might copy him.",
+            "Choose “Record her without saying anything first”."
           ]
         },
         {
           "id": "c1_flat.control",
           "title": "Recorder control test",
-          "prompt": "Steve tests a different stretch of tape. He hears “one, two” twice. A chair squeaks between the words only on the second pass. Which claim has this test actually challenged?",
+          "prompt": "Maybe the recorder is broken and keeps replaying old sound. Steve tests it: he says “one, two” twice, and a chair squeaks only the second time. The squeak is on the tape. What does that rule out?",
           "options": [
-            "Nora used the same words twice",
-            "The transport loops the last input on every pass",
-            "Steve recognized Nora’s voice correctly"
+            "That Nora used the same words twice",
+            "That the recorder just replays old sound",
+            "That Steve recognized Nora’s voice"
           ],
           "answer": 1,
           "lines": [
@@ -485,15 +223,15 @@
           "sounds": [],
           "hint": "Look at the evidence in the description, then try another approach.",
           "hints": [
-            "Use the squeak as a marker independent of the words.",
-            "A transport that always replayed the earlier pass would replay the earlier room noise too.",
-            "Choose “The transport loops the last input on every pass”. Ruled out a stuck or looping recorder."
+            "The squeak happened only the second time.",
+            "A recorder stuck replaying old sound would have played the first pass again, without the squeak.",
+            "Choose “That the recorder just replays old sound”."
           ]
         },
         {
           "id": "c1_flat.compare",
           "title": "Compare greetings",
-          "prompt": "Listen to Saturday and Sunday. Compare the breath, onset and pause, not just the words.",
+          "prompt": "Line up Saturday and Sunday and listen closely. Two different mornings, or the same recording?",
           "options": [
             "Different words",
             "An identical performance",
@@ -572,7 +310,16 @@
           "move": "push",
           "direction": "Move toward the active interaction."
         }
-      ]
+      ],
+      "card": {
+        "chapter": {
+          "kicker": "Chapter 1",
+          "title": "Good Morning, Sleepyhead",
+          "when": "Saturday, three in the morning",
+          "goal": "Steve wants to find out what is wrong with Nora."
+        }
+      },
+      "coach": "Steve’s tools are Dad’s recorder and his notebook. Click the recorder to begin. Press J to read the notebook."
     },
     {
       "id": "c1_pier",
@@ -583,7 +330,7 @@
       "actors": [
         "steve"
       ],
-      "objective": "Look for independent evidence around town.",
+      "objective": "Look around the harbor. Is anyone else acting strangely?",
       "tasks": [
         {
           "id": "c1_pier.whistle",
@@ -828,7 +575,8 @@
           "move": "push",
           "direction": "Move toward the active interaction."
         }
-      ]
+      ],
+      "coach": "Some leads open a case board. Drag the cards into place, or ask for a hint."
     },
     {
       "id": "c1_dinner",
@@ -839,7 +587,7 @@
       "actors": [
         "steve"
       ],
-      "objective": "Listen to Nora’s family before drawing a conclusion.",
+      "objective": "Have Sunday dinner with Nora’s family, and listen.",
       "tasks": [
         {
           "id": "c1_dinner.birthday",
@@ -1076,7 +824,7 @@
       "actors": [
         "steve"
       ],
-      "objective": "Check the work order and leave the locked apartment.",
+      "objective": "Find out what Nora is hiding, then get out of the locked apartment.",
       "tasks": [
         {
           "id": "c1_escape.order",
@@ -1695,7 +1443,15 @@
           "move": "push",
           "direction": "Move toward the active interaction."
         }
-      ]
+      ],
+      "card": {
+        "chapter": {
+          "kicker": "Chapter 2",
+          "title": "The Aquarium Is Closed",
+          "when": "The same night",
+          "goal": "Steve wants to find the real Nora."
+        }
+      }
     },
     {
       "id": "c2_ship",
@@ -2605,7 +2361,15 @@
           "move": "push",
           "direction": "Move toward the active interaction."
         }
-      ]
+      ],
+      "card": {
+        "chapter": {
+          "kicker": "Chapter 3",
+          "title": "Please Prove You Exist",
+          "when": "The next morning",
+          "goal": "Steve wants one person to believe him."
+        }
+      }
     },
     {
       "id": "c3_archive",
@@ -3155,7 +2919,154 @@
           "move": "push",
           "direction": "Move toward the active interaction."
         }
-      ]
+      ],
+      "card": {
+        "chapter": {
+          "kicker": "Interlude",
+          "title": "The Archivist",
+          "when": "The same ninth night, under the bay",
+          "goal": "The keeper of the ship’s records goes about her work. She has a secret."
+        }
+      }
+    },
+    {
+      "id": "p_veyr",
+      "chapter": "Interlude 1",
+      "title": "The last wind",
+      "place": "Veyr, 900 years ago",
+      "style": "veyr",
+      "actors": [
+        "archivist"
+      ],
+      "objective": "Record the wind over the city one last time.",
+      "tasks": [
+        {
+          "id": "p_veyr.shield",
+          "title": "Wind screen",
+          "prompt": "The wind thumps against the bare microphone. When the Archivist cups it with her hand, the thumping stops. What can do the same job when she lets go?",
+          "options": [
+            "Fit the felt sleeve",
+            "Set the recorder on a folded cloth",
+            "Lower the volume a little"
+          ],
+          "answer": 0,
+          "lines": [
+            "p_veyr.shield.01"
+          ],
+          "note": "Shielded the microphone against wind noise.",
+          "requires": [],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Her hand blocked the wind from hitting the microphone.",
+            "A soft cover does what her hand did.",
+            "Choose “Fit the felt sleeve”."
+          ]
+        },
+        {
+          "id": "p_veyr.levels",
+          "title": "Recording levels",
+          "prompt": "Every gust pushes the meter toward the red mark. Leave room for the loud parts.",
+          "options": [
+            "Turn gain to maximum",
+            "Lower the gain until peaks stay below red",
+            "Stop recording between gusts"
+          ],
+          "answer": 1,
+          "lines": [
+            "p_veyr.levels.01"
+          ],
+          "note": "Set recording headroom.",
+          "requires": [
+            "p_veyr.shield"
+          ],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "puzzle": {
+            "instruction": "The loudest gust so far peaked at −3 dB. The next one will be 6 dB louder, which would hit +3 dB, in the red. Choose the smallest change that brings it back down to −3 dB.",
+            "rows": [
+              {
+                "label": "Gain adjustment",
+                "options": [
+                  "+6 dB",
+                  "0 dB",
+                  "−6 dB",
+                  "−12 dB"
+                ]
+              }
+            ],
+            "solution": [
+              2
+            ]
+          },
+          "hints": [
+            "The next gust would land 6 dB too high.",
+            "Turning the gain down by the same amount brings it back to −3 dB.",
+            "Choose −6 dB. A bigger cut also works, but loses more of the quiet sounds."
+          ]
+        },
+        {
+          "id": "p_veyr.record",
+          "title": "Departure recorder",
+          "prompt": "The ships begin to rise: first the wind, then the engines, then silence where the engines were. How should she record it?",
+          "options": [
+            "Record the whole passage, silence included",
+            "Make a separate reel for each sound",
+            "Stop the tape during the quiet part"
+          ],
+          "answer": 0,
+          "lines": [
+            "p_veyr.record.01"
+          ],
+          "note": "Preserved the wind on Veyr.",
+          "requires": [
+            "p_veyr.levels"
+          ],
+          "actor": "",
+          "kind": "record",
+          "sounds": [
+            "effect.veyr_wind"
+          ],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Someone who never heard this will want to know how long the silence lasted.",
+            "Cutting it into pieces loses the time between the sounds.",
+            "Choose “Record the whole passage, silence included”."
+          ]
+        }
+      ],
+      "intro": [
+        "p_veyr.in.01",
+        "p_veyr.in.02"
+      ],
+      "outro": [
+        "p_veyr.out.01",
+        "p_veyr.out.02"
+      ],
+      "shots": [
+        {
+          "duration": 5.0,
+          "move": "establish",
+          "direction": "Track upward through glass towers to a dying red sun and departing lights."
+        },
+        {
+          "duration": 6.0,
+          "move": "push",
+          "direction": "Move toward the active interaction."
+        }
+      ],
+      "card": {
+        "page": {
+          "kicker": "The Archivist remembers",
+          "title": "Veyr, nine hundred years ago",
+          "goal": "Her homeworld’s sun is failing. Forty thousand sleepers are about to leave, and someone has to record what home sounded like."
+        }
+      },
+      "coach": "This is the Archivist’s memory. Click the recorder on the terrace to begin."
     },
     {
       "id": "c4_safe",
@@ -3565,7 +3476,14 @@
           "move": "push",
           "direction": "Move toward the active interaction."
         }
-      ]
+      ],
+      "card": {
+        "chapter": {
+          "kicker": "Chapter 4",
+          "title": "Federal Hospitality",
+          "goal": "Steve wants to hand the problem to someone in charge."
+        }
+      }
     },
     {
       "id": "c4_escape",
@@ -4187,7 +4105,15 @@
           "move": "push",
           "direction": "Move toward the active interaction."
         }
-      ]
+      ],
+      "card": {
+        "chapter": {
+          "kicker": "Chapter 5",
+          "title": "Wanted: Steve Mercer (Two of Him)",
+          "when": "Six days before the signing",
+          "goal": "Steve wants to hide, and to find his mother’s notebook before the crew does."
+        }
+      }
     },
     {
       "id": "c5_station",
@@ -4911,7 +4837,14 @@
           "move": "push",
           "direction": "Move toward the active interaction."
         }
-      ]
+      ],
+      "card": {
+        "chapter": {
+          "kicker": "Chapter 6",
+          "title": "Iris",
+          "goal": "Steve wants to free Calder and learn what the Veyri want."
+        }
+      }
     },
     {
       "id": "c6_jail",
@@ -5839,7 +5772,15 @@
           "move": "push",
           "direction": "Move toward the active interaction."
         }
-      ]
+      ],
+      "card": {
+        "chapter": {
+          "kicker": "Interlude",
+          "title": "Nora",
+          "when": "Inside the Long Patience",
+          "goal": "Nora wakes up on the ship. Nobody is coming to fix this."
+        }
+      }
     },
     {
       "id": "c7_gate",
@@ -6289,7 +6230,15 @@
           "move": "push",
           "direction": "Move toward the active interaction."
         }
-      ]
+      ],
+      "card": {
+        "chapter": {
+          "kicker": "Chapter 7",
+          "title": "The President’s Other Appointment",
+          "when": "The day of the signing",
+          "goal": "Steve wants to stop the swap of the President."
+        }
+      }
     },
     {
       "id": "c7_swap",
@@ -6636,6 +6585,158 @@
           "direction": "Move toward the active interaction."
         }
       ]
+    },
+    {
+      "id": "p_meeting",
+      "chapter": "Chapter 8",
+      "title": "A careful translation",
+      "place": "Sentinel Point, nine years ago",
+      "style": "meeting",
+      "actors": [
+        "helen"
+      ],
+      "objective": "Translate carefully, so that both sides can admit the truth.",
+      "tasks": [
+        {
+          "id": "p_meeting.terms",
+          "title": "Interpreter’s notebook",
+          "prompt": "The Chinese delegate says “compare our demonstrations.” Translate it without adding anything he did not say.",
+          "options": [
+            "You propose a test of which field was stronger",
+            "You propose discussing what was demonstrated",
+            "You propose proving the apparatus can work"
+          ],
+          "answer": 1,
+          "lines": [
+            "p_meeting.terms.01",
+            "p_meeting.terms.02"
+          ],
+          "note": "Kept the translation neutral.",
+          "requires": [],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Listen for the verb he actually used.",
+            "“Stronger” and “prove” are promises he never made.",
+            "Choose “You propose discussing what was demonstrated”."
+          ]
+        },
+        {
+          "id": "p_meeting.confess",
+          "title": "Joint statement",
+          "prompt": "Each side saw a ring of light on the other side’s screen. Help both delegates say what really happened, one machine at a time.",
+          "options": [
+            "Ask both delegates about their own apparatus",
+            "Ask about the other demonstration",
+            "Record a shared conclusion about the mechanism"
+          ],
+          "answer": 0,
+          "lines": [
+            "p_meeting.confess.01",
+            "p_meeting.confess.02",
+            "p_meeting.confess.03"
+          ],
+          "note": "Both Meridian demonstrations were staged.",
+          "requires": [
+            "p_meeting.terms"
+          ],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "puzzle": {
+            "instruction": "The American observer saw a ring on the Chinese screen. The Chinese observer saw a ring on the American screen. Neither inspected the other room. Each engineering team brought its own projection diagram. The joint minutes are public; the diagrams were offered in the closed session.",
+            "rows": [
+              {
+                "label": "Question for both delegates",
+                "options": [
+                  "What produced the ring in your room?",
+                  "How did the other team produce its ring?",
+                  "How far did the other team move the target?"
+                ]
+              },
+              {
+                "label": "Entry in the joint minutes",
+                "options": [
+                  "Two projectors, one in each room",
+                  "Both observers saw a ring",
+                  "Both targets moved the same distance"
+                ]
+              }
+            ],
+            "solution": [
+              0,
+              1
+            ]
+          },
+          "hints": [
+            "Separate what an observer saw from what an engineer did.",
+            "Each delegate can explain one apparatus in private. Both can attest to one visible feature in public.",
+            "Ask what produced the ring in each delegate’s own room. Record only that both observers saw a ring in the joint minutes."
+          ]
+        },
+        {
+          "id": "p_meeting.record",
+          "title": "Private record",
+          "prompt": "Both delegates sign the same public statement. Helen also heard what each one admitted in private. What goes in the notebook she keeps for herself?",
+          "options": [
+            "The public statement alone",
+            "Who said what in private, and the final agreement",
+            "One admission credited to both sides"
+          ],
+          "answer": 1,
+          "lines": [
+            "p_meeting.record.01"
+          ],
+          "note": "Helen preserved the truth in Mandarin shorthand.",
+          "requires": [
+            "p_meeting.confess"
+          ],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Someone may read this notebook years from now.",
+            "A future reader needs to know who said what, and what they all signed.",
+            "Choose “Who said what in private, and the final agreement”."
+          ]
+        }
+      ],
+      "intro": [
+        "p_meeting.in.01",
+        "p_meeting.in.02"
+      ],
+      "outro": [
+        "p_meeting.out.01"
+      ],
+      "shots": [
+        {
+          "duration": 5.0,
+          "move": "establish",
+          "direction": "Push across an empty conference table toward a notebook, then the pulse outside."
+        },
+        {
+          "duration": 6.0,
+          "move": "push",
+          "direction": "Move toward the active interaction."
+        }
+      ],
+      "card": {
+        "chapter": {
+          "kicker": "Chapter 8",
+          "title": "The Biggest Lie on Earth",
+          "goal": "Steve wants a way to stop an invasion with no weapon."
+        },
+        "page": {
+          "kicker": "From Helen’s notebook",
+          "title": "Sentinel Point, nine years ago",
+          "goal": "Dr. Lin Wen reads Helen’s shorthand aloud. She was in that room, and so was Helen."
+        }
+      },
+      "coach": "You are Helen. Choose each translation carefully."
     },
     {
       "id": "c8_lab",
@@ -7903,7 +8004,14 @@
           "move": "push",
           "direction": "Move toward the active interaction."
         }
-      ]
+      ],
+      "card": {
+        "chapter": {
+          "kicker": "Chapter 9",
+          "title": "The Long Patience",
+          "goal": "Steve wants to wake the sleepers and get the signal into the ship."
+        }
+      }
     },
     {
       "id": "c9_wake",
@@ -9055,7 +9163,15 @@
           "move": "push",
           "direction": "Move toward the active interaction."
         }
-      ]
+      ],
+      "card": {
+        "chapter": {
+          "kicker": "Chapter 10",
+          "title": "Good Morning, Bellwether",
+          "when": "Before sunrise",
+          "goal": "Steve wants to turn the fleet away."
+        }
+      }
     },
     {
       "id": "c10_town",
@@ -9698,74 +9814,68 @@
         {
           "id": "epilogue.neighbors",
           "title": "The new neighbors",
-          "prompt": "A chalkboard outside the café has a blank for tomorrow’s mail round. Dale left his retirement card beneath it. Pell’s bag is under the bench and Biscuit waits at the gate. Who should Steve ask about the first delivery?",
+          "prompt": "Lyle and his copy are walking the boys to school together. Pell has Dale’s mailbag and Biscuit’s leash. Gus is waving a green croissant.",
           "options": [
-            "Dale, at his retirement breakfast",
-            "Pell, beside his bag",
-            "Lyle, on his way to the school"
+            "Say good morning to everyone"
           ],
-          "answer": 1,
+          "answer": 0,
           "lines": [
             "epilogue.neighbors.01",
             "epilogue.neighbors.02",
             "epilogue.neighbors.03",
             "epilogue.neighbors.04"
           ],
-          "note": "The copies began independent lives.",
+          "note": "Bellwether kept its new neighbors.",
           "requires": [],
           "actor": "",
           "kind": "choice",
           "sounds": [],
           "hint": "Look at the evidence in the description, then try another approach.",
           "hints": [
-            "Look for the person starting a shift.",
-            "Dale’s card and Pell’s bag tell different stories.",
-            "Visit Pell and Biscuit for the morning route."
+            "There is nothing to solve here. Enjoy the visit.",
+            "There is nothing to solve here. Enjoy the visit.",
+            "Choose “Say good morning to everyone”."
           ]
         },
         {
           "id": "epilogue.bait",
-          "title": "Two Agneses",
-          "prompt": "Two chalked prices face one another across the bait counter. By the ferry, Rook and his copy share one boarding ticket between them. Steve has space for one line under each visit. What did he actually see?",
+          "title": "Two Mrs. Penhallows",
+          "prompt": "The two Mrs. Penhallows are arguing about bait prices across one counter. By the ferry, Adrian Rook says goodbye to his copy.",
           "options": [
-            "One stall closing; two seats on the ferry",
-            "Two prices at the shop; one traveler at the ferry",
-            "Two stalls merging; two travelers staying ashore"
+            "Visit the bait shop, then the ferry"
           ],
-          "answer": 1,
+          "answer": 0,
           "lines": [
             "epilogue.bait.01",
             "epilogue.bait.02",
             "epilogue.bait.03",
             "epilogue.bait.04"
           ],
-          "note": "Agnes and her echo stayed; Rook’s copy chose to leave.",
+          "note": "Two Agneses, one shop. One Rook stays, one leaves.",
           "requires": [],
           "actor": "",
           "kind": "choice",
           "sounds": [],
           "hint": "Look at the evidence in the description, then try another approach.",
           "hints": [
-            "Count the prices, then count the tickets.",
-            "Look for what each person chose for themself.",
-            "Record the two competing prices and the one traveler."
+            "There is nothing to solve here. Enjoy the visit.",
+            "There is nothing to solve here. Enjoy the visit.",
+            "Choose “Visit the bait shop, then the ferry”."
           ]
         },
         {
           "id": "epilogue.coffee",
           "title": "A new morning",
-          "prompt": "In the kitchen, yesterday’s voicemail is still cued to play. A new note has a coffee ring across Dad’s freshly labelled paint tin. Nora is standing by the door with her coat. Steve can answer his mother and still keep whom he promised to meet.",
+          "prompt": "Mom is calling from the kitchen. There is a new note on the table. Nora is at the door with her coat on.",
           "options": [
-            "Ask Nora to sit through the old voicemail",
-            "Ring the station for a replay of yesterday",
             "Answer Mom, then go with Nora for coffee"
           ],
-          "answer": 2,
+          "answer": 0,
           "lines": [
             "epilogue.coffee.01",
             "epilogue.coffee.02"
           ],
-          "note": "Steve chose a new morning with the people he loves.",
+          "note": "Steve answered his mother and kept his date with Nora.",
           "requires": [
             "epilogue.neighbors",
             "epilogue.bait"
@@ -9775,9 +9885,9 @@
           "sounds": [],
           "hint": "Look at the evidence in the description, then try another approach.",
           "hints": [
-            "Look around the kitchen Steve is in today.",
-            "He can answer one person and keep his plans with another.",
-            "Answer Mom, then go for coffee with Nora."
+            "There is nothing to solve here. Enjoy the visit.",
+            "There is nothing to solve here. Enjoy the visit.",
+            "Choose “Answer Mom, then go with Nora for coffee”."
           ]
         }
       ],
@@ -9803,7 +9913,14 @@
           "move": "push",
           "direction": "Move toward the active interaction."
         }
-      ]
+      ],
+      "card": {
+        "chapter": {
+          "kicker": "Epilogue",
+          "title": "A Place to Live",
+          "goal": "The ship is gone. Bellwether wakes up to a different town."
+        }
+      }
     },
     {
       "id": "one_year",
@@ -9814,16 +9931,16 @@
       "actors": [
         "steve"
       ],
-      "objective": "Begin a new live show.",
+      "objective": "Open the package from the fleet, then go live.",
       "tasks": [
         {
           "id": "one_year.newwind",
           "title": "A message from the fleet",
-          "prompt": "A package from the fleet carries a fresh date and the glass towers of its new home. The Veyr spool already has Agnes’s old tail mark. Steve and Stephen are at the live microphones. How can they let Bellwether hear where the fleet is today?",
+          "prompt": "A package arrived from the fleet: a recording of wind through new glass towers. Steve and Stephen are at the microphones.",
           "options": [
-            "Play the new arrival, then open the brothers’ microphones",
-            "Start the old Veyr spool at its tail mark",
-            "Replay yesterday’s show over the arrival"
+            "Play the new wind, then open the microphones",
+            "Play the old Veyr recording instead",
+            "Replay yesterday’s show"
           ],
           "answer": 0,
           "lines": [
@@ -9839,9 +9956,9 @@
           ],
           "hint": "Look at the evidence in the description, then try another approach.",
           "hints": [
-            "Check the place and date on the package.",
-            "The old spool preserves the home the fleet left.",
-            "Play the new wind, then let Steve and Stephen speak live."
+            "The package is new. The Veyr reel is nine hundred years old.",
+            "Let Bellwether hear the fleet’s new home, then talk.",
+            "Choose “Play the new wind, then open the microphones”."
           ]
         }
       ],
@@ -9864,7 +9981,14 @@
           "move": "push",
           "direction": "Move toward the active interaction."
         }
-      ]
+      ],
+      "card": {
+        "page": {
+          "kicker": "One year later",
+          "title": "Good Morning",
+          "goal": "KBWR, before the morning show."
+        }
+      }
     },
     {
       "id": "postcredits",
@@ -9880,7 +10004,7 @@
         {
           "id": "postcredits.answer",
           "title": "The new signal",
-          "prompt": "At three in the morning the receiver catches a low voice. Helen traces the first signs: rise without a break, space, then a longer fall. One reference in her notes came from listening rather than translation. Which should she open before she tries to answer?",
+          "prompt": "At three in the morning a real signal arrives from deep space. Helen knows its shape: the same script as the last page of her notebook, the tones she copied from Wick’s dreams. Which notes should she open?",
           "options": [
             "Meridian’s lamp schedule",
             "Frank’s Thursday-club roster",
@@ -9897,9 +10021,9 @@
           "sounds": [],
           "hint": "Look at the evidence in the description, then try another approach.",
           "hints": [
-            "Follow the contour back to its first appearance.",
-            "Think of the page Helen compared with the hydrophone tape.",
-            "Open the transcription of Wick’s dream tones and compare the incoming phrase."
+            "Where did Helen first write down this script?",
+            "The last page of her notebook came from listening to the bay.",
+            "Choose “Her transcription of Wick’s dream tones”."
           ]
         }
       ],
@@ -9922,7 +10046,14 @@
           "move": "push",
           "direction": "Move toward the active interaction."
         }
-      ]
+      ],
+      "card": {
+        "chapter": {
+          "kicker": "After the credits",
+          "title": "We Heard the Singing",
+          "goal": ""
+        }
+      }
     }
   ],
   "lines": {
@@ -9985,7 +10116,8 @@
       "id": "p_meeting.out.01",
       "speaker": "helen",
       "text": "Everyone agreed to keep lying. It may be the most honest thing I have seen.",
-      "audio": "p_meeting.out.01"
+      "audio": "p_meeting.out.01",
+      "cue": "meridian_pulse"
     },
     "p_meeting.terms.01": {
       "id": "p_meeting.terms.01",
@@ -10030,13 +10162,13 @@
     "p_bay.in.01": {
       "id": "p_bay.in.01",
       "speaker": "frank",
-      "text": "Same interval as last Thursday. Louder out here.",
+      "text": "Same interval as last Thursday, Helen. Louder out here. Whatever it is, it keeps better time than I do.",
       "audio": "p_bay.in.01"
     },
     "p_bay.in.02": {
       "id": "p_bay.in.02",
       "speaker": "helen",
-      "text": "Steve is working. I’ll leave him a message.",
+      "text": "Steve would hear more in this than both of us put together. I’ll leave him a message.",
       "audio": "p_bay.in.02"
     },
     "p_bay.out.01": {
@@ -10054,13 +10186,13 @@
     "p_bay.tune.01": {
       "id": "p_bay.tune.01",
       "speaker": "frank",
-      "text": "There you are. I can hear more than one voice.",
+      "text": "There you are. Hear that, Helen? More than one voice, all holding the same note.",
       "audio": "p_bay.tune.01"
     },
     "p_bay.message.01": {
       "id": "p_bay.message.01",
       "speaker": "helen",
-      "text": "He should hear this for himself. We’ll bring the tape home.",
+      "text": "He should hear this for himself. We’ll bring the tape home, and he’ll tell us we recorded it wrong.",
       "audio": "p_bay.message.01"
     },
     "c1_flat.in.01": {
@@ -10072,7 +10204,7 @@
     "c1_flat.in.02": {
       "id": "c1_flat.in.02",
       "speaker": "steve",
-      "text": "Three in the morning. Again.",
+      "text": "Three in the morning. Again. Well, Mom, it’s a fine night for it.",
       "audio": "c1_flat.in.02"
     },
     "c1_flat.in.03": {
@@ -10103,7 +10235,7 @@
     "c1_flat.saturday.01": {
       "id": "c1_flat.saturday.01",
       "speaker": "steve",
-      "text": "Saturday. Kitchen. Original tape.",
+      "text": "Saturday, kitchen, quarter past seven. Dad always said to put the date on everything.",
       "audio": "c1_flat.saturday.01"
     },
     "c1_flat.sunday.01": {
@@ -10116,7 +10248,7 @@
     "c1_flat.sunday.02": {
       "id": "c1_flat.sunday.02",
       "speaker": "steve",
-      "text": "Sunday. Different section of tape.",
+      "text": "Sunday. Fresh tape. Same words. Same... everything.",
       "audio": "c1_flat.sunday.02"
     },
     "c1_flat.control.01": {
@@ -10128,19 +10260,19 @@
     "c1_flat.control.02": {
       "id": "c1_flat.control.02",
       "speaker": "steve",
-      "text": "Different. Cross out faulty recorder.",
+      "text": "The squeak only made the second pass. So the recorder’s fine. Cross that one out.",
       "audio": "c1_flat.control.02"
     },
     "c1_flat.compare.01": {
       "id": "c1_flat.compare.01",
       "speaker": "steve",
-      "text": "She remembers our first date better than I do. But people don’t do this.",
+      "text": "She remembers our first date better than I do. But nobody says a sentence the same way twice. Nobody.",
       "audio": "c1_flat.compare.01"
     },
     "c1_pier.in.01": {
       "id": "c1_pier.in.01",
       "speaker": "steve",
-      "text": "Admiral. That was my lunch.",
+      "text": "Admiral. That was my lunch. You don’t even like rye.",
       "audio": "c1_pier.in.01"
     },
     "c1_pier.in.02": {
@@ -10153,12 +10285,13 @@
       "id": "c1_pier.out.01",
       "speaker": "pell",
       "text": "Your parents’ mail, Mr. Mercer. Delivered precisely on schedule.",
-      "audio": "c1_pier.out.01"
+      "audio": "c1_pier.out.01",
+      "display_speaker": "Dale Kittredge"
     },
     "c1_pier.out.02": {
       "id": "c1_pier.out.02",
       "speaker": "steve",
-      "text": "They haven’t been home for eighteen months.",
+      "text": "They haven’t been home in eighteen months, Dale. You know that.",
       "audio": "c1_pier.out.02"
     },
     "c1_pier.whistle.01": {
@@ -10178,7 +10311,7 @@
     "c1_pier.door.02": {
       "id": "c1_pier.door.02",
       "speaker": "steve",
-      "text": "Lyle remembered a promise. I should probably write that down.",
+      "text": "Deputy Lyle, keeping a promise. I should write that down before the world ends.",
       "audio": "c1_pier.door.02"
     },
     "c1_pier.bait.01": {
@@ -10246,7 +10379,7 @@
     "c1_escape.in.02": {
       "id": "c1_escape.in.02",
       "speaker": "steve",
-      "text": "Nora? Why is the front door locked?",
+      "text": "Nora? Why is the front door locked from the outside?",
       "audio": "c1_escape.in.02"
     },
     "c1_escape.out.01": {
@@ -10259,7 +10392,8 @@
       "id": "c1_escape.out.02",
       "speaker": "agnes",
       "text": "Ninth night, Steven. Count them.",
-      "audio": "c1_escape.out.02"
+      "audio": "c1_escape.out.02",
+      "cue": "ninth_night"
     },
     "c1_escape.order.01": {
       "id": "c1_escape.order.01",
@@ -10270,7 +10404,7 @@
     "c1_escape.power.01": {
       "id": "c1_escape.power.01",
       "speaker": "steve",
-      "text": "I fixed this for Mr. Bell last winter. For once, something I repaired is useful.",
+      "text": "I fixed this latch for Mr. Bell last winter. He paid me in fruitcake. Tonight it’s worth every slice.",
       "audio": "c1_escape.power.01"
     },
     "c1_escape.cross.01": {
@@ -10295,7 +10429,7 @@
     "c2_aquarium.in.02": {
       "id": "c2_aquarium.in.02",
       "speaker": "steve",
-      "text": "Half a sentence. I hope someone heard it.",
+      "text": "Half a sentence before the line died. I hope someone heard it.",
       "audio": "c2_aquarium.in.02"
     },
     "c2_aquarium.out.01": {
@@ -10351,7 +10485,7 @@
     "c2_ship.in.03": {
       "id": "c2_ship.in.03",
       "speaker": "steve",
-      "text": "I’d prefer leaving.",
+      "text": "I’d prefer the exit. Does that come with music too?",
       "audio": "c2_ship.in.03"
     },
     "c2_ship.out.01": {
@@ -10370,7 +10504,8 @@
       "id": "c2_ship.nora.01",
       "speaker": "steve",
       "text": "I kept waiting until I knew what to say. I’m here now. I should have been here sooner.",
-      "audio": "c2_ship.nora.01"
+      "audio": "c2_ship.nora.01",
+      "cue": "lullaby"
     },
     "c2_ship.command.01": {
       "id": "c2_ship.command.01",
@@ -10381,7 +10516,7 @@
     "c2_ship.command.02": {
       "id": "c2_ship.command.02",
       "speaker": "steve",
-      "text": "Got it.",
+      "text": "Got it. Thank you, Prefect.",
       "audio": "c2_ship.command.02"
     },
     "c2_ship.escape.01": {
@@ -10393,7 +10528,7 @@
     "c2_ship.escape.02": {
       "id": "c2_ship.escape.02",
       "speaker": "steve",
-      "text": "Open. Now the seawater valve.",
+      "text": "It worked. Now the seawater valve. Then I find out how long I can hold my breath.",
       "audio": "c2_ship.escape.02"
     },
     "c3_house.in.01": {
@@ -10405,7 +10540,7 @@
     "c3_house.in.02": {
       "id": "c3_house.in.02",
       "speaker": "steve",
-      "text": "Nora is on a ship under the bay.",
+      "text": "Nora is asleep on a ship under the bay. I know exactly how that sounds.",
       "audio": "c3_house.in.02"
     },
     "c3_house.in.03": {
@@ -10423,7 +10558,7 @@
     "c3_house.out.02": {
       "id": "c3_house.out.02",
       "speaker": "steve",
-      "text": "Let’s find evidence for each one.",
+      "text": "Then let’s find out which of them got better, and which of them got replaced.",
       "audio": "c3_house.out.02"
     },
     "c3_house.crossword.01": {
@@ -10448,7 +10583,8 @@
       "id": "c3_house.mail.01",
       "speaker": "pell",
       "text": "A most diligent animal. I will return at the scheduled interval.",
-      "audio": "c3_house.mail.01"
+      "audio": "c3_house.mail.01",
+      "display_speaker": "Dale Kittredge"
     },
     "c3_house.mail.02": {
       "id": "c3_house.mail.02",
@@ -10708,7 +10844,7 @@
     "c5_shack.rig.01": {
       "id": "c5_shack.rig.01",
       "speaker": "steve",
-      "text": "Power off. Matching connector. Now the antenna.",
+      "text": "Power off. Matching connector. I’m doing it your way, Dad.",
       "audio": "c5_shack.rig.01"
     },
     "c5_shack.club.01": {
@@ -10980,7 +11116,8 @@
       "id": "i2_nora.out.03",
       "speaker": "nora",
       "text": "And you, under the frost... you can hear me, can’t you?",
-      "audio": "i2_nora.out.03"
+      "audio": "i2_nora.out.03",
+      "cue": "wick"
     },
     "i2_nora.patrol.01": {
       "id": "i2_nora.patrol.01",
@@ -11162,7 +11299,8 @@
       "id": "c8_lab.out.02",
       "speaker": "saren",
       "text": "Deliver the engine by midnight tomorrow. The ninth night.",
-      "audio": "c8_lab.out.02"
+      "audio": "c8_lab.out.02",
+      "cue": "ninth_night"
     },
     "c8_lab.notebook.01": {
       "id": "c8_lab.notebook.01",
@@ -11275,7 +11413,7 @@
     "c8_rig.source.01": {
       "id": "c8_rig.source.01",
       "speaker": "steve",
-      "text": "Every response will be new. We’ll listen and answer each other.",
+      "text": "Their old test failed because it repeated. Ours won’t. Every answer will be live.",
       "audio": "c8_rig.source.01"
     },
     "c8_rig.path.01": {
@@ -11530,7 +11668,7 @@
     "c10_station.in.02": {
       "id": "c10_station.in.02",
       "speaker": "steve",
-      "text": "Rick. I need the microphone.",
+      "text": "Rick, buddy. I need my microphone back.",
       "audio": "c10_station.in.02"
     },
     "c10_station.in.03": {
@@ -11650,7 +11788,7 @@
     "c10_live.in.01": {
       "id": "c10_live.in.01",
       "speaker": "steve",
-      "text": "Bellwether, this is Steve Mercer. We’re going to do this together.",
+      "text": "Bellwether, this is Steve Mercer, live. I can’t do this alone, and for once I’m not going to try.",
       "audio": "c10_live.in.01"
     },
     "c10_live.in.02": {

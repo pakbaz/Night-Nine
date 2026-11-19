@@ -61,6 +61,9 @@ func arrive(id: String, intro: bool = false, task_id: String = "") -> void:
 	if not intro:
 		game.campaign.mark_seen(game.campaign.current().intro)
 	game._load_stage(intro)
+	# Chapter cards are timed in story_flow_qa.gd; this test starts at the first line.
+	if game.title_card.visible:
+		game.title_card.finish_now()
 	await process_frame
 	await process_frame
 

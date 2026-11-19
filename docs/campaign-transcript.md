@@ -2,67 +2,31 @@
 
 First dialogue draft adapted from the final user-supplied plot. Newly written dialogue is not a quotation from the source. Stable IDs match the game and voice manifests.
 
-## Prologue - The last wind
+## Storybook - Before the ninth night
 
-Veyr, 900 years ago
+Steve narrates over illustrated panels.
 
-### Arrival
+*Bellwether. A fishing town on the Pacific coast.*
 
-**The Archivist** [p_veyr.in.01]: There are forty thousand names on the departure register. I have checked every one.
+*Six thousand people, one radio station, and a lot of fog.*
 
-**The Archivist** [p_veyr.in.02]: One recording remains.
+*I’m Steve Mercer. For years I ran the night shift at KBWR, the town radio station.*
 
-### Wind screen
+*Nobody hears the night engineer. The night engineer hears everything.*
 
-**The Archivist** [p_veyr.shield.01]: Now I can hear the city, beneath the wind.
+*My dad, Frank, taught me how to listen.*
 
-### Recording levels
+*Ham radio, every night. Strangers from all over the world, all of them his friends.*
 
-**The Archivist** [p_veyr.levels.01]: Leave room for the loud parts. They belong to the record too.
+*My mom, Helen, was an interpreter. Government work, rooms with no windows. She never talked about it.*
 
-### Departure recorder
+*She could hear what people meant, even when they said something else.*
 
-**The Archivist** [p_veyr.record.01]: Recording. Please wait for me.
+*Eighteen months ago, they rowed out into the bay after dark. They said the water was making a sound.*
 
-### Departure
+*They asked me to come along.*
 
-**The Archivist** [p_veyr.out.01]: Wind through the western towers. Last evening. Original take.
-
-**The Archivist** [p_veyr.out.02]: I will remember where we lived.
-
-## Prologue - A careful translation
-
-Sentinel Point, nine years ago
-
-### Arrival
-
-**American delegate** [p_meeting.in.01]: We are prepared to discuss the practical status of our demonstration.
-
-**Chinese delegate** [p_meeting.in.02]: After you explain the difference between practical and actual.
-
-### Interpreter’s notebook
-
-**Helen Mercer** [p_meeting.terms.01]: They propose that both teams describe what the observers actually saw.
-
-**Chinese delegate** [p_meeting.terms.02]: That would be a useful place to begin.
-
-### Joint statement
-
-**American delegate** [p_meeting.confess.01]: There was no space-fold engine.
-
-**Chinese delegate** [p_meeting.confess.02]: There was no engine at our test either.
-
-[The delegates share a tired laugh.]
-
-**Helen Mercer** [p_meeting.confess.03]: Then we can discuss what to do next.
-
-### Private record
-
-**Helen Mercer** [p_meeting.record.01]: Dates. Names. What each person actually said. Someone may need the truth one day.
-
-### Departure
-
-**Helen Mercer** [p_meeting.out.01]: Everyone agreed to keep lying. It may be the most honest thing I have seen.
+*I said no. I had a shift.*
 
 ## Prologue - The bay is singing
 
@@ -70,23 +34,45 @@ Bellwether Bay, eighteen months ago
 
 ### Arrival
 
-**Frank Mercer** [p_bay.in.01]: Same interval as last Thursday. Louder out here.
+**Frank Mercer** [p_bay.in.01]: Same interval as last Thursday, Helen. Louder out here. Whatever it is, it keeps better time than I do.
 
-**Helen Mercer** [p_bay.in.02]: Steve is working. I’ll leave him a message.
+**Helen Mercer** [p_bay.in.02]: Steve would hear more in this than both of us put together. I’ll leave him a message.
 
 ### Frank’s radio
 
-**Frank Mercer** [p_bay.tune.01]: There you are. I can hear more than one voice.
+**Frank Mercer** [p_bay.tune.01]: There you are. Hear that, Helen? More than one voice, all holding the same note.
 
-### Phone and notebook
+### Helen’s phone
 
-**Helen Mercer** [p_bay.message.01]: He should hear this for himself. We’ll bring the tape home.
+**Helen Mercer** [p_bay.message.01]: He should hear this for himself. We’ll bring the tape home, and he’ll tell us we recorded it wrong.
 
 ### Departure
 
 **Helen Mercer** [p_bay.out.01]: Come out with us, kiddo. The bay is singing tonight.
 
 **Frank Mercer** [p_bay.out.02]: Helen. It’s tuning to us.
+
+## Storybook - Eighteen months
+
+Steve narrates over illustrated panels.
+
+*In the morning, their boat drifted back to shore. Empty.*
+
+*Dad’s radio was still on.*
+
+*Nobody found them. That was eighteen months ago.*
+
+*Most nights I still play Mom’s last voicemail. I don’t know what I’m listening for.*
+
+*Three weeks ago, a company called Halcyon Media bought KBWR.*
+
+*They replaced me with a machine called DJ AutoRick. He reads yesterday’s weather.*
+
+*And then there’s Nora. Nora Reyes runs the aquarium and argues with everybody, me included.*
+
+*Now that I’m home in the mornings, I get to hear her say good morning.*
+
+*This is the story of how I started counting nights.*
 
 ## Chapter 1 - Good Morning, Sleepyhead
 
@@ -96,7 +82,7 @@ Steve and Nora’s apartment
 
 **Helen Mercer** [c1_flat.in.01]: Come out with us, kiddo. The bay is singing tonight.
 
-**Steve Mercer** [c1_flat.in.02]: Three in the morning. Again.
+**Steve Mercer** [c1_flat.in.02]: Three in the morning. Again. Well, Mom, it’s a fine night for it.
 
 **DJ AutoRick** [c1_flat.in.03]: Good morning, Bellwether! Yesterday will be sunny.
 
@@ -104,23 +90,23 @@ Steve and Nora’s apartment
 
 ### Saturday take
 
-**Steve Mercer** [c1_flat.saturday.01]: Saturday. Kitchen. Original tape.
+**Steve Mercer** [c1_flat.saturday.01]: Saturday, kitchen, quarter past seven. Dad always said to put the date on everything.
 
 ### Sunday take
 
 **Nora Reyes** [c1_flat.sunday.01]: Good morning, sleepyhead.
 
-**Steve Mercer** [c1_flat.sunday.02]: Sunday. Different section of tape.
+**Steve Mercer** [c1_flat.sunday.02]: Sunday. Fresh tape. Same words. Same... everything.
 
 ### Recorder control test
 
 **Steve Mercer** [c1_flat.control.01]: Testing. One, two. Testing... one, two.
 
-**Steve Mercer** [c1_flat.control.02]: Different. Cross out faulty recorder.
+**Steve Mercer** [c1_flat.control.02]: The squeak only made the second pass. So the recorder’s fine. Cross that one out.
 
 ### Compare greetings
 
-**Steve Mercer** [c1_flat.compare.01]: She remembers our first date better than I do. But people don’t do this.
+**Steve Mercer** [c1_flat.compare.01]: She remembers our first date better than I do. But nobody says a sentence the same way twice. Nobody.
 
 ### Departure
 
@@ -134,7 +120,7 @@ Bellwether harbor
 
 ### Arrival
 
-**Steve Mercer** [c1_pier.in.01]: Admiral. That was my lunch.
+**Steve Mercer** [c1_pier.in.01]: Admiral. That was my lunch. You don’t even like rye.
 
 **Agnes Penhallow** [c1_pier.in.02]: Fish don’t sing, Steven. Something under them does.
 
@@ -146,7 +132,7 @@ Bellwether harbor
 
 **Lyle Boone** [c1_pier.door.01]: They’re both pitching today. I promised I’d watch every inning.
 
-**Steve Mercer** [c1_pier.door.02]: Lyle remembered a promise. I should probably write that down.
+**Steve Mercer** [c1_pier.door.02]: Deputy Lyle, keeping a promise. I should write that down before the world ends.
 
 ### Penhallow’s bait stall
 
@@ -154,9 +140,9 @@ Bellwether harbor
 
 ### Departure
 
-**Pell** [c1_pier.out.01]: Your parents’ mail, Mr. Mercer. Delivered precisely on schedule.
+**Dale Kittredge** [c1_pier.out.01]: Your parents’ mail, Mr. Mercer. Delivered precisely on schedule.
 
-**Steve Mercer** [c1_pier.out.02]: They haven’t been home for eighteen months.
+**Steve Mercer** [c1_pier.out.02]: They haven’t been home in eighteen months, Dale. You know that.
 
 ## Chapter 1 - A plate kept warm
 
@@ -196,7 +182,7 @@ Apartment balcony and beach
 
 **Nora Reyes** [c1_escape.in.01]: No. He does not know where the notebook is. Tonight? Understood.
 
-**Steve Mercer** [c1_escape.in.02]: Nora? Why is the front door locked?
+**Steve Mercer** [c1_escape.in.02]: Nora? Why is the front door locked from the outside?
 
 ### Coat pocket
 
@@ -204,7 +190,7 @@ Apartment balcony and beach
 
 ### Balcony wiring
 
-**Steve Mercer** [c1_escape.power.01]: I fixed this for Mr. Bell last winter. For once, something I repaired is useful.
+**Steve Mercer** [c1_escape.power.01]: I fixed this latch for Mr. Bell last winter. He paid me in fruitcake. Tonight it’s worth every slice.
 
 ### Iris pots
 
@@ -226,7 +212,7 @@ Aquarium north wing
 
 **Steve Mercer** [c2_aquarium.in.01]: Emergency. Bellwether Aquarium. Someone is... hello?
 
-**Steve Mercer** [c2_aquarium.in.02]: Half a sentence. I hope someone heard it.
+**Steve Mercer** [c2_aquarium.in.02]: Half a sentence before the line died. I hope someone heard it.
 
 ### Exhibit plan
 
@@ -258,7 +244,7 @@ The Long Patience, scan chamber
 
 **Veyri attendant** [c2_ship.in.02]: Would peaceful human hold music assist your experience?
 
-**Steve Mercer** [c2_ship.in.03]: I’d prefer leaving.
+**Steve Mercer** [c2_ship.in.03]: I’d prefer the exit. Does that come with music too?
 
 ### Amber sleeper
 
@@ -268,13 +254,13 @@ The Long Patience, scan chamber
 
 **Prefect Saren** [c2_ship.command.01]: Release the restraint. Maintenance authorization.
 
-**Steve Mercer** [c2_ship.command.02]: Got it.
+**Steve Mercer** [c2_ship.command.02]: Got it. Thank you, Prefect.
 
 ### Scan chair
 
 **Prefect Saren** [c2_ship.escape.01]: Release the restraint. Maintenance authorization.
 
-**Steve Mercer** [c2_ship.escape.02]: Open. Now the seawater valve.
+**Steve Mercer** [c2_ship.escape.02]: It worked. Now the seawater valve. Then I find out how long I can hold my breath.
 
 ### Departure
 
@@ -290,7 +276,7 @@ Calder’s house
 
 **Sheriff June Calder** [c3_house.in.01]: Forty-seven casseroles. Your town is either very worried or very hungry.
 
-**Steve Mercer** [c3_house.in.02]: Nora is on a ship under the bay.
+**Steve Mercer** [c3_house.in.02]: Nora is asleep on a ship under the bay. I know exactly how that sounds.
 
 **Sheriff June Calder** [c3_house.in.03]: Then we start with what you can prove.
 
@@ -306,7 +292,7 @@ Calder’s house
 
 ### Dale’s delivery
 
-**Pell** [c3_house.mail.01]: A most diligent animal. I will return at the scheduled interval.
+**Dale Kittredge** [c3_house.mail.01]: A most diligent animal. I will return at the scheduled interval.
 
 **Sheriff June Calder** [c3_house.mail.02]: He’s asleep. That is his schedule.
 
@@ -314,7 +300,7 @@ Calder’s house
 
 **Sheriff June Calder** [c3_house.out.01]: For a year I’ve kept a list. People who got better overnight. Thirty-one names.
 
-**Steve Mercer** [c3_house.out.02]: Let’s find evidence for each one.
+**Steve Mercer** [c3_house.out.02]: Then let’s find out which of them got better, and which of them got replaced.
 
 ## Chapter 3 - Paper remembers
 
@@ -381,6 +367,34 @@ The Choir’s record chamber
 **The Archivist** [i1_archive.out.01]: Memory damaged by scan. Details in subject’s notebook.
 
 **The Archivist** [i1_archive.out.02]: I will leave the report as it is.
+
+## Interlude 1 - The last wind
+
+Veyr, 900 years ago
+
+### Arrival
+
+**The Archivist** [p_veyr.in.01]: There are forty thousand names on the departure register. I have checked every one.
+
+**The Archivist** [p_veyr.in.02]: One recording remains.
+
+### Wind screen
+
+**The Archivist** [p_veyr.shield.01]: Now I can hear the city, beneath the wind.
+
+### Recording levels
+
+**The Archivist** [p_veyr.levels.01]: Leave room for the loud parts. They belong to the record too.
+
+### Departure recorder
+
+**The Archivist** [p_veyr.record.01]: Recording. Please wait for me.
+
+### Departure
+
+**The Archivist** [p_veyr.out.01]: Wind through the western towers. Last evening. Original take.
+
+**The Archivist** [p_veyr.out.02]: I will remember where we lived.
 
 ## Chapter 4 - Federal Hospitality
 
@@ -460,7 +474,7 @@ Frank’s radio shack
 
 ### Frank’s receiver
 
-**Steve Mercer** [c5_shack.rig.01]: Power off. Matching connector. Now the antenna.
+**Steve Mercer** [c5_shack.rig.01]: Power off. Matching connector. I’m doing it your way, Dad.
 
 ### Thursday club
 
@@ -700,6 +714,40 @@ Accord ceremony
 
 **Dr. Evelyn Shaw** [c7_swap.out.03]: There is no engine. There never was.
 
+## Chapter 8 - A careful translation
+
+Sentinel Point, nine years ago
+
+### Arrival
+
+**American delegate** [p_meeting.in.01]: We are prepared to discuss the practical status of our demonstration.
+
+**Chinese delegate** [p_meeting.in.02]: After you explain the difference between practical and actual.
+
+### Interpreter’s notebook
+
+**Helen Mercer** [p_meeting.terms.01]: They propose that both teams describe what the observers actually saw.
+
+**Chinese delegate** [p_meeting.terms.02]: That would be a useful place to begin.
+
+### Joint statement
+
+**American delegate** [p_meeting.confess.01]: There was no space-fold engine.
+
+**Chinese delegate** [p_meeting.confess.02]: There was no engine at our test either.
+
+[The delegates share a tired laugh.]
+
+**Helen Mercer** [p_meeting.confess.03]: Then we can discuss what to do next.
+
+### Private record
+
+**Helen Mercer** [p_meeting.record.01]: Dates. Names. What each person actually said. Someone may need the truth one day.
+
+### Departure
+
+**Helen Mercer** [p_meeting.out.01]: Everyone agreed to keep lying. It may be the most honest thing I have seen.
+
 ## Chapter 8 - The Biggest Lie on Earth
 
 Meridian laboratory
@@ -776,7 +824,7 @@ Sentinel Point workshop
 
 ### Signal sources
 
-**Steve Mercer** [c8_rig.source.01]: Every response will be new. We’ll listen and answer each other.
+**Steve Mercer** [c8_rig.source.01]: Their old test failed because it repeated. Ours won’t. Every answer will be live.
 
 ### Trust path
 
@@ -922,7 +970,7 @@ KBWR live booth
 
 **DJ AutoRick** [c10_station.in.01]: Good morning! Up next, another hour of uninterrupted favorites.
 
-**Steve Mercer** [c10_station.in.02]: Rick. I need the microphone.
+**Steve Mercer** [c10_station.in.02]: Rick, buddy. I need my microphone back.
 
 **DJ AutoRick** [c10_station.in.03]: Your request is important to us!
 
@@ -990,7 +1038,7 @@ KBWR and the whole coast
 
 ### Arrival
 
-**Steve Mercer** [c10_live.in.01]: Bellwether, this is Steve Mercer. We’re going to do this together.
+**Steve Mercer** [c10_live.in.01]: Bellwether, this is Steve Mercer, live. I can’t do this alone, and for once I’m not going to try.
 
 **Stephen** [c10_live.in.02]: You knocked the microphone stand.
 
@@ -1092,7 +1140,7 @@ Bellwether, after sunrise
 
 **Gus Albano** [epilogue.neighbors.04]: Kelp croissant. Someone wrote it in my notebook. I’m going to try it.
 
-### Two Agneses
+### Two Mrs. Penhallows
 
 **Agnes Penhallow, original** [epilogue.bait.01]: That price is robbery.
 
@@ -1115,6 +1163,34 @@ Bellwether, after sunrise
 **Nora Reyes** [epilogue.out.02]: And an actual conversation.
 
 **Steve Mercer** [epilogue.out.03]: Every day.
+
+## Storybook - After the ninth night
+
+Steve narrates over illustrated panels.
+
+*Before the ship left, the Choir gave the copies one last gift. They don’t need the ninth night anymore.*
+
+*More than two hundred of them stayed. Bellwether has a lot of new neighbors with familiar faces.*
+
+*Sunday dinner is still at six. Iris comes too.*
+
+*Nora hasn’t forgiven her for the kidnapping. She tells her so, and passes her the bread.*
+
+*Mom and Dad came home. Dad is back on the radio every Thursday.*
+
+*There’s a new note on the kitchen table every morning. Most of them are about paint.*
+
+*I don’t play the old voicemail anymore.*
+
+*The ring moved from my sock drawer to my cardigan pocket. Nora and I are starting with coffee, and an actual conversation.*
+
+*KBWR has live hosts again. Two of them.*
+
+*Stephen and I still argue about which one of us is the upgrade.*
+
+*One year after the ninth night, a package arrived at the station.*
+
+*From very, very far away.*
 
 ## Epilogue - Good morning
 

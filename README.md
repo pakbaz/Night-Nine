@@ -20,7 +20,7 @@ In the soundtrack edition, you can hear the title music and a background piece a
 
 ## Chapter checkpoints
 
-To play the prologue or one of ten cumulative chapters with this edition’s puzzles, films and music, choose a `chapters-0.9.1/*` tag. For example, run `git worktree add --detach ../Night-Nine-chapter-04 chapters-0.9.1/chapter-04` and open `game/project.godot` in that directory. You can still find the original development editions at `checkpoint/*`. Each checkpoint has a separate default save directory. Play Interlude 1 after Chapter 3 and Interlude 2 after Chapter 6. Play through Chapter 10 for the epilogue and the post-credits scene. You can find subsequent complete editions at the version tags. [Chapter goals](MILESTONES.md)
+To play the prologue or one of ten cumulative chapters with this edition’s puzzles, films and music, choose a `chapters-0.9.2/*` tag. For example, run `git worktree add --detach ../Night-Nine-chapter-04 chapters-0.9.2/chapter-04` and open `game/project.godot` in that directory. You can still find the original development editions at `checkpoint/*`. Each checkpoint has a separate default save directory. Play Interlude 1 after Chapter 3 and Interlude 2 after Chapter 6. Play through Chapter 10 for the epilogue and the post-credits scene. You can find subsequent complete editions at the version tags. [Chapter goals](MILESTONES.md)
 
 ## Build and test
 

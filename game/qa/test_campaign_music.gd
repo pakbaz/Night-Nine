@@ -39,6 +39,25 @@ func finish_lines() -> void:
 		game._next_line()
 	check(false,"Return to exploration or the departure film after the lines")
 
+## Storybooks and chapter cards are checked in story_flow_qa.gd; here they are passed quickly.
+func clear_overlays() -> void:
+	for i: int in 4:
+		if game.storybook.visible:
+			game.storybook.finish_now()
+		if game.title_card.visible:
+			game.title_card.finish_now()
+		await frames(1)
+
+func planned(scene: Dictionary) -> Dictionary:
+	return catalog.get("scene_music",{}).get(scene.id,{})
+
+func has_book(scene_id: String) -> bool:
+	var books: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://content/storybook.json")).books
+	for book: Dictionary in books.values():
+		if book.before == scene_id:
+			return true
+	return false
+
 func solve(task: Dictionary) -> void:
 	if not task.actor.is_empty():
 		game.campaign.switch_actor(task.actor)
@@ -70,6 +89,10 @@ func run() -> void:
 	check(is_zero_approx(game.score.volume) and is_zero_approx(game.settings.get_value("audio","music",-1.0)), "Persist the independent music mute")
 	game.music_volume.value=old_volume
 	game._new_game()
+	await frames(1)
+	check(game.storybook.visible and game.score.current_file.ends_with("prologue-theme.mp3"), "Open the backstory on the Three Nights theme")
+	recordings[game.score.current_file] = true
+	await clear_overlays()
 	for scene: Dictionary in game.campaign.content.scenes:
 		check(scene.id == game.campaign.current().id,"Enter " + str(scene.id))
 		if scene.id == "postcredits":
@@ -77,13 +100,33 @@ func run() -> void:
 			check(game.score.cue=="silence","Leave the final radio signal clear")
 			break
 		var group: Dictionary = catalog.chapters[scene.chapter]
+		var heard: Dictionary = planned(scene)
+		await clear_overlays()
 		await frames(2)
-		verify_track("bgm",group.bgm)
-		if scene.id == "p_veyr":
+		verify_track("bgm" if heard.role == "bgm" else "scene",heard)
+		if scene.id == "p_bay":
 			await create_timer(.35).timeout
 			check(game.voice.playing and game.score.duck_db < -3.0, "Lower the prologue score under spoken dialogue")
 		finish_lines()
 		var deck := player()
+		if scene.id == "c1_dinner":
+			# The score rides a quiet passage up and is back down before a loud one.
+			var loud: Array = heard.bar_loudness
+			var bar: float = game.score.bar_length(heard)
+			var quiet := -1
+			var peak := 0
+			for i in loud.size() - 1:
+				if quiet < 0 and maxf(loud[i],loud[i+1]) < float(heard.lufs) - 9.0:
+					quiet = i
+				if minf(loud[i],loud[i+1]) > minf(loud[peak],loud[peak+1]):
+					peak = i
+			check(quiet >= 0, "Find a quiet passage in the Chapter 1 BGM")
+			deck.seek(float(heard.beat) + bar * (quiet + .1))
+			await create_timer(1.2).timeout
+			check(game.score.ride_db > .5 and game.score.ride_db <= game.score.MAX_RIDE_DB, "Ride the Chapter 1 BGM up through a quiet passage")
+			deck.seek(float(heard.beat) + bar * (peak + .1))
+			await create_timer(.6).timeout
+			check(game.score.ride_db < .1, "Bring the ride down before a loud passage")
 		if scene.id == "c1_pier":
 			deck.seek(29.0)
 			game.menu.show()
@@ -103,23 +146,42 @@ func run() -> void:
 		game._refresh()
 		var next_scene: Dictionary = game.campaign.content.scenes[int(game.campaign.data.scene)+1]
 		var boundary: bool = next_scene.chapter != scene.chapter
-		if not boundary:
+		var cue: Dictionary = catalog.get("departures",{}).get(scene.id,{})
+		var same_music: bool = not boundary and cue.is_empty() and planned(next_scene).get("file","") == heard.file and not has_book(next_scene.id)
+		if same_music:
 			deck.seek(23.0)
 		game._depart()
 		finish_lines()
 		await frames(2)
-		if boundary:
+		if not cue.is_empty():
+			check(game.score.cue == "theme" and game.score.current_file == cue.file, "Departure music for " + str(scene.id))
+			var bar: float = game.score.bar_length(cue)
+			check(absf(game.cut_duration - float(cue.bars) * bar) < .01, "Departure lasts whole bars in " + str(scene.id))
+			recordings[cue.file] = true
+		elif boundary:
 			verify_track("theme",group.theme)
-		else:
-			check(player()==deck and game.score.current_file==group.bgm.file,"Keep the chapter music through " + str(scene.id))
+			var bar: float = game.score.bar_length(group.theme)
+			check(absf(fposmod(game.cut_duration + bar * .5, bar) - bar * .5) < .01, "Chapter film lasts whole bars in " + str(scene.id))
+		elif same_music:
+			check(player()==deck and game.score.current_file==heard.file,"Keep the chapter music through " + str(scene.id))
 		game._advance_scene()
 		if scene.id == "one_year":
-			check(game.credits_panel.visible and game.score.current_file==group.theme.file and not player().stream_paused,"Play the epilogue theme over the story credits")
+			check(game.credits_panel.visible and game.score.current_file==catalog.credits.file and not player().stream_paused,"Carry the main title from the last film into the credits")
 			game._close_credits()
-		elif not boundary:
+		elif same_music:
 			await frames(2)
 			check(player()==deck and deck.get_playback_position()>21.0,"Continue the same BGM position in "+str(next_scene.id))
-	check(recordings.size()==29, "Hear all 29 supplied recordings")
+	# The end card plays the short Epilogue theme once.
+	game.campaign.data.finished = true
+	game._load_stage(false)
+	await frames(2)
+	verify_track("theme",catalog.finale)
+	check(not player().stream.loop, "Play the Epilogue theme once under the end card")
+	var mp3s := 0
+	for name: String in DirAccess.get_files_at("res://assets/audio/music"):
+		if name.ends_with(".mp3"):
+			mp3s += 1
+	check(recordings.size()==mp3s and mp3s==30, "Hear all 30 supplied recordings")
 	var file := FileAccess.open(report_dir.path_join("score-route.json"),FileAccess.WRITE)
 	file.store_string(JSON.stringify({"checks":checks,"failures":errors,"stream_count":recordings.size(),"recordings":recordings.keys(),"audio_driver":AudioServer.get_driver_name()},"  ")+"\n")
 	file.close()

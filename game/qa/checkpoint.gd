@@ -26,12 +26,15 @@ func check_dialogue(game: Node, ids: Array) -> void:
 		game._next_line()
 
 func verify() -> void:
-	if OS.get_environment("NIGHT_NINE_SAVE_DIR").is_empty():
+	if not OS.has_feature("web") and OS.get_environment("NIGHT_NINE_SAVE_DIR").is_empty():
 		push_error("Set NIGHT_NINE_SAVE_DIR to a new temporary directory before running this test.")
 		quit(2)
 		return
 	var game: Node = load("res://scenes/campaign.tscn").instantiate()
 	root.add_child(game)
+	if OS.has_feature("web"):
+		game.save_root = "user://checkpoint-qa"
+		game.saves = NightSaves.new(game.save_root, game.campaign.validate)
 	game.auto_dialogue=false
 	game._new_game()
 	var checkpoint: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://content/checkpoint.json"))
@@ -39,12 +42,21 @@ func verify() -> void:
 	expect(count==int(checkpoint.scenes),"Manifest room count")
 	var last_id: String = ""
 	for index: int in count:
+		if game.storybook.visible:
+			for panel: Dictionary in game.storybook.book.panels:
+				expect(ResourceLoader.exists(panel.image), "Storybook painting " + str(panel.image))
+				for line: Dictionary in panel.lines:
+					expect(ResourceLoader.exists(line.narration), "Storybook narration " + str(line.narration))
+			game.storybook.finish_now()
+		if game.title_card.visible:
+			game.title_card.finish_now()
+		await process_frame
 		var scene: Dictionary = game.campaign.current()
 		last_id=scene.id
 		expect(scene.id==game.campaign.content.scenes[index].id,"Room order "+scene.id)
 		expect(game.stage.room_id==scene.id and game.stage.art_ready,"Loaded stage "+scene.id)
 		expect(game.ambience.playing and game.ambience.stream.resource_path.ends_with("/"+scene.id+".ogg"),"Authored room ambience "+scene.id)
-		if scene.chapter!="Prologue":
+		if scene.id not in game.PAINTED_NIGHTS:
 			expect(game.stage.background!=null and game.stage.background.texture!=null,"Painted background "+scene.id)
 		expect(game.hotspots.size()==scene.tasks.size(),"Clickable evidence "+scene.id)
 		expect(game.dialogue_panel.visible and game.active_line==scene.intro[0],"Playable arrival "+scene.id)
@@ -73,7 +85,7 @@ func verify() -> void:
 		expect(game.light_remaining > 0.0, "Departure cut started " + scene.id)
 		game._process(game.cut_duration * 0.5)
 		expect(is_equal_approx(game.stage.cut_progress, 0.5), "Departure midpoint " + scene.id)
-		if scene.chapter != "Prologue" and game.stage.directions.get("chapter_insert", false):
+		if scene.id not in game.PAINTED_NIGHTS and game.stage.directions.get("chapter_insert", false):
 			expect(game.stage.chapter_frames.size() == 2, "Chapter keyframes " + scene.id)
 			expect(game.stage.motion_material != null, "Chapter motion field " + scene.id)
 		game._process(game.cut_duration)
@@ -107,4 +119,7 @@ func verify() -> void:
 	await game.drain_audio()
 	var report={"checks":checks,"rooms":visited,"tasks":game.campaign.data.done.size(),"lines":shown_lines.size(),"ending":last_id,"errors":errors}
 	print("NIGHT_NINE_CHECKPOINT_QA ",JSON.stringify(report))
+	game.queue_free()
+	await process_frame
+	await process_frame
 	quit(0 if errors.is_empty() else 1)

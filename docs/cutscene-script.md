@@ -2,16 +2,6 @@
 
 At each numbered chapter ending, play the paired illustrated poses, then cut to the animated reverse angle. Players can pause or skip a film.
 
-## p_veyr: The last wind
-
-- Track upward through glass towers to a dying red sun and departing lights.
-- Move toward the active interaction.
-
-## p_meeting: A careful translation
-
-- Push across an empty conference table toward a notebook, then the pulse outside.
-- Move toward the active interaction.
-
 ## p_bay: The bay is singing
 
 - Drift beside the rowboat as turquoise light grows beneath black water.
@@ -68,6 +58,11 @@ Departure film: *The message* (12 seconds).
 - Circle a glass memory console, then settle beside the isolated frosted bed.
 - Move toward the active interaction.
 
+## p_veyr: The last wind
+
+- Track upward through glass towers to a dying red sun and departing lights.
+- Move toward the active interaction.
+
 ## c4_safe: Federal Hospitality
 
 - Look through a half-open door at a telephone and a corridor of closed rooms.
@@ -120,6 +115,11 @@ Departure film: *The bakery van* (13.5 seconds).
 - Move toward the active interaction.
 
 Departure film: *Behind the ceremony* (12 seconds).
+
+## p_meeting: A careful translation
+
+- Push across an empty conference table toward a notebook, then the pulse outside.
+- Move toward the active interaction.
 
 ## c8_lab: The Biggest Lie on Earth
 

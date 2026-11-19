@@ -82,6 +82,18 @@ var case_board: CASE_BOARD
 var closing := false
 var tape_playback := false
 var tape_compare: NightTapeCompare
+const STORYBOOK := preload("res://ui/storybook.gd")
+const TITLE_CARD := preload("res://ui/title_card.gd")
+## The three painted "nights" use the illustrated prologue stage wherever they sit in the story.
+const PAINTED_NIGHTS := ["p_veyr", "p_meeting", "p_bay"]
+var storybooks: Dictionary = {}
+## Small interface sounds, synthesized by tools/build-ui-sounds.py.
+const UI_SOUNDS := {"solved": preload("res://assets/audio/effects/ui_solved.wav"),
+	"wrong": preload("res://assets/audio/effects/ui_wrong.wav"), "hint": preload("res://assets/audio/effects/ui_hint.wav")}
+var ui_player: AudioStreamPlayer
+var heading_shade: TextureRect
+var storybook: STORYBOOK
+var title_card: TITLE_CARD
 
 func _ready() -> void:
 	save_root = NightDesktop.new().save_root().path_join("campaign")
@@ -93,6 +105,8 @@ func _ready() -> void:
 	voice_manifest = JSON.parse_string(FileAccess.get_file_as_string("res://content/voice-manifest.json"))
 	lipsync_manifest = JSON.parse_string(FileAccess.get_file_as_string("res://content/lipsync-manifest.json"))
 	sound_manifest = JSON.parse_string(FileAccess.get_file_as_string("res://assets/audio/soundscape-manifest.json"))
+	if FileAccess.file_exists("res://content/storybook.json"):
+		storybooks = JSON.parse_string(FileAccess.get_file_as_string("res://content/storybook.json")).get("books", {})
 	voice = AudioStreamPlayer.new()
 	voice.finished.connect(_after_spoken_line)
 	add_child(voice)
@@ -102,6 +116,9 @@ func _ready() -> void:
 	effect = AudioStreamPlayer.new()
 	effect.volume_db = -10
 	add_child(effect)
+	ui_player = AudioStreamPlayer.new()
+	ui_player.volume_db = -12
+	add_child(ui_player)
 	score = SCORE.new()
 	score.name = "CampaignScore"
 	add_child(score)
@@ -109,7 +126,7 @@ func _ready() -> void:
 	_load_stage(false)
 	menu.show()
 	var previous := saves.read_slot("autosave")
-	_status("Continue your saved game, or begin with the three playable prologue scenes." if previous.get("ok",false) else "Begin a new game. Click objects to investigate; use the notebook for collected evidence.")
+	_status("Continue your saved game, or start a new game from the beginning." if previous.get("ok",false) else "Choose New game to begin. The story starts with a short illustrated prologue.")
 	get_tree().auto_accept_quit = false
 
 func _theme() -> Theme:
@@ -166,6 +183,27 @@ func _build_ui() -> void:
 	root.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	root.theme = _theme()
 	layer.add_child(root)
+	# A soft shade keeps the title and objective readable over bright skies.
+	var shade := TextureRect.new()
+	shade.name = "HeadingShade"
+	shade.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	var fade := Gradient.new()
+	fade.set_color(0, Color(0.0, 0.03, 0.04, .78))
+	fade.add_point(.55, Color(0.0, 0.03, 0.04, .5))
+	fade.set_color(fade.get_point_count() - 1, Color(0.0, 0.03, 0.04, 0.0))
+	var fill := GradientTexture2D.new()
+	fill.gradient = fade
+	# An ellipse from the top-left corner that reaches zero at the shade's right and bottom edges.
+	fill.fill = GradientTexture2D.FILL_RADIAL
+	fill.fill_from = Vector2(0.0, 0.0)
+	fill.fill_to = Vector2(0.0, 1.0)
+	shade.texture = fill
+	shade.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+	shade.stretch_mode = TextureRect.STRETCH_SCALE
+	shade.position = Vector2.ZERO
+	shade.size = Vector2(1180, 190)
+	root.add_child(shade)
+	heading_shade = shade
 	var heading := VBoxContainer.new()
 	heading.position = Vector2(42,32)
 	heading.custom_minimum_size.x = 830
@@ -175,7 +213,12 @@ func _build_ui() -> void:
 	title.custom_minimum_size.x = 830
 	objective = _label(heading,"",20)
 	objective.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	objective.modulate = Color("c4cdc3")
+	objective.modulate = Color("d6ddd3")
+	for label: Label in [title, objective]:
+		label.add_theme_color_override("font_shadow_color", Color(0, 0, 0, .85))
+		label.add_theme_constant_override("shadow_outline_size", 6)
+		label.add_theme_constant_override("shadow_offset_y", 1)
+	heading.visibility_changed.connect(func(): shade.visible = heading.visible)
 	var toolbar := HBoxContainer.new()
 	toolbar.set_anchors_and_offsets_preset(Control.PRESET_TOP_RIGHT)
 	toolbar.grow_horizontal = Control.GROW_DIRECTION_BEGIN
@@ -251,6 +294,7 @@ func _build_ui() -> void:
 	tape_compare.stop_requested.connect(func(): voice.stop(); tape_playback = false)
 	tape_compare.finding_requested.connect(func(values: Array): _choose(tape_compare.task_id, int(campaign.task_index[tape_compare.task_id].answer), values))
 	tape_compare.hint_requested.connect(func():
+		_ui("hint")
 		tape_compare.feedback.text = campaign.hint(tape_compare.task_id)
 		_save("autosave"))
 	tape_compare.closed.connect(func():
@@ -277,6 +321,18 @@ func _build_ui() -> void:
 	cut_skip.offset_top = -91
 	cut_skip.offset_bottom = -45
 	cut_skip.hide()
+	storybook = STORYBOOK.new()
+	root.add_child(storybook)
+	# Steve narrates each caption as it appears; the score dips under his voice.
+	storybook.line_shown.connect(func(line: Dictionary):
+		var clip: String = line.get("narration", "")
+		if not clip.is_empty() and ResourceLoader.exists(clip):
+			tape_playback = false
+			voice.stream = load(clip)
+			voice.play())
+	storybook.page_turned.connect(func(): voice.stop())
+	title_card = TITLE_CARD.new()
+	root.add_child(title_card)
 	_build_menu()
 	journal = _panel(root)
 	journal.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
@@ -511,7 +567,7 @@ func _open_credits() -> void:
 	_show_credits_page(false)
 	credits_panel.show()
 	if credits_before_signal or (started and campaign.data.finished):
-		score.play_theme("Epilogue")
+		score.play_credits()
 	_pause_audio(true)
 	if credits_before_signal:
 		credits_return.grab_focus()
@@ -549,8 +605,43 @@ func _new_game() -> void:
 	campaign.reset()
 	started=true
 	menu.hide()
-	_load_stage(true)
 	_save("autosave")
+	_enter_with_story(true)
+
+func _book_before(scene_id: String) -> Dictionary:
+	for book: Dictionary in storybooks.values():
+		if str(book.get("before","")) == scene_id:
+			return book
+	return {}
+
+## A storybook plays before its scene, then the scene arrives with its card.
+func _enter_with_story(play_intro: bool) -> void:
+	var book := _book_before(str(campaign.current().id))
+	if book.is_empty() or campaign.data.finished:
+		_load_stage(play_intro)
+		return
+	light_remaining = -1.0
+	cut_skip.hide()
+	transitioning = true
+	voice.stop()
+	effect.stop()
+	dialogue_panel.hide()
+	root.get_node("InteractionPanel").hide()
+	title.get_parent().hide()
+	status.hide()
+	for connection: Dictionary in storybook.finished.get_connections():
+		storybook.finished.disconnect(connection.callable)
+	storybook.finished.connect(func(): _load_stage(true), CONNECT_ONE_SHOT)
+	storybook.play(book, score)
+
+func _untouched_scene() -> bool:
+	for id: String in campaign.current().intro:
+		if id in campaign.data.seen:
+			return false
+	for task: Dictionary in campaign.current().tasks:
+		if task.id in campaign.data.done:
+			return false
+	return true
 
 func _load(slot: String) -> bool:
 	var result := saves.read_slot(slot)
@@ -562,6 +653,9 @@ func _load(slot: String) -> bool:
 		return false
 	started=true
 	menu.hide()
+	if _untouched_scene() and not _book_before(str(campaign.current().id)).is_empty():
+		_enter_with_story(true)
+		return true
 	_load_stage(false)
 	_status("Recovered the previous valid save." if result.get("recovered",false) else "Game loaded.")
 	return true
@@ -577,6 +671,10 @@ func _save_settings() -> void:
 	settings.save(save_root.path_join("settings.cfg"))
 
 func _load_stage(play_intro: bool) -> void:
+	if is_instance_valid(title_card) and title_card.visible:
+		title_card.cancel()
+	if is_instance_valid(storybook) and storybook.visible:
+		storybook.cancel()
 	light_remaining=-1.0
 	skipping_departure=false
 	cut_skip.hide()
@@ -586,10 +684,12 @@ func _load_stage(play_intro: bool) -> void:
 	listening_inspection = false
 	if not started:
 		score.play_title()
-	elif campaign.current().id == "postcredits" or campaign.data.finished:
+	elif campaign.data.finished:
+		score.play_finale()
+	elif campaign.current().id == "postcredits":
 		score.silence()
 	else:
-		score.play_chapter(campaign.current().chapter)
+		score.play_scene(campaign.current())
 	voice.stop()
 	effect.stop()
 	queue.clear()
@@ -606,7 +706,7 @@ func _load_stage(play_intro: bool) -> void:
 	if is_instance_valid(stage):
 		remove_child(stage)
 		stage.queue_free()
-	var prologue: bool = campaign.current().chapter == "Prologue"
+	var prologue: bool = campaign.current().id in PAINTED_NIGHTS
 	stage = ILLUSTRATED_STAGE.new() if prologue else CHAPTER_STAGE.new()
 	add_child(stage)
 	stage.build(campaign.current(),profile)
@@ -630,6 +730,8 @@ func _load_stage(play_intro: bool) -> void:
 		b.add_theme_font_size_override("font_size",17)
 		hotspots.append(b)
 		root.move_child(b,0)
+	# Object markers stay above the heading shade.
+	root.move_child(heading_shade,0)
 	_refresh()
 	var audio_path: String = "res://assets/audio/ambience/"+campaign.current().style+".wav"
 	var atmosphere_folder := "ambience-prologue" if prologue else "ambience-campaign"
@@ -650,14 +752,46 @@ func _load_stage(play_intro: bool) -> void:
 			ambience.play()
 	else:
 		ambience.stop()
-	if play_intro:
+	status.show()
+	if play_intro and not campaign.data.finished:
+		var card: Dictionary = campaign.current().get("card", {})
+		if card.is_empty():
+			_speak(campaign.current().intro,_coach)
+		else:
+			transitioning = true
+			title.get_parent().hide()
+			status.hide()
+			for connection: Dictionary in title_card.finished.get_connections():
+				title_card.finished.disconnect(connection.callable)
+			title_card.finished.connect(func():
+				transitioning = false
+				title.get_parent().show()
+				status.show()
+				_speak(campaign.current().intro,_coach), CONNECT_ONE_SHOT)
+			title_card.play(card, str(campaign.current().place), score, _scene_painting(campaign.current()))
+	elif play_intro:
 		_speak(campaign.current().intro,Callable())
 	elif started and not campaign.data.finished:
 		_resume_dialogue()
 	end_card.visible=campaign.data.finished
 	if campaign.data.finished:
 		title.get_parent().hide()
+		# The end card has its own notebook and credits buttons.
+		actor.get_parent().hide()
 		_status("Night Nine completed. Your notebook and transcript are available.")
+
+## The painting a scene opens on, for its chapter card.
+func _scene_painting(scene: Dictionary) -> String:
+	var prologue := {"p_bay": "bay.png", "p_veyr": "veyr.png", "p_meeting": "meeting.png"}
+	if prologue.has(scene.id):
+		return "res://assets/illustrated/rooms/" + str(prologue[scene.id])
+	return "res://assets/illustrated/campaign/rooms/" + str(scene.id) + ".webp"
+
+## A first-time tip for scenes that introduce a tool.
+func _coach() -> void:
+	var tip: String = campaign.current().get("coach", "")
+	if not tip.is_empty() and not campaign.can_leave():
+		_status(tip)
 
 func _resume_dialogue() -> void:
 	# Resume unheard dialogue after a save during an arrival or completed interaction.
@@ -804,7 +938,7 @@ func _inspect_on_arrival(id: String) -> void:
 		_button(interaction,caption,func():
 			if _play_audio(audio_id)<=0.0:
 				_status("Restore the missing recording from the game download, then reopen this location."))
-	_button(interaction,"Hint",func(): _status(campaign.hint(id)); _save("autosave"))
+	_button(interaction,"Hint",func(): _ui("hint"); _status(campaign.hint(id)); _save("autosave"))
 	_button(interaction,"Back",func(): root.get_node("InteractionPanel").hide(); stage.set_focus(-1))
 	root.get_node("InteractionPanel").show()
 	if interaction.get_child_count()>2 and interaction.get_child(2) is Button:
@@ -825,6 +959,7 @@ func _open_case_board(task: Dictionary) -> void:
 			_save("autosave"))
 	case_board.submitted.connect(func(values: Array): _choose(id,int(task.answer),values))
 	case_board.hint_requested.connect(func():
+		_ui("hint")
 		case_board.response.text=campaign.hint(id)
 		_save("autosave"))
 	case_board.closed.connect(func():
@@ -908,11 +1043,17 @@ func _recorder_gain(id: String, task: Dictionary) -> void:
 	gain.pressed.connect(func(_setting: BaseButton): apply.disabled = false)
 	bank.get_child(0).grab_focus()
 
+func _ui(sound: String) -> void:
+	ui_player.stream = UI_SOUNDS[sound]
+	ui_player.play()
+
 func _choose(id: String, answer: int, puzzle_input: Array = []) -> void:
 	var result:=campaign.choose(id,answer,puzzle_input)
 	if not result.ok:
+		_ui("wrong")
 		_status(result.reason)
 		return
+	_ui("solved")
 	root.get_node("InteractionPanel").hide()
 	if tape_compare.visible:
 		tape_compare.close()
@@ -1056,9 +1197,11 @@ func _end_departure_dialogue() -> void:
 	cut_duration=stage.departure_duration() if stage.has_method("departure_duration") else LIGHT_BEAT
 	var next_index := int(campaign.data.scene) + 1
 	var chapter_id: String = campaign.current().chapter
-	if next_index >= campaign.content.scenes.size() or chapter_id != campaign.content.scenes[next_index].chapter:
-		if score.play_theme(chapter_id):
-			cut_duration = maxf(cut_duration,8.0)
+	var chapter_ending: bool = next_index >= campaign.content.scenes.size() or chapter_id != campaign.content.scenes[next_index].chapter
+	# The film lasts whole bars of its music, so the next card starts on a bar line.
+	var music_cut: float = score.play_departure(str(campaign.current().id), chapter_id, chapter_ending, cut_duration)
+	if music_cut > 0.0:
+		cut_duration = music_cut
 	light_remaining=cut_duration
 	title.get_parent().hide()
 	actor.get_parent().hide()
@@ -1082,6 +1225,9 @@ func _enter_next_scene(dissolve: bool=false) -> void:
 		last_frame=stage.outgoing_frame()
 	if campaign.advance():
 		_save("autosave")
+		if not campaign.data.finished and not _book_before(str(campaign.current().id)).is_empty():
+			_enter_with_story(true)
+			return
 		_load_stage(not campaign.data.finished)
 		if not last_frame.is_empty() and stage.has_method("receive_frame"):
 			stage.receive_frame(last_frame)
@@ -1102,7 +1248,10 @@ func _open_journal() -> void:
 	_pause_audio(true)
 
 func _pause_audio(on: bool) -> void:
-	score.pause_film(on and light_remaining >= 0 and not credits_before_signal)
+	var overlay := storybook.visible or title_card.visible
+	score.pause_film(on and (light_remaining >= 0 or overlay) and not credits_before_signal)
+	storybook.paused = on
+	title_card.paused = on
 	if is_instance_valid(receiver):
 		receiver.set_paused(on)
 	voice.stream_paused=on
@@ -1159,7 +1308,7 @@ func _process(delta: float) -> void:
 			_next_line()
 
 func _can_explore() -> bool:
-	return started and not campaign.data.finished and not transitioning and not dialogue_panel.visible and not menu.visible and not journal.visible and not credits_panel.visible and not tape_compare.visible
+	return started and not campaign.data.finished and not transitioning and not dialogue_panel.visible and not menu.visible and not journal.visible and not credits_panel.visible and not tape_compare.visible and not storybook.visible and not title_card.visible
 
 func _sync_score_mix(starting_audio: bool = false) -> void:
 	var in_menu := started and (menu.visible or journal.visible or credits_panel.visible)
@@ -1168,6 +1317,10 @@ func _sync_score_mix(starting_audio: bool = false) -> void:
 		return
 	if in_menu:
 		score.set_mix(false,false,true)
+		return
+	score.set_lift(6.0 if title_card.visible else 0.0)
+	if storybook.visible or title_card.visible:
+		score.set_mix(voice.playing,false,false)
 		return
 	var evidence := tape_compare.visible or (listening_inspection and interaction.is_visible_in_tree())
 	var spoken_scene := dialogue_panel.visible
@@ -1198,6 +1351,13 @@ func _unhandled_key_input(event: InputEvent) -> void:
 					_close_credits()
 			get_viewport().set_input_as_handled()
 			return
+		if (storybook.visible or title_card.visible) and not menu.visible and event.keycode in [KEY_SPACE, KEY_ENTER, KEY_KP_ENTER, KEY_RIGHT]:
+			if storybook.visible:
+				storybook.next()
+			else:
+				title_card.skip()
+			get_viewport().set_input_as_handled()
+			return
 		if event.keycode==KEY_ESCAPE:
 			if journal.visible:
 				journal.hide()
@@ -1224,7 +1384,7 @@ func _unhandled_key_input(event: InputEvent) -> void:
 		elif event.keycode==KEY_I and object_list.visible:
 			_open_objects()
 			get_viewport().set_input_as_handled()
-		elif event.keycode==KEY_J and not menu.visible:
+		elif event.keycode==KEY_J and not menu.visible and not storybook.visible and not title_card.visible:
 			_open_journal()
 
 func _status(message: String) -> void:
@@ -1240,7 +1400,7 @@ func _exit_tree() -> void:
 func shutdown_audio() -> void:
 	if is_instance_valid(score):
 		score.stop_all()
-	for player: AudioStreamPlayer in [voice,ambience,effect]:
+	for player: AudioStreamPlayer in [voice,ambience,effect,ui_player]:
 		if is_instance_valid(player):
 			player.stream_paused=false
 			player.stop()
