@@ -1,0 +1,112 @@
+{
+  "base": "shaw.webp",
+  "size": [
+    966,
+    1080
+  ],
+  "origin": "top_left",
+  "foot_anchor": [
+    483,
+    1080
+  ],
+  "frames": {
+    "blink_half": {
+      "atlas_region": [
+        0,
+        0,
+        143,
+        41
+      ],
+      "source_origin": [
+        428,
+        164
+      ]
+    },
+    "blink_closed": {
+      "atlas_region": [
+        0,
+        43,
+        143,
+        41
+      ],
+      "source_origin": [
+        428,
+        164
+      ]
+    },
+    "mouth_parted": {
+      "atlas_region": [
+        0,
+        86,
+        117,
+        81
+      ],
+      "source_origin": [
+        458,
+        227
+      ]
+    },
+    "mouth_open": {
+      "atlas_region": [
+        0,
+        169,
+        117,
+        81
+      ],
+      "source_origin": [
+        458,
+        227
+      ]
+    },
+    "mouth_round": {
+      "atlas_region": [
+        0,
+        252,
+        117,
+        81
+      ],
+      "source_origin": [
+        458,
+        227
+      ]
+    },
+    "mouth_wide": {
+      "atlas_region": [
+        0,
+        335,
+        117,
+        81
+      ],
+      "source_origin": [
+        458,
+        227
+      ]
+    }
+  },
+  "cue_frames": {
+    "X": null,
+    "A": null,
+    "B": "mouth_parted",
+    "C": "mouth_wide",
+    "D": "mouth_open",
+    "E": "mouth_round",
+    "F": "mouth_round",
+    "G": "mouth_parted",
+    "H": "mouth_parted"
+  },
+  "atlas": "shaw-face-atlas.png",
+  "eye_centers": [
+    [
+      455,
+      192
+    ],
+    [
+      544,
+      180
+    ]
+  ],
+  "mouth_center": [
+    517,
+    267
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "base": "ward.webp",
+  "size": [
+    829,
+    1080
+  ],
+  "origin": "top_left",
+  "foot_anchor": [
+    414,
+    1080
+  ],
+  "frames": {
+    "blink_half": {
+      "atlas_region": [
+        0,
+        0,
+        131,
+        39
+      ],
+      "source_origin": [
+        351,
+        163
+      ]
+    },
+    "blink_closed": {
+      "atlas_region": [
+        0,
+        41,
+        131,
+        39
+      ],
+      "source_origin": [
+        351,
+        163
+      ]
+    },
+    "mouth_parted": {
+      "atlas_region": [
+        0,
+        82,
+        99,
+        70
+      ],
+      "source_origin": [
+        381,
+        237
+      ]
+    },
+    "mouth_open": {
+      "atlas_region": [
+        0,
+        154,
+        99,
+        70
+      ],
+      "source_origin": [
+        381,
+        237
+      ]
+    },
+    "mouth_round": {
+      "atlas_region": [
+        0,
+        226,
+        99,
+        70
+      ],
+      "source_origin": [
+        381,
+        237
+      ]
+    },
+    "mouth_wide": {
+      "atlas_region": [
+        0,
+        298,
+        99,
+        70
+      ],
+      "source_origin": [
+        381,
+        237
+      ]
+    }
+  },
+  "cue_frames": {
+    "X": null,
+    "A": null,
+    "B": "mouth_parted",
+    "C": "mouth_wide",
+    "D": "mouth_open",
+    "E": "mouth_round",
+    "F": "mouth_round",
+    "G": "mouth_parted",
+    "H": "mouth_parted"
+  },
+  "atlas": "ward-face-atlas.png",
+  "eye_centers": [
+    [
+      378,
+      189
+    ],
+    [
+      457,
+      178
+    ]
+  ],
+  "mouth_center": [
+    434,
+    271
+  ]
+}
