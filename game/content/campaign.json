@@ -1,0 +1,149 @@
+{
+  "schema": 1,
+  "version": "campaign-2",
+  "title": "Night Nine",
+  "source": "Night Nine original story",
+  "adaptation_status": "Playable illustrated campaign checkpoint.",
+  "cast": {
+    "archivist": "The Archivist",
+    "helen": "Helen Mercer",
+    "frank": "Frank Mercer",
+    "general_us": "American delegate",
+    "general_cn": "Chinese delegate"
+  },
+  "scenes": [
+    {
+      "id": "p_bay",
+      "chapter": "Prologue",
+      "title": "The bay is singing",
+      "place": "Bellwether Bay, eighteen months ago",
+      "style": "boat",
+      "actors": [
+        "frank"
+      ],
+      "objective": "Help Frank find the strange hum on his radio.",
+      "tasks": [
+        {
+          "id": "p_bay.tune",
+          "title": "Frank’s radio",
+          "prompt": "Two stations crackle on Frank’s radio: a time signal on one side, a chime on the other. Something hums in between. Drag the dial until both stations fade, switch on Narrow bandwidth, then record.",
+          "options": [
+            "Broadcast a distress call",
+            "Tune between the stations and narrow the band",
+            "Turn the radio off"
+          ],
+          "answer": 1,
+          "lines": [
+            "p_bay.tune.01"
+          ],
+          "note": "Found the ship’s hum beneath the radio static.",
+          "requires": [],
+          "actor": "",
+          "kind": "record",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Drag the dial toward the middle, away from both stations.",
+            "The hum sits at 815 kHz. Narrow bandwidth shuts out the stations on either side.",
+            "Set the dial to 815 kHz, switch on Narrow bandwidth, then press Record the signal."
+          ]
+        },
+        {
+          "id": "p_bay.message",
+          "title": "Helen’s phone",
+          "prompt": "Steve stayed ashore for his shift. Helen wants him to hear this too. How can she reach him tonight?",
+          "options": [
+            "Leave Steve a voicemail",
+            "Write it in the boat’s logbook",
+            "Call Frank’s radio club"
+          ],
+          "answer": 0,
+          "lines": [
+            "p_bay.message.01"
+          ],
+          "note": "Helen left Steve a voicemail.",
+          "requires": [
+            "p_bay.tune"
+          ],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Steve is at work, far from the boat.",
+            "Which of these will Steve find without coming out on the water?",
+            "Choose “Leave Steve a voicemail”."
+          ]
+        }
+      ],
+      "intro": [
+        "p_bay.in.01",
+        "p_bay.in.02"
+      ],
+      "outro": [
+        "p_bay.out.01",
+        "p_bay.out.02"
+      ],
+      "shots": [
+        {
+          "duration": 5.0,
+          "move": "establish",
+          "direction": "Drift beside the rowboat as turquoise light grows beneath black water."
+        },
+        {
+          "duration": 6.0,
+          "move": "push",
+          "direction": "Move toward the active interaction."
+        }
+      ],
+      "card": {
+        "chapter": {
+          "kicker": "Prologue",
+          "title": "The Bay Is Singing",
+          "goal": "Frank and Helen Mercer row out to listen to the bay."
+        }
+      },
+      "coach": "Click the glowing radio to begin. Press I for a list of things to look at."
+    }
+  ],
+  "lines": {
+    "p_bay.in.01": {
+      "id": "p_bay.in.01",
+      "speaker": "frank",
+      "text": "Same interval as last Thursday, Helen. Louder out here. Whatever it is, it keeps better time than I do.",
+      "audio": "p_bay.in.01"
+    },
+    "p_bay.in.02": {
+      "id": "p_bay.in.02",
+      "speaker": "helen",
+      "text": "Steve would hear more in this than both of us put together. I’ll leave him a message.",
+      "audio": "p_bay.in.02"
+    },
+    "p_bay.out.01": {
+      "id": "p_bay.out.01",
+      "speaker": "helen",
+      "text": "Come out with us, kiddo. The bay is singing tonight.",
+      "audio": "recording.voicemail"
+    },
+    "p_bay.out.02": {
+      "id": "p_bay.out.02",
+      "speaker": "frank",
+      "text": "Helen. It’s tuning to us.",
+      "audio": "p_bay.out.02"
+    },
+    "p_bay.tune.01": {
+      "id": "p_bay.tune.01",
+      "speaker": "frank",
+      "text": "There you are. Hear that, Helen? More than one voice, all holding the same note.",
+      "audio": "p_bay.tune.01"
+    },
+    "p_bay.message.01": {
+      "id": "p_bay.message.01",
+      "speaker": "helen",
+      "text": "He should hear this for himself. We’ll bring the tape home, and he’ll tell us we recorded it wrong.",
+      "audio": "p_bay.message.01"
+    }
+  },
+  "sound_labels": {},
+  "notebook_cases": {}
+}

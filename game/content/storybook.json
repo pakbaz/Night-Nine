@@ -1,0 +1,162 @@
+{
+  "schema": 1,
+  "books": {
+    "opening": {
+      "title": "Before the ninth night",
+      "before": "p_bay",
+      "music": {
+        "file": "res://assets/audio/music/prologue-theme.mp3",
+        "bar": 0
+      },
+      "end_bar": 20,
+      "panels": [
+        {
+          "bar": 0,
+          "image": "res://assets/illustrated/campaign/rooms/c1_pier.webp",
+          "from": [
+            0.42,
+            0.56,
+            1.0
+          ],
+          "to": [
+            0.56,
+            0.48,
+            1.12
+          ],
+          "lines": [
+            {
+              "bar": 0.25,
+              "text": "Bellwether. A fishing town on the Pacific coast.",
+              "narration": "res://assets/audio/voices/narration/opening-01.wav",
+              "seconds": 3.587
+            },
+            {
+              "bar": 1.497,
+              "text": "Six thousand people, one radio station, and a lot of fog.",
+              "narration": "res://assets/audio/voices/narration/opening-02.wav",
+              "seconds": 4.377
+            }
+          ]
+        },
+        {
+          "bar": 3.5,
+          "image": "res://assets/illustrated/campaign/rooms/c10_station.webp",
+          "from": [
+            0.5,
+            0.55,
+            1.14
+          ],
+          "to": [
+            0.6,
+            0.45,
+            1.02
+          ],
+          "lines": [
+            {
+              "bar": 3.75,
+              "text": "I’m Steve Mercer. For years I ran the night shift at KBWR, the town radio station.",
+              "narration": "res://assets/audio/voices/narration/opening-03.wav",
+              "seconds": 5.907
+            },
+            {
+              "bar": 5.731,
+              "text": "Nobody hears the night engineer. The night engineer hears everything.",
+              "narration": "res://assets/audio/voices/narration/opening-04.wav",
+              "seconds": 4.723
+            }
+          ]
+        },
+        {
+          "bar": 7.5,
+          "image": "res://assets/illustrated/campaign/rooms/c5_shack.webp",
+          "from": [
+            0.35,
+            0.6,
+            1.1
+          ],
+          "to": [
+            0.45,
+            0.55,
+            1.0
+          ],
+          "lines": [
+            {
+              "bar": 7.75,
+              "text": "My dad, Frank, taught me how to listen.",
+              "narration": "res://assets/audio/voices/narration/opening-05.wav",
+              "seconds": 3.06
+            },
+            {
+              "bar": 8.83,
+              "text": "Ham radio, every night. Strangers from all over the world, all of them his friends.",
+              "narration": "res://assets/audio/voices/narration/opening-06.wav",
+              "seconds": 5.908
+            }
+          ]
+        },
+        {
+          "bar": 11.0,
+          "image": "res://assets/illustrated/rooms/meeting.png",
+          "from": [
+            0.5,
+            0.45,
+            1.0
+          ],
+          "to": [
+            0.5,
+            0.5,
+            1.12
+          ],
+          "lines": [
+            {
+              "bar": 11.25,
+              "text": "My mom, Helen, was an interpreter. Government work, rooms with no windows. She never talked about it.",
+              "narration": "res://assets/audio/voices/narration/opening-07.wav",
+              "seconds": 7.37
+            },
+            {
+              "bar": 13.695,
+              "text": "She could hear what people meant, even when they said something else.",
+              "narration": "res://assets/audio/voices/narration/opening-08.wav",
+              "seconds": 3.772
+            }
+          ]
+        },
+        {
+          "bar": 15.5,
+          "image": "res://assets/illustrated/rooms/bay.png",
+          "from": [
+            0.5,
+            0.42,
+            1.0
+          ],
+          "to": [
+            0.5,
+            0.5,
+            1.16
+          ],
+          "lines": [
+            {
+              "bar": 15.75,
+              "text": "Eighteen months ago, they rowed out into the bay after dark. They said the water was making a sound.",
+              "narration": "res://assets/audio/voices/narration/opening-09.wav",
+              "seconds": 5.858
+            },
+            {
+              "bar": 17.716,
+              "text": "They asked me to come along.",
+              "narration": "res://assets/audio/voices/narration/opening-10.wav",
+              "seconds": 1.55
+            },
+            {
+              "bar": 18.318,
+              "text": "I said no. I had a shift.",
+              "narration": "res://assets/audio/voices/narration/opening-11.wav",
+              "seconds": 2.584
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

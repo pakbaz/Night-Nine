@@ -1,0 +1,112 @@
+{
+  "size": [
+    1024,
+    1536
+  ],
+  "origin": "top_left",
+  "foot_anchor": [
+    512,
+    1486
+  ],
+  "eye_centers": [
+    [
+      478,
+      146
+    ],
+    [
+      546,
+      145
+    ]
+  ],
+  "mouth_center": [
+    512,
+    203
+  ],
+  "base": "archivist.png",
+  "atlas": "archivist-face-atlas.png",
+  "frames": {
+    "blink_half": {
+      "atlas_region": [
+        0,
+        0,
+        144,
+        56
+      ],
+      "source_origin": [
+        440,
+        121
+      ]
+    },
+    "blink_closed": {
+      "atlas_region": [
+        0,
+        56,
+        144,
+        56
+      ],
+      "source_origin": [
+        440,
+        121
+      ]
+    },
+    "mouth_parted": {
+      "atlas_region": [
+        0,
+        112,
+        96,
+        48
+      ],
+      "source_origin": [
+        464,
+        181
+      ]
+    },
+    "mouth_open": {
+      "atlas_region": [
+        0,
+        160,
+        96,
+        48
+      ],
+      "source_origin": [
+        464,
+        181
+      ]
+    },
+    "mouth_round": {
+      "atlas_region": [
+        0,
+        208,
+        96,
+        48
+      ],
+      "source_origin": [
+        464,
+        181
+      ]
+    },
+    "mouth_wide": {
+      "atlas_region": [
+        0,
+        256,
+        96,
+        48
+      ],
+      "source_origin": [
+        464,
+        181
+      ]
+    }
+  },
+  "cue_frames": {
+    "X": null,
+    "A": null,
+    "B": "mouth_parted",
+    "C": "mouth_wide",
+    "D": "mouth_open",
+    "E": "mouth_round",
+    "F": "mouth_round",
+    "G": "mouth_parted",
+    "H": "mouth_parted"
+  }
+}

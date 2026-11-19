@@ -1,0 +1,89 @@
+{
+  "schema": 1,
+  "takes": {
+    "p_bay.in.01": {
+      "id": "p_bay.in.01",
+      "speaker": "frank",
+      "identity": "frank",
+      "text": "Same interval as last Thursday, Helen. Louder out here. Whatever it is, it keeps better time than I do.",
+      "spoken_text": "Same interval as last Thursday, Helen. Louder out here. Whatever it is, it keeps better time than I do.",
+      "file": "res://assets/audio/voices/elevenlabs-v4/p_bay.in.01.wav",
+      "seconds": 6.609,
+      "sha256": "af223234659a2fddff77de53b101f2fe3be7ad96b81c75851fad084618a83037",
+      "sample_rate": 48000,
+      "model": "elevenlabs_v4",
+      "provider": "ElevenLabs via Higgsfield",
+      "preset": "Grady"
+    },
+    "p_bay.in.02": {
+      "id": "p_bay.in.02",
+      "speaker": "helen",
+      "identity": "helen",
+      "text": "Steve would hear more in this than both of us put together. I’ll leave him a message.",
+      "spoken_text": "Steve would hear more in this than both of us put together. I’ll leave him a message.",
+      "file": "res://assets/audio/voices/elevenlabs-v4/p_bay.in.02.wav",
+      "seconds": 5.250625,
+      "sha256": "d7f2694b287ba5299524970e5a2c0124805d22ace49bc82823922160bc586039",
+      "sample_rate": 48000,
+      "model": "elevenlabs_v4",
+      "provider": "ElevenLabs via Higgsfield",
+      "preset": "Vera"
+    },
+    "p_bay.message.01": {
+      "id": "p_bay.message.01",
+      "speaker": "helen",
+      "identity": "helen",
+      "text": "He should hear this for himself. We’ll bring the tape home, and he’ll tell us we recorded it wrong.",
+      "spoken_text": "He should hear this for himself. We’ll bring the tape home, and he’ll tell us we recorded it wrong.",
+      "file": "res://assets/audio/voices/elevenlabs-v4/p_bay.message.01.wav",
+      "seconds": 5.485729166666666,
+      "sha256": "48a44e87f4c7b979d27108c7dc762c7ecd7ad0413005f8c86e03bf1f04f843dd",
+      "sample_rate": 48000,
+      "model": "elevenlabs_v4",
+      "provider": "ElevenLabs via Higgsfield",
+      "preset": "Vera"
+    },
+    "p_bay.out.02": {
+      "id": "p_bay.out.02",
+      "speaker": "frank",
+      "identity": "frank",
+      "text": "Helen. It’s tuning to us.",
+      "spoken_text": "Helen. It’s tuning to us.",
+      "file": "res://assets/audio/voices/elevenlabs-v4/p_bay.out.02.wav",
+      "seconds": 2.351020833333333,
+      "sha256": "3117c00c703c63bcc4efb12e28662ef9fc3a4f262dafd1e5eae80c9e3e1cdb39",
+      "sample_rate": 48000,
+      "model": "elevenlabs_v4",
+      "provider": "ElevenLabs via Higgsfield",
+      "preset": "Grady"
+    },
+    "p_bay.tune.01": {
+      "id": "p_bay.tune.01",
+      "speaker": "frank",
+      "identity": "frank",
+      "text": "There you are. Hear that, Helen? More than one voice, all holding the same note.",
+      "spoken_text": "There you are. Hear that, Helen? More than one voice, all holding the same note.",
+      "file": "res://assets/audio/voices/elevenlabs-v4/p_bay.tune.01.wav",
+      "seconds": 5.8775625,
+      "sha256": "5a043475ff50f505bed6e7b162a950d953655bc137c1ae1699929f29b6f9a171",
+      "sample_rate": 48000,
+      "model": "elevenlabs_v4",
+      "provider": "ElevenLabs via Higgsfield",
+      "preset": "Grady"
+    },
+    "recording.voicemail": {
+      "id": "recording.voicemail",
+      "speaker": "helen",
+      "identity": "helen",
+      "text": "Come out with us, kiddo. The bay is singing tonight.",
+      "spoken_text": "Come out with us, kiddo. The bay is singing tonight.",
+      "file": "res://assets/audio/voices/elevenlabs-v4/recording.voicemail.wav",
+      "seconds": 3.7093958333333332,
+      "sha256": "5170040306e748c99d71f63d15e4538f3a4e333f4f4e048bc62a60620b4af389",
+      "sample_rate": 48000,
+      "model": "elevenlabs_v4",
+      "provider": "ElevenLabs via Higgsfield",
+      "preset": "Vera"
+    }
+  }
+}

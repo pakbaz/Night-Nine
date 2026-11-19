@@ -1,0 +1,88 @@
+{
+  "atlas": "general_us-face-atlas.png",
+  "frames": {
+    "blink_half": {
+      "source_origin": [
+        214,
+        367
+      ],
+      "atlas_region": [
+        0,
+        0,
+        55,
+        34
+      ]
+    },
+    "blink_closed": {
+      "source_origin": [
+        214,
+        367
+      ],
+      "atlas_region": [
+        0,
+        34,
+        55,
+        34
+      ]
+    },
+    "mouth_parted": {
+      "source_origin": [
+        231,
+        425
+      ],
+      "atlas_region": [
+        0,
+        68,
+        44,
+        29
+      ]
+    },
+    "mouth_open": {
+      "source_origin": [
+        231,
+        425
+      ],
+      "atlas_region": [
+        0,
+        97,
+        44,
+        29
+      ]
+    },
+    "mouth_round": {
+      "source_origin": [
+        231,
+        425
+      ],
+      "atlas_region": [
+        0,
+        126,
+        44,
+        29
+      ]
+    },
+    "mouth_wide": {
+      "source_origin": [
+        231,
+        425
+      ],
+      "atlas_region": [
+        0,
+        155,
+        44,
+        29
+      ]
+    }
+  },
+  "cue_frames": {
+    "X": null,
+    "A": null,
+    "B": "mouth_parted",
+    "C": "mouth_wide",
+    "D": "mouth_open",
+    "E": "mouth_round",
+    "F": "mouth_round",
+    "G": "mouth_parted",
+    "H": "mouth_parted"
+  }
+}
