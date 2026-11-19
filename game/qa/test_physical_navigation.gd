@@ -1,0 +1,223 @@
+extends SceneTree
+
+const FLOOR := preload("res://render/illustrated/exploration_floor.gd")
+const STAGE := preload("res://render/illustrated/campaign_room.gd")
+const ART := Vector2(1600,900)
+var checks := 0
+var failures: Array[String] = []
+var last_arrival := ""
+var coverage := {}
+
+func check(ok: bool, description: String) -> void:
+	checks+=1
+	if not ok:
+		failures.append(description)
+		push_error(description)
+
+func _initialize() -> void:
+	run.call_deferred()
+
+func run() -> void:
+	var fixture := {
+		"polygon":[[.04,.08],[.96,.08],[.96,.94],[.04,.94]], "depth":[.08,.32,.94,.32],
+		"spawn":{"steve":[.18,.51],"stephen":[.44,.77]}, "approach":{"lever":[.64,.52],"far":[.85,.5]},
+		"blockers":[{"id":"table","polygon":[[.38,.40],[.55,.40],[.55,.62],[.38,.62]]},
+			{"id":"door","polygon":[[.71,.05],[.725,.05],[.725,.96],[.71,.96]],"opens_after":"test.lever"}]}
+	var floor_stage := FLOOR.new()
+	root.add_child(floor_stage)
+	floor_stage.room_id="test"
+	var plate := PlaceholderTexture2D.new()
+	plate.size=ART
+	floor_stage.configure(fixture,["steve","stephen"],plate,"res://missing-field-art.webp",Color.WHITE)
+	floor_stage.select_actor("steve")
+	var body: Node2D=floor_stage.bodies.steve.body
+	var other: Node2D=floor_stage.bodies.stephen.body
+	var start:=body.position
+	var end := floor_stage.point([.62,.50])
+	check(not floor_stage.clear_segment(start,end),"A straight click crosses the tabletop")
+	var route := floor_stage.path_to(start,end)
+	check(route.size()>=2,"Click navigation bends around the solid table")
+	var last:=start
+	for part: Vector2 in route:
+		check(floor_stage.clear_segment(last,part),"The whole routed segment clears the table with room for the feet")
+		last=part
+	check(not floor_stage.on_floor(floor_stage.point([.38,.49])-Vector2(6,0)),"Shoe clearance extends beyond the painted edge")
+	check(floor_stage.walk_to(floor_stage.point([.383,.49])),"Clicking just inside furniture finds an accessible edge")
+	check(floor_stage.route[-1].x<.38*ART.x,"The marker stops in front of the near table edge")
+	floor_stage.cancel()
+	check(not floor_stage.walk_to(floor_stage.point([.85,.5])),"A closed door prevents a route into the far room")
+	check(not floor_stage.finish_now("test.far") and body.position==start,"Keyboard evidence access also respects the closed door")
+	floor_stage.step(6.0,Vector2.RIGHT)
+	check(body.position.x<.38*ART.x and body.position.x>start.x+100,"A long WASD frame reaches the table without tunneling")
+	var before:=body.position
+	floor_stage.step(.55,Vector2(1,.48))
+	check(body.position.y>before.y+10 and body.position.x<.38*ART.x,"WASD slides along the table edge")
+	body.position=floor_stage.point([.20,.77])
+	var beyond:=floor_stage.point([.64,.77])
+	check(not floor_stage.clear_segment(body.position,beyond),"Another character occupies real personal space")
+	check(floor_stage.walk_to(beyond) and floor_stage.route.size()>1,"Clicks route around a standing companion")
+	other.position=floor_stage.point([.52,.73])
+	var min_gap:=INF
+	for frame: int in 300:
+		floor_stage.step(.024,Vector2.ZERO)
+		min_gap=minf(min_gap,((body.position-other.position)*floor_stage.navigation.FLATTEN).length())
+		if floor_stage.route.is_empty():
+			break
+	check(body.position.distance_to(beyond)<.5 and min_gap>=floor_stage.navigation.radius(other.position)*3.1,
+		"A moving companion triggers replanning with shoe clearance throughout")
+	check(floor_stage.walk_to_person("stephen","test.hello"),"A character interaction finds a reachable nearby stance")
+	for tick: int in 300:
+		if floor_stage.route.is_empty():
+			break
+		floor_stage.step(.08,Vector2.ZERO)
+	check(floor_stage.route.is_empty() and body.position.distance_to(other.position)>35 and floor_stage.bodies.steve.left==(body.position.x>other.position.x),
+		"The investigators face each other across a speaking distance")
+	floor_stage.set_story(["test.lever"],{})
+	check(floor_stage.finish_now("test.far") and body.position.x>.725*ART.x,"After the registered event, direct access can pass the opened door")
+	floor_stage.set_story([],{})
+	floor_stage.restore({"steve":[.45,.50,true]})
+	check(floor_stage.on_floor(body.position) and not Geometry2D.is_point_in_polygon(body.position,floor_stage.points(fixture.blockers[0].polygon)),
+		"An older save inside newly solid furniture returns to accessible ground")
+	floor_stage.restore({"steve":[.85,.5,false]})
+	check(body.position.x<.71*ART.x,"An old save beyond a newly closed threshold resumes on the reachable side")
+	floor_stage.restore({"steve":[.18,.70,false]})
+	floor_stage.step(.23,Vector2.UP)
+	floor_stage.step(.01,Vector2.ZERO)
+	var sheet: Sprite2D=floor_stage.bodies.steve.sprite
+	check(sheet.texture.resource_path.ends_with("steve-away.webp") and sheet.hframes==4 and not sheet.flip_h,
+		"Depth travel retains an unmirrored away stance when the investigator stops")
+	var saved := floor_stage.snapshot()
+	floor_stage.step(.23,Vector2.DOWN)
+	check(sheet.texture.resource_path.ends_with("steve-toward.webp"),"Moving toward the camera selects its own painted cycle")
+	floor_stage.restore(saved)
+	check(sheet.texture.resource_path.ends_with("steve-away.webp") and sheet.frame==1,"Saving and restoring retains the depth-facing stance")
+	var rooms: Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://content/illustrated-floor.json"))
+	var campaign := NightCampaign.new()
+	var n_solids:=0
+	var n_doors:=0
+	for id: String in rooms:
+		var layout: Dictionary=rooms[id]
+		var isolated:=FLOOR.new()
+		isolated.configure_navigation(layout)
+		for solid: Dictionary in layout.get("blockers",[]):
+			n_solids+=1
+			if not solid.has("opens_after"):
+				continue
+			n_doors+=1
+			check(campaign.task_index.has(solid.opens_after),"Registered story event exists for "+str(solid.id))
+			check_door(isolated,layout,solid,id)
+		isolated.free()
+	floor_stage.free()
+	verify_campaign(campaign,rooms)
+	var result := {"rooms":coverage,"registered_blockers":n_solids,"story_gates":n_doors,"checks":checks,"failures":failures}
+	var destination := OS.get_environment("NIGHT_NINE_QA_DIR")
+	if not destination.is_empty():
+		DirAccess.make_dir_recursive_absolute(destination)
+		var output := FileAccess.open(destination.path_join("physical-navigation.json"),FileAccess.WRITE)
+		output.store_string(JSON.stringify(result,"\t")+"\n")
+		output.close()
+	print("Physical navigation: ",checks," checks, ",n_solids," registered blockers, ",n_doors," story doors, ",failures.size()," failures.")
+	quit(0 if failures.is_empty() else 1)
+
+func check_door(floor_stage: Node2D, layout: Dictionary, door: Dictionary, room: String) -> void:
+	var outline: PackedVector2Array=floor_stage.points(door.polygon)
+	var box := Rect2(outline[0],Vector2.ZERO)
+	for vertex: Vector2 in outline:
+		box=box.expand(vertex)
+	box=box.grow(18.0)
+	floor_stage.update_solids([])
+	floor_stage.sync_navigation()
+	var closed_points := PackedVector2Array()
+	for ix: int in 17:
+		for iy: int in 17:
+			var spot := box.position+box.size*Vector2(ix,iy)/16.0
+			if not floor_stage.navigation.contains(spot):
+				closed_points.append(spot)
+	floor_stage.update_solids([door.opens_after])
+	floor_stage.sync_navigation()
+	var entry: Vector2=floor_stage.point(layout.spawn.values()[0])
+	var newly_reachable := false
+	for spot: Vector2 in closed_points:
+		if not floor_stage.navigation.path(entry,spot).is_empty():
+			newly_reachable=true
+			break
+	check(newly_reachable,room+" opens reachable painted ground at "+str(door.id))
+
+func verify_campaign(campaign: NightCampaign, layouts: Dictionary) -> void:
+	var before_scene: Array = []
+	for scene: Dictionary in campaign.content.scenes:
+		if layouts.has(scene.id):
+			var stage := STAGE.new()
+			root.add_child(stage)
+			stage.build(scene,"high")
+			check(stage.floor_stage!=null,scene.id+" has its imported exploration painting and floor")
+			if stage.floor_stage==null:
+				stage.free()
+				continue
+			if scene.id=="c6_jail":
+				verify_jail_staging(stage)
+			stage.approach_finished.connect(func(id: String): last_arrival=id)
+			var room_results := {}
+			for id: String in scene.actors:
+				stage.select_walker(id)
+				var completed := before_scene.duplicate()
+				stage.sync_story(completed)
+				var floor_stage: Node2D=stage.floor_stage
+				check(stage.walking_view() and floor_stage.visible,scene.id+" visible walking floor for "+id)
+				var reached: Array = []
+				for i: int in scene.tasks.size():
+					var task: Dictionary=scene.tasks[i]
+					var label := str(task.id)+" via "+id
+					check(stage.frame.get_global_rect().has_point(stage.project_target(i)),label+" target in camera")
+					last_arrival=""
+					var started := stage.walk_task(task.id)
+					check(started,label+" registers a physical route")
+					var on_ground := true
+					var acted := false
+					for frame: int in 650:
+						if not stage.is_walking():
+							break
+						stage.tick_walk(.025,Vector2.ZERO)
+						on_ground=on_ground and floor_stage.on_floor(floor_stage.bodies[id].body.position)
+						acted=acted or not floor_stage.performance_action.is_empty()
+					check(on_ground,label+" feet clear solids and other people throughout")
+					check(acted and last_arrival==task.id,label+" action and arrival callback")
+					if scene.id=="c8_beach":
+						var guest: Dictionary=floor_stage.bodies.get("saren",{})
+						var lead: Dictionary=floor_stage.bodies[id]
+						check(not guest.is_empty() and guest.body.visible and guest.sprite.texture.resource_path.ends_with("saren-idle.webp")
+							and floor_stage.speaking_partner=="saren" and lead.left!=guest.left
+							and absf(guest.body.position.x-lead.body.position.x)>.12*floor_stage.height_at(guest.body.position),
+							label+" finishes facing the standing Prefect across a speaking distance")
+					if last_arrival==task.id:
+						reached.append(task.id)
+					stage.set_focus(i)
+					check(not floor_stage.visible,label+" shows the evidence painting")
+					completed.append(task.id)
+					stage.sync_story(completed)
+					stage.set_focus(-1)
+					check(floor_stage.visible,label+" returns to exploration")
+				room_results[id]=reached
+			stage.free()
+			coverage[scene.id]=room_results
+		for task: Dictionary in scene.tasks:
+			before_scene.append(task.id)
+
+func verify_jail_staging(stage: STAGE) -> void:
+	var floor_stage: Node2D=stage.floor_stage
+	var cell: Vector2=floor_stage.point(floor_stage.approach.crossword)
+	var stephen: Vector2=floor_stage.bodies.stephen.body.position
+	check(floor_stage.point(floor_stage.object_marks.crossword).x-cell.x>floor_stage.height_at(cell)*.15,
+		"Steve can look into the cell from beside the door and leave the central bars visible")
+	check(stephen.y<cell.y or absf(stephen.x-cell.x)>.22*floor_stage.height_at(stephen),
+		"The foreground investigator leaves Steve visible when he speaks through the cell door")
+	var dog: Node2D=stage.floor_creatures.biscuit
+	var sprite: Sprite2D=dog.get_child(0)
+	var animal_height := sprite.scale.y*sprite.texture.get_height()
+	check(dog.get_parent()==floor_stage.cast and dog.visible and not stage.creatures.biscuit.visible,
+		"Biscuit shares the investigators' depth sorting on the wide painting")
+	check(animal_height<floor_stage.height_at(dog.position)*.40 and not floor_stage.on_floor(dog.position),
+		"Biscuit sits at a dog's scale with an occupied spot on the jail floor")
+	stage.set_focus(0)
+	check(not dog.visible and stage.creatures.biscuit.visible,"The detail painting keeps the close-up of Biscuit")
+	stage.set_focus(-1)

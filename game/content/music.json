@@ -135,6 +135,27 @@
         "lufs": -17.2,
         "entry_seconds": 0.2
       }
+    },
+    "Chapter 10": {
+      "bgm": {
+        "file": "res://assets/audio/music/chapter-10-bgm.mp3",
+        "lufs": -14.9
+      },
+      "theme": {
+        "file": "res://assets/audio/music/chapter-10-theme.mp3",
+        "lufs": -17.1,
+        "entry_seconds": 10.9
+      }
+    },
+    "Epilogue": {
+      "bgm": {
+        "file": "res://assets/audio/music/epilogue-bgm.mp3",
+        "lufs": -16.8
+      },
+      "theme": {
+        "file": "res://assets/audio/music/epilogue-theme.mp3",
+        "lufs": -17.1
+      }
     }
   }
 }

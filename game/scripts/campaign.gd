@@ -303,7 +303,7 @@ func _build_ui() -> void:
 	credits.add_theme_constant_override("separation",12)
 	end_card.add_child(credits)
 	_label(credits,"NIGHT NINE",44).horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
-	_label(credits,"Chapter 9 checkpoint complete",23).horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
+	_label(credits,"The End",23).horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
 	_button(credits,"Read the notebook and transcript",_open_journal)
 	_button(credits,"Credits",_open_credits)
 	end_card.hide()
@@ -657,7 +657,7 @@ func _load_stage(play_intro: bool) -> void:
 	end_card.visible=campaign.data.finished
 	if campaign.data.finished:
 		title.get_parent().hide()
-		_status("Chapter 9 checkpoint complete. Your notebook and transcript are available.")
+		_status("Night Nine completed. Your notebook and transcript are available.")
 
 func _resume_dialogue() -> void:
 	# Resume unheard dialogue after a save during an arrival or completed interaction.
