@@ -26,6 +26,10 @@ var menu_resume: Button
 var menu_save: Button
 var menu_load: Button
 var menu_heading: Label
+var browser_storage: RefCounted
+var browser_storage_dialog: AcceptDialog
+var browser_storage_status: Label
+var browser_export: Button
 var settings_open := false
 var journal: PanelContainer
 const CASEBOOK := preload("res://ui/hypothesis_notebook.gd")
@@ -487,12 +491,73 @@ func _build_menu() -> void:
 	var guide := _label(menu_settings,"Click the ground or use WASD to walk. Press I for objects, Tab to move focus and Space to advance dialogue.",16)
 	guide.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	guide.custom_minimum_size.x = 310
+	if OS.has_feature("web"):
+		_build_browser_storage()
+		_button(box, "Browser storage", _open_browser_storage)
 	_button(box,"Credits",_open_credits)
-	_button(box,"Quit",_quit)
+	if not OS.has_feature("web"):
+		_button(box,"Quit",_quit)
 	menu.visibility_changed.connect(func():
 		settings_open = false
 		_layout_menu())
 	_layout_menu()
+
+func _build_browser_storage() -> void:
+	browser_storage = preload("res://ui/browser_storage.gd").new()
+	browser_storage.backup_selected.connect(_import_browser_backup)
+	browser_storage.status_changed.connect(_browser_storage_message)
+	browser_storage_dialog = AcceptDialog.new()
+	browser_storage_dialog.title = "Browser saves and offline storage"
+	browser_storage_dialog.get_ok_button().text = "Return"
+	root.add_child(browser_storage_dialog)
+	var box := VBoxContainer.new()
+	box.add_theme_constant_override("separation", 14)
+	browser_storage_dialog.add_child(box)
+	var explanation := _label(box, "Saves stay in this browser on this device. The game caches its resources for offline play. Export a backup before clearing site data or changing browsers.", 19)
+	explanation.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	explanation.custom_minimum_size.x = 540
+	browser_export = _button(box, "Export save backup", _export_browser_backup)
+	_button(box, "Import save backup", browser_storage.choose_backup)
+	_button(box, "Keep browser data", browser_storage.request_persistence)
+	browser_storage_status = _label(box, "", 17)
+	browser_storage_status.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	browser_storage_status.custom_minimum_size = Vector2(540, 72)
+
+func _open_browser_storage() -> void:
+	browser_export.disabled = not started and not saves.read_slot("autosave").get("ok", false) and not saves.read_slot("manual").get("ok", false)
+	browser_storage_dialog.popup_centered(Vector2i(610, 380))
+
+func _browser_storage_message(message: String) -> void:
+	browser_storage_status.text = message
+	_status(message)
+
+func _export_browser_backup() -> void:
+	var slot := "export" if started else ("autosave" if saves.read_slot("autosave").get("ok", false) else "manual")
+	if started:
+		_save(slot)
+		if not saves.last_error.is_empty():
+			_browser_storage_message("Could not export: " + saves.last_error)
+			return
+	var result: Dictionary = saves.export_slot(slot)
+	if not result.get("ok", false):
+		_browser_storage_message(result.error)
+		return
+	browser_storage.download(result.text)
+	_browser_storage_message("Backup offered for download. Keep it somewhere safe.")
+
+func _import_browser_backup(text: String) -> void:
+	if not saves.import_slot("imported", text):
+		_browser_storage_message("Could not import: " + saves.last_error)
+		return
+	if started:
+		_save("before-import")
+		if not saves.last_error.is_empty():
+			_browser_storage_message("Could not preserve current progress: " + saves.last_error)
+			return
+	if _load("imported"):
+		browser_storage_dialog.hide()
+		_save("autosave")
+		_status("Backup loaded." if saves.last_error.is_empty() else "Backup loaded, but could not save: " + saves.last_error)
 
 func _volume_control(label: String, key: String, initial: float, change: Callable) -> HSlider:
 	var row := HBoxContainer.new()

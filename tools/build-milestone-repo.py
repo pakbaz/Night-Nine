@@ -145,6 +145,7 @@ def public_project(stage):
         flags=re.M,
     )
     text = re.sub(r"^run/main_scene\.painted_desktop=.*\n", "", text, flags=re.M)
+    text = re.sub(r"^config/(?:use_custom_user_dir|custom_user_dir_name)\.web=.*\n", "", text, flags=re.M)
     save_folder = TAGS[stage].removeprefix("checkpoint/")
     text = text.replace(
         "[application]",
@@ -226,6 +227,7 @@ def public_control_files(files, stage, all_scenes):
         "ui/closing_credits.gd",
         "ui/storybook.gd",
         "ui/title_card.gd",
+        "ui/browser_storage.gd",
         "audio/campaign_score.gd",
     ]:
         copy_sources(files, name)

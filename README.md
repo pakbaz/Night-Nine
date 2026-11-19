@@ -6,7 +6,7 @@ A painted point-and-click mystery set in Bellwether. Steve Mercer hears the same
 
 ## Play
 
-For the free desktop edition, extract the Windows x64 or macOS download and open **Night Nine**. To play from source, open `game/project.godot` in Godot 4.7.2, wait for import, then press F5. From a terminal, run `godot --path game` after the first import.
+Play in a desktop browser with WebGL 2. There is no installer. To edit or test the source, open `game/project.godot` in Godot 4.7.2, wait for import, then press F5.
 
 Select **New game**. Click an object to investigate, or use **Objects** for a keyboard-accessible list. In rooms with a walkable floor, click a spot or use WASD to move. Open the notebook to review evidence, case theories and the transcript. After initial setup, you can play the full story offline.
 
@@ -14,7 +14,7 @@ At a case board, read the case notes, choose an evidence piece, then choose its 
 
 We estimate **3.5 to 5 hours for a first playthrough**. We budgeted 2 to 2½ minutes for each of the 84 stages across 32 case boards, or 168 to 210 minutes. We allowed another 42 to 90 minutes for conversations, movement, other puzzles and films. We have yet to measure first-time players.
 
-You can also play the Web edition from a desktop browser with WebGL 2. Use **Play in browser** on the published Pages site. Your browser keeps its own saves for that site. [Build or host the browser edition](PUBLISHING.md)
+Resources are cached for repeat visits and offline play after the first complete load. Updates can require another download. Saves use IndexedDB on the same browser and site address; they do not sync between devices. **Menu → Browser storage** can request persistent storage and export/import checksummed save backups. Browsers can deny persistent storage, and clearing site data still removes saves and cached files. [Build or host the browser edition](PUBLISHING.md)
 
 In the soundtrack edition, you can hear the title music and a background piece and theme for each chapter, interlude, the prologue and the epilogue. You can find the original MP3s in `game/assets/audio/music/` and edit their cues in `game/content/music.json`.
 
@@ -28,7 +28,7 @@ The private development branch includes the editable production art and audio ma
 
 For the complete native development suite, set `GODOT_BIN` to Godot 4.7.2 and run `bash tools/test-campaign.sh --render`. Use `NIGHT_NINE_QA_AUDIO_DRIVER=Dummy` when physical sound output is unavailable. The fixed version tags and chapter tags retain their original release contents.
 
-Install Godot's 4.7.2 desktop export templates from the editor for Mac and Windows builds. Choose the supplied macOS or Windows Desktop preset under **Project → Export**. From a clean checkout on macOS or Linux you can run the portable checkpoint test as follows.
+Install Godot's 4.7.2 standard editor and matching single-threaded Web export template. The only production export is **Web**. From a clean checkout on macOS or Linux you can run the portable checkpoint test as follows.
 
 ```sh
 godot --headless --path game --import

@@ -30,8 +30,7 @@ func write_slot(slot: String, state: Dictionary) -> bool:
 	if error != OK:
 		last_error = "Cannot create save folder: " + error_string(error)
 		return false
-	var payload: String = JSON.stringify(state, "", true)
-	var body: String = JSON.stringify({"format": 1, "sha256": payload.sha256_text(), "payload": payload})
+	var body: String = _encode(state)
 	if body.to_utf8_buffer().size() > MAX_BYTES:
 		last_error = "Save exceeds the size limit."
 		return false
@@ -76,6 +75,23 @@ func read_slot(slot: String) -> Dictionary:
 		return backup
 	return result
 
+func export_slot(slot: String) -> Dictionary:
+	var result := read_slot(slot)
+	if result.get("ok", false):
+		result["text"] = _encode(result.state)
+	return result
+
+func import_slot(slot: String, text: String) -> bool:
+	var result := _decode(text)
+	if not result.get("ok", false):
+		last_error = result.error
+		return false
+	return write_slot(slot, result.state)
+
+func _encode(state: Dictionary) -> String:
+	var payload := JSON.stringify(state, "", true)
+	return JSON.stringify({"format": 1, "sha256": payload.sha256_text(), "payload": payload})
+
 func _read_file(path: String) -> Dictionary:
 	var file := FileAccess.open(path, FileAccess.READ)
 	if file == null:
@@ -85,6 +101,11 @@ func _read_file(path: String) -> Dictionary:
 		return {"ok": false, "error": "Save file is too large."}
 	var text: String = file.get_as_text()
 	file.close()
+	return _decode(text)
+
+func _decode(text: String) -> Dictionary:
+	if text.to_utf8_buffer().size() > MAX_BYTES:
+		return {"ok": false, "error": "Save file is too large."}
 	var parser := JSON.new()
 	if parser.parse(text) != OK:
 		return {"ok": false, "error": "Invalid save JSON."}

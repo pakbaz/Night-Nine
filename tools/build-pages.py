@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build a static Pages site and its matching source from one public release commit."""
+"""Build an offline-capable Pages game and compact source from one Git commit."""
 import argparse
 import html
 import os
@@ -11,8 +11,27 @@ import tempfile
 import zipfile
 
 
+SOURCE_PATHS = ("game", "art", "site", "tools/build-pages.py",
+                "README.md", "PUBLISHING.md", "LICENSE", "MEDIA.md")
+
+
 def run(*args, **kwargs):
     subprocess.run([str(arg) for arg in args], check=True, **kwargs)
+
+
+def prepare_offline_cache(site):
+    worker = site / "play.service.worker.js"
+    text = worker.read_text()
+    text, count = re.subn(r"const CACHE_PREFIX = '[^']*';",
+                         "const CACHE_PREFIX = 'night-nine:' + self.registration.scope + ':';", text)
+    if count != 1 or "const FULL_CACHE = " not in text:
+        raise ValueError("Unexpected Godot service worker; cannot configure the offline cache.")
+    text = text.replace("const FULL_CACHE = ",
+                        "CACHED_FILES.push('./', 'index.html', 'cover.jpg', 'LICENSE.txt', "
+                        "'MEDIA.txt', 'THIRD-PARTY.txt');\nconst FULL_CACHE = ", 1)
+    text = text.replace("cache.put(event.request, response.clone());",
+                        "event.waitUntil(cache.put(event.request, response.clone()));")
+    worker.write_text(text)
 
 
 def build(repo, output, godot, template, source_url, archive_path):
@@ -29,8 +48,9 @@ def build(repo, output, godot, template, source_url, archive_path):
         temp = Path(directory)
         site = temp / "site"
         site.mkdir()
+        # Keep editable masters in Git, not in the size-limited Pages artifact.
         run("git", "-C", repo, "archive", "--format=zip", "--prefix=Night-Nine/",
-            "--output", site / "source.zip", "HEAD")
+            "--output", site / "source.zip", "HEAD", *SOURCE_PATHS)
         with zipfile.ZipFile(site / "source.zip") as archive:
             archive.extractall(temp)
         snapshot = temp / "Night-Nine"
@@ -56,10 +76,16 @@ def build(repo, output, godot, template, source_url, archive_path):
             raise RuntimeError("Incomplete Godot Web export.")
         size = sum(p.stat().st_size for p in core) / 2**20
         version = re.search(r'^config/version="(\d+\.\d+\.\d+)', (game / "project.godot").read_text(), re.M).group(1)
-        full_source = f"NightNine-{version}-source.zip"
         if not source_url:
             github = os.environ.get("GITHUB_REPOSITORY")
-            source_url = f"https://github.com/{github}/releases/download/v{version}/{full_source}" if github else "../" + full_source
+            if not github:
+                remote = subprocess.check_output(["git", "-C", str(repo), "remote", "get-url", "origin"], text=True).strip()
+                match = re.fullmatch(r"(?:https://github\.com/|git@github\.com:)([^/]+/[^/]+?)(?:\.git)?", remote)
+                if not match:
+                    raise ValueError("Set --source-url to the matching complete source download.")
+                github = match.group(1)
+            commit = subprocess.check_output(["git", "-C", str(repo), "rev-parse", "HEAD"], text=True).strip()
+            source_url = f"https://github.com/{github}/archive/{commit}.zip"
         page = (snapshot / "site/index.html").read_text().replace("@@SIZE@@", str(round(size)))
         (site / "index.html").write_text(page.replace("@@EDITABLE_SOURCE@@", html.escape(source_url, quote=True)))
         shutil.copyfile(snapshot / "art/night-nine.jpg", site / "cover.jpg")
@@ -67,6 +93,9 @@ def build(repo, output, godot, template, source_url, archive_path):
         shutil.copyfile(snapshot / "MEDIA.md", site / "MEDIA.txt")
         shutil.copyfile(game / "LICENSES.txt", site / "THIRD-PARTY.txt")
         (site / ".nojekyll").touch()
+        prepare_offline_cache(site)
+        if sum(p.stat().st_size for p in site.iterdir() if p.is_file()) >= 1024**3:
+            raise ValueError("The Pages site exceeds the 1 GiB site limit.")
         if archive_path:
             archive_path.parent.mkdir(parents=True, exist_ok=True)
             with tempfile.TemporaryDirectory(dir=archive_path.parent) as zip_dir:
@@ -80,8 +109,10 @@ def build(repo, output, godot, template, source_url, archive_path):
                         "    python3 -m http.server 8000 --bind 127.0.0.1\n\n"
                         "On Windows you can use py in place of python3. Open http://localhost:8000/Night-Nine/ "
                         "and select Play in browser. Keep the same site address to continue your saved game.\n\n"
-                        f"For a local copy of the full source and masters, put {full_source} beside the extracted "
-                        "Night-Nine folder. You can also open the compact Godot checkout in Night-Nine/source.zip.\n")
+                        "The game caches resources after loading. Browser saves stay on the same origin. "
+                        "Use Menu > Browser storage to export/import backups or request persistent storage.\n\n"
+                        f"Complete source and masters: {source_url}\n"
+                        "You can also open the compact Godot checkout in Night-Nine/source.zip.\n")
                 with zipfile.ZipFile(packaged) as archive:
                     if archive.testzip():
                         raise RuntimeError("The portable browser archive failed its integrity check.")
