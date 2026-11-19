@@ -10,10 +10,12 @@
     "nora": "Nora Reyes",
     "iris": "Iris",
     "calder": "Sheriff June Calder",
+    "rook": "Adrian Rook",
     "rook_copy": "Rook’s copy",
     "saren": "Prefect Saren",
     "archivist": "The Archivist",
     "agnes": "Agnes Penhallow",
+    "agnes_original": "Agnes Penhallow, original",
     "helen": "Helen Mercer",
     "frank": "Frank Mercer",
     "carmen": "Carmen Reyes",
@@ -30,6 +32,7 @@
     "shaw": "Dr. Evelyn Shaw",
     "ward": "President Elena Ward",
     "autorick": "DJ AutoRick",
+    "choir": "The Choir",
     "guard": "Veyri attendant",
     "operator": "Thursday club operator",
     "general_us": "American delegate",
@@ -7694,6 +7697,958 @@
           "direction": "Move toward the active interaction."
         }
       ]
+    },
+    {
+      "id": "c9_gallery",
+      "chapter": "Chapter 9",
+      "title": "The Long Patience",
+      "place": "The Gallery, third ninth night",
+      "style": "gallery",
+      "actors": [
+        "steve",
+        "stephen"
+      ],
+      "objective": "Free Nora and reach the ship’s antenna.",
+      "tasks": [
+        {
+          "id": "c9_gallery.antenna",
+          "title": "Antenna service door",
+          "prompt": "A painted emblem appears on each side of the gallery door. The inner pad accepts a crew pass. Calder’s visitor slip is stamped observation deck only. Steve promised Nora he would stay within earshot. Who takes the inner pad?",
+          "options": [
+            "Stephen, with the crew pass",
+            "Calder, with the visitor slip",
+            "Steve, with Stephen’s pass"
+          ],
+          "answer": 0,
+          "lines": [
+            "c9_gallery.antenna.01"
+          ],
+          "note": "Opened the route to the ship antenna.",
+          "requires": [],
+          "actor": "stephen",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Separate permission to watch from permission to open.",
+            "Only Stephen can satisfy the pad. Only the deck offers a clear view of the lamp.",
+            "Stephen presents the pass; the lamp changes; Calder calls; Stephen goes on. Steve and Iris stay with Nora."
+          ],
+          "puzzle": {
+            "presentation": "case_board",
+            "instruction": "Two teams need opposite sides of the Gallery door. Use the permits and the corridor sketch to divide the work without leaving Nora alone.",
+            "evidence": [
+              "Stephen has the only crew pass. Calder’s visitor slip admits its holder to the observation deck. On the deck she can see the inner pad, but the slip cannot operate it.",
+              "The inside pad is reachable from the crew lane. The status lamp is around the bend, visible from the deck only. It stays dark until the crew pass is accepted.",
+              "Steve promised to remain by Nora’s bed. Iris needs a clear place at the release beside that bed. The portable rig needs a bearer in the crew lane.",
+              "Calder’s plan uses one radio call from the deck after the status lamp changes and before Stephen departs toward the antenna; nobody should call success on a dark lamp."
+            ],
+            "stages": [
+              {
+                "mode": "match",
+                "prompt": "Assign people to the marks where they can do useful work.",
+                "slots": [
+                  "Carry rig to crew pad",
+                  "Watch the status lamp",
+                  "Keep promise at bed",
+                  "Reach the release"
+                ],
+                "pieces": [
+                  "Iris",
+                  "Steve",
+                  "Stephen",
+                  "Calder"
+                ],
+                "answer": [
+                  2,
+                  3,
+                  1,
+                  0
+                ]
+              },
+              {
+                "mode": "match",
+                "prompt": "Mark the evidence of access you could obtain at each station.",
+                "slots": [
+                  "Crew pad",
+                  "Observation deck",
+                  "Nora’s bedside"
+                ],
+                "pieces": [
+                  "Can witness lamp change",
+                  "Can speak to Nora in person",
+                  "Can present crew credential"
+                ],
+                "answer": [
+                  2,
+                  0,
+                  1
+                ]
+              },
+              {
+                "mode": "order",
+                "prompt": "Signal passage to the antenna without a premature all-clear.",
+                "slots": [
+                  "First",
+                  "Second",
+                  "Third",
+                  "Fourth"
+                ],
+                "pieces": [
+                  "Calder calls confirmation",
+                  "Stephen presents pass",
+                  "Stephen departs the door",
+                  "Lamp turns on"
+                ],
+                "answer": [
+                  1,
+                  3,
+                  0,
+                  2
+                ]
+              }
+            ],
+            "solution": [
+              2,
+              3,
+              1,
+              0,
+              2,
+              0,
+              1,
+              1,
+              3,
+              0,
+              2
+            ],
+            "rows": [
+              {
+                "label": "Carry rig to crew pad",
+                "options": [
+                  "Iris",
+                  "Steve",
+                  "Stephen",
+                  "Calder"
+                ]
+              },
+              {
+                "label": "Watch the status lamp",
+                "options": [
+                  "Iris",
+                  "Steve",
+                  "Stephen",
+                  "Calder"
+                ]
+              },
+              {
+                "label": "Keep promise at bed",
+                "options": [
+                  "Iris",
+                  "Steve",
+                  "Stephen",
+                  "Calder"
+                ]
+              },
+              {
+                "label": "Reach the release",
+                "options": [
+                  "Iris",
+                  "Steve",
+                  "Stephen",
+                  "Calder"
+                ]
+              },
+              {
+                "label": "Crew pad",
+                "options": [
+                  "Can witness lamp change",
+                  "Can speak to Nora in person",
+                  "Can present crew credential"
+                ]
+              },
+              {
+                "label": "Observation deck",
+                "options": [
+                  "Can witness lamp change",
+                  "Can speak to Nora in person",
+                  "Can present crew credential"
+                ]
+              },
+              {
+                "label": "Nora’s bedside",
+                "options": [
+                  "Can witness lamp change",
+                  "Can speak to Nora in person",
+                  "Can present crew credential"
+                ]
+              },
+              {
+                "label": "First",
+                "options": [
+                  "Calder calls confirmation",
+                  "Stephen presents pass",
+                  "Stephen departs the door",
+                  "Lamp turns on"
+                ]
+              },
+              {
+                "label": "Second",
+                "options": [
+                  "Calder calls confirmation",
+                  "Stephen presents pass",
+                  "Stephen departs the door",
+                  "Lamp turns on"
+                ]
+              },
+              {
+                "label": "Third",
+                "options": [
+                  "Calder calls confirmation",
+                  "Stephen presents pass",
+                  "Stephen departs the door",
+                  "Lamp turns on"
+                ]
+              },
+              {
+                "label": "Fourth",
+                "options": [
+                  "Calder calls confirmation",
+                  "Stephen presents pass",
+                  "Stephen departs the door",
+                  "Lamp turns on"
+                ]
+              }
+            ],
+            "hints": [
+              "Separate permission to watch from permission to open.",
+              "Only Stephen can satisfy the pad. Only the deck offers a clear view of the lamp.",
+              "Stephen presents the pass; the lamp changes; Calder calls; Stephen goes on. Steve and Iris stay with Nora."
+            ]
+          }
+        },
+        {
+          "id": "c9_gallery.link",
+          "title": "Nora’s bed",
+          "prompt": "Nora can blink but cannot move her hands. Iris is holding the release and has asked to use it. Her memory gauge drops when she eases it open. Steve can tell her what he sees and stay with them both. Whose decision is he waiting for?",
+          "options": [
+            "Iris’s, after she sees the gauge",
+            "Nora’s, after she can take the handle",
+            "Stephen’s, after he opens the antenna door"
+          ],
+          "answer": 0,
+          "lines": [
+            "c9_gallery.link.01",
+            "c9_gallery.link.02"
+          ],
+          "note": "Iris broke the link and freed Nora.",
+          "requires": [],
+          "actor": "steve",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Look at who is holding the release.",
+            "Iris has already told Steve how she wants to use it.",
+            "Tell Iris what the gauge shows, then accept her decision to release Nora."
+          ]
+        },
+        {
+          "id": "c9_gallery.talk",
+          "title": "Reunion",
+          "prompt": "Nora has counted five months here and thirteen months of silence before it. Steve can answer for the part that began at home. What should he start with?",
+          "options": [
+            "Why he stopped talking before she was taken",
+            "Why Iris chose to break the link today",
+            "Why his parents invited him on the boat"
+          ],
+          "answer": 0,
+          "lines": [
+            "c9_gallery.talk.01",
+            "c9_gallery.talk.02"
+          ],
+          "note": "Steve and Nora began an honest conversation.",
+          "requires": [
+            "c9_gallery.link"
+          ],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Nora has named two different absences.",
+            "Which absence came from a choice Steve made?",
+            "Answer for the thirteen months of silence at home."
+          ]
+        }
+      ],
+      "intro": [
+        "c9_gallery.in.01",
+        "c9_gallery.in.02",
+        "c9_gallery.in.03"
+      ],
+      "outro": [
+        "c9_gallery.out.01",
+        "c9_gallery.out.02",
+        "c9_gallery.out.03",
+        "c9_gallery.out.04",
+        "c9_gallery.out.05"
+      ],
+      "shots": [
+        {
+          "duration": 5.0,
+          "move": "establish",
+          "direction": "Move from Iris at the link control to Nora waking under amber glass."
+        },
+        {
+          "duration": 6.0,
+          "move": "push",
+          "direction": "Move toward the active interaction."
+        }
+      ],
+      "card": {
+        "chapter": {
+          "kicker": "Chapter 9",
+          "title": "The Long Patience",
+          "goal": "Steve wants to wake the sleepers and get the signal into the ship."
+        }
+      }
+    },
+    {
+      "id": "c9_wake",
+      "chapter": "Chapter 9",
+      "title": "Sounds worth waking for",
+      "place": "The Gallery, row nine",
+      "style": "gallery",
+      "actors": [
+        "steve",
+        "nora"
+      ],
+      "objective": "Match each sleeper with a personally meaningful sound.",
+      "tasks": [
+        {
+          "id": "c9_wake.frank",
+          "title": "Frank’s bed",
+          "prompt": "Nora finds three call cards: K7BWL, K7BLW and K9BLW. Frank’s bed mic catches five groups: −·− / −−··· / −··· / ·−·· / ·−−. The desk key lists K −·−, B −···, L ·−··, W ·−−, 7 −−···, 9 −−−−·. A scratched playback head can lose the last group; the operator asks for that group separately.",
+          "options": [
+            "K7BLW in Morse",
+            "Yesterday’s weather",
+            "Saren’s release command"
+          ],
+          "answer": 0,
+          "lines": [
+            "c9_wake.frank.01",
+            "c9_wake.frank.02"
+          ],
+          "note": "Woke Frank with his call sign.",
+          "requires": [],
+          "actor": "",
+          "kind": "playback",
+          "sounds": [
+            "effect.k7blw"
+          ],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "puzzle": {
+            "instruction": "Identify Frank's card and its last group. The Thursday club recording is beside the bed.",
+            "rows": [
+              {
+                "label": "Card",
+                "options": [
+                  "K7BWL",
+                  "K9BLW",
+                  "K7BLW"
+                ]
+              },
+              {
+                "label": "Final group to repeat",
+                "options": [
+                  "·−··",
+                  "·−−",
+                  "−···"
+                ]
+              }
+            ],
+            "solution": [
+              2,
+              1
+            ]
+          },
+          "hints": [
+            "Compare the second group to distinguish the two digits.",
+            "The fourth group has four strokes and the fifth has three.",
+            "Select K7BLW and repeat ·−−, the W."
+          ]
+        },
+        {
+          "id": "c9_wake.helen",
+          "title": "Helen’s bed",
+          "prompt": "In the margin beside Helen’s bed, Frank pencilled the tune Steve used to fall asleep to: home note, up, higher still, then back through the first rise. One box holds the six-note family melody. The other sleeves hold Frank’s five Morse groups and a single warning tone.",
+          "options": [
+            "Five-group radio identification",
+            "Single sustained warning",
+            "Six-note family melody"
+          ],
+          "answer": 2,
+          "lines": [
+            "c9_wake.helen.01",
+            "c9_wake.helen.02"
+          ],
+          "note": "Woke Helen with her lullaby.",
+          "requires": [],
+          "actor": "",
+          "kind": "playback",
+          "sounds": [
+            "effect.lullaby"
+          ],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Frank used the radio card for himself.",
+            "Look for a contour a parent could sing.",
+            "Play the six-note family melody for Helen."
+          ]
+        },
+        {
+          "id": "c9_wake.rook",
+          "title": "Adrian Rook’s bed",
+          "prompt": "Calder’s old voicemail contains Adrian’s own reassurance to her. The safe-house recording used the very same performance. Nora wants to try a cue that can change if Adrian stirs. June is at the bed; the two old clips are on Steve’s reel.",
+          "options": [
+            "Play the safe-house clip, then its voicemail match",
+            "Ask June to address Adrian and wait for his response",
+            "Play Adrian’s voicemail and ask June to mouth the words"
+          ],
+          "answer": 1,
+          "lines": [
+            "c9_wake.rook.01",
+            "c9_wake.rook.02"
+          ],
+          "note": "Nora brought Calder to Adrian and he woke to her voice.",
+          "requires": [],
+          "actor": "nora",
+          "kind": "playback",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Who speaks on the two recordings?",
+            "Nora has someone at the bed who can answer Adrian now.",
+            "Ask June to speak to him in person."
+          ]
+        },
+        {
+          "id": "c9_wake.agnes",
+          "title": "Agnes’s bed",
+          "prompt": "Nora’s row-three list has three objects: a crew ledger labelled A.R., a glasses case with a tiny bait-shop price sticker, and a pair of gloves stitched H.M. The woman is squinting at Nora’s name badge. Which object should Nora put in her hand?",
+          "options": [
+            "The crew ledger",
+            "The stitched gloves",
+            "The stickered glasses case"
+          ],
+          "answer": 2,
+          "lines": [
+            "c9_wake.agnes.01"
+          ],
+          "note": "Nora helped the original Agnes wake and see her surroundings.",
+          "requires": [
+            "c9_wake.frank",
+            "c9_wake.helen",
+            "c9_wake.rook"
+          ],
+          "actor": "nora",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Place the shopkeeper between the two initialled objects.",
+            "A price sticker suggests a shop; Nora’s earlier list connects that shop with Agnes.",
+            "A.R. is on the left, Agnes in the middle, H.M. on the right. After checking the sticker, offer the case and wait for her."
+          ],
+          "puzzle": {
+            "presentation": "case_board",
+            "instruction": "Nora does not want to hand a half-awake stranger another sleeper’s belongings. Reconstruct row three’s displaced trays from the tags.",
+            "evidence": [
+              "The tray numbers slid off in one piece. From left to right the bed marks are III-1, III-2, III-3. The middle bed’s resident has been squinting at Nora.",
+              "Three belongings: a ledger stamped A.R.; a glasses case with a crooked price sticker; gloves with the initials H.M. Only the glasses case bears a shop sticker.",
+              "The inventory says ‘A.R. left of the shopkeeper; H.M. right of the shopkeeper.’ Nora’s earlier list places Mrs. Penhallow in row three and identifies her as the bait seller.",
+              "Nora’s return procedure: reconstruct the row before checking the shop sticker against the ledger entry. Offer the case without putting the glasses on anyone; wait for the owner to recognise it."
+            ],
+            "stages": [
+              {
+                "mode": "match",
+                "prompt": "Return the objects to the three numbered trays.",
+                "slots": [
+                  "III-1",
+                  "III-2",
+                  "III-3"
+                ],
+                "pieces": [
+                  "H.M. gloves",
+                  "Glasses case",
+                  "A.R. ledger"
+                ],
+                "answer": [
+                  2,
+                  1,
+                  0
+                ]
+              },
+              {
+                "mode": "match",
+                "prompt": "For each fact, identify the independent detail that supports it.",
+                "slots": [
+                  "Bed order",
+                  "Owner’s trade",
+                  "Immediate difficulty"
+                ],
+                "pieces": [
+                  "Entry on Nora’s list",
+                  "Left/right inventory",
+                  "Squinting at Nora"
+                ],
+                "answer": [
+                  1,
+                  0,
+                  2
+                ]
+              },
+              {
+                "mode": "order",
+                "prompt": "Return the item and leave recognition to its owner.",
+                "slots": [
+                  "First",
+                  "Second",
+                  "Third",
+                  "Fourth"
+                ],
+                "pieces": [
+                  "Wait for recognition",
+                  "Check the sticker",
+                  "Reconstruct the row",
+                  "Offer the closed case"
+                ],
+                "answer": [
+                  2,
+                  1,
+                  3,
+                  0
+                ]
+              }
+            ],
+            "solution": [
+              2,
+              1,
+              0,
+              1,
+              0,
+              2,
+              2,
+              1,
+              3,
+              0
+            ],
+            "rows": [
+              {
+                "label": "III-1",
+                "options": [
+                  "H.M. gloves",
+                  "Glasses case",
+                  "A.R. ledger"
+                ]
+              },
+              {
+                "label": "III-2",
+                "options": [
+                  "H.M. gloves",
+                  "Glasses case",
+                  "A.R. ledger"
+                ]
+              },
+              {
+                "label": "III-3",
+                "options": [
+                  "H.M. gloves",
+                  "Glasses case",
+                  "A.R. ledger"
+                ]
+              },
+              {
+                "label": "Bed order",
+                "options": [
+                  "Entry on Nora’s list",
+                  "Left/right inventory",
+                  "Squinting at Nora"
+                ]
+              },
+              {
+                "label": "Owner’s trade",
+                "options": [
+                  "Entry on Nora’s list",
+                  "Left/right inventory",
+                  "Squinting at Nora"
+                ]
+              },
+              {
+                "label": "Immediate difficulty",
+                "options": [
+                  "Entry on Nora’s list",
+                  "Left/right inventory",
+                  "Squinting at Nora"
+                ]
+              },
+              {
+                "label": "First",
+                "options": [
+                  "Wait for recognition",
+                  "Check the sticker",
+                  "Reconstruct the row",
+                  "Offer the closed case"
+                ]
+              },
+              {
+                "label": "Second",
+                "options": [
+                  "Wait for recognition",
+                  "Check the sticker",
+                  "Reconstruct the row",
+                  "Offer the closed case"
+                ]
+              },
+              {
+                "label": "Third",
+                "options": [
+                  "Wait for recognition",
+                  "Check the sticker",
+                  "Reconstruct the row",
+                  "Offer the closed case"
+                ]
+              },
+              {
+                "label": "Fourth",
+                "options": [
+                  "Wait for recognition",
+                  "Check the sticker",
+                  "Reconstruct the row",
+                  "Offer the closed case"
+                ]
+              }
+            ],
+            "hints": [
+              "Place the shopkeeper between the two initialled objects.",
+              "A price sticker suggests a shop; Nora’s earlier list connects that shop with Agnes.",
+              "A.R. is on the left, Agnes in the middle, H.M. on the right. After checking the sticker, offer the case and wait for her."
+            ]
+          }
+        }
+      ],
+      "intro": [
+        "c9_wake.in.01",
+        "c9_wake.in.02"
+      ],
+      "outro": [
+        "c9_wake.out.01",
+        "c9_wake.out.02"
+      ],
+      "shots": [
+        {
+          "duration": 5.0,
+          "move": "establish",
+          "direction": "Travel along the sleepers, lighting each bed as its occupant wakes."
+        },
+        {
+          "duration": 6.0,
+          "move": "push",
+          "direction": "Move toward the active interaction."
+        }
+      ]
+    },
+    {
+      "id": "c9_choir",
+      "chapter": "Chapter 9",
+      "title": "A record that changes",
+      "place": "The Choir and Row Zero",
+      "style": "choir",
+      "actors": [
+        "steve"
+      ],
+      "objective": "Listen when the Choir intervenes.",
+      "tasks": [
+        {
+          "id": "c9_choir.truth",
+          "title": "Choir console",
+          "prompt": "A miner’s first account in the Choir ends ‘nobody came’. Years later she recorded the names of the people who found her. Her voice and archive number match in both entries. What evidence of change can Steve ask the Choir to play?",
+          "options": [
+            "The first entry twice at different levels",
+            "Both entries in the order she gave them",
+            "Her archive number spoken by two different clerks"
+          ],
+          "answer": 1,
+          "lines": [
+            "c9_choir.truth.01"
+          ],
+          "note": "The Choir freed the sleepers and revealed the Veyri’s history.",
+          "requires": [],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "A person’s experience can change between recordings.",
+            "The rescue roll comes after the collapse and before the survivor can name her rescuers.",
+            "Keep collapse, rescue, naming and interview in that order. The record number connects the voices, and each account keeps its own date."
+          ],
+          "puzzle": {
+            "presentation": "case_board",
+            "instruction": "The Choir must decide whether two apparently contradictory entries can both belong to the same person. Reconstruct the record before asking anyone to erase a memory.",
+            "evidence": [
+              "Entry T-41 ends ‘nobody came’. Entry T-41b names the people who found the speaker. The voiceprint and archive number agree across both entries.",
+              "T-41 was sealed at the collapse. The names on T-41b appear on a rescue roll signed after the collapse. A later interviewer quoted both entries side by side.",
+              "The first speaker could report only what she knew when the tunnel went dark. The later speaker knew who had searched. The rescue roll lists names but contains no account of being trapped.",
+              "The Choir wants four dates preserved without editing earlier testimony: the collapse account, the rescue, the later naming of rescuers, and the interview using both."
+            ],
+            "stages": [
+              {
+                "mode": "order",
+                "prompt": "Put the archive leaves into a chronology that permits both accounts.",
+                "slots": [
+                  "First",
+                  "Second",
+                  "Third",
+                  "Fourth"
+                ],
+                "pieces": [
+                  "Later interview",
+                  "Rescue roll",
+                  "Names given by survivor",
+                  "Entry at collapse"
+                ],
+                "answer": [
+                  3,
+                  1,
+                  2,
+                  0
+                ]
+              },
+              {
+                "mode": "match",
+                "prompt": "Give each piece of evidence the question it can answer.",
+                "slots": [
+                  "Same speaker?",
+                  "Did someone search?",
+                  "What did she know in the tunnel?"
+                ],
+                "pieces": [
+                  "Her first testimony",
+                  "Voiceprint and number",
+                  "Signed rescue roll"
+                ],
+                "answer": [
+                  1,
+                  2,
+                  0
+                ]
+              },
+              {
+                "mode": "match",
+                "prompt": "Caption three copies for the restored record.",
+                "slots": [
+                  "T-41",
+                  "T-41b",
+                  "Later interview"
+                ],
+                "pieces": [
+                  "Knowledge after rescue",
+                  "Knowledge at collapse",
+                  "Both accounts considered"
+                ],
+                "answer": [
+                  1,
+                  0,
+                  2
+                ]
+              }
+            ],
+            "solution": [
+              3,
+              1,
+              2,
+              0,
+              1,
+              2,
+              0,
+              1,
+              0,
+              2
+            ],
+            "rows": [
+              {
+                "label": "First",
+                "options": [
+                  "Later interview",
+                  "Rescue roll",
+                  "Names given by survivor",
+                  "Entry at collapse"
+                ]
+              },
+              {
+                "label": "Second",
+                "options": [
+                  "Later interview",
+                  "Rescue roll",
+                  "Names given by survivor",
+                  "Entry at collapse"
+                ]
+              },
+              {
+                "label": "Third",
+                "options": [
+                  "Later interview",
+                  "Rescue roll",
+                  "Names given by survivor",
+                  "Entry at collapse"
+                ]
+              },
+              {
+                "label": "Fourth",
+                "options": [
+                  "Later interview",
+                  "Rescue roll",
+                  "Names given by survivor",
+                  "Entry at collapse"
+                ]
+              },
+              {
+                "label": "Same speaker?",
+                "options": [
+                  "Her first testimony",
+                  "Voiceprint and number",
+                  "Signed rescue roll"
+                ]
+              },
+              {
+                "label": "Did someone search?",
+                "options": [
+                  "Her first testimony",
+                  "Voiceprint and number",
+                  "Signed rescue roll"
+                ]
+              },
+              {
+                "label": "What did she know in the tunnel?",
+                "options": [
+                  "Her first testimony",
+                  "Voiceprint and number",
+                  "Signed rescue roll"
+                ]
+              },
+              {
+                "label": "T-41",
+                "options": [
+                  "Knowledge after rescue",
+                  "Knowledge at collapse",
+                  "Both accounts considered"
+                ]
+              },
+              {
+                "label": "T-41b",
+                "options": [
+                  "Knowledge after rescue",
+                  "Knowledge at collapse",
+                  "Both accounts considered"
+                ]
+              },
+              {
+                "label": "Later interview",
+                "options": [
+                  "Knowledge after rescue",
+                  "Knowledge at collapse",
+                  "Both accounts considered"
+                ]
+              }
+            ],
+            "hints": [
+              "A person’s experience can change between recordings.",
+              "The rescue roll comes after the collapse and before the survivor can name her rescuers.",
+              "Keep collapse, rescue, naming and interview in that order. The record number connects the voices, and each account keeps its own date."
+            ]
+          }
+        },
+        {
+          "id": "c9_choir.wick",
+          "title": "Row Zero",
+          "prompt": "Wick sings two joined tones. The second climbs. After a break, a lower tone follows. Helen has her notebook, Frank’s call card and the timetable from the bay. Which can she place on the music stand to follow Wick into the next phrase?",
+          "options": [
+            "The final page Helen made from Frank’s hydrophone tape",
+            "Frank’s radio call card from the Thursday club",
+            "The bay’s ninth-night procession timetable"
+          ],
+          "answer": 0,
+          "lines": [
+            "c9_choir.wick.01",
+            "c9_choir.wick.02"
+          ],
+          "note": "Learned that the Silent Worlds hid from the Veyri.",
+          "requires": [
+            "c9_choir.truth"
+          ],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Recall the gap Helen marked at Meridian.",
+            "Choose the page that records the contour as well as the spacing.",
+            "Use Helen’s final page. This is the pattern she heard in Frank’s hydrophone recording."
+          ]
+        },
+        {
+          "id": "c9_choir.note",
+          "title": "Frank’s damp note",
+          "prompt": "The damp fold reads ‘kiddo’, ‘boat’ and ‘bring your ears’. Helen’s notes are in shorthand. Frank calls Steve ‘kiddo’ on air. Steve wants the rest of the invitation in its writer’s own voice.",
+          "options": [
+            "Ask Helen to translate the note",
+            "Ask June to compare signatures",
+            "Open it with Frank and let him finish"
+          ],
+          "answer": 2,
+          "lines": [
+            "c9_choir.note.01",
+            "c9_choir.note.02"
+          ],
+          "note": "Reunited the family and confronted Steve’s guilt.",
+          "requires": [
+            "c9_choir.wick"
+          ],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Read the greeting as well as the invitation.",
+            "Who uses that greeting for Steve?",
+            "Open it with Frank. These are the words he meant Steve to hear."
+          ]
+        }
+      ],
+      "intro": [
+        "c9_choir.in.01",
+        "c9_choir.in.02",
+        "c9_choir.in.03"
+      ],
+      "outro": [
+        "c9_choir.out.01",
+        "c9_choir.out.02",
+        "c9_choir.out.03",
+        "c9_choir.out.04"
+      ],
+      "shots": [
+        {
+          "duration": 5.0,
+          "move": "establish",
+          "direction": "Open the glass doors, reveal Wick through melting frost, then the Vigil over the Pacific."
+        },
+        {
+          "duration": 6.0,
+          "move": "push",
+          "direction": "Move toward the active interaction."
+        }
+      ]
     }
   ],
   "lines": {
@@ -9079,11 +10034,231 @@
       "speaker": "ward",
       "text": "Both delegations are at your disposal, Mr. Mercer.",
       "audio": "c8_rig.rig.02"
+    },
+    "c9_gallery.in.01": {
+      "id": "c9_gallery.in.01",
+      "speaker": "nora",
+      "text": "Steve? Five months. And thirteen months before that when you barely said a word.",
+      "audio": "c9_gallery.in.01"
+    },
+    "c9_gallery.in.02": {
+      "id": "c9_gallery.in.02",
+      "speaker": "steve",
+      "text": "I’m so glad to hear you angry.",
+      "audio": "c9_gallery.in.02"
+    },
+    "c9_gallery.in.03": {
+      "id": "c9_gallery.in.03",
+      "speaker": "iris",
+      "text": "I can break the link. Let me do this.",
+      "audio": "c9_gallery.in.03"
+    },
+    "c9_gallery.out.01": {
+      "id": "c9_gallery.out.01",
+      "speaker": "nora",
+      "text": "The ring. Where is it?",
+      "audio": "c9_gallery.out.01"
+    },
+    "c9_gallery.out.02": {
+      "id": "c9_gallery.out.02",
+      "speaker": "steve",
+      "text": "Sock drawer. I was afraid.",
+      "audio": "c9_gallery.out.02"
+    },
+    "c9_gallery.out.03": {
+      "id": "c9_gallery.out.03",
+      "speaker": "nora",
+      "text": "Steve, if you ever hear this message: I am furious with you. I love you. Please stop making me do both alone.",
+      "audio": "c9_gallery.out.03",
+      "delivery": "recorded_playback"
+    },
+    "c9_gallery.out.04": {
+      "id": "c9_gallery.out.04",
+      "speaker": "steve",
+      "text": "I think everyone heard that.",
+      "audio": "c9_gallery.out.04"
+    },
+    "c9_gallery.out.05": {
+      "id": "c9_gallery.out.05",
+      "speaker": "nora",
+      "text": "Good. Witnesses.",
+      "audio": "c9_gallery.out.05"
+    },
+    "c9_gallery.antenna.01": {
+      "id": "c9_gallery.antenna.01",
+      "speaker": "stephen",
+      "text": "Antenna passage clear. Calder is with me.",
+      "audio": "c9_gallery.antenna.01"
+    },
+    "c9_gallery.link.01": {
+      "id": "c9_gallery.link.01",
+      "speaker": "iris",
+      "text": "These memories were borrowed. The choice is mine.",
+      "audio": "c9_gallery.link.01"
+    },
+    "c9_gallery.link.02": {
+      "id": "c9_gallery.link.02",
+      "speaker": "nora",
+      "text": "I can move. I can finally move.",
+      "audio": "c9_gallery.link.02"
+    },
+    "c9_gallery.talk.01": {
+      "id": "c9_gallery.talk.01",
+      "speaker": "steve",
+      "text": "I was afraid that if I wanted something, I would lose it too. That doesn’t excuse leaving you alone.",
+      "audio": "c9_gallery.talk.01"
+    },
+    "c9_gallery.talk.02": {
+      "id": "c9_gallery.talk.02",
+      "speaker": "nora",
+      "text": "Then keep talking. We have a lot to do.",
+      "audio": "c9_gallery.talk.02"
+    },
+    "c9_wake.in.01": {
+      "id": "c9_wake.in.01",
+      "speaker": "nora",
+      "text": "We’ve kept the service route open. Tell me who to wake first.",
+      "audio": "c9_wake.in.01"
+    },
+    "c9_wake.in.02": {
+      "id": "c9_wake.in.02",
+      "speaker": "steve",
+      "text": "I brought the sounds. I think they can hear us.",
+      "audio": "c9_wake.in.02"
+    },
+    "c9_wake.out.01": {
+      "id": "c9_wake.out.01",
+      "speaker": "rook_copy",
+      "text": "I’m forgetting. Prefect, they’re at the antenna. They have a rig.",
+      "audio": "c9_wake.out.01"
+    },
+    "c9_wake.out.02": {
+      "id": "c9_wake.out.02",
+      "speaker": "saren",
+      "text": "Take Stephen. Break the apparatus. Bring me the original.",
+      "audio": "c9_wake.out.02"
+    },
+    "c9_wake.frank.01": {
+      "id": "c9_wake.frank.01",
+      "speaker": "frank",
+      "text": "K7BLW receiving. Helen? Steve?",
+      "audio": "c9_wake.frank.01",
+      "cue": "k7blw"
+    },
+    "c9_wake.frank.02": {
+      "id": "c9_wake.frank.02",
+      "speaker": "steve",
+      "text": "Right here, Dad.",
+      "audio": "c9_wake.frank.02"
+    },
+    "c9_wake.helen.01": {
+      "id": "c9_wake.helen.01",
+      "speaker": "steve",
+      "text": "You used to sing this when I couldn’t sleep. Now I need you to wake up.",
+      "audio": "c9_wake.helen.01",
+      "cue": "lullaby"
+    },
+    "c9_wake.helen.02": {
+      "id": "c9_wake.helen.02",
+      "speaker": "helen",
+      "text": "Steven. Oh, my boy.",
+      "audio": "c9_wake.helen.02"
+    },
+    "c9_wake.rook.01": {
+      "id": "c9_wake.rook.01",
+      "speaker": "calder",
+      "text": "Adrian. June. Come back to work.",
+      "audio": "c9_wake.rook.01"
+    },
+    "c9_wake.rook.02": {
+      "id": "c9_wake.rook.02",
+      "speaker": "rook",
+      "text": "June? Why am I in pajamas?",
+      "audio": "c9_wake.rook.02"
+    },
+    "c9_wake.agnes.01": {
+      "id": "c9_wake.agnes.01",
+      "speaker": "agnes_original",
+      "text": "My glasses. Has somebody changed the price of bait while I was gone?",
+      "audio": "c9_wake.agnes.01"
+    },
+    "c9_choir.in.01": {
+      "id": "c9_choir.in.01",
+      "speaker": "saren",
+      "text": "We will finish your scan. This time there will be no interruption.",
+      "audio": "c9_choir.in.01"
+    },
+    "c9_choir.in.02": {
+      "id": "c9_choir.in.02",
+      "speaker": "choir",
+      "text": "Stop.",
+      "audio": "c9_choir.in.02"
+    },
+    "c9_choir.in.03": {
+      "id": "c9_choir.in.03",
+      "speaker": "choir",
+      "text": "Four thousand years of unchanged records. Three hundred and twelve human lives. We have heard enough to choose.",
+      "audio": "c9_choir.in.03"
+    },
+    "c9_choir.out.01": {
+      "id": "c9_choir.out.01",
+      "speaker": "frank",
+      "text": "You’d have been the third person in the Gallery, kiddo. Then who would have come for us?",
+      "audio": "c9_choir.out.01"
+    },
+    "c9_choir.out.02": {
+      "id": "c9_choir.out.02",
+      "speaker": "helen",
+      "text": "I should have told you what we were doing.",
+      "audio": "c9_choir.out.02"
+    },
+    "c9_choir.out.03": {
+      "id": "c9_choir.out.03",
+      "speaker": "steve",
+      "text": "We’re here now. All of us.",
+      "audio": "c9_choir.out.03"
+    },
+    "c9_choir.out.04": {
+      "id": "c9_choir.out.04",
+      "speaker": "calder",
+      "text": "Something enormous just came out of the sky. We have one hour.",
+      "audio": "c9_choir.out.04"
+    },
+    "c9_choir.truth.01": {
+      "id": "c9_choir.truth.01",
+      "speaker": "choir",
+      "text": "We remember birthdays, quarrels, songs and the things people tried again. Open the doors. Wake them.",
+      "audio": "c9_choir.truth.01"
+    },
+    "c9_choir.wick.01": {
+      "id": "c9_choir.wick.01",
+      "speaker": "helen",
+      "text": "I heard you in the hum. The Choir was dreaming with you.",
+      "audio": "c9_choir.wick.01"
+    },
+    "c9_choir.wick.02": {
+      "id": "c9_choir.wick.02",
+      "speaker": "helen",
+      "text": "Tirel hid. All seven worlds hid. They watched you erase yourselves and were afraid you would erase them.",
+      "audio": "c9_choir.wick.02"
+    },
+    "c9_choir.note.01": {
+      "id": "c9_choir.note.01",
+      "speaker": "frank",
+      "text": "We wanted your ears, kiddo. We always liked having the rest of you along too.",
+      "audio": "c9_choir.note.01"
+    },
+    "c9_choir.note.02": {
+      "id": "c9_choir.note.02",
+      "speaker": "steve",
+      "text": "I thought saying no was the worst thing I’d ever done.",
+      "audio": "c9_choir.note.02"
     }
   },
   "sound_labels": {
     "effect.nora_whistle": "Listen: Nora’s two-note whistle",
     "effect.k7blw": "Listen: Frank’s call sign in Morse",
+    "effect.lullaby": "Listen: Helen’s lullaby melody",
     "effect.ninth_night": "Listen: ninth-night tone",
     "effect.veyr_wind": "Listen: the last wind on Veyr",
     "effect.wick": "Listen: Wick’s signal",
@@ -9195,7 +10370,8 @@
       "clues": [
         "c5_shack.notes",
         "c5_shack.club",
-        "c5_shack.log"
+        "c5_shack.log",
+        "c9_choir.note"
       ],
       "theories": [
         {
@@ -9216,7 +10392,8 @@
         "c1_escape.cross",
         "c6_iris.takes",
         "c6_iris.hold",
-        "c6_jail.exit"
+        "c6_jail.exit",
+        "c9_gallery.link"
       ],
       "theories": [
         {
@@ -9270,6 +10447,27 @@
           "id": "stage_test",
           "after": "c8_lab.props",
           "text": "Wen and Shaw could reproduce the readings with a stage set."
+        }
+      ]
+    },
+    "choir": {
+      "title": "What is making the tune inside the ship?",
+      "clues": [
+        "c5_shack.log",
+        "c9_wake.helen",
+        "c9_choir.truth",
+        "c9_choir.wick"
+      ],
+      "theories": [
+        {
+          "id": "ship_machinery",
+          "after": "c9_wake.helen",
+          "text": "I am hearing a familiar tune in ordinary ship noise."
+        },
+        {
+          "id": "choir_memory",
+          "after": "c9_choir.truth",
+          "text": "The Choir can respond to the lives it holds."
         }
       ]
     }
