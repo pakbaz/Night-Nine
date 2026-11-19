@@ -58,6 +58,17 @@
         "file": "res://assets/audio/music/interlude-archivist-theme.mp3",
         "lufs": -19.1
       }
+    },
+    "Chapter 4": {
+      "bgm": {
+        "file": "res://assets/audio/music/chapter-04-bgm.mp3",
+        "lufs": -17.0
+      },
+      "theme": {
+        "file": "res://assets/audio/music/chapter-04-theme.mp3",
+        "lufs": -16.9,
+        "entry_seconds": 19.5
+      }
     }
   }
 }

@@ -3146,6 +3146,739 @@
           "direction": "Move toward the active interaction."
         }
       ]
+    },
+    {
+      "id": "c4_safe",
+      "chapter": "Chapter 4",
+      "title": "Federal Hospitality",
+      "place": "Coast Range safe house",
+      "style": "safehouse",
+      "actors": [
+        "steve"
+      ],
+      "objective": "Test Rook’s voice against his message.",
+      "tasks": [
+        {
+          "id": "c4_safe.record",
+          "title": "Office door",
+          "prompt": "Calder’s voicemail preserves Rook saying “Sit tight, June.” Through the door Steve hears the same words after the hold music stops. How should he prepare a comparison?",
+          "options": [
+            "Capture the new reassurance with the room sound intact",
+            "Ask Rook to imitate the voicemail in the same room",
+            "Record the hold music instead of the words"
+          ],
+          "answer": 0,
+          "lines": [
+            "c4_safe.record.01",
+            "c4_safe.record.02"
+          ],
+          "note": "Recorded Rook’s reassurance at the safe house.",
+          "requires": [],
+          "actor": "",
+          "kind": "record",
+          "sounds": [
+            "recording.rook"
+          ],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "The two rooms have different background sounds.",
+            "Telephone tones and a refrigerator belong to June. Match the spoken sound, so the different noises remain available as a check.",
+            "Home has telephone then refrigerator; office has music then chair. Put H on the left and O on the right, line up the S and compare the tails."
+          ],
+          "puzzle": {
+            "presentation": "case_board",
+            "instruction": "June has a voicemail from Rook. Steve hears the same reassurance through the office door. He needs two independently sourced recordings for the comparison that follows.",
+            "evidence": [
+              "June started her voicemail at home. Before the words there are three exchange tones; after them her refrigerator starts. At the office Steve hears hold music, then the words, then a chair against the floor.",
+              "On the two reels, labels mark H for the house and O for the office. The long rewind mark sits before every tone or note. A listening dub may be trimmed, but June keeps both source reels intact.",
+              "On Steve’s comparison bench the left channel is always the earlier source. He lines up the onset of the spoken S in both takes and reserves the noises after the words as location checks."
+            ],
+            "stages": [
+              {
+                "mode": "match",
+                "prompt": "Return four sounds to the correct place on the two reels.",
+                "slots": [
+                  "Home before the line",
+                  "Home after the line",
+                  "Office before the line",
+                  "Office after the line"
+                ],
+                "pieces": [
+                  "Telephone tones",
+                  "Hold music",
+                  "Chair on floor",
+                  "Refrigerator starts"
+                ],
+                "answer": [
+                  0,
+                  3,
+                  1,
+                  2
+                ]
+              },
+              {
+                "mode": "match",
+                "prompt": "Set the comparison bench. Choose the source reels, the alignment mark and the reason to retain the tails.",
+                "slots": [
+                  "Left input",
+                  "Right input",
+                  "Common start mark",
+                  "Check the recording locations"
+                ],
+                "pieces": [
+                  "First spoken S",
+                  "Different trailing noises",
+                  "O reel",
+                  "H reel"
+                ],
+                "answer": [
+                  3,
+                  2,
+                  0,
+                  1
+                ]
+              }
+            ],
+            "solution": [
+              0,
+              3,
+              1,
+              2,
+              3,
+              2,
+              0,
+              1
+            ],
+            "rows": [
+              {
+                "label": "Home before the line",
+                "options": [
+                  "Telephone tones",
+                  "Hold music",
+                  "Chair on floor",
+                  "Refrigerator starts"
+                ]
+              },
+              {
+                "label": "Home after the line",
+                "options": [
+                  "Telephone tones",
+                  "Hold music",
+                  "Chair on floor",
+                  "Refrigerator starts"
+                ]
+              },
+              {
+                "label": "Office before the line",
+                "options": [
+                  "Telephone tones",
+                  "Hold music",
+                  "Chair on floor",
+                  "Refrigerator starts"
+                ]
+              },
+              {
+                "label": "Office after the line",
+                "options": [
+                  "Telephone tones",
+                  "Hold music",
+                  "Chair on floor",
+                  "Refrigerator starts"
+                ]
+              },
+              {
+                "label": "Left input",
+                "options": [
+                  "First spoken S",
+                  "Different trailing noises",
+                  "O reel",
+                  "H reel"
+                ]
+              },
+              {
+                "label": "Right input",
+                "options": [
+                  "First spoken S",
+                  "Different trailing noises",
+                  "O reel",
+                  "H reel"
+                ]
+              },
+              {
+                "label": "Common start mark",
+                "options": [
+                  "First spoken S",
+                  "Different trailing noises",
+                  "O reel",
+                  "H reel"
+                ]
+              },
+              {
+                "label": "Check the recording locations",
+                "options": [
+                  "First spoken S",
+                  "Different trailing noises",
+                  "O reel",
+                  "H reel"
+                ]
+              }
+            ],
+            "hints": [
+              "The two rooms have different background sounds.",
+              "Telephone tones and a refrigerator belong to June. Match the spoken sound, so the different noises remain available as a check.",
+              "Home has telephone then refrigerator; office has music then chair. Put H on the left and O on the right, line up the S and compare the tails."
+            ]
+          }
+        },
+        {
+          "id": "c4_safe.match",
+          "title": "Rook comparison",
+          "prompt": "Compare the fresh recording with Calder’s saved voicemail.",
+          "options": [
+            "A second reading at a different pace",
+            "The same recorded performance",
+            "A shortened version of the voicemail"
+          ],
+          "answer": 1,
+          "lines": [
+            "c4_safe.match.01"
+          ],
+          "note": "Identified Rook’s copy through repeated audio.",
+          "requires": [
+            "c4_safe.record"
+          ],
+          "actor": "",
+          "kind": "compare",
+          "sounds": [
+            "recording.rook",
+            "recording.rook"
+          ],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "evidence_labels": [
+            "Calder’s voicemail",
+            "Safe-house door"
+          ],
+          "hints": [
+            "Compare the space between “tight” and “June.”",
+            "Follow the smaller peaks as well as the loudest word.",
+            "Choose the same recorded performance. Onsets, pauses and endings all coincide."
+          ]
+        },
+        {
+          "id": "c4_safe.screens",
+          "title": "Observation room",
+          "prompt": "A monitor shows a sleeping man with Rook’s face. A second screen holds personnel portraits and assignment dates. Which combination would test whether this feed predates the man in the safe house?",
+          "options": [
+            "Check the live Gallery clock against the dated assignment",
+            "Compare the two portrait backgrounds",
+            "Match the spelling of Rook’s surname"
+          ],
+          "answer": 0,
+          "lines": [
+            "c4_safe.screens.01"
+          ],
+          "note": "Confirmed the real Rook is asleep and the invasion reaches both governments.",
+          "requires": [
+            "c4_safe.match"
+          ],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "First decide which monitor shows the paper star.",
+            "A face alone cannot date a feed. Follow the bed tag from East to the roster, then look for the transfer number.",
+            "West is old; East is current. Link star, East picture, roster 41B and the two assignment sheets."
+          ],
+          "puzzle": {
+            "presentation": "case_board",
+            "instruction": "Four monitors show the same gray control room. Steve has only a wall clock, the patient tag, and the maintenance entries to work out which pictures he can trust.",
+            "evidence": [
+              "Steve watched a technician tape a paper star over the shared wall clock at 16:10. The rack now reads 16:14. West still shows an uncovered clock at 16:03. East shows the star and the digits 16:14.",
+              "On East, Rook’s patient tag ends 41B. The roster entry ending 41B assigns that bed to Adrian Rook. The two adjacent assignment sheets have different government seals but share the same transfer number.",
+              "The roster has a portrait but no clock. The transfer sheets list the two offices but show no patient. Only the bed feed can establish that the tagged sleeper was present at 16:14."
+            ],
+            "stages": [
+              {
+                "mode": "match",
+                "prompt": "Classify the four records by what is directly visible on them.",
+                "slots": [
+                  "Before the clock was covered",
+                  "Current tagged sleeper",
+                  "Named identity",
+                  "Cross-government assignment"
+                ],
+                "pieces": [
+                  "Roster portrait 41B",
+                  "Transfer sheets",
+                  "West picture",
+                  "East picture"
+                ],
+                "answer": [
+                  2,
+                  3,
+                  0,
+                  1
+                ]
+              },
+              {
+                "mode": "route",
+                "prompt": "Trace the audit from a witnessed time to the offices. Use a shared identifying mark at each step.",
+                "slots": [
+                  "Witness fixes the time",
+                  "Find the bed at that time",
+                  "Resolve the bed tag",
+                  "Follow the shared transfer"
+                ],
+                "pieces": [
+                  "Named roster entry",
+                  "East feed at 16:14",
+                  "Two sealed assignment sheets",
+                  "Star over the clock"
+                ],
+                "answer": [
+                  3,
+                  1,
+                  0,
+                  2
+                ]
+              }
+            ],
+            "solution": [
+              2,
+              3,
+              0,
+              1,
+              3,
+              1,
+              0,
+              2
+            ],
+            "rows": [
+              {
+                "label": "Before the clock was covered",
+                "options": [
+                  "Roster portrait 41B",
+                  "Transfer sheets",
+                  "West picture",
+                  "East picture"
+                ]
+              },
+              {
+                "label": "Current tagged sleeper",
+                "options": [
+                  "Roster portrait 41B",
+                  "Transfer sheets",
+                  "West picture",
+                  "East picture"
+                ]
+              },
+              {
+                "label": "Named identity",
+                "options": [
+                  "Roster portrait 41B",
+                  "Transfer sheets",
+                  "West picture",
+                  "East picture"
+                ]
+              },
+              {
+                "label": "Cross-government assignment",
+                "options": [
+                  "Roster portrait 41B",
+                  "Transfer sheets",
+                  "West picture",
+                  "East picture"
+                ]
+              },
+              {
+                "label": "Witness fixes the time",
+                "options": [
+                  "Named roster entry",
+                  "East feed at 16:14",
+                  "Two sealed assignment sheets",
+                  "Star over the clock"
+                ]
+              },
+              {
+                "label": "Find the bed at that time",
+                "options": [
+                  "Named roster entry",
+                  "East feed at 16:14",
+                  "Two sealed assignment sheets",
+                  "Star over the clock"
+                ]
+              },
+              {
+                "label": "Resolve the bed tag",
+                "options": [
+                  "Named roster entry",
+                  "East feed at 16:14",
+                  "Two sealed assignment sheets",
+                  "Star over the clock"
+                ]
+              },
+              {
+                "label": "Follow the shared transfer",
+                "options": [
+                  "Named roster entry",
+                  "East feed at 16:14",
+                  "Two sealed assignment sheets",
+                  "Star over the clock"
+                ]
+              }
+            ],
+            "hints": [
+              "First decide which monitor shows the paper star.",
+              "A face alone cannot date a feed. Follow the bed tag from East to the roster, then look for the transfer number.",
+              "West is old; East is current. Link star, East picture, roster 41B and the two assignment sheets."
+            ]
+          }
+        }
+      ],
+      "intro": [
+        "c4_safe.in.01",
+        "c4_safe.in.02",
+        "c4_safe.in.03"
+      ],
+      "outro": [
+        "c4_safe.out.01"
+      ],
+      "shots": [
+        {
+          "duration": 5.0,
+          "move": "establish",
+          "direction": "Look through a half-open door at a telephone and a corridor of closed rooms."
+        },
+        {
+          "duration": 6.0,
+          "move": "push",
+          "direction": "Move toward the active interaction."
+        }
+      ]
+    },
+    {
+      "id": "c4_escape",
+      "chapter": "Chapter 4",
+      "title": "Only honest",
+      "place": "Safe house service wing",
+      "style": "safehouse",
+      "actors": [
+        "steve"
+      ],
+      "objective": "Warn Calder and force an evacuation.",
+      "tasks": [
+        {
+          "id": "c4_escape.tube",
+          "title": "Pneumatic post",
+          "prompt": "The old tube map uses construction names. Steve needs his warning and the voice comparison to reach June without passing the interview desk.",
+          "options": [
+            "Send both takes directly to June’s current room",
+            "Send both takes to June’s original room",
+            "Send the old voicemail to the front desk"
+          ],
+          "answer": 0,
+          "lines": [
+            "c4_escape.tube.01"
+          ],
+          "note": "Warned Calder through the service tubes.",
+          "requires": [],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "puzzle": {
+            "instruction": "Panel map: A leads to OAK, B leads to PINE, C leads to ASH. Occupancy docket: June was moved from OAK into the room opposite the linen cupboard. The building sketch places ASH opposite linen; PINE faces the lift. Standard capsules go through the interview desk for sorting. Blue maintenance capsules travel directly to the selected room.",
+            "rows": [
+              {
+                "label": "Diverter",
+                "options": [
+                  "A",
+                  "B",
+                  "C"
+                ]
+              },
+              {
+                "label": "Capsule",
+                "options": [
+                  "Standard",
+                  "Blue maintenance"
+                ]
+              },
+              {
+                "label": "Enclosure",
+                "options": [
+                  "Rook’s voicemail only",
+                  "The recent take only",
+                  "Both labeled takes and the warning"
+                ]
+              }
+            ],
+            "solution": [
+              2,
+              1,
+              2
+            ]
+          },
+          "hints": [
+            "Use the occupancy docket after the construction map.",
+            "Find the room opposite linen. June needs to check a comparison for herself before trusting a warning.",
+            "Set C, send a blue capsule and enclose both labeled takes with the warning."
+          ]
+        },
+        {
+          "id": "c4_escape.fault",
+          "title": "Safety test panel",
+          "prompt": "The safe-house training console offers three rehearsals. Calder wants the occupied west corridor cleared while she keeps Rook in the east interview room.",
+          "options": [
+            "Print the west transport route",
+            "Schedule the west corridor’s authorized floor rehearsal",
+            "Schedule the interview team’s rehearsal"
+          ],
+          "answer": 1,
+          "lines": [
+            "c4_escape.fault.01"
+          ],
+          "note": "Triggered a safe evacuation.",
+          "requires": [
+            "c4_escape.tube"
+          ],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "puzzle": {
+            "instruction": "The transport escort in west signed the drill ticket. Yesterday’s log: SILVER moved only the signer. BLUE moved every badge in the signer’s corridor. WHITE moved every badge outside it. Dry run prints the route. Floor rehearsal sends the staff that route. Four staff must assemble together. The covered court seats three, the transport bay four. The five-place front office is occupied by interviews.",
+            "rows": [
+              {
+                "label": "Exercise card",
+                "options": [
+                  "WHITE",
+                  "SILVER",
+                  "BLUE"
+                ]
+              },
+              {
+                "label": "Console mode",
+                "options": [
+                  "Dry run",
+                  "Floor rehearsal"
+                ]
+              },
+              {
+                "label": "West team’s assembly point",
+                "options": [
+                  "Covered court",
+                  "Transport bay",
+                  "Front office"
+                ]
+              }
+            ],
+            "solution": [
+              2,
+              1,
+              1
+            ]
+          },
+          "hints": [
+            "Work out who signed the ticket and how many colleagues must move with them.",
+            "Yesterday’s log distinguishes one person, their group and the other group. Compare the group’s size with each assembly point.",
+            "Use BLUE and floor rehearsal. Move the four western staff to the transport bay."
+          ]
+        },
+        {
+          "id": "c4_escape.van",
+          "title": "Transport van",
+          "prompt": "From the seat Steve can see the shoulder only where the driver slows for a gravel turn. The rear handle moves freely once the escort releases the travel catch.",
+          "options": [
+            "Wait for the released catch and the gravel bend",
+            "Use the released catch on the straight road",
+            "Try the gravel bend while the travel catch is set"
+          ],
+          "answer": 0,
+          "lines": [
+            "c4_escape.van.01"
+          ],
+          "note": "Escaped the transport at a slow service bend.",
+          "requires": [
+            "c4_escape.fault"
+          ],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Read the places in the direction the driver is travelling.",
+            "Both Quarry and Service have gravel. Keep the tower and the railway in order.",
+            "Steve sees tower, railway and curved gravel before the weighbridge. Only Service Loop has all three in that order."
+          ],
+          "puzzle": {
+            "presentation": "case_board",
+            "instruction": "The road atlas slid off the dashboard. To recognize the slow service bend Steve matches what he sees through the window to the driver’s route card.",
+            "evidence": [
+              "Steve still saw the depot behind the white tank. Between that tank and his first glimpse of gravel, the van passed beneath an iron track. Gravel dust already covered the glass when he saw the weighbridge.",
+              "Through the window: a white tank on four legs, a dark steel ceiling, white gravel with two curved wheel marks. The square brick arch on the spare route card is a canal bridge with no rails.",
+              "Three map negatives lost their labels. Circle shows a railway west of the tank; triangle has a tank west of the railway; square has no railway. On both railway maps the gravel lies to the east. The van is travelling east.",
+              "June kept the printing key separate. Quarry Road took the four-sided punch. Tank Lane used the round one. The remaining negative belongs to Service Loop."
+            ],
+            "stages": [
+              {
+                "mode": "route",
+                "prompt": "Reconstruct what Steve sees after leaving the depot. End with the driver’s next stop beyond the gravel.",
+                "slots": [
+                  "First landmark",
+                  "Next overhead",
+                  "Turn after the crossing",
+                  "Next named stop"
+                ],
+                "pieces": [
+                  "Curved gravel",
+                  "Water tower",
+                  "Railway underpass",
+                  "Town weighbridge"
+                ],
+                "answer": [
+                  1,
+                  2,
+                  0,
+                  3
+                ]
+              },
+              {
+                "mode": "match",
+                "prompt": "Use the negative punches and direction of travel to distinguish the route cards.",
+                "slots": [
+                  "Gravel but no rail crossing",
+                  "Railway earlier than tank",
+                  "Matches Steve’s sequence",
+                  "Brick arch on the spare"
+                ],
+                "pieces": [
+                  "Quarry Road",
+                  "Service Loop",
+                  "Tank Lane",
+                  "Canal bridge"
+                ],
+                "answer": [
+                  0,
+                  2,
+                  1,
+                  3
+                ]
+              }
+            ],
+            "solution": [
+              1,
+              2,
+              0,
+              3,
+              0,
+              2,
+              1,
+              3
+            ],
+            "rows": [
+              {
+                "label": "First landmark",
+                "options": [
+                  "Curved gravel",
+                  "Water tower",
+                  "Railway underpass",
+                  "Town weighbridge"
+                ]
+              },
+              {
+                "label": "Next overhead",
+                "options": [
+                  "Curved gravel",
+                  "Water tower",
+                  "Railway underpass",
+                  "Town weighbridge"
+                ]
+              },
+              {
+                "label": "Turn after the crossing",
+                "options": [
+                  "Curved gravel",
+                  "Water tower",
+                  "Railway underpass",
+                  "Town weighbridge"
+                ]
+              },
+              {
+                "label": "Next named stop",
+                "options": [
+                  "Curved gravel",
+                  "Water tower",
+                  "Railway underpass",
+                  "Town weighbridge"
+                ]
+              },
+              {
+                "label": "Gravel but no rail crossing",
+                "options": [
+                  "Quarry Road",
+                  "Service Loop",
+                  "Tank Lane",
+                  "Canal bridge"
+                ]
+              },
+              {
+                "label": "Railway earlier than tank",
+                "options": [
+                  "Quarry Road",
+                  "Service Loop",
+                  "Tank Lane",
+                  "Canal bridge"
+                ]
+              },
+              {
+                "label": "Matches Steve’s sequence",
+                "options": [
+                  "Quarry Road",
+                  "Service Loop",
+                  "Tank Lane",
+                  "Canal bridge"
+                ]
+              },
+              {
+                "label": "Brick arch on the spare",
+                "options": [
+                  "Quarry Road",
+                  "Service Loop",
+                  "Tank Lane",
+                  "Canal bridge"
+                ]
+              }
+            ],
+            "hints": [
+              "Read the places in the direction the driver is travelling.",
+              "Both Quarry and Service have gravel. Keep the tower and the railway in order.",
+              "Steve sees tower, railway and curved gravel before the weighbridge. Only Service Loop has all three in that order."
+            ]
+          }
+        }
+      ],
+      "intro": [
+        "c4_escape.in.01",
+        "c4_escape.in.02"
+      ],
+      "outro": [
+        "c4_escape.out.01",
+        "c4_escape.out.02"
+      ],
+      "shots": [
+        {
+          "duration": 5.0,
+          "move": "establish",
+          "direction": "Follow a pneumatic capsule, then a van’s headlights into mountain fog."
+        },
+        {
+          "duration": 6.0,
+          "move": "push",
+          "direction": "Move toward the active interaction."
+        }
+      ]
     }
   ],
   "lines": {
@@ -3793,12 +4526,105 @@
       "speaker": "archivist",
       "text": "Three hundred years, and you still will not tell me where your people went.",
       "audio": "i1_archive.quiet.03"
+    },
+    "c4_safe.in.01": {
+      "id": "c4_safe.in.01",
+      "speaker": "rook_copy",
+      "text": "We’ll take the tapes as evidence. You may keep the recorder.",
+      "audio": "c4_safe.in.01",
+      "display_speaker": "Adrian Rook"
+    },
+    "c4_safe.in.02": {
+      "id": "c4_safe.in.02",
+      "speaker": "calder",
+      "text": "Adrian and I go back a long way.",
+      "audio": "c4_safe.in.02"
+    },
+    "c4_safe.in.03": {
+      "id": "c4_safe.in.03",
+      "speaker": "steve",
+      "text": "That’s what worries me.",
+      "audio": "c4_safe.in.03"
+    },
+    "c4_safe.out.01": {
+      "id": "c4_safe.out.01",
+      "speaker": "steve",
+      "text": "The same breath. He knows June because someone copied a man who knew June.",
+      "audio": "c4_safe.out.01"
+    },
+    "c4_safe.record.01": {
+      "id": "c4_safe.record.01",
+      "speaker": "rook_copy",
+      "text": "Sit tight, June.",
+      "audio": "recording.rook",
+      "display_speaker": "Adrian Rook"
+    },
+    "c4_safe.record.02": {
+      "id": "c4_safe.record.02",
+      "speaker": "steve",
+      "text": "That’s the line. Keep the whole take.",
+      "audio": "c4_safe.record.02"
+    },
+    "c4_safe.match.01": {
+      "id": "c4_safe.match.01",
+      "speaker": "steve",
+      "text": "Same breath, pause and room click. This is the man the message warned us about.",
+      "audio": "c4_safe.match.01"
+    },
+    "c4_safe.screens.01": {
+      "id": "c4_safe.screens.01",
+      "speaker": "steve",
+      "text": "Adrian Rook. Asleep. Both governments... and President Ward is next.",
+      "audio": "c4_safe.screens.01"
+    },
+    "c4_escape.in.01": {
+      "id": "c4_escape.in.01",
+      "speaker": "calder",
+      "text": "I don’t need you to be brave, Steve. I need you to be honest.",
+      "audio": "c4_escape.in.01"
+    },
+    "c4_escape.in.02": {
+      "id": "c4_escape.in.02",
+      "speaker": "steve",
+      "text": "Rook is one of them. I have proof.",
+      "audio": "c4_escape.in.02"
+    },
+    "c4_escape.out.01": {
+      "id": "c4_escape.out.01",
+      "speaker": "rook_copy",
+      "text": "Scan Calder tonight. The signing is in six days.",
+      "audio": "c4_escape.out.01"
+    },
+    "c4_escape.out.02": {
+      "id": "c4_escape.out.02",
+      "speaker": "steve",
+      "text": "And now I’m wanted for kidnapping Nora. I have to keep moving.",
+      "audio": "c4_escape.out.02"
+    },
+    "c4_escape.tube.01": {
+      "id": "c4_escape.tube.01",
+      "speaker": "calder",
+      "text": "I’ll keep his attention. You get out. We both know you can’t bluff him in person.",
+      "audio": "c4_escape.tube.01"
+    },
+    "c4_escape.fault.01": {
+      "id": "c4_escape.fault.01",
+      "speaker": "steve",
+      "text": "Test circuit. No heat, no flame. Just enough bureaucracy to get us outside.",
+      "audio": "c4_escape.fault.01"
+    },
+    "c4_escape.van.01": {
+      "id": "c4_escape.van.01",
+      "speaker": "steve",
+      "text": "I meant to land on my feet. The ditch had other plans.",
+      "audio": "c4_escape.van.01"
     }
   },
   "sound_labels": {
     "effect.nora_whistle": "Listen: Nora’s two-note whistle",
     "effect.veyr_wind": "Listen: the last wind on Veyr",
     "recording.greeting": "Listen: the morning greeting",
+    "recording.rook": "Listen: Rook’s recorded reassurance",
     "recording.release": "Listen: the restraint-release command"
   },
   "notebook_cases": {
@@ -3876,6 +4702,26 @@
           "id": "dated_records",
           "after": "c3_house.rules",
           "text": "New private facts and independently dated records could tell us more."
+        }
+      ]
+    },
+    "rook": {
+      "title": "What does Rook know about June?",
+      "clues": [
+        "c4_safe.record",
+        "c4_safe.match",
+        "c4_safe.screens"
+      ],
+      "theories": [
+        {
+          "id": "old_friend",
+          "after": "c4_safe.record",
+          "text": "Only June’s old friend could know the right words."
+        },
+        {
+          "id": "borrowed_voice",
+          "after": "c4_safe.match",
+          "text": "Someone else could have access to the performance on her voicemail."
         }
       ]
     }
