@@ -215,5 +215,42 @@
       "saren"
     ],
     "resident": "archivist"
+  },
+  "c4_safe": {
+    "light": "95b4c6",
+    "air": 0,
+    "opening": [
+      0.69,
+      0.31
+    ],
+    "closing": [
+      0.3,
+      0.63
+    ],
+    "company": [
+      "steve",
+      "calder",
+      "rook_copy"
+    ],
+    "off_camera_lines": [
+      "c4_safe.match.01"
+    ]
+  },
+  "c4_escape": {
+    "light": "e0ae74",
+    "air": 0,
+    "opening": [
+      0.22,
+      0.5
+    ],
+    "closing": [
+      0.75,
+      0.36
+    ],
+    "company": [
+      "calder",
+      "steve"
+    ],
+    "chapter_insert": true
   }
 }

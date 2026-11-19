@@ -1388,6 +1388,240 @@
           "direction": "Move toward the active interaction."
         }
       ]
+    },
+    {
+      "id": "c4_safe",
+      "chapter": "Chapter 4",
+      "title": "Federal Hospitality",
+      "place": "Coast Range safe house",
+      "style": "safehouse",
+      "actors": [
+        "steve"
+      ],
+      "objective": "Test Rook’s voice against his message.",
+      "tasks": [
+        {
+          "id": "c4_safe.record",
+          "title": "Office door",
+          "prompt": "Rook hums along to hold music. When he hangs up, he repeats his reassurance to Calder.",
+          "options": [
+            "Record the new reassurance",
+            "Ask his favorite soup",
+            "Take the telephone apart"
+          ],
+          "answer": 0,
+          "lines": [
+            "c4_safe.record.01",
+            "c4_safe.record.02"
+          ],
+          "note": "Recorded Rook’s reassurance at the safe house.",
+          "requires": [],
+          "actor": "",
+          "kind": "record",
+          "sounds": [
+            "recording.rook"
+          ],
+          "hint": "Look at the evidence in the description, then try another approach."
+        },
+        {
+          "id": "c4_safe.match",
+          "title": "Rook comparison",
+          "prompt": "Compare the fresh recording with Calder’s saved voicemail.",
+          "options": [
+            "A new performance",
+            "An identical take",
+            "Insufficient evidence because the words match"
+          ],
+          "answer": 1,
+          "lines": [
+            "c4_safe.match.01"
+          ],
+          "note": "Identified Rook’s copy through repeated audio.",
+          "requires": [
+            "c4_safe.record"
+          ],
+          "actor": "",
+          "kind": "compare",
+          "sounds": [
+            "recording.rook",
+            "recording.rook"
+          ],
+          "hint": "Look at the evidence in the description, then try another approach."
+        },
+        {
+          "id": "c4_safe.screens",
+          "title": "Observation room",
+          "prompt": "A maintenance monitor has a view of the Gallery and assignment files for Washington and Beijing.",
+          "options": [
+            "Inspect the sleeper and assignment dates",
+            "Broadcast an accusation now",
+            "Turn every screen off"
+          ],
+          "answer": 0,
+          "lines": [
+            "c4_safe.screens.01"
+          ],
+          "note": "Confirmed the real Rook is asleep and the invasion reaches both governments.",
+          "requires": [
+            "c4_safe.match"
+          ],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach."
+        }
+      ],
+      "intro": [
+        "c4_safe.in.01",
+        "c4_safe.in.02",
+        "c4_safe.in.03"
+      ],
+      "outro": [
+        "c4_safe.out.01"
+      ],
+      "shots": [
+        {
+          "duration": 5.0,
+          "move": "establish",
+          "direction": "Look through a half-open door at a telephone and a corridor of closed rooms."
+        },
+        {
+          "duration": 6.0,
+          "move": "push",
+          "direction": "Move toward the active interaction."
+        }
+      ]
+    },
+    {
+      "id": "c4_escape",
+      "chapter": "Chapter 4",
+      "title": "Only honest",
+      "place": "Safe house service wing",
+      "style": "safehouse",
+      "actors": [
+        "steve"
+      ],
+      "objective": "Warn Calder and force an evacuation.",
+      "tasks": [
+        {
+          "id": "c4_escape.tube",
+          "title": "Pneumatic post",
+          "prompt": "The tube diagram labels Calder’s room C and Rook’s office R.",
+          "options": [
+            "Send the warning to C",
+            "Send the warning to R",
+            "Leave it on the desk"
+          ],
+          "answer": 0,
+          "lines": [
+            "c4_escape.tube.01"
+          ],
+          "note": "Warned Calder through the service tubes.",
+          "requires": [],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "puzzle": {
+            "instruction": "The service map identifies C as Calder, R as Rook and M as maintenance. The diverter must point at the recipient before the send valve opens.",
+            "rows": [
+              {
+                "label": "Diverter",
+                "options": [
+                  "C",
+                  "R",
+                  "M"
+                ]
+              },
+              {
+                "label": "Capsule contents",
+                "options": [
+                  "The original notebook",
+                  "A warning and the recording comparison",
+                  "An empty tape"
+                ]
+              },
+              {
+                "label": "Final action",
+                "options": [
+                  "Open send valve",
+                  "Disconnect the blower",
+                  "Switch to R"
+                ]
+              }
+            ],
+            "solution": [
+              0,
+              1,
+              0
+            ]
+          }
+        },
+        {
+          "id": "c4_escape.fault",
+          "title": "Safety test panel",
+          "prompt": "A harmless smoke-test cartridge can trigger an evacuation without starting a fire.",
+          "options": [
+            "Set an actual fire",
+            "Use the marked evacuation test",
+            "Disable the alarms"
+          ],
+          "answer": 1,
+          "lines": [
+            "c4_escape.fault.01"
+          ],
+          "note": "Triggered a safe evacuation.",
+          "requires": [
+            "c4_escape.tube"
+          ],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach."
+        },
+        {
+          "id": "c4_escape.van",
+          "title": "Transport van",
+          "prompt": "The van slows at a gravel service bend. The rear latch has a manual release.",
+          "options": [
+            "Use the release at the slow bend",
+            "Jump onto the highway",
+            "Wait until the ship"
+          ],
+          "answer": 0,
+          "lines": [
+            "c4_escape.van.01"
+          ],
+          "note": "Escaped the transport at a slow service bend.",
+          "requires": [
+            "c4_escape.fault"
+          ],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach."
+        }
+      ],
+      "intro": [
+        "c4_escape.in.01",
+        "c4_escape.in.02"
+      ],
+      "outro": [
+        "c4_escape.out.01",
+        "c4_escape.out.02"
+      ],
+      "shots": [
+        {
+          "duration": 5.0,
+          "move": "establish",
+          "direction": "Follow a pneumatic capsule, then a van’s headlights into mountain fog."
+        },
+        {
+          "duration": 6.0,
+          "move": "push",
+          "direction": "Move toward the active interaction."
+        }
+      ]
     }
   ],
   "lines": {
@@ -2035,12 +2269,105 @@
       "speaker": "archivist",
       "text": "Three hundred years, and you still will not tell me where your people went.",
       "audio": "i1_archive.quiet.03"
+    },
+    "c4_safe.in.01": {
+      "id": "c4_safe.in.01",
+      "speaker": "rook_copy",
+      "text": "We’ll take the tapes as evidence. You may keep the recorder.",
+      "audio": "c4_safe.in.01",
+      "display_speaker": "Adrian Rook"
+    },
+    "c4_safe.in.02": {
+      "id": "c4_safe.in.02",
+      "speaker": "calder",
+      "text": "Adrian and I go back a long way.",
+      "audio": "c4_safe.in.02"
+    },
+    "c4_safe.in.03": {
+      "id": "c4_safe.in.03",
+      "speaker": "steve",
+      "text": "That’s what worries me.",
+      "audio": "c4_safe.in.03"
+    },
+    "c4_safe.out.01": {
+      "id": "c4_safe.out.01",
+      "speaker": "steve",
+      "text": "The same breath. He knows June because someone copied a man who knew June.",
+      "audio": "c4_safe.out.01"
+    },
+    "c4_safe.record.01": {
+      "id": "c4_safe.record.01",
+      "speaker": "rook_copy",
+      "text": "Sit tight, June.",
+      "audio": "recording.rook",
+      "display_speaker": "Adrian Rook"
+    },
+    "c4_safe.record.02": {
+      "id": "c4_safe.record.02",
+      "speaker": "steve",
+      "text": "That’s the line. Keep the whole take.",
+      "audio": "c4_safe.record.02"
+    },
+    "c4_safe.match.01": {
+      "id": "c4_safe.match.01",
+      "speaker": "steve",
+      "text": "Same breath, pause and room click. This is the man the message warned us about.",
+      "audio": "c4_safe.match.01"
+    },
+    "c4_safe.screens.01": {
+      "id": "c4_safe.screens.01",
+      "speaker": "steve",
+      "text": "Adrian Rook. Asleep. Both governments... and President Ward is next.",
+      "audio": "c4_safe.screens.01"
+    },
+    "c4_escape.in.01": {
+      "id": "c4_escape.in.01",
+      "speaker": "calder",
+      "text": "I don’t need you to be brave, Steve. I need you to be honest.",
+      "audio": "c4_escape.in.01"
+    },
+    "c4_escape.in.02": {
+      "id": "c4_escape.in.02",
+      "speaker": "steve",
+      "text": "Rook is one of them. I have proof.",
+      "audio": "c4_escape.in.02"
+    },
+    "c4_escape.out.01": {
+      "id": "c4_escape.out.01",
+      "speaker": "rook_copy",
+      "text": "Scan Calder tonight. The signing is in six days.",
+      "audio": "c4_escape.out.01"
+    },
+    "c4_escape.out.02": {
+      "id": "c4_escape.out.02",
+      "speaker": "steve",
+      "text": "And now I’m wanted for kidnapping Nora. I have to keep moving.",
+      "audio": "c4_escape.out.02"
+    },
+    "c4_escape.tube.01": {
+      "id": "c4_escape.tube.01",
+      "speaker": "calder",
+      "text": "I’ll keep his attention. You get out. We both know you can’t bluff him in person.",
+      "audio": "c4_escape.tube.01"
+    },
+    "c4_escape.fault.01": {
+      "id": "c4_escape.fault.01",
+      "speaker": "steve",
+      "text": "Test circuit. No heat, no flame. Just enough bureaucracy to get us outside.",
+      "audio": "c4_escape.fault.01"
+    },
+    "c4_escape.van.01": {
+      "id": "c4_escape.van.01",
+      "speaker": "steve",
+      "text": "I meant to land on my feet. The ditch had other plans.",
+      "audio": "c4_escape.van.01"
     }
   },
   "sound_labels": {
     "effect.nora_whistle": "Listen: Nora’s two-note whistle",
     "effect.veyr_wind": "Listen: the last wind on Veyr",
     "recording.greeting": "Listen: the morning greeting",
+    "recording.rook": "Listen: Rook’s recorded reassurance",
     "recording.release": "Listen: the restraint-release command"
   }
 }
