@@ -21,8 +21,10 @@
     "mateo": "Mateo Reyes",
     "rafa": "Rafa Reyes",
     "tomas": "Tomás Reyes",
+    "lyle": "Lyle Boone",
     "lyle_copy": "Lyle’s copy",
     "gus": "Gus Albano",
+    "dale": "Dale Kittredge",
     "pell": "Pell",
     "autorick": "DJ AutoRick",
     "guard": "Veyri attendant",
@@ -1904,6 +1906,411 @@
           "direction": "Move toward the active interaction."
         }
       ]
+    },
+    {
+      "id": "c6_iris",
+      "chapter": "Chapter 6",
+      "title": "Iris",
+      "place": "Bellwether after dark",
+      "style": "street",
+      "actors": [
+        "steve",
+        "stephen"
+      ],
+      "objective": "Give each Steve a role and test Iris fairly.",
+      "tasks": [
+        {
+          "id": "c6_iris.alibi",
+          "title": "Market corner",
+          "prompt": "Someone must be seen in public while Steve reaches the Sheriff’s service entrance.",
+          "options": [
+            "Ask Stephen to speak to the shopkeeper",
+            "Send both Steves into hiding",
+            "Ask Steve to announce the break-in"
+          ],
+          "answer": 0,
+          "lines": [
+            "c6_iris.alibi.01"
+          ],
+          "note": "Stephen established a public alibi.",
+          "requires": [],
+          "actor": "stephen",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach."
+        },
+        {
+          "id": "c6_iris.takes",
+          "title": "Iris’s recorder test",
+          "prompt": "Iris agrees to record the same sentence twice. Her second take hesitates and changes pace.",
+          "options": [
+            "Conclude she has become the original Nora",
+            "Recognize that she is changing",
+            "Assume every variation is a fault"
+          ],
+          "answer": 1,
+          "lines": [
+            "c6_iris.takes.01",
+            "c6_iris.takes.02",
+            "c6_iris.takes.03"
+          ],
+          "note": "Iris is an echo with her own experiences.",
+          "requires": [],
+          "actor": "steve",
+          "kind": "compare",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach."
+        },
+        {
+          "id": "c6_iris.hold",
+          "title": "Halcyon lines",
+          "prompt": "Distant copies spend long periods waiting on Halcyon telephone lines.",
+          "options": [
+            "Connect hold music with remote re-sync",
+            "Assume they enjoy customer service",
+            "Cut every phone line immediately"
+          ],
+          "answer": 0,
+          "lines": [
+            "c6_iris.hold.01",
+            "c6_iris.hold.02"
+          ],
+          "note": "Learned how distant copies re-sync.",
+          "requires": [
+            "c6_iris.takes"
+          ],
+          "actor": "steve",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach."
+        }
+      ],
+      "intro": [
+        "c6_iris.in.01",
+        "c6_iris.in.02"
+      ],
+      "outro": [
+        "c6_iris.out.01",
+        "c6_iris.out.02",
+        "c6_iris.out.03"
+      ],
+      "shots": [
+        {
+          "duration": 5.0,
+          "move": "establish",
+          "direction": "Follow two routes through the same lamplit street and reunite beside the closed bakery."
+        },
+        {
+          "duration": 6.0,
+          "move": "push",
+          "direction": "Move toward the active interaction."
+        }
+      ]
+    },
+    {
+      "id": "c6_jail",
+      "chapter": "Chapter 6",
+      "title": "Two Sheriffs",
+      "place": "Sheriff’s office and jail",
+      "style": "jail",
+      "actors": [
+        "steve",
+        "stephen"
+      ],
+      "objective": "Find the cell key and identify the real Calder.",
+      "tasks": [
+        {
+          "id": "c6_jail.mail",
+          "title": "Pell’s sorting case",
+          "prompt": "The service key was returned in a registered envelope. Its ledger says JAIL, drawer J, slot 9.",
+          "options": [
+            "Open drawer J, slot 9",
+            "Open drawer R, slot 1",
+            "Empty every letter onto the floor"
+          ],
+          "answer": 0,
+          "lines": [
+            "c6_jail.mail.01"
+          ],
+          "note": "Located the jail service key.",
+          "requires": [],
+          "actor": "steve",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "puzzle": {
+            "instruction": "Pell’s ledger uses destination initials for drawers. JAIL is entry 18, COUNTER entry 12. Each slot holds two consecutive entries: 1-2 in slot 1, 3-4 in slot 2, and so on.",
+            "rows": [
+              {
+                "label": "Drawer",
+                "options": [
+                  "C",
+                  "J",
+                  "R"
+                ]
+              },
+              {
+                "label": "Slot",
+                "options": [
+                  "6",
+                  "8",
+                  "9",
+                  "18"
+                ]
+              }
+            ],
+            "solution": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "id": "c6_jail.distract",
+          "title": "Sheriff’s front desk",
+          "prompt": "Calder’s copy is watching the cell corridor. Stephen can draw her to the public counter.",
+          "options": [
+            "Have Stephen demand to correct his wanted photograph",
+            "Have Steve surrender the key",
+            "Sound the fire alarm"
+          ],
+          "answer": 0,
+          "lines": [
+            "c6_jail.distract.01"
+          ],
+          "note": "Distracted Calder’s copy.",
+          "requires": [],
+          "actor": "stephen",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach."
+        },
+        {
+          "id": "c6_jail.crossword",
+          "title": "The two Calders",
+          "prompt": "Steve slipped today’s crossword into the cell. Only the prisoner has had time to solve it.",
+          "options": [
+            "Ask about a shared childhood",
+            "Ask for today’s unfinished crossword answer",
+            "Choose the friendlier Sheriff"
+          ],
+          "answer": 1,
+          "lines": [
+            "c6_jail.crossword.01",
+            "c6_jail.crossword.02"
+          ],
+          "note": "Identified and freed the original Calder.",
+          "requires": [
+            "c6_jail.mail",
+            "c6_jail.distract"
+          ],
+          "actor": "steve",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach."
+        },
+        {
+          "id": "c6_jail.exit",
+          "title": "Deputy’s checkpoint",
+          "prompt": "Lyle’s copy recognizes the fugitives but keeps glancing at a school-play ticket.",
+          "options": [
+            "Let him choose to go to the play",
+            "Threaten his sons",
+            "Demand that he forget them"
+          ],
+          "answer": 0,
+          "lines": [
+            "c6_jail.exit.01",
+            "c6_jail.exit.02"
+          ],
+          "note": "Lyle’s copy chose his family over his orders.",
+          "requires": [
+            "c6_jail.crossword"
+          ],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach."
+        }
+      ],
+      "intro": [
+        "c6_jail.in.01",
+        "c6_jail.in.02",
+        "c6_jail.in.03"
+      ],
+      "outro": [
+        "c6_jail.out.01",
+        "c6_jail.out.02",
+        "c6_jail.out.03"
+      ],
+      "shots": [
+        {
+          "duration": 5.0,
+          "move": "establish",
+          "direction": "Cross the mail-sorting wall to a jail corridor; finish beneath a bakery van’s giant croissant."
+        },
+        {
+          "duration": 6.0,
+          "move": "push",
+          "direction": "Move toward the active interaction."
+        }
+      ]
+    },
+    {
+      "id": "i2_nora",
+      "chapter": "Interlude 2",
+      "title": "Nobody is coming to fix this",
+      "place": "The Gallery",
+      "style": "gallery",
+      "actors": [
+        "nora"
+      ],
+      "objective": "Organize the half-awake sleepers between patrols.",
+      "tasks": [
+        {
+          "id": "i2_nora.patrol",
+          "title": "Guard circuit",
+          "prompt": "The guard passes, a pump cycles, then the far door closes. Move only after the door closes.",
+          "options": [
+            "Move when the far door closes",
+            "Move on the guard’s first footstep",
+            "Shout for everyone to wake"
+          ],
+          "answer": 0,
+          "lines": [
+            "i2_nora.patrol.01"
+          ],
+          "note": "Learned the patrol interval.",
+          "requires": [],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach."
+        },
+        {
+          "id": "i2_nora.jobs",
+          "title": "Sleeper skills",
+          "prompt": "Lyle knows door hardware. Dale remembers routes. Nora understands water systems.",
+          "options": [
+            "Give each person a task using those skills",
+            "Make everyone work on the same lock",
+            "Ask everyone to wait without a plan"
+          ],
+          "answer": 0,
+          "lines": [
+            "i2_nora.jobs.01",
+            "i2_nora.jobs.02",
+            "i2_nora.jobs.03"
+          ],
+          "note": "Organized the waking prisoners.",
+          "requires": [
+            "i2_nora.patrol"
+          ],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach."
+        },
+        {
+          "id": "i2_nora.pump",
+          "title": "Gallery circulation",
+          "prompt": "A bypass marked SERVICE relieves pressure without interrupting life support.",
+          "options": [
+            "Shut down life support",
+            "Use the service bypass",
+            "Open every valve"
+          ],
+          "answer": 1,
+          "lines": [
+            "i2_nora.pump.01"
+          ],
+          "note": "Prepared a safe route through the Gallery.",
+          "requires": [
+            "i2_nora.jobs"
+          ],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "puzzle": {
+            "instruction": "Life support must remain open. The service bypass takes pressure around the access hatch. Open that bypass before opening the hatch.",
+            "rows": [
+              {
+                "label": "Life support",
+                "options": [
+                  "Keep open",
+                  "Close"
+                ]
+              },
+              {
+                "label": "First operation",
+                "options": [
+                  "Open hatch",
+                  "Open service bypass",
+                  "Stop circulation"
+                ]
+              },
+              {
+                "label": "Second operation",
+                "options": [
+                  "Close life support",
+                  "Open hatch after pressure falls",
+                  "Close bypass immediately"
+                ]
+              }
+            ],
+            "solution": [
+              0,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "id": "i2_nora.message",
+          "title": "Gallery intercom",
+          "prompt": "Nora can leave a message in the local intercom memory for Steve.",
+          "options": [
+            "Record a private message for him",
+            "Overwrite the patrol warning",
+            "Broadcast immediately to the guards"
+          ],
+          "answer": 0,
+          "lines": [
+            "i2_nora.message.01"
+          ],
+          "note": "Nora left a message for Steve.",
+          "requires": [
+            "i2_nora.pump"
+          ],
+          "actor": "",
+          "kind": "record",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach."
+        }
+      ],
+      "intro": [
+        "i2_nora.in.01",
+        "i2_nora.in.02",
+        "i2_nora.in.03"
+      ],
+      "outro": [
+        "i2_nora.out.01",
+        "i2_nora.out.02",
+        "i2_nora.out.03"
+      ],
+      "shots": [
+        {
+          "duration": 5.0,
+          "move": "establish",
+          "direction": "Travel at sleeper height through amber beds to the enormous eye in Row Zero."
+        },
+        {
+          "duration": 6.0,
+          "move": "push",
+          "direction": "Move toward the active interaction."
+        }
+      ]
     }
   ],
   "lines": {
@@ -2782,6 +3189,224 @@
       "speaker": "steve",
       "text": "Sit down. There’s something you need to know.",
       "audio": "c5_station.stephen.02"
+    },
+    "c6_iris.in.01": {
+      "id": "c6_iris.in.01",
+      "speaker": "stephen",
+      "text": "You hide. I’ll be charming in public. We should each use our strengths.",
+      "audio": "c6_iris.in.01"
+    },
+    "c6_iris.in.02": {
+      "id": "c6_iris.in.02",
+      "speaker": "iris",
+      "text": "I sent the message about Rook. Please listen before you decide what I am.",
+      "audio": "c6_iris.in.02",
+      "display_speaker": "Nora’s copy"
+    },
+    "c6_iris.out.01": {
+      "id": "c6_iris.out.01",
+      "speaker": "iris",
+      "text": "Those Sunday dinners happened to me. I won’t let them take them away.",
+      "audio": "c6_iris.out.01",
+      "display_speaker": "Nora’s copy"
+    },
+    "c6_iris.out.02": {
+      "id": "c6_iris.out.02",
+      "speaker": "steve",
+      "text": "What should I call you?",
+      "audio": "c6_iris.out.02"
+    },
+    "c6_iris.out.03": {
+      "id": "c6_iris.out.03",
+      "speaker": "iris",
+      "text": "Iris. After the flowers.",
+      "audio": "c6_iris.out.03",
+      "display_speaker": "Nora’s copy"
+    },
+    "c6_iris.alibi.01": {
+      "id": "c6_iris.alibi.01",
+      "speaker": "stephen",
+      "text": "Good evening. Yes, that is my face on the poster. Terrible photograph.",
+      "audio": "c6_iris.alibi.01"
+    },
+    "c6_iris.takes.01": {
+      "id": "c6_iris.takes.01",
+      "speaker": "iris",
+      "text": "I stayed because I wanted to.",
+      "audio": "c6_iris.takes.01",
+      "display_speaker": "Nora’s copy"
+    },
+    "c6_iris.takes.02": {
+      "id": "c6_iris.takes.02",
+      "speaker": "iris",
+      "text": "I stayed... because I wanted to.",
+      "audio": "c6_iris.takes.02",
+      "display_speaker": "Nora’s copy"
+    },
+    "c6_iris.takes.03": {
+      "id": "c6_iris.takes.03",
+      "speaker": "steve",
+      "text": "Two different takes. You’re choosing what to say.",
+      "audio": "c6_iris.takes.03"
+    },
+    "c6_iris.hold.01": {
+      "id": "c6_iris.hold.01",
+      "speaker": "iris",
+      "text": "The signal is inside the music. Near the bay we go below. Far away, we call.",
+      "audio": "c6_iris.hold.01",
+      "display_speaker": "Nora’s copy"
+    },
+    "c6_iris.hold.02": {
+      "id": "c6_iris.hold.02",
+      "speaker": "steve",
+      "text": "Rook was never waiting for the Bureau.",
+      "audio": "c6_iris.hold.02"
+    },
+    "c6_jail.in.01": {
+      "id": "c6_jail.in.01",
+      "speaker": "pell",
+      "text": "I am required to report your location.",
+      "audio": "c6_jail.in.01"
+    },
+    "c6_jail.in.02": {
+      "id": "c6_jail.in.02",
+      "speaker": "pell",
+      "text": "Biscuit, Steve Mercer is here. My duty is complete.",
+      "audio": "c6_jail.in.02"
+    },
+    "c6_jail.in.03": {
+      "id": "c6_jail.in.03",
+      "speaker": "stephen",
+      "text": "We should put the dog in charge.",
+      "audio": "c6_jail.in.03"
+    },
+    "c6_jail.out.01": {
+      "id": "c6_jail.out.01",
+      "speaker": "iris",
+      "text": "Nora found the ring a year ago. It is not mine to answer.",
+      "audio": "c6_jail.out.01"
+    },
+    "c6_jail.out.02": {
+      "id": "c6_jail.out.02",
+      "speaker": "gus",
+      "text": "Take the van. I don’t know why, but I trust you.",
+      "audio": "c6_jail.out.02"
+    },
+    "c6_jail.out.03": {
+      "id": "c6_jail.out.03",
+      "speaker": "iris",
+      "text": "We’re starting to forget. Stephen and I have days.",
+      "audio": "c6_jail.out.03"
+    },
+    "c6_jail.mail.01": {
+      "id": "c6_jail.mail.01",
+      "speaker": "pell",
+      "text": "Correctly delivered. Biscuit may inspect the chain of custody.",
+      "audio": "c6_jail.mail.01"
+    },
+    "c6_jail.distract.01": {
+      "id": "c6_jail.distract.01",
+      "speaker": "stephen",
+      "text": "I would like a better photograph. My family will be seeing these.",
+      "audio": "c6_jail.distract.01"
+    },
+    "c6_jail.crossword.01": {
+      "id": "c6_jail.crossword.01",
+      "speaker": "calder",
+      "text": "Twenty-three across. Inimitable. Unlike my colleague’s handwriting.",
+      "audio": "c6_jail.crossword.01"
+    },
+    "c6_jail.crossword.02": {
+      "id": "c6_jail.crossword.02",
+      "speaker": "steve",
+      "text": "June. We’re getting you out.",
+      "audio": "c6_jail.crossword.02"
+    },
+    "c6_jail.exit.01": {
+      "id": "c6_jail.exit.01",
+      "speaker": "lyle_copy",
+      "text": "They gave me a seat in the front row.",
+      "audio": "c6_jail.exit.01"
+    },
+    "c6_jail.exit.02": {
+      "id": "c6_jail.exit.02",
+      "speaker": "calder",
+      "text": "Then you’d better get there. We can talk tomorrow.",
+      "audio": "c6_jail.exit.02"
+    },
+    "i2_nora.in.01": {
+      "id": "i2_nora.in.01",
+      "speaker": "nora",
+      "text": "I can move my hand. That’s a start.",
+      "audio": "i2_nora.in.01"
+    },
+    "i2_nora.in.02": {
+      "id": "i2_nora.in.02",
+      "speaker": "dale",
+      "text": "If this is a hospital, I’m changing hospitals.",
+      "audio": "i2_nora.in.02"
+    },
+    "i2_nora.in.03": {
+      "id": "i2_nora.in.03",
+      "speaker": "nora",
+      "text": "Names first. Complaints after we have a plan.",
+      "audio": "i2_nora.in.03"
+    },
+    "i2_nora.out.01": {
+      "id": "i2_nora.out.01",
+      "speaker": "nora",
+      "text": "Helen. Frank. Steve is going to be so glad.",
+      "audio": "i2_nora.out.01"
+    },
+    "i2_nora.out.02": {
+      "id": "i2_nora.out.02",
+      "speaker": "nora",
+      "text": "Mrs. Penhallow? Row three. I should remember that.",
+      "audio": "i2_nora.out.02"
+    },
+    "i2_nora.out.03": {
+      "id": "i2_nora.out.03",
+      "speaker": "nora",
+      "text": "And you, under the frost... you can hear me, can’t you?",
+      "audio": "i2_nora.out.03"
+    },
+    "i2_nora.patrol.01": {
+      "id": "i2_nora.patrol.01",
+      "speaker": "nora",
+      "text": "Wait. Now. Keep low. We can argue about my tone after we’re out.",
+      "audio": "i2_nora.patrol.01"
+    },
+    "i2_nora.jobs.01": {
+      "id": "i2_nora.jobs.01",
+      "speaker": "lyle",
+      "text": "I can keep that latch from catching.",
+      "audio": "i2_nora.jobs.01"
+    },
+    "i2_nora.jobs.02": {
+      "id": "i2_nora.jobs.02",
+      "speaker": "dale",
+      "text": "I’ll remember the turns.",
+      "audio": "i2_nora.jobs.02"
+    },
+    "i2_nora.jobs.03": {
+      "id": "i2_nora.jobs.03",
+      "speaker": "nora",
+      "text": "Good. I’ll handle the pump.",
+      "audio": "i2_nora.jobs.03"
+    },
+    "i2_nora.pump.01": {
+      "id": "i2_nora.pump.01",
+      "speaker": "nora",
+      "text": "Pressure down. Nobody’s breathing changes. That’s our route.",
+      "audio": "i2_nora.pump.01"
+    },
+    "i2_nora.message.01": {
+      "id": "i2_nora.message.01",
+      "speaker": "nora",
+      "text": "Steve, if you ever hear this message: I am furious with you. I love you. Please stop making me do both alone.",
+      "audio": "c9_gallery.out.03",
+      "delivery": "private_recording",
+      "display_text": "Nora records a private message for Steve."
     }
   },
   "sound_labels": {
