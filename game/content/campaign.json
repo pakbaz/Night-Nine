@@ -1,0 +1,514 @@
+{
+  "schema": 1,
+  "version": "campaign-1",
+  "title": "Night Nine",
+  "source": "Night Nine original story",
+  "adaptation_status": "Playable illustrated campaign checkpoint.",
+  "cast": {
+    "archivist": "The Archivist",
+    "helen": "Helen Mercer",
+    "frank": "Frank Mercer",
+    "general_us": "American delegate",
+    "general_cn": "Chinese delegate"
+  },
+  "scenes": [
+    {
+      "id": "p_veyr",
+      "chapter": "Prologue",
+      "title": "The last wind",
+      "place": "Veyr, 900 years ago",
+      "style": "veyr",
+      "actors": [
+        "archivist"
+      ],
+      "objective": "Preserve the sound of home before departure.",
+      "tasks": [
+        {
+          "id": "p_veyr.shield",
+          "title": "Wind screen",
+          "prompt": "Knocks vanish when the Archivist shelters the microphone with her hand. The distant towers are still audible. What can she leave in place when she lets go?",
+          "options": [
+            "Fit the felt sleeve",
+            "Set the recorder on a folded cloth",
+            "Lower the gain one division"
+          ],
+          "answer": 0,
+          "lines": [
+            "p_veyr.shield.01"
+          ],
+          "note": "Shielded the microphone against wind noise.",
+          "requires": [],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "What changed when she used her hand?",
+            "Air hitting the capsule and vibration travelling up the stand have different remedies.",
+            "Choose “Fit the felt sleeve”. Shielded the microphone against wind noise."
+          ]
+        },
+        {
+          "id": "p_veyr.levels",
+          "title": "Recording levels",
+          "prompt": "The meter reaches the red mark on every gust. The quiet passages are still audible.",
+          "options": [
+            "Turn gain to maximum",
+            "Lower the gain until peaks stay below red",
+            "Stop recording between gusts"
+          ],
+          "answer": 1,
+          "lines": [
+            "p_veyr.levels.01"
+          ],
+          "note": "Set recording headroom.",
+          "requires": [
+            "p_veyr.shield"
+          ],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "puzzle": {
+            "instruction": "Set the recorder without clipping. The gust is 6 dB louder than the current peak at -3 dB. Make the smallest gain change that leaves at least 3 dB of headroom.",
+            "rows": [
+              {
+                "label": "Gain adjustment",
+                "options": [
+                  "+6 dB",
+                  "0 dB",
+                  "-6 dB",
+                  "-12 dB"
+                ]
+              }
+            ],
+            "solution": [
+              2
+            ]
+          },
+          "hints": [
+            "Start by working out where the louder gust would peak at the current setting.",
+            "The next peak would be +3 dB. Count how far it must move to reach -3 dB.",
+            "Choose -6 dB. A bigger reduction also avoids clipping, but loses more level than necessary."
+          ]
+        },
+        {
+          "id": "p_veyr.record",
+          "title": "Departure recorder",
+          "prompt": "The departure has three sounds in order: the tower wind, an engine lifting, then a silence where the engine was. What would preserve their timing for someone who never heard them?",
+          "options": [
+            "Record the whole passage",
+            "Make a separate reel for each sound",
+            "Stop the tape during the quiet passage"
+          ],
+          "answer": 0,
+          "lines": [
+            "p_veyr.record.01"
+          ],
+          "note": "Preserved the wind on Veyr.",
+          "requires": [
+            "p_veyr.levels"
+          ],
+          "actor": "",
+          "kind": "record",
+          "sounds": [
+            "effect.veyr_wind"
+          ],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Consider what a listener can learn from the silence.",
+            "A splice can preserve the order of events while losing their spacing.",
+            "Choose “Record the whole passage”. Preserved the wind on Veyr."
+          ]
+        }
+      ],
+      "intro": [
+        "p_veyr.in.01",
+        "p_veyr.in.02"
+      ],
+      "outro": [
+        "p_veyr.out.01",
+        "p_veyr.out.02"
+      ],
+      "shots": [
+        {
+          "duration": 5.0,
+          "move": "establish",
+          "direction": "Track upward through glass towers to a dying red sun and departing lights."
+        },
+        {
+          "duration": 6.0,
+          "move": "push",
+          "direction": "Move toward the active interaction."
+        }
+      ]
+    },
+    {
+      "id": "p_meeting",
+      "chapter": "Prologue",
+      "title": "A careful translation",
+      "place": "Sentinel Point, nine years ago",
+      "style": "meeting",
+      "actors": [
+        "helen"
+      ],
+      "objective": "Keep both delegations talking.",
+      "tasks": [
+        {
+          "id": "p_meeting.terms",
+          "title": "Interpreter’s notebook",
+          "prompt": "The delegate says “compare our demonstrations.” One interpreter’s draft uses “prove”; another adds “which was stronger.” Helen needs to translate the proposal without adding a claim.",
+          "options": [
+            "You propose a test of which field was stronger",
+            "You propose discussing what was demonstrated",
+            "You propose proving the apparatus can work"
+          ],
+          "answer": 1,
+          "lines": [
+            "p_meeting.terms.01",
+            "p_meeting.terms.02"
+          ],
+          "note": "Kept the translation neutral.",
+          "requires": [],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Listen for the verb the delegate actually used.",
+            "Comparing observations leaves their explanation open. Ranking or proving them adds a promise.",
+            "Choose “You propose discussing what was demonstrated”. Kept the translation neutral."
+          ]
+        },
+        {
+          "id": "p_meeting.confess",
+          "title": "Joint statement",
+          "prompt": "The interpreters have two records to fill. Helen must leave each delegate room to speak for their own team.",
+          "options": [
+            "Ask both delegates about their own apparatus",
+            "Ask about the other demonstration",
+            "Record a shared conclusion about the mechanism"
+          ],
+          "answer": 0,
+          "lines": [
+            "p_meeting.confess.01",
+            "p_meeting.confess.02",
+            "p_meeting.confess.03"
+          ],
+          "note": "Both Meridian demonstrations were staged.",
+          "requires": [
+            "p_meeting.terms"
+          ],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "puzzle": {
+            "instruction": "The American observer saw a ring on the Chinese screen. The Chinese observer saw a ring on the American screen. Neither inspected the other room. Each engineering team brought its own projection diagram. The joint minutes are public; the diagrams were offered in the closed session.",
+            "rows": [
+              {
+                "label": "Question for both delegates",
+                "options": [
+                  "What produced the ring in your room?",
+                  "How did the other team produce its ring?",
+                  "How far did the other team move the target?"
+                ]
+              },
+              {
+                "label": "Entry in the joint minutes",
+                "options": [
+                  "Two projectors, one in each room",
+                  "Both observers saw a ring",
+                  "Both targets moved the same distance"
+                ]
+              }
+            ],
+            "solution": [
+              0,
+              1
+            ]
+          },
+          "hints": [
+            "Separate what an observer saw from what an engineer did.",
+            "Each delegate can explain one apparatus in private. Both can attest to one visible feature in public.",
+            "Ask what produced the ring in each delegate’s own room. Record only that both observers saw a ring in the joint minutes."
+          ]
+        },
+        {
+          "id": "p_meeting.record",
+          "title": "Private record",
+          "prompt": "The two delegates approve the same public sentence. Helen also heard each private admission. What belongs in the notebook she keeps for herself?",
+          "options": [
+            "The printed joint sentence alone",
+            "Separately attributed remarks and the final agreement",
+            "A single admission credited to both delegates"
+          ],
+          "answer": 1,
+          "lines": [
+            "p_meeting.record.01"
+          ],
+          "note": "Helen preserved the truth in Mandarin shorthand.",
+          "requires": [
+            "p_meeting.confess"
+          ],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "The notebook may be read years after the speakers are gone.",
+            "A reader should be able to distinguish who spoke in private from what both signed.",
+            "Choose “Separately attributed remarks and the final agreement”. Helen preserved the truth in Mandarin shorthand."
+          ]
+        }
+      ],
+      "intro": [
+        "p_meeting.in.01",
+        "p_meeting.in.02"
+      ],
+      "outro": [
+        "p_meeting.out.01"
+      ],
+      "shots": [
+        {
+          "duration": 5.0,
+          "move": "establish",
+          "direction": "Push across an empty conference table toward a notebook, then the pulse outside."
+        },
+        {
+          "duration": 6.0,
+          "move": "push",
+          "direction": "Move toward the active interaction."
+        }
+      ]
+    },
+    {
+      "id": "p_bay",
+      "chapter": "Prologue",
+      "title": "The bay is singing",
+      "place": "Bellwether Bay, eighteen months ago",
+      "style": "boat",
+      "actors": [
+        "frank"
+      ],
+      "objective": "Find the hum beneath the radio static.",
+      "tasks": [
+        {
+          "id": "p_bay.tune",
+          "title": "Frank’s radio",
+          "prompt": "A low musical hum sits between two loud stations. Narrow the receiver bandwidth.",
+          "options": [
+            "Broadcast a distress call",
+            "Tune between the stations and narrow the band",
+            "Turn the radio off"
+          ],
+          "answer": 1,
+          "lines": [
+            "p_bay.tune.01"
+          ],
+          "note": "Found the ship’s hum beneath the radio static.",
+          "requires": [],
+          "actor": "",
+          "kind": "record",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Move the dial between the two clear broadcasts and listen for a third sound.",
+            "The hum is near 815 kHz. A broad setting still lets the adjacent stations through.",
+            "Set 815 kHz, choose the narrow bandwidth, then record."
+          ]
+        },
+        {
+          "id": "p_bay.message",
+          "title": "Phone and notebook",
+          "prompt": "Frank needs both hands on the set. Helen has a dry notebook in the boat. Steve’s recorded greeting ends with a beep. Which record could Steve find at home tonight?",
+          "options": [
+            "Leave Steve a message",
+            "Write a second copy in the boat log",
+            "Call the Thursday club from Frank’s receiver"
+          ],
+          "answer": 0,
+          "lines": [
+            "p_bay.message.01"
+          ],
+          "note": "Helen called Steve before the boat disappeared.",
+          "requires": [
+            "p_bay.tune"
+          ],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Where will each record be when the boat leaves?",
+            "Steve can retrieve something left on his own phone.",
+            "Choose “Leave Steve a message”. Helen called Steve before the boat disappeared."
+          ]
+        }
+      ],
+      "intro": [
+        "p_bay.in.01",
+        "p_bay.in.02"
+      ],
+      "outro": [
+        "p_bay.out.01",
+        "p_bay.out.02"
+      ],
+      "shots": [
+        {
+          "duration": 5.0,
+          "move": "establish",
+          "direction": "Drift beside the rowboat as turquoise light grows beneath black water."
+        },
+        {
+          "duration": 6.0,
+          "move": "push",
+          "direction": "Move toward the active interaction."
+        }
+      ]
+    }
+  ],
+  "lines": {
+    "p_veyr.in.01": {
+      "id": "p_veyr.in.01",
+      "speaker": "archivist",
+      "text": "There are forty thousand names on the departure register. I have checked every one.",
+      "audio": "p_veyr.in.01"
+    },
+    "p_veyr.in.02": {
+      "id": "p_veyr.in.02",
+      "speaker": "archivist",
+      "text": "One recording remains.",
+      "audio": "p_veyr.in.02"
+    },
+    "p_veyr.out.01": {
+      "id": "p_veyr.out.01",
+      "speaker": "archivist",
+      "text": "Wind through the western towers. Last evening. Original take.",
+      "audio": "p_veyr.out.01"
+    },
+    "p_veyr.out.02": {
+      "id": "p_veyr.out.02",
+      "speaker": "archivist",
+      "text": "I will remember where we lived.",
+      "audio": "p_veyr.out.02"
+    },
+    "p_veyr.shield.01": {
+      "id": "p_veyr.shield.01",
+      "speaker": "archivist",
+      "text": "Now I can hear the city, beneath the wind.",
+      "audio": "p_veyr.shield.01"
+    },
+    "p_veyr.levels.01": {
+      "id": "p_veyr.levels.01",
+      "speaker": "archivist",
+      "text": "Leave room for the loud parts. They belong to the record too.",
+      "audio": "p_veyr.levels.01"
+    },
+    "p_veyr.record.01": {
+      "id": "p_veyr.record.01",
+      "speaker": "archivist",
+      "text": "Recording. Please wait for me.",
+      "audio": "p_veyr.record.01",
+      "cue": "veyr_wind"
+    },
+    "p_meeting.in.01": {
+      "id": "p_meeting.in.01",
+      "speaker": "general_us",
+      "text": "We are prepared to discuss the practical status of our demonstration.",
+      "audio": "p_meeting.in.01"
+    },
+    "p_meeting.in.02": {
+      "id": "p_meeting.in.02",
+      "speaker": "general_cn",
+      "text": "After you explain the difference between practical and actual.",
+      "audio": "p_meeting.in.02"
+    },
+    "p_meeting.out.01": {
+      "id": "p_meeting.out.01",
+      "speaker": "helen",
+      "text": "Everyone agreed to keep lying. It may be the most honest thing I have seen.",
+      "audio": "p_meeting.out.01"
+    },
+    "p_meeting.terms.01": {
+      "id": "p_meeting.terms.01",
+      "speaker": "helen",
+      "text": "They propose that both teams describe what the observers actually saw.",
+      "audio": "p_meeting.terms.01"
+    },
+    "p_meeting.terms.02": {
+      "id": "p_meeting.terms.02",
+      "speaker": "general_cn",
+      "text": "That would be a useful place to begin.",
+      "audio": "p_meeting.terms.02"
+    },
+    "p_meeting.confess.01": {
+      "id": "p_meeting.confess.01",
+      "speaker": "general_us",
+      "text": "There was no space-fold engine.",
+      "audio": "p_meeting.confess.01"
+    },
+    "p_meeting.confess.02": {
+      "id": "p_meeting.confess.02",
+      "speaker": "general_cn",
+      "text": "There was no engine at our test either.",
+      "audio": "p_meeting.confess.02",
+      "reaction": {
+        "sound": "delegates_laugh",
+        "caption": "[The delegates share a tired laugh.]"
+      }
+    },
+    "p_meeting.confess.03": {
+      "id": "p_meeting.confess.03",
+      "speaker": "helen",
+      "text": "Then we can discuss what to do next.",
+      "audio": "p_meeting.confess.03"
+    },
+    "p_meeting.record.01": {
+      "id": "p_meeting.record.01",
+      "speaker": "helen",
+      "text": "Dates. Names. What each person actually said. Someone may need the truth one day.",
+      "audio": "p_meeting.record.01"
+    },
+    "p_bay.in.01": {
+      "id": "p_bay.in.01",
+      "speaker": "frank",
+      "text": "Same interval as last Thursday. Louder out here.",
+      "audio": "p_bay.in.01"
+    },
+    "p_bay.in.02": {
+      "id": "p_bay.in.02",
+      "speaker": "helen",
+      "text": "Steve is working. I’ll leave him a message.",
+      "audio": "p_bay.in.02"
+    },
+    "p_bay.out.01": {
+      "id": "p_bay.out.01",
+      "speaker": "helen",
+      "text": "Come out with us, kiddo. The bay is singing tonight.",
+      "audio": "recording.voicemail"
+    },
+    "p_bay.out.02": {
+      "id": "p_bay.out.02",
+      "speaker": "frank",
+      "text": "Helen. It’s tuning to us.",
+      "audio": "p_bay.out.02"
+    },
+    "p_bay.tune.01": {
+      "id": "p_bay.tune.01",
+      "speaker": "frank",
+      "text": "There you are. I can hear more than one voice.",
+      "audio": "p_bay.tune.01"
+    },
+    "p_bay.message.01": {
+      "id": "p_bay.message.01",
+      "speaker": "helen",
+      "text": "He should hear this for himself. We’ll bring the tape home.",
+      "audio": "p_bay.message.01"
+    }
+  },
+  "sound_labels": {
+    "effect.veyr_wind": "Listen: the last wind on Veyr"
+  },
+  "notebook_cases": {}
+}

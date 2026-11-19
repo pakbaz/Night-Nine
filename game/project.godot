@@ -1,0 +1,33 @@
+; Night Nine - native adventure framework
+config_version=5
+
+[application]
+config/use_custom_user_dir=true
+config/custom_user_dir_name="NightNineCommunity/chapters-0.9.1/prologue"
+config/name="Night Nine"
+config/version="0.9.1-soundtrack"
+run/main_scene="res://scenes/campaign.tscn"
+config/features=PackedStringArray("4.7", "Forward Plus")
+config/description="Free illustrated science-fiction adventure set in Bellwether."
+config/icon="res://icon.svg"
+
+[display]
+window/size/viewport_width=1600
+window/size/viewport_height=1000
+window/size/window_width_override=1440
+window/size/window_height_override=900
+window/stretch/mode="canvas_items"
+
+[rendering]
+renderer/rendering_method="forward_plus"
+renderer/rendering_method.mobile="mobile"
+renderer/rendering_method.web="gl_compatibility"
+rendering_device/driver.macos="metal"
+anti_aliasing/quality/use_taa=false
+textures/default_filters/use_nearest_mipmap_filter=false
+textures/vram_compression/import_s3tc_bptc=true
+textures/vram_compression/import_etc2_astc=true
+environment/defaults/default_clear_color=Color(0.018,0.033,0.038,1)
+
+[audio]
+default_bus_layout="res://default_bus_layout.tres"

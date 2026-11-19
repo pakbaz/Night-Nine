@@ -1,0 +1,20 @@
+{
+  "title": {
+    "file": "res://assets/audio/music/main-title.mp3",
+    "lufs": -15.5,
+    "entry_seconds": 12.7
+  },
+  "chapters": {
+    "Prologue": {
+      "bgm": {
+        "file": "res://assets/audio/music/prologue-bgm.mp3",
+        "lufs": -14.6
+      },
+      "theme": {
+        "file": "res://assets/audio/music/prologue-theme.mp3",
+        "lufs": -15.3,
+        "entry_seconds": 1.4
+      }
+    }
+  }
+}
