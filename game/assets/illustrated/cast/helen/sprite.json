@@ -1,0 +1,112 @@
+{
+  "base": "helen.png",
+  "atlas": "helen-face-atlas.png",
+  "size": [
+    1086,
+    1448
+  ],
+  "origin": "top_left",
+  "foot_anchor": [
+    543,
+    1448
+  ],
+  "eye_centers": [
+    [
+      535,
+      193
+    ],
+    [
+      633,
+      214
+    ]
+  ],
+  "mouth_center": [
+    569,
+    302
+  ],
+  "frames": {
+    "blink_half": {
+      "atlas_region": [
+        0,
+        0,
+        174,
+        68
+      ],
+      "source_origin": [
+        500,
+        174
+      ]
+    },
+    "blink_closed": {
+      "atlas_region": [
+        0,
+        70,
+        174,
+        68
+      ],
+      "source_origin": [
+        500,
+        174
+      ]
+    },
+    "mouth_parted": {
+      "atlas_region": [
+        0,
+        140,
+        133,
+        63
+      ],
+      "source_origin": [
+        503,
+        277
+      ]
+    },
+    "mouth_open": {
+      "atlas_region": [
+        0,
+        205,
+        133,
+        63
+      ],
+      "source_origin": [
+        503,
+        277
+      ]
+    },
+    "mouth_round": {
+      "atlas_region": [
+        0,
+        270,
+        133,
+        63
+      ],
+      "source_origin": [
+        503,
+        277
+      ]
+    },
+    "mouth_wide": {
+      "atlas_region": [
+        0,
+        335,
+        133,
+        63
+      ],
+      "source_origin": [
+        503,
+        277
+      ]
+    }
+  },
+  "cue_frames": {
+    "X": null,
+    "A": null,
+    "B": "mouth_parted",
+    "C": "mouth_wide",
+    "D": "mouth_open",
+    "E": "mouth_round",
+    "F": "mouth_round",
+    "G": "mouth_parted",
+    "H": "mouth_parted"
+  }
+}
