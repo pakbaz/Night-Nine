@@ -1,0 +1,112 @@
+{
+  "base": "pell.webp",
+  "size": [
+    942,
+    1080
+  ],
+  "origin": "top_left",
+  "foot_anchor": [
+    471,
+    1080
+  ],
+  "frames": {
+    "blink_half": {
+      "atlas_region": [
+        0,
+        0,
+        131,
+        35
+      ],
+      "source_origin": [
+        410,
+        131
+      ]
+    },
+    "blink_closed": {
+      "atlas_region": [
+        0,
+        37,
+        131,
+        35
+      ],
+      "source_origin": [
+        410,
+        131
+      ]
+    },
+    "mouth_parted": {
+      "atlas_region": [
+        0,
+        74,
+        113,
+        70
+      ],
+      "source_origin": [
+        429,
+        195
+      ]
+    },
+    "mouth_open": {
+      "atlas_region": [
+        0,
+        146,
+        113,
+        70
+      ],
+      "source_origin": [
+        429,
+        195
+      ]
+    },
+    "mouth_round": {
+      "atlas_region": [
+        0,
+        218,
+        113,
+        70
+      ],
+      "source_origin": [
+        429,
+        195
+      ]
+    },
+    "mouth_wide": {
+      "atlas_region": [
+        0,
+        290,
+        113,
+        70
+      ],
+      "source_origin": [
+        429,
+        195
+      ]
+    }
+  },
+  "cue_frames": {
+    "X": null,
+    "A": null,
+    "B": "mouth_parted",
+    "C": "mouth_wide",
+    "D": "mouth_open",
+    "E": "mouth_round",
+    "F": "mouth_round",
+    "G": "mouth_parted",
+    "H": "mouth_parted"
+  },
+  "atlas": "pell-face-atlas.png",
+  "eye_centers": [
+    [
+      436,
+      153
+    ],
+    [
+      515,
+      147
+    ]
+  ],
+  "mouth_center": [
+    487,
+    230
+  ]
+}

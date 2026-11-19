@@ -1,1 +1,119 @@
-{}
+{
+  "c1_flat": {
+    "light": "e9bb87",
+    "air": 0,
+    "opening": [
+      0.26,
+      0.65
+    ],
+    "closing": [
+      0.68,
+      0.38
+    ],
+    "company": [
+      "steve",
+      "iris"
+    ],
+    "off_camera_lines": [
+      "c1_flat.in.01"
+    ],
+    "inserts": {
+      "c1_flat.in.01": "c1_flat.control",
+      "c1_flat.in.03": "c1_flat.control"
+    }
+  },
+  "c1_pier": {
+    "light": "b8d4d8",
+    "air": 2,
+    "opening": [
+      0.25,
+      0.39
+    ],
+    "closing": [
+      0.83,
+      0.55
+    ],
+    "company": [
+      "agnes",
+      "steve",
+      "pell",
+      "lyle_copy"
+    ],
+    "resident": "agnes",
+    "painted_creatures": {
+      "admiral": [
+        0.153,
+        0.487
+      ]
+    },
+    "detail_shots": {
+      "c1_pier.whistle.01": {
+        "target": [
+          0.18,
+          0.805
+        ],
+        "zoom": 2.8,
+        "cut": true
+      }
+    },
+    "creatures": [
+      {
+        "id": "admiral",
+        "foot": [
+          0.176,
+          0.836
+        ],
+        "width": 0.145,
+        "lines": [
+          "c1_pier.whistle.01"
+        ]
+      }
+    ]
+  },
+  "c1_dinner": {
+    "light": "ffce87",
+    "air": 0,
+    "opening": [
+      0.67,
+      0.32
+    ],
+    "closing": [
+      0.31,
+      0.54
+    ],
+    "company": [
+      "carmen",
+      "steve",
+      "rafa",
+      "mateo",
+      "tomas",
+      "iris",
+      "luis"
+    ],
+    "resident": "carmen"
+  },
+  "c1_escape": {
+    "light": "91c8c9",
+    "air": 1,
+    "opening": [
+      0.31,
+      0.52
+    ],
+    "closing": [
+      0.77,
+      0.32
+    ],
+    "company": [
+      "iris",
+      "steve",
+      "agnes"
+    ],
+    "window": [
+      0.51,
+      0.16,
+      0.42,
+      0.82
+    ],
+    "chapter_insert": true
+  }
+}
