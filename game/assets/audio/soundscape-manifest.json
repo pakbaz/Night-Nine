@@ -1,4 +1,19 @@
 {
+  "aquarium_pa": {
+    "file": "res://assets/audio/effects/aquarium_pa.wav",
+    "sha256": "352f6acde3a1b7e681c507418db7075e364c618bb3dd77efd723db6e8ccb4e92",
+    "seconds": 6.0
+  },
+  "aquarium_steps": {
+    "file": "res://assets/audio/effects/aquarium_steps.wav",
+    "sha256": "15ad7d1808ac3a51bfd27f6835bd6bc7b860f08e9119f65e246ddea3965aa870",
+    "seconds": 6.0
+  },
+  "lullaby": {
+    "file": "res://assets/audio/effects/lullaby.wav",
+    "sha256": "d5339beaa251c124dea3716635f5790c1671c2fc3cb9d18f193cd922e5ac5a1a",
+    "seconds": 5.38
+  },
   "ninth_night": {
     "file": "res://assets/audio/effects/ninth_night.wav",
     "sha256": "7e2a9e3e6ec7d06e191cfd64eebbe03f483880aeb858c59dda99bebf6fe4382d",

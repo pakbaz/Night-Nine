@@ -116,5 +116,45 @@
       0.82
     ],
     "chapter_insert": true
+  },
+  "c2_aquarium": {
+    "light": "8ebfc1",
+    "air": 2,
+    "opening": [
+      0.23,
+      0.47
+    ],
+    "closing": [
+      0.77,
+      0.59
+    ],
+    "company": [
+      "steve"
+    ],
+    "inserts": {
+      "c2_aquarium.out.01": "c2_aquarium.intercom",
+      "c2_aquarium.intercom": "c2_aquarium.intercom"
+    }
+  },
+  "c2_ship": {
+    "light": "ffc887",
+    "air": 3,
+    "opening": [
+      0.77,
+      0.48
+    ],
+    "closing": [
+      0.24,
+      0.63
+    ],
+    "company": [
+      "steve",
+      "iris",
+      "saren"
+    ],
+    "off_camera_lines": [
+      "c2_ship.escape.01"
+    ],
+    "chapter_insert": true
   }
 }
