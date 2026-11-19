@@ -6,6 +6,7 @@
   "adaptation_status": "Playable illustrated campaign checkpoint.",
   "cast": {
     "steve": "Steve Mercer",
+    "stephen": "Stephen",
     "nora": "Nora Reyes",
     "iris": "Iris",
     "calder": "Sheriff June Calder",
@@ -25,6 +26,7 @@
     "pell": "Pell",
     "autorick": "DJ AutoRick",
     "guard": "Veyri attendant",
+    "operator": "Thursday club operator",
     "general_us": "American delegate",
     "general_cn": "Chinese delegate"
   },
@@ -3879,6 +3881,748 @@
           "direction": "Move toward the active interaction."
         }
       ]
+    },
+    {
+      "id": "c5_shack",
+      "chapter": "Chapter 5",
+      "title": "Wanted: Steve Mercer",
+      "place": "Frank’s radio shack",
+      "style": "radio_shack",
+      "actors": [
+        "steve"
+      ],
+      "objective": "Open the boxes and follow Frank’s investigation.",
+      "tasks": [
+        {
+          "id": "c5_shack.notes",
+          "title": "Kitchen-table notes",
+          "prompt": "Helen wrote “with the good stuff” on a loose slip. A previous note uses the same phrase; Frank’s reply is dated the following morning. Which pair could recover the family meaning?",
+          "options": [
+            "Put Helen’s earlier use beside Frank’s dated reply",
+            "Pair the loose slip with the nearest envelope by size",
+            "File all notes by the color of the ink"
+          ],
+          "answer": 0,
+          "lines": [
+            "c5_shack.notes.01",
+            "c5_shack.notes.02"
+          ],
+          "note": "Opened the family notes and found the record-library clue.",
+          "requires": [],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "A private joke is easiest to recover from a conversation.",
+            "Use chronology to test which note answers which.",
+            "Choose “Put Helen’s earlier use beside Frank’s dated reply”. Opened the family notes and found the record-library clue."
+          ]
+        },
+        {
+          "id": "c5_shack.rig",
+          "title": "Frank’s receiver",
+          "prompt": "Three insulated battery packs fit Frank’s receiver. His Thursday club is on the log frequency, but the dial has slipped.",
+          "options": [
+            "Match the receiver rating and correct the slipped dial",
+            "Use the measured frequency without a dial correction",
+            "Retune using the opposite dial correction"
+          ],
+          "answer": 0,
+          "lines": [
+            "c5_shack.rig.01"
+          ],
+          "note": "Repaired Frank’s radio safely.",
+          "requires": [
+            "c5_shack.notes"
+          ],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "puzzle": {
+            "instruction": "Receiver card: 12 V DC, center positive, draws 400 mA. A battery pack may supply more current than the set draws. Pack RED: 12 V, 300 mA, + center. BLUE: 12 V, 800 mA, + center. GREY: 12 V, 800 mA, − center. Frank logged a 3.20 MHz station at dial 3.25, and a 3.40 MHz station at 3.45. Thursday club transmits on 3.56 MHz.",
+            "rows": [
+              {
+                "label": "Battery pack with receiver off",
+                "options": [
+                  "RED",
+                  "GREY",
+                  "BLUE"
+                ]
+              },
+              {
+                "label": "Dial setting for Thursday club",
+                "options": [
+                  "3.51 MHz",
+                  "3.56 MHz",
+                  "3.61 MHz"
+                ]
+              }
+            ],
+            "solution": [
+              2,
+              2
+            ]
+          },
+          "hints": [
+            "Check all three rating marks before relying on a pack’s color.",
+            "The receiver reads high at both known stations. Add the same offset to the club’s actual frequency.",
+            "Select BLUE and 3.61 MHz. The pack has the correct polarity and enough current, and the dial reads 0.05 MHz high."
+          ]
+        },
+        {
+          "id": "c5_shack.club",
+          "title": "Thursday club",
+          "prompt": "Frank’s outgoing logs end with K7BLW. The contact column has a different call sign on each Thursday. Which identifier would old club members recognize as coming from this set?",
+          "options": [
+            "K7BLW, from the outgoing column",
+            "The last contact in the receiving column",
+            "The frequency printed on every club card"
+          ],
+          "answer": 0,
+          "lines": [
+            "c5_shack.club.01",
+            "c5_shack.club.02",
+            "c5_shack.club.03"
+          ],
+          "note": "Restored contact with Frank’s ham radio club.",
+          "requires": [
+            "c5_shack.rig"
+          ],
+          "actor": "",
+          "kind": "record",
+          "sounds": [
+            "effect.k7blw"
+          ],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Frank signs the outgoing line. The three drawings came back in the post.",
+            "Put the lighthouse on four and add two for the orchard. The mountain is between them.",
+            "Use lighthouse, mountain, orchard on four, five and six. The card at the key reads K7BLW."
+          ],
+          "puzzle": {
+            "presentation": "case_board",
+            "instruction": "Frank’s Thursday club used four homemade call cards. The old operator will recognize the shack if Steve can put the local and remote marks back on the log.",
+            "evidence": [
+              "At the shack Frank signed off every conversation with K7BLW. Thursday’s card with the lighthouse drawing came from M4TID. The orchard card came from N6PEA; the mountain card was signed W2RID.",
+              "On the dial sheet the orchard reply is two divisions above the lighthouse; the mountain reply is one division below the orchard. The lighthouse is pinned to division four.",
+              "Steve can keep Frank’s own call card at the key and put the three remote cards in ascending dial order beside it. The numbers are marks on Frank’s dial, not frequencies."
+            ],
+            "stages": [
+              {
+                "mode": "match",
+                "prompt": "Reconstruct the pencilled dial strip from the picture cards.",
+                "slots": [
+                  "Division four",
+                  "Division five",
+                  "Division six"
+                ],
+                "pieces": [
+                  "W2RID · mountain",
+                  "N6PEA · orchard",
+                  "M4TID · lighthouse"
+                ],
+                "answer": [
+                  2,
+                  0,
+                  1
+                ]
+              },
+              {
+                "mode": "order",
+                "prompt": "Set the four cards out, starting with the shack’s own identification at the key.",
+                "slots": [
+                  "Local operator at the key",
+                  "Lowest remote mark",
+                  "Middle remote mark",
+                  "Highest remote mark"
+                ],
+                "pieces": [
+                  "N6PEA",
+                  "K7BLW",
+                  "W2RID",
+                  "M4TID"
+                ],
+                "answer": [
+                  1,
+                  3,
+                  2,
+                  0
+                ]
+              }
+            ],
+            "solution": [
+              2,
+              0,
+              1,
+              1,
+              3,
+              2,
+              0
+            ],
+            "rows": [
+              {
+                "label": "Division four",
+                "options": [
+                  "W2RID · mountain",
+                  "N6PEA · orchard",
+                  "M4TID · lighthouse"
+                ]
+              },
+              {
+                "label": "Division five",
+                "options": [
+                  "W2RID · mountain",
+                  "N6PEA · orchard",
+                  "M4TID · lighthouse"
+                ]
+              },
+              {
+                "label": "Division six",
+                "options": [
+                  "W2RID · mountain",
+                  "N6PEA · orchard",
+                  "M4TID · lighthouse"
+                ]
+              },
+              {
+                "label": "Local operator at the key",
+                "options": [
+                  "N6PEA",
+                  "K7BLW",
+                  "W2RID",
+                  "M4TID"
+                ]
+              },
+              {
+                "label": "Lowest remote mark",
+                "options": [
+                  "N6PEA",
+                  "K7BLW",
+                  "W2RID",
+                  "M4TID"
+                ]
+              },
+              {
+                "label": "Middle remote mark",
+                "options": [
+                  "N6PEA",
+                  "K7BLW",
+                  "W2RID",
+                  "M4TID"
+                ]
+              },
+              {
+                "label": "Highest remote mark",
+                "options": [
+                  "N6PEA",
+                  "K7BLW",
+                  "W2RID",
+                  "M4TID"
+                ]
+              }
+            ],
+            "hints": [
+              "Frank signs the outgoing line. The three drawings came back in the post.",
+              "Put the lighthouse on four and add two for the orchard. The mountain is between them.",
+              "Use lighthouse, mountain, orchard on four, five and six. The card at the key reads K7BLW."
+            ]
+          }
+        },
+        {
+          "id": "c5_shack.log",
+          "title": "The final log",
+          "prompt": "On the last reel, a long hum underlies a short tone. Frank’s last entry distinguishes the voices inside the hum. Which material would let Steve test that description?",
+          "options": [
+            "Keep the full sound under the dated log entry",
+            "Keep only the loud short tone",
+            "Average all the ninth-night reels into one undated track"
+          ],
+          "answer": 0,
+          "lines": [
+            "c5_shack.log.01",
+            "c5_shack.log.02"
+          ],
+          "note": "Preserved the ninth-night tone and Frank’s Choir observation.",
+          "requires": [
+            "c5_shack.club"
+          ],
+          "actor": "",
+          "kind": "record",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Consider which part of the recording Frank described.",
+            "A short alert could mask the evidence he wanted his son to hear.",
+            "Choose “Keep the full sound under the dated log entry”. Preserved the ninth-night tone and Frank’s Choir observation."
+          ]
+        }
+      ],
+      "intro": [
+        "c5_shack.in.01",
+        "c5_shack.in.02",
+        "c5_shack.in.03"
+      ],
+      "outro": [
+        "c5_shack.out.01",
+        "c5_shack.out.02"
+      ],
+      "shots": [
+        {
+          "duration": 5.0,
+          "move": "establish",
+          "direction": "Push through rain at a shack window to boxes of handwritten kitchen notes."
+        },
+        {
+          "duration": 6.0,
+          "move": "push",
+          "direction": "Move toward the active interaction."
+        }
+      ]
+    },
+    {
+      "id": "c5_station",
+      "chapter": "Chapter 5",
+      "title": "Two of him",
+      "place": "KBWR record library",
+      "style": "station",
+      "actors": [
+        "steve"
+      ],
+      "objective": "Recover Helen’s notebook and face the pursuer.",
+      "tasks": [
+        {
+          "id": "c5_station.automation",
+          "title": "Unattended console",
+          "prompt": "AutoRick’s sheet repeats three events. WEATHER keeps the booth locked. IDENT briefly opens maintenance access while the recording plays. NEWS opens the visitors’ entrance after it ends. Steve is already at the booth door.",
+          "options": [
+            "Queue IDENT and enter during playback",
+            "Queue NEWS and enter after playback",
+            "Queue WEATHER and enter during playback"
+          ],
+          "answer": 0,
+          "lines": [
+            "c5_station.automation.01"
+          ],
+          "note": "Used the station’s scheduled maintenance window.",
+          "requires": [],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Check both which door and which part of the cue.",
+            "The visitors’ entrance is on the other side of the building.",
+            "Choose “Queue IDENT and enter during playback”. Used the station’s scheduled maintenance window."
+          ]
+        },
+        {
+          "id": "c5_station.sleeve",
+          "title": "First show",
+          "prompt": "Helen’s note says “your first night at the desk.” A library card covers three shows: Steve presented the second, but engineered the first. The station files by original transmission, even after a repeat.",
+          "options": [
+            "The original transmission sleeve of the first show he engineered",
+            "The rerun sleeve of the first show he engineered",
+            "The original sleeve of the first show he presented"
+          ],
+          "answer": 0,
+          "lines": [
+            "c5_station.sleeve.01"
+          ],
+          "note": "Recovered Helen’s notebook.",
+          "requires": [
+            "c5_station.automation"
+          ],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Steve first sat at the controls before he first spoke on air.",
+            "A repeat date points backward, and Helen used the engineer’s bench letter.",
+            "On the 4th Steve engineered, on the 11th he presented, on the 18th Pat replayed. Go from bench B to midnight on the 4th, blue sleeve, back pocket. The blue, yellow and green engineer’s stamps are B, C and A."
+          ],
+          "puzzle": {
+            "presentation": "case_board",
+            "instruction": "Helen hid her notebook in the record library. She remembered Steve’s first night at the desk more clearly than he did.",
+            "evidence": [
+              "Duty book, three Tuesdays: on the 4th Steve mixed the midnight broadcast and Jo presented. On the 11th Jo mixed while Steve presented. On the 18th Pat replayed the earlier midnight show.",
+              "KBWR files a master under its original transmission and the engineer’s bench letter. Steve’s crew badge says B; Jo’s says A; Pat’s says C. Helen always called the engineer’s bench ‘your desk’.",
+              "The yellow sleeve has a repeat stamp. The blue sleeve has an earlier original date than the green one. Steve cannot read any of the numbers. Helen used the back pocket of the right sleeve.",
+              "The duty stamps A, B and C on the loose shelf cards are still readable. Cross the color evidence with the duty book before searching a pocket."
+            ],
+            "stages": [
+              {
+                "mode": "match",
+                "prompt": "Restore the missing roles on the three transmission dates.",
+                "slots": [
+                  "4th",
+                  "11th",
+                  "18th"
+                ],
+                "pieces": [
+                  "Steve presents",
+                  "Steve engineers",
+                  "Pat replays"
+                ],
+                "answer": [
+                  1,
+                  0,
+                  2
+                ]
+              },
+              {
+                "mode": "route",
+                "prompt": "Follow Helen’s words through KBWR’s filing system. Finish where her notebook can actually fit.",
+                "slots": [
+                  "Meaning of ‘the desk’",
+                  "Original transmission",
+                  "Master shelf",
+                  "Last place to inspect"
+                ],
+                "pieces": [
+                  "Engineer’s bench B",
+                  "Back pocket",
+                  "Midnight on the 4th",
+                  "Blue sleeve"
+                ],
+                "answer": [
+                  0,
+                  2,
+                  3,
+                  1
+                ]
+              },
+              {
+                "mode": "match",
+                "prompt": "Refile the neighboring sleeves too. Assign an engineer’s stamp to each color using the duty book.",
+                "slots": [
+                  "Blue sleeve",
+                  "Yellow sleeve",
+                  "Green sleeve"
+                ],
+                "pieces": [
+                  "Stamp C",
+                  "Stamp A",
+                  "Stamp B"
+                ],
+                "answer": [
+                  2,
+                  0,
+                  1
+                ]
+              }
+            ],
+            "solution": [
+              1,
+              0,
+              2,
+              0,
+              2,
+              3,
+              1,
+              2,
+              0,
+              1
+            ],
+            "rows": [
+              {
+                "label": "4th",
+                "options": [
+                  "Steve presents",
+                  "Steve engineers",
+                  "Pat replays"
+                ]
+              },
+              {
+                "label": "11th",
+                "options": [
+                  "Steve presents",
+                  "Steve engineers",
+                  "Pat replays"
+                ]
+              },
+              {
+                "label": "18th",
+                "options": [
+                  "Steve presents",
+                  "Steve engineers",
+                  "Pat replays"
+                ]
+              },
+              {
+                "label": "Meaning of ‘the desk’",
+                "options": [
+                  "Engineer’s bench B",
+                  "Back pocket",
+                  "Midnight on the 4th",
+                  "Blue sleeve"
+                ]
+              },
+              {
+                "label": "Original transmission",
+                "options": [
+                  "Engineer’s bench B",
+                  "Back pocket",
+                  "Midnight on the 4th",
+                  "Blue sleeve"
+                ]
+              },
+              {
+                "label": "Master shelf",
+                "options": [
+                  "Engineer’s bench B",
+                  "Back pocket",
+                  "Midnight on the 4th",
+                  "Blue sleeve"
+                ]
+              },
+              {
+                "label": "Last place to inspect",
+                "options": [
+                  "Engineer’s bench B",
+                  "Back pocket",
+                  "Midnight on the 4th",
+                  "Blue sleeve"
+                ]
+              },
+              {
+                "label": "Blue sleeve",
+                "options": [
+                  "Stamp C",
+                  "Stamp A",
+                  "Stamp B"
+                ]
+              },
+              {
+                "label": "Yellow sleeve",
+                "options": [
+                  "Stamp C",
+                  "Stamp A",
+                  "Stamp B"
+                ]
+              },
+              {
+                "label": "Green sleeve",
+                "options": [
+                  "Stamp C",
+                  "Stamp A",
+                  "Stamp B"
+                ]
+              }
+            ],
+            "hints": [
+              "Steve first sat at the controls before he first spoke on air.",
+              "A repeat date points backward, and Helen used the engineer’s bench letter.",
+              "On the 4th Steve engineered, on the 11th he presented, on the 18th Pat replayed. Go from bench B to midnight on the 4th, blue sleeve, back pocket. The blue, yellow and green engineer’s stamps are B, C and A."
+            ]
+          }
+        },
+        {
+          "id": "c5_station.halcyon",
+          "title": "Ownership papers",
+          "prompt": "Three stamps survive: Halcyon acquired KBWR on the 3rd, Steve’s overnight slot ended on the 5th, and the first unattended tower transmission was logged on the 6th. Which sequence do those records support?",
+          "options": [
+            "The new owner cleared the overnight slot before the tower traffic began",
+            "New tower traffic preceded the sale and caused it",
+            "Steve was still working alone during the first unattended transmission"
+          ],
+          "answer": 0,
+          "lines": [
+            "c5_station.halcyon.01"
+          ],
+          "note": "Connected Steve’s dismissal to the Veyri communications network.",
+          "requires": [],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Put all three stamps on one calendar.",
+            "The earliest transmission in the log follows the last staffed slot.",
+            "Choose “The new owner cleared the overnight slot before the tower traffic began”. Connected Steve’s dismissal to the Veyri communications network."
+          ]
+        },
+        {
+          "id": "c5_station.stephen",
+          "title": "The pursuer",
+          "prompt": "Stephen remembers breakfast in Frank’s shack but cannot account for the wanted posters. Steve wants to find how far Stephen’s memories reach without feeding him the answer.",
+          "options": [
+            "Ask him for the last time he saw their parents; listen before explaining",
+            "Tell him the date of the boat trip and ask him to repeat it",
+            "Quiz him only on the kitchen where they grew up"
+          ],
+          "answer": 0,
+          "lines": [
+            "c5_station.stephen.01",
+            "c5_station.stephen.02"
+          ],
+          "note": "Recognized Stephen as an incomplete copy with no Veyri occupant.",
+          "requires": [
+            "c5_station.sleeve",
+            "c5_station.halcyon"
+          ],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "An object’s date and the moment Stephen first learns about it are different things.",
+            "The lid detail came before the photographs were shown. Reading the poster later is new perception.",
+            "Order jar, receipt, poster. The blue lid is the supported detail, the receipt the first gap, and the revealed wording belongs to the interview."
+          ],
+          "puzzle": {
+            "presentation": "case_board",
+            "instruction": "Stephen remembers the taste of breakfast in Frank’s shack. Steve lays three objects between them and lets Stephen tell the story before saying what each object means.",
+            "evidence": [
+              "Frank took a photo of the blue jam jar at breakfast. June stamped a receipt later, at the aquarium. The wanted poster was printed after Steve escaped. Steve keeps the poster turned over during the interview.",
+              "Before seeing the objects, Stephen describes the chipped blue lid. He says he remembers neither June’s red stamp nor the words on the poster. Only after Steve turns the poster over can Stephen read it aloud.",
+              "In the notebook Steve distinguishes volunteered detail, an acknowledged gap, and detail supplied by Steve. One correct answer after a reveal cannot move the last independently supported memory forward."
+            ],
+            "stages": [
+              {
+                "mode": "order",
+                "prompt": "Put the physical objects in Steve’s own chronology.",
+                "slots": [
+                  "Earliest object",
+                  "Next event",
+                  "Latest object"
+                ],
+                "pieces": [
+                  "Wanted poster",
+                  "Aquarium receipt",
+                  "Blue jam jar"
+                ],
+                "answer": [
+                  2,
+                  1,
+                  0
+                ]
+              },
+              {
+                "mode": "match",
+                "prompt": "File the interview without giving Stephen credit for a memory he acquired in the room.",
+                "slots": [
+                  "Last independently supported detail",
+                  "First later event he cannot place",
+                  "Learned during the interview",
+                  "Undoing the test"
+                ],
+                "pieces": [
+                  "Chip in the blue lid",
+                  "June’s aquarium receipt",
+                  "Suggest the poster wording first",
+                  "Poster wording after the reveal"
+                ],
+                "answer": [
+                  0,
+                  1,
+                  3,
+                  2
+                ]
+              }
+            ],
+            "solution": [
+              2,
+              1,
+              0,
+              0,
+              1,
+              3,
+              2
+            ],
+            "rows": [
+              {
+                "label": "Earliest object",
+                "options": [
+                  "Wanted poster",
+                  "Aquarium receipt",
+                  "Blue jam jar"
+                ]
+              },
+              {
+                "label": "Next event",
+                "options": [
+                  "Wanted poster",
+                  "Aquarium receipt",
+                  "Blue jam jar"
+                ]
+              },
+              {
+                "label": "Latest object",
+                "options": [
+                  "Wanted poster",
+                  "Aquarium receipt",
+                  "Blue jam jar"
+                ]
+              },
+              {
+                "label": "Last independently supported detail",
+                "options": [
+                  "Chip in the blue lid",
+                  "June’s aquarium receipt",
+                  "Suggest the poster wording first",
+                  "Poster wording after the reveal"
+                ]
+              },
+              {
+                "label": "First later event he cannot place",
+                "options": [
+                  "Chip in the blue lid",
+                  "June’s aquarium receipt",
+                  "Suggest the poster wording first",
+                  "Poster wording after the reveal"
+                ]
+              },
+              {
+                "label": "Learned during the interview",
+                "options": [
+                  "Chip in the blue lid",
+                  "June’s aquarium receipt",
+                  "Suggest the poster wording first",
+                  "Poster wording after the reveal"
+                ]
+              },
+              {
+                "label": "Undoing the test",
+                "options": [
+                  "Chip in the blue lid",
+                  "June’s aquarium receipt",
+                  "Suggest the poster wording first",
+                  "Poster wording after the reveal"
+                ]
+              }
+            ],
+            "hints": [
+              "An object’s date and the moment Stephen first learns about it are different things.",
+              "The lid detail came before the photographs were shown. Reading the poster later is new perception.",
+              "Order jar, receipt, poster. The blue lid is the supported detail, the receipt the first gap, and the revealed wording belongs to the interview."
+            ]
+          }
+        }
+      ],
+      "intro": [
+        "c5_station.in.01",
+        "c5_station.in.02"
+      ],
+      "outro": [
+        "c5_station.out.01",
+        "c5_station.out.02",
+        "c5_station.out.03"
+      ],
+      "shots": [
+        {
+          "duration": 5.0,
+          "move": "establish",
+          "direction": "Track between empty broadcasting racks, then hold on the two brothers at the record shelf."
+        },
+        {
+          "duration": 6.0,
+          "move": "push",
+          "direction": "Move toward the active interaction."
+        }
+      ]
     }
   ],
   "lines": {
@@ -4618,10 +5362,150 @@
       "speaker": "steve",
       "text": "I meant to land on my feet. The ditch had other plans.",
       "audio": "c4_escape.van.01"
+    },
+    "c5_shack.in.01": {
+      "id": "c5_shack.in.01",
+      "speaker": "luis",
+      "text": "Food. I know where your father used to come to think.",
+      "audio": "c5_shack.in.01"
+    },
+    "c5_shack.in.02": {
+      "id": "c5_shack.in.02",
+      "speaker": "steve",
+      "text": "Are you going to call the Sheriff?",
+      "audio": "c5_shack.in.02"
+    },
+    "c5_shack.in.03": {
+      "id": "c5_shack.in.03",
+      "speaker": "luis",
+      "text": "Eat first.",
+      "audio": "c5_shack.in.03"
+    },
+    "c5_shack.out.01": {
+      "id": "c5_shack.out.01",
+      "speaker": "steve",
+      "text": "With the good stuff. Mom meant the record library. My first show.",
+      "audio": "c5_shack.out.01"
+    },
+    "c5_shack.out.02": {
+      "id": "c5_shack.out.02",
+      "speaker": "steve",
+      "text": "I know where the notebook is.",
+      "audio": "c5_shack.out.02"
+    },
+    "c5_shack.notes.01": {
+      "id": "c5_shack.notes.01",
+      "speaker": "helen",
+      "text": "Frank, there is soup in the refrigerator. The other container is paint. Please read both labels.",
+      "audio": "c5_shack.notes.01"
+    },
+    "c5_shack.notes.02": {
+      "id": "c5_shack.notes.02",
+      "speaker": "steve",
+      "text": "I missed you both so much I stopped looking at anything you left.",
+      "audio": "c5_shack.notes.02"
+    },
+    "c5_shack.rig.01": {
+      "id": "c5_shack.rig.01",
+      "speaker": "steve",
+      "text": "Power off. Matching connector. Now the antenna.",
+      "audio": "c5_shack.rig.01"
+    },
+    "c5_shack.club.01": {
+      "id": "c5_shack.club.01",
+      "speaker": "operator",
+      "text": "K7BLW? Frank? We thought we’d lost you.",
+      "audio": "c5_shack.club.01",
+      "cue": "k7blw"
+    },
+    "c5_shack.club.02": {
+      "id": "c5_shack.club.02",
+      "speaker": "steve",
+      "text": "It’s Steve. I need your help.",
+      "audio": "c5_shack.club.02"
+    },
+    "c5_shack.club.03": {
+      "id": "c5_shack.club.03",
+      "speaker": "operator",
+      "text": "Any time, kid.",
+      "audio": "c5_shack.club.03"
+    },
+    "c5_shack.log.01": {
+      "id": "c5_shack.log.01",
+      "speaker": "frank",
+      "text": "It isn’t one voice. It’s a choir.",
+      "audio": "c5_shack.log.01"
+    },
+    "c5_shack.log.02": {
+      "id": "c5_shack.log.02",
+      "speaker": "steve",
+      "text": "They wanted my ears. That’s why they asked me along.",
+      "audio": "c5_shack.log.02"
+    },
+    "c5_station.in.01": {
+      "id": "c5_station.in.01",
+      "speaker": "autorick",
+      "text": "Breaking news, folks: there’s a fella in our record library!",
+      "audio": "c5_station.in.01"
+    },
+    "c5_station.in.02": {
+      "id": "c5_station.in.02",
+      "speaker": "stephen",
+      "text": "That cardigan. Is this what happens when I stop trying?",
+      "audio": "c5_station.in.02"
+    },
+    "c5_station.out.01": {
+      "id": "c5_station.out.01",
+      "speaker": "steve",
+      "text": "They disappeared eighteen months ago. I said no to the boat trip.",
+      "audio": "c5_station.out.01"
+    },
+    "c5_station.out.02": {
+      "id": "c5_station.out.02",
+      "speaker": "stephen",
+      "text": "No. I had breakfast with them. I remember...",
+      "audio": "c5_station.out.02"
+    },
+    "c5_station.out.03": {
+      "id": "c5_station.out.03",
+      "speaker": "stephen",
+      "text": "Then that explains what I saw when I woke up. Mom and Dad are on that ship, Steve. Row nine. They’re asleep. They’re alive.",
+      "audio": "c5_station.out.03"
+    },
+    "c5_station.automation.01": {
+      "id": "c5_station.automation.01",
+      "speaker": "steve",
+      "text": "I built the schedule before they replaced me with it. Maintenance follows the ident.",
+      "audio": "c5_station.automation.01"
+    },
+    "c5_station.sleeve.01": {
+      "id": "c5_station.sleeve.01",
+      "speaker": "steve",
+      "text": "Mom’s handwriting. Mandarin shorthand. And this last page... I’ve never seen that script.",
+      "audio": "c5_station.sleeve.01"
+    },
+    "c5_station.halcyon.01": {
+      "id": "c5_station.halcyon.01",
+      "speaker": "steve",
+      "text": "They needed the tower, and they needed the building empty. I was the last person here.",
+      "audio": "c5_station.halcyon.01"
+    },
+    "c5_station.stephen.01": {
+      "id": "c5_station.stephen.01",
+      "speaker": "stephen",
+      "text": "Sixty-one percent. That’s what the attendant said. I assumed the rest was a compliment.",
+      "audio": "c5_station.stephen.01"
+    },
+    "c5_station.stephen.02": {
+      "id": "c5_station.stephen.02",
+      "speaker": "steve",
+      "text": "Sit down. There’s something you need to know.",
+      "audio": "c5_station.stephen.02"
     }
   },
   "sound_labels": {
     "effect.nora_whistle": "Listen: Nora’s two-note whistle",
+    "effect.k7blw": "Listen: Frank’s call sign in Morse",
     "effect.veyr_wind": "Listen: the last wind on Veyr",
     "recording.greeting": "Listen: the morning greeting",
     "recording.rook": "Listen: Rook’s recorded reassurance",
@@ -4722,6 +5606,26 @@
           "id": "borrowed_voice",
           "after": "c4_safe.match",
           "text": "Someone else could have access to the performance on her voicemail."
+        }
+      ]
+    },
+    "boat": {
+      "title": "Why did my parents go out that night?",
+      "clues": [
+        "c5_shack.notes",
+        "c5_shack.club",
+        "c5_shack.log"
+      ],
+      "theories": [
+        {
+          "id": "pleasure_trip",
+          "after": "c5_shack.notes",
+          "text": "They only wanted company on the water."
+        },
+        {
+          "id": "radio_investigation",
+          "after": "c5_shack.log",
+          "text": "They went to locate the signal Frank was tracking."
         }
       ]
     }

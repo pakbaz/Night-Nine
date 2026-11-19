@@ -69,6 +69,17 @@
         "lufs": -16.9,
         "entry_seconds": 19.5
       }
+    },
+    "Chapter 5": {
+      "bgm": {
+        "file": "res://assets/audio/music/chapter-05-bgm.mp3",
+        "lufs": -14.0
+      },
+      "theme": {
+        "file": "res://assets/audio/music/chapter-05-theme.mp3",
+        "lufs": -15.8,
+        "entry_seconds": 4.9
+      }
     }
   }
 }
