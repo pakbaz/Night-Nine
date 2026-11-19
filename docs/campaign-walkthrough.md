@@ -12,8 +12,9 @@ Spoilers for the entire game.
 ## A careful translation
 
 - Interpreter’s notebook: You propose discussing what was demonstrated
-- Joint statement: Invite each side to describe the apparatus
-- Private record: Write the agreement in her own shorthand
+- Joint statement: Ask both delegates about their own apparatus
+  Settings: Question for both delegates: What produced the ring in your room?; Entry in the joint minutes: Both observers saw a ring
+- Private record: Separately attributed remarks and the final agreement
 
 ## The bay is singing
 
@@ -24,201 +25,209 @@ Spoilers for the entire game.
 
 - Saturday take: Keep the original recording
 - Sunday take: Record the greeting without prompting her
-- Recorder control test: The recorder preserves new differences
+- Recorder control test: The transport loops the last input on every pass
 - Compare greetings: An identical performance
   Settings: Sunday offset: -0.35 s; Conclusion: Identical performance
 
 ## Sunday on the pier
 
-- Admiral’s pool: Make a note, without treating it as proof
-- Deputy Lyle: Record the change as a lead
-- Penhallow’s bait stall: Ask about the sound
+- Admiral’s pool: He failed to turn during this whistle
+- Deputy Lyle: Ask when he first began coming to their games
+- Penhallow’s bait stall: Ask which part of the bay she hears it from
 
 ## A plate kept warm
 
-- Carmen’s birthday: Write down the date and witnesses
-- Tomás’s recorder: Ask to keep the dates and recordings
-- Nora at dinner: Treat the change as another lead
+- Carmen’s birthday: Mateo’s arrival and Rafa’s departure times
+- Tomás’s recorder: The field reels with their original labels
+- Nora at dinner: Two witnesses noticed a change worth following
 
 ## The ninth night
 
-- Coat pocket: Compare it with the birthday alibi
-- Balcony wiring: Use the service switch to release the latch
-  Settings: First action: Isolate power; Second action: Hold release; Third action: Restore power
-- Iris pots: Cross toward the unlocked stairwell
+- Coat pocket: The sign-off against the family’s witnessed interval
+- Balcony wiring: Queue the release and restart the motor with the stair lit
+  Settings: Selector before touching the pad: SERVICE; At the thumb pad: Press and keep pressure; While the pad is still in that position: Switch to NORMAL
+- Iris pots: Follow the shared rail to the communal stair
 
 ## The Aquarium Is Closed
 
-- Exhibit plan: Follow the service route on the old plan
-  Settings: Entrance: Service door; Pump-room outlet: N
-- Announcement loop: Use the corridor with the repeated announcement
-- Nora’s coat and intercom: Preserve the complete tape
+- Exhibit plan: Reach the outgoing pump route from the service entrance
+  Settings: Entrance: Service door; Pump outlet: E
+- Two service doors: Take the filter corridor
+- Nora’s coat and intercom: File the intact spool and its marked leader
 
 ## Sixty-one percent
 
-- Amber sleeper: Speak to her and listen
-- Saren’s intercom: Record the complete release command
-- Scan chair: Play Saren’s release command
+- Amber sleeper: Speak close to the bed and watch her breathing
+- Saren’s intercom: Saren’s reply from first word to last
+- Scan chair: Deliver the captured service phrase during the long scan window
+  Settings: Recorder cue: Reel 03; Microphone grille: Undamaged rim; Start of playback: Start of the 61 notch
 
 ## Please Prove You Exist
 
-- Morning crossword: Use the new crossword
-- Evidence notebook: Use fresh facts and independently dated evidence
-- Dale’s delivery: Record the visit without confronting him
+- Morning crossword: Today’s ferry clue
+- Evidence notebook: Check a new fact against a separately dated record
+- Dale’s delivery: Compare dispatch and redirection timestamps
 
 ## Paper remembers
 
-- Attendance ledger: Keep both originals and record the contradiction
-  Settings: First independent source: Paper ledger; Second independent source: Clinic receipt; Inference: Two independent locations conflict
-- Meridian utility bill: File the measured power use
-- Tomás’s tapes: Nine nights
-  Settings: Next date: 29th; Stakeout arrival: Before midnight
+- Attendance ledger: Retain both originals and document the travel conflict
+  Settings: From Desk A: Clinic receipt; From Desk B: Bound ledger; What those originals establish: Two locations conflict under one name
+- Meridian utility bill: Recorded grid use is modest; other supply is unverified
+- Tomás’s tapes: Use the field interval and observe the path before the procession
+  Settings: Next field date: 29th; Watch assignment: Boathouse at 23:45
 
 ## The Archivist
 
-- Echo reconciliation: Perform the required reconciliation
-- Meridian test archive: Mark the signals as repeated recordings
-- Sealed surveys: Remember the sealed survey and visit Row Zero
+- Echo reconciliation: Restore Gus’s working echo from the stored record
+- Meridian test archive: Flag one performance filed twice
+- Sealed surveys: Keep the sealed survey separate and visit Row Zero
 
 ## Federal Hospitality
 
-- Office door: Record the new reassurance
-- Rook comparison: An identical take
-- Observation room: Inspect the sleeper and assignment dates
+- Office door: Capture the new reassurance with the room sound intact
+- Rook comparison: The same recorded performance
+- Observation room: Check the live Gallery clock against the dated assignment
 
 ## Only honest
 
-- Pneumatic post: Send the warning to C
-  Settings: Diverter: C; Capsule contents: A warning and the recording comparison; Final action: Open send valve
-- Safety test panel: Use the marked evacuation test
-- Transport van: Use the release at the slow bend
+- Pneumatic post: Send both takes directly to June’s current room
+  Settings: Diverter: C; Capsule: Blue maintenance; Enclosure: Both labeled takes and the warning
+- Safety test panel: Schedule the west corridor’s authorized floor rehearsal
+  Settings: Exercise card: BLUE; Console mode: Floor rehearsal; West team’s assembly point: Transport bay
+- Transport van: Wait for the released catch and the gravel bend
 
 ## Wanted: Steve Mercer
 
-- Kitchen-table notes: Read the notes in order
-- Frank’s receiver: Reconnect the matching low-voltage lead with power off
-  Settings: Receiver power: 12V output; Long wire: ANT; When to reconnect power: After wiring is complete
-- Thursday club: Call K7BLW
-- The final log: Preserve the tone and read the last entry
+- Kitchen-table notes: Put Helen’s earlier use beside Frank’s dated reply
+- Frank’s receiver: Match the receiver rating and correct the slipped dial
+  Settings: Battery pack with receiver off: BLUE; Dial setting for Thursday club: 3.61 MHz
+- Thursday club: K7BLW, from the outgoing column
+- The final log: Keep the full sound under the dated log entry
 
 ## Two of him
 
-- Unattended console: Schedule an identification break
-- First show: Open that record sleeve
-- Ownership papers: Compare the transmission dates with the acquisition
-- The pursuer: Tell him what happened
+- Unattended console: Queue IDENT and enter during playback
+- First show: The original transmission sleeve of the first show he engineered
+- Ownership papers: The new owner cleared the overnight slot before the tower traffic began
+- The pursuer: Ask him for the last time he saw their parents; listen before explaining
 
 ## Iris
 
-- Market corner: Ask Stephen to speak to the shopkeeper (as Stephen)
-- Iris’s recorder test: Recognize that she is changing (as Steve Mercer)
-- Halcyon lines: Connect hold music with remote re-sync (as Steve Mercer)
+- Market corner: Ask the baker to correct the wanted poster during her 8:10 window sale (as Stephen)
+- Iris’s recorder test: She chose how to say it each time (as Steve Mercer)
+- Halcyon lines: The shared passage in the hold tune (as Steve Mercer)
 
 ## Two Sheriffs
 
 - Pell’s sorting case: Open drawer J, slot 9 (as Steve Mercer)
-  Settings: Drawer: J; Slot: 9
-- Sheriff’s front desk: Have Stephen demand to correct his wanted photograph (as Stephen)
+  Settings: Drawer: Jail; Slot: 9
+- Sheriff’s front desk: Records, for a new likeness on a contested poster (as Stephen)
 - The two Calders: Ask for today’s unfinished crossword answer (as Steve Mercer)
-- Deputy’s checkpoint: Let him choose to go to the play
+  Settings: Crossing to ask for: 23 Across / 8 Down; Accept the slip with: An M circled
+- Deputy’s checkpoint: Tell him his relief has signed and let him decide where to go
 
 ## Nobody is coming to fix this
 
 - Guard circuit: Move when the far door closes
-- Sleeper skills: Give each person a task using those skills
+  Settings: Step out at count: 20; Reach cover at count: 24
+- Sleeper skills: Lyle at the latch, Dale on directions, Nora at the gauge
 - Gallery circulation: Use the service bypass
-  Settings: Life support: Keep open; First operation: Open service bypass; Second operation: Open hatch after pressure falls
-- Gallery intercom: Record a private message for him
+  Settings: Branch: Blue; Clearance on both gauges: Beds 4 / hatch 2
+- Gallery intercom: Slot B
 
 ## The President’s Other Appointment
 
-- Security gate: Send Stephen through the official gate (as Stephen)
-- Accord mail: Use the marked mail entrance (as Pell)
-- Halcyon broadcast truck: Enter as the sound technician during the cable check (as Steve Mercer)
+- Security gate: 11:40, contracted crew (as Stephen)
+- Accord mail: Keep the counterfoil at the delegation hatch for Ward (as Pell)
+- Halcyon broadcast truck: Halcyon truck (as Steve Mercer)
 
 ## Fourteen turn toward the sea
 
-- Event monitor: Tell Calder and Iris where the real Ward went (as Stephen)
+- Event monitor: Service tunnel at the east stairs (as Stephen)
 - Sound desk routing: Route Frank’s tone to the all-call bus (as Steve Mercer)
-  Settings: Frank’s tone: ALL-CALL; Calder’s talkback: Crew headset; Trigger: After the copy reaches the podium and Calder is ready
-- Ceremony cue: Play the ninth-night tone now (as Steve Mercer)
+  Settings: Tone send: Blue; Recovery-team return: Slate
+- Ceremony cue: 11:58:15 (as Steve Mercer)
 
 ## The Biggest Lie on Earth
 
-- Helen’s shorthand: Tests, mutual discovery, private agreement
-- The reactor: Inspect and reuse the stage equipment
+- Helen’s shorthand: Our test, their test, table
+- The reactor: Drums and lamps
 - Unknown script: Preserve the script and the hum together
+  Settings: Reel to keep with Helen’s page: Reel 11; Notebook finding: A match in rhythm and pitch
 
 ## An offer on the shore
 
-- The offer: Preserve the offer
-- The repeated offer: Compare both performances
-- The notebook: Keep the notebook and refuse
+- The offer: Keep the first take and ask Saren to repeat the whole offer
+- A second offer: One performance, played twice
+- The notebook: He has one assurance and will keep the notebook
 
 ## A show that happens once
 
-- Signal sources: Use live human cues and changing signals
+- Signal sources: Feed B
 - Trust path: Feed the performance into the ship’s own systems
-  Settings: Signal source: Live cue desk; Signal destination: Ship instrument input; Parallel team: Secure the Gallery and wake sleepers
-- Props and radio: Connect the cue board through the isolated interface (as Stephen)
+  Settings: Measurement receipt: Mast; Stephen’s assignment: Antenna passage; Other team: Bring sleepers through the Gallery
+- Props and radio: Coupler C (as Stephen)
 
 ## The Long Patience
 
-- Antenna service door: Use Stephen’s crew credentials (as Stephen)
-- Nora’s bed: Accept Iris’s choice to release Nora (as Steve Mercer)
-- Reunion: Tell her he was afraid and stopped talking
+- Antenna service door: Stephen, with the crew pass (as Stephen)
+- Nora’s bed: Iris’s, after she sees the gauge (as Steve Mercer)
+- Reunion: Why he stopped talking before she was taken
 
 ## Sounds worth waking for
 
 - Frank’s bed: K7BLW in Morse
-  Settings: Call sign: K7BLW; First Morse group: -.-; Final group: .--
-- Helen’s bed: Helen’s lullaby
-- Adrian Rook’s bed: Calder’s voice
-- Agnes’s bed: Bring her glasses and call her name
+  Settings: Card: K7BLW; Final group to repeat: ·−−
+- Helen’s bed: Six-note family melody
+- Adrian Rook’s bed: Ask June to address Adrian and wait for his response (as Nora Reyes)
+- Agnes’s bed: The stickered glasses case (as Nora Reyes)
 
 ## A record that changes
 
-- Choir console: Listen to the lives it has preserved
-- Row Zero: Let Helen compare the tones with her last notebook page
-- Frank’s damp note: Read the note with his parents
+- Choir console: Both entries in the order she gave them
+- Row Zero: The final page Helen made from Frank’s hydrophone tape
+- Frank’s damp note: Open it with Frank and let him finish
 
 ## Good Morning, Bellwether
 
-- AutoRick queue: Select the live emergency bulletin bus
+- AutoRick queue: Sign the bulletin as duty host
 - Tower patch panel: Patch the live desk into Halcyon’s uplink
-  Settings: Source: Live L; Destination: Halcyon H; Limiter: Engaged
-- Emergency radio: Call the ham network with K7BLW
+  Settings: Source jack: Birch; Accepted return: Return C; Level stage: Limiter in
+- Emergency radio: The Sentinel operator
 
 ## Everybody has a part
 
 - Phone tree: Assign local relay callers and await Steve’s cue (as Nora Reyes)
-- Wen and Shaw: Ask them to coordinate at one console (as Steve Mercer)
-- The bait bucket: Use the wind as an emotional cue within the live show (as Steve Mercer)
+  Settings: First street: Orchard; Spare phone: Keep free for the fire crew
+- Wen and Shaw: Wen follows Shaw’s observed lamp mark (as Steve Mercer)
+- The bait bucket: Open the Choir’s return after the last gust (as Steve Mercer)
 
 ## One new take
 
 - Cue one: establish scale: Nora’s porch lights, then Shaw’s field lights
+  Settings: Call first: Orchard; Release Shaw on: A new Pier flash after Orchard changes
 - Cue two: adapt: Hold two seconds and issue a fresh cue
-  Settings: Delay compensation: 2 seconds; First response: Shaw on Steve’s fresh cue; Then: Wen after coast confirmation
-- Cue three: listen: Bring in the Choir after the wind, following its breath
+  Settings: Coast return fader: Reed; Reserve for Wen: Beats 43 and 44
+- Cue three: listen: At the Choir’s intake at 53
 
 ## Go around
 
-- The open channel: Hear what the shore echo has learned
+- The open channel: Penhallow with the bait ledger
 - Saren’s sealed survey: Release its coordinates with the report
-- Fleet transmission: Confirm the measured performance and transmit the new home
+  Settings: Survey: Reach 2; Evidence for ground clear: Separate visits found no settlements
+- Fleet transmission: Ship measurement and the Reach 2 survey
 
 ## A place to live
 
-- The new neighbors: Visit the families making those choices
-- Two Agneses: Listen to their choices
-- A new morning: Make coffee and begin talking
+- The new neighbors: Pell, beside his bag
+- Two Agneses: Two prices at the shop; one traveler at the ferry
+- A new morning: Answer Mom, then go with Nora for coffee
 
 ## Good morning
 
-- A message from the fleet: Play the new wind, then speak live
+- A message from the fleet: Play the new arrival, then open the brothers’ microphones
 
 ## We heard the singing
 
-- The new signal: Compare it with the final notebook page
+- The new signal: Her transcription of Wick’s dream tones
 

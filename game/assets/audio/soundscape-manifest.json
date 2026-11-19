@@ -1,4 +1,14 @@
 {
+  "aquarium_pa": {
+    "file": "res://assets/audio/effects/aquarium_pa.wav",
+    "sha256": "352f6acde3a1b7e681c507418db7075e364c618bb3dd77efd723db6e8ccb4e92",
+    "seconds": 6.0
+  },
+  "aquarium_steps": {
+    "file": "res://assets/audio/effects/aquarium_steps.wav",
+    "sha256": "15ad7d1808ac3a51bfd27f6835bd6bc7b860f08e9119f65e246ddea3965aa870",
+    "seconds": 6.0
+  },
   "delegates_laugh": {
     "file": "res://assets/audio/effects/delegates_laugh.wav",
     "sha256": "7c66db1fe72a1466c994323f3b28f491fdc862750b323097c353ce3051b5a541",
@@ -13,6 +23,11 @@
     "file": "res://assets/audio/effects/lullaby.wav",
     "sha256": "d5339beaa251c124dea3716635f5790c1671c2fc3cb9d18f193cd922e5ac5a1a",
     "seconds": 5.38
+  },
+  "meridian_pulse": {
+    "file": "res://assets/audio/effects/meridian_pulse.wav",
+    "sha256": "9104907acf9a0738e7fbc711851b25e8ec46b8f935e3d5c4609bbc7a1082649d",
+    "seconds": 2.72
   },
   "new_wind": {
     "file": "res://assets/audio/effects/new_wind.wav",
@@ -33,5 +48,10 @@
     "file": "res://assets/audio/effects/veyr_wind.wav",
     "sha256": "3fa22497241a72a989f2b971b6ae2763bee06155ce69b173136c1d2b05e1b443",
     "seconds": 11.75
+  },
+  "wick": {
+    "file": "res://assets/audio/effects/wick.wav",
+    "sha256": "ab9f5387c84d31af393960ece5a4238a783435cf3f9c5e36ba92c02eebdb3540",
+    "seconds": 3.55
   }
 }

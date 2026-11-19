@@ -53,11 +53,11 @@
         {
           "id": "p_veyr.shield",
           "title": "Wind screen",
-          "prompt": "Wind rattles the exposed microphone. A felt sleeve lies beside the recorder.",
+          "prompt": "Knocks vanish when the Archivist shelters the microphone with her hand. The distant towers are still audible. What can she leave in place when she lets go?",
           "options": [
             "Fit the felt sleeve",
-            "Raise the input gain",
-            "Point the microphone into the gust"
+            "Set the recorder on a folded cloth",
+            "Lower the gain one division"
           ],
           "answer": 0,
           "lines": [
@@ -68,7 +68,12 @@
           "actor": "",
           "kind": "choice",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "What changed when she used her hand?",
+            "Air hitting the capsule and vibration travelling up the stand have different remedies.",
+            "Choose “Fit the felt sleeve”. Shielded the microphone against wind noise."
+          ]
         },
         {
           "id": "p_veyr.levels",
@@ -107,16 +112,21 @@
             "solution": [
               2
             ]
-          }
+          },
+          "hints": [
+            "Start by working out where the louder gust would peak at the current setting.",
+            "The next peak would be +3 dB. Count how far it must move to reach -3 dB.",
+            "Choose -6 dB. A bigger reduction also avoids clipping, but loses more level than necessary."
+          ]
         },
         {
           "id": "p_veyr.record",
           "title": "Departure recorder",
-          "prompt": "The ships are rising. Capture a continuous take before the tower falls silent.",
+          "prompt": "The departure has three sounds in order: the tower wind, an engine lifting, then a silence where the engine was. What would preserve their timing for someone who never heard them?",
           "options": [
             "Record the whole passage",
-            "Loop the cleanest second",
-            "Replace it with generated wind"
+            "Make a separate reel for each sound",
+            "Stop the tape during the quiet passage"
           ],
           "answer": 0,
           "lines": [
@@ -131,7 +141,12 @@
           "sounds": [
             "effect.veyr_wind"
           ],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Consider what a listener can learn from the silence.",
+            "A splice can preserve the order of events while losing their spacing.",
+            "Choose “Record the whole passage”. Preserved the wind on Veyr."
+          ]
         }
       ],
       "intro": [
@@ -169,11 +184,11 @@
         {
           "id": "p_meeting.terms",
           "title": "Interpreter’s notebook",
-          "prompt": "Both delegates want the other to admit a weakness first. Translate without adding an accusation.",
+          "prompt": "The delegate says “compare our demonstrations.” One interpreter’s draft uses “prove”; another adds “which was stronger.” Helen needs to translate the proposal without adding a claim.",
           "options": [
-            "You admit defeat",
+            "You propose a test of which field was stronger",
             "You propose discussing what was demonstrated",
-            "You demand their surrender"
+            "You propose proving the apparatus can work"
           ],
           "answer": 1,
           "lines": [
@@ -185,16 +200,21 @@
           "actor": "",
           "kind": "choice",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Listen for the verb the delegate actually used.",
+            "Comparing observations leaves their explanation open. Ranking or proving them adds a promise.",
+            "Choose “You propose discussing what was demonstrated”. Kept the translation neutral."
+          ]
         },
         {
           "id": "p_meeting.confess",
           "title": "Joint statement",
-          "prompt": "The American demonstration used stage effects. The Chinese delegate has quietly closed a similar effects diagram.",
+          "prompt": "The interpreters have two records to fill. Helen must leave each delegate room to speak for their own team.",
           "options": [
-            "Invite each side to describe the apparatus",
-            "Announce that China lost",
-            "Promise the machines work"
+            "Ask both delegates about their own apparatus",
+            "Ask about the other demonstration",
+            "Record a shared conclusion about the mechanism"
           ],
           "answer": 0,
           "lines": [
@@ -209,16 +229,46 @@
           "actor": "",
           "kind": "choice",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "puzzle": {
+            "instruction": "The American observer saw a ring on the Chinese screen. The Chinese observer saw a ring on the American screen. Neither inspected the other room. Each engineering team brought its own projection diagram. The joint minutes are public; the diagrams were offered in the closed session.",
+            "rows": [
+              {
+                "label": "Question for both delegates",
+                "options": [
+                  "What produced the ring in your room?",
+                  "How did the other team produce its ring?",
+                  "How far did the other team move the target?"
+                ]
+              },
+              {
+                "label": "Entry in the joint minutes",
+                "options": [
+                  "Two projectors, one in each room",
+                  "Both observers saw a ring",
+                  "Both targets moved the same distance"
+                ]
+              }
+            ],
+            "solution": [
+              0,
+              1
+            ]
+          },
+          "hints": [
+            "Separate what an observer saw from what an engineer did.",
+            "Each delegate can explain one apparatus in private. Both can attest to one visible feature in public.",
+            "Ask what produced the ring in each delegate’s own room. Record only that both observers saw a ring in the joint minutes."
+          ]
         },
         {
           "id": "p_meeting.record",
           "title": "Private record",
-          "prompt": "The delegates agree to maintain the public story. Helen needs an accurate private account.",
+          "prompt": "The two delegates approve the same public sentence. Helen also heard each private admission. What belongs in the notebook she keeps for herself?",
           "options": [
-            "Destroy the notes",
-            "Write the agreement in her own shorthand",
-            "Replace the notes with the press release"
+            "The printed joint sentence alone",
+            "Separately attributed remarks and the final agreement",
+            "A single admission credited to both delegates"
           ],
           "answer": 1,
           "lines": [
@@ -231,7 +281,12 @@
           "actor": "",
           "kind": "choice",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "The notebook may be read years after the speakers are gone.",
+            "A reader should be able to distinguish who spoke in private from what both signed.",
+            "Choose “Separately attributed remarks and the final agreement”. Helen preserved the truth in Mandarin shorthand."
+          ]
         }
       ],
       "intro": [
@@ -283,16 +338,21 @@
           "actor": "",
           "kind": "record",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Move the dial between the two clear broadcasts and listen for a third sound.",
+            "The hum is near 815 kHz. A broad setting still lets the adjacent stations through.",
+            "Set 815 kHz, choose the narrow bandwidth, then record."
+          ]
         },
         {
           "id": "p_bay.message",
           "title": "Phone and notebook",
-          "prompt": "Helen has the pattern written down. Steve’s phone has gone to voicemail.",
+          "prompt": "Frank needs both hands on the set. Helen has a dry notebook in the boat. Steve’s recorded greeting ends with a beep. Which record could Steve find at home tonight?",
           "options": [
             "Leave Steve a message",
-            "Erase the pattern",
-            "Row back without recording it"
+            "Write a second copy in the boat log",
+            "Call the Thursday club from Frank’s receiver"
           ],
           "answer": 0,
           "lines": [
@@ -305,7 +365,12 @@
           "actor": "",
           "kind": "choice",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Where will each record be when the boat leaves?",
+            "Steve can retrieve something left on his own phone.",
+            "Choose “Leave Steve a message”. Helen called Steve before the boat disappeared."
+          ]
         }
       ],
       "intro": [
@@ -343,11 +408,11 @@
         {
           "id": "c1_flat.saturday",
           "title": "Saturday take",
-          "prompt": "Frank’s recorder was running when Nora greeted Steve. Preserve that take.",
+          "prompt": "The leader reads SAT. A loose work reel holds an earlier kitchen test. Steve wants evidence he can date without relying on memory.",
           "options": [
             "Keep the original recording",
-            "Record over it",
-            "Normalize it destructively"
+            "Copy both takes onto the work reel without markers",
+            "Use the kitchen test as the Saturday reference"
           ],
           "answer": 0,
           "lines": [
@@ -360,16 +425,21 @@
           "sounds": [
             "recording.greeting"
           ],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "The date has to stay attached to the sound.",
+            "An earlier recording from the same room does not establish what Steve heard on Saturday.",
+            "Choose “Keep the original recording”. Preserved Saturday’s greeting."
+          ]
         },
         {
           "id": "c1_flat.sunday",
           "title": "Sunday take",
-          "prompt": "The next morning, Nora gives the same greeting. Record it on a fresh section of tape.",
+          "prompt": "On Sunday Steve can set the recorder running before Nora comes in. How could he compare an ordinary morning with Saturday without teaching her the rhythm he remembers?",
           "options": [
-            "Ask about their first date",
+            "Play Saturday first and ask for another greeting",
             "Record the greeting without prompting her",
-            "Guess from memory"
+            "Say the greeting first and ask her to reply"
           ],
           "answer": 1,
           "lines": [
@@ -385,16 +455,21 @@
           "sounds": [
             "recording.greeting"
           ],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Keep the conditions of the two mornings as similar as possible.",
+            "A demonstration or a verbal cue can change the second performance.",
+            "Choose “Record the greeting without prompting her”. Preserved Sunday’s greeting."
+          ]
         },
         {
           "id": "c1_flat.control",
           "title": "Recorder control test",
-          "prompt": "Steve says the same sentence twice. He can hear a different breath and a longer pause in the second take.",
+          "prompt": "Steve tests a different stretch of tape. He hears “one, two” twice. A chair squeaks between the words only on the second pass. Which claim has this test actually challenged?",
           "options": [
-            "The recorder repeats every input",
-            "The recorder preserves new differences",
-            "People always repeat perfectly"
+            "Nora used the same words twice",
+            "The transport loops the last input on every pass",
+            "Steve recognized Nora’s voice correctly"
           ],
           "answer": 1,
           "lines": [
@@ -408,7 +483,12 @@
           "actor": "",
           "kind": "choice",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Use the squeak as a marker independent of the words.",
+            "A transport that always replayed the earlier pass would replay the earlier room noise too.",
+            "Choose “The transport loops the last input on every pass”. Ruled out a stuck or looping recorder."
+          ]
         },
         {
           "id": "c1_flat.compare",
@@ -508,11 +588,11 @@
         {
           "id": "c1_pier.whistle",
           "title": "Admiral’s pool",
-          "prompt": "Admiral stole Steve’s sandwich. Nora whistles her familiar two-note call, but he ignores it.",
+          "prompt": "Admiral took Steve’s lunch. Nora whistles while Admiral is underwater; the harbor winch is running. He keeps swimming. What should go in the observation column?",
           "options": [
-            "Make a note, without treating it as proof",
-            "Conclude that everyone is a copy",
-            "Blame the sealion"
+            "He failed to turn during this whistle",
+            "He heard Nora and chose to ignore her",
+            "Nora’s second note was too low"
           ],
           "answer": 0,
           "lines": [
@@ -525,16 +605,21 @@
           "sounds": [
             "effect.nora_whistle"
           ],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Separate what Steve saw from what he thinks Admiral heard.",
+            "The winch and the water leave more than one explanation.",
+            "Choose “He failed to turn during this whistle”. Admiral ignored the apparent Nora’s whistle."
+          ]
         },
         {
           "id": "c1_pier.door",
           "title": "Deputy Lyle",
-          "prompt": "Lyle holds the door, remembers a birthday and hurries to his sons’ game.",
+          "prompt": "Lyle holds a door and remembers the boys’ birthday. Steve remembers him as a colder man. What independent follow-up would help date the change?",
           "options": [
-            "Arrest him",
-            "Record the change as a lead",
-            "Decide that kindness proves innocence"
+            "Record the birthday itself",
+            "Ask when he first began coming to their games",
+            "Test whether he remembers Steve’s old address"
           ],
           "answer": 1,
           "lines": [
@@ -546,16 +631,21 @@
           "actor": "",
           "kind": "choice",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Steve needs a date for the new habit.",
+            "Old memories can establish familiarity without dating a change in behavior.",
+            "Choose “Ask when he first began coming to their games”. Lyle’s behavior changed; behavior alone proves nothing."
+          ]
         },
         {
           "id": "c1_pier.bait",
           "title": "Penhallow’s bait stall",
-          "prompt": "Mrs. Penhallow hums a tune while she wraps bait. The same low tone drifts from the bay.",
+          "prompt": "Penhallow hums along to a low note. Her lips go still before the note dies away across the water. Steve wants to learn where it comes from.",
           "options": [
-            "Ask about the sound",
-            "Take her cash box",
-            "Assume it is a fishing song"
+            "Ask which part of the bay she hears it from",
+            "Ask when she learned the melody",
+            "Ask whether she hums it in the shop"
           ],
           "answer": 0,
           "lines": [
@@ -566,7 +656,12 @@
           "actor": "",
           "kind": "record",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "There are two possible sources close together.",
+            "Steve still hears the note after Penhallow stops.",
+            "Choose “Ask which part of the bay she hears it from”. Penhallow knows about the bay’s recurring tone."
+          ]
         }
       ],
       "intro": [
@@ -581,7 +676,7 @@
         {
           "duration": 5.0,
           "move": "establish",
-          "direction": "Track along wet timber past a bait stall and pools of warm lamplight."
+          "direction": "Follow Steve along the pier, then join the Reyes family at La Marea for Sunday dinner."
         },
         {
           "duration": 6.0,
@@ -604,11 +699,11 @@
         {
           "id": "c1_dinner.birthday",
           "title": "Carmen’s birthday",
-          "prompt": "Carmen remembers Nora staying at La Marea from noon to midnight on her birthday.",
+          "prompt": "Mateo drove Nora to the restaurant; Rafa took her home. Carmen remembers the meal but spent most of it in the kitchen. Which entries could later establish how long Nora stayed?",
           "options": [
-            "Write down the date and witnesses",
-            "Ask whether Nora seemed nicer",
-            "Ignore the date"
+            "Mateo’s arrival and Rafa’s departure times",
+            "Carmen’s menu and the restaurant hours",
+            "Nora’s shift roster and the table booking"
           ],
           "answer": 0,
           "lines": [
@@ -619,16 +714,21 @@
           "actor": "",
           "kind": "choice",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Which family members actually witnessed the endpoints?",
+            "A booking describes a plan; a ride places someone at the restaurant.",
+            "Choose “Mateo’s arrival and Rafa’s departure times”. Nora had a documented alibi on Carmen’s birthday."
+          ]
         },
         {
           "id": "c1_dinner.podcast",
           "title": "Tomás’s recorder",
-          "prompt": "Tomás has dated recordings of lights and hums in the bay from the past three years.",
+          "prompt": "Tomás has three years of field reels. His published episodes splice sounds from several nights. What should Steve borrow to investigate the dates?",
           "options": [
-            "Laugh off the story",
-            "Ask to keep the dates and recordings",
-            "Edit his podcast title"
+            "The episodes arranged by broadcast date",
+            "The field reels with their original labels",
+            "An undated compilation of the clearest hums"
           ],
           "answer": 1,
           "lines": [
@@ -640,16 +740,21 @@
           "actor": "",
           "kind": "record",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Does a broadcast date establish a recording date?",
+            "Keep the sound attached to the night Tomás was in the field.",
+            "Choose “The field reels with their original labels”. Tomás retained dated bay recordings."
+          ]
         },
         {
           "id": "c1_dinner.family",
           "title": "Nora at dinner",
-          "prompt": "Nora agrees with every suggestion, including a recipe she used to dislike.",
+          "prompt": "Nora now agrees with Carmen about a recipe she used to argue over. Carmen notices too. Which conclusion can Steve support tonight?",
           "options": [
-            "Test her on a childhood memory",
-            "Treat the change as another lead",
-            "Accuse her in front of everyone"
+            "Nora has forgotten how the dish used to taste",
+            "Two witnesses noticed a change worth following",
+            "They know when and why Nora changed her mind"
           ],
           "answer": 1,
           "lines": [
@@ -661,7 +766,12 @@
           "actor": "",
           "kind": "choice",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Count the observations, then consider what caused them.",
+            "Agreement between two witnesses about a change does not date it or explain it.",
+            "Choose “Two witnesses noticed a change worth following”. Several people noticed Nora’s changed behavior."
+          ]
         }
       ],
       "intro": [
@@ -698,11 +808,11 @@
         {
           "id": "c1_escape.order",
           "title": "Coat pocket",
-          "prompt": "Nora signed a north-wing aquarium work order on Carmen’s birthday.",
+          "prompt": "The north-wing work order has a handwritten sign-off at 20:15 on Carmen’s birthday. Mateo brought Nora to dinner at noon; Rafa took her home at midnight. Which discrepancy should Steve check first?",
           "options": [
-            "Compare it with the birthday alibi",
-            "Assume the birthday was wrong",
-            "Throw the work order away"
+            "The sign-off against the family’s witnessed interval",
+            "The form’s print date against the reservation date",
+            "The work-order number against the menu price"
           ],
           "answer": 0,
           "lines": [
@@ -713,16 +823,21 @@
           "actor": "",
           "kind": "choice",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Find two records that make claims about the same person and time.",
+            "A form can be printed long before someone signs it.",
+            "Choose “The sign-off against the family’s witnessed interval”. The aquarium work order contradicts a witnessed alibi."
+          ]
         },
         {
           "id": "c1_escape.power",
           "title": "Balcony wiring",
-          "prompt": "The neighbor’s balcony gate has an old electric latch. Its service switch is beside Steve’s window.",
+          "prompt": "The neighbor is halfway down the stairs and cannot see the last turn. Steve must open the balcony gate while the stair bulb stays lit from start to finish. The service selector has three positions.",
           "options": [
-            "Cut a live cable",
-            "Use the service switch to release the latch",
-            "Jump toward the street"
+            "Cycle the light and motor together",
+            "Queue the release and restart the motor with the stair lit",
+            "Try the thumb pad with the motor running"
           ],
           "answer": 1,
           "lines": [
@@ -737,48 +852,53 @@
           "sounds": [],
           "hint": "Look at the evidence in the description, then try another approach.",
           "puzzle": {
-            "instruction": "The service plate reads: isolate supply, hold RELEASE, then restore power. Releasing the button before power returns resets the latch.",
+            "instruction": "NORMAL feeds the stair bulb and latch motor. SERVICE feeds the bulb alone. OFF feeds neither. A thumb pad can store a release request only while the motor is idle. The return spring clears the request the instant the pad rises. The motor checks for a stored request only when it starts.",
             "rows": [
               {
-                "label": "First action",
+                "label": "Selector before touching the pad",
                 "options": [
-                  "Restore power",
-                  "Isolate power",
-                  "Hold release"
+                  "NORMAL",
+                  "OFF",
+                  "SERVICE"
                 ]
               },
               {
-                "label": "Second action",
+                "label": "At the thumb pad",
                 "options": [
-                  "Restore power",
-                  "Isolate power",
-                  "Hold release"
+                  "Tap and let go",
+                  "Press and keep pressure",
+                  "Rest a hand beside it"
                 ]
               },
               {
-                "label": "Third action",
+                "label": "While the pad is still in that position",
                 "options": [
-                  "Restore power",
-                  "Isolate power",
-                  "Let go of release"
+                  "Switch to NORMAL",
+                  "Switch to OFF",
+                  "Stay in SERVICE"
                 ]
               }
             ],
             "solution": [
-              1,
               2,
+              1,
               0
             ]
-          }
+          },
+          "hints": [
+            "Track the stair bulb separately from the latch motor.",
+            "The request must survive until the motor starts. Which position lets you store one without darkening the stairs?",
+            "Choose SERVICE, press and keep pressure, then switch to NORMAL."
+          ]
         },
         {
           "id": "c1_escape.cross",
           "title": "Iris pots",
-          "prompt": "The safe route is along the shared balcony. Steve bumps the flowerpots as he climbs.",
+          "prompt": "The pots lean against the inner rail. The landing door needs a key from the stair side. Through the neighbor’s open balcony gate Steve can see the illuminated communal stair.",
           "options": [
-            "Cross toward the unlocked stairwell",
-            "Go back to the locked door",
-            "Hide in the flowerpot"
+            "Follow the shared rail to the communal stair",
+            "Pull the landing door shut and try its outside handle",
+            "Pass the stair and try the unlit fire door"
           ],
           "answer": 0,
           "lines": [
@@ -792,7 +912,12 @@
           "actor": "",
           "kind": "choice",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Use only a route Steve can see is open.",
+            "The landing handle is on the wrong side.",
+            "Choose “Follow the shared rail to the communal stair”. Escaped while the apparent Nora hesitated."
+          ]
         }
       ],
       "intro": [
@@ -830,11 +955,11 @@
         {
           "id": "c2_aquarium.plan",
           "title": "Exhibit plan",
-          "prompt": "The old public route ends at a new wall. The service drain still connects to the north wing.",
+          "prompt": "The old plan and a newer maintenance notice disagree. Steve needs a route into the north wing.",
           "options": [
-            "Follow the service route on the old plan",
-            "Break the public entrance",
-            "Wait for the morning tour"
+            "Reach the outgoing pump route from the service entrance",
+            "Use the old visitor-hall plan",
+            "Trace an incoming pipe back toward the pump"
           ],
           "answer": 0,
           "lines": [
@@ -847,22 +972,22 @@
           "sounds": [],
           "hint": "Look at the evidence in the description, then try another approach.",
           "puzzle": {
-            "instruction": "The old plan shows: service door -> pump room -> north wing. The public hall connects to a new plywood wall. The pump room has an outlet marked N.",
+            "instruction": "On the plan the café and public tank both feed the visitor hall. The service door feeds the pump room. The visitor hall leads to the north wing through door 1. Notice: door 1 was bricked up; the pump room has three pipes now. Flow arrows point from N into the pump, from the pump into E, and from S into the pump. The maintenance slip says to follow the only pipe carrying water away from the pump.",
             "rows": [
               {
                 "label": "Entrance",
                 "options": [
-                  "Public hall",
+                  "Public tank",
                   "Service door",
-                  "Gift shop"
+                  "Café"
                 ]
               },
               {
-                "label": "Pump-room outlet",
+                "label": "Pump outlet",
                 "options": [
+                  "N",
                   "S",
-                  "E",
-                  "N"
+                  "E"
                 ]
               }
             ],
@@ -870,16 +995,21 @@
               1,
               2
             ]
-          }
+          },
+          "hints": [
+            "Use the newer notice when two documents conflict.",
+            "The old visitor route depends on door 1. At the pump compare both ends of the flow arrows.",
+            "Use the service door and follow E, the only outgoing pipe."
+          ]
         },
         {
           "id": "c2_aquarium.guard",
-          "title": "Announcement loop",
-          "prompt": "A warning repeats with the same cough and interval. Behind another door, footsteps pause when Steve moves.",
+          "title": "Two service doors",
+          "prompt": "Steve records six seconds at each door. Which passage can he cross without meeting the guard?",
           "options": [
-            "Walk toward the changing footsteps",
-            "Use the corridor with the repeated announcement",
-            "Call both guards over"
+            "Take the pump corridor",
+            "Take the filter corridor",
+            "Wait for both doors to go silent"
           ],
           "answer": 1,
           "lines": [
@@ -891,17 +1021,29 @@
           ],
           "actor": "",
           "kind": "compare",
-          "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "sounds": [
+            "effect.aquarium_steps",
+            "effect.aquarium_pa"
+          ],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "evidence_labels": [
+            "Pump corridor",
+            "Filter corridor"
+          ],
+          "hints": [
+            "Look for a sound that repeats at the same interval.",
+            "Compare the spacing and shapes of the peaks in each six-second strip.",
+            "Take the filter corridor. The bell and cough repeat together there; the footsteps at the pump change their spacing."
+          ]
         },
         {
           "id": "c2_aquarium.intercom",
           "title": "Nora’s coat and intercom",
-          "prompt": "Inside Nora’s real coat is an intercom tape dated five months earlier. Keep its two-note whistle intact.",
+          "prompt": "The spool starts before Nora states her name. A date mark remains on the leader, and two notes follow the speech. What would let somebody else check both her identity and the date later?",
           "options": [
-            "Preserve the complete tape",
-            "Keep only the spoken name",
-            "Discard the whistle as noise"
+            "File the intact spool and its marked leader",
+            "Keep the two notes alone with a new date label",
+            "Copy the name only and discard the leader"
           ],
           "answer": 0,
           "lines": [
@@ -917,7 +1059,12 @@
           "sounds": [
             "effect.nora_whistle"
           ],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Two different kinds of evidence are on the same spool.",
+            "A date copied by Steve has a different chain of custody from the original marked leader.",
+            "Choose “File the intact spool and its marked leader”. Recovered Nora’s intercom tape and whistle."
+          ]
         }
       ],
       "intro": [
@@ -955,11 +1102,11 @@
         {
           "id": "c2_ship.nora",
           "title": "Amber sleeper",
-          "prompt": "Nora is asleep and breathing in the Gallery. The hum almost forms a familiar lullaby.",
+          "prompt": "At the bed, Nora’s chest rises irregularly against the glass. A pulse travels down the corridor at even intervals. Steve wants to check for a response without disturbing life support.",
           "options": [
-            "Speak to her and listen",
-            "Assume the bed is empty",
-            "Ignore the hum"
+            "Speak close to the bed and watch her breathing",
+            "Use the corridor pulse as Nora’s breathing rate",
+            "Use the brightness of the next bed as her pulse"
           ],
           "answer": 0,
           "lines": [
@@ -970,16 +1117,21 @@
           "actor": "",
           "kind": "record",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Which observation belongs to this sleeper?",
+            "The rhythm shared by the corridor need not come from Nora.",
+            "Choose “Speak close to the bed and watch her breathing”. Confirmed that the real Nora is alive."
+          ]
         },
         {
           "id": "c2_ship.command",
           "title": "Saren’s intercom",
-          "prompt": "Saren orders an attendant to release a maintenance restraint. His voice authorizes the chair.",
+          "prompt": "An attendant asks the chair to open. Nothing happens. Saren answers over the intercom and the buckle releases during his last words. What should Steve mark on the reel?",
           "options": [
-            "Record the complete release command",
-            "Imitate Saren from memory",
-            "Record the hold music only"
+            "Saren’s reply from first word to last",
+            "The attendant’s request before the reply",
+            "Only the noise of the buckle opening"
           ],
           "answer": 0,
           "lines": [
@@ -993,16 +1145,21 @@
           "actor": "",
           "kind": "record",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "The order of the three sounds matters.",
+            "The words before the click may matter just as much as the word Steve heard most clearly.",
+            "Choose “Saren’s reply from first word to last”. Recorded Saren’s restraint-release command."
+          ]
         },
         {
           "id": "c2_ship.escape",
           "title": "Scan chair",
-          "prompt": "The scan has reached 61%. The intercom microphone is within reach of the recorder.",
+          "prompt": "The scan is moving again. Steve has three recordings on Frank’s reel and can reach two microphone grilles.",
           "options": [
-            "Wait until the scan finishes",
-            "Play Saren’s release command",
-            "Ask for louder hold music"
+            "Route the clip to the Gallery speakers",
+            "Deliver the captured service phrase during the long scan window",
+            "Repeat a short scan pulse"
           ],
           "answer": 1,
           "lines": [
@@ -1016,9 +1173,54 @@
           "actor": "",
           "kind": "playback",
           "sounds": [
+            "c2_aquarium.out.01",
+            "c2_ship.in.02",
             "recording.release"
           ],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "puzzle": {
+            "instruction": "The attendant spoke into the grille with the broken rim when testing the gallery speakers. The undamaged grille made the chair’s service lamp blink. The lamp stays lit for one second on an ordinary scan beat and for six seconds at the notch marked 61. The chair listens only while the lamp is lit and drops an unfinished phrase when it goes dark.",
+            "rows": [
+              {
+                "label": "Recorder cue",
+                "options": [
+                  "Reel 01",
+                  "Reel 02",
+                  "Reel 03"
+                ]
+              },
+              {
+                "label": "Microphone grille",
+                "options": [
+                  "Broken rim",
+                  "Undamaged rim"
+                ]
+              },
+              {
+                "label": "Start of playback",
+                "options": [
+                  "First ordinary beat",
+                  "Start of the 61 notch",
+                  "When the notch ends"
+                ]
+              }
+            ],
+            "solution": [
+              2,
+              1,
+              1
+            ]
+          },
+          "hints": [
+            "Preview the three cues. Which speaker has already been obeyed by this chair?",
+            "Separate the public speakers from the local service input. The complete authorization lasts longer than one ordinary beat.",
+            "Choose cue 03, the undamaged grille, and the start of the 61 notch."
+          ],
+          "audition_labels": [
+            "Reel 01",
+            "Reel 02",
+            "Reel 03"
+          ]
         }
       ],
       "intro": [
@@ -1057,11 +1259,11 @@
         {
           "id": "c3_house.crossword",
           "title": "Morning crossword",
-          "prompt": "Calder asks Steve to solve fresh clues from today’s paper. Old shared memories could have been copied.",
+          "prompt": "Calder’s drawer holds last Friday’s completed crossword. Today’s blank crossword includes a clue about a ferry cancellation announced this morning. Which item can test access to fresh facts?",
           "options": [
-            "Use the new crossword",
-            "Recite his birthday",
-            "Describe his first date"
+            "Today’s ferry clue",
+            "Friday’s handwritten letters",
+            "The nickname Calder used at school"
           ],
           "answer": 0,
           "lines": [
@@ -1073,16 +1275,21 @@
           "actor": "",
           "kind": "choice",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "When could the subject first have learned the answer?",
+            "An old private memory and fresh private evidence are different tests.",
+            "Choose “Today’s ferry clue”. Established fresh private facts with Calder."
+          ]
         },
         {
           "id": "c3_house.rules",
           "title": "Evidence notebook",
-          "prompt": "Affection can be real in a copy. Grief can change a human. Neither is a reliable test.",
+          "prompt": "One grieving human has changed his routine. Someone suspected of being a copy has remembered the sheriff’s childhood. Which approach could June check without assuming either example proves identity?",
           "options": [
-            "Treat kindness as proof",
-            "Use fresh facts and independently dated evidence",
-            "Arrest everyone who seems different"
+            "Score how many old memories sound correct",
+            "Check a new fact against a separately dated record",
+            "Treat each new kindness as a separate positive test"
           ],
           "answer": 1,
           "lines": [
@@ -1095,16 +1302,21 @@
           "actor": "",
           "kind": "choice",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Two different causes can produce the same behavior.",
+            "Prefer observations that can be checked outside the interview.",
+            "Choose “Check a new fact against a separately dated record”. Agreed on evidence rather than personality tests."
+          ]
         },
         {
           "id": "c3_house.mail",
           "title": "Dale’s delivery",
-          "prompt": "The mail carrier brings Steve’s redirected mail early, then spends several minutes petting Biscuit.",
+          "prompt": "Dale carries Steve’s redirected mail before the desk has logged the change. He also stops to pet Biscuit. Which follow-up can distinguish an early dispatch from an alteration?",
           "options": [
-            "Record the visit without confronting him",
-            "Take Biscuit away",
-            "Assume a dog can verify identity"
+            "Compare dispatch and redirection timestamps",
+            "Ask Biscuit which hand Dale normally uses",
+            "Compare today’s greeting with Steve’s memory of it"
           ],
           "answer": 0,
           "lines": [
@@ -1116,7 +1328,12 @@
           "actor": "",
           "kind": "choice",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Which suspicious detail has a record independent of Dale?",
+            "The route desk and the dispatch office record different events.",
+            "Choose “Compare dispatch and redirection timestamps”. The mail carrier has formed an attachment to Biscuit."
+          ]
         }
       ],
       "intro": [
@@ -1155,11 +1372,11 @@
         {
           "id": "c3_archive.paper",
           "title": "Attendance ledger",
-          "prompt": "A paper signature places a suspect at Town Hall while a dated clinic receipt places the same person elsewhere.",
+          "prompt": "Calder needs two independent originals. The office has copies and summaries of the same records.",
           "options": [
-            "Keep both originals and record the contradiction",
-            "Trust the edited database",
-            "Destroy the paper"
+            "Retain both originals and document the travel conflict",
+            "Treat the originals and their copies as four witnesses",
+            "Identify an impostor from one signature"
           ],
           "answer": 0,
           "lines": [
@@ -1172,48 +1389,51 @@
           "sounds": [],
           "hint": "Look at the evidence in the description, then try another approach.",
           "puzzle": {
-            "instruction": "Three records: a paper ledger signed at 14:10, a clinic receipt stamped 14:12, and a digital entry amended the following day. The clinic is forty minutes away.",
+            "instruction": "Desk A: clinic receipt, punched 14:12; fax of that receipt, received 15:04. Desk B: bound Town Hall ledger, signed 14:10; next-day database entry transcribed from the ledger. The bus trip between the two counters takes forty minutes. One signature uses the same name as the other.",
             "rows": [
               {
-                "label": "First independent source",
-                "options": [
-                  "Digital entry",
-                  "Paper ledger",
-                  "Rumor"
-                ]
-              },
-              {
-                "label": "Second independent source",
+                "label": "From Desk A",
                 "options": [
                   "Clinic receipt",
-                  "Digital entry",
-                  "Personality change"
+                  "Fax copy"
                 ]
               },
               {
-                "label": "Inference",
+                "label": "From Desk B",
                 "options": [
-                  "Ordinary travel fits",
-                  "The digital amendment proves innocence",
-                  "Two independent locations conflict"
+                  "Database entry",
+                  "Bound ledger"
+                ]
+              },
+              {
+                "label": "What those originals establish",
+                "options": [
+                  "Which signer used a false name",
+                  "Two locations conflict under one name",
+                  "The exact time of a later amendment"
                 ]
               }
             ],
             "solution": [
-              1,
               0,
-              2
+              1,
+              1
             ]
-          }
+          },
+          "hints": [
+            "A second sheet is not necessarily a second independent event.",
+            "Choose the document made at each counter. Compare the times with the travel time; neither record alone identifies an impostor.",
+            "Take the clinic receipt and bound ledger. They place one name in conflicting locations."
+          ]
         },
         {
           "id": "c3_archive.power",
           "title": "Meridian utility bill",
-          "prompt": "Sentinel Point claims to run a space-fold engine. Its electricity bill is lower than a laundromat’s.",
+          "prompt": "A laundromat used 882 units last month. Sentinel Point reported 640. The meter reader confirms one billing meter, but the archives have no record of on-site generation. What can Steve enter in the file?",
           "options": [
-            "File the measured power use",
-            "Assume unlimited secret electricity",
-            "Change the bill"
+            "Recorded grid use is modest; other supply is unverified",
+            "The utility bill measures every source of energy on site",
+            "The smaller bill proves every apparatus was switched off"
           ],
           "answer": 0,
           "lines": [
@@ -1224,16 +1444,21 @@
           "actor": "",
           "kind": "choice",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "The meter records only what passes through it.",
+            "Distinguish an unexplained discrepancy from proof of what the facility contains.",
+            "Choose “Recorded grid use is modest; other supply is unverified”. Meridian’s power use does not fit the claimed engine."
+          ]
         },
         {
           "id": "c3_archive.cycle",
           "title": "Tomás’s tapes",
-          "prompt": "The hum peaks on recordings separated by nine nights. Choose the interval for the stakeout.",
+          "prompt": "Tomás penciled the field dates onto the tape boxes. The studio dates mark the day he aired a recording. Calder needs one evening and one watch point.",
           "options": [
-            "Seven nights",
-            "Nine nights",
-            "Every night"
+            "Use the broadcast interval",
+            "Use the field interval and observe the path before the procession",
+            "Watch for the first glow from the sea wall"
           ],
           "answer": 1,
           "lines": [
@@ -1249,10 +1474,10 @@
           "sounds": [],
           "hint": "Look at the evidence in the description, then try another approach.",
           "puzzle": {
-            "instruction": "Tomás’s strongest recordings were on the 2nd, 11th and 20th. The town’s lights are brightest shortly before the midnight tone.",
+            "instruction": "Field / broadcast dates: 02 / 05, 11 / 13, 20 / 22. From the last stakeout: pier lamp dims 23:42; footsteps pass the boathouse 23:53; water glows 00:04. The radio boat obscures the sea wall from 23:48 until midnight. The boathouse window faces the path.",
             "rows": [
               {
-                "label": "Next date",
+                "label": "Next field date",
                 "options": [
                   "27th",
                   "28th",
@@ -1261,11 +1486,11 @@
                 ]
               },
               {
-                "label": "Stakeout arrival",
+                "label": "Watch assignment",
                 "options": [
-                  "After dawn",
-                  "Before midnight",
-                  "The following afternoon"
+                  "Sea wall at 23:50",
+                  "Boathouse at 23:45",
+                  "Boathouse at 00:05"
                 ]
               }
             ],
@@ -1273,7 +1498,12 @@
               2,
               1
             ]
-          }
+          },
+          "hints": [
+            "Follow when Tomás was in the field, not when his show aired.",
+            "Choose a vantage with an open view before people pass it. The glow comes later.",
+            "Stake out the boathouse at 23:45 on the 29th."
+          ]
         }
       ],
       "intro": [
@@ -1312,11 +1542,11 @@
         {
           "id": "i1_archive.reset",
           "title": "Echo reconciliation",
-          "prompt": "Gus’s new recipes are classified as drift. The Archivist follows the law she has enforced for centuries.",
+          "prompt": "Gus baked a new kelp pastry yesterday. His original human record predates the recipe. The reconciliation register requires preserving the original and restoring only the changed working echo.",
           "options": [
-            "Perform the required reconciliation",
-            "Delete the original human",
-            "Reconcile every crew member"
+            "Restore Gus’s working echo from the stored record",
+            "Update the stored record from the working echo",
+            "Copy yesterday’s recipe into both records before reconciling"
           ],
           "answer": 0,
           "lines": [
@@ -1329,16 +1559,21 @@
           "actor": "",
           "kind": "choice",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Which record is the reference, and which has changed?",
+            "The law preserves an older record even when that costs Gus something new.",
+            "Choose “Restore Gus’s working echo from the stored record”. The Archivist erased an echo’s new experiences."
+          ]
         },
         {
           "id": "i1_archive.signals",
           "title": "Meridian test archive",
-          "prompt": "Two supposedly separate tests contain exactly the same signal imperfections.",
+          "prompt": "Two national stations dated their Meridian instrument reels a week apart. What can the Archivist establish from the traces?",
           "options": [
-            "Mark the signals as repeated recordings",
-            "Assume nature repeated perfectly",
-            "Erase the comparison"
+            "Flag one performance filed twice",
+            "File two independent performances",
+            "Flag a change of playback speed"
           ],
           "answer": 0,
           "lines": [
@@ -1350,17 +1585,29 @@
           ],
           "actor": "",
           "kind": "compare",
-          "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "sounds": [
+            "effect.meridian_pulse",
+            "effect.meridian_pulse"
+          ],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "evidence_labels": [
+            "American station · first test",
+            "Chinese station · second test"
+          ],
+          "hints": [
+            "Start with the gap near the middle.",
+            "Compare the small pulse before the gap and the decay that follows it.",
+            "Flag one performance filed twice. Even the interruption and uneven tail coincide."
+          ]
         },
         {
           "id": "i1_archive.quiet",
           "title": "Sealed surveys",
-          "prompt": "Seven inhabited worlds are marked Quiet. Another living-world survey is sealed under Saren’s own mark.",
+          "prompt": "Seven surveys name inhabited worlds, each marked Quiet. An eighth file has a living atmosphere, but Saren has sealed its coordinates. Row Zero has one surviving witness. Which entry preserves what is known?",
           "options": [
-            "Remember the sealed survey and visit Row Zero",
-            "Unseal every crew member’s memory",
-            "Report a destroyed world as fact"
+            "Keep the sealed survey separate and visit Row Zero",
+            "Enter eight destroyed worlds under the same cause",
+            "Use the sealed file to assign one named world to Row Zero"
           ],
           "answer": 0,
           "lines": [
@@ -1375,7 +1622,12 @@
           "actor": "",
           "kind": "choice",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "A sealed coordinate does not identify a named world.",
+            "Quiet describes the record; it does not establish how a people disappeared.",
+            "Choose “Keep the sealed survey separate and visit Row Zero”. Found the Quiet worlds and Saren’s sealed survey."
+          ]
         }
       ],
       "intro": [
@@ -1413,11 +1665,11 @@
         {
           "id": "c4_safe.record",
           "title": "Office door",
-          "prompt": "Rook hums along to hold music. When he hangs up, he repeats his reassurance to Calder.",
+          "prompt": "Calder’s voicemail preserves Rook saying “Sit tight, June.” Through the door Steve hears the same words after the hold music stops. How should he prepare a comparison?",
           "options": [
-            "Record the new reassurance",
-            "Ask his favorite soup",
-            "Take the telephone apart"
+            "Capture the new reassurance with the room sound intact",
+            "Ask Rook to imitate the voicemail in the same room",
+            "Record the hold music instead of the words"
           ],
           "answer": 0,
           "lines": [
@@ -1431,16 +1683,21 @@
           "sounds": [
             "recording.rook"
           ],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Keep the naturally occurring performance.",
+            "The room sounds and the pauses are useful evidence too.",
+            "Choose “Capture the new reassurance with the room sound intact”. Recorded Rook’s reassurance at the safe house."
+          ]
         },
         {
           "id": "c4_safe.match",
           "title": "Rook comparison",
           "prompt": "Compare the fresh recording with Calder’s saved voicemail.",
           "options": [
-            "A new performance",
-            "An identical take",
-            "Insufficient evidence because the words match"
+            "A second reading at a different pace",
+            "The same recorded performance",
+            "A shortened version of the voicemail"
           ],
           "answer": 1,
           "lines": [
@@ -1456,16 +1713,25 @@
             "recording.rook",
             "recording.rook"
           ],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "evidence_labels": [
+            "Calder’s voicemail",
+            "Safe-house door"
+          ],
+          "hints": [
+            "Compare the space between “tight” and “June.”",
+            "Follow the smaller peaks as well as the loudest word.",
+            "Choose the same recorded performance. Onsets, pauses and endings all coincide."
+          ]
         },
         {
           "id": "c4_safe.screens",
           "title": "Observation room",
-          "prompt": "A maintenance monitor has a view of the Gallery and assignment files for Washington and Beijing.",
+          "prompt": "A monitor shows a sleeping man with Rook’s face. A second screen holds personnel portraits and assignment dates. Which combination would test whether this feed predates the man in the safe house?",
           "options": [
-            "Inspect the sleeper and assignment dates",
-            "Broadcast an accusation now",
-            "Turn every screen off"
+            "Check the live Gallery clock against the dated assignment",
+            "Compare the two portrait backgrounds",
+            "Match the spelling of Rook’s surname"
           ],
           "answer": 0,
           "lines": [
@@ -1478,7 +1744,12 @@
           "actor": "",
           "kind": "choice",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "A matching face alone does not establish when a picture was taken.",
+            "One display is a live feed. The other has an independent date.",
+            "Choose “Check the live Gallery clock against the dated assignment”. Confirmed the real Rook is asleep and the invasion reaches both governments."
+          ]
         }
       ],
       "intro": [
@@ -1516,11 +1787,11 @@
         {
           "id": "c4_escape.tube",
           "title": "Pneumatic post",
-          "prompt": "The tube diagram labels Calder’s room C and Rook’s office R.",
+          "prompt": "The old tube map uses construction names. Steve needs his warning and the voice comparison to reach June without passing the interview desk.",
           "options": [
-            "Send the warning to C",
-            "Send the warning to R",
-            "Leave it on the desk"
+            "Send both takes directly to June’s current room",
+            "Send both takes to June’s original room",
+            "Send the old voicemail to the front desk"
           ],
           "answer": 0,
           "lines": [
@@ -1533,48 +1804,52 @@
           "sounds": [],
           "hint": "Look at the evidence in the description, then try another approach.",
           "puzzle": {
-            "instruction": "The service map identifies C as Calder, R as Rook and M as maintenance. The diverter must point at the recipient before the send valve opens.",
+            "instruction": "Panel map: A leads to OAK, B leads to PINE, C leads to ASH. Occupancy docket: June was moved from OAK into the room opposite the linen cupboard. The building sketch places ASH opposite linen; PINE faces the lift. Standard capsules go through the interview desk for sorting. Blue maintenance capsules travel directly to the selected room.",
             "rows": [
               {
                 "label": "Diverter",
                 "options": [
-                  "C",
-                  "R",
-                  "M"
+                  "A",
+                  "B",
+                  "C"
                 ]
               },
               {
-                "label": "Capsule contents",
+                "label": "Capsule",
                 "options": [
-                  "The original notebook",
-                  "A warning and the recording comparison",
-                  "An empty tape"
+                  "Standard",
+                  "Blue maintenance"
                 ]
               },
               {
-                "label": "Final action",
+                "label": "Enclosure",
                 "options": [
-                  "Open send valve",
-                  "Disconnect the blower",
-                  "Switch to R"
+                  "Rook’s voicemail only",
+                  "The recent take only",
+                  "Both labeled takes and the warning"
                 ]
               }
             ],
             "solution": [
-              0,
+              2,
               1,
-              0
+              2
             ]
-          }
+          },
+          "hints": [
+            "Use the occupancy docket after the construction map.",
+            "Find the room opposite linen. June needs to check a comparison for herself before trusting a warning.",
+            "Set C, send a blue capsule and enclose both labeled takes with the warning."
+          ]
         },
         {
           "id": "c4_escape.fault",
           "title": "Safety test panel",
-          "prompt": "A harmless smoke-test cartridge can trigger an evacuation without starting a fire.",
+          "prompt": "The safe-house training console offers three rehearsals. Calder wants the occupied west corridor cleared while she keeps Rook in the east interview room.",
           "options": [
-            "Set an actual fire",
-            "Use the marked evacuation test",
-            "Disable the alarms"
+            "Print the west transport route",
+            "Schedule the west corridor’s authorized floor rehearsal",
+            "Schedule the interview team’s rehearsal"
           ],
           "answer": 1,
           "lines": [
@@ -1587,16 +1862,54 @@
           "actor": "",
           "kind": "choice",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "puzzle": {
+            "instruction": "The transport escort in west signed the drill ticket. Yesterday’s log: SILVER moved only the signer. BLUE moved every badge in the signer’s corridor. WHITE moved every badge outside it. Dry run prints the route. Floor rehearsal sends the staff that route. Four staff must assemble together. The covered court seats three, the transport bay four. The five-place front office is occupied by interviews.",
+            "rows": [
+              {
+                "label": "Exercise card",
+                "options": [
+                  "WHITE",
+                  "SILVER",
+                  "BLUE"
+                ]
+              },
+              {
+                "label": "Console mode",
+                "options": [
+                  "Dry run",
+                  "Floor rehearsal"
+                ]
+              },
+              {
+                "label": "West team’s assembly point",
+                "options": [
+                  "Covered court",
+                  "Transport bay",
+                  "Front office"
+                ]
+              }
+            ],
+            "solution": [
+              2,
+              1,
+              1
+            ]
+          },
+          "hints": [
+            "Work out who signed the ticket and how many colleagues must move with them.",
+            "Yesterday’s log distinguishes one person, their group and the other group. Compare the group’s size with each assembly point.",
+            "Use BLUE and floor rehearsal. Move the four western staff to the transport bay."
+          ]
         },
         {
           "id": "c4_escape.van",
           "title": "Transport van",
-          "prompt": "The van slows at a gravel service bend. The rear latch has a manual release.",
+          "prompt": "From the seat Steve can see the shoulder only where the driver slows for a gravel turn. The rear handle moves freely once the escort releases the travel catch.",
           "options": [
-            "Use the release at the slow bend",
-            "Jump onto the highway",
-            "Wait until the ship"
+            "Wait for the released catch and the gravel bend",
+            "Use the released catch on the straight road",
+            "Try the gravel bend while the travel catch is set"
           ],
           "answer": 0,
           "lines": [
@@ -1609,7 +1922,12 @@
           "actor": "",
           "kind": "choice",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Steve needs two things to be true at once.",
+            "A clear shoulder and an operable handle occur together only on the turn.",
+            "Choose “Wait for the released catch and the gravel bend”. Escaped the transport at a slow service bend."
+          ]
         }
       ],
       "intro": [
@@ -1647,11 +1965,11 @@
         {
           "id": "c5_shack.notes",
           "title": "Kitchen-table notes",
-          "prompt": "Forty-five years of notes fill a box. One mentions keeping precious things “with the good stuff.”",
+          "prompt": "Helen wrote “with the good stuff” on a loose slip. A previous note uses the same phrase; Frank’s reply is dated the following morning. Which pair could recover the family meaning?",
           "options": [
-            "Read the notes in order",
-            "Search only for government stamps",
-            "Close the box again"
+            "Put Helen’s earlier use beside Frank’s dated reply",
+            "Pair the loose slip with the nearest envelope by size",
+            "File all notes by the color of the ink"
           ],
           "answer": 0,
           "lines": [
@@ -1663,16 +1981,21 @@
           "actor": "",
           "kind": "choice",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "A private joke is easiest to recover from a conversation.",
+            "Use chronology to test which note answers which.",
+            "Choose “Put Helen’s earlier use beside Frank’s dated reply”. Opened the family notes and found the record-library clue."
+          ]
         },
         {
           "id": "c5_shack.rig",
           "title": "Frank’s receiver",
-          "prompt": "The receiver’s power lead is loose. Its matching socket is marked 12V DC; the mains lead belongs to a separate supply.",
+          "prompt": "Three insulated battery packs fit Frank’s receiver. His Thursday club is on the log frequency, but the dial has slipped.",
           "options": [
-            "Reconnect the matching low-voltage lead with power off",
-            "Bridge every terminal",
-            "Plug the receiver into mains directly"
+            "Match the receiver rating and correct the slipped dial",
+            "Use the measured frequency without a dial correction",
+            "Retune using the opposite dial correction"
           ],
           "answer": 0,
           "lines": [
@@ -1687,48 +2010,44 @@
           "sounds": [],
           "hint": "Look at the evidence in the description, then try another approach.",
           "puzzle": {
-            "instruction": "The receiver needs 12V DC. The supply has a matching 12V output and a separate 120V mains input. The long wire belongs on ANT, not GROUND.",
+            "instruction": "Receiver card: 12 V DC, center positive, draws 400 mA. A battery pack may supply more current than the set draws. Pack RED: 12 V, 300 mA, + center. BLUE: 12 V, 800 mA, + center. GREY: 12 V, 800 mA, − center. Frank logged a 3.20 MHz station at dial 3.25, and a 3.40 MHz station at 3.45. Thursday club transmits on 3.56 MHz.",
             "rows": [
               {
-                "label": "Receiver power",
+                "label": "Battery pack with receiver off",
                 "options": [
-                  "120V input",
-                  "12V output",
-                  "ANT"
+                  "RED",
+                  "GREY",
+                  "BLUE"
                 ]
               },
               {
-                "label": "Long wire",
+                "label": "Dial setting for Thursday club",
                 "options": [
-                  "DC IN",
-                  "GROUND",
-                  "ANT"
-                ]
-              },
-              {
-                "label": "When to reconnect power",
-                "options": [
-                  "After wiring is complete",
-                  "Before touching the connectors",
-                  "While bridging the terminals"
+                  "3.51 MHz",
+                  "3.56 MHz",
+                  "3.61 MHz"
                 ]
               }
             ],
             "solution": [
-              1,
               2,
-              0
+              2
             ]
-          }
+          },
+          "hints": [
+            "Check all three rating marks before relying on a pack’s color.",
+            "The receiver reads high at both known stations. Add the same offset to the club’s actual frequency.",
+            "Select BLUE and 3.61 MHz. The pack has the correct polarity and enough current, and the dial reads 0.05 MHz high."
+          ]
         },
         {
           "id": "c5_shack.club",
           "title": "Thursday club",
-          "prompt": "Frank’s log identifies his call sign as K7BLW. Use it to reach the operators who knew him.",
+          "prompt": "Frank’s outgoing logs end with K7BLW. The contact column has a different call sign on each Thursday. Which identifier would old club members recognize as coming from this set?",
           "options": [
-            "Call K7BLW",
-            "Play the wanted bulletin",
-            "Send random tones"
+            "K7BLW, from the outgoing column",
+            "The last contact in the receiving column",
+            "The frequency printed on every club card"
           ],
           "answer": 0,
           "lines": [
@@ -1745,16 +2064,21 @@
           "sounds": [
             "effect.k7blw"
           ],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Read the two columns from Frank’s point of view.",
+            "A contact changes when the other operator changes.",
+            "Choose “K7BLW, from the outgoing column”. Restored contact with Frank’s ham radio club."
+          ]
         },
         {
           "id": "c5_shack.log",
           "title": "The final log",
-          "prompt": "Frank recorded the ninth-night tone. His last note describes the hum beneath it.",
+          "prompt": "On the last reel, a long hum underlies a short tone. Frank’s last entry distinguishes the voices inside the hum. Which material would let Steve test that description?",
           "options": [
-            "Preserve the tone and read the last entry",
-            "Discard the hum as static",
-            "Erase the oldest entries"
+            "Keep the full sound under the dated log entry",
+            "Keep only the loud short tone",
+            "Average all the ninth-night reels into one undated track"
           ],
           "answer": 0,
           "lines": [
@@ -1768,7 +2092,12 @@
           "actor": "",
           "kind": "record",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Consider which part of the recording Frank described.",
+            "A short alert could mask the evidence he wanted his son to hear.",
+            "Choose “Keep the full sound under the dated log entry”. Preserved the ninth-night tone and Frank’s Choir observation."
+          ]
         }
       ],
       "intro": [
@@ -1807,11 +2136,11 @@
         {
           "id": "c5_station.automation",
           "title": "Unattended console",
-          "prompt": "AutoRick reads every item in the event queue. A scheduled station-identification break opens a maintenance window.",
+          "prompt": "AutoRick’s sheet repeats three events. WEATHER keeps the booth locked. IDENT briefly opens maintenance access while the recording plays. NEWS opens the visitors’ entrance after it ends. Steve is already at the booth door.",
           "options": [
-            "Schedule an identification break",
-            "Shout over AutoRick",
-            "Pull the tower’s power"
+            "Queue IDENT and enter during playback",
+            "Queue NEWS and enter after playback",
+            "Queue WEATHER and enter during playback"
           ],
           "answer": 0,
           "lines": [
@@ -1822,16 +2151,21 @@
           "actor": "",
           "kind": "choice",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Check both which door and which part of the cue.",
+            "The visitors’ entrance is on the other side of the building.",
+            "Choose “Queue IDENT and enter during playback”. Used the station’s scheduled maintenance window."
+          ]
         },
         {
           "id": "c5_station.sleeve",
           "title": "First show",
-          "prompt": "The first show Steve engineered is filed under its original broadcast date, written in Helen’s kitchen note.",
+          "prompt": "Helen’s note says “your first night at the desk.” A library card covers three shows: Steve presented the second, but engineered the first. The station files by original transmission, even after a repeat.",
           "options": [
-            "Open that record sleeve",
-            "Search the newest releases",
-            "Take the severance letter"
+            "The original transmission sleeve of the first show he engineered",
+            "The rerun sleeve of the first show he engineered",
+            "The original sleeve of the first show he presented"
           ],
           "answer": 0,
           "lines": [
@@ -1844,16 +2178,21 @@
           "actor": "",
           "kind": "choice",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "“At the desk” had a particular meaning in this family.",
+            "Use the date of the original, not the repeat.",
+            "Choose “The original transmission sleeve of the first show he engineered”. Recovered Helen’s notebook."
+          ]
         },
         {
           "id": "c5_station.halcyon",
           "title": "Ownership papers",
-          "prompt": "The tower’s night transmissions and the severance paperwork name Halcyon Media Holdings.",
+          "prompt": "Three stamps survive: Halcyon acquired KBWR on the 3rd, Steve’s overnight slot ended on the 5th, and the first unattended tower transmission was logged on the 6th. Which sequence do those records support?",
           "options": [
-            "Compare the transmission dates with the acquisition",
-            "Assume the sale was unrelated",
-            "Erase the transmitter logs"
+            "The new owner cleared the overnight slot before the tower traffic began",
+            "New tower traffic preceded the sale and caused it",
+            "Steve was still working alone during the first unattended transmission"
           ],
           "answer": 0,
           "lines": [
@@ -1864,16 +2203,21 @@
           "actor": "",
           "kind": "choice",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Put all three stamps on one calendar.",
+            "The earliest transmission in the log follows the last staffed slot.",
+            "Choose “The new owner cleared the overnight slot before the tower traffic began”. Connected Steve’s dismissal to the Veyri communications network."
+          ]
         },
         {
           "id": "c5_station.stephen",
           "title": "The pursuer",
-          "prompt": "Stephen has childhood memories but knows nothing from the last eighteen months. His scan was incomplete.",
+          "prompt": "Stephen remembers breakfast in Frank’s shack but cannot account for the wanted posters. Steve wants to find how far Stephen’s memories reach without feeding him the answer.",
           "options": [
-            "Tell him what happened",
-            "Test him on copied childhood facts",
-            "Treat him as an enemy without listening"
+            "Ask him for the last time he saw their parents; listen before explaining",
+            "Tell him the date of the boat trip and ask him to repeat it",
+            "Quiz him only on the kitchen where they grew up"
           ],
           "answer": 0,
           "lines": [
@@ -1888,7 +2232,12 @@
           "actor": "",
           "kind": "choice",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Which question can locate a gap in time?",
+            "A leading date and a much older shared memory cannot locate the boundary by themselves.",
+            "Choose “Ask him for the last time he saw their parents; listen before explaining”. Recognized Stephen as an incomplete copy with no Veyri occupant."
+          ]
         }
       ],
       "intro": [
@@ -1928,13 +2277,13 @@
         {
           "id": "c6_iris.alibi",
           "title": "Market corner",
-          "prompt": "Someone must be seen in public while Steve reaches the Sheriff’s service entrance.",
+          "prompt": "Steve’s appointment is at 8:10. Stephen has three chances for someone else to remember seeing him. Which one puts his face in public at the same time?",
           "options": [
-            "Ask Stephen to speak to the shopkeeper",
-            "Send both Steves into hiding",
-            "Ask Steve to announce the break-in"
+            "Buy flowers from the unattended stall at 8:10",
+            "Ask the baker to correct the wanted poster during her 8:10 window sale",
+            "Sign for the 8:20 bread delivery beside the poster"
           ],
-          "answer": 0,
+          "answer": 1,
           "lines": [
             "c6_iris.alibi.01"
           ],
@@ -1943,16 +2292,21 @@
           "actor": "stephen",
           "kind": "choice",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "A timestamp and a face can come from different sources.",
+            "Who can personally vouch for a face at 8:10?",
+            "Talk to the baker during the window sale. She will see Stephen while Steve is at his appointment."
+          ]
         },
         {
           "id": "c6_iris.takes",
           "title": "Iris’s recorder test",
-          "prompt": "Iris agrees to record the same sentence twice. Her second take hesitates and changes pace.",
+          "prompt": "Steve gives her the recorder and asks for the same words twice. What can he put in his notebook?",
           "options": [
-            "Conclude she has become the original Nora",
-            "Recognize that she is changing",
-            "Assume every variation is a fault"
+            "She played the first take again",
+            "She chose how to say it each time",
+            "She started the same take later"
           ],
           "answer": 1,
           "lines": [
@@ -1964,19 +2318,31 @@
           "requires": [],
           "actor": "steve",
           "kind": "compare",
-          "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "sounds": [
+            "c6_iris.takes.01",
+            "c6_iris.takes.02"
+          ],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "evidence_labels": [
+            "First reading",
+            "Second reading"
+          ],
+          "hints": [
+            "Listen past the words, or compare where each strip becomes quiet.",
+            "Consider whether moving a single recording later would explain the different spacing within the phrase.",
+            "Choose that she decided how to say it each time. The two performances have different rhythms."
+          ]
         },
         {
           "id": "c6_iris.hold",
           "title": "Halcyon lines",
-          "prompt": "Distant copies spend long periods waiting on Halcyon telephone lines.",
+          "prompt": "Iris marks three calls on the café receipt. At 9:00 two people dial different Halcyon offices. Both stay through the same hold tune and hang up at the same bar. A caller who reaches a clerk hangs up early. Which timing should Steve compare with the procession at the bay?",
           "options": [
-            "Connect hold music with remote re-sync",
-            "Assume they enjoy customer service",
-            "Cut every phone line immediately"
+            "Minutes each clerk spends speaking",
+            "Time between dial tone and pickup",
+            "The shared passage in the hold tune"
           ],
-          "answer": 0,
+          "answer": 2,
           "lines": [
             "c6_iris.hold.01",
             "c6_iris.hold.02"
@@ -1988,7 +2354,12 @@
           "actor": "steve",
           "kind": "choice",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Look at what the two long calls have in common.",
+            "Different offices and waiting times leave one sound in common.",
+            "Compare the shared passage in the hold tune with the bay schedule. The two listeners hang up at the same musical bar."
+          ]
         }
       ],
       "intro": [
@@ -2028,7 +2399,7 @@
         {
           "id": "c6_jail.mail",
           "title": "Pell’s sorting case",
-          "prompt": "The service key was returned in a registered envelope. Its ledger says JAIL, drawer J, slot 9.",
+          "prompt": "Pell has a carbon dated today. DESTINATION / ITEM reads ‘Jail / returned key.’ In the register, the jail’s last three numbers are 14 (signed), 18 (returned), 19 (signed). The drawer tabs read Counter, Returns, Jail. Pell filed by destination. Drawer slots hold pairs starting with 1 and 2.",
           "options": [
             "Open drawer J, slot 9",
             "Open drawer R, slot 1",
@@ -2038,49 +2409,54 @@
           "lines": [
             "c6_jail.mail.01"
           ],
-          "note": "Located the jail service key.",
+          "note": "Pell kept the key in Jail, slot 9. On June’s folded crossword Steve pencilled a circle round the crossing of 23 Across and 8 Down before he passed it through the slot.",
           "requires": [],
           "actor": "steve",
           "kind": "choice",
           "sounds": [],
           "hint": "Look at the evidence in the description, then try another approach.",
           "puzzle": {
-            "instruction": "Pell’s ledger uses destination initials for drawers. JAIL is entry 18, COUNTER entry 12. Each slot holds two consecutive entries: 1-2 in slot 1, 3-4 in slot 2, and so on.",
+            "instruction": "Find today's return in Pell's case.",
             "rows": [
               {
                 "label": "Drawer",
                 "options": [
-                  "C",
-                  "J",
-                  "R"
+                  "Counter",
+                  "Returns",
+                  "Jail"
                 ]
               },
               {
                 "label": "Slot",
                 "options": [
-                  "6",
-                  "8",
+                  "7",
                   "9",
+                  "10",
                   "18"
                 ]
               }
             ],
             "solution": [
-              1,
-              2
+              2,
+              1
             ]
-          }
+          },
+          "hints": [
+            "Separate the destination from the parcel status.",
+            "Use the returned entry in the jail register. Two consecutive numbers share a slot.",
+            "Find the jail drawer, slot 9. Entries 17 and 18 share it."
+          ]
         },
         {
           "id": "c6_jail.distract",
           "title": "Sheriff’s front desk",
-          "prompt": "Calder’s copy is watching the cell corridor. Stephen can draw her to the public counter.",
+          "prompt": "The desk book lists three appointments at noon. Stephen looks exactly like the man on the town poster. Which clerk would need him standing at the public counter for the entire appointment?",
           "options": [
-            "Have Stephen demand to correct his wanted photograph",
-            "Have Steve surrender the key",
-            "Sound the fire alarm"
+            "Lost property, to identify a coat over the intercom",
+            "Records, for a new likeness on a contested poster",
+            "Mail, to sign a collection slip at the side hatch"
           ],
-          "answer": 0,
+          "answer": 1,
           "lines": [
             "c6_jail.distract.01"
           ],
@@ -2089,12 +2465,17 @@
           "actor": "stephen",
           "kind": "choice",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Stephen needs a reason to stay in view.",
+            "A signature or a description can be taken elsewhere.",
+            "Ask Records to correct the wanted photograph. The clerk needs Stephen's face in front of her."
+          ]
         },
         {
           "id": "c6_jail.crossword",
           "title": "The two Calders",
-          "prompt": "Steve slipped today’s crossword into the cell. Only the prisoner has had time to solve it.",
+          "prompt": "Both Calders have the town edition. Only one received Steve’s marked copy after the cell door closed. His pocket grid reads ‘23 Across: beyond imitation (10), I _ I _ I _ A _ L _’. The down headings over its first, second and last blanks are 3, 8 and 12. Radio or paper? The guard can hear the radio; June can slip back a square of paper.",
           "options": [
             "Ask about a shared childhood",
             "Ask for today’s unfinished crossword answer",
@@ -2113,18 +2494,48 @@
           "actor": "steve",
           "kind": "choice",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Retrieve the private mark from the entry for Pell’s sorting case. The public crossword alone proves little.",
+            "Solve 23 Across, then count its letters from the left for the crossing.",
+            "Ask for 23 Across / 8 Down and accept the circled M. INIMITABLE has M as its fourth letter."
+          ],
+          "puzzle": {
+            "instruction": "Use Steve’s notebook entry for Pell’s sorting case. Ask for the marked crossing, then check the handwritten reply.",
+            "rows": [
+              {
+                "label": "Crossing to ask for",
+                "options": [
+                  "17 Across / 8 Down",
+                  "23 Across / 3 Down",
+                  "23 Across / 8 Down"
+                ]
+              },
+              {
+                "label": "Accept the slip with",
+                "options": [
+                  "An M circled",
+                  "A T circled",
+                  "An A circled"
+                ]
+              }
+            ],
+            "solution": [
+              2,
+              0
+            ]
+          }
         },
         {
           "id": "c6_jail.exit",
           "title": "Deputy’s checkpoint",
-          "prompt": "Lyle’s copy recognizes the fugitives but keeps glancing at a school-play ticket.",
+          "prompt": "Lyle’s copy has written ‘Front row, two boys’ beside tonight’s duty roster. His partner has already signed the relief line. The school ticket says ‘Admit one’. June waits for Steve to speak.",
           "options": [
-            "Let him choose to go to the play",
-            "Threaten his sons",
-            "Demand that he forget them"
+            "Offer to keep the ticket safe until the morning",
+            "Tell him his relief has signed and let him decide where to go",
+            "Ask if June can take his seat and tell him how the boys did"
           ],
-          "answer": 0,
+          "answer": 1,
           "lines": [
             "c6_jail.exit.01",
             "c6_jail.exit.02"
@@ -2136,7 +2547,12 @@
           "actor": "",
           "kind": "choice",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Read his ticket alongside the duty roster.",
+            "A relief officer is already present. Who has a seat?",
+            "Tell Lyle his relief has signed. Give him the choice to go see his sons."
+          ]
         }
       ],
       "intro": [
@@ -2176,7 +2592,7 @@
         {
           "id": "i2_nora.patrol",
           "title": "Guard circuit",
-          "prompt": "The guard passes, a pump cycles, then the far door closes. Move only after the door closes.",
+          "prompt": "Nora scratches times against the bed rail. On the first lap: boots at 02, pump at 05, door at 08, boots again at 14. The guard can see the aisle until the door shuts. It takes four counts to cross. On the next lap the boots arrive at 14.",
           "options": [
             "Move when the far door closes",
             "Move on the guard’s first footstep",
@@ -2191,36 +2607,71 @@
           "actor": "",
           "kind": "choice",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Find the length of a whole lap using the boots.",
+            "The door closed six counts after the boots. Add four more for the crossing.",
+            "Leave at 20 and reach cover at 24, before the next boots at 26."
+          ],
+          "puzzle": {
+            "instruction": "Use the next lap and allow all four counts for the crossing.",
+            "rows": [
+              {
+                "label": "Step out at count",
+                "options": [
+                  "17",
+                  "20",
+                  "23"
+                ]
+              },
+              {
+                "label": "Reach cover at count",
+                "options": [
+                  "21",
+                  "24",
+                  "27"
+                ]
+              }
+            ],
+            "solution": [
+              1,
+              1
+            ]
+          }
         },
         {
           "id": "i2_nora.jobs",
           "title": "Sleeper skills",
-          "prompt": "Lyle knows door hardware. Dale remembers routes. Nora understands water systems.",
+          "prompt": "Nora asks for volunteers. Lyle has kept two doors from jamming. Dale can repeat all five turns with his eyes shut. Nora has sketched where the blue water crosses the return pipe. Which rota leaves someone at each job they have practised?",
           "options": [
-            "Give each person a task using those skills",
-            "Make everyone work on the same lock",
-            "Ask everyone to wait without a plan"
+            "Dale at the latch, Nora on directions, Lyle at the gauge",
+            "Nora at the latch, Lyle on directions, Dale at the gauge",
+            "Lyle at the latch, Dale on directions, Nora at the gauge"
           ],
-          "answer": 0,
+          "answer": 2,
           "lines": [
             "i2_nora.jobs.01",
             "i2_nora.jobs.02",
             "i2_nora.jobs.03"
           ],
-          "note": "Organized the waking prisoners.",
+          "note": "Lyle minded the latch. Dale remembered the turns. Nora traced circulation through the Gallery.",
           "requires": [
             "i2_nora.patrol"
           ],
           "actor": "",
           "kind": "choice",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Read the three volunteers’ own observations.",
+            "Start with Dale. Who would you trust to lead the return trip?",
+            "Give Lyle the latch, Dale the turns and Nora the gauge."
+          ]
         },
         {
           "id": "i2_nora.pump",
           "title": "Gallery circulation",
-          "prompt": "A bypass marked SERVICE relieves pressure without interrupting life support.",
+          "prompt": "Nora copies the readings from the three service trials. Amber: bed flow 4, hatch pressure 7. Blue: bed flow 4, hatch pressure 2. White: bed flow 1, hatch pressure 2. The handwritten limits are bed flow at least 3 and hatch pressure below 3.",
           "options": [
             "Shut down life support",
             "Use the service bypass",
@@ -2239,49 +2690,46 @@
           "sounds": [],
           "hint": "Look at the evidence in the description, then try another approach.",
           "puzzle": {
-            "instruction": "Life support must remain open. The service bypass takes pressure around the access hatch. Open that bypass before opening the hatch.",
+            "instruction": "Set the service branch. Decide which reading gives Nora clearance to open the hatch.",
             "rows": [
               {
-                "label": "Life support",
+                "label": "Branch",
                 "options": [
-                  "Keep open",
-                  "Close"
+                  "Amber",
+                  "White",
+                  "Blue"
                 ]
               },
               {
-                "label": "First operation",
+                "label": "Clearance on both gauges",
                 "options": [
-                  "Open hatch",
-                  "Open service bypass",
-                  "Stop circulation"
-                ]
-              },
-              {
-                "label": "Second operation",
-                "options": [
-                  "Close life support",
-                  "Open hatch after pressure falls",
-                  "Close bypass immediately"
+                  "Beds 1 / hatch 2",
+                  "Beds 4 / hatch 2",
+                  "Beds 4 / hatch 7"
                 ]
               }
             ],
             "solution": [
-              0,
-              1,
+              2,
               1
             ]
-          }
+          },
+          "hints": [
+            "A low reading on the hatch alone cannot tell you about the beds.",
+            "Amber keeps bed flow up. White relieves pressure. Test the remaining branch against both limits.",
+            "Choose Blue and wait for beds 4 / hatch 2."
+          ]
         },
         {
           "id": "i2_nora.message",
           "title": "Gallery intercom",
-          "prompt": "Nora can leave a message in the local intercom memory for Steve.",
+          "prompt": "Three slots on the Gallery intercom: A plays in every bed now, B keeps one message by this bed until someone presses PLAY, C clears itself when Dale changes the watch. Steve may arrive on another watch. Where can Nora leave her words?",
           "options": [
-            "Record a private message for him",
-            "Overwrite the patrol warning",
-            "Broadcast immediately to the guards"
+            "Slot C",
+            "Slot A",
+            "Slot B"
           ],
-          "answer": 0,
+          "answer": 2,
           "lines": [
             "i2_nora.message.01"
           ],
@@ -2292,7 +2740,12 @@
           "actor": "",
           "kind": "record",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Who should hear the message, and when?",
+            "Nora needs it to survive a change of watch.",
+            "Use slot B. Only a visitor at this bed can start playback."
+          ]
         }
       ],
       "intro": [
@@ -2334,13 +2787,13 @@
         {
           "id": "c7_gate.badge",
           "title": "Security gate",
-          "prompt": "Stephen’s crew credentials remain valid. Steve’s face is wanted.",
+          "prompt": "Pell’s list has a red dot for delivery staff, a blue stripe for contracted crew and a gold seal for signatories. The gate board gives times: red 11:20, blue 11:40, gold noon. Stephen’s card has a stripe; its printed face is his. Which appointment is his?",
           "options": [
-            "Send Stephen through the official gate",
-            "Send Steve through with no badge",
-            "Give the credentials to a stranger"
+            "11:20, deliveries",
+            "Noon, delegation",
+            "11:40, contracted crew"
           ],
-          "answer": 0,
+          "answer": 2,
           "lines": [
             "c7_gate.badge.01"
           ],
@@ -2349,18 +2802,23 @@
           "actor": "stephen",
           "kind": "choice",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Look at the mark on Stephen’s card.",
+            "Only one appointment shares his crew stripe.",
+            "Use the blue 11:40 appointment."
+          ]
         },
         {
           "id": "c7_gate.post",
           "title": "Accord mail",
-          "prompt": "Pell’s registered delivery belongs at the delegation service entrance.",
+          "prompt": "Pell’s envelope needs Ward’s own signature and a counterfoil he can take back. The press desk stamps copies. The delegation clerk brings the signer to the hatch. The stage manager signs receipts for scenery.",
           "options": [
-            "Use the marked mail entrance",
-            "Climb the antenna fence",
-            "Leave the letter in the road"
+            "Leave both sheets at the press desk",
+            "Keep the counterfoil at the delegation hatch for Ward",
+            "Take the stage manager’s receipt back to the post office"
           ],
-          "answer": 0,
+          "answer": 1,
           "lines": [
             "c7_gate.post.01",
             "c7_gate.post.02"
@@ -2370,18 +2828,23 @@
           "actor": "pell",
           "kind": "choice",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Pell needs two things from one delivery.",
+            "Whose signature belongs on the returning half?",
+            "Use the delegation hatch and keep Ward’s signed counterfoil."
+          ]
         },
         {
           "id": "c7_gate.truck",
           "title": "Halcyon broadcast truck",
-          "prompt": "Steve knows the sound equipment. A spare technician’s pass is inside the van.",
+          "prompt": "A sound check failed at the back fence. Steve’s docket reads ‘return meter required’. Cameras show a local monitor, the stage van has lamps, and the Halcyon truck has a return strip still showing the fence. Where can he verify the repair?",
           "options": [
-            "Enter as the sound technician during the cable check",
-            "Announce a kidnapping",
-            "Follow Stephen into the press crowd"
+            "Camera monitor",
+            "Stage van",
+            "Halcyon truck"
           ],
-          "answer": 0,
+          "answer": 2,
           "lines": [
             "c7_gate.truck.01",
             "c7_gate.truck.02"
@@ -2394,7 +2857,12 @@
           "actor": "steve",
           "kind": "choice",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Who can see what the far end received?",
+            "A local monitor can look good when the far end hears nothing.",
+            "Use the return strip in the Halcyon truck."
+          ]
         }
       ],
       "intro": [
@@ -2434,11 +2902,11 @@
         {
           "id": "c7_swap.map",
           "title": "Event monitor",
-          "prompt": "The physician escorts Ward toward a service tunnel while her copy approaches the podium.",
+          "prompt": "Pell saw Ward sign before the ceremony. At 11:56 the physician and a patient pass a camera with a chipped east-stair tile. At 11:57 someone in Ward’s coat reaches the podium. A lift log puts all lifts on the west side until noon. Which route should Calder check for the patient?",
           "options": [
-            "Tell Calder and Iris where the real Ward went",
-            "Assume the biometric check proves identity",
-            "Follow the podium alone"
+            "Service tunnel at the east stairs",
+            "West lift from the press gallery",
+            "Podium gangway from the public gate"
           ],
           "answer": 0,
           "lines": [
@@ -2450,12 +2918,17 @@
           "actor": "stephen",
           "kind": "choice",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Follow the last sighting of the patient.",
+            "Use the tile to place the camera; the coat can travel separately.",
+            "Follow the service tunnel to the east stairs. That is the physician’s last verified route."
+          ]
         },
         {
           "id": "c7_swap.bus",
           "title": "Sound desk routing",
-          "prompt": "The desk has separate press, stage and site buses. The all-call bus reaches every speaker.",
+          "prompt": "Steve writes down everyone who heard each test. Amber: lectern and press van. Blue: lectern, back fence and service steps. Green: back fence and service steps. Calder tries the return. Copper: Steve, Iris and the lectern. Slate: Steve and Iris. Pearl: Steve alone.",
           "options": [
             "Route Frank’s tone to the all-call bus",
             "Route it only to Steve’s headphones",
@@ -2472,50 +2945,46 @@
           "sounds": [],
           "hint": "Look at the evidence in the description, then try another approach.",
           "puzzle": {
-            "instruction": "The all-call bus reaches every speaker; PRESS reaches the television feed; CUE reaches Steve’s headphones. Keep a separate microphone path open for Calder.",
+            "instruction": "Sound the tone for the people standing at the lectern, fence and steps. The press van feeds the TV audience and must stay on ceremony audio. Calder’s reply is for Steve and Iris alone.",
             "rows": [
               {
-                "label": "Frank’s tone",
+                "label": "Tone send",
                 "options": [
-                  "PRESS",
-                  "CUE",
-                  "ALL-CALL"
+                  "Amber",
+                  "Green",
+                  "Blue"
                 ]
               },
               {
-                "label": "Calder’s talkback",
+                "label": "Recovery-team return",
                 "options": [
-                  "Crew headset",
-                  "Public podium",
-                  "Muted"
-                ]
-              },
-              {
-                "label": "Trigger",
-                "options": [
-                  "Before the copy arrives",
-                  "After the copy reaches the podium and Calder is ready",
-                  "After the ceremony ends"
+                  "Slate",
+                  "Pearl",
+                  "Copper"
                 ]
               }
             ],
             "solution": [
               2,
-              0,
-              1
+              0
             ]
-          }
+          },
+          "hints": [
+            "Trace the tone and Calder’s reply separately.",
+            "Green misses one group by the stage. Copper would put Calder on the lectern speaker.",
+            "Use Blue for the three groups in the grounds and Slate for Steve and Iris. Neither goes to the press van."
+          ]
         },
         {
           "id": "c7_swap.tone",
           "title": "Ceremony cue",
-          "prompt": "The copy has reached the podium. Calder and Iris are at the tunnel.",
+          "prompt": "Steve marks two events: Ward’s double at the lectern (11:58:10), Calder and Iris with the patient (11:58:14). The public feed closes at 11:58:18. The tone takes two seconds. Which start gives Calder time to reach the real Ward and keeps the whole tone on air?",
           "options": [
-            "Play the ninth-night tone now",
-            "Wait until the copy leaves",
-            "Play yesterday’s weather"
+            "11:58:11",
+            "11:58:15",
+            "11:58:17"
           ],
-          "answer": 0,
+          "answer": 1,
           "lines": [
             "c7_swap.tone.01",
             "c7_swap.tone.02"
@@ -2528,7 +2997,12 @@
           "actor": "steve",
           "kind": "playback",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Mark the first moment when both teams are in place.",
+            "The two-second tone must finish by :18.",
+            "Start at :15. The recovery team is in place, and the tone ends at :17."
+          ]
         }
       ],
       "intro": [
@@ -2566,13 +3040,13 @@
         {
           "id": "c8_lab.notebook",
           "title": "Helen’s shorthand",
-          "prompt": "Match Helen’s dates with the two staged tests and the private meeting.",
+          "prompt": "Helen’s undated slips read ‘our demonstration’, ‘their demonstration: our broken beat again’ and ‘both teams at one table’. Her date index puts the table after both tests. In the margin by the broken beat she wrote ‘heard this before’. What order belongs in the notebook?",
           "options": [
-            "Tests, mutual discovery, private agreement",
-            "Private agreement, real engine, surrender",
-            "Arrival of the ship, then the tests"
+            "Their test, our test, table",
+            "Our test, their test, table",
+            "Our test, table, their test"
           ],
-          "answer": 0,
+          "answer": 1,
           "lines": [
             "c8_lab.notebook.01"
           ],
@@ -2581,16 +3055,21 @@
           "actor": "",
           "kind": "choice",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Start with the slip the date index places last.",
+            "Helen recognized a blemish on the second slip.",
+            "File our test first, their test second and the table last."
+          ]
         },
         {
           "id": "c8_lab.props",
           "title": "The reactor",
-          "prompt": "Inside the apparent reactor are washer drums, theater lights and a fog machine.",
+          "prompt": "Shaw rolls the film and Wen reads the old test sheet. At the apparent surge, three drum strikes coincide with three lamp flashes. The fog keeps drifting after the meter drops. Which two crew members need the same cue?",
           "options": [
-            "Inspect and reuse the stage equipment",
-            "Try to start a real engine",
-            "Destroy all the props"
+            "Drums and lamps",
+            "Lamps and fog",
+            "Fog and drums"
           ],
           "answer": 0,
           "lines": [
@@ -2601,12 +3080,17 @@
           "actor": "",
           "kind": "choice",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Find two effects with separate, matching starts.",
+            "The fog outlasts the meter. Count the other two effects.",
+            "Cue the drums with the lamps. Their three starts coincide."
+          ]
         },
         {
           "id": "c8_lab.lastpage",
           "title": "Unknown script",
-          "prompt": "Helen’s note says she transcribed the last page from Frank’s tapes and recognized a language.",
+          "prompt": "Helen drew three strokes from Frank’s hydrophone tape. Stroke two touches the first and climbs higher. A space follows, then the longest stroke falls below both. Wen can read the notes in the margin; she has no translation for the marks themselves.",
           "options": [
             "Preserve the script and the hum together",
             "Assume it is Mandarin",
@@ -2617,14 +3101,53 @@
             "c8_lab.lastpage.01",
             "c8_lab.lastpage.02"
           ],
-          "note": "Preserved the unidentified language from the hum.",
+          "note": "Helen’s last page matches reel 11 of Frank’s hydrophone tape: two joined notes rise, then a longer low note follows a space. The words remain unknown.",
           "requires": [
             "c8_lab.notebook"
           ],
           "actor": "",
           "kind": "choice",
-          "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "sounds": [
+            "effect.ninth_night",
+            "effect.wick",
+            "effect.meridian_pulse"
+          ],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Compare where the ink strokes touch and where Helen lifted her pencil.",
+            "The first two sounds run together. Listen for the lower, longer note after the space.",
+            "File reel 11 with the page. The lengths and pitches match; Wen still needs a translation."
+          ],
+          "puzzle": {
+            "instruction": "Audition Frank’s three reels or use their listening captions. Label the reel and decide what Steve can file as evidence.",
+            "rows": [
+              {
+                "label": "Reel to keep with Helen’s page",
+                "options": [
+                  "Reel 07",
+                  "Reel 11",
+                  "Reel 14"
+                ]
+              },
+              {
+                "label": "Notebook finding",
+                "options": [
+                  "A match in rhythm and pitch",
+                  "A word-for-word translation",
+                  "A match in the reel length alone"
+                ]
+              }
+            ],
+            "solution": [
+              1,
+              0
+            ]
+          },
+          "evidence_labels": [
+            "Reel 07 · one steady note",
+            "Reel 11 · two rising notes together, gap, long lower note",
+            "Reel 14 · five separate notes, the third cut short"
+          ]
         }
       ],
       "intro": [
@@ -2663,13 +3186,13 @@
         {
           "id": "c8_beach.first",
           "title": "The offer",
-          "prompt": "Record Saren’s exact promise without agreeing to it.",
+          "prompt": "Steve has the recorder running when Saren names a price and offers a date for their release. Three takes fit the reel. Which pair would let Steve compare the promise itself?",
           "options": [
-            "Preserve the offer",
-            "Hand over the notebook",
-            "Erase the recording"
+            "Record Saren’s offer and his next answer to a different question",
+            "Record the offer, then have Steve read it back",
+            "Keep the first take and ask Saren to repeat the whole offer"
           ],
-          "answer": 0,
+          "answer": 2,
           "lines": [
             "c8_beach.first.01"
           ],
@@ -2680,16 +3203,21 @@
           "sounds": [
             "recording.offer"
           ],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Keep the speaker and the requested words constant.",
+            "A second voice or a fresh question changes the experiment.",
+            "Keep the first take and ask Saren for the same words a second time."
+          ]
         },
         {
           "id": "c8_beach.second",
-          "title": "The repeated offer",
-          "prompt": "Saren repeats his promise with precisely the same breath and cadence.",
+          "title": "A second offer",
+          "prompt": "Steve rewinds to the first offer. Does the second promise deserve more weight as an independent assurance?",
           "options": [
-            "Compare both performances",
-            "Assume repetition proves sincerity",
-            "Ask him to speak louder"
+            "One performance, played twice",
+            "A new reading of the same promise",
+            "The second promise omits the last phrase"
           ],
           "answer": 0,
           "lines": [
@@ -2705,18 +3233,27 @@
             "recording.offer",
             "recording.offer"
           ],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "evidence_labels": [
+            "First offer",
+            "Second offer"
+          ],
+          "hints": [
+            "Compare what happens between the two sentences.",
+            "Look at the final word and the lengths of the pauses leading to it.",
+            "Choose one performance played twice. Neither the pauses nor the ending shift."
+          ]
         },
         {
           "id": "c8_beach.refuse",
           "title": "The notebook",
-          "prompt": "The notebook would prove Earth has no engine. Saren has used this promise before.",
+          "prompt": "Steve has two matching takes of the promise. He has received a date, no independent word from his parents, and no way to recover the notebook once he gives it up. What can he honestly say when he answers Saren?",
           "options": [
-            "Keep the notebook and refuse",
-            "Hand it over without conditions",
-            "Destroy Helen’s final page"
+            "Two takes establish two independent guarantees",
+            "He has one assurance and will keep the notebook",
+            "The matching takes prove his parents have already left the ship"
           ],
-          "answer": 0,
+          "answer": 1,
           "lines": [
             "c8_beach.refuse.01"
           ],
@@ -2727,7 +3264,12 @@
           "actor": "",
           "kind": "choice",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Separate what the promise says from how often Steve heard it.",
+            "The same performance cannot supply independent confirmation.",
+            "Keep the notebook. Steve has heard one assurance twice."
+          ]
         }
       ],
       "intro": [
@@ -2767,11 +3309,11 @@
         {
           "id": "c8_rig.source",
           "title": "Signal sources",
-          "prompt": "The earlier bluff failed under inspection because its signals repeated.",
+          "prompt": "Wen tries three control feeds. On A the flare lands one beat late even when Shaw changes the cue. On B it follows Shaw early on one trial and late on the next, exactly when she moves her hand. On C the flare leads her change by a beat. Which feed can answer a cue the fleet has never seen?",
           "options": [
-            "Use a longer loop",
-            "Use live human cues and changing signals",
-            "Replay the original test"
+            "Feed A",
+            "Feed B",
+            "Feed C"
           ],
           "answer": 1,
           "lines": [
@@ -2782,12 +3324,17 @@
           "actor": "",
           "kind": "choice",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "A changing sequence can still be a recording.",
+            "See which output follows an unexpected change in Shaw’s hand.",
+            "Take feed B. It follows both of Shaw’s changes."
+          ]
         },
         {
           "id": "c8_rig.path",
           "title": "Trust path",
-          "prompt": "The fleet trusts measurements from its own ship. An external broadcast alone will not persuade it.",
+          "prompt": "Wen’s paper trial has three receipts. Dock signed ‘camera saw lamps’. Mast signed ‘ship measured lamps’. Shore signed ‘ship received crew’s numbers’. The fleet asks for its own measured return. On the team sheet Stephen can open the antenna passage; Nora has already found an occupied row and a route out.",
           "options": [
             "Feed the performance into the ship’s own systems",
             "Mail the fleet a video",
@@ -2798,7 +3345,7 @@
             "c8_rig.path.01",
             "c8_rig.path.02"
           ],
-          "note": "Planned the ship-side signal injection.",
+          "note": "The fleet accepted measurements from its own ship. A camera picture or a set of figures delivered from shore could not replace a ship reading.",
           "requires": [
             "c8_rig.source"
           ],
@@ -2807,30 +3354,30 @@
           "sounds": [],
           "hint": "Look at the evidence in the description, then try another approach.",
           "puzzle": {
-            "instruction": "The fleet trusts the ship’s instruments. The earlier signal failed because it repeated. The prisoners must be awake before departure.",
+            "instruction": "Choose a receipt the fleet can verify and assign two simultaneous jobs.",
             "rows": [
               {
-                "label": "Signal source",
+                "label": "Measurement receipt",
                 "options": [
-                  "Old test tape",
-                  "Live cue desk",
-                  "A longer loop"
+                  "Dock",
+                  "Mast",
+                  "Shore"
                 ]
               },
               {
-                "label": "Signal destination",
+                "label": "Stephen’s assignment",
                 "options": [
-                  "Press camera",
-                  "Ship instrument input",
-                  "Public telephone recording"
+                  "Gallery beds",
+                  "Antenna passage",
+                  "Shore camera"
                 ]
               },
               {
-                "label": "Parallel team",
+                "label": "Other team",
                 "options": [
-                  "Secure the Gallery and wake sleepers",
-                  "Leave everyone asleep",
-                  "Erase the Choir"
+                  "Bring sleepers through the Gallery",
+                  "Wait for the camera receipt",
+                  "Read shore figures to the ship"
                 ]
               }
             ],
@@ -2839,18 +3386,23 @@
               1,
               0
             ]
-          }
+          },
+          "hints": [
+            "Read who took the measurement, not just who received the page.",
+            "Only one receipt has the ship as observer. The other job follows the occupied beds.",
+            "Choose Mast, send Stephen to the antenna passage, and bring the sleepers through the Gallery."
+          ]
         },
         {
           "id": "c8_rig.rig",
           "title": "Props and radio",
-          "prompt": "Frank’s transmitter needs a stage cue source and an isolated connection to the ship antenna.",
+          "prompt": "The crew tests three couplers on a dummy meter. A passes the cue outward and returns the stage hum. B blocks the hum and the cue. C passes the outward cue and keeps the return meter still. Stephen needs the stage cue at the antenna and the stage hum off its return.",
           "options": [
-            "Connect the cue board through the isolated interface",
-            "Short the transmitter output",
-            "Use a repeating test tape"
+            "Coupler B",
+            "Coupler C",
+            "Coupler A"
           ],
-          "answer": 0,
+          "answer": 1,
           "lines": [
             "c8_rig.rig.01",
             "c8_rig.rig.02"
@@ -2862,7 +3414,12 @@
           "actor": "stephen",
           "kind": "choice",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Read each coupler in both directions.",
+            "Eliminate the one that blocks the cue and the one that returns the hum.",
+            "Use C. The cue passes outward and the return stays still."
+          ]
         }
       ],
       "intro": [
@@ -2903,11 +3460,11 @@
         {
           "id": "c9_gallery.antenna",
           "title": "Antenna service door",
-          "prompt": "Stephen can open the antenna path while Steve stays with Nora.",
+          "prompt": "A painted emblem appears on each side of the gallery door. The inner pad accepts a crew pass. Calder’s visitor slip is stamped observation deck only. Steve promised Nora he would stay within earshot. Who takes the inner pad?",
           "options": [
-            "Use Stephen’s crew credentials",
-            "Leave Nora alone and send both Steves",
-            "Destroy the door"
+            "Stephen, with the crew pass",
+            "Calder, with the visitor slip",
+            "Steve, with Stephen’s pass"
           ],
           "answer": 0,
           "lines": [
@@ -2918,16 +3475,21 @@
           "actor": "stephen",
           "kind": "choice",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Consider the pass and the person Nora needs beside her.",
+            "The observation deck and antenna passage have different marks.",
+            "Stephen takes the crew pass to the antenna. Steve stays beside Nora."
+          ]
         },
         {
           "id": "c9_gallery.link",
           "title": "Nora’s bed",
-          "prompt": "Iris knows the consequence: breaking the link will accelerate the loss of borrowed memories.",
+          "prompt": "Nora can blink but cannot move her hands. Iris is holding the release and has asked to use it. Her memory gauge drops when she eases it open. Steve can tell her what he sees and stay with them both. Whose decision is he waiting for?",
           "options": [
-            "Accept Iris’s choice to release Nora",
-            "Force Iris to keep the link",
-            "Leave Nora asleep"
+            "Iris’s, after she sees the gauge",
+            "Nora’s, after she can take the handle",
+            "Stephen’s, after he opens the antenna door"
           ],
           "answer": 0,
           "lines": [
@@ -2939,16 +3501,21 @@
           "actor": "steve",
           "kind": "choice",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Look at who is holding the release.",
+            "Iris has already told Steve how she wants to use it.",
+            "Tell Iris what the gauge shows, then accept her decision to release Nora."
+          ]
         },
         {
           "id": "c9_gallery.talk",
           "title": "Reunion",
-          "prompt": "Nora deserves an honest answer about Steve’s silence.",
+          "prompt": "Nora has counted five months here and thirteen months of silence before it. Steve can answer for the part that began at home. What should he start with?",
           "options": [
-            "Tell her he was afraid and stopped talking",
-            "Promise everything is already fixed",
-            "Blame her for not knowing"
+            "Why he stopped talking before she was taken",
+            "Why Iris chose to break the link today",
+            "Why his parents invited him on the boat"
           ],
           "answer": 0,
           "lines": [
@@ -2962,7 +3529,12 @@
           "actor": "",
           "kind": "choice",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Nora has named two different absences.",
+            "Which absence came from a choice Steve made?",
+            "Answer for the thirteen months of silence at home."
+          ]
         }
       ],
       "intro": [
@@ -2997,14 +3569,15 @@
       "place": "The Gallery, row nine",
       "style": "gallery",
       "actors": [
-        "steve"
+        "steve",
+        "nora"
       ],
       "objective": "Match each sleeper with a personally meaningful sound.",
       "tasks": [
         {
           "id": "c9_wake.frank",
           "title": "Frank’s bed",
-          "prompt": "Frank answered his call sign for decades. Choose the sound he would recognize through sleep.",
+          "prompt": "Nora finds three call cards: K7BWL, K7BLW and K9BLW. Frank’s bed mic catches five groups: −·− / −−··· / −··· / ·−·· / ·−−. The desk key lists K −·−, B −···, L ·−··, W ·−−, 7 −−···, 9 −−−−·. A scratched playback head can lose the last group; the operator asks for that group separately.",
           "options": [
             "K7BLW in Morse",
             "Yesterday’s weather",
@@ -3024,50 +3597,46 @@
           ],
           "hint": "Look at the evidence in the description, then try another approach.",
           "puzzle": {
-            "instruction": "Use Frank’s radio identity. K = dash-dot-dash; 7 = dash-dash-dot-dot-dot; B = dash-dot-dot-dot; L = dot-dash-dot-dot; W = dot-dash-dash.",
+            "instruction": "Identify Frank's card and its last group. The Thursday club recording is beside the bed.",
             "rows": [
               {
-                "label": "Call sign",
+                "label": "Card",
                 "options": [
-                  "K7BLW",
                   "K7BWL",
-                  "K9BLW"
+                  "K9BLW",
+                  "K7BLW"
                 ]
               },
               {
-                "label": "First Morse group",
+                "label": "Final group to repeat",
                 "options": [
-                  ".-.",
-                  "-.-",
-                  "--."
-                ]
-              },
-              {
-                "label": "Final group",
-                "options": [
-                  ".--",
-                  "-..",
-                  "..-"
+                  "·−··",
+                  "·−−",
+                  "−···"
                 ]
               }
             ],
             "solution": [
-              0,
-              1,
-              0
+              2,
+              1
             ]
-          }
+          },
+          "hints": [
+            "Compare the second group to distinguish the two digits.",
+            "The fourth group has four strokes and the fifth has three.",
+            "Select K7BLW and repeat ·−−, the W."
+          ]
         },
         {
           "id": "c9_wake.helen",
           "title": "Helen’s bed",
-          "prompt": "The ship’s hum almost played the tune Helen sang to Steve as a child.",
+          "prompt": "In the margin beside Helen’s bed, Frank pencilled the tune Steve used to fall asleep to: home note, up, higher still, then back through the first rise. One box holds the six-note family melody. The other sleeves hold Frank’s five Morse groups and a single warning tone.",
           "options": [
-            "The ninth-night alert",
-            "Helen’s lullaby",
-            "The station identification"
+            "Five-group radio identification",
+            "Single sustained warning",
+            "Six-note family melody"
           ],
-          "answer": 1,
+          "answer": 2,
           "lines": [
             "c9_wake.helen.01",
             "c9_wake.helen.02"
@@ -3079,52 +3648,67 @@
           "sounds": [
             "effect.lullaby"
           ],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Frank used the radio card for himself.",
+            "Look for a contour a parent could sing.",
+            "Play the six-note family melody for Helen."
+          ]
         },
         {
           "id": "c9_wake.rook",
           "title": "Adrian Rook’s bed",
-          "prompt": "The real Rook has known June Calder for years. Her voice can reach him.",
+          "prompt": "Calder’s old voicemail contains Adrian’s own reassurance to her. The safe-house recording used the very same performance. Nora wants to try a cue that can change if Adrian stirs. June is at the bed; the two old clips are on Steve’s reel.",
           "options": [
-            "Calder’s voice",
-            "AutoRick’s forecast",
-            "A stranger’s password"
+            "Play the safe-house clip, then its voicemail match",
+            "Ask June to address Adrian and wait for his response",
+            "Play Adrian’s voicemail and ask June to mouth the words"
           ],
-          "answer": 0,
+          "answer": 1,
           "lines": [
             "c9_wake.rook.01",
             "c9_wake.rook.02"
           ],
-          "note": "Woke the real Adrian Rook.",
+          "note": "Nora brought Calder to Adrian and he woke to her voice.",
           "requires": [],
-          "actor": "",
+          "actor": "nora",
           "kind": "playback",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Who speaks on the two recordings?",
+            "Nora has someone at the bed who can answer Adrian now.",
+            "Ask June to speak to him in person."
+          ]
         },
         {
           "id": "c9_wake.agnes",
           "title": "Agnes’s bed",
-          "prompt": "The original Agnes has been asleep in row three. Her reading glasses are beside her belongings.",
+          "prompt": "Nora’s row-three list has three objects: a crew ledger labelled A.R., a glasses case with a tiny bait-shop price sticker, and a pair of gloves stitched H.M. The woman is squinting at Nora’s name badge. Which object should Nora put in her hand?",
           "options": [
-            "Bring her glasses and call her name",
-            "Ask the shore copy to disappear",
-            "Leave her asleep"
+            "The crew ledger",
+            "The stitched gloves",
+            "The stickered glasses case"
           ],
-          "answer": 0,
+          "answer": 2,
           "lines": [
             "c9_wake.agnes.01"
           ],
-          "note": "Woke the original Agnes.",
+          "note": "Nora helped the original Agnes wake and see her surroundings.",
           "requires": [
             "c9_wake.frank",
             "c9_wake.helen",
             "c9_wake.rook"
           ],
-          "actor": "",
+          "actor": "nora",
           "kind": "choice",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Combine what the woman is trying to do with what Nora recalls of row three.",
+            "The price sticker connects the case to the bait-shop owner.",
+            "Give Agnes the glasses case and call her name."
+          ]
         }
       ],
       "intro": [
@@ -3162,13 +3746,13 @@
         {
           "id": "c9_choir.truth",
           "title": "Choir console",
-          "prompt": "The Choir reveals that every Veyri is a copy of a copy. Its human memories have changed it.",
+          "prompt": "A miner’s first account in the Choir ends ‘nobody came’. Years later she recorded the names of the people who found her. Her voice and archive number match in both entries. What evidence of change can Steve ask the Choir to play?",
           "options": [
-            "Listen to the lives it has preserved",
-            "Demand a reset of every echo",
-            "Order the human records erased"
+            "The first entry twice at different levels",
+            "Both entries in the order she gave them",
+            "Her archive number spoken by two different clerks"
           ],
-          "answer": 0,
+          "answer": 1,
           "lines": [
             "c9_choir.truth.01"
           ],
@@ -3177,16 +3761,21 @@
           "actor": "",
           "kind": "choice",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Look for something that changed during one life.",
+            "The archive number identifies the witness. Her two accounts show what she learned.",
+            "Play the earlier account and then her later account."
+          ]
         },
         {
           "id": "c9_choir.wick",
           "title": "Row Zero",
-          "prompt": "Wick speaks in low, unfamiliar tones. Helen recognizes their structure from Frank’s tapes.",
+          "prompt": "Wick sings two joined tones. The second climbs. After a break, a lower tone follows. Helen has her notebook, Frank’s call card and the timetable from the bay. Which can she place on the music stand to follow Wick into the next phrase?",
           "options": [
-            "Let Helen compare the tones with her last notebook page",
-            "Assume silence means hostility",
-            "Ask Saren to speak for Wick"
+            "The final page Helen made from Frank’s hydrophone tape",
+            "Frank’s radio call card from the Thursday club",
+            "The bay’s ninth-night procession timetable"
           ],
           "answer": 0,
           "lines": [
@@ -3200,18 +3789,23 @@
           "actor": "",
           "kind": "choice",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Recall the gap Helen marked at Meridian.",
+            "Choose the page that records the contour as well as the spacing.",
+            "Use Helen’s final page. This is the pattern she heard in Frank’s hydrophone recording."
+          ]
         },
         {
           "id": "c9_choir.note",
           "title": "Frank’s damp note",
-          "prompt": "Frank wrote Steve a note in the boat. Steve can finally hear why his parents invited him.",
+          "prompt": "The damp fold reads ‘kiddo’, ‘boat’ and ‘bring your ears’. Helen’s notes are in shorthand. Frank calls Steve ‘kiddo’ on air. Steve wants the rest of the invitation in its writer’s own voice.",
           "options": [
-            "Read the note with his parents",
-            "Apologize and run before they answer",
-            "Return to the old voicemail"
+            "Ask Helen to translate the note",
+            "Ask June to compare signatures",
+            "Open it with Frank and let him finish"
           ],
-          "answer": 0,
+          "answer": 2,
           "lines": [
             "c9_choir.note.01",
             "c9_choir.note.02"
@@ -3223,7 +3817,12 @@
           "actor": "",
           "kind": "choice",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Read the greeting as well as the invitation.",
+            "Who uses that greeting for Steve?",
+            "Open it with Frank. These are the words he meant Steve to hear."
+          ]
         }
       ],
       "intro": [
@@ -3264,11 +3863,11 @@
         {
           "id": "c10_station.playlist",
           "title": "AutoRick queue",
-          "prompt": "AutoRick yields only to the station’s live emergency bulletin input.",
+          "prompt": "AutoRick’s log from the last outage has three entries. Traffic: queued after the song. Ident: opened the engineer’s maintenance door and kept the song on air. Bulletin: gave the microphone to the duty host until sign-off. Steve wants to talk to the town and still hear their answer.",
           "options": [
-            "Queue another song",
-            "Select the live emergency bulletin bus",
-            "Argue with the weather recording"
+            "Book the traffic slot",
+            "Sign the bulletin as duty host",
+            "Use the ident to open maintenance"
           ],
           "answer": 1,
           "lines": [
@@ -3280,12 +3879,17 @@
           "actor": "",
           "kind": "choice",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Getting inside the booth and getting on air are separate jobs.",
+            "Check what the audience heard during the last ident.",
+            "Sign the bulletin as duty host. That entry put the microphone on air until sign-off."
+          ]
         },
         {
           "id": "c10_station.route",
           "title": "Tower patch panel",
-          "prompt": "The Halcyon transmitter already communicates with the Long Patience. Steve can use that existing route.",
+          "prompt": "Wen puts the patch tests on paper. Sources: Birch changed on Shaw’s hand signal; Elm repeated the last song; Ash carried a steady check note. Returns: A gave a booth echo; B gave a shore camera picture; C gave a measurement signed aboard the Long Patience. The tower ceiling is 8 divisions. Two cues together peak at 11. The pad trims 2; the limiter caps at 8.",
           "options": [
             "Patch the live desk into Halcyon’s uplink",
             "Broadcast only to the car park",
@@ -3295,7 +3899,7 @@
           "lines": [
             "c10_station.route.01"
           ],
-          "note": "Connected the live performance to the ship’s systems.",
+          "note": "Birch followed Shaw live. Return C carried the ship’s own measurement. Wen kept the limiter on for the combined cues.",
           "requires": [
             "c10_station.playlist"
           ],
@@ -3304,49 +3908,55 @@
           "sounds": [],
           "hint": "Look at the evidence in the description, then try another approach.",
           "puzzle": {
-            "instruction": "The live desk is source L. Halcyon’s uplink is destination H. The limiter must remain engaged to protect the transmitter from the combined cues.",
+            "instruction": "Patch a fresh performance, choose the return the fleet can verify, and keep both cues within the tower ceiling.",
             "rows": [
               {
-                "label": "Source",
+                "label": "Source jack",
                 "options": [
-                  "Playlist P",
-                  "Live L",
-                  "Test loop T"
+                  "Elm",
+                  "Ash",
+                  "Birch"
                 ]
               },
               {
-                "label": "Destination",
+                "label": "Accepted return",
                 "options": [
-                  "Headphones C",
-                  "Halcyon H",
-                  "Archive A"
+                  "Return C",
+                  "Return A",
+                  "Return B"
                 ]
               },
               {
-                "label": "Limiter",
+                "label": "Level stage",
                 "options": [
-                  "Engaged",
-                  "Bypassed"
+                  "Pad only",
+                  "Straight through",
+                  "Limiter in"
                 ]
               }
             ],
             "solution": [
-              1,
-              1,
-              0
+              2,
+              0,
+              2
             ]
-          }
+          },
+          "hints": [
+            "Work from the three slips separately: source, observer and peak level.",
+            "Use the rig team’s finding about who must measure the show. An 11-division peak through the pad still reaches 9.",
+            "Patch Birch to Return C with the limiter in. Shaw changed Birch live, the ship signed C, and the limiter holds the peak at 8."
+          ]
         },
         {
           "id": "c10_station.relay",
           "title": "Emergency radio",
-          "prompt": "Official channels are jammed. Frank’s amateur radio contacts can relay spoken cues.",
+          "prompt": "Frank sends ‘cue four’ once. The official line returns yesterday’s cue three. The club operator at Sentinel repeats four and gives a new wind reading on request. A second club operator repeats four but cannot hear Steve’s follow-up. Who should acknowledge tonight’s changing cues first?",
           "options": [
-            "Call the ham network with K7BLW",
-            "Keep retrying the jammed line",
-            "Send the cues through hold music"
+            "The official operator",
+            "The second club operator",
+            "The Sentinel operator"
           ],
-          "answer": 0,
+          "answer": 2,
           "lines": [
             "c10_station.relay.01",
             "c10_station.relay.02"
@@ -3358,7 +3968,12 @@
           "actor": "",
           "kind": "choice",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Confirm that the path works in both directions.",
+            "One operator can answer a new question.",
+            "Call the Sentinel operator through Frank’s club. They repeated four and answered the wind check."
+          ]
         }
       ],
       "intro": [
@@ -3398,7 +4013,7 @@
         {
           "id": "c10_town.lights",
           "title": "Phone tree",
-          "prompt": "Each household needs a cue source and a simple light pattern they can perform live.",
+          "prompt": "Nora has two street captains and one spare phone. Pier can see Orchard's lamps. Orchard faces inland and cannot see Pier. Both can hear KBWR. If every phone stays on the show, nobody can call the fire crew.",
           "options": [
             "Assign local relay callers and await Steve’s cue",
             "Tell everyone to start whenever",
@@ -3408,21 +4023,49 @@
           "lines": [
             "c10_town.lights.01"
           ],
-          "note": "Organized Bellwether’s porch-light performance.",
+          "note": "Orchard starts on KBWR. Pier can see Orchard and answers its lamps. Nora keeps the spare phone free for the fire crew.",
           "requires": [],
           "actor": "nora",
           "kind": "choice",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Draw an arrow from the lamps toward the captain who can see them.",
+            "Orchard can hear Steve; Pier can see Orchard. Only the spare phone remains.",
+            "Start with Orchard and keep the spare phone free for the fire crew."
+          ],
+          "puzzle": {
+            "instruction": "Arrange a visible handoff: one street leads, the other answers what it sees. Keep emergency calls possible.",
+            "rows": [
+              {
+                "label": "First street",
+                "options": [
+                  "Pier",
+                  "Orchard"
+                ]
+              },
+              {
+                "label": "Spare phone",
+                "options": [
+                  "Keep free for the fire crew",
+                  "Join both captains in a show call"
+                ]
+              }
+            ],
+            "solution": [
+              1,
+              0
+            ]
+          }
         },
         {
           "id": "c10_town.console",
           "title": "Wen and Shaw",
-          "prompt": "Both technical teams need to operate from one shared cue sheet.",
+          "prompt": "Shaw’s stage lamps show when the harbor response arrives. Wen’s grid crew can raise load on the next beat. If they follow independent wall clocks, Wen sometimes fires first. Which mark belongs on the common cue sheet?",
           "options": [
-            "Ask them to coordinate at one console",
-            "Have them compete for the loudest signal",
-            "Play both original test tapes"
+            "Wen follows Shaw’s observed lamp mark",
+            "Both teams start on their wall clocks",
+            "Shaw follows Wen’s predicted load time"
           ],
           "answer": 0,
           "lines": [
@@ -3430,27 +4073,32 @@
             "c10_town.console.02",
             "c10_town.console.03"
           ],
-          "note": "Combined both delegations into a live effects team.",
+          "note": "Shaw takes the visible field cue. Wen waits for confirmation before she raises the live grid response.",
           "requires": [],
           "actor": "steve",
           "kind": "choice",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "The desired order starts with something seen at the harbor.",
+            "Wen needs a mark that corrects for the harbor’s actual response.",
+            "Have Wen follow Shaw’s observed mark."
+          ]
         },
         {
           "id": "c10_town.wind",
           "title": "The bait bucket",
-          "prompt": "Penhallow has the original wind recording from Veyr. The surrounding performance must remain live.",
+          "prompt": "Agnes has one spool from Veyr. It has a pencil tail mark after the last gust. The Choir can answer Steve from aboard the ship. He wants listeners to hear both home as it was and a voice answering them now. What cue should he mark on the spool?",
           "options": [
-            "Use the wind as an emotional cue within the live show",
-            "Loop the entire show around it",
-            "Discard it because it is old"
+            "Restart the spool at the tail",
+            "Open the Choir’s return after the last gust",
+            "Record the Choir on the leader for every replay"
           ],
-          "answer": 0,
+          "answer": 1,
           "lines": [
             "c10_town.wind.01"
           ],
-          "note": "Prepared Veyr’s wind as a distinct archival element.",
+          "note": "Agnes marked the tail of the original wind from Veyr. The Choir has an open return for its live answer.",
           "requires": [
             "c10_town.lights",
             "c10_town.console"
@@ -3458,7 +4106,12 @@
           "actor": "steve",
           "kind": "playback",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Find the point where the old recording has finished speaking.",
+            "Keep the Choir free to choose its own answer.",
+            "Open the Choir’s return at the tail mark, after the last gust."
+          ]
         }
       ],
       "intro": [
@@ -3498,7 +4151,7 @@
         {
           "id": "c10_live.first",
           "title": "Cue one: establish scale",
-          "prompt": "The Vigil is measuring the antenna field. Begin with a visible live response, then let the technicians follow it.",
+          "prompt": "Steve is live with three slips. ORCHARD: relay heard the call, no lamps yet. PIER: last rehearsal left two lamps glowing. FIELD: Shaw has a hand on the follower bank. From his desk Steve can see both streets. He needs evidence of a reply made during this broadcast.",
           "options": [
             "Nora’s porch lights, then Shaw’s field lights",
             "Replay the nine-year-old test",
@@ -3514,12 +4167,42 @@
           "actor": "",
           "kind": "choice",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Look in the notebook for Nora’s sightline between the streets. A lamp already on tells Steve very little.",
+            "Only one captain can see the other street. Shaw needs proof that the second street saw the first change.",
+            "Call Orchard. Release Shaw when a fresh Pier flash follows Orchard’s change. The two old Pier lights are left over from rehearsal."
+          ],
+          "puzzle": {
+            "instruction": "Use the phone tree Nora prepared. Cue one street and choose the observation that releases Shaw’s bank.",
+            "rows": [
+              {
+                "label": "Call first",
+                "options": [
+                  "Pier",
+                  "Orchard",
+                  "Sentinel field"
+                ]
+              },
+              {
+                "label": "Release Shaw on",
+                "options": [
+                  "Two Pier lamps already glowing",
+                  "Orchard’s first flash alone",
+                  "A new Pier flash after Orchard changes"
+                ]
+              }
+            ],
+            "solution": [
+              1,
+              2
+            ]
+          }
         },
         {
           "id": "c10_live.second",
           "title": "Cue two: adapt",
-          "prompt": "A relay operator reports a two-second delay. Adjust the next cue to the report instead of repeating a timed tape.",
+          "prompt": "Frank logged three returns on Steve’s beat clock. Test at 10 with the coast connected: Birch 10, Reed 12, Bell 12. Test at 20 with the coast unplugged: Birch 20, Reed silent, Bell 22. Test at 31, coast reconnected: Birch 31, Reed 33, Bell 33. Cue four leaves at 40.",
           "options": [
             "Ignore the report",
             "Hold two seconds and issue a fresh cue",
@@ -3540,50 +4223,46 @@
           "sounds": [],
           "hint": "Look at the evidence in the description, then try another approach.",
           "puzzle": {
-            "instruction": "The coast relay reports a two-second delay. Shaw can respond immediately, Wen needs the coast confirmation, and the Choir needs a clear channel after the power cue.",
+            "instruction": "Arm the coast return. When its fresh reply arrives, Shaw uses that beat for the field lamps. Wen needs two consecutive beats on the same supply. The crew needs the supply back at the start of beat 45. Hold if the coast stays silent.",
             "rows": [
               {
-                "label": "Delay compensation",
+                "label": "Coast return fader",
                 "options": [
-                  "0 seconds",
-                  "2 seconds",
-                  "9 seconds"
+                  "Bell",
+                  "Birch",
+                  "Reed"
                 ]
               },
               {
-                "label": "First response",
+                "label": "Reserve for Wen",
                 "options": [
-                  "Shaw on Steve’s fresh cue",
-                  "Wen before confirmation",
-                  "Replay the old cue"
-                ]
-              },
-              {
-                "label": "Then",
-                "options": [
-                  "Choir over every other channel",
-                  "Wen after coast confirmation",
-                  "Repeat the same sequence unchanged"
+                  "Beats 42 and 43",
+                  "Beats 44 and 45",
+                  "Beats 43 and 44"
                 ]
               }
             ],
             "solution": [
-              1,
-              0,
-              1
+              2,
+              2
             ]
-          }
+          },
+          "hints": [
+            "Cover the first and last tests. Which return changed when Frank unplugged the coast?",
+            "Use the connected runs to find the delay. Cross out the beat Shaw needs and the beat already booked by the crew.",
+            "Arm Reed. Its expected reply at 42 is Shaw’s beat. Reserve 43 and 44 for Wen. If Reed stays silent, hold the cue."
+          ]
         },
         {
           "id": "c10_live.third",
           "title": "Cue three: listen",
-          "prompt": "The Choir is ready. The fleet pauses at the old wind recording. Give the live voices room to answer.",
+          "prompt": "The master cue sheet has three marks. At 48 Wen confirms the grid. At 50 Agnes reaches the final gust; Steve can still hear it through 52. At 53 the Choir draws breath on the return. Where can Steve open the vocal channel and preserve its first word?",
           "options": [
-            "Bring in the Choir after the wind, following its breath",
-            "Loop the wind forever",
-            "Mute the human voices"
+            "At 48, mixed under Wen’s confirmation",
+            "At 50, with the gust still playing",
+            "At the Choir’s intake at 53"
           ],
-          "answer": 0,
+          "answer": 2,
           "lines": [
             "c10_live.third.01",
             "c10_live.third.02"
@@ -3595,7 +4274,12 @@
           "actor": "",
           "kind": "choice",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Use the marks the people at the console can hear.",
+            "Check the tail Agnes marked, then listen for a live entrance.",
+            "Open on the intake at 53. Wen has confirmed and the wind has ended."
+          ]
         }
       ],
       "intro": [
@@ -3636,13 +4320,13 @@
         {
           "id": "c10_report.echo",
           "title": "The open channel",
-          "prompt": "Penhallow is the Archivist’s own secret echo. Her experiences belong to someone the Archivist already knows.",
+          "prompt": "The two Agneses remember the last wind on Veyr. Only one can list the boat owners who took bait on credit during Bellwether’s bad winter. The Archivist needs a witness to what happened on shore. Whom should she invite?",
           "options": [
-            "Hear what the shore echo has learned",
-            "Reconcile her before she speaks",
-            "Ask Saren to decide for both"
+            "The Archivist with her departure register",
+            "Penhallow with the bait ledger",
+            "Either one reading the old wind log"
           ],
-          "answer": 0,
+          "answer": 1,
           "lines": [
             "c10_report.echo.01",
             "c10_report.echo.02"
@@ -3652,12 +4336,17 @@
           "actor": "",
           "kind": "choice",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "A shared memory predates the shore assignment.",
+            "Look for an experience acquired during three years in town.",
+            "Hear Penhallow’s bait ledger and her memories of those customers."
+          ]
         },
         {
           "id": "c10_report.survey",
           "title": "Saren’s sealed survey",
-          "prompt": "The sealed entry describes an empty, living world off the fleet’s course.",
+          "prompt": "Saren sealed three slips. Reef 6: water and air, beacon answers every inquiry. Sound 4: air, no liquid water, silent. Reach 2: water and air, three unoccupied-ground surveys on separate visits. The fleet needs a living world with evidence of room to settle.",
           "options": [
             "Release its coordinates with the report",
             "Keep it sealed to protect Saren’s reputation",
@@ -3675,16 +4364,46 @@
           "actor": "",
           "kind": "choice",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "A silent receiver alone tells you little about who lives there.",
+            "Require both a living environment and repeated observations on the ground.",
+            "Disclose Reach 2 and attach the three independent surveys of unoccupied ground."
+          ],
+          "puzzle": {
+            "instruction": "Choose which surveyed world to disclose and what makes its claim to empty ground the strongest.",
+            "rows": [
+              {
+                "label": "Survey",
+                "options": [
+                  "Sound 4",
+                  "Reach 2",
+                  "Reef 6"
+                ]
+              },
+              {
+                "label": "Evidence for ground clear",
+                "options": [
+                  "The channel was quiet once",
+                  "An automated beacon replied",
+                  "Separate visits found no settlements"
+                ]
+              }
+            ],
+            "solution": [
+              1,
+              2
+            ]
+          }
         },
         {
           "id": "c10_report.report",
           "title": "Fleet transmission",
-          "prompt": "The report requires the Prefect or Archivist. The Archivist can now speak for herself.",
+          "prompt": "The fleet asks for two signed attachments: evidence of the danger at Earth, and coordinates for another living world. Steve has the camera film and the ship’s own live measurement. The Archivist has the newly opened survey. Which packet can she stand behind?",
           "options": [
-            "Confirm the measured performance and transmit the new home",
-            "Erase Saren and appoint his old record",
-            "Send only the old command, Deliver"
+            "Ship measurement and the Reach 2 survey",
+            "Shore camera film and Reach 2’s quiet-channel log",
+            "Ship measurement and Reef 6’s beacon acknowledgment"
           ],
           "answer": 0,
           "lines": [
@@ -3699,7 +4418,12 @@
           "actor": "",
           "kind": "choice",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Use one result from Wen’s patch and one from Saren’s survey.",
+            "The fleet accepted its own ship as observer. Which world has repeated settlement surveys?",
+            "Send the ship’s live measurement and the Reach 2 survey."
+          ]
         }
       ],
       "intro": [
@@ -3740,13 +4464,13 @@
         {
           "id": "epilogue.neighbors",
           "title": "The new neighbors",
-          "prompt": "More than two hundred copies stay. Their future requires ordinary choices.",
+          "prompt": "A chalkboard outside the café has a blank for tomorrow’s mail round. Dale left his retirement card beneath it. Pell’s bag is under the bench and Biscuit waits at the gate. Who should Steve ask about the first delivery?",
           "options": [
-            "Visit the families making those choices",
-            "Assign everyone their original’s life",
-            "Demand another re-sync"
+            "Dale, at his retirement breakfast",
+            "Pell, beside his bag",
+            "Lyle, on his way to the school"
           ],
-          "answer": 0,
+          "answer": 1,
           "lines": [
             "epilogue.neighbors.01",
             "epilogue.neighbors.02",
@@ -3758,18 +4482,23 @@
           "actor": "",
           "kind": "choice",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Look for the person starting a shift.",
+            "Dale’s card and Pell’s bag tell different stories.",
+            "Visit Pell and Biscuit for the morning route."
+          ]
         },
         {
           "id": "epilogue.bait",
           "title": "Two Agneses",
-          "prompt": "The two Agneses argue cheerfully over bait prices. Rook’s copy prepares to leave with the ship.",
+          "prompt": "Two chalked prices face one another across the bait counter. By the ferry, Rook and his copy share one boarding ticket between them. Steve has space for one line under each visit. What did he actually see?",
           "options": [
-            "Listen to their choices",
-            "Ask them to pick a single shared name",
-            "Insist every copy stay"
+            "One stall closing; two seats on the ferry",
+            "Two prices at the shop; one traveler at the ferry",
+            "Two stalls merging; two travelers staying ashore"
           ],
-          "answer": 0,
+          "answer": 1,
           "lines": [
             "epilogue.bait.01",
             "epilogue.bait.02",
@@ -3781,18 +4510,23 @@
           "actor": "",
           "kind": "choice",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Count the prices, then count the tickets.",
+            "Look for what each person chose for themself.",
+            "Record the two competing prices and the one traveler."
+          ]
         },
         {
           "id": "epilogue.coffee",
           "title": "A new morning",
-          "prompt": "Helen has left a new kitchen note. Steve can put away the old voicemail and speak to Nora.",
+          "prompt": "In the kitchen, yesterday’s voicemail is still cued to play. A new note has a coffee ring across Dad’s freshly labelled paint tin. Nora is standing by the door with her coat. Steve can answer his mother and still keep whom he promised to meet.",
           "options": [
-            "Make coffee and begin talking",
-            "Replay the voicemail instead of answering",
-            "Pretend the past year never happened"
+            "Ask Nora to sit through the old voicemail",
+            "Ring the station for a replay of yesterday",
+            "Answer Mom, then go with Nora for coffee"
           ],
-          "answer": 0,
+          "answer": 2,
           "lines": [
             "epilogue.coffee.01",
             "epilogue.coffee.02"
@@ -3805,7 +4539,12 @@
           "actor": "",
           "kind": "choice",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Look around the kitchen Steve is in today.",
+            "He can answer one person and keep his plans with another.",
+            "Answer Mom, then go for coffee with Nora."
+          ]
         }
       ],
       "intro": [
@@ -3823,7 +4562,7 @@
         {
           "duration": 5.0,
           "move": "establish",
-          "direction": "Watch the ship rise into sunrise; return to warm windows and a new kitchen-table note."
+          "direction": "Return to Bellwether with Steve and Nora. On the ninth night, neighbors set paper lanterns on the water."
         },
         {
           "duration": 6.0,
@@ -3846,11 +4585,11 @@
         {
           "id": "one_year.newwind",
           "title": "A message from the fleet",
-          "prompt": "The new recording contains wind through new glass towers.",
+          "prompt": "A package from the fleet carries a fresh date and the glass towers of its new home. The Veyr spool already has Agnes’s old tail mark. Steve and Stephen are at the live microphones. How can they let Bellwether hear where the fleet is today?",
           "options": [
-            "Play the new wind, then speak live",
-            "Repeat yesterday’s greeting exactly",
-            "Let AutoRick take over"
+            "Play the new arrival, then open the brothers’ microphones",
+            "Start the old Veyr spool at its tail mark",
+            "Replay yesterday’s show over the arrival"
           ],
           "answer": 0,
           "lines": [
@@ -3864,7 +4603,12 @@
           "sounds": [
             "effect.new_wind"
           ],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Check the place and date on the package.",
+            "The old spool preserves the home the fleet left.",
+            "Play the new wind, then let Steve and Stephen speak live."
+          ]
         }
       ],
       "intro": [
@@ -3879,7 +4623,7 @@
         {
           "duration": 5.0,
           "move": "establish",
-          "direction": "Push toward the live microphone as a new recording of wind arrives from the fleet’s home."
+          "direction": "Join Steve at the KBWR microphone for his live greeting. Read the credits, then continue to Sentinel Point for the final transmission."
         },
         {
           "duration": 6.0,
@@ -3902,13 +4646,13 @@
         {
           "id": "postcredits.answer",
           "title": "The new signal",
-          "prompt": "The signal uses the language Helen transcribed from Wick’s dreams.",
+          "prompt": "At three in the morning the receiver catches a low voice. Helen traces the first signs: rise without a break, space, then a longer fall. One reference in her notes came from listening rather than translation. Which should she open before she tries to answer?",
           "options": [
-            "Compare it with the final notebook page",
-            "Classify it as another Meridian recording",
-            "Erase it before anyone hears"
+            "Meridian’s lamp schedule",
+            "Frank’s Thursday-club roster",
+            "Her transcription of Wick’s dream tones"
           ],
-          "answer": 0,
+          "answer": 2,
           "lines": [
             "postcredits.answer.01"
           ],
@@ -3917,7 +4661,12 @@
           "actor": "",
           "kind": "choice",
           "sounds": [],
-          "hint": "Look at the evidence in the description, then try another approach."
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Follow the contour back to its first appearance.",
+            "Think of the page Helen compared with the hydrophone tape.",
+            "Open the transcription of Wick’s dream tones and compare the incoming phrase."
+          ]
         }
       ],
       "intro": [
@@ -6006,11 +6755,240 @@
     "effect.nora_whistle": "Listen: Nora’s two-note whistle",
     "effect.k7blw": "Listen: Frank’s call sign in Morse",
     "effect.lullaby": "Listen: Helen’s lullaby melody",
+    "effect.ninth_night": "Listen: ninth-night tone",
     "effect.veyr_wind": "Listen: the last wind on Veyr",
     "effect.new_wind": "Listen: wind from the new home",
+    "effect.wick": "Listen: Wick’s signal",
     "recording.greeting": "Listen: the morning greeting",
     "recording.rook": "Listen: Rook’s recorded reassurance",
     "recording.offer": "Listen: Saren’s recorded offer",
     "recording.release": "Listen: the restraint-release command"
+  },
+  "notebook_cases": {
+    "greeting": {
+      "title": "Why did I hear the same greeting twice?",
+      "clues": [
+        "c1_flat.saturday",
+        "c1_flat.sunday",
+        "c1_flat.control",
+        "c1_flat.compare",
+        "c1_dinner.family",
+        "c1_escape.order",
+        "c2_aquarium.intercom",
+        "c2_ship.nora"
+      ],
+      "theories": [
+        {
+          "id": "tape_fault",
+          "after": "c1_flat.sunday",
+          "text": "My recorder is playing a piece of old tape."
+        },
+        {
+          "id": "misheard",
+          "after": "c1_flat.sunday",
+          "text": "I was tired and heard a match that was never there."
+        },
+        {
+          "id": "grief",
+          "after": "c1_flat.sunday",
+          "text": "Since the boat vanished, I may be reading too much into ordinary things."
+        },
+        {
+          "id": "stand_in",
+          "after": "c1_escape.order",
+          "text": "Could someone else have used Nora’s name?"
+        }
+      ]
+    },
+    "aquarium": {
+      "title": "What happened in the north wing?",
+      "clues": [
+        "c1_escape.order",
+        "c2_aquarium.intercom",
+        "c2_ship.nora",
+        "c2_ship.command"
+      ],
+      "theories": [
+        {
+          "id": "maintenance",
+          "after": "c2_aquarium.plan",
+          "text": "The work order was an ordinary repair with the wrong date."
+        },
+        {
+          "id": "missing_nora",
+          "after": "c2_aquarium.intercom",
+          "text": "The woman I heard on that tape might still be here."
+        }
+      ]
+    },
+    "town": {
+      "title": "How can June and I test a suspicion?",
+      "clues": [
+        "c3_house.crossword",
+        "c3_house.rules",
+        "c3_archive.paper",
+        "c3_archive.cycle"
+      ],
+      "theories": [
+        {
+          "id": "personality",
+          "after": "c3_house.crossword",
+          "text": "A change in someone’s habits could identify a copy."
+        },
+        {
+          "id": "dated_records",
+          "after": "c3_house.rules",
+          "text": "New private facts and independently dated records could tell us more."
+        }
+      ]
+    },
+    "rook": {
+      "title": "What does Rook know about June?",
+      "clues": [
+        "c4_safe.record",
+        "c4_safe.match",
+        "c4_safe.screens"
+      ],
+      "theories": [
+        {
+          "id": "old_friend",
+          "after": "c4_safe.record",
+          "text": "Only June’s old friend could know the right words."
+        },
+        {
+          "id": "borrowed_voice",
+          "after": "c4_safe.match",
+          "text": "Someone else could have access to the performance on her voicemail."
+        }
+      ]
+    },
+    "boat": {
+      "title": "Why did my parents go out that night?",
+      "clues": [
+        "c5_shack.notes",
+        "c5_shack.club",
+        "c5_shack.log",
+        "c9_choir.note"
+      ],
+      "theories": [
+        {
+          "id": "pleasure_trip",
+          "after": "c5_shack.notes",
+          "text": "They only wanted company on the water."
+        },
+        {
+          "id": "radio_investigation",
+          "after": "c5_shack.log",
+          "text": "They went to locate the signal Frank was tracking."
+        }
+      ]
+    },
+    "iris": {
+      "title": "Why did she let me leave?",
+      "clues": [
+        "c1_escape.cross",
+        "c6_iris.takes",
+        "c6_iris.hold",
+        "c6_jail.exit",
+        "c9_gallery.link"
+      ],
+      "theories": [
+        {
+          "id": "fixed_record",
+          "after": "c6_iris.takes",
+          "text": "She can only repeat what Nora would have done."
+        },
+        {
+          "id": "own_choice",
+          "after": "c6_iris.takes",
+          "text": "She can make a choice Nora never made."
+        }
+      ]
+    },
+    "signing": {
+      "title": "Where could a substitution take place?",
+      "clues": [
+        "c7_gate.post",
+        "c7_gate.truck",
+        "c7_swap.map",
+        "c7_swap.tone"
+      ],
+      "theories": [
+        {
+          "id": "podium_only",
+          "after": "c7_gate.post",
+          "text": "We only need to watch the podium."
+        },
+        {
+          "id": "broadcast_truck",
+          "after": "c7_gate.truck",
+          "text": "The event crew and the sound desk could be part of it."
+        }
+      ]
+    },
+    "meridian": {
+      "title": "What could the Meridian instruments have measured?",
+      "clues": [
+        "c3_archive.power",
+        "c8_lab.notebook",
+        "c8_lab.props",
+        "c8_rig.path"
+      ],
+      "theories": [
+        {
+          "id": "working_engine",
+          "after": "c8_lab.notebook",
+          "text": "The readings require a working space-fold engine."
+        },
+        {
+          "id": "stage_test",
+          "after": "c8_lab.props",
+          "text": "Wen and Shaw could reproduce the readings with a stage set."
+        }
+      ]
+    },
+    "choir": {
+      "title": "What is making the tune inside the ship?",
+      "clues": [
+        "c5_shack.log",
+        "c9_wake.helen",
+        "c9_choir.truth",
+        "c9_choir.wick"
+      ],
+      "theories": [
+        {
+          "id": "ship_machinery",
+          "after": "c9_wake.helen",
+          "text": "I am hearing a familiar tune in ordinary ship noise."
+        },
+        {
+          "id": "choir_memory",
+          "after": "c9_choir.truth",
+          "text": "The Choir can respond to the lives it holds."
+        }
+      ]
+    },
+    "broadcast": {
+      "title": "How can the fleet test our performance?",
+      "clues": [
+        "c8_rig.path",
+        "c10_station.route",
+        "c10_station.relay",
+        "c10_live.second",
+        "c10_report.report"
+      ],
+      "theories": [
+        {
+          "id": "old_test",
+          "after": "c10_station.route",
+          "text": "We could send the old Meridian loop over the tower."
+        },
+        {
+          "id": "live_reply",
+          "after": "c10_station.relay",
+          "text": "We could answer each measurement live through the ship’s own equipment."
+        }
+      ]
+    }
   }
 }

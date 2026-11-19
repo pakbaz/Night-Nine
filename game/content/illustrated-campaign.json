@@ -68,7 +68,8 @@
           "c1_pier.whistle.01"
         ]
       }
-    ]
+    ],
+    "departure_painting": "SundayAtLaMarea"
   },
   "c1_dinner": {
     "light": "ffce87",
@@ -675,6 +676,9 @@
     "chapter_insert": true
   },
   "epilogue": {
+    "appearances": {
+      "iris": "iris_epilogue"
+    },
     "light": "ffdbab",
     "air": 2,
     "opening": [
@@ -712,7 +716,8 @@
           "epilogue.neighbors.03"
         ]
       }
-    ]
+    ],
+    "departure_painting": "NinthNightLanterns"
   },
   "one_year": {
     "light": "f4c78c",
@@ -729,7 +734,8 @@
       "steve",
       "stephen",
       "tomas"
-    ]
+    ],
+    "departure_painting": "MorningBroadcast"
   },
   "postcredits": {
     "light": "7ec4d8",

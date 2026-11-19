@@ -6,11 +6,15 @@ A painted point-and-click mystery set in Bellwether. Steve Mercer hears the same
 
 ## Play
 
-Open `game/project.godot` in Godot 4.7.2, wait for import, then press F5. Select **New game**. Click a marked object to investigate, use **Objects** for a keyboard-accessible list, and open the notebook to review evidence and dialogue. From a terminal, run `godot --path game` after the first import. All game data, recordings and textures are available locally.
+For the free desktop edition, extract the Windows x64 or macOS download and open **Night Nine**. To play from source, open `game/project.godot` in Godot 4.7.2, wait for import, then press F5. From a terminal, run `godot --path game` after the first import.
+
+Select **New game**. Click an object to investigate, or use **Objects** for a keyboard-accessible list. In rooms with a walkable floor, click a spot or use WASD to move. Open the notebook to review evidence, case theories and the transcript. After initial setup, you can play the full story offline.
+
+You can also play the Web edition from a desktop browser with WebGL 2. Use **Play in browser** on the published Pages site. Your browser keeps its own saves for that site. [Build or host the browser edition](PUBLISHING.md)
 
 ## Chapter checkpoints
 
-See [the checkpoint list](MILESTONES.md) for tags, official chapter titles and acceptance criteria. Open an earlier tag in another directory, for example with `git worktree add --detach ../Night-Nine-chapter-01 checkpoint/chapter-01`. Each tag starts at the three-part prologue and ends at its own completion card. Each checkpoint has a separate default save directory. Interlude 1 belongs to Chapter 3 and Interlude 2 to Chapter 6. Chapter 10 includes the epilogue and post-credits scene.
+You can play the original prologue and ten cumulative chapter checkpoints at the `checkpoint/*` tags. Open an earlier one in another directory with `git worktree add --detach ../Night-Nine-chapter-01 checkpoint/chapter-01`. Each checkpoint has a separate default save directory. Play Interlude 1 after Chapter 3 and Interlude 2 after Chapter 6. Play through Chapter 10 for the epilogue and the post-credits scene. You can find subsequent complete editions at the version tags. [Chapter goals](MILESTONES.md)
 
 ## Build and test
 

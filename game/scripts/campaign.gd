@@ -17,8 +17,16 @@ var words: RichTextLabel
 var interaction: VBoxContainer
 var dialogue_panel: PanelContainer
 var menu: PanelContainer
+var title_art: TextureRect
+var menu_settings: VBoxContainer
+var menu_resume: Button
+var menu_save: Button
+var menu_load: Button
+var menu_heading: Label
+var settings_open := false
 var journal: PanelContainer
-var journal_text: RichTextLabel
+const CASEBOOK := preload("res://ui/hypothesis_notebook.gd")
+var casebook: CASEBOOK
 var actor: OptionButton
 const LIGHT_BEAT := 2.15
 var light_remaining := -1.0
@@ -33,6 +41,7 @@ var credits_toggle: Button
 var credits_return: Button
 var credits_prior_focus: Control
 var showing_notices:=false
+var credits_before_signal := false
 var cut_skip: Button
 var next_button: Button
 var hotspots: Array[Button] = []
@@ -261,10 +270,9 @@ func _build_ui() -> void:
 	var jbox := VBoxContainer.new()
 	journal.add_child(jbox)
 	_label(jbox,"FRANK’S RECORDER / STEVE’S NOTEBOOK",26)
-	journal_text = RichTextLabel.new()
-	journal_text.size_flags_vertical=Control.SIZE_EXPAND_FILL
-	journal_text.bbcode_enabled = false
-	jbox.add_child(journal_text)
+	casebook = CASEBOOK.new()
+	jbox.add_child(casebook)
+	casebook.edited.connect(func(): _save("autosave"))
 	_button(jbox,"Return to the scene",func(): journal.hide(); _pause_audio(false))
 	journal.hide()
 	end_card=_panel(root)
@@ -288,6 +296,8 @@ func _build_ui() -> void:
 func _open_objects() -> void:
 	if not started or campaign.data.finished or dialogue_panel.visible or transitioning or menu.visible or journal.visible or tape_compare.visible:
 		return
+	if stage.has_method("cancel_walk"):
+		stage.cancel_walk()
 	stage.set_focus(-1)
 	(interaction.get_parent() as ScrollContainer).scroll_vertical=0
 	for child: Node in interaction.get_children():
@@ -296,7 +306,10 @@ func _open_objects() -> void:
 	_label(interaction,"Objects at this location",25)
 	var first: Button
 	for task: Dictionary in campaign.current().tasks:
-		var lead:=_button(interaction,task.title,func(): _inspect(task.id))
+		var lead:=_button(interaction,task.title,func():
+			if stage.has_method("walking_view") and stage.walking_view():
+				stage.floor_stage.finish_now(task.id)
+			_inspect_on_arrival(task.id))
 		lead.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART
 		lead.disabled=not campaign.available(task.id) and task.id not in campaign.data.done
 		if not lead.disabled and not first:
@@ -307,23 +320,36 @@ func _open_objects() -> void:
 		first.grab_focus()
 
 func _build_menu() -> void:
+	title_art = TextureRect.new()
+	title_art.name = "BellwetherTitle"
+	title_art.texture = preload("res://assets/illustrated/title.webp")
+	title_art.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+	title_art.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED
+	title_art.mouse_filter = Control.MOUSE_FILTER_STOP
+	root.add_child(title_art)
+	title_art.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	menu = _panel(root)
 	menu.position = Vector2(62,126)
 	menu.size = Vector2(470,720)
 	var box := VBoxContainer.new()
 	box.add_theme_constant_override("separation",12)
 	menu.add_child(box)
-	_label(box,"NIGHT NINE",42)
-	_label(box,"An original adventure in Bellwether",20)
-	_button(box,"Continue",_continue)
+	menu_heading = _label(box, "Paused", 30)
+	menu_resume = _button(box,"Continue",_continue)
 	_button(box,"New game",_request_new_game)
 	new_game_confirmation = ConfirmationDialog.new()
 	new_game_confirmation.title = "Begin a new game?"
 	new_game_confirmation.dialog_text = "Replace your autosave and begin again? Your manual save will remain available."
 	new_game_confirmation.confirmed.connect(_new_game)
 	root.add_child(new_game_confirmation)
-	_button(box,"Save game",func(): _save("manual"); _status("Game saved." if saves.last_error.is_empty() else saves.last_error))
-	_button(box,"Load saved game",func(): _load("manual"))
+	menu_save = _button(box,"Save game",func(): _save("manual"); _status("Game saved." if saves.last_error.is_empty() else saves.last_error))
+	menu_load = _button(box,"Load saved game",func(): _load("manual"))
+	_button(box, "Settings", func():
+		settings_open = not settings_open
+		_layout_menu())
+	menu_settings = VBoxContainer.new()
+	menu_settings.add_theme_constant_override("separation", 8)
+	box.add_child(menu_settings)
 	var quality := OptionButton.new()
 	quality.add_item("Graphics: High")
 	quality.add_item("Graphics: Performance")
@@ -334,12 +360,12 @@ func _build_menu() -> void:
 			stage.set_quality(profile)
 		settings.set_value("graphics","profile",profile)
 		_save_settings())
-	box.add_child(quality)
+	menu_settings.add_child(quality)
 	var fullscreen := CheckButton.new()
 	fullscreen.text="Fullscreen"
 	fullscreen.toggled.connect(func(on: bool): DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN if on else DisplayServer.WINDOW_MODE_WINDOWED))
-	box.add_child(fullscreen)
-	_label(box,"Voice volume",18)
+	menu_settings.add_child(fullscreen)
+	_label(menu_settings,"Voice volume",18)
 	var volume := HSlider.new()
 	volume.min_value=0
 	volume.max_value=1
@@ -347,10 +373,35 @@ func _build_menu() -> void:
 	volume.value=float(settings.get_value("audio","voice",0.9))
 	voice.volume_db=linear_to_db(volume.value)
 	volume.value_changed.connect(func(value: float): voice.volume_db=linear_to_db(value); settings.set_value("audio","voice",value); _save_settings())
-	box.add_child(volume)
-	_label(box,"Click an object, or press I to choose from a list. Tab moves focus. Space advances dialogue.",16).autowrap_mode=TextServer.AUTOWRAP_WORD_SMART
+	menu_settings.add_child(volume)
+	var names := CheckButton.new()
+	names.text = "Always show object names"
+	names.button_pressed = bool(settings.get_value("interface", "object_names", false))
+	names.toggled.connect(func(on: bool):
+		settings.set_value("interface", "object_names", on)
+		for marker: Button in hotspots:
+			marker.set("show_names", on)
+		_save_settings())
+	menu_settings.add_child(names)
+	var guide := _label(menu_settings,"Click the ground or use WASD to walk. Press I for objects, Tab to move focus and Space to advance dialogue.",16)
+	guide.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	guide.custom_minimum_size.x = 310
 	_button(box,"Credits",_open_credits)
 	_button(box,"Quit",_quit)
+	menu.visibility_changed.connect(func():
+		settings_open = false
+		_layout_menu())
+	_layout_menu()
+
+func _layout_menu() -> void:
+	title_art.visible = not started and menu.visible
+	menu_settings.visible = settings_open
+	menu_heading.visible = started
+	menu_save.visible = started
+	menu_resume.visible = started or saves.read_slot("autosave").get("ok", false)
+	menu_load.visible = started or saves.read_slot("manual").get("ok", false)
+	menu.position = Vector2(78, 103) if started or settings_open else Vector2(100, 473)
+	menu.size = Vector2(430 if settings_open else 357, 0)
 
 func _build_credits() -> void:
 	credits_panel=ColorRect.new()
@@ -395,13 +446,21 @@ func _show_credits_page(notices: bool) -> void:
 
 func _open_credits() -> void:
 	credits_prior_focus=get_viewport().gui_get_focus_owner()
+	credits_return.text = "Continue" if credits_before_signal else "Return"
 	_show_credits_page(false)
 	credits_panel.show()
 	_pause_audio(true)
-	credits_toggle.grab_focus()
+	if credits_before_signal:
+		credits_return.grab_focus()
+	else:
+		credits_toggle.grab_focus()
 
 func _close_credits() -> void:
 	credits_panel.hide()
+	if credits_before_signal:
+		credits_before_signal = false
+		_enter_next_scene()
+		return
 	_pause_audio(menu.visible or journal.visible)
 	if is_instance_valid(credits_prior_focus) and credits_prior_focus.is_visible_in_tree():
 		credits_prior_focus.grab_focus()
@@ -443,6 +502,8 @@ func _load(slot: String) -> bool:
 	return true
 
 func _save(slot: String) -> void:
+	if started and is_instance_valid(stage) and stage.room_id==campaign.current().id and stage.has_method("walk_task") and stage.floor_stage:
+		campaign.data.walk_positions = stage.floor_stage.snapshot()
 	if started and not saves.write_slot(slot,campaign.data):
 		_status("Could not save: "+saves.last_error)
 
@@ -477,14 +538,19 @@ func _load_stage(play_intro: bool) -> void:
 	stage = ILLUSTRATED_STAGE.new() if prologue else CHAPTER_STAGE.new()
 	add_child(stage)
 	stage.build(campaign.current(),profile)
+	if stage.has_signal("approach_finished"):
+		stage.approach_finished.connect(_inspect_on_arrival)
+		if stage.floor_stage:
+			stage.floor_stage.restore(campaign.data.get("walk_positions",{}))
 	if started:
-		_status("Click a marked object to investigate.")
+		_status("Click the ground or use WASD to walk. Select an object to investigate." if stage.has_method("walking_view") and stage.walking_view() else "Click a marked object to investigate.")
 	actor.clear()
 	for id: String in campaign.current().actors:
 		actor.add_item(campaign.content.cast[id])
 	for i: int in range(campaign.current().tasks.size()):
 		var task: Dictionary = campaign.current().tasks[i]
 		var b := PROP_BUTTON.new()
+		b.show_names = bool(settings.get_value("interface", "object_names", false))
 		b.text = task.title
 		b.pressed.connect(func(): _inspect(task.id))
 		root.add_child(b)
@@ -546,6 +612,8 @@ func _resume_dialogue() -> void:
 
 func _refresh() -> void:
 	if is_instance_valid(stage):
+		if stage.has_method("select_walker"):
+			stage.select_walker(campaign.data.actor)
 		stage.sync_story(campaign.data.done)
 	var s := campaign.current()
 	title.text=s.chapter.to_upper()+"  /  "+s.title
@@ -563,8 +631,23 @@ func _refresh() -> void:
 	next_button.text="Finish" if int(campaign.data.scene)==campaign.content.scenes.size()-1 else "Leave this location"
 
 func _inspect(id: String) -> void:
-	if not started or dialogue_panel.visible or menu.visible or journal.visible or transitioning:
+	if not _can_explore() or not campaign.task_index.has(id) or campaign.task_scene[id]!=int(campaign.data.scene):
 		return
+	if stage.has_method("walking_view") and stage.walking_view():
+		root.get_node("InteractionPanel").hide()
+		if stage.floor_stage.pending==id:
+			stage.floor_stage.finish_now(id)
+			_inspect_on_arrival(id)
+			return
+		if stage.walk_task(id):
+			_status("Walking to "+str(campaign.task_index[id].title)+".")
+		return
+	_inspect_on_arrival(id)
+
+func _inspect_on_arrival(id: String) -> void:
+	if not _can_explore():
+		return
+	_status("")
 	selected_task=id
 	(interaction.get_parent() as ScrollContainer).scroll_vertical=0
 	puzzle_controls.clear()
@@ -589,6 +672,10 @@ func _inspect(id: String) -> void:
 	var prompt:=_label(interaction,task.prompt,19)
 	prompt.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART
 	prompt.custom_minimum_size.x=355
+	if task.has("evidence_labels"):
+		_show_recording_evidence(task)
+	elif task.has("audition_labels"):
+		_show_reel_index(task)
 	if id == "p_bay.tune":
 		receiver = BAY_RECEIVER.new()
 		receiver.tuned.connect(func(): _choose(id,int(task.answer)))
@@ -630,6 +717,8 @@ func _inspect(id: String) -> void:
 		b.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART
 		b.custom_minimum_size.x=355
 	for audio_id: String in task.sounds:
+		if task.has("evidence_labels") or task.has("audition_labels"):
+			break
 		var caption: String = campaign.content.get("sound_labels",{}).get(audio_id,"Listen to recording")
 		_button(interaction,caption,func():
 			if _play_audio(audio_id)<=0.0:
@@ -639,6 +728,52 @@ func _inspect(id: String) -> void:
 	root.get_node("InteractionPanel").show()
 	if interaction.get_child_count()>2 and interaction.get_child(2) is Button:
 		interaction.get_child(2).grab_focus()
+
+func _show_reel_index(task: Dictionary) -> void:
+	var captions := VBoxContainer.new()
+	for i: int in task.sounds.size():
+		var id: String = task.sounds[i]
+		var label: String = task.audition_labels[i]
+		var take: Dictionary = _recording_for(id).take
+		var play := _button(interaction, "Listen · " + label, func(): _play_audio(id))
+		play.name = "ReelPlay%d" % i
+		play.disabled = take.is_empty()
+		var caption := _label(captions, label + "  “" + str(take.get("text", "")) + "”", 16)
+		caption.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	var reveal := CheckButton.new()
+	reveal.text = "Show reel transcripts"
+	reveal.name = "ReelCaptions"
+	interaction.add_child(reveal)
+	interaction.add_child(captions)
+	captions.name = "ReelTranscripts"
+	captions.hide()
+	reveal.toggled.connect(func(on: bool): captions.visible = on)
+
+func _show_recording_evidence(task: Dictionary) -> void:
+	var recordings: Array[AudioStreamWAV] = []
+	var duration := 0.0
+	for id: String in task.sounds:
+		var take: Dictionary = sound_manifest.get(id.trim_prefix("effect."), {}) if id.begins_with("effect.") else _recording_for(id).take
+		var path: String = take.get("file", "")
+		var clip: AudioStreamWAV = load(path) if not path.is_empty() and ResourceLoader.exists(path) else null
+		recordings.append(clip)
+		if clip != null:
+			duration = maxf(duration, clip.get_length())
+	for index: int in recordings.size():
+		var id: String = task.sounds[index]
+		var clip := recordings[index]
+		var caption: String = task.evidence_labels[index]
+		var listen := _button(interaction, "Listen · " + caption, func(): _play_audio(id))
+		listen.name = "EvidencePlay%d" % index
+		listen.disabled = clip == null
+		if clip == null:
+			_label(interaction, "Recording unavailable.", 15)
+			continue
+		var trace := preload("res://ui/evidence_trace.gd").new()
+		trace.name = "EvidenceTrace%d" % index
+		interaction.add_child(trace)
+		trace.configure(clip, duration)
+		_label(interaction, "%.2f s" % clip.get_length(), 14)
 
 func _recorder_gain(id: String, task: Dictionary) -> void:
 	var row: Dictionary = task.puzzle.rows[0]
@@ -669,7 +804,10 @@ func _choose(id: String, answer: int, puzzle_input: Array = []) -> void:
 	root.get_node("InteractionPanel").hide()
 	if tape_compare.visible:
 		tape_compare.close()
-	_status(campaign.task_index[id].note)
+	if id == "c1_flat.sunday":
+		_status("Both greetings are on tape. Open Steve’s notebook to write down what might explain them.")
+	else:
+		_status(campaign.task_index[id].note)
 	_save("autosave")
 	_refresh()
 	_speak(result.lines,Callable())
@@ -791,6 +929,8 @@ func _depart() -> void:
 	if campaign.data.finished or not campaign.can_leave() or transitioning or dialogue_panel.visible:
 		return
 	transitioning=true
+	if stage.has_method("cancel_walk"):
+		stage.cancel_walk()
 	root.get_node("InteractionPanel").hide()
 	_speak(campaign.current().outro,_end_departure_dialogue)
 
@@ -807,6 +947,17 @@ func _end_departure_dialogue() -> void:
 	cut_skip.show()
 
 func _advance_scene(dissolve: bool=false) -> void:
+	if credits_before_signal:
+		return
+	if campaign.current().id == "one_year":
+		light_remaining = -1.0
+		cut_skip.hide()
+		credits_before_signal = true
+		_open_credits()
+		return
+	_enter_next_scene(dissolve)
+
+func _enter_next_scene(dissolve: bool=false) -> void:
 	var last_frame: Dictionary={}
 	if dissolve and stage.has_method("outgoing_frame"):
 		last_frame=stage.outgoing_frame()
@@ -817,17 +968,17 @@ func _advance_scene(dissolve: bool=false) -> void:
 			stage.receive_frame(last_frame)
 
 func _open_journal() -> void:
-	var text := "COLLECTED EVIDENCE\n\n"
+	var evidence := ""
 	for id: String in campaign.data.done:
-		text += "• "+campaign.task_index[id].note+"\n\n"
-	text += "\nCONVERSATION TRANSCRIPT\n\n"
+		evidence += "• "+campaign.task_index[id].note+"\n\n"
+	var transcript := ""
 	var transcript_ids: Array=campaign.data.seen.duplicate()
 	if not active_line.is_empty() and active_line not in transcript_ids:
 		transcript_ids.append(active_line)
 	for id: String in transcript_ids:
 		var line: Dictionary=campaign.content.lines[id]
-		text += str(line.get("display_speaker", campaign.content.cast[line.speaker]))+": "+str(line.get("display_text", line.text))+"\n\n"
-	journal_text.text=text
+		transcript += str(line.get("display_speaker", campaign.content.cast[line.speaker]))+": "+str(line.get("display_text", line.text))+"\n\n"
+	casebook.open_book(campaign, evidence if not evidence.is_empty() else "No evidence collected yet.", transcript if not transcript.is_empty() else "No dialogue recorded yet.")
 	journal.show()
 	_pause_audio(true)
 
@@ -845,6 +996,11 @@ func _pause_audio(on: bool) -> void:
 func _process(delta: float) -> void:
 	if not is_instance_valid(stage):
 		return
+	if stage.has_method("tick_walk") and _can_walk():
+		var direction := Vector2(
+			int(Input.is_physical_key_pressed(KEY_D))-int(Input.is_physical_key_pressed(KEY_A)),
+			int(Input.is_physical_key_pressed(KEY_S))-int(Input.is_physical_key_pressed(KEY_W)))
+		stage.tick_walk(delta,direction)
 	if light_remaining>=0.0:
 		cut_skip.visible=not menu.visible and not journal.visible
 	if light_remaining>=0.0 and not menu.visible and not journal.visible:
@@ -864,6 +1020,18 @@ func _process(delta: float) -> void:
 		if line_remaining<=0 and not voice.playing and not effect.playing:
 			_next_line()
 
+func _can_explore() -> bool:
+	return started and not campaign.data.finished and not transitioning and not dialogue_panel.visible and not menu.visible and not journal.visible and not credits_panel.visible and not tape_compare.visible
+
+func _can_walk() -> bool:
+	return _can_explore() and not actor.get_popup().visible and not root.get_node("InteractionPanel").visible
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event is InputEventMouseButton and event.button_index==MOUSE_BUTTON_LEFT and event.pressed and _can_walk():
+		if stage.has_method("walk_screen") and stage.walk_screen(event.position):
+			_status("")
+			get_viewport().set_input_as_handled()
+
 func _unhandled_key_input(event: InputEvent) -> void:
 	if event is InputEventKey and event.pressed and not event.echo:
 		if credits_panel.visible:
@@ -878,7 +1046,10 @@ func _unhandled_key_input(event: InputEvent) -> void:
 			if journal.visible:
 				journal.hide()
 				_pause_audio(false)
-			else:
+			elif menu.visible and settings_open:
+				settings_open = false
+				_layout_menu()
+			elif started:
 				menu.visible=not menu.visible
 				_pause_audio(menu.visible)
 			get_viewport().set_input_as_handled()

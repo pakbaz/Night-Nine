@@ -232,7 +232,7 @@ Aquarium north wing
 
 **Steve Mercer** [c2_aquarium.plan.01]: Nora showed me this when I repaired the underwater speakers.
 
-### Announcement loop
+### Two service doors
 
 **Steve Mercer** [c2_aquarium.guard.01]: The cough was in exactly the same place. That corridor has a recording.
 
@@ -746,7 +746,7 @@ Beach at dawn
 
 **Steve Mercer** [c8_beach.first.01]: Say it again. I want to be certain I heard you.
 
-### The repeated offer
+### A second offer
 
 **Prefect Saren** [c8_beach.second.01]: Give me the notebook. Helen and Frank will walk out of the sea tomorrow morning.
 

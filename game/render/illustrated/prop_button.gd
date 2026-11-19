@@ -1,5 +1,10 @@
 extends Button
 ## Mouse and keyboard share the illustrated object's real hit rectangle.
+var show_names := false:
+	set(value):
+		show_names = value
+		queue_redraw()
+
 func _ready() -> void:
 	flat = true
 	focus_mode = Control.FOCUS_ALL
@@ -14,6 +19,13 @@ func _ready() -> void:
 	focus_exited.connect(queue_redraw)
 
 func _draw() -> void:
+	if not show_names and not is_hovered() and not has_focus():
+		if not disabled:
+			var mark := size * .5
+			draw_circle(mark, 6, Color(.04,.06,.06,.72), true, -1, true)
+			draw_arc(mark, 5, 0, TAU, 24, Color("e8ce9c"), 1.25, true)
+			draw_circle(mark, 1.35, Color("e8ce9c"), true, -1, true)
+		return
 	var face := get_theme_default_font()
 	var fs := 18
 	var text_extent := face.get_string_size(text,HORIZONTAL_ALIGNMENT_LEFT,-1,fs)

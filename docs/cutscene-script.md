@@ -24,7 +24,7 @@ Camera directions for the interactive adaptation. In-engine camera staging is se
 
 ## c1_pier: Sunday on the pier
 
-- Track along wet timber past a bait stall and pools of warm lamplight.
+- Follow Steve along the pier, then join the Reyes family at La Marea for Sunday dinner.
 - Move toward the active interaction.
 
 ## c1_dinner: A plate kept warm
@@ -159,12 +159,12 @@ Camera directions for the interactive adaptation. In-engine camera staging is se
 
 ## epilogue: A place to live
 
-- Watch the ship rise into sunrise; return to warm windows and a new kitchen-table note.
+- Return to Bellwether with Steve and Nora. On the ninth night, neighbors set paper lanterns on the water.
 - Move toward the active interaction.
 
 ## one_year: Good morning
 
-- Push toward the live microphone as a new recording of wind arrives from the fleet’s home.
+- Join Steve at the KBWR microphone for his live greeting. Read the credits, then continue to Sentinel Point for the final transmission.
 - Move toward the active interaction.
 
 ## postcredits: We heard the singing

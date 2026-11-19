@@ -53,8 +53,13 @@ func verify() -> void:
 		for task: Dictionary in scene.tasks:
 			if not task.actor.is_empty():
 				game.campaign.switch_actor(task.actor)
+				game._refresh()
 			var solution: Array=task.get("puzzle",{}).get("solution",[])
 			game._inspect(task.id)
+			for step: int in 400:
+				if not game.stage.has_method("is_walking") or not game.stage.is_walking():
+					break
+				game._process(.05)
 			expect(game.selected_task==task.id,"Inspect "+task.id)
 			game._choose(task.id,int(task.answer),solution)
 			expect(task.id in game.campaign.data.done,"Resolve "+task.id)
@@ -70,6 +75,9 @@ func verify() -> void:
 			expect(game.stage.chapter_frames.size() == 2, "Chapter keyframes " + scene.id)
 			expect(game.stage.motion_material != null, "Chapter motion field " + scene.id)
 		game._process(game.cut_duration)
+		if scene.id == "one_year":
+			expect(game.credits_panel.visible and game.campaign.current().id == "one_year","Credits before the transmission")
+			game._close_credits()
 		visited.append(scene.id)
 		await process_frame
 	expect(game.campaign.data.finished and game.end_card.visible,"Terminal card after "+last_id)
@@ -89,7 +97,9 @@ func verify() -> void:
 	expect("Godot Engine contributors" in game.credits_body.text,"View engine and dependency notices")
 	game._close_credits()
 	game._open_journal()
-	expect(game.journal.visible and game.journal_text.text.length()>100,"Read completed notebook and transcript")
+	game.casebook.tabs["Transcript"].pressed.emit()
+	expect(game.journal.visible and game.casebook.archive.visible and game.casebook.archive.text.length()>100,
+		"Read completed notebook and transcript")
 	await game.drain_audio()
 	var report={"checks":checks,"rooms":visited,"tasks":game.campaign.data.done.size(),"lines":shown_lines.size(),"ending":last_id,"errors":errors}
 	print("NIGHT_NINE_CHECKPOINT_QA ",JSON.stringify(report))

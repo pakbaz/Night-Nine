@@ -1,5 +1,8 @@
 extends "res://render/illustrated/room.gd"
 ## Chapter camera, character and object staging in a shared 1600 by 900 art space.
+signal approach_finished(task_id: String)
+const FLOOR := preload("exploration_floor.gd")
+const FLOOR_BOOK := "res://content/illustrated-floor.json"
 const ROOM_FOLDER := "res://assets/illustrated/campaign/rooms/"
 const MOTION_SHADER := "res://render/illustrated/keyframe_motion.gdshader"
 const INSERT_FOLDER := "res://assets/illustrated/campaign/inserts/"
@@ -33,9 +36,12 @@ var retained := ""
 var scene_props := {}
 var location_landmarks := {}
 var high_detail := true
+var floor_stage: FLOOR
+var floor_directions := {}
 
 static var direction_book: Dictionary
 static var landmark_book: Dictionary
+static var floor_book: Dictionary
 
 func build_art(scene: Dictionary) -> void:
 	scene_record = scene
@@ -69,6 +75,19 @@ func build_art(scene: Dictionary) -> void:
 		hit_sizes.append(extent)
 		scene_props[task.id] = targets.back()
 	var foreground_path := FOREGROUND_FOLDER+room_id+".webp"
+	if floor_book.is_empty():
+		floor_book = JSON.parse_string(FileAccess.get_file_as_string(FLOOR_BOOK))
+	floor_directions = floor_book.get(room_id,{})
+	var wide_file := "res://assets/illustrated/campaign/wide/"+room_id+".webp"
+	if background and not floor_directions.is_empty() and (not floor_directions.has("landmarks") or ResourceLoader.exists(wide_file)):
+		floor_stage = FLOOR.new()
+		distant.add_child(floor_stage)
+		floor_stage.configure(floor_directions,scene.actors,background.texture,wide_file,Color.from_string(directions.light,Color.WHITE))
+		for task: Dictionary in scene.tasks:
+			var key: String = task.id.get_slice(".",1)
+			floor_stage.object_marks[key] = floor_directions.get("landmarks",{}).get(key,location_landmarks[task.id])
+		floor_stage.select_actor(scene.actors[0])
+		floor_stage.arrived.connect(func(id: String): approach_finished.emit(id))
 	if ResourceLoader.exists(foreground_path):
 		foreground = picture(props,foreground_path,Vector2.ZERO,ART)
 	if background:
@@ -107,6 +126,31 @@ func build_art(scene: Dictionary) -> void:
 
 func art_point(pair: Array) -> Vector2:
 	return Vector2(pair[0],pair[1])*ART
+
+func walking_view() -> bool:
+	return floor_stage != null and floor_stage.has_actor() and not cinematic and cut_progress < 0.0 and focus < 0
+
+func is_walking() -> bool:
+	return floor_stage != null and (not floor_stage.route.is_empty() or floor_stage.pose_time>0.0)
+
+func walk_screen(screen: Vector2) -> bool:
+	return walking_view() and frame.get_global_rect().has_point(screen) and floor_stage.walk_to(distant.to_local(screen))
+
+func walk_task(id: String) -> bool:
+	return walking_view() and floor_stage.approach_task(id)
+
+func select_walker(id: String) -> void:
+	if floor_stage:
+		floor_stage.select_actor(id)
+		update_inserts()
+
+func cancel_walk() -> void:
+	if floor_stage:
+		floor_stage.cancel()
+
+func tick_walk(delta: float, direction: Vector2) -> void:
+	if walking_view() and not paused:
+		floor_stage.step(delta,direction)
 
 func make_object_layer(index: int) -> void:
 	# Crop the actual painted prop. Separate near depth allows a small shift when
@@ -148,7 +192,7 @@ func actor_visible(id: String) -> bool:
 func get_performer(id: String) -> Node2D:
 	if actors.has(id):
 		return actors[id]
-	var appearance: String = APPEARANCE.get(id,id)
+	var appearance: String = directions.get("appearances", {}).get(id, APPEARANCE.get(id,id))
 	var folder := CAST+appearance
 	if not FileAccess.file_exists(folder+"/sprite.json"):
 		return null
@@ -185,10 +229,10 @@ func show_cast(id: String) -> void:
 	if not id.is_empty() and actor_visible(id):
 		visible_ids.append(id)
 	var resident: String = directions.get("resident","")
-	if not resident.is_empty() and actor_visible(resident) and (id.is_empty() or resident==id):
+	if not resident.is_empty() and actor_visible(resident) and (id==resident or (id.is_empty() and not walking_view())):
 		if resident not in visible_ids:
 			visible_ids.append(resident)
-	if room_id=="c9_gallery" and "c9_gallery.link" in done and (id in ["steve","nora"] or id.is_empty()):
+	if room_id=="c9_gallery" and "c9_gallery.link" in done and (id in ["steve","nora"] or (id.is_empty() and not walking_view())):
 		for partner: String in ["steve","nora"]:
 			if partner not in visible_ids:
 				visible_ids.append(partner)
@@ -197,6 +241,14 @@ func show_cast(id: String) -> void:
 	for member: String in actors.keys():
 		var person: Node = actors[member]
 		person.visible=member in visible_ids
+		if person.visible:
+			var body: Sprite2D = person.body
+			if not person.has_meta("portrait_origin"):
+				person.set_meta("portrait_origin",person.position)
+			person.position = person.get_meta("portrait_origin")
+			if not cinematic and not walking_view():
+				var lower_edge: float = person.position.y + (body.position.y + body.texture.get_height()) * person.resting_scale.y
+				person.position.y += maxf(0.0,ART.y+12.0-lower_edge)
 		# Keep the immediately preceding take ready for shot/reverse shot. Returning
 		# to exploration releases other incidental portraits in crowded scenes.
 		if not person.visible and member!=retained:
@@ -206,6 +258,10 @@ func show_cast(id: String) -> void:
 
 func set_focus(index: int) -> void:
 	focus=index
+	if floor_stage:
+		update_inserts()
+		if not cinematic:
+			show_cast("")
 	if index<0 and not cinematic and art_ready:
 		# Restore the whole clickable canvas in the same beat as the controls.
 		# A tight insert can otherwise leave the next object outside the viewport.
@@ -216,12 +272,16 @@ func set_focus(index: int) -> void:
 func update_inserts() -> void:
 	var cutaway: Dictionary=directions.get("cutaway",{})
 	var away: bool=active_id in cutaway.get("lines",[]) or (cutaway.has("group") and active_id.begins_with(str(cutaway.group)+"."))
+	var exploring := walking_view()
+	if floor_stage:
+		floor_stage.visible = exploring
+		floor_stage.set_story(done,directions.get("reveal_after",{}))
 	if is_instance_valid(illustration_insert):
 		illustration_insert.visible=away
 	for layer: Sprite2D in physical_art:
-		layer.visible=not away
+		layer.visible=not away and not exploring
 	if is_instance_valid(foreground):
-		foreground.visible=not away
+		foreground.visible=not away and not (exploring and floor_stage.wide != null)
 	for role: Dictionary in directions.get("creatures",[]):
 		if creatures.has(role.id):
 			var in_shot: bool=not role.has("lines") or active_id in role.lines
@@ -308,6 +368,12 @@ func begin_departure_cut() -> void:
 					var layer:=image_layer(painting,"ChapterFrame%d"%chapter_frames.size())
 					layer.modulate.a=0.0
 					chapter_frames.append(layer)
+	elif directions.has("departure_painting"):
+		var painting := load(INSERT_FOLDER + room_id + ".webp") as Texture2D
+		if painting:
+			var layer := image_layer(painting, str(directions.departure_painting))
+			layer.modulate.a = 0.0
+			chapter_frames.append(layer)
 	if not chapter_frames.is_empty():
 		if chapter_frames.size()==2:
 			set_keyframe_quality()
@@ -341,7 +407,7 @@ func set_keyframe_quality() -> void:
 	later.visible=cut_progress>=.14
 
 func departure_duration() -> float:
-	return 3.85 if chapter_frames.size()==2 else (3.05 if chapter_frames.size()==1 else 2.15)
+	return 3.85 if chapter_frames.size()==2 else (4.4 if chapter_frames.size()==1 else 2.15)
 
 func set_departure_progress(value: float) -> void:
 	cut_progress=clampf(value,0.0,1.0)
@@ -433,10 +499,16 @@ func _process(delta: float) -> void:
 		atmosphere.material.set_shader_parameter("seconds",clock)
 
 func project_target(index: int) -> Vector2:
+	if walking_view() and floor_stage.wide:
+		var mark: Array = floor_directions.landmarks[scene_record.tasks[index].id.get_slice(".",1)]
+		return distant.to_global(art_point(mark))
 	if index<physical_art.size():
 		var object:=physical_art[index]
 		return object.to_global(object.region_rect.size*.5)
 	return distant.to_global(targets[index])
 
 func hotspot_size(index: int) -> Vector2:
+	if walking_view() and floor_stage.wide:
+		var mark: Array = floor_directions.landmarks[scene_record.tasks[index].id.get_slice(".",1)]
+		return ART*Vector2(mark[2],mark[3])*distant.scale
 	return hit_sizes[index]*distant.scale
