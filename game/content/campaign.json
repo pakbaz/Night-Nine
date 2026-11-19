@@ -6582,6 +6582,1118 @@
           "direction": "Move toward the active interaction."
         }
       ]
+    },
+    {
+      "id": "p_meeting",
+      "chapter": "Chapter 8",
+      "title": "A careful translation",
+      "place": "Sentinel Point, nine years ago",
+      "style": "meeting",
+      "actors": [
+        "helen"
+      ],
+      "objective": "Translate carefully, so that both sides can admit the truth.",
+      "tasks": [
+        {
+          "id": "p_meeting.terms",
+          "title": "Interpreter’s notebook",
+          "prompt": "The Chinese delegate says “compare our demonstrations.” Translate it without adding anything he did not say.",
+          "options": [
+            "You propose a test of which field was stronger",
+            "You propose discussing what was demonstrated",
+            "You propose proving the apparatus can work"
+          ],
+          "answer": 1,
+          "lines": [
+            "p_meeting.terms.01",
+            "p_meeting.terms.02"
+          ],
+          "note": "Kept the translation neutral.",
+          "requires": [],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Listen for the verb he actually used.",
+            "“Stronger” and “prove” are promises he never made.",
+            "Choose “You propose discussing what was demonstrated”."
+          ]
+        },
+        {
+          "id": "p_meeting.confess",
+          "title": "Joint statement",
+          "prompt": "Each side saw a ring of light on the other side’s screen. Help both delegates say what really happened, one machine at a time.",
+          "options": [
+            "Ask both delegates about their own apparatus",
+            "Ask about the other demonstration",
+            "Record a shared conclusion about the mechanism"
+          ],
+          "answer": 0,
+          "lines": [
+            "p_meeting.confess.01",
+            "p_meeting.confess.02",
+            "p_meeting.confess.03"
+          ],
+          "note": "Both Meridian demonstrations were staged.",
+          "requires": [
+            "p_meeting.terms"
+          ],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "puzzle": {
+            "instruction": "The American observer saw a ring on the Chinese screen. The Chinese observer saw a ring on the American screen. Neither inspected the other room. Each engineering team brought its own projection diagram. The joint minutes are public; the diagrams were offered in the closed session.",
+            "rows": [
+              {
+                "label": "Question for both delegates",
+                "options": [
+                  "What produced the ring in your room?",
+                  "How did the other team produce its ring?",
+                  "How far did the other team move the target?"
+                ]
+              },
+              {
+                "label": "Entry in the joint minutes",
+                "options": [
+                  "Two projectors, one in each room",
+                  "Both observers saw a ring",
+                  "Both targets moved the same distance"
+                ]
+              }
+            ],
+            "solution": [
+              0,
+              1
+            ]
+          },
+          "hints": [
+            "Separate what an observer saw from what an engineer did.",
+            "Each delegate can explain one apparatus in private. Both can attest to one visible feature in public.",
+            "Ask what produced the ring in each delegate’s own room. Record only that both observers saw a ring in the joint minutes."
+          ]
+        },
+        {
+          "id": "p_meeting.record",
+          "title": "Private record",
+          "prompt": "Both delegates sign the same public statement. Helen also heard what each one admitted in private. What goes in the notebook she keeps for herself?",
+          "options": [
+            "The public statement alone",
+            "Who said what in private, and the final agreement",
+            "One admission credited to both sides"
+          ],
+          "answer": 1,
+          "lines": [
+            "p_meeting.record.01"
+          ],
+          "note": "Helen preserved the truth in Mandarin shorthand.",
+          "requires": [
+            "p_meeting.confess"
+          ],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Someone may read this notebook years from now.",
+            "A future reader needs to know who said what, and what they all signed.",
+            "Choose “Who said what in private, and the final agreement”."
+          ]
+        }
+      ],
+      "intro": [
+        "p_meeting.in.01",
+        "p_meeting.in.02"
+      ],
+      "outro": [
+        "p_meeting.out.01"
+      ],
+      "shots": [
+        {
+          "duration": 5.0,
+          "move": "establish",
+          "direction": "Push across an empty conference table toward a notebook, then the pulse outside."
+        },
+        {
+          "duration": 6.0,
+          "move": "push",
+          "direction": "Move toward the active interaction."
+        }
+      ],
+      "card": {
+        "chapter": {
+          "kicker": "Chapter 8",
+          "title": "The Biggest Lie on Earth",
+          "goal": "Steve wants a way to stop an invasion with no weapon."
+        },
+        "page": {
+          "kicker": "From Helen’s notebook",
+          "title": "Sentinel Point, nine years ago",
+          "goal": "Dr. Lin Wen reads Helen’s shorthand aloud. She was in that room, and so was Helen."
+        }
+      },
+      "coach": "You are Helen. Choose each translation carefully."
+    },
+    {
+      "id": "c8_lab",
+      "chapter": "Chapter 8",
+      "title": "The Biggest Lie on Earth",
+      "place": "Meridian laboratory",
+      "style": "lab",
+      "actors": [
+        "steve"
+      ],
+      "objective": "Reconstruct the bluff and prepare a live signal rig.",
+      "tasks": [
+        {
+          "id": "c8_lab.notebook",
+          "title": "Helen’s shorthand",
+          "prompt": "Helen’s undated slips read ‘our demonstration’, ‘their demonstration: our broken beat again’ and ‘both teams at one table’. Her date index puts the table after both tests. In the margin by the broken beat she wrote ‘heard this before’. What order belongs in the notebook?",
+          "options": [
+            "Their test, our test, table",
+            "Our test, their test, table",
+            "Our test, table, their test"
+          ],
+          "answer": 1,
+          "lines": [
+            "c8_lab.notebook.01"
+          ],
+          "note": "Connected the Meridian deception to the invasion.",
+          "requires": [],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "A quotation cannot predate the material it quotes.",
+            "Wen received H before making W. The invitation calls for two finished strips.",
+            "Date H, W, invitation, minutes. Treat the missing beat as a shared fault and the differing flares as a real difference."
+          ],
+          "puzzle": {
+            "presentation": "case_board",
+            "instruction": "Wen can read Helen’s notes, but the pages have come loose. Use a production fault to date the demonstrations and work out what the meeting could establish.",
+            "evidence": [
+              "Scrap H reads ‘our demonstration’. Its strip shows two strikes, a missing beat and a lamp flare. Helen sealed the join with her thumbprint. Wen has Helen’s authenticated print on their correspondence.",
+              "Scrap W reads ‘their demonstration’. It has the same missing beat and a different lamp flare. Wen remembers receiving a copy of H before her team made its demonstration.",
+              "The table minutes quote both demonstrations and show both teams’ signatures. An unsigned invitation asks the teams to bring both strips to that meeting; the invitation was issued after both demonstrations.",
+              "Helen distinguishes an observation from an inference: the two recorded lamp patterns differ; the missing beat recurs; the number of actual engines is never measured on either strip."
+            ],
+            "stages": [
+              {
+                "mode": "order",
+                "prompt": "Date the four scraps from the evidence on the desk.",
+                "slots": [
+                  "First",
+                  "Second",
+                  "Third",
+                  "Fourth"
+                ],
+                "pieces": [
+                  "Meeting minutes",
+                  "Wen’s demonstration",
+                  "Invitation",
+                  "Helen’s demonstration"
+                ],
+                "answer": [
+                  3,
+                  1,
+                  2,
+                  0
+                ]
+              },
+              {
+                "mode": "match",
+                "prompt": "For each comparison, choose what a reader can establish.",
+                "slots": [
+                  "Lamp flares",
+                  "Missing drum beat",
+                  "Working engines"
+                ],
+                "pieces": [
+                  "No measurement",
+                  "Different lamp patterns",
+                  "Shared production fault"
+                ],
+                "answer": [
+                  1,
+                  2,
+                  0
+                ]
+              },
+              {
+                "mode": "match",
+                "prompt": "Match each search question to the item that can answer it.",
+                "slots": [
+                  "Which team made H?",
+                  "Did W follow H?",
+                  "Did both teams formally meet?"
+                ],
+                "pieces": [
+                  "Both signatures",
+                  "Wen’s account of receipt",
+                  "Helen’s authenticated print"
+                ],
+                "answer": [
+                  2,
+                  1,
+                  0
+                ]
+              }
+            ],
+            "solution": [
+              3,
+              1,
+              2,
+              0,
+              1,
+              2,
+              0,
+              2,
+              1,
+              0
+            ],
+            "rows": [
+              {
+                "label": "First",
+                "options": [
+                  "Meeting minutes",
+                  "Wen’s demonstration",
+                  "Invitation",
+                  "Helen’s demonstration"
+                ]
+              },
+              {
+                "label": "Second",
+                "options": [
+                  "Meeting minutes",
+                  "Wen’s demonstration",
+                  "Invitation",
+                  "Helen’s demonstration"
+                ]
+              },
+              {
+                "label": "Third",
+                "options": [
+                  "Meeting minutes",
+                  "Wen’s demonstration",
+                  "Invitation",
+                  "Helen’s demonstration"
+                ]
+              },
+              {
+                "label": "Fourth",
+                "options": [
+                  "Meeting minutes",
+                  "Wen’s demonstration",
+                  "Invitation",
+                  "Helen’s demonstration"
+                ]
+              },
+              {
+                "label": "Lamp flares",
+                "options": [
+                  "No measurement",
+                  "Different lamp patterns",
+                  "Shared production fault"
+                ]
+              },
+              {
+                "label": "Missing drum beat",
+                "options": [
+                  "No measurement",
+                  "Different lamp patterns",
+                  "Shared production fault"
+                ]
+              },
+              {
+                "label": "Working engines",
+                "options": [
+                  "No measurement",
+                  "Different lamp patterns",
+                  "Shared production fault"
+                ]
+              },
+              {
+                "label": "Which team made H?",
+                "options": [
+                  "Both signatures",
+                  "Wen’s account of receipt",
+                  "Helen’s authenticated print"
+                ]
+              },
+              {
+                "label": "Did W follow H?",
+                "options": [
+                  "Both signatures",
+                  "Wen’s account of receipt",
+                  "Helen’s authenticated print"
+                ]
+              },
+              {
+                "label": "Did both teams formally meet?",
+                "options": [
+                  "Both signatures",
+                  "Wen’s account of receipt",
+                  "Helen’s authenticated print"
+                ]
+              }
+            ],
+            "hints": [
+              "A quotation cannot predate the material it quotes.",
+              "Wen received H before making W. The invitation calls for two finished strips.",
+              "Date H, W, invitation, minutes. Treat the missing beat as a shared fault and the differing flares as a real difference."
+            ]
+          }
+        },
+        {
+          "id": "c8_lab.props",
+          "title": "The reactor",
+          "prompt": "Shaw rolls the film and Wen reads the old test sheet. At the apparent surge, three drum strikes coincide with three lamp flashes. The fog keeps drifting after the meter drops. Which two crew members need the same cue?",
+          "options": [
+            "Drums and lamps",
+            "Lamps and fog",
+            "Fog and drums"
+          ],
+          "answer": 0,
+          "lines": [
+            "c8_lab.props.01"
+          ],
+          "note": "Identified reusable Meridian stage equipment.",
+          "requires": [],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Find two effects with separate, matching starts.",
+            "The fog outlasts the meter. Count the other two effects.",
+            "Cue the drums with the lamps. Their three starts coincide."
+          ]
+        },
+        {
+          "id": "c8_lab.lastpage",
+          "title": "Unknown script",
+          "prompt": "Helen drew three strokes from Frank’s hydrophone tape. Stroke two touches the first and climbs higher. A space follows, then the longest stroke falls below both. Wen can read the notes in the margin; she has no translation for the marks themselves.",
+          "options": [
+            "Preserve the script and the hum together",
+            "Assume it is Mandarin",
+            "Erase it as a copying error"
+          ],
+          "answer": 0,
+          "lines": [
+            "c8_lab.lastpage.01",
+            "c8_lab.lastpage.02"
+          ],
+          "note": "Helen’s last page matches reel 11 of Frank’s hydrophone tape: two joined notes rise, then a longer low note follows a space. The words remain unknown.",
+          "requires": [
+            "c8_lab.notebook"
+          ],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [
+            "effect.ninth_night",
+            "effect.wick",
+            "effect.meridian_pulse"
+          ],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Compare where the ink strokes touch and where Helen lifted her pencil.",
+            "The first two sounds run together. Listen for the lower, longer note after the space.",
+            "File reel 11 with the page. The lengths and pitches match; Wen still needs a translation."
+          ],
+          "puzzle": {
+            "instruction": "Audition Frank’s three reels or use their listening captions. Label the reel and decide what Steve can file as evidence.",
+            "rows": [
+              {
+                "label": "Reel to keep with Helen’s page",
+                "options": [
+                  "Reel 07",
+                  "Reel 11",
+                  "Reel 14"
+                ]
+              },
+              {
+                "label": "Notebook finding",
+                "options": [
+                  "A match in rhythm and pitch",
+                  "A word-for-word translation",
+                  "A match in the reel length alone"
+                ]
+              }
+            ],
+            "solution": [
+              1,
+              0
+            ]
+          },
+          "evidence_labels": [
+            "Reel 07 · one steady note",
+            "Reel 11 · two rising notes together, gap, long lower note",
+            "Reel 14 · five separate notes, the third cut short"
+          ]
+        }
+      ],
+      "intro": [
+        "c8_lab.in.01",
+        "c8_lab.in.02",
+        "c8_lab.in.03"
+      ],
+      "outro": [
+        "c8_lab.out.01",
+        "c8_lab.out.02"
+      ],
+      "shots": [
+        {
+          "duration": 5.0,
+          "move": "establish",
+          "direction": "Reveal painted doors, washing-machine drums and theatrical lights beneath the grand facade."
+        },
+        {
+          "duration": 6.0,
+          "move": "push",
+          "direction": "Move toward the active interaction."
+        }
+      ]
+    },
+    {
+      "id": "c8_beach",
+      "chapter": "Chapter 8",
+      "title": "An offer on the shore",
+      "place": "Beach at dawn",
+      "style": "beach",
+      "actors": [
+        "steve"
+      ],
+      "objective": "Examine Saren’s offer before answering.",
+      "tasks": [
+        {
+          "id": "c8_beach.first",
+          "title": "The offer",
+          "prompt": "Steve has the recorder running when Saren names a price and offers a date for their release. Three takes fit the reel. Which pair would let Steve compare the promise itself?",
+          "options": [
+            "Record Saren’s offer and his next answer to a different question",
+            "Record the offer, then have Steve read it back",
+            "Keep the first take and ask Saren to repeat the whole offer"
+          ],
+          "answer": 2,
+          "lines": [
+            "c8_beach.first.01"
+          ],
+          "note": "Recorded Saren’s offer.",
+          "requires": [],
+          "actor": "",
+          "kind": "record",
+          "sounds": [
+            "recording.offer"
+          ],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Keep the speaker and the requested words constant.",
+            "A second voice or a fresh question changes the experiment.",
+            "Keep the first take and ask Saren for the same words a second time."
+          ]
+        },
+        {
+          "id": "c8_beach.second",
+          "title": "A second offer",
+          "prompt": "Steve rewinds to the first offer. Does the second promise deserve more weight as an independent assurance?",
+          "options": [
+            "One performance, played twice",
+            "A new reading of the same promise",
+            "The second promise omits the last phrase"
+          ],
+          "answer": 0,
+          "lines": [
+            "c8_beach.second.01"
+          ],
+          "note": "Saren repeated an identical take.",
+          "requires": [
+            "c8_beach.first"
+          ],
+          "actor": "",
+          "kind": "compare",
+          "sounds": [
+            "recording.offer",
+            "recording.offer"
+          ],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "evidence_labels": [
+            "First offer",
+            "Second offer"
+          ],
+          "hints": [
+            "Compare what happens between the two sentences.",
+            "Look at the final word and the lengths of the pauses leading to it.",
+            "Choose one performance played twice. Neither the pauses nor the ending shift."
+          ]
+        },
+        {
+          "id": "c8_beach.refuse",
+          "title": "The notebook",
+          "prompt": "Steve has two matching takes of the promise. He has received a date, no independent word from his parents, and no way to recover the notebook once he gives it up. What can he honestly say when he answers Saren?",
+          "options": [
+            "Two takes establish two independent guarantees",
+            "He has one assurance and will keep the notebook",
+            "The matching takes prove his parents have already left the ship"
+          ],
+          "answer": 1,
+          "lines": [
+            "c8_beach.refuse.01"
+          ],
+          "note": "Refused Saren’s bargain.",
+          "requires": [
+            "c8_beach.second"
+          ],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Separate what the promise says from how often Steve heard it.",
+            "The same performance cannot supply independent confirmation.",
+            "Keep the notebook. Steve has heard one assurance twice."
+          ]
+        }
+      ],
+      "intro": [
+        "c8_beach.in.01",
+        "c8_beach.in.02"
+      ],
+      "outro": [
+        "c8_beach.out.01",
+        "c8_beach.out.02",
+        "c8_beach.out.03"
+      ],
+      "shots": [
+        {
+          "duration": 5.0,
+          "move": "establish",
+          "direction": "Hold a wide empty shoreline between Steve and the glass figure at the water’s edge."
+        },
+        {
+          "duration": 6.0,
+          "move": "push",
+          "direction": "Move toward the active interaction."
+        }
+      ]
+    },
+    {
+      "id": "c8_rig",
+      "chapter": "Chapter 8",
+      "title": "A show that happens once",
+      "place": "Sentinel Point workshop",
+      "style": "lab",
+      "actors": [
+        "steve",
+        "stephen"
+      ],
+      "objective": "Prepare a live bluff and a route into the ship.",
+      "tasks": [
+        {
+          "id": "c8_rig.source",
+          "title": "Signal sources",
+          "prompt": "Wen tries three control feeds. On A the flare lands one beat late even when Shaw changes the cue. On B it follows Shaw early on one trial and late on the next, exactly when she moves her hand. On C the flare leads her change by a beat. Which feed can answer a cue the fleet has never seen?",
+          "options": [
+            "Feed A",
+            "Feed B",
+            "Feed C"
+          ],
+          "answer": 1,
+          "lines": [
+            "c8_rig.source.01"
+          ],
+          "note": "Designed the bluff around live variation.",
+          "requires": [],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "One trial cannot distinguish B and C. Use the changed cue.",
+            "Ask what stayed at 5, what stayed at 4, and what moved along with Shaw. Trace those patterns to the jacks.",
+            "A is the tester on Birch, B is Shaw on Elm, and C is the film on Ash. Predict before drawing the surprise cue."
+          ],
+          "puzzle": {
+            "presentation": "case_board",
+            "instruction": "An old film can look live on a single trial. Shaw changes her cue twice while Wen isolates three possible sources.",
+            "evidence": [
+              "Shaw cues at beat 4 on trial one and beat 7 on trial two. On A, the flare comes at beat 5 both times. On B, it comes at 4 and 7. On C, it comes at 4 and 4.",
+              "Shaw had made the rehearsal film on beat 4 and left it looping. Wen’s automatic lamp tester is fixed at beat 5. The hand-controlled feed has no fixed beat.",
+              "Three covered jacks go to the meter. Birch connects to the feed that stayed at 5, Elm to the one that followed both cues, Ash to the rehearsal loop.",
+              "Verification card: commit your prediction before drawing a fresh beat; let Shaw give the new cue without announcing it to Wen; afterwards, compare the return with the written cue."
+            ],
+            "stages": [
+              {
+                "mode": "match",
+                "prompt": "Identify the source behind each letter.",
+                "slots": [
+                  "A",
+                  "B",
+                  "C"
+                ],
+                "pieces": [
+                  "Rehearsal film",
+                  "Fixed tester",
+                  "Shaw’s hand"
+                ],
+                "answer": [
+                  1,
+                  2,
+                  0
+                ]
+              },
+              {
+                "mode": "match",
+                "prompt": "Mark each jack with the source letter you would receive.",
+                "slots": [
+                  "Ash",
+                  "Birch",
+                  "Elm"
+                ],
+                "pieces": [
+                  "C",
+                  "B",
+                  "A"
+                ],
+                "answer": [
+                  0,
+                  2,
+                  1
+                ]
+              },
+              {
+                "mode": "order",
+                "prompt": "Use a third trial to challenge the apparent live source.",
+                "slots": [
+                  "First",
+                  "Second",
+                  "Third",
+                  "Fourth"
+                ],
+                "pieces": [
+                  "Compare cue and return",
+                  "Write what each source predicts",
+                  "Shaw gives the cue",
+                  "Draw a fresh beat"
+                ],
+                "answer": [
+                  1,
+                  3,
+                  2,
+                  0
+                ]
+              }
+            ],
+            "solution": [
+              1,
+              2,
+              0,
+              0,
+              2,
+              1,
+              1,
+              3,
+              2,
+              0
+            ],
+            "rows": [
+              {
+                "label": "A",
+                "options": [
+                  "Rehearsal film",
+                  "Fixed tester",
+                  "Shaw’s hand"
+                ]
+              },
+              {
+                "label": "B",
+                "options": [
+                  "Rehearsal film",
+                  "Fixed tester",
+                  "Shaw’s hand"
+                ]
+              },
+              {
+                "label": "C",
+                "options": [
+                  "Rehearsal film",
+                  "Fixed tester",
+                  "Shaw’s hand"
+                ]
+              },
+              {
+                "label": "Ash",
+                "options": [
+                  "C",
+                  "B",
+                  "A"
+                ]
+              },
+              {
+                "label": "Birch",
+                "options": [
+                  "C",
+                  "B",
+                  "A"
+                ]
+              },
+              {
+                "label": "Elm",
+                "options": [
+                  "C",
+                  "B",
+                  "A"
+                ]
+              },
+              {
+                "label": "First",
+                "options": [
+                  "Compare cue and return",
+                  "Write what each source predicts",
+                  "Shaw gives the cue",
+                  "Draw a fresh beat"
+                ]
+              },
+              {
+                "label": "Second",
+                "options": [
+                  "Compare cue and return",
+                  "Write what each source predicts",
+                  "Shaw gives the cue",
+                  "Draw a fresh beat"
+                ]
+              },
+              {
+                "label": "Third",
+                "options": [
+                  "Compare cue and return",
+                  "Write what each source predicts",
+                  "Shaw gives the cue",
+                  "Draw a fresh beat"
+                ]
+              },
+              {
+                "label": "Fourth",
+                "options": [
+                  "Compare cue and return",
+                  "Write what each source predicts",
+                  "Shaw gives the cue",
+                  "Draw a fresh beat"
+                ]
+              }
+            ],
+            "hints": [
+              "One trial cannot distinguish B and C. Use the changed cue.",
+              "Ask what stayed at 5, what stayed at 4, and what moved along with Shaw. Trace those patterns to the jacks.",
+              "A is the tester on Birch, B is Shaw on Elm, and C is the film on Ash. Predict before drawing the surprise cue."
+            ]
+          }
+        },
+        {
+          "id": "c8_rig.path",
+          "title": "Trust path",
+          "prompt": "Wen’s paper trial has three receipts. Dock signed ‘camera saw lamps’. Mast signed ‘ship measured lamps’. Shore signed ‘ship received crew’s numbers’. The fleet asks for its own measured return. On the team sheet Stephen can open the antenna passage; Nora has already found an occupied row and a route out.",
+          "options": [
+            "Feed the performance into the ship’s own systems",
+            "Mail the fleet a video",
+            "Ask AutoRick to announce victory"
+          ],
+          "answer": 0,
+          "lines": [
+            "c8_rig.path.01",
+            "c8_rig.path.02"
+          ],
+          "note": "The fleet accepted measurements from its own ship. A camera picture or a set of figures delivered from shore could not replace a ship reading.",
+          "requires": [
+            "c8_rig.source"
+          ],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "puzzle": {
+            "instruction": "Choose a receipt the fleet can verify and assign two simultaneous jobs.",
+            "rows": [
+              {
+                "label": "Measurement receipt",
+                "options": [
+                  "Dock",
+                  "Mast",
+                  "Shore"
+                ]
+              },
+              {
+                "label": "Stephen’s assignment",
+                "options": [
+                  "Gallery beds",
+                  "Antenna passage",
+                  "Shore camera"
+                ]
+              },
+              {
+                "label": "Other team",
+                "options": [
+                  "Bring sleepers through the Gallery",
+                  "Wait for the camera receipt",
+                  "Read shore figures to the ship"
+                ]
+              }
+            ],
+            "solution": [
+              1,
+              1,
+              0
+            ]
+          },
+          "hints": [
+            "Read who took the measurement, not just who received the page.",
+            "Only one receipt has the ship as observer. The other job follows the occupied beds.",
+            "Choose Mast, send Stephen to the antenna passage, and bring the sleepers through the Gallery."
+          ]
+        },
+        {
+          "id": "c8_rig.rig",
+          "title": "Props and radio",
+          "prompt": "The crew tests three couplers on a dummy meter. A passes the cue outward and returns the stage hum. B blocks the hum and the cue. C passes the outward cue and keeps the return meter still. Stephen needs the stage cue at the antenna and the stage hum off its return.",
+          "options": [
+            "Coupler B",
+            "Coupler C",
+            "Coupler A"
+          ],
+          "answer": 1,
+          "lines": [
+            "c8_rig.rig.01",
+            "c8_rig.rig.02"
+          ],
+          "note": "Prepared the signal rig and two-team plan.",
+          "requires": [
+            "c8_rig.path"
+          ],
+          "actor": "stephen",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Check the outward and return paths separately.",
+            "B and C both have a clean return. Only one passes Shaw’s cue.",
+            "Use C between the console and dummy load. Take a baseline, send the cue, then isolate the output and check local hum before signing."
+          ],
+          "puzzle": {
+            "presentation": "case_board",
+            "instruction": "The prop table gives Wen three couplers with identical plugs. Qualify one on a dummy meter before letting Stephen carry it toward the antenna.",
+            "evidence": [
+              "Signal direction: Shaw makes the cue at the prop console; the selected coupler sits between that console and the dummy load. The return meter reads what leaks back toward the console.",
+              "With the output connected, A and C pass Shaw’s cue. B passes nothing. With the output isolated, a stage hum still shows up on the return through A. The return through B or C stays still.",
+              "A usable coupler must pass the outward cue and keep local hum out of its return. A dead outward line can still look excellent if all you watch is a quiet return.",
+              "For the acceptance run, first write down the uncabled baseline. Then push a surprise cue through the dummy. Pull the output plug while the local hum keeps playing. Sign only after both comparisons."
+            ],
+            "stages": [
+              {
+                "mode": "match",
+                "prompt": "Give each coupler its diagnosis.",
+                "slots": [
+                  "A",
+                  "B",
+                  "C"
+                ],
+                "pieces": [
+                  "Isolated and passes cue",
+                  "Leaks stage hum",
+                  "Blocks the cue"
+                ],
+                "answer": [
+                  1,
+                  2,
+                  0
+                ]
+              },
+              {
+                "mode": "route",
+                "prompt": "Follow a deliberate stage cue along the bench and back to the observer.",
+                "slots": [
+                  "Origin",
+                  "Interface",
+                  "Test load",
+                  "Leak check"
+                ],
+                "pieces": [
+                  "Return meter",
+                  "Dummy load",
+                  "Prop console",
+                  "Coupler C"
+                ],
+                "answer": [
+                  2,
+                  3,
+                  1,
+                  0
+                ]
+              },
+              {
+                "mode": "order",
+                "prompt": "Arrange the acceptance slips so a silent dead line cannot pass.",
+                "slots": [
+                  "First",
+                  "Second",
+                  "Third",
+                  "Fourth"
+                ],
+                "pieces": [
+                  "Isolate output; leave hum on",
+                  "Sign the run",
+                  "Record uncabled baseline",
+                  "Send surprise cue"
+                ],
+                "answer": [
+                  2,
+                  3,
+                  0,
+                  1
+                ]
+              }
+            ],
+            "solution": [
+              1,
+              2,
+              0,
+              2,
+              3,
+              1,
+              0,
+              2,
+              3,
+              0,
+              1
+            ],
+            "rows": [
+              {
+                "label": "A",
+                "options": [
+                  "Isolated and passes cue",
+                  "Leaks stage hum",
+                  "Blocks the cue"
+                ]
+              },
+              {
+                "label": "B",
+                "options": [
+                  "Isolated and passes cue",
+                  "Leaks stage hum",
+                  "Blocks the cue"
+                ]
+              },
+              {
+                "label": "C",
+                "options": [
+                  "Isolated and passes cue",
+                  "Leaks stage hum",
+                  "Blocks the cue"
+                ]
+              },
+              {
+                "label": "Origin",
+                "options": [
+                  "Return meter",
+                  "Dummy load",
+                  "Prop console",
+                  "Coupler C"
+                ]
+              },
+              {
+                "label": "Interface",
+                "options": [
+                  "Return meter",
+                  "Dummy load",
+                  "Prop console",
+                  "Coupler C"
+                ]
+              },
+              {
+                "label": "Test load",
+                "options": [
+                  "Return meter",
+                  "Dummy load",
+                  "Prop console",
+                  "Coupler C"
+                ]
+              },
+              {
+                "label": "Leak check",
+                "options": [
+                  "Return meter",
+                  "Dummy load",
+                  "Prop console",
+                  "Coupler C"
+                ]
+              },
+              {
+                "label": "First",
+                "options": [
+                  "Isolate output; leave hum on",
+                  "Sign the run",
+                  "Record uncabled baseline",
+                  "Send surprise cue"
+                ]
+              },
+              {
+                "label": "Second",
+                "options": [
+                  "Isolate output; leave hum on",
+                  "Sign the run",
+                  "Record uncabled baseline",
+                  "Send surprise cue"
+                ]
+              },
+              {
+                "label": "Third",
+                "options": [
+                  "Isolate output; leave hum on",
+                  "Sign the run",
+                  "Record uncabled baseline",
+                  "Send surprise cue"
+                ]
+              },
+              {
+                "label": "Fourth",
+                "options": [
+                  "Isolate output; leave hum on",
+                  "Sign the run",
+                  "Record uncabled baseline",
+                  "Send surprise cue"
+                ]
+              }
+            ],
+            "hints": [
+              "Check the outward and return paths separately.",
+              "B and C both have a clean return. Only one passes Shaw’s cue.",
+              "Use C between the console and dummy load. Take a baseline, send the cue, then isolate the output and check local hum before signing."
+            ]
+          }
+        }
+      ],
+      "intro": [
+        "c8_rig.in.01",
+        "c8_rig.in.02",
+        "c8_rig.in.03"
+      ],
+      "outro": [
+        "c8_rig.out.01",
+        "c8_rig.out.02",
+        "c8_rig.out.03"
+      ],
+      "shots": [
+        {
+          "duration": 5.0,
+          "move": "establish",
+          "direction": "Push across the improvised signal rig to Stephen writing a name on his hand."
+        },
+        {
+          "duration": 6.0,
+          "move": "push",
+          "direction": "Move toward the active interaction."
+        }
+      ]
     }
   ],
   "lines": {
@@ -6627,6 +7739,65 @@
       "text": "Recording. Please wait for me.",
       "audio": "p_veyr.record.01",
       "cue": "veyr_wind"
+    },
+    "p_meeting.in.01": {
+      "id": "p_meeting.in.01",
+      "speaker": "general_us",
+      "text": "We are prepared to discuss the practical status of our demonstration.",
+      "audio": "p_meeting.in.01"
+    },
+    "p_meeting.in.02": {
+      "id": "p_meeting.in.02",
+      "speaker": "general_cn",
+      "text": "After you explain the difference between practical and actual.",
+      "audio": "p_meeting.in.02"
+    },
+    "p_meeting.out.01": {
+      "id": "p_meeting.out.01",
+      "speaker": "helen",
+      "text": "Everyone agreed to keep lying. It may be the most honest thing I have seen.",
+      "audio": "p_meeting.out.01",
+      "cue": "meridian_pulse"
+    },
+    "p_meeting.terms.01": {
+      "id": "p_meeting.terms.01",
+      "speaker": "helen",
+      "text": "They propose that both teams describe what the observers actually saw.",
+      "audio": "p_meeting.terms.01"
+    },
+    "p_meeting.terms.02": {
+      "id": "p_meeting.terms.02",
+      "speaker": "general_cn",
+      "text": "That would be a useful place to begin.",
+      "audio": "p_meeting.terms.02"
+    },
+    "p_meeting.confess.01": {
+      "id": "p_meeting.confess.01",
+      "speaker": "general_us",
+      "text": "There was no space-fold engine.",
+      "audio": "p_meeting.confess.01"
+    },
+    "p_meeting.confess.02": {
+      "id": "p_meeting.confess.02",
+      "speaker": "general_cn",
+      "text": "There was no engine at our test either.",
+      "audio": "p_meeting.confess.02",
+      "reaction": {
+        "sound": "delegates_laugh",
+        "caption": "[The delegates share a tired laugh.]"
+      }
+    },
+    "p_meeting.confess.03": {
+      "id": "p_meeting.confess.03",
+      "speaker": "helen",
+      "text": "Then we can discuss what to do next.",
+      "audio": "p_meeting.confess.03"
+    },
+    "p_meeting.record.01": {
+      "id": "p_meeting.record.01",
+      "speaker": "helen",
+      "text": "Dates. Names. What each person actually said. Someone may need the truth one day.",
+      "audio": "p_meeting.record.01"
     },
     "p_bay.in.01": {
       "id": "p_bay.in.01",
@@ -7739,14 +8910,186 @@
       "speaker": "calder",
       "text": "We have President Ward.",
       "audio": "c7_swap.tone.02"
+    },
+    "c8_lab.in.01": {
+      "id": "c8_lab.in.01",
+      "speaker": "wen",
+      "text": "Your mother recorded the meeting accurately. Both sides staged the tests.",
+      "audio": "c8_lab.in.01"
+    },
+    "c8_lab.in.02": {
+      "id": "c8_lab.in.02",
+      "speaker": "shaw",
+      "text": "Mine had a better explosion.",
+      "audio": "c8_lab.in.02"
+    },
+    "c8_lab.in.03": {
+      "id": "c8_lab.in.03",
+      "speaker": "wen",
+      "text": "Mine required fewer washing machines.",
+      "audio": "c8_lab.in.03"
+    },
+    "c8_lab.out.01": {
+      "id": "c8_lab.out.01",
+      "speaker": "agnes",
+      "text": "A lie is only shameful when it’s lazy, Steven.",
+      "audio": "c8_lab.out.01"
+    },
+    "c8_lab.out.02": {
+      "id": "c8_lab.out.02",
+      "speaker": "saren",
+      "text": "Deliver the engine by midnight tomorrow. The ninth night.",
+      "audio": "c8_lab.out.02",
+      "cue": "ninth_night"
+    },
+    "c8_lab.notebook.01": {
+      "id": "c8_lab.notebook.01",
+      "speaker": "wen",
+      "text": "They heard the demonstrations nine years ago. They came here three years ago. We called them without knowing anyone was listening.",
+      "audio": "c8_lab.notebook.01"
+    },
+    "c8_lab.props.01": {
+      "id": "c8_lab.props.01",
+      "speaker": "shaw",
+      "text": "Those drums survived six films and a congressional visit. They can manage one more show.",
+      "audio": "c8_lab.props.01"
+    },
+    "c8_lab.lastpage.01": {
+      "id": "c8_lab.lastpage.01",
+      "speaker": "wen",
+      "text": "I can read Helen’s shorthand. This is something else.",
+      "audio": "c8_lab.lastpage.01"
+    },
+    "c8_lab.lastpage.02": {
+      "id": "c8_lab.lastpage.02",
+      "speaker": "steve",
+      "text": "Then we keep listening.",
+      "audio": "c8_lab.lastpage.02"
+    },
+    "c8_beach.in.01": {
+      "id": "c8_beach.in.01",
+      "speaker": "saren",
+      "text": "Give me the notebook. Helen and Frank will walk out of the sea tomorrow morning.",
+      "audio": "recording.offer"
+    },
+    "c8_beach.in.02": {
+      "id": "c8_beach.in.02",
+      "speaker": "steve",
+      "text": "I need a moment.",
+      "audio": "c8_beach.in.02"
+    },
+    "c8_beach.out.01": {
+      "id": "c8_beach.out.01",
+      "speaker": "steve",
+      "text": "Who did you say that to on Tirel?",
+      "audio": "c8_beach.out.01"
+    },
+    "c8_beach.out.02": {
+      "id": "c8_beach.out.02",
+      "speaker": "saren",
+      "text": "You should consider your parents.",
+      "audio": "c8_beach.out.02"
+    },
+    "c8_beach.out.03": {
+      "id": "c8_beach.out.03",
+      "speaker": "steve",
+      "text": "I am. And everyone else’s.",
+      "audio": "c8_beach.out.03"
+    },
+    "c8_beach.first.01": {
+      "id": "c8_beach.first.01",
+      "speaker": "steve",
+      "text": "Say it again. I want to be certain I heard you.",
+      "audio": "c8_beach.first.01"
+    },
+    "c8_beach.second.01": {
+      "id": "c8_beach.second.01",
+      "speaker": "saren",
+      "text": "Give me the notebook. Helen and Frank will walk out of the sea tomorrow morning.",
+      "audio": "recording.offer"
+    },
+    "c8_beach.refuse.01": {
+      "id": "c8_beach.refuse.01",
+      "speaker": "steve",
+      "text": "No. You don’t get to make me trade the whole town for my family.",
+      "audio": "c8_beach.refuse.01"
+    },
+    "c8_rig.in.01": {
+      "id": "c8_rig.in.01",
+      "speaker": "shaw",
+      "text": "You are a terrible liar.",
+      "audio": "c8_rig.in.01"
+    },
+    "c8_rig.in.02": {
+      "id": "c8_rig.in.02",
+      "speaker": "steve",
+      "text": "I know. That is why it has to be a show.",
+      "audio": "c8_rig.in.02"
+    },
+    "c8_rig.in.03": {
+      "id": "c8_rig.in.03",
+      "speaker": "iris",
+      "text": "Wake them. Even if we start forgetting. I vote to do it.",
+      "audio": "c8_rig.in.03"
+    },
+    "c8_rig.out.01": {
+      "id": "c8_rig.out.01",
+      "speaker": "stephen",
+      "text": "Dad’s name. I know it. I just...",
+      "audio": "c8_rig.out.01"
+    },
+    "c8_rig.out.02": {
+      "id": "c8_rig.out.02",
+      "speaker": "steve",
+      "text": "Frank.",
+      "audio": "c8_rig.out.02"
+    },
+    "c8_rig.out.03": {
+      "id": "c8_rig.out.03",
+      "speaker": "stephen",
+      "text": "Frank. I’ll write it on my hand.",
+      "audio": "c8_rig.out.03"
+    },
+    "c8_rig.source.01": {
+      "id": "c8_rig.source.01",
+      "speaker": "steve",
+      "text": "Their old test failed because it repeated. Ours won’t. Every answer will be live.",
+      "audio": "c8_rig.source.01"
+    },
+    "c8_rig.path.01": {
+      "id": "c8_rig.path.01",
+      "speaker": "wen",
+      "text": "The ship must measure the event.",
+      "audio": "c8_rig.path.01"
+    },
+    "c8_rig.path.02": {
+      "id": "c8_rig.path.02",
+      "speaker": "steve",
+      "text": "Then we take the rig to its antenna.",
+      "audio": "c8_rig.path.02"
+    },
+    "c8_rig.rig.01": {
+      "id": "c8_rig.rig.01",
+      "speaker": "stephen",
+      "text": "I can carry this. You get them awake.",
+      "audio": "c8_rig.rig.01"
+    },
+    "c8_rig.rig.02": {
+      "id": "c8_rig.rig.02",
+      "speaker": "ward",
+      "text": "Both delegations are at your disposal, Mr. Mercer.",
+      "audio": "c8_rig.rig.02"
     }
   },
   "sound_labels": {
     "effect.nora_whistle": "Listen: Nora’s two-note whistle",
     "effect.k7blw": "Listen: Frank’s call sign in Morse",
+    "effect.ninth_night": "Listen: ninth-night tone",
     "effect.veyr_wind": "Listen: the last wind on Veyr",
+    "effect.wick": "Listen: Wick’s signal",
     "recording.greeting": "Listen: the morning greeting",
     "recording.rook": "Listen: Rook’s recorded reassurance",
+    "recording.offer": "Listen: Saren’s recorded offer",
     "recording.release": "Listen: the restraint-release command"
   },
   "notebook_cases": {
@@ -7906,6 +9249,27 @@
           "id": "broadcast_truck",
           "after": "c7_gate.truck",
           "text": "The event crew and the sound desk could be part of it."
+        }
+      ]
+    },
+    "meridian": {
+      "title": "What could the Meridian instruments have measured?",
+      "clues": [
+        "c3_archive.power",
+        "c8_lab.notebook",
+        "c8_lab.props",
+        "c8_rig.path"
+      ],
+      "theories": [
+        {
+          "id": "working_engine",
+          "after": "c8_lab.notebook",
+          "text": "The readings require a working space-fold engine."
+        },
+        {
+          "id": "stage_test",
+          "after": "c8_lab.props",
+          "text": "Wen and Shaw could reproduce the readings with a stage set."
         }
       ]
     }
