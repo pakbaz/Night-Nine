@@ -43,6 +43,9 @@ var night_light := false
 var underlight_material: ShaderMaterial
 var room_id := ""
 var cast_marks := {}
+var seats := {}
+var gaze_targets := {}
+var seated_gaze := {}
 var camera_goal := HALF
 var close_scale := 1.18
 var art_ready := false
@@ -148,6 +151,8 @@ func build_meeting() -> void:
 	picture(props,ROOMS+"meeting-foreground.png",Vector2(-12,230),Vector2(1624,755))
 	targets.assign([Vector2(408,745),Vector2(824,733),Vector2(1260,754)])
 	hit_sizes.assign([Vector2(195,118),Vector2(190,108),Vector2(190,106)])
+	seat("helen",false)
+	direct_attention()
 
 func build_bay() -> void:
 	painted_room("bay")
@@ -163,6 +168,53 @@ func build_bay() -> void:
 	foreground.material = dial_material
 	targets.assign([Vector2(595,658),Vector2(1060,654)])
 	hit_sizes.assign([Vector2(190,115),Vector2(210,106)])
+	seat("frank",false)
+	seat("helen",true)
+	direct_attention()
+
+func seat(id: String, faces_left: bool) -> void:
+	var person: Node2D = actors[id]
+	person.prepare_blocking()
+	seats[id] = person.position
+	person.base_ground = person.position
+	person.blocking_plane.scale.x = -1.0 if faces_left else 1.0
+	seated_gaze[id] = Vector2.ZERO
+
+func direct_attention(speaker_id: String = "", line_id: String = "") -> void:
+	for id: String in seats:
+		var person: Node2D = actors[id]
+		var mark: Vector2 = cast_marks[id]
+		var target: Vector2
+		if focus >= 0 and speaker_id.is_empty():
+			target = targets[focus]
+		elif room_id == "p_meeting":
+			if line_id == "p_meeting.record.01":
+				target = targets[2]
+			elif speaker_id == "general_us" or line_id == "p_meeting.terms.01":
+				target = cast_marks.general_us
+			else:
+				target = cast_marks.general_cn
+		elif line_id == "p_bay.tune.01":
+			target = targets[0]
+		elif id == "helen" and line_id == "p_bay.out.01":
+			target = targets[1]
+		else:
+			target = cast_marks.helen if id == "frank" else cast_marks.frank
+		var look := (target-mark).normalized()
+		person.look_side = signf(look.x)
+		person.base_ground = seats[id]
+		person.role = "" if speaker_id.is_empty() else ("speaker" if id == speaker_id else "listener")
+		person.beat_start = clock
+		gaze_targets[id] = look
+
+func animate_seated_gaze(delta: float) -> void:
+	for id: String in seats:
+		var person: Node = actors[id]
+		var look: Vector2 = seated_gaze[id].lerp(gaze_targets[id],1.0-exp(-delta*12.0))
+		seated_gaze[id] = look
+		if person.eye_shader:
+			var local := Vector2(look.x*person.blocking_plane.scale.x*.045,look.y*.026)
+			person.eye_shader.set_shader_parameter("eye_travel",local*person.eye_span/person.body.texture.get_size())
 
 func layout() -> void:
 	if not art_ready:
@@ -211,6 +263,8 @@ func set_departure_progress(value: float) -> void:
 
 func set_focus(index: int) -> void:
 	focus = index
+	if dialogue_shot.is_empty():
+		direct_attention()
 
 func sync_story(completed: Array) -> void:
 	done = completed
@@ -225,6 +279,7 @@ func set_frequency(khz: int) -> void:
 
 func begin_dialogue(line: Dictionary, voice: AudioStreamPlayer, _take: Dictionary, timing: Dictionary) -> void:
 	var actor_id: String = line.speaker
+	direct_attention(actor_id,line.get("id",""))
 	dialogue_shot = {"speaker":actor_id}
 	camera_goal = cast_marks.get(actor_id,HALF)
 	close_scale = 1.22 if cast_marks.has(actor_id) else 1.06
@@ -235,6 +290,9 @@ func begin_dialogue(line: Dictionary, voice: AudioStreamPlayer, _take: Dictionar
 
 func end_dialogue() -> void:
 	dialogue_shot.clear()
+	direct_attention()
+	for id: String in seats:
+		actors[id].position = seats[id]
 	for person: Node in actors.values():
 		person.silence()
 
@@ -248,6 +306,7 @@ func _process(delta: float) -> void:
 	if not art_ready or paused:
 		return
 	clock += delta
+	animate_seated_gaze(delta)
 	var target := HALF
 	var magnitude := 1.0
 	if cut_progress >= 0.0 and room_id=="p_veyr":

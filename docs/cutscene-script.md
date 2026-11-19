@@ -1,6 +1,6 @@
 # Night Nine - cutscene production script
 
-Camera directions for the interactive adaptation. In-engine camera staging is separate from finished character animation.
+At each numbered chapter ending, play the paired illustrated poses, then cut to the animated reverse angle. Players can pause or skip a film.
 
 ## p_veyr: The last wind
 
@@ -37,6 +37,8 @@ Camera directions for the interactive adaptation. In-engine camera staging is se
 - Follow the balcony escape, then reveal a procession entering luminous surf.
 - Move toward the active interaction.
 
+Departure film: *The ninth tide* (11.5 seconds).
+
 ## c2_aquarium: The Aquarium Is Closed
 
 - Pass dark empty exhibits into an amber transit chamber beneath new plywood.
@@ -47,6 +49,8 @@ Camera directions for the interactive adaptation. In-engine camera staging is se
 - Reveal the Gallery, close on the scan meter, then follow light into the flooding intake.
 - Move toward the active interaction.
 
+Departure film: *An occupied berth* (12 seconds).
+
 ## c3_house: Please Prove You Exist
 
 - Move from casserole dishes and a sleeping beagle to a drawer full of case notes.
@@ -56,6 +60,8 @@ Camera directions for the interactive adaptation. In-engine camera staging is se
 
 - Slide between municipal shelves, then pull back from the dark beach stakeout.
 - Move toward the active interaction.
+
+Departure film: *The message* (12 seconds).
 
 ## i1_archive: The Archivist
 
@@ -72,6 +78,8 @@ Camera directions for the interactive adaptation. In-engine camera staging is se
 - Follow a pneumatic capsule, then a van’s headlights into mountain fog.
 - Move toward the active interaction.
 
+Departure film: *The searchlights* (11.5 seconds).
+
 ## c5_shack: Wanted: Steve Mercer
 
 - Push through rain at a shack window to boxes of handwritten kitchen notes.
@@ -82,6 +90,8 @@ Camera directions for the interactive adaptation. In-engine camera staging is se
 - Track between empty broadcasting racks, then hold on the two brothers at the record shelf.
 - Move toward the active interaction.
 
+Departure film: *Row Nine* (13 seconds).
+
 ## c6_iris: Iris
 
 - Follow two routes through the same lamplit street and reunite beside the closed bakery.
@@ -91,6 +101,8 @@ Camera directions for the interactive adaptation. In-engine camera staging is se
 
 - Cross the mail-sorting wall to a jail corridor; finish beneath a bakery van’s giant croissant.
 - Move toward the active interaction.
+
+Departure film: *The bakery van* (13.5 seconds).
 
 ## i2_nora: Nobody is coming to fix this
 
@@ -107,6 +119,8 @@ Camera directions for the interactive adaptation. In-engine camera staging is se
 - Sweep from the podium to fourteen figures turning toward the water as the tone sounds.
 - Move toward the active interaction.
 
+Departure film: *Behind the ceremony* (12 seconds).
+
 ## c8_lab: The Biggest Lie on Earth
 
 - Reveal painted doors, washing-machine drums and theatrical lights beneath the grand facade.
@@ -122,6 +136,8 @@ Camera directions for the interactive adaptation. In-engine camera staging is se
 - Push across the improvised signal rig to Stephen writing a name on his hand.
 - Move toward the active interaction.
 
+Departure film: *Under Bellwether Bay* (13 seconds).
+
 ## c9_gallery: The Long Patience
 
 - Move from Iris at the link control to Nora waking under amber glass.
@@ -136,6 +152,8 @@ Camera directions for the interactive adaptation. In-engine camera staging is se
 
 - Open the glass doors, reveal Wick through melting frost, then the Vigil over the Pacific.
 - Move toward the active interaction.
+
+Departure film: *The Vigil overhead* (16 seconds).
 
 ## c10_station: Good Morning, Bellwether
 
@@ -157,15 +175,21 @@ Camera directions for the interactive adaptation. In-engine camera staging is se
 - Frame the Archivist and her shore echo across an open radio channel, then the turning fleet.
 - Move toward the active interaction.
 
+Departure film: *The Long Patience rises* (17.5 seconds).
+
 ## epilogue: A place to live
 
 - Return to Bellwether with Steve and Nora. On the ninth night, neighbors set paper lanterns on the water.
 - Move toward the active interaction.
 
+Departure film: *Lights on the water* (13 seconds).
+
 ## one_year: Good morning
 
 - Join Steve at the KBWR microphone for his live greeting. Read the credits, then continue to Sentinel Point for the final transmission.
 - Move toward the active interaction.
+
+Departure film: *Two shores* (15 seconds).
 
 ## postcredits: We heard the singing
 

@@ -26,6 +26,7 @@ var approach: Dictionary
 var listen_tasks: Array
 var object_marks := {}
 var bodies := {}
+var cast: Node2D
 var playable: Array
 var active_actor := ""
 var route := PackedVector2Array()
@@ -64,7 +65,7 @@ func configure(room: Dictionary, roles: Array, plate: Texture2D, wide_file: Stri
 		add_child(door)
 		door.configure(record,plate,room_id,ART,record.opens_after in story)
 		door_art[record.blocker]=door
-	var cast := Node2D.new()
+	cast = Node2D.new()
 	cast.y_sort_enabled = true
 	marker = Node2D.new()
 	add_child(marker)

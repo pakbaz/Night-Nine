@@ -1,0 +1,161 @@
+{
+  "title": {
+    "file": "res://assets/audio/music/main-title.mp3",
+    "lufs": -15.5,
+    "entry_seconds": 12.7
+  },
+  "chapters": {
+    "Prologue": {
+      "bgm": {
+        "file": "res://assets/audio/music/prologue-bgm.mp3",
+        "lufs": -14.6
+      },
+      "theme": {
+        "file": "res://assets/audio/music/prologue-theme.mp3",
+        "lufs": -15.3,
+        "entry_seconds": 1.4
+      }
+    },
+    "Chapter 1": {
+      "bgm": {
+        "file": "res://assets/audio/music/chapter-01-bgm.mp3",
+        "lufs": -15.5
+      },
+      "theme": {
+        "file": "res://assets/audio/music/chapter-01-theme.mp3",
+        "lufs": -15.7,
+        "entry_seconds": 20.1
+      }
+    },
+    "Chapter 2": {
+      "bgm": {
+        "file": "res://assets/audio/music/chapter-02-bgm.mp3",
+        "lufs": -15.6
+      },
+      "theme": {
+        "file": "res://assets/audio/music/chapter-02-theme.mp3",
+        "lufs": -15.6,
+        "entry_seconds": 25.5
+      }
+    },
+    "Chapter 3": {
+      "bgm": {
+        "file": "res://assets/audio/music/chapter-03-bgm.mp3",
+        "lufs": -18.6
+      },
+      "theme": {
+        "file": "res://assets/audio/music/chapter-03-theme.mp3",
+        "lufs": -15.8,
+        "entry_seconds": 21.6
+      }
+    },
+    "Interlude 1": {
+      "bgm": {
+        "file": "res://assets/audio/music/interlude-archivist-bgm.mp3",
+        "lufs": -16.4
+      },
+      "theme": {
+        "file": "res://assets/audio/music/interlude-archivist-theme.mp3",
+        "lufs": -19.1
+      }
+    },
+    "Chapter 4": {
+      "bgm": {
+        "file": "res://assets/audio/music/chapter-04-bgm.mp3",
+        "lufs": -17.0
+      },
+      "theme": {
+        "file": "res://assets/audio/music/chapter-04-theme.mp3",
+        "lufs": -16.9,
+        "entry_seconds": 19.5
+      }
+    },
+    "Chapter 5": {
+      "bgm": {
+        "file": "res://assets/audio/music/chapter-05-bgm.mp3",
+        "lufs": -14.0
+      },
+      "theme": {
+        "file": "res://assets/audio/music/chapter-05-theme.mp3",
+        "lufs": -15.8,
+        "entry_seconds": 4.9
+      }
+    },
+    "Chapter 6": {
+      "bgm": {
+        "file": "res://assets/audio/music/chapter-06-bgm.mp3",
+        "lufs": -16.2
+      },
+      "theme": {
+        "file": "res://assets/audio/music/chapter-06-theme.mp3",
+        "lufs": -14.4,
+        "entry_seconds": 19.6
+      }
+    },
+    "Interlude 2": {
+      "bgm": {
+        "file": "res://assets/audio/music/interlude-nora-bgm.mp3",
+        "lufs": -16.2
+      },
+      "theme": {
+        "file": "res://assets/audio/music/interlude-nora-theme.mp3",
+        "lufs": -15.3,
+        "entry_seconds": 19.5
+      }
+    },
+    "Chapter 7": {
+      "bgm": {
+        "file": "res://assets/audio/music/chapter-07-bgm.mp3",
+        "lufs": -15.6
+      },
+      "theme": {
+        "file": "res://assets/audio/music/chapter-07-theme.mp3",
+        "lufs": -15.1,
+        "entry_seconds": 0.3
+      }
+    },
+    "Chapter 8": {
+      "bgm": {
+        "file": "res://assets/audio/music/chapter-08-bgm.mp3",
+        "lufs": -17.9
+      },
+      "theme": {
+        "file": "res://assets/audio/music/chapter-08-theme.mp3",
+        "lufs": -15.8,
+        "entry_seconds": 25.2
+      }
+    },
+    "Chapter 9": {
+      "bgm": {
+        "file": "res://assets/audio/music/chapter-09-bgm.mp3",
+        "lufs": -15.8
+      },
+      "theme": {
+        "file": "res://assets/audio/music/chapter-09-theme.mp3",
+        "lufs": -17.2,
+        "entry_seconds": 0.2
+      }
+    },
+    "Chapter 10": {
+      "bgm": {
+        "file": "res://assets/audio/music/chapter-10-bgm.mp3",
+        "lufs": -14.9
+      },
+      "theme": {
+        "file": "res://assets/audio/music/chapter-10-theme.mp3",
+        "lufs": -17.1,
+        "entry_seconds": 10.9
+      }
+    },
+    "Epilogue": {
+      "bgm": {
+        "file": "res://assets/audio/music/epilogue-bgm.mp3",
+        "lufs": -16.8
+      },
+      "theme": {
+        "file": "res://assets/audio/music/epilogue-theme.mp3",
+        "lufs": -17.1
+      }
+    }
+  }
+}

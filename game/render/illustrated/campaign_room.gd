@@ -6,6 +6,8 @@ const SOCIAL := preload("social_direction.gd")
 const FLOOR_BOOK := "res://content/illustrated-floor.json"
 const ROOM_FOLDER := "res://assets/illustrated/campaign/rooms/"
 const MOTION_SHADER := "res://render/illustrated/keyframe_motion.gdshader"
+const CHAPTER_FILM := preload("chapter_film.gd")
+const FILM_CUES := "res://content/films.json"
 const INSERT_FOLDER := "res://assets/illustrated/campaign/inserts/"
 const FOREGROUND_FOLDER := "res://assets/illustrated/campaign/foregrounds/"
 const SCENE_BOOK := "res://content/illustrated-campaign.json"
@@ -23,6 +25,7 @@ var foreground: Sprite2D
 var atmosphere: ColorRect
 var curtain: ColorRect
 var chapter_frames: Array[TextureRect]=[]
+var chapter_film: CHAPTER_FILM
 var motion_material: ShaderMaterial
 var incoming_frame: TextureRect
 var incoming_time:=0.0
@@ -30,6 +33,7 @@ var incoming_duration:=.62
 var physical_art: Array[Sprite2D] = []
 var illustration_insert: Sprite2D
 var creatures := {}
+var floor_creatures := {}
 var active_id := ""
 var current_speaker := ""
 var shot_clock := 0.0
@@ -50,6 +54,7 @@ var working_actor := ""
 static var direction_book: Dictionary
 static var landmark_book: Dictionary
 static var floor_book: Dictionary
+static var film_book: Dictionary
 
 func build_art(scene: Dictionary) -> void:
 	scene_record = scene
@@ -66,7 +71,7 @@ func build_art(scene: Dictionary) -> void:
 	else:
 		push_error("Missing room illustration " + file)
 	if directions.has("cutaway"):
-		var insert_path:=ROOM_FOLDER+str(directions.cutaway.room)+".webp"
+		var insert_path:=ROOM_FOLDER+str(directions.cutaway.get("file",directions.cutaway.room))+".webp"
 		if ResourceLoader.exists(insert_path):
 			illustration_insert=picture(distant,insert_path,Vector2.ZERO,ART)
 			illustration_insert.hide()
@@ -122,6 +127,19 @@ func build_art(scene: Dictionary) -> void:
 		var height:=float(sheet.foot_anchor[1])*span
 		performer.configure(folder,id,height,art_point(role.foot),Color.WHITE.lerp(Color.from_string(directions.light,Color.WHITE),.14),sheet)
 		creatures[id]=performer
+		if floor_stage and floor_directions.get("animals",{}).has(id):
+			var mark: Dictionary=floor_directions.animals[id]
+			var animal:=Node2D.new()
+			animal.position=art_point(mark.foot)
+			floor_stage.cast.add_child(animal)
+			var sprite:=Sprite2D.new()
+			sprite.centered=false
+			sprite.texture=texture
+			sprite.scale=Vector2.ONE*float(mark.width)*ART.x/texture.get_width()
+			sprite.position=-Vector2(sheet.foot_anchor[0],sheet.foot_anchor[1])*sprite.scale
+			sprite.modulate=Color.WHITE.lerp(Color.from_string(directions.light,Color.WHITE),.14)
+			animal.add_child(sprite)
+			floor_creatures[id]=animal
 	update_inserts()
 	var air_plane := distant if directions.has("window") else props
 	atmosphere = patch_rect(air_plane,Vector2(-22,-18),ART+Vector2(44,36),NEAR_AIR)
@@ -277,6 +295,8 @@ func make_object_layer(index: int) -> void:
 func set_quality(profile: String) -> void:
 	high_detail = profile != "performance"
 	atmosphere.visible = high_detail
+	if is_instance_valid(chapter_film):
+		chapter_film.action.set_shader_parameter("detail", high_detail)
 	if chapter_frames.size()==2:
 		set_keyframe_quality()
 	for plane: Sprite2D in physical_art:
@@ -325,6 +345,7 @@ func get_performer(id: String) -> Node2D:
 	cast_plane.add_child(performer)
 	var ambient := Color.WHITE.lerp(Color.from_string(directions.light,Color.WHITE),.14)
 	performer.configure(folder,appearance,scale_factor*float(anchor[1]),foot_world,ambient,actor_data)
+	performer.phase = float(posmod(id.hash(),379))/100.0
 	actors[id]=performer
 	cast_marks[id]=eye_target
 	return performer
@@ -334,6 +355,8 @@ func show_cast(id: String) -> void:
 	if not id.is_empty() and actor_visible(id):
 		visible_ids.append(id)
 	social_pair = SOCIAL.dialogue_pair(room_id,active_id,id)
+	if active_id == "c9_gallery.out.03" and "c9_gallery.link" in done:
+		social_pair = PackedStringArray(["steve","nora"])
 	if social_pair.size() == 2:
 		for member: String in social_pair:
 			if not actor_visible(member) or get_performer(member) == null:
@@ -343,7 +366,7 @@ func show_cast(id: String) -> void:
 		if member not in visible_ids:
 			visible_ids.append(member)
 	var resident: String = directions.get("resident","")
-	if not resident.is_empty() and actor_visible(resident) and (id==resident or (id.is_empty() and not walking_view())):
+	if not resident.is_empty() and actor_visible(resident) and (id==resident or (id.is_empty() and not walking_view() and not in_cutaway())):
 		if resident not in visible_ids:
 			visible_ids.append(resident)
 	if room_id=="c9_gallery" and "c9_gallery.link" in done and (id in ["steve","nora"] or (id.is_empty() and not walking_view())):
@@ -381,7 +404,7 @@ func show_cast(id: String) -> void:
 
 func set_focus(index: int) -> void:
 	focus=index
-	if floor_stage:
+	if floor_stage or directions.get("cutaway",{}).has("inspect"):
 		update_inserts()
 		if not cinematic:
 			show_cast("")
@@ -392,9 +415,15 @@ func set_focus(index: int) -> void:
 		zoom=1.028
 		transform_planes()
 
-func update_inserts() -> void:
+func in_cutaway() -> bool:
 	var cutaway: Dictionary=directions.get("cutaway",{})
-	var away: bool=active_id in cutaway.get("lines",[]) or (cutaway.has("group") and active_id.begins_with(str(cutaway.group)+"."))
+	if not active_id.is_empty():
+		return active_id in cutaway.get("lines",[]) or (cutaway.has("group") and active_id.begins_with(str(cutaway.group)+"."))
+	var task_in_view: bool = focus >= 0 and focus < scene_record.tasks.size() and scene_record.tasks[focus].id == cutaway.get("inspect","")
+	return task_in_view or (cutaway.has("after") and cutaway.after in done)
+
+func update_inserts() -> void:
+	var away := in_cutaway()
 	var exploring := walking_view() or floor_dialogue
 	if floor_stage:
 		floor_stage.visible = exploring
@@ -408,7 +437,10 @@ func update_inserts() -> void:
 	for role: Dictionary in directions.get("creatures",[]):
 		if creatures.has(role.id):
 			var in_shot: bool=not role.has("lines") or active_id in role.lines
-			creatures[role.id].visible=in_shot and (not role.has("after") or role.after in done)
+			var visible_now: bool=in_shot and (not role.has("after") or role.after in done)
+			creatures[role.id].visible=visible_now and not (exploring and floor_creatures.has(role.id))
+			if floor_creatures.has(role.id):
+				floor_creatures[role.id].visible=visible_now and exploring
 
 func sync_story(completed: Array) -> void:
 	done=completed
@@ -529,6 +561,12 @@ func begin_departure_cut() -> void:
 	if not chapter_frames.is_empty():
 		if chapter_frames.size()==2:
 			set_keyframe_quality()
+		if film_book.is_empty():
+			film_book = JSON.parse_string(FileAccess.get_file_as_string(FILM_CUES))
+		if film_book.has(room_id) and ResourceLoader.exists("res://assets/illustrated/campaign/" + str(film_book[room_id].plate) + ".webp"):
+			chapter_film = CHAPTER_FILM.new()
+			frame.add_child(chapter_film)
+			chapter_film.configure(film_book[room_id],high_detail)
 		return
 	curtain=ColorRect.new()
 	curtain.name="FadeToNextScene"
@@ -559,6 +597,8 @@ func set_keyframe_quality() -> void:
 	later.visible=cut_progress>=.14
 
 func departure_duration() -> float:
+	if is_instance_valid(chapter_film):
+		return float(chapter_film.record.duration)
 	return 3.85 if chapter_frames.size()==2 else (4.4 if chapter_frames.size()==1 else 2.15)
 
 func set_departure_progress(value: float) -> void:
@@ -568,20 +608,23 @@ func set_departure_progress(value: float) -> void:
 		return
 	# Hold the first drawing, then let the moving light, hand or figure travel
 	# between two corresponding poses. Keep the final frame for the next room.
-	var push:=1.0+.036*smoothstep(0.0,1.0,cut_progress) if high_detail else 1.0
+	var drawing_time := minf(1.0, cut_progress / .48) if is_instance_valid(chapter_film) and chapter_frames.size()==2 else cut_progress
+	var push:=1.0+.036*smoothstep(0.0,1.0,drawing_time) if high_detail else 1.0
 	for layer: TextureRect in chapter_frames:
 		layer.pivot_offset=frame.size*.5
 		layer.scale=Vector2.ONE*push
-	chapter_frames[0].modulate.a=smoothstep(0.0,.14,cut_progress)
+	chapter_frames[0].modulate.a=smoothstep(0.0,.14,drawing_time)
 	if chapter_frames.size()>1:
-		var morph:=smoothstep(.30,.78,cut_progress)
+		var morph:=smoothstep(.30,.78,drawing_time)
 		if chapter_frames[1].material:
 			motion_material.set_shader_parameter("progress",morph)
-			chapter_frames[1].visible=cut_progress>=.14
+			chapter_frames[1].visible=drawing_time>=.14
 			chapter_frames[1].modulate.a=1.0
 		else:
 			chapter_frames[1].modulate.a=morph
-	if cut_progress>=.14:
+	if is_instance_valid(chapter_film):
+		chapter_film.advance(cut_progress)
+	if drawing_time>=.14:
 		for plane: Node2D in [distant,hull,cast_plane,props]:
 			plane.hide()
 
@@ -589,12 +632,21 @@ func outgoing_frame() -> Dictionary:
 	if chapter_frames.is_empty():
 		return {}
 	var last: TextureRect=chapter_frames.back()
-	return {"texture":last.texture,"scale":last.scale}
+	var state := {"texture":last.texture,"scale":last.scale}
+	if is_instance_valid(chapter_film) and chapter_film.visible:
+		# Retain the final animated pose across the change of rooms.
+		chapter_film.get_parent().remove_child(chapter_film)
+		state.film = chapter_film
+		state.scale = Vector2.ONE
+	return state
 
 func receive_frame(state: Dictionary) -> void:
 	incoming_frame=image_layer(state.texture,"IncomingChapterDissolve")
 	incoming_frame.pivot_offset=frame.size*.5
 	incoming_frame.scale=state.scale
+	if state.has("film"):
+		incoming_frame.add_child(state.film)
+		state.film.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	incoming_time=0.0
 	incoming_duration=.62 if high_detail else .24
 

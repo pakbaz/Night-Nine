@@ -1,0 +1,78 @@
+{
+  "c1_escape": {
+    "shot": 1,
+    "duration": 11.5,
+    "plate": "films/c1_escape",
+    "title": "The ninth tide"
+  },
+  "c2_ship": {
+    "shot": 2,
+    "duration": 12.0,
+    "plate": "films/c2_ship",
+    "title": "An occupied berth"
+  },
+  "c3_archive": {
+    "shot": 3,
+    "duration": 12.0,
+    "plate": "films/c3_archive",
+    "title": "The message"
+  },
+  "c4_escape": {
+    "shot": 4,
+    "duration": 11.5,
+    "plate": "films/c4_escape",
+    "title": "The searchlights"
+  },
+  "c5_station": {
+    "shot": 5,
+    "duration": 13.0,
+    "plate": "films/c5_station",
+    "title": "Row Nine"
+  },
+  "c6_jail": {
+    "shot": 6,
+    "duration": 13.5,
+    "plate": "films/c6_jail",
+    "subject": "c6_jail-van",
+    "title": "The bakery van"
+  },
+  "c7_swap": {
+    "shot": 7,
+    "duration": 12.0,
+    "plate": "films/c7_swap",
+    "title": "Behind the ceremony"
+  },
+  "c8_rig": {
+    "shot": 8,
+    "duration": 13.0,
+    "plate": "films/c8_rig",
+    "title": "Under Bellwether Bay"
+  },
+  "c9_choir": {
+    "shot": 9,
+    "duration": 16.0,
+    "plate": "films/c9_choir",
+    "subject": "c9_choir-vigil",
+    "title": "The Vigil overhead"
+  },
+  "c10_report": {
+    "shot": 10,
+    "duration": 17.5,
+    "plate": "films/c10_report",
+    "subject": "c10_report-scout",
+    "title": "The Long Patience rises"
+  },
+  "epilogue": {
+    "shot": 11,
+    "duration": 13.0,
+    "plate": "inserts/epilogue",
+    "subject": "epilogue-lantern",
+    "title": "Lights on the water"
+  },
+  "one_year": {
+    "shot": 12,
+    "duration": 15.0,
+    "plate": "films/one_year",
+    "title": "Two shores"
+  }
+}

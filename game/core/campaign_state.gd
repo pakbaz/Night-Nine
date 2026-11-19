@@ -22,7 +22,7 @@ func reset() -> void:
 	data = {"schema": 2, "game": "night-nine", "content": content.version,
 		"scene": 0, "actor": content.scenes[0].actors[0], "done": [],
 		"seen": [], "finished": false, "hints": {}, "walk_positions": {},
-		"notebook": {"marks": {}, "notes": {}}}
+		"notebook": {"marks": {}, "notes": {}}, "case_boards": {}}
 	changed.emit()
 
 func current() -> Dictionary:
@@ -50,6 +50,7 @@ func choose(task_id: String, answer: int, puzzle_input: Array = []) -> Dictionar
 	if task.has("puzzle") and not _settings_match(puzzle_input,task.puzzle.solution):
 		return {"ok": false, "reason": "Those settings do not satisfy the evidence. Check each connection; you can retry safely."}
 	data.done.append(task_id)
+	data.case_boards.erase(task_id)
 	changed.emit()
 	return {"ok": true, "lines": task.lines}
 
@@ -128,11 +129,13 @@ func restore(candidate: Variant) -> bool:
 		data.walk_positions = {}
 	if not data.has("notebook"):
 		data.notebook = {"marks": {}, "notes": {}}
+	if not data.has("case_boards"):
+		data.case_boards = {}
 	changed.emit()
 	return true
 
 func validate(candidate: Variant) -> String:
-	if not candidate is Dictionary or candidate.size() != 9 + int(candidate.has("walk_positions")) + int(candidate.has("notebook")):
+	if not candidate is Dictionary or candidate.size() != 9 + int(candidate.has("walk_positions")) + int(candidate.has("notebook")) + int(candidate.has("case_boards")):
 		return "Invalid campaign state."
 	for key: String in ["schema", "game", "content", "scene", "actor", "done", "seen", "finished", "hints"]:
 		if not candidate.has(key):
@@ -192,7 +195,65 @@ func validate(candidate: Variant) -> String:
 			return "Invalid hint level."
 	if candidate.has("notebook") and not _valid_notebook(candidate.notebook, completed):
 		return "Invalid notebook entry."
+	var drafts: Variant = candidate.get("case_boards", {})
+	if not drafts is Dictionary or drafts.size() > content.scenes[at].tasks.size():
+		return "Invalid case boards."
+	for task_id: Variant in drafts:
+		if task_scene.get(task_id, -1) != at or completed.has(task_id) or not _valid_board(task_id, drafts[task_id]):
+			return "Invalid case board."
+		for required: String in task_index[task_id].requires:
+			if not completed.has(required):
+				return "Case board prerequisite missing."
 	return ""
+
+func board_draft(id: String) -> Dictionary:
+	if data.case_boards.has(id):
+		var restored: Dictionary = data.case_boards[id].duplicate(true)
+		restored.stage = int(restored.stage)
+		for row: Array in restored.placements:
+			for i: int in row.size():
+				row[i] = int(row[i])
+		return restored
+	var placements := []
+	for stage: Dictionary in task_index[id].puzzle.stages:
+		var row := []
+		row.resize(stage.slots.size())
+		row.fill(-1)
+		placements.append(row)
+	return {"stage": 0, "placements": placements}
+
+func store_board(id: String, draft: Dictionary) -> bool:
+	if not available(id) or not _valid_board(id, draft):
+		return false
+	data.case_boards[id] = draft.duplicate(true)
+	return true
+
+func _valid_board(id: String, draft: Variant) -> bool:
+	var stages: Array = task_index[id].get("puzzle", {}).get("stages", [])
+	if stages.is_empty() or not draft is Dictionary or draft.size() != 2:
+		return false
+	var step: Variant = draft.get("stage")
+	if typeof(step) not in [TYPE_INT,TYPE_FLOAT] or not is_finite(step) or step != int(step) or step < 0 or step >= stages.size():
+		return false
+	var placements: Variant = draft.get("placements")
+	if not placements is Array or placements.size() != stages.size():
+		return false
+	for index: int in stages.size():
+		var row: Variant = placements[index]
+		var count: int = stages[index].slots.size()
+		if not row is Array or row.size() != count:
+			return false
+		var used := {}
+		for tile: Variant in row:
+			if typeof(tile) not in [TYPE_INT,TYPE_FLOAT] or not is_finite(tile) or tile != int(tile) or tile < -1 or tile >= count:
+				return false
+			if tile >= 0:
+				if used.has(int(tile)) or index > int(step):
+					return false
+				used[int(tile)] = true
+		if index < int(step) and not _settings_match(row, stages[index].answer):
+			return false
+	return true
 
 func available_theories(case_id: String, completed: Variant) -> Array:
 	var page: Dictionary = content.get("notebook_cases", {}).get(case_id, {})

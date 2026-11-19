@@ -24,7 +24,7 @@ def main():
     milestone_file = Path(__file__).resolve().parents[1] / "MILESTONES.md"
     records = []
     for line in milestone_file.read_text().splitlines():
-        if line.startswith("| `checkpoint/"):
+        if re.match(r"^\| `(?:checkpoint|chapters-\d+\.\d+\.\d+)/", line):
             tag, title, criteria = (cell.strip() for cell in line.strip("|").split("|"))
             records.append((title, f"{criteria}\n\nPlayable source tag: {tag}."))
     if len(records) != 11:

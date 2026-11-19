@@ -29,8 +29,9 @@ const PARTNERS := {
 	"c9_choir": {"note":"frank steve"},
 	"c10_town": {"in":"nora carmen","console":"wen shaw","out":"steve agnes"},
 	"c10_live": {"in":"steve stephen"},
-	"c10_report": {"in":"saren archivist","echo":"agnes archivist","survey":"agnes archivist","report":"saren archivist"},
-	"epilogue": {"in":"iris nora","out":"steve nora"},
+	"epilogue": {"in":"iris nora","out":"steve nora","neighbors.01":"lyle lyle_copy",
+		"neighbors.02":"pell dale","neighbors.03":"pell dale","bait.01":"agnes_original agnes",
+		"bait.02":"agnes_original agnes","bait.03":"rook rook_copy","bait.04":"rook rook_copy"},
 	"one_year": {"in":"steve stephen","newwind":"steve stephen"},
 }
 
@@ -79,7 +80,8 @@ static func task_partner(room: String, task: String, active: String) -> String:
 	return other
 
 static func dialogue_pair(room: String, line_id: String, speaker: String) -> PackedStringArray:
-	var pair := str(PARTNERS.get(room,{}).get(line_id.get_slice(".",1),""))
+	var exchanges: Dictionary = PARTNERS.get(room,{})
+	var pair := str(exchanges.get(line_id.trim_prefix(room+"."),exchanges.get(line_id.get_slice(".",1),"")))
 	if pair.is_empty():
 		return PackedStringArray()
 	var names := pair.split(" ")

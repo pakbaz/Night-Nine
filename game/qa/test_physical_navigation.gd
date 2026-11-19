@@ -154,6 +154,8 @@ func verify_campaign(campaign: NightCampaign, layouts: Dictionary) -> void:
 			if stage.floor_stage==null:
 				stage.free()
 				continue
+			if scene.id=="c6_jail":
+				verify_jail_staging(stage)
 			stage.approach_finished.connect(func(id: String): last_arrival=id)
 			var room_results := {}
 			for id: String in scene.actors:
@@ -180,6 +182,13 @@ func verify_campaign(campaign: NightCampaign, layouts: Dictionary) -> void:
 						acted=acted or not floor_stage.performance_action.is_empty()
 					check(on_ground,label+" feet clear solids and other people throughout")
 					check(acted and last_arrival==task.id,label+" action and arrival callback")
+					if scene.id=="c8_beach":
+						var guest: Dictionary=floor_stage.bodies.get("saren",{})
+						var lead: Dictionary=floor_stage.bodies[id]
+						check(not guest.is_empty() and guest.body.visible and guest.sprite.texture.resource_path.ends_with("saren-idle.webp")
+							and floor_stage.speaking_partner=="saren" and lead.left!=guest.left
+							and absf(guest.body.position.x-lead.body.position.x)>.12*floor_stage.height_at(guest.body.position),
+							label+" finishes facing the standing Prefect across a speaking distance")
 					if last_arrival==task.id:
 						reached.append(task.id)
 					stage.set_focus(i)
@@ -193,3 +202,22 @@ func verify_campaign(campaign: NightCampaign, layouts: Dictionary) -> void:
 			coverage[scene.id]=room_results
 		for task: Dictionary in scene.tasks:
 			before_scene.append(task.id)
+
+func verify_jail_staging(stage: STAGE) -> void:
+	var floor_stage: Node2D=stage.floor_stage
+	var cell: Vector2=floor_stage.point(floor_stage.approach.crossword)
+	var stephen: Vector2=floor_stage.bodies.stephen.body.position
+	check(floor_stage.point(floor_stage.object_marks.crossword).x-cell.x>floor_stage.height_at(cell)*.15,
+		"Steve can look into the cell from beside the door and leave the central bars visible")
+	check(stephen.y<cell.y or absf(stephen.x-cell.x)>.22*floor_stage.height_at(stephen),
+		"The foreground investigator leaves Steve visible when he speaks through the cell door")
+	var dog: Node2D=stage.floor_creatures.biscuit
+	var sprite: Sprite2D=dog.get_child(0)
+	var animal_height := sprite.scale.y*sprite.texture.get_height()
+	check(dog.get_parent()==floor_stage.cast and dog.visible and not stage.creatures.biscuit.visible,
+		"Biscuit shares the investigators' depth sorting on the wide painting")
+	check(animal_height<floor_stage.height_at(dog.position)*.40 and not floor_stage.on_floor(dog.position),
+		"Biscuit sits at a dog's scale with an occupied spot on the jail floor")
+	stage.set_focus(0)
+	check(not dog.visible and stage.creatures.biscuit.visible,"The detail painting keeps the close-up of Biscuit")
+	stage.set_focus(-1)

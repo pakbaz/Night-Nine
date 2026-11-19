@@ -5,6 +5,7 @@ var saves: NightSaves
 const ILLUSTRATED_STAGE := preload("res://render/illustrated/room.gd")
 const CHAPTER_STAGE := preload("res://render/illustrated/campaign_room.gd")
 const BAY_RECEIVER := preload("res://render/illustrated/bay_receiver.gd")
+const SCORE := preload("res://audio/campaign_score.gd")
 var receiver: Control
 const PROP_BUTTON := preload("res://render/illustrated/prop_button.gd")
 const PERFORMANCE_TEXT := {"conversation":"speaks","read":"reads","kneel":"kneels for a closer look",
@@ -36,6 +37,11 @@ var cut_duration := LIGHT_BEAT
 var skipping_departure := false
 var object_list: Button
 var end_card: PanelContainer
+const CLOSING_CREDITS := preload("res://ui/closing_credits.gd")
+var credit_reel: CLOSING_CREDITS
+var credit_list: PanelContainer
+var credit_list_button: Button
+var credit_list_open := false
 var credits_panel: ColorRect
 var credits_title: Label
 var credits_body: RichTextLabel
@@ -50,6 +56,9 @@ var hotspots: Array[Button] = []
 var voice: AudioStreamPlayer
 var ambience: AudioStreamPlayer
 var effect: AudioStreamPlayer
+var score: SCORE
+var music_volume: HSlider
+var listening_inspection := false
 var sound_manifest: Dictionary = {}
 var new_game_confirmation: ConfirmationDialog
 var queue: Array = []
@@ -67,7 +76,9 @@ var line_remaining := 0.0
 var active_line := ""
 var save_root := ""
 const SETTING_ROW := preload("res://ui/setting_row.gd")
+const CASE_BOARD := preload("res://ui/case_board.gd")
 var puzzle_controls: Array[SETTING_ROW] = []
+var case_board: CASE_BOARD
 var closing := false
 var tape_playback := false
 var tape_compare: NightTapeCompare
@@ -91,6 +102,9 @@ func _ready() -> void:
 	effect = AudioStreamPlayer.new()
 	effect.volume_db = -10
 	add_child(effect)
+	score = SCORE.new()
+	score.name = "CampaignScore"
+	add_child(score)
 	_build_ui()
 	_load_stage(false)
 	menu.show()
@@ -301,11 +315,13 @@ func _open_objects() -> void:
 		return
 	if stage.has_method("cancel_walk"):
 		stage.cancel_walk()
+	listening_inspection = false
 	stage.set_focus(-1)
 	(interaction.get_parent() as ScrollContainer).scroll_vertical=0
 	for child: Node in interaction.get_children():
 		interaction.remove_child(child)
 		child.queue_free()
+	_investigation_size(false)
 	_label(interaction,"Objects at this location",25)
 	var first: Button
 	for task: Dictionary in campaign.current().tasks:
@@ -370,15 +386,11 @@ func _build_menu() -> void:
 	fullscreen.text="Fullscreen"
 	fullscreen.toggled.connect(func(on: bool): DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN if on else DisplayServer.WINDOW_MODE_WINDOWED))
 	menu_settings.add_child(fullscreen)
-	_label(menu_settings,"Voice volume",18)
-	var volume := HSlider.new()
-	volume.min_value=0
-	volume.max_value=1
-	volume.step=0.01
-	volume.value=float(settings.get_value("audio","voice",0.9))
-	voice.volume_db=linear_to_db(volume.value)
-	volume.value_changed.connect(func(value: float): voice.volume_db=linear_to_db(value); settings.set_value("audio","voice",value); _save_settings())
-	menu_settings.add_child(volume)
+	_volume_control("Overall volume","master",1.0,func(value: float):
+		AudioServer.set_bus_volume_db(0,-6.0 + linear_to_db(maxf(.0001,value)))
+		AudioServer.set_bus_mute(0,value <= 0.0))
+	_volume_control("Voice volume","voice",.9,func(value: float): voice.volume_linear = value)
+	music_volume = _volume_control("Music volume","music",.85,func(value: float): score.volume = value)
 	var names := CheckButton.new()
 	names.text = "Always show object names"
 	names.button_pressed = bool(settings.get_value("interface", "object_names", false))
@@ -398,6 +410,26 @@ func _build_menu() -> void:
 		_layout_menu())
 	_layout_menu()
 
+func _volume_control(label: String, key: String, initial: float, change: Callable) -> HSlider:
+	var row := HBoxContainer.new()
+	menu_settings.add_child(row)
+	_label(row,label,18).custom_minimum_size.x = 144
+	var slider := HSlider.new()
+	slider.name = key.capitalize() + "Volume"
+	slider.accessibility_name = label
+	slider.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	slider.min_value = 0.0
+	slider.max_value = 1.0
+	slider.step = .01
+	slider.value = float(settings.get_value("audio",key,initial))
+	row.add_child(slider)
+	change.call(slider.value)
+	slider.value_changed.connect(func(value: float):
+		change.call(value)
+		settings.set_value("audio",key,value)
+		_save_settings())
+	return slider
+
 func _layout_menu() -> void:
 	title_art.visible = not started and menu.visible
 	menu_settings.visible = settings_open
@@ -415,15 +447,20 @@ func _build_credits() -> void:
 	credits_panel.mouse_filter=Control.MOUSE_FILTER_STOP
 	root.add_child(credits_panel)
 	credits_panel.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
-	var card:=_panel(credits_panel)
-	card.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
-	card.offset_left=155
-	card.offset_right=-155
-	card.offset_top=108
-	card.offset_bottom=-100
+	credit_reel=CLOSING_CREDITS.new()
+	credits_panel.add_child(credit_reel)
+	credit_reel.finished.connect(func():
+		credit_list_open=true
+		_show_credits_page(false))
+	credit_list=_panel(credits_panel)
+	credit_list.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	credit_list.offset_left=155
+	credit_list.offset_right=-155
+	credit_list.offset_top=88
+	credit_list.offset_bottom=-150
 	var box:=VBoxContainer.new()
 	box.add_theme_constant_override("separation",22)
-	card.add_child(box)
+	credit_list.add_child(box)
 	credits_title=_label(box,"Credits",36)
 	credits_body=RichTextLabel.new()
 	credits_body.size_flags_vertical=Control.SIZE_EXPAND_FILL
@@ -431,10 +468,20 @@ func _build_credits() -> void:
 	credits_body.selection_enabled=true
 	box.add_child(credits_body)
 	var actions:=HBoxContainer.new()
-	box.add_child(actions)
+	credits_panel.add_child(actions)
+	actions.set_anchors_and_offsets_preset(Control.PRESET_BOTTOM_WIDE)
+	actions.offset_bottom=-42
+	actions.offset_top=-102
+	actions.alignment=BoxContainer.ALIGNMENT_CENTER
+	actions.add_theme_constant_override("separation",16)
+	credit_list_button=_button(actions,"All credits",func():
+		credit_list_open=not credit_list_open
+		if not credit_list_open:
+			credit_reel.start(credits_before_signal or campaign.data.finished,profile=="high")
+		_show_credits_page(false))
 	credits_toggle=_button(actions,"Third-party notices",func(): _show_credits_page(not showing_notices))
 	credits_return=_button(actions,"Return",_close_credits)
-	credits_return.focus_next=credits_return.get_path_to(credits_body)
+	credits_return.focus_next=credits_return.get_path_to(credit_list_button)
 	credits_body.focus_previous=credits_body.get_path_to(credits_return)
 	credits_panel.hide()
 
@@ -445,15 +492,26 @@ func _show_credits_page(notices: bool) -> void:
 	if notices:
 		credits_body.text=FileAccess.get_file_as_string("res://LICENSES.txt")
 	else:
-		credits_body.text="[font_size=29]Original story and characters[/font_size]\nPakbaz\n\n[font_size=29]Production tools[/font_size]\n\n[b]Paintings and chapter animation keyframes[/b]\nGPT Image\n\n[b]Character dialogue audio[/b]\nElevenLabs v4 through Higgsfield\n\n[b]Game engine[/b]\nGodot Engine"
+		var full_credits := PackedStringArray()
+		for row: Array in CLOSING_CREDITS.ROLES:
+			full_credits.append("[b]%s[/b]\n%s" % [row[0],row[1]])
+		credits_body.text="\n\n".join(full_credits)
+	credit_list.visible=notices or credit_list_open
+	credit_reel.visible=not credit_list.visible
+	credit_list_button.visible=not notices
+	credit_list_button.text="Play credit sequence" if credit_list_open else "All credits"
 	credits_toggle.text="Back to credits" if notices else "Third-party notices"
 	credits_body.scroll_to_line(0)
 
 func _open_credits() -> void:
 	credits_prior_focus=get_viewport().gui_get_focus_owner()
 	credits_return.text = "Continue" if credits_before_signal else "Return"
+	credit_list_open=false
+	credit_reel.start(credits_before_signal or campaign.data.finished,profile=="high")
 	_show_credits_page(false)
 	credits_panel.show()
+	if credits_before_signal or (started and campaign.data.finished):
+		score.play_theme("Epilogue")
 	_pause_audio(true)
 	if credits_before_signal:
 		credits_return.grab_focus()
@@ -466,6 +524,8 @@ func _close_credits() -> void:
 		credits_before_signal = false
 		_enter_next_scene()
 		return
+	if started and campaign.data.finished:
+		score.silence()
 	_pause_audio(menu.visible or journal.visible)
 	if is_instance_valid(credits_prior_focus) and credits_prior_focus.is_visible_in_tree():
 		credits_prior_focus.grab_focus()
@@ -523,6 +583,13 @@ func _load_stage(play_intro: bool) -> void:
 	actor.get_parent().show()
 	_pause_audio(false)
 	tape_compare.reset_task()
+	listening_inspection = false
+	if not started:
+		score.play_title()
+	elif campaign.current().id == "postcredits" or campaign.data.finished:
+		score.silence()
+	else:
+		score.play_chapter(campaign.current().chapter)
 	voice.stop()
 	effect.stop()
 	queue.clear()
@@ -660,6 +727,8 @@ func _inspect_on_arrival(id: String) -> void:
 	(interaction.get_parent() as ScrollContainer).scroll_vertical=0
 	puzzle_controls.clear()
 	var task: Dictionary=campaign.task_index[id]
+	var use_board: bool=task.get("puzzle",{}).get("presentation","")=="case_board"
+	listening_inspection = id in ["p_veyr.levels","p_bay.tune"] or not task.sounds.is_empty() or task.has("audition_labels") or task.has("evidence_labels")
 	stage.set_focus(campaign.current().tasks.find(task))
 	if id in campaign.data.done:
 		root.get_node("InteractionPanel").hide()
@@ -676,6 +745,10 @@ func _inspect_on_arrival(id: String) -> void:
 	for child: Node in interaction.get_children():
 		interaction.remove_child(child)
 		child.queue_free()
+	_investigation_size(use_board)
+	if use_board:
+		_open_case_board(task)
+		return
 	_label(interaction,task.title,25)
 	var prompt:=_label(interaction,task.prompt,19)
 	prompt.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART
@@ -736,6 +809,37 @@ func _inspect_on_arrival(id: String) -> void:
 	root.get_node("InteractionPanel").show()
 	if interaction.get_child_count()>2 and interaction.get_child(2) is Button:
 		interaction.get_child(2).grab_focus()
+
+func _investigation_size(wide: bool) -> void:
+	var panel: PanelContainer=root.get_node("InteractionPanel")
+	panel.position=Vector2(154,104) if wide else Vector2(42,150)
+	panel.size=Vector2(1292,770) if wide else Vector2(440,720)
+
+func _open_case_board(task: Dictionary) -> void:
+	var id: String=task.id
+	case_board=CASE_BOARD.new()
+	interaction.add_child(case_board)
+	case_board.configure(id,task.title,task.puzzle,campaign.board_draft(id))
+	case_board.draft_changed.connect(func(draft: Dictionary):
+		if campaign.store_board(id,draft):
+			_save("autosave"))
+	case_board.submitted.connect(func(values: Array): _choose(id,int(task.answer),values))
+	case_board.hint_requested.connect(func():
+		case_board.response.text=campaign.hint(id)
+		_save("autosave"))
+	case_board.closed.connect(func():
+		root.get_node("InteractionPanel").hide()
+		stage.set_focus(-1)
+		object_list.grab_focus())
+	if task.has("evidence_labels"):
+		_show_recording_evidence(task)
+	elif task.has("audition_labels"):
+		_show_reel_index(task)
+	else:
+		for audio_id: String in task.sounds:
+			var caption: String=campaign.content.get("sound_labels",{}).get(audio_id,"Listen")
+			_button(interaction,caption,_play_audio.bind(audio_id))
+	root.get_node("InteractionPanel").show()
 
 func _show_reel_index(task: Dictionary) -> void:
 	var captions := VBoxContainer.new()
@@ -875,12 +979,13 @@ func _next_line() -> void:
 
 func _dialogue_layout(staged: bool) -> void:
 	var scene := campaign.current()
-	var show_dateline: bool = staged and active_line in scene.intro
+	var morning := active_line == "postcredits.answer.01"
+	var show_dateline: bool = staged and (active_line in scene.intro or morning)
 	actor.visible=not staged and scene.actors.size()>1 and not campaign.data.finished
 	title.get_parent().visible = not staged or show_dateline
 	objective.visible = not staged
 	if show_dateline:
-		title.text = scene.place
+		title.text = "Sentinel Point, the following morning" if morning else scene.place
 	status.visible = not staged
 	dialogue_panel.offset_left = 140 if staged else 180
 	dialogue_panel.offset_right = -140 if staged else -180
@@ -910,6 +1015,7 @@ func _play_audio(id: String, take: Dictionary = {}) -> float:
 	if not stream:
 		return 0.0
 	voice.stream=stream
+	_sync_score_mix(true)
 	voice.play()
 	return voice.stream.get_length()
 
@@ -948,6 +1054,11 @@ func _end_departure_dialogue() -> void:
 		return
 	stage.begin_departure_cut()
 	cut_duration=stage.departure_duration() if stage.has_method("departure_duration") else LIGHT_BEAT
+	var next_index := int(campaign.data.scene) + 1
+	var chapter_id: String = campaign.current().chapter
+	if next_index >= campaign.content.scenes.size() or chapter_id != campaign.content.scenes[next_index].chapter:
+		if score.play_theme(chapter_id):
+			cut_duration = maxf(cut_duration,8.0)
 	light_remaining=cut_duration
 	title.get_parent().hide()
 	actor.get_parent().hide()
@@ -991,6 +1102,7 @@ func _open_journal() -> void:
 	_pause_audio(true)
 
 func _pause_audio(on: bool) -> void:
+	score.pause_film(on and light_remaining >= 0 and not credits_before_signal)
 	if is_instance_valid(receiver):
 		receiver.set_paused(on)
 	voice.stream_paused=on
@@ -1004,6 +1116,7 @@ func _pause_audio(on: bool) -> void:
 func _process(delta: float) -> void:
 	if not is_instance_valid(stage):
 		return
+	_sync_score_mix()
 	if stage.has_method("tick_walk") and _can_walk():
 		var direction := Vector2(
 			int(Input.is_physical_key_pressed(KEY_D))-int(Input.is_physical_key_pressed(KEY_A)),
@@ -1047,6 +1160,24 @@ func _process(delta: float) -> void:
 
 func _can_explore() -> bool:
 	return started and not campaign.data.finished and not transitioning and not dialogue_panel.visible and not menu.visible and not journal.visible and not credits_panel.visible and not tape_compare.visible
+
+func _sync_score_mix(starting_audio: bool = false) -> void:
+	var in_menu := started and (menu.visible or journal.visible or credits_panel.visible)
+	if not started or credits_before_signal or (campaign.data.finished and credits_panel.visible):
+		score.set_mix(false,false,false)
+		return
+	if in_menu:
+		score.set_mix(false,false,true)
+		return
+	var evidence := tape_compare.visible or (listening_inspection and interaction.is_visible_in_tree())
+	var spoken_scene := dialogue_panel.visible
+	var audible_voice := voice.playing or starting_audio
+	if audible_voice and (not spoken_scene or tape_playback):
+		evidence = true
+	if spoken_scene and not active_line.is_empty():
+		var line: Dictionary = campaign.content.lines[active_line]
+		evidence = evidence or (audible_voice and line.get("delivery","live") != "live") or (effect.playing and (line.has("cue") or line.has("reaction")))
+	score.set_mix(spoken_scene and audible_voice,evidence,false)
 
 func _can_walk() -> bool:
 	return _can_explore() and not actor.get_popup().visible and not root.get_node("InteractionPanel").visible
@@ -1107,6 +1238,8 @@ func _exit_tree() -> void:
 	shutdown_audio()
 
 func shutdown_audio() -> void:
+	if is_instance_valid(score):
+		score.stop_all()
 	for player: AudioStreamPlayer in [voice,ambience,effect]:
 		if is_instance_valid(player):
 			player.stream_paused=false

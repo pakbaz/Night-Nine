@@ -403,7 +403,13 @@
       "calder",
       "stephen"
     ],
-    "chapter_insert": true
+    "chapter_insert": true,
+    "off_camera_lines": [
+      "c7_swap.in.01"
+    ],
+    "inserts": {
+      "c7_swap.in.01": "c7_swap.bus"
+    }
   },
   "c8_lab": {
     "light": "dfb99a",
@@ -543,7 +549,12 @@
           0.63
         ],
         "width": 0.2,
-        "after": "c9_choir.wick"
+        "after": "c9_choir.wick",
+        "lines": [
+          "",
+          "c9_choir.wick.01",
+          "c9_choir.wick.02"
+        ]
       }
     ],
     "chapter_insert": true
@@ -597,7 +608,10 @@
     ],
     "company": [
       "steve",
-      "stephen"
+      "stephen",
+      "mateo",
+      "carmen",
+      "pell"
     ],
     "cutaway": {
       "room": "c10_town",
@@ -660,20 +674,27 @@
     "company": [
       "archivist",
       "saren",
-      "agnes"
+      "agnes",
+      "steve"
     ],
     "resident": "archivist",
     "cutaway": {
-      "room": "c10_town",
+      "room": "c10_station",
       "lines": [
         "c10_report.in.03",
-        "c10_report.echo.01"
+        "c10_report.echo.01",
+        "c10_report.survey.02",
+        "c10_report.out.04"
       ]
     },
     "inserts": {
       "c10_report.report": "c10_report.report"
     },
-    "chapter_insert": true
+    "chapter_insert": true,
+    "off_camera_lines": [
+      "c10_report.in.01",
+      "c10_report.report.02"
+    ]
   },
   "epilogue": {
     "appearances": {
@@ -701,7 +722,8 @@
       "agnes_original",
       "agnes",
       "rook",
-      "rook_copy"
+      "rook_copy",
+      "lyle_copy"
     ],
     "creatures": [
       {
@@ -758,6 +780,16 @@
     "inserts": {
       "postcredits.out.01": "postcredits.answer",
       "postcredits.in.02": "postcredits.answer"
+    },
+    "cutaway": {
+      "room": "postcredits",
+      "file": "postcredits-dawn",
+      "inspect": "postcredits.answer",
+      "after": "postcredits.answer",
+      "lines": [
+        "postcredits.answer.01",
+        "postcredits.out.01"
+      ]
     }
   }
 }
