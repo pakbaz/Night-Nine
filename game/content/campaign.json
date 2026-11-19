@@ -21,8 +21,10 @@
     "mateo": "Mateo Reyes",
     "rafa": "Rafa Reyes",
     "tomas": "Tomás Reyes",
+    "lyle": "Lyle Boone",
     "lyle_copy": "Lyle’s copy",
     "gus": "Gus Albano",
+    "dale": "Dale Kittredge",
     "pell": "Pell",
     "autorick": "DJ AutoRick",
     "guard": "Veyri attendant",
@@ -4549,6 +4551,1230 @@
           "direction": "Move toward the active interaction."
         }
       ]
+    },
+    {
+      "id": "c6_iris",
+      "chapter": "Chapter 6",
+      "title": "Iris",
+      "place": "Bellwether after dark",
+      "style": "street",
+      "actors": [
+        "steve",
+        "stephen"
+      ],
+      "objective": "Give each Steve a role and test Iris fairly.",
+      "tasks": [
+        {
+          "id": "c6_iris.alibi",
+          "title": "Market corner",
+          "prompt": "Steve’s appointment is at 8:10. Stephen has three chances for someone else to remember seeing him. Which one puts his face in public at the same time?",
+          "options": [
+            "Buy flowers from the unattended stall at 8:10",
+            "Ask the baker to correct the wanted poster during her 8:10 window sale",
+            "Sign for the 8:20 bread delivery beside the poster"
+          ],
+          "answer": 1,
+          "lines": [
+            "c6_iris.alibi.01"
+          ],
+          "note": "Stephen established a public alibi.",
+          "requires": [],
+          "actor": "stephen",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Use the radio as the common clock.",
+            "Subtract four at the bakery and add two on the bus. Ask whether each witness saw a face.",
+            "The bus reads 08:07, the window 08:10, and the flowers 08:12 in radio time. Gus can compare a face with the poster."
+          ],
+          "puzzle": {
+            "presentation": "case_board",
+            "instruction": "The poster shows Steve’s face. Stephen can give the town a true sighting of that face, if the time holds up.",
+            "evidence": [
+              "Gus sets the oven clock four minutes fast. The bus clock is two minutes slow. The florist sets hers by the radio.",
+              "Three slips: BREAD 08:14, BUS 08:05, FLOWERS 08:12. Steve’s appointment begins at 08:10 by the radio.",
+              "The bus driver stamped the fare card through a slot. The florist called back a telephone order. At the bread window Gus corrected a smudge on the poster while his customer stood beside it.",
+              "Iris has three envelopes: JUST BEFORE, DURING and JUST AFTER. Only the middle envelope needs a witness to a face."
+            ],
+            "stages": [
+              {
+                "mode": "match",
+                "prompt": "Correct each slip to the radio clock.",
+                "slots": [
+                  "Bread",
+                  "Bus",
+                  "Flowers"
+                ],
+                "pieces": [
+                  "08:12",
+                  "08:10",
+                  "08:07"
+                ],
+                "answer": [
+                  1,
+                  2,
+                  0
+                ]
+              },
+              {
+                "mode": "order",
+                "prompt": "Pin the three envelopes in the order of the actual transactions.",
+                "slots": [
+                  "First",
+                  "Second",
+                  "Third"
+                ],
+                "pieces": [
+                  "Bread window",
+                  "Bus fare",
+                  "Florist call"
+                ],
+                "answer": [
+                  1,
+                  0,
+                  2
+                ]
+              },
+              {
+                "mode": "match",
+                "prompt": "Label what a stranger could actually testify to at each stop.",
+                "slots": [
+                  "Bus",
+                  "Bread window",
+                  "Florist"
+                ],
+                "pieces": [
+                  "Voice on a phone",
+                  "Face beside likeness",
+                  "Fare card present"
+                ],
+                "answer": [
+                  2,
+                  1,
+                  0
+                ]
+              }
+            ],
+            "solution": [
+              1,
+              2,
+              0,
+              1,
+              0,
+              2,
+              2,
+              1,
+              0
+            ],
+            "rows": [
+              {
+                "label": "Bread",
+                "options": [
+                  "08:12",
+                  "08:10",
+                  "08:07"
+                ]
+              },
+              {
+                "label": "Bus",
+                "options": [
+                  "08:12",
+                  "08:10",
+                  "08:07"
+                ]
+              },
+              {
+                "label": "Flowers",
+                "options": [
+                  "08:12",
+                  "08:10",
+                  "08:07"
+                ]
+              },
+              {
+                "label": "First",
+                "options": [
+                  "Bread window",
+                  "Bus fare",
+                  "Florist call"
+                ]
+              },
+              {
+                "label": "Second",
+                "options": [
+                  "Bread window",
+                  "Bus fare",
+                  "Florist call"
+                ]
+              },
+              {
+                "label": "Third",
+                "options": [
+                  "Bread window",
+                  "Bus fare",
+                  "Florist call"
+                ]
+              },
+              {
+                "label": "Bus",
+                "options": [
+                  "Voice on a phone",
+                  "Face beside likeness",
+                  "Fare card present"
+                ]
+              },
+              {
+                "label": "Bread window",
+                "options": [
+                  "Voice on a phone",
+                  "Face beside likeness",
+                  "Fare card present"
+                ]
+              },
+              {
+                "label": "Florist",
+                "options": [
+                  "Voice on a phone",
+                  "Face beside likeness",
+                  "Fare card present"
+                ]
+              }
+            ],
+            "hints": [
+              "Use the radio as the common clock.",
+              "Subtract four at the bakery and add two on the bus. Ask whether each witness saw a face.",
+              "The bus reads 08:07, the window 08:10, and the flowers 08:12 in radio time. Gus can compare a face with the poster."
+            ]
+          }
+        },
+        {
+          "id": "c6_iris.takes",
+          "title": "Iris’s recorder test",
+          "prompt": "Steve gives her the recorder and asks for the same words twice. What can he put in his notebook?",
+          "options": [
+            "She played the first take again",
+            "She chose how to say it each time",
+            "She started the same take later"
+          ],
+          "answer": 1,
+          "lines": [
+            "c6_iris.takes.01",
+            "c6_iris.takes.02",
+            "c6_iris.takes.03"
+          ],
+          "note": "Iris is an echo with her own experiences.",
+          "requires": [],
+          "actor": "steve",
+          "kind": "compare",
+          "sounds": [
+            "c6_iris.takes.01",
+            "c6_iris.takes.02"
+          ],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "evidence_labels": [
+            "First reading",
+            "Second reading"
+          ],
+          "hints": [
+            "Listen past the words, or compare where each strip becomes quiet.",
+            "Consider whether moving a single recording later would explain the different spacing within the phrase.",
+            "Choose that she decided how to say it each time. The two performances have different rhythms."
+          ]
+        },
+        {
+          "id": "c6_iris.hold",
+          "title": "Halcyon lines",
+          "prompt": "Iris marks three calls on the café receipt. At 9:00 two people dial different Halcyon offices. Both stay through the same hold tune and hang up at the same bar. A caller who reaches a clerk hangs up early. Which timing should Steve compare with the procession at the bay?",
+          "options": [
+            "Minutes each clerk spends speaking",
+            "Time between dial tone and pickup",
+            "The shared passage in the hold tune"
+          ],
+          "answer": 2,
+          "lines": [
+            "c6_iris.hold.01",
+            "c6_iris.hold.02"
+          ],
+          "note": "Learned how distant copies re-sync.",
+          "requires": [
+            "c6_iris.takes"
+          ],
+          "actor": "steve",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Look at what the two long calls have in common.",
+            "Different offices and waiting times leave one sound in common.",
+            "Compare the shared passage in the hold tune with the bay schedule. The two listeners hang up at the same musical bar."
+          ]
+        }
+      ],
+      "intro": [
+        "c6_iris.in.01",
+        "c6_iris.in.02"
+      ],
+      "outro": [
+        "c6_iris.out.01",
+        "c6_iris.out.02",
+        "c6_iris.out.03"
+      ],
+      "shots": [
+        {
+          "duration": 5.0,
+          "move": "establish",
+          "direction": "Follow two routes through the same lamplit street and reunite beside the closed bakery."
+        },
+        {
+          "duration": 6.0,
+          "move": "push",
+          "direction": "Move toward the active interaction."
+        }
+      ],
+      "card": {
+        "chapter": {
+          "kicker": "Chapter 6",
+          "title": "Iris",
+          "goal": "Steve wants to free Calder and learn what the Veyri want."
+        }
+      }
+    },
+    {
+      "id": "c6_jail",
+      "chapter": "Chapter 6",
+      "title": "Two Sheriffs",
+      "place": "Sheriff’s office and jail",
+      "style": "jail",
+      "actors": [
+        "steve",
+        "stephen"
+      ],
+      "objective": "Find the cell key and identify the real Calder.",
+      "tasks": [
+        {
+          "id": "c6_jail.mail",
+          "title": "Pell’s sorting case",
+          "prompt": "Pell has a carbon dated today. DESTINATION / ITEM reads ‘Jail / returned key.’ In the register, the jail’s last three numbers are 14 (signed), 18 (returned), 19 (signed). The drawer tabs read Counter, Returns, Jail. Pell filed by destination. Drawer slots hold pairs starting with 1 and 2.",
+          "options": [
+            "Open drawer J, slot 9",
+            "Open drawer R, slot 1",
+            "Empty every letter onto the floor"
+          ],
+          "answer": 0,
+          "lines": [
+            "c6_jail.mail.01"
+          ],
+          "note": "Pell kept the key in Jail, slot 9. On June’s folded crossword Steve pencilled a circle round the crossing of 23 Across and 8 Down before he passed it through the slot.",
+          "requires": [],
+          "actor": "steve",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "puzzle": {
+            "instruction": "Find today's return in Pell's case.",
+            "rows": [
+              {
+                "label": "Drawer",
+                "options": [
+                  "Counter",
+                  "Returns",
+                  "Jail"
+                ]
+              },
+              {
+                "label": "Slot",
+                "options": [
+                  "7",
+                  "9",
+                  "10",
+                  "18"
+                ]
+              }
+            ],
+            "solution": [
+              2,
+              1
+            ]
+          },
+          "hints": [
+            "Separate the destination from the parcel status.",
+            "Use the returned entry in the jail register. Two consecutive numbers share a slot.",
+            "Find the jail drawer, slot 9. Entries 17 and 18 share it."
+          ]
+        },
+        {
+          "id": "c6_jail.distract",
+          "title": "Sheriff’s front desk",
+          "prompt": "The desk book lists three appointments at noon. Stephen looks exactly like the man on the town poster. Which clerk would need him standing at the public counter for the entire appointment?",
+          "options": [
+            "Lost property, to identify a coat over the intercom",
+            "Records, for a new likeness on a contested poster",
+            "Mail, to sign a collection slip at the side hatch"
+          ],
+          "answer": 1,
+          "lines": [
+            "c6_jail.distract.01"
+          ],
+          "note": "Distracted Calder’s copy.",
+          "requires": [],
+          "actor": "stephen",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "First distinguish a paper transaction from somebody checking a face.",
+            "The register is open from 11:58 to 12:04. The deputy’s absence is shorter.",
+            "The deputy leaves at 11:59 and returns at 12:03. Stephen stays at ticket 42 while Steve uses noon to 12:02."
+          ],
+          "puzzle": {
+            "presentation": "case_board",
+            "instruction": "The desk copy can send a deputy away for only one appointment. Plan a distraction Stephen can sustain without ever entering the cell corridor.",
+            "evidence": [
+              "Three brass tickets: 41 is paid in coins, 42 needs a likeness checked, 43 is a form already signed. The slot accepts paper only; a cashier is behind frosted glass.",
+              "The likeness clerk has to compare the applicant in person with the public poster. No part of that examination can happen by telephone.",
+              "The noon stamp is accurate. The front-counter register opens two minutes before noon and closes four minutes after. The deputy leaves the records desk one minute after the register opens, and returns one minute before it closes.",
+              "Steve needs two complete minutes in the empty corridor. He must start strictly after the deputy leaves and finish strictly before she returns. Choose whole-minute marks."
+            ],
+            "stages": [
+              {
+                "mode": "match",
+                "prompt": "Send each ticket to the only desk that can finish it.",
+                "slots": [
+                  "41",
+                  "42",
+                  "43"
+                ],
+                "pieces": [
+                  "Document slot",
+                  "Likeness counter",
+                  "Cashier"
+                ],
+                "answer": [
+                  2,
+                  1,
+                  0
+                ]
+              },
+              {
+                "mode": "order",
+                "prompt": "Reconstruct the four marks on the duty strip.",
+                "slots": [
+                  "First",
+                  "Second",
+                  "Third",
+                  "Fourth"
+                ],
+                "pieces": [
+                  "Deputy returns",
+                  "Register opens",
+                  "Register closes",
+                  "Deputy leaves"
+                ],
+                "answer": [
+                  1,
+                  3,
+                  0,
+                  2
+                ]
+              },
+              {
+                "mode": "match",
+                "prompt": "Write the duty times on Steve’s pass.",
+                "slots": [
+                  "Deputy leaves",
+                  "Steve starts",
+                  "Steve finishes",
+                  "Deputy returns"
+                ],
+                "pieces": [
+                  "12:02",
+                  "12:03",
+                  "11:59",
+                  "12:00"
+                ],
+                "answer": [
+                  2,
+                  3,
+                  0,
+                  1
+                ]
+              }
+            ],
+            "solution": [
+              2,
+              1,
+              0,
+              1,
+              3,
+              0,
+              2,
+              2,
+              3,
+              0,
+              1
+            ],
+            "rows": [
+              {
+                "label": "41",
+                "options": [
+                  "Document slot",
+                  "Likeness counter",
+                  "Cashier"
+                ]
+              },
+              {
+                "label": "42",
+                "options": [
+                  "Document slot",
+                  "Likeness counter",
+                  "Cashier"
+                ]
+              },
+              {
+                "label": "43",
+                "options": [
+                  "Document slot",
+                  "Likeness counter",
+                  "Cashier"
+                ]
+              },
+              {
+                "label": "First",
+                "options": [
+                  "Deputy returns",
+                  "Register opens",
+                  "Register closes",
+                  "Deputy leaves"
+                ]
+              },
+              {
+                "label": "Second",
+                "options": [
+                  "Deputy returns",
+                  "Register opens",
+                  "Register closes",
+                  "Deputy leaves"
+                ]
+              },
+              {
+                "label": "Third",
+                "options": [
+                  "Deputy returns",
+                  "Register opens",
+                  "Register closes",
+                  "Deputy leaves"
+                ]
+              },
+              {
+                "label": "Fourth",
+                "options": [
+                  "Deputy returns",
+                  "Register opens",
+                  "Register closes",
+                  "Deputy leaves"
+                ]
+              },
+              {
+                "label": "Deputy leaves",
+                "options": [
+                  "12:02",
+                  "12:03",
+                  "11:59",
+                  "12:00"
+                ]
+              },
+              {
+                "label": "Steve starts",
+                "options": [
+                  "12:02",
+                  "12:03",
+                  "11:59",
+                  "12:00"
+                ]
+              },
+              {
+                "label": "Steve finishes",
+                "options": [
+                  "12:02",
+                  "12:03",
+                  "11:59",
+                  "12:00"
+                ]
+              },
+              {
+                "label": "Deputy returns",
+                "options": [
+                  "12:02",
+                  "12:03",
+                  "11:59",
+                  "12:00"
+                ]
+              }
+            ],
+            "hints": [
+              "First distinguish a paper transaction from somebody checking a face.",
+              "The register is open from 11:58 to 12:04. The deputy’s absence is shorter.",
+              "The deputy leaves at 11:59 and returns at 12:03. Stephen stays at ticket 42 while Steve uses noon to 12:02."
+            ]
+          }
+        },
+        {
+          "id": "c6_jail.crossword",
+          "title": "The two Calders",
+          "prompt": "Both Calders have the town edition. Only one received Steve’s marked copy after the cell door closed. His pocket grid reads ‘23 Across: beyond imitation (10), I _ I _ I _ A _ L _’. The down headings over its first, second and last blanks are 3, 8 and 12. Radio or paper? The guard can hear the radio; June can slip back a square of paper.",
+          "options": [
+            "Ask about a shared childhood",
+            "Ask for today’s unfinished crossword answer",
+            "Choose the friendlier Sheriff"
+          ],
+          "answer": 1,
+          "lines": [
+            "c6_jail.crossword.01",
+            "c6_jail.crossword.02"
+          ],
+          "note": "Identified and freed the original Calder.",
+          "requires": [
+            "c6_jail.mail",
+            "c6_jail.distract"
+          ],
+          "actor": "steve",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Retrieve the private mark from the entry for Pell’s sorting case. The public crossword alone proves little.",
+            "Solve 23 Across, then count its letters from the left for the crossing.",
+            "Ask for 23 Across / 8 Down and accept the circled M. INIMITABLE has M as its fourth letter."
+          ],
+          "puzzle": {
+            "instruction": "Use Steve’s notebook entry for Pell’s sorting case. Ask for the marked crossing, then check the handwritten reply.",
+            "rows": [
+              {
+                "label": "Crossing to ask for",
+                "options": [
+                  "17 Across / 8 Down",
+                  "23 Across / 3 Down",
+                  "23 Across / 8 Down"
+                ]
+              },
+              {
+                "label": "Accept the slip with",
+                "options": [
+                  "An M circled",
+                  "A T circled",
+                  "An A circled"
+                ]
+              }
+            ],
+            "solution": [
+              2,
+              0
+            ]
+          }
+        },
+        {
+          "id": "c6_jail.exit",
+          "title": "Deputy’s checkpoint",
+          "prompt": "Lyle’s copy has written ‘Front row, two boys’ beside tonight’s duty roster. His partner has already signed the relief line. The school ticket says ‘Admit one’. June waits for Steve to speak.",
+          "options": [
+            "Offer to keep the ticket safe until the morning",
+            "Tell him his relief has signed and let him decide where to go",
+            "Ask if June can take his seat and tell him how the boys did"
+          ],
+          "answer": 1,
+          "lines": [
+            "c6_jail.exit.01",
+            "c6_jail.exit.02"
+          ],
+          "note": "Lyle’s copy chose his family over his orders.",
+          "requires": [
+            "c6_jail.crossword"
+          ],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Feel the edges of the three slips.",
+            "A school stub admits one person; it cannot release someone from duty. Use the departure time of each bus, or start walking when the relief signs.",
+            "The walk arrives at 18:42, A at 18:38 and B at 18:41. Check cover, offer Lyle the stub, wait for his choice, then meet the van."
+          ],
+          "puzzle": {
+            "presentation": "case_board",
+            "instruction": "Lyle is still on duty at the checkpoint. June wants to show him that he can leave of his own accord. Sort the evening papers before the van comes.",
+            "evidence": [
+              "Three signatures have been rubbed off. The embossed star appears only on duty records. The school uses perforated stock. Gus writes on the waxy back of a bread order.",
+              "The perforated stub says ADMIT ONE / FRONT ROW. Two boys’ names are pencilled in the margin. The waxed slip promises a bakery van at the loading door.",
+              "Relief signs at 18:24. The school doors close at 18:40. A walk from the jail takes 18 minutes. Bus A leaves at 18:29 and takes 9 minutes; bus B leaves at 18:26 and takes 15 minutes.",
+              "House practice: check that cover is signed before inviting a deputy to hand over. The signed RELIEF line covers the post. The time on the school stub is a firm last entry. Only after Lyle elects to leave can June collect the group at the loading door."
+            ],
+            "stages": [
+              {
+                "mode": "match",
+                "prompt": "Return the torn slips to their owners.",
+                "slots": [
+                  "Perforated stock",
+                  "Star embossing",
+                  "Waxed slip"
+                ],
+                "pieces": [
+                  "Gus",
+                  "Duty desk",
+                  "School"
+                ],
+                "answer": [
+                  2,
+                  1,
+                  0
+                ]
+              },
+              {
+                "mode": "match",
+                "prompt": "If Lyle leaves as soon as his relief signs, work out his school-door arrival for each route.",
+                "slots": [
+                  "Walk the whole way",
+                  "Wait for bus A",
+                  "Wait for bus B"
+                ],
+                "pieces": [
+                  "18:41",
+                  "18:42",
+                  "18:38"
+                ],
+                "answer": [
+                  1,
+                  2,
+                  0
+                ]
+              },
+              {
+                "mode": "order",
+                "prompt": "Lay out June’s handover so Lyle keeps control of his decision.",
+                "slots": [
+                  "First",
+                  "Second",
+                  "Third",
+                  "Fourth"
+                ],
+                "pieces": [
+                  "Lyle chooses whether to leave",
+                  "Read the relief signature",
+                  "Meet the van",
+                  "Offer him the stub"
+                ],
+                "answer": [
+                  1,
+                  3,
+                  0,
+                  2
+                ]
+              }
+            ],
+            "solution": [
+              2,
+              1,
+              0,
+              1,
+              2,
+              0,
+              1,
+              3,
+              0,
+              2
+            ],
+            "rows": [
+              {
+                "label": "Perforated stock",
+                "options": [
+                  "Gus",
+                  "Duty desk",
+                  "School"
+                ]
+              },
+              {
+                "label": "Star embossing",
+                "options": [
+                  "Gus",
+                  "Duty desk",
+                  "School"
+                ]
+              },
+              {
+                "label": "Waxed slip",
+                "options": [
+                  "Gus",
+                  "Duty desk",
+                  "School"
+                ]
+              },
+              {
+                "label": "Walk the whole way",
+                "options": [
+                  "18:41",
+                  "18:42",
+                  "18:38"
+                ]
+              },
+              {
+                "label": "Wait for bus A",
+                "options": [
+                  "18:41",
+                  "18:42",
+                  "18:38"
+                ]
+              },
+              {
+                "label": "Wait for bus B",
+                "options": [
+                  "18:41",
+                  "18:42",
+                  "18:38"
+                ]
+              },
+              {
+                "label": "First",
+                "options": [
+                  "Lyle chooses whether to leave",
+                  "Read the relief signature",
+                  "Meet the van",
+                  "Offer him the stub"
+                ]
+              },
+              {
+                "label": "Second",
+                "options": [
+                  "Lyle chooses whether to leave",
+                  "Read the relief signature",
+                  "Meet the van",
+                  "Offer him the stub"
+                ]
+              },
+              {
+                "label": "Third",
+                "options": [
+                  "Lyle chooses whether to leave",
+                  "Read the relief signature",
+                  "Meet the van",
+                  "Offer him the stub"
+                ]
+              },
+              {
+                "label": "Fourth",
+                "options": [
+                  "Lyle chooses whether to leave",
+                  "Read the relief signature",
+                  "Meet the van",
+                  "Offer him the stub"
+                ]
+              }
+            ],
+            "hints": [
+              "Feel the edges of the three slips.",
+              "A school stub admits one person; it cannot release someone from duty. Use the departure time of each bus, or start walking when the relief signs.",
+              "The walk arrives at 18:42, A at 18:38 and B at 18:41. Check cover, offer Lyle the stub, wait for his choice, then meet the van."
+            ]
+          }
+        }
+      ],
+      "intro": [
+        "c6_jail.in.01",
+        "c6_jail.in.02",
+        "c6_jail.in.03"
+      ],
+      "outro": [
+        "c6_jail.out.01",
+        "c6_jail.out.02",
+        "c6_jail.out.03"
+      ],
+      "shots": [
+        {
+          "duration": 5.0,
+          "move": "establish",
+          "direction": "Cross the mail-sorting wall to a jail corridor; finish beneath a bakery van’s giant croissant."
+        },
+        {
+          "duration": 6.0,
+          "move": "push",
+          "direction": "Move toward the active interaction."
+        }
+      ]
+    },
+    {
+      "id": "i2_nora",
+      "chapter": "Interlude 2",
+      "title": "Nobody is coming to fix this",
+      "place": "The Gallery",
+      "style": "gallery",
+      "actors": [
+        "nora"
+      ],
+      "objective": "Organize the half-awake sleepers between patrols.",
+      "tasks": [
+        {
+          "id": "i2_nora.patrol",
+          "title": "Guard circuit",
+          "prompt": "Nora scratches times against the bed rail. On the first lap: boots at 02, pump at 05, door at 08, boots again at 14. The guard can see the aisle until the door shuts. It takes four counts to cross. On the next lap the boots arrive at 14.",
+          "options": [
+            "Move when the far door closes",
+            "Move on the guard’s first footstep",
+            "Shout for everyone to wake"
+          ],
+          "answer": 0,
+          "lines": [
+            "i2_nora.patrol.01"
+          ],
+          "note": "Learned the patrol interval.",
+          "requires": [],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Find the length of a whole lap using the boots.",
+            "The door closed six counts after the boots. Add four more for the crossing.",
+            "Leave at 20 and reach cover at 24, before the next boots at 26."
+          ],
+          "puzzle": {
+            "instruction": "Use the next lap and allow all four counts for the crossing.",
+            "rows": [
+              {
+                "label": "Step out at count",
+                "options": [
+                  "17",
+                  "20",
+                  "23"
+                ]
+              },
+              {
+                "label": "Reach cover at count",
+                "options": [
+                  "21",
+                  "24",
+                  "27"
+                ]
+              }
+            ],
+            "solution": [
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "id": "i2_nora.jobs",
+          "title": "Sleeper skills",
+          "prompt": "Nora asks for volunteers. Lyle has kept two doors from jamming. Dale can repeat all five turns with his eyes shut. Nora has sketched where the blue water crosses the return pipe. Which rota leaves someone at each job they have practised?",
+          "options": [
+            "Dale at the latch, Nora on directions, Lyle at the gauge",
+            "Nora at the latch, Lyle on directions, Dale at the gauge",
+            "Lyle at the latch, Dale on directions, Nora at the gauge"
+          ],
+          "answer": 2,
+          "lines": [
+            "i2_nora.jobs.01",
+            "i2_nora.jobs.02",
+            "i2_nora.jobs.03"
+          ],
+          "note": "Lyle minded the latch. Dale remembered the turns. Nora traced circulation through the Gallery.",
+          "requires": [
+            "i2_nora.patrol"
+          ],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Each skill came from something Nora personally observed.",
+            "The hatch comes before the fork. The nearer turn takes everyone back.",
+            "Lyle wedges the hatch, Dale takes the far branch, and Nora reads the lower RETURN gauge."
+          ],
+          "puzzle": {
+            "presentation": "case_board",
+            "instruction": "Three sleepers, one trip along an aisle they can cross only between patrols. Nora must fit each person’s knowledge to the route.",
+            "evidence": [
+              "Lyle left two fresh wedge marks on a sticking hatch. Dale can recite the turn sequence without opening his eyes. Nora drew the lines in the return-water circuit.",
+              "Nora’s pencil map: from the beds the striped aisle ends at the sticking hatch. Beyond the hatch a fork has lost its arrows. Each branch ends in a gauge cabinet.",
+              "Dale’s memory: at the fork the nearer turn led straight back to the beds. The other turn ended at the gauge beside a cold return pipe.",
+              "At the right cabinet, the upper dial belongs to the empty wash line. The lower dial is stamped RETURN. Nobody has opened a pipe yet."
+            ],
+            "stages": [
+              {
+                "mode": "match",
+                "prompt": "Set the first person responsible for each job.",
+                "slots": [
+                  "Keep an exit available",
+                  "Guide the party at the fork",
+                  "Read the working circuit"
+                ],
+                "pieces": [
+                  "Dale",
+                  "Nora",
+                  "Lyle"
+                ],
+                "answer": [
+                  2,
+                  0,
+                  1
+                ]
+              },
+              {
+                "mode": "route",
+                "prompt": "Trace the walk from bed to the instrument Nora needs.",
+                "slots": [
+                  "Aisle end",
+                  "Next landmark",
+                  "Turn to take",
+                  "Final instrument"
+                ],
+                "pieces": [
+                  "Far branch",
+                  "Lower dial",
+                  "Sticking hatch",
+                  "Unmarked fork"
+                ],
+                "answer": [
+                  2,
+                  3,
+                  0,
+                  1
+                ]
+              },
+              {
+                "mode": "match",
+                "prompt": "Log what each sleeper could check on this trip.",
+                "slots": [
+                  "Lyle",
+                  "Nora",
+                  "Dale"
+                ],
+                "pieces": [
+                  "Which circuit the gauge reads",
+                  "Which branch returns home",
+                  "Whether the hatch stays open"
+                ],
+                "answer": [
+                  2,
+                  0,
+                  1
+                ]
+              }
+            ],
+            "solution": [
+              2,
+              0,
+              1,
+              2,
+              3,
+              0,
+              1,
+              2,
+              0,
+              1
+            ],
+            "rows": [
+              {
+                "label": "Keep an exit available",
+                "options": [
+                  "Dale",
+                  "Nora",
+                  "Lyle"
+                ]
+              },
+              {
+                "label": "Guide the party at the fork",
+                "options": [
+                  "Dale",
+                  "Nora",
+                  "Lyle"
+                ]
+              },
+              {
+                "label": "Read the working circuit",
+                "options": [
+                  "Dale",
+                  "Nora",
+                  "Lyle"
+                ]
+              },
+              {
+                "label": "Aisle end",
+                "options": [
+                  "Far branch",
+                  "Lower dial",
+                  "Sticking hatch",
+                  "Unmarked fork"
+                ]
+              },
+              {
+                "label": "Next landmark",
+                "options": [
+                  "Far branch",
+                  "Lower dial",
+                  "Sticking hatch",
+                  "Unmarked fork"
+                ]
+              },
+              {
+                "label": "Turn to take",
+                "options": [
+                  "Far branch",
+                  "Lower dial",
+                  "Sticking hatch",
+                  "Unmarked fork"
+                ]
+              },
+              {
+                "label": "Final instrument",
+                "options": [
+                  "Far branch",
+                  "Lower dial",
+                  "Sticking hatch",
+                  "Unmarked fork"
+                ]
+              },
+              {
+                "label": "Lyle",
+                "options": [
+                  "Which circuit the gauge reads",
+                  "Which branch returns home",
+                  "Whether the hatch stays open"
+                ]
+              },
+              {
+                "label": "Nora",
+                "options": [
+                  "Which circuit the gauge reads",
+                  "Which branch returns home",
+                  "Whether the hatch stays open"
+                ]
+              },
+              {
+                "label": "Dale",
+                "options": [
+                  "Which circuit the gauge reads",
+                  "Which branch returns home",
+                  "Whether the hatch stays open"
+                ]
+              }
+            ],
+            "hints": [
+              "Each skill came from something Nora personally observed.",
+              "The hatch comes before the fork. The nearer turn takes everyone back.",
+              "Lyle wedges the hatch, Dale takes the far branch, and Nora reads the lower RETURN gauge."
+            ]
+          }
+        },
+        {
+          "id": "i2_nora.pump",
+          "title": "Gallery circulation",
+          "prompt": "Nora copies the readings from the three service trials. Amber: bed flow 4, hatch pressure 7. Blue: bed flow 4, hatch pressure 2. White: bed flow 1, hatch pressure 2. The handwritten limits are bed flow at least 3 and hatch pressure below 3.",
+          "options": [
+            "Shut down life support",
+            "Use the service bypass",
+            "Open every valve"
+          ],
+          "answer": 1,
+          "lines": [
+            "i2_nora.pump.01"
+          ],
+          "note": "Prepared a safe route through the Gallery.",
+          "requires": [
+            "i2_nora.jobs"
+          ],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "puzzle": {
+            "instruction": "Set the service branch. Decide which reading gives Nora clearance to open the hatch.",
+            "rows": [
+              {
+                "label": "Branch",
+                "options": [
+                  "Amber",
+                  "White",
+                  "Blue"
+                ]
+              },
+              {
+                "label": "Clearance on both gauges",
+                "options": [
+                  "Beds 1 / hatch 2",
+                  "Beds 4 / hatch 2",
+                  "Beds 4 / hatch 7"
+                ]
+              }
+            ],
+            "solution": [
+              2,
+              1
+            ]
+          },
+          "hints": [
+            "A low reading on the hatch alone cannot tell you about the beds.",
+            "Amber keeps bed flow up. White relieves pressure. Test the remaining branch against both limits.",
+            "Choose Blue and wait for beds 4 / hatch 2."
+          ]
+        },
+        {
+          "id": "i2_nora.message",
+          "title": "Gallery intercom",
+          "prompt": "Three slots on the Gallery intercom: A plays in every bed now, B keeps one message by this bed until someone presses PLAY, C clears itself when Dale changes the watch. Steve may arrive on another watch. Where can Nora leave her words?",
+          "options": [
+            "Slot C",
+            "Slot A",
+            "Slot B"
+          ],
+          "answer": 2,
+          "lines": [
+            "i2_nora.message.01"
+          ],
+          "note": "Nora left a message for Steve.",
+          "requires": [
+            "i2_nora.pump"
+          ],
+          "actor": "",
+          "kind": "record",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Who should hear the message, and when?",
+            "Nora needs it to survive a change of watch.",
+            "Use slot B. Only a visitor at this bed can start playback."
+          ]
+        }
+      ],
+      "intro": [
+        "i2_nora.in.01",
+        "i2_nora.in.02",
+        "i2_nora.in.03"
+      ],
+      "outro": [
+        "i2_nora.out.01",
+        "i2_nora.out.02",
+        "i2_nora.out.03"
+      ],
+      "shots": [
+        {
+          "duration": 5.0,
+          "move": "establish",
+          "direction": "Travel at sleeper height through amber beds to the enormous eye in Row Zero."
+        },
+        {
+          "duration": 6.0,
+          "move": "push",
+          "direction": "Move toward the active interaction."
+        }
+      ],
+      "card": {
+        "chapter": {
+          "kicker": "Interlude",
+          "title": "Nora",
+          "when": "Inside the Long Patience",
+          "goal": "Nora wakes up on the ship. Nobody is coming to fix this."
+        }
+      }
     }
   ],
   "lines": {
@@ -5373,6 +6599,225 @@
       "speaker": "steve",
       "text": "Sit down. There’s something you need to know.",
       "audio": "c5_station.stephen.02"
+    },
+    "c6_iris.in.01": {
+      "id": "c6_iris.in.01",
+      "speaker": "stephen",
+      "text": "You hide. I’ll be charming in public. We should each use our strengths.",
+      "audio": "c6_iris.in.01"
+    },
+    "c6_iris.in.02": {
+      "id": "c6_iris.in.02",
+      "speaker": "iris",
+      "text": "I sent the message about Rook. Please listen before you decide what I am.",
+      "audio": "c6_iris.in.02",
+      "display_speaker": "Nora’s copy"
+    },
+    "c6_iris.out.01": {
+      "id": "c6_iris.out.01",
+      "speaker": "iris",
+      "text": "Those Sunday dinners happened to me. I won’t let them take them away.",
+      "audio": "c6_iris.out.01",
+      "display_speaker": "Nora’s copy"
+    },
+    "c6_iris.out.02": {
+      "id": "c6_iris.out.02",
+      "speaker": "steve",
+      "text": "What should I call you?",
+      "audio": "c6_iris.out.02"
+    },
+    "c6_iris.out.03": {
+      "id": "c6_iris.out.03",
+      "speaker": "iris",
+      "text": "Iris. After the flowers.",
+      "audio": "c6_iris.out.03",
+      "display_speaker": "Nora’s copy"
+    },
+    "c6_iris.alibi.01": {
+      "id": "c6_iris.alibi.01",
+      "speaker": "stephen",
+      "text": "Good evening. Yes, that is my face on the poster. Terrible photograph.",
+      "audio": "c6_iris.alibi.01"
+    },
+    "c6_iris.takes.01": {
+      "id": "c6_iris.takes.01",
+      "speaker": "iris",
+      "text": "I stayed because I wanted to.",
+      "audio": "c6_iris.takes.01",
+      "display_speaker": "Nora’s copy"
+    },
+    "c6_iris.takes.02": {
+      "id": "c6_iris.takes.02",
+      "speaker": "iris",
+      "text": "I stayed... because I wanted to.",
+      "audio": "c6_iris.takes.02",
+      "display_speaker": "Nora’s copy"
+    },
+    "c6_iris.takes.03": {
+      "id": "c6_iris.takes.03",
+      "speaker": "steve",
+      "text": "Two different takes. You’re choosing what to say.",
+      "audio": "c6_iris.takes.03"
+    },
+    "c6_iris.hold.01": {
+      "id": "c6_iris.hold.01",
+      "speaker": "iris",
+      "text": "The signal is inside the music. Near the bay we go below. Far away, we call.",
+      "audio": "c6_iris.hold.01",
+      "display_speaker": "Nora’s copy"
+    },
+    "c6_iris.hold.02": {
+      "id": "c6_iris.hold.02",
+      "speaker": "steve",
+      "text": "Rook was never waiting for the Bureau.",
+      "audio": "c6_iris.hold.02"
+    },
+    "c6_jail.in.01": {
+      "id": "c6_jail.in.01",
+      "speaker": "pell",
+      "text": "I am required to report your location.",
+      "audio": "c6_jail.in.01"
+    },
+    "c6_jail.in.02": {
+      "id": "c6_jail.in.02",
+      "speaker": "pell",
+      "text": "Biscuit, Steve Mercer is here. My duty is complete.",
+      "audio": "c6_jail.in.02"
+    },
+    "c6_jail.in.03": {
+      "id": "c6_jail.in.03",
+      "speaker": "stephen",
+      "text": "We should put the dog in charge.",
+      "audio": "c6_jail.in.03"
+    },
+    "c6_jail.out.01": {
+      "id": "c6_jail.out.01",
+      "speaker": "iris",
+      "text": "Nora found the ring a year ago. It is not mine to answer.",
+      "audio": "c6_jail.out.01"
+    },
+    "c6_jail.out.02": {
+      "id": "c6_jail.out.02",
+      "speaker": "gus",
+      "text": "Take the van. I don’t know why, but I trust you.",
+      "audio": "c6_jail.out.02"
+    },
+    "c6_jail.out.03": {
+      "id": "c6_jail.out.03",
+      "speaker": "iris",
+      "text": "We’re starting to forget. Stephen and I have days.",
+      "audio": "c6_jail.out.03"
+    },
+    "c6_jail.mail.01": {
+      "id": "c6_jail.mail.01",
+      "speaker": "pell",
+      "text": "Correctly delivered. Biscuit may inspect the chain of custody.",
+      "audio": "c6_jail.mail.01"
+    },
+    "c6_jail.distract.01": {
+      "id": "c6_jail.distract.01",
+      "speaker": "stephen",
+      "text": "I would like a better photograph. My family will be seeing these.",
+      "audio": "c6_jail.distract.01"
+    },
+    "c6_jail.crossword.01": {
+      "id": "c6_jail.crossword.01",
+      "speaker": "calder",
+      "text": "Twenty-three across. Inimitable. Unlike my colleague’s handwriting.",
+      "audio": "c6_jail.crossword.01"
+    },
+    "c6_jail.crossword.02": {
+      "id": "c6_jail.crossword.02",
+      "speaker": "steve",
+      "text": "June. We’re getting you out.",
+      "audio": "c6_jail.crossword.02"
+    },
+    "c6_jail.exit.01": {
+      "id": "c6_jail.exit.01",
+      "speaker": "lyle_copy",
+      "text": "They gave me a seat in the front row.",
+      "audio": "c6_jail.exit.01"
+    },
+    "c6_jail.exit.02": {
+      "id": "c6_jail.exit.02",
+      "speaker": "calder",
+      "text": "Then you’d better get there. We can talk tomorrow.",
+      "audio": "c6_jail.exit.02"
+    },
+    "i2_nora.in.01": {
+      "id": "i2_nora.in.01",
+      "speaker": "nora",
+      "text": "I can move my hand. That’s a start.",
+      "audio": "i2_nora.in.01"
+    },
+    "i2_nora.in.02": {
+      "id": "i2_nora.in.02",
+      "speaker": "dale",
+      "text": "If this is a hospital, I’m changing hospitals.",
+      "audio": "i2_nora.in.02"
+    },
+    "i2_nora.in.03": {
+      "id": "i2_nora.in.03",
+      "speaker": "nora",
+      "text": "Names first. Complaints after we have a plan.",
+      "audio": "i2_nora.in.03"
+    },
+    "i2_nora.out.01": {
+      "id": "i2_nora.out.01",
+      "speaker": "nora",
+      "text": "Helen. Frank. Steve is going to be so glad.",
+      "audio": "i2_nora.out.01"
+    },
+    "i2_nora.out.02": {
+      "id": "i2_nora.out.02",
+      "speaker": "nora",
+      "text": "Mrs. Penhallow? Row three. I should remember that.",
+      "audio": "i2_nora.out.02"
+    },
+    "i2_nora.out.03": {
+      "id": "i2_nora.out.03",
+      "speaker": "nora",
+      "text": "And you, under the frost... you can hear me, can’t you?",
+      "audio": "i2_nora.out.03",
+      "cue": "wick"
+    },
+    "i2_nora.patrol.01": {
+      "id": "i2_nora.patrol.01",
+      "speaker": "nora",
+      "text": "Wait. Now. Keep low. We can argue about my tone after we’re out.",
+      "audio": "i2_nora.patrol.01"
+    },
+    "i2_nora.jobs.01": {
+      "id": "i2_nora.jobs.01",
+      "speaker": "lyle",
+      "text": "I can keep that latch from catching.",
+      "audio": "i2_nora.jobs.01"
+    },
+    "i2_nora.jobs.02": {
+      "id": "i2_nora.jobs.02",
+      "speaker": "dale",
+      "text": "I’ll remember the turns.",
+      "audio": "i2_nora.jobs.02"
+    },
+    "i2_nora.jobs.03": {
+      "id": "i2_nora.jobs.03",
+      "speaker": "nora",
+      "text": "Good. I’ll handle the pump.",
+      "audio": "i2_nora.jobs.03"
+    },
+    "i2_nora.pump.01": {
+      "id": "i2_nora.pump.01",
+      "speaker": "nora",
+      "text": "Pressure down. Nobody’s breathing changes. That’s our route.",
+      "audio": "i2_nora.pump.01"
+    },
+    "i2_nora.message.01": {
+      "id": "i2_nora.message.01",
+      "speaker": "nora",
+      "text": "Steve, if you ever hear this message: I am furious with you. I love you. Please stop making me do both alone.",
+      "audio": "c9_gallery.out.03",
+      "delivery": "private_recording",
+      "display_text": "Nora records a private message for Steve."
     }
   },
   "sound_labels": {
@@ -5498,6 +6943,27 @@
           "id": "radio_investigation",
           "after": "c5_shack.log",
           "text": "They went to locate the signal Frank was tracking."
+        }
+      ]
+    },
+    "iris": {
+      "title": "Why did she let me leave?",
+      "clues": [
+        "c1_escape.cross",
+        "c6_iris.takes",
+        "c6_iris.hold",
+        "c6_jail.exit"
+      ],
+      "theories": [
+        {
+          "id": "fixed_record",
+          "after": "c6_iris.takes",
+          "text": "She can only repeat what Nora would have done."
+        },
+        {
+          "id": "own_choice",
+          "after": "c6_iris.takes",
+          "text": "She can make a choice Nora never made."
         }
       ]
     }
