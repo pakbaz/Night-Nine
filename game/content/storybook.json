@@ -303,6 +303,186 @@
           ]
         }
       ]
+    },
+    "after": {
+      "title": "After the ninth night",
+      "before": "one_year",
+      "music": {
+        "file": "res://assets/audio/music/prologue-theme.mp3",
+        "bar": 31,
+        "continue": true
+      },
+      "end_bar": 54,
+      "panels": [
+        {
+          "bar": 31,
+          "image": "res://assets/illustrated/campaign/rooms/epilogue.webp",
+          "from": [
+            0.45,
+            0.5,
+            1.0
+          ],
+          "to": [
+            0.55,
+            0.5,
+            1.12
+          ],
+          "lines": [
+            {
+              "bar": 31.25,
+              "text": "Before the ship left, the Choir gave the copies one last gift. They don’t need the ninth night anymore.",
+              "narration": "res://assets/audio/voices/narration/after-01.wav",
+              "seconds": 6.745
+            },
+            {
+              "bar": 33.497,
+              "text": "More than two hundred of them stayed. Bellwether has a lot of new neighbors with familiar faces.",
+              "narration": "res://assets/audio/voices/narration/after-02.wav",
+              "seconds": 6.26
+            }
+          ]
+        },
+        {
+          "bar": 36.0,
+          "image": "res://assets/illustrated/campaign/inserts/c1_pier.webp",
+          "from": [
+            0.55,
+            0.45,
+            1.12
+          ],
+          "to": [
+            0.45,
+            0.5,
+            1.0
+          ],
+          "lines": [
+            {
+              "bar": 36.25,
+              "text": "Sunday dinner is still at six. Iris comes too.",
+              "narration": "res://assets/audio/voices/narration/after-03.wav",
+              "seconds": 3.519
+            },
+            {
+              "bar": 37.475,
+              "text": "Nora hasn’t forgiven her for the kidnapping. She tells her so, and passes her the bread.",
+              "narration": "res://assets/audio/voices/narration/after-04.wav",
+              "seconds": 5.307
+            }
+          ]
+        },
+        {
+          "bar": 39.5,
+          "image": "res://assets/illustrated/campaign/rooms/c5_shack.webp",
+          "from": [
+            0.45,
+            0.55,
+            1.0
+          ],
+          "to": [
+            0.35,
+            0.6,
+            1.12
+          ],
+          "lines": [
+            {
+              "bar": 39.75,
+              "text": "Mom and Dad came home. Dad is back on the radio every Thursday.",
+              "narration": "res://assets/audio/voices/narration/after-05.wav",
+              "seconds": 4.243
+            },
+            {
+              "bar": 41.204,
+              "text": "There’s a new note on the kitchen table every morning. Most of them are about paint.",
+              "narration": "res://assets/audio/voices/narration/after-06.wav",
+              "seconds": 5.35
+            }
+          ]
+        },
+        {
+          "bar": 43.5,
+          "image": "res://assets/illustrated/title.webp",
+          "from": [
+            0.72,
+            0.46,
+            1.6
+          ],
+          "to": [
+            0.75,
+            0.38,
+            1.72
+          ],
+          "lines": [
+            {
+              "bar": 43.75,
+              "text": "I don’t play the old voicemail anymore.",
+              "narration": "res://assets/audio/voices/narration/after-07.wav",
+              "seconds": 2.37
+            },
+            {
+              "bar": 44.611,
+              "text": "The ring moved from my sock drawer to my cardigan pocket. Nora and I are starting with coffee, and an actual conversation.",
+              "narration": "res://assets/audio/voices/narration/after-08.wav",
+              "seconds": 7.945
+            }
+          ]
+        },
+        {
+          "bar": 47.5,
+          "image": "res://assets/illustrated/campaign/rooms/one_year.webp",
+          "from": [
+            0.4,
+            0.5,
+            1.12
+          ],
+          "to": [
+            0.55,
+            0.45,
+            1.0
+          ],
+          "lines": [
+            {
+              "bar": 47.75,
+              "text": "KBWR has live hosts again. Two of them.",
+              "narration": "res://assets/audio/voices/narration/after-09.wav",
+              "seconds": 3.65
+            },
+            {
+              "bar": 49.017,
+              "text": "Stephen and I still argue about which one of us is the upgrade.",
+              "narration": "res://assets/audio/voices/narration/after-10.wav",
+              "seconds": 3.772
+            }
+          ]
+        },
+        {
+          "bar": 50.5,
+          "image": "res://assets/illustrated/campaign/films/one_year.webp",
+          "from": [
+            0.5,
+            0.55,
+            1.0
+          ],
+          "to": [
+            0.62,
+            0.42,
+            1.15
+          ],
+          "lines": [
+            {
+              "bar": 50.75,
+              "text": "One year after the ninth night, a package arrived at the station.",
+              "narration": "res://assets/audio/voices/narration/after-11.wav",
+              "seconds": 3.867
+            },
+            {
+              "bar": 52.085,
+              "text": "From very, very far away.",
+              "narration": "res://assets/audio/voices/narration/after-12.wav",
+              "seconds": 2.963
+            }
+          ]
+        }
+      ]
     }
   }
 }

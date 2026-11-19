@@ -2,6 +2,5534 @@
   "schema": 1,
   "generator": "Rhubarb Lip Sync",
   "takes": {
+    "c10_live.first.01": {
+      "audio_sha256": "d89b0898d153a62ecafa88ac1da6e08049ba025ffbbbc8be00f047d8756b10c2",
+      "seconds": 5.7991875,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.04,
+          "value": "X"
+        },
+        {
+          "start": 0.04,
+          "end": 0.19,
+          "value": "G"
+        },
+        {
+          "start": 0.19,
+          "end": 0.33,
+          "value": "E"
+        },
+        {
+          "start": 0.33,
+          "end": 1.2,
+          "value": "B"
+        },
+        {
+          "start": 1.2,
+          "end": 1.41,
+          "value": "C"
+        },
+        {
+          "start": 1.41,
+          "end": 2.02,
+          "value": "X"
+        },
+        {
+          "start": 2.02,
+          "end": 2.12,
+          "value": "B"
+        },
+        {
+          "start": 2.12,
+          "end": 2.26,
+          "value": "C"
+        },
+        {
+          "start": 2.26,
+          "end": 2.61,
+          "value": "B"
+        },
+        {
+          "start": 2.61,
+          "end": 2.81,
+          "value": "X"
+        },
+        {
+          "start": 2.81,
+          "end": 3.41,
+          "value": "B"
+        },
+        {
+          "start": 3.41,
+          "end": 3.62,
+          "value": "C"
+        },
+        {
+          "start": 3.62,
+          "end": 4.16,
+          "value": "X"
+        },
+        {
+          "start": 4.16,
+          "end": 4.23,
+          "value": "H"
+        },
+        {
+          "start": 4.23,
+          "end": 4.37,
+          "value": "C"
+        },
+        {
+          "start": 4.37,
+          "end": 4.51,
+          "value": "B"
+        },
+        {
+          "start": 4.51,
+          "end": 4.71,
+          "value": "D"
+        },
+        {
+          "start": 4.71,
+          "end": 4.79,
+          "value": "C"
+        },
+        {
+          "start": 4.79,
+          "end": 4.87,
+          "value": "A"
+        },
+        {
+          "start": 4.87,
+          "end": 5.04,
+          "value": "E"
+        },
+        {
+          "start": 5.04,
+          "end": 5.46,
+          "value": "B"
+        },
+        {
+          "start": 5.46,
+          "end": 5.6,
+          "value": "G"
+        },
+        {
+          "start": 5.6,
+          "end": 5.79,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "c10_live.first.02": {
+      "audio_sha256": "3b6271f9b4c3329a77aeb5200fae201f9855f2e88ff51bd359874409c8078400",
+      "seconds": 3.0040833333333334,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.04,
+          "value": "X"
+        },
+        {
+          "start": 0.04,
+          "end": 0.16,
+          "value": "G"
+        },
+        {
+          "start": 0.16,
+          "end": 0.37,
+          "value": "B"
+        },
+        {
+          "start": 0.37,
+          "end": 0.51,
+          "value": "H"
+        },
+        {
+          "start": 0.51,
+          "end": 0.58,
+          "value": "C"
+        },
+        {
+          "start": 0.58,
+          "end": 0.79,
+          "value": "B"
+        },
+        {
+          "start": 0.79,
+          "end": 0.86,
+          "value": "G"
+        },
+        {
+          "start": 0.86,
+          "end": 1.0,
+          "value": "D"
+        },
+        {
+          "start": 1.0,
+          "end": 1.14,
+          "value": "E"
+        },
+        {
+          "start": 1.14,
+          "end": 1.42,
+          "value": "B"
+        },
+        {
+          "start": 1.42,
+          "end": 1.86,
+          "value": "X"
+        },
+        {
+          "start": 1.86,
+          "end": 1.91,
+          "value": "F"
+        },
+        {
+          "start": 1.91,
+          "end": 2.1,
+          "value": "C"
+        },
+        {
+          "start": 2.1,
+          "end": 2.18,
+          "value": "A"
+        },
+        {
+          "start": 2.18,
+          "end": 2.31,
+          "value": "C"
+        },
+        {
+          "start": 2.31,
+          "end": 2.52,
+          "value": "B"
+        },
+        {
+          "start": 2.52,
+          "end": 2.59,
+          "value": "C"
+        },
+        {
+          "start": 2.59,
+          "end": 2.87,
+          "value": "B"
+        },
+        {
+          "start": 2.87,
+          "end": 3.0,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "c10_live.in.01": {
+      "audio_sha256": "24239aa3bd41181e9847bc13da7f07af4e324df0630d257303798237d9499654",
+      "seconds": 7.2359375,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.01,
+          "value": "X"
+        },
+        {
+          "start": 0.01,
+          "end": 0.07,
+          "value": "A"
+        },
+        {
+          "start": 0.07,
+          "end": 0.21,
+          "value": "C"
+        },
+        {
+          "start": 0.21,
+          "end": 0.35,
+          "value": "H"
+        },
+        {
+          "start": 0.35,
+          "end": 0.42,
+          "value": "F"
+        },
+        {
+          "start": 0.42,
+          "end": 0.49,
+          "value": "B"
+        },
+        {
+          "start": 0.49,
+          "end": 0.84,
+          "value": "E"
+        },
+        {
+          "start": 0.84,
+          "end": 1.26,
+          "value": "B"
+        },
+        {
+          "start": 1.26,
+          "end": 1.33,
+          "value": "C"
+        },
+        {
+          "start": 1.33,
+          "end": 1.61,
+          "value": "B"
+        },
+        {
+          "start": 1.61,
+          "end": 1.68,
+          "value": "G"
+        },
+        {
+          "start": 1.68,
+          "end": 1.77,
+          "value": "A"
+        },
+        {
+          "start": 1.77,
+          "end": 1.86,
+          "value": "E"
+        },
+        {
+          "start": 1.86,
+          "end": 2.0,
+          "value": "B"
+        },
+        {
+          "start": 2.0,
+          "end": 2.32,
+          "value": "E"
+        },
+        {
+          "start": 2.32,
+          "end": 2.53,
+          "value": "H"
+        },
+        {
+          "start": 2.53,
+          "end": 2.67,
+          "value": "D"
+        },
+        {
+          "start": 2.67,
+          "end": 2.74,
+          "value": "B"
+        },
+        {
+          "start": 2.74,
+          "end": 2.95,
+          "value": "G"
+        },
+        {
+          "start": 2.95,
+          "end": 3.16,
+          "value": "B"
+        },
+        {
+          "start": 3.16,
+          "end": 3.39,
+          "value": "X"
+        },
+        {
+          "start": 3.39,
+          "end": 3.74,
+          "value": "B"
+        },
+        {
+          "start": 3.74,
+          "end": 3.81,
+          "value": "C"
+        },
+        {
+          "start": 3.81,
+          "end": 4.09,
+          "value": "F"
+        },
+        {
+          "start": 4.09,
+          "end": 4.23,
+          "value": "B"
+        },
+        {
+          "start": 4.23,
+          "end": 4.3,
+          "value": "C"
+        },
+        {
+          "start": 4.3,
+          "end": 4.51,
+          "value": "E"
+        },
+        {
+          "start": 4.51,
+          "end": 4.72,
+          "value": "F"
+        },
+        {
+          "start": 4.72,
+          "end": 5.03,
+          "value": "X"
+        },
+        {
+          "start": 5.03,
+          "end": 5.14,
+          "value": "B"
+        },
+        {
+          "start": 5.14,
+          "end": 5.21,
+          "value": "G"
+        },
+        {
+          "start": 5.21,
+          "end": 5.28,
+          "value": "E"
+        },
+        {
+          "start": 5.28,
+          "end": 5.42,
+          "value": "F"
+        },
+        {
+          "start": 5.42,
+          "end": 5.56,
+          "value": "C"
+        },
+        {
+          "start": 5.56,
+          "end": 5.87,
+          "value": "B"
+        },
+        {
+          "start": 5.87,
+          "end": 5.97,
+          "value": "C"
+        },
+        {
+          "start": 5.97,
+          "end": 6.1,
+          "value": "A"
+        },
+        {
+          "start": 6.1,
+          "end": 6.17,
+          "value": "C"
+        },
+        {
+          "start": 6.17,
+          "end": 6.24,
+          "value": "D"
+        },
+        {
+          "start": 6.24,
+          "end": 6.45,
+          "value": "E"
+        },
+        {
+          "start": 6.45,
+          "end": 6.87,
+          "value": "B"
+        },
+        {
+          "start": 6.87,
+          "end": 7.01,
+          "value": "D"
+        },
+        {
+          "start": 7.01,
+          "end": 7.08,
+          "value": "B"
+        },
+        {
+          "start": 7.08,
+          "end": 7.23,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "c10_live.in.02": {
+      "audio_sha256": "f9e652b3c8ebde327b03b80023ac8499098654b4020e28e4c252f006af9b9de3",
+      "seconds": 2.0375625,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.06,
+          "value": "X"
+        },
+        {
+          "start": 0.06,
+          "end": 0.16,
+          "value": "F"
+        },
+        {
+          "start": 0.16,
+          "end": 0.3,
+          "value": "C"
+        },
+        {
+          "start": 0.3,
+          "end": 0.37,
+          "value": "D"
+        },
+        {
+          "start": 0.37,
+          "end": 0.65,
+          "value": "B"
+        },
+        {
+          "start": 0.65,
+          "end": 0.8,
+          "value": "A"
+        },
+        {
+          "start": 0.8,
+          "end": 0.86,
+          "value": "C"
+        },
+        {
+          "start": 0.86,
+          "end": 1.05,
+          "value": "B"
+        },
+        {
+          "start": 1.05,
+          "end": 1.12,
+          "value": "G"
+        },
+        {
+          "start": 1.12,
+          "end": 1.19,
+          "value": "E"
+        },
+        {
+          "start": 1.19,
+          "end": 1.26,
+          "value": "F"
+        },
+        {
+          "start": 1.26,
+          "end": 1.4,
+          "value": "B"
+        },
+        {
+          "start": 1.4,
+          "end": 1.68,
+          "value": "C"
+        },
+        {
+          "start": 1.68,
+          "end": 1.82,
+          "value": "B"
+        },
+        {
+          "start": 1.82,
+          "end": 2.03,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "c10_live.in.03": {
+      "audio_sha256": "dbe0944a23b4210931c8296dda8cbe77489b06ae422181b41e7d05779f671af0",
+      "seconds": 1.8808333333333334,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.06,
+          "value": "X"
+        },
+        {
+          "start": 0.06,
+          "end": 0.11,
+          "value": "C"
+        },
+        {
+          "start": 0.11,
+          "end": 0.15,
+          "value": "B"
+        },
+        {
+          "start": 0.15,
+          "end": 0.34,
+          "value": "D"
+        },
+        {
+          "start": 0.34,
+          "end": 0.39,
+          "value": "C"
+        },
+        {
+          "start": 0.39,
+          "end": 0.71,
+          "value": "B"
+        },
+        {
+          "start": 0.71,
+          "end": 1.01,
+          "value": "X"
+        },
+        {
+          "start": 1.01,
+          "end": 1.13,
+          "value": "B"
+        },
+        {
+          "start": 1.13,
+          "end": 1.2,
+          "value": "C"
+        },
+        {
+          "start": 1.2,
+          "end": 1.27,
+          "value": "B"
+        },
+        {
+          "start": 1.27,
+          "end": 1.34,
+          "value": "F"
+        },
+        {
+          "start": 1.34,
+          "end": 1.48,
+          "value": "B"
+        },
+        {
+          "start": 1.48,
+          "end": 1.56,
+          "value": "A"
+        },
+        {
+          "start": 1.56,
+          "end": 1.75,
+          "value": "B"
+        },
+        {
+          "start": 1.75,
+          "end": 1.88,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "c10_live.out.01": {
+      "audio_sha256": "c0f426e9685da394889c8fd1cb1efe8c408380e8aa64e53c5268671cefaa642b",
+      "seconds": 3.3175625,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.04,
+          "value": "X"
+        },
+        {
+          "start": 0.04,
+          "end": 0.36,
+          "value": "B"
+        },
+        {
+          "start": 0.36,
+          "end": 0.43,
+          "value": "C"
+        },
+        {
+          "start": 0.43,
+          "end": 0.71,
+          "value": "B"
+        },
+        {
+          "start": 0.71,
+          "end": 0.78,
+          "value": "E"
+        },
+        {
+          "start": 0.78,
+          "end": 0.85,
+          "value": "C"
+        },
+        {
+          "start": 0.85,
+          "end": 0.93,
+          "value": "A"
+        },
+        {
+          "start": 0.93,
+          "end": 1.47,
+          "value": "B"
+        },
+        {
+          "start": 1.47,
+          "end": 1.85,
+          "value": "X"
+        },
+        {
+          "start": 1.85,
+          "end": 1.99,
+          "value": "B"
+        },
+        {
+          "start": 1.99,
+          "end": 2.13,
+          "value": "E"
+        },
+        {
+          "start": 2.13,
+          "end": 2.2,
+          "value": "F"
+        },
+        {
+          "start": 2.2,
+          "end": 2.55,
+          "value": "B"
+        },
+        {
+          "start": 2.55,
+          "end": 2.83,
+          "value": "C"
+        },
+        {
+          "start": 2.83,
+          "end": 3.11,
+          "value": "E"
+        },
+        {
+          "start": 3.11,
+          "end": 3.31,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "c10_live.out.02": {
+      "audio_sha256": "134502a0d7c8a908e05dc159a59e3d99a0698dc82c33c7a9028dbe196a51881a",
+      "seconds": 2.1159375,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.07,
+          "value": "X"
+        },
+        {
+          "start": 0.07,
+          "end": 0.18,
+          "value": "B"
+        },
+        {
+          "start": 0.18,
+          "end": 0.6,
+          "value": "C"
+        },
+        {
+          "start": 0.6,
+          "end": 0.95,
+          "value": "B"
+        },
+        {
+          "start": 0.95,
+          "end": 1.09,
+          "value": "E"
+        },
+        {
+          "start": 1.09,
+          "end": 1.51,
+          "value": "F"
+        },
+        {
+          "start": 1.51,
+          "end": 1.65,
+          "value": "C"
+        },
+        {
+          "start": 1.65,
+          "end": 1.93,
+          "value": "B"
+        },
+        {
+          "start": 1.93,
+          "end": 2.11,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "c10_live.out.03": {
+      "audio_sha256": "d7488011667fab5eb0bd8889813e23037649818f692bd397fb6793f03ef412ad",
+      "seconds": 2.351020833333333,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.01,
+          "value": "X"
+        },
+        {
+          "start": 0.01,
+          "end": 0.08,
+          "value": "A"
+        },
+        {
+          "start": 0.08,
+          "end": 0.24,
+          "value": "B"
+        },
+        {
+          "start": 0.24,
+          "end": 0.38,
+          "value": "C"
+        },
+        {
+          "start": 0.38,
+          "end": 0.59,
+          "value": "B"
+        },
+        {
+          "start": 0.59,
+          "end": 0.73,
+          "value": "E"
+        },
+        {
+          "start": 0.73,
+          "end": 0.8,
+          "value": "C"
+        },
+        {
+          "start": 0.8,
+          "end": 0.87,
+          "value": "B"
+        },
+        {
+          "start": 0.87,
+          "end": 1.01,
+          "value": "C"
+        },
+        {
+          "start": 1.01,
+          "end": 1.08,
+          "value": "G"
+        },
+        {
+          "start": 1.08,
+          "end": 1.29,
+          "value": "B"
+        },
+        {
+          "start": 1.29,
+          "end": 1.36,
+          "value": "E"
+        },
+        {
+          "start": 1.36,
+          "end": 1.5,
+          "value": "B"
+        },
+        {
+          "start": 1.5,
+          "end": 1.64,
+          "value": "C"
+        },
+        {
+          "start": 1.64,
+          "end": 1.71,
+          "value": "E"
+        },
+        {
+          "start": 1.71,
+          "end": 1.99,
+          "value": "F"
+        },
+        {
+          "start": 1.99,
+          "end": 2.13,
+          "value": "B"
+        },
+        {
+          "start": 2.13,
+          "end": 2.35,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "c10_live.out.04": {
+      "audio_sha256": "4e187ed2a2892f2b616af0f48a0aad88151cb0a6ba444674189382a1598c21e8",
+      "seconds": 4.127354166666667,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.04,
+          "value": "X"
+        },
+        {
+          "start": 0.04,
+          "end": 0.18,
+          "value": "C"
+        },
+        {
+          "start": 0.18,
+          "end": 0.32,
+          "value": "B"
+        },
+        {
+          "start": 0.32,
+          "end": 0.4,
+          "value": "A"
+        },
+        {
+          "start": 0.4,
+          "end": 0.46,
+          "value": "E"
+        },
+        {
+          "start": 0.46,
+          "end": 0.59,
+          "value": "C"
+        },
+        {
+          "start": 0.59,
+          "end": 0.73,
+          "value": "H"
+        },
+        {
+          "start": 0.73,
+          "end": 0.87,
+          "value": "B"
+        },
+        {
+          "start": 0.87,
+          "end": 1.08,
+          "value": "X"
+        },
+        {
+          "start": 1.08,
+          "end": 1.21,
+          "value": "B"
+        },
+        {
+          "start": 1.21,
+          "end": 1.28,
+          "value": "C"
+        },
+        {
+          "start": 1.28,
+          "end": 1.63,
+          "value": "B"
+        },
+        {
+          "start": 1.63,
+          "end": 1.77,
+          "value": "C"
+        },
+        {
+          "start": 1.77,
+          "end": 2.4,
+          "value": "B"
+        },
+        {
+          "start": 2.4,
+          "end": 2.49,
+          "value": "A"
+        },
+        {
+          "start": 2.49,
+          "end": 2.75,
+          "value": "B"
+        },
+        {
+          "start": 2.75,
+          "end": 2.83,
+          "value": "A"
+        },
+        {
+          "start": 2.83,
+          "end": 2.99,
+          "value": "C"
+        },
+        {
+          "start": 2.99,
+          "end": 3.2,
+          "value": "B"
+        },
+        {
+          "start": 3.2,
+          "end": 3.27,
+          "value": "G"
+        },
+        {
+          "start": 3.27,
+          "end": 3.34,
+          "value": "B"
+        },
+        {
+          "start": 3.34,
+          "end": 3.48,
+          "value": "C"
+        },
+        {
+          "start": 3.48,
+          "end": 3.62,
+          "value": "B"
+        },
+        {
+          "start": 3.62,
+          "end": 3.69,
+          "value": "F"
+        },
+        {
+          "start": 3.69,
+          "end": 3.9,
+          "value": "B"
+        },
+        {
+          "start": 3.9,
+          "end": 4.12,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "c10_live.second.01": {
+      "audio_sha256": "265e24dacc01ec83030d1f8492de306d26702c9caf0257ec42e424d19af72c40",
+      "seconds": 2.4293958333333334,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.06,
+          "value": "X"
+        },
+        {
+          "start": 0.06,
+          "end": 0.15,
+          "value": "E"
+        },
+        {
+          "start": 0.15,
+          "end": 0.22,
+          "value": "F"
+        },
+        {
+          "start": 0.22,
+          "end": 0.57,
+          "value": "B"
+        },
+        {
+          "start": 0.57,
+          "end": 1.13,
+          "value": "X"
+        },
+        {
+          "start": 1.13,
+          "end": 1.42,
+          "value": "C"
+        },
+        {
+          "start": 1.42,
+          "end": 1.49,
+          "value": "E"
+        },
+        {
+          "start": 1.49,
+          "end": 1.82,
+          "value": "B"
+        },
+        {
+          "start": 1.82,
+          "end": 1.93,
+          "value": "F"
+        },
+        {
+          "start": 1.93,
+          "end": 2.21,
+          "value": "C"
+        },
+        {
+          "start": 2.21,
+          "end": 2.42,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "c10_live.second.02": {
+      "audio_sha256": "4e24f38b9f40d7a38565a78dc8771848c3e1eddee60887d5eab85f8227a0636e",
+      "seconds": 3.0824583333333333,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.44,
+          "value": "B"
+        },
+        {
+          "start": 0.44,
+          "end": 0.52,
+          "value": "A"
+        },
+        {
+          "start": 0.52,
+          "end": 0.74,
+          "value": "D"
+        },
+        {
+          "start": 0.74,
+          "end": 0.81,
+          "value": "C"
+        },
+        {
+          "start": 0.81,
+          "end": 1.02,
+          "value": "B"
+        },
+        {
+          "start": 1.02,
+          "end": 1.16,
+          "value": "G"
+        },
+        {
+          "start": 1.16,
+          "end": 1.3,
+          "value": "E"
+        },
+        {
+          "start": 1.3,
+          "end": 1.38,
+          "value": "A"
+        },
+        {
+          "start": 1.38,
+          "end": 1.76,
+          "value": "B"
+        },
+        {
+          "start": 1.76,
+          "end": 1.88,
+          "value": "A"
+        },
+        {
+          "start": 1.88,
+          "end": 2.02,
+          "value": "E"
+        },
+        {
+          "start": 2.02,
+          "end": 2.09,
+          "value": "F"
+        },
+        {
+          "start": 2.09,
+          "end": 2.23,
+          "value": "B"
+        },
+        {
+          "start": 2.23,
+          "end": 2.3,
+          "value": "C"
+        },
+        {
+          "start": 2.3,
+          "end": 2.44,
+          "value": "B"
+        },
+        {
+          "start": 2.44,
+          "end": 2.51,
+          "value": "F"
+        },
+        {
+          "start": 2.51,
+          "end": 2.58,
+          "value": "E"
+        },
+        {
+          "start": 2.58,
+          "end": 2.72,
+          "value": "C"
+        },
+        {
+          "start": 2.72,
+          "end": 2.93,
+          "value": "B"
+        },
+        {
+          "start": 2.93,
+          "end": 3.08,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "c10_live.second.03": {
+      "audio_sha256": "92d862dd67a47612bf8b6325d89a80a9fcf2f1860a0a02ad6327e6bf72e4e9c1",
+      "seconds": 1.8808333333333334,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.09,
+          "value": "X"
+        },
+        {
+          "start": 0.09,
+          "end": 0.15,
+          "value": "B"
+        },
+        {
+          "start": 0.15,
+          "end": 0.2,
+          "value": "C"
+        },
+        {
+          "start": 0.2,
+          "end": 0.34,
+          "value": "G"
+        },
+        {
+          "start": 0.34,
+          "end": 0.48,
+          "value": "D"
+        },
+        {
+          "start": 0.48,
+          "end": 0.76,
+          "value": "B"
+        },
+        {
+          "start": 0.76,
+          "end": 0.83,
+          "value": "H"
+        },
+        {
+          "start": 0.83,
+          "end": 0.9,
+          "value": "C"
+        },
+        {
+          "start": 0.9,
+          "end": 0.97,
+          "value": "B"
+        },
+        {
+          "start": 0.97,
+          "end": 1.18,
+          "value": "C"
+        },
+        {
+          "start": 1.18,
+          "end": 1.32,
+          "value": "B"
+        },
+        {
+          "start": 1.32,
+          "end": 1.6,
+          "value": "F"
+        },
+        {
+          "start": 1.6,
+          "end": 1.88,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "c10_live.third.01": {
+      "audio_sha256": "ed2d4594e45195defc1eeb5fabeae545fd5cbe96832256d757e4b86b54b55201",
+      "seconds": 3.7877708333333335,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.05,
+          "value": "X"
+        },
+        {
+          "start": 0.05,
+          "end": 0.15,
+          "value": "F"
+        },
+        {
+          "start": 0.15,
+          "end": 0.36,
+          "value": "B"
+        },
+        {
+          "start": 0.36,
+          "end": 0.43,
+          "value": "D"
+        },
+        {
+          "start": 0.43,
+          "end": 1.06,
+          "value": "B"
+        },
+        {
+          "start": 1.06,
+          "end": 1.52,
+          "value": "X"
+        },
+        {
+          "start": 1.52,
+          "end": 1.59,
+          "value": "F"
+        },
+        {
+          "start": 1.59,
+          "end": 1.65,
+          "value": "B"
+        },
+        {
+          "start": 1.65,
+          "end": 1.79,
+          "value": "C"
+        },
+        {
+          "start": 1.79,
+          "end": 1.86,
+          "value": "G"
+        },
+        {
+          "start": 1.86,
+          "end": 2.0,
+          "value": "B"
+        },
+        {
+          "start": 2.0,
+          "end": 2.14,
+          "value": "C"
+        },
+        {
+          "start": 2.14,
+          "end": 2.56,
+          "value": "B"
+        },
+        {
+          "start": 2.56,
+          "end": 3.04,
+          "value": "X"
+        },
+        {
+          "start": 3.04,
+          "end": 3.37,
+          "value": "B"
+        },
+        {
+          "start": 3.37,
+          "end": 3.65,
+          "value": "C"
+        },
+        {
+          "start": 3.65,
+          "end": 3.78,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "c10_live.third.02": {
+      "audio_sha256": "28cb96fb50f686452d8f12baf77207cc5feba14bee54ad8fb8ec28a5ae66ccb5",
+      "seconds": 3.7093958333333332,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.18,
+          "value": "B"
+        },
+        {
+          "start": 0.18,
+          "end": 0.31,
+          "value": "A"
+        },
+        {
+          "start": 0.31,
+          "end": 0.41,
+          "value": "B"
+        },
+        {
+          "start": 0.41,
+          "end": 0.55,
+          "value": "G"
+        },
+        {
+          "start": 0.55,
+          "end": 0.62,
+          "value": "E"
+        },
+        {
+          "start": 0.62,
+          "end": 0.76,
+          "value": "B"
+        },
+        {
+          "start": 0.76,
+          "end": 0.83,
+          "value": "C"
+        },
+        {
+          "start": 0.83,
+          "end": 1.53,
+          "value": "B"
+        },
+        {
+          "start": 1.53,
+          "end": 2.03,
+          "value": "X"
+        },
+        {
+          "start": 2.03,
+          "end": 2.29,
+          "value": "B"
+        },
+        {
+          "start": 2.29,
+          "end": 2.37,
+          "value": "A"
+        },
+        {
+          "start": 2.37,
+          "end": 2.78,
+          "value": "B"
+        },
+        {
+          "start": 2.78,
+          "end": 2.91,
+          "value": "C"
+        },
+        {
+          "start": 2.91,
+          "end": 3.05,
+          "value": "G"
+        },
+        {
+          "start": 3.05,
+          "end": 3.12,
+          "value": "B"
+        },
+        {
+          "start": 3.12,
+          "end": 3.31,
+          "value": "F"
+        },
+        {
+          "start": 3.31,
+          "end": 3.36,
+          "value": "E"
+        },
+        {
+          "start": 3.36,
+          "end": 3.54,
+          "value": "C"
+        },
+        {
+          "start": 3.54,
+          "end": 3.7,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "c10_report.echo.01": {
+      "audio_sha256": "f36ffc5dd7a876d6257aa920853887441879f0499aebf20159073d83426b3887",
+      "seconds": 6.269395833333333,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.06,
+          "value": "X"
+        },
+        {
+          "start": 0.06,
+          "end": 0.12,
+          "value": "F"
+        },
+        {
+          "start": 0.12,
+          "end": 0.39,
+          "value": "C"
+        },
+        {
+          "start": 0.39,
+          "end": 0.47,
+          "value": "A"
+        },
+        {
+          "start": 0.47,
+          "end": 0.63,
+          "value": "C"
+        },
+        {
+          "start": 0.63,
+          "end": 0.77,
+          "value": "B"
+        },
+        {
+          "start": 0.77,
+          "end": 1.05,
+          "value": "C"
+        },
+        {
+          "start": 1.05,
+          "end": 1.12,
+          "value": "B"
+        },
+        {
+          "start": 1.12,
+          "end": 1.19,
+          "value": "E"
+        },
+        {
+          "start": 1.19,
+          "end": 1.47,
+          "value": "C"
+        },
+        {
+          "start": 1.47,
+          "end": 1.61,
+          "value": "B"
+        },
+        {
+          "start": 1.61,
+          "end": 1.82,
+          "value": "C"
+        },
+        {
+          "start": 1.82,
+          "end": 2.31,
+          "value": "B"
+        },
+        {
+          "start": 2.31,
+          "end": 2.38,
+          "value": "C"
+        },
+        {
+          "start": 2.38,
+          "end": 2.73,
+          "value": "B"
+        },
+        {
+          "start": 2.73,
+          "end": 2.8,
+          "value": "A"
+        },
+        {
+          "start": 2.8,
+          "end": 2.87,
+          "value": "C"
+        },
+        {
+          "start": 2.87,
+          "end": 2.95,
+          "value": "A"
+        },
+        {
+          "start": 2.95,
+          "end": 3.07,
+          "value": "E"
+        },
+        {
+          "start": 3.07,
+          "end": 3.14,
+          "value": "B"
+        },
+        {
+          "start": 3.14,
+          "end": 3.49,
+          "value": "E"
+        },
+        {
+          "start": 3.49,
+          "end": 3.56,
+          "value": "F"
+        },
+        {
+          "start": 3.56,
+          "end": 3.73,
+          "value": "A"
+        },
+        {
+          "start": 3.73,
+          "end": 4.19,
+          "value": "X"
+        },
+        {
+          "start": 4.19,
+          "end": 4.65,
+          "value": "E"
+        },
+        {
+          "start": 4.65,
+          "end": 4.82,
+          "value": "H"
+        },
+        {
+          "start": 4.82,
+          "end": 5.03,
+          "value": "B"
+        },
+        {
+          "start": 5.03,
+          "end": 5.1,
+          "value": "C"
+        },
+        {
+          "start": 5.1,
+          "end": 5.18,
+          "value": "A"
+        },
+        {
+          "start": 5.18,
+          "end": 5.23,
+          "value": "F"
+        },
+        {
+          "start": 5.23,
+          "end": 5.28,
+          "value": "C"
+        },
+        {
+          "start": 5.28,
+          "end": 5.36,
+          "value": "A"
+        },
+        {
+          "start": 5.36,
+          "end": 5.55,
+          "value": "C"
+        },
+        {
+          "start": 5.55,
+          "end": 5.6,
+          "value": "E"
+        },
+        {
+          "start": 5.6,
+          "end": 5.9,
+          "value": "F"
+        },
+        {
+          "start": 5.9,
+          "end": 5.95,
+          "value": "E"
+        },
+        {
+          "start": 5.95,
+          "end": 6.13,
+          "value": "C"
+        },
+        {
+          "start": 6.13,
+          "end": 6.26,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "c10_report.echo.02": {
+      "audio_sha256": "c4448604a7288426c96fb37c27f173cd9c0cfb4282f269adaeeb23c2249911ea",
+      "seconds": 3.6310208333333334,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.05,
+          "value": "X"
+        },
+        {
+          "start": 0.05,
+          "end": 0.18,
+          "value": "D"
+        },
+        {
+          "start": 0.18,
+          "end": 0.39,
+          "value": "B"
+        },
+        {
+          "start": 0.39,
+          "end": 0.46,
+          "value": "A"
+        },
+        {
+          "start": 0.46,
+          "end": 0.54,
+          "value": "C"
+        },
+        {
+          "start": 0.54,
+          "end": 0.68,
+          "value": "A"
+        },
+        {
+          "start": 0.68,
+          "end": 0.78,
+          "value": "B"
+        },
+        {
+          "start": 0.78,
+          "end": 0.92,
+          "value": "C"
+        },
+        {
+          "start": 0.92,
+          "end": 0.99,
+          "value": "F"
+        },
+        {
+          "start": 0.99,
+          "end": 1.55,
+          "value": "B"
+        },
+        {
+          "start": 1.55,
+          "end": 2.06,
+          "value": "X"
+        },
+        {
+          "start": 2.06,
+          "end": 2.24,
+          "value": "F"
+        },
+        {
+          "start": 2.24,
+          "end": 2.31,
+          "value": "B"
+        },
+        {
+          "start": 2.31,
+          "end": 2.39,
+          "value": "A"
+        },
+        {
+          "start": 2.39,
+          "end": 2.47,
+          "value": "C"
+        },
+        {
+          "start": 2.47,
+          "end": 2.6,
+          "value": "A"
+        },
+        {
+          "start": 2.6,
+          "end": 2.64,
+          "value": "B"
+        },
+        {
+          "start": 2.64,
+          "end": 2.72,
+          "value": "A"
+        },
+        {
+          "start": 2.72,
+          "end": 2.92,
+          "value": "B"
+        },
+        {
+          "start": 2.92,
+          "end": 3.06,
+          "value": "A"
+        },
+        {
+          "start": 3.06,
+          "end": 3.12,
+          "value": "B"
+        },
+        {
+          "start": 3.12,
+          "end": 3.31,
+          "value": "H"
+        },
+        {
+          "start": 3.31,
+          "end": 3.63,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "c10_report.in.01": {
+      "audio_sha256": "0d4716366d1aa582d67a227648cc5d686cc41289fbf62603042e5c02895db568",
+      "seconds": 2.1942916666666665,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.05,
+          "value": "X"
+        },
+        {
+          "start": 0.05,
+          "end": 0.16,
+          "value": "C"
+        },
+        {
+          "start": 0.16,
+          "end": 0.23,
+          "value": "B"
+        },
+        {
+          "start": 0.23,
+          "end": 0.3,
+          "value": "F"
+        },
+        {
+          "start": 0.3,
+          "end": 0.37,
+          "value": "B"
+        },
+        {
+          "start": 0.37,
+          "end": 0.51,
+          "value": "C"
+        },
+        {
+          "start": 0.51,
+          "end": 0.58,
+          "value": "D"
+        },
+        {
+          "start": 0.58,
+          "end": 0.93,
+          "value": "B"
+        },
+        {
+          "start": 0.93,
+          "end": 1.07,
+          "value": "G"
+        },
+        {
+          "start": 1.07,
+          "end": 1.21,
+          "value": "E"
+        },
+        {
+          "start": 1.21,
+          "end": 1.3,
+          "value": "A"
+        },
+        {
+          "start": 1.3,
+          "end": 1.53,
+          "value": "B"
+        },
+        {
+          "start": 1.53,
+          "end": 1.61,
+          "value": "A"
+        },
+        {
+          "start": 1.61,
+          "end": 1.87,
+          "value": "E"
+        },
+        {
+          "start": 1.87,
+          "end": 2.01,
+          "value": "B"
+        },
+        {
+          "start": 2.01,
+          "end": 2.19,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "c10_report.in.02": {
+      "audio_sha256": "d4de638006cf104102fe5cac1964b1a637a93744fefc3fe8761b61d9feef04ff",
+      "seconds": 3.7093958333333332,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.04,
+          "value": "X"
+        },
+        {
+          "start": 0.04,
+          "end": 0.43,
+          "value": "F"
+        },
+        {
+          "start": 0.43,
+          "end": 0.57,
+          "value": "B"
+        },
+        {
+          "start": 0.57,
+          "end": 0.71,
+          "value": "E"
+        },
+        {
+          "start": 0.71,
+          "end": 0.96,
+          "value": "F"
+        },
+        {
+          "start": 0.96,
+          "end": 1.03,
+          "value": "B"
+        },
+        {
+          "start": 1.03,
+          "end": 1.17,
+          "value": "G"
+        },
+        {
+          "start": 1.17,
+          "end": 1.31,
+          "value": "C"
+        },
+        {
+          "start": 1.31,
+          "end": 1.38,
+          "value": "B"
+        },
+        {
+          "start": 1.38,
+          "end": 1.52,
+          "value": "C"
+        },
+        {
+          "start": 1.52,
+          "end": 1.81,
+          "value": "B"
+        },
+        {
+          "start": 1.81,
+          "end": 1.91,
+          "value": "C"
+        },
+        {
+          "start": 1.91,
+          "end": 2.05,
+          "value": "G"
+        },
+        {
+          "start": 2.05,
+          "end": 2.33,
+          "value": "B"
+        },
+        {
+          "start": 2.33,
+          "end": 2.4,
+          "value": "C"
+        },
+        {
+          "start": 2.4,
+          "end": 2.61,
+          "value": "E"
+        },
+        {
+          "start": 2.61,
+          "end": 2.82,
+          "value": "B"
+        },
+        {
+          "start": 2.82,
+          "end": 3.17,
+          "value": "C"
+        },
+        {
+          "start": 3.17,
+          "end": 3.28,
+          "value": "A"
+        },
+        {
+          "start": 3.28,
+          "end": 3.53,
+          "value": "B"
+        },
+        {
+          "start": 3.53,
+          "end": 3.7,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "c10_report.in.03": {
+      "audio_sha256": "0c3d13d49358590954f2e5cb2508e645d829f823720e618a6b1325d0ca145704",
+      "seconds": 5.485729166666666,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.06,
+          "value": "X"
+        },
+        {
+          "start": 0.06,
+          "end": 0.18,
+          "value": "F"
+        },
+        {
+          "start": 0.18,
+          "end": 0.32,
+          "value": "C"
+        },
+        {
+          "start": 0.32,
+          "end": 0.39,
+          "value": "B"
+        },
+        {
+          "start": 0.39,
+          "end": 0.47,
+          "value": "A"
+        },
+        {
+          "start": 0.47,
+          "end": 0.65,
+          "value": "C"
+        },
+        {
+          "start": 0.65,
+          "end": 1.84,
+          "value": "B"
+        },
+        {
+          "start": 1.84,
+          "end": 1.91,
+          "value": "C"
+        },
+        {
+          "start": 1.91,
+          "end": 2.05,
+          "value": "B"
+        },
+        {
+          "start": 2.05,
+          "end": 2.13,
+          "value": "A"
+        },
+        {
+          "start": 2.13,
+          "end": 2.31,
+          "value": "C"
+        },
+        {
+          "start": 2.31,
+          "end": 2.38,
+          "value": "B"
+        },
+        {
+          "start": 2.38,
+          "end": 2.52,
+          "value": "F"
+        },
+        {
+          "start": 2.52,
+          "end": 2.6,
+          "value": "A"
+        },
+        {
+          "start": 2.6,
+          "end": 2.73,
+          "value": "B"
+        },
+        {
+          "start": 2.73,
+          "end": 2.83,
+          "value": "A"
+        },
+        {
+          "start": 2.83,
+          "end": 2.9,
+          "value": "B"
+        },
+        {
+          "start": 2.9,
+          "end": 3.1,
+          "value": "F"
+        },
+        {
+          "start": 3.1,
+          "end": 3.18,
+          "value": "A"
+        },
+        {
+          "start": 3.18,
+          "end": 3.26,
+          "value": "C"
+        },
+        {
+          "start": 3.26,
+          "end": 3.61,
+          "value": "B"
+        },
+        {
+          "start": 3.61,
+          "end": 3.99,
+          "value": "X"
+        },
+        {
+          "start": 3.99,
+          "end": 4.12,
+          "value": "B"
+        },
+        {
+          "start": 4.12,
+          "end": 4.26,
+          "value": "C"
+        },
+        {
+          "start": 4.26,
+          "end": 4.33,
+          "value": "H"
+        },
+        {
+          "start": 4.33,
+          "end": 4.4,
+          "value": "B"
+        },
+        {
+          "start": 4.4,
+          "end": 4.48,
+          "value": "A"
+        },
+        {
+          "start": 4.48,
+          "end": 4.74,
+          "value": "F"
+        },
+        {
+          "start": 4.74,
+          "end": 5.09,
+          "value": "E"
+        },
+        {
+          "start": 5.09,
+          "end": 5.3,
+          "value": "B"
+        },
+        {
+          "start": 5.3,
+          "end": 5.48,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "c10_report.out.01": {
+      "audio_sha256": "f69c558fc3c09237929e55df7a1310cf65fdf5180318a2c34488b5e36d716efb",
+      "seconds": 3.866125,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.05,
+          "value": "X"
+        },
+        {
+          "start": 0.05,
+          "end": 0.11,
+          "value": "B"
+        },
+        {
+          "start": 0.11,
+          "end": 0.23,
+          "value": "C"
+        },
+        {
+          "start": 0.23,
+          "end": 0.58,
+          "value": "B"
+        },
+        {
+          "start": 0.58,
+          "end": 0.65,
+          "value": "C"
+        },
+        {
+          "start": 0.65,
+          "end": 0.86,
+          "value": "B"
+        },
+        {
+          "start": 0.86,
+          "end": 1.0,
+          "value": "E"
+        },
+        {
+          "start": 1.0,
+          "end": 1.07,
+          "value": "C"
+        },
+        {
+          "start": 1.07,
+          "end": 1.52,
+          "value": "B"
+        },
+        {
+          "start": 1.52,
+          "end": 1.69,
+          "value": "C"
+        },
+        {
+          "start": 1.69,
+          "end": 1.83,
+          "value": "B"
+        },
+        {
+          "start": 1.83,
+          "end": 1.9,
+          "value": "C"
+        },
+        {
+          "start": 1.9,
+          "end": 2.18,
+          "value": "B"
+        },
+        {
+          "start": 2.18,
+          "end": 2.39,
+          "value": "C"
+        },
+        {
+          "start": 2.39,
+          "end": 2.53,
+          "value": "B"
+        },
+        {
+          "start": 2.53,
+          "end": 2.77,
+          "value": "X"
+        },
+        {
+          "start": 2.77,
+          "end": 2.9,
+          "value": "B"
+        },
+        {
+          "start": 2.9,
+          "end": 3.04,
+          "value": "E"
+        },
+        {
+          "start": 3.04,
+          "end": 3.11,
+          "value": "F"
+        },
+        {
+          "start": 3.11,
+          "end": 3.32,
+          "value": "E"
+        },
+        {
+          "start": 3.32,
+          "end": 3.39,
+          "value": "C"
+        },
+        {
+          "start": 3.39,
+          "end": 3.46,
+          "value": "E"
+        },
+        {
+          "start": 3.46,
+          "end": 3.53,
+          "value": "C"
+        },
+        {
+          "start": 3.53,
+          "end": 3.67,
+          "value": "B"
+        },
+        {
+          "start": 3.67,
+          "end": 3.86,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "c10_report.out.02": {
+      "audio_sha256": "f1901d852bcadbda50477f64213fbe1d9777ded737cfdf23b579f56d157e2051",
+      "seconds": 5.7991875,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.06,
+          "value": "X"
+        },
+        {
+          "start": 0.06,
+          "end": 0.36,
+          "value": "B"
+        },
+        {
+          "start": 0.36,
+          "end": 0.43,
+          "value": "D"
+        },
+        {
+          "start": 0.43,
+          "end": 0.85,
+          "value": "B"
+        },
+        {
+          "start": 0.85,
+          "end": 0.99,
+          "value": "C"
+        },
+        {
+          "start": 0.99,
+          "end": 1.06,
+          "value": "B"
+        },
+        {
+          "start": 1.06,
+          "end": 1.13,
+          "value": "E"
+        },
+        {
+          "start": 1.13,
+          "end": 1.48,
+          "value": "B"
+        },
+        {
+          "start": 1.48,
+          "end": 1.55,
+          "value": "F"
+        },
+        {
+          "start": 1.55,
+          "end": 1.62,
+          "value": "C"
+        },
+        {
+          "start": 1.62,
+          "end": 1.97,
+          "value": "H"
+        },
+        {
+          "start": 1.97,
+          "end": 2.04,
+          "value": "D"
+        },
+        {
+          "start": 2.04,
+          "end": 2.18,
+          "value": "B"
+        },
+        {
+          "start": 2.18,
+          "end": 2.53,
+          "value": "F"
+        },
+        {
+          "start": 2.53,
+          "end": 2.6,
+          "value": "B"
+        },
+        {
+          "start": 2.6,
+          "end": 2.69,
+          "value": "A"
+        },
+        {
+          "start": 2.69,
+          "end": 3.03,
+          "value": "B"
+        },
+        {
+          "start": 3.03,
+          "end": 3.18,
+          "value": "X"
+        },
+        {
+          "start": 3.18,
+          "end": 3.42,
+          "value": "B"
+        },
+        {
+          "start": 3.42,
+          "end": 3.56,
+          "value": "C"
+        },
+        {
+          "start": 3.56,
+          "end": 4.05,
+          "value": "B"
+        },
+        {
+          "start": 4.05,
+          "end": 4.12,
+          "value": "C"
+        },
+        {
+          "start": 4.12,
+          "end": 4.19,
+          "value": "F"
+        },
+        {
+          "start": 4.19,
+          "end": 4.4,
+          "value": "E"
+        },
+        {
+          "start": 4.4,
+          "end": 4.54,
+          "value": "B"
+        },
+        {
+          "start": 4.54,
+          "end": 4.61,
+          "value": "F"
+        },
+        {
+          "start": 4.61,
+          "end": 4.68,
+          "value": "C"
+        },
+        {
+          "start": 4.68,
+          "end": 4.75,
+          "value": "B"
+        },
+        {
+          "start": 4.75,
+          "end": 4.82,
+          "value": "F"
+        },
+        {
+          "start": 4.82,
+          "end": 4.89,
+          "value": "B"
+        },
+        {
+          "start": 4.89,
+          "end": 5.1,
+          "value": "C"
+        },
+        {
+          "start": 5.1,
+          "end": 5.38,
+          "value": "B"
+        },
+        {
+          "start": 5.38,
+          "end": 5.59,
+          "value": "G"
+        },
+        {
+          "start": 5.59,
+          "end": 5.79,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "c10_report.out.03": {
+      "audio_sha256": "da3b80870224b12f75edbfdb28f401bae7839b7ab3926fc26f8baa3bb4147210",
+      "seconds": 2.5077708333333333,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.05,
+          "value": "X"
+        },
+        {
+          "start": 0.05,
+          "end": 0.14,
+          "value": "F"
+        },
+        {
+          "start": 0.14,
+          "end": 0.63,
+          "value": "B"
+        },
+        {
+          "start": 0.63,
+          "end": 0.7,
+          "value": "C"
+        },
+        {
+          "start": 0.7,
+          "end": 0.98,
+          "value": "B"
+        },
+        {
+          "start": 0.98,
+          "end": 1.07,
+          "value": "A"
+        },
+        {
+          "start": 1.07,
+          "end": 1.14,
+          "value": "C"
+        },
+        {
+          "start": 1.14,
+          "end": 1.62,
+          "value": "B"
+        },
+        {
+          "start": 1.62,
+          "end": 1.83,
+          "value": "C"
+        },
+        {
+          "start": 1.83,
+          "end": 1.97,
+          "value": "B"
+        },
+        {
+          "start": 1.97,
+          "end": 2.04,
+          "value": "C"
+        },
+        {
+          "start": 2.04,
+          "end": 2.18,
+          "value": "H"
+        },
+        {
+          "start": 2.18,
+          "end": 2.5,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "c10_report.out.04": {
+      "audio_sha256": "0bb325e374cc36645cbe4907761d911cbed3dad8138b4b17fdc334ff5a39b978",
+      "seconds": 1.8024583333333333,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.07,
+          "value": "X"
+        },
+        {
+          "start": 0.07,
+          "end": 0.18,
+          "value": "B"
+        },
+        {
+          "start": 0.18,
+          "end": 0.32,
+          "value": "G"
+        },
+        {
+          "start": 0.32,
+          "end": 0.53,
+          "value": "B"
+        },
+        {
+          "start": 0.53,
+          "end": 0.6,
+          "value": "C"
+        },
+        {
+          "start": 0.6,
+          "end": 1.02,
+          "value": "B"
+        },
+        {
+          "start": 1.02,
+          "end": 1.3,
+          "value": "E"
+        },
+        {
+          "start": 1.3,
+          "end": 1.58,
+          "value": "B"
+        },
+        {
+          "start": 1.58,
+          "end": 1.8,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "c10_report.report.01": {
+      "audio_sha256": "359ef88992989f9c64c36dbd82c434e369ff382d628b77ca68518231dd8ca20c",
+      "seconds": 4.911020833333334,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.05,
+          "value": "X"
+        },
+        {
+          "start": 0.05,
+          "end": 0.17,
+          "value": "B"
+        },
+        {
+          "start": 0.17,
+          "end": 0.24,
+          "value": "C"
+        },
+        {
+          "start": 0.24,
+          "end": 0.38,
+          "value": "B"
+        },
+        {
+          "start": 0.38,
+          "end": 0.66,
+          "value": "C"
+        },
+        {
+          "start": 0.66,
+          "end": 0.86,
+          "value": "B"
+        },
+        {
+          "start": 0.86,
+          "end": 1.02,
+          "value": "F"
+        },
+        {
+          "start": 1.02,
+          "end": 1.3,
+          "value": "B"
+        },
+        {
+          "start": 1.3,
+          "end": 1.41,
+          "value": "A"
+        },
+        {
+          "start": 1.41,
+          "end": 1.47,
+          "value": "C"
+        },
+        {
+          "start": 1.47,
+          "end": 1.53,
+          "value": "B"
+        },
+        {
+          "start": 1.53,
+          "end": 1.74,
+          "value": "F"
+        },
+        {
+          "start": 1.74,
+          "end": 1.95,
+          "value": "B"
+        },
+        {
+          "start": 1.95,
+          "end": 2.02,
+          "value": "C"
+        },
+        {
+          "start": 2.02,
+          "end": 2.16,
+          "value": "H"
+        },
+        {
+          "start": 2.16,
+          "end": 2.37,
+          "value": "G"
+        },
+        {
+          "start": 2.37,
+          "end": 2.69,
+          "value": "X"
+        },
+        {
+          "start": 2.69,
+          "end": 2.81,
+          "value": "F"
+        },
+        {
+          "start": 2.81,
+          "end": 2.88,
+          "value": "B"
+        },
+        {
+          "start": 2.88,
+          "end": 3.09,
+          "value": "C"
+        },
+        {
+          "start": 3.09,
+          "end": 3.16,
+          "value": "G"
+        },
+        {
+          "start": 3.16,
+          "end": 3.37,
+          "value": "F"
+        },
+        {
+          "start": 3.37,
+          "end": 3.44,
+          "value": "B"
+        },
+        {
+          "start": 3.44,
+          "end": 3.56,
+          "value": "A"
+        },
+        {
+          "start": 3.56,
+          "end": 3.65,
+          "value": "C"
+        },
+        {
+          "start": 3.65,
+          "end": 3.77,
+          "value": "A"
+        },
+        {
+          "start": 3.77,
+          "end": 3.82,
+          "value": "E"
+        },
+        {
+          "start": 3.82,
+          "end": 3.9,
+          "value": "A"
+        },
+        {
+          "start": 3.9,
+          "end": 4.28,
+          "value": "B"
+        },
+        {
+          "start": 4.28,
+          "end": 4.7,
+          "value": "E"
+        },
+        {
+          "start": 4.7,
+          "end": 4.91,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "c10_report.report.02": {
+      "audio_sha256": "47f616aba6708c1c390201156c26d7165c9d11d8b1c9250dfb07e099d3b39b47",
+      "seconds": 1.8808333333333334,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.06,
+          "value": "X"
+        },
+        {
+          "start": 0.06,
+          "end": 0.12,
+          "value": "C"
+        },
+        {
+          "start": 0.12,
+          "end": 0.18,
+          "value": "B"
+        },
+        {
+          "start": 0.18,
+          "end": 0.32,
+          "value": "C"
+        },
+        {
+          "start": 0.32,
+          "end": 0.39,
+          "value": "G"
+        },
+        {
+          "start": 0.39,
+          "end": 0.53,
+          "value": "C"
+        },
+        {
+          "start": 0.53,
+          "end": 0.6,
+          "value": "E"
+        },
+        {
+          "start": 0.6,
+          "end": 0.72,
+          "value": "A"
+        },
+        {
+          "start": 0.72,
+          "end": 1.16,
+          "value": "B"
+        },
+        {
+          "start": 1.16,
+          "end": 1.23,
+          "value": "E"
+        },
+        {
+          "start": 1.23,
+          "end": 1.3,
+          "value": "G"
+        },
+        {
+          "start": 1.3,
+          "end": 1.37,
+          "value": "E"
+        },
+        {
+          "start": 1.37,
+          "end": 1.44,
+          "value": "B"
+        },
+        {
+          "start": 1.44,
+          "end": 1.51,
+          "value": "C"
+        },
+        {
+          "start": 1.51,
+          "end": 1.72,
+          "value": "B"
+        },
+        {
+          "start": 1.72,
+          "end": 1.88,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "c10_report.report.03": {
+      "audio_sha256": "1cbed8f113258ad2e574c3c652315752352be5d8f3e62f84d288c8faa92727ef",
+      "seconds": 1.410625,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.06,
+          "value": "X"
+        },
+        {
+          "start": 0.06,
+          "end": 0.26,
+          "value": "C"
+        },
+        {
+          "start": 0.26,
+          "end": 0.47,
+          "value": "B"
+        },
+        {
+          "start": 0.47,
+          "end": 0.68,
+          "value": "F"
+        },
+        {
+          "start": 0.68,
+          "end": 0.94,
+          "value": "D"
+        },
+        {
+          "start": 0.94,
+          "end": 0.99,
+          "value": "C"
+        },
+        {
+          "start": 0.99,
+          "end": 1.17,
+          "value": "B"
+        },
+        {
+          "start": 1.17,
+          "end": 1.41,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "c10_report.survey.01": {
+      "audio_sha256": "93c92c6fbc3d3c2f69e904518ec4e3c52efc99ef6fd0fb49ab47a6e3c51dbe60",
+      "seconds": 4.205729166666667,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.07,
+          "value": "X"
+        },
+        {
+          "start": 0.07,
+          "end": 0.17,
+          "value": "B"
+        },
+        {
+          "start": 0.17,
+          "end": 0.31,
+          "value": "G"
+        },
+        {
+          "start": 0.31,
+          "end": 0.38,
+          "value": "C"
+        },
+        {
+          "start": 0.38,
+          "end": 0.45,
+          "value": "E"
+        },
+        {
+          "start": 0.45,
+          "end": 0.52,
+          "value": "C"
+        },
+        {
+          "start": 0.52,
+          "end": 0.66,
+          "value": "B"
+        },
+        {
+          "start": 0.66,
+          "end": 0.94,
+          "value": "E"
+        },
+        {
+          "start": 0.94,
+          "end": 1.01,
+          "value": "F"
+        },
+        {
+          "start": 1.01,
+          "end": 1.56,
+          "value": "A"
+        },
+        {
+          "start": 1.56,
+          "end": 2.2,
+          "value": "B"
+        },
+        {
+          "start": 2.2,
+          "end": 2.28,
+          "value": "A"
+        },
+        {
+          "start": 2.28,
+          "end": 2.4,
+          "value": "B"
+        },
+        {
+          "start": 2.4,
+          "end": 2.54,
+          "value": "C"
+        },
+        {
+          "start": 2.54,
+          "end": 2.75,
+          "value": "B"
+        },
+        {
+          "start": 2.75,
+          "end": 2.86,
+          "value": "A"
+        },
+        {
+          "start": 2.86,
+          "end": 3.05,
+          "value": "B"
+        },
+        {
+          "start": 3.05,
+          "end": 3.19,
+          "value": "C"
+        },
+        {
+          "start": 3.19,
+          "end": 3.26,
+          "value": "F"
+        },
+        {
+          "start": 3.26,
+          "end": 3.33,
+          "value": "B"
+        },
+        {
+          "start": 3.33,
+          "end": 3.4,
+          "value": "C"
+        },
+        {
+          "start": 3.4,
+          "end": 3.47,
+          "value": "G"
+        },
+        {
+          "start": 3.47,
+          "end": 3.61,
+          "value": "C"
+        },
+        {
+          "start": 3.61,
+          "end": 3.68,
+          "value": "B"
+        },
+        {
+          "start": 3.68,
+          "end": 3.75,
+          "value": "C"
+        },
+        {
+          "start": 3.75,
+          "end": 3.96,
+          "value": "B"
+        },
+        {
+          "start": 3.96,
+          "end": 4.2,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "c10_report.survey.02": {
+      "audio_sha256": "5f14fd3406f7d0b056f8e60f34e19a3b114b37e111383bcd2633a981559d8d46",
+      "seconds": 1.9591875,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.04,
+          "value": "X"
+        },
+        {
+          "start": 0.04,
+          "end": 0.1,
+          "value": "B"
+        },
+        {
+          "start": 0.1,
+          "end": 0.6,
+          "value": "C"
+        },
+        {
+          "start": 0.6,
+          "end": 0.77,
+          "value": "G"
+        },
+        {
+          "start": 0.77,
+          "end": 1.19,
+          "value": "B"
+        },
+        {
+          "start": 1.19,
+          "end": 1.27,
+          "value": "A"
+        },
+        {
+          "start": 1.27,
+          "end": 1.46,
+          "value": "B"
+        },
+        {
+          "start": 1.46,
+          "end": 1.74,
+          "value": "C"
+        },
+        {
+          "start": 1.74,
+          "end": 1.95,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "c10_station.in.01": {
+      "audio_sha256": "afbbaa604442fd2cb248a29ccfb42cd619795bb7d8d64bf335241d4ca3f6a4ac",
+      "seconds": 4.284083333333333,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.02,
+          "value": "X"
+        },
+        {
+          "start": 0.02,
+          "end": 0.17,
+          "value": "B"
+        },
+        {
+          "start": 0.17,
+          "end": 0.25,
+          "value": "A"
+        },
+        {
+          "start": 0.25,
+          "end": 0.3,
+          "value": "E"
+        },
+        {
+          "start": 0.3,
+          "end": 0.95,
+          "value": "B"
+        },
+        {
+          "start": 0.95,
+          "end": 1.03,
+          "value": "C"
+        },
+        {
+          "start": 1.03,
+          "end": 1.11,
+          "value": "A"
+        },
+        {
+          "start": 1.11,
+          "end": 1.38,
+          "value": "C"
+        },
+        {
+          "start": 1.38,
+          "end": 1.73,
+          "value": "B"
+        },
+        {
+          "start": 1.73,
+          "end": 1.99,
+          "value": "C"
+        },
+        {
+          "start": 1.99,
+          "end": 2.06,
+          "value": "B"
+        },
+        {
+          "start": 2.06,
+          "end": 2.13,
+          "value": "E"
+        },
+        {
+          "start": 2.13,
+          "end": 2.34,
+          "value": "C"
+        },
+        {
+          "start": 2.34,
+          "end": 2.55,
+          "value": "E"
+        },
+        {
+          "start": 2.55,
+          "end": 2.62,
+          "value": "C"
+        },
+        {
+          "start": 2.62,
+          "end": 2.69,
+          "value": "G"
+        },
+        {
+          "start": 2.69,
+          "end": 2.9,
+          "value": "D"
+        },
+        {
+          "start": 2.9,
+          "end": 3.04,
+          "value": "B"
+        },
+        {
+          "start": 3.04,
+          "end": 3.18,
+          "value": "E"
+        },
+        {
+          "start": 3.18,
+          "end": 3.25,
+          "value": "C"
+        },
+        {
+          "start": 3.25,
+          "end": 3.33,
+          "value": "A"
+        },
+        {
+          "start": 3.33,
+          "end": 3.53,
+          "value": "B"
+        },
+        {
+          "start": 3.53,
+          "end": 3.67,
+          "value": "G"
+        },
+        {
+          "start": 3.67,
+          "end": 3.74,
+          "value": "C"
+        },
+        {
+          "start": 3.74,
+          "end": 3.81,
+          "value": "B"
+        },
+        {
+          "start": 3.81,
+          "end": 3.88,
+          "value": "G"
+        },
+        {
+          "start": 3.88,
+          "end": 3.95,
+          "value": "C"
+        },
+        {
+          "start": 3.95,
+          "end": 4.16,
+          "value": "B"
+        },
+        {
+          "start": 4.16,
+          "end": 4.28,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "c10_station.in.02": {
+      "audio_sha256": "22406a4d3247a4663b3af8b829286133129d03413883783a1a3bff374ee7020f",
+      "seconds": 3.3959375,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.06,
+          "value": "X"
+        },
+        {
+          "start": 0.06,
+          "end": 0.69,
+          "value": "B"
+        },
+        {
+          "start": 0.69,
+          "end": 0.77,
+          "value": "A"
+        },
+        {
+          "start": 0.77,
+          "end": 0.9,
+          "value": "C"
+        },
+        {
+          "start": 0.9,
+          "end": 1.11,
+          "value": "B"
+        },
+        {
+          "start": 1.11,
+          "end": 1.25,
+          "value": "D"
+        },
+        {
+          "start": 1.25,
+          "end": 1.73,
+          "value": "B"
+        },
+        {
+          "start": 1.73,
+          "end": 1.8,
+          "value": "C"
+        },
+        {
+          "start": 1.8,
+          "end": 2.0,
+          "value": "B"
+        },
+        {
+          "start": 2.0,
+          "end": 2.08,
+          "value": "A"
+        },
+        {
+          "start": 2.08,
+          "end": 2.12,
+          "value": "C"
+        },
+        {
+          "start": 2.12,
+          "end": 2.16,
+          "value": "B"
+        },
+        {
+          "start": 2.16,
+          "end": 2.31,
+          "value": "A"
+        },
+        {
+          "start": 2.31,
+          "end": 2.38,
+          "value": "C"
+        },
+        {
+          "start": 2.38,
+          "end": 2.52,
+          "value": "B"
+        },
+        {
+          "start": 2.52,
+          "end": 2.66,
+          "value": "G"
+        },
+        {
+          "start": 2.66,
+          "end": 2.73,
+          "value": "F"
+        },
+        {
+          "start": 2.73,
+          "end": 2.81,
+          "value": "A"
+        },
+        {
+          "start": 2.81,
+          "end": 2.98,
+          "value": "C"
+        },
+        {
+          "start": 2.98,
+          "end": 3.19,
+          "value": "B"
+        },
+        {
+          "start": 3.19,
+          "end": 3.39,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "c10_station.in.03": {
+      "audio_sha256": "24c32c082cf52ec4b99b7cc85efb5cc18b0ef6c6a3bab178b7ef217287ca0511",
+      "seconds": 2.272666666666667,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.08,
+          "value": "X"
+        },
+        {
+          "start": 0.08,
+          "end": 0.17,
+          "value": "C"
+        },
+        {
+          "start": 0.17,
+          "end": 0.31,
+          "value": "E"
+        },
+        {
+          "start": 0.31,
+          "end": 0.52,
+          "value": "B"
+        },
+        {
+          "start": 0.52,
+          "end": 0.59,
+          "value": "F"
+        },
+        {
+          "start": 0.59,
+          "end": 0.73,
+          "value": "C"
+        },
+        {
+          "start": 0.73,
+          "end": 1.08,
+          "value": "B"
+        },
+        {
+          "start": 1.08,
+          "end": 1.16,
+          "value": "A"
+        },
+        {
+          "start": 1.16,
+          "end": 1.37,
+          "value": "E"
+        },
+        {
+          "start": 1.37,
+          "end": 1.44,
+          "value": "B"
+        },
+        {
+          "start": 1.44,
+          "end": 1.51,
+          "value": "C"
+        },
+        {
+          "start": 1.51,
+          "end": 1.79,
+          "value": "F"
+        },
+        {
+          "start": 1.79,
+          "end": 1.93,
+          "value": "C"
+        },
+        {
+          "start": 1.93,
+          "end": 2.14,
+          "value": "B"
+        },
+        {
+          "start": 2.14,
+          "end": 2.27,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "c10_station.out.01": {
+      "audio_sha256": "c2da0da06a2f480cc80ec598021daafdc195b742eb86f635743725eb75cb23f7",
+      "seconds": 6.191020833333333,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.02,
+          "value": "X"
+        },
+        {
+          "start": 0.02,
+          "end": 0.3,
+          "value": "C"
+        },
+        {
+          "start": 0.3,
+          "end": 0.58,
+          "value": "B"
+        },
+        {
+          "start": 0.58,
+          "end": 0.65,
+          "value": "C"
+        },
+        {
+          "start": 0.65,
+          "end": 0.72,
+          "value": "G"
+        },
+        {
+          "start": 0.72,
+          "end": 0.79,
+          "value": "B"
+        },
+        {
+          "start": 0.79,
+          "end": 0.87,
+          "value": "A"
+        },
+        {
+          "start": 0.87,
+          "end": 1.16,
+          "value": "B"
+        },
+        {
+          "start": 1.16,
+          "end": 1.23,
+          "value": "C"
+        },
+        {
+          "start": 1.23,
+          "end": 1.3,
+          "value": "H"
+        },
+        {
+          "start": 1.3,
+          "end": 1.44,
+          "value": "B"
+        },
+        {
+          "start": 1.44,
+          "end": 1.51,
+          "value": "C"
+        },
+        {
+          "start": 1.51,
+          "end": 1.59,
+          "value": "A"
+        },
+        {
+          "start": 1.59,
+          "end": 1.71,
+          "value": "B"
+        },
+        {
+          "start": 1.71,
+          "end": 1.99,
+          "value": "F"
+        },
+        {
+          "start": 1.99,
+          "end": 2.27,
+          "value": "B"
+        },
+        {
+          "start": 2.27,
+          "end": 2.41,
+          "value": "E"
+        },
+        {
+          "start": 2.41,
+          "end": 2.62,
+          "value": "B"
+        },
+        {
+          "start": 2.62,
+          "end": 2.69,
+          "value": "C"
+        },
+        {
+          "start": 2.69,
+          "end": 2.83,
+          "value": "B"
+        },
+        {
+          "start": 2.83,
+          "end": 2.97,
+          "value": "E"
+        },
+        {
+          "start": 2.97,
+          "end": 3.04,
+          "value": "B"
+        },
+        {
+          "start": 3.04,
+          "end": 3.18,
+          "value": "C"
+        },
+        {
+          "start": 3.18,
+          "end": 3.32,
+          "value": "B"
+        },
+        {
+          "start": 3.32,
+          "end": 3.51,
+          "value": "A"
+        },
+        {
+          "start": 3.51,
+          "end": 3.99,
+          "value": "X"
+        },
+        {
+          "start": 3.99,
+          "end": 4.04,
+          "value": "F"
+        },
+        {
+          "start": 4.04,
+          "end": 4.16,
+          "value": "E"
+        },
+        {
+          "start": 4.16,
+          "end": 4.23,
+          "value": "B"
+        },
+        {
+          "start": 4.23,
+          "end": 4.37,
+          "value": "F"
+        },
+        {
+          "start": 4.37,
+          "end": 4.51,
+          "value": "B"
+        },
+        {
+          "start": 4.51,
+          "end": 4.65,
+          "value": "C"
+        },
+        {
+          "start": 4.65,
+          "end": 4.86,
+          "value": "G"
+        },
+        {
+          "start": 4.86,
+          "end": 5.0,
+          "value": "F"
+        },
+        {
+          "start": 5.0,
+          "end": 5.08,
+          "value": "A"
+        },
+        {
+          "start": 5.08,
+          "end": 5.28,
+          "value": "E"
+        },
+        {
+          "start": 5.28,
+          "end": 5.36,
+          "value": "A"
+        },
+        {
+          "start": 5.36,
+          "end": 5.57,
+          "value": "E"
+        },
+        {
+          "start": 5.57,
+          "end": 5.64,
+          "value": "B"
+        },
+        {
+          "start": 5.64,
+          "end": 5.85,
+          "value": "E"
+        },
+        {
+          "start": 5.85,
+          "end": 6.06,
+          "value": "B"
+        },
+        {
+          "start": 6.06,
+          "end": 6.19,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "c10_station.out.02": {
+      "audio_sha256": "4554d5d1664ad584523abe0433f9855b75d350800581779bdc785a870647d872",
+      "seconds": 4.205729166666667,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.02,
+          "value": "X"
+        },
+        {
+          "start": 0.02,
+          "end": 0.22,
+          "value": "E"
+        },
+        {
+          "start": 0.22,
+          "end": 0.36,
+          "value": "F"
+        },
+        {
+          "start": 0.36,
+          "end": 0.78,
+          "value": "B"
+        },
+        {
+          "start": 0.78,
+          "end": 0.85,
+          "value": "H"
+        },
+        {
+          "start": 0.85,
+          "end": 0.92,
+          "value": "C"
+        },
+        {
+          "start": 0.92,
+          "end": 1.55,
+          "value": "B"
+        },
+        {
+          "start": 1.55,
+          "end": 1.93,
+          "value": "X"
+        },
+        {
+          "start": 1.93,
+          "end": 1.98,
+          "value": "B"
+        },
+        {
+          "start": 1.98,
+          "end": 2.02,
+          "value": "C"
+        },
+        {
+          "start": 2.02,
+          "end": 2.09,
+          "value": "B"
+        },
+        {
+          "start": 2.09,
+          "end": 2.23,
+          "value": "D"
+        },
+        {
+          "start": 2.23,
+          "end": 2.37,
+          "value": "B"
+        },
+        {
+          "start": 2.37,
+          "end": 2.44,
+          "value": "F"
+        },
+        {
+          "start": 2.44,
+          "end": 2.58,
+          "value": "B"
+        },
+        {
+          "start": 2.58,
+          "end": 2.65,
+          "value": "G"
+        },
+        {
+          "start": 2.65,
+          "end": 2.72,
+          "value": "B"
+        },
+        {
+          "start": 2.72,
+          "end": 2.86,
+          "value": "A"
+        },
+        {
+          "start": 2.86,
+          "end": 3.02,
+          "value": "C"
+        },
+        {
+          "start": 3.02,
+          "end": 3.09,
+          "value": "G"
+        },
+        {
+          "start": 3.09,
+          "end": 3.23,
+          "value": "B"
+        },
+        {
+          "start": 3.23,
+          "end": 3.3,
+          "value": "F"
+        },
+        {
+          "start": 3.3,
+          "end": 3.37,
+          "value": "C"
+        },
+        {
+          "start": 3.37,
+          "end": 3.54,
+          "value": "B"
+        },
+        {
+          "start": 3.54,
+          "end": 3.6,
+          "value": "G"
+        },
+        {
+          "start": 3.6,
+          "end": 3.66,
+          "value": "B"
+        },
+        {
+          "start": 3.66,
+          "end": 3.8,
+          "value": "C"
+        },
+        {
+          "start": 3.8,
+          "end": 4.01,
+          "value": "B"
+        },
+        {
+          "start": 4.01,
+          "end": 4.2,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "c10_station.playlist.01": {
+      "audio_sha256": "762b2636c75d25541b824cb0981486fe0316e73a58806b6dc75498afdffce0db",
+      "seconds": 2.272666666666667,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.05,
+          "value": "X"
+        },
+        {
+          "start": 0.05,
+          "end": 0.12,
+          "value": "C"
+        },
+        {
+          "start": 0.12,
+          "end": 0.19,
+          "value": "B"
+        },
+        {
+          "start": 0.19,
+          "end": 0.33,
+          "value": "C"
+        },
+        {
+          "start": 0.33,
+          "end": 0.47,
+          "value": "B"
+        },
+        {
+          "start": 0.47,
+          "end": 0.61,
+          "value": "C"
+        },
+        {
+          "start": 0.61,
+          "end": 0.68,
+          "value": "B"
+        },
+        {
+          "start": 0.68,
+          "end": 0.75,
+          "value": "G"
+        },
+        {
+          "start": 0.75,
+          "end": 0.89,
+          "value": "E"
+        },
+        {
+          "start": 0.89,
+          "end": 1.24,
+          "value": "C"
+        },
+        {
+          "start": 1.24,
+          "end": 1.38,
+          "value": "B"
+        },
+        {
+          "start": 1.38,
+          "end": 1.45,
+          "value": "F"
+        },
+        {
+          "start": 1.45,
+          "end": 1.73,
+          "value": "B"
+        },
+        {
+          "start": 1.73,
+          "end": 1.8,
+          "value": "C"
+        },
+        {
+          "start": 1.8,
+          "end": 2.08,
+          "value": "B"
+        },
+        {
+          "start": 2.08,
+          "end": 2.27,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "c10_station.playlist.02": {
+      "audio_sha256": "cc50d94cbf04c7e463a9a1404a871b1c00d7aa7a4c99e0458d8cda63554c779f",
+      "seconds": 2.351020833333333,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.06,
+          "value": "X"
+        },
+        {
+          "start": 0.06,
+          "end": 0.15,
+          "value": "B"
+        },
+        {
+          "start": 0.15,
+          "end": 0.22,
+          "value": "C"
+        },
+        {
+          "start": 0.22,
+          "end": 0.43,
+          "value": "F"
+        },
+        {
+          "start": 0.43,
+          "end": 1.24,
+          "value": "B"
+        },
+        {
+          "start": 1.24,
+          "end": 1.3,
+          "value": "F"
+        },
+        {
+          "start": 1.3,
+          "end": 1.36,
+          "value": "E"
+        },
+        {
+          "start": 1.36,
+          "end": 1.5,
+          "value": "H"
+        },
+        {
+          "start": 1.5,
+          "end": 1.57,
+          "value": "C"
+        },
+        {
+          "start": 1.57,
+          "end": 1.64,
+          "value": "B"
+        },
+        {
+          "start": 1.64,
+          "end": 1.71,
+          "value": "G"
+        },
+        {
+          "start": 1.71,
+          "end": 1.92,
+          "value": "C"
+        },
+        {
+          "start": 1.92,
+          "end": 1.99,
+          "value": "E"
+        },
+        {
+          "start": 1.99,
+          "end": 2.35,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "c10_station.relay.01": {
+      "audio_sha256": "9ec33908b3d72e7d17a03d10de9dfd261836f500f239969709e34eb02bf3fdf5",
+      "seconds": 4.3624583333333335,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.05,
+          "value": "X"
+        },
+        {
+          "start": 0.05,
+          "end": 0.2,
+          "value": "B"
+        },
+        {
+          "start": 0.2,
+          "end": 0.34,
+          "value": "E"
+        },
+        {
+          "start": 0.34,
+          "end": 0.41,
+          "value": "B"
+        },
+        {
+          "start": 0.41,
+          "end": 0.49,
+          "value": "A"
+        },
+        {
+          "start": 0.49,
+          "end": 0.54,
+          "value": "C"
+        },
+        {
+          "start": 0.54,
+          "end": 1.08,
+          "value": "B"
+        },
+        {
+          "start": 1.08,
+          "end": 1.62,
+          "value": "X"
+        },
+        {
+          "start": 1.62,
+          "end": 1.7,
+          "value": "B"
+        },
+        {
+          "start": 1.7,
+          "end": 1.78,
+          "value": "A"
+        },
+        {
+          "start": 1.78,
+          "end": 2.16,
+          "value": "B"
+        },
+        {
+          "start": 2.16,
+          "end": 2.44,
+          "value": "F"
+        },
+        {
+          "start": 2.44,
+          "end": 2.51,
+          "value": "B"
+        },
+        {
+          "start": 2.51,
+          "end": 2.59,
+          "value": "A"
+        },
+        {
+          "start": 2.59,
+          "end": 2.86,
+          "value": "E"
+        },
+        {
+          "start": 2.86,
+          "end": 3.12,
+          "value": "C"
+        },
+        {
+          "start": 3.12,
+          "end": 3.21,
+          "value": "B"
+        },
+        {
+          "start": 3.21,
+          "end": 3.35,
+          "value": "C"
+        },
+        {
+          "start": 3.35,
+          "end": 3.43,
+          "value": "A"
+        },
+        {
+          "start": 3.43,
+          "end": 3.63,
+          "value": "C"
+        },
+        {
+          "start": 3.63,
+          "end": 3.84,
+          "value": "B"
+        },
+        {
+          "start": 3.84,
+          "end": 3.98,
+          "value": "E"
+        },
+        {
+          "start": 3.98,
+          "end": 4.26,
+          "value": "C"
+        },
+        {
+          "start": 4.26,
+          "end": 4.36,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "c10_station.relay.02": {
+      "audio_sha256": "534bb3992c35ad35bb5cc1702d86f716438b298465a76c17f9ce7683a3ed50e9",
+      "seconds": 3.0824583333333333,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.03,
+          "value": "X"
+        },
+        {
+          "start": 0.03,
+          "end": 0.14,
+          "value": "C"
+        },
+        {
+          "start": 0.14,
+          "end": 0.28,
+          "value": "B"
+        },
+        {
+          "start": 0.28,
+          "end": 0.56,
+          "value": "F"
+        },
+        {
+          "start": 0.56,
+          "end": 0.77,
+          "value": "B"
+        },
+        {
+          "start": 0.77,
+          "end": 1.1,
+          "value": "X"
+        },
+        {
+          "start": 1.1,
+          "end": 1.24,
+          "value": "B"
+        },
+        {
+          "start": 1.24,
+          "end": 1.52,
+          "value": "C"
+        },
+        {
+          "start": 1.52,
+          "end": 1.6,
+          "value": "A"
+        },
+        {
+          "start": 1.6,
+          "end": 1.76,
+          "value": "E"
+        },
+        {
+          "start": 1.76,
+          "end": 2.12,
+          "value": "B"
+        },
+        {
+          "start": 2.12,
+          "end": 2.49,
+          "value": "F"
+        },
+        {
+          "start": 2.49,
+          "end": 2.91,
+          "value": "B"
+        },
+        {
+          "start": 2.91,
+          "end": 3.08,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "c10_station.route.01": {
+      "audio_sha256": "c8a10d7173695e4742e90473319a09f2e36958ca14b6df298a548d5b87d1d6c9",
+      "seconds": 4.049,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.06,
+          "value": "X"
+        },
+        {
+          "start": 0.06,
+          "end": 0.11,
+          "value": "B"
+        },
+        {
+          "start": 0.11,
+          "end": 0.22,
+          "value": "C"
+        },
+        {
+          "start": 0.22,
+          "end": 0.57,
+          "value": "F"
+        },
+        {
+          "start": 0.57,
+          "end": 1.2,
+          "value": "B"
+        },
+        {
+          "start": 1.2,
+          "end": 1.27,
+          "value": "E"
+        },
+        {
+          "start": 1.27,
+          "end": 1.41,
+          "value": "F"
+        },
+        {
+          "start": 1.41,
+          "end": 1.76,
+          "value": "D"
+        },
+        {
+          "start": 1.76,
+          "end": 1.83,
+          "value": "B"
+        },
+        {
+          "start": 1.83,
+          "end": 1.98,
+          "value": "A"
+        },
+        {
+          "start": 1.98,
+          "end": 2.46,
+          "value": "X"
+        },
+        {
+          "start": 2.46,
+          "end": 2.61,
+          "value": "B"
+        },
+        {
+          "start": 2.61,
+          "end": 2.75,
+          "value": "F"
+        },
+        {
+          "start": 2.75,
+          "end": 2.82,
+          "value": "B"
+        },
+        {
+          "start": 2.82,
+          "end": 2.9,
+          "value": "A"
+        },
+        {
+          "start": 2.9,
+          "end": 3.0,
+          "value": "D"
+        },
+        {
+          "start": 3.0,
+          "end": 3.35,
+          "value": "B"
+        },
+        {
+          "start": 3.35,
+          "end": 3.49,
+          "value": "C"
+        },
+        {
+          "start": 3.49,
+          "end": 3.63,
+          "value": "B"
+        },
+        {
+          "start": 3.63,
+          "end": 3.84,
+          "value": "C"
+        },
+        {
+          "start": 3.84,
+          "end": 4.04,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "c10_town.console.01": {
+      "audio_sha256": "817533cd7b862714de0d5e816c6a21ebb9b90394f59b258b1cfbd894f8a75a87",
+      "seconds": 1.9591875,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.07,
+          "value": "X"
+        },
+        {
+          "start": 0.07,
+          "end": 0.19,
+          "value": "F"
+        },
+        {
+          "start": 0.19,
+          "end": 0.54,
+          "value": "B"
+        },
+        {
+          "start": 0.54,
+          "end": 0.62,
+          "value": "A"
+        },
+        {
+          "start": 0.62,
+          "end": 1.0,
+          "value": "B"
+        },
+        {
+          "start": 1.0,
+          "end": 1.14,
+          "value": "H"
+        },
+        {
+          "start": 1.14,
+          "end": 1.21,
+          "value": "C"
+        },
+        {
+          "start": 1.21,
+          "end": 1.7,
+          "value": "B"
+        },
+        {
+          "start": 1.7,
+          "end": 1.95,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "c10_town.console.02": {
+      "audio_sha256": "4cfaad70e69c5f599bd56b7edc29e6fc6db6b601dbc4b5e49431f945596189eb",
+      "seconds": 1.8024583333333333,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.06,
+          "value": "X"
+        },
+        {
+          "start": 0.06,
+          "end": 0.13,
+          "value": "C"
+        },
+        {
+          "start": 0.13,
+          "end": 0.19,
+          "value": "E"
+        },
+        {
+          "start": 0.19,
+          "end": 0.26,
+          "value": "B"
+        },
+        {
+          "start": 0.26,
+          "end": 0.4,
+          "value": "H"
+        },
+        {
+          "start": 0.4,
+          "end": 0.54,
+          "value": "C"
+        },
+        {
+          "start": 0.54,
+          "end": 0.65,
+          "value": "A"
+        },
+        {
+          "start": 0.65,
+          "end": 0.81,
+          "value": "B"
+        },
+        {
+          "start": 0.81,
+          "end": 0.88,
+          "value": "D"
+        },
+        {
+          "start": 0.88,
+          "end": 1.3,
+          "value": "B"
+        },
+        {
+          "start": 1.3,
+          "end": 1.51,
+          "value": "A"
+        },
+        {
+          "start": 1.51,
+          "end": 1.71,
+          "value": "B"
+        },
+        {
+          "start": 1.71,
+          "end": 1.8,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "c10_town.console.03": {
+      "audio_sha256": "95a8621c39421f9861eb310d4b978c9c1de446c0f1c3a17d561944d94f80cdd0",
+      "seconds": 3.2391875,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.05,
+          "value": "X"
+        },
+        {
+          "start": 0.05,
+          "end": 0.16,
+          "value": "F"
+        },
+        {
+          "start": 0.16,
+          "end": 0.23,
+          "value": "C"
+        },
+        {
+          "start": 0.23,
+          "end": 0.3,
+          "value": "B"
+        },
+        {
+          "start": 0.3,
+          "end": 0.44,
+          "value": "E"
+        },
+        {
+          "start": 0.44,
+          "end": 0.51,
+          "value": "G"
+        },
+        {
+          "start": 0.51,
+          "end": 1.03,
+          "value": "B"
+        },
+        {
+          "start": 1.03,
+          "end": 1.13,
+          "value": "F"
+        },
+        {
+          "start": 1.13,
+          "end": 1.27,
+          "value": "C"
+        },
+        {
+          "start": 1.27,
+          "end": 1.35,
+          "value": "A"
+        },
+        {
+          "start": 1.35,
+          "end": 1.5,
+          "value": "E"
+        },
+        {
+          "start": 1.5,
+          "end": 1.64,
+          "value": "F"
+        },
+        {
+          "start": 1.64,
+          "end": 1.78,
+          "value": "G"
+        },
+        {
+          "start": 1.78,
+          "end": 2.13,
+          "value": "B"
+        },
+        {
+          "start": 2.13,
+          "end": 2.2,
+          "value": "F"
+        },
+        {
+          "start": 2.2,
+          "end": 2.27,
+          "value": "C"
+        },
+        {
+          "start": 2.27,
+          "end": 2.34,
+          "value": "B"
+        },
+        {
+          "start": 2.34,
+          "end": 2.48,
+          "value": "F"
+        },
+        {
+          "start": 2.48,
+          "end": 2.55,
+          "value": "E"
+        },
+        {
+          "start": 2.55,
+          "end": 2.69,
+          "value": "D"
+        },
+        {
+          "start": 2.69,
+          "end": 2.76,
+          "value": "C"
+        },
+        {
+          "start": 2.76,
+          "end": 3.04,
+          "value": "B"
+        },
+        {
+          "start": 3.04,
+          "end": 3.23,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "c10_town.in.01": {
+      "audio_sha256": "c79b33a4dd0fbd2cc27b03c53e6337f4335fa31ec7457e8dba7f2fb57956f7bc",
+      "seconds": 7.392666666666667,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.03,
+          "value": "X"
+        },
+        {
+          "start": 0.03,
+          "end": 0.17,
+          "value": "D"
+        },
+        {
+          "start": 0.17,
+          "end": 0.24,
+          "value": "B"
+        },
+        {
+          "start": 0.24,
+          "end": 0.32,
+          "value": "A"
+        },
+        {
+          "start": 0.32,
+          "end": 0.37,
+          "value": "B"
+        },
+        {
+          "start": 0.37,
+          "end": 0.42,
+          "value": "C"
+        },
+        {
+          "start": 0.42,
+          "end": 0.77,
+          "value": "E"
+        },
+        {
+          "start": 0.77,
+          "end": 0.84,
+          "value": "B"
+        },
+        {
+          "start": 0.84,
+          "end": 0.91,
+          "value": "C"
+        },
+        {
+          "start": 0.91,
+          "end": 1.26,
+          "value": "B"
+        },
+        {
+          "start": 1.26,
+          "end": 1.33,
+          "value": "D"
+        },
+        {
+          "start": 1.33,
+          "end": 1.89,
+          "value": "B"
+        },
+        {
+          "start": 1.89,
+          "end": 2.29,
+          "value": "X"
+        },
+        {
+          "start": 2.29,
+          "end": 2.37,
+          "value": "A"
+        },
+        {
+          "start": 2.37,
+          "end": 2.44,
+          "value": "B"
+        },
+        {
+          "start": 2.44,
+          "end": 2.65,
+          "value": "C"
+        },
+        {
+          "start": 2.65,
+          "end": 2.72,
+          "value": "B"
+        },
+        {
+          "start": 2.72,
+          "end": 3.14,
+          "value": "E"
+        },
+        {
+          "start": 3.14,
+          "end": 3.28,
+          "value": "B"
+        },
+        {
+          "start": 3.28,
+          "end": 3.42,
+          "value": "G"
+        },
+        {
+          "start": 3.42,
+          "end": 3.49,
+          "value": "C"
+        },
+        {
+          "start": 3.49,
+          "end": 3.56,
+          "value": "B"
+        },
+        {
+          "start": 3.56,
+          "end": 3.63,
+          "value": "E"
+        },
+        {
+          "start": 3.63,
+          "end": 4.05,
+          "value": "F"
+        },
+        {
+          "start": 4.05,
+          "end": 4.19,
+          "value": "B"
+        },
+        {
+          "start": 4.19,
+          "end": 4.65,
+          "value": "X"
+        },
+        {
+          "start": 4.65,
+          "end": 4.86,
+          "value": "C"
+        },
+        {
+          "start": 4.86,
+          "end": 5.0,
+          "value": "G"
+        },
+        {
+          "start": 5.0,
+          "end": 5.07,
+          "value": "B"
+        },
+        {
+          "start": 5.07,
+          "end": 5.42,
+          "value": "E"
+        },
+        {
+          "start": 5.42,
+          "end": 5.61,
+          "value": "B"
+        },
+        {
+          "start": 5.61,
+          "end": 5.74,
+          "value": "C"
+        },
+        {
+          "start": 5.74,
+          "end": 5.81,
+          "value": "G"
+        },
+        {
+          "start": 5.81,
+          "end": 5.88,
+          "value": "B"
+        },
+        {
+          "start": 5.88,
+          "end": 5.95,
+          "value": "F"
+        },
+        {
+          "start": 5.95,
+          "end": 6.09,
+          "value": "C"
+        },
+        {
+          "start": 6.09,
+          "end": 6.3,
+          "value": "F"
+        },
+        {
+          "start": 6.3,
+          "end": 6.37,
+          "value": "E"
+        },
+        {
+          "start": 6.37,
+          "end": 6.44,
+          "value": "F"
+        },
+        {
+          "start": 6.44,
+          "end": 6.58,
+          "value": "B"
+        },
+        {
+          "start": 6.58,
+          "end": 6.66,
+          "value": "A"
+        },
+        {
+          "start": 6.66,
+          "end": 6.72,
+          "value": "C"
+        },
+        {
+          "start": 6.72,
+          "end": 6.84,
+          "value": "G"
+        },
+        {
+          "start": 6.84,
+          "end": 6.91,
+          "value": "C"
+        },
+        {
+          "start": 6.91,
+          "end": 6.98,
+          "value": "B"
+        },
+        {
+          "start": 6.98,
+          "end": 7.05,
+          "value": "G"
+        },
+        {
+          "start": 7.05,
+          "end": 7.26,
+          "value": "E"
+        },
+        {
+          "start": 7.26,
+          "end": 7.39,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "c10_town.in.02": {
+      "audio_sha256": "09b08439f702cbf3f44dffab42fed003bc88a61a359cb853dd6f7d3f18cf1528",
+      "seconds": 2.1159375,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.06,
+          "value": "X"
+        },
+        {
+          "start": 0.06,
+          "end": 0.13,
+          "value": "B"
+        },
+        {
+          "start": 0.13,
+          "end": 0.26,
+          "value": "C"
+        },
+        {
+          "start": 0.26,
+          "end": 0.6,
+          "value": "B"
+        },
+        {
+          "start": 0.6,
+          "end": 0.74,
+          "value": "C"
+        },
+        {
+          "start": 0.74,
+          "end": 0.95,
+          "value": "H"
+        },
+        {
+          "start": 0.95,
+          "end": 1.37,
+          "value": "E"
+        },
+        {
+          "start": 1.37,
+          "end": 1.93,
+          "value": "B"
+        },
+        {
+          "start": 1.93,
+          "end": 2.11,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "c10_town.in.03": {
+      "audio_sha256": "4fcfed6eff7fd51865b1ea9341960d90d99aafee02d57a0a9ba9251da04219f4",
+      "seconds": 4.832666666666666,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.07,
+          "value": "X"
+        },
+        {
+          "start": 0.07,
+          "end": 0.35,
+          "value": "B"
+        },
+        {
+          "start": 0.35,
+          "end": 0.7,
+          "value": "F"
+        },
+        {
+          "start": 0.7,
+          "end": 0.98,
+          "value": "E"
+        },
+        {
+          "start": 0.98,
+          "end": 1.05,
+          "value": "C"
+        },
+        {
+          "start": 1.05,
+          "end": 1.26,
+          "value": "B"
+        },
+        {
+          "start": 1.26,
+          "end": 1.33,
+          "value": "C"
+        },
+        {
+          "start": 1.33,
+          "end": 1.54,
+          "value": "B"
+        },
+        {
+          "start": 1.54,
+          "end": 1.61,
+          "value": "E"
+        },
+        {
+          "start": 1.61,
+          "end": 1.82,
+          "value": "B"
+        },
+        {
+          "start": 1.82,
+          "end": 2.05,
+          "value": "X"
+        },
+        {
+          "start": 2.05,
+          "end": 2.27,
+          "value": "B"
+        },
+        {
+          "start": 2.27,
+          "end": 2.48,
+          "value": "C"
+        },
+        {
+          "start": 2.48,
+          "end": 2.83,
+          "value": "B"
+        },
+        {
+          "start": 2.83,
+          "end": 3.04,
+          "value": "X"
+        },
+        {
+          "start": 3.04,
+          "end": 3.26,
+          "value": "B"
+        },
+        {
+          "start": 3.26,
+          "end": 3.34,
+          "value": "A"
+        },
+        {
+          "start": 3.34,
+          "end": 3.48,
+          "value": "B"
+        },
+        {
+          "start": 3.48,
+          "end": 3.76,
+          "value": "F"
+        },
+        {
+          "start": 3.76,
+          "end": 3.83,
+          "value": "B"
+        },
+        {
+          "start": 3.83,
+          "end": 3.97,
+          "value": "C"
+        },
+        {
+          "start": 3.97,
+          "end": 4.04,
+          "value": "B"
+        },
+        {
+          "start": 4.04,
+          "end": 4.12,
+          "value": "A"
+        },
+        {
+          "start": 4.12,
+          "end": 4.27,
+          "value": "D"
+        },
+        {
+          "start": 4.27,
+          "end": 4.31,
+          "value": "C"
+        },
+        {
+          "start": 4.31,
+          "end": 4.64,
+          "value": "B"
+        },
+        {
+          "start": 4.64,
+          "end": 4.83,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "c10_town.lights.01": {
+      "audio_sha256": "26ec244232c4f842a68cfa69964834d980b5feb5d62162fad7c8869e795ef05a",
+      "seconds": 6.034291666666666,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.09,
+          "value": "X"
+        },
+        {
+          "start": 0.09,
+          "end": 0.37,
+          "value": "B"
+        },
+        {
+          "start": 0.37,
+          "end": 0.51,
+          "value": "C"
+        },
+        {
+          "start": 0.51,
+          "end": 0.65,
+          "value": "B"
+        },
+        {
+          "start": 0.65,
+          "end": 0.87,
+          "value": "X"
+        },
+        {
+          "start": 0.87,
+          "end": 0.95,
+          "value": "B"
+        },
+        {
+          "start": 0.95,
+          "end": 1.03,
+          "value": "A"
+        },
+        {
+          "start": 1.03,
+          "end": 1.46,
+          "value": "B"
+        },
+        {
+          "start": 1.46,
+          "end": 1.81,
+          "value": "F"
+        },
+        {
+          "start": 1.81,
+          "end": 2.07,
+          "value": "X"
+        },
+        {
+          "start": 2.07,
+          "end": 2.12,
+          "value": "B"
+        },
+        {
+          "start": 2.12,
+          "end": 2.31,
+          "value": "C"
+        },
+        {
+          "start": 2.31,
+          "end": 2.38,
+          "value": "B"
+        },
+        {
+          "start": 2.38,
+          "end": 2.45,
+          "value": "F"
+        },
+        {
+          "start": 2.45,
+          "end": 2.87,
+          "value": "B"
+        },
+        {
+          "start": 2.87,
+          "end": 3.31,
+          "value": "X"
+        },
+        {
+          "start": 3.31,
+          "end": 3.61,
+          "value": "B"
+        },
+        {
+          "start": 3.61,
+          "end": 3.68,
+          "value": "C"
+        },
+        {
+          "start": 3.68,
+          "end": 3.82,
+          "value": "H"
+        },
+        {
+          "start": 3.82,
+          "end": 3.89,
+          "value": "C"
+        },
+        {
+          "start": 3.89,
+          "end": 4.03,
+          "value": "B"
+        },
+        {
+          "start": 4.03,
+          "end": 4.17,
+          "value": "G"
+        },
+        {
+          "start": 4.17,
+          "end": 4.45,
+          "value": "B"
+        },
+        {
+          "start": 4.45,
+          "end": 4.52,
+          "value": "G"
+        },
+        {
+          "start": 4.52,
+          "end": 4.66,
+          "value": "E"
+        },
+        {
+          "start": 4.66,
+          "end": 4.8,
+          "value": "C"
+        },
+        {
+          "start": 4.8,
+          "end": 4.94,
+          "value": "B"
+        },
+        {
+          "start": 4.94,
+          "end": 5.01,
+          "value": "F"
+        },
+        {
+          "start": 5.01,
+          "end": 5.08,
+          "value": "C"
+        },
+        {
+          "start": 5.08,
+          "end": 5.29,
+          "value": "F"
+        },
+        {
+          "start": 5.29,
+          "end": 5.5,
+          "value": "B"
+        },
+        {
+          "start": 5.5,
+          "end": 5.64,
+          "value": "C"
+        },
+        {
+          "start": 5.64,
+          "end": 5.71,
+          "value": "H"
+        },
+        {
+          "start": 5.71,
+          "end": 5.79,
+          "value": "A"
+        },
+        {
+          "start": 5.79,
+          "end": 6.03,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "c10_town.out.01": {
+      "audio_sha256": "4c629cfc620c1eafbbbc30dd2f980450896fd122724d6f57faf30efd6eafd1bd",
+      "seconds": 1.8808333333333334,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.01,
+          "value": "X"
+        },
+        {
+          "start": 0.01,
+          "end": 0.09,
+          "value": "C"
+        },
+        {
+          "start": 0.09,
+          "end": 0.16,
+          "value": "A"
+        },
+        {
+          "start": 0.16,
+          "end": 0.33,
+          "value": "E"
+        },
+        {
+          "start": 0.33,
+          "end": 0.54,
+          "value": "B"
+        },
+        {
+          "start": 0.54,
+          "end": 0.61,
+          "value": "C"
+        },
+        {
+          "start": 0.61,
+          "end": 0.69,
+          "value": "A"
+        },
+        {
+          "start": 0.69,
+          "end": 0.9,
+          "value": "B"
+        },
+        {
+          "start": 0.9,
+          "end": 0.97,
+          "value": "A"
+        },
+        {
+          "start": 0.97,
+          "end": 1.04,
+          "value": "C"
+        },
+        {
+          "start": 1.04,
+          "end": 1.1,
+          "value": "A"
+        },
+        {
+          "start": 1.1,
+          "end": 1.22,
+          "value": "C"
+        },
+        {
+          "start": 1.22,
+          "end": 1.71,
+          "value": "B"
+        },
+        {
+          "start": 1.71,
+          "end": 1.88,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "c10_town.out.02": {
+      "audio_sha256": "b6a58ab297338e0ceb715264232d4f3b4fce4a29dfac64d69b56ec6128e2b0e3",
+      "seconds": 3.5526666666666666,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.07,
+          "value": "X"
+        },
+        {
+          "start": 0.07,
+          "end": 0.14,
+          "value": "B"
+        },
+        {
+          "start": 0.14,
+          "end": 0.21,
+          "value": "C"
+        },
+        {
+          "start": 0.21,
+          "end": 0.35,
+          "value": "F"
+        },
+        {
+          "start": 0.35,
+          "end": 0.7,
+          "value": "B"
+        },
+        {
+          "start": 0.7,
+          "end": 1.26,
+          "value": "X"
+        },
+        {
+          "start": 1.26,
+          "end": 1.38,
+          "value": "G"
+        },
+        {
+          "start": 1.38,
+          "end": 1.45,
+          "value": "B"
+        },
+        {
+          "start": 1.45,
+          "end": 1.54,
+          "value": "A"
+        },
+        {
+          "start": 1.54,
+          "end": 1.63,
+          "value": "B"
+        },
+        {
+          "start": 1.63,
+          "end": 1.77,
+          "value": "C"
+        },
+        {
+          "start": 1.77,
+          "end": 2.05,
+          "value": "B"
+        },
+        {
+          "start": 2.05,
+          "end": 2.48,
+          "value": "X"
+        },
+        {
+          "start": 2.48,
+          "end": 2.64,
+          "value": "F"
+        },
+        {
+          "start": 2.64,
+          "end": 2.71,
+          "value": "B"
+        },
+        {
+          "start": 2.71,
+          "end": 2.92,
+          "value": "E"
+        },
+        {
+          "start": 2.92,
+          "end": 3.34,
+          "value": "B"
+        },
+        {
+          "start": 3.34,
+          "end": 3.55,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "c10_town.out.03": {
+      "audio_sha256": "502eabee2e233f8239fd2f4158b714e426224a5665ab8b67d043fd1147a70d63",
+      "seconds": 2.5077708333333333,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.05,
+          "value": "X"
+        },
+        {
+          "start": 0.05,
+          "end": 0.1,
+          "value": "B"
+        },
+        {
+          "start": 0.1,
+          "end": 0.15,
+          "value": "C"
+        },
+        {
+          "start": 0.15,
+          "end": 0.43,
+          "value": "E"
+        },
+        {
+          "start": 0.43,
+          "end": 0.5,
+          "value": "B"
+        },
+        {
+          "start": 0.5,
+          "end": 0.71,
+          "value": "C"
+        },
+        {
+          "start": 0.71,
+          "end": 0.78,
+          "value": "B"
+        },
+        {
+          "start": 0.78,
+          "end": 0.86,
+          "value": "A"
+        },
+        {
+          "start": 0.86,
+          "end": 0.92,
+          "value": "C"
+        },
+        {
+          "start": 0.92,
+          "end": 1.18,
+          "value": "E"
+        },
+        {
+          "start": 1.18,
+          "end": 1.32,
+          "value": "F"
+        },
+        {
+          "start": 1.32,
+          "end": 1.95,
+          "value": "B"
+        },
+        {
+          "start": 1.95,
+          "end": 2.02,
+          "value": "G"
+        },
+        {
+          "start": 2.02,
+          "end": 2.23,
+          "value": "C"
+        },
+        {
+          "start": 2.23,
+          "end": 2.37,
+          "value": "B"
+        },
+        {
+          "start": 2.37,
+          "end": 2.5,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "c10_town.wind.01": {
+      "audio_sha256": "db9294887ea9c0bb9f75602d27bda9848d3a53e68a72f6df09ac3438813b7d18",
+      "seconds": 4.832666666666666,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.06,
+          "value": "X"
+        },
+        {
+          "start": 0.06,
+          "end": 0.13,
+          "value": "C"
+        },
+        {
+          "start": 0.13,
+          "end": 0.19,
+          "value": "B"
+        },
+        {
+          "start": 0.19,
+          "end": 0.47,
+          "value": "E"
+        },
+        {
+          "start": 0.47,
+          "end": 0.61,
+          "value": "B"
+        },
+        {
+          "start": 0.61,
+          "end": 0.89,
+          "value": "C"
+        },
+        {
+          "start": 0.89,
+          "end": 1.03,
+          "value": "B"
+        },
+        {
+          "start": 1.03,
+          "end": 1.16,
+          "value": "A"
+        },
+        {
+          "start": 1.16,
+          "end": 1.22,
+          "value": "C"
+        },
+        {
+          "start": 1.22,
+          "end": 1.42,
+          "value": "B"
+        },
+        {
+          "start": 1.42,
+          "end": 1.5,
+          "value": "A"
+        },
+        {
+          "start": 1.5,
+          "end": 1.56,
+          "value": "B"
+        },
+        {
+          "start": 1.56,
+          "end": 1.61,
+          "value": "G"
+        },
+        {
+          "start": 1.61,
+          "end": 1.82,
+          "value": "E"
+        },
+        {
+          "start": 1.82,
+          "end": 1.89,
+          "value": "F"
+        },
+        {
+          "start": 1.89,
+          "end": 2.05,
+          "value": "A"
+        },
+        {
+          "start": 2.05,
+          "end": 2.6,
+          "value": "X"
+        },
+        {
+          "start": 2.6,
+          "end": 2.66,
+          "value": "F"
+        },
+        {
+          "start": 2.66,
+          "end": 2.71,
+          "value": "B"
+        },
+        {
+          "start": 2.71,
+          "end": 2.78,
+          "value": "H"
+        },
+        {
+          "start": 2.78,
+          "end": 2.92,
+          "value": "C"
+        },
+        {
+          "start": 2.92,
+          "end": 3.06,
+          "value": "B"
+        },
+        {
+          "start": 3.06,
+          "end": 3.13,
+          "value": "E"
+        },
+        {
+          "start": 3.13,
+          "end": 3.48,
+          "value": "B"
+        },
+        {
+          "start": 3.48,
+          "end": 3.55,
+          "value": "C"
+        },
+        {
+          "start": 3.55,
+          "end": 3.63,
+          "value": "A"
+        },
+        {
+          "start": 3.63,
+          "end": 3.77,
+          "value": "B"
+        },
+        {
+          "start": 3.77,
+          "end": 3.91,
+          "value": "C"
+        },
+        {
+          "start": 3.91,
+          "end": 3.99,
+          "value": "A"
+        },
+        {
+          "start": 3.99,
+          "end": 4.28,
+          "value": "B"
+        },
+        {
+          "start": 4.28,
+          "end": 4.35,
+          "value": "C"
+        },
+        {
+          "start": 4.35,
+          "end": 4.56,
+          "value": "D"
+        },
+        {
+          "start": 4.56,
+          "end": 4.7,
+          "value": "E"
+        },
+        {
+          "start": 4.7,
+          "end": 4.83,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
     "c1_dinner.birthday.01": {
       "audio_sha256": "837a0d869a9ef802d6dfdee5ebf7e4c4f28747bd221d2a3ddbbcb9fdcbf625de",
       "seconds": 5.485729166666666,
@@ -25976,6 +31504,1740 @@
       ],
       "visual_timing_reviewed": false
     },
+    "epilogue.bait.01": {
+      "audio_sha256": "329ba9bbc16739c61bbb18f7f79432e214f669d8af8be52911eafba5aff5769b",
+      "seconds": 2.0375625,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.06,
+          "value": "X"
+        },
+        {
+          "start": 0.06,
+          "end": 0.13,
+          "value": "B"
+        },
+        {
+          "start": 0.13,
+          "end": 0.2,
+          "value": "C"
+        },
+        {
+          "start": 0.2,
+          "end": 0.27,
+          "value": "B"
+        },
+        {
+          "start": 0.27,
+          "end": 0.45,
+          "value": "A"
+        },
+        {
+          "start": 0.45,
+          "end": 0.5,
+          "value": "B"
+        },
+        {
+          "start": 0.5,
+          "end": 0.55,
+          "value": "C"
+        },
+        {
+          "start": 0.55,
+          "end": 1.18,
+          "value": "B"
+        },
+        {
+          "start": 1.18,
+          "end": 1.25,
+          "value": "D"
+        },
+        {
+          "start": 1.25,
+          "end": 1.33,
+          "value": "A"
+        },
+        {
+          "start": 1.33,
+          "end": 1.56,
+          "value": "E"
+        },
+        {
+          "start": 1.56,
+          "end": 1.84,
+          "value": "B"
+        },
+        {
+          "start": 1.84,
+          "end": 2.03,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "epilogue.bait.02": {
+      "audio_sha256": "df58f836bbe277b44570073d4c639feb56d6dcd09754eec1ea87c3e1cbeb99f9",
+      "seconds": 4.127354166666667,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.07,
+          "value": "X"
+        },
+        {
+          "start": 0.07,
+          "end": 0.37,
+          "value": "B"
+        },
+        {
+          "start": 0.37,
+          "end": 0.44,
+          "value": "C"
+        },
+        {
+          "start": 0.44,
+          "end": 0.58,
+          "value": "B"
+        },
+        {
+          "start": 0.58,
+          "end": 0.69,
+          "value": "A"
+        },
+        {
+          "start": 0.69,
+          "end": 0.9,
+          "value": "C"
+        },
+        {
+          "start": 0.9,
+          "end": 1.18,
+          "value": "B"
+        },
+        {
+          "start": 1.18,
+          "end": 1.25,
+          "value": "G"
+        },
+        {
+          "start": 1.25,
+          "end": 1.33,
+          "value": "A"
+        },
+        {
+          "start": 1.33,
+          "end": 1.4,
+          "value": "D"
+        },
+        {
+          "start": 1.4,
+          "end": 2.22,
+          "value": "B"
+        },
+        {
+          "start": 2.22,
+          "end": 2.31,
+          "value": "F"
+        },
+        {
+          "start": 2.31,
+          "end": 2.45,
+          "value": "B"
+        },
+        {
+          "start": 2.45,
+          "end": 2.59,
+          "value": "E"
+        },
+        {
+          "start": 2.59,
+          "end": 2.8,
+          "value": "B"
+        },
+        {
+          "start": 2.8,
+          "end": 2.87,
+          "value": "C"
+        },
+        {
+          "start": 2.87,
+          "end": 2.94,
+          "value": "B"
+        },
+        {
+          "start": 2.94,
+          "end": 3.01,
+          "value": "E"
+        },
+        {
+          "start": 3.01,
+          "end": 3.08,
+          "value": "C"
+        },
+        {
+          "start": 3.08,
+          "end": 3.18,
+          "value": "D"
+        },
+        {
+          "start": 3.18,
+          "end": 3.22,
+          "value": "C"
+        },
+        {
+          "start": 3.22,
+          "end": 3.3,
+          "value": "A"
+        },
+        {
+          "start": 3.3,
+          "end": 3.35,
+          "value": "C"
+        },
+        {
+          "start": 3.35,
+          "end": 3.68,
+          "value": "B"
+        },
+        {
+          "start": 3.68,
+          "end": 3.96,
+          "value": "C"
+        },
+        {
+          "start": 3.96,
+          "end": 4.12,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "epilogue.bait.03": {
+      "audio_sha256": "edb1e5a4922f75c5e4c1abf8a0eff6639541f3dd5373244d3b80d4e194a9a145",
+      "seconds": 1.489,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.06,
+          "value": "X"
+        },
+        {
+          "start": 0.06,
+          "end": 0.2,
+          "value": "F"
+        },
+        {
+          "start": 0.2,
+          "end": 0.41,
+          "value": "C"
+        },
+        {
+          "start": 0.41,
+          "end": 0.62,
+          "value": "B"
+        },
+        {
+          "start": 0.62,
+          "end": 0.76,
+          "value": "F"
+        },
+        {
+          "start": 0.76,
+          "end": 0.83,
+          "value": "B"
+        },
+        {
+          "start": 0.83,
+          "end": 0.97,
+          "value": "C"
+        },
+        {
+          "start": 0.97,
+          "end": 1.11,
+          "value": "H"
+        },
+        {
+          "start": 1.11,
+          "end": 1.32,
+          "value": "G"
+        },
+        {
+          "start": 1.32,
+          "end": 1.48,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "epilogue.bait.04": {
+      "audio_sha256": "a391d71916528a63f8f1edceca1c1d43e99dba5e29a458dead02243942c5ac02",
+      "seconds": 2.1942916666666665,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.06,
+          "value": "X"
+        },
+        {
+          "start": 0.06,
+          "end": 0.11,
+          "value": "C"
+        },
+        {
+          "start": 0.11,
+          "end": 0.16,
+          "value": "H"
+        },
+        {
+          "start": 0.16,
+          "end": 0.37,
+          "value": "C"
+        },
+        {
+          "start": 0.37,
+          "end": 0.51,
+          "value": "F"
+        },
+        {
+          "start": 0.51,
+          "end": 0.65,
+          "value": "G"
+        },
+        {
+          "start": 0.65,
+          "end": 0.72,
+          "value": "C"
+        },
+        {
+          "start": 0.72,
+          "end": 0.79,
+          "value": "B"
+        },
+        {
+          "start": 0.79,
+          "end": 0.93,
+          "value": "C"
+        },
+        {
+          "start": 0.93,
+          "end": 1.0,
+          "value": "B"
+        },
+        {
+          "start": 1.0,
+          "end": 1.28,
+          "value": "F"
+        },
+        {
+          "start": 1.28,
+          "end": 1.98,
+          "value": "B"
+        },
+        {
+          "start": 1.98,
+          "end": 2.19,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "epilogue.coffee.01": {
+      "audio_sha256": "2631a7f45a63749684e34d85dd299e71f33ea170d67fd112ec1ffabc7dd763fa",
+      "seconds": 5.146125,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.04,
+          "value": "X"
+        },
+        {
+          "start": 0.04,
+          "end": 0.52,
+          "value": "B"
+        },
+        {
+          "start": 0.52,
+          "end": 0.66,
+          "value": "G"
+        },
+        {
+          "start": 0.66,
+          "end": 0.8,
+          "value": "B"
+        },
+        {
+          "start": 0.8,
+          "end": 0.94,
+          "value": "F"
+        },
+        {
+          "start": 0.94,
+          "end": 1.29,
+          "value": "E"
+        },
+        {
+          "start": 1.29,
+          "end": 1.36,
+          "value": "F"
+        },
+        {
+          "start": 1.36,
+          "end": 1.47,
+          "value": "A"
+        },
+        {
+          "start": 1.47,
+          "end": 1.92,
+          "value": "X"
+        },
+        {
+          "start": 1.92,
+          "end": 1.96,
+          "value": "B"
+        },
+        {
+          "start": 1.96,
+          "end": 2.0,
+          "value": "C"
+        },
+        {
+          "start": 2.0,
+          "end": 2.14,
+          "value": "B"
+        },
+        {
+          "start": 2.14,
+          "end": 2.28,
+          "value": "D"
+        },
+        {
+          "start": 2.28,
+          "end": 2.35,
+          "value": "C"
+        },
+        {
+          "start": 2.35,
+          "end": 2.49,
+          "value": "G"
+        },
+        {
+          "start": 2.49,
+          "end": 2.92,
+          "value": "B"
+        },
+        {
+          "start": 2.92,
+          "end": 3.22,
+          "value": "C"
+        },
+        {
+          "start": 3.22,
+          "end": 3.36,
+          "value": "F"
+        },
+        {
+          "start": 3.36,
+          "end": 3.43,
+          "value": "G"
+        },
+        {
+          "start": 3.43,
+          "end": 3.64,
+          "value": "D"
+        },
+        {
+          "start": 3.64,
+          "end": 3.71,
+          "value": "B"
+        },
+        {
+          "start": 3.71,
+          "end": 3.85,
+          "value": "C"
+        },
+        {
+          "start": 3.85,
+          "end": 3.92,
+          "value": "B"
+        },
+        {
+          "start": 3.92,
+          "end": 3.99,
+          "value": "H"
+        },
+        {
+          "start": 3.99,
+          "end": 4.06,
+          "value": "C"
+        },
+        {
+          "start": 4.06,
+          "end": 4.17,
+          "value": "A"
+        },
+        {
+          "start": 4.17,
+          "end": 4.33,
+          "value": "B"
+        },
+        {
+          "start": 4.33,
+          "end": 4.41,
+          "value": "A"
+        },
+        {
+          "start": 4.41,
+          "end": 4.62,
+          "value": "C"
+        },
+        {
+          "start": 4.62,
+          "end": 4.97,
+          "value": "B"
+        },
+        {
+          "start": 4.97,
+          "end": 5.14,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "epilogue.coffee.02": {
+      "audio_sha256": "d9a04b22711a32d7aa440d4fa5639ce4ab4d6db6683983994f9016f194d3ac43",
+      "seconds": 3.160833333333333,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.11,
+          "value": "X"
+        },
+        {
+          "start": 0.11,
+          "end": 0.16,
+          "value": "C"
+        },
+        {
+          "start": 0.16,
+          "end": 0.21,
+          "value": "B"
+        },
+        {
+          "start": 0.21,
+          "end": 0.29,
+          "value": "A"
+        },
+        {
+          "start": 0.29,
+          "end": 0.76,
+          "value": "B"
+        },
+        {
+          "start": 0.76,
+          "end": 1.19,
+          "value": "X"
+        },
+        {
+          "start": 1.19,
+          "end": 1.31,
+          "value": "B"
+        },
+        {
+          "start": 1.31,
+          "end": 1.52,
+          "value": "C"
+        },
+        {
+          "start": 1.52,
+          "end": 1.59,
+          "value": "E"
+        },
+        {
+          "start": 1.59,
+          "end": 1.73,
+          "value": "B"
+        },
+        {
+          "start": 1.73,
+          "end": 1.8,
+          "value": "C"
+        },
+        {
+          "start": 1.8,
+          "end": 1.87,
+          "value": "B"
+        },
+        {
+          "start": 1.87,
+          "end": 1.94,
+          "value": "C"
+        },
+        {
+          "start": 1.94,
+          "end": 2.01,
+          "value": "B"
+        },
+        {
+          "start": 2.01,
+          "end": 2.15,
+          "value": "C"
+        },
+        {
+          "start": 2.15,
+          "end": 2.22,
+          "value": "G"
+        },
+        {
+          "start": 2.22,
+          "end": 2.36,
+          "value": "B"
+        },
+        {
+          "start": 2.36,
+          "end": 2.44,
+          "value": "A"
+        },
+        {
+          "start": 2.44,
+          "end": 2.57,
+          "value": "F"
+        },
+        {
+          "start": 2.57,
+          "end": 2.65,
+          "value": "A"
+        },
+        {
+          "start": 2.65,
+          "end": 2.93,
+          "value": "B"
+        },
+        {
+          "start": 2.93,
+          "end": 3.16,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "epilogue.in.01": {
+      "audio_sha256": "1b07cb2962c74caa89a385279215bd6fca489e48093c3f017d25d15b011092d8",
+      "seconds": 4.284083333333333,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.07,
+          "value": "X"
+        },
+        {
+          "start": 0.07,
+          "end": 0.15,
+          "value": "C"
+        },
+        {
+          "start": 0.15,
+          "end": 0.29,
+          "value": "E"
+        },
+        {
+          "start": 0.29,
+          "end": 0.37,
+          "value": "A"
+        },
+        {
+          "start": 0.37,
+          "end": 0.47,
+          "value": "C"
+        },
+        {
+          "start": 0.47,
+          "end": 0.55,
+          "value": "A"
+        },
+        {
+          "start": 0.55,
+          "end": 0.67,
+          "value": "E"
+        },
+        {
+          "start": 0.67,
+          "end": 0.95,
+          "value": "B"
+        },
+        {
+          "start": 0.95,
+          "end": 1.09,
+          "value": "D"
+        },
+        {
+          "start": 1.09,
+          "end": 1.16,
+          "value": "B"
+        },
+        {
+          "start": 1.16,
+          "end": 1.3,
+          "value": "C"
+        },
+        {
+          "start": 1.3,
+          "end": 1.51,
+          "value": "E"
+        },
+        {
+          "start": 1.51,
+          "end": 1.65,
+          "value": "B"
+        },
+        {
+          "start": 1.65,
+          "end": 1.86,
+          "value": "C"
+        },
+        {
+          "start": 1.86,
+          "end": 2.0,
+          "value": "E"
+        },
+        {
+          "start": 2.0,
+          "end": 2.41,
+          "value": "X"
+        },
+        {
+          "start": 2.41,
+          "end": 2.54,
+          "value": "F"
+        },
+        {
+          "start": 2.54,
+          "end": 2.82,
+          "value": "B"
+        },
+        {
+          "start": 2.82,
+          "end": 2.96,
+          "value": "C"
+        },
+        {
+          "start": 2.96,
+          "end": 3.03,
+          "value": "E"
+        },
+        {
+          "start": 3.03,
+          "end": 3.1,
+          "value": "F"
+        },
+        {
+          "start": 3.1,
+          "end": 3.18,
+          "value": "A"
+        },
+        {
+          "start": 3.18,
+          "end": 3.28,
+          "value": "E"
+        },
+        {
+          "start": 3.28,
+          "end": 4.12,
+          "value": "B"
+        },
+        {
+          "start": 4.12,
+          "end": 4.28,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "epilogue.in.02": {
+      "audio_sha256": "dfdf78e52736f6748eab8aec07ccc71ea440e8f61c4f63e005f024d53eeb2b99",
+      "seconds": 3.7877708333333335,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.06,
+          "value": "X"
+        },
+        {
+          "start": 0.06,
+          "end": 0.13,
+          "value": "C"
+        },
+        {
+          "start": 0.13,
+          "end": 0.34,
+          "value": "G"
+        },
+        {
+          "start": 0.34,
+          "end": 0.41,
+          "value": "C"
+        },
+        {
+          "start": 0.41,
+          "end": 0.62,
+          "value": "B"
+        },
+        {
+          "start": 0.62,
+          "end": 0.69,
+          "value": "C"
+        },
+        {
+          "start": 0.69,
+          "end": 0.76,
+          "value": "G"
+        },
+        {
+          "start": 0.76,
+          "end": 0.86,
+          "value": "A"
+        },
+        {
+          "start": 0.86,
+          "end": 0.97,
+          "value": "C"
+        },
+        {
+          "start": 0.97,
+          "end": 1.04,
+          "value": "B"
+        },
+        {
+          "start": 1.04,
+          "end": 1.11,
+          "value": "E"
+        },
+        {
+          "start": 1.11,
+          "end": 1.39,
+          "value": "F"
+        },
+        {
+          "start": 1.39,
+          "end": 1.53,
+          "value": "B"
+        },
+        {
+          "start": 1.53,
+          "end": 2.09,
+          "value": "X"
+        },
+        {
+          "start": 2.09,
+          "end": 2.37,
+          "value": "B"
+        },
+        {
+          "start": 2.37,
+          "end": 2.72,
+          "value": "C"
+        },
+        {
+          "start": 2.72,
+          "end": 2.86,
+          "value": "B"
+        },
+        {
+          "start": 2.86,
+          "end": 3.49,
+          "value": "F"
+        },
+        {
+          "start": 3.49,
+          "end": 3.78,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "epilogue.in.03": {
+      "audio_sha256": "bb7268143a7e08aee28272441a48bfe76ec3519c2e39228551dd92b596e5eb11",
+      "seconds": 4.049,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.05,
+          "value": "X"
+        },
+        {
+          "start": 0.05,
+          "end": 0.15,
+          "value": "B"
+        },
+        {
+          "start": 0.15,
+          "end": 0.29,
+          "value": "C"
+        },
+        {
+          "start": 0.29,
+          "end": 0.57,
+          "value": "F"
+        },
+        {
+          "start": 0.57,
+          "end": 0.64,
+          "value": "G"
+        },
+        {
+          "start": 0.64,
+          "end": 0.85,
+          "value": "C"
+        },
+        {
+          "start": 0.85,
+          "end": 0.93,
+          "value": "A"
+        },
+        {
+          "start": 0.93,
+          "end": 1.04,
+          "value": "B"
+        },
+        {
+          "start": 1.04,
+          "end": 1.32,
+          "value": "C"
+        },
+        {
+          "start": 1.32,
+          "end": 2.04,
+          "value": "B"
+        },
+        {
+          "start": 2.04,
+          "end": 2.08,
+          "value": "C"
+        },
+        {
+          "start": 2.08,
+          "end": 2.12,
+          "value": "B"
+        },
+        {
+          "start": 2.12,
+          "end": 2.4,
+          "value": "C"
+        },
+        {
+          "start": 2.4,
+          "end": 2.54,
+          "value": "B"
+        },
+        {
+          "start": 2.54,
+          "end": 2.61,
+          "value": "G"
+        },
+        {
+          "start": 2.61,
+          "end": 2.89,
+          "value": "B"
+        },
+        {
+          "start": 2.89,
+          "end": 2.96,
+          "value": "G"
+        },
+        {
+          "start": 2.96,
+          "end": 3.1,
+          "value": "C"
+        },
+        {
+          "start": 3.1,
+          "end": 3.31,
+          "value": "B"
+        },
+        {
+          "start": 3.31,
+          "end": 3.45,
+          "value": "C"
+        },
+        {
+          "start": 3.45,
+          "end": 3.53,
+          "value": "A"
+        },
+        {
+          "start": 3.53,
+          "end": 3.87,
+          "value": "B"
+        },
+        {
+          "start": 3.87,
+          "end": 4.04,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "epilogue.in.04": {
+      "audio_sha256": "4f3ad8f3fd6cb345b3fbc26714a5512a529adf9b621a295d3e91ec694e2af013",
+      "seconds": 1.9591875,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.02,
+          "value": "X"
+        },
+        {
+          "start": 0.02,
+          "end": 0.2,
+          "value": "B"
+        },
+        {
+          "start": 0.2,
+          "end": 0.27,
+          "value": "C"
+        },
+        {
+          "start": 0.27,
+          "end": 0.48,
+          "value": "E"
+        },
+        {
+          "start": 0.48,
+          "end": 0.97,
+          "value": "B"
+        },
+        {
+          "start": 0.97,
+          "end": 1.04,
+          "value": "H"
+        },
+        {
+          "start": 1.04,
+          "end": 1.74,
+          "value": "B"
+        },
+        {
+          "start": 1.74,
+          "end": 1.95,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "epilogue.neighbors.01": {
+      "audio_sha256": "ce3d98b8b7aa6c82bbb71ff7f47dbadb278d888b0b2ae1c59fe5c63a08a6b696",
+      "seconds": 4.205729166666667,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.02,
+          "value": "X"
+        },
+        {
+          "start": 0.02,
+          "end": 0.22,
+          "value": "F"
+        },
+        {
+          "start": 0.22,
+          "end": 0.3,
+          "value": "A"
+        },
+        {
+          "start": 0.3,
+          "end": 0.56,
+          "value": "E"
+        },
+        {
+          "start": 0.56,
+          "end": 1.28,
+          "value": "B"
+        },
+        {
+          "start": 1.28,
+          "end": 1.65,
+          "value": "F"
+        },
+        {
+          "start": 1.65,
+          "end": 1.72,
+          "value": "G"
+        },
+        {
+          "start": 1.72,
+          "end": 1.93,
+          "value": "D"
+        },
+        {
+          "start": 1.93,
+          "end": 2.0,
+          "value": "B"
+        },
+        {
+          "start": 2.0,
+          "end": 2.14,
+          "value": "E"
+        },
+        {
+          "start": 2.14,
+          "end": 2.35,
+          "value": "B"
+        },
+        {
+          "start": 2.35,
+          "end": 2.88,
+          "value": "X"
+        },
+        {
+          "start": 2.88,
+          "end": 2.95,
+          "value": "B"
+        },
+        {
+          "start": 2.95,
+          "end": 3.02,
+          "value": "F"
+        },
+        {
+          "start": 3.02,
+          "end": 3.23,
+          "value": "C"
+        },
+        {
+          "start": 3.23,
+          "end": 3.3,
+          "value": "G"
+        },
+        {
+          "start": 3.3,
+          "end": 3.44,
+          "value": "F"
+        },
+        {
+          "start": 3.44,
+          "end": 3.65,
+          "value": "E"
+        },
+        {
+          "start": 3.65,
+          "end": 4.0,
+          "value": "C"
+        },
+        {
+          "start": 4.0,
+          "end": 4.2,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "epilogue.neighbors.02": {
+      "audio_sha256": "d1fcaa6e8731e5eb272f9b3077475056e94353869da41e4f05ff7253ff37e58f",
+      "seconds": 3.970625,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.01,
+          "value": "X"
+        },
+        {
+          "start": 0.01,
+          "end": 0.06,
+          "value": "B"
+        },
+        {
+          "start": 0.06,
+          "end": 0.25,
+          "value": "C"
+        },
+        {
+          "start": 0.25,
+          "end": 0.46,
+          "value": "B"
+        },
+        {
+          "start": 0.46,
+          "end": 0.6,
+          "value": "C"
+        },
+        {
+          "start": 0.6,
+          "end": 0.81,
+          "value": "B"
+        },
+        {
+          "start": 0.81,
+          "end": 1.02,
+          "value": "C"
+        },
+        {
+          "start": 1.02,
+          "end": 1.09,
+          "value": "B"
+        },
+        {
+          "start": 1.09,
+          "end": 1.16,
+          "value": "E"
+        },
+        {
+          "start": 1.16,
+          "end": 1.37,
+          "value": "B"
+        },
+        {
+          "start": 1.37,
+          "end": 1.77,
+          "value": "X"
+        },
+        {
+          "start": 1.77,
+          "end": 1.89,
+          "value": "A"
+        },
+        {
+          "start": 1.89,
+          "end": 1.97,
+          "value": "B"
+        },
+        {
+          "start": 1.97,
+          "end": 2.11,
+          "value": "C"
+        },
+        {
+          "start": 2.11,
+          "end": 2.32,
+          "value": "B"
+        },
+        {
+          "start": 2.32,
+          "end": 2.46,
+          "value": "D"
+        },
+        {
+          "start": 2.46,
+          "end": 2.6,
+          "value": "B"
+        },
+        {
+          "start": 2.6,
+          "end": 2.67,
+          "value": "F"
+        },
+        {
+          "start": 2.67,
+          "end": 2.74,
+          "value": "H"
+        },
+        {
+          "start": 2.74,
+          "end": 2.82,
+          "value": "A"
+        },
+        {
+          "start": 2.82,
+          "end": 2.88,
+          "value": "C"
+        },
+        {
+          "start": 2.88,
+          "end": 2.94,
+          "value": "B"
+        },
+        {
+          "start": 2.94,
+          "end": 3.15,
+          "value": "C"
+        },
+        {
+          "start": 3.15,
+          "end": 3.29,
+          "value": "B"
+        },
+        {
+          "start": 3.29,
+          "end": 3.36,
+          "value": "C"
+        },
+        {
+          "start": 3.36,
+          "end": 3.57,
+          "value": "F"
+        },
+        {
+          "start": 3.57,
+          "end": 3.78,
+          "value": "B"
+        },
+        {
+          "start": 3.78,
+          "end": 3.97,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "epilogue.neighbors.03": {
+      "audio_sha256": "fe9aa5d2699f94027aa3eb07630931cff4b433640f4c8e3122a5e9362ed1d4ec",
+      "seconds": 2.351020833333333,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.01,
+          "value": "X"
+        },
+        {
+          "start": 0.01,
+          "end": 0.07,
+          "value": "A"
+        },
+        {
+          "start": 0.07,
+          "end": 0.25,
+          "value": "C"
+        },
+        {
+          "start": 0.25,
+          "end": 0.39,
+          "value": "B"
+        },
+        {
+          "start": 0.39,
+          "end": 0.6,
+          "value": "F"
+        },
+        {
+          "start": 0.6,
+          "end": 0.67,
+          "value": "B"
+        },
+        {
+          "start": 0.67,
+          "end": 0.74,
+          "value": "C"
+        },
+        {
+          "start": 0.74,
+          "end": 0.81,
+          "value": "G"
+        },
+        {
+          "start": 0.81,
+          "end": 1.02,
+          "value": "C"
+        },
+        {
+          "start": 1.02,
+          "end": 1.65,
+          "value": "B"
+        },
+        {
+          "start": 1.65,
+          "end": 1.86,
+          "value": "E"
+        },
+        {
+          "start": 1.86,
+          "end": 2.0,
+          "value": "B"
+        },
+        {
+          "start": 2.0,
+          "end": 2.35,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "epilogue.neighbors.04": {
+      "audio_sha256": "78fa85a828c9fa72edd415897a566c9761c601c2b60fb4a9b94c905949e7755d",
+      "seconds": 4.6759375,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.01,
+          "value": "X"
+        },
+        {
+          "start": 0.01,
+          "end": 0.18,
+          "value": "C"
+        },
+        {
+          "start": 0.18,
+          "end": 0.25,
+          "value": "H"
+        },
+        {
+          "start": 0.25,
+          "end": 0.33,
+          "value": "A"
+        },
+        {
+          "start": 0.33,
+          "end": 0.45,
+          "value": "B"
+        },
+        {
+          "start": 0.45,
+          "end": 0.59,
+          "value": "F"
+        },
+        {
+          "start": 0.59,
+          "end": 1.01,
+          "value": "B"
+        },
+        {
+          "start": 1.01,
+          "end": 1.49,
+          "value": "X"
+        },
+        {
+          "start": 1.49,
+          "end": 1.65,
+          "value": "B"
+        },
+        {
+          "start": 1.65,
+          "end": 1.73,
+          "value": "A"
+        },
+        {
+          "start": 1.73,
+          "end": 1.78,
+          "value": "F"
+        },
+        {
+          "start": 1.78,
+          "end": 1.82,
+          "value": "B"
+        },
+        {
+          "start": 1.82,
+          "end": 1.89,
+          "value": "C"
+        },
+        {
+          "start": 1.89,
+          "end": 2.03,
+          "value": "E"
+        },
+        {
+          "start": 2.03,
+          "end": 2.38,
+          "value": "B"
+        },
+        {
+          "start": 2.38,
+          "end": 2.47,
+          "value": "A"
+        },
+        {
+          "start": 2.47,
+          "end": 2.68,
+          "value": "C"
+        },
+        {
+          "start": 2.68,
+          "end": 2.75,
+          "value": "B"
+        },
+        {
+          "start": 2.75,
+          "end": 2.83,
+          "value": "A"
+        },
+        {
+          "start": 2.83,
+          "end": 3.07,
+          "value": "F"
+        },
+        {
+          "start": 3.07,
+          "end": 3.55,
+          "value": "B"
+        },
+        {
+          "start": 3.55,
+          "end": 3.65,
+          "value": "C"
+        },
+        {
+          "start": 3.65,
+          "end": 3.79,
+          "value": "E"
+        },
+        {
+          "start": 3.79,
+          "end": 3.86,
+          "value": "B"
+        },
+        {
+          "start": 3.86,
+          "end": 4.0,
+          "value": "F"
+        },
+        {
+          "start": 4.0,
+          "end": 4.14,
+          "value": "B"
+        },
+        {
+          "start": 4.14,
+          "end": 4.21,
+          "value": "C"
+        },
+        {
+          "start": 4.21,
+          "end": 4.56,
+          "value": "B"
+        },
+        {
+          "start": 4.56,
+          "end": 4.67,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "epilogue.out.01": {
+      "audio_sha256": "388edb84682e3a08ca3a8ea7230e2204094170353d759f3276735f9cd4b48b63",
+      "seconds": 3.3175625,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.07,
+          "value": "X"
+        },
+        {
+          "start": 0.07,
+          "end": 0.12,
+          "value": "B"
+        },
+        {
+          "start": 0.12,
+          "end": 0.24,
+          "value": "C"
+        },
+        {
+          "start": 0.24,
+          "end": 0.87,
+          "value": "B"
+        },
+        {
+          "start": 0.87,
+          "end": 0.93,
+          "value": "A"
+        },
+        {
+          "start": 0.93,
+          "end": 0.99,
+          "value": "C"
+        },
+        {
+          "start": 0.99,
+          "end": 1.05,
+          "value": "A"
+        },
+        {
+          "start": 1.05,
+          "end": 1.29,
+          "value": "D"
+        },
+        {
+          "start": 1.29,
+          "end": 1.35,
+          "value": "C"
+        },
+        {
+          "start": 1.35,
+          "end": 1.6,
+          "value": "B"
+        },
+        {
+          "start": 1.6,
+          "end": 2.0,
+          "value": "X"
+        },
+        {
+          "start": 2.0,
+          "end": 2.06,
+          "value": "F"
+        },
+        {
+          "start": 2.06,
+          "end": 2.32,
+          "value": "B"
+        },
+        {
+          "start": 2.32,
+          "end": 2.46,
+          "value": "D"
+        },
+        {
+          "start": 2.46,
+          "end": 2.53,
+          "value": "B"
+        },
+        {
+          "start": 2.53,
+          "end": 2.6,
+          "value": "F"
+        },
+        {
+          "start": 2.6,
+          "end": 2.8,
+          "value": "D"
+        },
+        {
+          "start": 2.8,
+          "end": 2.88,
+          "value": "C"
+        },
+        {
+          "start": 2.88,
+          "end": 2.95,
+          "value": "G"
+        },
+        {
+          "start": 2.95,
+          "end": 3.09,
+          "value": "B"
+        },
+        {
+          "start": 3.09,
+          "end": 3.31,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "epilogue.out.02": {
+      "audio_sha256": "a66a911a2caf5dd4ad9607fb82aa2b4575f1992c98999f65f24ee0e3baa89bd7",
+      "seconds": 2.4293958333333334,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.08,
+          "value": "X"
+        },
+        {
+          "start": 0.08,
+          "end": 0.3,
+          "value": "C"
+        },
+        {
+          "start": 0.3,
+          "end": 0.37,
+          "value": "B"
+        },
+        {
+          "start": 0.37,
+          "end": 0.89,
+          "value": "C"
+        },
+        {
+          "start": 0.89,
+          "end": 1.1,
+          "value": "B"
+        },
+        {
+          "start": 1.1,
+          "end": 1.17,
+          "value": "F"
+        },
+        {
+          "start": 1.17,
+          "end": 1.24,
+          "value": "C"
+        },
+        {
+          "start": 1.24,
+          "end": 1.38,
+          "value": "D"
+        },
+        {
+          "start": 1.38,
+          "end": 1.45,
+          "value": "C"
+        },
+        {
+          "start": 1.45,
+          "end": 1.52,
+          "value": "G"
+        },
+        {
+          "start": 1.52,
+          "end": 1.73,
+          "value": "B"
+        },
+        {
+          "start": 1.73,
+          "end": 1.8,
+          "value": "C"
+        },
+        {
+          "start": 1.8,
+          "end": 1.94,
+          "value": "B"
+        },
+        {
+          "start": 1.94,
+          "end": 2.22,
+          "value": "C"
+        },
+        {
+          "start": 2.22,
+          "end": 2.42,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "epilogue.out.03": {
+      "audio_sha256": "d1c2aa483324cd4ea16445cdebb72c296f466c719e85ef627266e7df2ff2c98f",
+      "seconds": 1.2277708333333333,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.06,
+          "value": "X"
+        },
+        {
+          "start": 0.06,
+          "end": 0.2,
+          "value": "C"
+        },
+        {
+          "start": 0.2,
+          "end": 0.27,
+          "value": "G"
+        },
+        {
+          "start": 0.27,
+          "end": 0.41,
+          "value": "B"
+        },
+        {
+          "start": 0.41,
+          "end": 0.69,
+          "value": "C"
+        },
+        {
+          "start": 0.69,
+          "end": 0.97,
+          "value": "B"
+        },
+        {
+          "start": 0.97,
+          "end": 1.22,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
     "i1_archive.in.01": {
       "audio_sha256": "1b54d67d9de435097c85ce86f875cd947d54e408f1c9d58761264254e87cb1b9",
       "seconds": 5.9559375,
@@ -28295,6 +35557,583 @@
         {
           "start": 4.57,
           "end": 4.75,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "one_year.in.01": {
+      "audio_sha256": "3c554389cff60c0e3724082fcff10e9b02e149b30f5a75b181f3f18798d71a1d",
+      "seconds": 6.844083333333334,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.06,
+          "value": "X"
+        },
+        {
+          "start": 0.06,
+          "end": 0.17,
+          "value": "F"
+        },
+        {
+          "start": 0.17,
+          "end": 0.38,
+          "value": "C"
+        },
+        {
+          "start": 0.38,
+          "end": 0.46,
+          "value": "A"
+        },
+        {
+          "start": 0.46,
+          "end": 0.91,
+          "value": "F"
+        },
+        {
+          "start": 0.91,
+          "end": 1.01,
+          "value": "C"
+        },
+        {
+          "start": 1.01,
+          "end": 1.08,
+          "value": "B"
+        },
+        {
+          "start": 1.08,
+          "end": 1.29,
+          "value": "E"
+        },
+        {
+          "start": 1.29,
+          "end": 1.57,
+          "value": "F"
+        },
+        {
+          "start": 1.57,
+          "end": 1.71,
+          "value": "B"
+        },
+        {
+          "start": 1.71,
+          "end": 1.78,
+          "value": "E"
+        },
+        {
+          "start": 1.78,
+          "end": 1.85,
+          "value": "F"
+        },
+        {
+          "start": 1.85,
+          "end": 1.99,
+          "value": "B"
+        },
+        {
+          "start": 1.99,
+          "end": 2.43,
+          "value": "X"
+        },
+        {
+          "start": 2.43,
+          "end": 2.7,
+          "value": "B"
+        },
+        {
+          "start": 2.7,
+          "end": 2.77,
+          "value": "F"
+        },
+        {
+          "start": 2.77,
+          "end": 3.23,
+          "value": "B"
+        },
+        {
+          "start": 3.23,
+          "end": 3.28,
+          "value": "C"
+        },
+        {
+          "start": 3.28,
+          "end": 3.47,
+          "value": "B"
+        },
+        {
+          "start": 3.47,
+          "end": 3.55,
+          "value": "A"
+        },
+        {
+          "start": 3.55,
+          "end": 3.7,
+          "value": "C"
+        },
+        {
+          "start": 3.7,
+          "end": 4.12,
+          "value": "B"
+        },
+        {
+          "start": 4.12,
+          "end": 4.19,
+          "value": "G"
+        },
+        {
+          "start": 4.19,
+          "end": 4.4,
+          "value": "F"
+        },
+        {
+          "start": 4.4,
+          "end": 4.54,
+          "value": "C"
+        },
+        {
+          "start": 4.54,
+          "end": 4.75,
+          "value": "G"
+        },
+        {
+          "start": 4.75,
+          "end": 4.94,
+          "value": "C"
+        },
+        {
+          "start": 4.94,
+          "end": 5.01,
+          "value": "G"
+        },
+        {
+          "start": 5.01,
+          "end": 5.08,
+          "value": "B"
+        },
+        {
+          "start": 5.08,
+          "end": 5.22,
+          "value": "F"
+        },
+        {
+          "start": 5.22,
+          "end": 5.29,
+          "value": "C"
+        },
+        {
+          "start": 5.29,
+          "end": 5.57,
+          "value": "F"
+        },
+        {
+          "start": 5.57,
+          "end": 5.64,
+          "value": "E"
+        },
+        {
+          "start": 5.64,
+          "end": 5.78,
+          "value": "F"
+        },
+        {
+          "start": 5.78,
+          "end": 5.86,
+          "value": "A"
+        },
+        {
+          "start": 5.86,
+          "end": 5.93,
+          "value": "B"
+        },
+        {
+          "start": 5.93,
+          "end": 5.99,
+          "value": "C"
+        },
+        {
+          "start": 5.99,
+          "end": 6.07,
+          "value": "A"
+        },
+        {
+          "start": 6.07,
+          "end": 6.27,
+          "value": "D"
+        },
+        {
+          "start": 6.27,
+          "end": 6.34,
+          "value": "H"
+        },
+        {
+          "start": 6.34,
+          "end": 6.69,
+          "value": "B"
+        },
+        {
+          "start": 6.69,
+          "end": 6.84,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "one_year.in.02": {
+      "audio_sha256": "71497047f3185d2beea7dab5b545f41ee42576e57861f798f6c736aab930b33c",
+      "seconds": 3.160833333333333,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.1,
+          "value": "X"
+        },
+        {
+          "start": 0.1,
+          "end": 0.19,
+          "value": "F"
+        },
+        {
+          "start": 0.19,
+          "end": 0.26,
+          "value": "B"
+        },
+        {
+          "start": 0.26,
+          "end": 0.54,
+          "value": "F"
+        },
+        {
+          "start": 0.54,
+          "end": 0.61,
+          "value": "C"
+        },
+        {
+          "start": 0.61,
+          "end": 0.82,
+          "value": "B"
+        },
+        {
+          "start": 0.82,
+          "end": 0.89,
+          "value": "C"
+        },
+        {
+          "start": 0.89,
+          "end": 0.96,
+          "value": "B"
+        },
+        {
+          "start": 0.96,
+          "end": 1.04,
+          "value": "A"
+        },
+        {
+          "start": 1.04,
+          "end": 1.11,
+          "value": "C"
+        },
+        {
+          "start": 1.11,
+          "end": 1.17,
+          "value": "B"
+        },
+        {
+          "start": 1.17,
+          "end": 1.25,
+          "value": "A"
+        },
+        {
+          "start": 1.25,
+          "end": 1.38,
+          "value": "C"
+        },
+        {
+          "start": 1.38,
+          "end": 1.66,
+          "value": "B"
+        },
+        {
+          "start": 1.66,
+          "end": 1.94,
+          "value": "F"
+        },
+        {
+          "start": 1.94,
+          "end": 2.29,
+          "value": "B"
+        },
+        {
+          "start": 2.29,
+          "end": 2.36,
+          "value": "C"
+        },
+        {
+          "start": 2.36,
+          "end": 2.48,
+          "value": "A"
+        },
+        {
+          "start": 2.48,
+          "end": 2.89,
+          "value": "B"
+        },
+        {
+          "start": 2.89,
+          "end": 3.16,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "one_year.in.03": {
+      "audio_sha256": "f80eecf73af72b250302dcee97b4a721f2c1b2ebb6fa6b6e4d43c782df29aee0",
+      "seconds": 1.6457291666666667,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.06,
+          "value": "X"
+        },
+        {
+          "start": 0.06,
+          "end": 0.15,
+          "value": "F"
+        },
+        {
+          "start": 0.15,
+          "end": 0.5,
+          "value": "B"
+        },
+        {
+          "start": 0.5,
+          "end": 0.78,
+          "value": "C"
+        },
+        {
+          "start": 0.78,
+          "end": 0.99,
+          "value": "B"
+        },
+        {
+          "start": 0.99,
+          "end": 1.2,
+          "value": "C"
+        },
+        {
+          "start": 1.2,
+          "end": 1.34,
+          "value": "B"
+        },
+        {
+          "start": 1.34,
+          "end": 1.64,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "one_year.newwind.01": {
+      "audio_sha256": "84a3b34635e777a7ef5fee890088bd930378e50e952e3a389538b26dc347e3e3",
+      "seconds": 2.1942916666666665,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.08,
+          "value": "X"
+        },
+        {
+          "start": 0.08,
+          "end": 0.24,
+          "value": "B"
+        },
+        {
+          "start": 0.24,
+          "end": 0.38,
+          "value": "C"
+        },
+        {
+          "start": 0.38,
+          "end": 0.45,
+          "value": "B"
+        },
+        {
+          "start": 0.45,
+          "end": 0.52,
+          "value": "H"
+        },
+        {
+          "start": 0.52,
+          "end": 0.59,
+          "value": "C"
+        },
+        {
+          "start": 0.59,
+          "end": 0.87,
+          "value": "E"
+        },
+        {
+          "start": 0.87,
+          "end": 0.94,
+          "value": "F"
+        },
+        {
+          "start": 0.94,
+          "end": 1.12,
+          "value": "A"
+        },
+        {
+          "start": 1.12,
+          "end": 1.5,
+          "value": "X"
+        },
+        {
+          "start": 1.5,
+          "end": 1.57,
+          "value": "C"
+        },
+        {
+          "start": 1.57,
+          "end": 1.83,
+          "value": "F"
+        },
+        {
+          "start": 1.83,
+          "end": 1.88,
+          "value": "E"
+        },
+        {
+          "start": 1.88,
+          "end": 2.06,
+          "value": "C"
+        },
+        {
+          "start": 2.06,
+          "end": 2.19,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "one_year.newwind.02": {
+      "audio_sha256": "871b89b1d350e2d7355138d4daec2839e4e2b08b3f7e6695494bf3ce2ab376b7",
+      "seconds": 1.5673541666666666,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.08,
+          "value": "X"
+        },
+        {
+          "start": 0.08,
+          "end": 0.41,
+          "value": "B"
+        },
+        {
+          "start": 0.41,
+          "end": 0.85,
+          "value": "X"
+        },
+        {
+          "start": 0.85,
+          "end": 0.96,
+          "value": "F"
+        },
+        {
+          "start": 0.96,
+          "end": 1.1,
+          "value": "E"
+        },
+        {
+          "start": 1.1,
+          "end": 1.24,
+          "value": "D"
+        },
+        {
+          "start": 1.24,
+          "end": 1.45,
+          "value": "C"
+        },
+        {
+          "start": 1.45,
+          "end": 1.56,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "one_year.out.01": {
+      "audio_sha256": "934f69df9b89116097cc61511e69062732077b7979867d68586e17162769974c",
+      "seconds": 1.489,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.02,
+          "value": "X"
+        },
+        {
+          "start": 0.02,
+          "end": 0.16,
+          "value": "F"
+        },
+        {
+          "start": 0.16,
+          "end": 0.24,
+          "value": "A"
+        },
+        {
+          "start": 0.24,
+          "end": 0.33,
+          "value": "E"
+        },
+        {
+          "start": 0.33,
+          "end": 0.47,
+          "value": "B"
+        },
+        {
+          "start": 0.47,
+          "end": 0.55,
+          "value": "A"
+        },
+        {
+          "start": 0.55,
+          "end": 0.67,
+          "value": "C"
+        },
+        {
+          "start": 0.67,
+          "end": 0.74,
+          "value": "H"
+        },
+        {
+          "start": 0.74,
+          "end": 0.81,
+          "value": "F"
+        },
+        {
+          "start": 0.81,
+          "end": 0.88,
+          "value": "C"
+        },
+        {
+          "start": 0.88,
+          "end": 0.95,
+          "value": "B"
+        },
+        {
+          "start": 0.95,
+          "end": 1.09,
+          "value": "E"
+        },
+        {
+          "start": 1.09,
+          "end": 1.23,
+          "value": "B"
+        },
+        {
+          "start": 1.23,
+          "end": 1.48,
           "value": "X"
         }
       ],
@@ -31007,6 +38846,441 @@
         {
           "start": 3.0,
           "end": 3.23,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "postcredits.answer.01": {
+      "audio_sha256": "7ef5c141cafb01506d2c75b0647e74009d17fc0feed321c4dca8018a68b1c8ef",
+      "seconds": 3.0040833333333334,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.05,
+          "value": "X"
+        },
+        {
+          "start": 0.05,
+          "end": 0.11,
+          "value": "C"
+        },
+        {
+          "start": 0.11,
+          "end": 0.17,
+          "value": "B"
+        },
+        {
+          "start": 0.17,
+          "end": 0.31,
+          "value": "C"
+        },
+        {
+          "start": 0.31,
+          "end": 0.45,
+          "value": "E"
+        },
+        {
+          "start": 0.45,
+          "end": 0.52,
+          "value": "F"
+        },
+        {
+          "start": 0.52,
+          "end": 0.73,
+          "value": "B"
+        },
+        {
+          "start": 0.73,
+          "end": 0.8,
+          "value": "H"
+        },
+        {
+          "start": 0.8,
+          "end": 0.94,
+          "value": "C"
+        },
+        {
+          "start": 0.94,
+          "end": 1.22,
+          "value": "B"
+        },
+        {
+          "start": 1.22,
+          "end": 1.29,
+          "value": "C"
+        },
+        {
+          "start": 1.29,
+          "end": 1.5,
+          "value": "D"
+        },
+        {
+          "start": 1.5,
+          "end": 1.64,
+          "value": "E"
+        },
+        {
+          "start": 1.64,
+          "end": 1.79,
+          "value": "C"
+        },
+        {
+          "start": 1.79,
+          "end": 2.05,
+          "value": "B"
+        },
+        {
+          "start": 2.05,
+          "end": 2.13,
+          "value": "A"
+        },
+        {
+          "start": 2.13,
+          "end": 2.2,
+          "value": "B"
+        },
+        {
+          "start": 2.2,
+          "end": 2.26,
+          "value": "C"
+        },
+        {
+          "start": 2.26,
+          "end": 2.34,
+          "value": "A"
+        },
+        {
+          "start": 2.34,
+          "end": 2.4,
+          "value": "E"
+        },
+        {
+          "start": 2.4,
+          "end": 2.45,
+          "value": "F"
+        },
+        {
+          "start": 2.45,
+          "end": 2.53,
+          "value": "A"
+        },
+        {
+          "start": 2.53,
+          "end": 2.64,
+          "value": "C"
+        },
+        {
+          "start": 2.64,
+          "end": 2.85,
+          "value": "B"
+        },
+        {
+          "start": 2.85,
+          "end": 3.0,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "postcredits.in.01": {
+      "audio_sha256": "d47b4a3cb311b7df08b573520a35bdcdca92e7277d0f868f192f3980ef68598e",
+      "seconds": 4.127354166666667,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.11,
+          "value": "X"
+        },
+        {
+          "start": 0.11,
+          "end": 0.21,
+          "value": "A"
+        },
+        {
+          "start": 0.21,
+          "end": 0.26,
+          "value": "C"
+        },
+        {
+          "start": 0.26,
+          "end": 0.31,
+          "value": "B"
+        },
+        {
+          "start": 0.31,
+          "end": 0.45,
+          "value": "C"
+        },
+        {
+          "start": 0.45,
+          "end": 0.65,
+          "value": "A"
+        },
+        {
+          "start": 0.65,
+          "end": 0.71,
+          "value": "B"
+        },
+        {
+          "start": 0.71,
+          "end": 0.77,
+          "value": "C"
+        },
+        {
+          "start": 0.77,
+          "end": 0.91,
+          "value": "B"
+        },
+        {
+          "start": 0.91,
+          "end": 1.05,
+          "value": "C"
+        },
+        {
+          "start": 1.05,
+          "end": 1.47,
+          "value": "B"
+        },
+        {
+          "start": 1.47,
+          "end": 1.9,
+          "value": "X"
+        },
+        {
+          "start": 1.9,
+          "end": 2.2,
+          "value": "B"
+        },
+        {
+          "start": 2.2,
+          "end": 2.41,
+          "value": "C"
+        },
+        {
+          "start": 2.41,
+          "end": 2.48,
+          "value": "B"
+        },
+        {
+          "start": 2.48,
+          "end": 2.88,
+          "value": "A"
+        },
+        {
+          "start": 2.88,
+          "end": 2.98,
+          "value": "C"
+        },
+        {
+          "start": 2.98,
+          "end": 3.19,
+          "value": "B"
+        },
+        {
+          "start": 3.19,
+          "end": 3.26,
+          "value": "C"
+        },
+        {
+          "start": 3.26,
+          "end": 3.34,
+          "value": "A"
+        },
+        {
+          "start": 3.34,
+          "end": 3.93,
+          "value": "B"
+        },
+        {
+          "start": 3.93,
+          "end": 4.12,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "postcredits.in.02": {
+      "audio_sha256": "2628d9f910e534835fc76bbcb7c696b37d518bdac0225ecc65851569c71d4956",
+      "seconds": 2.769,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.05,
+          "value": "X"
+        },
+        {
+          "start": 0.05,
+          "end": 0.14,
+          "value": "C"
+        },
+        {
+          "start": 0.14,
+          "end": 0.21,
+          "value": "G"
+        },
+        {
+          "start": 0.21,
+          "end": 0.28,
+          "value": "C"
+        },
+        {
+          "start": 0.28,
+          "end": 1.05,
+          "value": "B"
+        },
+        {
+          "start": 1.05,
+          "end": 1.19,
+          "value": "C"
+        },
+        {
+          "start": 1.19,
+          "end": 1.89,
+          "value": "B"
+        },
+        {
+          "start": 1.89,
+          "end": 2.0,
+          "value": "A"
+        },
+        {
+          "start": 2.0,
+          "end": 2.14,
+          "value": "E"
+        },
+        {
+          "start": 2.14,
+          "end": 2.63,
+          "value": "B"
+        },
+        {
+          "start": 2.63,
+          "end": 2.76,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "postcredits.in.03": {
+      "audio_sha256": "afa2cd9a1afbbbcf509d25a5bb31604cdf33f90bea10b370db6c4d8fbc091065",
+      "seconds": 1.9591875,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.06,
+          "value": "X"
+        },
+        {
+          "start": 0.06,
+          "end": 0.22,
+          "value": "F"
+        },
+        {
+          "start": 0.22,
+          "end": 0.36,
+          "value": "E"
+        },
+        {
+          "start": 0.36,
+          "end": 0.43,
+          "value": "F"
+        },
+        {
+          "start": 0.43,
+          "end": 0.5,
+          "value": "B"
+        },
+        {
+          "start": 0.5,
+          "end": 0.71,
+          "value": "F"
+        },
+        {
+          "start": 0.71,
+          "end": 0.78,
+          "value": "D"
+        },
+        {
+          "start": 0.78,
+          "end": 0.92,
+          "value": "F"
+        },
+        {
+          "start": 0.92,
+          "end": 1.76,
+          "value": "B"
+        },
+        {
+          "start": 1.76,
+          "end": 1.95,
+          "value": "X"
+        }
+      ],
+      "visual_timing_reviewed": false
+    },
+    "postcredits.out.01": {
+      "audio_sha256": "46ce0b0555b40643c650b179d212988aae402a682fe3dc3ddcfe08c5a541f5f1",
+      "seconds": 2.351020833333333,
+      "cues": [
+        {
+          "start": 0.0,
+          "end": 0.05,
+          "value": "X"
+        },
+        {
+          "start": 0.05,
+          "end": 0.14,
+          "value": "C"
+        },
+        {
+          "start": 0.14,
+          "end": 0.28,
+          "value": "E"
+        },
+        {
+          "start": 0.28,
+          "end": 0.42,
+          "value": "D"
+        },
+        {
+          "start": 0.42,
+          "end": 0.91,
+          "value": "B"
+        },
+        {
+          "start": 0.91,
+          "end": 0.99,
+          "value": "F"
+        },
+        {
+          "start": 0.99,
+          "end": 1.06,
+          "value": "B"
+        },
+        {
+          "start": 1.06,
+          "end": 1.2,
+          "value": "C"
+        },
+        {
+          "start": 1.2,
+          "end": 1.55,
+          "value": "B"
+        },
+        {
+          "start": 1.55,
+          "end": 1.62,
+          "value": "C"
+        },
+        {
+          "start": 1.62,
+          "end": 2.04,
+          "value": "B"
+        },
+        {
+          "start": 2.04,
+          "end": 2.35,
           "value": "X"
         }
       ],

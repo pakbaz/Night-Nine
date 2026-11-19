@@ -54,5 +54,25 @@
     "plate": "films/c9_choir",
     "subject": "c9_choir-vigil",
     "title": "The Vigil overhead"
+  },
+  "c10_report": {
+    "shot": 10,
+    "duration": 17.5,
+    "plate": "films/c10_report",
+    "subject": "c10_report-scout",
+    "title": "The Long Patience rises"
+  },
+  "epilogue": {
+    "shot": 11,
+    "duration": 13.0,
+    "plate": "inserts/epilogue",
+    "subject": "epilogue-lantern",
+    "title": "Lights on the water"
+  },
+  "one_year": {
+    "shot": 12,
+    "duration": 15.0,
+    "plate": "films/one_year",
+    "title": "Two shores"
   }
 }
