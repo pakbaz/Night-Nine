@@ -9,6 +9,7 @@
     "nora": "Nora Reyes",
     "iris": "Iris",
     "calder": "Sheriff June Calder",
+    "rook_copy": "Rook’s copy",
     "saren": "Prefect Saren",
     "archivist": "The Archivist",
     "agnes": "Agnes Penhallow",
@@ -20,6 +21,7 @@
     "rafa": "Rafa Reyes",
     "tomas": "Tomás Reyes",
     "lyle_copy": "Lyle’s copy",
+    "gus": "Gus Albano",
     "pell": "Pell",
     "autorick": "DJ AutoRick",
     "guard": "Veyri attendant",
@@ -2161,6 +2163,989 @@
           "direction": "Move toward the active interaction."
         }
       ]
+    },
+    {
+      "id": "c3_house",
+      "chapter": "Chapter 3",
+      "title": "Please Prove You Exist",
+      "place": "Calder’s house",
+      "style": "cottage",
+      "actors": [
+        "steve"
+      ],
+      "objective": "Agree on a fair method for finding copies.",
+      "tasks": [
+        {
+          "id": "c3_house.crossword",
+          "title": "Morning crossword",
+          "prompt": "Calder’s drawer holds last Friday’s completed crossword. Today’s blank crossword includes a clue about a ferry cancellation announced this morning. Which item can test access to fresh facts?",
+          "options": [
+            "Today’s ferry clue",
+            "Friday’s handwritten letters",
+            "The nickname Calder used at school"
+          ],
+          "answer": 0,
+          "lines": [
+            "c3_house.crossword.01",
+            "c3_house.crossword.02"
+          ],
+          "note": "Established fresh private facts with Calder.",
+          "requires": [],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "New information can still be public.",
+            "The cancellation aired on the radio. Only the private caller and June knew the spare, until the written check was opened.",
+            "First give the public clue, then commit the spare name, open the flap and ask where June learned it. Its pieces spell SEA, WR, EN."
+          ],
+          "puzzle": {
+            "presentation": "case_board",
+            "instruction": "June keeps two crosswords in one drawer. She and Steve want a private test made this morning that can be checked again tomorrow.",
+            "evidence": [
+              "Last Friday June finished a square about a black ferry. Today the harbor master cancelled the Blue Petrel, then telephoned June alone with the spare vessel’s name. The public radio carried only the cancellation.",
+              "June wrote the spare name behind an envelope flap, sealed it, and put the blank grid beside it. The old filled grid and the radio bulletin are also on the table.",
+              "Steve needs the public starting clue and an answer supplied privately before he sees June’s seal. He can ask June about her source after opening it.",
+              "Inside the flap, three damp chunks of the seven-letter spare name come loose. The first ruled box is three letters wide. In the blank grid, the fifth letter crosses an R and the seventh crosses an N."
+            ],
+            "stages": [
+              {
+                "mode": "match",
+                "prompt": "Sort the information by who could have learned it and when.",
+                "slots": [
+                  "Old shared knowledge",
+                  "New public fact",
+                  "New private detail",
+                  "Independent written check"
+                ],
+                "pieces": [
+                  "Name on sealed flap",
+                  "Cancelled Blue Petrel",
+                  "Name in the private call",
+                  "Last Friday’s black ferry"
+                ],
+                "answer": [
+                  3,
+                  1,
+                  2,
+                  0
+                ]
+              },
+              {
+                "mode": "order",
+                "prompt": "Run the test without giving away the answer. Save the explanation of the phone call until last.",
+                "slots": [
+                  "Set the clue",
+                  "Commit a response",
+                  "Compare the answer",
+                  "Document the source"
+                ],
+                "pieces": [
+                  "Ask June about the call",
+                  "Write the spare name privately",
+                  "Offer the public cancellation",
+                  "Open the flap together"
+                ],
+                "answer": [
+                  2,
+                  1,
+                  3,
+                  0
+                ]
+              },
+              {
+                "mode": "match",
+                "prompt": "Once both people have committed their answers, piece together the spare vessel’s name for the envelope.",
+                "slots": [
+                  "Letters 1 through 3",
+                  "Letters 4 and 5",
+                  "Letters 6 and 7"
+                ],
+                "pieces": [
+                  "EN",
+                  "SEA",
+                  "WR"
+                ],
+                "answer": [
+                  1,
+                  2,
+                  0
+                ]
+              }
+            ],
+            "solution": [
+              3,
+              1,
+              2,
+              0,
+              2,
+              1,
+              3,
+              0,
+              1,
+              2,
+              0
+            ],
+            "rows": [
+              {
+                "label": "Old shared knowledge",
+                "options": [
+                  "Name on sealed flap",
+                  "Cancelled Blue Petrel",
+                  "Name in the private call",
+                  "Last Friday’s black ferry"
+                ]
+              },
+              {
+                "label": "New public fact",
+                "options": [
+                  "Name on sealed flap",
+                  "Cancelled Blue Petrel",
+                  "Name in the private call",
+                  "Last Friday’s black ferry"
+                ]
+              },
+              {
+                "label": "New private detail",
+                "options": [
+                  "Name on sealed flap",
+                  "Cancelled Blue Petrel",
+                  "Name in the private call",
+                  "Last Friday’s black ferry"
+                ]
+              },
+              {
+                "label": "Independent written check",
+                "options": [
+                  "Name on sealed flap",
+                  "Cancelled Blue Petrel",
+                  "Name in the private call",
+                  "Last Friday’s black ferry"
+                ]
+              },
+              {
+                "label": "Set the clue",
+                "options": [
+                  "Ask June about the call",
+                  "Write the spare name privately",
+                  "Offer the public cancellation",
+                  "Open the flap together"
+                ]
+              },
+              {
+                "label": "Commit a response",
+                "options": [
+                  "Ask June about the call",
+                  "Write the spare name privately",
+                  "Offer the public cancellation",
+                  "Open the flap together"
+                ]
+              },
+              {
+                "label": "Compare the answer",
+                "options": [
+                  "Ask June about the call",
+                  "Write the spare name privately",
+                  "Offer the public cancellation",
+                  "Open the flap together"
+                ]
+              },
+              {
+                "label": "Document the source",
+                "options": [
+                  "Ask June about the call",
+                  "Write the spare name privately",
+                  "Offer the public cancellation",
+                  "Open the flap together"
+                ]
+              },
+              {
+                "label": "Letters 1 through 3",
+                "options": [
+                  "EN",
+                  "SEA",
+                  "WR"
+                ]
+              },
+              {
+                "label": "Letters 4 and 5",
+                "options": [
+                  "EN",
+                  "SEA",
+                  "WR"
+                ]
+              },
+              {
+                "label": "Letters 6 and 7",
+                "options": [
+                  "EN",
+                  "SEA",
+                  "WR"
+                ]
+              }
+            ],
+            "hints": [
+              "New information can still be public.",
+              "The cancellation aired on the radio. Only the private caller and June knew the spare, until the written check was opened.",
+              "First give the public clue, then commit the spare name, open the flap and ask where June learned it. Its pieces spell SEA, WR, EN."
+            ]
+          }
+        },
+        {
+          "id": "c3_house.rules",
+          "title": "Evidence notebook",
+          "prompt": "One grieving human has changed his routine. Someone suspected of being a copy has remembered the sheriff’s childhood. Which approach could June check without assuming either example proves identity?",
+          "options": [
+            "Score how many old memories sound correct",
+            "Check a new fact against a separately dated record",
+            "Treat each new kindness as a separate positive test"
+          ],
+          "answer": 1,
+          "lines": [
+            "c3_house.rules.01"
+          ],
+          "note": "Agreed on evidence rather than personality tests.",
+          "requires": [
+            "c3_house.crossword"
+          ],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Two different causes can produce the same behavior.",
+            "Prefer observations that can be checked outside the interview.",
+            "Choose “Check a new fact against a separately dated record”. Agreed on evidence rather than personality tests."
+          ]
+        },
+        {
+          "id": "c3_house.mail",
+          "title": "Dale’s delivery",
+          "prompt": "Dale carries Steve’s redirected mail before the desk has logged the change. He also stops to pet Biscuit. Which follow-up can distinguish an early dispatch from an alteration?",
+          "options": [
+            "Compare dispatch and redirection timestamps",
+            "Ask Biscuit which hand Dale normally uses",
+            "Compare today’s greeting with Steve’s memory of it"
+          ],
+          "answer": 0,
+          "lines": [
+            "c3_house.mail.01",
+            "c3_house.mail.02"
+          ],
+          "note": "The mail carrier has formed an attachment to Biscuit.",
+          "requires": [],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Convert the desk entry before comparing it with the round card.",
+            "Subtract seven minutes from 08:19. The blue card is the only signed delivery record.",
+            "Dispatch was 08:04, delivery 08:08, desk entry 08:12. Match orange office and white travelling leaves before treating the address as altered."
+          ],
+          "puzzle": {
+            "presentation": "case_board",
+            "instruction": "Biscuit has slept on part of the mail ledger. June lets Steve lift the corner. Dale’s early delivery has two very different paper trails.",
+            "evidence": [
+              "The dispatch office used harbor time. June’s desk clock was seven minutes fast. Dale’s round card used harbor time.",
+              "Dispatch carbon 08:04. Delivery card 08:08. Redirection at June’s desk 08:19 on her fast clock. The office kept the carbon with the pinhole. Dale kept the one with a bicycle clip mark. The signed round card is blue.",
+              "To test whether someone changed the dispatch address later, compare the address on both carbon leaves. To establish when Dale arrived, use the signed blue card. Biscuit’s muddy paw print has no time.",
+              "Under Biscuit’s paw Steve finds a pinhole in the orange paper. Only the white paper has the two little dents from a clip."
+            ],
+            "stages": [
+              {
+                "mode": "order",
+                "prompt": "Reconstruct the morning on harbor time.",
+                "slots": [
+                  "Earliest event",
+                  "Middle event",
+                  "Latest event"
+                ],
+                "pieces": [
+                  "June records redirection",
+                  "Office dispatches the round",
+                  "Dale arrives"
+                ],
+                "answer": [
+                  1,
+                  2,
+                  0
+                ]
+              },
+              {
+                "mode": "match",
+                "prompt": "Give each witness the paper that can settle their particular question.",
+                "slots": [
+                  "What the office retained",
+                  "What left with Dale",
+                  "When someone received it",
+                  "What time remains unknown"
+                ],
+                "pieces": [
+                  "Orange carbon",
+                  "Muddy paw print",
+                  "Blue round card",
+                  "White carbon"
+                ],
+                "answer": [
+                  0,
+                  3,
+                  2,
+                  1
+                ]
+              }
+            ],
+            "solution": [
+              1,
+              2,
+              0,
+              0,
+              3,
+              2,
+              1
+            ],
+            "rows": [
+              {
+                "label": "Earliest event",
+                "options": [
+                  "June records redirection",
+                  "Office dispatches the round",
+                  "Dale arrives"
+                ]
+              },
+              {
+                "label": "Middle event",
+                "options": [
+                  "June records redirection",
+                  "Office dispatches the round",
+                  "Dale arrives"
+                ]
+              },
+              {
+                "label": "Latest event",
+                "options": [
+                  "June records redirection",
+                  "Office dispatches the round",
+                  "Dale arrives"
+                ]
+              },
+              {
+                "label": "What the office retained",
+                "options": [
+                  "Orange carbon",
+                  "Muddy paw print",
+                  "Blue round card",
+                  "White carbon"
+                ]
+              },
+              {
+                "label": "What left with Dale",
+                "options": [
+                  "Orange carbon",
+                  "Muddy paw print",
+                  "Blue round card",
+                  "White carbon"
+                ]
+              },
+              {
+                "label": "When someone received it",
+                "options": [
+                  "Orange carbon",
+                  "Muddy paw print",
+                  "Blue round card",
+                  "White carbon"
+                ]
+              },
+              {
+                "label": "What time remains unknown",
+                "options": [
+                  "Orange carbon",
+                  "Muddy paw print",
+                  "Blue round card",
+                  "White carbon"
+                ]
+              }
+            ],
+            "hints": [
+              "Convert the desk entry before comparing it with the round card.",
+              "Subtract seven minutes from 08:19. The blue card is the only signed delivery record.",
+              "Dispatch was 08:04, delivery 08:08, desk entry 08:12. Match orange office and white travelling leaves before treating the address as altered."
+            ]
+          }
+        }
+      ],
+      "intro": [
+        "c3_house.in.01",
+        "c3_house.in.02",
+        "c3_house.in.03"
+      ],
+      "outro": [
+        "c3_house.out.01",
+        "c3_house.out.02"
+      ],
+      "shots": [
+        {
+          "duration": 5.0,
+          "move": "establish",
+          "direction": "Move from casserole dishes and a sleeping beagle to a drawer full of case notes."
+        },
+        {
+          "duration": 6.0,
+          "move": "push",
+          "direction": "Move toward the active interaction."
+        }
+      ]
+    },
+    {
+      "id": "c3_archive",
+      "chapter": "Chapter 3",
+      "title": "Paper remembers",
+      "place": "Town Hall archive",
+      "style": "archive",
+      "actors": [
+        "steve"
+      ],
+      "objective": "Build a case from independent records.",
+      "tasks": [
+        {
+          "id": "c3_archive.paper",
+          "title": "Attendance ledger",
+          "prompt": "Calder needs two independent originals. The office has copies and summaries of the same records.",
+          "options": [
+            "Retain both originals and document the travel conflict",
+            "Treat the originals and their copies as four witnesses",
+            "Identify an impostor from one signature"
+          ],
+          "answer": 0,
+          "lines": [
+            "c3_archive.paper.01"
+          ],
+          "note": "Found contradictory physical records.",
+          "requires": [],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "puzzle": {
+            "instruction": "Desk A: clinic receipt, punched 14:12; fax of that receipt, received 15:04. Desk B: bound Town Hall ledger, signed 14:10; next-day database entry transcribed from the ledger. The bus trip between the two counters takes forty minutes. One signature uses the same name as the other.",
+            "rows": [
+              {
+                "label": "From Desk A",
+                "options": [
+                  "Clinic receipt",
+                  "Fax copy"
+                ]
+              },
+              {
+                "label": "From Desk B",
+                "options": [
+                  "Database entry",
+                  "Bound ledger"
+                ]
+              },
+              {
+                "label": "What those originals establish",
+                "options": [
+                  "Which signer used a false name",
+                  "Two locations conflict under one name",
+                  "The exact time of a later amendment"
+                ]
+              }
+            ],
+            "solution": [
+              0,
+              1,
+              1
+            ]
+          },
+          "hints": [
+            "A second sheet is not necessarily a second independent event.",
+            "Choose the document made at each counter. Compare the times with the travel time; neither record alone identifies an impostor.",
+            "Take the clinic receipt and bound ledger. They place one name in conflicting locations."
+          ]
+        },
+        {
+          "id": "c3_archive.power",
+          "title": "Meridian utility bill",
+          "prompt": "A laundromat used 882 units last month. Sentinel Point reported 640. The meter reader confirms one billing meter, but the archives have no record of on-site generation. What can Steve enter in the file?",
+          "options": [
+            "Recorded grid use is modest; other supply is unverified",
+            "The utility bill measures every source of energy on site",
+            "The smaller bill proves every apparatus was switched off"
+          ],
+          "answer": 0,
+          "lines": [
+            "c3_archive.power.01"
+          ],
+          "note": "Meridian’s power use does not fit the claimed engine.",
+          "requires": [],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "The printed figures are cumulative counter readings.",
+            "Subtract each site’s own start from its own end. An unsigned estimate is a different kind of evidence from a bill.",
+            "Pearl used 882 and Sentinel 640, a difference of 242. File Sentinel, Pearl, estimate, then the neighbor’s receipt."
+          ],
+          "puzzle": {
+            "presentation": "case_board",
+            "instruction": "The archive has both ends of a meter roll and one unpaid connection estimate. June wants a calculation she could defend in daylight.",
+            "evidence": [
+              "The start and end readings for Pearl Laundry are 1,118 and 2,000. At Sentinel they are 3,460 and 4,100. Both counters run forward in the same units.",
+              "An unsigned estimate describes a possible second feeder. No permit or meter reading accompanies it. An oil delivery receipt belongs to the building next door.",
+              "In June’s file the lowest evidenced grid draw goes first, then the higher draw. She files a possible alternative supply behind those readings, and unrelated property papers last."
+            ],
+            "stages": [
+              {
+                "mode": "match",
+                "prompt": "Reconcile the end readings with the start of each roll and identify the difference between the two sites.",
+                "slots": [
+                  "Pearl Laundry used",
+                  "Sentinel used",
+                  "Difference in use"
+                ],
+                "pieces": [
+                  "640 units",
+                  "882 units",
+                  "242 units"
+                ],
+                "answer": [
+                  1,
+                  0,
+                  2
+                ]
+              },
+              {
+                "mode": "order",
+                "prompt": "Assemble June’s file from measured use to the documents that still need verification.",
+                "slots": [
+                  "Lower measured draw",
+                  "Higher measured draw",
+                  "Unconfirmed alternative",
+                  "Different property"
+                ],
+                "pieces": [
+                  "Pearl meter roll",
+                  "Unsigned feeder estimate",
+                  "Sentinel meter roll",
+                  "Oil delivery receipt"
+                ],
+                "answer": [
+                  2,
+                  0,
+                  1,
+                  3
+                ]
+              }
+            ],
+            "solution": [
+              1,
+              0,
+              2,
+              2,
+              0,
+              1,
+              3
+            ],
+            "rows": [
+              {
+                "label": "Pearl Laundry used",
+                "options": [
+                  "640 units",
+                  "882 units",
+                  "242 units"
+                ]
+              },
+              {
+                "label": "Sentinel used",
+                "options": [
+                  "640 units",
+                  "882 units",
+                  "242 units"
+                ]
+              },
+              {
+                "label": "Difference in use",
+                "options": [
+                  "640 units",
+                  "882 units",
+                  "242 units"
+                ]
+              },
+              {
+                "label": "Lower measured draw",
+                "options": [
+                  "Pearl meter roll",
+                  "Unsigned feeder estimate",
+                  "Sentinel meter roll",
+                  "Oil delivery receipt"
+                ]
+              },
+              {
+                "label": "Higher measured draw",
+                "options": [
+                  "Pearl meter roll",
+                  "Unsigned feeder estimate",
+                  "Sentinel meter roll",
+                  "Oil delivery receipt"
+                ]
+              },
+              {
+                "label": "Unconfirmed alternative",
+                "options": [
+                  "Pearl meter roll",
+                  "Unsigned feeder estimate",
+                  "Sentinel meter roll",
+                  "Oil delivery receipt"
+                ]
+              },
+              {
+                "label": "Different property",
+                "options": [
+                  "Pearl meter roll",
+                  "Unsigned feeder estimate",
+                  "Sentinel meter roll",
+                  "Oil delivery receipt"
+                ]
+              }
+            ],
+            "hints": [
+              "The printed figures are cumulative counter readings.",
+              "Subtract each site’s own start from its own end. An unsigned estimate is a different kind of evidence from a bill.",
+              "Pearl used 882 and Sentinel 640, a difference of 242. File Sentinel, Pearl, estimate, then the neighbor’s receipt."
+            ]
+          }
+        },
+        {
+          "id": "c3_archive.cycle",
+          "title": "Tomás’s tapes",
+          "prompt": "Tomás penciled the field dates onto the tape boxes. The studio dates mark the day he aired a recording. Calder needs one evening and one watch point.",
+          "options": [
+            "Use the broadcast interval",
+            "Use the field interval and observe the path before the procession",
+            "Watch for the first glow from the sea wall"
+          ],
+          "answer": 1,
+          "lines": [
+            "c3_archive.cycle.01"
+          ],
+          "note": "Predicted the re-sync procession.",
+          "requires": [
+            "c3_archive.paper",
+            "c3_archive.power"
+          ],
+          "actor": "",
+          "kind": "compare",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "puzzle": {
+            "instruction": "Field / broadcast dates: 02 / 05, 11 / 13, 20 / 22. From the last stakeout: pier lamp dims 23:42; footsteps pass the boathouse 23:53; water glows 00:04. The radio boat obscures the sea wall from 23:48 until midnight. The boathouse window faces the path.",
+            "rows": [
+              {
+                "label": "Next field date",
+                "options": [
+                  "27th",
+                  "28th",
+                  "29th",
+                  "30th"
+                ]
+              },
+              {
+                "label": "Watch assignment",
+                "options": [
+                  "Sea wall at 23:50",
+                  "Boathouse at 23:45",
+                  "Boathouse at 00:05"
+                ]
+              }
+            ],
+            "solution": [
+              2,
+              1
+            ]
+          },
+          "hints": [
+            "Follow when Tomás was in the field, not when his show aired.",
+            "Choose a vantage with an open view before people pass it. The glow comes later.",
+            "Stake out the boathouse at 23:45 on the 29th."
+          ]
+        }
+      ],
+      "intro": [
+        "c3_archive.in.01",
+        "c3_archive.in.02"
+      ],
+      "outro": [
+        "c3_archive.out.01",
+        "c3_archive.out.02",
+        "c3_archive.out.03"
+      ],
+      "shots": [
+        {
+          "duration": 5.0,
+          "move": "establish",
+          "direction": "Slide between municipal shelves, then pull back from the dark beach stakeout."
+        },
+        {
+          "duration": 6.0,
+          "move": "push",
+          "direction": "Move toward the active interaction."
+        }
+      ]
+    },
+    {
+      "id": "i1_archive",
+      "chapter": "Interlude 1",
+      "title": "The Archivist",
+      "place": "The Choir’s record chamber",
+      "style": "choir",
+      "actors": [
+        "archivist"
+      ],
+      "objective": "Maintain the records and inspect the sealed surveys.",
+      "tasks": [
+        {
+          "id": "i1_archive.reset",
+          "title": "Echo reconciliation",
+          "prompt": "Gus baked a new kelp pastry yesterday. His original human record predates the recipe. The reconciliation register requires preserving the original and restoring only the changed working echo.",
+          "options": [
+            "Restore Gus’s working echo from the stored record",
+            "Update the stored record from the working echo",
+            "Copy yesterday’s recipe into both records before reconciling"
+          ],
+          "answer": 0,
+          "lines": [
+            "i1_archive.reset.01",
+            "i1_archive.reset.02",
+            "i1_archive.reset.03"
+          ],
+          "note": "The Archivist erased an echo’s new experiences.",
+          "requires": [],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Try telling Gus’s story from his point of view first.",
+            "The question in the shop was on stone before the new taste existed. The Archivist can keep her own account.",
+            "Order the greeting, fold, tray and witness mark. Read the stone source, restore the working Gus, write in the separate ledger."
+          ],
+          "puzzle": {
+            "presentation": "case_board",
+            "instruction": "The Archivist has to reconcile Gus’s echo. His first kelp pastry is still warm. She lays out the records so she can see exactly what the order will cost him.",
+            "evidence": [
+              "Stone tab. Gus once asked a customer what they would like, on the last morning recorded before he left home. This is the oldest record and sealed under the source mark.",
+              "Reed tab. Yesterday the working Gus folded a strand of kelp through the dough for the first time. Wax tab. This morning he described the new taste and set out another tray.",
+              "The law requires the source to remain sealed. Restore the working echo from the source. In a separate ledger, retain a description of the experience he will lose.",
+              "The ledger has spaces for the original phrase, the first change, the consequence, and the Archivist’s own witness mark. Only the witness mark may be added after restoration."
+            ],
+            "stages": [
+              {
+                "mode": "order",
+                "prompt": "Place the four moments in the ledger. Keep the Archivist’s observation separate from Gus’s memories.",
+                "slots": [
+                  "Before departure",
+                  "First new experience",
+                  "Morning after",
+                  "After restoration"
+                ],
+                "pieces": [
+                  "First kelp fold",
+                  "The old shop greeting",
+                  "Archivist’s witness mark",
+                  "Another tray ready"
+                ],
+                "answer": [
+                  1,
+                  0,
+                  3,
+                  2
+                ]
+              },
+              {
+                "mode": "match",
+                "prompt": "Assign the three surviving records to the lawful operations without overwriting the oldest one.",
+                "slots": [
+                  "Read from",
+                  "Restore into",
+                  "Write the account in"
+                ],
+                "pieces": [
+                  "Sealed stone source",
+                  "Separate witness ledger",
+                  "Gus’s working echo"
+                ],
+                "answer": [
+                  0,
+                  2,
+                  1
+                ]
+              }
+            ],
+            "solution": [
+              1,
+              0,
+              3,
+              2,
+              0,
+              2,
+              1
+            ],
+            "rows": [
+              {
+                "label": "Before departure",
+                "options": [
+                  "First kelp fold",
+                  "The old shop greeting",
+                  "Archivist’s witness mark",
+                  "Another tray ready"
+                ]
+              },
+              {
+                "label": "First new experience",
+                "options": [
+                  "First kelp fold",
+                  "The old shop greeting",
+                  "Archivist’s witness mark",
+                  "Another tray ready"
+                ]
+              },
+              {
+                "label": "Morning after",
+                "options": [
+                  "First kelp fold",
+                  "The old shop greeting",
+                  "Archivist’s witness mark",
+                  "Another tray ready"
+                ]
+              },
+              {
+                "label": "After restoration",
+                "options": [
+                  "First kelp fold",
+                  "The old shop greeting",
+                  "Archivist’s witness mark",
+                  "Another tray ready"
+                ]
+              },
+              {
+                "label": "Read from",
+                "options": [
+                  "Sealed stone source",
+                  "Separate witness ledger",
+                  "Gus’s working echo"
+                ]
+              },
+              {
+                "label": "Restore into",
+                "options": [
+                  "Sealed stone source",
+                  "Separate witness ledger",
+                  "Gus’s working echo"
+                ]
+              },
+              {
+                "label": "Write the account in",
+                "options": [
+                  "Sealed stone source",
+                  "Separate witness ledger",
+                  "Gus’s working echo"
+                ]
+              }
+            ],
+            "hints": [
+              "Try telling Gus’s story from his point of view first.",
+              "The question in the shop was on stone before the new taste existed. The Archivist can keep her own account.",
+              "Order the greeting, fold, tray and witness mark. Read the stone source, restore the working Gus, write in the separate ledger."
+            ]
+          }
+        },
+        {
+          "id": "i1_archive.signals",
+          "title": "Meridian test archive",
+          "prompt": "Two national stations dated their Meridian instrument reels a week apart. What can the Archivist establish from the traces?",
+          "options": [
+            "Flag one performance filed twice",
+            "File two independent performances",
+            "Flag a change of playback speed"
+          ],
+          "answer": 0,
+          "lines": [
+            "i1_archive.signals.01"
+          ],
+          "note": "The Archivist knows Meridian’s signals were staged.",
+          "requires": [
+            "i1_archive.reset"
+          ],
+          "actor": "",
+          "kind": "compare",
+          "sounds": [
+            "effect.meridian_pulse",
+            "effect.meridian_pulse"
+          ],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "evidence_labels": [
+            "American station · first test",
+            "Chinese station · second test"
+          ],
+          "hints": [
+            "Start with the gap near the middle.",
+            "Compare the small pulse before the gap and the decay that follows it.",
+            "Flag one performance filed twice. Even the interruption and uneven tail coincide."
+          ]
+        },
+        {
+          "id": "i1_archive.quiet",
+          "title": "Sealed surveys",
+          "prompt": "Seven surveys name inhabited worlds, each marked Quiet. An eighth file has a living atmosphere, but Saren has sealed its coordinates. Row Zero has one surviving witness. Which entry preserves what is known?",
+          "options": [
+            "Keep the sealed survey separate and visit Row Zero",
+            "Enter eight destroyed worlds under the same cause",
+            "Use the sealed file to assign one named world to Row Zero"
+          ],
+          "answer": 0,
+          "lines": [
+            "i1_archive.quiet.01",
+            "i1_archive.quiet.02",
+            "i1_archive.quiet.03"
+          ],
+          "note": "Found the Quiet worlds and Saren’s sealed survey.",
+          "requires": [
+            "i1_archive.signals"
+          ],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "A sealed coordinate does not identify a named world.",
+            "Quiet describes the record; it does not establish how a people disappeared.",
+            "Choose “Keep the sealed survey separate and visit Row Zero”. Found the Quiet worlds and Saren’s sealed survey."
+          ]
+        }
+      ],
+      "intro": [
+        "i1_archive.in.01",
+        "i1_archive.in.02"
+      ],
+      "outro": [
+        "i1_archive.out.01",
+        "i1_archive.out.02"
+      ],
+      "shots": [
+        {
+          "duration": 5.0,
+          "move": "establish",
+          "direction": "Circle a glass memory console, then settle beside the isolated frosted bed."
+        },
+        {
+          "duration": 6.0,
+          "move": "push",
+          "direction": "Move toward the active interaction."
+        }
+      ]
     }
   ],
   "lines": {
@@ -2633,6 +3618,181 @@
       "speaker": "steve",
       "text": "Open. Now the seawater valve.",
       "audio": "c2_ship.escape.02"
+    },
+    "c3_house.in.01": {
+      "id": "c3_house.in.01",
+      "speaker": "calder",
+      "text": "Forty-seven casseroles. Your town is either very worried or very hungry.",
+      "audio": "c3_house.in.01"
+    },
+    "c3_house.in.02": {
+      "id": "c3_house.in.02",
+      "speaker": "steve",
+      "text": "Nora is on a ship under the bay.",
+      "audio": "c3_house.in.02"
+    },
+    "c3_house.in.03": {
+      "id": "c3_house.in.03",
+      "speaker": "calder",
+      "text": "Then we start with what you can prove.",
+      "audio": "c3_house.in.03"
+    },
+    "c3_house.out.01": {
+      "id": "c3_house.out.01",
+      "speaker": "calder",
+      "text": "For a year I’ve kept a list. People who got better overnight. Thirty-one names.",
+      "audio": "c3_house.out.01"
+    },
+    "c3_house.out.02": {
+      "id": "c3_house.out.02",
+      "speaker": "steve",
+      "text": "Let’s find evidence for each one.",
+      "audio": "c3_house.out.02"
+    },
+    "c3_house.crossword.01": {
+      "id": "c3_house.crossword.01",
+      "speaker": "steve",
+      "text": "Seven letters. Maritime... marmite?",
+      "audio": "c3_house.crossword.01"
+    },
+    "c3_house.crossword.02": {
+      "id": "c3_house.crossword.02",
+      "speaker": "calder",
+      "text": "No copy is that bad at this. And you’ve put coffee in my lap.",
+      "audio": "c3_house.crossword.02"
+    },
+    "c3_house.rules.01": {
+      "id": "c3_house.rules.01",
+      "speaker": "calder",
+      "text": "We do this fairly. Otherwise we’re just frightened people making a list.",
+      "audio": "c3_house.rules.01"
+    },
+    "c3_house.mail.01": {
+      "id": "c3_house.mail.01",
+      "speaker": "pell",
+      "text": "A most diligent animal. I will return at the scheduled interval.",
+      "audio": "c3_house.mail.01"
+    },
+    "c3_house.mail.02": {
+      "id": "c3_house.mail.02",
+      "speaker": "calder",
+      "text": "He’s asleep. That is his schedule.",
+      "audio": "c3_house.mail.02"
+    },
+    "c3_archive.in.01": {
+      "id": "c3_archive.in.01",
+      "speaker": "tomas",
+      "text": "Three years of recordings. Original timestamps. You can stop calling it a hobby now.",
+      "audio": "c3_archive.in.01"
+    },
+    "c3_archive.in.02": {
+      "id": "c3_archive.in.02",
+      "speaker": "steve",
+      "text": "I’ll start with thank you.",
+      "audio": "c3_archive.in.02"
+    },
+    "c3_archive.out.01": {
+      "id": "c3_archive.out.01",
+      "speaker": "calder",
+      "text": "Two hundred and seventy-four. My list had thirty-one.",
+      "audio": "c3_archive.out.01"
+    },
+    "c3_archive.out.02": {
+      "id": "c3_archive.out.02",
+      "speaker": "rook_copy",
+      "text": "Sit tight, June.",
+      "audio": "recording.rook",
+      "display_speaker": "Adrian Rook"
+    },
+    "c3_archive.out.03": {
+      "id": "c3_archive.out.03",
+      "speaker": "steve",
+      "text": "A message: he remembers june. that doesnt mean hes adrian.",
+      "audio": "c3_archive.out.03"
+    },
+    "c3_archive.paper.01": {
+      "id": "c3_archive.paper.01",
+      "speaker": "steve",
+      "text": "Two places. Same time. Witnesses on both documents.",
+      "audio": "c3_archive.paper.01"
+    },
+    "c3_archive.power.01": {
+      "id": "c3_archive.power.01",
+      "speaker": "steve",
+      "text": "A world-changing machine with a very modest dryer cycle.",
+      "audio": "c3_archive.power.01"
+    },
+    "c3_archive.cycle.01": {
+      "id": "c3_archive.cycle.01",
+      "speaker": "steve",
+      "text": "Same interval across three years. We watch the beach on the next ninth night.",
+      "audio": "c3_archive.cycle.01"
+    },
+    "i1_archive.in.01": {
+      "id": "i1_archive.in.01",
+      "speaker": "gus",
+      "text": "I invented a kelp croissant. Nobody asked for it. I wanted to know what it would taste like.",
+      "audio": "i1_archive.in.01"
+    },
+    "i1_archive.in.02": {
+      "id": "i1_archive.in.02",
+      "speaker": "archivist",
+      "text": "Your record contains no such recipe.",
+      "audio": "i1_archive.in.02"
+    },
+    "i1_archive.out.01": {
+      "id": "i1_archive.out.01",
+      "speaker": "archivist",
+      "text": "Memory damaged by scan. Details in subject’s notebook.",
+      "audio": "i1_archive.out.01"
+    },
+    "i1_archive.out.02": {
+      "id": "i1_archive.out.02",
+      "speaker": "archivist",
+      "text": "I will leave the report as it is.",
+      "audio": "i1_archive.out.02"
+    },
+    "i1_archive.reset.01": {
+      "id": "i1_archive.reset.01",
+      "speaker": "archivist",
+      "text": "Return to the stored record.",
+      "audio": "i1_archive.reset.01"
+    },
+    "i1_archive.reset.02": {
+      "id": "i1_archive.reset.02",
+      "speaker": "gus",
+      "text": "Good evening. May I help you?",
+      "audio": "i1_archive.reset.02"
+    },
+    "i1_archive.reset.03": {
+      "id": "i1_archive.reset.03",
+      "speaker": "archivist",
+      "text": "You asked me that before.",
+      "audio": "i1_archive.reset.03"
+    },
+    "i1_archive.signals.01": {
+      "id": "i1_archive.signals.01",
+      "speaker": "archivist",
+      "text": "The same performance. Again. I knew this a year ago.",
+      "audio": "i1_archive.signals.01"
+    },
+    "i1_archive.quiet.01": {
+      "id": "i1_archive.quiet.01",
+      "speaker": "saren",
+      "text": "The fleet’s message is one word. Deliver.",
+      "audio": "i1_archive.quiet.01"
+    },
+    "i1_archive.quiet.02": {
+      "id": "i1_archive.quiet.02",
+      "speaker": "archivist",
+      "text": "And who will come to check?",
+      "audio": "i1_archive.quiet.02"
+    },
+    "i1_archive.quiet.03": {
+      "id": "i1_archive.quiet.03",
+      "speaker": "archivist",
+      "text": "Three hundred years, and you still will not tell me where your people went.",
+      "audio": "i1_archive.quiet.03"
     }
   },
   "sound_labels": {
@@ -2695,6 +3855,27 @@
           "id": "missing_nora",
           "after": "c2_aquarium.intercom",
           "text": "The woman I heard on that tape might still be here."
+        }
+      ]
+    },
+    "town": {
+      "title": "How can June and I test a suspicion?",
+      "clues": [
+        "c3_house.crossword",
+        "c3_house.rules",
+        "c3_archive.paper",
+        "c3_archive.cycle"
+      ],
+      "theories": [
+        {
+          "id": "personality",
+          "after": "c3_house.crossword",
+          "text": "A change in someone’s habits could identify a copy."
+        },
+        {
+          "id": "dated_records",
+          "after": "c3_house.rules",
+          "text": "New private facts and independently dated records could tell us more."
         }
       ]
     }
