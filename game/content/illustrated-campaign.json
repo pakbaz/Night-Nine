@@ -155,5 +155,65 @@
       "c2_ship.escape.01"
     ],
     "chapter_insert": true
+  },
+  "c3_house": {
+    "light": "eac397",
+    "air": 0,
+    "opening": [
+      0.28,
+      0.61
+    ],
+    "closing": [
+      0.72,
+      0.45
+    ],
+    "company": [
+      "calder",
+      "steve",
+      "pell"
+    ],
+    "resident": "calder"
+  },
+  "c3_archive": {
+    "light": "e8d4b3",
+    "air": 0,
+    "opening": [
+      0.75,
+      0.39
+    ],
+    "closing": [
+      0.27,
+      0.61
+    ],
+    "company": [
+      "steve",
+      "tomas",
+      "calder"
+    ],
+    "off_camera_lines": [
+      "c3_archive.out.02"
+    ],
+    "inserts": {
+      "c3_archive.out.02": "c3_archive.cycle"
+    },
+    "chapter_insert": true
+  },
+  "i1_archive": {
+    "light": "89d2df",
+    "air": 3,
+    "opening": [
+      0.22,
+      0.33
+    ],
+    "closing": [
+      0.75,
+      0.55
+    ],
+    "company": [
+      "archivist",
+      "gus",
+      "saren"
+    ],
+    "resident": "archivist"
   }
 }

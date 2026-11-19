@@ -9,6 +9,7 @@
     "nora": "Nora Reyes",
     "iris": "Iris",
     "calder": "Sheriff June Calder",
+    "rook_copy": "Rook’s copy",
     "saren": "Prefect Saren",
     "archivist": "The Archivist",
     "agnes": "Agnes Penhallow",
@@ -20,6 +21,7 @@
     "rafa": "Rafa Reyes",
     "tomas": "Tomás Reyes",
     "lyle_copy": "Lyle’s copy",
+    "gus": "Gus Albano",
     "pell": "Pell",
     "autorick": "DJ AutoRick",
     "guard": "Veyri attendant",
@@ -1030,6 +1032,362 @@
           "direction": "Move toward the active interaction."
         }
       ]
+    },
+    {
+      "id": "c3_house",
+      "chapter": "Chapter 3",
+      "title": "Please Prove You Exist",
+      "place": "Calder’s house",
+      "style": "cottage",
+      "actors": [
+        "steve"
+      ],
+      "objective": "Agree on a fair method for finding copies.",
+      "tasks": [
+        {
+          "id": "c3_house.crossword",
+          "title": "Morning crossword",
+          "prompt": "Calder asks Steve to solve fresh clues from today’s paper. Old shared memories could have been copied.",
+          "options": [
+            "Use the new crossword",
+            "Recite his birthday",
+            "Describe his first date"
+          ],
+          "answer": 0,
+          "lines": [
+            "c3_house.crossword.01",
+            "c3_house.crossword.02"
+          ],
+          "note": "Established fresh private facts with Calder.",
+          "requires": [],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach."
+        },
+        {
+          "id": "c3_house.rules",
+          "title": "Evidence notebook",
+          "prompt": "Affection can be real in a copy. Grief can change a human. Neither is a reliable test.",
+          "options": [
+            "Treat kindness as proof",
+            "Use fresh facts and independently dated evidence",
+            "Arrest everyone who seems different"
+          ],
+          "answer": 1,
+          "lines": [
+            "c3_house.rules.01"
+          ],
+          "note": "Agreed on evidence rather than personality tests.",
+          "requires": [
+            "c3_house.crossword"
+          ],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach."
+        },
+        {
+          "id": "c3_house.mail",
+          "title": "Dale’s delivery",
+          "prompt": "The mail carrier brings Steve’s redirected mail early, then spends several minutes petting Biscuit.",
+          "options": [
+            "Record the visit without confronting him",
+            "Take Biscuit away",
+            "Assume a dog can verify identity"
+          ],
+          "answer": 0,
+          "lines": [
+            "c3_house.mail.01",
+            "c3_house.mail.02"
+          ],
+          "note": "The mail carrier has formed an attachment to Biscuit.",
+          "requires": [],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach."
+        }
+      ],
+      "intro": [
+        "c3_house.in.01",
+        "c3_house.in.02",
+        "c3_house.in.03"
+      ],
+      "outro": [
+        "c3_house.out.01",
+        "c3_house.out.02"
+      ],
+      "shots": [
+        {
+          "duration": 5.0,
+          "move": "establish",
+          "direction": "Move from casserole dishes and a sleeping beagle to a drawer full of case notes."
+        },
+        {
+          "duration": 6.0,
+          "move": "push",
+          "direction": "Move toward the active interaction."
+        }
+      ]
+    },
+    {
+      "id": "c3_archive",
+      "chapter": "Chapter 3",
+      "title": "Paper remembers",
+      "place": "Town Hall archive",
+      "style": "archive",
+      "actors": [
+        "steve"
+      ],
+      "objective": "Build a case from independent records.",
+      "tasks": [
+        {
+          "id": "c3_archive.paper",
+          "title": "Attendance ledger",
+          "prompt": "A paper signature places a suspect at Town Hall while a dated clinic receipt places the same person elsewhere.",
+          "options": [
+            "Keep both originals and record the contradiction",
+            "Trust the edited database",
+            "Destroy the paper"
+          ],
+          "answer": 0,
+          "lines": [
+            "c3_archive.paper.01"
+          ],
+          "note": "Found contradictory physical records.",
+          "requires": [],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "puzzle": {
+            "instruction": "Three records: a paper ledger signed at 14:10, a clinic receipt stamped 14:12, and a digital entry amended the following day. The clinic is forty minutes away.",
+            "rows": [
+              {
+                "label": "First independent source",
+                "options": [
+                  "Digital entry",
+                  "Paper ledger",
+                  "Rumor"
+                ]
+              },
+              {
+                "label": "Second independent source",
+                "options": [
+                  "Clinic receipt",
+                  "Digital entry",
+                  "Personality change"
+                ]
+              },
+              {
+                "label": "Inference",
+                "options": [
+                  "Ordinary travel fits",
+                  "The digital amendment proves innocence",
+                  "Two independent locations conflict"
+                ]
+              }
+            ],
+            "solution": [
+              1,
+              0,
+              2
+            ]
+          }
+        },
+        {
+          "id": "c3_archive.power",
+          "title": "Meridian utility bill",
+          "prompt": "Sentinel Point claims to run a space-fold engine. Its electricity bill is lower than a laundromat’s.",
+          "options": [
+            "File the measured power use",
+            "Assume unlimited secret electricity",
+            "Change the bill"
+          ],
+          "answer": 0,
+          "lines": [
+            "c3_archive.power.01"
+          ],
+          "note": "Meridian’s power use does not fit the claimed engine.",
+          "requires": [],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach."
+        },
+        {
+          "id": "c3_archive.cycle",
+          "title": "Tomás’s tapes",
+          "prompt": "The hum peaks on recordings separated by nine nights. Choose the interval for the stakeout.",
+          "options": [
+            "Seven nights",
+            "Nine nights",
+            "Every night"
+          ],
+          "answer": 1,
+          "lines": [
+            "c3_archive.cycle.01"
+          ],
+          "note": "Predicted the re-sync procession.",
+          "requires": [
+            "c3_archive.paper",
+            "c3_archive.power"
+          ],
+          "actor": "",
+          "kind": "compare",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "puzzle": {
+            "instruction": "Tomás’s strongest recordings were on the 2nd, 11th and 20th. The town’s lights are brightest shortly before the midnight tone.",
+            "rows": [
+              {
+                "label": "Next date",
+                "options": [
+                  "27th",
+                  "28th",
+                  "29th",
+                  "30th"
+                ]
+              },
+              {
+                "label": "Stakeout arrival",
+                "options": [
+                  "After dawn",
+                  "Before midnight",
+                  "The following afternoon"
+                ]
+              }
+            ],
+            "solution": [
+              2,
+              1
+            ]
+          }
+        }
+      ],
+      "intro": [
+        "c3_archive.in.01",
+        "c3_archive.in.02"
+      ],
+      "outro": [
+        "c3_archive.out.01",
+        "c3_archive.out.02",
+        "c3_archive.out.03"
+      ],
+      "shots": [
+        {
+          "duration": 5.0,
+          "move": "establish",
+          "direction": "Slide between municipal shelves, then pull back from the dark beach stakeout."
+        },
+        {
+          "duration": 6.0,
+          "move": "push",
+          "direction": "Move toward the active interaction."
+        }
+      ]
+    },
+    {
+      "id": "i1_archive",
+      "chapter": "Interlude 1",
+      "title": "The Archivist",
+      "place": "The Choir’s record chamber",
+      "style": "choir",
+      "actors": [
+        "archivist"
+      ],
+      "objective": "Maintain the records and inspect the sealed surveys.",
+      "tasks": [
+        {
+          "id": "i1_archive.reset",
+          "title": "Echo reconciliation",
+          "prompt": "Gus’s new recipes are classified as drift. The Archivist follows the law she has enforced for centuries.",
+          "options": [
+            "Perform the required reconciliation",
+            "Delete the original human",
+            "Reconcile every crew member"
+          ],
+          "answer": 0,
+          "lines": [
+            "i1_archive.reset.01",
+            "i1_archive.reset.02",
+            "i1_archive.reset.03"
+          ],
+          "note": "The Archivist erased an echo’s new experiences.",
+          "requires": [],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach."
+        },
+        {
+          "id": "i1_archive.signals",
+          "title": "Meridian test archive",
+          "prompt": "Two supposedly separate tests contain exactly the same signal imperfections.",
+          "options": [
+            "Mark the signals as repeated recordings",
+            "Assume nature repeated perfectly",
+            "Erase the comparison"
+          ],
+          "answer": 0,
+          "lines": [
+            "i1_archive.signals.01"
+          ],
+          "note": "The Archivist knows Meridian’s signals were staged.",
+          "requires": [
+            "i1_archive.reset"
+          ],
+          "actor": "",
+          "kind": "compare",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach."
+        },
+        {
+          "id": "i1_archive.quiet",
+          "title": "Sealed surveys",
+          "prompt": "Seven inhabited worlds are marked Quiet. Another living-world survey is sealed under Saren’s own mark.",
+          "options": [
+            "Remember the sealed survey and visit Row Zero",
+            "Unseal every crew member’s memory",
+            "Report a destroyed world as fact"
+          ],
+          "answer": 0,
+          "lines": [
+            "i1_archive.quiet.01",
+            "i1_archive.quiet.02",
+            "i1_archive.quiet.03"
+          ],
+          "note": "Found the Quiet worlds and Saren’s sealed survey.",
+          "requires": [
+            "i1_archive.signals"
+          ],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach."
+        }
+      ],
+      "intro": [
+        "i1_archive.in.01",
+        "i1_archive.in.02"
+      ],
+      "outro": [
+        "i1_archive.out.01",
+        "i1_archive.out.02"
+      ],
+      "shots": [
+        {
+          "duration": 5.0,
+          "move": "establish",
+          "direction": "Circle a glass memory console, then settle beside the isolated frosted bed."
+        },
+        {
+          "duration": 6.0,
+          "move": "push",
+          "direction": "Move toward the active interaction."
+        }
+      ]
     }
   ],
   "lines": {
@@ -1502,6 +1860,181 @@
       "speaker": "steve",
       "text": "Open. Now the seawater valve.",
       "audio": "c2_ship.escape.02"
+    },
+    "c3_house.in.01": {
+      "id": "c3_house.in.01",
+      "speaker": "calder",
+      "text": "Forty-seven casseroles. Your town is either very worried or very hungry.",
+      "audio": "c3_house.in.01"
+    },
+    "c3_house.in.02": {
+      "id": "c3_house.in.02",
+      "speaker": "steve",
+      "text": "Nora is on a ship under the bay.",
+      "audio": "c3_house.in.02"
+    },
+    "c3_house.in.03": {
+      "id": "c3_house.in.03",
+      "speaker": "calder",
+      "text": "Then we start with what you can prove.",
+      "audio": "c3_house.in.03"
+    },
+    "c3_house.out.01": {
+      "id": "c3_house.out.01",
+      "speaker": "calder",
+      "text": "For a year I’ve kept a list. People who got better overnight. Thirty-one names.",
+      "audio": "c3_house.out.01"
+    },
+    "c3_house.out.02": {
+      "id": "c3_house.out.02",
+      "speaker": "steve",
+      "text": "Let’s find evidence for each one.",
+      "audio": "c3_house.out.02"
+    },
+    "c3_house.crossword.01": {
+      "id": "c3_house.crossword.01",
+      "speaker": "steve",
+      "text": "Seven letters. Maritime... marmite?",
+      "audio": "c3_house.crossword.01"
+    },
+    "c3_house.crossword.02": {
+      "id": "c3_house.crossword.02",
+      "speaker": "calder",
+      "text": "No copy is that bad at this. And you’ve put coffee in my lap.",
+      "audio": "c3_house.crossword.02"
+    },
+    "c3_house.rules.01": {
+      "id": "c3_house.rules.01",
+      "speaker": "calder",
+      "text": "We do this fairly. Otherwise we’re just frightened people making a list.",
+      "audio": "c3_house.rules.01"
+    },
+    "c3_house.mail.01": {
+      "id": "c3_house.mail.01",
+      "speaker": "pell",
+      "text": "A most diligent animal. I will return at the scheduled interval.",
+      "audio": "c3_house.mail.01"
+    },
+    "c3_house.mail.02": {
+      "id": "c3_house.mail.02",
+      "speaker": "calder",
+      "text": "He’s asleep. That is his schedule.",
+      "audio": "c3_house.mail.02"
+    },
+    "c3_archive.in.01": {
+      "id": "c3_archive.in.01",
+      "speaker": "tomas",
+      "text": "Three years of recordings. Original timestamps. You can stop calling it a hobby now.",
+      "audio": "c3_archive.in.01"
+    },
+    "c3_archive.in.02": {
+      "id": "c3_archive.in.02",
+      "speaker": "steve",
+      "text": "I’ll start with thank you.",
+      "audio": "c3_archive.in.02"
+    },
+    "c3_archive.out.01": {
+      "id": "c3_archive.out.01",
+      "speaker": "calder",
+      "text": "Two hundred and seventy-four. My list had thirty-one.",
+      "audio": "c3_archive.out.01"
+    },
+    "c3_archive.out.02": {
+      "id": "c3_archive.out.02",
+      "speaker": "rook_copy",
+      "text": "Sit tight, June.",
+      "audio": "recording.rook",
+      "display_speaker": "Adrian Rook"
+    },
+    "c3_archive.out.03": {
+      "id": "c3_archive.out.03",
+      "speaker": "steve",
+      "text": "A message: he remembers june. that doesnt mean hes adrian.",
+      "audio": "c3_archive.out.03"
+    },
+    "c3_archive.paper.01": {
+      "id": "c3_archive.paper.01",
+      "speaker": "steve",
+      "text": "Two places. Same time. Witnesses on both documents.",
+      "audio": "c3_archive.paper.01"
+    },
+    "c3_archive.power.01": {
+      "id": "c3_archive.power.01",
+      "speaker": "steve",
+      "text": "A world-changing machine with a very modest dryer cycle.",
+      "audio": "c3_archive.power.01"
+    },
+    "c3_archive.cycle.01": {
+      "id": "c3_archive.cycle.01",
+      "speaker": "steve",
+      "text": "Same interval across three years. We watch the beach on the next ninth night.",
+      "audio": "c3_archive.cycle.01"
+    },
+    "i1_archive.in.01": {
+      "id": "i1_archive.in.01",
+      "speaker": "gus",
+      "text": "I invented a kelp croissant. Nobody asked for it. I wanted to know what it would taste like.",
+      "audio": "i1_archive.in.01"
+    },
+    "i1_archive.in.02": {
+      "id": "i1_archive.in.02",
+      "speaker": "archivist",
+      "text": "Your record contains no such recipe.",
+      "audio": "i1_archive.in.02"
+    },
+    "i1_archive.out.01": {
+      "id": "i1_archive.out.01",
+      "speaker": "archivist",
+      "text": "Memory damaged by scan. Details in subject’s notebook.",
+      "audio": "i1_archive.out.01"
+    },
+    "i1_archive.out.02": {
+      "id": "i1_archive.out.02",
+      "speaker": "archivist",
+      "text": "I will leave the report as it is.",
+      "audio": "i1_archive.out.02"
+    },
+    "i1_archive.reset.01": {
+      "id": "i1_archive.reset.01",
+      "speaker": "archivist",
+      "text": "Return to the stored record.",
+      "audio": "i1_archive.reset.01"
+    },
+    "i1_archive.reset.02": {
+      "id": "i1_archive.reset.02",
+      "speaker": "gus",
+      "text": "Good evening. May I help you?",
+      "audio": "i1_archive.reset.02"
+    },
+    "i1_archive.reset.03": {
+      "id": "i1_archive.reset.03",
+      "speaker": "archivist",
+      "text": "You asked me that before.",
+      "audio": "i1_archive.reset.03"
+    },
+    "i1_archive.signals.01": {
+      "id": "i1_archive.signals.01",
+      "speaker": "archivist",
+      "text": "The same performance. Again. I knew this a year ago.",
+      "audio": "i1_archive.signals.01"
+    },
+    "i1_archive.quiet.01": {
+      "id": "i1_archive.quiet.01",
+      "speaker": "saren",
+      "text": "The fleet’s message is one word. Deliver.",
+      "audio": "i1_archive.quiet.01"
+    },
+    "i1_archive.quiet.02": {
+      "id": "i1_archive.quiet.02",
+      "speaker": "archivist",
+      "text": "And who will come to check?",
+      "audio": "i1_archive.quiet.02"
+    },
+    "i1_archive.quiet.03": {
+      "id": "i1_archive.quiet.03",
+      "speaker": "archivist",
+      "text": "Three hundred years, and you still will not tell me where your people went.",
+      "audio": "i1_archive.quiet.03"
     }
   },
   "sound_labels": {

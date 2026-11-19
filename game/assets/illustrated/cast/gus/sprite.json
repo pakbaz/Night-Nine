@@ -1,0 +1,112 @@
+{
+  "base": "gus.webp",
+  "size": [
+    720,
+    1080
+  ],
+  "origin": "top_left",
+  "foot_anchor": [
+    360,
+    1080
+  ],
+  "frames": {
+    "blink_half": {
+      "atlas_region": [
+        0,
+        0,
+        122,
+        42
+      ],
+      "source_origin": [
+        295,
+        132
+      ]
+    },
+    "blink_closed": {
+      "atlas_region": [
+        0,
+        44,
+        122,
+        42
+      ],
+      "source_origin": [
+        295,
+        132
+      ]
+    },
+    "mouth_parted": {
+      "atlas_region": [
+        0,
+        88,
+        98,
+        65
+      ],
+      "source_origin": [
+        331,
+        195
+      ]
+    },
+    "mouth_open": {
+      "atlas_region": [
+        0,
+        155,
+        98,
+        65
+      ],
+      "source_origin": [
+        331,
+        195
+      ]
+    },
+    "mouth_round": {
+      "atlas_region": [
+        0,
+        222,
+        98,
+        65
+      ],
+      "source_origin": [
+        331,
+        195
+      ]
+    },
+    "mouth_wide": {
+      "atlas_region": [
+        0,
+        289,
+        98,
+        65
+      ],
+      "source_origin": [
+        331,
+        195
+      ]
+    }
+  },
+  "cue_frames": {
+    "X": null,
+    "A": null,
+    "B": "mouth_parted",
+    "C": "mouth_wide",
+    "D": "mouth_open",
+    "E": "mouth_round",
+    "F": "mouth_round",
+    "G": "mouth_parted",
+    "H": "mouth_parted"
+  },
+  "atlas": "gus-face-atlas.png",
+  "eye_centers": [
+    [
+      320,
+      160
+    ],
+    [
+      393,
+      145
+    ]
+  ],
+  "mouth_center": [
+    382,
+    227
+  ]
+}
