@@ -26,6 +26,9 @@
     "gus": "Gus Albano",
     "dale": "Dale Kittredge",
     "pell": "Pell",
+    "wen": "Dr. Lin Wen",
+    "shaw": "Dr. Evelyn Shaw",
+    "ward": "President Elena Ward",
     "autorick": "DJ AutoRick",
     "guard": "Veyri attendant",
     "operator": "Thursday club operator",
@@ -2311,6 +2314,240 @@
           "direction": "Move toward the active interaction."
         }
       ]
+    },
+    {
+      "id": "c7_gate",
+      "chapter": "Chapter 7",
+      "title": "The President’s Other Appointment",
+      "place": "Sentinel Point gate",
+      "style": "array",
+      "actors": [
+        "steve",
+        "stephen",
+        "pell"
+      ],
+      "objective": "Get the team into the accord signing.",
+      "tasks": [
+        {
+          "id": "c7_gate.badge",
+          "title": "Security gate",
+          "prompt": "Stephen’s crew credentials remain valid. Steve’s face is wanted.",
+          "options": [
+            "Send Stephen through the official gate",
+            "Send Steve through with no badge",
+            "Give the credentials to a stranger"
+          ],
+          "answer": 0,
+          "lines": [
+            "c7_gate.badge.01"
+          ],
+          "note": "Stephen entered as a crew asset.",
+          "requires": [],
+          "actor": "stephen",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach."
+        },
+        {
+          "id": "c7_gate.post",
+          "title": "Accord mail",
+          "prompt": "Pell’s registered delivery belongs at the delegation service entrance.",
+          "options": [
+            "Use the marked mail entrance",
+            "Climb the antenna fence",
+            "Leave the letter in the road"
+          ],
+          "answer": 0,
+          "lines": [
+            "c7_gate.post.01",
+            "c7_gate.post.02"
+          ],
+          "note": "Pell reached the delegation.",
+          "requires": [],
+          "actor": "pell",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach."
+        },
+        {
+          "id": "c7_gate.truck",
+          "title": "Halcyon broadcast truck",
+          "prompt": "Steve knows the sound equipment. A spare technician’s pass is inside the van.",
+          "options": [
+            "Enter as the sound technician during the cable check",
+            "Announce a kidnapping",
+            "Follow Stephen into the press crowd"
+          ],
+          "answer": 0,
+          "lines": [
+            "c7_gate.truck.01",
+            "c7_gate.truck.02"
+          ],
+          "note": "Steve reached the sound desk.",
+          "requires": [
+            "c7_gate.badge",
+            "c7_gate.post"
+          ],
+          "actor": "steve",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach."
+        }
+      ],
+      "intro": [
+        "c7_gate.in.01",
+        "c7_gate.in.02"
+      ],
+      "outro": [
+        "c7_gate.out.01",
+        "c7_gate.out.02",
+        "c7_gate.out.03"
+      ],
+      "shots": [
+        {
+          "duration": 5.0,
+          "move": "establish",
+          "direction": "Move through fog among antenna towers toward a temporary broadcast compound."
+        },
+        {
+          "duration": 6.0,
+          "move": "push",
+          "direction": "Move toward the active interaction."
+        }
+      ]
+    },
+    {
+      "id": "c7_swap",
+      "chapter": "Chapter 7",
+      "title": "Fourteen turn toward the sea",
+      "place": "Accord ceremony",
+      "style": "array",
+      "actors": [
+        "steve",
+        "stephen"
+      ],
+      "objective": "Route the ninth-night tone through every event speaker.",
+      "tasks": [
+        {
+          "id": "c7_swap.map",
+          "title": "Event monitor",
+          "prompt": "The physician escorts Ward toward a service tunnel while her copy approaches the podium.",
+          "options": [
+            "Tell Calder and Iris where the real Ward went",
+            "Assume the biometric check proves identity",
+            "Follow the podium alone"
+          ],
+          "answer": 0,
+          "lines": [
+            "c7_swap.map.01",
+            "c7_swap.map.02"
+          ],
+          "note": "Directed Calder and Iris toward the real President.",
+          "requires": [],
+          "actor": "stephen",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach."
+        },
+        {
+          "id": "c7_swap.bus",
+          "title": "Sound desk routing",
+          "prompt": "The desk has separate press, stage and site buses. The all-call bus reaches every speaker.",
+          "options": [
+            "Route Frank’s tone to the all-call bus",
+            "Route it only to Steve’s headphones",
+            "Mute the whole site"
+          ],
+          "answer": 0,
+          "lines": [
+            "c7_swap.bus.01"
+          ],
+          "note": "Routed the ninth-night tone across the site.",
+          "requires": [],
+          "actor": "steve",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "puzzle": {
+            "instruction": "The all-call bus reaches every speaker; PRESS reaches the television feed; CUE reaches Steve’s headphones. Keep a separate microphone path open for Calder.",
+            "rows": [
+              {
+                "label": "Frank’s tone",
+                "options": [
+                  "PRESS",
+                  "CUE",
+                  "ALL-CALL"
+                ]
+              },
+              {
+                "label": "Calder’s talkback",
+                "options": [
+                  "Crew headset",
+                  "Public podium",
+                  "Muted"
+                ]
+              },
+              {
+                "label": "Trigger",
+                "options": [
+                  "Before the copy arrives",
+                  "After the copy reaches the podium and Calder is ready",
+                  "After the ceremony ends"
+                ]
+              }
+            ],
+            "solution": [
+              2,
+              0,
+              1
+            ]
+          }
+        },
+        {
+          "id": "c7_swap.tone",
+          "title": "Ceremony cue",
+          "prompt": "The copy has reached the podium. Calder and Iris are at the tunnel.",
+          "options": [
+            "Play the ninth-night tone now",
+            "Wait until the copy leaves",
+            "Play yesterday’s weather"
+          ],
+          "answer": 0,
+          "lines": [
+            "c7_swap.tone.01",
+            "c7_swap.tone.02"
+          ],
+          "note": "Exposed fourteen copies and recovered the President.",
+          "requires": [
+            "c7_swap.map",
+            "c7_swap.bus"
+          ],
+          "actor": "steve",
+          "kind": "playback",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach."
+        }
+      ],
+      "intro": [
+        "c7_swap.in.01"
+      ],
+      "outro": [
+        "c7_swap.out.01",
+        "c7_swap.out.02",
+        "c7_swap.out.03"
+      ],
+      "shots": [
+        {
+          "duration": 5.0,
+          "move": "establish",
+          "direction": "Sweep from the podium to fourteen figures turning toward the water as the tone sounds."
+        },
+        {
+          "duration": 6.0,
+          "move": "push",
+          "direction": "Move toward the active interaction."
+        }
+      ]
     }
   ],
   "lines": {
@@ -3407,6 +3644,120 @@
       "audio": "c9_gallery.out.03",
       "delivery": "private_recording",
       "display_text": "Nora records a private message for Steve."
+    },
+    "c7_gate.in.01": {
+      "id": "c7_gate.in.01",
+      "speaker": "stephen",
+      "text": "Crew credentials. Loyal asset. Very important face.",
+      "audio": "c7_gate.in.01"
+    },
+    "c7_gate.in.02": {
+      "id": "c7_gate.in.02",
+      "speaker": "pell",
+      "text": "Registered mail for the President. Delivery cannot be delayed.",
+      "audio": "c7_gate.in.02"
+    },
+    "c7_gate.out.01": {
+      "id": "c7_gate.out.01",
+      "speaker": "wen",
+      "text": "Helen wrote this? Where is she?",
+      "audio": "c7_gate.out.01"
+    },
+    "c7_gate.out.02": {
+      "id": "c7_gate.out.02",
+      "speaker": "steve",
+      "text": "Asleep under the bay. Can you read it?",
+      "audio": "c7_gate.out.02"
+    },
+    "c7_gate.out.03": {
+      "id": "c7_gate.out.03",
+      "speaker": "wen",
+      "text": "This page... we need a private room.",
+      "audio": "c7_gate.out.03"
+    },
+    "c7_gate.badge.01": {
+      "id": "c7_gate.badge.01",
+      "speaker": "stephen",
+      "text": "I’m expected. I’m usually expected everywhere.",
+      "audio": "c7_gate.badge.01"
+    },
+    "c7_gate.post.01": {
+      "id": "c7_gate.post.01",
+      "speaker": "pell",
+      "text": "President Ward. Your letter. On time.",
+      "audio": "c7_gate.post.01"
+    },
+    "c7_gate.post.02": {
+      "id": "c7_gate.post.02",
+      "speaker": "ward",
+      "text": "An increasingly rare achievement.",
+      "audio": "c7_gate.post.02"
+    },
+    "c7_gate.truck.01": {
+      "id": "c7_gate.truck.01",
+      "speaker": "steve",
+      "text": "Sound check. I’m supposed to be under the desk.",
+      "audio": "c7_gate.truck.01"
+    },
+    "c7_gate.truck.02": {
+      "id": "c7_gate.truck.02",
+      "speaker": "shaw",
+      "text": "Then try staying off the cables.",
+      "audio": "c7_gate.truck.02"
+    },
+    "c7_swap.in.01": {
+      "id": "c7_swap.in.01",
+      "speaker": "saren",
+      "text": "Your parents’ records are in good order, Mr. Mercer. So is mine. I have never been wrong on the record. Not on Tirel, and not here.",
+      "audio": "c7_swap.in.01"
+    },
+    "c7_swap.out.01": {
+      "id": "c7_swap.out.01",
+      "speaker": "rook_copy",
+      "text": "Is he awake? The other one?",
+      "audio": "c7_swap.out.01"
+    },
+    "c7_swap.out.02": {
+      "id": "c7_swap.out.02",
+      "speaker": "ward",
+      "text": "Thank you, Mr. Mercer. Now we owe you an explanation.",
+      "audio": "c7_swap.out.02"
+    },
+    "c7_swap.out.03": {
+      "id": "c7_swap.out.03",
+      "speaker": "shaw",
+      "text": "There is no engine. There never was.",
+      "audio": "c7_swap.out.03"
+    },
+    "c7_swap.map.01": {
+      "id": "c7_swap.map.01",
+      "speaker": "stephen",
+      "text": "Service tunnel, east stairs. The doctor has the real President.",
+      "audio": "c7_swap.map.01"
+    },
+    "c7_swap.map.02": {
+      "id": "c7_swap.map.02",
+      "speaker": "calder",
+      "text": "We’re on it.",
+      "audio": "c7_swap.map.02"
+    },
+    "c7_swap.bus.01": {
+      "id": "c7_swap.bus.01",
+      "speaker": "steve",
+      "text": "All-call. Enough level to reach the back fence. Leave the microphone clear.",
+      "audio": "c7_swap.bus.01"
+    },
+    "c7_swap.tone.01": {
+      "id": "c7_swap.tone.01",
+      "speaker": "steve",
+      "text": "Fourteen. Rook. The physician. The woman at the microphone.",
+      "audio": "c7_swap.tone.01"
+    },
+    "c7_swap.tone.02": {
+      "id": "c7_swap.tone.02",
+      "speaker": "calder",
+      "text": "We have President Ward.",
+      "audio": "c7_swap.tone.02"
     }
   },
   "sound_labels": {
