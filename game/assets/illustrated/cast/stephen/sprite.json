@@ -1,5 +1,7 @@
 {
   "base": "stephen.webp",
+  "source": "assets/characters/campaign/masters/stephen.png",
+  "source_sha256": "f74247555f62f582fca5d0be8b659cc8722e11950f09f632b2cba5e2e34ffcce",
   "size": [
     810,
     1080
@@ -93,6 +95,10 @@
     "F": "mouth_round",
     "G": "mouth_parted",
     "H": "mouth_parted"
+  },
+  "sha256": {
+    "stephen.webp": "2b81455490cf80072f57d4c77d6da7862d4644373caf7b6fd69c2477a9a430d4",
+    "stephen-face-atlas.png": "93e2396a26e6846542b6983e3f2093ff9a6fbe9c5b1d7d5ed98a69c4837144af"
   },
   "atlas": "stephen-face-atlas.png",
   "eye_centers": [

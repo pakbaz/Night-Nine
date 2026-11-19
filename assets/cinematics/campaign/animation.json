@@ -1,0 +1,322 @@
+{
+  "c1_escape": {
+    "first": {
+      "source": "c1_escape.png",
+      "size": [
+        1672,
+        941
+      ],
+      "sha256": "385f5253f896dc6b8de97a376de56d689bf655dc53198e583b1a323d68b66c5b",
+      "runtime": "c1_escape.webp",
+      "runtime_sha256": "553e553735cc185aaf00cd96d9a007a2594c818ebea65a8b36958a75f2313884"
+    },
+    "last": {
+      "source": "c1_escape-motion.png",
+      "size": [
+        1671,
+        941
+      ],
+      "sha256": "4815886079326b012c704a712647270c6d62dc649679b89a301ee932381b8c77",
+      "runtime": "c1_escape-motion.webp",
+      "runtime_sha256": "93536673e9dd09c63f7ff354540ee19c264e6425b10aae04d77a68deea4072ab"
+    },
+    "motion_map": "c1_escape-flow.png",
+    "map_sha256": "ff94f91906575742e2ea653e5cd865a0ebe697eda7403bce1ab4b2435fa97563",
+    "working_size": [
+      800,
+      450
+    ],
+    "mean_unregistered_difference": 5.098,
+    "mean_warped_difference": 4.314,
+    "reverse_mean_warped_difference": 4.486,
+    "motion_pixel_95th_percentile": 0.493
+  },
+  "c2_ship": {
+    "first": {
+      "source": "c2_ship.png",
+      "size": [
+        1672,
+        941
+      ],
+      "sha256": "4ec8c8208da37c139fadc5c3a6a5798f34c0b5b7a2adbf3097d2f7cdc207d224",
+      "runtime": "c2_ship.webp",
+      "runtime_sha256": "f928634a4299fb34955087fa1fdcef5db1b775fd717f17d06ef92130b841b524"
+    },
+    "last": {
+      "source": "c2_ship-motion.png",
+      "size": [
+        1672,
+        941
+      ],
+      "sha256": "a7ba51e168fb37558222915ac17a5e8c92f44204ef31f9d30de04495476a2f6f",
+      "runtime": "c2_ship-motion.webp",
+      "runtime_sha256": "8d63d9b71f6726c8a65984780ecb50bbe46ec4f7ba4c80200babedd41275476a"
+    },
+    "motion_map": "c2_ship-flow.png",
+    "map_sha256": "77042adc8e026db299c4e73ad30c40c3303550b1781fc528fea0c0bd3cfbb63b",
+    "working_size": [
+      800,
+      450
+    ],
+    "mean_unregistered_difference": 10.021,
+    "mean_warped_difference": 7.189,
+    "reverse_mean_warped_difference": 7.317,
+    "motion_pixel_95th_percentile": 5.306
+  },
+  "c3_archive": {
+    "first": {
+      "source": "c3_archive.png",
+      "size": [
+        1672,
+        941
+      ],
+      "sha256": "76230c4fdf751418e69e8f391da45b69cdc0d48c10b8318a758e5de1dfcf8d34",
+      "runtime": "c3_archive.webp",
+      "runtime_sha256": "ada4f1799667e879a9cc45ec2656074b52cde22efcf4e4a29f989ea423c0e633"
+    },
+    "last": {
+      "source": "c3_archive-motion.png",
+      "size": [
+        1672,
+        941
+      ],
+      "sha256": "12688dd4d99463eec4003ea1b236a636ee05c6ae468dec20cf19d25f25eb22c7",
+      "runtime": "c3_archive-motion.webp",
+      "runtime_sha256": "ae85457f4a6c2e61a0483dbc0ca586f9ad294e09f30359b4db31d48f98e539af"
+    },
+    "motion_map": "c3_archive-flow.png",
+    "map_sha256": "ff209926defac83abde7e763551129be1d3fd6e2882448e03a5912cc1302c868",
+    "working_size": [
+      800,
+      450
+    ],
+    "mean_unregistered_difference": 7.268,
+    "mean_warped_difference": 4.62,
+    "reverse_mean_warped_difference": 4.615,
+    "motion_pixel_95th_percentile": 1.637
+  },
+  "c4_escape": {
+    "first": {
+      "source": "c4_escape.png",
+      "size": [
+        1672,
+        941
+      ],
+      "sha256": "2a935f7e2c27cd8016b217553350815fcc2bab37fa4e0bf6746621e7d19e5931",
+      "runtime": "c4_escape.webp",
+      "runtime_sha256": "e9231186dc9d600f91ddfa28cab975549dd8015ae69484fe4a311553d65f99fe"
+    },
+    "last": {
+      "source": "c4_escape-motion.png",
+      "size": [
+        1672,
+        941
+      ],
+      "sha256": "eb0bc686258110c0386e4c896bd52da070656d5f95100747d14e9f6dce96a3b2",
+      "runtime": "c4_escape-motion.webp",
+      "runtime_sha256": "3333f9b8cc70ed0f33979748ba22239b2ca3a7a66175da34d91399d221f7793c"
+    },
+    "motion_map": "c4_escape-flow.png",
+    "map_sha256": "2c74ca548c88dd31cd9dde994512220abf80fef31cc13719815c34f1cdfe1650",
+    "working_size": [
+      800,
+      450
+    ],
+    "mean_unregistered_difference": 8.487,
+    "mean_warped_difference": 7.618,
+    "reverse_mean_warped_difference": 6.776,
+    "motion_pixel_95th_percentile": 5.563
+  },
+  "c5_station": {
+    "first": {
+      "source": "c5_station.png",
+      "size": [
+        1672,
+        941
+      ],
+      "sha256": "89171f1a48450b71433603f386b089c7ec96ec19218a891f0ae0874bd0ea3af6",
+      "runtime": "c5_station.webp",
+      "runtime_sha256": "d8e6b1f07478120228506b470ae5fd813eceb5ea24f55b0b5853e2d40269107b"
+    },
+    "last": {
+      "source": "c5_station-motion.png",
+      "size": [
+        1672,
+        941
+      ],
+      "sha256": "b2b1b35736b1fc32e3e62854bb20367406875ecfd12f36372142d823ec924216",
+      "runtime": "c5_station-motion.webp",
+      "runtime_sha256": "8064e5837c50d0669a25f0973ab8f9bf850cf3f1c96d7437d400b485a8686ff1"
+    },
+    "motion_map": "c5_station-flow.png",
+    "map_sha256": "3f8085a5f47c4d4e9374548743c7b090f52ac5fcd54ecc747453b1a6eb0ea2b1",
+    "working_size": [
+      800,
+      450
+    ],
+    "mean_unregistered_difference": 6.22,
+    "mean_warped_difference": 5.59,
+    "reverse_mean_warped_difference": 5.692,
+    "motion_pixel_95th_percentile": 0.663
+  },
+  "c6_jail": {
+    "first": {
+      "source": "c6_jail.png",
+      "size": [
+        1672,
+        941
+      ],
+      "sha256": "a4efc354c60efae2fd492b8a6c2061bc1d82bdda1b4c4924391224087ad21917",
+      "runtime": "c6_jail.webp",
+      "runtime_sha256": "7ac23446d4e8b6df13c8bd72b2bf5e16528d84a9fd119392a25ea03bc15ecb30"
+    },
+    "last": {
+      "source": "c6_jail-motion.png",
+      "size": [
+        1672,
+        941
+      ],
+      "sha256": "8eca4e8d2cf674c529778ef4356512dce87d130c651c00f1dd3b984c1c52b3d3",
+      "runtime": "c6_jail-motion.webp",
+      "runtime_sha256": "8c32e7f580b265cb51041bce75ab89a3dd07b6750b0a6eb01f007b8ca7b386b3"
+    },
+    "motion_map": "c6_jail-flow.png",
+    "map_sha256": "8205c99afb6fe31c2dbe7ebb6d97beb508bc7f178cfe25f54250629c5a0abad8",
+    "working_size": [
+      800,
+      450
+    ],
+    "mean_unregistered_difference": 7.526,
+    "mean_warped_difference": 5.773,
+    "reverse_mean_warped_difference": 4.708,
+    "motion_pixel_95th_percentile": 3.958
+  },
+  "c7_swap": {
+    "first": {
+      "source": "c7_swap.png",
+      "size": [
+        1672,
+        941
+      ],
+      "sha256": "cda8017ad1dacd4ff1434b29f45d9fbd8ad41af15df711bdf1c5ca24fe416208",
+      "runtime": "c7_swap.webp",
+      "runtime_sha256": "0d600da4c9a23e153fbe36f484bb0eec6185021d786ff6952d3a9aea0ad96c81"
+    },
+    "last": {
+      "source": "c7_swap-motion.png",
+      "size": [
+        1672,
+        941
+      ],
+      "sha256": "54e7dae6cd7071d2913368e9deca7a36caf528660de9748ea7162108ca4f8102",
+      "runtime": "c7_swap-motion.webp",
+      "runtime_sha256": "c6465b4fa3eb75d1a6f23abf197ade751ff936af842e097207e77fa4aafbb9ab"
+    },
+    "motion_map": "c7_swap-flow.png",
+    "map_sha256": "6a551b64e6c210dc7a748e866fc58ec0533d97d17197139e0f57dfc1f66e0b97",
+    "working_size": [
+      800,
+      450
+    ],
+    "mean_unregistered_difference": 4.989,
+    "mean_warped_difference": 4.447,
+    "reverse_mean_warped_difference": 4.244,
+    "motion_pixel_95th_percentile": 0.351
+  },
+  "c8_rig": {
+    "first": {
+      "source": "c8_rig.png",
+      "size": [
+        1672,
+        941
+      ],
+      "sha256": "0287e0bbc3912cd5b08be3bce8494c97245d99b76345b9bc3b7b710fde02329e",
+      "runtime": "c8_rig.webp",
+      "runtime_sha256": "90f797aa5454038ef1d262dc84f3624b2e1364aac1f302ac4c75e9cf170f726f"
+    },
+    "last": {
+      "source": "c8_rig-motion.png",
+      "size": [
+        1672,
+        941
+      ],
+      "sha256": "0fe29e6573d7931280d85a97982f52b6cbe201356f9a5bf33b11ace871939aa0",
+      "runtime": "c8_rig-motion.webp",
+      "runtime_sha256": "92f531d79226fd3b6160ce341d0828179faf6268ca55db5f813e5731f04c80a4"
+    },
+    "motion_map": "c8_rig-flow.png",
+    "map_sha256": "e61e2c0e64fe6d9dad8cd98d4e3bd36419cd0743b28bc7ed2e60e960d3be899f",
+    "working_size": [
+      800,
+      450
+    ],
+    "mean_unregistered_difference": 7.149,
+    "mean_warped_difference": 5.972,
+    "reverse_mean_warped_difference": 6.024,
+    "motion_pixel_95th_percentile": 4.037
+  },
+  "c9_choir": {
+    "first": {
+      "source": "c9_choir.png",
+      "size": [
+        1672,
+        941
+      ],
+      "sha256": "4f02decabe58f7d0d6b531dd1fea3d1f625ef2fb2155a7f22c4cb1fd1c2137b4",
+      "runtime": "c9_choir.webp",
+      "runtime_sha256": "cf5a5a70480cfc3685768a1ba310d6dde04ff9fd795035ecef5ca886e908b033"
+    },
+    "last": {
+      "source": "c9_choir-motion.png",
+      "size": [
+        1672,
+        941
+      ],
+      "sha256": "ad233388738b78c431117f30064de442c04353744a37b085138b98a2804b7dc8",
+      "runtime": "c9_choir-motion.webp",
+      "runtime_sha256": "a79d3ccac946fd993cbdd76f8e40cb10526267a1778003a39544f8e86a0a8f1f"
+    },
+    "motion_map": "c9_choir-flow.png",
+    "map_sha256": "6e0e2cf8d6a2fc618d59bfcbc03d5910b7d9a99ccd1dbc78856676a329b69a59",
+    "working_size": [
+      800,
+      450
+    ],
+    "mean_unregistered_difference": 6.728,
+    "mean_warped_difference": 5.528,
+    "reverse_mean_warped_difference": 5.474,
+    "motion_pixel_95th_percentile": 1.76
+  },
+  "c10_report": {
+    "first": {
+      "source": "c10_report.png",
+      "size": [
+        1672,
+        941
+      ],
+      "sha256": "3488af07ab49e56bfb062170bedc1e02e812dedf26025cd7673c0e6f93045941",
+      "runtime": "c10_report.webp",
+      "runtime_sha256": "b8512843d92b0a00cc66bd1000e83f05d88979783ffb5b790af8ca4fa75719cb"
+    },
+    "last": {
+      "source": "c10_report-motion.png",
+      "size": [
+        1672,
+        941
+      ],
+      "sha256": "e27334b79b86d1a1d6fd0c44979058577899d2e99ca8e73e23f8b51f24f48bb3",
+      "runtime": "c10_report-motion.webp",
+      "runtime_sha256": "3c1293f40075145192256c951c0733905c0ef9f2d6d1e5261db79c44346365eb"
+    },
+    "motion_map": "c10_report-flow.png",
+    "map_sha256": "b991e3a18053aaffc25aa0da6a0d61e39a7bf8a8e8bd0df0983d5052fe64035b",
+    "working_size": [
+      800,
+      450
+    ],
+    "mean_unregistered_difference": 5.769,
+    "mean_warped_difference": 4.692,
+    "reverse_mean_warped_difference": 4.82,
+    "motion_pixel_95th_percentile": 1.268
+  }
+}

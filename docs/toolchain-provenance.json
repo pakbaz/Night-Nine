@@ -1,0 +1,31 @@
+{
+  "engine": "Godot 4.7.2 stable",
+  "checksum_source": "https://github.com/godotengine/godot-builds/releases/download/4.7.2-stable/SHA512-SUMS.txt",
+  "assets": [
+    {
+      "asset": "Godot_v4.7.2-stable_macos.universal.zip",
+      "sha512": "38aa16e5bba2083941fc5b3e54be0089bd4cc35e32415f5b9fd9a8a6a7b9818255d44532ea8ef94b5aef56c4b407c2d634fa4f657e4ebe681ebbf59b7bac69ca",
+      "verified": true
+    },
+    {
+      "asset": "Godot_v4.7.2-stable_export_templates.tpz",
+      "sha512": "ca4d71c4d7b81dfc15d1a98baa07534aa95b03fdda78a0075b06672e1648d2e5f40980c9adc28d23e1b92e732ee7bf3461997aa804af74ec2fcd7a93ccb84079",
+      "verified": true
+    }
+  ],
+  "mac_editor_codesign": "codesign --verify --deep --strict passed with macOS certificate access",
+  "blender": {
+    "version": "5.2.4 LTS",
+    "build_hash": "cd5dc428cce1",
+    "platform": "macOS ARM64",
+    "source": "https://download.blender.org/release/Blender5.2/blender-5.2.4-macos-arm64.dmg",
+    "sha256": "e73d564f97061b2496ccc5a0bd738937d2d3d0acae23621a00bbc7534dfd135f",
+    "checksum_verified": true,
+    "mac_codesign_verified": true
+  },
+  "gltf_transform": {
+    "version": "4.5.1",
+    "installation": ".tools/asset-tools/node_modules/@gltf-transform/cli",
+    "use": "local mesh simplification"
+  }
+}

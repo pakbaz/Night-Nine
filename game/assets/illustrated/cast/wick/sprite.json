@@ -1,5 +1,7 @@
 {
   "base": "wick.webp",
+  "source": "assets/characters/campaign/masters/wick.png",
+  "source_sha256": "516689c2eb8365cbc488ecb07f7382f30c868a8f7cf10972815bd025f79176ec",
   "size": [
     720,
     1080
@@ -10,5 +12,8 @@
     1080
   ],
   "frames": {},
-  "cue_frames": {}
+  "cue_frames": {},
+  "sha256": {
+    "wick.webp": "2ffcec6c720edd20b28a269171f6120ac1224deabba7e6450ea21cbdbe3ed1ea"
+  }
 }

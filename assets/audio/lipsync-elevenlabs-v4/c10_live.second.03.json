@@ -1,0 +1,83 @@
+{
+  "id": "c10_live.second.03",
+  "speaker": "operator",
+  "audio": "res://assets/audio/voices/elevenlabs-v4/c10_live.second.03.wav",
+  "audio_sha256": "92d862dd67a47612bf8b6325d89a80a9fcf2f1860a0a02ad6327e6bf72e4e9c1",
+  "transcript": "The far relay has you.",
+  "transcript_sha256": "93125adce8fb6843f368a7fb2e28ba9d3936af363070bd7cb6fe4ac35569e48a",
+  "generator": "Rhubarb Lip Sync version 1.14.0",
+  "generator_sha256": "93fa4a16ae1cc88a89d59743057521407843fc7139e23808c9e6587c6cc946d3",
+  "seconds": 1.8808333333333334,
+  "generation_seconds": 3.895,
+  "cues": [
+    {
+      "start": 0.0,
+      "end": 0.09,
+      "value": "X"
+    },
+    {
+      "start": 0.09,
+      "end": 0.15,
+      "value": "B"
+    },
+    {
+      "start": 0.15,
+      "end": 0.2,
+      "value": "C"
+    },
+    {
+      "start": 0.2,
+      "end": 0.34,
+      "value": "G"
+    },
+    {
+      "start": 0.34,
+      "end": 0.48,
+      "value": "D"
+    },
+    {
+      "start": 0.48,
+      "end": 0.76,
+      "value": "B"
+    },
+    {
+      "start": 0.76,
+      "end": 0.83,
+      "value": "H"
+    },
+    {
+      "start": 0.83,
+      "end": 0.9,
+      "value": "C"
+    },
+    {
+      "start": 0.9,
+      "end": 0.97,
+      "value": "B"
+    },
+    {
+      "start": 0.97,
+      "end": 1.18,
+      "value": "C"
+    },
+    {
+      "start": 1.18,
+      "end": 1.32,
+      "value": "B"
+    },
+    {
+      "start": 1.32,
+      "end": 1.6,
+      "value": "F"
+    },
+    {
+      "start": 1.6,
+      "end": 1.88,
+      "value": "X"
+    }
+  ],
+  "raw_sha256": "43f9f056aa3c0c2d0940a63d4d739981aee9c90d5e99230894939d5ae4d5321b",
+  "visual_timing_reviewed": false,
+  "cloud_credits": 0,
+  "uploads": false
+}

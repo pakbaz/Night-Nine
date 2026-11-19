@@ -1,0 +1,90 @@
+{
+  "version": 1,
+  "scenes": {
+    "c9_gallery": {
+      "actors": [
+        {
+          "id": "steve",
+          "position": [
+            -0.78,
+            0,
+            -0.1
+          ],
+          "yaw_degrees": 55
+        },
+        {
+          "id": "nora",
+          "position": [
+            0.78,
+            0,
+            -0.1
+          ],
+          "yaw_degrees": -55,
+          "visible_after": "c9_gallery.link"
+        }
+      ],
+      "targets": {
+        "c9_gallery.antenna": [
+          -4.2,
+          1.25,
+          -3.1
+        ],
+        "c9_gallery.link": [
+          2.0,
+          1.1,
+          -2.4
+        ],
+        "c9_gallery.talk": [
+          0.78,
+          1.35,
+          -0.1
+        ]
+      },
+      "dialogue_groups": [
+        "c9_gallery.talk",
+        "c9_gallery.out"
+      ],
+      "shots": {
+        "steve": {
+          "position": [
+            0.25,
+            1.68,
+            1.23
+          ],
+          "target": [
+            -0.78,
+            1.6,
+            -0.1
+          ],
+          "fov": 38
+        },
+        "nora": {
+          "position": [
+            -0.25,
+            1.59,
+            1.23
+          ],
+          "target": [
+            0.78,
+            1.49,
+            -0.1
+          ],
+          "fov": 38
+        },
+        "wide": {
+          "position": [
+            0,
+            1.8,
+            3.9
+          ],
+          "target": [
+            0,
+            1.18,
+            -0.1
+          ],
+          "fov": 42
+        }
+      }
+    }
+  }
+}

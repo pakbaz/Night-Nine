@@ -1,0 +1,74 @@
+{
+  "id": "p_veyr.in.02",
+  "speaker": "archivist",
+  "audio": "one-recording-remains.wav",
+  "audio_sha256": "be41a70680f4fb4e170f33cac9b1969bf096d6093327f333c9896b97f853619f",
+  "transcript": "One recording remains.",
+  "transcript_sha256": "9cffc70eb8bb3dd71f832b8f3537dbed88e1e6ca33aeef0e56c322eb5c2e4990",
+  "seconds": 1.8808333333333334,
+  "audio_frames": 90280,
+  "sample_rate": 48000,
+  "cues": [
+    {
+      "start": 0.0,
+      "end": 0.06,
+      "value": "X"
+    },
+    {
+      "start": 0.06,
+      "end": 0.15,
+      "value": "F"
+    },
+    {
+      "start": 0.15,
+      "end": 0.36,
+      "value": "C"
+    },
+    {
+      "start": 0.36,
+      "end": 0.43,
+      "value": "B"
+    },
+    {
+      "start": 0.43,
+      "end": 0.64,
+      "value": "E"
+    },
+    {
+      "start": 0.64,
+      "end": 1.06,
+      "value": "B"
+    },
+    {
+      "start": 1.06,
+      "end": 1.14,
+      "value": "A"
+    },
+    {
+      "start": 1.14,
+      "end": 1.2,
+      "value": "C"
+    },
+    {
+      "start": 1.2,
+      "end": 1.67,
+      "value": "B"
+    },
+    {
+      "start": 1.67,
+      "end": 1.88,
+      "value": "X"
+    }
+  ],
+  "generator": "Rhubarb Lip Sync version 1.14.0",
+  "generator_sha256": "93fa4a16ae1cc88a89d59743057521407843fc7139e23808c9e6587c6cc946d3",
+  "visual_timing_reviewed": false,
+  "recording": {
+    "provider": "ElevenLabs via Higgsfield",
+    "model": "elevenlabs_v4",
+    "voice": "Faye",
+    "job_id": "bb4aac5c-f2da-4162-bf15-2710e029b7b8",
+    "quoted_credits": 0.23,
+    "source_mp3_sha256": "57b9937c83f5e7a3bacd85f4f5138e6ab0349ea3388acf76bc92aba49cc92a59"
+  }
+}

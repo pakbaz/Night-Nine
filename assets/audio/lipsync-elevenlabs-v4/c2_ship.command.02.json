@@ -1,0 +1,83 @@
+{
+  "id": "c2_ship.command.02",
+  "speaker": "steve",
+  "audio": "res://assets/audio/voices/elevenlabs-v4/c2_ship.command.02.wav",
+  "audio_sha256": "2c4321eef8dd8b46eb2b8f94c3e0ce7047ee044a091154efbf34cd0147b1d054",
+  "transcript": "Got it. Thank you, Prefect.",
+  "transcript_sha256": "9ab424412a8fac5eee2ec7b91f9d0d2e8339a5db920319148ee7bc9f2a60c444",
+  "generator": "Rhubarb Lip Sync version 1.14.0",
+  "generator_sha256": "93fa4a16ae1cc88a89d59743057521407843fc7139e23808c9e6587c6cc946d3",
+  "seconds": 2.0375625,
+  "generation_seconds": 3.875,
+  "cues": [
+    {
+      "start": 0.0,
+      "end": 0.19,
+      "value": "D"
+    },
+    {
+      "start": 0.19,
+      "end": 0.24,
+      "value": "C"
+    },
+    {
+      "start": 0.24,
+      "end": 0.56,
+      "value": "B"
+    },
+    {
+      "start": 0.56,
+      "end": 0.92,
+      "value": "X"
+    },
+    {
+      "start": 0.92,
+      "end": 1.03,
+      "value": "B"
+    },
+    {
+      "start": 1.03,
+      "end": 1.1,
+      "value": "C"
+    },
+    {
+      "start": 1.1,
+      "end": 1.24,
+      "value": "F"
+    },
+    {
+      "start": 1.24,
+      "end": 1.32,
+      "value": "A"
+    },
+    {
+      "start": 1.32,
+      "end": 1.49,
+      "value": "B"
+    },
+    {
+      "start": 1.49,
+      "end": 1.56,
+      "value": "G"
+    },
+    {
+      "start": 1.56,
+      "end": 1.7,
+      "value": "C"
+    },
+    {
+      "start": 1.7,
+      "end": 1.91,
+      "value": "B"
+    },
+    {
+      "start": 1.91,
+      "end": 2.03,
+      "value": "X"
+    }
+  ],
+  "raw_sha256": "597f1feff8dc990e8a7cdd30837fcf0d9ff6f50ea3a214c167c2661575e678d6",
+  "visual_timing_reviewed": false,
+  "cloud_credits": 0,
+  "uploads": false
+}

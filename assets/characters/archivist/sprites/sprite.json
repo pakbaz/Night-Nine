@@ -1,0 +1,124 @@
+{
+  "source": "assets/concepts/characters/archivist-front-modeling-v1.png",
+  "source_sha256": "c4ffecb16a5a0d2676cab10a951dca19901a92e84ea580cf46ee42dff420ad5e",
+  "size": [
+    1024,
+    1536
+  ],
+  "origin": "top_left",
+  "foot_anchor": [
+    512,
+    1486
+  ],
+  "eye_centers": [
+    [
+      478,
+      146
+    ],
+    [
+      546,
+      145
+    ]
+  ],
+  "mouth_center": [
+    512,
+    203
+  ],
+  "base": "archivist.png",
+  "atlas": "archivist-face-atlas.png",
+  "frames": {
+    "blink_half": {
+      "atlas_region": [
+        0,
+        0,
+        144,
+        56
+      ],
+      "source_origin": [
+        440,
+        121
+      ]
+    },
+    "blink_closed": {
+      "atlas_region": [
+        0,
+        56,
+        144,
+        56
+      ],
+      "source_origin": [
+        440,
+        121
+      ]
+    },
+    "mouth_parted": {
+      "atlas_region": [
+        0,
+        112,
+        96,
+        48
+      ],
+      "source_origin": [
+        464,
+        181
+      ]
+    },
+    "mouth_open": {
+      "atlas_region": [
+        0,
+        160,
+        96,
+        48
+      ],
+      "source_origin": [
+        464,
+        181
+      ]
+    },
+    "mouth_round": {
+      "atlas_region": [
+        0,
+        208,
+        96,
+        48
+      ],
+      "source_origin": [
+        464,
+        181
+      ]
+    },
+    "mouth_wide": {
+      "atlas_region": [
+        0,
+        256,
+        96,
+        48
+      ],
+      "source_origin": [
+        464,
+        181
+      ]
+    }
+  },
+  "cue_frames": {
+    "X": null,
+    "A": null,
+    "B": "mouth_parted",
+    "C": "mouth_wide",
+    "D": "mouth_open",
+    "E": "mouth_round",
+    "F": "mouth_round",
+    "G": "mouth_parted",
+    "H": "mouth_parted"
+  },
+  "full_canvas_examples": {
+    "blink_closed": "archivist-blink.png",
+    "mouth_open": "archivist-speaking.png"
+  },
+  "sha256": {
+    "archivist.png": "c8f33bb5e2d8f09abe0878492a70cfdbee9a7b3ad04d254fd3c4a143b317a166",
+    "archivist-face-atlas.png": "2be9762932851f85761bf552caf96c409f80b8d4f0404945fa3151bf3be0fbc3",
+    "archivist-blink.png": "eb76596ba81fef2687022fb647304ee8f8cef864a7a4b95e576982404ed8080c",
+    "archivist-speaking.png": "0bd103d187f8af15382dc769487c5064eb405ec3f1314da42d662b0114d6660b"
+  }
+}

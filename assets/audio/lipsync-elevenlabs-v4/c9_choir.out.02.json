@@ -1,0 +1,83 @@
+{
+  "id": "c9_choir.out.02",
+  "speaker": "helen",
+  "audio": "res://assets/audio/voices/elevenlabs-v4/c9_choir.out.02.wav",
+  "audio_sha256": "f9fd8e875705d8b973d3439380b73c38a752c51974a1df8fe953e6b0e66797a9",
+  "transcript": "I should have told you what we were doing.",
+  "transcript_sha256": "feb24f9230cf0d0ae1dd4bda5c3b539012535672d27e26d41cbfb4efd3b1f67d",
+  "generator": "Rhubarb Lip Sync version 1.14.0",
+  "generator_sha256": "93fa4a16ae1cc88a89d59743057521407843fc7139e23808c9e6587c6cc946d3",
+  "seconds": 2.351020833333333,
+  "generation_seconds": 4.681,
+  "cues": [
+    {
+      "start": 0.0,
+      "end": 0.05,
+      "value": "X"
+    },
+    {
+      "start": 0.05,
+      "end": 0.12,
+      "value": "C"
+    },
+    {
+      "start": 0.12,
+      "end": 0.18,
+      "value": "B"
+    },
+    {
+      "start": 0.18,
+      "end": 0.32,
+      "value": "F"
+    },
+    {
+      "start": 0.32,
+      "end": 0.46,
+      "value": "C"
+    },
+    {
+      "start": 0.46,
+      "end": 0.53,
+      "value": "B"
+    },
+    {
+      "start": 0.53,
+      "end": 0.74,
+      "value": "E"
+    },
+    {
+      "start": 0.74,
+      "end": 1.16,
+      "value": "F"
+    },
+    {
+      "start": 1.16,
+      "end": 1.3,
+      "value": "B"
+    },
+    {
+      "start": 1.3,
+      "end": 1.37,
+      "value": "F"
+    },
+    {
+      "start": 1.37,
+      "end": 1.44,
+      "value": "B"
+    },
+    {
+      "start": 1.44,
+      "end": 1.79,
+      "value": "F"
+    },
+    {
+      "start": 1.79,
+      "end": 2.35,
+      "value": "B"
+    }
+  ],
+  "raw_sha256": "9147c5c283335fa5276f0208f6c6d64d0430c4985d0b5e3af23a50c3f9e7021b",
+  "visual_timing_reviewed": false,
+  "cloud_credits": 0,
+  "uploads": false
+}

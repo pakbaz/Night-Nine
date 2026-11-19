@@ -1,5 +1,7 @@
 {
   "base": "saren.webp",
+  "source": "assets/characters/campaign/masters/saren.png",
+  "source_sha256": "5574d8da6624bdae23745288df70b571e01cdbacf8a3ed4493a6a66a0047584c",
   "size": [
     720,
     1080
@@ -93,6 +95,10 @@
     "F": "mouth_round",
     "G": "mouth_parted",
     "H": "mouth_parted"
+  },
+  "sha256": {
+    "saren.webp": "4a3d7246e3b0da1a549a60ca0d83d855b2962b171dedee02110a7f3654b6d235",
+    "saren-face-atlas.png": "e566e784153c56f981d34bc8ff41803b2bfcfba129f2a3c30c6139d556d28973"
   },
   "atlas": "saren-face-atlas.png",
   "eye_centers": [

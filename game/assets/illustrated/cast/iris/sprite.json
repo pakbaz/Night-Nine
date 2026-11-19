@@ -1,5 +1,7 @@
 {
   "base": "iris.webp",
+  "source": "assets/characters/campaign/masters/iris.png",
+  "source_sha256": "0a9f54ba63c4e5339e49a8d2eb39fe44a6c473ac772f49e82bcf7a42dc457f4b",
   "size": [
     810,
     1080
@@ -93,6 +95,10 @@
     "F": "mouth_round",
     "G": "mouth_parted",
     "H": "mouth_parted"
+  },
+  "sha256": {
+    "iris.webp": "a6eb11eedae774fa6ef54653c9d941e43e8377d707b74dc15c2595080186e6a0",
+    "iris-face-atlas.png": "27e130a6b1e84a48eb4f07766eb21b87074989d7374f31d7f604fe5e0fd39f46"
   },
   "atlas": "iris-face-atlas.png",
   "eye_centers": [

@@ -1,0 +1,63 @@
+{
+  "id": "c9_gallery.out.01",
+  "speaker": "nora",
+  "audio": "res://assets/audio/voices/elevenlabs-v4/c9_gallery.out.01.wav",
+  "audio_sha256": "1ed97f788ed327317e1e6d0bb99ccfa0b350a9308ef39ccc7d772cb0d9f86e2f",
+  "transcript": "The ring. Where is it?",
+  "transcript_sha256": "2bc21deb8bc92d8612d18b536b8fca8944f0ccc1f5e79d9bb8b144bc4f63b6a9",
+  "generator": "Rhubarb Lip Sync version 1.14.0",
+  "generator_sha256": "93fa4a16ae1cc88a89d59743057521407843fc7139e23808c9e6587c6cc946d3",
+  "seconds": 2.1159375,
+  "generation_seconds": 3.571,
+  "cues": [
+    {
+      "start": 0.0,
+      "end": 0.06,
+      "value": "X"
+    },
+    {
+      "start": 0.06,
+      "end": 0.15,
+      "value": "B"
+    },
+    {
+      "start": 0.15,
+      "end": 0.22,
+      "value": "C"
+    },
+    {
+      "start": 0.22,
+      "end": 0.71,
+      "value": "B"
+    },
+    {
+      "start": 0.71,
+      "end": 1.2,
+      "value": "X"
+    },
+    {
+      "start": 1.2,
+      "end": 1.31,
+      "value": "F"
+    },
+    {
+      "start": 1.31,
+      "end": 1.38,
+      "value": "C"
+    },
+    {
+      "start": 1.38,
+      "end": 1.94,
+      "value": "B"
+    },
+    {
+      "start": 1.94,
+      "end": 2.11,
+      "value": "X"
+    }
+  ],
+  "raw_sha256": "d2b3fd0d659775c6719fec9f5249653face36fc95fdcbd1ba5ec753ab016b1fc",
+  "visual_timing_reviewed": false,
+  "cloud_credits": 0,
+  "uploads": false
+}

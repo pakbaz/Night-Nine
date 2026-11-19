@@ -1,0 +1,48 @@
+{
+  "id": "recording.rook",
+  "speaker": "rook_copy",
+  "audio": "res://assets/audio/voices/elevenlabs-v4/recording.rook.wav",
+  "audio_sha256": "30bd588ce8e2f2286ddba7ec25f54e84898a657dfa198805f2ca9ff062f0ad33",
+  "transcript": "Sit tight, June.",
+  "transcript_sha256": "0b3d8715236f8014a3195b7f9ab3a5d554cff63254857d257b76fee74e657457",
+  "generator": "Rhubarb Lip Sync version 1.14.0",
+  "generator_sha256": "93fa4a16ae1cc88a89d59743057521407843fc7139e23808c9e6587c6cc946d3",
+  "seconds": 1.5673541666666666,
+  "generation_seconds": 3.753,
+  "cues": [
+    {
+      "start": 0.0,
+      "end": 0.06,
+      "value": "X"
+    },
+    {
+      "start": 0.06,
+      "end": 0.34,
+      "value": "B"
+    },
+    {
+      "start": 0.34,
+      "end": 0.55,
+      "value": "C"
+    },
+    {
+      "start": 0.55,
+      "end": 0.92,
+      "value": "B"
+    },
+    {
+      "start": 0.92,
+      "end": 1.35,
+      "value": "F"
+    },
+    {
+      "start": 1.35,
+      "end": 1.56,
+      "value": "X"
+    }
+  ],
+  "raw_sha256": "7a56feece7966c87ab5fee5134a02a6b0b1c70ae3aa92d32d4b4371249273107",
+  "visual_timing_reviewed": false,
+  "cloud_credits": 0,
+  "uploads": false
+}

@@ -1,5 +1,7 @@
 {
   "base": "agnes.webp",
+  "source": "assets/characters/campaign/masters/agnes.png",
+  "source_sha256": "62bc5492ac2ed088883edb36ca014ade8a1bef7503b7660970f26a65da89fc72",
   "size": [
     774,
     1080
@@ -93,6 +95,10 @@
     "F": "mouth_round",
     "G": "mouth_parted",
     "H": "mouth_parted"
+  },
+  "sha256": {
+    "agnes.webp": "b7def110355211a6ee554d95b3a320605b66fadcc9bb2ba0d68f7b73358d44ba",
+    "agnes-face-atlas.png": "cfa189d544a2b257c75bc32545291691850b9079172d8c1181d02ffb18e60576"
   },
   "atlas": "agnes-face-atlas.png",
   "eye_centers": [

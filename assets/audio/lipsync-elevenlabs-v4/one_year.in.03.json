@@ -1,0 +1,58 @@
+{
+  "id": "one_year.in.03",
+  "speaker": "steve",
+  "audio": "res://assets/audio/voices/elevenlabs-v4/one_year.in.03.wav",
+  "audio_sha256": "f80eecf73af72b250302dcee97b4a721f2c1b2ebb6fa6b6e4d43c782df29aee0",
+  "transcript": "We did that yesterday.",
+  "transcript_sha256": "7f9223ca6d6a0ce83260b360c0db412755be3b72c30e6f7ad8f688e5e2a86776",
+  "generator": "Rhubarb Lip Sync version 1.14.0",
+  "generator_sha256": "93fa4a16ae1cc88a89d59743057521407843fc7139e23808c9e6587c6cc946d3",
+  "seconds": 1.6457291666666667,
+  "generation_seconds": 3.324,
+  "cues": [
+    {
+      "start": 0.0,
+      "end": 0.06,
+      "value": "X"
+    },
+    {
+      "start": 0.06,
+      "end": 0.15,
+      "value": "F"
+    },
+    {
+      "start": 0.15,
+      "end": 0.5,
+      "value": "B"
+    },
+    {
+      "start": 0.5,
+      "end": 0.78,
+      "value": "C"
+    },
+    {
+      "start": 0.78,
+      "end": 0.99,
+      "value": "B"
+    },
+    {
+      "start": 0.99,
+      "end": 1.2,
+      "value": "C"
+    },
+    {
+      "start": 1.2,
+      "end": 1.34,
+      "value": "B"
+    },
+    {
+      "start": 1.34,
+      "end": 1.64,
+      "value": "X"
+    }
+  ],
+  "raw_sha256": "2b41f3e7b15adb19e84bce37932e1f01833429389b0163923622f04c88c9c8e4",
+  "visual_timing_reviewed": false,
+  "cloud_credits": 0,
+  "uploads": false
+}

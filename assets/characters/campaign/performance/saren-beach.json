@@ -1,0 +1,24 @@
+{
+  "character": "Prefect Saren",
+  "source": "assets/concepts/characters/06-veyri-and-wick.png",
+  "source_sha256": "19e6b2bd204f16178e6cc435c3559ffb181deeec5535a9f1d6a13fb9f38da731",
+  "crop_xywh": [
+    4,
+    6,
+    330,
+    947
+  ],
+  "selection": "Largest foreground instance in Apple Vision; existing concept-board colours and silhouette.",
+  "matte_sha256": "dc678db0a3a99a16e8955d8d66c1ac011b3524d6e8b7cb35853f81f37839191a",
+  "drawn_facing": "screen right",
+  "texture": "game/assets/illustrated/campaign/walk/saren-idle.webp",
+  "texture_sha256": "fd1f2ddaebe2dbd9a3450c2a1ea4adc879dc5c4279c479252821399ba57ccf11",
+  "size": [
+    416,
+    512
+  ],
+  "foot_anchor": [
+    208,
+    512
+  ]
+}

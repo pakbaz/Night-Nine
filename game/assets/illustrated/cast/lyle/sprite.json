@@ -1,5 +1,7 @@
 {
   "base": "lyle.webp",
+  "source": "assets/characters/campaign/masters/lyle.png",
+  "source_sha256": "b4d0f17b3719434bfb576271a8809787dd5f6aeee940295263471f1d6a4ab962",
   "size": [
     900,
     1080
@@ -93,6 +95,10 @@
     "F": "mouth_round",
     "G": "mouth_parted",
     "H": "mouth_parted"
+  },
+  "sha256": {
+    "lyle.webp": "ab457d424fbf3336cf2f49c838700e02f5517410d57e8367ab4842d17906f110",
+    "lyle-face-atlas.png": "b1aeb2ccc6262ddfe81780c9e0d9391fba26e038a16ff725ebe63189dbdbdcfa"
   },
   "atlas": "lyle-face-atlas.png",
   "eye_centers": [

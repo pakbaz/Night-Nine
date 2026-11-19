@@ -1,0 +1,151 @@
+{
+  "captures": [
+    "01-main-menu.png",
+    "p_bay-storybook.png",
+    "p_bay-card.png",
+    "p_bay-arrival.png",
+    "p_bay-exploration.png",
+    "p_bay-radio.png",
+    "p_bay-last-light.png",
+    "p_veyr-card.png",
+    "p_veyr-arrival.png",
+    "p_veyr-exploration.png",
+    "p_veyr-puzzle.png",
+    "p_veyr-last-light.png",
+    "p_meeting-card.png",
+    "p_meeting-arrival.png",
+    "p_meeting-exploration.png",
+    "p_meeting-reaction.png",
+    "p_meeting-last-light.png"
+  ],
+  "checks": 159,
+  "failures": [],
+  "next_scene": "c8_lab",
+  "recordings": {
+    "p_bay.in.01": "res://assets/audio/voices/elevenlabs-v4/p_bay.in.01.wav",
+    "p_bay.in.02": "res://assets/audio/voices/elevenlabs-v4/p_bay.in.02.wav",
+    "p_bay.message.01": "res://assets/audio/voices/elevenlabs-v4/p_bay.message.01.wav",
+    "p_bay.out.01": "res://assets/audio/voices/elevenlabs-v4/recording.voicemail.wav",
+    "p_bay.out.02": "res://assets/audio/voices/elevenlabs-v4/p_bay.out.02.wav",
+    "p_bay.tune.01": "res://assets/audio/voices/elevenlabs-v4/p_bay.tune.01.wav",
+    "p_meeting.confess.01": "res://assets/audio/voices/elevenlabs-v4/p_meeting.confess.01.wav",
+    "p_meeting.confess.02": "res://assets/audio/voices/elevenlabs-v4/p_meeting.confess.02.wav",
+    "p_meeting.confess.03": "res://assets/audio/voices/elevenlabs-v4/p_meeting.confess.03.wav",
+    "p_meeting.in.01": "res://assets/audio/voices/elevenlabs-v4/p_meeting.in.01.wav",
+    "p_meeting.in.02": "res://assets/audio/voices/elevenlabs-v4/p_meeting.in.02.wav",
+    "p_meeting.out.01": "res://assets/audio/voices/elevenlabs-v4/p_meeting.out.01.wav",
+    "p_meeting.record.01": "res://assets/audio/voices/elevenlabs-v4/p_meeting.record.01.wav",
+    "p_meeting.terms.01": "res://assets/audio/voices/elevenlabs-v4/p_meeting.terms.01.wav",
+    "p_meeting.terms.02": "res://assets/audio/voices/elevenlabs-v4/p_meeting.terms.02.wav",
+    "p_veyr.in.01": "res://assets/audio/voices/elevenlabs-v4/p_veyr.in.01.wav",
+    "p_veyr.in.02": "res://assets/audio/voices/elevenlabs-v4/p_veyr.in.02.wav",
+    "p_veyr.levels.01": "res://assets/audio/voices/elevenlabs-v4/p_veyr.levels.01.wav",
+    "p_veyr.out.01": "res://assets/audio/voices/elevenlabs-v4/p_veyr.out.01.wav",
+    "p_veyr.out.02": "res://assets/audio/voices/elevenlabs-v4/p_veyr.out.02.wav",
+    "p_veyr.record.01": "res://assets/audio/voices/elevenlabs-v4/p_veyr.record.01.wav",
+    "p_veyr.shield.01": "res://assets/audio/voices/elevenlabs-v4/p_veyr.shield.01.wav"
+  },
+  "renderer": "forward_plus",
+  "scenes": {
+    "p_bay": {
+      "heard": [
+        "p_bay.in.01",
+        "p_bay.in.02",
+        "p_bay.tune.01",
+        "p_bay.message.01",
+        "p_bay.out.01",
+        "p_bay.out.02"
+      ],
+      "hotspots": {
+        "p_bay.message": [
+          1161.9,
+          747.3
+        ],
+        "p_bay.tune": [
+          592.8,
+          720.6
+        ]
+      }
+    },
+    "p_meeting": {
+      "heard": [
+        "p_meeting.in.01",
+        "p_meeting.in.02",
+        "p_meeting.terms.01",
+        "p_meeting.terms.02",
+        "p_meeting.confess.01",
+        "p_meeting.confess.02",
+        "p_meeting.confess.03",
+        "p_meeting.record.01",
+        "p_meeting.out.01"
+      ],
+      "hotspots": {
+        "p_meeting.confess": [
+          823.1,
+          811.8
+        ],
+        "p_meeting.record": [
+          1294.5,
+          898.4
+        ],
+        "p_meeting.terms": [
+          397.8,
+          805.5
+        ]
+      }
+    },
+    "p_veyr": {
+      "heard": [
+        "p_veyr.in.01",
+        "p_veyr.in.02",
+        "p_veyr.shield.01",
+        "p_veyr.levels.01",
+        "p_veyr.record.01",
+        "p_veyr.out.01",
+        "p_veyr.out.02"
+      ],
+      "hotspots": {
+        "p_veyr.levels": [
+          1207.6,
+          827.6
+        ],
+        "p_veyr.record": [
+          950.5,
+          836.7
+        ],
+        "p_veyr.shield": [
+          1476.8,
+          615.7
+        ]
+      }
+    }
+  },
+  "speaking_faces": {
+    "archivist": {
+      "frame": "mouth_parted",
+      "line": "p_veyr.in.01",
+      "voice_seconds": 0.00266666663810611
+    },
+    "frank": {
+      "frame": "mouth_parted",
+      "line": "p_bay.in.01",
+      "voice_seconds": 0.00266666663810611
+    },
+    "general_cn": {
+      "frame": "mouth_round",
+      "line": "p_meeting.in.02",
+      "voice_seconds": 0.0933333337306976
+    },
+    "general_us": {
+      "frame": "mouth_round",
+      "line": "p_meeting.in.01",
+      "voice_seconds": 0.00266666663810611
+    },
+    "helen": {
+      "frame": "mouth_parted",
+      "line": "p_bay.in.02",
+      "voice_seconds": 0.00266666663810611
+    }
+  },
+  "verified_group_laugh": true
+}

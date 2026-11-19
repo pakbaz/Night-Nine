@@ -1,0 +1,77 @@
+{
+  "checks": 83,
+  "failures": [],
+  "hitches": [],
+  "longest_frame": 0.15,
+  "screenshots": [
+    "00-title.png",
+    "01-opening-01.png",
+    "01-opening-02.png",
+    "01-opening-03.png",
+    "01-opening-04.png",
+    "01-opening-05.png",
+    "02-prologue-card.png",
+    "03-bay-arrival.png",
+    "04-bay-play.png",
+    "05-bay-departure.png",
+    "06-aftermath-01.png",
+    "06-aftermath-02.png",
+    "06-aftermath-03.png",
+    "06-aftermath-04.png",
+    "06-aftermath-05.png",
+    "07-chapter-1-card.png",
+    "08-chapter-1-arrival.png",
+    "09-veyr-card.png",
+    "10-veyr-play.png",
+    "11-chapter-8-card.png",
+    "12-sentinel-page.png",
+    "13-epilogue-card.png",
+    "14-epilogue-visit.png",
+    "15-lanterns.png",
+    "16-after-01.png",
+    "16-after-02.png",
+    "16-after-03.png",
+    "16-after-04.png",
+    "16-after-05.png",
+    "16-after-06.png",
+    "17-one-year-card.png",
+    "18-one-year.png"
+  ],
+  "silent_lines": [],
+  "timing": [
+    {
+      "event": "01-opening panel 1",
+      "music_seconds": 11.126,
+      "off_bar_by": 0.043
+    },
+    {
+      "event": "Bay departure",
+      "music_seconds": 107.537,
+      "off_bar_by": 0.053
+    },
+    {
+      "event": "06-aftermath panel 1",
+      "music_seconds": 124.811,
+      "off_bar_by": 0.042
+    },
+    {
+      "event": "Chapter 1 card ends",
+      "music_seconds": 7.074,
+      "off_bar_by": 0.036
+    },
+    {
+      "event": "Chapter 1 card length",
+      "seconds": 5.54
+    },
+    {
+      "event": "Epilogue departure",
+      "music_seconds": 85.418,
+      "off_bar_by": 0.038
+    },
+    {
+      "event": "16-after panel 1",
+      "music_seconds": 113.759,
+      "off_bar_by": 0.041
+    }
+  ]
+}

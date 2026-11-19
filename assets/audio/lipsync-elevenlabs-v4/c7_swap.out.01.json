@@ -1,0 +1,88 @@
+{
+  "id": "c7_swap.out.01",
+  "speaker": "rook_copy",
+  "audio": "res://assets/audio/voices/elevenlabs-v4/c7_swap.out.01.wav",
+  "audio_sha256": "b8958808d54ff15271955c5dcd5dfefbc0b66ff64c80a4f6951e700899003c94",
+  "transcript": "Is he awake? The other one?",
+  "transcript_sha256": "be8687ea044970789178c90791d77cdad64ec2b2360528b72c6beca9db0a3778",
+  "generator": "Rhubarb Lip Sync version 1.14.0",
+  "generator_sha256": "93fa4a16ae1cc88a89d59743057521407843fc7139e23808c9e6587c6cc946d3",
+  "seconds": 2.1159375,
+  "generation_seconds": 3.121,
+  "cues": [
+    {
+      "start": 0.0,
+      "end": 0.06,
+      "value": "X"
+    },
+    {
+      "start": 0.06,
+      "end": 0.29,
+      "value": "B"
+    },
+    {
+      "start": 0.29,
+      "end": 0.43,
+      "value": "C"
+    },
+    {
+      "start": 0.43,
+      "end": 0.57,
+      "value": "F"
+    },
+    {
+      "start": 0.57,
+      "end": 0.71,
+      "value": "C"
+    },
+    {
+      "start": 0.71,
+      "end": 0.78,
+      "value": "B"
+    },
+    {
+      "start": 0.78,
+      "end": 1.29,
+      "value": "X"
+    },
+    {
+      "start": 1.29,
+      "end": 1.43,
+      "value": "B"
+    },
+    {
+      "start": 1.43,
+      "end": 1.5,
+      "value": "C"
+    },
+    {
+      "start": 1.5,
+      "end": 1.57,
+      "value": "B"
+    },
+    {
+      "start": 1.57,
+      "end": 1.64,
+      "value": "E"
+    },
+    {
+      "start": 1.64,
+      "end": 1.71,
+      "value": "F"
+    },
+    {
+      "start": 1.71,
+      "end": 1.92,
+      "value": "C"
+    },
+    {
+      "start": 1.92,
+      "end": 2.11,
+      "value": "X"
+    }
+  ],
+  "raw_sha256": "a8e69006bbee67985ee8a0aaa65375308639467bdca9db8e60f71cd851714a10",
+  "visual_timing_reviewed": false,
+  "cloud_credits": 0,
+  "uploads": false
+}

@@ -1,0 +1,83 @@
+{
+  "id": "c9_wake.helen.02",
+  "speaker": "helen",
+  "audio": "res://assets/audio/voices/elevenlabs-v4/c9_wake.helen.02.wav",
+  "audio_sha256": "79f99437e2a0fe1e0c9a75dc42fff782b4beef5625ba08163611161881809bef",
+  "transcript": "Steven. Oh, my boy.",
+  "transcript_sha256": "c9ed40546b7aa67c0ec73712206214d20f9369f8257fc18b955aae4ade8b274d",
+  "generator": "Rhubarb Lip Sync version 1.14.0",
+  "generator_sha256": "93fa4a16ae1cc88a89d59743057521407843fc7139e23808c9e6587c6cc946d3",
+  "seconds": 2.769,
+  "generation_seconds": 6.301,
+  "cues": [
+    {
+      "start": 0.0,
+      "end": 0.06,
+      "value": "X"
+    },
+    {
+      "start": 0.06,
+      "end": 0.35,
+      "value": "B"
+    },
+    {
+      "start": 0.35,
+      "end": 0.42,
+      "value": "G"
+    },
+    {
+      "start": 0.42,
+      "end": 0.63,
+      "value": "C"
+    },
+    {
+      "start": 0.63,
+      "end": 1.07,
+      "value": "X"
+    },
+    {
+      "start": 1.07,
+      "end": 1.59,
+      "value": "B"
+    },
+    {
+      "start": 1.59,
+      "end": 1.67,
+      "value": "A"
+    },
+    {
+      "start": 1.67,
+      "end": 1.79,
+      "value": "C"
+    },
+    {
+      "start": 1.79,
+      "end": 1.95,
+      "value": "B"
+    },
+    {
+      "start": 1.95,
+      "end": 2.03,
+      "value": "A"
+    },
+    {
+      "start": 2.03,
+      "end": 2.23,
+      "value": "E"
+    },
+    {
+      "start": 2.23,
+      "end": 2.65,
+      "value": "B"
+    },
+    {
+      "start": 2.65,
+      "end": 2.76,
+      "value": "X"
+    }
+  ],
+  "raw_sha256": "f81d72f7afe04ceb740c44aa3ea27abbcc2d5a99b147ef41d3d15e2293bc7732",
+  "visual_timing_reviewed": false,
+  "cloud_credits": 0,
+  "uploads": false
+}

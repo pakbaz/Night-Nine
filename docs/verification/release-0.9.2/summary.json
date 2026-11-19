@@ -1,0 +1,132 @@
+{
+  "version": "0.9.2",
+  "status": "verification_incomplete",
+  "reports": {
+    "campaign-core.json": {
+      "checks": 1794,
+      "scenes": 34
+    },
+    "windows-wine.json": {
+      "checks": 3646,
+      "scenes": 34,
+      "finished": true,
+      "renderer": "gl_compatibility",
+      "audio_driver": "Dummy"
+    },
+    "chapter-checkouts.json": {
+      "entries": 12
+    },
+    "story-flow.json": {
+      "checks": 83
+    },
+    "tape-ui.json": {
+      "checks": 32
+    },
+    "reunion-staging.json": {
+      "checks": 135,
+      "renderer": "forward_plus"
+    },
+    "input.json": {
+      "checks": 31
+    },
+    "prologue.json": {
+      "checks": 159,
+      "scenes": {
+        "p_bay": {
+          "heard": [
+            "p_bay.in.01",
+            "p_bay.in.02",
+            "p_bay.tune.01",
+            "p_bay.message.01",
+            "p_bay.out.01",
+            "p_bay.out.02"
+          ],
+          "hotspots": {
+            "p_bay.message": [
+              1161.9,
+              747.3
+            ],
+            "p_bay.tune": [
+              592.8,
+              720.6
+            ]
+          }
+        },
+        "p_meeting": {
+          "heard": [
+            "p_meeting.in.01",
+            "p_meeting.in.02",
+            "p_meeting.terms.01",
+            "p_meeting.terms.02",
+            "p_meeting.confess.01",
+            "p_meeting.confess.02",
+            "p_meeting.confess.03",
+            "p_meeting.record.01",
+            "p_meeting.out.01"
+          ],
+          "hotspots": {
+            "p_meeting.confess": [
+              823.1,
+              811.8
+            ],
+            "p_meeting.record": [
+              1294.5,
+              898.4
+            ],
+            "p_meeting.terms": [
+              397.8,
+              805.5
+            ]
+          }
+        },
+        "p_veyr": {
+          "heard": [
+            "p_veyr.in.01",
+            "p_veyr.in.02",
+            "p_veyr.shield.01",
+            "p_veyr.levels.01",
+            "p_veyr.record.01",
+            "p_veyr.out.01",
+            "p_veyr.out.02"
+          ],
+          "hotspots": {
+            "p_veyr.levels": [
+              1207.6,
+              827.6
+            ],
+            "p_veyr.record": [
+              950.5,
+              836.7
+            ],
+            "p_veyr.shield": [
+              1476.8,
+              615.7
+            ]
+          }
+        }
+      },
+      "renderer": "forward_plus"
+    },
+    "music.json": {
+      "checks": 318,
+      "audio_driver": "Dummy"
+    },
+    "case-boards-headless.json": {
+      "checks": 181
+    },
+    "social-staging-headless.json": {
+      "checks": 149,
+      "renderer": "forward_plus"
+    }
+  },
+  "remaining": [
+    "macOS packaged full graphical walkthrough ended before producing a completion report; not a pass",
+    "Dedicated rendered case-board and social-staging suites still need to finish",
+    "Physical Windows hardware and physical speaker output were not tested",
+    "macOS notarization and Windows signing are not complete"
+  ],
+  "notes": [
+    "All authored reunion assertions ran: 135 checks and zero failures. The new runner had incorrectly expected 140; no assertions were removed.",
+    "Existing voices remain unchanged. Direct ElevenLabs casting and re-recording require the user OAuth connection and voice selections."
+  ]
+}

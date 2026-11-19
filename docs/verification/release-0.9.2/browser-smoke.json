@@ -1,0 +1,28 @@
+{
+  "version": "0.9.2",
+  "url": "http://127.0.0.1:8253/Night-Nine/play.html",
+  "browser": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36",
+  "crossOriginIsolated": false,
+  "viewport": {
+    "width": 1280,
+    "height": 800
+  },
+  "indexeddb": {
+    "database": "/userfs",
+    "manualSavePersisted": true,
+    "scene": 0,
+    "completedTasks": [
+      "p_bay.tune"
+    ],
+    "checksum": "eba42a34283c846982dd08218c3621ec5f692892f2fab0e1f16def2b9bcff201"
+  },
+  "frameCadence": {
+    "method": "requestAnimationFrame during the restored prologue; not a whole-campaign GPU benchmark",
+    "durationMs": 10008.299999999988,
+    "frames": 1201,
+    "medianMs": 8.300000000017462,
+    "p95Ms": 9.299999999988358,
+    "maximumMs": 9.400000000023283,
+    "over33ms": 0
+  }
+}

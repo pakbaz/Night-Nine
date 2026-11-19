@@ -1,57 +1,200 @@
 {
-  "aquarium_pa": {
-    "file": "res://assets/audio/effects/aquarium_pa.wav",
-    "sha256": "352f6acde3a1b7e681c507418db7075e364c618bb3dd77efd723db6e8ccb4e92",
-    "seconds": 6.0
+  "apartment": {
+    "file": "res://assets/audio/ambience/apartment.wav",
+    "sha256": "af11e155dbe3876ef43fd7141a9d05914907b0e1aedc98563cc519fd1bca6a0a",
+    "seconds": 11.75,
+    "provenance": "Original deterministic synthesis in tools/build-soundscape.py"
   },
-  "aquarium_steps": {
-    "file": "res://assets/audio/effects/aquarium_steps.wav",
-    "sha256": "15ad7d1808ac3a51bfd27f6835bd6bc7b860f08e9119f65e246ddea3965aa870",
-    "seconds": 6.0
+  "aquarium": {
+    "file": "res://assets/audio/ambience/aquarium.wav",
+    "sha256": "eab7f5fdb25982dc2fb1dea6f434ab5c135785ae6fc9c14a95d1bd1a9c4541d1",
+    "seconds": 11.75,
+    "provenance": "Original deterministic synthesis in tools/build-soundscape.py"
   },
-  "delegates_laugh": {
-    "file": "res://assets/audio/effects/delegates_laugh.wav",
-    "sha256": "7c66db1fe72a1466c994323f3b28f491fdc862750b323097c353ce3051b5a541",
-    "seconds": 1.3186666666666667
+  "archive": {
+    "file": "res://assets/audio/ambience/archive.wav",
+    "sha256": "c4facebaf8c6c17969a06bb357d8be0cfbc2bea57855349ea05464e836c56e1f",
+    "seconds": 11.75,
+    "provenance": "Original deterministic synthesis in tools/build-soundscape.py"
   },
-  "k7blw": {
-    "file": "res://assets/audio/effects/k7blw.wav",
-    "sha256": "0cf92159c2c0bb16e326e26eac3436b570748121e94eed7f0c3cd0bfbc2d0633",
-    "seconds": 5.76
+  "array": {
+    "file": "res://assets/audio/ambience/array.wav",
+    "sha256": "d0804b9ed84ae50430601edbe81ea59ec92c5314f3bf7b82d5aef6dbe71aaa81",
+    "seconds": 11.75,
+    "provenance": "Original deterministic synthesis in tools/build-soundscape.py"
   },
-  "lullaby": {
-    "file": "res://assets/audio/effects/lullaby.wav",
-    "sha256": "d5339beaa251c124dea3716635f5790c1671c2fc3cb9d18f193cd922e5ac5a1a",
-    "seconds": 5.38
+  "balcony": {
+    "file": "res://assets/audio/ambience/balcony.wav",
+    "sha256": "1126bed6b75679d417cc20747d0d17cccac128b882fa76965fdfe270a9d04b21",
+    "seconds": 11.75,
+    "provenance": "Original deterministic synthesis in tools/build-soundscape.py"
   },
-  "meridian_pulse": {
-    "file": "res://assets/audio/effects/meridian_pulse.wav",
-    "sha256": "9104907acf9a0738e7fbc711851b25e8ec46b8f935e3d5c4609bbc7a1082649d",
-    "seconds": 2.72
+  "beach": {
+    "file": "res://assets/audio/ambience/beach.wav",
+    "sha256": "2ee1c76e51a9b52dc698725c6ab74fd9efea488117dc6a10020784140cdccc60",
+    "seconds": 11.75,
+    "provenance": "Original deterministic synthesis in tools/build-soundscape.py"
   },
-  "new_wind": {
-    "file": "res://assets/audio/effects/new_wind.wav",
-    "sha256": "5d682cad01477856c00c5c3e3efd9b811f937a727db8434a1ade3e36cee0f87b",
-    "seconds": 11.75
+  "boat": {
+    "file": "res://assets/audio/ambience/boat.wav",
+    "sha256": "a2dab7dede6d0c70af0b682b113acb08dc775cc0ced3d83eae66d8cd723f4fe5",
+    "seconds": 11.75,
+    "provenance": "Original deterministic synthesis in tools/build-soundscape.py"
   },
-  "ninth_night": {
-    "file": "res://assets/audio/effects/ninth_night.wav",
-    "sha256": "7e2a9e3e6ec7d06e191cfd64eebbe03f483880aeb858c59dda99bebf6fe4382d",
-    "seconds": 4.0
+  "choir": {
+    "file": "res://assets/audio/ambience/choir.wav",
+    "sha256": "7c95ebc25e829b4a865a8a833eb915773eeb4049be03c1860e680b323fde64cc",
+    "seconds": 11.75,
+    "provenance": "Original deterministic synthesis in tools/build-soundscape.py"
+  },
+  "cottage": {
+    "file": "res://assets/audio/ambience/cottage.wav",
+    "sha256": "5a75e43e32501b8f0b0d9f351b146f34f87e3c3f267a9f5a4a0532f0d90cc13e",
+    "seconds": 11.75,
+    "provenance": "Original deterministic synthesis in tools/build-soundscape.py"
+  },
+  "finale": {
+    "file": "res://assets/audio/ambience/finale.wav",
+    "sha256": "ede1106a11fc22a0f18b72040eb553fb7bdbabfe98d577deebfc0180e65db5d2",
+    "seconds": 11.75,
+    "provenance": "Original deterministic synthesis in tools/build-soundscape.py"
+  },
+  "gallery": {
+    "file": "res://assets/audio/ambience/gallery.wav",
+    "sha256": "991eebcecf96f440f8fff39b88b328987cf58177c9e29551a6fd80a7e22ea3d0",
+    "seconds": 11.75,
+    "provenance": "Original deterministic synthesis in tools/build-soundscape.py"
+  },
+  "jail": {
+    "file": "res://assets/audio/ambience/jail.wav",
+    "sha256": "3f9b7ef86793660cca5e2c7dd7fb20b89a2756b906ca9bde946745c4e9f5329b",
+    "seconds": 11.75,
+    "provenance": "Original deterministic synthesis in tools/build-soundscape.py"
+  },
+  "lab": {
+    "file": "res://assets/audio/ambience/lab.wav",
+    "sha256": "593e68d96190d61dbd5dcc2eedf21eff706b04047c5672d3efed1d3f26616e87",
+    "seconds": 11.75,
+    "provenance": "Original deterministic synthesis in tools/build-soundscape.py"
+  },
+  "meeting": {
+    "file": "res://assets/audio/ambience/meeting.wav",
+    "sha256": "6706c8ae7e23c855cf7e55a8b44254b8787fe0318aa564f5b62cad208e5a047e",
+    "seconds": 11.75,
+    "provenance": "Original deterministic synthesis in tools/build-soundscape.py"
+  },
+  "pier": {
+    "file": "res://assets/audio/ambience/pier.wav",
+    "sha256": "c6e8cec2c56c0eeb1270a0d1e7536f5c6406a2a42aae91aa730a021dab9aa4b4",
+    "seconds": 11.75,
+    "provenance": "Original deterministic synthesis in tools/build-soundscape.py"
+  },
+  "radio_shack": {
+    "file": "res://assets/audio/ambience/radio_shack.wav",
+    "sha256": "43dbf79d675eb844a3f932243868c51d6562804e5923709aa8385ddf401ed0a8",
+    "seconds": 11.75,
+    "provenance": "Original deterministic synthesis in tools/build-soundscape.py"
+  },
+  "restaurant": {
+    "file": "res://assets/audio/ambience/restaurant.wav",
+    "sha256": "6d052e2d8c5571b2a85d7e959946f8c9dee4ebfe1ade9413108b95a7b4699c99",
+    "seconds": 11.75,
+    "provenance": "Original deterministic synthesis in tools/build-soundscape.py"
+  },
+  "safehouse": {
+    "file": "res://assets/audio/ambience/safehouse.wav",
+    "sha256": "49d1402914a4c86ac5656f6b3ec810ac6b8cdd2977f53cedaa80131d13fb1246",
+    "seconds": 11.75,
+    "provenance": "Original deterministic synthesis in tools/build-soundscape.py"
+  },
+  "ship": {
+    "file": "res://assets/audio/ambience/ship.wav",
+    "sha256": "6b22180538f784ab8e738e1265b782f363796bef6c3d397ace5e61ba0b0c751c",
+    "seconds": 11.75,
+    "provenance": "Original deterministic synthesis in tools/build-soundscape.py"
+  },
+  "station": {
+    "file": "res://assets/audio/ambience/station.wav",
+    "sha256": "b6cde4d8ce3881fee42b035196d83eab06aebb7734e654137dd885b2edb8e8eb",
+    "seconds": 11.75,
+    "provenance": "Original deterministic synthesis in tools/build-soundscape.py"
+  },
+  "street": {
+    "file": "res://assets/audio/ambience/street.wav",
+    "sha256": "8499c4a0cc669775e79ab840126b120232c8e3842e1b665394a45f0ae7e658ba",
+    "seconds": 11.75,
+    "provenance": "Original deterministic synthesis in tools/build-soundscape.py"
+  },
+  "veyr": {
+    "file": "res://assets/audio/ambience/veyr.wav",
+    "sha256": "e5656594ebbf9f24787d8d63f2104dd607de5cb1d274e30e070087a20361b80c",
+    "seconds": 11.75,
+    "provenance": "Original deterministic synthesis in tools/build-soundscape.py"
   },
   "nora_whistle": {
     "file": "res://assets/audio/effects/nora_whistle.wav",
     "sha256": "749a4f877816a5962a23d5c04967fb3c57a38a37d787f702b22f444e95284cea",
-    "seconds": 0.98
+    "seconds": 0.98,
+    "provenance": "Original deterministic synthesis in tools/build-soundscape.py"
+  },
+  "k7blw": {
+    "file": "res://assets/audio/effects/k7blw.wav",
+    "sha256": "0cf92159c2c0bb16e326e26eac3436b570748121e94eed7f0c3cd0bfbc2d0633",
+    "seconds": 5.76,
+    "provenance": "Original deterministic synthesis in tools/build-soundscape.py"
+  },
+  "lullaby": {
+    "file": "res://assets/audio/effects/lullaby.wav",
+    "sha256": "d5339beaa251c124dea3716635f5790c1671c2fc3cb9d18f193cd922e5ac5a1a",
+    "seconds": 5.38,
+    "provenance": "Original deterministic synthesis in tools/build-soundscape.py"
+  },
+  "ninth_night": {
+    "file": "res://assets/audio/effects/ninth_night.wav",
+    "sha256": "7e2a9e3e6ec7d06e191cfd64eebbe03f483880aeb858c59dda99bebf6fe4382d",
+    "seconds": 4.0,
+    "provenance": "Original deterministic synthesis in tools/build-soundscape.py"
   },
   "veyr_wind": {
     "file": "res://assets/audio/effects/veyr_wind.wav",
     "sha256": "3fa22497241a72a989f2b971b6ae2763bee06155ce69b173136c1d2b05e1b443",
-    "seconds": 11.75
+    "seconds": 11.75,
+    "provenance": "Original deterministic synthesis in tools/build-soundscape.py"
+  },
+  "new_wind": {
+    "file": "res://assets/audio/effects/new_wind.wav",
+    "sha256": "5d682cad01477856c00c5c3e3efd9b811f937a727db8434a1ade3e36cee0f87b",
+    "seconds": 11.75,
+    "provenance": "Original deterministic synthesis in tools/build-soundscape.py"
   },
   "wick": {
     "file": "res://assets/audio/effects/wick.wav",
     "sha256": "ab9f5387c84d31af393960ece5a4238a783435cf3f9c5e36ba92c02eebdb3540",
-    "seconds": 3.55
+    "seconds": 3.55,
+    "provenance": "Original deterministic synthesis in tools/build-soundscape.py"
+  },
+  "delegates_laugh": {
+    "file": "res://assets/audio/effects/delegates_laugh.wav",
+    "seconds": 1.3186666666666667,
+    "sha256": "7c66db1fe72a1466c994323f3b28f491fdc862750b323097c353ce3051b5a541",
+    "provenance": "assets/audio/delegate-reaction/delegates_laugh.json"
+  },
+  "aquarium_pa": {
+    "file": "res://assets/audio/effects/aquarium_pa.wav",
+    "sha256": "352f6acde3a1b7e681c507418db7075e364c618bb3dd77efd723db6e8ccb4e92",
+    "seconds": 6.0,
+    "provenance": "Original deterministic synthesis in tools/build-soundscape.py"
+  },
+  "aquarium_steps": {
+    "file": "res://assets/audio/effects/aquarium_steps.wav",
+    "sha256": "15ad7d1808ac3a51bfd27f6835bd6bc7b860f08e9119f65e246ddea3965aa870",
+    "seconds": 6.0,
+    "provenance": "Original deterministic synthesis in tools/build-soundscape.py"
+  },
+  "meridian_pulse": {
+    "file": "res://assets/audio/effects/meridian_pulse.wav",
+    "sha256": "9104907acf9a0738e7fbc711851b25e8ec46b8f935e3d5c4609bbc7a1082649d",
+    "seconds": 2.72,
+    "provenance": "Original deterministic synthesis in tools/build-soundscape.py"
   }
 }

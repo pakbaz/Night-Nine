@@ -1,5 +1,7 @@
 {
   "base": "calder.webp",
+  "source": "assets/characters/campaign/masters/calder.png",
+  "source_sha256": "ee67d3ab70dbfd7ed5e9d4ef9da1776c08632707d3b6dd3711629960f12c8e7f",
   "size": [
     900,
     1080
@@ -93,6 +95,10 @@
     "F": "mouth_round",
     "G": "mouth_parted",
     "H": "mouth_parted"
+  },
+  "sha256": {
+    "calder.webp": "5b5eb9cb68151a0746394fbcab721defa8f60ef57dabf592af5e221de72bb844",
+    "calder-face-atlas.png": "a2552539cd784929f00c713497b9259639a25da0312306081c93dd6031af78c4"
   },
   "atlas": "calder-face-atlas.png",
   "eye_centers": [

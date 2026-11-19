@@ -1,0 +1,63 @@
+{
+  "id": "c1_escape.cross.02",
+  "speaker": "iris",
+  "audio": "res://assets/audio/voices/elevenlabs-v4/c1_escape.cross.02.wav",
+  "audio_sha256": "b16e59afc4fa6a79f64e8a43e1c172b71f381c53a330dfe19cac0c4613c3f08f",
+  "transcript": "Steve... go.",
+  "transcript_sha256": "90c8490ed58b6a0561e0ea9a076b5db9802cd1c8a7678aa527c47042d1f01cb9",
+  "generator": "Rhubarb Lip Sync version 1.14.0",
+  "generator_sha256": "93fa4a16ae1cc88a89d59743057521407843fc7139e23808c9e6587c6cc946d3",
+  "seconds": 1.8808333333333334,
+  "generation_seconds": 3.058,
+  "cues": [
+    {
+      "start": 0.0,
+      "end": 0.07,
+      "value": "X"
+    },
+    {
+      "start": 0.07,
+      "end": 0.51,
+      "value": "B"
+    },
+    {
+      "start": 0.51,
+      "end": 0.72,
+      "value": "G"
+    },
+    {
+      "start": 0.72,
+      "end": 0.86,
+      "value": "B"
+    },
+    {
+      "start": 0.86,
+      "end": 1.13,
+      "value": "X"
+    },
+    {
+      "start": 1.13,
+      "end": 1.25,
+      "value": "B"
+    },
+    {
+      "start": 1.25,
+      "end": 1.53,
+      "value": "E"
+    },
+    {
+      "start": 1.53,
+      "end": 1.6,
+      "value": "F"
+    },
+    {
+      "start": 1.6,
+      "end": 1.88,
+      "value": "X"
+    }
+  ],
+  "raw_sha256": "0288716110dd573a9e218d284c06149b58104ced8c79ee334a71ab870c678230",
+  "visual_timing_reviewed": false,
+  "cloud_credits": 0,
+  "uploads": false
+}

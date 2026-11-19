@@ -1,0 +1,83 @@
+{
+  "id": "c5_shack.in.02",
+  "speaker": "steve",
+  "audio": "res://assets/audio/voices/elevenlabs-v4/c5_shack.in.02.wav",
+  "audio_sha256": "0feae51023e76c6ef9cd8bcabaa8e2d41b9af2f0a25736a8ba42390d22d36162",
+  "transcript": "Are you going to call the Sheriff?",
+  "transcript_sha256": "7c480a6c58fa57203de9467f3d1cb4f8b97de286e2cf920779a53ddf5bf0035d",
+  "generator": "Rhubarb Lip Sync version 1.14.0",
+  "generator_sha256": "93fa4a16ae1cc88a89d59743057521407843fc7139e23808c9e6587c6cc946d3",
+  "seconds": 1.7240833333333334,
+  "generation_seconds": 2.724,
+  "cues": [
+    {
+      "start": 0.0,
+      "end": 0.06,
+      "value": "X"
+    },
+    {
+      "start": 0.06,
+      "end": 0.1,
+      "value": "D"
+    },
+    {
+      "start": 0.1,
+      "end": 0.28,
+      "value": "F"
+    },
+    {
+      "start": 0.28,
+      "end": 0.42,
+      "value": "E"
+    },
+    {
+      "start": 0.42,
+      "end": 0.49,
+      "value": "F"
+    },
+    {
+      "start": 0.49,
+      "end": 0.56,
+      "value": "B"
+    },
+    {
+      "start": 0.56,
+      "end": 0.84,
+      "value": "E"
+    },
+    {
+      "start": 0.84,
+      "end": 1.05,
+      "value": "B"
+    },
+    {
+      "start": 1.05,
+      "end": 1.19,
+      "value": "C"
+    },
+    {
+      "start": 1.19,
+      "end": 1.26,
+      "value": "B"
+    },
+    {
+      "start": 1.26,
+      "end": 1.33,
+      "value": "C"
+    },
+    {
+      "start": 1.33,
+      "end": 1.54,
+      "value": "G"
+    },
+    {
+      "start": 1.54,
+      "end": 1.72,
+      "value": "X"
+    }
+  ],
+  "raw_sha256": "59366269d8fa5a3eb4108c761b1f7a8912d976985e15d0ccae014ccf310fb0dd",
+  "visual_timing_reviewed": false,
+  "cloud_credits": 0,
+  "uploads": false
+}

@@ -1,0 +1,653 @@
+{
+  "c1_flat": {
+    "recipe": [
+      "home",
+      "pipes",
+      "traffic",
+      "close"
+    ],
+    "seed": 3167415971,
+    "seconds": 45,
+    "rate": 48000,
+    "channels": 2,
+    "integrated_lufs": -25.2,
+    "true_peak_dbtp": -13.5,
+    "wrap_delta_dbfs": [
+      -57.8,
+      -42.2
+    ],
+    "master_sha256": "137654aeca1bf61365c3b2fc5467bc71437cd53bef07b555abe957abf168ff83",
+    "runtime_sha256": "48ab4be1bed1db7f1f46d1752e5b81ede0d126e0901406622e1ce5482444c1bc",
+    "runtime_bytes": 645796
+  },
+  "c1_pier": {
+    "recipe": [
+      "coast",
+      "rigging",
+      "pilings",
+      "open"
+    ],
+    "seed": 2466619072,
+    "seconds": 38,
+    "rate": 48000,
+    "channels": 2,
+    "integrated_lufs": -23.8,
+    "true_peak_dbtp": -7.6,
+    "wrap_delta_dbfs": [
+      -43.3,
+      -44.5
+    ],
+    "master_sha256": "cf372d541c1fa47e4c063687e507f84ea7d4d45800225901c782267fb15c90c6",
+    "runtime_sha256": "d1ad466d3a8c85ee39fad585dece5edd9616f86e4d1b8a52884c155eccc60577",
+    "runtime_bytes": 589248
+  },
+  "c1_dinner": {
+    "recipe": [
+      "kitchen",
+      "ceramic",
+      "cloth",
+      "warm"
+    ],
+    "seed": 334808553,
+    "seconds": 43,
+    "rate": 48000,
+    "channels": 2,
+    "integrated_lufs": -25.4,
+    "true_peak_dbtp": -14.4,
+    "wrap_delta_dbfs": [
+      -39.8,
+      -53.1
+    ],
+    "master_sha256": "fbb872f103d3b0a4bc2bc39e42682f7f5cfe3ae87f7f710ee24939dbbe70c380",
+    "runtime_sha256": "7a85ed0f9edda6895f950217de13df95e77837218aaeeb2e12c99a9e0db098de",
+    "runtime_bytes": 666668
+  },
+  "c1_escape": {
+    "recipe": [
+      "street",
+      "traffic",
+      "wind",
+      "open"
+    ],
+    "seed": 4007238325,
+    "seconds": 35,
+    "rate": 48000,
+    "channels": 2,
+    "integrated_lufs": -23.7,
+    "true_peak_dbtp": -11.4,
+    "wrap_delta_dbfs": [
+      -47.7,
+      -46.9
+    ],
+    "master_sha256": "1f457248b01ee7fd2dba84ea240e14fa786023f10101fd288c4a4e628ab42ac9",
+    "runtime_sha256": "c11b8abab4bd2469da40d173500a0d65bf2e7615121cd59f8f6216eeebb4458a",
+    "runtime_bytes": 531562
+  },
+  "c2_aquarium": {
+    "recipe": [
+      "waterworks",
+      "glass",
+      "drip",
+      "tile"
+    ],
+    "seed": 3697243431,
+    "seconds": 37,
+    "rate": 48000,
+    "channels": 2,
+    "integrated_lufs": -25.3,
+    "true_peak_dbtp": -13.0,
+    "wrap_delta_dbfs": [
+      -43.9,
+      -39.4
+    ],
+    "master_sha256": "969f06c9f6bdc3701fa8e2268b54bc1dad7df9a9756ceda45d4c5c74ec10d1cf",
+    "runtime_sha256": "af57aae7661d2a6d926679bdc5cd35ef0b195ec9208b356d76dab7876c45b6d0",
+    "runtime_bytes": 572928
+  },
+  "c2_ship": {
+    "recipe": [
+      "vessel",
+      "bulkhead",
+      "servo",
+      "metal"
+    ],
+    "seed": 909823942,
+    "seconds": 44,
+    "rate": 48000,
+    "channels": 2,
+    "integrated_lufs": -25.2,
+    "true_peak_dbtp": -12.7,
+    "wrap_delta_dbfs": [
+      -55.3,
+      -50.2
+    ],
+    "master_sha256": "8ff27e7cd7f6208d15787f8703cf923b82b8b397b19148fbafca3871f77ad24f",
+    "runtime_sha256": "2b7fa0ef7a57f34407cc2207c2dd88505e0da6cbe50e9843413e634a4068c795",
+    "runtime_bytes": 659248
+  },
+  "c3_house": {
+    "recipe": [
+      "home",
+      "timber",
+      "pages",
+      "warm"
+    ],
+    "seed": 4065969756,
+    "seconds": 34,
+    "rate": 48000,
+    "channels": 2,
+    "integrated_lufs": -25.1,
+    "true_peak_dbtp": -12.8,
+    "wrap_delta_dbfs": [
+      -56.1,
+      -53.4
+    ],
+    "master_sha256": "4fd4f2ebe6d0606940af42741931c312653402b6834eeae80a65be9478b38e68",
+    "runtime_sha256": "c7a8fe6899a17e333d63ec9c8e3a11c172997b1ee2ade64e0eaee4b29b2e4c4c",
+    "runtime_bytes": 495349
+  },
+  "c3_archive": {
+    "recipe": [
+      "archive",
+      "pages",
+      "pipes",
+      "shelves"
+    ],
+    "seed": 3921471342,
+    "seconds": 40,
+    "rate": 48000,
+    "channels": 2,
+    "integrated_lufs": -25.1,
+    "true_peak_dbtp": -13.6,
+    "wrap_delta_dbfs": [
+      -49.4,
+      -48.0
+    ],
+    "master_sha256": "b900ceb22a388086fd104a826d8d12a4064d259bc240e4157893abd4b20346e1",
+    "runtime_sha256": "4f6eeac087c329e251ded7d8a166ab89c817122e7faecf060b0fe9be8979f2b4",
+    "runtime_bytes": 595962
+  },
+  "i1_archive": {
+    "recipe": [
+      "choir",
+      "resonance",
+      "glass",
+      "deep"
+    ],
+    "seed": 200891587,
+    "seconds": 41,
+    "rate": 48000,
+    "channels": 2,
+    "integrated_lufs": -25.3,
+    "true_peak_dbtp": -13.8,
+    "wrap_delta_dbfs": [
+      -44.4,
+      -43.8
+    ],
+    "master_sha256": "41f26fba5fd4cbabbafcb4b02c643ed985d2b0a99857e80185a1eedd4cd2e192",
+    "runtime_sha256": "da5a5749bd92e32e6028bc1bf41d58f6973004f53deb904b3225f4500f27877a",
+    "runtime_bytes": 638534
+  },
+  "c4_safe": {
+    "recipe": [
+      "home",
+      "duct",
+      "pipes",
+      "close"
+    ],
+    "seed": 1207748678,
+    "seconds": 36,
+    "rate": 48000,
+    "channels": 2,
+    "integrated_lufs": -25.1,
+    "true_peak_dbtp": -13.2,
+    "wrap_delta_dbfs": [
+      -49.2,
+      -73.2
+    ],
+    "master_sha256": "80af666e75e219d57ae0d52c3f8620d3ce9070974a74875dd5e5bb8cb3694f5e",
+    "runtime_sha256": "59374aa17e91d3cb6655822025dac0bf8f0ff3109694527877f4ff4f2d5b7b5e",
+    "runtime_bytes": 518948
+  },
+  "c4_escape": {
+    "recipe": [
+      "basement",
+      "latch",
+      "duct",
+      "tile"
+    ],
+    "seed": 95885847,
+    "seconds": 37,
+    "rate": 48000,
+    "channels": 2,
+    "integrated_lufs": -25.2,
+    "true_peak_dbtp": -12.5,
+    "wrap_delta_dbfs": [
+      -66.8,
+      -55.1
+    ],
+    "master_sha256": "a3beaf976c4e72f00a39eee62ddac0562c05ba1e0bf8c5b48ae31a021fdf909e",
+    "runtime_sha256": "789c7f43245f3f385b97871ad3c395b5b1ad3f3e7108f1095be47c7d979f4203",
+    "runtime_bytes": 556748
+  },
+  "c5_shack": {
+    "recipe": [
+      "radio",
+      "paper",
+      "wind",
+      "close"
+    ],
+    "seed": 3716358257,
+    "seconds": 39,
+    "rate": 48000,
+    "channels": 2,
+    "integrated_lufs": -25.2,
+    "true_peak_dbtp": -13.7,
+    "wrap_delta_dbfs": [
+      -86.8,
+      -48.4
+    ],
+    "master_sha256": "b38f92c338670e21f1d0e73afe4548f898f014cd66931ea2827b21406b6ee162",
+    "runtime_sha256": "1fd77aa43fb2cc70591b7be834714a3826ffea90e4231a1ec9a988865865a98f",
+    "runtime_bytes": 581329
+  },
+  "c5_station": {
+    "recipe": [
+      "radio",
+      "reel",
+      "keys",
+      "studio"
+    ],
+    "seed": 4145541881,
+    "seconds": 39,
+    "rate": 48000,
+    "channels": 2,
+    "integrated_lufs": -25.2,
+    "true_peak_dbtp": -12.6,
+    "wrap_delta_dbfs": [
+      -45.1,
+      -50.6
+    ],
+    "master_sha256": "dc96b7a10a7a6a61125fac77bad1d0fc899c8f353b9e8da69d46247e01942eb7",
+    "runtime_sha256": "2b3d28084c682034ca51509d07830e0d8dd681e22a3cf0f10816033aedde7e8b",
+    "runtime_bytes": 583551
+  },
+  "c6_iris": {
+    "recipe": [
+      "street",
+      "traffic",
+      "cloth",
+      "open"
+    ],
+    "seed": 1060818961,
+    "seconds": 35,
+    "rate": 48000,
+    "channels": 2,
+    "integrated_lufs": -23.7,
+    "true_peak_dbtp": -11.6,
+    "wrap_delta_dbfs": [
+      -40.0,
+      -42.5
+    ],
+    "master_sha256": "248f22d0d571708fc1b1f920da278898146a63bc0ce38870178361e53ddcc339",
+    "runtime_sha256": "678ee05d653da3a81626a485579ad926fd92446a97213c62fc9c90214df2d870",
+    "runtime_bytes": 535275
+  },
+  "c6_jail": {
+    "recipe": [
+      "basement",
+      "latch",
+      "duct",
+      "metal"
+    ],
+    "seed": 1651062137,
+    "seconds": 39,
+    "rate": 48000,
+    "channels": 2,
+    "integrated_lufs": -25.2,
+    "true_peak_dbtp": -12.3,
+    "wrap_delta_dbfs": [
+      -51.5,
+      -43.4
+    ],
+    "master_sha256": "36873aa2ee9a761c19f4c8158b474141a09c377ee9a0abbfcb0a095cff64c4d2",
+    "runtime_sha256": "725b2856d8a2204065a586e4e16a93314c8fe9fe16ffeac6fd01d55be3b3221c",
+    "runtime_bytes": 587582
+  },
+  "i2_nora": {
+    "recipe": [
+      "gallery",
+      "crystal",
+      "servo",
+      "deep"
+    ],
+    "seed": 1483493668,
+    "seconds": 38,
+    "rate": 48000,
+    "channels": 2,
+    "integrated_lufs": -25.3,
+    "true_peak_dbtp": -13.9,
+    "wrap_delta_dbfs": [
+      -42.9,
+      -51.1
+    ],
+    "master_sha256": "c1c8154976036454b63e09f299cb76cd2ef92d65b36790a10129c7c5437ced87",
+    "runtime_sha256": "16cc792c63c26ab27743b61d798a996ff59ee86ab83b2f87f94816a11b766760",
+    "runtime_bytes": 587833
+  },
+  "c7_gate": {
+    "recipe": [
+      "upland",
+      "fence",
+      "wind",
+      "open"
+    ],
+    "seed": 755622201,
+    "seconds": 43,
+    "rate": 48000,
+    "channels": 2,
+    "integrated_lufs": -23.8,
+    "true_peak_dbtp": -12.3,
+    "wrap_delta_dbfs": [
+      -46.7,
+      -56.8
+    ],
+    "master_sha256": "2b342d68a1a829166efa61b7cbe4cbe7a838c1ff7171a28c2ae15c10247bbc82",
+    "runtime_sha256": "4b8fe723225642fb3d46753072b2db3ca5a5ce099eb52ca823bc1431e0597498",
+    "runtime_bytes": 671861
+  },
+  "c7_swap": {
+    "recipe": [
+      "upland",
+      "servo",
+      "fence",
+      "open"
+    ],
+    "seed": 3445481089,
+    "seconds": 35,
+    "rate": 48000,
+    "channels": 2,
+    "integrated_lufs": -23.8,
+    "true_peak_dbtp": -11.4,
+    "wrap_delta_dbfs": [
+      -33.0,
+      -35.3
+    ],
+    "master_sha256": "a77d7945825ab4d7f36219843232181671e6f47688f452638bac96ac64382259",
+    "runtime_sha256": "b1e373b3c9a4c1904663f58efeb919c9fd884f7356384503822bff4326073e49",
+    "runtime_bytes": 542495
+  },
+  "c8_lab": {
+    "recipe": [
+      "lab",
+      "blower",
+      "glass",
+      "tile"
+    ],
+    "seed": 1430366911,
+    "seconds": 41,
+    "rate": 48000,
+    "channels": 2,
+    "integrated_lufs": -25.3,
+    "true_peak_dbtp": -13.4,
+    "wrap_delta_dbfs": [
+      -41.4,
+      -51.3
+    ],
+    "master_sha256": "082b29aef36abcf008d1602e685c06cdabcd9d4570af05ff84f7354be9a56f49",
+    "runtime_sha256": "a0221892ec91d7f77f4c39d05d7a94077db148c633050ea73a33baba72e30e9e",
+    "runtime_bytes": 636602
+  },
+  "c8_beach": {
+    "recipe": [
+      "coast",
+      "sand",
+      "wind",
+      "open"
+    ],
+    "seed": 2488382953,
+    "seconds": 35,
+    "rate": 48000,
+    "channels": 2,
+    "integrated_lufs": -23.8,
+    "true_peak_dbtp": -7.1,
+    "wrap_delta_dbfs": [
+      -42.3,
+      -43.0
+    ],
+    "master_sha256": "079f330d7b35cef2cd7ccb118fcb3318fccb0b0de3cc4667c47df26dea1b3e21",
+    "runtime_sha256": "9f713e684fb1156cae765787f28eca14c2e8a2253dad4d3c7eba4f3deb9e5f82",
+    "runtime_bytes": 538687
+  },
+  "c8_rig": {
+    "recipe": [
+      "lab",
+      "keys",
+      "reel",
+      "studio"
+    ],
+    "seed": 734438723,
+    "seconds": 45,
+    "rate": 48000,
+    "channels": 2,
+    "integrated_lufs": -25.3,
+    "true_peak_dbtp": -14.0,
+    "wrap_delta_dbfs": [
+      -51.4,
+      -45.8
+    ],
+    "master_sha256": "f7c8b93035ae44006a2731d4c0890e4d75f62bbc38cc2e39bf09d82fdddb0299",
+    "runtime_sha256": "8b42df38b4d67d5cd40dba0caa21a0d19c408991bc980188ffb35519a7d2dc6c",
+    "runtime_bytes": 694987
+  },
+  "c9_gallery": {
+    "recipe": [
+      "gallery",
+      "glass",
+      "crystal",
+      "deep"
+    ],
+    "seed": 1964776979,
+    "seconds": 45,
+    "rate": 48000,
+    "channels": 2,
+    "integrated_lufs": -25.3,
+    "true_peak_dbtp": -13.8,
+    "wrap_delta_dbfs": [
+      -44.0,
+      -43.1
+    ],
+    "master_sha256": "cc7e09cded23af97d6506a680c3e08cbf0fae50ea2ea66cd934c30e3e711f562",
+    "runtime_sha256": "efc7c33749a196bfad133d9b522fa9ad369ecc7e48a845f545807318328b2f0f",
+    "runtime_bytes": 695023
+  },
+  "c9_wake": {
+    "recipe": [
+      "gallery",
+      "servo",
+      "breath",
+      "metal"
+    ],
+    "seed": 3706152733,
+    "seconds": 35,
+    "rate": 48000,
+    "channels": 2,
+    "integrated_lufs": -25.2,
+    "true_peak_dbtp": -13.4,
+    "wrap_delta_dbfs": [
+      -48.6,
+      -68.8
+    ],
+    "master_sha256": "bb2d77bf60994642f8f578911b3a0693a608c737741d4acfcea8fbe070f80014",
+    "runtime_sha256": "98dc60fcda0af5064fbc8a910457ec1fc911a69476e4e97366114ceb3941af75",
+    "runtime_bytes": 542853
+  },
+  "c9_choir": {
+    "recipe": [
+      "choir",
+      "crystal",
+      "breath",
+      "deep"
+    ],
+    "seed": 2421863358,
+    "seconds": 40,
+    "rate": 48000,
+    "channels": 2,
+    "integrated_lufs": -25.3,
+    "true_peak_dbtp": -12.6,
+    "wrap_delta_dbfs": [
+      -61.3,
+      -61.0
+    ],
+    "master_sha256": "78c2b95720e23d512c11ae1b9a8fd83e48b47d6eb91ccfdec4ab6b6d8ea371ed",
+    "runtime_sha256": "fbe095a732b790702cbf9dbb9b85a7183f9d92429a220544ff18a7646d636532",
+    "runtime_bytes": 625682
+  },
+  "c10_station": {
+    "recipe": [
+      "radio",
+      "reel",
+      "paper",
+      "studio"
+    ],
+    "seed": 2500514834,
+    "seconds": 36,
+    "rate": 48000,
+    "channels": 2,
+    "integrated_lufs": -25.2,
+    "true_peak_dbtp": -13.5,
+    "wrap_delta_dbfs": [
+      -53.2,
+      -49.3
+    ],
+    "master_sha256": "30d197910cf523a5ec2d9198543d08d83635eea9e4ce0aac48097e5d780b11b7",
+    "runtime_sha256": "f0ff88957aa75ee55efc79f017039764e2b8cbd0123ef8d258528179a9a0d675",
+    "runtime_bytes": 538961
+  },
+  "c10_town": {
+    "recipe": [
+      "coast",
+      "pilings",
+      "rigging",
+      "open"
+    ],
+    "seed": 2177706386,
+    "seconds": 36,
+    "rate": 48000,
+    "channels": 2,
+    "integrated_lufs": -23.8,
+    "true_peak_dbtp": -6.6,
+    "wrap_delta_dbfs": [
+      -50.0,
+      -37.8
+    ],
+    "master_sha256": "1c78a0551f79007cf3dcdf494499460c88418dfbe1c450554d3f94057b57c6ae",
+    "runtime_sha256": "a3f538e734125fb9e6c632ffb1c457c603cf2e9ed9536e454559b640269afbb4",
+    "runtime_bytes": 557926
+  },
+  "c10_live": {
+    "recipe": [
+      "radio",
+      "keys",
+      "breath",
+      "studio"
+    ],
+    "seed": 671297006,
+    "seconds": 36,
+    "rate": 48000,
+    "channels": 2,
+    "integrated_lufs": -25.2,
+    "true_peak_dbtp": -13.5,
+    "wrap_delta_dbfs": [
+      -52.7,
+      -58.6
+    ],
+    "master_sha256": "d3bfc378d39844bf728cd93540c27706c14a021bbf9829a220f6000e8145d5ae",
+    "runtime_sha256": "acef852d2b3077f30aa388e9bd0fe783aed0ea35cc53d2f0822293fb19c744e7",
+    "runtime_bytes": 542370
+  },
+  "c10_report": {
+    "recipe": [
+      "choir",
+      "resonance",
+      "cloth",
+      "deep"
+    ],
+    "seed": 195642925,
+    "seconds": 35,
+    "rate": 48000,
+    "channels": 2,
+    "integrated_lufs": -25.3,
+    "true_peak_dbtp": -12.9,
+    "wrap_delta_dbfs": [
+      -42.3,
+      -50.4
+    ],
+    "master_sha256": "25e1806b964a94214b0eee135a19051229834cde1fd83d12d3bf93bddcd0eedc",
+    "runtime_sha256": "dcde8b5c852d47ec3d6336be58f548cc6f24e1359cc6e76622ce66e9151ace1e",
+    "runtime_bytes": 544987
+  },
+  "epilogue": {
+    "recipe": [
+      "street",
+      "cloth",
+      "traffic",
+      "warm"
+    ],
+    "seed": 633555191,
+    "seconds": 45,
+    "rate": 48000,
+    "channels": 2,
+    "integrated_lufs": -25.2,
+    "true_peak_dbtp": -13.2,
+    "wrap_delta_dbfs": [
+      -37.7,
+      -49.6
+    ],
+    "master_sha256": "b40033dc81952ba9d8a25c09e9f05b9f3e5aa0441f3829ad2f56bc1655e8c1bd",
+    "runtime_sha256": "74c3794484b60140dabb53952908f6d0177aef4ce97f19b1715456031445a9fc",
+    "runtime_bytes": 684040
+  },
+  "one_year": {
+    "recipe": [
+      "radio",
+      "ceramic",
+      "paper",
+      "studio"
+    ],
+    "seed": 422576275,
+    "seconds": 41,
+    "rate": 48000,
+    "channels": 2,
+    "integrated_lufs": -25.2,
+    "true_peak_dbtp": -12.4,
+    "wrap_delta_dbfs": [
+      -43.1,
+      -52.4
+    ],
+    "master_sha256": "e2808266d2c1530bf7e710aa92ddfbbe18baac52fc9b9df18c33ba6eeb07699a",
+    "runtime_sha256": "4a4ffb433e080a9c6266ff75b1e5b495a2b2af2263c067f276d985f4129a2c7d",
+    "runtime_bytes": 612903
+  },
+  "postcredits": {
+    "recipe": [
+      "upland",
+      "wind",
+      "resonance",
+      "open"
+    ],
+    "seed": 1533978758,
+    "seconds": 36,
+    "rate": 48000,
+    "channels": 2,
+    "integrated_lufs": -23.7,
+    "true_peak_dbtp": -10.1,
+    "wrap_delta_dbfs": [
+      -46.4,
+      -42.2
+    ],
+    "master_sha256": "213360629e9b27e364f28bdb0550891a6a92fad6b6eb14ec851583ac213b01d9",
+    "runtime_sha256": "e8bba63611e55c9e582e371c8027ac2713cdd41ae5e037694e0e8354a7362445",
+    "runtime_bytes": 556960
+  }
+}

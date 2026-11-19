@@ -1,0 +1,88 @@
+{
+  "id": "c10_station.relay.02",
+  "speaker": "operator",
+  "audio": "res://assets/audio/voices/elevenlabs-v4/c10_station.relay.02.wav",
+  "audio_sha256": "534bb3992c35ad35bb5cc1702d86f716438b298465a76c17f9ce7683a3ed50e9",
+  "transcript": "Understood. Sentinel Point, do you read?",
+  "transcript_sha256": "1c3d0ae4b4eef7e613ea80c542a58aac32da3328d60548162e31c388f63e0cc0",
+  "generator": "Rhubarb Lip Sync version 1.14.0",
+  "generator_sha256": "93fa4a16ae1cc88a89d59743057521407843fc7139e23808c9e6587c6cc946d3",
+  "seconds": 3.0824583333333333,
+  "generation_seconds": 5.863,
+  "cues": [
+    {
+      "start": 0.0,
+      "end": 0.03,
+      "value": "X"
+    },
+    {
+      "start": 0.03,
+      "end": 0.14,
+      "value": "C"
+    },
+    {
+      "start": 0.14,
+      "end": 0.28,
+      "value": "B"
+    },
+    {
+      "start": 0.28,
+      "end": 0.56,
+      "value": "F"
+    },
+    {
+      "start": 0.56,
+      "end": 0.77,
+      "value": "B"
+    },
+    {
+      "start": 0.77,
+      "end": 1.1,
+      "value": "X"
+    },
+    {
+      "start": 1.1,
+      "end": 1.24,
+      "value": "B"
+    },
+    {
+      "start": 1.24,
+      "end": 1.52,
+      "value": "C"
+    },
+    {
+      "start": 1.52,
+      "end": 1.6,
+      "value": "A"
+    },
+    {
+      "start": 1.6,
+      "end": 1.76,
+      "value": "E"
+    },
+    {
+      "start": 1.76,
+      "end": 2.12,
+      "value": "B"
+    },
+    {
+      "start": 2.12,
+      "end": 2.49,
+      "value": "F"
+    },
+    {
+      "start": 2.49,
+      "end": 2.91,
+      "value": "B"
+    },
+    {
+      "start": 2.91,
+      "end": 3.08,
+      "value": "X"
+    }
+  ],
+  "raw_sha256": "02e2d8e239def6544dfbaa7d83a302ba2b11b0f6b32d5a48516b94c07ed5a239",
+  "visual_timing_reviewed": false,
+  "cloud_credits": 0,
+  "uploads": false
+}

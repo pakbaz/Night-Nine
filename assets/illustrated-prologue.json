@@ -1,0 +1,115 @@
+{
+  "engine": "Godot 4.7.2",
+  "art": "GPT Image painted backgrounds and foregrounds. The artists prepared the facial expressions from each character painting.",
+  "character_references": {
+    "Archivist": "concepts/characters/archivist-front-modeling-v1.png",
+    "Helen and Frank": "concepts/characters/04-parents-and-calder.png"
+  },
+  "files": [
+    {
+      "master": "environments/veyr/veyr-sunset.png",
+      "godot": "res://assets/illustrated/rooms/veyr.png",
+      "sha256": "3c97040052ffb2a48fa57296c34a19f82874d9053984f630bcef74f59893b163"
+    },
+    {
+      "master": "props/veyr-recorder/recorder-rail.png",
+      "godot": "res://assets/illustrated/rooms/veyr-recorder.png",
+      "sha256": "7958a77ce17600e311dec4111ce955cd32aa1e443b65c433b2327dbb5373741f"
+    },
+    {
+      "master": "environments/sentinel-point/room.png",
+      "godot": "res://assets/illustrated/rooms/meeting.png",
+      "sha256": "b81c151e66032fd2f0177656ebc6ac24bf293082d3bf49baca21bd16347975d9"
+    },
+    {
+      "master": "environments/sentinel-point/exterior.png",
+      "godot": "res://assets/illustrated/rooms/meeting-exterior.png",
+      "sha256": "9bedac97092eb0d1800dbd0d497f6377358a6f501af436f43a26773f72aa7f70"
+    },
+    {
+      "master": "environments/sentinel-point/foreground.png",
+      "godot": "res://assets/illustrated/rooms/meeting-foreground.png",
+      "sha256": "5f9c6ee2f15442cee9a8e3b324533ab944b60c1f4dbfe8a9612b5af87ea3a8ed"
+    },
+    {
+      "master": "environments/bellwether-bay/room.png",
+      "godot": "res://assets/illustrated/rooms/bay.png",
+      "sha256": "36625708b8bb2fc0915b5b17c8f4b781daa708348fdf41538564c2ec4dbed47a"
+    },
+    {
+      "master": "environments/bellwether-bay/foreground.png",
+      "godot": "res://assets/illustrated/rooms/bay-foreground.png",
+      "sha256": "b44dd5cc12d4aba1aaa8f85e4d35787df523fb562505f288218e278e6b40cd78"
+    },
+    {
+      "master": "environments/bellwether-bay/underlight.png",
+      "godot": "res://assets/illustrated/rooms/bay-underlight.png",
+      "sha256": "a8ccfae7187e6c7c0124c5bbed837130d9f9031591fdc4db6535376636b72c59"
+    },
+    {
+      "master": "characters/archivist/sprites/archivist-face-atlas.png",
+      "godot": "res://assets/illustrated/cast/archivist/archivist-face-atlas.png",
+      "sha256": "2be9762932851f85761bf552caf96c409f80b8d4f0404945fa3151bf3be0fbc3"
+    },
+    {
+      "master": "characters/archivist/sprites/archivist.png",
+      "godot": "res://assets/illustrated/cast/archivist/archivist.png",
+      "sha256": "c8f33bb5e2d8f09abe0878492a70cfdbee9a7b3ad04d254fd3c4a143b317a166"
+    },
+    {
+      "master": "characters/archivist/sprites/sprite.json",
+      "godot": "res://assets/illustrated/cast/archivist/sprite.json",
+      "sha256": "3e96ca462c436ed7912e329019434218523d5b7bdb229d83aa36c0f8ef5dc711"
+    },
+    {
+      "master": "characters/frank/sprites/frank-face-atlas.png",
+      "godot": "res://assets/illustrated/cast/frank/frank-face-atlas.png",
+      "sha256": "c915932f39e6e971f2d7f3ceaaca6dc418dfef4629012ce98e4947793345498a"
+    },
+    {
+      "master": "characters/frank/sprites/frank.png",
+      "godot": "res://assets/illustrated/cast/frank/frank.png",
+      "sha256": "b9066bc4f19ee92d9ea44f043a0b858aa031a263c2a673584990235f90fa612c"
+    },
+    {
+      "master": "characters/frank/sprites/sprite.json",
+      "godot": "res://assets/illustrated/cast/frank/sprite.json",
+      "sha256": "781381054a2e085fabc209b4724ca9601901d0ee4c8e9b249f40f550a04f8f3f"
+    },
+    {
+      "master": "environments/sentinel-point/delegates/general_cn/general_cn-face-atlas.png",
+      "godot": "res://assets/illustrated/cast/general_cn/general_cn-face-atlas.png",
+      "sha256": "72f0e855ce21155430f2e496d32a1ed82b775ec11b20b9524d82a2d2bebb830e"
+    },
+    {
+      "master": "environments/sentinel-point/delegates/general_cn/sprite.json",
+      "godot": "res://assets/illustrated/cast/general_cn/sprite.json",
+      "sha256": "668d1cd2dc1110ec12154d5012c843a16ca327a2dd0569646d58f17690db6b7f"
+    },
+    {
+      "master": "environments/sentinel-point/delegates/general_us/general_us-face-atlas.png",
+      "godot": "res://assets/illustrated/cast/general_us/general_us-face-atlas.png",
+      "sha256": "23578dc967e4421c5cfa0ff9a2341bf5384547e088845afa642a2fc07fde3c5e"
+    },
+    {
+      "master": "environments/sentinel-point/delegates/general_us/sprite.json",
+      "godot": "res://assets/illustrated/cast/general_us/sprite.json",
+      "sha256": "cbc560bd1f4e80f31b013a2268b143a25b29b12814181aa28bfb643f1c01ec9a"
+    },
+    {
+      "master": "characters/helen/sprites/helen-face-atlas.png",
+      "godot": "res://assets/illustrated/cast/helen/helen-face-atlas.png",
+      "sha256": "439c7ed8af023ca94412d4fb8e09e227441916f7e76b0c52a7d1baf959f8197c"
+    },
+    {
+      "master": "characters/helen/sprites/helen.png",
+      "godot": "res://assets/illustrated/cast/helen/helen.png",
+      "sha256": "768dd8e2d78be32e1e7216d4c02c642d48401fc9f18fb01a6bf4f6f230b10ad5"
+    },
+    {
+      "master": "characters/helen/sprites/sprite.json",
+      "godot": "res://assets/illustrated/cast/helen/sprite.json",
+      "sha256": "ced153dab532b5add90453b8d5919ee02e60a1973135fffb10ea5208a01dff5c"
+    }
+  ]
+}

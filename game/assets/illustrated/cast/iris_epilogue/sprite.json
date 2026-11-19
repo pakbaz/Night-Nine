@@ -1,5 +1,7 @@
 {
   "base": "iris_epilogue.webp",
+  "source": "assets/characters/campaign/masters/iris_epilogue.png",
+  "source_sha256": "62accca20eb43a63e546d43fa5ebd98b909df9618fece38261167b87804d4dbc",
   "size": [
     810,
     1080
@@ -93,6 +95,10 @@
     "F": "mouth_round",
     "G": "mouth_parted",
     "H": "mouth_parted"
+  },
+  "sha256": {
+    "iris_epilogue.webp": "92f4a783203bd3eff9740b04ee64fc47ebad2869f81d8fb54dfc95bf8dbae0ba",
+    "iris_epilogue-face-atlas.png": "a9298f1ac781eb73404207adbb5caa422cbce0472f6187c6c3cbb92ebbae7e9a"
   },
   "atlas": "iris_epilogue-face-atlas.png",
   "eye_centers": [

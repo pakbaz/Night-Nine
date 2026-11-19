@@ -1,6 +1,8 @@
 {
   "base": "frank.png",
   "atlas": "frank-face-atlas.png",
+  "source": "assets/characters/frank/sprites/frank.png",
+  "source_sha256": "b9066bc4f19ee92d9ea44f043a0b858aa031a263c2a673584990235f90fa612c",
   "size": [
     1312,
     1199
@@ -108,5 +110,9 @@
     "F": "mouth_round",
     "G": "mouth_parted",
     "H": "mouth_parted"
+  },
+  "sha256": {
+    "frank.png": "b9066bc4f19ee92d9ea44f043a0b858aa031a263c2a673584990235f90fa612c",
+    "frank-face-atlas.png": "c915932f39e6e971f2d7f3ceaaca6dc418dfef4629012ce98e4947793345498a"
   }
 }

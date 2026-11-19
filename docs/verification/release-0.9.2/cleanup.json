@@ -1,0 +1,44 @@
+{
+  "removed_generated_copies": [
+    {
+      "path": "tmp/qa/pre-fix-0.9.2",
+      "bytes": 1831484816
+    },
+    {
+      "path": "tmp/qa/public-current",
+      "bytes": 675914818
+    },
+    {
+      "path": "tmp/qa/release-0.9.2",
+      "bytes": 650770402
+    },
+    {
+      "path": "tmp/qa/chapters-0.9.2",
+      "bytes": 641099231
+    },
+    {
+      "path": "tmp/qa/clone-0.9.2-probe",
+      "bytes": 650760757
+    },
+    {
+      "path": "tmp/qa/web-current",
+      "bytes": 401843333
+    },
+    {
+      "path": "tmp/qa/web-checkpoint",
+      "bytes": 381504856
+    },
+    {
+      "path": "tmp/qa/web-checkpoint-project",
+      "bytes": 675441146
+    }
+  ],
+  "bytes_reclaimed": 5908819359,
+  "preserved": [
+    "all original asset masters and approved recordings",
+    "all pre-existing release archives",
+    "current v0.9.2 release archives",
+    "integrated Git history and all chapter tags",
+    "QA results and incomplete Mac-run evidence"
+  ]
+}

@@ -1,5 +1,7 @@
 {
   "base": "biscuit.webp",
+  "source": "assets/characters/campaign/masters/biscuit.png",
+  "source_sha256": "5494589b76872b6eb1a41972a81f33a84c6acadcf794f4570026274b3b25b84c",
   "size": [
     722,
     1080
@@ -10,5 +12,8 @@
     1080
   ],
   "frames": {},
-  "cue_frames": {}
+  "cue_frames": {},
+  "sha256": {
+    "biscuit.webp": "b61937e049f0cd2322831c9dedf56d3b733d65a3000e4d84b96ae82a6b4f9da7"
+  }
 }

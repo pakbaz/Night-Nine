@@ -1,5 +1,7 @@
 {
   "base": "admiral.webp",
+  "source": "assets/characters/campaign/masters/admiral.png",
+  "source_sha256": "2c8f9c8482ba412df0d96cc7b6d246d468cc90e646b16a3584831acf0c27c891",
   "size": [
     1240,
     827
@@ -10,5 +12,8 @@
     827
   ],
   "frames": {},
-  "cue_frames": {}
+  "cue_frames": {},
+  "sha256": {
+    "admiral.webp": "65aae408d17d5d191abbcd4570888bdd0202bc614c22c0983bf66a628e7783e8"
+  }
 }

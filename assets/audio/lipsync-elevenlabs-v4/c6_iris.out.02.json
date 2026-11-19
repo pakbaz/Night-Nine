@@ -1,0 +1,53 @@
+{
+  "id": "c6_iris.out.02",
+  "speaker": "steve",
+  "audio": "res://assets/audio/voices/elevenlabs-v4/c6_iris.out.02.wav",
+  "audio_sha256": "b8c5171d6dc9b3ef9a4942d56ac7ca3d1a5c9fbdbfa6d4440b15f8e0e9a5bcea",
+  "transcript": "What should I call you?",
+  "transcript_sha256": "e3395828aef06d1864cf34c51c16b1244d085df0fe01e59e7fdea4d68dc472b8",
+  "generator": "Rhubarb Lip Sync version 1.14.0",
+  "generator_sha256": "93fa4a16ae1cc88a89d59743057521407843fc7139e23808c9e6587c6cc946d3",
+  "seconds": 1.489,
+  "generation_seconds": 2.826,
+  "cues": [
+    {
+      "start": 0.0,
+      "end": 0.05,
+      "value": "X"
+    },
+    {
+      "start": 0.05,
+      "end": 0.36,
+      "value": "F"
+    },
+    {
+      "start": 0.36,
+      "end": 0.43,
+      "value": "B"
+    },
+    {
+      "start": 0.43,
+      "end": 0.5,
+      "value": "C"
+    },
+    {
+      "start": 0.5,
+      "end": 0.78,
+      "value": "E"
+    },
+    {
+      "start": 0.78,
+      "end": 1.13,
+      "value": "F"
+    },
+    {
+      "start": 1.13,
+      "end": 1.48,
+      "value": "X"
+    }
+  ],
+  "raw_sha256": "87b2d6387c672860b0fd4e8baf338dc4f471ce29530ece9d2b7b8052fa4b83d8",
+  "visual_timing_reviewed": false,
+  "cloud_credits": 0,
+  "uploads": false
+}

@@ -1,0 +1,43 @@
+{
+  "id": "c9_wake.frank.02",
+  "speaker": "steve",
+  "audio": "res://assets/audio/voices/elevenlabs-v4/c9_wake.frank.02.wav",
+  "audio_sha256": "201de1850ca1d2c642b5921051d9c4f995b2ea71aa2255a1166f75b04d9129b0",
+  "transcript": "Right here, Dad.",
+  "transcript_sha256": "3d998f606aaa3537cab652884f0dbc280ae4544edff7ae969ff05814db2090e4",
+  "generator": "Rhubarb Lip Sync version 1.14.0",
+  "generator_sha256": "93fa4a16ae1cc88a89d59743057521407843fc7139e23808c9e6587c6cc946d3",
+  "seconds": 1.6457291666666667,
+  "generation_seconds": 3.969,
+  "cues": [
+    {
+      "start": 0.0,
+      "end": 0.06,
+      "value": "X"
+    },
+    {
+      "start": 0.06,
+      "end": 0.89,
+      "value": "B"
+    },
+    {
+      "start": 0.89,
+      "end": 1.03,
+      "value": "C"
+    },
+    {
+      "start": 1.03,
+      "end": 1.38,
+      "value": "B"
+    },
+    {
+      "start": 1.38,
+      "end": 1.64,
+      "value": "X"
+    }
+  ],
+  "raw_sha256": "4e3bf13e2af48f335056f883369280206771356a135215599d4b6bf69c4d521e",
+  "visual_timing_reviewed": false,
+  "cloud_credits": 0,
+  "uploads": false
+}

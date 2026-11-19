@@ -1,0 +1,514 @@
+{
+  "boards": 32,
+  "checks": 181,
+  "failures": [],
+  "layouts": [
+    {
+      "fits": true,
+      "mode": "order",
+      "step": 1,
+      "task": "c1_pier.bait"
+    },
+    {
+      "fits": true,
+      "mode": "match",
+      "step": 2,
+      "task": "c1_pier.bait"
+    },
+    {
+      "fits": true,
+      "mode": "match",
+      "step": 1,
+      "task": "c1_dinner.podcast"
+    },
+    {
+      "fits": true,
+      "mode": "order",
+      "step": 2,
+      "task": "c1_dinner.podcast"
+    },
+    {
+      "fits": true,
+      "mode": "match",
+      "step": 1,
+      "task": "c1_escape.order"
+    },
+    {
+      "fits": true,
+      "mode": "match",
+      "step": 2,
+      "task": "c1_escape.order"
+    },
+    {
+      "fits": true,
+      "mode": "order",
+      "step": 3,
+      "task": "c1_escape.order"
+    },
+    {
+      "fits": true,
+      "mode": "order",
+      "step": 1,
+      "task": "c2_aquarium.intercom"
+    },
+    {
+      "fits": true,
+      "mode": "match",
+      "step": 2,
+      "task": "c2_aquarium.intercom"
+    },
+    {
+      "fits": true,
+      "mode": "match",
+      "step": 1,
+      "task": "c2_ship.nora"
+    },
+    {
+      "fits": true,
+      "mode": "order",
+      "step": 2,
+      "task": "c2_ship.nora"
+    },
+    {
+      "fits": true,
+      "mode": "match",
+      "step": 1,
+      "task": "c2_ship.command"
+    },
+    {
+      "fits": true,
+      "mode": "order",
+      "step": 2,
+      "task": "c2_ship.command"
+    },
+    {
+      "fits": true,
+      "mode": "match",
+      "step": 3,
+      "task": "c2_ship.command"
+    },
+    {
+      "fits": true,
+      "mode": "match",
+      "step": 1,
+      "task": "c3_house.crossword"
+    },
+    {
+      "fits": true,
+      "mode": "order",
+      "step": 2,
+      "task": "c3_house.crossword"
+    },
+    {
+      "fits": true,
+      "mode": "match",
+      "step": 3,
+      "task": "c3_house.crossword"
+    },
+    {
+      "fits": true,
+      "mode": "order",
+      "step": 1,
+      "task": "c3_house.mail"
+    },
+    {
+      "fits": true,
+      "mode": "match",
+      "step": 2,
+      "task": "c3_house.mail"
+    },
+    {
+      "fits": true,
+      "mode": "match",
+      "step": 1,
+      "task": "c3_archive.power"
+    },
+    {
+      "fits": true,
+      "mode": "order",
+      "step": 2,
+      "task": "c3_archive.power"
+    },
+    {
+      "fits": true,
+      "mode": "order",
+      "step": 1,
+      "task": "i1_archive.reset"
+    },
+    {
+      "fits": true,
+      "mode": "match",
+      "step": 2,
+      "task": "i1_archive.reset"
+    },
+    {
+      "fits": true,
+      "mode": "match",
+      "step": 1,
+      "task": "c4_safe.record"
+    },
+    {
+      "fits": true,
+      "mode": "match",
+      "step": 2,
+      "task": "c4_safe.record"
+    },
+    {
+      "fits": true,
+      "mode": "match",
+      "step": 1,
+      "task": "c4_safe.screens"
+    },
+    {
+      "fits": true,
+      "mode": "route",
+      "step": 2,
+      "task": "c4_safe.screens"
+    },
+    {
+      "fits": true,
+      "mode": "route",
+      "step": 1,
+      "task": "c4_escape.van"
+    },
+    {
+      "fits": true,
+      "mode": "match",
+      "step": 2,
+      "task": "c4_escape.van"
+    },
+    {
+      "fits": true,
+      "mode": "match",
+      "step": 1,
+      "task": "c5_shack.club"
+    },
+    {
+      "fits": true,
+      "mode": "order",
+      "step": 2,
+      "task": "c5_shack.club"
+    },
+    {
+      "fits": true,
+      "mode": "match",
+      "step": 1,
+      "task": "c5_station.sleeve"
+    },
+    {
+      "fits": true,
+      "mode": "route",
+      "step": 2,
+      "task": "c5_station.sleeve"
+    },
+    {
+      "fits": true,
+      "mode": "match",
+      "step": 3,
+      "task": "c5_station.sleeve"
+    },
+    {
+      "fits": true,
+      "mode": "order",
+      "step": 1,
+      "task": "c5_station.stephen"
+    },
+    {
+      "fits": true,
+      "mode": "match",
+      "step": 2,
+      "task": "c5_station.stephen"
+    },
+    {
+      "fits": true,
+      "mode": "match",
+      "step": 1,
+      "task": "c6_iris.alibi"
+    },
+    {
+      "fits": true,
+      "mode": "order",
+      "step": 2,
+      "task": "c6_iris.alibi"
+    },
+    {
+      "fits": true,
+      "mode": "match",
+      "step": 3,
+      "task": "c6_iris.alibi"
+    },
+    {
+      "fits": true,
+      "mode": "match",
+      "step": 1,
+      "task": "c6_jail.distract"
+    },
+    {
+      "fits": true,
+      "mode": "order",
+      "step": 2,
+      "task": "c6_jail.distract"
+    },
+    {
+      "fits": true,
+      "mode": "match",
+      "step": 3,
+      "task": "c6_jail.distract"
+    },
+    {
+      "fits": true,
+      "mode": "match",
+      "step": 1,
+      "task": "c6_jail.exit"
+    },
+    {
+      "fits": true,
+      "mode": "match",
+      "step": 2,
+      "task": "c6_jail.exit"
+    },
+    {
+      "fits": true,
+      "mode": "order",
+      "step": 3,
+      "task": "c6_jail.exit"
+    },
+    {
+      "fits": true,
+      "mode": "match",
+      "step": 1,
+      "task": "i2_nora.jobs"
+    },
+    {
+      "fits": true,
+      "mode": "route",
+      "step": 2,
+      "task": "i2_nora.jobs"
+    },
+    {
+      "fits": true,
+      "mode": "match",
+      "step": 3,
+      "task": "i2_nora.jobs"
+    },
+    {
+      "fits": true,
+      "mode": "match",
+      "step": 1,
+      "task": "c7_gate.badge"
+    },
+    {
+      "fits": true,
+      "mode": "order",
+      "step": 2,
+      "task": "c7_gate.badge"
+    },
+    {
+      "fits": true,
+      "mode": "match",
+      "step": 3,
+      "task": "c7_gate.badge"
+    },
+    {
+      "fits": true,
+      "mode": "match",
+      "step": 1,
+      "task": "c7_gate.post"
+    },
+    {
+      "fits": true,
+      "mode": "order",
+      "step": 2,
+      "task": "c7_gate.post"
+    },
+    {
+      "fits": true,
+      "mode": "match",
+      "step": 3,
+      "task": "c7_gate.post"
+    },
+    {
+      "fits": true,
+      "mode": "match",
+      "step": 1,
+      "task": "c7_swap.map"
+    },
+    {
+      "fits": true,
+      "mode": "order",
+      "step": 2,
+      "task": "c7_swap.map"
+    },
+    {
+      "fits": true,
+      "mode": "route",
+      "step": 3,
+      "task": "c7_swap.map"
+    },
+    {
+      "fits": true,
+      "mode": "order",
+      "step": 1,
+      "task": "c8_lab.notebook"
+    },
+    {
+      "fits": true,
+      "mode": "match",
+      "step": 2,
+      "task": "c8_lab.notebook"
+    },
+    {
+      "fits": true,
+      "mode": "match",
+      "step": 3,
+      "task": "c8_lab.notebook"
+    },
+    {
+      "fits": true,
+      "mode": "match",
+      "step": 1,
+      "task": "c8_rig.source"
+    },
+    {
+      "fits": true,
+      "mode": "match",
+      "step": 2,
+      "task": "c8_rig.source"
+    },
+    {
+      "fits": true,
+      "mode": "order",
+      "step": 3,
+      "task": "c8_rig.source"
+    },
+    {
+      "fits": true,
+      "mode": "match",
+      "step": 1,
+      "task": "c8_rig.rig"
+    },
+    {
+      "fits": true,
+      "mode": "route",
+      "step": 2,
+      "task": "c8_rig.rig"
+    },
+    {
+      "fits": true,
+      "mode": "order",
+      "step": 3,
+      "task": "c8_rig.rig"
+    },
+    {
+      "fits": true,
+      "mode": "match",
+      "step": 1,
+      "task": "c9_gallery.antenna"
+    },
+    {
+      "fits": true,
+      "mode": "match",
+      "step": 2,
+      "task": "c9_gallery.antenna"
+    },
+    {
+      "fits": true,
+      "mode": "order",
+      "step": 3,
+      "task": "c9_gallery.antenna"
+    },
+    {
+      "fits": true,
+      "mode": "match",
+      "step": 1,
+      "task": "c9_wake.agnes"
+    },
+    {
+      "fits": true,
+      "mode": "match",
+      "step": 2,
+      "task": "c9_wake.agnes"
+    },
+    {
+      "fits": true,
+      "mode": "order",
+      "step": 3,
+      "task": "c9_wake.agnes"
+    },
+    {
+      "fits": true,
+      "mode": "order",
+      "step": 1,
+      "task": "c9_choir.truth"
+    },
+    {
+      "fits": true,
+      "mode": "match",
+      "step": 2,
+      "task": "c9_choir.truth"
+    },
+    {
+      "fits": true,
+      "mode": "match",
+      "step": 3,
+      "task": "c9_choir.truth"
+    },
+    {
+      "fits": true,
+      "mode": "match",
+      "step": 1,
+      "task": "c10_station.playlist"
+    },
+    {
+      "fits": true,
+      "mode": "match",
+      "step": 2,
+      "task": "c10_station.playlist"
+    },
+    {
+      "fits": true,
+      "mode": "order",
+      "step": 3,
+      "task": "c10_station.playlist"
+    },
+    {
+      "fits": true,
+      "mode": "match",
+      "step": 1,
+      "task": "c10_station.relay"
+    },
+    {
+      "fits": true,
+      "mode": "route",
+      "step": 2,
+      "task": "c10_station.relay"
+    },
+    {
+      "fits": true,
+      "mode": "order",
+      "step": 3,
+      "task": "c10_station.relay"
+    },
+    {
+      "fits": true,
+      "mode": "match",
+      "step": 1,
+      "task": "c10_report.report"
+    },
+    {
+      "fits": true,
+      "mode": "match",
+      "step": 2,
+      "task": "c10_report.report"
+    },
+    {
+      "fits": true,
+      "mode": "order",
+      "step": 3,
+      "task": "c10_report.report"
+    }
+  ],
+  "placements": 296,
+  "screens": {},
+  "stages": 84
+}

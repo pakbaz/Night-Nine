@@ -1,0 +1,83 @@
+{
+  "id": "c10_report.out.03",
+  "speaker": "helen",
+  "audio": "res://assets/audio/voices/elevenlabs-v4/c10_report.out.03.wav",
+  "audio_sha256": "da3b80870224b12f75edbfdb28f401bae7839b7ab3926fc26f8baa3bb4147210",
+  "transcript": "Wick is adding a message for Tirel.",
+  "transcript_sha256": "5e8ca6acbf1be134465f12e26085b3314af2a44e2c32b67c1aadce7dd1ec149c",
+  "generator": "Rhubarb Lip Sync version 1.14.0",
+  "generator_sha256": "93fa4a16ae1cc88a89d59743057521407843fc7139e23808c9e6587c6cc946d3",
+  "seconds": 2.5077708333333333,
+  "generation_seconds": 4.246,
+  "cues": [
+    {
+      "start": 0.0,
+      "end": 0.05,
+      "value": "X"
+    },
+    {
+      "start": 0.05,
+      "end": 0.14,
+      "value": "F"
+    },
+    {
+      "start": 0.14,
+      "end": 0.63,
+      "value": "B"
+    },
+    {
+      "start": 0.63,
+      "end": 0.7,
+      "value": "C"
+    },
+    {
+      "start": 0.7,
+      "end": 0.98,
+      "value": "B"
+    },
+    {
+      "start": 0.98,
+      "end": 1.07,
+      "value": "A"
+    },
+    {
+      "start": 1.07,
+      "end": 1.14,
+      "value": "C"
+    },
+    {
+      "start": 1.14,
+      "end": 1.62,
+      "value": "B"
+    },
+    {
+      "start": 1.62,
+      "end": 1.83,
+      "value": "C"
+    },
+    {
+      "start": 1.83,
+      "end": 1.97,
+      "value": "B"
+    },
+    {
+      "start": 1.97,
+      "end": 2.04,
+      "value": "C"
+    },
+    {
+      "start": 2.04,
+      "end": 2.18,
+      "value": "H"
+    },
+    {
+      "start": 2.18,
+      "end": 2.5,
+      "value": "X"
+    }
+  ],
+  "raw_sha256": "c99455b4d04ea3ba41020f4052f1c7f1267fb43d17343be5de257492709ad5a0",
+  "visual_timing_reviewed": false,
+  "cloud_credits": 0,
+  "uploads": false
+}

@@ -1,0 +1,90 @@
+{
+  "reference": "assets/environments/sentinel-point/room.png",
+  "reference_sha256": "b81c151e66032fd2f0177656ebc6ac24bf293082d3bf49baca21bd16347975d9",
+  "atlas": "general_cn-face-atlas.png",
+  "frames": {
+    "blink_half": {
+      "source_origin": [
+        1404,
+        382
+      ],
+      "atlas_region": [
+        0,
+        0,
+        57,
+        30
+      ]
+    },
+    "blink_closed": {
+      "source_origin": [
+        1404,
+        382
+      ],
+      "atlas_region": [
+        0,
+        30,
+        57,
+        30
+      ]
+    },
+    "mouth_parted": {
+      "source_origin": [
+        1405,
+        440
+      ],
+      "atlas_region": [
+        0,
+        60,
+        39,
+        25
+      ]
+    },
+    "mouth_open": {
+      "source_origin": [
+        1405,
+        440
+      ],
+      "atlas_region": [
+        0,
+        85,
+        39,
+        25
+      ]
+    },
+    "mouth_round": {
+      "source_origin": [
+        1405,
+        440
+      ],
+      "atlas_region": [
+        0,
+        110,
+        39,
+        25
+      ]
+    },
+    "mouth_wide": {
+      "source_origin": [
+        1405,
+        440
+      ],
+      "atlas_region": [
+        0,
+        135,
+        39,
+        25
+      ]
+    }
+  },
+  "cue_frames": {
+    "X": null,
+    "A": null,
+    "B": "mouth_parted",
+    "C": "mouth_wide",
+    "D": "mouth_open",
+    "E": "mouth_round",
+    "F": "mouth_round",
+    "G": "mouth_parted",
+    "H": "mouth_parted"
+  }
+}

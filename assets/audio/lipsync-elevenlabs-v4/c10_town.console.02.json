@@ -1,0 +1,83 @@
+{
+  "id": "c10_town.console.02",
+  "speaker": "shaw",
+  "audio": "res://assets/audio/voices/elevenlabs-v4/c10_town.console.02.wav",
+  "audio_sha256": "4cfaad70e69c5f599bd56b7edc29e6fc6db6b601dbc4b5e49431f945596189eb",
+  "transcript": "Your lamps are dim.",
+  "transcript_sha256": "03f860a1b2b164f8431684829a220a1f135708f7402495c338091fd1b8b5b940",
+  "generator": "Rhubarb Lip Sync version 1.14.0",
+  "generator_sha256": "93fa4a16ae1cc88a89d59743057521407843fc7139e23808c9e6587c6cc946d3",
+  "seconds": 1.8024583333333333,
+  "generation_seconds": 3.321,
+  "cues": [
+    {
+      "start": 0.0,
+      "end": 0.06,
+      "value": "X"
+    },
+    {
+      "start": 0.06,
+      "end": 0.13,
+      "value": "C"
+    },
+    {
+      "start": 0.13,
+      "end": 0.19,
+      "value": "E"
+    },
+    {
+      "start": 0.19,
+      "end": 0.26,
+      "value": "B"
+    },
+    {
+      "start": 0.26,
+      "end": 0.4,
+      "value": "H"
+    },
+    {
+      "start": 0.4,
+      "end": 0.54,
+      "value": "C"
+    },
+    {
+      "start": 0.54,
+      "end": 0.65,
+      "value": "A"
+    },
+    {
+      "start": 0.65,
+      "end": 0.81,
+      "value": "B"
+    },
+    {
+      "start": 0.81,
+      "end": 0.88,
+      "value": "D"
+    },
+    {
+      "start": 0.88,
+      "end": 1.3,
+      "value": "B"
+    },
+    {
+      "start": 1.3,
+      "end": 1.51,
+      "value": "A"
+    },
+    {
+      "start": 1.51,
+      "end": 1.71,
+      "value": "B"
+    },
+    {
+      "start": 1.71,
+      "end": 1.8,
+      "value": "X"
+    }
+  ],
+  "raw_sha256": "a55d089c7ebdcc5dd68d6bdd2b11f0056af4b47983585d055a9c43dfad28aaa1",
+  "visual_timing_reviewed": false,
+  "cloud_credits": 0,
+  "uploads": false
+}

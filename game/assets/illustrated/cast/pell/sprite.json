@@ -1,5 +1,7 @@
 {
   "base": "pell.webp",
+  "source": "assets/characters/campaign/masters/pell.png",
+  "source_sha256": "8fadb8f7c115195fdd85ce9b54b3f40b431dffa85f54511797ba852029089ae8",
   "size": [
     942,
     1080
@@ -93,6 +95,10 @@
     "F": "mouth_round",
     "G": "mouth_parted",
     "H": "mouth_parted"
+  },
+  "sha256": {
+    "pell.webp": "dd64580d8fa609e3c8331a5f3a0a998a81b372c04a91e417656799eeead7e778",
+    "pell-face-atlas.png": "50fc116d6b2f86dd7c305a79fac7b5cff3ddb18046fddcca03de7bc7a3cb6ee1"
   },
   "atlas": "pell-face-atlas.png",
   "eye_centers": [

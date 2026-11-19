@@ -1,5 +1,7 @@
 {
   "base": "carmen.webp",
+  "source": "assets/characters/campaign/masters/carmen.png",
+  "source_sha256": "a28a482f10c3d9e274f58216f6dda4ee0600a8cad121f97f700913d8a7af6f52",
   "size": [
     824,
     1080
@@ -93,6 +95,10 @@
     "F": "mouth_round",
     "G": "mouth_parted",
     "H": "mouth_parted"
+  },
+  "sha256": {
+    "carmen.webp": "ec9c4ec5bfdc1a4d13f392cff1bec9efac0114b337ec4377b5024a435aee91a2",
+    "carmen-face-atlas.png": "abb4004d7a348ead1495b4694e9178346a39a7524740ea00644699bc8350bb22"
   },
   "atlas": "carmen-face-atlas.png",
   "eye_centers": [

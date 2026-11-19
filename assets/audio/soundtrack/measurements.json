@@ -1,0 +1,1169 @@
+{
+  "music_credit": "Sepehr (S3pehR) Pakbaz",
+  "music_generated_by": "Google Lyria 3.5",
+  "analyzer": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
+  "integrated_loudness": "EBU R128 across the complete decoded recording; sample and fourfold oversampled true peaks from FFmpeg ebur128. Full-scale sample counts use floating-point MP3 decoding before conversion to integer PCM and count both channels. Peaks at or above full scale indicate potential clipping on unattenuated integer playback. These measurements cannot establish source-master clipping.",
+  "silence": "Both channels below -55 dBFS for at least 0.25 seconds. Some opening and closing passages are deliberately very quiet.",
+  "theme_entries": "For the title and 14 themes, we scanned the earliest 45 seconds for an entry at which the energy average of the first 2.15 seconds was no more than 5 LU below the full-track integrated level and the first 1.2 seconds no more than 7 LU below. We excluded the first 400 ms of momentary readings to avoid including audio before the entry. We independently decoded the resulting excerpts from source and measured their integrated loudness over 2.15 and 4.4 seconds. For full-length listening, start at zero.",
+  "tracks": [
+    {
+      "chapter": "Title",
+      "use": "title",
+      "source_filename": "Night Nine (Main Title Theme).mp3",
+      "filename": "main-title.mp3",
+      "id3_title": "Night Nine (Main Title Theme)",
+      "id3_artist": "s3pehR",
+      "bytes": 3463285,
+      "sha256": "e6a28e18da5285bc4acdd7fc4c3dfffce92a1b1f5a571b213332132f3a7ea95e",
+      "source_sha256": "e6a28e18da5285bc4acdd7fc4c3dfffce92a1b1f5a571b213332132f3a7ea95e",
+      "codec": "mp3",
+      "sample_rate_hz": 48000,
+      "channels": 2,
+      "bitrate_bps": 128000,
+      "audio_duration_seconds": 158.315,
+      "integrated_lufs": -15.5,
+      "loudness_range_lu": 10.5,
+      "sample_peak_dbfs": -0.3,
+      "true_peak_dbtp": -0.3,
+      "samples_at_or_above_full_scale": 0,
+      "total_channel_samples": 0,
+      "silence_intervals_seconds": [
+        [
+          157.116,
+          158.315
+        ]
+      ],
+      "leading_silence_seconds": 0.0,
+      "trailing_silence_seconds": 1.199,
+      "first_momentary_audible_seconds": 13.1,
+      "embedded_cover": [
+        {
+          "format": "mjpeg",
+          "width": 1408,
+          "height": 768
+        }
+      ],
+      "entry_seconds": 12.7,
+      "opening_2_15s_lufs": -48.1,
+      "chosen_2_15s_lufs": -20.3,
+      "chosen_4_4s_lufs": -19.0
+    },
+    {
+      "chapter": "Prologue",
+      "use": "bgm",
+      "source_filename": "Prologue. Three Nights (BGM).mp3",
+      "filename": "prologue-bgm.mp3",
+      "id3_title": "Prologue. Three Nights (BGM)",
+      "id3_artist": "s3pehR",
+      "bytes": 2482614,
+      "sha256": "a313aab2bf640192b43d74f2ddc6c968fd84d482822a987031d7e98594bc207f",
+      "source_sha256": "a313aab2bf640192b43d74f2ddc6c968fd84d482822a987031d7e98594bc207f",
+      "codec": "mp3",
+      "sample_rate_hz": 48000,
+      "channels": 2,
+      "bitrate_bps": 128000,
+      "audio_duration_seconds": 107.947,
+      "integrated_lufs": -14.6,
+      "loudness_range_lu": 11.2,
+      "sample_peak_dbfs": -1.5,
+      "true_peak_dbtp": -1.5,
+      "samples_at_or_above_full_scale": 0,
+      "total_channel_samples": 0,
+      "silence_intervals_seconds": [
+        [
+          0.0,
+          0.506
+        ]
+      ],
+      "leading_silence_seconds": 0.506,
+      "trailing_silence_seconds": 0.0,
+      "first_momentary_audible_seconds": 2.4,
+      "embedded_cover": [
+        {
+          "format": "mjpeg",
+          "width": 1408,
+          "height": 768
+        }
+      ]
+    },
+    {
+      "chapter": "Prologue",
+      "use": "theme",
+      "source_filename": "Prologue. Three Nights.mp3",
+      "filename": "prologue-theme.mp3",
+      "id3_title": "Prologue. Three Nights",
+      "id3_artist": "s3pehR",
+      "bytes": 3584949,
+      "sha256": "5dae35f72d4805196172a9fd251c8765d43df71f86747709dfb880cd8c521e76",
+      "source_sha256": "5dae35f72d4805196172a9fd251c8765d43df71f86747709dfb880cd8c521e76",
+      "codec": "mp3",
+      "sample_rate_hz": 48000,
+      "channels": 2,
+      "bitrate_bps": 128000,
+      "audio_duration_seconds": 175.957,
+      "integrated_lufs": -15.3,
+      "loudness_range_lu": 6.8,
+      "sample_peak_dbfs": -0.2,
+      "true_peak_dbtp": -0.1,
+      "samples_at_or_above_full_scale": 0,
+      "total_channel_samples": 0,
+      "silence_intervals_seconds": [
+        [
+          0.0,
+          0.858
+        ],
+        [
+          174.621,
+          175.957
+        ]
+      ],
+      "leading_silence_seconds": 0.858,
+      "trailing_silence_seconds": 1.336,
+      "first_momentary_audible_seconds": 1.4,
+      "embedded_cover": [
+        {
+          "format": "mjpeg",
+          "width": 1408,
+          "height": 768
+        }
+      ],
+      "entry_seconds": 1.4,
+      "opening_2_15s_lufs": -26.0,
+      "chosen_2_15s_lufs": -20.3,
+      "chosen_4_4s_lufs": -19.6
+    },
+    {
+      "chapter": "Chapter 1",
+      "use": "bgm",
+      "source_filename": "1. Good Morning, Sleepyhead (BGM).mp3",
+      "filename": "chapter-01-bgm.mp3",
+      "id3_title": "1. Good Morning, Sleepyhead (BGM)",
+      "id3_artist": "s3pehR",
+      "bytes": 3757375,
+      "sha256": "0cfd9cf0f6d300f7ade3f5eefd871a8efa1db90ae6ceedaa7980a0bbd22bd166",
+      "source_sha256": "0cfd9cf0f6d300f7ade3f5eefd871a8efa1db90ae6ceedaa7980a0bbd22bd166",
+      "codec": "mp3",
+      "sample_rate_hz": 48000,
+      "channels": 2,
+      "bitrate_bps": 128000,
+      "audio_duration_seconds": 176.448,
+      "integrated_lufs": -15.5,
+      "loudness_range_lu": 11.5,
+      "sample_peak_dbfs": -0.5,
+      "true_peak_dbtp": -0.5,
+      "samples_at_or_above_full_scale": 0,
+      "total_channel_samples": 0,
+      "silence_intervals_seconds": [
+        [
+          175.387,
+          176.448
+        ]
+      ],
+      "leading_silence_seconds": 0.0,
+      "trailing_silence_seconds": 1.061,
+      "first_momentary_audible_seconds": 0.4,
+      "embedded_cover": [
+        {
+          "format": "mjpeg",
+          "width": 1408,
+          "height": 768
+        }
+      ]
+    },
+    {
+      "chapter": "Chapter 1",
+      "use": "theme",
+      "source_filename": "1. Good Morning, Sleepyhead.mp3",
+      "filename": "chapter-01-theme.mp3",
+      "id3_title": "1. Good Morning, Sleepyhead",
+      "id3_artist": "s3pehR",
+      "bytes": 3341866,
+      "sha256": "e12237c0e1eb83b32c260ceca45b5be31fda4eb1a42b9335f0a29d49f4d7a631",
+      "source_sha256": "e12237c0e1eb83b32c260ceca45b5be31fda4eb1a42b9335f0a29d49f4d7a631",
+      "codec": "mp3",
+      "sample_rate_hz": 48000,
+      "channels": 2,
+      "bitrate_bps": 128000,
+      "audio_duration_seconds": 154.795,
+      "integrated_lufs": -15.7,
+      "loudness_range_lu": 12.0,
+      "sample_peak_dbfs": -0.4,
+      "true_peak_dbtp": -0.3,
+      "samples_at_or_above_full_scale": 0,
+      "total_channel_samples": 0,
+      "silence_intervals_seconds": [
+        [
+          153.971,
+          154.795
+        ]
+      ],
+      "leading_silence_seconds": 0.0,
+      "trailing_silence_seconds": 0.824,
+      "first_momentary_audible_seconds": 0.6,
+      "embedded_cover": [
+        {
+          "format": "mjpeg",
+          "width": 1408,
+          "height": 768
+        }
+      ],
+      "entry_seconds": 20.1,
+      "opening_2_15s_lufs": -24.3,
+      "chosen_2_15s_lufs": -20.8,
+      "chosen_4_4s_lufs": -21.4
+    },
+    {
+      "chapter": "Chapter 2",
+      "use": "bgm",
+      "source_filename": "2. The Aquarium Is Closed (BGM).mp3",
+      "filename": "chapter-02-bgm.mp3",
+      "id3_title": "2. The Aquarium Is Closed (BGM)",
+      "id3_artist": "s3pehR",
+      "bytes": 3753279,
+      "sha256": "ebe79eab05677038acd76d26aade174bdd9f5aec0f0b5e49c0aadbf1dbad4f3a",
+      "source_sha256": "ebe79eab05677038acd76d26aade174bdd9f5aec0f0b5e49c0aadbf1dbad4f3a",
+      "codec": "mp3",
+      "sample_rate_hz": 48000,
+      "channels": 2,
+      "bitrate_bps": 128000,
+      "audio_duration_seconds": 176.235,
+      "integrated_lufs": -15.6,
+      "loudness_range_lu": 12.4,
+      "sample_peak_dbfs": -0.4,
+      "true_peak_dbtp": -0.4,
+      "samples_at_or_above_full_scale": 0,
+      "total_channel_samples": 0,
+      "silence_intervals_seconds": [],
+      "leading_silence_seconds": 0.0,
+      "trailing_silence_seconds": 0.0,
+      "first_momentary_audible_seconds": 0.4,
+      "embedded_cover": [
+        {
+          "format": "mjpeg",
+          "width": 1408,
+          "height": 768
+        }
+      ]
+    },
+    {
+      "chapter": "Chapter 2",
+      "use": "theme",
+      "source_filename": "2. The Aquarium Is Closed.mp3",
+      "filename": "chapter-02-theme.mp3",
+      "id3_title": "2. The Aquarium Is Closed",
+      "id3_artist": "s3pehR",
+      "bytes": 3071364,
+      "sha256": "de1c05b5040942fab00dae6f938789aabd3f3187d641ee3de8aabb7496eaee0c",
+      "source_sha256": "de1c05b5040942fab00dae6f938789aabd3f3187d641ee3de8aabb7496eaee0c",
+      "codec": "mp3",
+      "sample_rate_hz": 48000,
+      "channels": 2,
+      "bitrate_bps": 128000,
+      "audio_duration_seconds": 152.597,
+      "integrated_lufs": -15.6,
+      "loudness_range_lu": 10.4,
+      "sample_peak_dbfs": -0.5,
+      "true_peak_dbtp": -0.5,
+      "samples_at_or_above_full_scale": 0,
+      "total_channel_samples": 0,
+      "silence_intervals_seconds": [],
+      "leading_silence_seconds": 0.0,
+      "trailing_silence_seconds": 0.0,
+      "first_momentary_audible_seconds": 0.4,
+      "embedded_cover": [
+        {
+          "format": "mjpeg",
+          "width": 1376,
+          "height": 768
+        }
+      ],
+      "entry_seconds": 25.5,
+      "opening_2_15s_lufs": -22.4,
+      "chosen_2_15s_lufs": -17.6,
+      "chosen_4_4s_lufs": -16.4
+    },
+    {
+      "chapter": "Chapter 3",
+      "use": "bgm",
+      "source_filename": "3. Please Prove You Exist (BGM).mp3",
+      "filename": "chapter-03-bgm.mp3",
+      "id3_title": "3. Please Prove You Exist (BGM)",
+      "id3_artist": "s3pehR",
+      "bytes": 3443044,
+      "sha256": "9f4a4d17e72385598cd0bae89aff8f98f656a8bc99b0a782e3950079d2f03f09",
+      "source_sha256": "9f4a4d17e72385598cd0bae89aff8f98f656a8bc99b0a782e3950079d2f03f09",
+      "codec": "mp3",
+      "sample_rate_hz": 48000,
+      "channels": 2,
+      "bitrate_bps": 128000,
+      "audio_duration_seconds": 157.845,
+      "integrated_lufs": -18.6,
+      "loudness_range_lu": 8.7,
+      "sample_peak_dbfs": -0.3,
+      "true_peak_dbtp": -0.3,
+      "samples_at_or_above_full_scale": 0,
+      "total_channel_samples": 0,
+      "silence_intervals_seconds": [
+        [
+          155.913,
+          157.845
+        ]
+      ],
+      "leading_silence_seconds": 0.0,
+      "trailing_silence_seconds": 1.932,
+      "first_momentary_audible_seconds": 0.4,
+      "embedded_cover": [
+        {
+          "format": "mjpeg",
+          "width": 1408,
+          "height": 768
+        }
+      ]
+    },
+    {
+      "chapter": "Chapter 3",
+      "use": "theme",
+      "source_filename": "3. Please Prove You Exist.mp3",
+      "filename": "chapter-03-theme.mp3",
+      "id3_title": "3. Please Prove You Exist",
+      "id3_artist": "s3pehR",
+      "bytes": 3675336,
+      "sha256": "6ed70f16bc1c0bc36a84d549993df2b5afeb1d69e08e88e26131c2342f152d02",
+      "source_sha256": "6ed70f16bc1c0bc36a84d549993df2b5afeb1d69e08e88e26131c2342f152d02",
+      "codec": "mp3",
+      "sample_rate_hz": 48000,
+      "channels": 2,
+      "bitrate_bps": 128000,
+      "audio_duration_seconds": 181.461,
+      "integrated_lufs": -15.8,
+      "loudness_range_lu": 15.8,
+      "sample_peak_dbfs": -0.7,
+      "true_peak_dbtp": -0.7,
+      "samples_at_or_above_full_scale": 0,
+      "total_channel_samples": 0,
+      "silence_intervals_seconds": [
+        [
+          2.801,
+          3.264
+        ],
+        [
+          178.879,
+          179.269
+        ],
+        [
+          179.308,
+          181.461
+        ]
+      ],
+      "leading_silence_seconds": 0.0,
+      "trailing_silence_seconds": 2.153,
+      "first_momentary_audible_seconds": 0.4,
+      "embedded_cover": [
+        {
+          "format": "mjpeg",
+          "width": 1408,
+          "height": 768
+        }
+      ],
+      "entry_seconds": 21.6,
+      "opening_2_15s_lufs": -25.2,
+      "chosen_2_15s_lufs": -17.9,
+      "chosen_4_4s_lufs": -20.1
+    },
+    {
+      "chapter": "Interlude 1",
+      "use": "bgm",
+      "source_filename": "Interlude. The Archivist (BGM).mp3",
+      "filename": "interlude-archivist-bgm.mp3",
+      "id3_title": "Interlude. The Archivist (BGM)",
+      "id3_artist": "s3pehR",
+      "bytes": 3278799,
+      "sha256": "96adcfd0b190735922e6ba7c247aa4de01dc64c2fc32a88b2fe4811db474d85a",
+      "source_sha256": "96adcfd0b190735922e6ba7c247aa4de01dc64c2fc32a88b2fe4811db474d85a",
+      "codec": "mp3",
+      "sample_rate_hz": 48000,
+      "channels": 2,
+      "bitrate_bps": 128000,
+      "audio_duration_seconds": 151.232,
+      "integrated_lufs": -16.4,
+      "loudness_range_lu": 14.3,
+      "sample_peak_dbfs": -1.4,
+      "true_peak_dbtp": -1.4,
+      "samples_at_or_above_full_scale": 0,
+      "total_channel_samples": 0,
+      "silence_intervals_seconds": [],
+      "leading_silence_seconds": 0.0,
+      "trailing_silence_seconds": 0.0,
+      "first_momentary_audible_seconds": 0.4,
+      "embedded_cover": [
+        {
+          "format": "mjpeg",
+          "width": 1408,
+          "height": 768
+        }
+      ]
+    },
+    {
+      "chapter": "Interlude 1",
+      "use": "theme",
+      "source_filename": "Interlude. The Archivist.mp3",
+      "filename": "interlude-archivist-theme.mp3",
+      "id3_title": "Interlude. The Archivist",
+      "id3_artist": "s3pehR",
+      "bytes": 3369089,
+      "sha256": "36e02dea5f51ce01146eb83d6b48c71034eb16fcef3e1b38db374cca7f3f2a5f",
+      "source_sha256": "36e02dea5f51ce01146eb83d6b48c71034eb16fcef3e1b38db374cca7f3f2a5f",
+      "codec": "mp3",
+      "sample_rate_hz": 48000,
+      "channels": 2,
+      "bitrate_bps": 128000,
+      "audio_duration_seconds": 154.837,
+      "integrated_lufs": -19.1,
+      "loudness_range_lu": 6.8,
+      "sample_peak_dbfs": -1.0,
+      "true_peak_dbtp": -1.0,
+      "samples_at_or_above_full_scale": 0,
+      "total_channel_samples": 0,
+      "silence_intervals_seconds": [],
+      "leading_silence_seconds": 0.0,
+      "trailing_silence_seconds": 0.0,
+      "first_momentary_audible_seconds": 0.4,
+      "embedded_cover": [
+        {
+          "format": "mjpeg",
+          "width": 1408,
+          "height": 768
+        }
+      ],
+      "entry_seconds": 0.0,
+      "opening_2_15s_lufs": -23.3,
+      "chosen_2_15s_lufs": -23.3,
+      "chosen_4_4s_lufs": -23.3
+    },
+    {
+      "chapter": "Chapter 4",
+      "use": "bgm",
+      "source_filename": "4. Federal Hospitality (BGM).mp3",
+      "filename": "chapter-04-bgm.mp3",
+      "id3_title": "4. Federal Hospitality (BGM)",
+      "id3_artist": "s3pehR",
+      "bytes": 3480203,
+      "sha256": "7c7541d6917faf384fc4676f716cd0a745752ccfc8680c0019d18f066d377608",
+      "source_sha256": "7c7541d6917faf384fc4676f716cd0a745752ccfc8680c0019d18f066d377608",
+      "codec": "mp3",
+      "sample_rate_hz": 48000,
+      "channels": 2,
+      "bitrate_bps": 128000,
+      "audio_duration_seconds": 171.691,
+      "integrated_lufs": -17.0,
+      "loudness_range_lu": 4.5,
+      "sample_peak_dbfs": -0.4,
+      "true_peak_dbtp": -0.4,
+      "samples_at_or_above_full_scale": 0,
+      "total_channel_samples": 0,
+      "silence_intervals_seconds": [
+        [
+          170.531,
+          171.691
+        ]
+      ],
+      "leading_silence_seconds": 0.0,
+      "trailing_silence_seconds": 1.16,
+      "first_momentary_audible_seconds": 0.4,
+      "embedded_cover": [
+        {
+          "format": "mjpeg",
+          "width": 1408,
+          "height": 768
+        }
+      ]
+    },
+    {
+      "chapter": "Chapter 4",
+      "use": "theme",
+      "source_filename": "4. Federal Hospitality.mp3",
+      "filename": "chapter-04-theme.mp3",
+      "id3_title": "4. Federal Hospitality",
+      "id3_artist": "s3pehR",
+      "bytes": 3289516,
+      "sha256": "af482da4527bbcc744cf508565195648ecd7636ab1f67b53b82491ab01dd1610",
+      "source_sha256": "af482da4527bbcc744cf508565195648ecd7636ab1f67b53b82491ab01dd1610",
+      "codec": "mp3",
+      "sample_rate_hz": 48000,
+      "channels": 2,
+      "bitrate_bps": 128000,
+      "audio_duration_seconds": 154.496,
+      "integrated_lufs": -16.9,
+      "loudness_range_lu": 11.9,
+      "sample_peak_dbfs": -1.0,
+      "true_peak_dbtp": -1.0,
+      "samples_at_or_above_full_scale": 0,
+      "total_channel_samples": 0,
+      "silence_intervals_seconds": [
+        [
+          152.118,
+          152.624
+        ],
+        [
+          152.625,
+          152.967
+        ],
+        [
+          153.089,
+          154.49
+        ]
+      ],
+      "leading_silence_seconds": 0.0,
+      "trailing_silence_seconds": 1.407,
+      "first_momentary_audible_seconds": 7.5,
+      "embedded_cover": [
+        {
+          "format": "mjpeg",
+          "width": 1408,
+          "height": 768
+        }
+      ],
+      "entry_seconds": 19.5,
+      "opening_2_15s_lufs": -39.2,
+      "chosen_2_15s_lufs": -16.5,
+      "chosen_4_4s_lufs": -16.6
+    },
+    {
+      "chapter": "Chapter 5",
+      "use": "bgm",
+      "source_filename": "5. Wanted_ Steve Mercer (BGM).mp3",
+      "filename": "chapter-05-bgm.mp3",
+      "id3_title": "5. Wanted: Steve Mercer (BGM)",
+      "id3_artist": "s3pehR",
+      "bytes": 3283491,
+      "sha256": "f2891bf29c20765b71a2dc6ef06ee1f900a3f14e3aae8d4ca75218662f64ce3e",
+      "source_sha256": "f2891bf29c20765b71a2dc6ef06ee1f900a3f14e3aae8d4ca75218662f64ce3e",
+      "codec": "mp3",
+      "sample_rate_hz": 48000,
+      "channels": 2,
+      "bitrate_bps": 128000,
+      "audio_duration_seconds": 156.075,
+      "integrated_lufs": -14.0,
+      "loudness_range_lu": 9.1,
+      "sample_peak_dbfs": -0.8,
+      "true_peak_dbtp": -0.8,
+      "samples_at_or_above_full_scale": 0,
+      "total_channel_samples": 0,
+      "silence_intervals_seconds": [
+        [
+          0.0,
+          0.474
+        ],
+        [
+          155.035,
+          156.075
+        ]
+      ],
+      "leading_silence_seconds": 0.474,
+      "trailing_silence_seconds": 1.04,
+      "first_momentary_audible_seconds": 1.3,
+      "embedded_cover": [
+        {
+          "format": "mjpeg",
+          "width": 1408,
+          "height": 768
+        }
+      ]
+    },
+    {
+      "chapter": "Chapter 5",
+      "use": "theme",
+      "source_filename": "5. Wanted_ Steve Mercer.mp3",
+      "filename": "chapter-05-theme.mp3",
+      "id3_title": "5. Wanted: Steve Mercer",
+      "id3_artist": "s3pehR",
+      "bytes": 3566578,
+      "sha256": "6485face07af130a58661041365c4f4d556e83804b25427ef760cee55f3e8aeb",
+      "source_sha256": "6485face07af130a58661041365c4f4d556e83804b25427ef760cee55f3e8aeb",
+      "codec": "mp3",
+      "sample_rate_hz": 48000,
+      "channels": 2,
+      "bitrate_bps": 128000,
+      "audio_duration_seconds": 154.048,
+      "integrated_lufs": -15.8,
+      "loudness_range_lu": 11.5,
+      "sample_peak_dbfs": -0.5,
+      "true_peak_dbtp": -0.5,
+      "samples_at_or_above_full_scale": 0,
+      "total_channel_samples": 0,
+      "silence_intervals_seconds": [],
+      "leading_silence_seconds": 0.0,
+      "trailing_silence_seconds": 0.0,
+      "first_momentary_audible_seconds": 0.4,
+      "embedded_cover": [
+        {
+          "format": "mjpeg",
+          "width": 1408,
+          "height": 768
+        }
+      ],
+      "entry_seconds": 4.9,
+      "opening_2_15s_lufs": -22.1,
+      "chosen_2_15s_lufs": -20.9,
+      "chosen_4_4s_lufs": -20.8
+    },
+    {
+      "chapter": "Chapter 6",
+      "use": "bgm",
+      "source_filename": "6. Iris (BGM).mp3",
+      "filename": "chapter-06-bgm.mp3",
+      "id3_title": "6. Iris (BGM)",
+      "id3_artist": "s3pehR",
+      "bytes": 3799401,
+      "sha256": "3dbfecd70834faf5353db46774f552dde60297d07bde176784ba3783a3309b76",
+      "source_sha256": "3dbfecd70834faf5353db46774f552dde60297d07bde176784ba3783a3309b76",
+      "codec": "mp3",
+      "sample_rate_hz": 48000,
+      "channels": 2,
+      "bitrate_bps": 128000,
+      "audio_duration_seconds": 178.901,
+      "integrated_lufs": -16.2,
+      "loudness_range_lu": 12.5,
+      "sample_peak_dbfs": -0.6,
+      "true_peak_dbtp": -0.6,
+      "samples_at_or_above_full_scale": 0,
+      "total_channel_samples": 0,
+      "silence_intervals_seconds": [
+        [
+          177.592,
+          178.901
+        ]
+      ],
+      "leading_silence_seconds": 0.0,
+      "trailing_silence_seconds": 1.309,
+      "first_momentary_audible_seconds": 0.4,
+      "embedded_cover": [
+        {
+          "format": "mjpeg",
+          "width": 1408,
+          "height": 768
+        }
+      ]
+    },
+    {
+      "chapter": "Chapter 6",
+      "use": "theme",
+      "source_filename": "6. Iris.mp3",
+      "filename": "chapter-06-theme.mp3",
+      "id3_title": "6. Iris",
+      "id3_artist": "s3pehR",
+      "bytes": 3549132,
+      "sha256": "62a4499447b09fad12a96d87b66d9ab606b240221d91e7562ecc3e0d1c405308",
+      "source_sha256": "62a4499447b09fad12a96d87b66d9ab606b240221d91e7562ecc3e0d1c405308",
+      "codec": "mp3",
+      "sample_rate_hz": 48000,
+      "channels": 2,
+      "bitrate_bps": 128000,
+      "audio_duration_seconds": 177.984,
+      "integrated_lufs": -14.4,
+      "loudness_range_lu": 14.9,
+      "sample_peak_dbfs": -1.2,
+      "true_peak_dbtp": -1.1,
+      "samples_at_or_above_full_scale": 0,
+      "total_channel_samples": 0,
+      "silence_intervals_seconds": [],
+      "leading_silence_seconds": 0.0,
+      "trailing_silence_seconds": 0.0,
+      "first_momentary_audible_seconds": 3.6,
+      "embedded_cover": [
+        {
+          "format": "mjpeg",
+          "width": 1408,
+          "height": 768
+        }
+      ],
+      "entry_seconds": 19.6,
+      "opening_2_15s_lufs": -35.1,
+      "chosen_2_15s_lufs": -19.4,
+      "chosen_4_4s_lufs": -20.0
+    },
+    {
+      "chapter": "Interlude 2",
+      "use": "bgm",
+      "source_filename": "Interlude. Nora (BGM).mp3",
+      "filename": "interlude-nora-bgm.mp3",
+      "id3_title": "Interlude. Nora (BGM)",
+      "id3_artist": "s3pehR",
+      "bytes": 3123699,
+      "sha256": "e24fc6d9682a6987f676a890e78fd7660aeb270cd05a283f80d6e2bf78ad9827",
+      "source_sha256": "e24fc6d9682a6987f676a890e78fd7660aeb270cd05a283f80d6e2bf78ad9827",
+      "codec": "mp3",
+      "sample_rate_hz": 48000,
+      "channels": 2,
+      "bitrate_bps": 128000,
+      "audio_duration_seconds": 152.363,
+      "integrated_lufs": -16.2,
+      "loudness_range_lu": 7.1,
+      "sample_peak_dbfs": -0.2,
+      "true_peak_dbtp": -0.2,
+      "samples_at_or_above_full_scale": 0,
+      "total_channel_samples": 0,
+      "silence_intervals_seconds": [
+        [
+          151.944,
+          152.363
+        ]
+      ],
+      "leading_silence_seconds": 0.0,
+      "trailing_silence_seconds": 0.419,
+      "first_momentary_audible_seconds": 0.4,
+      "embedded_cover": [
+        {
+          "format": "mjpeg",
+          "width": 1408,
+          "height": 768
+        }
+      ]
+    },
+    {
+      "chapter": "Interlude 2",
+      "use": "theme",
+      "source_filename": "Interlude. Nora.mp3",
+      "filename": "interlude-nora-theme.mp3",
+      "id3_title": "Interlude. Nora",
+      "id3_artist": "s3pehR",
+      "bytes": 3197755,
+      "sha256": "20efa3ae0e096f5546f32c3f667df7881f18f92d2e92177d3d333114b6647639",
+      "source_sha256": "20efa3ae0e096f5546f32c3f667df7881f18f92d2e92177d3d333114b6647639",
+      "codec": "mp3",
+      "sample_rate_hz": 48000,
+      "channels": 2,
+      "bitrate_bps": 128000,
+      "audio_duration_seconds": 163.029,
+      "integrated_lufs": -15.3,
+      "loudness_range_lu": 14.8,
+      "sample_peak_dbfs": -0.5,
+      "true_peak_dbtp": -0.5,
+      "samples_at_or_above_full_scale": 0,
+      "total_channel_samples": 0,
+      "silence_intervals_seconds": [
+        [
+          160.465,
+          163.029
+        ]
+      ],
+      "leading_silence_seconds": 0.0,
+      "trailing_silence_seconds": 2.564,
+      "first_momentary_audible_seconds": 0.4,
+      "embedded_cover": [
+        {
+          "format": "mjpeg",
+          "width": 1408,
+          "height": 768
+        }
+      ],
+      "entry_seconds": 19.5,
+      "opening_2_15s_lufs": -26.2,
+      "chosen_2_15s_lufs": -17.6,
+      "chosen_4_4s_lufs": -17.2
+    },
+    {
+      "chapter": "Chapter 7",
+      "use": "bgm",
+      "source_filename": "7. The President's Other Appointment (BGM).mp3",
+      "filename": "chapter-07-bgm.mp3",
+      "id3_title": "7. The President's Other Appointment (BGM)",
+      "id3_artist": "s3pehR",
+      "bytes": 3503260,
+      "sha256": "e7217c7c3ee0742f020f71ed0531f6477955cf0080d970d04e307fc084bfa14b",
+      "source_sha256": "e7217c7c3ee0742f020f71ed0531f6477955cf0080d970d04e307fc084bfa14b",
+      "codec": "mp3",
+      "sample_rate_hz": 48000,
+      "channels": 2,
+      "bitrate_bps": 128000,
+      "audio_duration_seconds": 175.339,
+      "integrated_lufs": -15.6,
+      "loudness_range_lu": 6.5,
+      "sample_peak_dbfs": -0.8,
+      "true_peak_dbtp": -0.8,
+      "samples_at_or_above_full_scale": 0,
+      "total_channel_samples": 0,
+      "silence_intervals_seconds": [
+        [
+          174.725,
+          175.339
+        ]
+      ],
+      "leading_silence_seconds": 0.0,
+      "trailing_silence_seconds": 0.614,
+      "first_momentary_audible_seconds": 4.9,
+      "embedded_cover": [
+        {
+          "format": "mjpeg",
+          "width": 1408,
+          "height": 768
+        }
+      ]
+    },
+    {
+      "chapter": "Chapter 7",
+      "use": "theme",
+      "source_filename": "7. The President's Other Appointment.mp3",
+      "filename": "chapter-07-theme.mp3",
+      "id3_title": "7. The President's Other Appointment",
+      "id3_artist": "s3pehR",
+      "bytes": 3671576,
+      "sha256": "cefccf845b27207bfe369f50cae9d3aee7b18437ccf4cb00563dc0e65921cfc4",
+      "source_sha256": "cefccf845b27207bfe369f50cae9d3aee7b18437ccf4cb00563dc0e65921cfc4",
+      "codec": "mp3",
+      "sample_rate_hz": 48000,
+      "channels": 2,
+      "bitrate_bps": 128000,
+      "audio_duration_seconds": 178.645,
+      "integrated_lufs": -15.1,
+      "loudness_range_lu": 7.9,
+      "sample_peak_dbfs": -0.7,
+      "true_peak_dbtp": -0.7,
+      "samples_at_or_above_full_scale": 0,
+      "total_channel_samples": 0,
+      "silence_intervals_seconds": [
+        [
+          177.514,
+          178.645
+        ]
+      ],
+      "leading_silence_seconds": 0.0,
+      "trailing_silence_seconds": 1.131,
+      "first_momentary_audible_seconds": 0.9,
+      "embedded_cover": [
+        {
+          "format": "mjpeg",
+          "width": 1376,
+          "height": 768
+        }
+      ],
+      "entry_seconds": 0.3,
+      "opening_2_15s_lufs": -19.8,
+      "chosen_2_15s_lufs": -19.7,
+      "chosen_4_4s_lufs": -22.5
+    },
+    {
+      "chapter": "Chapter 8",
+      "use": "bgm",
+      "source_filename": "8. The Biggest Lie on Earth (BGM).mp3",
+      "filename": "chapter-08-bgm.mp3",
+      "id3_title": "8. The Biggest Lie on Earth (BGM)",
+      "id3_artist": "s3pehR",
+      "bytes": 3501279,
+      "sha256": "ca55d1b9fa3b8f78af0ce29aa7154161254b7bd10e51661552b9b89cbf46c29c",
+      "source_sha256": "ca55d1b9fa3b8f78af0ce29aa7154161254b7bd10e51661552b9b89cbf46c29c",
+      "codec": "mp3",
+      "sample_rate_hz": 48000,
+      "channels": 2,
+      "bitrate_bps": 128000,
+      "audio_duration_seconds": 170.923,
+      "integrated_lufs": -17.9,
+      "loudness_range_lu": 13.5,
+      "sample_peak_dbfs": -0.8,
+      "true_peak_dbtp": -0.8,
+      "samples_at_or_above_full_scale": 0,
+      "total_channel_samples": 0,
+      "silence_intervals_seconds": [
+        [
+          0.0,
+          0.483
+        ]
+      ],
+      "leading_silence_seconds": 0.483,
+      "trailing_silence_seconds": 0.0,
+      "first_momentary_audible_seconds": 1.8,
+      "embedded_cover": [
+        {
+          "format": "mjpeg",
+          "width": 1408,
+          "height": 768
+        }
+      ]
+    },
+    {
+      "chapter": "Chapter 8",
+      "use": "theme",
+      "source_filename": "8. The Biggest Lie on Earth.mp3",
+      "filename": "chapter-08-theme.mp3",
+      "id3_title": "8. The Biggest Lie on Earth",
+      "id3_artist": "s3pehR",
+      "bytes": 3506277,
+      "sha256": "118059d6b2784231d6c04d53bedbab8d9c711f5a412460bec9a3e13f8f425d7b",
+      "source_sha256": "118059d6b2784231d6c04d53bedbab8d9c711f5a412460bec9a3e13f8f425d7b",
+      "codec": "mp3",
+      "sample_rate_hz": 48000,
+      "channels": 2,
+      "bitrate_bps": 128000,
+      "audio_duration_seconds": 171.755,
+      "integrated_lufs": -15.8,
+      "loudness_range_lu": 9.6,
+      "sample_peak_dbfs": -0.5,
+      "true_peak_dbtp": -0.5,
+      "samples_at_or_above_full_scale": 0,
+      "total_channel_samples": 0,
+      "silence_intervals_seconds": [],
+      "leading_silence_seconds": 0.0,
+      "trailing_silence_seconds": 0.0,
+      "first_momentary_audible_seconds": 0.5,
+      "embedded_cover": [
+        {
+          "format": "mjpeg",
+          "width": 1408,
+          "height": 768
+        }
+      ],
+      "entry_seconds": 25.2,
+      "opening_2_15s_lufs": -22.3,
+      "chosen_2_15s_lufs": -19.8,
+      "chosen_4_4s_lufs": -20.0
+    },
+    {
+      "chapter": "Chapter 9",
+      "use": "bgm",
+      "source_filename": "9. The Long Patience (BGM).mp3",
+      "filename": "chapter-09-bgm.mp3",
+      "id3_title": "9. The Long Patience (BGM)",
+      "id3_artist": "s3pehR",
+      "bytes": 3714580,
+      "sha256": "1bd6e7ee4ba92f44caf131feec156e627bbc9f89851db13b4f41599a914d481c",
+      "source_sha256": "1bd6e7ee4ba92f44caf131feec156e627bbc9f89851db13b4f41599a914d481c",
+      "codec": "mp3",
+      "sample_rate_hz": 48000,
+      "channels": 2,
+      "bitrate_bps": 128000,
+      "audio_duration_seconds": 178.944,
+      "integrated_lufs": -15.8,
+      "loudness_range_lu": 11.5,
+      "sample_peak_dbfs": -0.8,
+      "true_peak_dbtp": -0.8,
+      "samples_at_or_above_full_scale": 0,
+      "total_channel_samples": 0,
+      "silence_intervals_seconds": [
+        [
+          0.0,
+          0.921
+        ],
+        [
+          177.848,
+          178.944
+        ]
+      ],
+      "leading_silence_seconds": 0.921,
+      "trailing_silence_seconds": 1.096,
+      "first_momentary_audible_seconds": 1.1,
+      "embedded_cover": [
+        {
+          "format": "mjpeg",
+          "width": 1408,
+          "height": 768
+        }
+      ]
+    },
+    {
+      "chapter": "Chapter 9",
+      "use": "theme",
+      "source_filename": "9. The Long Patience.mp3",
+      "filename": "chapter-09-theme.mp3",
+      "id3_title": "9. The Long Patience",
+      "id3_artist": "s3pehR",
+      "bytes": 3432952,
+      "sha256": "96c73cb4130a6702b071a913fbb4cfaea8b2bd81309f6a9df89c437f6d204462",
+      "source_sha256": "96c73cb4130a6702b071a913fbb4cfaea8b2bd81309f6a9df89c437f6d204462",
+      "codec": "mp3",
+      "sample_rate_hz": 48000,
+      "channels": 2,
+      "bitrate_bps": 128000,
+      "audio_duration_seconds": 174.293,
+      "integrated_lufs": -17.2,
+      "loudness_range_lu": 8.9,
+      "sample_peak_dbfs": -1.1,
+      "true_peak_dbtp": -1.1,
+      "samples_at_or_above_full_scale": 0,
+      "total_channel_samples": 0,
+      "silence_intervals_seconds": [
+        [
+          0.0,
+          0.82
+        ]
+      ],
+      "leading_silence_seconds": 0.82,
+      "trailing_silence_seconds": 0.0,
+      "first_momentary_audible_seconds": 0.9,
+      "embedded_cover": [
+        {
+          "format": "mjpeg",
+          "width": 1408,
+          "height": 768
+        }
+      ],
+      "entry_seconds": 0.2,
+      "opening_2_15s_lufs": -21.7,
+      "chosen_2_15s_lufs": -21.4,
+      "chosen_4_4s_lufs": -22.5
+    },
+    {
+      "chapter": "Chapter 10",
+      "use": "bgm",
+      "source_filename": "10. Good Morning, Bellwether (BGM).mp3",
+      "filename": "chapter-10-bgm.mp3",
+      "id3_title": "10. Good Morning, Bellwether (BGM)",
+      "id3_artist": "s3pehR",
+      "bytes": 3556656,
+      "sha256": "3713fc54a9a8d32954d5cb4735b3c7399eba318af778b6b02f458ae45e21653e",
+      "source_sha256": "3713fc54a9a8d32954d5cb4735b3c7399eba318af778b6b02f458ae45e21653e",
+      "codec": "mp3",
+      "sample_rate_hz": 48000,
+      "channels": 2,
+      "bitrate_bps": 128000,
+      "audio_duration_seconds": 172.736,
+      "integrated_lufs": -14.9,
+      "loudness_range_lu": 6.5,
+      "sample_peak_dbfs": -0.5,
+      "true_peak_dbtp": -0.5,
+      "samples_at_or_above_full_scale": 0,
+      "total_channel_samples": 0,
+      "silence_intervals_seconds": [
+        [
+          0.0,
+          0.486
+        ]
+      ],
+      "leading_silence_seconds": 0.486,
+      "trailing_silence_seconds": 0.0,
+      "first_momentary_audible_seconds": 1.4,
+      "embedded_cover": [
+        {
+          "format": "mjpeg",
+          "width": 1408,
+          "height": 768
+        }
+      ]
+    },
+    {
+      "chapter": "Chapter 10",
+      "use": "theme",
+      "source_filename": "10. Good Morning, Bellwether.mp3",
+      "filename": "chapter-10-theme.mp3",
+      "id3_title": "10. Good Morning, Bellwether",
+      "id3_artist": "s3pehR",
+      "bytes": 3593789,
+      "sha256": "74f55bc21c6196977c225f5c894044a313713755b3d0fd37fa7e89d0292d930a",
+      "source_sha256": "74f55bc21c6196977c225f5c894044a313713755b3d0fd37fa7e89d0292d930a",
+      "codec": "mp3",
+      "sample_rate_hz": 48000,
+      "channels": 2,
+      "bitrate_bps": 128000,
+      "audio_duration_seconds": 179.541,
+      "integrated_lufs": -17.1,
+      "loudness_range_lu": 11.8,
+      "sample_peak_dbfs": -1.0,
+      "true_peak_dbtp": -1.0,
+      "samples_at_or_above_full_scale": 0,
+      "total_channel_samples": 0,
+      "silence_intervals_seconds": [
+        [
+          0.0,
+          0.773
+        ],
+        [
+          177.299,
+          179.541
+        ]
+      ],
+      "leading_silence_seconds": 0.773,
+      "trailing_silence_seconds": 2.242,
+      "first_momentary_audible_seconds": 1.1,
+      "embedded_cover": [
+        {
+          "format": "mjpeg",
+          "width": 1408,
+          "height": 768
+        }
+      ],
+      "entry_seconds": 10.9,
+      "opening_2_15s_lufs": -28.4,
+      "chosen_2_15s_lufs": -21.4,
+      "chosen_4_4s_lufs": -21.0
+    },
+    {
+      "chapter": "Epilogue",
+      "use": "bgm",
+      "source_filename": "Epilogue (BGM).mp3",
+      "filename": "epilogue-bgm.mp3",
+      "id3_title": "Epilogue (BGM)",
+      "id3_artist": "s3pehR",
+      "bytes": 3433112,
+      "sha256": "855dcaf2d9b0c24e52766e62a8c5a4ec7a1a26d3cb00472d383fd6637eb9dec9",
+      "source_sha256": "855dcaf2d9b0c24e52766e62a8c5a4ec7a1a26d3cb00472d383fd6637eb9dec9",
+      "codec": "mp3",
+      "sample_rate_hz": 48000,
+      "channels": 2,
+      "bitrate_bps": 128000,
+      "audio_duration_seconds": 174.955,
+      "integrated_lufs": -16.8,
+      "loudness_range_lu": 16.3,
+      "sample_peak_dbfs": -0.6,
+      "true_peak_dbtp": -0.6,
+      "samples_at_or_above_full_scale": 0,
+      "total_channel_samples": 0,
+      "silence_intervals_seconds": [
+        [
+          0.0,
+          0.43
+        ]
+      ],
+      "leading_silence_seconds": 0.43,
+      "trailing_silence_seconds": 0.0,
+      "first_momentary_audible_seconds": 0.8,
+      "embedded_cover": [
+        {
+          "format": "mjpeg",
+          "width": 1408,
+          "height": 768
+        }
+      ]
+    },
+    {
+      "chapter": "Epilogue",
+      "use": "theme",
+      "source_filename": "Epilogue.mp3",
+      "filename": "epilogue-theme.mp3",
+      "id3_title": "Epilogue",
+      "id3_artist": "s3pehR",
+      "bytes": 1195637,
+      "sha256": "c567cf7962fb76fa78bad91d6a61fc430a3ab95c4fa4b7ddb6761daa681277cc",
+      "source_sha256": "c567cf7962fb76fa78bad91d6a61fc430a3ab95c4fa4b7ddb6761daa681277cc",
+      "codec": "mp3",
+      "sample_rate_hz": 48000,
+      "channels": 2,
+      "bitrate_bps": 128000,
+      "audio_duration_seconds": 19.925,
+      "integrated_lufs": -17.1,
+      "loudness_range_lu": 11.5,
+      "sample_peak_dbfs": -3.0,
+      "true_peak_dbtp": -3.0,
+      "samples_at_or_above_full_scale": 0,
+      "total_channel_samples": 0,
+      "silence_intervals_seconds": [
+        [
+          19.401,
+          19.925
+        ]
+      ],
+      "leading_silence_seconds": 0.0,
+      "trailing_silence_seconds": 0.524,
+      "first_momentary_audible_seconds": 0.4,
+      "embedded_cover": [
+        {
+          "format": "mjpeg",
+          "width": 1408,
+          "height": 768
+        }
+      ],
+      "entry_seconds": 0.0,
+      "opening_2_15s_lufs": -19.6,
+      "chosen_2_15s_lufs": -19.6,
+      "chosen_4_4s_lufs": -15.1
+    }
+  ]
+}

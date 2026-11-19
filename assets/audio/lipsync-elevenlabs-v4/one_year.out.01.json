@@ -1,0 +1,88 @@
+{
+  "id": "one_year.out.01",
+  "speaker": "steve",
+  "audio": "res://assets/audio/voices/elevenlabs-v4/one_year.out.01.wav",
+  "audio_sha256": "934f69df9b89116097cc61511e69062732077b7979867d68586e17162769974c",
+  "transcript": "Good morning, Bellwether.",
+  "transcript_sha256": "a22028f06c6cb165525de691c49a8289035addd1a61b99f94706d02caf6f23b2",
+  "generator": "Rhubarb Lip Sync version 1.14.0",
+  "generator_sha256": "93fa4a16ae1cc88a89d59743057521407843fc7139e23808c9e6587c6cc946d3",
+  "seconds": 1.489,
+  "generation_seconds": 2.66,
+  "cues": [
+    {
+      "start": 0.0,
+      "end": 0.02,
+      "value": "X"
+    },
+    {
+      "start": 0.02,
+      "end": 0.16,
+      "value": "F"
+    },
+    {
+      "start": 0.16,
+      "end": 0.24,
+      "value": "A"
+    },
+    {
+      "start": 0.24,
+      "end": 0.33,
+      "value": "E"
+    },
+    {
+      "start": 0.33,
+      "end": 0.47,
+      "value": "B"
+    },
+    {
+      "start": 0.47,
+      "end": 0.55,
+      "value": "A"
+    },
+    {
+      "start": 0.55,
+      "end": 0.67,
+      "value": "C"
+    },
+    {
+      "start": 0.67,
+      "end": 0.74,
+      "value": "H"
+    },
+    {
+      "start": 0.74,
+      "end": 0.81,
+      "value": "F"
+    },
+    {
+      "start": 0.81,
+      "end": 0.88,
+      "value": "C"
+    },
+    {
+      "start": 0.88,
+      "end": 0.95,
+      "value": "B"
+    },
+    {
+      "start": 0.95,
+      "end": 1.09,
+      "value": "E"
+    },
+    {
+      "start": 1.09,
+      "end": 1.23,
+      "value": "B"
+    },
+    {
+      "start": 1.23,
+      "end": 1.48,
+      "value": "X"
+    }
+  ],
+  "raw_sha256": "a9fd881c00497f0ea9026696f3e8c1b6a8f95a4f2d4c785bba969dc4878b8849",
+  "visual_timing_reviewed": false,
+  "cloud_credits": 0,
+  "uploads": false
+}

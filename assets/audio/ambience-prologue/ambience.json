@@ -1,0 +1,83 @@
+{
+  "p_veyr": {
+    "scene": "Veyr",
+    "audible_elements": "Wind across the gallery and two answering tower choirs",
+    "seed": 27319,
+    "sample_rate": 48000,
+    "channels": 2,
+    "frames": 1728000,
+    "loop_seconds": 36,
+    "loop_start": 0,
+    "loop_end": 1728000,
+    "master_pcm_bits": 24,
+    "master_sha256": "280c82c883603e4ecfee5f9674b0485fb6d35baaac4f173e0ddd48d49e87dc06",
+    "runtime_file": "res://assets/audio/ambience-prologue/p_veyr.ogg",
+    "runtime_sha256": "34db1508e3a92a536b33bdbf0cded41fa820387be6cb8979d5faab66d0671910",
+    "runtime_bytes": 590870,
+    "integrated_lufs": -22.1,
+    "true_peak_dbtp": -9.4,
+    "channel_correlation": 0.429,
+    "wrap_delta_dBFS": [
+      -46.8,
+      -46.7
+    ],
+    "runtime_gain_db": -12,
+    "dialogue_test": "p_veyr.in.02",
+    "dialogue_lufs": -23.3,
+    "under_dialogue_db": 10.8
+  },
+  "p_meeting": {
+    "scene": "Sentinel Point",
+    "audible_elements": "Ventilation, writing at the table and settling timber",
+    "seed": 48209,
+    "sample_rate": 48000,
+    "channels": 2,
+    "frames": 1968000,
+    "loop_seconds": 41,
+    "loop_start": 0,
+    "loop_end": 1968000,
+    "master_pcm_bits": 24,
+    "master_sha256": "b6007a3eddb9439e9aa1094482ec85df2859e6d473856741e36af27954f24c31",
+    "runtime_file": "res://assets/audio/ambience-prologue/p_meeting.ogg",
+    "runtime_sha256": "ef095159a4b9ebf7a406c8a9a4c1dc9afb1683f018676398f1e1734ca6c5c1b1",
+    "runtime_bytes": 659452,
+    "integrated_lufs": -25.1,
+    "true_peak_dbtp": -9.0,
+    "channel_correlation": 0.755,
+    "wrap_delta_dBFS": [
+      -95.3,
+      -62.2
+    ],
+    "runtime_gain_db": -12,
+    "dialogue_test": "p_meeting.in.01",
+    "dialogue_lufs": -21.6,
+    "under_dialogue_db": 15.5
+  },
+  "p_bay": {
+    "scene": "Bellwether Bay",
+    "audible_elements": "Water against both sides of the boat, hull flex and a distant mooring",
+    "seed": 71903,
+    "sample_rate": 48000,
+    "channels": 2,
+    "frames": 2112000,
+    "loop_seconds": 44,
+    "loop_start": 0,
+    "loop_end": 2112000,
+    "master_pcm_bits": 24,
+    "master_sha256": "27bd7571fca76ea13fb866ab5ca574e0344c15710e92cf5e6e4b12b08bf744ad",
+    "runtime_file": "res://assets/audio/ambience-prologue/p_bay.ogg",
+    "runtime_sha256": "adf93be6cc40c17e6c49873b96dc5a11fabf9b3fafb3b947a081dd3a8ff631fb",
+    "runtime_bytes": 718056,
+    "integrated_lufs": -21.1,
+    "true_peak_dbtp": -2.3,
+    "channel_correlation": 0.521,
+    "wrap_delta_dBFS": [
+      -53.7,
+      -49.6
+    ],
+    "runtime_gain_db": -12,
+    "dialogue_test": "p_bay.in.01",
+    "dialogue_lufs": -19.6,
+    "under_dialogue_db": 13.5
+  }
+}

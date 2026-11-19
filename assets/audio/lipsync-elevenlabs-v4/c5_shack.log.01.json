@@ -1,0 +1,98 @@
+{
+  "id": "c5_shack.log.01",
+  "speaker": "frank",
+  "audio": "res://assets/audio/voices/elevenlabs-v4/c5_shack.log.01.wav",
+  "audio_sha256": "722c1d7b5b700cb2fe2d8fa67f5a8fc01449e075790be8fed36d54d9a370b99c",
+  "transcript": "It isn\u2019t one voice. It\u2019s a choir.",
+  "transcript_sha256": "dea1201333a5249a7ae30825a9fe4f1337c62cc14e285861f290db08a310a3d6",
+  "generator": "Rhubarb Lip Sync version 1.14.0",
+  "generator_sha256": "93fa4a16ae1cc88a89d59743057521407843fc7139e23808c9e6587c6cc946d3",
+  "seconds": 3.0040833333333334,
+  "generation_seconds": 6.374,
+  "cues": [
+    {
+      "start": 0.0,
+      "end": 0.04,
+      "value": "X"
+    },
+    {
+      "start": 0.04,
+      "end": 0.62,
+      "value": "B"
+    },
+    {
+      "start": 0.62,
+      "end": 0.83,
+      "value": "F"
+    },
+    {
+      "start": 0.83,
+      "end": 0.97,
+      "value": "C"
+    },
+    {
+      "start": 0.97,
+      "end": 1.11,
+      "value": "G"
+    },
+    {
+      "start": 1.11,
+      "end": 1.18,
+      "value": "E"
+    },
+    {
+      "start": 1.18,
+      "end": 1.6,
+      "value": "B"
+    },
+    {
+      "start": 1.6,
+      "end": 1.94,
+      "value": "X"
+    },
+    {
+      "start": 1.94,
+      "end": 2.09,
+      "value": "B"
+    },
+    {
+      "start": 2.09,
+      "end": 2.16,
+      "value": "C"
+    },
+    {
+      "start": 2.16,
+      "end": 2.3,
+      "value": "B"
+    },
+    {
+      "start": 2.3,
+      "end": 2.44,
+      "value": "F"
+    },
+    {
+      "start": 2.44,
+      "end": 2.51,
+      "value": "C"
+    },
+    {
+      "start": 2.51,
+      "end": 2.58,
+      "value": "B"
+    },
+    {
+      "start": 2.58,
+      "end": 2.79,
+      "value": "E"
+    },
+    {
+      "start": 2.79,
+      "end": 3.0,
+      "value": "X"
+    }
+  ],
+  "raw_sha256": "9eb072b4f19b5578d0bf3954674010400ce26ec3116528bf6c2e63696ae19f13",
+  "visual_timing_reviewed": false,
+  "cloud_credits": 0,
+  "uploads": false
+}

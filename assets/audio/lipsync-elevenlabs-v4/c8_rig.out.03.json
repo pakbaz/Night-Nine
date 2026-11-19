@@ -1,0 +1,88 @@
+{
+  "id": "c8_rig.out.03",
+  "speaker": "stephen",
+  "audio": "res://assets/audio/voices/elevenlabs-v4/c8_rig.out.03.wav",
+  "audio_sha256": "bca969d906cdb319228379fee455b06d53cf80bb13df7a2a4ca8bef290bbe9c4",
+  "transcript": "Frank. I\u2019ll write it on my hand.",
+  "transcript_sha256": "8c6dd001d60f9b9a709c503e20ac3b4df72c880dcc973254ece6f8abaccfbf49",
+  "generator": "Rhubarb Lip Sync version 1.14.0",
+  "generator_sha256": "93fa4a16ae1cc88a89d59743057521407843fc7139e23808c9e6587c6cc946d3",
+  "seconds": 2.351020833333333,
+  "generation_seconds": 4.47,
+  "cues": [
+    {
+      "start": 0.0,
+      "end": 0.05,
+      "value": "X"
+    },
+    {
+      "start": 0.05,
+      "end": 0.16,
+      "value": "G"
+    },
+    {
+      "start": 0.16,
+      "end": 0.23,
+      "value": "B"
+    },
+    {
+      "start": 0.23,
+      "end": 0.3,
+      "value": "C"
+    },
+    {
+      "start": 0.3,
+      "end": 0.58,
+      "value": "B"
+    },
+    {
+      "start": 0.58,
+      "end": 1.02,
+      "value": "X"
+    },
+    {
+      "start": 1.02,
+      "end": 1.46,
+      "value": "B"
+    },
+    {
+      "start": 1.46,
+      "end": 1.56,
+      "value": "D"
+    },
+    {
+      "start": 1.56,
+      "end": 1.6,
+      "value": "C"
+    },
+    {
+      "start": 1.6,
+      "end": 1.68,
+      "value": "A"
+    },
+    {
+      "start": 1.68,
+      "end": 1.72,
+      "value": "B"
+    },
+    {
+      "start": 1.72,
+      "end": 1.9,
+      "value": "C"
+    },
+    {
+      "start": 1.9,
+      "end": 2.18,
+      "value": "B"
+    },
+    {
+      "start": 2.18,
+      "end": 2.35,
+      "value": "X"
+    }
+  ],
+  "raw_sha256": "f34506373e9f204fa5a5e96d0c1dc3b01e100c0b58c342a1d68a10735520afc5",
+  "visual_timing_reviewed": false,
+  "cloud_credits": 0,
+  "uploads": false
+}

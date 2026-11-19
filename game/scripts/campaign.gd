@@ -127,6 +127,34 @@ func _ready() -> void:
 	menu.show()
 	var previous := saves.read_slot("autosave")
 	_status("Continue your saved game, or start a new game from the beginning." if previous.get("ok",false) else "Choose New game to begin. The story starts with a short illustrated prologue.")
+	if "--campaign-qa" in OS.get_cmdline_user_args():
+		var runner: Node = load("res://tests/campaign_runtime_qa.gd").new()
+		runner.set("game", self)
+		add_child(runner)
+	if "--illustrated-prologue-qa" in OS.get_cmdline_user_args():
+		var runner: Node = load("res://tests/illustrated_prologue_qa.gd").new()
+		runner.set("game", self)
+		add_child(runner)
+	if "--campaign-input-qa" in OS.get_cmdline_user_args():
+		var runner: Node = load("res://tests/campaign_input_qa.gd").new()
+		runner.set("game", self)
+		add_child(runner)
+	if "--showreel" in OS.get_cmdline_user_args():
+		var reel: Node = load("res://tests/showreel_capture.gd").new()
+		reel.set("game", self)
+		add_child(reel)
+	if "--story-qa" in OS.get_cmdline_user_args():
+		var runner: Node = load("res://tests/story_flow_qa.gd").new()
+		runner.set("game", self)
+		add_child(runner)
+	if "--tape-qa" in OS.get_cmdline_user_args():
+		var runner: Node = load("res://tests/tape_compare_qa.gd").new()
+		runner.set("game", self)
+		add_child(runner)
+	if "--staging-qa" in OS.get_cmdline_user_args() or "--staging-capture" in OS.get_cmdline_user_args():
+		var runner: Node = load("res://tests/campaign_staging_qa.gd").new()
+		runner.set("game", self)
+		add_child(runner)
 	get_tree().auto_accept_quit = false
 
 func _theme() -> Theme:

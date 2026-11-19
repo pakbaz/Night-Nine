@@ -1,0 +1,48 @@
+{
+  "id": "c9_choir.in.02",
+  "speaker": "choir",
+  "audio": "res://assets/audio/voices/elevenlabs-v4/c9_choir.in.02.wav",
+  "audio_sha256": "a206ee0c3b84555dbca03e6e7809f116b1f5bdbc1e01f2bc770424db29f9eca4",
+  "transcript": "Stop.",
+  "transcript_sha256": "8dfd80ba047e575b1a31bffa865145de0b7e909ecc2e6c61955e4c98f7b254bf",
+  "generator": "Rhubarb Lip Sync version 1.14.0",
+  "generator_sha256": "93fa4a16ae1cc88a89d59743057521407843fc7139e23808c9e6587c6cc946d3",
+  "seconds": 0.7575625,
+  "generation_seconds": 2.584,
+  "cues": [
+    {
+      "start": 0.0,
+      "end": 0.04,
+      "value": "X"
+    },
+    {
+      "start": 0.04,
+      "end": 0.14,
+      "value": "B"
+    },
+    {
+      "start": 0.14,
+      "end": 0.28,
+      "value": "D"
+    },
+    {
+      "start": 0.28,
+      "end": 0.35,
+      "value": "C"
+    },
+    {
+      "start": 0.35,
+      "end": 0.63,
+      "value": "A"
+    },
+    {
+      "start": 0.63,
+      "end": 0.75,
+      "value": "X"
+    }
+  ],
+  "raw_sha256": "e5b0572f36ce3919a0fd853f499d8d1690388819f4751d33208d6cd67a03ac15",
+  "visual_timing_reviewed": false,
+  "cloud_credits": 0,
+  "uploads": false
+}

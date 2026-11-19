@@ -1,0 +1,125 @@
+{
+  "captured": false,
+  "checks": 149,
+  "failures": [],
+  "measurements": {
+    "c10_town.console": {
+      "action": "operate",
+      "approach_seconds_simulated": 0.8,
+      "asset": "steve-operate.webp",
+      "contact_in_body_heights": [
+        0.285084307193756,
+        -0.558830142021179
+      ],
+      "finger_error_in_body_heights": 0.0202412192277082,
+      "registered_ground_error": 0.0,
+      "standing_height_art_px": 370.416666666667
+    },
+    "c10_town.wind": {
+      "action": "kneel",
+      "approach_seconds_simulated": 1.325,
+      "asset": "steve-kneel.webp",
+      "contact_in_body_heights": [
+        0.102764591574669,
+        -0.0816068649291992
+      ],
+      "finger_error_in_body_heights": 0.0386737350507949,
+      "registered_ground_error": 0.0,
+      "standing_height_art_px": 264.683326438621
+    },
+    "c1_escape.cross": {
+      "action": "kneel",
+      "approach_seconds_simulated": 1.2,
+      "asset": "steve-kneel.webp",
+      "contact_in_body_heights": [
+        0.0946939289569855,
+        -0.0697958171367645
+      ],
+      "finger_error_in_body_heights": 0.042415883589764,
+      "registered_ground_error": 0.0,
+      "standing_height_art_px": 490.0
+    },
+    "c1_escape.power": {
+      "action": "operate",
+      "approach_seconds_simulated": 0.725,
+      "asset": "steve-operate.webp",
+      "contact_in_body_heights": [
+        -0.284678727388382,
+        -0.642433524131775
+      ],
+      "finger_error_in_body_heights": 0.0686778940371605,
+      "registered_ground_error": 0.0,
+      "standing_height_art_px": 472.111145773052
+    },
+    "c1_flat.saturday": {
+      "action": "listen",
+      "approach_seconds_simulated": 2.3,
+      "asset": "steve-listen.webp",
+      "contact_in_body_heights": [
+        -0.0407702699303627,
+        -0.573331892490387
+      ],
+      "registered_ground_error": 0.0,
+      "standing_height_art_px": 588.664273216611
+    },
+    "c1_pier.bait": {
+      "action": "conversation",
+      "approach_seconds_simulated": 0.875,
+      "asset": "steve-idle.webp",
+      "contact_in_body_heights": [
+        0.360920071601868,
+        -0.108356185257435
+      ],
+      "registered_ground_error": 0.0,
+      "standing_height_art_px": 294.188998135653
+    },
+    "c3_house.crossword": {
+      "action": "read",
+      "approach_seconds_simulated": 2.45,
+      "asset": "steve-read.webp",
+      "contact_in_body_heights": [
+        0.0202589593827724,
+        -0.574056446552277
+      ],
+      "registered_ground_error": 0.0,
+      "standing_height_art_px": 631.819393034904
+    },
+    "c5_station.automation": {
+      "action": "operate",
+      "approach_seconds_simulated": 1.925,
+      "asset": "steve-operate.webp",
+      "contact_in_body_heights": [
+        0.296119958162308,
+        -0.544943153858185
+      ],
+      "finger_error_in_body_heights": 0.030016044496348,
+      "registered_ground_error": 0.0,
+      "standing_height_art_px": 437.660403461576
+    },
+    "c7_swap.bus": {
+      "action": "operate",
+      "approach_seconds_simulated": 0.675,
+      "asset": "steve-operate.webp",
+      "contact_in_body_heights": [
+        0.279482871294022,
+        -0.5670126080513
+      ],
+      "finger_error_in_body_heights": 0.0195415304078327,
+      "registered_ground_error": 0.0,
+      "standing_height_art_px": 509.51252746582
+    },
+    "i2_nora.pump": {
+      "action": "operate",
+      "approach_seconds_simulated": 1.35,
+      "asset": "nora-operate.webp",
+      "contact_in_body_heights": [
+        0.215284541249275,
+        -0.590659320354462
+      ],
+      "finger_error_in_body_heights": 0.104203275557232,
+      "registered_ground_error": 0.0,
+      "standing_height_art_px": 364.169316633358
+    }
+  },
+  "renderer": "forward_plus"
+}

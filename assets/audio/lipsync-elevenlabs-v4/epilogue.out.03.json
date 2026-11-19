@@ -1,0 +1,53 @@
+{
+  "id": "epilogue.out.03",
+  "speaker": "steve",
+  "audio": "res://assets/audio/voices/elevenlabs-v4/epilogue.out.03.wav",
+  "audio_sha256": "d1c2aa483324cd4ea16445cdebb72c296f466c719e85ef627266e7df2ff2c98f",
+  "transcript": "Every day.",
+  "transcript_sha256": "4d95e41f2953f8efb9a7b77d7fe0ed90417b5c93263286bffa6a384a50652f08",
+  "generator": "Rhubarb Lip Sync version 1.14.0",
+  "generator_sha256": "93fa4a16ae1cc88a89d59743057521407843fc7139e23808c9e6587c6cc946d3",
+  "seconds": 1.2277708333333333,
+  "generation_seconds": 2.473,
+  "cues": [
+    {
+      "start": 0.0,
+      "end": 0.06,
+      "value": "X"
+    },
+    {
+      "start": 0.06,
+      "end": 0.2,
+      "value": "C"
+    },
+    {
+      "start": 0.2,
+      "end": 0.27,
+      "value": "G"
+    },
+    {
+      "start": 0.27,
+      "end": 0.41,
+      "value": "B"
+    },
+    {
+      "start": 0.41,
+      "end": 0.69,
+      "value": "C"
+    },
+    {
+      "start": 0.69,
+      "end": 0.97,
+      "value": "B"
+    },
+    {
+      "start": 0.97,
+      "end": 1.22,
+      "value": "X"
+    }
+  ],
+  "raw_sha256": "539fd7b7e036ebd1635b537b350374dd90930250c3652586b3245cff765d5cd0",
+  "visual_timing_reviewed": false,
+  "cloud_credits": 0,
+  "uploads": false
+}

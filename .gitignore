@@ -2,3 +2,16 @@
 .DS_Store
 builds/
 export_credentials.cfg
+.tools/
+tmp/
+.playwright-mcp/
+__pycache__/
+*.pyc
+*.log
+*.tmp
+.env
+.env.*
+!.env.example
+.mcp.json
+mcp-config.json
+*.raw.json

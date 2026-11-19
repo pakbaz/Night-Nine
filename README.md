@@ -24,6 +24,10 @@ To play the prologue or one of ten cumulative chapters with this edition’s puz
 
 ## Build and test
 
+The private development branch includes the editable production art and audio masters in `assets/`, their preparation tools in `tools/`, and the runtime copies in `game/assets/`. Keep both forms: the masters are for editing, while the optimized runtime files are used by Godot. Temporary exports, engine caches, credentials and provider response dumps are excluded. [Asset layout](assets/README.md)
+
+For the complete native development suite, set `GODOT_BIN` to Godot 4.7.2 and run `bash tools/test-campaign.sh --render`. Use `NIGHT_NINE_QA_AUDIO_DRIVER=Dummy` when physical sound output is unavailable. The fixed version tags and chapter tags retain their original release contents.
+
 Install Godot's 4.7.2 desktop export templates from the editor for Mac and Windows builds. Choose the supplied macOS or Windows Desktop preset under **Project → Export**. From a clean checkout on macOS or Linux you can run the portable checkpoint test as follows.
 
 ```sh
@@ -54,3 +58,5 @@ In the soundtrack edition, you can use the same isolated save and QA directories
 You can play the official release for free. The Night Nine contributors license their original game code under GNU GPL version 3 only. You may share, modify or sell copies under the applicable terms. [GPLv3](LICENSE) · [Media terms](MEDIA.md) · [Third-party notices](game/LICENSES.txt)
 
 When publishing downloads, provide the matching complete corresponding source alongside the binaries. See [the GitHub publishing guide](PUBLISHING.md) for the local branch, annotated tags and release steps.
+
+The repository is private. GitHub Pages deployment has not been enabled. The current voice recordings are preserved while a new ElevenLabs cast is selected; no replacement recording should overwrite an approved take before review.

@@ -1,5 +1,7 @@
 {
   "base": "nora.webp",
+  "source": "assets/characters/campaign/masters/nora.png",
+  "source_sha256": "bf126ce45099d7bb1dc04d9871585dfd6b26c059e6873fa70bd8a2b45b9d63cf",
   "size": [
     846,
     1080
@@ -93,6 +95,10 @@
     "F": "mouth_round",
     "G": "mouth_parted",
     "H": "mouth_parted"
+  },
+  "sha256": {
+    "nora.webp": "d576a7071187c836af85eaba7cf96cd3235d58db1610755db5c81d764773522e",
+    "nora-face-atlas.png": "a4cd9563d412ad4fb5a08468bebe4b59f277e5554799fe82061f92007ff8826a"
   },
   "atlas": "nora-face-atlas.png",
   "eye_centers": [

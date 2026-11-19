@@ -1,0 +1,68 @@
+{
+  "id": "recording.greeting",
+  "speaker": "iris",
+  "audio": "res://assets/audio/voices/elevenlabs-v4/recording.greeting.wav",
+  "audio_sha256": "5d0317ff6c60299fe25e276b0d8f2dd7d45fea98ff641f575820f41e2521edbc",
+  "transcript": "Good morning, sleepyhead.",
+  "transcript_sha256": "203562c2b885b59668967e3dc607faabea86ea773a30ce2a9c6781254ad35355",
+  "generator": "Rhubarb Lip Sync version 1.14.0",
+  "generator_sha256": "93fa4a16ae1cc88a89d59743057521407843fc7139e23808c9e6587c6cc946d3",
+  "seconds": 1.9591875,
+  "generation_seconds": 2.755,
+  "cues": [
+    {
+      "start": 0.0,
+      "end": 0.06,
+      "value": "X"
+    },
+    {
+      "start": 0.06,
+      "end": 0.29,
+      "value": "B"
+    },
+    {
+      "start": 0.29,
+      "end": 0.37,
+      "value": "A"
+    },
+    {
+      "start": 0.37,
+      "end": 0.45,
+      "value": "E"
+    },
+    {
+      "start": 0.45,
+      "end": 0.94,
+      "value": "B"
+    },
+    {
+      "start": 0.94,
+      "end": 1.02,
+      "value": "A"
+    },
+    {
+      "start": 1.02,
+      "end": 1.13,
+      "value": "B"
+    },
+    {
+      "start": 1.13,
+      "end": 1.34,
+      "value": "C"
+    },
+    {
+      "start": 1.34,
+      "end": 1.69,
+      "value": "B"
+    },
+    {
+      "start": 1.69,
+      "end": 1.95,
+      "value": "X"
+    }
+  ],
+  "raw_sha256": "edf29156264a1c0ded3119b944ca0fc654563cb001e51246d6839effe38be938",
+  "visual_timing_reviewed": false,
+  "cloud_credits": 0,
+  "uploads": false
+}

@@ -1,0 +1,48 @@
+{
+  "id": "c8_rig.out.02",
+  "speaker": "steve",
+  "audio": "res://assets/audio/voices/elevenlabs-v4/c8_rig.out.02.wav",
+  "audio_sha256": "fd824b969c970df8128066790fd84cd58ab376fdecbe0b042bd2eb9d49873a4b",
+  "transcript": "Frank.",
+  "transcript_sha256": "a7e8f5fd8c73de55c1ff31ef8eedcd8db43cdc9f477904bc2f68c020f5fc0335",
+  "generator": "Rhubarb Lip Sync version 1.14.0",
+  "generator_sha256": "93fa4a16ae1cc88a89d59743057521407843fc7139e23808c9e6587c6cc946d3",
+  "seconds": 0.9142916666666666,
+  "generation_seconds": 2.006,
+  "cues": [
+    {
+      "start": 0.0,
+      "end": 0.03,
+      "value": "X"
+    },
+    {
+      "start": 0.03,
+      "end": 0.13,
+      "value": "G"
+    },
+    {
+      "start": 0.13,
+      "end": 0.2,
+      "value": "B"
+    },
+    {
+      "start": 0.2,
+      "end": 0.34,
+      "value": "C"
+    },
+    {
+      "start": 0.34,
+      "end": 0.62,
+      "value": "B"
+    },
+    {
+      "start": 0.62,
+      "end": 0.91,
+      "value": "X"
+    }
+  ],
+  "raw_sha256": "f2e0ba4375779bb409860c70e674fe368258b1f21e19476474cc4ca070ba84a5",
+  "visual_timing_reviewed": false,
+  "cloud_credits": 0,
+  "uploads": false
+}

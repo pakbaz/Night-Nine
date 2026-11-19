@@ -1,0 +1,48 @@
+{
+  "id": "c5_shack.in.03",
+  "speaker": "luis",
+  "audio": "res://assets/audio/voices/elevenlabs-v4/c5_shack.in.03.wav",
+  "audio_sha256": "9780a5bf641eb3078a5db18fb6dbc002cf9b93ef885facbceb2a294476d4c0be",
+  "transcript": "Eat first.",
+  "transcript_sha256": "6b73de2c0cb5bd44b07f690b5db62729747fa1fc9e6c1a48ded4703b331b55b8",
+  "generator": "Rhubarb Lip Sync version 1.14.0",
+  "generator_sha256": "93fa4a16ae1cc88a89d59743057521407843fc7139e23808c9e6587c6cc946d3",
+  "seconds": 0.9926666666666667,
+  "generation_seconds": 2.169,
+  "cues": [
+    {
+      "start": 0.0,
+      "end": 0.08,
+      "value": "X"
+    },
+    {
+      "start": 0.08,
+      "end": 0.25,
+      "value": "B"
+    },
+    {
+      "start": 0.25,
+      "end": 0.39,
+      "value": "G"
+    },
+    {
+      "start": 0.39,
+      "end": 0.6,
+      "value": "E"
+    },
+    {
+      "start": 0.6,
+      "end": 0.81,
+      "value": "B"
+    },
+    {
+      "start": 0.81,
+      "end": 0.99,
+      "value": "X"
+    }
+  ],
+  "raw_sha256": "06ef4f99092a23806f7c82ac98f3c831eb884e0c3c1bf1a349b044d0a3c6ef64",
+  "visual_timing_reviewed": false,
+  "cloud_credits": 0,
+  "uploads": false
+}

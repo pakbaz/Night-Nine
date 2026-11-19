@@ -1,0 +1,93 @@
+{
+  "id": "c6_iris.takes.01",
+  "speaker": "iris",
+  "audio": "res://assets/audio/voices/elevenlabs-v4/c6_iris.takes.01.wav",
+  "audio_sha256": "4972722349b946dcad457427fd239d54e757931d23d63e81a84a7103e81aea6a",
+  "transcript": "I stayed because I wanted to.",
+  "transcript_sha256": "de111de80a88d19e19bb541bb81fe5ea7b14ebb5d876e23a5a4b15c7f22fd49c",
+  "generator": "Rhubarb Lip Sync version 1.14.0",
+  "generator_sha256": "93fa4a16ae1cc88a89d59743057521407843fc7139e23808c9e6587c6cc946d3",
+  "seconds": 2.4293958333333334,
+  "generation_seconds": 4.557,
+  "cues": [
+    {
+      "start": 0.0,
+      "end": 0.04,
+      "value": "X"
+    },
+    {
+      "start": 0.04,
+      "end": 0.11,
+      "value": "C"
+    },
+    {
+      "start": 0.11,
+      "end": 0.32,
+      "value": "B"
+    },
+    {
+      "start": 0.32,
+      "end": 0.6,
+      "value": "C"
+    },
+    {
+      "start": 0.6,
+      "end": 0.81,
+      "value": "B"
+    },
+    {
+      "start": 0.81,
+      "end": 0.89,
+      "value": "A"
+    },
+    {
+      "start": 0.89,
+      "end": 0.98,
+      "value": "B"
+    },
+    {
+      "start": 0.98,
+      "end": 1.12,
+      "value": "C"
+    },
+    {
+      "start": 1.12,
+      "end": 1.26,
+      "value": "B"
+    },
+    {
+      "start": 1.26,
+      "end": 1.33,
+      "value": "C"
+    },
+    {
+      "start": 1.33,
+      "end": 1.54,
+      "value": "F"
+    },
+    {
+      "start": 1.54,
+      "end": 1.61,
+      "value": "E"
+    },
+    {
+      "start": 1.61,
+      "end": 1.75,
+      "value": "B"
+    },
+    {
+      "start": 1.75,
+      "end": 2.17,
+      "value": "F"
+    },
+    {
+      "start": 2.17,
+      "end": 2.42,
+      "value": "X"
+    }
+  ],
+  "raw_sha256": "26fc94dc331e994c39a2c1be1b500225677c22075b1613f4ddb27f5eba2c176a",
+  "visual_timing_reviewed": false,
+  "cloud_credits": 0,
+  "uploads": false
+}

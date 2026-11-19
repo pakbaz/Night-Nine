@@ -1,5 +1,7 @@
 {
   "base": "rafa.webp",
+  "source": "assets/characters/campaign/masters/rafa.png",
+  "source_sha256": "a47d8d72ec7052edbe8d52e255c266d5744b6c2d65bc797f7cd458aae0140ee9",
   "size": [
     939,
     1080
@@ -93,6 +95,10 @@
     "F": "mouth_round",
     "G": "mouth_parted",
     "H": "mouth_parted"
+  },
+  "sha256": {
+    "rafa.webp": "866efaa4aa2fecfafb2cfaae0b32b72af98483c1b094a9f5f7df4cf8d068d84d",
+    "rafa-face-atlas.png": "063b7decd8d38fb8110584d9e870b3d28c578dfae89d5ebda36c5aba95ddd59d"
   },
   "atlas": "rafa-face-atlas.png",
   "eye_centers": [

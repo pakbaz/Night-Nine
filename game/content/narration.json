@@ -1,0 +1,236 @@
+{
+  "schema": 1,
+  "voice": "Holden (ElevenLabs v4 via Higgsfield)",
+  "books": {
+    "opening": [
+      {
+        "file": "res://assets/audio/voices/narration/opening-01.wav",
+        "seconds": 3.587,
+        "caption": "Bellwether. A fishing town on the Pacific coast.",
+        "heard": "Bellwether, a fishing town on the Pacific coast.",
+        "word_edits": 0
+      },
+      {
+        "file": "res://assets/audio/voices/narration/opening-02.wav",
+        "seconds": 4.377,
+        "caption": "Six thousand people, one radio station, and a lot of fog.",
+        "heard": "6,000 people, one radio station, and a lot of fog.",
+        "word_edits": 1
+      },
+      {
+        "file": "res://assets/audio/voices/narration/opening-03.wav",
+        "seconds": 5.907,
+        "caption": "I’m Steve Mercer. For years I ran the night shift at KBWR, the town radio station.",
+        "heard": "I'm Steve Mercer. For years, I ran the night shift at KBWR, the town radio station.",
+        "word_edits": 0
+      },
+      {
+        "file": "res://assets/audio/voices/narration/opening-04.wav",
+        "seconds": 4.723,
+        "caption": "Nobody hears the night engineer. The night engineer hears everything.",
+        "heard": "Nobody hears the night engineer. The night engineer hears everything.",
+        "word_edits": 0
+      },
+      {
+        "file": "res://assets/audio/voices/narration/opening-05.wav",
+        "seconds": 3.06,
+        "caption": "My dad, Frank, taught me how to listen.",
+        "heard": "My dad, Frank, taught me how to listen.",
+        "word_edits": 0
+      },
+      {
+        "file": "res://assets/audio/voices/narration/opening-06.wav",
+        "seconds": 5.908,
+        "caption": "Ham radio, every night. Strangers from all over the world, all of them his friends.",
+        "heard": "ham radio every night strangers from all over the world all of them his friends",
+        "word_edits": 0
+      },
+      {
+        "file": "res://assets/audio/voices/narration/opening-07.wav",
+        "seconds": 7.37,
+        "caption": "My mom, Helen, was an interpreter. Government work, rooms with no windows. She never talked about it.",
+        "heard": "My mom, Helen, was an interpreter. Government work. Rooms with no windows. She never talked about it.",
+        "word_edits": 0
+      },
+      {
+        "file": "res://assets/audio/voices/narration/opening-08.wav",
+        "seconds": 3.772,
+        "caption": "She could hear what people meant, even when they said something else.",
+        "heard": "She could hear what people meant, even when they said something else.",
+        "word_edits": 0
+      },
+      {
+        "file": "res://assets/audio/voices/narration/opening-09.wav",
+        "seconds": 5.858,
+        "caption": "Eighteen months ago, they rowed out into the bay after dark. They said the water was making a sound.",
+        "heard": "Eighteen months ago, they rode out into the bay after dark. They said the water was making a sound.",
+        "word_edits": 1
+      },
+      {
+        "file": "res://assets/audio/voices/narration/opening-10.wav",
+        "seconds": 1.55,
+        "caption": "They asked me to come along.",
+        "heard": "They asked me to come along.",
+        "word_edits": 0
+      },
+      {
+        "file": "res://assets/audio/voices/narration/opening-11.wav",
+        "seconds": 2.584,
+        "caption": "I said no. I had a shift.",
+        "heard": "I said no. I had a shift.",
+        "word_edits": 0
+      }
+    ],
+    "aftermath": [
+      {
+        "file": "res://assets/audio/voices/narration/aftermath-01.wav",
+        "seconds": 3.738,
+        "caption": "In the morning, their boat drifted back to shore. Empty.",
+        "heard": "In the morning, their boat drifted back to shore, empty.",
+        "word_edits": 0
+      },
+      {
+        "file": "res://assets/audio/voices/narration/aftermath-02.wav",
+        "seconds": 2.07,
+        "caption": "Dad’s radio was still on.",
+        "heard": "Dad's radio was still on.",
+        "word_edits": 0
+      },
+      {
+        "file": "res://assets/audio/voices/narration/aftermath-03.wav",
+        "seconds": 3.309,
+        "caption": "Nobody found them. That was eighteen months ago.",
+        "heard": "Nobody found them. That was 18 months ago.",
+        "word_edits": 0
+      },
+      {
+        "file": "res://assets/audio/voices/narration/aftermath-04.wav",
+        "seconds": 5.43,
+        "caption": "Most nights I still play Mom’s last voicemail. I don’t know what I’m listening for.",
+        "heard": "Most nights, I still play Mom's last voicemail. I don't know what I'm listening for.",
+        "word_edits": 0
+      },
+      {
+        "file": "res://assets/audio/voices/narration/aftermath-05.wav",
+        "seconds": 5.0,
+        "caption": "Three weeks ago, a company called Halcyon Media bought KBWR.",
+        "heard": "Three weeks ago, a company called Halcyon Media bought KBWR.",
+        "word_edits": 0
+      },
+      {
+        "file": "res://assets/audio/voices/narration/aftermath-06.wav",
+        "seconds": 5.51,
+        "caption": "They replaced me with a machine called DJ AutoRick. He reads yesterday’s weather.",
+        "heard": "They replaced me with a machine called DJ Autorick. He reads yesterday's weather.",
+        "word_edits": 0
+      },
+      {
+        "file": "res://assets/audio/voices/narration/aftermath-07.wav",
+        "seconds": 6.96,
+        "caption": "And then there’s Nora. Nora Reyes runs the aquarium and argues with everybody, me included.",
+        "heard": "And then there's Nora. Nora Reyes runs the aquarium and argues with everybody, me included.",
+        "word_edits": 0
+      },
+      {
+        "file": "res://assets/audio/voices/narration/aftermath-08.wav",
+        "seconds": 3.371,
+        "caption": "Now that I’m home in the mornings, I get to hear her say good morning.",
+        "heard": "Now that I'm home in the mornings, I get to hear her say good morning.",
+        "word_edits": 0
+      },
+      {
+        "file": "res://assets/audio/voices/narration/aftermath-09.wav",
+        "seconds": 3.156,
+        "caption": "This is the story of how I started counting nights.",
+        "heard": "This is the story of how I started counting nights.",
+        "word_edits": 0
+      }
+    ],
+    "after": [
+      {
+        "file": "res://assets/audio/voices/narration/after-01.wav",
+        "seconds": 6.745,
+        "caption": "Before the ship left, the Choir gave the copies one last gift. They don’t need the ninth night anymore.",
+        "heard": "Before the ship left, the choir gave the copies one last gift. They don't need the ninth night anymore.",
+        "word_edits": 0
+      },
+      {
+        "file": "res://assets/audio/voices/narration/after-02.wav",
+        "seconds": 6.26,
+        "caption": "More than two hundred of them stayed. Bellwether has a lot of new neighbors with familiar faces.",
+        "heard": "More than 200 of them stayed. Bellwether has a lot of new neighbors with familiar faces.",
+        "word_edits": 2
+      },
+      {
+        "file": "res://assets/audio/voices/narration/after-03.wav",
+        "seconds": 3.519,
+        "caption": "Sunday dinner is still at six. Iris comes too.",
+        "heard": "Sunday dinner is still at 6. Iris comes too.",
+        "word_edits": 0
+      },
+      {
+        "file": "res://assets/audio/voices/narration/after-04.wav",
+        "seconds": 5.307,
+        "caption": "Nora hasn’t forgiven her for the kidnapping. She tells her so, and passes her the bread.",
+        "heard": "Nora hasn't forgiven her for the kidnapping. She tells her so and passes her the bread.",
+        "word_edits": 0
+      },
+      {
+        "file": "res://assets/audio/voices/narration/after-05.wav",
+        "seconds": 4.243,
+        "caption": "Mom and Dad came home. Dad is back on the radio every Thursday.",
+        "heard": "Mom and Dad came home. Dad is back on the radio every Thursday.",
+        "word_edits": 0
+      },
+      {
+        "file": "res://assets/audio/voices/narration/after-06.wav",
+        "seconds": 5.35,
+        "caption": "There’s a new note on the kitchen table every morning. Most of them are about paint.",
+        "heard": "There's a new note on the kitchen table every morning. Most of them are about paint.",
+        "word_edits": 0
+      },
+      {
+        "file": "res://assets/audio/voices/narration/after-07.wav",
+        "seconds": 2.37,
+        "caption": "I don’t play the old voicemail anymore.",
+        "heard": "I don't play the old voicemail anymore.",
+        "word_edits": 0
+      },
+      {
+        "file": "res://assets/audio/voices/narration/after-08.wav",
+        "seconds": 7.945,
+        "caption": "The ring moved from my sock drawer to my cardigan pocket. Nora and I are starting with coffee, and an actual conversation.",
+        "heard": "The ring moved from my sock drawer to my cardigan pocket. Nora and I are starting with coffee and an actual conversation.",
+        "word_edits": 0
+      },
+      {
+        "file": "res://assets/audio/voices/narration/after-09.wav",
+        "seconds": 3.65,
+        "caption": "KBWR has live hosts again. Two of them.",
+        "heard": "KBWR has live hosts again, two of them.",
+        "word_edits": 0
+      },
+      {
+        "file": "res://assets/audio/voices/narration/after-10.wav",
+        "seconds": 3.772,
+        "caption": "Stephen and I still argue about which one of us is the upgrade.",
+        "heard": "Steven and I still argue about which one of us is the upgrade.",
+        "word_edits": 1
+      },
+      {
+        "file": "res://assets/audio/voices/narration/after-11.wav",
+        "seconds": 3.867,
+        "caption": "One year after the ninth night, a package arrived at the station.",
+        "heard": "One year after the ninth night, a package arrived at the station.",
+        "word_edits": 0
+      },
+      {
+        "file": "res://assets/audio/voices/narration/after-12.wav",
+        "seconds": 2.963,
+        "caption": "From very, very far away.",
+        "heard": "from very, very far away.",
+        "word_edits": 0
+      }
+    ]
+  }
+}

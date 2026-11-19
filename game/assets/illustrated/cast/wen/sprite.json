@@ -1,5 +1,7 @@
 {
   "base": "wen.webp",
+  "source": "assets/characters/campaign/masters/wen.png",
+  "source_sha256": "7d9f3ecd509e9a5c38d926f79eb0d91249f03650e0953b0535a0b68ddfc5e594",
   "size": [
     840,
     1080
@@ -93,6 +95,10 @@
     "F": "mouth_round",
     "G": "mouth_parted",
     "H": "mouth_parted"
+  },
+  "sha256": {
+    "wen.webp": "a832963fd1078857f624b6405538d8a2f91969b021b1d2bcd036d7196c5d13ec",
+    "wen-face-atlas.png": "e03b20a84481966db41cd47010040b3392a2ed1b0243ad820c232c823df88452"
   },
   "atlas": "wen-face-atlas.png",
   "eye_centers": [

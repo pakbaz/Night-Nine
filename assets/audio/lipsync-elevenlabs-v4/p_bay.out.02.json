@@ -1,0 +1,78 @@
+{
+  "id": "p_bay.out.02",
+  "speaker": "frank",
+  "audio": "res://assets/audio/voices/elevenlabs-v4/p_bay.out.02.wav",
+  "audio_sha256": "3117c00c703c63bcc4efb12e28662ef9fc3a4f262dafd1e5eae80c9e3e1cdb39",
+  "transcript": "Helen. It\u2019s tuning to us.",
+  "transcript_sha256": "9e10723ad8b2aaecd784a1250290ad19f72acb7f062a54cfe462d2a78ada797e",
+  "generator": "Rhubarb Lip Sync version 1.14.0",
+  "generator_sha256": "93fa4a16ae1cc88a89d59743057521407843fc7139e23808c9e6587c6cc946d3",
+  "seconds": 2.351020833333333,
+  "generation_seconds": 4.199,
+  "cues": [
+    {
+      "start": 0.0,
+      "end": 0.06,
+      "value": "X"
+    },
+    {
+      "start": 0.06,
+      "end": 0.21,
+      "value": "C"
+    },
+    {
+      "start": 0.21,
+      "end": 0.28,
+      "value": "H"
+    },
+    {
+      "start": 0.28,
+      "end": 0.49,
+      "value": "B"
+    },
+    {
+      "start": 0.49,
+      "end": 0.92,
+      "value": "X"
+    },
+    {
+      "start": 0.92,
+      "end": 1.18,
+      "value": "B"
+    },
+    {
+      "start": 1.18,
+      "end": 1.39,
+      "value": "F"
+    },
+    {
+      "start": 1.39,
+      "end": 1.53,
+      "value": "B"
+    },
+    {
+      "start": 1.53,
+      "end": 1.74,
+      "value": "F"
+    },
+    {
+      "start": 1.74,
+      "end": 1.88,
+      "value": "C"
+    },
+    {
+      "start": 1.88,
+      "end": 2.16,
+      "value": "B"
+    },
+    {
+      "start": 2.16,
+      "end": 2.35,
+      "value": "X"
+    }
+  ],
+  "raw_sha256": "7516881784ed1c1cc03c147dde2c987dbf83473e1f3ef6b0352c8c4d4f576370",
+  "visual_timing_reviewed": false,
+  "cloud_credits": 0,
+  "uploads": false
+}

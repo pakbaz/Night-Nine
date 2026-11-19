@@ -1,5 +1,7 @@
 {
   "base": "ward.webp",
+  "source": "assets/characters/campaign/masters/ward.png",
+  "source_sha256": "73a75d8d2fdef978a955a6debb4fb848b40fd4e400182b4669cd407cb3631422",
   "size": [
     829,
     1080
@@ -93,6 +95,10 @@
     "F": "mouth_round",
     "G": "mouth_parted",
     "H": "mouth_parted"
+  },
+  "sha256": {
+    "ward.webp": "defd4d99a199aaf88a5681d52f43f403c6472e5b58a2807141753d605493ab95",
+    "ward-face-atlas.png": "9b6fa3d3b0047a938443d607abff573390d4ea966489a584b9d5f48836cc9635"
   },
   "atlas": "ward-face-atlas.png",
   "eye_centers": [

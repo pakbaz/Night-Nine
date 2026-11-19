@@ -1,0 +1,23 @@
+{
+  "source": "Local synthetic fictional cast performances",
+  "model": "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-bf16",
+  "revision": "a6eb4f68e4b056f1215157bb696209bc82a6db48",
+  "performers": [
+    {
+      "speaker": "general_us",
+      "reference_sha256": "584d4f381178df3bde24940ae85505a4de19282769a91537126a74bc1467ad47",
+      "text": "Heh. Heh heh.",
+      "seed": 13922
+    },
+    {
+      "speaker": "general_cn",
+      "reference_sha256": "4ed0fafde845863d5bae59f99ac45113b0cf0cf880ced1755ac491680c0a3379",
+      "text": "Ha ha. Ha.",
+      "seed": 18213
+    }
+  ],
+  "trigger": "p_meeting.confess.02",
+  "reaction_onset_seconds": 2.08,
+  "duration": 3.3986666666666667,
+  "sha256": "705cd57014e7a0d14aab6358567a4d6722721371d8386615e31bae792a1a67c9"
+}

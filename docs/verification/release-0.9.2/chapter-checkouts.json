@@ -1,0 +1,122 @@
+[
+  {
+    "tag": "v0.9.2",
+    "commit": "4fced9d222b0b4731fb35e8cb6c4ea59b8ce2126",
+    "rooms": 34,
+    "tasks": 103,
+    "lines": 338,
+    "verified_wavs": 332,
+    "runtime_checks": 1670,
+    "ending": "postcredits"
+  },
+  {
+    "tag": "chapters-0.9.2/prologue",
+    "commit": "23af51eca26b849ed19e5d47c4c59f101f81e467",
+    "rooms": 1,
+    "tasks": 2,
+    "lines": 6,
+    "verified_wavs": 6,
+    "runtime_checks": 59,
+    "ending": "p_bay"
+  },
+  {
+    "tag": "chapters-0.9.2/chapter-01",
+    "commit": "6d5606cd7daddbf2c8995271246c0465968db74e",
+    "rooms": 5,
+    "tasks": 15,
+    "lines": 42,
+    "verified_wavs": 40,
+    "runtime_checks": 253,
+    "ending": "c1_escape"
+  },
+  {
+    "tag": "chapters-0.9.2/chapter-02",
+    "commit": "af5ebd8be5b7cbe17fc162169944de2bdebb2959",
+    "rooms": 7,
+    "tasks": 21,
+    "lines": 60,
+    "verified_wavs": 57,
+    "runtime_checks": 343,
+    "ending": "c2_ship"
+  },
+  {
+    "tag": "chapters-0.9.2/chapter-03",
+    "commit": "c6c0a9a3cb2977507d96ca3ec6a87a93dded4dd9",
+    "rooms": 11,
+    "tasks": 33,
+    "lines": 96,
+    "verified_wavs": 93,
+    "runtime_checks": 520,
+    "ending": "p_veyr"
+  },
+  {
+    "tag": "chapters-0.9.2/chapter-04",
+    "commit": "5ab92834b0e39874b54c628f6ec982aeaee32c94",
+    "rooms": 13,
+    "tasks": 39,
+    "lines": 111,
+    "verified_wavs": 107,
+    "runtime_checks": 601,
+    "ending": "c4_escape"
+  },
+  {
+    "tag": "chapters-0.9.2/chapter-05",
+    "commit": "b68040b10b01659cc9e96f77259ce1fe7c760a53",
+    "rooms": 15,
+    "tasks": 47,
+    "lines": 134,
+    "verified_wavs": 130,
+    "runtime_checks": 710,
+    "ending": "c5_station"
+  },
+  {
+    "tag": "chapters-0.9.2/chapter-06",
+    "commit": "3b042b730d454cdcbeb3fba0557ab7c7fb9fb21b",
+    "rooms": 18,
+    "tasks": 58,
+    "lines": 169,
+    "verified_wavs": 165,
+    "runtime_checks": 871,
+    "ending": "i2_nora"
+  },
+  {
+    "tag": "chapters-0.9.2/chapter-07",
+    "commit": "000ae6577dfbd340d29122c36d7dc567afc400a1",
+    "rooms": 20,
+    "tasks": 64,
+    "lines": 188,
+    "verified_wavs": 184,
+    "runtime_checks": 964,
+    "ending": "c7_swap"
+  },
+  {
+    "tag": "chapters-0.9.2/chapter-08",
+    "commit": "126fdb27b218728dd6bf976cf56cf60a62a53daa",
+    "rooms": 24,
+    "tasks": 76,
+    "lines": 225,
+    "verified_wavs": 220,
+    "runtime_checks": 1144,
+    "ending": "c8_rig"
+  },
+  {
+    "tag": "chapters-0.9.2/chapter-09",
+    "commit": "4e143d9d6fe1baadaf345f40365d9183f7c1f14a",
+    "rooms": 27,
+    "tasks": 86,
+    "lines": 261,
+    "verified_wavs": 255,
+    "runtime_checks": 1307,
+    "ending": "c9_choir"
+  },
+  {
+    "tag": "chapters-0.9.2/chapter-10",
+    "commit": "298e6626668c8727cf8a5faa1959557f7498a7cf",
+    "rooms": 34,
+    "tasks": 103,
+    "lines": 338,
+    "verified_wavs": 332,
+    "runtime_checks": 1670,
+    "ending": "postcredits"
+  }
+]

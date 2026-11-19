@@ -1,5 +1,7 @@
 {
   "base": "shaw.webp",
+  "source": "assets/characters/campaign/masters/shaw.png",
+  "source_sha256": "9fa0eec75ffffc93e77154279d06ca85ece287c615a8dbd8292a9298dbc0cb58",
   "size": [
     966,
     1080
@@ -93,6 +95,10 @@
     "F": "mouth_round",
     "G": "mouth_parted",
     "H": "mouth_parted"
+  },
+  "sha256": {
+    "shaw.webp": "3337d7acd01be347382dc38715172d52ce08724db2a7857351f53f3f1ac256bb",
+    "shaw-face-atlas.png": "3428d16cf47dd2d08a0e3d2cb50fb99f399a4ed72c7c43fbef7ffcddeeebffcb"
   },
   "atlas": "shaw-face-atlas.png",
   "eye_centers": [

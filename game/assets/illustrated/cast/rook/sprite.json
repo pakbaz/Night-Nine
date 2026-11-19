@@ -1,5 +1,7 @@
 {
   "base": "rook.webp",
+  "source": "assets/characters/campaign/masters/rook.png",
+  "source_sha256": "aaa68eb0afc801a9b61614dfe0abfbf4646a5ea7d73b08e8cc05339e606875a5",
   "size": [
     843,
     1080
@@ -93,6 +95,10 @@
     "F": "mouth_round",
     "G": "mouth_parted",
     "H": "mouth_parted"
+  },
+  "sha256": {
+    "rook.webp": "470f81136d9f552a59055557cda725e221e836c201108b30aeeaedefe417708e",
+    "rook-face-atlas.png": "8b9e70fa911b56d581c6be6584f1c50e98b82156eefbe813fcc73c9cb506ab21"
   },
   "atlas": "rook-face-atlas.png",
   "eye_centers": [

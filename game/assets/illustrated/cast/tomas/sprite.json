@@ -1,5 +1,7 @@
 {
   "base": "tomas.webp",
+  "source": "assets/characters/campaign/masters/tomas.png",
+  "source_sha256": "1944a775e686c141a7f0901d20f1df590d4e9f386a948ba21d718d8541baed12",
   "size": [
     789,
     1080
@@ -93,6 +95,10 @@
     "F": "mouth_round",
     "G": "mouth_parted",
     "H": "mouth_parted"
+  },
+  "sha256": {
+    "tomas.webp": "a2374634430cacb9e694d89f67bf549574ba3f13eee324fc427a58f288365119",
+    "tomas-face-atlas.png": "8e494fe87fea60ea6c414beabb71a1479d837d548d98f4401ebc7c3e74912f89"
   },
   "atlas": "tomas-face-atlas.png",
   "eye_centers": [

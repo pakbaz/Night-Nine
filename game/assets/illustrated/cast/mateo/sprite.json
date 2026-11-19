@@ -1,5 +1,7 @@
 {
   "base": "mateo.webp",
+  "source": "assets/characters/campaign/masters/mateo.png",
+  "source_sha256": "e6561b68e672f97e7d896d543bd951cfdb0f24eb14fa6517eff9ee84be6d5af3",
   "size": [
     916,
     1080
@@ -93,6 +95,10 @@
     "F": "mouth_round",
     "G": "mouth_parted",
     "H": "mouth_parted"
+  },
+  "sha256": {
+    "mateo.webp": "72ec4aa0f5b5f08730c3b314c87db1fc6ce1ba2cba2fe6420600282e93c372c2",
+    "mateo-face-atlas.png": "882c6b55e5fbb7dcefe6dd2dc31fbe82563ef3a0b6d84394515311eb19469f21"
   },
   "atlas": "mateo-face-atlas.png",
   "eye_centers": [

@@ -1,5 +1,7 @@
 {
   "base": "steve_toward_nora.webp",
+  "source": "assets/characters/campaign/masters/steve_toward_nora.png",
+  "source_sha256": "48d7569fe966b45b55ac600946080bcac9961c76c37c0298290a736d45c959e9",
   "size": [
     810,
     1080
@@ -93,6 +95,10 @@
     "F": "mouth_round",
     "G": "mouth_parted",
     "H": "mouth_parted"
+  },
+  "sha256": {
+    "steve_toward_nora.webp": "14dab97ab58d657983ac7f9f8a262a9551b47d045526816d0c04fa0a70d5c63e",
+    "steve_toward_nora-face-atlas.png": "0d960046b39eb2952e4c2ddcab50c9fd66bf0439dd709bc96ea76f536fe7632f"
   },
   "atlas": "steve_toward_nora-face-atlas.png",
   "eye_centers": [

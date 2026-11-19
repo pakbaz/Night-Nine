@@ -1,0 +1,118 @@
+{
+  "base": "helen.png",
+  "atlas": "helen-face-atlas.png",
+  "source": "assets/characters/helen/sprites/helen.png",
+  "source_sha256": "768dd8e2d78be32e1e7216d4c02c642d48401fc9f18fb01a6bf4f6f230b10ad5",
+  "size": [
+    1086,
+    1448
+  ],
+  "origin": "top_left",
+  "foot_anchor": [
+    543,
+    1448
+  ],
+  "eye_centers": [
+    [
+      535,
+      193
+    ],
+    [
+      633,
+      214
+    ]
+  ],
+  "mouth_center": [
+    569,
+    302
+  ],
+  "frames": {
+    "blink_half": {
+      "atlas_region": [
+        0,
+        0,
+        174,
+        68
+      ],
+      "source_origin": [
+        500,
+        174
+      ]
+    },
+    "blink_closed": {
+      "atlas_region": [
+        0,
+        70,
+        174,
+        68
+      ],
+      "source_origin": [
+        500,
+        174
+      ]
+    },
+    "mouth_parted": {
+      "atlas_region": [
+        0,
+        140,
+        133,
+        63
+      ],
+      "source_origin": [
+        503,
+        277
+      ]
+    },
+    "mouth_open": {
+      "atlas_region": [
+        0,
+        205,
+        133,
+        63
+      ],
+      "source_origin": [
+        503,
+        277
+      ]
+    },
+    "mouth_round": {
+      "atlas_region": [
+        0,
+        270,
+        133,
+        63
+      ],
+      "source_origin": [
+        503,
+        277
+      ]
+    },
+    "mouth_wide": {
+      "atlas_region": [
+        0,
+        335,
+        133,
+        63
+      ],
+      "source_origin": [
+        503,
+        277
+      ]
+    }
+  },
+  "cue_frames": {
+    "X": null,
+    "A": null,
+    "B": "mouth_parted",
+    "C": "mouth_wide",
+    "D": "mouth_open",
+    "E": "mouth_round",
+    "F": "mouth_round",
+    "G": "mouth_parted",
+    "H": "mouth_parted"
+  },
+  "sha256": {
+    "helen.png": "768dd8e2d78be32e1e7216d4c02c642d48401fc9f18fb01a6bf4f6f230b10ad5",
+    "helen-face-atlas.png": "439c7ed8af023ca94412d4fb8e09e227441916f7e76b0c52a7d1baf959f8197c"
+  }
+}

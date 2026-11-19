@@ -1,6 +1,8 @@
 {
   "base": "helen.png",
   "atlas": "helen-face-atlas.png",
+  "source": "assets/characters/helen/sprites/helen.png",
+  "source_sha256": "768dd8e2d78be32e1e7216d4c02c642d48401fc9f18fb01a6bf4f6f230b10ad5",
   "size": [
     1086,
     1448
@@ -108,5 +110,9 @@
     "F": "mouth_round",
     "G": "mouth_parted",
     "H": "mouth_parted"
+  },
+  "sha256": {
+    "helen.png": "768dd8e2d78be32e1e7216d4c02c642d48401fc9f18fb01a6bf4f6f230b10ad5",
+    "helen-face-atlas.png": "439c7ed8af023ca94412d4fb8e09e227441916f7e76b0c52a7d1baf959f8197c"
   }
 }

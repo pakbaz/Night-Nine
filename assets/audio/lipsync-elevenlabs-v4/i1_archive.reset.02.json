@@ -1,0 +1,83 @@
+{
+  "id": "i1_archive.reset.02",
+  "speaker": "gus",
+  "audio": "res://assets/audio/voices/elevenlabs-v4/i1_archive.reset.02.wav",
+  "audio_sha256": "7d6db25dfc23363cf5be5eb42ced4a5e2bed75c611b00cf8c0e9c232bae9b10c",
+  "transcript": "Good evening. May I help you?",
+  "transcript_sha256": "1e082610d5d974bed30227068ad6f769bc1501a541f0aa6fee4f94eaa7231698",
+  "generator": "Rhubarb Lip Sync version 1.14.0",
+  "generator_sha256": "93fa4a16ae1cc88a89d59743057521407843fc7139e23808c9e6587c6cc946d3",
+  "seconds": 2.1159375,
+  "generation_seconds": 3.901,
+  "cues": [
+    {
+      "start": 0.0,
+      "end": 0.03,
+      "value": "X"
+    },
+    {
+      "start": 0.03,
+      "end": 0.3,
+      "value": "B"
+    },
+    {
+      "start": 0.3,
+      "end": 0.37,
+      "value": "G"
+    },
+    {
+      "start": 0.37,
+      "end": 1.09,
+      "value": "B"
+    },
+    {
+      "start": 1.09,
+      "end": 1.18,
+      "value": "A"
+    },
+    {
+      "start": 1.18,
+      "end": 1.23,
+      "value": "C"
+    },
+    {
+      "start": 1.23,
+      "end": 1.28,
+      "value": "B"
+    },
+    {
+      "start": 1.28,
+      "end": 1.35,
+      "value": "C"
+    },
+    {
+      "start": 1.35,
+      "end": 1.42,
+      "value": "B"
+    },
+    {
+      "start": 1.42,
+      "end": 1.56,
+      "value": "C"
+    },
+    {
+      "start": 1.56,
+      "end": 1.64,
+      "value": "A"
+    },
+    {
+      "start": 1.64,
+      "end": 1.93,
+      "value": "F"
+    },
+    {
+      "start": 1.93,
+      "end": 2.11,
+      "value": "X"
+    }
+  ],
+  "raw_sha256": "48c9db82a4509da40af6d9487c39970eb281c1af61b537f187dcf50622f6d30b",
+  "visual_timing_reviewed": false,
+  "cloud_credits": 0,
+  "uploads": false
+}

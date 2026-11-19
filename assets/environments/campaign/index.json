@@ -1,0 +1,1450 @@
+{
+  "c1_flat": {
+    "master": "masters/c1_flat.png",
+    "runtime": "game/assets/illustrated/campaign/rooms/c1_flat.webp",
+    "source_size": [
+      1672,
+      941
+    ],
+    "png_sha256": "04fee4c72b18dd890ac22ef3dab8f11deb22d63cf25893c6d8e08cf5188670c8",
+    "webp_sha256": "f74c5df9cc105b2a8412478eb28cb9fc4e86241db80fbe44832dda80e09a772b",
+    "webp_bytes": 415676,
+    "interaction_boxes": {
+      "c1_flat.saturday": {
+        "center": [
+          0.14,
+          0.72
+        ],
+        "size": [
+          0.14,
+          0.14
+        ],
+        "plane": "distant"
+      },
+      "c1_flat.sunday": {
+        "center": [
+          0.36,
+          0.75
+        ],
+        "size": [
+          0.13,
+          0.15
+        ],
+        "plane": "distant"
+      },
+      "c1_flat.control": {
+        "center": [
+          0.58,
+          0.72
+        ],
+        "size": [
+          0.17,
+          0.21
+        ],
+        "plane": "distant"
+      },
+      "c1_flat.compare": {
+        "center": [
+          0.82,
+          0.72
+        ],
+        "size": [
+          0.17,
+          0.23
+        ],
+        "plane": "distant"
+      }
+    }
+  },
+  "c1_pier": {
+    "master": "masters/c1_pier.png",
+    "runtime": "game/assets/illustrated/campaign/rooms/c1_pier.webp",
+    "source_size": [
+      1672,
+      941
+    ],
+    "png_sha256": "942df79f4f26325f3b988b73ac57e238d585953f2240a0f51b7b5572df483e0f",
+    "webp_sha256": "44b71e79c23e5980ac5a33bee9dc18dbc406198742e4ef11a3936f2c68c38cc0",
+    "webp_bytes": 514492,
+    "interaction_boxes": {
+      "c1_pier.whistle": {
+        "center": [
+          0.17,
+          0.76
+        ],
+        "size": [
+          0.29,
+          0.31
+        ],
+        "plane": "distant"
+      },
+      "c1_pier.door": {
+        "center": [
+          0.49,
+          0.48
+        ],
+        "size": [
+          0.17,
+          0.34
+        ],
+        "plane": "distant"
+      },
+      "c1_pier.bait": {
+        "center": [
+          0.86,
+          0.55
+        ],
+        "size": [
+          0.22,
+          0.43
+        ],
+        "plane": "distant"
+      }
+    }
+  },
+  "c1_dinner": {
+    "master": "masters/c1_dinner.png",
+    "runtime": "game/assets/illustrated/campaign/rooms/c1_dinner.webp",
+    "source_size": [
+      1672,
+      941
+    ],
+    "png_sha256": "3274cdfc141d93e8ec4759249e0a00f65a6a161171346b5873627b17669fb045",
+    "webp_sha256": "0451e8b96b0444d1c9641a28488242f85e7ecdf6cac66e9f9c7d27a9edff3d70",
+    "webp_bytes": 436070,
+    "interaction_boxes": {
+      "c1_dinner.birthday": {
+        "center": [
+          0.13,
+          0.75
+        ],
+        "size": [
+          0.14,
+          0.17
+        ],
+        "plane": "distant"
+      },
+      "c1_dinner.podcast": {
+        "center": [
+          0.48,
+          0.78
+        ],
+        "size": [
+          0.2,
+          0.17
+        ],
+        "plane": "distant"
+      },
+      "c1_dinner.family": {
+        "center": [
+          0.76,
+          0.72
+        ],
+        "size": [
+          0.2,
+          0.18
+        ],
+        "plane": "distant"
+      }
+    }
+  },
+  "c1_escape": {
+    "master": "masters/c1_escape.png",
+    "runtime": "game/assets/illustrated/campaign/rooms/c1_escape.webp",
+    "source_size": [
+      1672,
+      941
+    ],
+    "png_sha256": "ac968b40b52b652318f630f9ab3e68f466a2eaf6a11d957cdea32ac06858dee3",
+    "webp_sha256": "6385f2455b03990abf2611c405b5ad4aad6e8918cf7adef9f9526668960b6e62",
+    "webp_bytes": 372682,
+    "interaction_boxes": {
+      "c1_escape.order": {
+        "center": [
+          0.17,
+          0.53
+        ],
+        "size": [
+          0.16,
+          0.53
+        ],
+        "plane": "distant"
+      },
+      "c1_escape.power": {
+        "center": [
+          0.51,
+          0.48
+        ],
+        "size": [
+          0.08,
+          0.17
+        ],
+        "plane": "distant"
+      },
+      "c1_escape.cross": {
+        "center": [
+          0.86,
+          0.73
+        ],
+        "size": [
+          0.2,
+          0.32
+        ],
+        "plane": "distant"
+      }
+    }
+  },
+  "c2_aquarium": {
+    "master": "masters/c2_aquarium.png",
+    "runtime": "game/assets/illustrated/campaign/rooms/c2_aquarium.webp",
+    "source_size": [
+      1672,
+      941
+    ],
+    "png_sha256": "19c2ceb86fb770aa4f332240e1a6a25e45b299fb4e6c781164580b45da69a96e",
+    "webp_sha256": "a48e92af9dc9dccb11f364c5ea139f05b41e2b39e2b9490352986fa4e87cddf2",
+    "webp_bytes": 378164,
+    "interaction_boxes": {
+      "c2_aquarium.plan": {
+        "center": [
+          0.1,
+          0.47
+        ],
+        "size": [
+          0.14,
+          0.22
+        ],
+        "plane": "distant"
+      },
+      "c2_aquarium.guard": {
+        "center": [
+          0.48,
+          0.37
+        ],
+        "size": [
+          0.06,
+          0.11
+        ],
+        "plane": "distant"
+      },
+      "c2_aquarium.intercom": {
+        "center": [
+          0.9,
+          0.52
+        ],
+        "size": [
+          0.17,
+          0.37
+        ],
+        "plane": "distant"
+      }
+    }
+  },
+  "c2_ship": {
+    "master": "masters/c2_ship.png",
+    "runtime": "game/assets/illustrated/campaign/rooms/c2_ship.webp",
+    "source_size": [
+      1672,
+      941
+    ],
+    "png_sha256": "e80a4611e4b92a950b4743d18f89541154149fa08c0573347e909f44a4924555",
+    "webp_sha256": "cb7d47f9825c0ce864622b1cda87fb532983f6f41bf4836d80c14cb98b79c3f2",
+    "webp_bytes": 406426,
+    "interaction_boxes": {
+      "c2_ship.nora": {
+        "center": [
+          0.2,
+          0.59
+        ],
+        "size": [
+          0.34,
+          0.28
+        ],
+        "plane": "distant"
+      },
+      "c2_ship.command": {
+        "center": [
+          0.51,
+          0.48
+        ],
+        "size": [
+          0.08,
+          0.17
+        ],
+        "plane": "distant"
+      },
+      "c2_ship.escape": {
+        "center": [
+          0.85,
+          0.62
+        ],
+        "size": [
+          0.24,
+          0.42
+        ],
+        "plane": "distant"
+      }
+    }
+  },
+  "c3_house": {
+    "master": "masters/c3_house.png",
+    "runtime": "game/assets/illustrated/campaign/rooms/c3_house.webp",
+    "source_size": [
+      1672,
+      941
+    ],
+    "png_sha256": "7f372929e027bd47722ad5bf48f4b24fa8dfcba98f87e9d7fdef7effb509343d",
+    "webp_sha256": "6660f1c5522f7f5c31bec7ee69f6014368ef0a83c504b2fbbce7035def73bd9b",
+    "webp_bytes": 540968,
+    "interaction_boxes": {
+      "c3_house.crossword": {
+        "center": [
+          0.21,
+          0.76
+        ],
+        "size": [
+          0.18,
+          0.21
+        ],
+        "plane": "distant"
+      },
+      "c3_house.rules": {
+        "center": [
+          0.48,
+          0.7
+        ],
+        "size": [
+          0.31,
+          0.19
+        ],
+        "plane": "distant"
+      },
+      "c3_house.mail": {
+        "center": [
+          0.82,
+          0.6
+        ],
+        "size": [
+          0.17,
+          0.17
+        ],
+        "plane": "distant"
+      }
+    }
+  },
+  "c3_archive": {
+    "master": "masters/c3_archive.png",
+    "runtime": "game/assets/illustrated/campaign/rooms/c3_archive.webp",
+    "source_size": [
+      1672,
+      941
+    ],
+    "png_sha256": "beb28908672c711db2b3f8dc8e43050f0963e1603efc3d88b17765819147e7fa",
+    "webp_sha256": "7ef595e860a216c72e2a404b7c95ec1ee930762a0aa930019933642ea58d9f88",
+    "webp_bytes": 476604,
+    "interaction_boxes": {
+      "c3_archive.paper": {
+        "center": [
+          0.2,
+          0.73
+        ],
+        "size": [
+          0.33,
+          0.25
+        ],
+        "plane": "distant"
+      },
+      "c3_archive.power": {
+        "center": [
+          0.51,
+          0.71
+        ],
+        "size": [
+          0.23,
+          0.26
+        ],
+        "plane": "distant"
+      },
+      "c3_archive.cycle": {
+        "center": [
+          0.81,
+          0.68
+        ],
+        "size": [
+          0.25,
+          0.31
+        ],
+        "plane": "distant"
+      }
+    }
+  },
+  "i1_archive": {
+    "master": "masters/i1_archive.png",
+    "runtime": "game/assets/illustrated/campaign/rooms/i1_archive.webp",
+    "source_size": [
+      1672,
+      941
+    ],
+    "png_sha256": "11a081b44dab5d3e0573da2a7799b3320eda9f9b0efc79549a21653c072fe4a7",
+    "webp_sha256": "2ed79f3a26b893a10b6943a40588fd620a1eecd8c836c0a1bfd43db4b3c5b703",
+    "webp_bytes": 464578,
+    "interaction_boxes": {
+      "i1_archive.reset": {
+        "center": [
+          0.18,
+          0.7
+        ],
+        "size": [
+          0.28,
+          0.23
+        ],
+        "plane": "distant"
+      },
+      "i1_archive.signals": {
+        "center": [
+          0.51,
+          0.57
+        ],
+        "size": [
+          0.25,
+          0.16
+        ],
+        "plane": "distant"
+      },
+      "i1_archive.quiet": {
+        "center": [
+          0.83,
+          0.64
+        ],
+        "size": [
+          0.15,
+          0.24
+        ],
+        "plane": "distant"
+      }
+    }
+  },
+  "c4_safe": {
+    "master": "masters/c4_safe.png",
+    "runtime": "game/assets/illustrated/campaign/rooms/c4_safe.webp",
+    "source_size": [
+      1672,
+      941
+    ],
+    "png_sha256": "a69fe2d05995eaf39b358100fa08bc78b3fa6bb55bed63a590361fc935eeb659",
+    "webp_sha256": "b37d471451e86c0669ae5a4bddf447d4d5321447de8d1361ca0933d523016362",
+    "webp_bytes": 274486,
+    "interaction_boxes": {
+      "c4_safe.record": {
+        "center": [
+          0.11,
+          0.49
+        ],
+        "size": [
+          0.17,
+          0.38
+        ],
+        "plane": "distant"
+      },
+      "c4_safe.match": {
+        "center": [
+          0.51,
+          0.72
+        ],
+        "size": [
+          0.18,
+          0.17
+        ],
+        "plane": "distant"
+      },
+      "c4_safe.screens": {
+        "center": [
+          0.88,
+          0.35
+        ],
+        "size": [
+          0.22,
+          0.31
+        ],
+        "plane": "distant"
+      }
+    }
+  },
+  "c4_escape": {
+    "master": "masters/c4_escape.png",
+    "runtime": "game/assets/illustrated/campaign/rooms/c4_escape.webp",
+    "source_size": [
+      1672,
+      941
+    ],
+    "png_sha256": "846046d9413824b79a9696684801c8be7c93b188349f81722c2f37bbfe0ea4c6",
+    "webp_sha256": "bb9594f948b88d53c934914794ad95a95486b057c1847804c97763e6ca3aad93",
+    "webp_bytes": 367434,
+    "interaction_boxes": {
+      "c4_escape.tube": {
+        "center": [
+          0.19,
+          0.55
+        ],
+        "size": [
+          0.19,
+          0.25
+        ],
+        "plane": "distant"
+      },
+      "c4_escape.fault": {
+        "center": [
+          0.47,
+          0.45
+        ],
+        "size": [
+          0.09,
+          0.24
+        ],
+        "plane": "distant"
+      },
+      "c4_escape.van": {
+        "center": [
+          0.84,
+          0.54
+        ],
+        "size": [
+          0.29,
+          0.35
+        ],
+        "plane": "distant"
+      }
+    }
+  },
+  "c5_shack": {
+    "master": "masters/c5_shack.png",
+    "runtime": "game/assets/illustrated/campaign/rooms/c5_shack.webp",
+    "source_size": [
+      1672,
+      941
+    ],
+    "png_sha256": "647010f257bcb21820268e2a87caf0d471369887fafb82854322a7e6a44a8a6c",
+    "webp_sha256": "c62f799cd30024641de7d31561c3d3a25d45d99f79d3abac4bc2c6e48c8d7aea",
+    "webp_bytes": 523730,
+    "interaction_boxes": {
+      "c5_shack.notes": {
+        "center": [
+          0.14,
+          0.69
+        ],
+        "size": [
+          0.2,
+          0.25
+        ],
+        "plane": "distant"
+      },
+      "c5_shack.rig": {
+        "center": [
+          0.38,
+          0.59
+        ],
+        "size": [
+          0.25,
+          0.21
+        ],
+        "plane": "distant"
+      },
+      "c5_shack.club": {
+        "center": [
+          0.66,
+          0.6
+        ],
+        "size": [
+          0.21,
+          0.22
+        ],
+        "plane": "distant"
+      },
+      "c5_shack.log": {
+        "center": [
+          0.86,
+          0.75
+        ],
+        "size": [
+          0.16,
+          0.13
+        ],
+        "plane": "distant"
+      }
+    }
+  },
+  "c5_station": {
+    "master": "masters/c5_station.png",
+    "runtime": "game/assets/illustrated/campaign/rooms/c5_station.webp",
+    "source_size": [
+      1672,
+      941
+    ],
+    "png_sha256": "ef662c6025af8ffec717ff00c4a2b400b5b65541e0ac62c0fca2e7eb427d46bc",
+    "webp_sha256": "6c8146a34fcaa6df2e496f45753814e47056b334afe96b834cb5c70592761cb9",
+    "webp_bytes": 346524,
+    "interaction_boxes": {
+      "c5_station.automation": {
+        "center": [
+          0.17,
+          0.61
+        ],
+        "size": [
+          0.3,
+          0.22
+        ],
+        "plane": "distant"
+      },
+      "c5_station.sleeve": {
+        "center": [
+          0.31,
+          0.74
+        ],
+        "size": [
+          0.19,
+          0.13
+        ],
+        "plane": "distant"
+      },
+      "c5_station.halcyon": {
+        "center": [
+          0.63,
+          0.6
+        ],
+        "size": [
+          0.17,
+          0.15
+        ],
+        "plane": "distant"
+      },
+      "c5_station.stephen": {
+        "center": [
+          0.87,
+          0.43
+        ],
+        "size": [
+          0.18,
+          0.47
+        ],
+        "plane": "distant"
+      }
+    }
+  },
+  "c6_iris": {
+    "master": "masters/c6_iris.png",
+    "runtime": "game/assets/illustrated/campaign/rooms/c6_iris.webp",
+    "source_size": [
+      1672,
+      941
+    ],
+    "png_sha256": "4d35c1b38f8ced4aa2afa89a4031233719060aca4ecf67348b9ef2541f88e6cd",
+    "webp_sha256": "6632f3329a6d7c902ba4581aaf532f2fa44490dd5a5d9a296650c12436186d87",
+    "webp_bytes": 519794,
+    "interaction_boxes": {
+      "c6_iris.alibi": {
+        "center": [
+          0.16,
+          0.61
+        ],
+        "size": [
+          0.25,
+          0.21
+        ],
+        "plane": "distant"
+      },
+      "c6_iris.takes": {
+        "center": [
+          0.49,
+          0.74
+        ],
+        "size": [
+          0.14,
+          0.13
+        ],
+        "plane": "distant"
+      },
+      "c6_iris.hold": {
+        "center": [
+          0.85,
+          0.48
+        ],
+        "size": [
+          0.18,
+          0.25
+        ],
+        "plane": "distant"
+      }
+    }
+  },
+  "c6_jail": {
+    "master": "masters/c6_jail.png",
+    "runtime": "game/assets/illustrated/campaign/rooms/c6_jail.webp",
+    "source_size": [
+      1672,
+      941
+    ],
+    "png_sha256": "b51aaecc13a2ee9bf8e2da22de7ee11d208aec1948141b1af29d1a75e4b6cd2e",
+    "webp_sha256": "8e9f7d5afdd2b410233f1d7f75c6cef48cf8c28aac344f471cd24ed33c284e5a",
+    "webp_bytes": 466194,
+    "interaction_boxes": {
+      "c6_jail.mail": {
+        "center": [
+          0.1,
+          0.63
+        ],
+        "size": [
+          0.19,
+          0.4
+        ],
+        "plane": "distant"
+      },
+      "c6_jail.distract": {
+        "center": [
+          0.36,
+          0.61
+        ],
+        "size": [
+          0.16,
+          0.16
+        ],
+        "plane": "distant"
+      },
+      "c6_jail.crossword": {
+        "center": [
+          0.64,
+          0.47
+        ],
+        "size": [
+          0.27,
+          0.38
+        ],
+        "plane": "distant"
+      },
+      "c6_jail.exit": {
+        "center": [
+          0.88,
+          0.51
+        ],
+        "size": [
+          0.16,
+          0.36
+        ],
+        "plane": "distant"
+      }
+    }
+  },
+  "i2_nora": {
+    "master": "masters/i2_nora.png",
+    "runtime": "game/assets/illustrated/campaign/rooms/i2_nora.webp",
+    "source_size": [
+      1672,
+      941
+    ],
+    "png_sha256": "9f506c105a1a01fa58b93a9f970e7b90df293faed0c5f66c9bca4044d07de88e",
+    "webp_sha256": "aea2ca1394950369c6f0891d40b0b908381a8c10d634ec4597ccde75345dc3a2",
+    "webp_bytes": 403688,
+    "interaction_boxes": {
+      "i2_nora.patrol": {
+        "center": [
+          0.14,
+          0.55
+        ],
+        "size": [
+          0.15,
+          0.36
+        ],
+        "plane": "distant"
+      },
+      "i2_nora.jobs": {
+        "center": [
+          0.4,
+          0.58
+        ],
+        "size": [
+          0.23,
+          0.26
+        ],
+        "plane": "distant"
+      },
+      "i2_nora.pump": {
+        "center": [
+          0.7,
+          0.44
+        ],
+        "size": [
+          0.15,
+          0.43
+        ],
+        "plane": "distant"
+      },
+      "i2_nora.message": {
+        "center": [
+          0.89,
+          0.66
+        ],
+        "size": [
+          0.14,
+          0.19
+        ],
+        "plane": "distant"
+      }
+    }
+  },
+  "c7_gate": {
+    "master": "masters/c7_gate.png",
+    "runtime": "game/assets/illustrated/campaign/rooms/c7_gate.webp",
+    "source_size": [
+      1672,
+      941
+    ],
+    "png_sha256": "116f2372efbf3edce429537e44cfc771a49ef379d44a498d870b3d9f51a037dd",
+    "webp_sha256": "86658db8be30534f278f26991863e62d48154df2d8331ef31b2113e81fbb9ebb",
+    "webp_bytes": 545694,
+    "interaction_boxes": {
+      "c7_gate.badge": {
+        "center": [
+          0.18,
+          0.61
+        ],
+        "size": [
+          0.2,
+          0.25
+        ],
+        "plane": "distant"
+      },
+      "c7_gate.post": {
+        "center": [
+          0.55,
+          0.63
+        ],
+        "size": [
+          0.17,
+          0.32
+        ],
+        "plane": "distant"
+      },
+      "c7_gate.truck": {
+        "center": [
+          0.84,
+          0.49
+        ],
+        "size": [
+          0.27,
+          0.33
+        ],
+        "plane": "distant"
+      }
+    }
+  },
+  "c7_swap": {
+    "master": "masters/c7_swap.png",
+    "runtime": "game/assets/illustrated/campaign/rooms/c7_swap.webp",
+    "source_size": [
+      1672,
+      941
+    ],
+    "png_sha256": "8a663db74be7e2e790932039cc3bb67035f4c3fa678b8c990087185224f4b326",
+    "webp_sha256": "81d563369906e0d666902a15ec5776ef7871c50b99c11138e213f6061d0e759d",
+    "webp_bytes": 398076,
+    "interaction_boxes": {
+      "c7_swap.map": {
+        "center": [
+          0.11,
+          0.54
+        ],
+        "size": [
+          0.15,
+          0.25
+        ],
+        "plane": "distant"
+      },
+      "c7_swap.bus": {
+        "center": [
+          0.46,
+          0.68
+        ],
+        "size": [
+          0.35,
+          0.26
+        ],
+        "plane": "distant"
+      },
+      "c7_swap.tone": {
+        "center": [
+          0.8,
+          0.57
+        ],
+        "size": [
+          0.12,
+          0.22
+        ],
+        "plane": "distant"
+      }
+    }
+  },
+  "c8_lab": {
+    "master": "masters/c8_lab.png",
+    "runtime": "game/assets/illustrated/campaign/rooms/c8_lab.webp",
+    "source_size": [
+      1672,
+      941
+    ],
+    "png_sha256": "cccf9588966c99b9acf168ca7d6b07f86bcf968e159e3cd8bcd89a93ae9ff474",
+    "webp_sha256": "e614556b516a65ac946b37ac7b2c331259ddbdd75978b4b2790776e2a43ea70d",
+    "webp_bytes": 489670,
+    "interaction_boxes": {
+      "c8_lab.notebook": {
+        "center": [
+          0.16,
+          0.72
+        ],
+        "size": [
+          0.12,
+          0.15
+        ],
+        "plane": "distant"
+      },
+      "c8_lab.props": {
+        "center": [
+          0.5,
+          0.37
+        ],
+        "size": [
+          0.28,
+          0.36
+        ],
+        "plane": "distant"
+      },
+      "c8_lab.lastpage": {
+        "center": [
+          0.84,
+          0.72
+        ],
+        "size": [
+          0.24,
+          0.22
+        ],
+        "plane": "distant"
+      }
+    }
+  },
+  "c8_beach": {
+    "master": "masters/c8_beach.png",
+    "runtime": "game/assets/illustrated/campaign/rooms/c8_beach.webp",
+    "source_size": [
+      1672,
+      941
+    ],
+    "png_sha256": "afa373e42dd96d024dc13a7db85ed563cafff12abecf9b0815fbe6e9a2ce82c0",
+    "webp_sha256": "be8534978da3932124c02bfcde3401ae15a8074dc6e9843a252b111c4074211f",
+    "webp_bytes": 446316,
+    "interaction_boxes": {
+      "c8_beach.first": {
+        "center": [
+          0.13,
+          0.63
+        ],
+        "size": [
+          0.12,
+          0.18
+        ],
+        "plane": "distant"
+      },
+      "c8_beach.second": {
+        "center": [
+          0.58,
+          0.77
+        ],
+        "size": [
+          0.19,
+          0.16
+        ],
+        "plane": "distant"
+      },
+      "c8_beach.refuse": {
+        "center": [
+          0.86,
+          0.76
+        ],
+        "size": [
+          0.18,
+          0.16
+        ],
+        "plane": "distant"
+      }
+    }
+  },
+  "c8_rig": {
+    "master": "masters/c8_rig.png",
+    "runtime": "game/assets/illustrated/campaign/rooms/c8_rig.webp",
+    "source_size": [
+      1672,
+      941
+    ],
+    "png_sha256": "9a52ae448bc235f6608382f53d58c8d7022c600b433d4dd7ef4a518cba271fc7",
+    "webp_sha256": "fca479d59ac11044c5f664ad450a7344e0e30e97ca34eea61181d6a5de0857ae",
+    "webp_bytes": 469412,
+    "interaction_boxes": {
+      "c8_rig.source": {
+        "center": [
+          0.13,
+          0.53
+        ],
+        "size": [
+          0.17,
+          0.25
+        ],
+        "plane": "distant"
+      },
+      "c8_rig.path": {
+        "center": [
+          0.5,
+          0.6
+        ],
+        "size": [
+          0.11,
+          0.24
+        ],
+        "plane": "distant"
+      },
+      "c8_rig.rig": {
+        "center": [
+          0.86,
+          0.54
+        ],
+        "size": [
+          0.24,
+          0.2
+        ],
+        "plane": "distant"
+      }
+    }
+  },
+  "c9_gallery": {
+    "master": "masters/c9_gallery.png",
+    "runtime": "game/assets/illustrated/campaign/rooms/c9_gallery.webp",
+    "source_size": [
+      1672,
+      941
+    ],
+    "png_sha256": "d78a59b906f6864fe770aaead601b9264ebf984f4e0a998c31293a06d6b93764",
+    "webp_sha256": "97dfca9832d4300f09429ea7c6891452e8dbf231b1571faacb7ae28e234a5675",
+    "webp_bytes": 363802,
+    "interaction_boxes": {
+      "c9_gallery.antenna": {
+        "center": [
+          0.09,
+          0.47
+        ],
+        "size": [
+          0.15,
+          0.46
+        ],
+        "plane": "distant"
+      },
+      "c9_gallery.link": {
+        "center": [
+          0.45,
+          0.6
+        ],
+        "size": [
+          0.36,
+          0.3
+        ],
+        "plane": "distant"
+      },
+      "c9_gallery.talk": {
+        "center": [
+          0.82,
+          0.63
+        ],
+        "size": [
+          0.31,
+          0.31
+        ],
+        "plane": "distant"
+      }
+    }
+  },
+  "c9_wake": {
+    "master": "masters/c9_wake.png",
+    "runtime": "game/assets/illustrated/campaign/rooms/c9_wake.webp",
+    "source_size": [
+      1672,
+      941
+    ],
+    "png_sha256": "ba3456a67ccbcb079bd835315173b0108fc51ce7d7c9fe53dae97ac1e8967b7d",
+    "webp_sha256": "4060a43432145ec041992f34fba781d0504f9520d2a804d72f9d3c043ee1ece8",
+    "webp_bytes": 358152,
+    "interaction_boxes": {
+      "c9_wake.frank": {
+        "center": [
+          0.12,
+          0.51
+        ],
+        "size": [
+          0.2,
+          0.28
+        ],
+        "plane": "distant"
+      },
+      "c9_wake.helen": {
+        "center": [
+          0.39,
+          0.49
+        ],
+        "size": [
+          0.19,
+          0.24
+        ],
+        "plane": "distant"
+      },
+      "c9_wake.rook": {
+        "center": [
+          0.64,
+          0.49
+        ],
+        "size": [
+          0.18,
+          0.24
+        ],
+        "plane": "distant"
+      },
+      "c9_wake.agnes": {
+        "center": [
+          0.88,
+          0.5
+        ],
+        "size": [
+          0.19,
+          0.23
+        ],
+        "plane": "distant"
+      }
+    }
+  },
+  "c9_choir": {
+    "master": "masters/c9_choir.png",
+    "runtime": "game/assets/illustrated/campaign/rooms/c9_choir.webp",
+    "source_size": [
+      1672,
+      941
+    ],
+    "png_sha256": "2f5b21de2b8e81cd50c2783717829513de255466d2e643ad488a46ce5b7ed69e",
+    "webp_sha256": "c55a46c02666096a713e0d7c8eb78cdfd1211396056de858cd8dbfdab7d64472",
+    "webp_bytes": 433162,
+    "interaction_boxes": {
+      "c9_choir.truth": {
+        "center": [
+          0.16,
+          0.5
+        ],
+        "size": [
+          0.27,
+          0.3
+        ],
+        "plane": "distant"
+      },
+      "c9_choir.wick": {
+        "center": [
+          0.55,
+          0.52
+        ],
+        "size": [
+          0.22,
+          0.13
+        ],
+        "plane": "distant"
+      },
+      "c9_choir.note": {
+        "center": [
+          0.8,
+          0.76
+        ],
+        "size": [
+          0.22,
+          0.18
+        ],
+        "plane": "distant"
+      }
+    }
+  },
+  "c10_station": {
+    "master": "masters/c10_station.png",
+    "runtime": "game/assets/illustrated/campaign/rooms/c10_station.webp",
+    "source_size": [
+      1672,
+      941
+    ],
+    "png_sha256": "9cd17625cd3ba54d3fcca88b1f4647f2f3540f9202db87bcb026fecb56afc183",
+    "webp_sha256": "454f660ef9ce085dd54710c741c26b72a30b50ce792ae81021ed07ee9f6b7a57",
+    "webp_bytes": 406076,
+    "interaction_boxes": {
+      "c10_station.playlist": {
+        "center": [
+          0.16,
+          0.65
+        ],
+        "size": [
+          0.14,
+          0.23
+        ],
+        "plane": "distant"
+      },
+      "c10_station.route": {
+        "center": [
+          0.54,
+          0.62
+        ],
+        "size": [
+          0.18,
+          0.18
+        ],
+        "plane": "distant"
+      },
+      "c10_station.relay": {
+        "center": [
+          0.83,
+          0.75
+        ],
+        "size": [
+          0.24,
+          0.28
+        ],
+        "plane": "distant"
+      }
+    }
+  },
+  "c10_town": {
+    "master": "masters/c10_town.png",
+    "runtime": "game/assets/illustrated/campaign/rooms/c10_town.webp",
+    "source_size": [
+      1672,
+      941
+    ],
+    "png_sha256": "88a62e4991d7b50552a57abd5ddab2d851ef9d4e3091fc808c159a2db9bfc216",
+    "webp_sha256": "ec2ff7c973305123d39661f76ef73553445881c8078f00626c459fe73ab4fda4",
+    "webp_bytes": 550706,
+    "interaction_boxes": {
+      "c10_town.lights": {
+        "center": [
+          0.15,
+          0.74
+        ],
+        "size": [
+          0.21,
+          0.25
+        ],
+        "plane": "distant"
+      },
+      "c10_town.console": {
+        "center": [
+          0.55,
+          0.57
+        ],
+        "size": [
+          0.34,
+          0.19
+        ],
+        "plane": "distant"
+      },
+      "c10_town.wind": {
+        "center": [
+          0.8,
+          0.78
+        ],
+        "size": [
+          0.18,
+          0.29
+        ],
+        "plane": "distant"
+      }
+    }
+  },
+  "c10_live": {
+    "master": "masters/c10_live.png",
+    "runtime": "game/assets/illustrated/campaign/rooms/c10_live.webp",
+    "source_size": [
+      1672,
+      941
+    ],
+    "png_sha256": "40b2fe350dd462f4a3a17b7eb01c22ef3b3bcfcecd0934f58274875c9a8193aa",
+    "webp_sha256": "63e0246286256a4463057d71798c365f4631fdfe1ef750ae4678a47fdbfb5140",
+    "webp_bytes": 336952,
+    "interaction_boxes": {
+      "c10_live.first": {
+        "center": [
+          0.18,
+          0.68
+        ],
+        "size": [
+          0.23,
+          0.22
+        ],
+        "plane": "distant"
+      },
+      "c10_live.second": {
+        "center": [
+          0.5,
+          0.66
+        ],
+        "size": [
+          0.11,
+          0.22
+        ],
+        "plane": "distant"
+      },
+      "c10_live.third": {
+        "center": [
+          0.82,
+          0.62
+        ],
+        "size": [
+          0.22,
+          0.34
+        ],
+        "plane": "distant"
+      }
+    }
+  },
+  "c10_report": {
+    "master": "masters/c10_report.png",
+    "runtime": "game/assets/illustrated/campaign/rooms/c10_report.webp",
+    "source_size": [
+      1672,
+      941
+    ],
+    "png_sha256": "297a8c9e9115cf0f4bd0d5dd7df652893a2e7dad193cc3057907c8e35c5b68cc",
+    "webp_sha256": "3cbd43be350637470b0cd8179c3339182a44737dbab18047698c10ca23562d9d",
+    "webp_bytes": 385318,
+    "interaction_boxes": {
+      "c10_report.echo": {
+        "center": [
+          0.15,
+          0.6
+        ],
+        "size": [
+          0.2,
+          0.29
+        ],
+        "plane": "distant"
+      },
+      "c10_report.survey": {
+        "center": [
+          0.51,
+          0.61
+        ],
+        "size": [
+          0.11,
+          0.15
+        ],
+        "plane": "distant"
+      },
+      "c10_report.report": {
+        "center": [
+          0.83,
+          0.56
+        ],
+        "size": [
+          0.1,
+          0.23
+        ],
+        "plane": "distant"
+      }
+    }
+  },
+  "epilogue": {
+    "master": "masters/epilogue.png",
+    "runtime": "game/assets/illustrated/campaign/rooms/epilogue.webp",
+    "source_size": [
+      1672,
+      941
+    ],
+    "png_sha256": "8cae97d3235aac88f0b6b4217cd6e9e578641f9827907f4e25188c2aa4233f1e",
+    "webp_sha256": "584e4a2b40458d5947a68e52dfc81a45707a96b6f3abe1746604739acaff586d",
+    "webp_bytes": 624446,
+    "interaction_boxes": {
+      "epilogue.neighbors": {
+        "center": [
+          0.12,
+          0.68
+        ],
+        "size": [
+          0.21,
+          0.3
+        ],
+        "plane": "distant"
+      },
+      "epilogue.bait": {
+        "center": [
+          0.47,
+          0.57
+        ],
+        "size": [
+          0.17,
+          0.2
+        ],
+        "plane": "distant"
+      },
+      "epilogue.coffee": {
+        "center": [
+          0.89,
+          0.62
+        ],
+        "size": [
+          0.17,
+          0.17
+        ],
+        "plane": "distant"
+      }
+    }
+  },
+  "one_year": {
+    "master": "masters/one_year.png",
+    "runtime": "game/assets/illustrated/campaign/rooms/one_year.webp",
+    "source_size": [
+      1672,
+      941
+    ],
+    "png_sha256": "8876f61275f29048af863f8c362b29c3d0e232c4dcd4e5173c24e8bc390f0d3d",
+    "webp_sha256": "0cf47d76027510d29003298d9adb8187ffd7a7c3e26c0b2124fde68f9d0b770a",
+    "webp_bytes": 494984,
+    "interaction_boxes": {
+      "one_year.newwind": {
+        "center": [
+          0.35,
+          0.57
+        ],
+        "size": [
+          0.24,
+          0.31
+        ],
+        "plane": "distant"
+      }
+    }
+  },
+  "postcredits": {
+    "master": "masters/postcredits.png",
+    "runtime": "game/assets/illustrated/campaign/rooms/postcredits.webp",
+    "source_size": [
+      1672,
+      941
+    ],
+    "png_sha256": "06d1c082ac5d7afdd047d17540fe66823fea85beef282696e2790334702ff787",
+    "webp_sha256": "3f28b475bc449c8642657741d7a80b7d83bc93c271e6e1db09e8b2cf5fa4e374",
+    "webp_bytes": 302074,
+    "interaction_boxes": {
+      "postcredits.answer": {
+        "center": [
+          0.75,
+          0.61
+        ],
+        "size": [
+          0.19,
+          0.19
+        ],
+        "plane": "distant"
+      }
+    }
+  }
+}

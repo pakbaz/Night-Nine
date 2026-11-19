@@ -1,0 +1,172 @@
+{
+  "generator": "GPT Image",
+  "common_human_direction": "Create one exceptionally high-fidelity painted character sprite for Night Nine, original fixed-camera 2.5D PNW mystery adventure. Exact fictional identity, face shape, skin color, age, hair and wardrobe from reference; do not redesign or beautify. A single coherent individual, high-detail face in naturalistic cinematic hand-painted realism, three-quarter-waist portrait with both shoulders, crown to low belt visible, both sides of silhouette entirely inside the image, centered, bottom at hips. Face almost toward us (around 5-10 degrees), both eyes visible, naturally closed lips without teeth, listening to someone next to camera. Individual fine hair strands and the texture of a worn collar. Neutral soft front-left open window light, soft rim, no stage colors. Real proportions, human asymmetric natural expression. Clean real transparent background. No label, text, other people, backdrop, halo, opaque floor, extra face, objects in hair, grid or sheet. Frame character large and clean around hair. ",
+  "approved_boards": "assets/concepts/characters",
+  "portraits": {
+    "steve_toward_nora": {"direction": "Paint one cinematic cropped three-quarter-waist portrait on true alpha for a dialogue two-shot in the Night Nine game. Steve Mercer, modest worn brown cardigan, rectangle glasses, analog headphones at his collar, tousled brown hair; quiet dawning recognition. This is precisely the fictional person in the supplied reference with identical identity, age, complexion, clothing, facial proportions and hair. Primary change: position head in a true 30 to 35 degree three-quarter turn toward SCREEN RIGHT, with nostril, chin, nose tip and both pupils pointing firmly toward the right edge, looking at a nearby partner of similar height. Their shoulders also rotate 20 degrees toward screen right. They are listening, eyes open, closed parted-by-a-line mouth for lip-sync, hands down. Both eyes visible with unequal widths, neither staring at camera. Preserve photographic hand-painted diffuse game light from high left, actual material textures, facial asymmetry, freckles, sharp eye detail. Give breathing space at crown and both sides, complete shoulders and elbows, crop below waist. One complete figure, transparent background, no props added, no hair decorations, no text. Portrait orientation.", "references": ["assets/characters/campaign/masters/steve.png"], "master": "steve_toward_nora.png"},
+    "nora_toward_steve": {"direction": "Paint one cinematic cropped three-quarter-waist portrait on true alpha for a dialogue two-shot in the Night Nine game. Nora Reyes, blue aquarium fleece, natural gathered curly dark hair, warm steady eye contact after a long separation. This is precisely the fictional person in the supplied reference with identical identity, age, complexion, clothing, facial proportions and hair. Primary change: position head in a true 30 to 35 degree three-quarter turn toward SCREEN LEFT, with nostril, chin, nose tip and both pupils pointing firmly toward the left edge, looking at a nearby partner of similar height. Their shoulders also rotate 20 degrees toward screen left. They are listening, eyes open, closed parted-by-a-line mouth for lip-sync, hands down. Both eyes visible with unequal widths, neither staring at camera. Preserve photographic hand-painted diffuse game light from high left, actual material textures, facial asymmetry, freckles, sharp eye detail. Give breathing space at crown and both sides, complete shoulders and elbows, crop below waist. One complete figure, transparent background, no props added, no hair decorations, no text. Portrait orientation.", "references": ["assets/characters/campaign/masters/nora.png"], "master": "nora_toward_steve.png"},
+    "iris_epilogue": {
+      "direction": "Paint a new transparent, waist-up game sprite for the epilogue of Night Nine. The fictional adult Iris has deliberately chosen a new face. Use the reference for her navy aquarium fleece over dark shirt, gentle composure, hand-painted realism, and the same crown-through-hips framing with both hands in pockets, lit from upper left. For this epilogue only give her a distinctive face of her own, unmistakably another adult woman of a similar age: broad round cheekbones, a gently flattened bridge, hooded hazel eyes, softly rounded jaw, short dark auburn wavy hair with ears partly visible, small freckles across the bridge, a small dimple on one cheek. Neutral thoughtful smile with lips together, eyes open, facing forward with a slight turn to camera right. Human, self-possessed and warmly recognizable as her own person. Grounded Pacific Northwest game illustration with actual skin pores, natural fabric. Entire silhouette within frame, include shoulders and elbows. Plain transparent background. No text beyond the tiny embroidery on the uniform, no hair ornaments and no extra people.",
+      "references": ["assets/characters/campaign/masters/iris.png"],
+      "master": "iris_epilogue.png"
+    },
+    "steve": {
+      "direction": "Steve Mercer. The front face is authoritative. Shaggy brown hair, rectangular glasses, gray-brown cardigan and the old oversized brown headphones around his neck; visibly sleep deprived, compassionate. No pencil. Facing slightly camera-right.",
+      "references": [
+        "assets/characters/references/steve-face-v2.png",
+        "assets/characters/references/steve-front-v1.png"
+      ],
+      "master": "steve.png"
+    },
+    "stephen": {
+      "direction": "Stephen. SAME exact face and rectangular glasses as Steve Mercer in the approved front reference; this physically identical copy has a more upright posture, neater combed brown hair, light denim overshirt over a white tee as in the RIGHT figure on the character board. No headphones, no pencil; calmly self-assured. Facing slightly camera-left.",
+      "references": [
+        "assets/characters/references/steve-face-v2.png",
+        "assets/concepts/characters/01-steve-and-stephen-v2.png"
+      ],
+      "master": "stephen.png"
+    },
+    "nora": {
+      "direction": "Nora Reyes. Exact curious expressive face from the close-up, dark curly hair gathered loosely up, blue zip-front aquarium work jacket. A warm alert speaking partner. No pencil, no hairpin, no hair decoration. Facing slightly camera-left.",
+      "references": [
+        "assets/characters/references/nora-face-v2.png",
+        "assets/characters/references/nora-front-v1.png"
+      ],
+      "master": "nora.png"
+    },
+    "iris": {
+      "direction": "Iris, outwardly identical to Nora Reyes in the approved close-up: exact same face and loosely tied up curly black hair. In the dark navy aquarium work jacket of the SECOND full figure on the reference. A gentle stillness and steady eyes, looks slightly camera-right. No items or accessories in hair. Avoid robotic features.",
+      "references": [
+        "assets/characters/references/nora-face-v2.png",
+        "assets/concepts/characters/02-nora-and-iris.png"
+      ],
+      "master": "iris.png"
+    },
+    "calder": {
+      "direction": "Sheriff June Calder, 58. Weathered, calm, kind eyes, gray braid, beige county uniform and eyeglasses hanging on cord. No weapon.",
+      "references": [
+        "assets/characters/campaign/references/calder.png"
+      ],
+      "master": "calder.png"
+    },
+    "agnes": {
+      "direction": "Agnes Penhallow. Elderly, salt-weathered, wry pier bait seller, in the dark layered raincoat with the exact hair and face from the reference.",
+      "references": [
+        "assets/characters/campaign/references/agnes.png"
+      ],
+      "master": "agnes.png"
+    },
+    "rook": {
+      "direction": "Adrian Rook. Early-50s tired federal agent. Dark suit and tie from reference; precise and patient. No weapon.",
+      "references": [
+        "assets/characters/campaign/references/rook.png"
+      ],
+      "master": "rook.png"
+    },
+    "pell": {
+      "direction": "Deputy Dale Kittredge and his physically identical copy Pell. Match this original character's blue town patrol uniform and face. Kind anxious eyes; restrained smile. No weapon.",
+      "references": [
+        "assets/characters/campaign/references/pell.png"
+      ],
+      "master": "pell.png"
+    },
+    "saren": {
+      "direction": "Prefect Saren. Match the tallest upright alien on the LEFT of the reference, iridescent pearlescent layered translucent ceremonial material, exact delicate alien hairless face. Stern, subtle internal vein light, dark honey eyes, no armor or weapons. Preserve long head and refined silhouette.",
+      "references": [
+        "assets/characters/campaign/references/saren.png"
+      ],
+      "master": "saren.png"
+    },
+    "wen": {
+      "direction": "Dr. Lin Wen, elegant precise East Asian scientist in monochrome jacket, face and wardrobe as shown.",
+      "references": [
+        "assets/characters/campaign/references/wen.png"
+      ],
+      "master": "wen.png"
+    },
+    "shaw": {
+      "direction": "Dr. Evelyn Shaw. Practical expressive scientist in charcoal shirt, matching short unruly hair, with rolled sleeves and a grease smudge on cuff.",
+      "references": [
+        "assets/characters/campaign/references/shaw.png"
+      ],
+      "master": "shaw.png"
+    },
+    "ward": {
+      "direction": "President Elena Ward. Confident mature leader in a tailored navy suit, tact and humor, the actual face on the approved reference.",
+      "references": [
+        "assets/characters/campaign/references/ward.png"
+      ],
+      "master": "ward.png"
+    },
+    "lyle": {
+      "direction": "Lyle Boone, jovial middle-aged Bellwether sheriff's deputy in tan uniform, from the approved panel. No weapon.",
+      "references": [
+        "assets/characters/campaign/references/lyle.png"
+      ],
+      "master": "lyle.png"
+    },
+    "gus": {
+      "direction": "Gus Albano, cheerful white-aproned baker, reference white shirt and apron dusted lightly with flour.",
+      "references": [
+        "assets/characters/campaign/references/gus.png"
+      ],
+      "master": "gus.png"
+    },
+    "carmen": {
+      "direction": "Carmen Reyes, family matriarch at La Marea, dark red chef's shirt and apron from the approved reference.",
+      "references": [
+        "assets/characters/campaign/references/carmen.png"
+      ],
+      "master": "carmen.png"
+    },
+    "luis": {
+      "direction": "Luis Reyes, quiet older father, charcoal sweater, matching grey beard from board.",
+      "references": [
+        "assets/characters/campaign/references/luis.png"
+      ],
+      "master": "luis.png"
+    },
+    "mateo": {
+      "direction": "Mateo Reyes, eldest Reyes brother, strongly built, reference navy work shirt, practical warm expression.",
+      "references": [
+        "assets/characters/campaign/references/mateo.png"
+      ],
+      "master": "mateo.png"
+    },
+    "rafa": {
+      "direction": "Rafa Reyes, second brother, a small confident smile, white rolled-sleeve kitchen shirt and tied apron from the board.",
+      "references": [
+        "assets/characters/campaign/references/rafa.png"
+      ],
+      "master": "rafa.png"
+    },
+    "tomas": {
+      "direction": "Tomás Reyes, young podcaster, shaggy curls and layered field jacket as in this board, lively alert eyes.",
+      "references": [
+        "assets/characters/campaign/references/tomas.png"
+      ],
+      "master": "tomas.png"
+    },
+    "wick": {
+      "direction": "Wick, tall bowed icy being, visibly different than the pearly Veyri. Preserve exact arched head/neck, very long delicate arms, textured frost-covered charcoal-and-silver layers and gentle eye. Face sideways as on the reference; draw from waist to crown.",
+      "references": [
+        "assets/characters/campaign/references/wick.png"
+      ],
+      "master": "wick.png"
+    },
+    "admiral": {
+      "direction": "Admiral, the heavy adult California sea lion reclining with chest tall on his foreflippers, glancing over to camera right, wet dark russet-bronze fur, sandy grizzled muzzle and whiskers, tiny ear flaps; intelligent brazen curiosity.",
+      "references": [
+        "assets/characters/campaign/references/admiral.png"
+      ],
+      "master": "admiral.png"
+    },
+    "biscuit": {
+      "direction": "Biscuit, an elderly tricolor beagle sitting naturally, white-silver muzzle, soulful eyes, old worn collar if visible in reference, one floppy ear turned toward a sound. Cut the eyes toward upper left where the postal carrier stands.",
+      "references": [
+        "assets/characters/campaign/references/biscuit.png"
+      ],
+      "master": "biscuit.png"
+    }
+  }
+}

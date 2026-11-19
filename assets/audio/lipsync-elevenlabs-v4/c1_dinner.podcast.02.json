@@ -1,0 +1,58 @@
+{
+  "id": "c1_dinner.podcast.02",
+  "speaker": "steve",
+  "audio": "res://assets/audio/voices/elevenlabs-v4/c1_dinner.podcast.02.wav",
+  "audio_sha256": "99cd9b528c241d73511bd9b154d6e88bb839855f71c8f80656a34ce531faa179",
+  "transcript": "I\u2019m listening now.",
+  "transcript_sha256": "325c726e39b9c7b7730123cf024d9da1c2b038ebabd2274eadf698db1f3f2297",
+  "generator": "Rhubarb Lip Sync version 1.14.0",
+  "generator_sha256": "93fa4a16ae1cc88a89d59743057521407843fc7139e23808c9e6587c6cc946d3",
+  "seconds": 1.410625,
+  "generation_seconds": 2.738,
+  "cues": [
+    {
+      "start": 0.0,
+      "end": 0.05,
+      "value": "X"
+    },
+    {
+      "start": 0.05,
+      "end": 0.09,
+      "value": "C"
+    },
+    {
+      "start": 0.09,
+      "end": 0.13,
+      "value": "B"
+    },
+    {
+      "start": 0.13,
+      "end": 0.21,
+      "value": "A"
+    },
+    {
+      "start": 0.21,
+      "end": 0.52,
+      "value": "B"
+    },
+    {
+      "start": 0.52,
+      "end": 0.87,
+      "value": "C"
+    },
+    {
+      "start": 0.87,
+      "end": 1.01,
+      "value": "E"
+    },
+    {
+      "start": 1.01,
+      "end": 1.41,
+      "value": "X"
+    }
+  ],
+  "raw_sha256": "056c2c50afba46adc542f5b371c9f58acf980e9b7dcc7f4ac82480134f53524d",
+  "visual_timing_reviewed": false,
+  "cloud_credits": 0,
+  "uploads": false
+}

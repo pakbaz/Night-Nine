@@ -1,5 +1,7 @@
 {
   "base": "luis.webp",
+  "source": "assets/characters/campaign/masters/luis.png",
+  "source_sha256": "06f3017566222f6ab70a55118b51b42e8ca797510d8efaea764d9c32491cfa17",
   "size": [
     810,
     1080
@@ -93,6 +95,10 @@
     "F": "mouth_round",
     "G": "mouth_parted",
     "H": "mouth_parted"
+  },
+  "sha256": {
+    "luis.webp": "dffe1c374c549fd7a8a24c87b5240c47e42eef28dca851c54680c1a02737bf47",
+    "luis-face-atlas.png": "42b3ea994a97d1084722654627bfff0e8ec62c935f6963be8d8b637fcfde67f3"
   },
   "atlas": "luis-face-atlas.png",
   "eye_centers": [

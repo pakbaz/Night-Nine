@@ -1,5 +1,7 @@
 {
   "base": "gus.webp",
+  "source": "assets/characters/campaign/masters/gus.png",
+  "source_sha256": "3542852738660a3e146bfa8296361cae552e4a761849de26db2c7b183337617b",
   "size": [
     720,
     1080
@@ -93,6 +95,10 @@
     "F": "mouth_round",
     "G": "mouth_parted",
     "H": "mouth_parted"
+  },
+  "sha256": {
+    "gus.webp": "a695308aeee9fa34aa854ea17b074bdc57c17c655cab4dcfbcfa8806e596f2dd",
+    "gus-face-atlas.png": "ec3814a81afc80e667038d13421036c32d722ae467708ddadf054d16ecb133a9"
   },
   "atlas": "gus-face-atlas.png",
   "eye_centers": [
