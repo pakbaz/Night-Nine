@@ -6,6 +6,7 @@
   "adaptation_status": "Playable illustrated campaign checkpoint.",
   "cast": {
     "steve": "Steve Mercer",
+    "stephen": "Stephen",
     "nora": "Nora Reyes",
     "iris": "Iris",
     "calder": "Sheriff June Calder",
@@ -25,6 +26,7 @@
     "pell": "Pell",
     "autorick": "DJ AutoRick",
     "guard": "Veyri attendant",
+    "operator": "Thursday club operator",
     "general_us": "American delegate",
     "general_cn": "Chinese delegate"
   },
@@ -1622,6 +1624,286 @@
           "direction": "Move toward the active interaction."
         }
       ]
+    },
+    {
+      "id": "c5_shack",
+      "chapter": "Chapter 5",
+      "title": "Wanted: Steve Mercer",
+      "place": "Frank’s radio shack",
+      "style": "radio_shack",
+      "actors": [
+        "steve"
+      ],
+      "objective": "Open the boxes and follow Frank’s investigation.",
+      "tasks": [
+        {
+          "id": "c5_shack.notes",
+          "title": "Kitchen-table notes",
+          "prompt": "Forty-five years of notes fill a box. One mentions keeping precious things “with the good stuff.”",
+          "options": [
+            "Read the notes in order",
+            "Search only for government stamps",
+            "Close the box again"
+          ],
+          "answer": 0,
+          "lines": [
+            "c5_shack.notes.01",
+            "c5_shack.notes.02"
+          ],
+          "note": "Opened the family notes and found the record-library clue.",
+          "requires": [],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach."
+        },
+        {
+          "id": "c5_shack.rig",
+          "title": "Frank’s receiver",
+          "prompt": "The receiver’s power lead is loose. Its matching socket is marked 12V DC; the mains lead belongs to a separate supply.",
+          "options": [
+            "Reconnect the matching low-voltage lead with power off",
+            "Bridge every terminal",
+            "Plug the receiver into mains directly"
+          ],
+          "answer": 0,
+          "lines": [
+            "c5_shack.rig.01"
+          ],
+          "note": "Repaired Frank’s radio safely.",
+          "requires": [
+            "c5_shack.notes"
+          ],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "puzzle": {
+            "instruction": "The receiver needs 12V DC. The supply has a matching 12V output and a separate 120V mains input. The long wire belongs on ANT, not GROUND.",
+            "rows": [
+              {
+                "label": "Receiver power",
+                "options": [
+                  "120V input",
+                  "12V output",
+                  "ANT"
+                ]
+              },
+              {
+                "label": "Long wire",
+                "options": [
+                  "DC IN",
+                  "GROUND",
+                  "ANT"
+                ]
+              },
+              {
+                "label": "When to reconnect power",
+                "options": [
+                  "After wiring is complete",
+                  "Before touching the connectors",
+                  "While bridging the terminals"
+                ]
+              }
+            ],
+            "solution": [
+              1,
+              2,
+              0
+            ]
+          }
+        },
+        {
+          "id": "c5_shack.club",
+          "title": "Thursday club",
+          "prompt": "Frank’s log identifies his call sign as K7BLW. Use it to reach the operators who knew him.",
+          "options": [
+            "Call K7BLW",
+            "Play the wanted bulletin",
+            "Send random tones"
+          ],
+          "answer": 0,
+          "lines": [
+            "c5_shack.club.01",
+            "c5_shack.club.02",
+            "c5_shack.club.03"
+          ],
+          "note": "Restored contact with Frank’s ham radio club.",
+          "requires": [
+            "c5_shack.rig"
+          ],
+          "actor": "",
+          "kind": "record",
+          "sounds": [
+            "effect.k7blw"
+          ],
+          "hint": "Look at the evidence in the description, then try another approach."
+        },
+        {
+          "id": "c5_shack.log",
+          "title": "The final log",
+          "prompt": "Frank recorded the ninth-night tone. His last note describes the hum beneath it.",
+          "options": [
+            "Preserve the tone and read the last entry",
+            "Discard the hum as static",
+            "Erase the oldest entries"
+          ],
+          "answer": 0,
+          "lines": [
+            "c5_shack.log.01",
+            "c5_shack.log.02"
+          ],
+          "note": "Preserved the ninth-night tone and Frank’s Choir observation.",
+          "requires": [
+            "c5_shack.club"
+          ],
+          "actor": "",
+          "kind": "record",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach."
+        }
+      ],
+      "intro": [
+        "c5_shack.in.01",
+        "c5_shack.in.02",
+        "c5_shack.in.03"
+      ],
+      "outro": [
+        "c5_shack.out.01",
+        "c5_shack.out.02"
+      ],
+      "shots": [
+        {
+          "duration": 5.0,
+          "move": "establish",
+          "direction": "Push through rain at a shack window to boxes of handwritten kitchen notes."
+        },
+        {
+          "duration": 6.0,
+          "move": "push",
+          "direction": "Move toward the active interaction."
+        }
+      ]
+    },
+    {
+      "id": "c5_station",
+      "chapter": "Chapter 5",
+      "title": "Two of him",
+      "place": "KBWR record library",
+      "style": "station",
+      "actors": [
+        "steve"
+      ],
+      "objective": "Recover Helen’s notebook and face the pursuer.",
+      "tasks": [
+        {
+          "id": "c5_station.automation",
+          "title": "Unattended console",
+          "prompt": "AutoRick reads every item in the event queue. A scheduled station-identification break opens a maintenance window.",
+          "options": [
+            "Schedule an identification break",
+            "Shout over AutoRick",
+            "Pull the tower’s power"
+          ],
+          "answer": 0,
+          "lines": [
+            "c5_station.automation.01"
+          ],
+          "note": "Used the station’s scheduled maintenance window.",
+          "requires": [],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach."
+        },
+        {
+          "id": "c5_station.sleeve",
+          "title": "First show",
+          "prompt": "The first show Steve engineered is filed under its original broadcast date, written in Helen’s kitchen note.",
+          "options": [
+            "Open that record sleeve",
+            "Search the newest releases",
+            "Take the severance letter"
+          ],
+          "answer": 0,
+          "lines": [
+            "c5_station.sleeve.01"
+          ],
+          "note": "Recovered Helen’s notebook.",
+          "requires": [
+            "c5_station.automation"
+          ],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach."
+        },
+        {
+          "id": "c5_station.halcyon",
+          "title": "Ownership papers",
+          "prompt": "The tower’s night transmissions and the severance paperwork name Halcyon Media Holdings.",
+          "options": [
+            "Compare the transmission dates with the acquisition",
+            "Assume the sale was unrelated",
+            "Erase the transmitter logs"
+          ],
+          "answer": 0,
+          "lines": [
+            "c5_station.halcyon.01"
+          ],
+          "note": "Connected Steve’s dismissal to the Veyri communications network.",
+          "requires": [],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach."
+        },
+        {
+          "id": "c5_station.stephen",
+          "title": "The pursuer",
+          "prompt": "Stephen has childhood memories but knows nothing from the last eighteen months. His scan was incomplete.",
+          "options": [
+            "Tell him what happened",
+            "Test him on copied childhood facts",
+            "Treat him as an enemy without listening"
+          ],
+          "answer": 0,
+          "lines": [
+            "c5_station.stephen.01",
+            "c5_station.stephen.02"
+          ],
+          "note": "Recognized Stephen as an incomplete copy with no Veyri occupant.",
+          "requires": [
+            "c5_station.sleeve",
+            "c5_station.halcyon"
+          ],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach."
+        }
+      ],
+      "intro": [
+        "c5_station.in.01",
+        "c5_station.in.02"
+      ],
+      "outro": [
+        "c5_station.out.01",
+        "c5_station.out.02",
+        "c5_station.out.03"
+      ],
+      "shots": [
+        {
+          "duration": 5.0,
+          "move": "establish",
+          "direction": "Track between empty broadcasting racks, then hold on the two brothers at the record shelf."
+        },
+        {
+          "duration": 6.0,
+          "move": "push",
+          "direction": "Move toward the active interaction."
+        }
+      ]
     }
   ],
   "lines": {
@@ -2361,10 +2643,150 @@
       "speaker": "steve",
       "text": "I meant to land on my feet. The ditch had other plans.",
       "audio": "c4_escape.van.01"
+    },
+    "c5_shack.in.01": {
+      "id": "c5_shack.in.01",
+      "speaker": "luis",
+      "text": "Food. I know where your father used to come to think.",
+      "audio": "c5_shack.in.01"
+    },
+    "c5_shack.in.02": {
+      "id": "c5_shack.in.02",
+      "speaker": "steve",
+      "text": "Are you going to call the Sheriff?",
+      "audio": "c5_shack.in.02"
+    },
+    "c5_shack.in.03": {
+      "id": "c5_shack.in.03",
+      "speaker": "luis",
+      "text": "Eat first.",
+      "audio": "c5_shack.in.03"
+    },
+    "c5_shack.out.01": {
+      "id": "c5_shack.out.01",
+      "speaker": "steve",
+      "text": "With the good stuff. Mom meant the record library. My first show.",
+      "audio": "c5_shack.out.01"
+    },
+    "c5_shack.out.02": {
+      "id": "c5_shack.out.02",
+      "speaker": "steve",
+      "text": "I know where the notebook is.",
+      "audio": "c5_shack.out.02"
+    },
+    "c5_shack.notes.01": {
+      "id": "c5_shack.notes.01",
+      "speaker": "helen",
+      "text": "Frank, there is soup in the refrigerator. The other container is paint. Please read both labels.",
+      "audio": "c5_shack.notes.01"
+    },
+    "c5_shack.notes.02": {
+      "id": "c5_shack.notes.02",
+      "speaker": "steve",
+      "text": "I missed you both so much I stopped looking at anything you left.",
+      "audio": "c5_shack.notes.02"
+    },
+    "c5_shack.rig.01": {
+      "id": "c5_shack.rig.01",
+      "speaker": "steve",
+      "text": "Power off. Matching connector. Now the antenna.",
+      "audio": "c5_shack.rig.01"
+    },
+    "c5_shack.club.01": {
+      "id": "c5_shack.club.01",
+      "speaker": "operator",
+      "text": "K7BLW? Frank? We thought we’d lost you.",
+      "audio": "c5_shack.club.01",
+      "cue": "k7blw"
+    },
+    "c5_shack.club.02": {
+      "id": "c5_shack.club.02",
+      "speaker": "steve",
+      "text": "It’s Steve. I need your help.",
+      "audio": "c5_shack.club.02"
+    },
+    "c5_shack.club.03": {
+      "id": "c5_shack.club.03",
+      "speaker": "operator",
+      "text": "Any time, kid.",
+      "audio": "c5_shack.club.03"
+    },
+    "c5_shack.log.01": {
+      "id": "c5_shack.log.01",
+      "speaker": "frank",
+      "text": "It isn’t one voice. It’s a choir.",
+      "audio": "c5_shack.log.01"
+    },
+    "c5_shack.log.02": {
+      "id": "c5_shack.log.02",
+      "speaker": "steve",
+      "text": "They wanted my ears. That’s why they asked me along.",
+      "audio": "c5_shack.log.02"
+    },
+    "c5_station.in.01": {
+      "id": "c5_station.in.01",
+      "speaker": "autorick",
+      "text": "Breaking news, folks: there’s a fella in our record library!",
+      "audio": "c5_station.in.01"
+    },
+    "c5_station.in.02": {
+      "id": "c5_station.in.02",
+      "speaker": "stephen",
+      "text": "That cardigan. Is this what happens when I stop trying?",
+      "audio": "c5_station.in.02"
+    },
+    "c5_station.out.01": {
+      "id": "c5_station.out.01",
+      "speaker": "steve",
+      "text": "They disappeared eighteen months ago. I said no to the boat trip.",
+      "audio": "c5_station.out.01"
+    },
+    "c5_station.out.02": {
+      "id": "c5_station.out.02",
+      "speaker": "stephen",
+      "text": "No. I had breakfast with them. I remember...",
+      "audio": "c5_station.out.02"
+    },
+    "c5_station.out.03": {
+      "id": "c5_station.out.03",
+      "speaker": "stephen",
+      "text": "Then that explains what I saw when I woke up. Mom and Dad are on that ship, Steve. Row nine. They’re asleep. They’re alive.",
+      "audio": "c5_station.out.03"
+    },
+    "c5_station.automation.01": {
+      "id": "c5_station.automation.01",
+      "speaker": "steve",
+      "text": "I built the schedule before they replaced me with it. Maintenance follows the ident.",
+      "audio": "c5_station.automation.01"
+    },
+    "c5_station.sleeve.01": {
+      "id": "c5_station.sleeve.01",
+      "speaker": "steve",
+      "text": "Mom’s handwriting. Mandarin shorthand. And this last page... I’ve never seen that script.",
+      "audio": "c5_station.sleeve.01"
+    },
+    "c5_station.halcyon.01": {
+      "id": "c5_station.halcyon.01",
+      "speaker": "steve",
+      "text": "They needed the tower, and they needed the building empty. I was the last person here.",
+      "audio": "c5_station.halcyon.01"
+    },
+    "c5_station.stephen.01": {
+      "id": "c5_station.stephen.01",
+      "speaker": "stephen",
+      "text": "Sixty-one percent. That’s what the attendant said. I assumed the rest was a compliment.",
+      "audio": "c5_station.stephen.01"
+    },
+    "c5_station.stephen.02": {
+      "id": "c5_station.stephen.02",
+      "speaker": "steve",
+      "text": "Sit down. There’s something you need to know.",
+      "audio": "c5_station.stephen.02"
     }
   },
   "sound_labels": {
     "effect.nora_whistle": "Listen: Nora’s two-note whistle",
+    "effect.k7blw": "Listen: Frank’s call sign in Morse",
     "effect.veyr_wind": "Listen: the last wind on Veyr",
     "recording.greeting": "Listen: the morning greeting",
     "recording.rook": "Listen: Rook’s recorded reassurance",

@@ -252,5 +252,48 @@
       "steve"
     ],
     "chapter_insert": true
+  },
+  "c5_shack": {
+    "light": "e0b385",
+    "air": 1,
+    "opening": [
+      0.75,
+      0.38
+    ],
+    "closing": [
+      0.28,
+      0.62
+    ],
+    "company": [
+      "steve",
+      "luis"
+    ],
+    "inserts": {
+      "c5_shack.club": "c5_shack.club",
+      "c5_shack.log": "c5_shack.log"
+    },
+    "window": [
+      0.46,
+      0.01,
+      0.36,
+      0.45
+    ]
+  },
+  "c5_station": {
+    "light": "e9be8a",
+    "air": 0,
+    "opening": [
+      0.78,
+      0.39
+    ],
+    "closing": [
+      0.36,
+      0.43
+    ],
+    "company": [
+      "steve",
+      "stephen"
+    ],
+    "chapter_insert": true
   }
 }
