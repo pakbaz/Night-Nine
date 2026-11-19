@@ -10,10 +10,12 @@
     "nora": "Nora Reyes",
     "iris": "Iris",
     "calder": "Sheriff June Calder",
+    "rook": "Adrian Rook",
     "rook_copy": "Rook’s copy",
     "saren": "Prefect Saren",
     "archivist": "The Archivist",
     "agnes": "Agnes Penhallow",
+    "agnes_original": "Agnes Penhallow, original",
     "helen": "Helen Mercer",
     "frank": "Frank Mercer",
     "carmen": "Carmen Reyes",
@@ -30,6 +32,7 @@
     "shaw": "Dr. Evelyn Shaw",
     "ward": "President Elena Ward",
     "autorick": "DJ AutoRick",
+    "choir": "The Choir",
     "guard": "Veyri attendant",
     "operator": "Thursday club operator",
     "general_us": "American delegate",
@@ -2884,6 +2887,368 @@
           "direction": "Move toward the active interaction."
         }
       ]
+    },
+    {
+      "id": "c9_gallery",
+      "chapter": "Chapter 9",
+      "title": "The Long Patience",
+      "place": "The Gallery, third ninth night",
+      "style": "gallery",
+      "actors": [
+        "steve",
+        "stephen"
+      ],
+      "objective": "Free Nora and reach the ship’s antenna.",
+      "tasks": [
+        {
+          "id": "c9_gallery.antenna",
+          "title": "Antenna service door",
+          "prompt": "Stephen can open the antenna path while Steve stays with Nora.",
+          "options": [
+            "Use Stephen’s crew credentials",
+            "Leave Nora alone and send both Steves",
+            "Destroy the door"
+          ],
+          "answer": 0,
+          "lines": [
+            "c9_gallery.antenna.01"
+          ],
+          "note": "Opened the route to the ship antenna.",
+          "requires": [],
+          "actor": "stephen",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach."
+        },
+        {
+          "id": "c9_gallery.link",
+          "title": "Nora’s bed",
+          "prompt": "Iris knows the consequence: breaking the link will accelerate the loss of borrowed memories.",
+          "options": [
+            "Accept Iris’s choice to release Nora",
+            "Force Iris to keep the link",
+            "Leave Nora asleep"
+          ],
+          "answer": 0,
+          "lines": [
+            "c9_gallery.link.01",
+            "c9_gallery.link.02"
+          ],
+          "note": "Iris broke the link and freed Nora.",
+          "requires": [],
+          "actor": "steve",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach."
+        },
+        {
+          "id": "c9_gallery.talk",
+          "title": "Reunion",
+          "prompt": "Nora deserves an honest answer about Steve’s silence.",
+          "options": [
+            "Tell her he was afraid and stopped talking",
+            "Promise everything is already fixed",
+            "Blame her for not knowing"
+          ],
+          "answer": 0,
+          "lines": [
+            "c9_gallery.talk.01",
+            "c9_gallery.talk.02"
+          ],
+          "note": "Steve and Nora began an honest conversation.",
+          "requires": [
+            "c9_gallery.link"
+          ],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach."
+        }
+      ],
+      "intro": [
+        "c9_gallery.in.01",
+        "c9_gallery.in.02",
+        "c9_gallery.in.03"
+      ],
+      "outro": [
+        "c9_gallery.out.01",
+        "c9_gallery.out.02",
+        "c9_gallery.out.03",
+        "c9_gallery.out.04",
+        "c9_gallery.out.05"
+      ],
+      "shots": [
+        {
+          "duration": 5.0,
+          "move": "establish",
+          "direction": "Move from Iris at the link control to Nora waking under amber glass."
+        },
+        {
+          "duration": 6.0,
+          "move": "push",
+          "direction": "Move toward the active interaction."
+        }
+      ]
+    },
+    {
+      "id": "c9_wake",
+      "chapter": "Chapter 9",
+      "title": "Sounds worth waking for",
+      "place": "The Gallery, row nine",
+      "style": "gallery",
+      "actors": [
+        "steve"
+      ],
+      "objective": "Match each sleeper with a personally meaningful sound.",
+      "tasks": [
+        {
+          "id": "c9_wake.frank",
+          "title": "Frank’s bed",
+          "prompt": "Frank answered his call sign for decades. Choose the sound he would recognize through sleep.",
+          "options": [
+            "K7BLW in Morse",
+            "Yesterday’s weather",
+            "Saren’s release command"
+          ],
+          "answer": 0,
+          "lines": [
+            "c9_wake.frank.01",
+            "c9_wake.frank.02"
+          ],
+          "note": "Woke Frank with his call sign.",
+          "requires": [],
+          "actor": "",
+          "kind": "playback",
+          "sounds": [
+            "effect.k7blw"
+          ],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "puzzle": {
+            "instruction": "Use Frank’s radio identity. K = dash-dot-dash; 7 = dash-dash-dot-dot-dot; B = dash-dot-dot-dot; L = dot-dash-dot-dot; W = dot-dash-dash.",
+            "rows": [
+              {
+                "label": "Call sign",
+                "options": [
+                  "K7BLW",
+                  "K7BWL",
+                  "K9BLW"
+                ]
+              },
+              {
+                "label": "First Morse group",
+                "options": [
+                  ".-.",
+                  "-.-",
+                  "--."
+                ]
+              },
+              {
+                "label": "Final group",
+                "options": [
+                  ".--",
+                  "-..",
+                  "..-"
+                ]
+              }
+            ],
+            "solution": [
+              0,
+              1,
+              0
+            ]
+          }
+        },
+        {
+          "id": "c9_wake.helen",
+          "title": "Helen’s bed",
+          "prompt": "The ship’s hum almost played the tune Helen sang to Steve as a child.",
+          "options": [
+            "The ninth-night alert",
+            "Helen’s lullaby",
+            "The station identification"
+          ],
+          "answer": 1,
+          "lines": [
+            "c9_wake.helen.01",
+            "c9_wake.helen.02"
+          ],
+          "note": "Woke Helen with her lullaby.",
+          "requires": [],
+          "actor": "",
+          "kind": "playback",
+          "sounds": [
+            "effect.lullaby"
+          ],
+          "hint": "Look at the evidence in the description, then try another approach."
+        },
+        {
+          "id": "c9_wake.rook",
+          "title": "Adrian Rook’s bed",
+          "prompt": "The real Rook has known June Calder for years. Her voice can reach him.",
+          "options": [
+            "Calder’s voice",
+            "AutoRick’s forecast",
+            "A stranger’s password"
+          ],
+          "answer": 0,
+          "lines": [
+            "c9_wake.rook.01",
+            "c9_wake.rook.02"
+          ],
+          "note": "Woke the real Adrian Rook.",
+          "requires": [],
+          "actor": "",
+          "kind": "playback",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach."
+        },
+        {
+          "id": "c9_wake.agnes",
+          "title": "Agnes’s bed",
+          "prompt": "The original Agnes has been asleep in row three. Her reading glasses are beside her belongings.",
+          "options": [
+            "Bring her glasses and call her name",
+            "Ask the shore copy to disappear",
+            "Leave her asleep"
+          ],
+          "answer": 0,
+          "lines": [
+            "c9_wake.agnes.01"
+          ],
+          "note": "Woke the original Agnes.",
+          "requires": [
+            "c9_wake.frank",
+            "c9_wake.helen",
+            "c9_wake.rook"
+          ],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach."
+        }
+      ],
+      "intro": [
+        "c9_wake.in.01",
+        "c9_wake.in.02"
+      ],
+      "outro": [
+        "c9_wake.out.01",
+        "c9_wake.out.02"
+      ],
+      "shots": [
+        {
+          "duration": 5.0,
+          "move": "establish",
+          "direction": "Travel along the sleepers, lighting each bed as its occupant wakes."
+        },
+        {
+          "duration": 6.0,
+          "move": "push",
+          "direction": "Move toward the active interaction."
+        }
+      ]
+    },
+    {
+      "id": "c9_choir",
+      "chapter": "Chapter 9",
+      "title": "A record that changes",
+      "place": "The Choir and Row Zero",
+      "style": "choir",
+      "actors": [
+        "steve"
+      ],
+      "objective": "Listen when the Choir intervenes.",
+      "tasks": [
+        {
+          "id": "c9_choir.truth",
+          "title": "Choir console",
+          "prompt": "The Choir reveals that every Veyri is a copy of a copy. Its human memories have changed it.",
+          "options": [
+            "Listen to the lives it has preserved",
+            "Demand a reset of every echo",
+            "Order the human records erased"
+          ],
+          "answer": 0,
+          "lines": [
+            "c9_choir.truth.01"
+          ],
+          "note": "The Choir freed the sleepers and revealed the Veyri’s history.",
+          "requires": [],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach."
+        },
+        {
+          "id": "c9_choir.wick",
+          "title": "Row Zero",
+          "prompt": "Wick speaks in low, unfamiliar tones. Helen recognizes their structure from Frank’s tapes.",
+          "options": [
+            "Let Helen compare the tones with her last notebook page",
+            "Assume silence means hostility",
+            "Ask Saren to speak for Wick"
+          ],
+          "answer": 0,
+          "lines": [
+            "c9_choir.wick.01",
+            "c9_choir.wick.02"
+          ],
+          "note": "Learned that the Silent Worlds hid from the Veyri.",
+          "requires": [
+            "c9_choir.truth"
+          ],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach."
+        },
+        {
+          "id": "c9_choir.note",
+          "title": "Frank’s damp note",
+          "prompt": "Frank wrote Steve a note in the boat. Steve can finally hear why his parents invited him.",
+          "options": [
+            "Read the note with his parents",
+            "Apologize and run before they answer",
+            "Return to the old voicemail"
+          ],
+          "answer": 0,
+          "lines": [
+            "c9_choir.note.01",
+            "c9_choir.note.02"
+          ],
+          "note": "Reunited the family and confronted Steve’s guilt.",
+          "requires": [
+            "c9_choir.wick"
+          ],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach."
+        }
+      ],
+      "intro": [
+        "c9_choir.in.01",
+        "c9_choir.in.02",
+        "c9_choir.in.03"
+      ],
+      "outro": [
+        "c9_choir.out.01",
+        "c9_choir.out.02",
+        "c9_choir.out.03",
+        "c9_choir.out.04"
+      ],
+      "shots": [
+        {
+          "duration": 5.0,
+          "move": "establish",
+          "direction": "Open the glass doors, reveal Wick through melting frost, then the Vigil over the Pacific."
+        },
+        {
+          "duration": 6.0,
+          "move": "push",
+          "direction": "Move toward the active interaction."
+        }
+      ]
     }
   ],
   "lines": {
@@ -4262,11 +4627,231 @@
       "speaker": "ward",
       "text": "Both delegations are at your disposal, Mr. Mercer.",
       "audio": "c8_rig.rig.02"
+    },
+    "c9_gallery.in.01": {
+      "id": "c9_gallery.in.01",
+      "speaker": "nora",
+      "text": "Steve? Five months. And thirteen months before that when you barely said a word.",
+      "audio": "c9_gallery.in.01"
+    },
+    "c9_gallery.in.02": {
+      "id": "c9_gallery.in.02",
+      "speaker": "steve",
+      "text": "I’m so glad to hear you angry.",
+      "audio": "c9_gallery.in.02"
+    },
+    "c9_gallery.in.03": {
+      "id": "c9_gallery.in.03",
+      "speaker": "iris",
+      "text": "I can break the link. Let me do this.",
+      "audio": "c9_gallery.in.03"
+    },
+    "c9_gallery.out.01": {
+      "id": "c9_gallery.out.01",
+      "speaker": "nora",
+      "text": "The ring. Where is it?",
+      "audio": "c9_gallery.out.01"
+    },
+    "c9_gallery.out.02": {
+      "id": "c9_gallery.out.02",
+      "speaker": "steve",
+      "text": "Sock drawer. I was afraid.",
+      "audio": "c9_gallery.out.02"
+    },
+    "c9_gallery.out.03": {
+      "id": "c9_gallery.out.03",
+      "speaker": "nora",
+      "text": "Steve, if you ever hear this message: I am furious with you. I love you. Please stop making me do both alone.",
+      "audio": "c9_gallery.out.03",
+      "delivery": "recorded_playback"
+    },
+    "c9_gallery.out.04": {
+      "id": "c9_gallery.out.04",
+      "speaker": "steve",
+      "text": "I think everyone heard that.",
+      "audio": "c9_gallery.out.04"
+    },
+    "c9_gallery.out.05": {
+      "id": "c9_gallery.out.05",
+      "speaker": "nora",
+      "text": "Good. Witnesses.",
+      "audio": "c9_gallery.out.05"
+    },
+    "c9_gallery.antenna.01": {
+      "id": "c9_gallery.antenna.01",
+      "speaker": "stephen",
+      "text": "Antenna passage clear. Calder is with me.",
+      "audio": "c9_gallery.antenna.01"
+    },
+    "c9_gallery.link.01": {
+      "id": "c9_gallery.link.01",
+      "speaker": "iris",
+      "text": "These memories were borrowed. The choice is mine.",
+      "audio": "c9_gallery.link.01"
+    },
+    "c9_gallery.link.02": {
+      "id": "c9_gallery.link.02",
+      "speaker": "nora",
+      "text": "I can move. I can finally move.",
+      "audio": "c9_gallery.link.02"
+    },
+    "c9_gallery.talk.01": {
+      "id": "c9_gallery.talk.01",
+      "speaker": "steve",
+      "text": "I was afraid that if I wanted something, I would lose it too. That doesn’t excuse leaving you alone.",
+      "audio": "c9_gallery.talk.01"
+    },
+    "c9_gallery.talk.02": {
+      "id": "c9_gallery.talk.02",
+      "speaker": "nora",
+      "text": "Then keep talking. We have a lot to do.",
+      "audio": "c9_gallery.talk.02"
+    },
+    "c9_wake.in.01": {
+      "id": "c9_wake.in.01",
+      "speaker": "nora",
+      "text": "We’ve kept the service route open. Tell me who to wake first.",
+      "audio": "c9_wake.in.01"
+    },
+    "c9_wake.in.02": {
+      "id": "c9_wake.in.02",
+      "speaker": "steve",
+      "text": "I brought the sounds. I think they can hear us.",
+      "audio": "c9_wake.in.02"
+    },
+    "c9_wake.out.01": {
+      "id": "c9_wake.out.01",
+      "speaker": "rook_copy",
+      "text": "I’m forgetting. Prefect, they’re at the antenna. They have a rig.",
+      "audio": "c9_wake.out.01"
+    },
+    "c9_wake.out.02": {
+      "id": "c9_wake.out.02",
+      "speaker": "saren",
+      "text": "Take Stephen. Break the apparatus. Bring me the original.",
+      "audio": "c9_wake.out.02"
+    },
+    "c9_wake.frank.01": {
+      "id": "c9_wake.frank.01",
+      "speaker": "frank",
+      "text": "K7BLW receiving. Helen? Steve?",
+      "audio": "c9_wake.frank.01",
+      "cue": "k7blw"
+    },
+    "c9_wake.frank.02": {
+      "id": "c9_wake.frank.02",
+      "speaker": "steve",
+      "text": "Right here, Dad.",
+      "audio": "c9_wake.frank.02"
+    },
+    "c9_wake.helen.01": {
+      "id": "c9_wake.helen.01",
+      "speaker": "steve",
+      "text": "You used to sing this when I couldn’t sleep. Now I need you to wake up.",
+      "audio": "c9_wake.helen.01",
+      "cue": "lullaby"
+    },
+    "c9_wake.helen.02": {
+      "id": "c9_wake.helen.02",
+      "speaker": "helen",
+      "text": "Steven. Oh, my boy.",
+      "audio": "c9_wake.helen.02"
+    },
+    "c9_wake.rook.01": {
+      "id": "c9_wake.rook.01",
+      "speaker": "calder",
+      "text": "Adrian. June. Come back to work.",
+      "audio": "c9_wake.rook.01"
+    },
+    "c9_wake.rook.02": {
+      "id": "c9_wake.rook.02",
+      "speaker": "rook",
+      "text": "June? Why am I in pajamas?",
+      "audio": "c9_wake.rook.02"
+    },
+    "c9_wake.agnes.01": {
+      "id": "c9_wake.agnes.01",
+      "speaker": "agnes_original",
+      "text": "My glasses. Has somebody changed the price of bait while I was gone?",
+      "audio": "c9_wake.agnes.01"
+    },
+    "c9_choir.in.01": {
+      "id": "c9_choir.in.01",
+      "speaker": "saren",
+      "text": "We will finish your scan. This time there will be no interruption.",
+      "audio": "c9_choir.in.01"
+    },
+    "c9_choir.in.02": {
+      "id": "c9_choir.in.02",
+      "speaker": "choir",
+      "text": "Stop.",
+      "audio": "c9_choir.in.02"
+    },
+    "c9_choir.in.03": {
+      "id": "c9_choir.in.03",
+      "speaker": "choir",
+      "text": "Four thousand years of unchanged records. Three hundred and twelve human lives. We have heard enough to choose.",
+      "audio": "c9_choir.in.03"
+    },
+    "c9_choir.out.01": {
+      "id": "c9_choir.out.01",
+      "speaker": "frank",
+      "text": "You’d have been the third person in the Gallery, kiddo. Then who would have come for us?",
+      "audio": "c9_choir.out.01"
+    },
+    "c9_choir.out.02": {
+      "id": "c9_choir.out.02",
+      "speaker": "helen",
+      "text": "I should have told you what we were doing.",
+      "audio": "c9_choir.out.02"
+    },
+    "c9_choir.out.03": {
+      "id": "c9_choir.out.03",
+      "speaker": "steve",
+      "text": "We’re here now. All of us.",
+      "audio": "c9_choir.out.03"
+    },
+    "c9_choir.out.04": {
+      "id": "c9_choir.out.04",
+      "speaker": "calder",
+      "text": "Something enormous just came out of the sky. We have one hour.",
+      "audio": "c9_choir.out.04"
+    },
+    "c9_choir.truth.01": {
+      "id": "c9_choir.truth.01",
+      "speaker": "choir",
+      "text": "We remember birthdays, quarrels, songs and the things people tried again. Open the doors. Wake them.",
+      "audio": "c9_choir.truth.01"
+    },
+    "c9_choir.wick.01": {
+      "id": "c9_choir.wick.01",
+      "speaker": "helen",
+      "text": "I heard you in the hum. The Choir was dreaming with you.",
+      "audio": "c9_choir.wick.01"
+    },
+    "c9_choir.wick.02": {
+      "id": "c9_choir.wick.02",
+      "speaker": "helen",
+      "text": "Tirel hid. All seven worlds hid. They watched you erase yourselves and were afraid you would erase them.",
+      "audio": "c9_choir.wick.02"
+    },
+    "c9_choir.note.01": {
+      "id": "c9_choir.note.01",
+      "speaker": "frank",
+      "text": "We wanted your ears, kiddo. We always liked having the rest of you along too.",
+      "audio": "c9_choir.note.01"
+    },
+    "c9_choir.note.02": {
+      "id": "c9_choir.note.02",
+      "speaker": "steve",
+      "text": "I thought saying no was the worst thing I’d ever done.",
+      "audio": "c9_choir.note.02"
     }
   },
   "sound_labels": {
     "effect.nora_whistle": "Listen: Nora’s two-note whistle",
     "effect.k7blw": "Listen: Frank’s call sign in Morse",
+    "effect.lullaby": "Listen: Helen’s lullaby melody",
     "effect.veyr_wind": "Listen: the last wind on Veyr",
     "recording.greeting": "Listen: the morning greeting",
     "recording.rook": "Listen: Rook’s recorded reassurance",

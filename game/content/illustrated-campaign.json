@@ -459,5 +459,92 @@
       "ward"
     ],
     "chapter_insert": true
+  },
+  "c9_gallery": {
+    "light": "ffd09c",
+    "air": 3,
+    "opening": [
+      0.24,
+      0.55
+    ],
+    "closing": [
+      0.73,
+      0.42
+    ],
+    "company": [
+      "steve",
+      "nora",
+      "iris",
+      "stephen"
+    ],
+    "off_camera_lines": [
+      "c9_gallery.in.01",
+      "c9_gallery.out.03"
+    ],
+    "reveal_after": {
+      "nora": "c9_gallery.link"
+    },
+    "inserts": {
+      "c9_gallery.in.01": "c9_gallery.link",
+      "c9_gallery.out.03": "c9_gallery.link"
+    }
+  },
+  "c9_wake": {
+    "light": "ffdcb5",
+    "air": 3,
+    "opening": [
+      0.24,
+      0.55
+    ],
+    "closing": [
+      0.78,
+      0.46
+    ],
+    "company": [
+      "nora",
+      "steve",
+      "frank",
+      "helen",
+      "calder",
+      "rook",
+      "agnes_original"
+    ],
+    "reveal_after": {
+      "frank": "c9_wake.frank",
+      "helen": "c9_wake.helen",
+      "rook": "c9_wake.rook",
+      "agnes_original": "c9_wake.agnes"
+    }
+  },
+  "c9_choir": {
+    "light": "a6d2da",
+    "air": 3,
+    "opening": [
+      0.73,
+      0.45
+    ],
+    "closing": [
+      0.28,
+      0.4
+    ],
+    "company": [
+      "saren",
+      "steve",
+      "helen",
+      "frank",
+      "calder"
+    ],
+    "creatures": [
+      {
+        "id": "wick",
+        "foot": [
+          0.55,
+          0.63
+        ],
+        "width": 0.2,
+        "after": "c9_choir.wick"
+      }
+    ],
+    "chapter_insert": true
   }
 }
