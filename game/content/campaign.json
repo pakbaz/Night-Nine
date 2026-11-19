@@ -6,7 +6,10 @@
   "adaptation_status": "Playable illustrated campaign checkpoint.",
   "cast": {
     "steve": "Steve Mercer",
+    "nora": "Nora Reyes",
     "iris": "Iris",
+    "calder": "Sheriff June Calder",
+    "saren": "Prefect Saren",
     "archivist": "The Archivist",
     "agnes": "Agnes Penhallow",
     "helen": "Helen Mercer",
@@ -19,6 +22,7 @@
     "lyle_copy": "Lyle’s copy",
     "pell": "Pell",
     "autorick": "DJ AutoRick",
+    "guard": "Veyri attendant",
     "general_us": "American delegate",
     "general_cn": "Chinese delegate"
   },
@@ -1389,6 +1393,774 @@
           "direction": "Move toward the active interaction."
         }
       ]
+    },
+    {
+      "id": "c2_aquarium",
+      "chapter": "Chapter 2",
+      "title": "The Aquarium Is Closed",
+      "place": "Aquarium north wing",
+      "style": "aquarium",
+      "actors": [
+        "steve"
+      ],
+      "objective": "Follow the old exhibit plan to the sealed wing.",
+      "tasks": [
+        {
+          "id": "c2_aquarium.plan",
+          "title": "Exhibit plan",
+          "prompt": "The old plan and a newer maintenance notice disagree. Steve needs a route into the north wing.",
+          "options": [
+            "Reach the outgoing pump route from the service entrance",
+            "Use the old visitor-hall plan",
+            "Trace an incoming pipe back toward the pump"
+          ],
+          "answer": 0,
+          "lines": [
+            "c2_aquarium.plan.01"
+          ],
+          "note": "Located the north-wing service route.",
+          "requires": [],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "puzzle": {
+            "instruction": "On the plan the café and public tank both feed the visitor hall. The service door feeds the pump room. The visitor hall leads to the north wing through door 1. Notice: door 1 was bricked up; the pump room has three pipes now. Flow arrows point from N into the pump, from the pump into E, and from S into the pump. The maintenance slip says to follow the only pipe carrying water away from the pump.",
+            "rows": [
+              {
+                "label": "Entrance",
+                "options": [
+                  "Public tank",
+                  "Service door",
+                  "Café"
+                ]
+              },
+              {
+                "label": "Pump outlet",
+                "options": [
+                  "N",
+                  "S",
+                  "E"
+                ]
+              }
+            ],
+            "solution": [
+              1,
+              2
+            ]
+          },
+          "hints": [
+            "Use the newer notice when two documents conflict.",
+            "The old visitor route depends on door 1. At the pump compare both ends of the flow arrows.",
+            "Use the service door and follow E, the only outgoing pipe."
+          ]
+        },
+        {
+          "id": "c2_aquarium.guard",
+          "title": "Two service doors",
+          "prompt": "Steve records six seconds at each door. Which passage can he cross without meeting the guard?",
+          "options": [
+            "Take the pump corridor",
+            "Take the filter corridor",
+            "Wait for both doors to go silent"
+          ],
+          "answer": 1,
+          "lines": [
+            "c2_aquarium.guard.01"
+          ],
+          "note": "Distinguished an announcement loop from a live guard.",
+          "requires": [
+            "c2_aquarium.plan"
+          ],
+          "actor": "",
+          "kind": "compare",
+          "sounds": [
+            "effect.aquarium_steps",
+            "effect.aquarium_pa"
+          ],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "evidence_labels": [
+            "Pump corridor",
+            "Filter corridor"
+          ],
+          "hints": [
+            "Look for a sound that repeats at the same interval.",
+            "Compare the spacing and shapes of the peaks in each six-second strip.",
+            "Take the filter corridor. The bell and cough repeat together there; the footsteps at the pump change their spacing."
+          ]
+        },
+        {
+          "id": "c2_aquarium.intercom",
+          "title": "Nora’s coat and intercom",
+          "prompt": "The spool starts before Nora states her name. A date mark remains on the leader, and two notes follow the speech. What would let somebody else check both her identity and the date later?",
+          "options": [
+            "File the intact spool and its marked leader",
+            "Keep the two notes alone with a new date label",
+            "Copy the name only and discard the leader"
+          ],
+          "answer": 0,
+          "lines": [
+            "c2_aquarium.intercom.01",
+            "c2_aquarium.intercom.02"
+          ],
+          "note": "Recovered Nora’s intercom tape and whistle.",
+          "requires": [
+            "c2_aquarium.guard"
+          ],
+          "actor": "",
+          "kind": "record",
+          "sounds": [
+            "effect.nora_whistle"
+          ],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Start with the pencilled star rather than a sound.",
+            "Follow the splice into the blue line. The two versions of the whistle differ in what is still attached.",
+            "The order is dated leader, clear tape, voice, whistle. The loose duplicate belongs in the unverified pocket."
+          ],
+          "puzzle": {
+            "presentation": "case_board",
+            "instruction": "A paper leader has come loose from Nora’s intercom spool. Steve can preserve the whole recording before he makes a listening copy.",
+            "evidence": [
+              "On the leader Nora wrote the date and drew half a star across its splice. The matching half is on clear tape. At the other end of the clear tape someone drew a blue line before speaking.",
+              "Steve hears Nora name herself after the blue line and before the two whistle notes. A loose duplicate contains the notes only.",
+              "The evidence drawer has separate pockets for when, who, what Admiral might recognize, and a copy without a date. Keep the original attached from leader to whistle."
+            ],
+            "stages": [
+              {
+                "mode": "order",
+                "prompt": "Lay the original strip out from its dated head to its audible tail.",
+                "slots": [
+                  "Tape head",
+                  "After the splice",
+                  "After the blue line",
+                  "Tape tail"
+                ],
+                "pieces": [
+                  "Matching clear tape",
+                  "Two whistle notes",
+                  "Nora’s voice",
+                  "Date and half-star"
+                ],
+                "answer": [
+                  3,
+                  0,
+                  2,
+                  1
+                ]
+              },
+              {
+                "mode": "match",
+                "prompt": "Label the evidence pockets so a second listener could verify each claim.",
+                "slots": [
+                  "When",
+                  "Who spoke",
+                  "Cue for Admiral",
+                  "Unverified copy"
+                ],
+                "pieces": [
+                  "Loose two-note duplicate",
+                  "Date on the joined leader",
+                  "Spoken self-identification",
+                  "Two notes on the original"
+                ],
+                "answer": [
+                  1,
+                  2,
+                  3,
+                  0
+                ]
+              }
+            ],
+            "solution": [
+              3,
+              0,
+              2,
+              1,
+              1,
+              2,
+              3,
+              0
+            ],
+            "rows": [
+              {
+                "label": "Tape head",
+                "options": [
+                  "Matching clear tape",
+                  "Two whistle notes",
+                  "Nora’s voice",
+                  "Date and half-star"
+                ]
+              },
+              {
+                "label": "After the splice",
+                "options": [
+                  "Matching clear tape",
+                  "Two whistle notes",
+                  "Nora’s voice",
+                  "Date and half-star"
+                ]
+              },
+              {
+                "label": "After the blue line",
+                "options": [
+                  "Matching clear tape",
+                  "Two whistle notes",
+                  "Nora’s voice",
+                  "Date and half-star"
+                ]
+              },
+              {
+                "label": "Tape tail",
+                "options": [
+                  "Matching clear tape",
+                  "Two whistle notes",
+                  "Nora’s voice",
+                  "Date and half-star"
+                ]
+              },
+              {
+                "label": "When",
+                "options": [
+                  "Loose two-note duplicate",
+                  "Date on the joined leader",
+                  "Spoken self-identification",
+                  "Two notes on the original"
+                ]
+              },
+              {
+                "label": "Who spoke",
+                "options": [
+                  "Loose two-note duplicate",
+                  "Date on the joined leader",
+                  "Spoken self-identification",
+                  "Two notes on the original"
+                ]
+              },
+              {
+                "label": "Cue for Admiral",
+                "options": [
+                  "Loose two-note duplicate",
+                  "Date on the joined leader",
+                  "Spoken self-identification",
+                  "Two notes on the original"
+                ]
+              },
+              {
+                "label": "Unverified copy",
+                "options": [
+                  "Loose two-note duplicate",
+                  "Date on the joined leader",
+                  "Spoken self-identification",
+                  "Two notes on the original"
+                ]
+              }
+            ],
+            "hints": [
+              "Start with the pencilled star rather than a sound.",
+              "Follow the splice into the blue line. The two versions of the whistle differ in what is still attached.",
+              "The order is dated leader, clear tape, voice, whistle. The loose duplicate belongs in the unverified pocket."
+            ]
+          }
+        }
+      ],
+      "intro": [
+        "c2_aquarium.in.01",
+        "c2_aquarium.in.02"
+      ],
+      "outro": [
+        "c2_aquarium.out.01",
+        "c2_aquarium.out.02"
+      ],
+      "shots": [
+        {
+          "duration": 5.0,
+          "move": "establish",
+          "direction": "Pass dark empty exhibits into an amber transit chamber beneath new plywood."
+        },
+        {
+          "duration": 6.0,
+          "move": "push",
+          "direction": "Move toward the active interaction."
+        }
+      ]
+    },
+    {
+      "id": "c2_ship",
+      "chapter": "Chapter 2",
+      "title": "Sixty-one percent",
+      "place": "The Long Patience, scan chamber",
+      "style": "ship",
+      "actors": [
+        "steve"
+      ],
+      "objective": "Record a command and interrupt the scan.",
+      "tasks": [
+        {
+          "id": "c2_ship.nora",
+          "title": "Amber sleeper",
+          "prompt": "At the bed, Nora’s chest rises irregularly against the glass. A pulse travels down the corridor at even intervals. Steve wants to check for a response without disturbing life support.",
+          "options": [
+            "Speak close to the bed and watch her breathing",
+            "Use the corridor pulse as Nora’s breathing rate",
+            "Use the brightness of the next bed as her pulse"
+          ],
+          "answer": 0,
+          "lines": [
+            "c2_ship.nora.01"
+          ],
+          "note": "Confirmed that the real Nora is alive.",
+          "requires": [],
+          "actor": "",
+          "kind": "record",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Look for the one rhythm that loses a beat against the ship.",
+            "Only the mouth patch has unequal gaps. Steve can show a hand through glass while keeping the rail still.",
+            "The corridor, rail and mouth are A, B and C. Log the resting rhythm, raise a hand, mark the next patch, then compare the corridor."
+          ],
+          "puzzle": {
+            "presentation": "case_board",
+            "instruction": "Behind the amber glass, one rhythm belongs to the ship. Steve wants to find out whether Nora is breathing without touching her life support.",
+            "evidence": [
+              "Steve marked the corridor flash at seconds 2, 6 and 10. The pickup on the rail repeated each flash one second later. A fog patch above Nora’s mouth appeared at 3, 7 and 12.",
+              "Three rubbings lost their labels. Strip A reads 2 / 6 / 10, strip B reads 3 / 7 / 11, and strip C reads 3 / 7 / 12. Steve used the same stopwatch throughout.",
+              "The observation card separates a timing reference, a second reading of the ship cycle, and evidence consistent with breathing. Steve can make one further observation through sealed glass.",
+              "A reliable comparison needs an undisturbed mouth reading. Steve can signal with an upraised hand but must note the first breath afterwards before checking the corridor marks. Touching the rail would disturb the ship pickup."
+            ],
+            "stages": [
+              {
+                "mode": "match",
+                "prompt": "Recover the labels on the rubbings by comparing the marks with the notes.",
+                "slots": [
+                  "Corridor clock",
+                  "Rail pickup",
+                  "Mouth condensation"
+                ],
+                "pieces": [
+                  "Strip B",
+                  "Strip C",
+                  "Strip A"
+                ],
+                "answer": [
+                  2,
+                  0,
+                  1
+                ]
+              },
+              {
+                "mode": "order",
+                "prompt": "Plan the independent observation while keeping the sleeper sealed.",
+                "slots": [
+                  "Before the cue",
+                  "Give a cue",
+                  "Watch the next breath",
+                  "Check the reference"
+                ],
+                "pieces": [
+                  "Mark the next fog patch",
+                  "Raise Steve’s hand at the glass",
+                  "Log the resting mouth rhythm",
+                  "Compare with the corridor marks"
+                ],
+                "answer": [
+                  2,
+                  1,
+                  0,
+                  3
+                ]
+              }
+            ],
+            "solution": [
+              2,
+              0,
+              1,
+              2,
+              1,
+              0,
+              3
+            ],
+            "rows": [
+              {
+                "label": "Corridor clock",
+                "options": [
+                  "Strip B",
+                  "Strip C",
+                  "Strip A"
+                ]
+              },
+              {
+                "label": "Rail pickup",
+                "options": [
+                  "Strip B",
+                  "Strip C",
+                  "Strip A"
+                ]
+              },
+              {
+                "label": "Mouth condensation",
+                "options": [
+                  "Strip B",
+                  "Strip C",
+                  "Strip A"
+                ]
+              },
+              {
+                "label": "Before the cue",
+                "options": [
+                  "Mark the next fog patch",
+                  "Raise Steve’s hand at the glass",
+                  "Log the resting mouth rhythm",
+                  "Compare with the corridor marks"
+                ]
+              },
+              {
+                "label": "Give a cue",
+                "options": [
+                  "Mark the next fog patch",
+                  "Raise Steve’s hand at the glass",
+                  "Log the resting mouth rhythm",
+                  "Compare with the corridor marks"
+                ]
+              },
+              {
+                "label": "Watch the next breath",
+                "options": [
+                  "Mark the next fog patch",
+                  "Raise Steve’s hand at the glass",
+                  "Log the resting mouth rhythm",
+                  "Compare with the corridor marks"
+                ]
+              },
+              {
+                "label": "Check the reference",
+                "options": [
+                  "Mark the next fog patch",
+                  "Raise Steve’s hand at the glass",
+                  "Log the resting mouth rhythm",
+                  "Compare with the corridor marks"
+                ]
+              }
+            ],
+            "hints": [
+              "Look for the one rhythm that loses a beat against the ship.",
+              "Only the mouth patch has unequal gaps. Steve can show a hand through glass while keeping the rail still.",
+              "The corridor, rail and mouth are A, B and C. Log the resting rhythm, raise a hand, mark the next patch, then compare the corridor."
+            ]
+          }
+        },
+        {
+          "id": "c2_ship.command",
+          "title": "Saren’s intercom",
+          "prompt": "An attendant asks the chair to open. Nothing happens. Saren answers over the intercom and the buckle releases during his last words. What should Steve mark on the reel?",
+          "options": [
+            "Saren’s reply from first word to last",
+            "The attendant’s request before the reply",
+            "Only the noise of the buckle opening"
+          ],
+          "answer": 0,
+          "lines": [
+            "c2_ship.command.01",
+            "c2_ship.command.02"
+          ],
+          "note": "Recorded Saren’s restraint-release command.",
+          "requires": [
+            "c2_ship.nora"
+          ],
+          "actor": "",
+          "kind": "record",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "The lamp and buckle respond during the second voice.",
+            "A name or sentence alone would omit the response. Preserve the channel opening too.",
+            "Place attendant, Saren, buckle and bare leader on the strip. For the working copy use silence, the complete command and the click, then file the blank tail separately. Ash is the failed request, Elm the spoken release, Reed the manual test."
+          ],
+          "puzzle": {
+            "presentation": "case_board",
+            "instruction": "Steve finds two voices and a relay click on the chair circuit. The attendant’s words sound convincing. On his reel there is also a relay click.",
+            "evidence": [
+              "Tape edge, left to right: a large splice, one short mark, two short marks, then bare leader. Through headphones Steve hears the attendant before the first mark and Saren between the two marked groups.",
+              "The maintenance lamp stays dark for the attendant. It lights during Saren’s words. Steve marked the buckle click in the two-mark group, before the bare leader.",
+              "For a working copy, start with enough silence to hear the channel open, keep Saren’s complete words, and leave the buckle click in place. Return the blank tail to its own envelope.",
+              "Three short carbon traces came away with the relay log. Ash shows speech with the lamp dark. Elm has authorized speech and an open buckle. Reed has an open buckle after someone pressed a separate manual test switch."
+            ],
+            "stages": [
+              {
+                "mode": "match",
+                "prompt": "Place the events on the strip. Use the edge marks to distinguish the two voices.",
+                "slots": [
+                  "Before one mark",
+                  "Between marked groups",
+                  "At two marks",
+                  "Beyond the recording"
+                ],
+                "pieces": [
+                  "Bare leader",
+                  "Buckle click",
+                  "Saren speaks",
+                  "Attendant’s request"
+                ],
+                "answer": [
+                  3,
+                  2,
+                  1,
+                  0
+                ]
+              },
+              {
+                "mode": "order",
+                "prompt": "Lay out the verification copy, followed by the part returned to its envelope.",
+                "slots": [
+                  "Working copy head",
+                  "Authorization",
+                  "Physical response",
+                  "Separate unused end"
+                ],
+                "pieces": [
+                  "Blank tail",
+                  "Relay and buckle click",
+                  "Channel-opening silence",
+                  "Complete command"
+                ],
+                "answer": [
+                  2,
+                  3,
+                  1,
+                  0
+                ]
+              },
+              {
+                "mode": "match",
+                "prompt": "Use the test traces to separate what the two voices demonstrate from what the chair can do by itself.",
+                "slots": [
+                  "Request without release",
+                  "Authorized spoken release",
+                  "Release without speech"
+                ],
+                "pieces": [
+                  "Reed trace",
+                  "Ash trace",
+                  "Elm trace"
+                ],
+                "answer": [
+                  1,
+                  2,
+                  0
+                ]
+              }
+            ],
+            "solution": [
+              3,
+              2,
+              1,
+              0,
+              2,
+              3,
+              1,
+              0,
+              1,
+              2,
+              0
+            ],
+            "rows": [
+              {
+                "label": "Before one mark",
+                "options": [
+                  "Bare leader",
+                  "Buckle click",
+                  "Saren speaks",
+                  "Attendant’s request"
+                ]
+              },
+              {
+                "label": "Between marked groups",
+                "options": [
+                  "Bare leader",
+                  "Buckle click",
+                  "Saren speaks",
+                  "Attendant’s request"
+                ]
+              },
+              {
+                "label": "At two marks",
+                "options": [
+                  "Bare leader",
+                  "Buckle click",
+                  "Saren speaks",
+                  "Attendant’s request"
+                ]
+              },
+              {
+                "label": "Beyond the recording",
+                "options": [
+                  "Bare leader",
+                  "Buckle click",
+                  "Saren speaks",
+                  "Attendant’s request"
+                ]
+              },
+              {
+                "label": "Working copy head",
+                "options": [
+                  "Blank tail",
+                  "Relay and buckle click",
+                  "Channel-opening silence",
+                  "Complete command"
+                ]
+              },
+              {
+                "label": "Authorization",
+                "options": [
+                  "Blank tail",
+                  "Relay and buckle click",
+                  "Channel-opening silence",
+                  "Complete command"
+                ]
+              },
+              {
+                "label": "Physical response",
+                "options": [
+                  "Blank tail",
+                  "Relay and buckle click",
+                  "Channel-opening silence",
+                  "Complete command"
+                ]
+              },
+              {
+                "label": "Separate unused end",
+                "options": [
+                  "Blank tail",
+                  "Relay and buckle click",
+                  "Channel-opening silence",
+                  "Complete command"
+                ]
+              },
+              {
+                "label": "Request without release",
+                "options": [
+                  "Reed trace",
+                  "Ash trace",
+                  "Elm trace"
+                ]
+              },
+              {
+                "label": "Authorized spoken release",
+                "options": [
+                  "Reed trace",
+                  "Ash trace",
+                  "Elm trace"
+                ]
+              },
+              {
+                "label": "Release without speech",
+                "options": [
+                  "Reed trace",
+                  "Ash trace",
+                  "Elm trace"
+                ]
+              }
+            ],
+            "hints": [
+              "The lamp and buckle respond during the second voice.",
+              "A name or sentence alone would omit the response. Preserve the channel opening too.",
+              "Place attendant, Saren, buckle and bare leader on the strip. For the working copy use silence, the complete command and the click, then file the blank tail separately. Ash is the failed request, Elm the spoken release, Reed the manual test."
+            ]
+          }
+        },
+        {
+          "id": "c2_ship.escape",
+          "title": "Scan chair",
+          "prompt": "The scan is moving again. Steve has three recordings on Frank’s reel and can reach two microphone grilles.",
+          "options": [
+            "Route the clip to the Gallery speakers",
+            "Deliver the captured service phrase during the long scan window",
+            "Repeat a short scan pulse"
+          ],
+          "answer": 1,
+          "lines": [
+            "c2_ship.escape.01",
+            "c2_ship.escape.02"
+          ],
+          "note": "Interrupted the scan at 61% and escaped through the flooded intake.",
+          "requires": [
+            "c2_ship.command"
+          ],
+          "actor": "",
+          "kind": "playback",
+          "sounds": [
+            "c2_aquarium.out.01",
+            "c2_ship.in.02",
+            "recording.release"
+          ],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "puzzle": {
+            "instruction": "The attendant spoke into the grille with the broken rim when testing the gallery speakers. The undamaged grille made the chair’s service lamp blink. The lamp stays lit for one second on an ordinary scan beat and for six seconds at the notch marked 61. The chair listens only while the lamp is lit and drops an unfinished phrase when it goes dark.",
+            "rows": [
+              {
+                "label": "Recorder cue",
+                "options": [
+                  "Reel 01",
+                  "Reel 02",
+                  "Reel 03"
+                ]
+              },
+              {
+                "label": "Microphone grille",
+                "options": [
+                  "Broken rim",
+                  "Undamaged rim"
+                ]
+              },
+              {
+                "label": "Start of playback",
+                "options": [
+                  "First ordinary beat",
+                  "Start of the 61 notch",
+                  "When the notch ends"
+                ]
+              }
+            ],
+            "solution": [
+              2,
+              1,
+              1
+            ]
+          },
+          "hints": [
+            "Preview the three cues. Which speaker has already been obeyed by this chair?",
+            "Separate the public speakers from the local service input. The complete authorization lasts longer than one ordinary beat.",
+            "Choose cue 03, the undamaged grille, and the start of the 61 notch."
+          ],
+          "audition_labels": [
+            "Reel 01",
+            "Reel 02",
+            "Reel 03"
+          ]
+        }
+      ],
+      "intro": [
+        "c2_ship.in.01",
+        "c2_ship.in.02",
+        "c2_ship.in.03"
+      ],
+      "outro": [
+        "c2_ship.out.01",
+        "c2_ship.out.02"
+      ],
+      "shots": [
+        {
+          "duration": 5.0,
+          "move": "establish",
+          "direction": "Reveal the Gallery, close on the scan meter, then follow light into the flooding intake."
+        },
+        {
+          "duration": 6.0,
+          "move": "push",
+          "direction": "Move toward the active interaction."
+        }
+      ]
     }
   ],
   "lines": {
@@ -1751,12 +2523,123 @@
       "text": "Steve... go.",
       "audio": "c1_escape.cross.02",
       "display_speaker": "Nora Reyes"
+    },
+    "c2_aquarium.in.01": {
+      "id": "c2_aquarium.in.01",
+      "speaker": "steve",
+      "text": "Emergency. Bellwether Aquarium. Someone is... hello?",
+      "audio": "c2_aquarium.in.01"
+    },
+    "c2_aquarium.in.02": {
+      "id": "c2_aquarium.in.02",
+      "speaker": "steve",
+      "text": "Half a sentence. I hope someone heard it.",
+      "audio": "c2_aquarium.in.02"
+    },
+    "c2_aquarium.out.01": {
+      "id": "c2_aquarium.out.01",
+      "speaker": "nora",
+      "text": "My name is Nora Reyes, and somebody just walked out of here wearing my face.",
+      "audio": "c2_aquarium.out.01"
+    },
+    "c2_aquarium.out.02": {
+      "id": "c2_aquarium.out.02",
+      "speaker": "steve",
+      "text": "Five months. I didn’t notice for five months.",
+      "audio": "c2_aquarium.out.02"
+    },
+    "c2_aquarium.plan.01": {
+      "id": "c2_aquarium.plan.01",
+      "speaker": "steve",
+      "text": "Nora showed me this when I repaired the underwater speakers.",
+      "audio": "c2_aquarium.plan.01"
+    },
+    "c2_aquarium.guard.01": {
+      "id": "c2_aquarium.guard.01",
+      "speaker": "steve",
+      "text": "The cough was in exactly the same place. That corridor has a recording.",
+      "audio": "c2_aquarium.guard.01"
+    },
+    "c2_aquarium.intercom.01": {
+      "id": "c2_aquarium.intercom.01",
+      "speaker": "nora",
+      "text": "Two short notes. If Admiral can hear me, perhaps somebody else can.",
+      "audio": "c2_aquarium.intercom.01",
+      "cue": "nora_whistle"
+    },
+    "c2_aquarium.intercom.02": {
+      "id": "c2_aquarium.intercom.02",
+      "speaker": "steve",
+      "text": "I’m keeping all of it.",
+      "audio": "c2_aquarium.intercom.02"
+    },
+    "c2_ship.in.01": {
+      "id": "c2_ship.in.01",
+      "speaker": "iris",
+      "text": "Please come with us. They want to know where your mother put her notebook.",
+      "audio": "c2_ship.in.01",
+      "display_speaker": "Nora Reyes"
+    },
+    "c2_ship.in.02": {
+      "id": "c2_ship.in.02",
+      "speaker": "guard",
+      "text": "Would peaceful human hold music assist your experience?",
+      "audio": "c2_ship.in.02"
+    },
+    "c2_ship.in.03": {
+      "id": "c2_ship.in.03",
+      "speaker": "steve",
+      "text": "I’d prefer leaving.",
+      "audio": "c2_ship.in.03"
+    },
+    "c2_ship.out.01": {
+      "id": "c2_ship.out.01",
+      "speaker": "steve",
+      "text": "The room is flooding. The underwater speakers still work... Nora’s whistle.",
+      "audio": "c2_ship.out.01"
+    },
+    "c2_ship.out.02": {
+      "id": "c2_ship.out.02",
+      "speaker": "calder",
+      "text": "Mercer. Breathe first. Explain afterward.",
+      "audio": "c2_ship.out.02"
+    },
+    "c2_ship.nora.01": {
+      "id": "c2_ship.nora.01",
+      "speaker": "steve",
+      "text": "I kept waiting until I knew what to say. I’m here now. I should have been here sooner.",
+      "audio": "c2_ship.nora.01"
+    },
+    "c2_ship.command.01": {
+      "id": "c2_ship.command.01",
+      "speaker": "saren",
+      "text": "Release the restraint. Maintenance authorization.",
+      "audio": "recording.release"
+    },
+    "c2_ship.command.02": {
+      "id": "c2_ship.command.02",
+      "speaker": "steve",
+      "text": "Got it.",
+      "audio": "c2_ship.command.02"
+    },
+    "c2_ship.escape.01": {
+      "id": "c2_ship.escape.01",
+      "speaker": "saren",
+      "text": "Release the restraint. Maintenance authorization.",
+      "audio": "recording.release"
+    },
+    "c2_ship.escape.02": {
+      "id": "c2_ship.escape.02",
+      "speaker": "steve",
+      "text": "Open. Now the seawater valve.",
+      "audio": "c2_ship.escape.02"
     }
   },
   "sound_labels": {
     "effect.nora_whistle": "Listen: Nora’s two-note whistle",
     "effect.veyr_wind": "Listen: the last wind on Veyr",
-    "recording.greeting": "Listen: the morning greeting"
+    "recording.greeting": "Listen: the morning greeting",
+    "recording.release": "Listen: the restraint-release command"
   },
   "notebook_cases": {
     "greeting": {
@@ -1767,7 +2650,9 @@
         "c1_flat.control",
         "c1_flat.compare",
         "c1_dinner.family",
-        "c1_escape.order"
+        "c1_escape.order",
+        "c2_aquarium.intercom",
+        "c2_ship.nora"
       ],
       "theories": [
         {
@@ -1789,6 +2674,27 @@
           "id": "stand_in",
           "after": "c1_escape.order",
           "text": "Could someone else have used Nora’s name?"
+        }
+      ]
+    },
+    "aquarium": {
+      "title": "What happened in the north wing?",
+      "clues": [
+        "c1_escape.order",
+        "c2_aquarium.intercom",
+        "c2_ship.nora",
+        "c2_ship.command"
+      ],
+      "theories": [
+        {
+          "id": "maintenance",
+          "after": "c2_aquarium.plan",
+          "text": "The work order was an ordinary repair with the wrong date."
+        },
+        {
+          "id": "missing_nora",
+          "after": "c2_aquarium.intercom",
+          "text": "The woman I heard on that tape might still be here."
         }
       ]
     }

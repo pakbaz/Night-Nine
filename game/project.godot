@@ -3,7 +3,7 @@ config_version=5
 
 [application]
 config/use_custom_user_dir=true
-config/custom_user_dir_name="NightNineCommunity/chapters-0.9.1/chapter-01"
+config/custom_user_dir_name="NightNineCommunity/chapters-0.9.1/chapter-02"
 config/name="Night Nine"
 config/version="0.9.1-soundtrack"
 run/main_scene="res://scenes/campaign.tscn"
