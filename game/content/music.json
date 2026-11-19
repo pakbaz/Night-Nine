@@ -80,6 +80,28 @@
         "lufs": -15.8,
         "entry_seconds": 4.9
       }
+    },
+    "Chapter 6": {
+      "bgm": {
+        "file": "res://assets/audio/music/chapter-06-bgm.mp3",
+        "lufs": -16.2
+      },
+      "theme": {
+        "file": "res://assets/audio/music/chapter-06-theme.mp3",
+        "lufs": -14.4,
+        "entry_seconds": 19.6
+      }
+    },
+    "Interlude 2": {
+      "bgm": {
+        "file": "res://assets/audio/music/interlude-nora-bgm.mp3",
+        "lufs": -16.2
+      },
+      "theme": {
+        "file": "res://assets/audio/music/interlude-nora-theme.mp3",
+        "lufs": -15.3,
+        "entry_seconds": 19.5
+      }
     }
   }
 }
