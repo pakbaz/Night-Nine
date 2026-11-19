@@ -1,0 +1,112 @@
+{
+  "base": "calder.webp",
+  "size": [
+    900,
+    1080
+  ],
+  "origin": "top_left",
+  "foot_anchor": [
+    450,
+    1080
+  ],
+  "frames": {
+    "blink_half": {
+      "atlas_region": [
+        0,
+        0,
+        143,
+        31
+      ],
+      "source_origin": [
+        424,
+        162
+      ]
+    },
+    "blink_closed": {
+      "atlas_region": [
+        0,
+        33,
+        143,
+        31
+      ],
+      "source_origin": [
+        424,
+        162
+      ]
+    },
+    "mouth_parted": {
+      "atlas_region": [
+        0,
+        66,
+        107,
+        75
+      ],
+      "source_origin": [
+        447,
+        233
+      ]
+    },
+    "mouth_open": {
+      "atlas_region": [
+        0,
+        143,
+        107,
+        75
+      ],
+      "source_origin": [
+        447,
+        233
+      ]
+    },
+    "mouth_round": {
+      "atlas_region": [
+        0,
+        220,
+        107,
+        75
+      ],
+      "source_origin": [
+        447,
+        233
+      ]
+    },
+    "mouth_wide": {
+      "atlas_region": [
+        0,
+        297,
+        107,
+        75
+      ],
+      "source_origin": [
+        447,
+        233
+      ]
+    }
+  },
+  "cue_frames": {
+    "X": null,
+    "A": null,
+    "B": "mouth_parted",
+    "C": "mouth_wide",
+    "D": "mouth_open",
+    "E": "mouth_round",
+    "F": "mouth_round",
+    "G": "mouth_parted",
+    "H": "mouth_parted"
+  },
+  "atlas": "calder-face-atlas.png",
+  "eye_centers": [
+    [
+      453,
+      176
+    ],
+    [
+      541,
+      181
+    ]
+  ],
+  "mouth_center": [
+    506,
+    270
+  ]
+}

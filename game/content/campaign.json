@@ -6,7 +6,10 @@
   "adaptation_status": "Playable illustrated campaign checkpoint.",
   "cast": {
     "steve": "Steve Mercer",
+    "nora": "Nora Reyes",
     "iris": "Iris",
+    "calder": "Sheriff June Calder",
+    "saren": "Prefect Saren",
     "archivist": "The Archivist",
     "agnes": "Agnes Penhallow",
     "helen": "Helen Mercer",
@@ -19,6 +22,7 @@
     "lyle_copy": "Lyle’s copy",
     "pell": "Pell",
     "autorick": "DJ AutoRick",
+    "guard": "Veyri attendant",
     "general_us": "American delegate",
     "general_cn": "Chinese delegate"
   },
@@ -799,6 +803,233 @@
           "direction": "Move toward the active interaction."
         }
       ]
+    },
+    {
+      "id": "c2_aquarium",
+      "chapter": "Chapter 2",
+      "title": "The Aquarium Is Closed",
+      "place": "Aquarium north wing",
+      "style": "aquarium",
+      "actors": [
+        "steve"
+      ],
+      "objective": "Follow the old exhibit plan to the sealed wing.",
+      "tasks": [
+        {
+          "id": "c2_aquarium.plan",
+          "title": "Exhibit plan",
+          "prompt": "The old public route ends at a new wall. The service drain still connects to the north wing.",
+          "options": [
+            "Follow the service route on the old plan",
+            "Break the public entrance",
+            "Wait for the morning tour"
+          ],
+          "answer": 0,
+          "lines": [
+            "c2_aquarium.plan.01"
+          ],
+          "note": "Located the north-wing service route.",
+          "requires": [],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "puzzle": {
+            "instruction": "The old plan shows: service door -> pump room -> north wing. The public hall connects to a new plywood wall. The pump room has an outlet marked N.",
+            "rows": [
+              {
+                "label": "Entrance",
+                "options": [
+                  "Public hall",
+                  "Service door",
+                  "Gift shop"
+                ]
+              },
+              {
+                "label": "Pump-room outlet",
+                "options": [
+                  "S",
+                  "E",
+                  "N"
+                ]
+              }
+            ],
+            "solution": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "id": "c2_aquarium.guard",
+          "title": "Announcement loop",
+          "prompt": "A warning repeats with the same cough and interval. Behind another door, footsteps pause when Steve moves.",
+          "options": [
+            "Walk toward the changing footsteps",
+            "Use the corridor with the repeated announcement",
+            "Call both guards over"
+          ],
+          "answer": 1,
+          "lines": [
+            "c2_aquarium.guard.01"
+          ],
+          "note": "Distinguished an announcement loop from a live guard.",
+          "requires": [
+            "c2_aquarium.plan"
+          ],
+          "actor": "",
+          "kind": "compare",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach."
+        },
+        {
+          "id": "c2_aquarium.intercom",
+          "title": "Nora’s coat and intercom",
+          "prompt": "Inside Nora’s real coat is an intercom tape dated five months earlier. Keep its two-note whistle intact.",
+          "options": [
+            "Preserve the complete tape",
+            "Keep only the spoken name",
+            "Discard the whistle as noise"
+          ],
+          "answer": 0,
+          "lines": [
+            "c2_aquarium.intercom.01",
+            "c2_aquarium.intercom.02"
+          ],
+          "note": "Recovered Nora’s intercom tape and whistle.",
+          "requires": [
+            "c2_aquarium.guard"
+          ],
+          "actor": "",
+          "kind": "record",
+          "sounds": [
+            "effect.nora_whistle"
+          ],
+          "hint": "Look at the evidence in the description, then try another approach."
+        }
+      ],
+      "intro": [
+        "c2_aquarium.in.01",
+        "c2_aquarium.in.02"
+      ],
+      "outro": [
+        "c2_aquarium.out.01",
+        "c2_aquarium.out.02"
+      ],
+      "shots": [
+        {
+          "duration": 5.0,
+          "move": "establish",
+          "direction": "Pass dark empty exhibits into an amber transit chamber beneath new plywood."
+        },
+        {
+          "duration": 6.0,
+          "move": "push",
+          "direction": "Move toward the active interaction."
+        }
+      ]
+    },
+    {
+      "id": "c2_ship",
+      "chapter": "Chapter 2",
+      "title": "Sixty-one percent",
+      "place": "The Long Patience, scan chamber",
+      "style": "ship",
+      "actors": [
+        "steve"
+      ],
+      "objective": "Record a command and interrupt the scan.",
+      "tasks": [
+        {
+          "id": "c2_ship.nora",
+          "title": "Amber sleeper",
+          "prompt": "Nora is asleep and breathing in the Gallery. The hum almost forms a familiar lullaby.",
+          "options": [
+            "Speak to her and listen",
+            "Assume the bed is empty",
+            "Ignore the hum"
+          ],
+          "answer": 0,
+          "lines": [
+            "c2_ship.nora.01"
+          ],
+          "note": "Confirmed that the real Nora is alive.",
+          "requires": [],
+          "actor": "",
+          "kind": "record",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach."
+        },
+        {
+          "id": "c2_ship.command",
+          "title": "Saren’s intercom",
+          "prompt": "Saren orders an attendant to release a maintenance restraint. His voice authorizes the chair.",
+          "options": [
+            "Record the complete release command",
+            "Imitate Saren from memory",
+            "Record the hold music only"
+          ],
+          "answer": 0,
+          "lines": [
+            "c2_ship.command.01",
+            "c2_ship.command.02"
+          ],
+          "note": "Recorded Saren’s restraint-release command.",
+          "requires": [
+            "c2_ship.nora"
+          ],
+          "actor": "",
+          "kind": "record",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach."
+        },
+        {
+          "id": "c2_ship.escape",
+          "title": "Scan chair",
+          "prompt": "The scan has reached 61%. The intercom microphone is within reach of the recorder.",
+          "options": [
+            "Wait until the scan finishes",
+            "Play Saren’s release command",
+            "Ask for louder hold music"
+          ],
+          "answer": 1,
+          "lines": [
+            "c2_ship.escape.01",
+            "c2_ship.escape.02"
+          ],
+          "note": "Interrupted the scan at 61% and escaped through the flooded intake.",
+          "requires": [
+            "c2_ship.command"
+          ],
+          "actor": "",
+          "kind": "playback",
+          "sounds": [
+            "recording.release"
+          ],
+          "hint": "Look at the evidence in the description, then try another approach."
+        }
+      ],
+      "intro": [
+        "c2_ship.in.01",
+        "c2_ship.in.02",
+        "c2_ship.in.03"
+      ],
+      "outro": [
+        "c2_ship.out.01",
+        "c2_ship.out.02"
+      ],
+      "shots": [
+        {
+          "duration": 5.0,
+          "move": "establish",
+          "direction": "Reveal the Gallery, close on the scan meter, then follow light into the flooding intake."
+        },
+        {
+          "duration": 6.0,
+          "move": "push",
+          "direction": "Move toward the active interaction."
+        }
+      ]
     }
   ],
   "lines": {
@@ -1161,11 +1392,122 @@
       "text": "Steve... go.",
       "audio": "c1_escape.cross.02",
       "display_speaker": "Nora Reyes"
+    },
+    "c2_aquarium.in.01": {
+      "id": "c2_aquarium.in.01",
+      "speaker": "steve",
+      "text": "Emergency. Bellwether Aquarium. Someone is... hello?",
+      "audio": "c2_aquarium.in.01"
+    },
+    "c2_aquarium.in.02": {
+      "id": "c2_aquarium.in.02",
+      "speaker": "steve",
+      "text": "Half a sentence. I hope someone heard it.",
+      "audio": "c2_aquarium.in.02"
+    },
+    "c2_aquarium.out.01": {
+      "id": "c2_aquarium.out.01",
+      "speaker": "nora",
+      "text": "My name is Nora Reyes, and somebody just walked out of here wearing my face.",
+      "audio": "c2_aquarium.out.01"
+    },
+    "c2_aquarium.out.02": {
+      "id": "c2_aquarium.out.02",
+      "speaker": "steve",
+      "text": "Five months. I didn’t notice for five months.",
+      "audio": "c2_aquarium.out.02"
+    },
+    "c2_aquarium.plan.01": {
+      "id": "c2_aquarium.plan.01",
+      "speaker": "steve",
+      "text": "Nora showed me this when I repaired the underwater speakers.",
+      "audio": "c2_aquarium.plan.01"
+    },
+    "c2_aquarium.guard.01": {
+      "id": "c2_aquarium.guard.01",
+      "speaker": "steve",
+      "text": "The cough was in exactly the same place. That corridor has a recording.",
+      "audio": "c2_aquarium.guard.01"
+    },
+    "c2_aquarium.intercom.01": {
+      "id": "c2_aquarium.intercom.01",
+      "speaker": "nora",
+      "text": "Two short notes. If Admiral can hear me, perhaps somebody else can.",
+      "audio": "c2_aquarium.intercom.01",
+      "cue": "nora_whistle"
+    },
+    "c2_aquarium.intercom.02": {
+      "id": "c2_aquarium.intercom.02",
+      "speaker": "steve",
+      "text": "I’m keeping all of it.",
+      "audio": "c2_aquarium.intercom.02"
+    },
+    "c2_ship.in.01": {
+      "id": "c2_ship.in.01",
+      "speaker": "iris",
+      "text": "Please come with us. They want to know where your mother put her notebook.",
+      "audio": "c2_ship.in.01",
+      "display_speaker": "Nora Reyes"
+    },
+    "c2_ship.in.02": {
+      "id": "c2_ship.in.02",
+      "speaker": "guard",
+      "text": "Would peaceful human hold music assist your experience?",
+      "audio": "c2_ship.in.02"
+    },
+    "c2_ship.in.03": {
+      "id": "c2_ship.in.03",
+      "speaker": "steve",
+      "text": "I’d prefer leaving.",
+      "audio": "c2_ship.in.03"
+    },
+    "c2_ship.out.01": {
+      "id": "c2_ship.out.01",
+      "speaker": "steve",
+      "text": "The room is flooding. The underwater speakers still work... Nora’s whistle.",
+      "audio": "c2_ship.out.01"
+    },
+    "c2_ship.out.02": {
+      "id": "c2_ship.out.02",
+      "speaker": "calder",
+      "text": "Mercer. Breathe first. Explain afterward.",
+      "audio": "c2_ship.out.02"
+    },
+    "c2_ship.nora.01": {
+      "id": "c2_ship.nora.01",
+      "speaker": "steve",
+      "text": "I kept waiting until I knew what to say. I’m here now. I should have been here sooner.",
+      "audio": "c2_ship.nora.01"
+    },
+    "c2_ship.command.01": {
+      "id": "c2_ship.command.01",
+      "speaker": "saren",
+      "text": "Release the restraint. Maintenance authorization.",
+      "audio": "recording.release"
+    },
+    "c2_ship.command.02": {
+      "id": "c2_ship.command.02",
+      "speaker": "steve",
+      "text": "Got it.",
+      "audio": "c2_ship.command.02"
+    },
+    "c2_ship.escape.01": {
+      "id": "c2_ship.escape.01",
+      "speaker": "saren",
+      "text": "Release the restraint. Maintenance authorization.",
+      "audio": "recording.release"
+    },
+    "c2_ship.escape.02": {
+      "id": "c2_ship.escape.02",
+      "speaker": "steve",
+      "text": "Open. Now the seawater valve.",
+      "audio": "c2_ship.escape.02"
     }
   },
   "sound_labels": {
     "effect.nora_whistle": "Listen: Nora’s two-note whistle",
     "effect.veyr_wind": "Listen: the last wind on Veyr",
-    "recording.greeting": "Listen: the morning greeting"
+    "recording.greeting": "Listen: the morning greeting",
+    "recording.release": "Listen: the restraint-release command"
   }
 }
