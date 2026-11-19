@@ -3249,6 +3249,697 @@
           "direction": "Move toward the active interaction."
         }
       ]
+    },
+    {
+      "id": "c10_station",
+      "chapter": "Chapter 10",
+      "title": "Good Morning, Bellwether",
+      "place": "KBWR live booth",
+      "style": "station",
+      "actors": [
+        "steve"
+      ],
+      "objective": "Take back the microphone and rebuild contact.",
+      "tasks": [
+        {
+          "id": "c10_station.playlist",
+          "title": "AutoRick queue",
+          "prompt": "AutoRick yields only to the station’s live emergency bulletin input.",
+          "options": [
+            "Queue another song",
+            "Select the live emergency bulletin bus",
+            "Argue with the weather recording"
+          ],
+          "answer": 1,
+          "lines": [
+            "c10_station.playlist.01",
+            "c10_station.playlist.02"
+          ],
+          "note": "Recovered the live microphone.",
+          "requires": [],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach."
+        },
+        {
+          "id": "c10_station.route",
+          "title": "Tower patch panel",
+          "prompt": "The Halcyon transmitter already communicates with the Long Patience. Steve can use that existing route.",
+          "options": [
+            "Patch the live desk into Halcyon’s uplink",
+            "Broadcast only to the car park",
+            "Rebuild the smashed antenna rig"
+          ],
+          "answer": 0,
+          "lines": [
+            "c10_station.route.01"
+          ],
+          "note": "Connected the live performance to the ship’s systems.",
+          "requires": [
+            "c10_station.playlist"
+          ],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "puzzle": {
+            "instruction": "The live desk is source L. Halcyon’s uplink is destination H. The limiter must remain engaged to protect the transmitter from the combined cues.",
+            "rows": [
+              {
+                "label": "Source",
+                "options": [
+                  "Playlist P",
+                  "Live L",
+                  "Test loop T"
+                ]
+              },
+              {
+                "label": "Destination",
+                "options": [
+                  "Headphones C",
+                  "Halcyon H",
+                  "Archive A"
+                ]
+              },
+              {
+                "label": "Limiter",
+                "options": [
+                  "Engaged",
+                  "Bypassed"
+                ]
+              }
+            ],
+            "solution": [
+              1,
+              1,
+              0
+            ]
+          }
+        },
+        {
+          "id": "c10_station.relay",
+          "title": "Emergency radio",
+          "prompt": "Official channels are jammed. Frank’s amateur radio contacts can relay spoken cues.",
+          "options": [
+            "Call the ham network with K7BLW",
+            "Keep retrying the jammed line",
+            "Send the cues through hold music"
+          ],
+          "answer": 0,
+          "lines": [
+            "c10_station.relay.01",
+            "c10_station.relay.02"
+          ],
+          "note": "Established a global relay around the jamming.",
+          "requires": [
+            "c10_station.route"
+          ],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach."
+        }
+      ],
+      "intro": [
+        "c10_station.in.01",
+        "c10_station.in.02",
+        "c10_station.in.03"
+      ],
+      "outro": [
+        "c10_station.out.01",
+        "c10_station.out.02"
+      ],
+      "shots": [
+        {
+          "duration": 5.0,
+          "move": "establish",
+          "direction": "Push past the automated playlist into Steve’s old live booth as the tower wakes."
+        },
+        {
+          "duration": 6.0,
+          "move": "push",
+          "direction": "Move toward the active interaction."
+        }
+      ]
+    },
+    {
+      "id": "c10_town",
+      "chapter": "Chapter 10",
+      "title": "Everybody has a part",
+      "place": "Bellwether harbor and Sentinel Point",
+      "style": "pier",
+      "actors": [
+        "nora",
+        "steve"
+      ],
+      "objective": "Prepare the town and the live performance.",
+      "tasks": [
+        {
+          "id": "c10_town.lights",
+          "title": "Phone tree",
+          "prompt": "Each household needs a cue source and a simple light pattern they can perform live.",
+          "options": [
+            "Assign local relay callers and await Steve’s cue",
+            "Tell everyone to start whenever",
+            "Run a fixed loop everywhere"
+          ],
+          "answer": 0,
+          "lines": [
+            "c10_town.lights.01"
+          ],
+          "note": "Organized Bellwether’s porch-light performance.",
+          "requires": [],
+          "actor": "nora",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach."
+        },
+        {
+          "id": "c10_town.console",
+          "title": "Wen and Shaw",
+          "prompt": "Both technical teams need to operate from one shared cue sheet.",
+          "options": [
+            "Ask them to coordinate at one console",
+            "Have them compete for the loudest signal",
+            "Play both original test tapes"
+          ],
+          "answer": 0,
+          "lines": [
+            "c10_town.console.01",
+            "c10_town.console.02",
+            "c10_town.console.03"
+          ],
+          "note": "Combined both delegations into a live effects team.",
+          "requires": [],
+          "actor": "steve",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach."
+        },
+        {
+          "id": "c10_town.wind",
+          "title": "The bait bucket",
+          "prompt": "Penhallow has the original wind recording from Veyr. The surrounding performance must remain live.",
+          "options": [
+            "Use the wind as an emotional cue within the live show",
+            "Loop the entire show around it",
+            "Discard it because it is old"
+          ],
+          "answer": 0,
+          "lines": [
+            "c10_town.wind.01"
+          ],
+          "note": "Prepared Veyr’s wind as a distinct archival element.",
+          "requires": [
+            "c10_town.lights",
+            "c10_town.console"
+          ],
+          "actor": "steve",
+          "kind": "playback",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach."
+        }
+      ],
+      "intro": [
+        "c10_town.in.01",
+        "c10_town.in.02",
+        "c10_town.in.03"
+      ],
+      "outro": [
+        "c10_town.out.01",
+        "c10_town.out.02",
+        "c10_town.out.03"
+      ],
+      "shots": [
+        {
+          "duration": 5.0,
+          "move": "establish",
+          "direction": "Travel from porch lights along the harbor to the antenna field under a vast shadow."
+        },
+        {
+          "duration": 6.0,
+          "move": "push",
+          "direction": "Move toward the active interaction."
+        }
+      ]
+    },
+    {
+      "id": "c10_live",
+      "chapter": "Chapter 10",
+      "title": "One new take",
+      "place": "KBWR and the whole coast",
+      "style": "finale",
+      "actors": [
+        "steve"
+      ],
+      "objective": "Direct a responsive performance. Mistakes allow another cue.",
+      "tasks": [
+        {
+          "id": "c10_live.first",
+          "title": "Cue one: establish scale",
+          "prompt": "The Vigil is measuring the antenna field. Begin with a visible live response, then let the technicians follow it.",
+          "options": [
+            "Nora’s porch lights, then Shaw’s field lights",
+            "Replay the nine-year-old test",
+            "Start every channel at maximum"
+          ],
+          "answer": 0,
+          "lines": [
+            "c10_live.first.01",
+            "c10_live.first.02"
+          ],
+          "note": "Established a live, changing light pattern.",
+          "requires": [],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach."
+        },
+        {
+          "id": "c10_live.second",
+          "title": "Cue two: adapt",
+          "prompt": "A relay operator reports a two-second delay. Adjust the next cue to the report instead of repeating a timed tape.",
+          "options": [
+            "Ignore the report",
+            "Hold two seconds and issue a fresh cue",
+            "Restart the identical sequence"
+          ],
+          "answer": 1,
+          "lines": [
+            "c10_live.second.01",
+            "c10_live.second.02",
+            "c10_live.second.03"
+          ],
+          "note": "Adapted the show to live measurements.",
+          "requires": [
+            "c10_live.first"
+          ],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "puzzle": {
+            "instruction": "The coast relay reports a two-second delay. Shaw can respond immediately, Wen needs the coast confirmation, and the Choir needs a clear channel after the power cue.",
+            "rows": [
+              {
+                "label": "Delay compensation",
+                "options": [
+                  "0 seconds",
+                  "2 seconds",
+                  "9 seconds"
+                ]
+              },
+              {
+                "label": "First response",
+                "options": [
+                  "Shaw on Steve’s fresh cue",
+                  "Wen before confirmation",
+                  "Replay the old cue"
+                ]
+              },
+              {
+                "label": "Then",
+                "options": [
+                  "Choir over every other channel",
+                  "Wen after coast confirmation",
+                  "Repeat the same sequence unchanged"
+                ]
+              }
+            ],
+            "solution": [
+              1,
+              0,
+              1
+            ]
+          }
+        },
+        {
+          "id": "c10_live.third",
+          "title": "Cue three: listen",
+          "prompt": "The Choir is ready. The fleet pauses at the old wind recording. Give the live voices room to answer.",
+          "options": [
+            "Bring in the Choir after the wind, following its breath",
+            "Loop the wind forever",
+            "Mute the human voices"
+          ],
+          "answer": 0,
+          "lines": [
+            "c10_live.third.01",
+            "c10_live.third.02"
+          ],
+          "note": "Completed the live performance with the Choir.",
+          "requires": [
+            "c10_live.second"
+          ],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach."
+        }
+      ],
+      "intro": [
+        "c10_live.in.01",
+        "c10_live.in.02",
+        "c10_live.in.03"
+      ],
+      "outro": [
+        "c10_live.out.01",
+        "c10_live.out.02",
+        "c10_live.out.03",
+        "c10_live.out.04"
+      ],
+      "shots": [
+        {
+          "duration": 5.0,
+          "move": "establish",
+          "direction": "Move through waves of live porch lights, antenna pulses and the Choir’s luminous voices."
+        },
+        {
+          "duration": 6.0,
+          "move": "push",
+          "direction": "Move toward the active interaction."
+        }
+      ]
+    },
+    {
+      "id": "c10_report",
+      "chapter": "Chapter 10",
+      "title": "Go around",
+      "place": "Ship antenna and KBWR open channel",
+      "style": "choir",
+      "actors": [
+        "archivist"
+      ],
+      "objective": "Choose what to tell the fleet.",
+      "tasks": [
+        {
+          "id": "c10_report.echo",
+          "title": "The open channel",
+          "prompt": "Penhallow is the Archivist’s own secret echo. Her experiences belong to someone the Archivist already knows.",
+          "options": [
+            "Hear what the shore echo has learned",
+            "Reconcile her before she speaks",
+            "Ask Saren to decide for both"
+          ],
+          "answer": 0,
+          "lines": [
+            "c10_report.echo.01",
+            "c10_report.echo.02"
+          ],
+          "note": "The Archivist accepted her echo’s lived experience.",
+          "requires": [],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach."
+        },
+        {
+          "id": "c10_report.survey",
+          "title": "Saren’s sealed survey",
+          "prompt": "The sealed entry describes an empty, living world off the fleet’s course.",
+          "options": [
+            "Release its coordinates with the report",
+            "Keep it sealed to protect Saren’s reputation",
+            "Claim Earth is the only possible home"
+          ],
+          "answer": 0,
+          "lines": [
+            "c10_report.survey.01",
+            "c10_report.survey.02"
+          ],
+          "note": "Released the withheld habitable-world survey.",
+          "requires": [
+            "c10_report.echo"
+          ],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach."
+        },
+        {
+          "id": "c10_report.report",
+          "title": "Fleet transmission",
+          "prompt": "The report requires the Prefect or Archivist. The Archivist can now speak for herself.",
+          "options": [
+            "Confirm the measured performance and transmit the new home",
+            "Erase Saren and appoint his old record",
+            "Send only the old command, Deliver"
+          ],
+          "answer": 0,
+          "lines": [
+            "c10_report.report.01",
+            "c10_report.report.02",
+            "c10_report.report.03"
+          ],
+          "note": "Sent the report and chose change over reconciliation.",
+          "requires": [
+            "c10_report.survey"
+          ],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach."
+        }
+      ],
+      "intro": [
+        "c10_report.in.01",
+        "c10_report.in.02",
+        "c10_report.in.03"
+      ],
+      "outro": [
+        "c10_report.out.01",
+        "c10_report.out.02",
+        "c10_report.out.03",
+        "c10_report.out.04"
+      ],
+      "shots": [
+        {
+          "duration": 5.0,
+          "move": "establish",
+          "direction": "Frame the Archivist and her shore echo across an open radio channel, then the turning fleet."
+        },
+        {
+          "duration": 6.0,
+          "move": "push",
+          "direction": "Move toward the active interaction."
+        }
+      ]
+    },
+    {
+      "id": "epilogue",
+      "chapter": "Epilogue",
+      "title": "A place to live",
+      "place": "Bellwether, after sunrise",
+      "style": "street",
+      "actors": [
+        "steve"
+      ],
+      "objective": "Visit the people who chose to stay.",
+      "tasks": [
+        {
+          "id": "epilogue.neighbors",
+          "title": "The new neighbors",
+          "prompt": "More than two hundred copies stay. Their future requires ordinary choices.",
+          "options": [
+            "Visit the families making those choices",
+            "Assign everyone their original’s life",
+            "Demand another re-sync"
+          ],
+          "answer": 0,
+          "lines": [
+            "epilogue.neighbors.01",
+            "epilogue.neighbors.02",
+            "epilogue.neighbors.03",
+            "epilogue.neighbors.04"
+          ],
+          "note": "The copies began independent lives.",
+          "requires": [],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach."
+        },
+        {
+          "id": "epilogue.bait",
+          "title": "Two Agneses",
+          "prompt": "The two Agneses argue cheerfully over bait prices. Rook’s copy prepares to leave with the ship.",
+          "options": [
+            "Listen to their choices",
+            "Ask them to pick a single shared name",
+            "Insist every copy stay"
+          ],
+          "answer": 0,
+          "lines": [
+            "epilogue.bait.01",
+            "epilogue.bait.02",
+            "epilogue.bait.03",
+            "epilogue.bait.04"
+          ],
+          "note": "Agnes and her echo stayed; Rook’s copy chose to leave.",
+          "requires": [],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach."
+        },
+        {
+          "id": "epilogue.coffee",
+          "title": "A new morning",
+          "prompt": "Helen has left a new kitchen note. Steve can put away the old voicemail and speak to Nora.",
+          "options": [
+            "Make coffee and begin talking",
+            "Replay the voicemail instead of answering",
+            "Pretend the past year never happened"
+          ],
+          "answer": 0,
+          "lines": [
+            "epilogue.coffee.01",
+            "epilogue.coffee.02"
+          ],
+          "note": "Steve chose a new morning with the people he loves.",
+          "requires": [
+            "epilogue.neighbors",
+            "epilogue.bait"
+          ],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach."
+        }
+      ],
+      "intro": [
+        "epilogue.in.01",
+        "epilogue.in.02",
+        "epilogue.in.03",
+        "epilogue.in.04"
+      ],
+      "outro": [
+        "epilogue.out.01",
+        "epilogue.out.02",
+        "epilogue.out.03"
+      ],
+      "shots": [
+        {
+          "duration": 5.0,
+          "move": "establish",
+          "direction": "Watch the ship rise into sunrise; return to warm windows and a new kitchen-table note."
+        },
+        {
+          "duration": 6.0,
+          "move": "push",
+          "direction": "Move toward the active interaction."
+        }
+      ]
+    },
+    {
+      "id": "one_year",
+      "chapter": "Epilogue",
+      "title": "Good morning",
+      "place": "KBWR, one year later",
+      "style": "station",
+      "actors": [
+        "steve"
+      ],
+      "objective": "Begin a new live show.",
+      "tasks": [
+        {
+          "id": "one_year.newwind",
+          "title": "A message from the fleet",
+          "prompt": "The new recording contains wind through new glass towers.",
+          "options": [
+            "Play the new wind, then speak live",
+            "Repeat yesterday’s greeting exactly",
+            "Let AutoRick take over"
+          ],
+          "answer": 0,
+          "lines": [
+            "one_year.newwind.01",
+            "one_year.newwind.02"
+          ],
+          "note": "Steve and Stephen began another live morning show.",
+          "requires": [],
+          "actor": "",
+          "kind": "playback",
+          "sounds": [
+            "effect.new_wind"
+          ],
+          "hint": "Look at the evidence in the description, then try another approach."
+        }
+      ],
+      "intro": [
+        "one_year.in.01",
+        "one_year.in.02",
+        "one_year.in.03"
+      ],
+      "outro": [
+        "one_year.out.01"
+      ],
+      "shots": [
+        {
+          "duration": 5.0,
+          "move": "establish",
+          "direction": "Push toward the live microphone as a new recording of wind arrives from the fleet’s home."
+        },
+        {
+          "duration": 6.0,
+          "move": "push",
+          "direction": "Move toward the active interaction."
+        }
+      ]
+    },
+    {
+      "id": "postcredits",
+      "chapter": "After the credits",
+      "title": "We heard the singing",
+      "place": "Sentinel Point, 3 a.m.",
+      "style": "array",
+      "actors": [
+        "helen"
+      ],
+      "objective": "Translate the answer from deep space.",
+      "tasks": [
+        {
+          "id": "postcredits.answer",
+          "title": "The new signal",
+          "prompt": "The signal uses the language Helen transcribed from Wick’s dreams.",
+          "options": [
+            "Compare it with the final notebook page",
+            "Classify it as another Meridian recording",
+            "Erase it before anyone hears"
+          ],
+          "answer": 0,
+          "lines": [
+            "postcredits.answer.01"
+          ],
+          "note": "Translated the first reply from deep space.",
+          "requires": [],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach."
+        }
+      ],
+      "intro": [
+        "postcredits.in.01",
+        "postcredits.in.02",
+        "postcredits.in.03"
+      ],
+      "outro": [
+        "postcredits.out.01"
+      ],
+      "shots": [
+        {
+          "duration": 5.0,
+          "move": "establish",
+          "direction": "Move from a real incoming waveform to dawn over the quiet antenna field."
+        },
+        {
+          "duration": 6.0,
+          "move": "push",
+          "direction": "Move toward the active interaction."
+        }
+      ]
     }
   ],
   "lines": {
@@ -4846,6 +5537,469 @@
       "speaker": "steve",
       "text": "I thought saying no was the worst thing I’d ever done.",
       "audio": "c9_choir.note.02"
+    },
+    "c10_station.in.01": {
+      "id": "c10_station.in.01",
+      "speaker": "autorick",
+      "text": "Good morning! Up next, another hour of uninterrupted favorites.",
+      "audio": "c10_station.in.01"
+    },
+    "c10_station.in.02": {
+      "id": "c10_station.in.02",
+      "speaker": "steve",
+      "text": "Rick. I need the microphone.",
+      "audio": "c10_station.in.02"
+    },
+    "c10_station.in.03": {
+      "id": "c10_station.in.03",
+      "speaker": "autorick",
+      "text": "Your request is important to us!",
+      "audio": "c10_station.in.03"
+    },
+    "c10_station.out.01": {
+      "id": "c10_station.out.01",
+      "speaker": "frank",
+      "text": "K7BLW calling the Thursday club. We’re going to need a few more operators.",
+      "audio": "c10_station.out.01"
+    },
+    "c10_station.out.02": {
+      "id": "c10_station.out.02",
+      "speaker": "operator",
+      "text": "Coast relay ready. They’re answering from everywhere, Frank.",
+      "audio": "c10_station.out.02"
+    },
+    "c10_station.playlist.01": {
+      "id": "c10_station.playlist.01",
+      "speaker": "autorick",
+      "text": "And yesterday’s forecast was sunny!",
+      "audio": "c10_station.playlist.01"
+    },
+    "c10_station.playlist.02": {
+      "id": "c10_station.playlist.02",
+      "speaker": "steve",
+      "text": "Thank you, Rick. We’re live now.",
+      "audio": "c10_station.playlist.02"
+    },
+    "c10_station.route.01": {
+      "id": "c10_station.route.01",
+      "speaker": "steve",
+      "text": "The route was here the whole time. It’s why they bought the station.",
+      "audio": "c10_station.route.01"
+    },
+    "c10_station.relay.01": {
+      "id": "c10_station.relay.01",
+      "speaker": "frank",
+      "text": "Short messages. Repeat the cue number, then pass it on.",
+      "audio": "c10_station.relay.01"
+    },
+    "c10_station.relay.02": {
+      "id": "c10_station.relay.02",
+      "speaker": "operator",
+      "text": "Understood. Sentinel Point, do you read?",
+      "audio": "c10_station.relay.02"
+    },
+    "c10_town.in.01": {
+      "id": "c10_town.in.01",
+      "speaker": "nora",
+      "text": "Carmen calls the restaurant list. Mateo calls the fire crews. Rafa calls everyone who owes him a favor.",
+      "audio": "c10_town.in.01"
+    },
+    "c10_town.in.02": {
+      "id": "c10_town.in.02",
+      "speaker": "carmen",
+      "text": "That is a long list.",
+      "audio": "c10_town.in.02"
+    },
+    "c10_town.in.03": {
+      "id": "c10_town.in.03",
+      "speaker": "ward",
+      "text": "Listen to your local radio. Tonight, we need you to take part.",
+      "audio": "c10_town.in.03"
+    },
+    "c10_town.out.01": {
+      "id": "c10_town.out.01",
+      "speaker": "agnes",
+      "text": "I brought something in my bucket.",
+      "audio": "c10_town.out.01"
+    },
+    "c10_town.out.02": {
+      "id": "c10_town.out.02",
+      "speaker": "steve",
+      "text": "The wind. From Veyr. You recorded it.",
+      "audio": "c10_town.out.02"
+    },
+    "c10_town.out.03": {
+      "id": "c10_town.out.03",
+      "speaker": "agnes",
+      "text": "A long time ago, Steven.",
+      "audio": "c10_town.out.03"
+    },
+    "c10_town.lights.01": {
+      "id": "c10_town.lights.01",
+      "speaker": "nora",
+      "text": "Listen, repeat the cue, then switch. And leave a line free for anyone who needs help.",
+      "audio": "c10_town.lights.01"
+    },
+    "c10_town.console.01": {
+      "id": "c10_town.console.01",
+      "speaker": "wen",
+      "text": "Your timing is late.",
+      "audio": "c10_town.console.01"
+    },
+    "c10_town.console.02": {
+      "id": "c10_town.console.02",
+      "speaker": "shaw",
+      "text": "Your lamps are dim.",
+      "audio": "c10_town.console.02"
+    },
+    "c10_town.console.03": {
+      "id": "c10_town.console.03",
+      "speaker": "steve",
+      "text": "Wonderful. You can both fix it while we’re on air.",
+      "audio": "c10_town.console.03"
+    },
+    "c10_town.wind.01": {
+      "id": "c10_town.wind.01",
+      "speaker": "steve",
+      "text": "A recording can remind them of home. We’ll answer it with something happening now.",
+      "audio": "c10_town.wind.01"
+    },
+    "c10_live.in.01": {
+      "id": "c10_live.in.01",
+      "speaker": "steve",
+      "text": "Bellwether, this is Steve Mercer. We’re going to do this together.",
+      "audio": "c10_live.in.01"
+    },
+    "c10_live.in.02": {
+      "id": "c10_live.in.02",
+      "speaker": "stephen",
+      "text": "You knocked the microphone stand.",
+      "audio": "c10_live.in.02"
+    },
+    "c10_live.in.03": {
+      "id": "c10_live.in.03",
+      "speaker": "steve",
+      "text": "I caught it. Stay with me.",
+      "audio": "c10_live.in.03"
+    },
+    "c10_live.out.01": {
+      "id": "c10_live.out.01",
+      "speaker": "mateo",
+      "text": "Saren is on the pier. He’s going for the tower.",
+      "audio": "c10_live.out.01"
+    },
+    "c10_live.out.02": {
+      "id": "c10_live.out.02",
+      "speaker": "carmen",
+      "text": "Then he can go through us.",
+      "audio": "c10_live.out.02"
+    },
+    "c10_live.out.03": {
+      "id": "c10_live.out.03",
+      "speaker": "pell",
+      "text": "Biscuit and I have chosen our route.",
+      "audio": "c10_live.out.03"
+    },
+    "c10_live.out.04": {
+      "id": "c10_live.out.04",
+      "speaker": "stephen",
+      "text": "Admiral! That is an extremely expensive sandwich.",
+      "audio": "c10_live.out.04"
+    },
+    "c10_live.first.01": {
+      "id": "c10_live.first.01",
+      "speaker": "nora",
+      "text": "First street ready. Second street ready. Look at the harbor, Steve.",
+      "audio": "c10_live.first.01"
+    },
+    "c10_live.first.02": {
+      "id": "c10_live.first.02",
+      "speaker": "shaw",
+      "text": "Field lights following. We can match that.",
+      "audio": "c10_live.first.02"
+    },
+    "c10_live.second.01": {
+      "id": "c10_live.second.01",
+      "speaker": "steve",
+      "text": "Holding. Now, Wen.",
+      "audio": "c10_live.second.01"
+    },
+    "c10_live.second.02": {
+      "id": "c10_live.second.02",
+      "speaker": "wen",
+      "text": "Grid response confirmed. Both networks.",
+      "audio": "c10_live.second.02"
+    },
+    "c10_live.second.03": {
+      "id": "c10_live.second.03",
+      "speaker": "operator",
+      "text": "The far relay has you.",
+      "audio": "c10_live.second.03"
+    },
+    "c10_live.third.01": {
+      "id": "c10_live.third.01",
+      "speaker": "choir",
+      "text": "We are here. We have changed. Listen.",
+      "audio": "c10_live.third.01"
+    },
+    "c10_live.third.02": {
+      "id": "c10_live.third.02",
+      "speaker": "steve",
+      "text": "Keep the voices clear. Let them hear every one.",
+      "audio": "c10_live.third.02"
+    },
+    "c10_report.in.01": {
+      "id": "c10_report.in.01",
+      "speaker": "saren",
+      "text": "I will not confirm this report.",
+      "audio": "c10_report.in.01"
+    },
+    "c10_report.in.02": {
+      "id": "c10_report.in.02",
+      "speaker": "archivist",
+      "text": "To do so would violate every record we have kept.",
+      "audio": "c10_report.in.02"
+    },
+    "c10_report.in.03": {
+      "id": "c10_report.in.03",
+      "speaker": "agnes",
+      "text": "You have spent three years selling bait to people you like. Tell them what you learned.",
+      "audio": "c10_report.in.03"
+    },
+    "c10_report.out.01": {
+      "id": "c10_report.out.01",
+      "speaker": "archivist",
+      "text": "They are dangerous, and they sing. Go around.",
+      "audio": "c10_report.out.01"
+    },
+    "c10_report.out.02": {
+      "id": "c10_report.out.02",
+      "speaker": "archivist",
+      "text": "Here are three hundred and twelve lives you should meet. And here is a world where we can live.",
+      "audio": "c10_report.out.02"
+    },
+    "c10_report.out.03": {
+      "id": "c10_report.out.03",
+      "speaker": "helen",
+      "text": "Wick is adding a message for Tirel.",
+      "audio": "c10_report.out.03"
+    },
+    "c10_report.out.04": {
+      "id": "c10_report.out.04",
+      "speaker": "steve",
+      "text": "The Vigil is turning.",
+      "audio": "c10_report.out.04"
+    },
+    "c10_report.echo.01": {
+      "id": "c10_report.echo.01",
+      "speaker": "agnes",
+      "text": "You can spend another nine hundred years remembering home, or let someone make a new one.",
+      "audio": "c10_report.echo.01"
+    },
+    "c10_report.echo.02": {
+      "id": "c10_report.echo.02",
+      "speaker": "archivist",
+      "text": "I remember the wind. You remember the people.",
+      "audio": "c10_report.echo.02"
+    },
+    "c10_report.survey.01": {
+      "id": "c10_report.survey.01",
+      "speaker": "archivist",
+      "text": "He found a home. He hid it because the mission would have ended.",
+      "audio": "c10_report.survey.01"
+    },
+    "c10_report.survey.02": {
+      "id": "c10_report.survey.02",
+      "speaker": "agnes",
+      "text": "Then finish the mission.",
+      "audio": "c10_report.survey.02"
+    },
+    "c10_report.report.01": {
+      "id": "c10_report.report.01",
+      "speaker": "archivist",
+      "text": "Saren, you will remain yourself. You will have to remember being wrong.",
+      "audio": "c10_report.report.01"
+    },
+    "c10_report.report.02": {
+      "id": "c10_report.report.02",
+      "speaker": "saren",
+      "text": "I have no procedure for that.",
+      "audio": "c10_report.report.02"
+    },
+    "c10_report.report.03": {
+      "id": "c10_report.report.03",
+      "speaker": "archivist",
+      "text": "Neither do I.",
+      "audio": "c10_report.report.03"
+    },
+    "epilogue.in.01": {
+      "id": "epilogue.in.01",
+      "speaker": "choir",
+      "text": "Your memories are yours now. You need no more re-syncs.",
+      "audio": "epilogue.in.01"
+    },
+    "epilogue.in.02": {
+      "id": "epilogue.in.02",
+      "speaker": "iris",
+      "text": "A face of my own. It will take getting used to.",
+      "audio": "epilogue.in.02"
+    },
+    "epilogue.in.03": {
+      "id": "epilogue.in.03",
+      "speaker": "nora",
+      "text": "Thank you for helping us. I haven’t forgiven the kidnapping.",
+      "audio": "epilogue.in.03"
+    },
+    "epilogue.in.04": {
+      "id": "epilogue.in.04",
+      "speaker": "carmen",
+      "text": "Dinner is still at six.",
+      "audio": "epilogue.in.04"
+    },
+    "epilogue.out.01": {
+      "id": "epilogue.out.01",
+      "speaker": "steve",
+      "text": "The ring is in my pocket. We can start with coffee.",
+      "audio": "epilogue.out.01"
+    },
+    "epilogue.out.02": {
+      "id": "epilogue.out.02",
+      "speaker": "nora",
+      "text": "And an actual conversation.",
+      "audio": "epilogue.out.02"
+    },
+    "epilogue.out.03": {
+      "id": "epilogue.out.03",
+      "speaker": "steve",
+      "text": "Every day.",
+      "audio": "epilogue.out.03"
+    },
+    "epilogue.neighbors.01": {
+      "id": "epilogue.neighbors.01",
+      "speaker": "lyle",
+      "text": "Two boys. Two fathers. We’ll have to learn.",
+      "audio": "epilogue.neighbors.01"
+    },
+    "epilogue.neighbors.02": {
+      "id": "epilogue.neighbors.02",
+      "speaker": "pell",
+      "text": "Dale has retired. Biscuit and I will maintain the route.",
+      "audio": "epilogue.neighbors.02"
+    },
+    "epilogue.neighbors.03": {
+      "id": "epilogue.neighbors.03",
+      "speaker": "dale",
+      "text": "Best news I’ve had in years.",
+      "audio": "epilogue.neighbors.03"
+    },
+    "epilogue.neighbors.04": {
+      "id": "epilogue.neighbors.04",
+      "speaker": "gus",
+      "text": "Kelp croissant. Someone wrote it in my notebook. I’m going to try it.",
+      "audio": "epilogue.neighbors.04"
+    },
+    "epilogue.bait.01": {
+      "id": "epilogue.bait.01",
+      "speaker": "agnes_original",
+      "text": "That price is robbery.",
+      "audio": "epilogue.bait.01"
+    },
+    "epilogue.bait.02": {
+      "id": "epilogue.bait.02",
+      "speaker": "agnes",
+      "text": "It is a competitive market. We are each other’s competition.",
+      "audio": "epilogue.bait.02"
+    },
+    "epilogue.bait.03": {
+      "id": "epilogue.bait.03",
+      "speaker": "rook",
+      "text": "Look after yourself.",
+      "audio": "epilogue.bait.03"
+    },
+    "epilogue.bait.04": {
+      "id": "epilogue.bait.04",
+      "speaker": "rook_copy",
+      "text": "I’ll have to find out who that is.",
+      "audio": "epilogue.bait.04"
+    },
+    "epilogue.coffee.01": {
+      "id": "epilogue.coffee.01",
+      "speaker": "helen",
+      "text": "Steve, we’re home. There is coffee. Your father has labeled the paint.",
+      "audio": "epilogue.coffee.01"
+    },
+    "epilogue.coffee.02": {
+      "id": "epilogue.coffee.02",
+      "speaker": "steve",
+      "text": "I’ll be there. Then Nora and I have somewhere to be.",
+      "audio": "epilogue.coffee.02"
+    },
+    "one_year.in.01": {
+      "id": "one_year.in.01",
+      "speaker": "tomas",
+      "text": "Welcome to I Told You So. This week, a respectful review of everyone who owes me an apology.",
+      "audio": "one_year.in.01"
+    },
+    "one_year.in.02": {
+      "id": "one_year.in.02",
+      "speaker": "stephen",
+      "text": "We should do a segment about who is the upgrade.",
+      "audio": "one_year.in.02"
+    },
+    "one_year.in.03": {
+      "id": "one_year.in.03",
+      "speaker": "steve",
+      "text": "We did that yesterday.",
+      "audio": "one_year.in.03"
+    },
+    "one_year.out.01": {
+      "id": "one_year.out.01",
+      "speaker": "steve",
+      "text": "Good morning, Bellwether.",
+      "audio": "one_year.out.01"
+    },
+    "one_year.newwind.01": {
+      "id": "one_year.newwind.01",
+      "speaker": "stephen",
+      "text": "Sounds like home. A new one.",
+      "audio": "one_year.newwind.01",
+      "cue": "new_wind"
+    },
+    "one_year.newwind.02": {
+      "id": "one_year.newwind.02",
+      "speaker": "steve",
+      "text": "Ready? We’re on.",
+      "audio": "one_year.newwind.02"
+    },
+    "postcredits.in.01": {
+      "id": "postcredits.in.01",
+      "speaker": "shaw",
+      "text": "Madam President. This time I didn’t build it.",
+      "audio": "postcredits.in.01"
+    },
+    "postcredits.in.02": {
+      "id": "postcredits.in.02",
+      "speaker": "ward",
+      "text": "Evelyn, it is three in the morning.",
+      "audio": "postcredits.in.02"
+    },
+    "postcredits.in.03": {
+      "id": "postcredits.in.03",
+      "speaker": "shaw",
+      "text": "You’re going to want to hear this.",
+      "audio": "postcredits.in.03"
+    },
+    "postcredits.out.01": {
+      "id": "postcredits.out.01",
+      "speaker": "helen",
+      "text": "Hello. We heard the singing.",
+      "audio": "postcredits.out.01"
+    },
+    "postcredits.answer.01": {
+      "id": "postcredits.answer.01",
+      "speaker": "helen",
+      "text": "I know this language now. Give me a moment.",
+      "audio": "postcredits.answer.01"
     }
   },
   "sound_labels": {
@@ -4853,6 +6007,7 @@
     "effect.k7blw": "Listen: Frank’s call sign in Morse",
     "effect.lullaby": "Listen: Helen’s lullaby melody",
     "effect.veyr_wind": "Listen: the last wind on Veyr",
+    "effect.new_wind": "Listen: wind from the new home",
     "recording.greeting": "Listen: the morning greeting",
     "recording.rook": "Listen: Rook’s recorded reassurance",
     "recording.offer": "Listen: Saren’s recorded offer",
