@@ -26,6 +26,9 @@
     "gus": "Gus Albano",
     "dale": "Dale Kittredge",
     "pell": "Pell",
+    "wen": "Dr. Lin Wen",
+    "shaw": "Dr. Evelyn Shaw",
+    "ward": "President Elena Ward",
     "autorick": "DJ AutoRick",
     "guard": "Veyri attendant",
     "operator": "Thursday club operator",
@@ -5834,6 +5837,802 @@
           "direction": "Move toward the active interaction."
         }
       ]
+    },
+    {
+      "id": "c7_gate",
+      "chapter": "Chapter 7",
+      "title": "The President’s Other Appointment",
+      "place": "Sentinel Point gate",
+      "style": "array",
+      "actors": [
+        "steve",
+        "stephen",
+        "pell"
+      ],
+      "objective": "Get the team into the accord signing.",
+      "tasks": [
+        {
+          "id": "c7_gate.badge",
+          "title": "Security gate",
+          "prompt": "Pell’s list has a red dot for delivery staff, a blue stripe for contracted crew and a gold seal for signatories. The gate board gives times: red 11:20, blue 11:40, gold noon. Stephen’s card has a stripe; its printed face is his. Which appointment is his?",
+          "options": [
+            "11:20, deliveries",
+            "Noon, delegation",
+            "11:40, contracted crew"
+          ],
+          "answer": 2,
+          "lines": [
+            "c7_gate.badge.01"
+          ],
+          "note": "Stephen entered as a crew asset.",
+          "requires": [],
+          "actor": "stephen",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Use one event clock for all three badges.",
+            "The crew window is between the mail and the signatories; a fast watch reads later.",
+            "Pell enters at 11:20, Stephen at 11:40 and Ward at noon. Add five minutes for each watch reading."
+          ],
+          "puzzle": {
+            "presentation": "case_board",
+            "instruction": "One familiar face, two people, three ways through the gate. Reconstruct access for the venue before Stephen presents his crew pass.",
+            "evidence": [
+              "Gate card: red dot at 11:20, blue stripe twenty minutes later, gold seal twenty minutes after blue.",
+              "The tray with the earliest window takes individual deliveries. The last window admits accord signatories. A Halcyon crew pass is valid in the only remaining window.",
+              "Pell’s satchel holds a counterfoil. Stephen’s pass has a strip of blue thread. Ward’s folder has a raised seal. Steve has no credential of his own and travels with the sound truck.",
+              "Use the right clock: the gate runs on event time. The wristwatch Stephen borrowed is five minutes fast."
+            ],
+            "stages": [
+              {
+                "mode": "match",
+                "prompt": "Identify each mark from the time and purpose of its window.",
+                "slots": [
+                  "Mail delivery",
+                  "Contracted crew",
+                  "Signatory"
+                ],
+                "pieces": [
+                  "Gold seal",
+                  "Red dot",
+                  "Blue stripe"
+                ],
+                "answer": [
+                  1,
+                  2,
+                  0
+                ]
+              },
+              {
+                "mode": "order",
+                "prompt": "Place the credential holders in admission order. Steve is already in the sound truck.",
+                "slots": [
+                  "First",
+                  "Second",
+                  "Third"
+                ],
+                "pieces": [
+                  "Stephen",
+                  "Pell",
+                  "Ward"
+                ],
+                "answer": [
+                  1,
+                  0,
+                  2
+                ]
+              },
+              {
+                "mode": "match",
+                "prompt": "Write the correct reading of Stephen’s wristwatch at each gate opening.",
+                "slots": [
+                  "Red",
+                  "Blue",
+                  "Gold"
+                ],
+                "pieces": [
+                  "11:45",
+                  "12:05",
+                  "11:25"
+                ],
+                "answer": [
+                  2,
+                  0,
+                  1
+                ]
+              }
+            ],
+            "solution": [
+              1,
+              2,
+              0,
+              1,
+              0,
+              2,
+              2,
+              0,
+              1
+            ],
+            "rows": [
+              {
+                "label": "Mail delivery",
+                "options": [
+                  "Gold seal",
+                  "Red dot",
+                  "Blue stripe"
+                ]
+              },
+              {
+                "label": "Contracted crew",
+                "options": [
+                  "Gold seal",
+                  "Red dot",
+                  "Blue stripe"
+                ]
+              },
+              {
+                "label": "Signatory",
+                "options": [
+                  "Gold seal",
+                  "Red dot",
+                  "Blue stripe"
+                ]
+              },
+              {
+                "label": "First",
+                "options": [
+                  "Stephen",
+                  "Pell",
+                  "Ward"
+                ]
+              },
+              {
+                "label": "Second",
+                "options": [
+                  "Stephen",
+                  "Pell",
+                  "Ward"
+                ]
+              },
+              {
+                "label": "Third",
+                "options": [
+                  "Stephen",
+                  "Pell",
+                  "Ward"
+                ]
+              },
+              {
+                "label": "Red",
+                "options": [
+                  "11:45",
+                  "12:05",
+                  "11:25"
+                ]
+              },
+              {
+                "label": "Blue",
+                "options": [
+                  "11:45",
+                  "12:05",
+                  "11:25"
+                ]
+              },
+              {
+                "label": "Gold",
+                "options": [
+                  "11:45",
+                  "12:05",
+                  "11:25"
+                ]
+              }
+            ],
+            "hints": [
+              "Use one event clock for all three badges.",
+              "The crew window is between the mail and the signatories; a fast watch reads later.",
+              "Pell enters at 11:20, Stephen at 11:40 and Ward at noon. Add five minutes for each watch reading."
+            ]
+          }
+        },
+        {
+          "id": "c7_gate.post",
+          "title": "Accord mail",
+          "prompt": "Pell’s envelope needs Ward’s own signature and a counterfoil he can take back. The press desk stamps copies. The delegation clerk brings the signer to the hatch. The stage manager signs receipts for scenery.",
+          "options": [
+            "Leave both sheets at the press desk",
+            "Keep the counterfoil at the delegation hatch for Ward",
+            "Take the stage manager’s receipt back to the post office"
+          ],
+          "answer": 1,
+          "lines": [
+            "c7_gate.post.01",
+            "c7_gate.post.02"
+          ],
+          "note": "Pell reached the delegation.",
+          "requires": [],
+          "actor": "pell",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "A clerk may bring a signer to the desk. A clerk’s own signature has a different meaning.",
+            "The carbon must remain under the original during the signature; the bag number is visible before opening.",
+            "Match the dispatch, get Ward’s signature on both layers, separate them, file white and take yellow."
+          ],
+          "puzzle": {
+            "presentation": "case_board",
+            "instruction": "Pell wants Ward’s signature on an original and proof of delivery for his bag. Follow one envelope through three very similar hatches.",
+            "evidence": [
+              "The press desk keeps a photocopier and a publicity stamp. The delegation clerk can call Ward to the hatch. The stage manager signs only on behalf of the venue.",
+              "Pell must compare the still-sealed cover to his bag log before the clerk opens it. The outside bears the dispatch number. Inside are the white petition and its yellow carbon, still clipped together.",
+              "Ward presses through both sheets when she signs the white one. Then the clerk files the white sheet with the delegation. Pell takes the matching yellow impression back.",
+              "A returned receipt needs two independent matches: the dispatch number against the bag log and the impression against the white original. A publicity stamp supplies neither."
+            ],
+            "stages": [
+              {
+                "mode": "match",
+                "prompt": "Label the authority behind each desk.",
+                "slots": [
+                  "Stage door",
+                  "Press office",
+                  "Delegation hatch"
+                ],
+                "pieces": [
+                  "Publicity only",
+                  "Can summon the signer",
+                  "Venue only"
+                ],
+                "answer": [
+                  2,
+                  0,
+                  1
+                ]
+              },
+              {
+                "mode": "order",
+                "prompt": "Handle the papers without losing the carbon impression.",
+                "slots": [
+                  "First",
+                  "Second",
+                  "Third",
+                  "Fourth"
+                ],
+                "pieces": [
+                  "Separate the sheets",
+                  "Match dispatch to bag",
+                  "File the signed original",
+                  "Ask Ward to sign the clipped set"
+                ],
+                "answer": [
+                  1,
+                  3,
+                  0,
+                  2
+                ]
+              },
+              {
+                "mode": "match",
+                "prompt": "Reconstruct where each piece of evidence belongs.",
+                "slots": [
+                  "Pell’s outgoing log",
+                  "Delegation file",
+                  "Pell’s return pouch"
+                ],
+                "pieces": [
+                  "Yellow impression",
+                  "Dispatch number",
+                  "White original"
+                ],
+                "answer": [
+                  1,
+                  2,
+                  0
+                ]
+              }
+            ],
+            "solution": [
+              2,
+              0,
+              1,
+              1,
+              3,
+              0,
+              2,
+              1,
+              2,
+              0
+            ],
+            "rows": [
+              {
+                "label": "Stage door",
+                "options": [
+                  "Publicity only",
+                  "Can summon the signer",
+                  "Venue only"
+                ]
+              },
+              {
+                "label": "Press office",
+                "options": [
+                  "Publicity only",
+                  "Can summon the signer",
+                  "Venue only"
+                ]
+              },
+              {
+                "label": "Delegation hatch",
+                "options": [
+                  "Publicity only",
+                  "Can summon the signer",
+                  "Venue only"
+                ]
+              },
+              {
+                "label": "First",
+                "options": [
+                  "Separate the sheets",
+                  "Match dispatch to bag",
+                  "File the signed original",
+                  "Ask Ward to sign the clipped set"
+                ]
+              },
+              {
+                "label": "Second",
+                "options": [
+                  "Separate the sheets",
+                  "Match dispatch to bag",
+                  "File the signed original",
+                  "Ask Ward to sign the clipped set"
+                ]
+              },
+              {
+                "label": "Third",
+                "options": [
+                  "Separate the sheets",
+                  "Match dispatch to bag",
+                  "File the signed original",
+                  "Ask Ward to sign the clipped set"
+                ]
+              },
+              {
+                "label": "Fourth",
+                "options": [
+                  "Separate the sheets",
+                  "Match dispatch to bag",
+                  "File the signed original",
+                  "Ask Ward to sign the clipped set"
+                ]
+              },
+              {
+                "label": "Pell’s outgoing log",
+                "options": [
+                  "Yellow impression",
+                  "Dispatch number",
+                  "White original"
+                ]
+              },
+              {
+                "label": "Delegation file",
+                "options": [
+                  "Yellow impression",
+                  "Dispatch number",
+                  "White original"
+                ]
+              },
+              {
+                "label": "Pell’s return pouch",
+                "options": [
+                  "Yellow impression",
+                  "Dispatch number",
+                  "White original"
+                ]
+              }
+            ],
+            "hints": [
+              "A clerk may bring a signer to the desk. A clerk’s own signature has a different meaning.",
+              "The carbon must remain under the original during the signature; the bag number is visible before opening.",
+              "Match the dispatch, get Ward’s signature on both layers, separate them, file white and take yellow."
+            ]
+          }
+        },
+        {
+          "id": "c7_gate.truck",
+          "title": "Halcyon broadcast truck",
+          "prompt": "A sound check failed at the back fence. Steve’s docket reads ‘return meter required’. Cameras show a local monitor, the stage van has lamps, and the Halcyon truck has a return strip still showing the fence. Where can he verify the repair?",
+          "options": [
+            "Camera monitor",
+            "Stage van",
+            "Halcyon truck"
+          ],
+          "answer": 2,
+          "lines": [
+            "c7_gate.truck.01",
+            "c7_gate.truck.02"
+          ],
+          "note": "Steve reached the sound desk.",
+          "requires": [
+            "c7_gate.badge",
+            "c7_gate.post"
+          ],
+          "actor": "steve",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Who can see what the far end received?",
+            "A local monitor can look good when the far end hears nothing.",
+            "Use the return strip in the Halcyon truck."
+          ]
+        }
+      ],
+      "intro": [
+        "c7_gate.in.01",
+        "c7_gate.in.02"
+      ],
+      "outro": [
+        "c7_gate.out.01",
+        "c7_gate.out.02",
+        "c7_gate.out.03"
+      ],
+      "shots": [
+        {
+          "duration": 5.0,
+          "move": "establish",
+          "direction": "Move through fog among antenna towers toward a temporary broadcast compound."
+        },
+        {
+          "duration": 6.0,
+          "move": "push",
+          "direction": "Move toward the active interaction."
+        }
+      ]
+    },
+    {
+      "id": "c7_swap",
+      "chapter": "Chapter 7",
+      "title": "Fourteen turn toward the sea",
+      "place": "Accord ceremony",
+      "style": "array",
+      "actors": [
+        "steve",
+        "stephen"
+      ],
+      "objective": "Route the ninth-night tone through every event speaker.",
+      "tasks": [
+        {
+          "id": "c7_swap.map",
+          "title": "Event monitor",
+          "prompt": "Pell saw Ward sign before the ceremony. At 11:56 the physician and a patient pass a camera with a chipped east-stair tile. At 11:57 someone in Ward’s coat reaches the podium. A lift log puts all lifts on the west side until noon. Which route should Calder check for the patient?",
+          "options": [
+            "Service tunnel at the east stairs",
+            "West lift from the press gallery",
+            "Podium gangway from the public gate"
+          ],
+          "answer": 0,
+          "lines": [
+            "c7_swap.map.01",
+            "c7_swap.map.02"
+          ],
+          "note": "Directed Calder and Iris toward the real President.",
+          "requires": [],
+          "actor": "stephen",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Distinguish identifying a person from identifying a coat.",
+            "Pell and camera E both saw a bandaged wrist. Only the east stair has a chipped tile.",
+            "Follow Ward from the hatch with the physician down the east stair into the service tunnel. The lift carried nobody."
+          ],
+          "puzzle": {
+            "presentation": "case_board",
+            "instruction": "A coat, a patient and a service lift appear in the fog. Calder wants a route to the woman Pell actually saw, using evidence with a time and place.",
+            "evidence": [
+              "Pell watched Ward sign with a bandaged left wrist at 11:54. The physician supported a bandaged patient under camera E at 11:56. The camera at the podium recorded a coat at 11:57 but never saw its wearer’s wrist.",
+              "Map legend: camera E looks down on a chipped stair tile. The west stair has an intact tile. There is only one door at the bottom of the chipped stairs, into the service tunnel.",
+              "At 11:55 the service lift logged an empty trip. A red lamp indicates the door opened; the weight trace stayed at zero throughout.",
+              "On Calder’s overlay, mark the last identified person, the route confirmed by a second observation, and the public sighting that cannot establish identity."
+            ],
+            "stages": [
+              {
+                "mode": "match",
+                "prompt": "Match each record to the strongest fact it supports.",
+                "slots": [
+                  "Pell’s counterfoil",
+                  "Podium camera",
+                  "Lift trace",
+                  "Camera E"
+                ],
+                "pieces": [
+                  "An empty trip occurred",
+                  "A coat reached the lectern",
+                  "Ward signed in person",
+                  "Bandaged patient went downstairs"
+                ],
+                "answer": [
+                  2,
+                  1,
+                  0,
+                  3
+                ]
+              },
+              {
+                "mode": "order",
+                "prompt": "Arrange the independent observations by time.",
+                "slots": [
+                  "First",
+                  "Second",
+                  "Third",
+                  "Fourth"
+                ],
+                "pieces": [
+                  "Podium coat",
+                  "Empty lift",
+                  "Chipped tile",
+                  "Bandaged signer"
+                ],
+                "answer": [
+                  3,
+                  1,
+                  2,
+                  0
+                ]
+              },
+              {
+                "mode": "route",
+                "prompt": "Walk Calder from the last identified Ward to the search area.",
+                "slots": [
+                  "Start",
+                  "Follow this person",
+                  "Take this stair",
+                  "Search beyond it"
+                ],
+                "pieces": [
+                  "Service tunnel",
+                  "Physician with patient",
+                  "Signature hatch",
+                  "East stair"
+                ],
+                "answer": [
+                  2,
+                  1,
+                  3,
+                  0
+                ]
+              }
+            ],
+            "solution": [
+              2,
+              1,
+              0,
+              3,
+              3,
+              1,
+              2,
+              0,
+              2,
+              1,
+              3,
+              0
+            ],
+            "rows": [
+              {
+                "label": "Pell’s counterfoil",
+                "options": [
+                  "An empty trip occurred",
+                  "A coat reached the lectern",
+                  "Ward signed in person",
+                  "Bandaged patient went downstairs"
+                ]
+              },
+              {
+                "label": "Podium camera",
+                "options": [
+                  "An empty trip occurred",
+                  "A coat reached the lectern",
+                  "Ward signed in person",
+                  "Bandaged patient went downstairs"
+                ]
+              },
+              {
+                "label": "Lift trace",
+                "options": [
+                  "An empty trip occurred",
+                  "A coat reached the lectern",
+                  "Ward signed in person",
+                  "Bandaged patient went downstairs"
+                ]
+              },
+              {
+                "label": "Camera E",
+                "options": [
+                  "An empty trip occurred",
+                  "A coat reached the lectern",
+                  "Ward signed in person",
+                  "Bandaged patient went downstairs"
+                ]
+              },
+              {
+                "label": "First",
+                "options": [
+                  "Podium coat",
+                  "Empty lift",
+                  "Chipped tile",
+                  "Bandaged signer"
+                ]
+              },
+              {
+                "label": "Second",
+                "options": [
+                  "Podium coat",
+                  "Empty lift",
+                  "Chipped tile",
+                  "Bandaged signer"
+                ]
+              },
+              {
+                "label": "Third",
+                "options": [
+                  "Podium coat",
+                  "Empty lift",
+                  "Chipped tile",
+                  "Bandaged signer"
+                ]
+              },
+              {
+                "label": "Fourth",
+                "options": [
+                  "Podium coat",
+                  "Empty lift",
+                  "Chipped tile",
+                  "Bandaged signer"
+                ]
+              },
+              {
+                "label": "Start",
+                "options": [
+                  "Service tunnel",
+                  "Physician with patient",
+                  "Signature hatch",
+                  "East stair"
+                ]
+              },
+              {
+                "label": "Follow this person",
+                "options": [
+                  "Service tunnel",
+                  "Physician with patient",
+                  "Signature hatch",
+                  "East stair"
+                ]
+              },
+              {
+                "label": "Take this stair",
+                "options": [
+                  "Service tunnel",
+                  "Physician with patient",
+                  "Signature hatch",
+                  "East stair"
+                ]
+              },
+              {
+                "label": "Search beyond it",
+                "options": [
+                  "Service tunnel",
+                  "Physician with patient",
+                  "Signature hatch",
+                  "East stair"
+                ]
+              }
+            ],
+            "hints": [
+              "Distinguish identifying a person from identifying a coat.",
+              "Pell and camera E both saw a bandaged wrist. Only the east stair has a chipped tile.",
+              "Follow Ward from the hatch with the physician down the east stair into the service tunnel. The lift carried nobody."
+            ]
+          }
+        },
+        {
+          "id": "c7_swap.bus",
+          "title": "Sound desk routing",
+          "prompt": "Steve writes down everyone who heard each test. Amber: lectern and press van. Blue: lectern, back fence and service steps. Green: back fence and service steps. Calder tries the return. Copper: Steve, Iris and the lectern. Slate: Steve and Iris. Pearl: Steve alone.",
+          "options": [
+            "Route Frank’s tone to the all-call bus",
+            "Route it only to Steve’s headphones",
+            "Mute the whole site"
+          ],
+          "answer": 0,
+          "lines": [
+            "c7_swap.bus.01"
+          ],
+          "note": "Routed the ninth-night tone across the site.",
+          "requires": [],
+          "actor": "steve",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "puzzle": {
+            "instruction": "Sound the tone for the people standing at the lectern, fence and steps. The press van feeds the TV audience and must stay on ceremony audio. Calder’s reply is for Steve and Iris alone.",
+            "rows": [
+              {
+                "label": "Tone send",
+                "options": [
+                  "Amber",
+                  "Green",
+                  "Blue"
+                ]
+              },
+              {
+                "label": "Recovery-team return",
+                "options": [
+                  "Slate",
+                  "Pearl",
+                  "Copper"
+                ]
+              }
+            ],
+            "solution": [
+              2,
+              0
+            ]
+          },
+          "hints": [
+            "Trace the tone and Calder’s reply separately.",
+            "Green misses one group by the stage. Copper would put Calder on the lectern speaker.",
+            "Use Blue for the three groups in the grounds and Slate for Steve and Iris. Neither goes to the press van."
+          ]
+        },
+        {
+          "id": "c7_swap.tone",
+          "title": "Ceremony cue",
+          "prompt": "Steve marks two events: Ward’s double at the lectern (11:58:10), Calder and Iris with the patient (11:58:14). The public feed closes at 11:58:18. The tone takes two seconds. Which start gives Calder time to reach the real Ward and keeps the whole tone on air?",
+          "options": [
+            "11:58:11",
+            "11:58:15",
+            "11:58:17"
+          ],
+          "answer": 1,
+          "lines": [
+            "c7_swap.tone.01",
+            "c7_swap.tone.02"
+          ],
+          "note": "Exposed fourteen copies and recovered the President.",
+          "requires": [
+            "c7_swap.map",
+            "c7_swap.bus"
+          ],
+          "actor": "steve",
+          "kind": "playback",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Mark the first moment when both teams are in place.",
+            "The two-second tone must finish by :18.",
+            "Start at :15. The recovery team is in place, and the tone ends at :17."
+          ]
+        }
+      ],
+      "intro": [
+        "c7_swap.in.01"
+      ],
+      "outro": [
+        "c7_swap.out.01",
+        "c7_swap.out.02",
+        "c7_swap.out.03"
+      ],
+      "shots": [
+        {
+          "duration": 5.0,
+          "move": "establish",
+          "direction": "Sweep from the podium to fourteen figures turning toward the water as the tone sounds."
+        },
+        {
+          "duration": 6.0,
+          "move": "push",
+          "direction": "Move toward the active interaction."
+        }
+      ]
     }
   ],
   "lines": {
@@ -6930,6 +7729,120 @@
       "audio": "c9_gallery.out.03",
       "delivery": "private_recording",
       "display_text": "Nora records a private message for Steve."
+    },
+    "c7_gate.in.01": {
+      "id": "c7_gate.in.01",
+      "speaker": "stephen",
+      "text": "Crew credentials. Loyal asset. Very important face.",
+      "audio": "c7_gate.in.01"
+    },
+    "c7_gate.in.02": {
+      "id": "c7_gate.in.02",
+      "speaker": "pell",
+      "text": "Registered mail for the President. Delivery cannot be delayed.",
+      "audio": "c7_gate.in.02"
+    },
+    "c7_gate.out.01": {
+      "id": "c7_gate.out.01",
+      "speaker": "wen",
+      "text": "Helen wrote this? Where is she?",
+      "audio": "c7_gate.out.01"
+    },
+    "c7_gate.out.02": {
+      "id": "c7_gate.out.02",
+      "speaker": "steve",
+      "text": "Asleep under the bay. Can you read it?",
+      "audio": "c7_gate.out.02"
+    },
+    "c7_gate.out.03": {
+      "id": "c7_gate.out.03",
+      "speaker": "wen",
+      "text": "This page... we need a private room.",
+      "audio": "c7_gate.out.03"
+    },
+    "c7_gate.badge.01": {
+      "id": "c7_gate.badge.01",
+      "speaker": "stephen",
+      "text": "I’m expected. I’m usually expected everywhere.",
+      "audio": "c7_gate.badge.01"
+    },
+    "c7_gate.post.01": {
+      "id": "c7_gate.post.01",
+      "speaker": "pell",
+      "text": "President Ward. Your letter. On time.",
+      "audio": "c7_gate.post.01"
+    },
+    "c7_gate.post.02": {
+      "id": "c7_gate.post.02",
+      "speaker": "ward",
+      "text": "An increasingly rare achievement.",
+      "audio": "c7_gate.post.02"
+    },
+    "c7_gate.truck.01": {
+      "id": "c7_gate.truck.01",
+      "speaker": "steve",
+      "text": "Sound check. I’m supposed to be under the desk.",
+      "audio": "c7_gate.truck.01"
+    },
+    "c7_gate.truck.02": {
+      "id": "c7_gate.truck.02",
+      "speaker": "shaw",
+      "text": "Then try staying off the cables.",
+      "audio": "c7_gate.truck.02"
+    },
+    "c7_swap.in.01": {
+      "id": "c7_swap.in.01",
+      "speaker": "saren",
+      "text": "Your parents’ records are in good order, Mr. Mercer. So is mine. I have never been wrong on the record. Not on Tirel, and not here.",
+      "audio": "c7_swap.in.01"
+    },
+    "c7_swap.out.01": {
+      "id": "c7_swap.out.01",
+      "speaker": "rook_copy",
+      "text": "Is he awake? The other one?",
+      "audio": "c7_swap.out.01"
+    },
+    "c7_swap.out.02": {
+      "id": "c7_swap.out.02",
+      "speaker": "ward",
+      "text": "Thank you, Mr. Mercer. Now we owe you an explanation.",
+      "audio": "c7_swap.out.02"
+    },
+    "c7_swap.out.03": {
+      "id": "c7_swap.out.03",
+      "speaker": "shaw",
+      "text": "There is no engine. There never was.",
+      "audio": "c7_swap.out.03"
+    },
+    "c7_swap.map.01": {
+      "id": "c7_swap.map.01",
+      "speaker": "stephen",
+      "text": "Service tunnel, east stairs. The doctor has the real President.",
+      "audio": "c7_swap.map.01"
+    },
+    "c7_swap.map.02": {
+      "id": "c7_swap.map.02",
+      "speaker": "calder",
+      "text": "We’re on it.",
+      "audio": "c7_swap.map.02"
+    },
+    "c7_swap.bus.01": {
+      "id": "c7_swap.bus.01",
+      "speaker": "steve",
+      "text": "All-call. Enough level to reach the back fence. Leave the microphone clear.",
+      "audio": "c7_swap.bus.01"
+    },
+    "c7_swap.tone.01": {
+      "id": "c7_swap.tone.01",
+      "speaker": "steve",
+      "text": "Fourteen. Rook. The physician. The woman at the microphone.",
+      "audio": "c7_swap.tone.01"
+    },
+    "c7_swap.tone.02": {
+      "id": "c7_swap.tone.02",
+      "speaker": "calder",
+      "text": "We have President Ward.",
+      "audio": "c7_swap.tone.02"
     }
   },
   "sound_labels": {
@@ -7076,6 +7989,27 @@
           "id": "own_choice",
           "after": "c6_iris.takes",
           "text": "She can make a choice Nora never made."
+        }
+      ]
+    },
+    "signing": {
+      "title": "Where could a substitution take place?",
+      "clues": [
+        "c7_gate.post",
+        "c7_gate.truck",
+        "c7_swap.map",
+        "c7_swap.tone"
+      ],
+      "theories": [
+        {
+          "id": "podium_only",
+          "after": "c7_gate.post",
+          "text": "We only need to watch the podium."
+        },
+        {
+          "id": "broadcast_truck",
+          "after": "c7_gate.truck",
+          "text": "The event crew and the sound desk could be part of it."
         }
       ]
     }

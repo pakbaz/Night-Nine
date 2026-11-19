@@ -362,5 +362,53 @@
       "dale",
       "lyle"
     ]
+  },
+  "c7_gate": {
+    "light": "aacabf",
+    "air": 2,
+    "opening": [
+      0.23,
+      0.38
+    ],
+    "closing": [
+      0.77,
+      0.43
+    ],
+    "company": [
+      "stephen",
+      "pell",
+      "ward",
+      "steve",
+      "shaw",
+      "wen"
+    ]
+  },
+  "c7_swap": {
+    "light": "d9cca2",
+    "air": 2,
+    "opening": [
+      0.78,
+      0.42
+    ],
+    "closing": [
+      0.25,
+      0.61
+    ],
+    "company": [
+      "saren",
+      "steve",
+      "rook_copy",
+      "ward",
+      "shaw",
+      "calder",
+      "stephen"
+    ],
+    "chapter_insert": true,
+    "off_camera_lines": [
+      "c7_swap.in.01"
+    ],
+    "inserts": {
+      "c7_swap.in.01": "c7_swap.bus"
+    }
   }
 }
