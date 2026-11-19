@@ -1,0 +1,112 @@
+{
+  "base": "steve_toward_nora.webp",
+  "size": [
+    810,
+    1080
+  ],
+  "origin": "top_left",
+  "foot_anchor": [
+    405,
+    1080
+  ],
+  "frames": {
+    "blink_half": {
+      "atlas_region": [
+        0,
+        0,
+        117,
+        43
+      ],
+      "source_origin": [
+        420,
+        193
+      ]
+    },
+    "blink_closed": {
+      "atlas_region": [
+        0,
+        45,
+        117,
+        43
+      ],
+      "source_origin": [
+        420,
+        193
+      ]
+    },
+    "mouth_parted": {
+      "atlas_region": [
+        0,
+        90,
+        82,
+        62
+      ],
+      "source_origin": [
+        463,
+        285
+      ]
+    },
+    "mouth_open": {
+      "atlas_region": [
+        0,
+        154,
+        82,
+        62
+      ],
+      "source_origin": [
+        463,
+        285
+      ]
+    },
+    "mouth_round": {
+      "atlas_region": [
+        0,
+        218,
+        82,
+        62
+      ],
+      "source_origin": [
+        463,
+        285
+      ]
+    },
+    "mouth_wide": {
+      "atlas_region": [
+        0,
+        282,
+        82,
+        62
+      ],
+      "source_origin": [
+        463,
+        285
+      ]
+    }
+  },
+  "cue_frames": {
+    "X": null,
+    "A": null,
+    "B": "mouth_parted",
+    "C": "mouth_wide",
+    "D": "mouth_open",
+    "E": "mouth_round",
+    "F": "mouth_round",
+    "G": "mouth_parted",
+    "H": "mouth_parted"
+  },
+  "atlas": "steve_toward_nora-face-atlas.png",
+  "eye_centers": [
+    [
+      446,
+      222
+    ],
+    [
+      516,
+      209
+    ]
+  ],
+  "mouth_center": [
+    513,
+    315
+  ]
+}

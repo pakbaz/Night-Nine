@@ -4,6 +4,11 @@ var show_names := false:
 	set(value):
 		show_names = value
 		queue_redraw()
+var performing := false:
+	set(value):
+		if performing != value:
+			performing = value
+			queue_redraw()
 
 func _ready() -> void:
 	flat = true
@@ -19,6 +24,8 @@ func _ready() -> void:
 	focus_exited.connect(queue_redraw)
 
 func _draw() -> void:
+	if performing:
+		return
 	if not show_names and not is_hovered() and not has_focus():
 		if not disabled:
 			var mark := size * .5

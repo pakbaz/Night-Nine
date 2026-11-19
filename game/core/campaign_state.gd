@@ -149,8 +149,10 @@ func validate(candidate: Variant) -> String:
 		return "Invalid investigator positions."
 	for id: Variant in positions:
 		var foot: Variant = positions[id]
-		if id not in content.scenes[at].actors or not foot is Array or foot.size()!=3 or not foot[2] is bool:
+		if id not in content.scenes[at].actors or not foot is Array or foot.size() not in [3,4] or not foot[2] is bool:
 			return "Invalid investigator position."
+		if foot.size()==4 and foot[3] not in ["side","toward","away"]:
+			return "Invalid investigator facing."
 		for axis: int in 2:
 			var coordinate: Variant = foot[axis]
 			if not (coordinate is float or coordinate is int) or not is_finite(coordinate) or coordinate<0.0 or coordinate>1.0:

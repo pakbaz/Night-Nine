@@ -27,6 +27,8 @@ NIGHT_NINE_SAVE_DIR="$(mktemp -d)" godot --headless --path game --audio-driver D
 
 The test opens the normal campaign, follows each room through its departure, completes the available story, reloads a completed save and opens the notebook.
 
+In the complete release, run `godot --headless --path game --script res://qa/test_physical_navigation.gd` to check obstacle and door geometry. For a visual check of walking poses and conversations, choose empty directories for `NIGHT_NINE_SAVE_DIR` and `NIGHT_NINE_QA_DIR`, then run `godot --path game --script res://qa/test_social_staging.gd`. You can inspect the captured frames in your QA directory.
+
 ## Publication
 
 You can play the official release for free. The Night Nine contributors license their original game code under GNU GPL version 3 only. You may share, modify or sell copies under the applicable terms. [GPLv3](LICENSE) · [Media terms](MEDIA.md) · [Third-party notices](game/LICENSES.txt)

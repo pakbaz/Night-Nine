@@ -7,6 +7,8 @@ const CHAPTER_STAGE := preload("res://render/illustrated/campaign_room.gd")
 const BAY_RECEIVER := preload("res://render/illustrated/bay_receiver.gd")
 var receiver: Control
 const PROP_BUTTON := preload("res://render/illustrated/prop_button.gd")
+const PERFORMANCE_TEXT := {"conversation":"speaks","read":"reads","kneel":"kneels for a closer look",
+	"operate":"works the controls","listen":"listens","observe":"looks closer","reach":"reaches out"}
 var stage: Variant
 var root: Control
 var title: Label
@@ -55,6 +57,7 @@ var queue_done: Callable
 var voice_manifest: Dictionary = {}
 var lipsync_manifest: Dictionary = {}
 var selected_task := ""
+var performance_status := ""
 var settings := ConfigFile.new()
 var profile := "high"
 var started := false
@@ -308,7 +311,9 @@ func _open_objects() -> void:
 	for task: Dictionary in campaign.current().tasks:
 		var lead:=_button(interaction,task.title,func():
 			if stage.has_method("walking_view") and stage.walking_view():
-				stage.floor_stage.finish_now(task.id)
+				if not stage.floor_stage.finish_now(task.id):
+					_status("The way to that spot is blocked.")
+					return
 			_inspect_on_arrival(task.id))
 		lead.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART
 		lead.disabled=not campaign.available(task.id) and task.id not in campaign.data.done
@@ -541,6 +546,7 @@ func _load_stage(play_intro: bool) -> void:
 	if stage.has_signal("approach_finished"):
 		stage.approach_finished.connect(_inspect_on_arrival)
 		if stage.floor_stage:
+			stage.sync_story(campaign.data.done)
 			stage.floor_stage.restore(campaign.data.get("walk_positions",{}))
 	if started:
 		_status("Click the ground or use WASD to walk. Select an object to investigate." if stage.has_method("walking_view") and stage.walking_view() else "Click a marked object to investigate.")
@@ -636,11 +642,13 @@ func _inspect(id: String) -> void:
 	if stage.has_method("walking_view") and stage.walking_view():
 		root.get_node("InteractionPanel").hide()
 		if stage.floor_stage.pending==id:
-			stage.floor_stage.finish_now(id)
-			_inspect_on_arrival(id)
+			if stage.floor_stage.finish_now(id):
+				_inspect_on_arrival(id)
 			return
 		if stage.walk_task(id):
 			_status("Walking to "+str(campaign.task_index[id].title)+".")
+		else:
+			_status("The way to that spot is blocked.")
 		return
 	_inspect_on_arrival(id)
 
@@ -1010,7 +1018,24 @@ func _process(delta: float) -> void:
 			_advance_scene(true)
 			return
 	stage.set_recorder_running(tape_playback and voice.playing and not voice.stream_paused)
+	var doing := ""
+	if stage.has_method("walking_view") and stage.walking_view():
+		doing = stage.floor_stage.performance_action
+	if not doing.is_empty():
+		var investigator: String = campaign.content.cast[stage.floor_stage.active_actor]
+		var action_text: String = PERFORMANCE_TEXT[doing]
+		var phrase := investigator + " " + action_text
+		if doing == "conversation" and not stage.floor_stage.speaking_partner.is_empty():
+			phrase += " with " + str(campaign.content.cast[stage.floor_stage.speaking_partner])
+		if performance_status != phrase + ".":
+			performance_status = phrase + "."
+			_status(performance_status)
+	elif not performance_status.is_empty():
+		if status.text == performance_status:
+			_status("")
+		performance_status = ""
 	for i: int in range(hotspots.size()):
+		hotspots[i].performing = not doing.is_empty()
 		hotspots[i].size = stage.hotspot_size(i)
 		hotspots[i].position = stage.project_target(i)-hotspots[i].size*.5
 		hotspots[i].visible=started and not campaign.data.finished and not transitioning and not dialogue_panel.visible and not menu.visible and not journal.visible and not tape_compare.visible and not root.get_node("InteractionPanel").visible

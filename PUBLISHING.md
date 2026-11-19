@@ -4,20 +4,22 @@ In this local handoff, use `git log --oneline --decorate --reverse` to inspect t
 
 The official release is free. The Night Nine contributors chose GNU GPL version 3 only for their original code. When you distribute a compiled release, keep the copyright, license and applicable third-party notices, and offer the matching complete corresponding source from the same download location at no extra charge. Include the source materials and scripts needed to modify and rebuild that version. Preserve any additional permissions for separately licensed components. [GPLv3](LICENSE) · [Media terms](MEDIA.md) · [Third-party notices](game/LICENSES.txt)
 
-For v0.8.0, publish `NightNine-0.8.0-source.zip` beside `NightNine-0.8.0-Windows-x64.zip` and `NightNine-0.8.0-macOS.zip`. Attach `NightNine-0.8.0-chapters.bundle` for readers who want an offline copy of the Git history. Readers can use `git clone NightNine-0.8.0-chapters.bundle Night-Nine` to open it. Keep the 0.7.0 source available with the older desktop downloads.
+For v0.9.0, publish `NightNine-0.9.0-source.zip` beside `NightNine-0.9.0-Windows-x64.zip` and `NightNine-0.9.0-macOS.zip`. Attach `NightNine-0.9.0-chapters.bundle` for readers who want an offline copy of the Git history. Readers can use `git clone NightNine-0.9.0-chapters.bundle Night-Nine` to open it. Keep each older source archive beside its corresponding desktop downloads.
 
 ## Browser play
 
-After pushing the complete release to GitHub, create a GitHub Release for the tag `v0.8.0`. Attach the desktop downloads and `NightNine-0.8.0-source.zip` under that exact filename. Players can then choose **Full source and art masters** on the Pages site or open **Releases → v0.8.0** on the project page. That archive includes the editable painting, animation and audio masters. Players can download the smaller playable Godot checkout separately from the Pages site.
+After pushing the complete release to GitHub, create a GitHub Release for the tag `v0.9.0`. Attach the desktop downloads and `NightNine-0.9.0-source.zip` under that exact filename. Players can then choose **Full source and art masters** on the Pages site or open **Releases → v0.9.0** on the project page. That archive includes the editable painting, animation and audio masters. Players can download the smaller playable Godot checkout separately from the Pages site.
 
 Select **Settings → Pages → Build and deployment → GitHub Actions**. Open **Actions → Publish Night Nine to GitHub Pages → Run workflow**, select the release tag or matching release branch and confirm. You can follow the deployment link from that run. Publishing requires someone with repository write access to start the workflow.
 
-For local browser play, install Godot 4.7.2 with matching Web export templates, then run the following from the complete public repository. Place `NightNine-0.8.0-source.zip` in `builds/` for visitors who want the editable masters. Open `http://localhost:8000/web/`. The build uses the current Git commit and includes the corresponding playable checkout for download. Use a new output folder when rebuilding. You may supply the official Web release template directly with `--template /path/to/web_nothreads_release.zip`, or set a different masters download with `--source-url URL`.
+For local browser play, install Godot 4.7.2 with matching Web export templates, then run the following from the complete public repository. Place `NightNine-0.9.0-source.zip` in `builds/` for visitors who want the editable masters. Open `http://localhost:8000/web/`. The build uses the current Git commit and includes the corresponding playable checkout for download. Use a new output folder when rebuilding. You may supply the official Web release template directly with `--template /path/to/web_nothreads_release.zip`, or set a different masters download with `--source-url URL`.
 
 ```sh
 python3 tools/build-pages.py --output builds/web
 python3 -m http.server 8000 --bind 127.0.0.1 --directory builds
 ```
+
+To prepare a portable copy for your release page, add `--archive builds/NightNine-0.9.0-Web.zip` to the build command. Players can unpack that file and follow its local server instructions.
 
 To publish the commits and annotated tags, create an empty GitHub repository, substitute its SSH URL below, and run these commands from this repository.
 

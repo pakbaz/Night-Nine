@@ -2,6 +2,7 @@ extends "res://render/illustrated/room.gd"
 ## Chapter camera, character and object staging in a shared 1600 by 900 art space.
 signal approach_finished(task_id: String)
 const FLOOR := preload("exploration_floor.gd")
+const SOCIAL := preload("social_direction.gd")
 const FLOOR_BOOK := "res://content/illustrated-floor.json"
 const ROOM_FOLDER := "res://assets/illustrated/campaign/rooms/"
 const MOTION_SHADER := "res://render/illustrated/keyframe_motion.gdshader"
@@ -38,6 +39,13 @@ var location_landmarks := {}
 var high_detail := true
 var floor_stage: FLOOR
 var floor_directions := {}
+var social_scan := 0.0
+var notice := {}
+var social_pair := PackedStringArray()
+var preceding_pair := PackedStringArray()
+var last_floor_actor := ""
+var floor_dialogue := false
+var working_actor := ""
 
 static var direction_book: Dictionary
 static var landmark_book: Dictionary
@@ -81,11 +89,13 @@ func build_art(scene: Dictionary) -> void:
 	var wide_file := "res://assets/illustrated/campaign/wide/"+room_id+".webp"
 	if background and not floor_directions.is_empty() and (not floor_directions.has("landmarks") or ResourceLoader.exists(wide_file)):
 		floor_stage = FLOOR.new()
+		floor_stage.room_id = room_id
 		distant.add_child(floor_stage)
 		floor_stage.configure(floor_directions,scene.actors,background.texture,wide_file,Color.from_string(directions.light,Color.WHITE))
 		for task: Dictionary in scene.tasks:
 			var key: String = task.id.get_slice(".",1)
-			floor_stage.object_marks[key] = floor_directions.get("landmarks",{}).get(key,location_landmarks[task.id])
+			var landmark: Array = floor_directions.get("landmarks",{}).get(key,location_landmarks[task.id])
+			floor_stage.object_marks[key] = floor_directions.get("contact",{}).get(key,landmark)
 		floor_stage.select_actor(scene.actors[0])
 		floor_stage.arrived.connect(func(id: String): approach_finished.emit(id))
 	if ResourceLoader.exists(foreground_path):
@@ -151,6 +161,93 @@ func cancel_walk() -> void:
 func tick_walk(delta: float, direction: Vector2) -> void:
 	if walking_view() and not paused:
 		floor_stage.step(delta,direction)
+		animate_prop_contact()
+		if walking_view():
+			tick_company(delta)
+
+func animate_prop_contact() -> void:
+	var active: String = floor_stage.active_actor
+	var action: String = floor_stage.performance_action
+	if not working_actor.is_empty() and (active != working_actor or action.is_empty()):
+		var previous: Dictionary = floor_stage.bodies[working_actor]
+		previous.sprite.rotation = 0.0
+		previous.sprite.position = Vector2(0,-floor_stage.height_at(previous.body.position) * .5)
+		working_actor = ""
+	if action.is_empty() or floor_stage.pose_time <= 0:
+		return
+	working_actor = active
+	var progress := clampf(1.0 - floor_stage.pose_time / SOCIAL.hold_for(action),0,1)
+	var beat := smoothstep(.02,.34,progress) * (1.0 - smoothstep(.72,1.0,progress))
+	var person: Dictionary = floor_stage.bodies[active]
+	var turn := -1.0 if person.left else 1.0
+	var angle := .010
+	match action:
+		"operate":
+			# The second, smaller accent is the release of the control.
+			angle = .020 + .006 * sin(progress * TAU)
+		"kneel": angle = .030
+		"listen": angle = -.009
+		"read": angle = .015
+		"observe": angle = .006
+	var height: float = floor_stage.height_at(person.body.position)
+	var rotation_ := turn * angle * beat
+	# Apply the weight shift about the feet; a crouch keeps the same ground
+	# contact and reference scale as the preceding standing frame.
+	person.sprite.rotation = rotation_
+	person.sprite.position = Vector2(0,-height * .5).rotated(rotation_)
+
+func tick_company(delta: float) -> void:
+	# A player can pass a companion, turn around, or switch roles at any time.
+	# Recheck ordinary personal space at walking speed, with a wider release
+	# radius so someone standing on the boundary won't repeatedly greet.
+	social_scan -= delta
+	var lead: String = floor_stage.active_actor
+	if social_scan > 0 and lead == last_floor_actor:
+		return
+	social_scan = .12
+	if lead != last_floor_actor:
+		for member: String in notice:
+			if floor_stage.bodies.has(member) and member != lead:
+				floor_stage.draw_body(member,false)
+		notice.clear()
+		last_floor_actor = lead
+	var feet: Vector2 = floor_stage.bodies[lead].body.position
+	var greeting_partner := feet
+	var closest := INF
+	for member: String in floor_stage.bodies:
+		if member == lead or not floor_stage.bodies[member].body.visible:
+			continue
+		var other: Vector2 = floor_stage.bodies[member].body.position
+		var height: float = floor_stage.height_at(other)
+		var distance := (feet-other) * Vector2(1,1.9)
+		var present := notice.has(member)
+		var near := distance.length() < height * (1.85 if present else 1.49)
+		if not near:
+			if present:
+				notice.erase(member)
+				floor_stage.draw_body(member,false)
+			continue
+		if not present:
+			notice[member] = clock
+		floor_stage.face_toward(member,feet)
+		if floor_stage.pose_time > 0 and floor_stage.performance_action == "conversation":
+			floor_stage.draw_body(member,false,listener_pose(member))
+		elif clock - float(notice[member]) < .83:
+			floor_stage.draw_body(member,false,"greet")
+		else:
+			floor_stage.draw_body(member,false)
+		# Leave the lead's navigation and prop eyeline alone. At rest they can
+		# meet the gaze of the closest companion who just noticed them.
+		if not present and distance.length() < closest:
+			greeting_partner = other
+			closest = distance.length()
+	if closest < INF and not is_walking() and not floor_stage.keyboard_walking and floor_stage.performance_action.is_empty():
+		floor_stage.face_toward(lead,greeting_partner)
+
+func listener_pose(id: String) -> String:
+	# The investigators' evidence-listening drawing has a hand cupped to the
+	# ear. Let them listen face-to-face in their relaxed stance instead.
+	return "listen" if floor_stage.bodies[id].poses.has("greet") else ""
 
 func make_object_layer(index: int) -> void:
 	# Crop the actual painted prop. Separate near depth allows a small shift when
@@ -190,9 +287,17 @@ func actor_visible(id: String) -> bool:
 	return id in directions.company and (requirement.is_empty() or requirement in done)
 
 func get_performer(id: String) -> Node2D:
-	if actors.has(id):
-		return actors[id]
 	var appearance: String = directions.get("appearances", {}).get(id, APPEARANCE.get(id,id))
+	if social_pair.has("nora") and social_pair.has("steve") and room_id in ["c9_gallery","c9_wake","epilogue"]:
+		var profile := "steve_toward_nora" if id == "steve" else "nora_toward_steve"
+		if FileAccess.file_exists(CAST + profile + "/sprite.json") and ResourceLoader.exists(CAST + profile + "/" + profile + ".webp"):
+			appearance = profile
+	if actors.has(id):
+		if actors[id].appearance == appearance or active_id.is_empty():
+			return actors[id]
+		actors[id].queue_free()
+		actors.erase(id)
+		cast_marks.erase(id)
 	var folder := CAST+appearance
 	if not FileAccess.file_exists(folder+"/sprite.json"):
 		return null
@@ -228,6 +333,15 @@ func show_cast(id: String) -> void:
 	var visible_ids: Array[String] = []
 	if not id.is_empty() and actor_visible(id):
 		visible_ids.append(id)
+	social_pair = SOCIAL.dialogue_pair(room_id,active_id,id)
+	if social_pair.size() == 2:
+		for member: String in social_pair:
+			if not actor_visible(member) or get_performer(member) == null:
+				social_pair.clear()
+				break
+	for member: String in social_pair:
+		if member not in visible_ids:
+			visible_ids.append(member)
 	var resident: String = directions.get("resident","")
 	if not resident.is_empty() and actor_visible(resident) and (id==resident or (id.is_empty() and not walking_view())):
 		if resident not in visible_ids:
@@ -245,13 +359,22 @@ func show_cast(id: String) -> void:
 			var body: Sprite2D = person.body
 			if not person.has_meta("portrait_origin"):
 				person.set_meta("portrait_origin",person.position)
-			person.position = person.get_meta("portrait_origin")
+			if not person.has_meta("solo_eyes"):
+				person.set_meta("solo_eyes",cast_marks[member])
+			if member in social_pair:
+				var left := member == social_pair[0]
+				var mark := Vector2(ART.x * (.305 if left else .70), float(person.get_meta("solo_eyes").y))
+				cast_marks[member] = mark
+				person.take_mark(mark,1.0 if left else -1.0,"speaker" if member == id else "listener",clock)
+			else:
+				person.clear_mark(person.get_meta("portrait_origin"))
+				cast_marks[member] = person.get_meta("solo_eyes")
 			if not cinematic and not walking_view():
 				var lower_edge: float = person.position.y + (body.position.y + body.texture.get_height()) * person.resting_scale.y
 				person.position.y += maxf(0.0,ART.y+12.0-lower_edge)
 		# Keep the immediately preceding take ready for shot/reverse shot. Returning
 		# to exploration releases other incidental portraits in crowded scenes.
-		if not person.visible and member!=retained:
+		if not person.visible and member!=retained and not (cinematic and member in preceding_pair):
 			person.queue_free()
 			actors.erase(member)
 			cast_marks.erase(member)
@@ -272,7 +395,7 @@ func set_focus(index: int) -> void:
 func update_inserts() -> void:
 	var cutaway: Dictionary=directions.get("cutaway",{})
 	var away: bool=active_id in cutaway.get("lines",[]) or (cutaway.has("group") and active_id.begins_with(str(cutaway.group)+"."))
-	var exploring := walking_view()
+	var exploring := walking_view() or floor_dialogue
 	if floor_stage:
 		floor_stage.visible = exploring
 		floor_stage.set_story(done,directions.get("reveal_after",{}))
@@ -313,6 +436,9 @@ func begin_dialogue(line: Dictionary, voice: AudioStreamPlayer, _take: Dictionar
 	if actors.has(current_speaker):
 		actors[current_speaker].speak(voice,timing)
 		camera_goal=cast_marks[current_speaker]
+		if social_pair.size() == 2:
+			# Favor the current speaker without cutting the listener out.
+			camera_goal = HALF.lerp(camera_goal,.55)
 	else:
 		camera_goal=targets[focus] if focus>=0 and focus<targets.size() else (closing_mark if line.id in scene_record.outro else opening)
 	if actors.get(current_speaker)==null:
@@ -335,8 +461,34 @@ func begin_dialogue(line: Dictionary, voice: AudioStreamPlayer, _take: Dictionar
 	if shot_type=="arrival":
 		aim=HALF.lerp(opening,.22)
 		zoom=1.18
+	if active_id in SOCIAL.WIDE_LINES and social_pair.size() == 2 and floor_stage:
+		var a: Dictionary = floor_stage.bodies.get(social_pair[0],{})
+		var b: Dictionary = floor_stage.bodies.get(social_pair[1],{})
+		if not a.is_empty() and not b.is_empty() and a.body.visible and b.body.visible:
+			floor_dialogue = true
+			cast_plane.hide()
+			update_inserts()
+			floor_stage.face_toward(social_pair[0],b.body.position)
+			floor_stage.face_toward(social_pair[1],a.body.position)
+			for participant: String in social_pair:
+				floor_stage.draw_body(participant,false,"talk" if participant == id else listener_pose(participant))
+			aim = HALF
+			zoom = 1.028
+			transform_planes()
+
+func finish_floor_exchange() -> void:
+	if not floor_dialogue:
+		return
+	for participant: String in social_pair:
+		floor_stage.draw_body(participant,false)
+	floor_dialogue = false
+	cast_plane.show()
+	update_inserts()
 
 func end_dialogue() -> void:
+	finish_floor_exchange()
+	if not social_pair.is_empty():
+		preceding_pair = social_pair.duplicate()
 	active_id=""
 	update_inserts()
 	cast_plane.show()
@@ -462,10 +614,12 @@ func _process(delta: float) -> void:
 		return
 	var target:=HALF
 	var magnitude:=1.028
+	if floor_dialogue and shot_clock >= 1.76:
+		finish_floor_exchange()
 	if cut_progress>=0.0:
 		target=HALF.lerp(closing_mark,.31)
 		magnitude=1.05+.20*smoothstep(0.0,.85,cut_progress)
-	elif cinematic and not dialogue_shot.is_empty():
+	elif cinematic and not floor_dialogue and not dialogue_shot.is_empty():
 		match str(dialogue_shot.type):
 			"arrival":
 				var track:=smoothstep(0.0,3.0,shot_clock)
