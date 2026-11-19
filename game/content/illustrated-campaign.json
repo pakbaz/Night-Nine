@@ -403,5 +403,61 @@
       "stephen"
     ],
     "chapter_insert": true
+  },
+  "c8_lab": {
+    "light": "dfb99a",
+    "air": 0,
+    "opening": [
+      0.26,
+      0.55
+    ],
+    "closing": [
+      0.75,
+      0.37
+    ],
+    "company": [
+      "wen",
+      "shaw",
+      "agnes",
+      "steve"
+    ]
+  },
+  "c8_beach": {
+    "light": "ebcfae",
+    "air": 2,
+    "opening": [
+      0.77,
+      0.41
+    ],
+    "closing": [
+      0.27,
+      0.49
+    ],
+    "company": [
+      "saren",
+      "steve"
+    ],
+    "resident": "saren"
+  },
+  "c8_rig": {
+    "light": "f3bd80",
+    "air": 0,
+    "opening": [
+      0.27,
+      0.57
+    ],
+    "closing": [
+      0.74,
+      0.43
+    ],
+    "company": [
+      "shaw",
+      "steve",
+      "iris",
+      "wen",
+      "stephen",
+      "ward"
+    ],
+    "chapter_insert": true
   }
 }

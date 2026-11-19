@@ -2548,6 +2548,342 @@
           "direction": "Move toward the active interaction."
         }
       ]
+    },
+    {
+      "id": "c8_lab",
+      "chapter": "Chapter 8",
+      "title": "The Biggest Lie on Earth",
+      "place": "Meridian laboratory",
+      "style": "lab",
+      "actors": [
+        "steve"
+      ],
+      "objective": "Reconstruct the bluff and prepare a live signal rig.",
+      "tasks": [
+        {
+          "id": "c8_lab.notebook",
+          "title": "Helen’s shorthand",
+          "prompt": "Match Helen’s dates with the two staged tests and the private meeting.",
+          "options": [
+            "Tests, mutual discovery, private agreement",
+            "Private agreement, real engine, surrender",
+            "Arrival of the ship, then the tests"
+          ],
+          "answer": 0,
+          "lines": [
+            "c8_lab.notebook.01"
+          ],
+          "note": "Connected the Meridian deception to the invasion.",
+          "requires": [],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach."
+        },
+        {
+          "id": "c8_lab.props",
+          "title": "The reactor",
+          "prompt": "Inside the apparent reactor are washer drums, theater lights and a fog machine.",
+          "options": [
+            "Inspect and reuse the stage equipment",
+            "Try to start a real engine",
+            "Destroy all the props"
+          ],
+          "answer": 0,
+          "lines": [
+            "c8_lab.props.01"
+          ],
+          "note": "Identified reusable Meridian stage equipment.",
+          "requires": [],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach."
+        },
+        {
+          "id": "c8_lab.lastpage",
+          "title": "Unknown script",
+          "prompt": "Helen’s note says she transcribed the last page from Frank’s tapes and recognized a language.",
+          "options": [
+            "Preserve the script and the hum together",
+            "Assume it is Mandarin",
+            "Erase it as a copying error"
+          ],
+          "answer": 0,
+          "lines": [
+            "c8_lab.lastpage.01",
+            "c8_lab.lastpage.02"
+          ],
+          "note": "Preserved the unidentified language from the hum.",
+          "requires": [
+            "c8_lab.notebook"
+          ],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach."
+        }
+      ],
+      "intro": [
+        "c8_lab.in.01",
+        "c8_lab.in.02",
+        "c8_lab.in.03"
+      ],
+      "outro": [
+        "c8_lab.out.01",
+        "c8_lab.out.02"
+      ],
+      "shots": [
+        {
+          "duration": 5.0,
+          "move": "establish",
+          "direction": "Reveal painted doors, washing-machine drums and theatrical lights beneath the grand facade."
+        },
+        {
+          "duration": 6.0,
+          "move": "push",
+          "direction": "Move toward the active interaction."
+        }
+      ]
+    },
+    {
+      "id": "c8_beach",
+      "chapter": "Chapter 8",
+      "title": "An offer on the shore",
+      "place": "Beach at dawn",
+      "style": "beach",
+      "actors": [
+        "steve"
+      ],
+      "objective": "Examine Saren’s offer before answering.",
+      "tasks": [
+        {
+          "id": "c8_beach.first",
+          "title": "The offer",
+          "prompt": "Record Saren’s exact promise without agreeing to it.",
+          "options": [
+            "Preserve the offer",
+            "Hand over the notebook",
+            "Erase the recording"
+          ],
+          "answer": 0,
+          "lines": [
+            "c8_beach.first.01"
+          ],
+          "note": "Recorded Saren’s offer.",
+          "requires": [],
+          "actor": "",
+          "kind": "record",
+          "sounds": [
+            "recording.offer"
+          ],
+          "hint": "Look at the evidence in the description, then try another approach."
+        },
+        {
+          "id": "c8_beach.second",
+          "title": "The repeated offer",
+          "prompt": "Saren repeats his promise with precisely the same breath and cadence.",
+          "options": [
+            "Compare both performances",
+            "Assume repetition proves sincerity",
+            "Ask him to speak louder"
+          ],
+          "answer": 0,
+          "lines": [
+            "c8_beach.second.01"
+          ],
+          "note": "Saren repeated an identical take.",
+          "requires": [
+            "c8_beach.first"
+          ],
+          "actor": "",
+          "kind": "compare",
+          "sounds": [
+            "recording.offer",
+            "recording.offer"
+          ],
+          "hint": "Look at the evidence in the description, then try another approach."
+        },
+        {
+          "id": "c8_beach.refuse",
+          "title": "The notebook",
+          "prompt": "The notebook would prove Earth has no engine. Saren has used this promise before.",
+          "options": [
+            "Keep the notebook and refuse",
+            "Hand it over without conditions",
+            "Destroy Helen’s final page"
+          ],
+          "answer": 0,
+          "lines": [
+            "c8_beach.refuse.01"
+          ],
+          "note": "Refused Saren’s bargain.",
+          "requires": [
+            "c8_beach.second"
+          ],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach."
+        }
+      ],
+      "intro": [
+        "c8_beach.in.01",
+        "c8_beach.in.02"
+      ],
+      "outro": [
+        "c8_beach.out.01",
+        "c8_beach.out.02",
+        "c8_beach.out.03"
+      ],
+      "shots": [
+        {
+          "duration": 5.0,
+          "move": "establish",
+          "direction": "Hold a wide empty shoreline between Steve and the glass figure at the water’s edge."
+        },
+        {
+          "duration": 6.0,
+          "move": "push",
+          "direction": "Move toward the active interaction."
+        }
+      ]
+    },
+    {
+      "id": "c8_rig",
+      "chapter": "Chapter 8",
+      "title": "A show that happens once",
+      "place": "Sentinel Point workshop",
+      "style": "lab",
+      "actors": [
+        "steve",
+        "stephen"
+      ],
+      "objective": "Prepare a live bluff and a route into the ship.",
+      "tasks": [
+        {
+          "id": "c8_rig.source",
+          "title": "Signal sources",
+          "prompt": "The earlier bluff failed under inspection because its signals repeated.",
+          "options": [
+            "Use a longer loop",
+            "Use live human cues and changing signals",
+            "Replay the original test"
+          ],
+          "answer": 1,
+          "lines": [
+            "c8_rig.source.01"
+          ],
+          "note": "Designed the bluff around live variation.",
+          "requires": [],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach."
+        },
+        {
+          "id": "c8_rig.path",
+          "title": "Trust path",
+          "prompt": "The fleet trusts measurements from its own ship. An external broadcast alone will not persuade it.",
+          "options": [
+            "Feed the performance into the ship’s own systems",
+            "Mail the fleet a video",
+            "Ask AutoRick to announce victory"
+          ],
+          "answer": 0,
+          "lines": [
+            "c8_rig.path.01",
+            "c8_rig.path.02"
+          ],
+          "note": "Planned the ship-side signal injection.",
+          "requires": [
+            "c8_rig.source"
+          ],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "puzzle": {
+            "instruction": "The fleet trusts the ship’s instruments. The earlier signal failed because it repeated. The prisoners must be awake before departure.",
+            "rows": [
+              {
+                "label": "Signal source",
+                "options": [
+                  "Old test tape",
+                  "Live cue desk",
+                  "A longer loop"
+                ]
+              },
+              {
+                "label": "Signal destination",
+                "options": [
+                  "Press camera",
+                  "Ship instrument input",
+                  "Public telephone recording"
+                ]
+              },
+              {
+                "label": "Parallel team",
+                "options": [
+                  "Secure the Gallery and wake sleepers",
+                  "Leave everyone asleep",
+                  "Erase the Choir"
+                ]
+              }
+            ],
+            "solution": [
+              1,
+              1,
+              0
+            ]
+          }
+        },
+        {
+          "id": "c8_rig.rig",
+          "title": "Props and radio",
+          "prompt": "Frank’s transmitter needs a stage cue source and an isolated connection to the ship antenna.",
+          "options": [
+            "Connect the cue board through the isolated interface",
+            "Short the transmitter output",
+            "Use a repeating test tape"
+          ],
+          "answer": 0,
+          "lines": [
+            "c8_rig.rig.01",
+            "c8_rig.rig.02"
+          ],
+          "note": "Prepared the signal rig and two-team plan.",
+          "requires": [
+            "c8_rig.path"
+          ],
+          "actor": "stephen",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach."
+        }
+      ],
+      "intro": [
+        "c8_rig.in.01",
+        "c8_rig.in.02",
+        "c8_rig.in.03"
+      ],
+      "outro": [
+        "c8_rig.out.01",
+        "c8_rig.out.02",
+        "c8_rig.out.03"
+      ],
+      "shots": [
+        {
+          "duration": 5.0,
+          "move": "establish",
+          "direction": "Push across the improvised signal rig to Stephen writing a name on his hand."
+        },
+        {
+          "duration": 6.0,
+          "move": "push",
+          "direction": "Move toward the active interaction."
+        }
+      ]
     }
   ],
   "lines": {
@@ -3758,6 +4094,174 @@
       "speaker": "calder",
       "text": "We have President Ward.",
       "audio": "c7_swap.tone.02"
+    },
+    "c8_lab.in.01": {
+      "id": "c8_lab.in.01",
+      "speaker": "wen",
+      "text": "Your mother recorded the meeting accurately. Both sides staged the tests.",
+      "audio": "c8_lab.in.01"
+    },
+    "c8_lab.in.02": {
+      "id": "c8_lab.in.02",
+      "speaker": "shaw",
+      "text": "Mine had a better explosion.",
+      "audio": "c8_lab.in.02"
+    },
+    "c8_lab.in.03": {
+      "id": "c8_lab.in.03",
+      "speaker": "wen",
+      "text": "Mine required fewer washing machines.",
+      "audio": "c8_lab.in.03"
+    },
+    "c8_lab.out.01": {
+      "id": "c8_lab.out.01",
+      "speaker": "agnes",
+      "text": "A lie is only shameful when it’s lazy, Steven.",
+      "audio": "c8_lab.out.01"
+    },
+    "c8_lab.out.02": {
+      "id": "c8_lab.out.02",
+      "speaker": "saren",
+      "text": "Deliver the engine by midnight tomorrow. The ninth night.",
+      "audio": "c8_lab.out.02"
+    },
+    "c8_lab.notebook.01": {
+      "id": "c8_lab.notebook.01",
+      "speaker": "wen",
+      "text": "They heard the demonstrations nine years ago. They came here three years ago. We called them without knowing anyone was listening.",
+      "audio": "c8_lab.notebook.01"
+    },
+    "c8_lab.props.01": {
+      "id": "c8_lab.props.01",
+      "speaker": "shaw",
+      "text": "Those drums survived six films and a congressional visit. They can manage one more show.",
+      "audio": "c8_lab.props.01"
+    },
+    "c8_lab.lastpage.01": {
+      "id": "c8_lab.lastpage.01",
+      "speaker": "wen",
+      "text": "I can read Helen’s shorthand. This is something else.",
+      "audio": "c8_lab.lastpage.01"
+    },
+    "c8_lab.lastpage.02": {
+      "id": "c8_lab.lastpage.02",
+      "speaker": "steve",
+      "text": "Then we keep listening.",
+      "audio": "c8_lab.lastpage.02"
+    },
+    "c8_beach.in.01": {
+      "id": "c8_beach.in.01",
+      "speaker": "saren",
+      "text": "Give me the notebook. Helen and Frank will walk out of the sea tomorrow morning.",
+      "audio": "recording.offer"
+    },
+    "c8_beach.in.02": {
+      "id": "c8_beach.in.02",
+      "speaker": "steve",
+      "text": "I need a moment.",
+      "audio": "c8_beach.in.02"
+    },
+    "c8_beach.out.01": {
+      "id": "c8_beach.out.01",
+      "speaker": "steve",
+      "text": "Who did you say that to on Tirel?",
+      "audio": "c8_beach.out.01"
+    },
+    "c8_beach.out.02": {
+      "id": "c8_beach.out.02",
+      "speaker": "saren",
+      "text": "You should consider your parents.",
+      "audio": "c8_beach.out.02"
+    },
+    "c8_beach.out.03": {
+      "id": "c8_beach.out.03",
+      "speaker": "steve",
+      "text": "I am. And everyone else’s.",
+      "audio": "c8_beach.out.03"
+    },
+    "c8_beach.first.01": {
+      "id": "c8_beach.first.01",
+      "speaker": "steve",
+      "text": "Say it again. I want to be certain I heard you.",
+      "audio": "c8_beach.first.01"
+    },
+    "c8_beach.second.01": {
+      "id": "c8_beach.second.01",
+      "speaker": "saren",
+      "text": "Give me the notebook. Helen and Frank will walk out of the sea tomorrow morning.",
+      "audio": "recording.offer"
+    },
+    "c8_beach.refuse.01": {
+      "id": "c8_beach.refuse.01",
+      "speaker": "steve",
+      "text": "No. You don’t get to make me trade the whole town for my family.",
+      "audio": "c8_beach.refuse.01"
+    },
+    "c8_rig.in.01": {
+      "id": "c8_rig.in.01",
+      "speaker": "shaw",
+      "text": "You are a terrible liar.",
+      "audio": "c8_rig.in.01"
+    },
+    "c8_rig.in.02": {
+      "id": "c8_rig.in.02",
+      "speaker": "steve",
+      "text": "I know. That is why it has to be a show.",
+      "audio": "c8_rig.in.02"
+    },
+    "c8_rig.in.03": {
+      "id": "c8_rig.in.03",
+      "speaker": "iris",
+      "text": "Wake them. Even if we start forgetting. I vote to do it.",
+      "audio": "c8_rig.in.03"
+    },
+    "c8_rig.out.01": {
+      "id": "c8_rig.out.01",
+      "speaker": "stephen",
+      "text": "Dad’s name. I know it. I just...",
+      "audio": "c8_rig.out.01"
+    },
+    "c8_rig.out.02": {
+      "id": "c8_rig.out.02",
+      "speaker": "steve",
+      "text": "Frank.",
+      "audio": "c8_rig.out.02"
+    },
+    "c8_rig.out.03": {
+      "id": "c8_rig.out.03",
+      "speaker": "stephen",
+      "text": "Frank. I’ll write it on my hand.",
+      "audio": "c8_rig.out.03"
+    },
+    "c8_rig.source.01": {
+      "id": "c8_rig.source.01",
+      "speaker": "steve",
+      "text": "Every response will be new. We’ll listen and answer each other.",
+      "audio": "c8_rig.source.01"
+    },
+    "c8_rig.path.01": {
+      "id": "c8_rig.path.01",
+      "speaker": "wen",
+      "text": "The ship must measure the event.",
+      "audio": "c8_rig.path.01"
+    },
+    "c8_rig.path.02": {
+      "id": "c8_rig.path.02",
+      "speaker": "steve",
+      "text": "Then we take the rig to its antenna.",
+      "audio": "c8_rig.path.02"
+    },
+    "c8_rig.rig.01": {
+      "id": "c8_rig.rig.01",
+      "speaker": "stephen",
+      "text": "I can carry this. You get them awake.",
+      "audio": "c8_rig.rig.01"
+    },
+    "c8_rig.rig.02": {
+      "id": "c8_rig.rig.02",
+      "speaker": "ward",
+      "text": "Both delegations are at your disposal, Mr. Mercer.",
+      "audio": "c8_rig.rig.02"
     }
   },
   "sound_labels": {
@@ -3766,6 +4270,7 @@
     "effect.veyr_wind": "Listen: the last wind on Veyr",
     "recording.greeting": "Listen: the morning greeting",
     "recording.rook": "Listen: Rook’s recorded reassurance",
+    "recording.offer": "Listen: Saren’s recorded offer",
     "recording.release": "Listen: the restraint-release command"
   }
 }
