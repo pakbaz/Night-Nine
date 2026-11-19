@@ -1,0 +1,112 @@
+{
+  "base": "carmen.webp",
+  "size": [
+    824,
+    1080
+  ],
+  "origin": "top_left",
+  "foot_anchor": [
+    412,
+    1080
+  ],
+  "frames": {
+    "blink_half": {
+      "atlas_region": [
+        0,
+        0,
+        120,
+        47
+      ],
+      "source_origin": [
+        424,
+        141
+      ]
+    },
+    "blink_closed": {
+      "atlas_region": [
+        0,
+        49,
+        120,
+        47
+      ],
+      "source_origin": [
+        424,
+        141
+      ]
+    },
+    "mouth_parted": {
+      "atlas_region": [
+        0,
+        98,
+        99,
+        71
+      ],
+      "source_origin": [
+        423,
+        204
+      ]
+    },
+    "mouth_open": {
+      "atlas_region": [
+        0,
+        171,
+        99,
+        71
+      ],
+      "source_origin": [
+        423,
+        204
+      ]
+    },
+    "mouth_round": {
+      "atlas_region": [
+        0,
+        244,
+        99,
+        71
+      ],
+      "source_origin": [
+        423,
+        204
+      ]
+    },
+    "mouth_wide": {
+      "atlas_region": [
+        0,
+        317,
+        99,
+        71
+      ],
+      "source_origin": [
+        423,
+        204
+      ]
+    }
+  },
+  "cue_frames": {
+    "X": null,
+    "A": null,
+    "B": "mouth_parted",
+    "C": "mouth_wide",
+    "D": "mouth_open",
+    "E": "mouth_round",
+    "F": "mouth_round",
+    "G": "mouth_parted",
+    "H": "mouth_parted"
+  },
+  "atlas": "carmen-face-atlas.png",
+  "eye_centers": [
+    [
+      450,
+      156
+    ],
+    [
+      522,
+      174
+    ]
+  ],
+  "mouth_center": [
+    479,
+    238
+  ]
+}

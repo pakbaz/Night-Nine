@@ -1,0 +1,112 @@
+{
+  "base": "luis.webp",
+  "size": [
+    810,
+    1080
+  ],
+  "origin": "top_left",
+  "foot_anchor": [
+    405,
+    1080
+  ],
+  "frames": {
+    "blink_half": {
+      "atlas_region": [
+        0,
+        0,
+        124,
+        31
+      ],
+      "source_origin": [
+        371,
+        136
+      ]
+    },
+    "blink_closed": {
+      "atlas_region": [
+        0,
+        33,
+        124,
+        31
+      ],
+      "source_origin": [
+        371,
+        136
+      ]
+    },
+    "mouth_parted": {
+      "atlas_region": [
+        0,
+        66,
+        98,
+        65
+      ],
+      "source_origin": [
+        397,
+        200
+      ]
+    },
+    "mouth_open": {
+      "atlas_region": [
+        0,
+        133,
+        98,
+        65
+      ],
+      "source_origin": [
+        397,
+        200
+      ]
+    },
+    "mouth_round": {
+      "atlas_region": [
+        0,
+        200,
+        98,
+        65
+      ],
+      "source_origin": [
+        397,
+        200
+      ]
+    },
+    "mouth_wide": {
+      "atlas_region": [
+        0,
+        267,
+        98,
+        65
+      ],
+      "source_origin": [
+        397,
+        200
+      ]
+    }
+  },
+  "cue_frames": {
+    "X": null,
+    "A": null,
+    "B": "mouth_parted",
+    "C": "mouth_wide",
+    "D": "mouth_open",
+    "E": "mouth_round",
+    "F": "mouth_round",
+    "G": "mouth_parted",
+    "H": "mouth_parted"
+  },
+  "atlas": "luis-face-atlas.png",
+  "eye_centers": [
+    [
+      396,
+      154
+    ],
+    [
+      472,
+      149
+    ]
+  ],
+  "mouth_center": [
+    448,
+    232
+  ]
+}

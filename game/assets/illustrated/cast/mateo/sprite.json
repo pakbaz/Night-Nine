@@ -1,0 +1,112 @@
+{
+  "base": "mateo.webp",
+  "size": [
+    916,
+    1080
+  ],
+  "origin": "top_left",
+  "foot_anchor": [
+    458,
+    1080
+  ],
+  "frames": {
+    "blink_half": {
+      "atlas_region": [
+        0,
+        0,
+        123,
+        39
+      ],
+      "source_origin": [
+        427,
+        132
+      ]
+    },
+    "blink_closed": {
+      "atlas_region": [
+        0,
+        41,
+        123,
+        39
+      ],
+      "source_origin": [
+        427,
+        132
+      ]
+    },
+    "mouth_parted": {
+      "atlas_region": [
+        0,
+        82,
+        98,
+        68
+      ],
+      "source_origin": [
+        436,
+        193
+      ]
+    },
+    "mouth_open": {
+      "atlas_region": [
+        0,
+        152,
+        98,
+        68
+      ],
+      "source_origin": [
+        436,
+        193
+      ]
+    },
+    "mouth_round": {
+      "atlas_region": [
+        0,
+        222,
+        98,
+        68
+      ],
+      "source_origin": [
+        436,
+        193
+      ]
+    },
+    "mouth_wide": {
+      "atlas_region": [
+        0,
+        292,
+        98,
+        68
+      ],
+      "source_origin": [
+        436,
+        193
+      ]
+    }
+  },
+  "cue_frames": {
+    "X": null,
+    "A": null,
+    "B": "mouth_parted",
+    "C": "mouth_wide",
+    "D": "mouth_open",
+    "E": "mouth_round",
+    "F": "mouth_round",
+    "G": "mouth_parted",
+    "H": "mouth_parted"
+  },
+  "atlas": "mateo-face-atlas.png",
+  "eye_centers": [
+    [
+      453,
+      145
+    ],
+    [
+      527,
+      158
+    ]
+  ],
+  "mouth_center": [
+    489,
+    227
+  ]
+}

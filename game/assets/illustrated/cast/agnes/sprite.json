@@ -1,0 +1,112 @@
+{
+  "base": "agnes.webp",
+  "size": [
+    774,
+    1080
+  ],
+  "origin": "top_left",
+  "foot_anchor": [
+    387,
+    1080
+  ],
+  "frames": {
+    "blink_half": {
+      "atlas_region": [
+        0,
+        0,
+        123,
+        52
+      ],
+      "source_origin": [
+        363,
+        140
+      ]
+    },
+    "blink_closed": {
+      "atlas_region": [
+        0,
+        54,
+        123,
+        52
+      ],
+      "source_origin": [
+        363,
+        140
+      ]
+    },
+    "mouth_parted": {
+      "atlas_region": [
+        0,
+        108,
+        97,
+        69
+      ],
+      "source_origin": [
+        405,
+        206
+      ]
+    },
+    "mouth_open": {
+      "atlas_region": [
+        0,
+        179,
+        97,
+        69
+      ],
+      "source_origin": [
+        405,
+        206
+      ]
+    },
+    "mouth_round": {
+      "atlas_region": [
+        0,
+        250,
+        97,
+        69
+      ],
+      "source_origin": [
+        405,
+        206
+      ]
+    },
+    "mouth_wide": {
+      "atlas_region": [
+        0,
+        321,
+        97,
+        69
+      ],
+      "source_origin": [
+        405,
+        206
+      ]
+    }
+  },
+  "cue_frames": {
+    "X": null,
+    "A": null,
+    "B": "mouth_parted",
+    "C": "mouth_wide",
+    "D": "mouth_open",
+    "E": "mouth_round",
+    "F": "mouth_round",
+    "G": "mouth_parted",
+    "H": "mouth_parted"
+  },
+  "atlas": "agnes-face-atlas.png",
+  "eye_centers": [
+    [
+      389,
+      177
+    ],
+    [
+      463,
+      156
+    ]
+  ],
+  "mouth_center": [
+    459,
+    240
+  ]
+}

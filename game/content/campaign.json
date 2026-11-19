@@ -5,9 +5,20 @@
   "source": "Night Nine original story",
   "adaptation_status": "Playable illustrated campaign checkpoint.",
   "cast": {
+    "steve": "Steve Mercer",
+    "iris": "Iris",
     "archivist": "The Archivist",
+    "agnes": "Agnes Penhallow",
     "helen": "Helen Mercer",
     "frank": "Frank Mercer",
+    "carmen": "Carmen Reyes",
+    "luis": "Luis Reyes",
+    "mateo": "Mateo Reyes",
+    "rafa": "Rafa Reyes",
+    "tomas": "Tomás Reyes",
+    "lyle_copy": "Lyle’s copy",
+    "pell": "Pell",
+    "autorick": "DJ AutoRick",
     "general_us": "American delegate",
     "general_cn": "Chinese delegate"
   },
@@ -104,6 +115,1028 @@
         }
       },
       "coach": "Click the glowing radio to begin. Press I for a list of things to look at."
+    },
+    {
+      "id": "c1_flat",
+      "chapter": "Chapter 1",
+      "title": "Good Morning, Sleepyhead",
+      "place": "Steve and Nora’s apartment",
+      "style": "apartment",
+      "actors": [
+        "steve"
+      ],
+      "objective": "Nora’s “good morning” sounds exactly the same every day. Record it and find out why.",
+      "tasks": [
+        {
+          "id": "c1_flat.saturday",
+          "title": "Saturday take",
+          "prompt": "Dad’s recorder was running when Nora said good morning. The reel is labeled SAT. Keep it as evidence.",
+          "options": [
+            "Keep the original Saturday reel",
+            "Record something new over it",
+            "Copy it to a loose reel with no label"
+          ],
+          "answer": 0,
+          "lines": [
+            "c1_flat.saturday.01"
+          ],
+          "note": "Preserved Saturday’s greeting.",
+          "requires": [],
+          "actor": "",
+          "kind": "record",
+          "sounds": [
+            "recording.greeting"
+          ],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Evidence is only useful if you know when it was made.",
+            "The original reel already has the day written on it.",
+            "Choose “Keep the original Saturday reel”."
+          ]
+        },
+        {
+          "id": "c1_flat.sunday",
+          "title": "Sunday take",
+          "prompt": "Sunday morning. Steve sets the recorder running before Nora walks in, so she says it the way she always does.",
+          "options": [
+            "Play Saturday’s tape to her first",
+            "Record her without saying anything first",
+            "Say good morning first and wait for her reply"
+          ],
+          "answer": 1,
+          "lines": [
+            "c1_flat.sunday.01",
+            "c1_flat.sunday.02"
+          ],
+          "note": "Preserved Sunday’s greeting.",
+          "requires": [
+            "c1_flat.saturday"
+          ],
+          "actor": "",
+          "kind": "record",
+          "sounds": [
+            "recording.greeting"
+          ],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Keep the two mornings as alike as possible.",
+            "If Steve says or plays something first, she might copy him.",
+            "Choose “Record her without saying anything first”."
+          ]
+        },
+        {
+          "id": "c1_flat.control",
+          "title": "Recorder control test",
+          "prompt": "Maybe the recorder is broken and keeps replaying old sound. Steve tests it: he says “one, two” twice, and a chair squeaks only the second time. The squeak is on the tape. What does that rule out?",
+          "options": [
+            "That Nora used the same words twice",
+            "That the recorder just replays old sound",
+            "That Steve recognized Nora’s voice"
+          ],
+          "answer": 1,
+          "lines": [
+            "c1_flat.control.01",
+            "c1_flat.control.02"
+          ],
+          "note": "Ruled out a stuck or looping recorder.",
+          "requires": [
+            "c1_flat.sunday"
+          ],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "The squeak happened only the second time.",
+            "A recorder stuck replaying old sound would have played the first pass again, without the squeak.",
+            "Choose “That the recorder just replays old sound”."
+          ]
+        },
+        {
+          "id": "c1_flat.compare",
+          "title": "Compare greetings",
+          "prompt": "Line up Saturday and Sunday and listen closely. Two different mornings, or the same recording?",
+          "options": [
+            "Different words",
+            "An identical performance",
+            "Similar delivery with a new breath"
+          ],
+          "answer": 1,
+          "lines": [
+            "c1_flat.compare.01"
+          ],
+          "note": "Two independently captured greetings are the same take.",
+          "requires": [
+            "c1_flat.control"
+          ],
+          "actor": "",
+          "kind": "compare",
+          "sounds": [
+            "recording.greeting",
+            "recording.greeting"
+          ],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "puzzle": {
+            "instruction": "Line up the breath and first word, then compare the small peaks and pauses throughout both recordings.",
+            "rows": [
+              {
+                "label": "Sunday offset",
+                "options": [
+                  "+0.35 s",
+                  "-0.35 s",
+                  "-0.20 s",
+                  "0.00 s"
+                ]
+              },
+              {
+                "label": "Conclusion",
+                "options": [
+                  "Same words only",
+                  "Different performances",
+                  "Identical performance"
+                ]
+              }
+            ],
+            "solution": [
+              1,
+              2
+            ],
+            "presentation": "tape_alignment",
+            "recording": "recording.greeting",
+            "lead_a": 0.2,
+            "lead_b": 0.55,
+            "hints": [
+              "Line up the quiet breath and first word. Then look along the rest of both waveforms.",
+              "Sunday starts later than Saturday. Move Sunday to the left; compare pauses as well as large peaks.",
+              "Move Sunday 0.35 seconds earlier (-0.35 s). Choose Identical performance."
+            ]
+          }
+        }
+      ],
+      "intro": [
+        "c1_flat.in.01",
+        "c1_flat.in.02",
+        "c1_flat.in.03",
+        "c1_flat.in.04"
+      ],
+      "outro": [
+        "c1_flat.out.01",
+        "c1_flat.out.02"
+      ],
+      "shots": [
+        {
+          "duration": 5.0,
+          "move": "establish",
+          "direction": "Move from a dark reel-to-reel recorder toward amber kitchen light."
+        },
+        {
+          "duration": 6.0,
+          "move": "push",
+          "direction": "Move toward the active interaction."
+        }
+      ],
+      "card": {
+        "chapter": {
+          "kicker": "Chapter 1",
+          "title": "Good Morning, Sleepyhead",
+          "when": "Saturday, three in the morning",
+          "goal": "Steve wants to find out what is wrong with Nora."
+        }
+      },
+      "coach": "Steve’s tools are Dad’s recorder and his notebook. Click the recorder to begin. Press J to read the notebook."
+    },
+    {
+      "id": "c1_pier",
+      "chapter": "Chapter 1",
+      "title": "Sunday on the pier",
+      "place": "Bellwether harbor",
+      "style": "pier",
+      "actors": [
+        "steve"
+      ],
+      "objective": "Look around the harbor. Is anyone else acting strangely?",
+      "tasks": [
+        {
+          "id": "c1_pier.whistle",
+          "title": "Admiral’s pool",
+          "prompt": "Admiral took Steve’s lunch. Nora whistles while Admiral is underwater; the harbor winch is running. He keeps swimming. What should go in the observation column?",
+          "options": [
+            "He failed to turn during this whistle",
+            "He heard Nora and chose to ignore her",
+            "Nora’s second note was too low"
+          ],
+          "answer": 0,
+          "lines": [
+            "c1_pier.whistle.01"
+          ],
+          "note": "Admiral ignored the apparent Nora’s whistle.",
+          "requires": [],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [
+            "effect.nora_whistle"
+          ],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Separate what Steve saw from what he thinks Admiral heard.",
+            "The winch and the water leave more than one explanation.",
+            "Choose “He failed to turn during this whistle”. Admiral ignored the apparent Nora’s whistle."
+          ]
+        },
+        {
+          "id": "c1_pier.door",
+          "title": "Deputy Lyle",
+          "prompt": "Lyle holds a door and remembers the boys’ birthday. Steve remembers him as a colder man. What independent follow-up would help date the change?",
+          "options": [
+            "Record the birthday itself",
+            "Ask when he first began coming to their games",
+            "Test whether he remembers Steve’s old address"
+          ],
+          "answer": 1,
+          "lines": [
+            "c1_pier.door.01",
+            "c1_pier.door.02"
+          ],
+          "note": "Lyle’s behavior changed; behavior alone proves nothing.",
+          "requires": [],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Steve needs a date for the new habit.",
+            "Old memories can establish familiarity without dating a change in behavior.",
+            "Choose “Ask when he first began coming to their games”. Lyle’s behavior changed; behavior alone proves nothing."
+          ]
+        },
+        {
+          "id": "c1_pier.bait",
+          "title": "Penhallow’s bait stall",
+          "prompt": "Penhallow hums along to a low note. Her lips go still before the note dies away across the water. Steve wants to learn where it comes from.",
+          "options": [
+            "Ask which part of the bay she hears it from",
+            "Ask when she learned the melody",
+            "Ask whether she hums it in the shop"
+          ],
+          "answer": 0,
+          "lines": [
+            "c1_pier.bait.01"
+          ],
+          "note": "Penhallow knows about the bay’s recurring tone.",
+          "requires": [],
+          "actor": "",
+          "kind": "record",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Separate Agnes’s breath from the sound she follows.",
+            "The note brackets the humming. June and the winch operator each rule out a different explanation.",
+            "Place the start of the water note first and its end last. File the water as the possible source, Agnes as the imitation, the winch as the early stop and June as the independent ear."
+          ],
+          "puzzle": {
+            "presentation": "case_board",
+            "instruction": "Agnes has been keeping a tide book in a bait tin. Help her work out which sound she was humming along to.",
+            "evidence": [
+              "Agnes marked the first low note with a dot, the start of her humming with a loop, her last breath with a cross, and the end of the low note with a bar.",
+              "On the damp page the dot is two squares before the loop. The cross immediately precedes the bar. She wrote on one square at a time, left to right.",
+              "June stood upwind at the fish shed. She heard the low note before Agnes started, but could never hear Agnes herself. With the winch stopped she heard it most clearly beside the water under the floating dock.",
+              "Agnes left three pockets in the tin for a possible source, an imitation, and a noise that stopped too soon. The winch operator says he stopped halfway through the low note."
+            ],
+            "stages": [
+              {
+                "mode": "order",
+                "prompt": "Reconstruct the four pencil marks in the order Agnes made them. Empty squares can lie between marks.",
+                "slots": [
+                  "Earliest",
+                  "Next mark",
+                  "Next mark",
+                  "Latest"
+                ],
+                "pieces": [
+                  "Agnes joins in",
+                  "Low note begins",
+                  "Agnes takes a breath",
+                  "Low note ends"
+                ],
+                "answer": [
+                  1,
+                  0,
+                  2,
+                  3
+                ]
+              },
+              {
+                "mode": "match",
+                "prompt": "File the sound and witness cards by what June and the winch operator actually establish.",
+                "slots": [
+                  "Possible source to investigate",
+                  "Followed the existing note",
+                  "Stopped before the note did",
+                  "Heard the note independently"
+                ],
+                "pieces": [
+                  "Agnes’s humming",
+                  "June at the fish shed",
+                  "Sound from the water",
+                  "The harbor winch"
+                ],
+                "answer": [
+                  2,
+                  0,
+                  3,
+                  1
+                ]
+              }
+            ],
+            "solution": [
+              1,
+              0,
+              2,
+              3,
+              2,
+              0,
+              3,
+              1
+            ],
+            "rows": [
+              {
+                "label": "Earliest",
+                "options": [
+                  "Agnes joins in",
+                  "Low note begins",
+                  "Agnes takes a breath",
+                  "Low note ends"
+                ]
+              },
+              {
+                "label": "Next mark",
+                "options": [
+                  "Agnes joins in",
+                  "Low note begins",
+                  "Agnes takes a breath",
+                  "Low note ends"
+                ]
+              },
+              {
+                "label": "Next mark",
+                "options": [
+                  "Agnes joins in",
+                  "Low note begins",
+                  "Agnes takes a breath",
+                  "Low note ends"
+                ]
+              },
+              {
+                "label": "Latest",
+                "options": [
+                  "Agnes joins in",
+                  "Low note begins",
+                  "Agnes takes a breath",
+                  "Low note ends"
+                ]
+              },
+              {
+                "label": "Possible source to investigate",
+                "options": [
+                  "Agnes’s humming",
+                  "June at the fish shed",
+                  "Sound from the water",
+                  "The harbor winch"
+                ]
+              },
+              {
+                "label": "Followed the existing note",
+                "options": [
+                  "Agnes’s humming",
+                  "June at the fish shed",
+                  "Sound from the water",
+                  "The harbor winch"
+                ]
+              },
+              {
+                "label": "Stopped before the note did",
+                "options": [
+                  "Agnes’s humming",
+                  "June at the fish shed",
+                  "Sound from the water",
+                  "The harbor winch"
+                ]
+              },
+              {
+                "label": "Heard the note independently",
+                "options": [
+                  "Agnes’s humming",
+                  "June at the fish shed",
+                  "Sound from the water",
+                  "The harbor winch"
+                ]
+              }
+            ],
+            "hints": [
+              "Separate Agnes’s breath from the sound she follows.",
+              "The note brackets the humming. June and the winch operator each rule out a different explanation.",
+              "Place the start of the water note first and its end last. File the water as the possible source, Agnes as the imitation, the winch as the early stop and June as the independent ear."
+            ]
+          }
+        }
+      ],
+      "intro": [
+        "c1_pier.in.01",
+        "c1_pier.in.02"
+      ],
+      "outro": [
+        "c1_pier.out.01",
+        "c1_pier.out.02"
+      ],
+      "shots": [
+        {
+          "duration": 5.0,
+          "move": "establish",
+          "direction": "Follow Steve along the pier, then join the Reyes family at La Marea for Sunday dinner."
+        },
+        {
+          "duration": 6.0,
+          "move": "push",
+          "direction": "Move toward the active interaction."
+        }
+      ],
+      "coach": "Some leads open a case board. Drag the cards into place, or ask for a hint."
+    },
+    {
+      "id": "c1_dinner",
+      "chapter": "Chapter 1",
+      "title": "A plate kept warm",
+      "place": "La Marea restaurant",
+      "style": "restaurant",
+      "actors": [
+        "steve"
+      ],
+      "objective": "Have Sunday dinner with Nora’s family, and listen.",
+      "tasks": [
+        {
+          "id": "c1_dinner.birthday",
+          "title": "Carmen’s birthday",
+          "prompt": "Mateo drove Nora to the restaurant; Rafa took her home. Carmen remembers the meal but spent most of it in the kitchen. Which entries could later establish how long Nora stayed?",
+          "options": [
+            "Mateo’s arrival and Rafa’s departure times",
+            "Carmen’s menu and the restaurant hours",
+            "Nora’s shift roster and the table booking"
+          ],
+          "answer": 0,
+          "lines": [
+            "c1_dinner.birthday.01"
+          ],
+          "note": "Nora had a documented alibi on Carmen’s birthday.",
+          "requires": [],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Which family members actually witnessed the endpoints?",
+            "A booking describes a plan; a ride places someone at the restaurant.",
+            "Choose “Mateo’s arrival and Rafa’s departure times”. Nora had a documented alibi on Carmen’s birthday."
+          ]
+        },
+        {
+          "id": "c1_dinner.podcast",
+          "title": "Tomás’s recorder",
+          "prompt": "Tomás has three years of field reels. His published episodes splice sounds from several nights. What should Steve borrow to investigate the dates?",
+          "options": [
+            "The episodes arranged by broadcast date",
+            "The field reels with their original labels",
+            "An undated compilation of the clearest hums"
+          ],
+          "answer": 1,
+          "lines": [
+            "c1_dinner.podcast.01",
+            "c1_dinner.podcast.02"
+          ],
+          "note": "Tomás retained dated bay recordings.",
+          "requires": [],
+          "actor": "",
+          "kind": "record",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Start with the day the buoy was ashore.",
+            "The repaired buoy accounts for the two knocks. The pencil log ties those sounds to the spindles.",
+            "The nights begin with one bell, a gull and two knocks. Pack Salt, Thread and Glass, then the red copy."
+          ],
+          "puzzle": {
+            "presentation": "case_board",
+            "instruction": "Tomás will lend Steve the field reels if he can put the borrowed tapes back on the right spindles. The published episode has three cuts in it.",
+            "evidence": [
+              "From Tomás’s log. On the 3rd, low tide exposed the bell buoy. On the 12th the buoy was ashore, with a cracked clapper. On the 21st the repair crew gave it a double tap before launching.",
+              "Natural starts, as logged in pencil: one bell on Salt, a gull on Thread, two uneven knocks on Glass. On the red broadcast copy Tomás spliced Glass into Salt, then Salt into Thread.",
+              "The milk crate has four pockets in listening order. Borrow the three uncut nights in date order. File the edited copy last, with its paper edit list."
+            ],
+            "stages": [
+              {
+                "mode": "match",
+                "prompt": "Put an opening sound beside each field date. Use the repair history to identify the silent buoy.",
+                "slots": [
+                  "3rd",
+                  "12th",
+                  "21st"
+                ],
+                "pieces": [
+                  "One bell",
+                  "Two uneven knocks",
+                  "Gull without bell"
+                ],
+                "answer": [
+                  0,
+                  2,
+                  1
+                ]
+              },
+              {
+                "mode": "order",
+                "prompt": "Pack the crate so Steve can check the original intervals before he listens to the broadcast.",
+                "slots": [
+                  "First field night",
+                  "Second field night",
+                  "Third field night",
+                  "Edited reference"
+                ],
+                "pieces": [
+                  "Thread",
+                  "Glass",
+                  "Red broadcast",
+                  "Salt"
+                ],
+                "answer": [
+                  3,
+                  0,
+                  1,
+                  2
+                ]
+              }
+            ],
+            "solution": [
+              0,
+              2,
+              1,
+              3,
+              0,
+              1,
+              2
+            ],
+            "rows": [
+              {
+                "label": "3rd",
+                "options": [
+                  "One bell",
+                  "Two uneven knocks",
+                  "Gull without bell"
+                ]
+              },
+              {
+                "label": "12th",
+                "options": [
+                  "One bell",
+                  "Two uneven knocks",
+                  "Gull without bell"
+                ]
+              },
+              {
+                "label": "21st",
+                "options": [
+                  "One bell",
+                  "Two uneven knocks",
+                  "Gull without bell"
+                ]
+              },
+              {
+                "label": "First field night",
+                "options": [
+                  "Thread",
+                  "Glass",
+                  "Red broadcast",
+                  "Salt"
+                ]
+              },
+              {
+                "label": "Second field night",
+                "options": [
+                  "Thread",
+                  "Glass",
+                  "Red broadcast",
+                  "Salt"
+                ]
+              },
+              {
+                "label": "Third field night",
+                "options": [
+                  "Thread",
+                  "Glass",
+                  "Red broadcast",
+                  "Salt"
+                ]
+              },
+              {
+                "label": "Edited reference",
+                "options": [
+                  "Thread",
+                  "Glass",
+                  "Red broadcast",
+                  "Salt"
+                ]
+              }
+            ],
+            "hints": [
+              "Start with the day the buoy was ashore.",
+              "The repaired buoy accounts for the two knocks. The pencil log ties those sounds to the spindles.",
+              "The nights begin with one bell, a gull and two knocks. Pack Salt, Thread and Glass, then the red copy."
+            ]
+          }
+        },
+        {
+          "id": "c1_dinner.family",
+          "title": "Nora at dinner",
+          "prompt": "Nora now agrees with Carmen about a recipe she used to argue over. Carmen notices too. Which conclusion can Steve support tonight?",
+          "options": [
+            "Nora has forgotten how the dish used to taste",
+            "Two witnesses noticed a change worth following",
+            "They know when and why Nora changed her mind"
+          ],
+          "answer": 1,
+          "lines": [
+            "c1_dinner.family.01",
+            "c1_dinner.family.02"
+          ],
+          "note": "Several people noticed Nora’s changed behavior.",
+          "requires": [],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Count the observations, then consider what caused them.",
+            "Agreement between two witnesses about a change does not date it or explain it.",
+            "Choose “Two witnesses noticed a change worth following”. Several people noticed Nora’s changed behavior."
+          ]
+        }
+      ],
+      "intro": [
+        "c1_dinner.in.01",
+        "c1_dinner.in.02"
+      ],
+      "outro": [
+        "c1_dinner.out.01"
+      ],
+      "shots": [
+        {
+          "duration": 5.0,
+          "move": "establish",
+          "direction": "Settle beside the family table, with harbor lights through rain-streaked glass."
+        },
+        {
+          "duration": 6.0,
+          "move": "push",
+          "direction": "Move toward the active interaction."
+        }
+      ]
+    },
+    {
+      "id": "c1_escape",
+      "chapter": "Chapter 1",
+      "title": "The ninth night",
+      "place": "Apartment balcony and beach",
+      "style": "balcony",
+      "actors": [
+        "steve"
+      ],
+      "objective": "Find out what Nora is hiding, then get out of the locked apartment.",
+      "tasks": [
+        {
+          "id": "c1_escape.order",
+          "title": "Coat pocket",
+          "prompt": "The north-wing work order has a handwritten sign-off at 20:15 on Carmen’s birthday. Mateo brought Nora to dinner at noon; Rafa took her home at midnight. Which discrepancy should Steve check first?",
+          "options": [
+            "The sign-off against the family’s witnessed interval",
+            "The form’s print date against the reservation date",
+            "The work-order number against the menu price"
+          ],
+          "answer": 0,
+          "lines": [
+            "c1_escape.order.01"
+          ],
+          "note": "The aquarium work order contradicts a witnessed alibi.",
+          "requires": [],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Correct each clock in the opposite direction from its error.",
+            "The corrected kitchen and north-wing times coincide. Which source shows a face, and which shows a name?",
+            "Parking was noon. Both evening slips mean 20:15. Use Mateo, Carmen’s photo, the work order and Rafa. The earliest round trip would require Nora to be gone from 19:57 to 20:33."
+          ],
+          "puzzle": {
+            "presentation": "case_board",
+            "instruction": "Rain has stuck the aquarium paperwork to the lining of a coat. Steve has three independent clocks and one apparent signature.",
+            "evidence": [
+              "Control card: the aquarium wall clock ran 15 minutes fast all day. The kitchen clock at La Marea agreed with harbor time. The parking machine ran 10 minutes slow.",
+              "Printed slips: parking 11:50, north-wing sign-off 20:30, kitchen birthday check 20:15. Rafa wrote midnight in his own hand when he drove Nora home.",
+              "Mateo drove Nora directly from the parking machine to the restaurant at noon. Carmen's kitchen photograph shows Nora holding the birthday check inside La Marea. The aquarium is across the bay.",
+              "Rafa can attest to the ride home. Only the signed work order puts someone using Nora’s name inside the north wing.",
+              "The quickest crossing took 18 minutes each way. On Carmen’s contact strip two restaurant pictures also show Nora at 20:04 and 20:29. Use the corrected aquarium time to mark the narrowest possible absence."
+            ],
+            "stages": [
+              {
+                "mode": "match",
+                "prompt": "Correct the three machine times. Two events share a time; use the place as well as the clock.",
+                "slots": [
+                  "Parking slip",
+                  "North-wing wall clock",
+                  "Kitchen check"
+                ],
+                "pieces": [
+                  "20:15 at La Marea",
+                  "20:15 across the bay",
+                  "12:00 by the car"
+                ],
+                "answer": [
+                  2,
+                  1,
+                  0
+                ]
+              },
+              {
+                "mode": "match",
+                "prompt": "Attach a source to each part of the discrepancy. Keep the signature separate from an eyewitness.",
+                "slots": [
+                  "Arrival witness",
+                  "Inside the restaurant at 20:15",
+                  "Aquarium identity claim",
+                  "Departure witness"
+                ],
+                "pieces": [
+                  "Signed work order",
+                  "Mateo’s ride in",
+                  "Rafa’s ride home",
+                  "Carmen’s kitchen photo"
+                ],
+                "answer": [
+                  1,
+                  3,
+                  0,
+                  2
+                ]
+              },
+              {
+                "mode": "order",
+                "prompt": "Build the shortest round trip that could cover a 20:15 signature. Place the two pictures inside its limits.",
+                "slots": [
+                  "Latest departure",
+                  "First restaurant photo",
+                  "Second restaurant photo",
+                  "Earliest return"
+                ],
+                "pieces": [
+                  "20:29",
+                  "19:57",
+                  "20:33",
+                  "20:04"
+                ],
+                "answer": [
+                  1,
+                  3,
+                  0,
+                  2
+                ]
+              }
+            ],
+            "solution": [
+              2,
+              1,
+              0,
+              1,
+              3,
+              0,
+              2,
+              1,
+              3,
+              0,
+              2
+            ],
+            "rows": [
+              {
+                "label": "Parking slip",
+                "options": [
+                  "20:15 at La Marea",
+                  "20:15 across the bay",
+                  "12:00 by the car"
+                ]
+              },
+              {
+                "label": "North-wing wall clock",
+                "options": [
+                  "20:15 at La Marea",
+                  "20:15 across the bay",
+                  "12:00 by the car"
+                ]
+              },
+              {
+                "label": "Kitchen check",
+                "options": [
+                  "20:15 at La Marea",
+                  "20:15 across the bay",
+                  "12:00 by the car"
+                ]
+              },
+              {
+                "label": "Arrival witness",
+                "options": [
+                  "Signed work order",
+                  "Mateo’s ride in",
+                  "Rafa’s ride home",
+                  "Carmen’s kitchen photo"
+                ]
+              },
+              {
+                "label": "Inside the restaurant at 20:15",
+                "options": [
+                  "Signed work order",
+                  "Mateo’s ride in",
+                  "Rafa’s ride home",
+                  "Carmen’s kitchen photo"
+                ]
+              },
+              {
+                "label": "Aquarium identity claim",
+                "options": [
+                  "Signed work order",
+                  "Mateo’s ride in",
+                  "Rafa’s ride home",
+                  "Carmen’s kitchen photo"
+                ]
+              },
+              {
+                "label": "Departure witness",
+                "options": [
+                  "Signed work order",
+                  "Mateo’s ride in",
+                  "Rafa’s ride home",
+                  "Carmen’s kitchen photo"
+                ]
+              },
+              {
+                "label": "Latest departure",
+                "options": [
+                  "20:29",
+                  "19:57",
+                  "20:33",
+                  "20:04"
+                ]
+              },
+              {
+                "label": "First restaurant photo",
+                "options": [
+                  "20:29",
+                  "19:57",
+                  "20:33",
+                  "20:04"
+                ]
+              },
+              {
+                "label": "Second restaurant photo",
+                "options": [
+                  "20:29",
+                  "19:57",
+                  "20:33",
+                  "20:04"
+                ]
+              },
+              {
+                "label": "Earliest return",
+                "options": [
+                  "20:29",
+                  "19:57",
+                  "20:33",
+                  "20:04"
+                ]
+              }
+            ],
+            "hints": [
+              "Correct each clock in the opposite direction from its error.",
+              "The corrected kitchen and north-wing times coincide. Which source shows a face, and which shows a name?",
+              "Parking was noon. Both evening slips mean 20:15. Use Mateo, Carmen’s photo, the work order and Rafa. The earliest round trip would require Nora to be gone from 19:57 to 20:33."
+            ]
+          }
+        },
+        {
+          "id": "c1_escape.power",
+          "title": "Balcony wiring",
+          "prompt": "The neighbor is halfway down the stairs and cannot see the last turn. Steve must open the balcony gate while the stair bulb stays lit from start to finish. The service selector has three positions.",
+          "options": [
+            "Cycle the light and motor together",
+            "Queue the release and restart the motor with the stair lit",
+            "Try the thumb pad with the motor running"
+          ],
+          "answer": 1,
+          "lines": [
+            "c1_escape.power.01"
+          ],
+          "note": "Released the neighbor’s balcony latch.",
+          "requires": [
+            "c1_escape.order"
+          ],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "puzzle": {
+            "instruction": "NORMAL feeds the stair bulb and latch motor. SERVICE feeds the bulb alone. OFF feeds neither. A thumb pad can store a release request only while the motor is idle. The return spring clears the request the instant the pad rises. The motor checks for a stored request only when it starts.",
+            "rows": [
+              {
+                "label": "Selector before touching the pad",
+                "options": [
+                  "NORMAL",
+                  "OFF",
+                  "SERVICE"
+                ]
+              },
+              {
+                "label": "At the thumb pad",
+                "options": [
+                  "Tap and let go",
+                  "Press and keep pressure",
+                  "Rest a hand beside it"
+                ]
+              },
+              {
+                "label": "While the pad is still in that position",
+                "options": [
+                  "Switch to NORMAL",
+                  "Switch to OFF",
+                  "Stay in SERVICE"
+                ]
+              }
+            ],
+            "solution": [
+              2,
+              1,
+              0
+            ]
+          },
+          "hints": [
+            "Track the stair bulb separately from the latch motor.",
+            "The request must survive until the motor starts. Which position lets you store one without darkening the stairs?",
+            "Choose SERVICE, press and keep pressure, then switch to NORMAL."
+          ]
+        },
+        {
+          "id": "c1_escape.cross",
+          "title": "Iris pots",
+          "prompt": "The pots lean against the inner rail. The landing door needs a key from the stair side. Through the neighbor’s open balcony gate Steve can see the illuminated communal stair.",
+          "options": [
+            "Follow the shared rail to the communal stair",
+            "Pull the landing door shut and try its outside handle",
+            "Pass the stair and try the unlit fire door"
+          ],
+          "answer": 0,
+          "lines": [
+            "c1_escape.cross.01",
+            "c1_escape.cross.02"
+          ],
+          "note": "Escaped while the apparent Nora hesitated.",
+          "requires": [
+            "c1_escape.power"
+          ],
+          "actor": "",
+          "kind": "choice",
+          "sounds": [],
+          "hint": "Look at the evidence in the description, then try another approach.",
+          "hints": [
+            "Use only a route Steve can see is open.",
+            "The landing handle is on the wrong side.",
+            "Choose “Follow the shared rail to the communal stair”. Escaped while the apparent Nora hesitated."
+          ]
+        }
+      ],
+      "intro": [
+        "c1_escape.in.01",
+        "c1_escape.in.02"
+      ],
+      "outro": [
+        "c1_escape.out.01",
+        "c1_escape.out.02"
+      ],
+      "shots": [
+        {
+          "duration": 5.0,
+          "move": "establish",
+          "direction": "Follow the balcony escape, then reveal a procession entering luminous surf."
+        },
+        {
+          "duration": 6.0,
+          "move": "push",
+          "direction": "Move toward the active interaction."
+        }
+      ]
     }
   ],
   "lines": {
@@ -142,8 +1175,270 @@
       "speaker": "helen",
       "text": "He should hear this for himself. We’ll bring the tape home, and he’ll tell us we recorded it wrong.",
       "audio": "p_bay.message.01"
+    },
+    "c1_flat.in.01": {
+      "id": "c1_flat.in.01",
+      "speaker": "helen",
+      "text": "Come out with us, kiddo. The bay is singing tonight.",
+      "audio": "recording.voicemail"
+    },
+    "c1_flat.in.02": {
+      "id": "c1_flat.in.02",
+      "speaker": "steve",
+      "text": "Three in the morning. Again. Well, Mom, it’s a fine night for it.",
+      "audio": "c1_flat.in.02"
+    },
+    "c1_flat.in.03": {
+      "id": "c1_flat.in.03",
+      "speaker": "autorick",
+      "text": "Good morning, Bellwether! Yesterday will be sunny.",
+      "audio": "c1_flat.in.03"
+    },
+    "c1_flat.in.04": {
+      "id": "c1_flat.in.04",
+      "speaker": "iris",
+      "text": "Good morning, sleepyhead.",
+      "audio": "recording.greeting",
+      "display_speaker": "Nora Reyes"
+    },
+    "c1_flat.out.01": {
+      "id": "c1_flat.out.01",
+      "speaker": "steve",
+      "text": "Same breath. Same tiny click before the second word.",
+      "audio": "c1_flat.out.01"
+    },
+    "c1_flat.out.02": {
+      "id": "c1_flat.out.02",
+      "speaker": "steve",
+      "text": "I need evidence. Being afraid of something doesn’t make it true.",
+      "audio": "c1_flat.out.02"
+    },
+    "c1_flat.saturday.01": {
+      "id": "c1_flat.saturday.01",
+      "speaker": "steve",
+      "text": "Saturday, kitchen, quarter past seven. Dad always said to put the date on everything.",
+      "audio": "c1_flat.saturday.01"
+    },
+    "c1_flat.sunday.01": {
+      "id": "c1_flat.sunday.01",
+      "speaker": "iris",
+      "text": "Good morning, sleepyhead.",
+      "audio": "recording.greeting",
+      "display_speaker": "Nora Reyes"
+    },
+    "c1_flat.sunday.02": {
+      "id": "c1_flat.sunday.02",
+      "speaker": "steve",
+      "text": "Sunday. Fresh tape. Same words. Same... everything.",
+      "audio": "c1_flat.sunday.02"
+    },
+    "c1_flat.control.01": {
+      "id": "c1_flat.control.01",
+      "speaker": "steve",
+      "text": "Testing. One, two. Testing... one, two.",
+      "audio": "c1_flat.control.01"
+    },
+    "c1_flat.control.02": {
+      "id": "c1_flat.control.02",
+      "speaker": "steve",
+      "text": "The squeak only made the second pass. So the recorder’s fine. Cross that one out.",
+      "audio": "c1_flat.control.02"
+    },
+    "c1_flat.compare.01": {
+      "id": "c1_flat.compare.01",
+      "speaker": "steve",
+      "text": "She remembers our first date better than I do. But nobody says a sentence the same way twice. Nobody.",
+      "audio": "c1_flat.compare.01"
+    },
+    "c1_pier.in.01": {
+      "id": "c1_pier.in.01",
+      "speaker": "steve",
+      "text": "Admiral. That was my lunch. You don’t even like rye.",
+      "audio": "c1_pier.in.01"
+    },
+    "c1_pier.in.02": {
+      "id": "c1_pier.in.02",
+      "speaker": "agnes",
+      "text": "Fish don’t sing, Steven. Something under them does.",
+      "audio": "c1_pier.in.02"
+    },
+    "c1_pier.out.01": {
+      "id": "c1_pier.out.01",
+      "speaker": "pell",
+      "text": "Your parents’ mail, Mr. Mercer. Delivered precisely on schedule.",
+      "audio": "c1_pier.out.01",
+      "display_speaker": "Dale Kittredge"
+    },
+    "c1_pier.out.02": {
+      "id": "c1_pier.out.02",
+      "speaker": "steve",
+      "text": "They haven’t been home in eighteen months, Dale. You know that.",
+      "audio": "c1_pier.out.02"
+    },
+    "c1_pier.whistle.01": {
+      "id": "c1_pier.whistle.01",
+      "speaker": "steve",
+      "text": "You always come for that whistle. What’s different today?",
+      "audio": "c1_pier.whistle.01",
+      "cue": "nora_whistle"
+    },
+    "c1_pier.door.01": {
+      "id": "c1_pier.door.01",
+      "speaker": "lyle_copy",
+      "text": "They’re both pitching today. I promised I’d watch every inning.",
+      "audio": "c1_pier.door.01",
+      "display_speaker": "Lyle Boone"
+    },
+    "c1_pier.door.02": {
+      "id": "c1_pier.door.02",
+      "speaker": "steve",
+      "text": "Deputy Lyle, keeping a promise. I should write that down before the world ends.",
+      "audio": "c1_pier.door.02"
+    },
+    "c1_pier.bait.01": {
+      "id": "c1_pier.bait.01",
+      "speaker": "agnes",
+      "text": "Count the nights, Steven. You were always good with numbers when you wrote them down.",
+      "audio": "c1_pier.bait.01"
+    },
+    "c1_dinner.in.01": {
+      "id": "c1_dinner.in.01",
+      "speaker": "carmen",
+      "text": "Your plate is warm. Sit. You can apologize while you eat.",
+      "audio": "c1_dinner.in.01"
+    },
+    "c1_dinner.in.02": {
+      "id": "c1_dinner.in.02",
+      "speaker": "rafa",
+      "text": "I kept the sauce separate. You used to like it that way.",
+      "audio": "c1_dinner.in.02"
+    },
+    "c1_dinner.out.01": {
+      "id": "c1_dinner.out.01",
+      "speaker": "carmen",
+      "text": "She stopped arguing with me. My daughter has argued with me since she could talk.",
+      "audio": "c1_dinner.out.01"
+    },
+    "c1_dinner.birthday.01": {
+      "id": "c1_dinner.birthday.01",
+      "speaker": "mateo",
+      "text": "I drove her here. Rafa drove her home. Midnight, give or take ten minutes.",
+      "audio": "c1_dinner.birthday.01"
+    },
+    "c1_dinner.podcast.01": {
+      "id": "c1_dinner.podcast.01",
+      "speaker": "tomas",
+      "text": "You can borrow them. You could also have listened any time in the last three years.",
+      "audio": "c1_dinner.podcast.01"
+    },
+    "c1_dinner.podcast.02": {
+      "id": "c1_dinner.podcast.02",
+      "speaker": "steve",
+      "text": "I’m listening now.",
+      "audio": "c1_dinner.podcast.02"
+    },
+    "c1_dinner.family.01": {
+      "id": "c1_dinner.family.01",
+      "speaker": "iris",
+      "text": "Whatever Carmen thinks is best.",
+      "audio": "c1_dinner.family.01",
+      "display_speaker": "Nora Reyes"
+    },
+    "c1_dinner.family.02": {
+      "id": "c1_dinner.family.02",
+      "speaker": "luis",
+      "text": "Eat before it gets cold, Steve. Then tell us what is troubling you.",
+      "audio": "c1_dinner.family.02"
+    },
+    "c1_escape.in.01": {
+      "id": "c1_escape.in.01",
+      "speaker": "iris",
+      "text": "No. He does not know where the notebook is. Tonight? Understood.",
+      "audio": "c1_escape.in.01",
+      "display_speaker": "Nora Reyes"
+    },
+    "c1_escape.in.02": {
+      "id": "c1_escape.in.02",
+      "speaker": "steve",
+      "text": "Nora? Why is the front door locked from the outside?",
+      "audio": "c1_escape.in.02"
+    },
+    "c1_escape.out.01": {
+      "id": "c1_escape.out.01",
+      "speaker": "steve",
+      "text": "She could have stopped me. She stood there and let me go.",
+      "audio": "c1_escape.out.01"
+    },
+    "c1_escape.out.02": {
+      "id": "c1_escape.out.02",
+      "speaker": "agnes",
+      "text": "Ninth night, Steven. Count them.",
+      "audio": "c1_escape.out.02",
+      "cue": "ninth_night"
+    },
+    "c1_escape.order.01": {
+      "id": "c1_escape.order.01",
+      "speaker": "steve",
+      "text": "Noon to midnight at La Marea. Mateo and Rafa both saw her. She couldn’t have signed this there.",
+      "audio": "c1_escape.order.01"
+    },
+    "c1_escape.power.01": {
+      "id": "c1_escape.power.01",
+      "speaker": "steve",
+      "text": "I fixed this latch for Mr. Bell last winter. He paid me in fruitcake. Tonight it’s worth every slice.",
+      "audio": "c1_escape.power.01"
+    },
+    "c1_escape.cross.01": {
+      "id": "c1_escape.cross.01",
+      "speaker": "steve",
+      "text": "Sorry. Sorry. Those were your irises.",
+      "audio": "c1_escape.cross.01"
+    },
+    "c1_escape.cross.02": {
+      "id": "c1_escape.cross.02",
+      "speaker": "iris",
+      "text": "Steve... go.",
+      "audio": "c1_escape.cross.02",
+      "display_speaker": "Nora Reyes"
     }
   },
-  "sound_labels": {},
-  "notebook_cases": {}
+  "sound_labels": {
+    "effect.nora_whistle": "Listen: Nora’s two-note whistle",
+    "recording.greeting": "Listen: the morning greeting"
+  },
+  "notebook_cases": {
+    "greeting": {
+      "title": "Why did I hear the same greeting twice?",
+      "clues": [
+        "c1_flat.saturday",
+        "c1_flat.sunday",
+        "c1_flat.control",
+        "c1_flat.compare",
+        "c1_dinner.family",
+        "c1_escape.order"
+      ],
+      "theories": [
+        {
+          "id": "tape_fault",
+          "after": "c1_flat.sunday",
+          "text": "My recorder is playing a piece of old tape."
+        },
+        {
+          "id": "misheard",
+          "after": "c1_flat.sunday",
+          "text": "I was tired and heard a match that was never there."
+        },
+        {
+          "id": "grief",
+          "after": "c1_flat.sunday",
+          "text": "Since the boat vanished, I may be reading too much into ordinary things."
+        },
+        {
+          "id": "stand_in",
+          "after": "c1_escape.order",
+          "text": "Could someone else have used Nora’s name?"
+        }
+      ]
+    }
+  }
 }

@@ -157,6 +157,152 @@
           ]
         }
       ]
+    },
+    "aftermath": {
+      "title": "Eighteen months",
+      "before": "c1_flat",
+      "music": {
+        "file": "res://assets/audio/music/prologue-theme.mp3",
+        "bar": 37,
+        "continue": true
+      },
+      "end_bar": 54,
+      "panels": [
+        {
+          "bar": 37,
+          "image": "res://assets/illustrated/campaign/rooms/c8_beach.webp",
+          "from": [
+            0.5,
+            0.5,
+            1.12
+          ],
+          "to": [
+            0.62,
+            0.62,
+            1.22
+          ],
+          "lines": [
+            {
+              "bar": 37.25,
+              "text": "In the morning, their boat drifted back to shore. Empty.",
+              "narration": "res://assets/audio/voices/narration/aftermath-01.wav",
+              "seconds": 3.738
+            },
+            {
+              "bar": 38.545,
+              "text": "Dad’s radio was still on.",
+              "narration": "res://assets/audio/voices/narration/aftermath-02.wav",
+              "seconds": 2.07
+            }
+          ]
+        },
+        {
+          "bar": 39.5,
+          "image": "res://assets/illustrated/campaign/rooms/c1_escape.webp",
+          "from": [
+            0.55,
+            0.5,
+            1.0
+          ],
+          "to": [
+            0.45,
+            0.5,
+            1.1
+          ],
+          "lines": [
+            {
+              "bar": 39.75,
+              "text": "Nobody found them. That was eighteen months ago.",
+              "narration": "res://assets/audio/voices/narration/aftermath-03.wav",
+              "seconds": 3.309
+            },
+            {
+              "bar": 40.909,
+              "text": "Most nights I still play Mom’s last voicemail. I don’t know what I’m listening for.",
+              "narration": "res://assets/audio/voices/narration/aftermath-04.wav",
+              "seconds": 5.43
+            }
+          ]
+        },
+        {
+          "bar": 43.0,
+          "image": "res://assets/illustrated/campaign/wide/c5_station.webp",
+          "from": [
+            0.5,
+            0.5,
+            1.12
+          ],
+          "to": [
+            0.5,
+            0.45,
+            1.0
+          ],
+          "lines": [
+            {
+              "bar": 43.25,
+              "text": "Three weeks ago, a company called Halcyon Media bought KBWR.",
+              "narration": "res://assets/audio/voices/narration/aftermath-05.wav",
+              "seconds": 5.0
+            },
+            {
+              "bar": 44.944,
+              "text": "They replaced me with a machine called DJ AutoRick. He reads yesterday’s weather.",
+              "narration": "res://assets/audio/voices/narration/aftermath-06.wav",
+              "seconds": 5.51
+            }
+          ]
+        },
+        {
+          "bar": 47.0,
+          "image": "res://assets/illustrated/campaign/inserts/c1_pier.webp",
+          "from": [
+            0.5,
+            0.5,
+            1.0
+          ],
+          "to": [
+            0.6,
+            0.45,
+            1.14
+          ],
+          "lines": [
+            {
+              "bar": 47.25,
+              "text": "And then there’s Nora. Nora Reyes runs the aquarium and argues with everybody, me included.",
+              "narration": "res://assets/audio/voices/narration/aftermath-07.wav",
+              "seconds": 6.96
+            },
+            {
+              "bar": 49.565,
+              "text": "Now that I’m home in the mornings, I get to hear her say good morning.",
+              "narration": "res://assets/audio/voices/narration/aftermath-08.wav",
+              "seconds": 3.371
+            }
+          ]
+        },
+        {
+          "bar": 51.0,
+          "image": "res://assets/illustrated/title.webp",
+          "from": [
+            0.74,
+            0.4,
+            1.62
+          ],
+          "to": [
+            0.5,
+            0.5,
+            1.0
+          ],
+          "lines": [
+            {
+              "bar": 51.25,
+              "text": "This is the story of how I started counting nights.",
+              "narration": "res://assets/audio/voices/narration/aftermath-09.wav",
+              "seconds": 3.156
+            }
+          ]
+        }
+      ]
     }
   }
 }
