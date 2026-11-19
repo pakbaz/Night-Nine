@@ -1,0 +1,112 @@
+{
+  "base": "stephen.webp",
+  "size": [
+    810,
+    1080
+  ],
+  "origin": "top_left",
+  "foot_anchor": [
+    405,
+    1080
+  ],
+  "frames": {
+    "blink_half": {
+      "atlas_region": [
+        0,
+        0,
+        122,
+        40
+      ],
+      "source_origin": [
+        328,
+        141
+      ]
+    },
+    "blink_closed": {
+      "atlas_region": [
+        0,
+        42,
+        122,
+        40
+      ],
+      "source_origin": [
+        328,
+        141
+      ]
+    },
+    "mouth_parted": {
+      "atlas_region": [
+        0,
+        84,
+        89,
+        60
+      ],
+      "source_origin": [
+        360,
+        218
+      ]
+    },
+    "mouth_open": {
+      "atlas_region": [
+        0,
+        146,
+        89,
+        60
+      ],
+      "source_origin": [
+        360,
+        218
+      ]
+    },
+    "mouth_round": {
+      "atlas_region": [
+        0,
+        208,
+        89,
+        60
+      ],
+      "source_origin": [
+        360,
+        218
+      ]
+    },
+    "mouth_wide": {
+      "atlas_region": [
+        0,
+        270,
+        89,
+        60
+      ],
+      "source_origin": [
+        360,
+        218
+      ]
+    }
+  },
+  "cue_frames": {
+    "X": null,
+    "A": null,
+    "B": "mouth_parted",
+    "C": "mouth_wide",
+    "D": "mouth_open",
+    "E": "mouth_round",
+    "F": "mouth_round",
+    "G": "mouth_parted",
+    "H": "mouth_parted"
+  },
+  "atlas": "stephen-face-atlas.png",
+  "eye_centers": [
+    [
+      352,
+      168
+    ],
+    [
+      425,
+      157
+    ]
+  ],
+  "mouth_center": [
+    404,
+    247
+  ]
+}

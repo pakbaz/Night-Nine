@@ -359,7 +359,7 @@ func _build_ui() -> void:
 	credits.add_theme_constant_override("separation",12)
 	end_card.add_child(credits)
 	_label(credits,"NIGHT NINE",44).horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
-	_label(credits,"Chapter 4 checkpoint complete",23).horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
+	_label(credits,"Chapter 5 checkpoint complete",23).horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
 	_button(credits,"Read the notebook and transcript",_open_journal)
 	_button(credits,"Credits",_open_credits)
 	end_card.hide()
@@ -778,7 +778,7 @@ func _load_stage(play_intro: bool) -> void:
 		title.get_parent().hide()
 		# The end card has its own notebook and credits buttons.
 		actor.get_parent().hide()
-		_status("Chapter 4 checkpoint complete. Your notebook and transcript are available.")
+		_status("Chapter 5 checkpoint complete. Your notebook and transcript are available.")
 
 ## The painting a scene opens on, for its chapter card.
 func _scene_painting(scene: Dictionary) -> String:
