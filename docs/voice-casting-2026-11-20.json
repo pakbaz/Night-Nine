@@ -1,254 +1,366 @@
 {
- "saved": "2026-11-20",
- "model": "eleven_v4",
- "provider": "ElevenLabs voice library, via the ElevenLabs connector",
- "source": "https://claude.ai/artifact/3eLToUPan2qN8SXtDex4cx",
- "roles": {
-  "steve": {
-   "display": "Steve Mercer (also voices his copy Stephen)",
-   "also_voices": [
-    "Stephen"
-   ],
-   "lines": 121,
-   "voice_id": "vveagfomyMCJLZsOPRP2",
-   "voice_name": "Jonah Vale",
-   "details": "male \u00b7 American",
-   "why": "A calm, articulate, soft-spoken character voice with a precise edge that fits Steve's engineer reasoning and dry delivery."
+  "saved": "2026-11-20",
+  "model": "eleven_v4",
+  "provider": "ElevenLabs voice library, via the ElevenLabs connector",
+  "source": "https://claude.ai/artifact/3eLToUPan2qN8SXtDex4cx",
+  "roles": {
+    "steve": {
+      "display": "Steve Mercer (also voices his copy Stephen)",
+      "also_voices": [
+        "Stephen"
+      ],
+      "lines": 121,
+      "voice_id": "vveagfomyMCJLZsOPRP2",
+      "voice_name": "Jonah Vale",
+      "details": "male · American",
+      "why": "A calm, articulate, soft-spoken character voice with a precise edge that fits Steve's engineer reasoning and dry delivery.",
+      "library_name": "Jonah Vale - Calm, Soft",
+      "source": "ElevenLabs voice library (shared)",
+      "eleven_v4_verified": true,
+      "library_notice_days": 730
+    },
+    "nora": {
+      "display": "Nora Reyes (also voices her copy Iris)",
+      "also_voices": [
+        "Iris"
+      ],
+      "lines": 41,
+      "voice_id": "m8AHWg36LJTQWKmfeGVv",
+      "voice_name": "Sloane - Bold and Polished",
+      "details": "female · American",
+      "why": "Closest match to the voice Ward had before: about 197 Hz against 184 Hz, with a similar pitch range and brightness. You liked that voice for Nora.",
+      "library_name": "Sloane - Bold and Polished",
+      "source": "ElevenLabs voice library (shared)",
+      "eleven_v4_verified": true,
+      "library_notice_days": 4015
+    },
+    "archivist": {
+      "display": "The Archivist (also her shore echo, Mrs. Penhallow)",
+      "also_voices": [],
+      "lines": 22,
+      "voice_id": "6HXfTcSnxaoT6uM4pTRP",
+      "voice_name": "Delphi - Transformational Narrator",
+      "details": "female · middle-aged · British",
+      "why": "A wise, quietly luminous oracle tone that gives her 900 years of weight and still sounds kind.",
+      "library_name": "Delphi - Transformational Narrator",
+      "source": "ElevenLabs voice library (shared)",
+      "eleven_v4_verified": true,
+      "library_notice_days": 730
+    },
+    "helen": {
+      "display": "Helen Mercer",
+      "also_voices": [],
+      "lines": 17,
+      "voice_id": "5u41aNhyCU6hXOcjPPv0",
+      "voice_name": "Carol - Relatable, Real, Cool, Senior",
+      "details": "female · old · American (slight Midwestern)",
+      "why": "A smart, natural senior who sounds like she has lived a full life, so Helen comes across as an ordinary, grounded mom.",
+      "library_name": "Carol - Relatable, Real, Likeable Grandma",
+      "source": "ElevenLabs voice library (shared)",
+      "eleven_v4_verified": true,
+      "library_notice_days": 90
+    },
+    "calder": {
+      "display": "Sheriff June Calder",
+      "also_voices": [],
+      "lines": 17,
+      "voice_id": "wa4sQVgbDDzUDEzJwch3",
+      "voice_name": "Eryn - Strong Female Military Commander",
+      "details": "female · middle_aged · American",
+      "why": "Commanding and crisp, a good pick if Calder should sound more like the law and less like a neighbor when she pushes back on federal agents.",
+      "library_name": "Eryn – Strong Female Military Commander",
+      "source": "ElevenLabs voice library (shared)",
+      "eleven_v4_verified": true,
+      "library_notice_days": 730
+    },
+    "dale": {
+      "display": "Dale Kittredge (also Pell, his Veyri copy)",
+      "also_voices": [
+        "Pell"
+      ],
+      "lines": 12,
+      "voice_id": "kSSJYNGo5Kev6qgwVloV",
+      "voice_name": "Mike - Multi Trade Expert",
+      "details": "male · middle_aged · American (light Northeastern)",
+      "why": "Blue-collar, believably gruff tradesman voice that fits a real postal worker and has enough warmth to push into Pell's eagerness.",
+      "library_name": "Mike - Multi Trade Expert",
+      "source": "ElevenLabs voice library (shared)",
+      "eleven_v4_verified": true,
+      "library_notice_days": 730
+    },
+    "agnes": {
+      "display": "Agnes Penhallow (echo; also plays the original Agnes)",
+      "also_voices": [
+        "Agnes Penhallow, original"
+      ],
+      "lines": 12,
+      "voice_id": "jVMsZEw3hfmEAe9OUUtS",
+      "voice_name": "Nan - Warm Vintage Storyteller",
+      "details": "female · old · American",
+      "why": "Crisp diction with a light theatrical lilt, a good match for the riddling, slightly uncanny echo and the grammar-correcting teacher.",
+      "library_name": "Nan - Warm Vintage Storyteller",
+      "source": "ElevenLabs voice library (shared)",
+      "eleven_v4_verified": true,
+      "library_notice_days": 730
+    },
+    "saren": {
+      "display": "Prefect Saren",
+      "also_voices": [],
+      "lines": 12,
+      "voice_id": "zWuETeFKPJFmK8TgAMRf",
+      "voice_name": "Brendan - English & Polite",
+      "details": "male · middle-aged · British",
+      "why": "Polite and educational with a posh-villain option, close to a courteous official who never shouts.",
+      "library_name": "Brendan - English & Polite",
+      "source": "ElevenLabs voice library (shared)",
+      "eleven_v4_verified": true,
+      "library_notice_days": 730
+    },
+    "wen": {
+      "display": "Dr. Lin Wen",
+      "also_voices": [],
+      "lines": 9,
+      "voice_id": "OtI9u7gjScKYR7rOqBX2",
+      "voice_name": "Christine - Deep, Real and Sincere",
+      "details": "female · middle_aged · en-chinese",
+      "why": "Deep, composed, Chinese-accented and mature, fitting a senior scientist who guards a secret with quiet confidence.",
+      "library_name": "Christine - Deep, Real & Sincere",
+      "source": "ElevenLabs voice library (shared)",
+      "eleven_v4_verified": true,
+      "library_notice_days": 30
+    },
+    "shaw": {
+      "display": "Dr. Evelyn Shaw",
+      "also_voices": [],
+      "lines": 9,
+      "voice_id": "lRGgBdmdfHYNiqPVpbiS",
+      "voice_name": "Gretchen",
+      "details": "female · American",
+      "why": "Raspy with sarcastic undertones, ideal for Shaw's barbs at officials and at Wen.",
+      "library_name": "Jarin - Sarcastic and Raspy",
+      "source": "ElevenLabs voice library (shared)",
+      "eleven_v4_verified": true,
+      "library_notice_days": 365
+    },
+    "rook": {
+      "display": "Special Agent Adrian Rook (copy; also plays the real Rook)",
+      "also_voices": [
+        "Rook's copy"
+      ],
+      "lines": 9,
+      "voice_id": "iPYqcpY8j8Ap4jUf28I3",
+      "voice_name": "Michael - Gruff and Serious",
+      "details": "male · middle_aged · American",
+      "why": "Husky, brooding and emotive, the more worn-down option that suits the tired real Rook and the copy's fear-driven betrayal.",
+      "library_name": "Michael - Gruff and Serious",
+      "source": "ElevenLabs voice library (shared)",
+      "eleven_v4_verified": true,
+      "library_notice_days": 730
+    },
+    "frank": {
+      "display": "Frank Mercer",
+      "also_voices": [],
+      "lines": 9,
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "voice_name": "Bill - Wise, Mature, Balanced",
+      "details": "male · old · American",
+      "why": "A friendly, comforting older American voice that holds up well for radio-log lines like his K7BLW calls.",
+      "library_name": "Bill - Wise, Mature, Balanced",
+      "source": "ElevenLabs premade voice",
+      "eleven_v4_verified": true
+    },
+    "ward": {
+      "display": "President Elena Ward",
+      "also_voices": [],
+      "lines": 5,
+      "voice_id": "lVpo6IOLjDX4LxkYRZyj",
+      "voice_name": "Deborah- Trustworthy, confident",
+      "details": "female · middle_aged · en-american",
+      "why": "Warm, authoritative and polished like a broadcast, a natural fit for a national address.",
+      "library_name": "Deborah - Trustworthy, confident",
+      "source": "ElevenLabs voice library (shared)",
+      "eleven_v4_verified": true,
+      "library_notice_days": 730
+    },
+    "operator": {
+      "display": "Thursday club operator",
+      "also_voices": [],
+      "lines": 5,
+      "voice_id": "yeV5pw6QxLLhU2SzG4vx",
+      "voice_name": "Paul - Friendly Midwestern Storyteller",
+      "details": "male · old (70s) · en-us-midwest",
+      "why": "Clear, warm voice of a man in his 70s, close in age to Frank's club friends.",
+      "library_name": "Paul - Friendly Midwestern Storyteller",
+      "source": "ElevenLabs voice library (shared)",
+      "eleven_v4_verified": true,
+      "library_notice_days": 730
+    },
+    "autorick": {
+      "display": "DJ AutoRick",
+      "also_voices": [],
+      "lines": 5,
+      "voice_id": "KLoixBflzS2a9rg6nT8x",
+      "voice_name": "Danny DJ - Radio Announcer Voice",
+      "details": "male · middle_aged · American",
+      "why": "Built for radio station automation, which is literally what AutoRick is; upbeat and generic in a way that suits a corporate replacement host.",
+      "library_name": "Danny DJ - Radio Announcer Voice",
+      "source": "ElevenLabs voice library (shared)",
+      "eleven_v4_verified": true,
+      "library_notice_days": 730
+    },
+    "choir": {
+      "display": "The Choir",
+      "also_voices": [],
+      "lines": 5,
+      "voice_id": "ksryVoNAGZT8GxWCTiVm",
+      "voice_name": "Elariel X - Epic Ethereal Queen",
+      "details": "female · middle-aged · British",
+      "why": "A regal, mythic, ethereal tone for a lighter, more choral-sounding Choir that layers well with effects.",
+      "library_name": "Elariel X - Epic Queen Ethereal",
+      "source": "ElevenLabs voice library (shared)",
+      "eleven_v4_verified": true,
+      "library_notice_days": 730
+    },
+    "carmen": {
+      "display": "Carmen Reyes",
+      "also_voices": [],
+      "lines": 5,
+      "voice_id": "XjJZDs8qBsxY4vx0TGuV",
+      "voice_name": "Vanessa - Friendly & Engaging",
+      "details": "female · middle_aged · Latin American in English",
+      "why": "An English voice with a natural Latin accent and an outgoing, talkative energy for the side of Carmen that runs the dinner table.",
+      "library_name": "Vanessa - Friendly & Engaging",
+      "source": "ElevenLabs voice library (shared)",
+      "eleven_v4_verified": true,
+      "library_notice_days": 730
+    },
+    "gus": {
+      "display": "Gus Albano",
+      "also_voices": [],
+      "lines": 4,
+      "voice_id": "bO5Ny9R2uMBrCDk66aEj",
+      "voice_name": "Kelvin Southern Cheerful Call Center Voice",
+      "details": "male · middle_aged · American",
+      "why": "A soft, cheerful, mildly funny American tenor for a small-town shopkeeper Gus with no accent. It fits \"Good evening. May I help you?\"",
+      "library_name": "Kelvin - Cheerful Call Center",
+      "source": "ElevenLabs voice library (shared)",
+      "eleven_v4_verified": true,
+      "library_notice_days": 730
+    },
+    "lyle": {
+      "display": "Lyle Boone (also plays Lyle's copy)",
+      "also_voices": [
+        "Lyle's copy"
+      ],
+      "lines": 4,
+      "voice_id": "CwhRBWXzGAHq8TQ4Fs17",
+      "voice_name": "Roger - Laid-Back, Casual, Resonant",
+      "details": "male · middle_aged · American",
+      "why": "An easygoing, resonant middle-aged American voice with enough polish to also sound like the well-behaved copy.",
+      "library_name": "Roger - Laid-Back, Casual, Resonant",
+      "source": "ElevenLabs premade voice",
+      "eleven_v4_verified": true
+    },
+    "general_cn": {
+      "display": "Chinese delegate",
+      "also_voices": [],
+      "lines": 3,
+      "voice_id": "RBUtdrDRjER5aScqHwAS",
+      "voice_name": "Junfeng - Confident & Calm",
+      "details": "male · Chinese-influenced English with a light British tone",
+      "why": "Calm and confident with formally learned English, which fits a general trained in diplomatic English.",
+      "library_name": "Junfeng",
+      "source": "ElevenLabs voice library (shared)",
+      "eleven_v4_verified": true,
+      "library_notice_days": 730
+    },
+    "tomas": {
+      "display": "Tomás Reyes",
+      "also_voices": [],
+      "lines": 3,
+      "voice_id": "KcCKZnyrGenSzoMrpu7I",
+      "voice_name": "HecBel18 English",
+      "details": "male · young · Mexican-American",
+      "why": "A young Mexican-American reviewer voice that already sounds like someone talking to an online audience.",
+      "library_name": "HecBel - Conversational ",
+      "source": "ElevenLabs voice library (shared)",
+      "eleven_v4_verified": true,
+      "library_notice_days": 730
+    },
+    "luis": {
+      "display": "Luis Reyes",
+      "also_voices": [],
+      "lines": 3,
+      "voice_id": "5sPGxVw5vqj7a08c5Xbw",
+      "voice_name": "Luis Carlos - Northern Mexican Accent",
+      "details": "male · middle_aged · Northern Mexican in English",
+      "why": "A real Mexican man speaking English with a northern Mexican accent, the most authentic accent match here, though he sounds a little younger than 67.",
+      "library_name": "Luis - Poetic, Soft-Spoken Artist",
+      "source": "ElevenLabs voice library (shared)",
+      "eleven_v4_verified": true,
+      "library_notice_days": 180
+    },
+    "general_us": {
+      "display": "American delegate",
+      "also_voices": [],
+      "lines": 2,
+      "voice_id": "IUG7kl2EzGm6iS3Zorj4",
+      "voice_name": "Kenton",
+      "details": "male · old · american",
+      "why": "An older, gravelly voice with weight and restraint that fits a veteran general weighing every word.",
+      "library_name": "Kenton",
+      "source": "ElevenLabs voice library (shared)",
+      "eleven_v4_verified": true,
+      "library_notice_days": 730
+    },
+    "mateo": {
+      "display": "Mateo Reyes",
+      "also_voices": [],
+      "lines": 2,
+      "voice_id": "pHTIXPU0D9wgfJsumeMt",
+      "voice_name": "Luis",
+      "details": "male · middle_aged · American with slight Mexican accent",
+      "why": "A middle-aged Latino man with a slight Mexican accent, right for a US-raised son of Mexican immigrant parents.",
+      "library_name": "Luis - Narrator",
+      "source": "ElevenLabs voice library (shared)",
+      "eleven_v4_verified": true,
+      "library_notice_days": 730
+    },
+    "rafa": {
+      "display": "Rafa Reyes",
+      "also_voices": [],
+      "lines": 1,
+      "voice_id": "PbznH31DjtgyM0idevI0",
+      "voice_name": "Sebastian",
+      "details": "male · middle_aged · US-born Latino (American)",
+      "why": "A low, smooth, personable US-born Latino voice for a softer, more introverted Rafa.",
+      "library_name": "Sebastian",
+      "source": "ElevenLabs voice library (shared)",
+      "eleven_v4_verified": true,
+      "library_notice_days": 180
+    },
+    "guard": {
+      "display": "Veyri attendant",
+      "also_voices": [],
+      "lines": 1,
+      "voice_id": "55AvudlJMfCwL9pocDVh",
+      "voice_name": "AGEIS-7 - AI Alignment == 10/10",
+      "details": "neutral · adult · British",
+      "why": "Eager to assist and slightly unreal, which is exactly how an alien attendant offering hold music should land.",
+      "library_name": "AGEIS-7 - AI Alignment == 10/10",
+      "source": "ElevenLabs voice library (shared)",
+      "eleven_v4_verified": true,
+      "library_notice_days": 730
+    }
   },
-  "nora": {
-   "display": "Nora Reyes (also voices her copy Iris)",
-   "also_voices": [
-    "Iris"
-   ],
-   "lines": 41,
-   "voice_id": "m8AHWg36LJTQWKmfeGVv",
-   "voice_name": "Sloane - Bold and Polished",
-   "details": "female \u00b7 American",
-   "why": "Closest match to the voice Ward had before: about 197 Hz against 184 Hz, with a similar pitch range and brightness. You liked that voice for Nora."
+  "confirmed": {
+    "date": "2026-11-20",
+    "by": "user, after listening to every voice sample",
+    "checks": "All 26 voice IDs exist; 24 shared library voices and 2 premade voices; every voice is verified for eleven_v4; each sample matches the clip heard during casting."
   },
-  "archivist": {
-   "display": "The Archivist (also her shore echo, Mrs. Penhallow)",
-   "also_voices": [],
-   "lines": 22,
-   "voice_id": "6HXfTcSnxaoT6uM4pTRP",
-   "voice_name": "Delphi - Transformational Narrator",
-   "details": "female \u00b7 middle-aged \u00b7 British",
-   "why": "A wise, quietly luminous oracle tone that gives her 900 years of weight and still sounds kind."
-  },
-  "helen": {
-   "display": "Helen Mercer",
-   "also_voices": [],
-   "lines": 17,
-   "voice_id": "5u41aNhyCU6hXOcjPPv0",
-   "voice_name": "Carol - Relatable, Real, Cool, Senior",
-   "details": "female \u00b7 old \u00b7 American (slight Midwestern)",
-   "why": "A smart, natural senior who sounds like she has lived a full life, so Helen comes across as an ordinary, grounded mom."
-  },
-  "calder": {
-   "display": "Sheriff June Calder",
-   "also_voices": [],
-   "lines": 17,
-   "voice_id": "wa4sQVgbDDzUDEzJwch3",
-   "voice_name": "Eryn - Strong Female Military Commander",
-   "details": "female \u00b7 middle_aged \u00b7 American",
-   "why": "Commanding and crisp, a good pick if Calder should sound more like the law and less like a neighbor when she pushes back on federal agents."
-  },
-  "dale": {
-   "display": "Dale Kittredge (also Pell, his Veyri copy)",
-   "also_voices": [
-    "Pell"
-   ],
-   "lines": 12,
-   "voice_id": "kSSJYNGo5Kev6qgwVloV",
-   "voice_name": "Mike - Multi Trade Expert",
-   "details": "male \u00b7 middle_aged \u00b7 American (light Northeastern)",
-   "why": "Blue-collar, believably gruff tradesman voice that fits a real postal worker and has enough warmth to push into Pell's eagerness."
-  },
-  "agnes": {
-   "display": "Agnes Penhallow (echo; also plays the original Agnes)",
-   "also_voices": [
-    "Agnes Penhallow, original"
-   ],
-   "lines": 12,
-   "voice_id": "jVMsZEw3hfmEAe9OUUtS",
-   "voice_name": "Nan - Warm Vintage Storyteller",
-   "details": "female \u00b7 old \u00b7 American",
-   "why": "Crisp diction with a light theatrical lilt, a good match for the riddling, slightly uncanny echo and the grammar-correcting teacher."
-  },
-  "saren": {
-   "display": "Prefect Saren",
-   "also_voices": [],
-   "lines": 12,
-   "voice_id": "zWuETeFKPJFmK8TgAMRf",
-   "voice_name": "Brendan - English & Polite",
-   "details": "male \u00b7 middle-aged \u00b7 British",
-   "why": "Polite and educational with a posh-villain option, close to a courteous official who never shouts."
-  },
-  "wen": {
-   "display": "Dr. Lin Wen",
-   "also_voices": [],
-   "lines": 9,
-   "voice_id": "OtI9u7gjScKYR7rOqBX2",
-   "voice_name": "Christine - Deep, Real and Sincere",
-   "details": "female \u00b7 middle_aged \u00b7 en-chinese",
-   "why": "Deep, composed, Chinese-accented and mature, fitting a senior scientist who guards a secret with quiet confidence."
-  },
-  "shaw": {
-   "display": "Dr. Evelyn Shaw",
-   "also_voices": [],
-   "lines": 9,
-   "voice_id": "lRGgBdmdfHYNiqPVpbiS",
-   "voice_name": "Gretchen",
-   "details": "female \u00b7 American",
-   "why": "Raspy with sarcastic undertones, ideal for Shaw's barbs at officials and at Wen."
-  },
-  "rook": {
-   "display": "Special Agent Adrian Rook (copy; also plays the real Rook)",
-   "also_voices": [
-    "Rook's copy"
-   ],
-   "lines": 9,
-   "voice_id": "iPYqcpY8j8Ap4jUf28I3",
-   "voice_name": "Michael - Gruff and Serious",
-   "details": "male \u00b7 middle_aged \u00b7 American",
-   "why": "Husky, brooding and emotive, the more worn-down option that suits the tired real Rook and the copy's fear-driven betrayal."
-  },
-  "frank": {
-   "display": "Frank Mercer",
-   "also_voices": [],
-   "lines": 9,
-   "voice_id": "pqHfZKP75CvOlQylNhV4",
-   "voice_name": "Bill - Wise, Mature, Balanced",
-   "details": "male \u00b7 old \u00b7 American",
-   "why": "A friendly, comforting older American voice that holds up well for radio-log lines like his K7BLW calls."
-  },
-  "ward": {
-   "display": "President Elena Ward",
-   "also_voices": [],
-   "lines": 5,
-   "voice_id": "lVpo6IOLjDX4LxkYRZyj",
-   "voice_name": "Deborah- Trustworthy, confident",
-   "details": "female \u00b7 middle_aged \u00b7 en-american",
-   "why": "Warm, authoritative and polished like a broadcast, a natural fit for a national address."
-  },
-  "operator": {
-   "display": "Thursday club operator",
-   "also_voices": [],
-   "lines": 5,
-   "voice_id": "yeV5pw6QxLLhU2SzG4vx",
-   "voice_name": "Paul - Friendly Midwestern Storyteller",
-   "details": "male \u00b7 old (70s) \u00b7 en-us-midwest",
-   "why": "Clear, warm voice of a man in his 70s, close in age to Frank's club friends."
-  },
-  "autorick": {
-   "display": "DJ AutoRick",
-   "also_voices": [],
-   "lines": 5,
-   "voice_id": "KLoixBflzS2a9rg6nT8x",
-   "voice_name": "Danny DJ - Radio Announcer Voice",
-   "details": "male \u00b7 middle_aged \u00b7 American",
-   "why": "Built for radio station automation, which is literally what AutoRick is; upbeat and generic in a way that suits a corporate replacement host."
-  },
-  "choir": {
-   "display": "The Choir",
-   "also_voices": [],
-   "lines": 5,
-   "voice_id": "ksryVoNAGZT8GxWCTiVm",
-   "voice_name": "Elariel X - Epic Ethereal Queen",
-   "details": "female \u00b7 middle-aged \u00b7 British",
-   "why": "A regal, mythic, ethereal tone for a lighter, more choral-sounding Choir that layers well with effects."
-  },
-  "carmen": {
-   "display": "Carmen Reyes",
-   "also_voices": [],
-   "lines": 5,
-   "voice_id": "XjJZDs8qBsxY4vx0TGuV",
-   "voice_name": "Vanessa - Friendly & Engaging",
-   "details": "female \u00b7 middle_aged \u00b7 Latin American in English",
-   "why": "An English voice with a natural Latin accent and an outgoing, talkative energy for the side of Carmen that runs the dinner table."
-  },
-  "gus": {
-   "display": "Gus Albano",
-   "also_voices": [],
-   "lines": 4,
-   "voice_id": "bO5Ny9R2uMBrCDk66aEj",
-   "voice_name": "Kelvin Southern Cheerful Call Center Voice",
-   "details": "male \u00b7 middle_aged \u00b7 American",
-   "why": "A soft, cheerful, mildly funny American tenor for a small-town shopkeeper Gus with no accent. It fits \"Good evening. May I help you?\""
-  },
-  "lyle": {
-   "display": "Lyle Boone (also plays Lyle's copy)",
-   "also_voices": [
-    "Lyle's copy"
-   ],
-   "lines": 4,
-   "voice_id": "CwhRBWXzGAHq8TQ4Fs17",
-   "voice_name": "Roger - Laid-Back, Casual, Resonant",
-   "details": "male \u00b7 middle_aged \u00b7 American",
-   "why": "An easygoing, resonant middle-aged American voice with enough polish to also sound like the well-behaved copy."
-  },
-  "general_cn": {
-   "display": "Chinese delegate",
-   "also_voices": [],
-   "lines": 3,
-   "voice_id": "RBUtdrDRjER5aScqHwAS",
-   "voice_name": "Junfeng - Confident & Calm",
-   "details": "male \u00b7 Chinese-influenced English with a light British tone",
-   "why": "Calm and confident with formally learned English, which fits a general trained in diplomatic English."
-  },
-  "tomas": {
-   "display": "Tom\u00e1s Reyes",
-   "also_voices": [],
-   "lines": 3,
-   "voice_id": "KcCKZnyrGenSzoMrpu7I",
-   "voice_name": "HecBel18 English",
-   "details": "male \u00b7 young \u00b7 Mexican-American",
-   "why": "A young Mexican-American reviewer voice that already sounds like someone talking to an online audience."
-  },
-  "luis": {
-   "display": "Luis Reyes",
-   "also_voices": [],
-   "lines": 3,
-   "voice_id": "5sPGxVw5vqj7a08c5Xbw",
-   "voice_name": "Luis Carlos - Northern Mexican Accent",
-   "details": "male \u00b7 middle_aged \u00b7 Northern Mexican in English",
-   "why": "A real Mexican man speaking English with a northern Mexican accent, the most authentic accent match here, though he sounds a little younger than 67."
-  },
-  "general_us": {
-   "display": "American delegate",
-   "also_voices": [],
-   "lines": 2,
-   "voice_id": "IUG7kl2EzGm6iS3Zorj4",
-   "voice_name": "Kenton",
-   "details": "male \u00b7 old \u00b7 american",
-   "why": "An older, gravelly voice with weight and restraint that fits a veteran general weighing every word."
-  },
-  "mateo": {
-   "display": "Mateo Reyes",
-   "also_voices": [],
-   "lines": 2,
-   "voice_id": "pHTIXPU0D9wgfJsumeMt",
-   "voice_name": "Luis",
-   "details": "male \u00b7 middle_aged \u00b7 American with slight Mexican accent",
-   "why": "A middle-aged Latino man with a slight Mexican accent, right for a US-raised son of Mexican immigrant parents."
-  },
-  "rafa": {
-   "display": "Rafa Reyes",
-   "also_voices": [],
-   "lines": 1,
-   "voice_id": "PbznH31DjtgyM0idevI0",
-   "voice_name": "Sebastian",
-   "details": "male \u00b7 middle_aged \u00b7 US-born Latino (American)",
-   "why": "A low, smooth, personable US-born Latino voice for a softer, more introverted Rafa."
-  },
-  "guard": {
-   "display": "Veyri attendant",
-   "also_voices": [],
-   "lines": 1,
-   "voice_id": "55AvudlJMfCwL9pocDVh",
-   "voice_name": "AGEIS-7 - AI Alignment == 10/10",
-   "details": "neutral \u00b7 adult \u00b7 British",
-   "why": "Eager to assist and slightly unreal, which is exactly how an alien attendant offering hold music should land."
-  }
- }
+  "before_recording": [
+    "Add the 24 shared library voices to the ElevenLabs account (24 of the 29 free voice slots on the Creator plan). Premade Bill and Roger need no slot.",
+    "Record soon after adding: Christine (Wen) has a 30-day creator notice period, Carol (Helen) 90 days, Luis (Luis Reyes) and Sebastian (Rafa) 180 days.",
+    "Use model eleven_v4 for every line, including narration, and record each copy with its original's voice."
+  ]
 }
