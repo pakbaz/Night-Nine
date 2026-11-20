@@ -355,8 +355,8 @@ func _build_ui() -> void:
 	cut_skip.hide()
 	storybook = STORYBOOK.new()
 	root.add_child(storybook)
-	# Steve narrates each caption as it appears; the score dips under his voice.
-	storybook.line_shown.connect(func(line: Dictionary):
+	# Steve narrates the captions one at a time; the score dips under his voice.
+	storybook.narrate.connect(func(line: Dictionary):
 		var clip: String = line.get("narration", "")
 		if not clip.is_empty() and ResourceLoader.exists(clip):
 			tape_playback = false
@@ -725,6 +725,8 @@ func _enter_with_story(play_intro: bool) -> void:
 	for connection: Dictionary in storybook.finished.get_connections():
 		storybook.finished.disconnect(connection.callable)
 	storybook.finished.connect(func(): _load_stage(true), CONNECT_ONE_SHOT)
+	# New game and Load from the in-book menu arrive here with the audio still paused.
+	_pause_audio(false)
 	storybook.play(book, score)
 
 func _untouched_scene() -> bool:

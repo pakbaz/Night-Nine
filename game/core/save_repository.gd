@@ -118,6 +118,8 @@ func _decode(text: String) -> Dictionary:
 	if parser.parse(payload) != OK:
 		return {"ok": false, "error": "Invalid save payload."}
 	var candidate: Variant = parser.data
+	if not candidate is Dictionary:
+		return {"ok": false, "error": "Save payload must be an object."}
 	var issue: String = validator.call(candidate)
 	if not issue.is_empty():
 		return {"ok": false, "error": issue}

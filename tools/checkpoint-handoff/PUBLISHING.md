@@ -1,6 +1,6 @@
 # Publish Night Nine on GitHub Pages
 
-Night Nine is browser-only. No macOS or Windows installer is produced. Previous desktop tags and local archives remain historical backups.
+Night Nine is a web game, published on GitHub Pages. There are no installers.
 
 ## Build and preview
 
@@ -30,7 +30,7 @@ Clearing site data, private browsing and storage eviction can remove saves and c
 
 ## Deploy
 
-The `Publish Night Nine to GitHub Pages` workflow is manual. It checks the source, exports the Web build and uploads only the static website, not the native packages or editable masters. The builder refuses a site at or above the 1 GiB Pages size limit.
+The `Publish Night Nine to GitHub Pages` workflow is manual. It checks the source, exports the Web build and uploads only the static website and not the editable masters. The builder refuses a site at or above the 1 GiB Pages size limit.
 
 In the repository, select **Settings → Pages → Build and deployment → GitHub Actions**. Then run the Pages workflow for the desired committed revision.
 

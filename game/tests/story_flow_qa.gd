@@ -9,6 +9,7 @@ var shots: Array[String] = []
 var timing := []
 var narrated := 0
 var silent_lines: Array = []
+var fates: Array = []
 ## Frames longer than a quarter second, with where the music was. A throttled or
 ## background window shows up here, so a timing failure can be told apart from a bug.
 var hitches: Array = []
@@ -111,6 +112,7 @@ func watch_book(prefix: String, natural_panels: int) -> void:
 				var own: float = game.storybook._time_of(float(panels[i].bar))
 				check(absf(game.score.position() - own) < .25, prefix + " panel " + str(i) + " turns on its own bar (" + str(snappedf(game.score.position() - own, .01)) + " s off)")
 		else:
+			check(game.storybook.index == i - 1, prefix + " is on panel " + str(i - 1) + " when the QA turns the page")
 			game.storybook.next()
 			await until(func(): return game.storybook.index == i, 3.0)
 		if i + 1 == panels.size():
@@ -121,6 +123,8 @@ func watch_book(prefix: String, natural_panels: int) -> void:
 			await wait(4.8)
 		await capture("%s-%02d" % [prefix, i + 1])
 	await until(func(): return not game.storybook.visible, 6.0)
+	for entry: Dictionary in game.storybook.narration_log:
+		fates.append(entry.merged({"book": prefix}))
 
 func _run() -> void:
 	report_root = OS.get_environment("NIGHT_NINE_QA_DIR")
@@ -132,12 +136,14 @@ func _run() -> void:
 	game.auto_dialogue = false
 	await wait(.5)
 	await capture("00-title")
-	game.storybook.line_shown.connect(func(line: Dictionary):
-		await get_tree().process_frame
+	# The QA drives the game by calls; real clicks and keys must not turn pages.
+	get_viewport().gui_disable_input = true
+	# Connected after the game's own handler, so the clip must already be playing.
+	game.storybook.narrate.connect(func(line: Dictionary):
 		if game.voice.playing and str(game.voice.stream.resource_path) == str(line.get("narration", "")):
 			narrated += 1
 		else:
-			silent_lines.append({"text": line.text, "narration": line.get("narration", ""), "voice_playing": game.voice.playing, "voice_stream": str(game.voice.stream.resource_path) if game.voice.stream != null else "", "music_seconds": snappedf(game.score.position(), .01), "book_index": game.storybook.index}))
+			silent_lines.append({"text": line.text, "narration": line.get("narration", ""), "music_seconds": snappedf(game.score.position(), .01), "book_index": game.storybook.index}))
 	game._new_game()
 	await get_tree().process_frame
 	check(game.storybook.visible and game.campaign.current().id == "p_bay", "New game opens with the backstory, before the bay")
@@ -223,8 +229,10 @@ func _run() -> void:
 	await finish_dialogue()
 	await capture("18-one-year")
 	check(narrated >= 20 and silent_lines.is_empty(), "Steve narrates every caption he reaches (" + str(narrated) + " heard)")
+	var unexplained := fates.filter(func(f: Dictionary): return f.fate in ["superseded", "panel_ended", "book_closed"] and longest_frame < .5)
+	check(unexplained.is_empty(), "A caption goes unvoiced only after a page turn or a stall (" + str(unexplained.size()) + " without one)")
 	var file := FileAccess.open(report_root.path_join("story-flow.json"), FileAccess.WRITE)
-	file.store_string(JSON.stringify({"checks": checks, "failures": failures, "timing": timing, "silent_lines": silent_lines, "longest_frame": snappedf(longest_frame, .001), "hitches": hitches, "screenshots": shots}, "  ") + "\n")
+	file.store_string(JSON.stringify({"checks": checks, "failures": failures, "timing": timing, "silent_lines": silent_lines, "narration": fates, "longest_frame": snappedf(longest_frame, .001), "hitches": hitches, "screenshots": shots}, "  ") + "\n")
 	file.close()
 	print("Story flow: ", checks, " checks, ", failures.size(), " failures")
 	await game.drain_audio()

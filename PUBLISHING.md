@@ -1,6 +1,6 @@
 # Publish Night Nine on GitHub Pages
 
-Night Nine is browser-only. No macOS or Windows installer is produced. Previous desktop tags and local archives remain historical backups.
+Night Nine is a web game, published on GitHub Pages. There are no installers.
 
 ## Build and preview
 
@@ -30,7 +30,11 @@ Clearing site data, private browsing and storage eviction can remove saves and c
 
 ## Deploy
 
-The `Publish Night Nine to GitHub Pages` workflow is manual. It checks the source, exports the Web build and uploads only the static website, not the native packages or editable masters. The builder refuses a site at or above the 1 GiB Pages size limit.
+The `Publish Night Nine to GitHub Pages` workflow is manual. It checks the source, exports the Web build and uploads only the static website and not the editable masters. The builder refuses a site at or above the 1 GiB Pages size limit.
+
+The current test build is about **712 MiB total**. Loading the playable game uses about **377 MiB** on a cold visit. GitHub documents a **soft** limit of **100 GB of Pages bandwidth per month**, not a guaranteed allowance. That is roughly **270 cold game loads per month** if no one downloads the optional source archive, or about **144** if each visitor also downloads its roughly 334 MiB compact source ZIP. Browser caching can reduce repeat traffic after it has cached the game pack, but the browser check could not confirm offline behavior in this build. Treat these figures as planning estimates, not a traffic guarantee.
+
+Downloads from the website, including the optional `source.zip`, count as Pages traffic. Cloning the public repository or downloading an archive directly from its GitHub repository page uses GitHub's repository service rather than the Pages site's bandwidth. It still transfers a sizable source tree. Put the game pack on a CDN or another host if expected traffic approaches the Pages soft limit.
 
 In the repository, select **Settings → Pages → Build and deployment → GitHub Actions**. Then run the Pages workflow for the desired committed revision.
 

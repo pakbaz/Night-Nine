@@ -113,8 +113,9 @@ func play_story(file: String, bar: float, keep_playing: bool) -> bool:
 	if track.is_empty():
 		return false
 	var start := bar_time(track,bar)
-	if keep_playing and current_file == file and active_index >= 0:
-		if position() < start - .25:
+	if current_file == file and active_index >= 0:
+		# Carry on into the book's first bar, or bring the recording back to it.
+		if not keep_playing or position() < start - .25:
 			seek(start)
 		return true
 	return select_track(track,"story","",start)

@@ -70,29 +70,6 @@ class ReleasePackagingTests(unittest.TestCase):
                         self.assertTrue("game/" + resource[6:] in files, resource)
 
 
-class WindowsPackagingTests(unittest.TestCase):
-    def test_rebuild_uses_one_current_copy_of_each_notice(self):
-        with tempfile.TemporaryDirectory() as directory:
-            root = Path(directory)
-            for folder in ("tools", "game/content", "builds/windows"):
-                (root / folder).mkdir(parents=True)
-            for name in ("package-windows.py", "desktop_notices.py"):
-                shutil.copyfile(ROOT / "tools" / name, root / "tools" / name)
-            (root / "game/project.godot").write_text('config/version="0.9.2"\n')
-            (root / "game/content/voice-manifest.json").write_text('{"takes": {}}')
-            for name in ("LICENSE", "MEDIA.md"):
-                (root / name).write_text("current " + name)
-            (root / "game/LICENSES.txt").write_text("current dependency notices")
-            (root / "builds/windows/NightNine.exe").write_bytes(b"packaging fixture")
-            for name in ("LICENSE", "MEDIA.md", "LICENSES.txt", "README.txt", "SOURCE.txt"):
-                (root / "builds/windows" / name).write_text("previous release")
-            subprocess.run([sys.executable, root / "tools/package-windows.py"],
-                           check=True, capture_output=True)
-            with zipfile.ZipFile(root / "builds/NightNine-0.9.2-Windows-x64.zip") as archive:
-                self.assertEqual(len(archive.namelist()), len(set(archive.namelist())))
-                self.assertIn(b"NightNine-0.9.2-source.zip", archive.read("NightNine/SOURCE.txt"))
-                self.assertEqual(archive.read("NightNine/LICENSES.txt"), b"current dependency notices")
-
 
 if __name__ == "__main__":
     unittest.main()

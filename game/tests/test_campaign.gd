@@ -201,6 +201,9 @@ func _initialize() -> void:
 	envelope.payload = JSON.stringify(bad_state)
 	envelope.sha256 = str(envelope.payload).sha256_text()
 	check(not saves.import_slot("imported", JSON.stringify(envelope)), "Reject invalid campaign state even with a valid backup checksum")
+	envelope.payload = "null"
+	envelope.sha256 = str(envelope.payload).sha256_text()
+	check(not saves.import_slot("imported", JSON.stringify(envelope)), "Reject a backup whose valid JSON payload is not an object")
 	check(not saves.import_slot("imported", "{broken"), "Reject malformed backup JSON")
 	check(not saves.import_slot("imported", "x".repeat(NightSaves.MAX_BYTES + 1)), "Reject an oversized imported backup")
 	check(FileAccess.get_file_as_string(directory.path_join("imported.json")) == original_import, "Rejected imports preserve the existing save")

@@ -5,10 +5,20 @@ signal finished
 signal line_shown(line: Dictionary)
 ## The player turned the page or skipped, so any narration in progress should stop.
 signal page_turned
+## Start this caption's narration now. Sent one at a time, never over a clip that is still playing.
+signal narrate(line: Dictionary)
 
 const CROSSFADE := 1.25
 const CAPTION_IN := .7
 const CLOSE := 1.4
+## A short breath between two narrated captions.
+const NARRATION_GAP := .1
+## Book-clock time when the narration in progress ends. Voice and music pause together, so this survives pauses.
+var narration_until := -INF
+## The newest caption still waiting for the narrator.
+var waiting_line: Dictionary = {}
+## What happened to each caption's narration in this book, for QA.
+var narration_log: Array[Dictionary] = []
 var book: Dictionary = {}
 var score: Node
 var track: Dictionary = {}
@@ -140,6 +150,9 @@ func play(story: Dictionary, music: Node) -> void:
 		picture.modulate.a = 0.0
 		picture.texture = null
 	_clear_captions()
+	narration_until = -INF
+	waiting_line = {}
+	narration_log.clear()
 	heading.text = str(book.get("title", ""))
 	var cue: Dictionary = book.get("music", {})
 	music_driven = score != null and score.play_story(str(cue.get("file", "")), float(cue.get("bar", 0)), bool(cue.get("continue", false)))
@@ -163,21 +176,27 @@ func now() -> float:
 	return fallback_clock
 
 func next() -> void:
-	if not visible or closing >= 0.0:
+	# A click beside the pause menu must not turn the page underneath it.
+	if not visible or closing >= 0.0 or paused:
 		return
 	if index + 1 >= panels.size():
 		skip()
 		return
 	var target := _time_of(float(panels[index + 1].bar))
-	page_turned.emit()
+	_turn_page()
 	fallback_clock = target
 	if music_driven:
 		score.seek(target)
 
 func skip() -> void:
-	if visible and closing < 0.0:
-		page_turned.emit()
+	if visible and closing < 0.0 and not paused:
+		_turn_page()
 		closing = 0.0
+
+func _turn_page() -> void:
+	_drop_waiting("page_turned")
+	narration_until = -INF
+	page_turned.emit()
 
 ## Close without continuing the story, when a save is loaded over it.
 func cancel() -> void:
@@ -208,6 +227,7 @@ func _process(delta: float) -> void:
 		return
 	var t := now()
 	if t >= end_time:
+		_drop_waiting("book_closed")
 		closing = 0.0
 		return
 	veil.color.a = maxf(0.0, veil.color.a - delta / .9)
@@ -240,6 +260,7 @@ func _enter(panel_index: int) -> void:
 	layer_alpha[front] = 0.0
 	# The new picture fades in above the old one.
 	picture.get_parent().move_child(picture, -1)
+	_drop_waiting("panel_ended")
 	_clear_captions()
 	for line: Dictionary in panel.get("lines", []):
 		var caption := Label.new()
@@ -290,8 +311,24 @@ func _update_captions(t: float, delta: float) -> void:
 		var caption := captions[i]
 		if t >= caption_times[i]:
 			if caption.modulate.a == 0.0:
-				line_shown.emit(caption.get_meta("line"))
+				var line: Dictionary = caption.get_meta("line")
+				line_shown.emit(line)
+				# Newest wins: a caption still waiting when a newer one appears stays silent.
+				_drop_waiting("superseded")
+				waiting_line = line
 			caption.modulate.a = minf(1.0, caption.modulate.a + delta / CAPTION_IN + .0001)
+	# Never start a clip over one that is still playing; after a stall, the line starts a little late instead of cutting the last one.
+	if not waiting_line.is_empty() and t >= narration_until:
+		var due := waiting_line
+		waiting_line = {}
+		narration_until = t + float(due.get("seconds", 0.0)) + NARRATION_GAP
+		narration_log.append({"text": str(due.text), "fate": "narrated", "late": snappedf(t - _time_of(float(due.bar)), .001)})
+		narrate.emit(due)
+
+func _drop_waiting(fate: String) -> void:
+	if not waiting_line.is_empty():
+		narration_log.append({"text": str(waiting_line.text), "fate": fate})
+		waiting_line = {}
 
 func _clear_captions() -> void:
 	for caption: Label in captions:
