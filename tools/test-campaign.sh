@@ -45,7 +45,7 @@ if [[ "${1:-}" == "--render" ]]; then
   NIGHT_NINE_SAVE_DIR="$NIGHT_NINE_QA_DIR/prologue-save" NIGHT_NINE_QA_DIR="$NIGHT_NINE_QA_DIR/prologue" bash "$PROJECT_ROOT/tools/godot.sh" "${AUDIO_ARGUMENTS[@]}" --quit-after 3600 --log-file "$PROJECT_ROOT/tmp/qa/illustrated-prologue.log" -- --illustrated-prologue-qa
   python3 "$PROJECT_ROOT/tools/check-log.py" "$PROJECT_ROOT/tmp/qa/illustrated-prologue.log"
   python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$NIGHT_NINE_QA_DIR/prologue/prologue-gameplay.json" 128
-  NIGHT_NINE_SAVE_DIR="$NIGHT_NINE_QA_DIR/story-save" NIGHT_NINE_QA_DIR="$NIGHT_NINE_QA_DIR/story" bash "$PROJECT_ROOT/tools/godot.sh" "${AUDIO_ARGUMENTS[@]}" --quit-after 60000 --log-file "$PROJECT_ROOT/tmp/qa/story-flow.log" -- --story-qa
+  NIGHT_NINE_QA_MINIMIZE=1 NIGHT_NINE_SAVE_DIR="$NIGHT_NINE_QA_DIR/story-save" NIGHT_NINE_QA_DIR="$NIGHT_NINE_QA_DIR/story" bash "$PROJECT_ROOT/tools/godot.sh" "${AUDIO_ARGUMENTS[@]}" --log-file "$PROJECT_ROOT/tmp/qa/story-flow.log" -- --story-qa
   python3 "$PROJECT_ROOT/tools/check-log.py" "$PROJECT_ROOT/tmp/qa/story-flow.log"
   python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$NIGHT_NINE_QA_DIR/story/story-flow.json" 70
   NIGHT_NINE_SAVE_DIR="$NIGHT_NINE_QA_DIR/tape-save" NIGHT_NINE_QA_DIR="$NIGHT_NINE_QA_DIR/tape" bash "$PROJECT_ROOT/tools/godot.sh" "${AUDIO_ARGUMENTS[@]}" --quit-after 1800 --log-file "$PROJECT_ROOT/tmp/qa/tape-render.log" -- --tape-qa 2>&1 | tee "$PROJECT_ROOT/tmp/qa/tape-render-console.log"

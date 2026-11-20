@@ -16,6 +16,10 @@ var hitches: Array = []
 var longest_frame := 0.0
 
 func _ready() -> void:
+	# Keep the test window out of the way so it is not closed by accident; the
+	# screenshots force a render, so they work while minimized.
+	if not OS.get_environment("NIGHT_NINE_QA_MINIMIZE").is_empty():
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_MINIMIZED)
 	_run.call_deferred()
 
 func _process(delta: float) -> void:
@@ -133,6 +137,14 @@ func _run() -> void:
 		get_tree().quit(2)
 		return
 	DirAccess.make_dir_recursive_absolute(report_root)
+	# A wall-clock limit, not a frame count: a covered window can run thousands of
+	# frames a second and would hit a frame cap long before the story ends.
+	get_tree().create_timer(900.0, true, false, true).timeout.connect(func():
+		failures.append("Story flow timed out after 15 minutes")
+		var report := FileAccess.open(report_root.path_join("story-flow.json"), FileAccess.WRITE)
+		report.store_string(JSON.stringify({"checks": checks, "failures": failures, "narration": fates, "hitches": hitches}, "  ") + "\n")
+		report.close()
+		get_tree().quit(3))
 	game.auto_dialogue = false
 	await wait(.5)
 	await capture("00-title")
