@@ -1,0 +1,176 @@
+{
+ "saved": "2026-11-20",
+ "model": "eleven_v4",
+ "source": "https://claude.ai/artifact/3eLToUPan2qN8SXtDex4cx",
+ "roles": {
+  "steve": {
+   "display": "Steve Mercer (also voices his copy Stephen)",
+   "also_voices": [
+    "stephen"
+   ],
+   "voice_id": "vveagfomyMCJLZsOPRP2",
+   "voice_name": "Jonah Vale"
+  },
+  "nora": {
+   "display": "Nora Reyes (also voices her copy Iris)",
+   "also_voices": [
+    "iris"
+   ],
+   "voice_id": null,
+   "voice_name": null,
+   "note": "Wants the current in-game voice of President Ward (Higgsfield preset 'Sloane') or something close. Not yet cast."
+  },
+  "archivist": {
+   "display": "The Archivist (also her shore echo, Mrs. Penhallow)",
+   "also_voices": [],
+   "voice_id": "6HXfTcSnxaoT6uM4pTRP",
+   "voice_name": "Delphi - Transformational Narrator"
+  },
+  "helen": {
+   "display": "Helen Mercer",
+   "also_voices": [],
+   "voice_id": "5u41aNhyCU6hXOcjPPv0",
+   "voice_name": "Carol - Relatable, Real, Cool, Senior"
+  },
+  "calder": {
+   "display": "Sheriff June Calder",
+   "also_voices": [],
+   "voice_id": "wa4sQVgbDDzUDEzJwch3",
+   "voice_name": "Eryn - Strong Female Military Commander"
+  },
+  "dale": {
+   "display": "Dale Kittredge (also Pell, his Veyri copy)",
+   "also_voices": [
+    "pell"
+   ],
+   "voice_id": "kSSJYNGo5Kev6qgwVloV",
+   "voice_name": "Mike - Multi Trade Expert"
+  },
+  "agnes": {
+   "display": "Agnes Penhallow (echo; also plays the original Agnes)",
+   "also_voices": [
+    "agnes_original"
+   ],
+   "voice_id": "jVMsZEw3hfmEAe9OUUtS",
+   "voice_name": "Nan - Warm Vintage Storyteller"
+  },
+  "saren": {
+   "display": "Prefect Saren",
+   "also_voices": [],
+   "voice_id": "zWuETeFKPJFmK8TgAMRf",
+   "voice_name": "Brendan - English & Polite"
+  },
+  "wen": {
+   "display": "Dr. Lin Wen",
+   "also_voices": [],
+   "voice_id": "OtI9u7gjScKYR7rOqBX2",
+   "voice_name": "Christine - Deep, Real and Sincere"
+  },
+  "shaw": {
+   "display": "Dr. Evelyn Shaw",
+   "also_voices": [],
+   "voice_id": "lRGgBdmdfHYNiqPVpbiS",
+   "voice_name": "Gretchen"
+  },
+  "rook": {
+   "display": "Special Agent Adrian Rook (copy; also plays the real Rook)",
+   "also_voices": [
+    "rook_copy"
+   ],
+   "voice_id": "iPYqcpY8j8Ap4jUf28I3",
+   "voice_name": "Michael - Gruff and Serious"
+  },
+  "frank": {
+   "display": "Frank Mercer",
+   "also_voices": [],
+   "voice_id": "pqHfZKP75CvOlQylNhV4",
+   "voice_name": "Bill - Wise, Mature, Balanced"
+  },
+  "ward": {
+   "display": "President Elena Ward",
+   "also_voices": [],
+   "voice_id": "lVpo6IOLjDX4LxkYRZyj",
+   "voice_name": "Deborah- Trustworthy, confident"
+  },
+  "operator": {
+   "display": "Thursday club operator",
+   "also_voices": [],
+   "voice_id": "yeV5pw6QxLLhU2SzG4vx",
+   "voice_name": "Paul - Friendly Midwestern Storyteller"
+  },
+  "autorick": {
+   "display": "DJ AutoRick",
+   "also_voices": [],
+   "voice_id": "KLoixBflzS2a9rg6nT8x",
+   "voice_name": "Danny DJ - Radio Announcer Voice"
+  },
+  "choir": {
+   "display": "The Choir",
+   "also_voices": [],
+   "voice_id": "ksryVoNAGZT8GxWCTiVm",
+   "voice_name": "Elariel X - Epic Ethereal Queen"
+  },
+  "carmen": {
+   "display": "Carmen Reyes",
+   "also_voices": [],
+   "voice_id": "XjJZDs8qBsxY4vx0TGuV",
+   "voice_name": "Vanessa - Friendly & Engaging"
+  },
+  "gus": {
+   "display": "Gus Albano",
+   "also_voices": [],
+   "voice_id": "bO5Ny9R2uMBrCDk66aEj",
+   "voice_name": "Kelvin Southern Cheerful Call Center Voice"
+  },
+  "lyle": {
+   "display": "Lyle Boone (also plays Lyle's copy)",
+   "also_voices": [
+    "lyle_copy"
+   ],
+   "voice_id": "CwhRBWXzGAHq8TQ4Fs17",
+   "voice_name": "Roger - Laid-Back, Casual, Resonant"
+  },
+  "general_cn": {
+   "display": "Chinese delegate",
+   "also_voices": [],
+   "voice_id": "RBUtdrDRjER5aScqHwAS",
+   "voice_name": "Junfeng - Confident & Calm"
+  },
+  "tomas": {
+   "display": "Tom\u00e1s Reyes",
+   "also_voices": [],
+   "voice_id": "KcCKZnyrGenSzoMrpu7I",
+   "voice_name": "HecBel18 English"
+  },
+  "luis": {
+   "display": "Luis Reyes",
+   "also_voices": [],
+   "voice_id": "5sPGxVw5vqj7a08c5Xbw",
+   "voice_name": "Luis Carlos - Northern Mexican Accent"
+  },
+  "general_us": {
+   "display": "American delegate",
+   "also_voices": [],
+   "voice_id": "IUG7kl2EzGm6iS3Zorj4",
+   "voice_name": "Kenton"
+  },
+  "mateo": {
+   "display": "Mateo Reyes",
+   "also_voices": [],
+   "voice_id": "pHTIXPU0D9wgfJsumeMt",
+   "voice_name": "Luis"
+  },
+  "rafa": {
+   "display": "Rafa Reyes",
+   "also_voices": [],
+   "voice_id": "PbznH31DjtgyM0idevI0",
+   "voice_name": "Sebastian"
+  },
+  "guard": {
+   "display": "Veyri attendant",
+   "also_voices": [],
+   "voice_id": "55AvudlJMfCwL9pocDVh",
+   "voice_name": "AGEIS-7 - AI Alignment == 10/10"
+  }
+ }
+}
