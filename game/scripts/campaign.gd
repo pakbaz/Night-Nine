@@ -689,8 +689,12 @@ func _show_credits_page(notices: bool) -> void:
 		credits_body.text=FileAccess.get_file_as_string("res://LICENSES.txt")
 	else:
 		var full_credits := PackedStringArray()
-		for row: Array in CLOSING_CREDITS.ROLES:
-			full_credits.append("[b]%s[/b]\n%s" % [row[0],row[1]])
+		for page: int in CLOSING_CREDITS.PAGES.size():
+			if not CLOSING_CREDITS.PAGE_TITLES[page].is_empty():
+				full_credits.append("[b]%s[/b]" % CLOSING_CREDITS.PAGE_TITLES[page])
+			for role_index: int in CLOSING_CREDITS.PAGES[page]:
+				var row: Array = CLOSING_CREDITS.ROLES[role_index]
+				full_credits.append("[b]%s[/b]\n%s" % [row[0],row[1]])
 		credits_body.text="\n\n".join(full_credits)
 	credit_list.visible=notices or credit_list_open
 	credit_reel.visible=not credit_list.visible

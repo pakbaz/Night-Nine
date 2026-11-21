@@ -157,6 +157,10 @@ class ReleasePackagingTests(unittest.TestCase):
         self.assertEqual(meta["scenes"], 34)
         self.assertFalse(".github/workflows/pages.yml" in files,
                          "Checkpoints must not recreate the retired hosting workflow.")
+        splash = re.search(r'^boot_splash/image="res://([^"]+)"',
+                           read_entry(files, "game/project.godot"), re.M)
+        self.assertIsNotNone(splash, "Keep the game's branded boot splash.")
+        self.assertIn("game/" + splash.group(1), files)
         for name in ("game/content/storybook.json", "game/ui/storybook.gd", "game/ui/title_card.gd"):
             self.assertTrue(name in files, name)
         for name in files:

@@ -212,6 +212,7 @@ def public_control_files(files, stage, all_scenes):
     files["game/export_presets.cfg"] = preset.encode()
     for name in [
         "icon.svg",
+        "icon.png",
         "default_bus_layout.tres",
         "scenes/campaign.tscn",
         "core/campaign_state.gd",

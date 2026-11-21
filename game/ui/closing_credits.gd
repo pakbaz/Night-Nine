@@ -12,8 +12,12 @@ const ROLES := [
 	["Game hosting","Cloudflare Pages"],
 	["Code hosting","GitHub"],
 	["Deployment, verification, testing and game debugging","GitHub Copilot Fusion"],
+	["Built using","Godot Engine for Browsers"],
 ]
-const CARD_START := [0.0,6.7,12.9,18.9,25.2,31.4,37.6,43.8,50.0]
+const PAGES := [[0],[9],[1,2,3,4,5],[7,8,6]]
+const PAGE_TITLES := ["","","AI credits","Code, deployment and hosting"]
+const CARD_START := [0.0,6.7,12.9,37.6]
+const OPENING_ART_START := [0.0,6.7,12.9,18.9,25.2,31.4,37.6,43.8,50.0]
 const END := 56.4
 const OPENING_ART := ["rooms/bay.png","campaign/rooms/c5_station.webp","campaign/rooms/c3_archive.webp","rooms/veyr.png","campaign/rooms/c1_pier.webp","rooms/meeting.png","rooms/meeting-exterior.png","rooms/bay-underlight.png","rooms/veyr-recorder.png"]
 const ENDING_ART := ["campaign/rewards/home-at-last.webp","campaign/rewards/family-radio.webp","campaign/rewards/bellwether-together.webp"]
@@ -25,8 +29,7 @@ var at_ending := false
 var landscape: TextureRect
 var wash: TextureRect
 var names: VBoxContainer
-var role: Label
-var person: Label
+var serif: SystemFont
 var running := false
 var motion := true
 
@@ -59,19 +62,41 @@ func _ready() -> void:
 	names.add_theme_constant_override("separation",12)
 	add_child(names)
 	names.set_anchors_preset(Control.PRESET_TOP_LEFT)
-	role=Label.new()
-	role.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART
-	role.add_theme_color_override("font_color",Color("e4cfaa"))
-	role.add_theme_font_size_override("font_size",25)
-	names.add_child(role)
-	person=Label.new()
-	person.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART
-	person.add_theme_font_size_override("font_size",56)
-	person.add_theme_color_override("font_color",Color("fff4df"))
-	var serif := SystemFont.new()
+	serif=SystemFont.new()
 	serif.font_names=PackedStringArray(["Georgia","Noto Serif","Liberation Serif"])
-	person.add_theme_font_override("font",serif)
-	names.add_child(person)
+
+func _add_label(parent: Node, text: String, font_size: int, color: Color) -> Label:
+	var label := Label.new()
+	label.text=text
+	label.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART
+	label.add_theme_font_size_override("font_size",font_size)
+	label.add_theme_color_override("font_color",color)
+	parent.add_child(label)
+	return label
+
+func _show_page(index: int) -> void:
+	for child: Node in names.get_children():
+		names.remove_child(child)
+		child.queue_free()
+	var grouped: bool = PAGES[index].size()>1
+	names.add_theme_constant_override("separation",16 if grouped else 12)
+	if grouped:
+		_add_label(names,PAGE_TITLES[index],28,Color("e4cfaa"))
+	for role_index: int in PAGES[index]:
+		var entry := VBoxContainer.new()
+		entry.add_theme_constant_override("separation",4 if grouped else 12)
+		names.add_child(entry)
+		_add_label(entry,ROLES[role_index][0],24 if grouped else 25,Color("e4cfaa"))
+		var person := _add_label(entry,ROLES[role_index][1],38 if grouped else 56,Color("fff4df"))
+		person.add_theme_font_override("font",serif)
+	names.reset_size()
+
+func _index_at(starts: Array) -> int:
+	var index := 0
+	for i: int in range(1,starts.size()):
+		if elapsed>=starts[i]:
+			index=i
+	return index
 
 func start(ending: bool, panning: bool) -> void:
 	at_ending=ending
@@ -83,11 +108,8 @@ func start(ending: bool, panning: bool) -> void:
 	present()
 
 func present() -> void:
-	var index:=0
-	for i in range(1,CARD_START.size()):
-		if elapsed>=CARD_START[i]:
-			index=i
-	var art_index := mini(int(elapsed / (END / ENDING_ART.size())),ENDING_ART.size()-1) if at_ending else index
+	var index := _index_at(CARD_START)
+	var art_index := mini(int(elapsed / (END / ENDING_ART.size())),ENDING_ART.size()-1) if at_ending else _index_at(OPENING_ART_START)
 	if art_index!=painting:
 		painting=art_index
 		var path: String = "res://assets/illustrated/" + (ENDING_ART[art_index] if at_ending else OPENING_ART[art_index])
@@ -96,18 +118,20 @@ func present() -> void:
 		landscape.texture=load(path)
 	if index!=card:
 		card=index
-		role.text=ROLES[index][0]
-		person.text=ROLES[index][1]
+		_show_page(index)
 	var span:float=(CARD_START[index+1] if index+1<CARD_START.size() else END)-CARD_START[index]
 	var local:float=elapsed-CARD_START[index]
 	var alpha:=smoothstep(0,.55,local)*(1.0-smoothstep(span-.45,span,local))
 	names.modulate.a=alpha
-	var art_span: float = END / ENDING_ART.size() if at_ending else span
-	var art_local: float = elapsed - art_index * art_span if at_ending else local
+	var art_start: float = art_index * END / ENDING_ART.size() if at_ending else OPENING_ART_START[art_index]
+	var art_end: float = (art_index+1) * END / ENDING_ART.size() if at_ending else (OPENING_ART_START[art_index+1] if art_index+1<OPENING_ART_START.size() else END)
+	var art_span := art_end-art_start
+	var art_local := elapsed-art_start
 	landscape.modulate=Color.WHITE * (.40 + .60 * smoothstep(0,.78,art_local)*(1.0-smoothstep(art_span-.50,art_span,art_local)))
 	landscape.modulate.a=1
 	names.size.x=size.x*.60
-	names.position=Vector2(size.x*.095,size.y*.47-4*smoothstep(0,.70,local))
+	var top: float = (size.y-145-names.get_combined_minimum_size().y)*.5 if PAGES[index].size()>1 else size.y*.47
+	names.position=Vector2(size.x*.095,maxf(32,top)-4*smoothstep(0,.70,local))
 	var drift:=smoothstep(0,art_span,art_local) if motion else 0.0
 	landscape.pivot_offset=size*Vector2(.71,.47)
 	landscape.scale=Vector2.ONE*(1.015+.035*drift)

@@ -81,3 +81,25 @@ The code repository is public. This work has not deployed a public game build. C
 - `docs/story-walkthrough.md`: full spoiler-marked story and puzzle solutions.
 - `GitHub/Night-Nine/tmp/voice-story-recheck/`: complete Metal failure report and clock diagnostics in the local publishing checkout.
 - `GitHub/Night-Nine/tmp/voice-story-compatibility/`: complete compatibility-renderer failure report in the local publishing checkout.
+
+## November 21: Cloudflare playback and grouped credits
+
+The authorized review build is now hosted at `https://review.night-nine.pages.dev`. GitHub Pages has been removed; GitHub retains the public source and Cloudflare deployment workflow.
+
+A fresh native Control-input walkthrough completed all 34 rooms with **6,284 checks and zero failures**, including 64 instrument puzzles, the final transmission, completion save/reload and the final notebook. It used Compatibility rendering and Dummy audio. It was text-only: zero dialogue streams played. This run preceded the grouped-credit change below.
+
+The separate automatic story-flow run completed **94 checks with zero failures** using CoreAudio and Compatibility rendering. It covered the opening, aftermath, flashbacks, ending and one-year-later sequence and saved 31 screenshots. No frame exceeded 0.148 seconds. The shell's initial minimum-count check incorrectly required 96; this test conditionally omits two timing assertions when a first panel is already visible. The full result and final screenshots establish completion. The earlier Dummy-driver failures remain recorded above; no timing tolerances or assertions were changed.
+
+Direct checks of Cloudflare deployment `0175a37b` reached the title screen. A passive WebAudio analyser measured a running context with nonzero music output (sample peak 0.0486, RMS 0.0206). This confirms an audio signal, not a listening review or a complete browser walkthrough of this deployment.
+
+The credit sequence now has four pages: creator, "Built using Godot Engine for Browsers", all five creative AI tools, and GitHub/Copilot/Cloudflare together. All role wording is retained. The 56.4-second film, nine opening paintings, three ending reward paintings and soundtrack are unchanged. The updated rendered soundtrack/credits suite passed **402 checks**, covered all 30 recordings and captured all four credit pages. All 12 packaging tests passed.
+
+A targeted Control-input run through the final transmission passed 179 checks after the grouping change, including opening credits from both the title and completed-game screens. The existing N9 icon also replaces the default boot splash and appears in the README and landing page. Its PNG is rendered from `game/icon.svg` using `godot --headless --path game --script "$PWD/tools/render-icon.gd"` (run from the repository root).
+
+The full walkthrough included screenshots and ran alongside other verification work. Scene p95 frame times reached 140.3 ms and a maximum sample reached 557.1 ms, so this run is not evidence of consistently smooth frame pacing. Voice approval and a complete voiced browser walkthrough remain open.
+
+Evidence in the publishing checkout:
+
+- `tmp/current-full-walkthrough-2/report/campaign-render/results.json`
+- `tmp/current-story-timing/report/story-flow.json`
+- `tmp/grouped-credits/report-verified/score-route.json` and `credits-01.png` through `credits-04.png`

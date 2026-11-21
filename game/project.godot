@@ -11,6 +11,9 @@ run/main_scene.painted_desktop="res://scenes/campaign.tscn"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/description="Free illustrated science-fiction adventure set in Bellwether."
 config/icon="res://icon.svg"
+boot_splash/image="res://icon.png"
+boot_splash/fullsize=false
+boot_splash/bg_color=Color(0.043,0.125,0.153,1)
 
 [display]
 window/size/viewport_width=1600

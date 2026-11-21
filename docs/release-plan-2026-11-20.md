@@ -24,9 +24,10 @@ Written 2026-11-20; hosting and credits updated 2026-11-21. This is the working 
 
 ## Credits text
 
-One card per row. Role first, then name.
+Four pages: original creator, browser engine, all creative AI credits, and GitHub/Copilot/Cloudflare together. Each entry keeps its role and name. Preserve the 56.4-second film and its existing artwork and music.
 
 - Original story (written 25 years ago), plot, music, voice and creative design decisions: S3PehR
+- Built using: Godot Engine for Browsers
 - Creative narration, game script refinements and gameplay design: Claude Opus 5.5
 - Game engine core design and stages setup: GPT Astra 6.2
 - Artwork and pictures, including characters: GPT Image 2.6
