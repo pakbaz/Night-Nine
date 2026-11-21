@@ -1,0 +1,460 @@
+{
+  "scenes": {
+    "c2_aquarium": {
+      "when": "Just after midnight, Monday the 22nd",
+      "present": [
+        "steve",
+        "iris",
+        "lyle_copy"
+      ],
+      "card": {
+        "chapter": {
+          "kicker": "Chapter 2",
+          "title": "The Aquarium Is Closed",
+          "when": "Just after midnight",
+          "goal": "Steve wants to find out what happened to Nora."
+        }
+      },
+      "coach": "Some leads come with recordings. Listen, or read the sound traces: a sound that repeats looks the same each time.",
+      "objective": "Get into the sealed north wing. The work order says Nora signed something there.",
+      "changes": [
+        "C10",
+        "critic C10",
+        "U-relationships",
+        "U-narration"
+      ],
+      "notes": [
+        "Iris (still shown as Nora’s copy) and Lyle arrive in the departure, which leads straight into c2_ship."
+      ],
+      "intro": [
+        {
+          "id": "c2_aquarium.in.01",
+          "text": "Emergency. Bellwether beach. People are walking into the water, and they’re not coming back out. Hello? Hello?",
+          "direction": "on his flip phone, static rising"
+        },
+        {
+          "id": "c2_aquarium.in.02",
+          "text": "The line died. I didn’t know if anyone had heard."
+        },
+        {
+          "new": "steve|There was one place in town with Nora’s name on it that night. The north wing of her aquarium.",
+          "delivery": "narration"
+        },
+        {
+          "new": "steve|I knew the back way in. Four years of visiting her at work.",
+          "delivery": "narration"
+        }
+      ],
+      "delete": [],
+      "tasks": {
+        "plan": {
+          "difficulty": 2,
+          "title": "The old exhibit plan",
+          "goal": "Find a way into the sealed north wing.",
+          "background": "The north wing has been closed to the public for two years. Nora once walked Steve through the service side and called the pumps the aquarium’s heartbeat. A newer maintenance notice is taped over the old plan.",
+          "lead": [
+            {
+              "id": "c2_aquarium.plan.01",
+              "text": "Nora showed me this plan the week I fixed the underwater speakers. She said the pumps were the heartbeat of the place."
+            }
+          ],
+          "prompt": "The old plan and the newer notice disagree. Which route still reaches the north wing?",
+          "hints": [
+            "When two documents disagree, trust the newer notice.",
+            "The old visitor route needs door 1, which was bricked up. In the pump room, follow the arrows to see which way the water moves.",
+            "Door 1 is bricked up, so the visitor hall is a dead end. In the pump room, two arrows point in and one points out."
+          ],
+          "lines": [
+            "steve|Service door, pump room, the outgoing pipe. Into the north wing."
+          ],
+          "finding": "steve|The way in runs from the service door through the pump room, along the only pipe that carries water away."
+        },
+        "guard": {
+          "difficulty": 3,
+          "title": "Two service doors",
+          "goal": "Pick the corridor with nobody in it.",
+          "background": "Steve hears a voice and footsteps behind each door. Since this morning, he knows how to tell a person from a recording: a recording repeats perfectly.",
+          "lead": [
+            "steve|Someone’s behind both doors. Maybe only one of them is real."
+          ],
+          "prompt": "Steve records six seconds at each door. Which corridor can he cross without meeting anyone?",
+          "wrong": {
+            "0": "Those footsteps change their spacing. Somebody real is walking that corridor.",
+            "2": "Neither door goes quiet. One of them never will, because it’s on a loop."
+          },
+          "hints": [
+            "Look for a sound that repeats on the same beat.",
+            "Compare the spacing and shape of the peaks in each six-second strip.",
+            "Watch the bell and the cough. In one strip they come back on exactly the same beat. Nobody coughs on a schedule."
+          ],
+          "lines": [
+            "c2_aquarium.guard.01"
+          ],
+          "finding": "steve|The filter corridor plays a loop: the same bell and the same cough on the same beat. Nobody’s there. The pump corridor has real footsteps."
+        },
+        "intercom": {
+          "difficulty": 3,
+          "title": "Nora’s coat and the intercom tape",
+          "goal": "Work out what Nora’s tape means.",
+          "background": "Behind new plywood: holding rooms, cots and, on a hook, Nora’s real aquarium fleece with every enamel fish pin. In the pocket is a spool from the old intercom, the kind Steve fixed four years ago.",
+          "lead": [
+            "steve|Her fleece. Her real fleece, with the fish pins. And an intercom spool.",
+            {
+              "id": "c2_aquarium.out.01",
+              "delivery": "recorded_playback"
+            },
+            {
+              "id": "c2_aquarium.intercom.01",
+              "delivery": "recorded_playback"
+            }
+          ],
+          "prompt": "Nora’s voice, Nora’s whistle, and a date on the leader. What does the tape tell Steve?",
+          "board": {
+            "instruction": "Put the tape together with what Steve learned on Sunday.",
+            "evidence": [
+              "The paper leader is dated in Nora’s handwriting: May 29.",
+              "On the spool Nora names herself, then whistles two notes. The second note rises.",
+              "A loose duplicate in the same drawer holds the two notes only. Its second note sags flat.",
+              "Steve’s notebook from Sunday: Nora stopped arguing with her family between the end of May and the first Sunday in June. On the pier, Admiral turned away from a whistle whose second note fell.",
+              "Tonight is October 22."
+            ],
+            "stages": [
+              {
+                "mode": "match",
+                "prompt": "Match each question to the evidence that answers it.",
+                "slots": [
+                  "When the real Nora was last here",
+                  "How long someone else has been living Nora’s life",
+                  "The whistle Admiral answers",
+                  "The whistle Admiral turned away from"
+                ],
+                "pieces": [
+                  "May 29",
+                  "Five months",
+                  "Two days",
+                  "Eighteen months",
+                  "The rising second note, on the spool",
+                  "The falling second note, on the duplicate"
+                ],
+                "answer": [
+                  0,
+                  1,
+                  4,
+                  5
+                ]
+              }
+            ],
+            "wrong_text": "Steve stares at the spool. Something here doesn’t fit yet."
+          },
+          "hints": [
+            "Start with the date on the leader, then count to tonight.",
+            "Nora’s family dated the change to the same week as this tape. The pier whistle fell; this one rises.",
+            "Count from the date on the leader to tonight in whole months. Then remember which way the second note went on the pier."
+          ],
+          "lines": [
+            "c2_aquarium.out.02",
+            "c2_aquarium.intercom.02"
+          ],
+          "finding": "steve|The real Nora recorded this here on May 29. Someone else has been living her life with me for five months. Her whistle rises. The one Admiral ignored falls."
+        }
+      },
+      "recap": [
+        "steve|The north wing is no repair job. It’s a holding station, with cots, Nora’s real coat, and her voice on a tape from May.",
+        "steve|The woman who said good morning to me yesterday was not Nora. Nora was here, frightened, whistling for help. And I didn’t hear it for five months.",
+        "steve|If she was alive in May, she might be alive now."
+      ],
+      "outro": [
+        "iris|Steve. You shouldn’t be here.",
+        "lyle_copy|Easy now, Steve. Nobody wants this to be hard.",
+        "steve|Where is she? Where’s Nora?"
+      ],
+      "next": "Through the old seawater intake tunnel, under the bay (c2_ship)."
+    },
+    "c2_ship": {
+      "when": "Before dawn, Monday the 22nd",
+      "present": [
+        "steve",
+        "iris",
+        "guard",
+        "lyle_copy",
+        "calder"
+      ],
+      "coach": "Turn on Show reel transcripts if you would rather read the recordings than listen.",
+      "objective": "Get out of the scan chair before it finishes. Then find the real Nora.",
+      "changes": [
+        "C11",
+        "critic C11",
+        "U-narration",
+        "U-relationships"
+      ],
+      "notes": [
+        "New lead c2_ship.intake needs a hotspot in the painting (the flooded intake grille) and an approach point.",
+        "Saren is heard only over the intercom here. His release command is the fixed recording recording.release.",
+        "Film after the departure: a tank fills around a shape grown from the 61 percent scan. Steve never sees it."
+      ],
+      "intro": [
+        {
+          "new": "steve|They walked me down the old intake tunnel, under the bay. At the end of it there was a ship.",
+          "delivery": "narration"
+        },
+        {
+          "new": "steve|Glass corridors. Slow light. And a hum that was almost a tune.",
+          "delivery": "narration"
+        },
+        "c2_ship.in.01",
+        "c2_ship.in.02",
+        "c2_ship.in.03",
+        "guard|“You are the author of your own story.” This is from a human book. Is it helping?",
+        "guard|The scan proceeds from the oldest memories. You are now nineteen. Congratulations on your driving test."
+      ],
+      "task_order": [
+        "command",
+        "escape",
+        "nora",
+        "intake"
+      ],
+      "tasks": {
+        "command": {
+          "difficulty": 3,
+          "title": "The intercom",
+          "requires": [],
+          "goal": "Get the exact command that opens the chair onto Dad’s tape.",
+          "background": "Steve is strapped into the chair, and Dad’s recorder is running in his cardigan pocket. When a maintenance strap sticks, the attendant’s own request does nothing. A calm voice on the intercom opens it in four words.",
+          "lead": [
+            "guard|This restraint is sticking. Release, please.",
+            {
+              "id": "c2_ship.command.01",
+              "delivery": "intercom"
+            },
+            "guard|Thank you, Prefect. And fastened again.",
+            {
+              "new": "steve|Dad’s recorder was running in my pocket the whole time.",
+              "direction": "a whisper"
+            }
+          ],
+          "prompt": "Steve has the moment on tape. Where exactly is the command, and how long does it last?",
+          "board": {
+            "instruction": "Mark the command on the tape, then time it. The chair only listens for a few seconds at a time.",
+            "evidence": [
+              "Tape edge, left to right: a large splice, one short mark, two short marks, then bare leader. The attendant speaks before the first mark; the Prefect speaks between the marked groups.",
+              "The chair’s service lamp stays dark for the attendant. It lights at tick 3 on the Prefect’s first word, “Release,” and the buckle clicks at tick 7, just after “authorization.”",
+              "The tape counter ticks once a second."
+            ],
+            "stages": [
+              {
+                "mode": "match",
+                "prompt": "Place each event on the tape.",
+                "slots": [
+                  "Before one mark",
+                  "Between the marked groups",
+                  "At two marks",
+                  "Beyond the recording"
+                ],
+                "pieces": [
+                  "Bare leader",
+                  "Buckle click",
+                  "The Prefect speaks",
+                  "The attendant’s request"
+                ],
+                "answer": [
+                  3,
+                  2,
+                  1,
+                  0
+                ]
+              },
+              {
+                "mode": "match",
+                "prompt": "Time the command.",
+                "slots": [
+                  "Command starts",
+                  "Command ends",
+                  "Length"
+                ],
+                "pieces": [
+                  "Tick 1",
+                  "Tick 3",
+                  "Tick 7",
+                  "Four seconds",
+                  "One second"
+                ],
+                "answer": [
+                  1,
+                  2,
+                  3
+                ]
+              }
+            ],
+            "wrong_text": "Something here doesn’t match the marks on the tape yet."
+          },
+          "hints": [
+            "The lamp only reacts to one of the two voices.",
+            "The attendant comes before the first mark. The command runs from the lamp to the buckle.",
+            "The lamp lights on the Prefect’s first word, and the buckle clicks just after his last. Count the ticks between them."
+          ],
+          "lines": [
+            {
+              "id": "c2_ship.command.02",
+              "text": "Got it. Thank you, Prefect.",
+              "direction": "a whisper"
+            }
+          ],
+          "finding": "steve|The Prefect’s release command is on Dad’s tape: four seconds, from “Release” to the click."
+        },
+        "escape": {
+          "difficulty": 4,
+          "title": "The scan chair",
+          "requires": [
+            "command"
+          ],
+          "goal": "Open the chair with the Prefect’s own voice.",
+          "background": "The scan has started again. Dad’s recorder has been running in Steve’s pocket since the north wing, and three moments on its cassette are cued. He can reach two microphone grilles. The Prefect’s command runs four seconds, and the chair only listens while its service lamp is lit.",
+          "lead": [
+            "guard|Fifty-eight percent. Fifty-nine. You are doing very well."
+          ],
+          "prompt": "Pick the recording, the grille and the moment.",
+          "rows": [
+            {"label": "Recorder cue", "options": ["Cue 01", "Cue 02", "Cue 03"], "answer": 2},
+            {"label": "Microphone grille", "options": ["Broken rim", "Undamaged rim"], "answer": 1},
+            {"label": "Start of playback", "options": ["First ordinary beat", "Start of the 61 notch", "When the notch ends"], "answer": 1}
+          ],
+          "audition_labels": ["Cue 01", "Cue 02", "Cue 03"],
+          "instruction": "The attendant spoke into the grille with the broken rim when testing the hall speakers. The undamaged grille made the chair’s service lamp blink. The lamp stays lit for one second on an ordinary scan beat and for six seconds at the notch marked 61. The chair drops an unfinished phrase when the lamp goes dark. The Prefect’s command runs four seconds.",
+          "hints": [
+            "Listen to the three cues. Which voice has this chair already obeyed?",
+            "The broken grille feeds the public speakers. Four seconds won’t fit in a one-second beat.",
+            "Use the voice the chair has already obeyed, on the grille that made the lamp blink, in the only window longer than four seconds."
+          ],
+          "lines": [
+            {"id": "c2_ship.escape.01", "delivery": "recorded_playback", "direction": "Dad’s recorder, held to the grille"},
+            {
+              "id": "c2_ship.escape.02",
+              "text": "It worked. Sixty-one percent of me, and all of me is getting out of this chair."
+            }
+          ],
+          "finding": "steve|The Prefect’s own voice opened the chair, at the notch marked sixty-one. The scan stopped at sixty-one percent."
+        },
+        "nora": {
+          "difficulty": 2,
+          "title": "The amber sleeper",
+          "requires": [
+            "escape"
+          ],
+          "goal": "Find out whether the sleeper is alive.",
+          "background": "Beyond the chair is a hall of sleepers in amber light, hundreds of them. In one bed lies Nora. A light pulses down the corridor on a steady beat. Steve can’t touch the glass without disturbing whatever keeps her there.",
+          "lead": [
+            "steve|Nora.",
+            {
+              "new": "steve|That hum. It’s almost a song. I know it from somewhere.",
+              "cue": "lullaby"
+            }
+          ],
+          "prompt": "Three timing rubbings lost their labels. Which one is Nora breathing?",
+          "board": {
+            "instruction": "One rhythm belongs to the ship, one copies the ship, and one keeps its own time.",
+            "evidence": [
+              "Steve marked the corridor flash at seconds 2, 6 and 10. The pickup on the rail repeats each flash one second later. A fog patch above Nora’s mouth appeared at 3, 7 and 12.",
+              "The three rubbings lost their labels. Strip A reads 2 / 6 / 10, strip B reads 3 / 7 / 11, and strip C reads 3 / 7 / 12. Steve used the same stopwatch throughout."
+            ],
+            "stages": [
+              {
+                "mode": "match",
+                "prompt": "Label the rubbings.",
+                "slots": [
+                  "Corridor flash",
+                  "Rail pickup",
+                  "Nora’s breath"
+                ],
+                "pieces": [
+                  "Strip B",
+                  "Strip C",
+                  "Strip A"
+                ],
+                "answer": [
+                  2,
+                  0,
+                  1
+                ]
+              }
+            ],
+            "wrong_text": "One of these rhythms doesn’t belong where you put it."
+          },
+          "hints": [
+            "One strip loses a beat against the ship.",
+            "The rail repeats the corridor one second late. Only one strip has an uneven gap.",
+            "One strip matches Steve’s flash marks exactly. One is those marks plus one second. The breath is the strip that does not keep the ship’s beat."
+          ],
+          "lines": [
+            "steve|I can’t move you without stopping whatever keeps you breathing. I’m coming back for you.",
+            "c2_ship.nora.01"
+          ],
+          "finding": "steve|Nora is alive. Her breath keeps its own time, a little behind the ship’s. She’s asleep, not gone."
+        },
+        "intake": {
+          "type": "choice",
+          "kind": "playback",
+          "difficulty": 2,
+          "title": "The flooded intake",
+          "requires": [
+            "nora"
+          ],
+          "goal": "Call for help through the old aquarium speakers.",
+          "background": "Steve opened the seawater valve to cover his escape. Now the intake tunnel is flooding, and the water is at his chest. The tunnel runs back to the aquarium, past the underwater speakers Steve repaired the day he met Nora, and the old intercom line still feeds them. Steve still has Nora’s intercom spool and the loose duplicate from the north-wing drawer, and the Prefect’s command on Dad’s cassette.",
+          "lead": [
+            {
+              "id": "c2_ship.out.01",
+              "text": "The tunnel’s flooding. The underwater speakers still work... I fixed them, the day I met her."
+            }
+          ],
+          "prompt": "Which recording will bring help?",
+          "audition_labels": [
+            "Spool A: Nora’s intercom spool, whistle attached",
+            "Spool B: the loose two-note duplicate",
+            "Dad’s cassette: the Prefect’s command"
+          ],
+          "sounds": [
+            "effect.nora_whistle",
+            "effect.nora_whistle_flat",
+            "recording.release"
+          ],
+          "options": [
+            "Spool A: Nora’s intercom spool, whistle attached",
+            "Spool B: the loose two-note duplicate",
+            "Dad’s cassette: the Prefect’s command"
+          ],
+          "answer": 0,
+          "wrong": {
+            "1": "That’s the whistle Admiral turned away from on the pier.",
+            "2": "His voice opens chairs. It won’t bring a sea lion."
+          },
+          "hints": [
+            "Who has never once ignored Nora’s real whistle?",
+            "Think back to the pier. Which whistle did Admiral turn away from?",
+            "Admiral answers the whistle whose second note rises. Which spool is that?"
+          ],
+          "lines": [
+            {
+              "new": "steve|Come on, Admiral. You never missed this one.",
+              "sfx": "effect.nora_whistle through the underwater speakers"
+            }
+          ],
+          "finding": "steve|Nora’s real whistle, through the speakers I fixed the day we met. Admiral came down through the dark and dragged me to the surface."
+        }
+      },
+      "delete": [],
+      "recap": [
+        "steve|There is a ship under the bay. Nora is asleep on it, alive, with hundreds of others. At the far end of the hall, one bed lay under frost, and something too tall to be human slept in it. The guards never looked at it.",
+        "steve|They tried to make another me. They got sixty-one percent.",
+        "steve|And the woman with Nora’s face, who let me go on the balcony, had walked me to that chair herself."
+      ],
+      "outro": [
+        {
+          "new": "steve|Sheriff... there’s a ship. Under the bay.",
+          "direction": "coughing up seawater on the beach at dawn"
+        },
+        "c2_ship.out.02"
+      ],
+      "next": "Chapter 2 film: dawn on the beach, then a tank filling aboard the ship. Then Chapter 3."
+    }
+  }
+}

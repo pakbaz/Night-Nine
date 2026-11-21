@@ -1,0 +1,118 @@
+{
+  "base": "steve_broadcast.webp",
+  "source": "assets/characters/campaign/masters/steve_broadcast.png",
+  "source_sha256": "778d84ca122e1951e826f1b3c454e2720d0116f5631110d46c1ce2acfd402fb7",
+  "size": [
+    720,
+    1080
+  ],
+  "origin": "top_left",
+  "foot_anchor": [
+    360,
+    1080
+  ],
+  "frames": {
+    "blink_half": {
+      "atlas_region": [
+        0,
+        0,
+        110,
+        37
+      ],
+      "source_origin": [
+        313,
+        144
+      ]
+    },
+    "blink_closed": {
+      "atlas_region": [
+        0,
+        39,
+        110,
+        37
+      ],
+      "source_origin": [
+        313,
+        144
+      ]
+    },
+    "mouth_parted": {
+      "atlas_region": [
+        0,
+        78,
+        79,
+        57
+      ],
+      "source_origin": [
+        345,
+        214
+      ]
+    },
+    "mouth_open": {
+      "atlas_region": [
+        0,
+        137,
+        79,
+        57
+      ],
+      "source_origin": [
+        345,
+        214
+      ]
+    },
+    "mouth_round": {
+      "atlas_region": [
+        0,
+        196,
+        79,
+        57
+      ],
+      "source_origin": [
+        345,
+        214
+      ]
+    },
+    "mouth_wide": {
+      "atlas_region": [
+        0,
+        255,
+        79,
+        57
+      ],
+      "source_origin": [
+        345,
+        214
+      ]
+    }
+  },
+  "cue_frames": {
+    "X": null,
+    "A": null,
+    "B": "mouth_parted",
+    "C": "mouth_wide",
+    "D": "mouth_open",
+    "E": "mouth_round",
+    "F": "mouth_round",
+    "G": "mouth_parted",
+    "H": "mouth_parted"
+  },
+  "sha256": {
+    "steve_broadcast.webp": "afb33f5c815420ef68116b33d5cff9e3d5fa18995c3fd5c6df2ff16b58d9a2bb",
+    "steve_broadcast-face-atlas.png": "afaf752729d8b22c327d4599150c5325e12053c039073630592e01cc4d59b619"
+  },
+  "atlas": "steve_broadcast-face-atlas.png",
+  "eye_centers": [
+    [
+      336,
+      168
+    ],
+    [
+      401,
+      158
+    ]
+  ],
+  "mouth_center": [
+    387,
+    241
+  ]
+}

@@ -1,0 +1,812 @@
+{
+  "scenes": {
+    "c3_house": {
+      "when": "Friday the 26th, morning",
+      "present": [
+        "steve",
+        "calder",
+        "carmen",
+        "pell"
+      ],
+      "card": {
+        "chapter": {
+          "kicker": "Chapter 3",
+          "title": "Please Prove You Exist",
+          "when": "Four days later",
+          "goal": "Steve wants one person to believe him."
+        }
+      },
+      "objective": "Prove to June which Steve is standing in her kitchen. Then help her test her list.",
+      "changes": [
+        "C12",
+        "critic C12",
+        "U-relationships",
+        "U-narration",
+        "U-timeline (a copy body takes four days to grow)"
+      ],
+      "notes": [
+        "Carmen appears only in the opening and Dale only in the mail lead. Their lines play over the existing painting at the front door.",
+        "crossword becomes a rows puzzle and rules becomes a rows puzzle; mail becomes a choice. Keep the hotspot keys.",
+        "Art (optional): an insert of June’s list, ‘People who got better overnight’, thirty-one names in June’s handwriting, Lyle Boone near the top.",
+        "The 911 call the crossword test uses is c2_aquarium.in.01. Keep its wording identical in both places."
+      ],
+      "context": [
+        "steve|June Calder pulled me off the beach at dawn on Monday and drove me to her house, not the station. She called it protective custody. Her beagle, Biscuit, slept through the whole thing.",
+        "steve|By Friday, the whole town had heard I broke into the aquarium. The casseroles started arriving."
+      ],
+      "intro": [
+        "c3_house.in.01",
+        "c3_house.in.02",
+        "c3_house.in.03",
+        {
+          "new": "carmen|Forty-eight. Mine is the good one.",
+          "direction": "at the front door, holding a covered dish"
+        },
+        "carmen|Nora told me you’re not well, mijo. But I saw you at the market this morning, smiling at the tomatoes. I was so glad.",
+        "steve|Carmen... I haven’t left this house since Monday."
+      ],
+      "delete": [],
+      "task_order": [
+        "crossword",
+        "rules",
+        "mail"
+      ],
+      "tasks": {
+        "crossword": {
+          "type": "rows",
+          "difficulty": 3,
+          "title": "June’s crossword",
+          "requires": [],
+          "goal": "Prove to June that you are the man she pulled out of the water.",
+          "background": "June does the crossword every morning, in ink, a habit her late wife, Ruth, started. On the beach Steve told her about the chair: the attendant said the scan copies the oldest memories first, and Steve got out at sixty-one percent. A copy grown from that scan would have most of his life and none of the newest part.",
+          "lead": [
+            {
+              "new": "calder|You told me that chair copies the oldest memories first. And you got out at sixty-one percent.",
+              "direction": "after Carmen has gone, closing the door"
+            },
+            "calder|I was at the station all morning, and Biscuit isn’t a witness. So you tell me. What could I ask you that the man at the market couldn’t answer?",
+            "calder|Don’t tell me something sweet. Copies can be sweet. Don’t act strange. Grieving people act strange."
+          ],
+          "prompt": "June uncaps her pen over the crossword margin. What should she ask, and how will she know the answer is true?",
+          "instruction": "The chair copied Steve’s life from the oldest end and stopped at sixty-one percent, before dawn on Monday. After midnight, Bellwether’s 911 line rings in the sheriff’s kitchen, and her machine records every call.",
+          "rows": [
+            {
+              "label": "June asks about",
+              "options": [
+                "The lullaby Mom sang him to sleep",
+                "His first show on KBWR",
+                "His 911 call on Sunday night"
+              ],
+              "answer": 2
+            },
+            {
+              "label": "Steve writes",
+              "options": [
+                "“There’s a ship under the bay.”",
+                "“People are walking into the water, and they’re not coming back out.”",
+                "“Someone is trapped in the aquarium.”"
+              ],
+              "answer": 1
+            },
+            {
+              "label": "June checks it against",
+              "options": [
+                "Deputy Lyle’s night log",
+                "Her own call recording",
+                "The morning news"
+              ],
+              "answer": 1
+            }
+          ],
+          "hints": [
+            "The chair started with Steve’s childhood. What did it never reach?",
+            "Of the three, only one happened on Sunday night, before the chair. The line about the ship came later, on the beach.",
+            "The man at the market has Steve’s oldest memories, not Sunday night. And June’s kitchen machine kept every word of one call that night."
+          ],
+          "lines": [
+            {
+              "new": "calder|Word for word. Both hellos.",
+              "direction": "after playing back the call on her kitchen machine"
+            },
+            {
+              "id": "c3_house.crossword.01",
+              "direction": "relieved, leaning over her crossword, his elbow near her mug"
+            },
+            "c3_house.crossword.02",
+            "steve|How do I know you’re you?",
+            "calder|You don’t. Nobody scanned me halfway. So you check my paperwork, same as everyone else."
+          ],
+          "finding": "steve|The chair never got as far as Sunday night. My 911 call was on June’s machine, word for word. Whoever Carmen saw at the market, it wasn’t me."
+        },
+        "rules": {
+          "type": "rows",
+          "difficulty": 2,
+          "title": "June’s list",
+          "requires": [
+            "crossword"
+          ],
+          "goal": "Help June decide which entries on her list would stand up as evidence.",
+          "background": "June’s rules: kindness proves nothing, because copies can be kind. Strange behavior proves nothing, because grieving people behave strangely. What counts is a private fact a copy couldn’t know, or a dated record that puts someone where they couldn’t have been.",
+          "lead": [
+            "c3_house.out.01",
+            "calder|Lyle’s on it. My own deputy. Fourteen years, and this summer he started filing his reports on time.",
+            "c3_house.rules.01"
+          ],
+          "prompt": "June reads four entries aloud. Which ones would stand up in daylight?",
+          "instruction": "Lyle Boone remembered June’s birthday this year, for the first time in fourteen. Mateo Reyes’s coaching book shows Lyle absent from every Little League game last spring, then signed in at every game from June 11. Gus Albano put a new pastry in his window on Monday, after thirty years of his grandmother’s recipes. Walt Prior, the county planner who moved to Washington in April, has his signature on a Bellwether permit dated a day he was testifying in Washington.",
+          "rows": [
+            {
+              "label": "Lyle remembered her birthday",
+              "options": [
+                "Proves nothing",
+                "Evidence"
+              ],
+              "answer": 0
+            },
+            {
+              "label": "Mateo’s coaching book",
+              "options": [
+                "Proves nothing",
+                "Evidence"
+              ],
+              "answer": 1
+            },
+            {
+              "label": "Gus’s new pastry",
+              "options": [
+                "Proves nothing",
+                "Evidence"
+              ],
+              "answer": 0
+            },
+            {
+              "label": "Walt Prior’s permit",
+              "options": [
+                "Proves nothing",
+                "Evidence"
+              ],
+              "answer": 1
+            }
+          ],
+          "hints": [
+            "Use June’s rules. What could any person do on a good day?",
+            "A birthday and a new recipe are behavior. A sign-in book and a signed permit have dates you can check.",
+            "Ask of each entry: is there a date June could check in a book or a file? Feelings and new habits don’t count."
+          ],
+          "lines": [
+            "calder|Two I could take to a judge. And if I do, what do I tell Lyle’s boys? Mateo says they’ve never been happier.",
+            "steve|Is Mrs. Penhallow on it? She was on the beach at midnight on Sunday.",
+            "calder|Agnes? She hasn’t changed in forty years. She still corrects my grammar."
+          ],
+          "finding": "steve|June’s list has thirty-one names, and most of them are feelings. Two are records: Lyle’s sign-in book and Walt Prior’s permit. Mrs. Penhallow isn’t on it."
+        },
+        "mail": {
+          "type": "choice",
+          "difficulty": 2,
+          "title": "Dale’s delivery",
+          "requires": [
+            "crossword"
+          ],
+          "goal": "Find out how Dale knew Steve was staying here.",
+          "background": "Steve arrived at dawn on Monday. At 06:10 June radioed the station: ‘Bringing Mercer to my place. Tell nobody.’ Deputy Lyle Boone, starting his shift, answered. Dale’s bag left the post office at 08:04 with Steve’s letters already bundled for June’s house. He signed for June’s door at 08:08. June phoned the post office about Steve’s mail at 08:12. Carmen heard from Nora at lunchtime.",
+          "lead": [
+            {
+              "new": "pell|Good morning, Officer Biscuit.",
+              "direction": "at the front door with the mail, saluting the sleeping beagle"
+            },
+            "c3_house.mail.01",
+            {
+              "id": "c3_house.mail.02",
+              "text": "She’s asleep, Dale. That is her schedule."
+            },
+            "calder|On Monday the post office told me Dale had already brought your letters here. Before I’d called them. So I asked for the paperwork."
+          ],
+          "prompt": "Somebody told Dale before his bag left at 08:04. Who could have?",
+          "options": [
+            "The post office",
+            "Deputy Lyle Boone",
+            "Carmen Reyes",
+            "Biscuit"
+          ],
+          "answer": 1,
+          "wrong": {
+            "0": "The post office heard from June at 08:12. Dale’s bag had left at 08:04.",
+            "2": "Carmen heard at lunchtime, from Nora. Dale had delivered hours before.",
+            "3": "Biscuit slept through Monday. She sleeps through everything."
+          },
+          "hints": [
+            "Line up who knew Steve was here, and when each of them found out.",
+            "Dale’s bag left at 08:04. Besides June, only one person knew before then.",
+            "Read the 06:10 radio call again. Somebody on the other end of it was just starting his shift."
+          ],
+          "lines": [
+            "steve|He had my mail sorted for your house before anyone told the post office I was here.",
+            "calder|Lyle took my call at ten past six.",
+            "calder|Then nobody tells Lyle where we go next. Or Dale."
+          ],
+          "finding": "steve|Dale had my letters bundled for June’s house at 08:04. The post office didn’t know until 08:12. The only other person who knew was Lyle, who took June’s call at ten past six. They talk to each other."
+        }
+      },
+      "recap": [
+        "steve|June believes me. That makes one person.",
+        "steve|Somebody with my face was at the market this morning. Lyle passes things to Dale. And two names on June’s list have paper behind them.",
+        "steve|Paper is harder to replace than people. And June has keys to the Town Hall archive."
+      ],
+      "outro": [
+        "calder|Town Hall closes at five. I have keys.",
+        "c3_house.out.02"
+      ],
+      "next": "Town Hall, after hours (c3_archive)."
+    },
+    "c3_archive": {
+      "departure_art": "res://assets/illustrated/campaign/inserts/c3_archive-boathouse-stakeout.webp",
+      "when": "Friday the 26th, after hours",
+      "present": [
+        "steve",
+        "tomas",
+        "calder",
+        "agnes"
+      ],
+      "objective": "Build June a case from records nobody thought to change.",
+      "changes": [
+        "C03",
+        "critic C03",
+        "C13",
+        "critic C13",
+        "U-relationships",
+        "U-narration"
+      ],
+      "notes": [
+        "Mrs. Penhallow appears only in the power lead, at the archive door. Her lines play over the existing painting.",
+        "The departure (outro) is the stakeout on Tuesday the 30th. Art (recommended): a stakeout insert from the boathouse window at midnight: townspeople walking down Harbor Path into glowing surf; a woman in a good wool coat turning back at the waterline; a small old woman on the boathouse steps. Match the painted style of c1_escape.",
+        "The woman who turns back is Nora’s copy skipping her re-sync. It plants Chapter 6 (‘Those Sunday dinners happened to me’) and Interlude 2 (Nora waking).",
+        "out.03 is voiced in full sentences. Show the text message as typed with display_text.",
+        "Walt Prior is the county official from June’s list. Use the same name in Chapter 4’s files on copies placed in Washington."
+      ],
+      "context": [
+        "steve|Town Hall, after five. June had the keys, and I had a phone call to make.",
+        "steve|I asked Tomás for help. It was the first time in a year I’d asked anybody for anything."
+      ],
+      "intro": [
+        "c3_archive.in.01",
+        "c3_archive.in.02",
+        "tomas|Nora says you broke into her aquarium.",
+        "steve|I did.",
+        "tomas|...Cool. Why?",
+        "steve|When I can prove it, you’re the first person I tell."
+      ],
+      "delete": [],
+      "task_order": [
+        "paper",
+        "power",
+        "cycle"
+      ],
+      "tasks": {
+        "paper": {
+          "type": "rows",
+          "difficulty": 3,
+          "title": "Walt Prior’s permit",
+          "requires": [],
+          "goal": "Find out where Walt Prior really was on May 3.",
+          "background": "Walt Prior is on June’s list. He moved to Washington in April. On May 3 a permit was signed in his name at the Town Hall counter. Paper made at the time is hard to change. Copies of paper, and computers, are easy.",
+          "lead": [
+            "calder|Walt Prior. County planner. I went to his going-away party in April. He cried into the punch.",
+            "calder|The county computer says he signed this permit by fax from Washington. The clerk’s ledger says he signed it at her counter."
+          ],
+          "prompt": "Which records were made where they say, and what do they prove?",
+          "instruction": "Four records of May 3. The bound permit ledger: signed in ink at the Town Hall counter at 14:10, with the clerk’s stamp. The permit reopens the aquarium’s old seawater intake. The county computer entry: typed from that ledger the next day, but it now reads ‘signed by fax from Washington’. The hearing transcript: Walt Prior answering questions in Washington from 13:30 to 16:00, Bellwether time. A newspaper column: he ‘looked tired’.",
+          "rows": [
+            {
+              "label": "Made on the spot, in Bellwether",
+              "options": [
+                "Bound ledger",
+                "Computer entry"
+              ],
+              "answer": 0
+            },
+            {
+              "label": "Made on the spot, in Washington",
+              "options": [
+                "Hearing transcript",
+                "Newspaper column"
+              ],
+              "answer": 0
+            },
+            {
+              "label": "What those two show",
+              "options": [
+                "Walt Prior lied about his trip",
+                "One name in two places the same afternoon",
+                "The clerk stamped the wrong day"
+              ],
+              "answer": 1
+            },
+            {
+              "label": "Changed after the fact",
+              "options": [
+                "The bound ledger",
+                "The computer entry"
+              ],
+              "answer": 1
+            }
+          ],
+          "hints": [
+            "A copy of a record isn’t a second witness. Find the two records made on the spot.",
+            "The ledger was signed in ink at the counter. The computer was typed later, and it disagrees with the ink.",
+            "Two records were made on the spot, one in each city, on the same afternoon. Ask what that means for one man’s name."
+          ],
+          "lines": [
+            "c3_archive.paper.01",
+            "calder|And somebody went back and fixed the computer. Nobody bothered with the ink."
+          ],
+          "finding": "steve|On May 3, Walt Prior was answering questions in Washington while someone signed his name at our counter to reopen the aquarium’s old seawater intake. Later, somebody changed the computer. Nobody changed the ink."
+        },
+        "power": {
+          "difficulty": 2,
+          "title": "Sentinel Point’s meter",
+          "requires": [],
+          "goal": "Find out how much power Sentinel Point really uses.",
+          "background": "Meridian Labs says its engine at Sentinel Point will change the world. An engine like that would eat power. The archive keeps the utility’s meter rolls for Sentinel Point and for Pearl Laundry, the laundromat next door. Each roll prints a running total, like a car’s odometer.",
+          "lead": [
+            {
+              "new": "agnes|Steven. You’re slouching.",
+              "direction": "at the archive door, a bait bucket on her arm"
+            },
+            "steve|Mrs. Penhallow? You’re miles from your pier.",
+            "agnes|I take the bus. Two dollars, please. Herring.",
+            {
+              "new": "steve|She’s wrapped it in the business page. Something’s circled. ‘Meridian Labs: the engine that will change the world.’",
+              "direction": "unwrapping the fish"
+            },
+            "calder|Sentinel Point. It was a radio array when I was a girl. Now it’s Meridian’s. Federal money, an armed gate, and on November seventh the President flies in to sign something there.",
+            "agnes|Electricity is very honest, Steven. It can’t be charming."
+          ],
+          "prompt": "Did Sentinel Point use more power than a laundromat last month?",
+          "board": {
+            "instruction": "Work out what each site used last month.",
+            "evidence": [
+              "Pearl Laundry: the roll read 1,118 on the first of the month and 2,000 on the last.",
+              "Sentinel Point: the roll read 3,460 on the first of the month and 4,100 on the last.",
+              "Both meters count forward, in the same units. The same meter reader signed both rolls."
+            ],
+            "stages": [
+              {
+                "mode": "match",
+                "prompt": "Fill in June’s file.",
+                "slots": [
+                  "Pearl Laundry used",
+                  "Sentinel Point used",
+                  "The laundromat used more by"
+                ],
+                "pieces": [
+                  "882 units",
+                  "640 units",
+                  "242 units",
+                  "2,000 units",
+                  "4,100 units"
+                ],
+                "answer": [
+                  0,
+                  1,
+                  2
+                ]
+              }
+            ],
+            "wrong_text": "June taps the meter roll. “Show me how far each counter moved, Mercer.”"
+          },
+          "hints": [
+            "Each roll is a running total. What matters is how far it moved.",
+            "Subtract the first reading from the last, for each site.",
+            "Pearl Laundry: 2,000 minus 1,118. Sentinel Point: 4,100 minus 3,460. Then take the smaller result from the larger."
+          ],
+          "lines": [
+            "c3_archive.power.01"
+          ],
+          "finding": "steve|Last month Sentinel Point used 640 units. The laundromat next door used 882. Whatever Meridian is building out there, it runs on less power than a row of dryers."
+        },
+        "cycle": {
+          "difficulty": 2,
+          "title": "Tomás’s tapes",
+          "requires": [
+            "paper",
+            "power"
+          ],
+          "goal": "Plan a stakeout for the next ninth night.",
+          "background": "On Sunday, Tomás’s reels showed the loud nights coming every nine nights. Each box has two dates: when he recorded and when the episode aired. His field notes say what he saw, and from where.",
+          "lead": [
+            "tomas|Every ninth night for three years, I was out there with a recorder. I wrote down everything, from wherever I was standing.",
+            "steve|Then help me pick a night, and a place to stand."
+          ],
+          "prompt": "When should June and Steve watch, from where, and from what time?",
+          "instruction": "Box labels: RECORDED 3 OCT / AIRED 4 OCT. RECORDED 12 OCT / AIRED 15 OCT. RECORDED 21 OCT / AIRED 23 OCT. Field notes: the pier lamp dims at 23:42. Footsteps pass the boathouse at 23:53. The water glows at 00:04. From the sea wall you see the water, but the path is behind you. The boathouse window faces the path and the beach beyond it. The end of the pier is out in the open.",
+          "rows": [
+            {
+              "label": "The next loud night",
+              "options": [
+                "October 29",
+                "October 30",
+                "October 31"
+              ],
+              "answer": 1
+            },
+            {
+              "label": "Where to watch",
+              "options": [
+                "The sea wall",
+                "The boathouse window",
+                "The end of the pier"
+              ],
+              "answer": 1
+            },
+            {
+              "label": "In place by",
+              "options": [
+                "23:40",
+                "23:55",
+                "00:05"
+              ],
+              "answer": 0
+            }
+          ],
+          "hints": [
+            "Count from the day Tomás recorded, not the day it aired.",
+            "June wants to see faces on the path before they reach the water, without being seen.",
+            "Use the RECORDED dates and keep the same step. Watch from the window that faces the path, and be there before the first thing in the field notes happens."
+          ],
+          "lines": [
+            {
+              "id": "c3_archive.cycle.01",
+              "text": "Nine nights apart, for three years. It never missed one."
+            },
+            "tomas|I’m coming.",
+            "calder|You’re not.",
+            "tomas|Then I want it on tape."
+          ],
+          "finding": "steve|Three years of tape, and the bay never missed a ninth night. The next one is Tuesday the 30th. June and I will be at the boathouse window by 23:40, before the pier lamp dims."
+        }
+      },
+      "recap": [
+        "steve|Three things nobody thought to change. Walt Prior’s name in ink, in two places at once. A lab that will change the world, running on less power than a laundromat. And three years of tape that never missed a ninth night.",
+        "steve|June wanted to see it with her own eyes. So on Tuesday the 30th, at 23:40, we were at the boathouse window."
+      ],
+      "outro": [
+        {
+          "new": "steve|At 23:42 the pier lamp went out. Eleven minutes later, the footsteps started.",
+          "delivery": "narration"
+        },
+        {
+          "new": "steve|That’s Lyle. Gus again. Half the Rotary Club. Nobody’s talking.",
+          "direction": "a whisper at the boathouse window"
+        },
+        "calder|Nobody’s swimming. They’re walking until they’re gone.",
+        "steve|June. That’s Nora’s good coat.",
+        "steve|She’s stopped at the waterline. She’s... going back up the beach.",
+        "c3_archive.out.01",
+        "steve|Mrs. Penhallow was on the boathouse steps, watching. She isn’t on your list.",
+        "calder|She isn’t on anyone’s. Ninety-one years old, on a boathouse step at midnight. Counting.",
+        "calder|I’m calling Adrian Rook. FBI. He owes me a favor from a kidnapping case fifteen years ago.",
+        {
+          "id": "c3_archive.out.02",
+          "delivery": "voicemail"
+        },
+        {
+          "new": "steve|An hour later my flip phone buzzed. A text, from a number I didn’t know.",
+          "delivery": "narration"
+        },
+        {
+          "id": "c3_archive.out.03",
+          "text": "“He remembers June. That doesn’t mean he’s Adrian.” No capitals. No apostrophes.",
+          "display_text": "“he remembers june. that doesnt mean hes adrian.” No capitals. No apostrophes.",
+          "direction": "reading the text aloud, slowly"
+        }
+      ],
+      "next": "Interlude 1 on the same ninth night, under the bay (i1_archive)."
+    },
+    "i1_archive": {
+      "departure_art": "res://assets/illustrated/campaign/inserts/i1_archive-frosted-meeting-memory.webp",
+      "present": [
+        "archivist",
+        "gus"
+      ],
+      "coach": "You are the Archivist now, aboard the ship under the bay. Same tools: click a lead, read the notes, ask for a hint when stuck.",
+      "objective": "Keep the Choir’s records, as the law requires. Look again at what you noticed a year ago.",
+      "changes": [
+        "C26",
+        "critic C26 (keep the bluff hidden until Chapter 7)",
+        "U-narration"
+      ],
+      "notes": [
+        "Saren is heard only over the ship’s intercom.",
+        "The out.02 line stays spoiler-safe: the Archivist says Helen’s memory is not damaged, but not what it holds. Chapter 7 reveals the bluff.",
+        "Art: for the outro fragment, show the p_meeting painting behind a memory filter, or a new insert of the windowless room seen through frost.",
+        "Gus’s kelp croissant in the witness ledger pays off in epilogue.neighbors.04."
+      ],
+      "context": [
+        "archivist|Every ninth night they come below, and I compare each of them with the record they were made from.",
+        "archivist|Two hundred and seventy-four tonight. One of them has changed."
+      ],
+      "intro": [
+        "i1_archive.in.01",
+        "i1_archive.in.02",
+        "archivist|You were made from Gus Albano’s scan, and you have drifted from it. That makes you an echo. Echoes are reconciled.",
+        "gus|It was a very good croissant."
+      ],
+      "delete": [],
+      "task_order": [
+        "reset",
+        "signals",
+        "quiet"
+      ],
+      "tasks": {
+        "reset": {
+          "difficulty": 2,
+          "title": "Gus’s reconciliation",
+          "requires": [],
+          "goal": "Reconcile Gus’s echo, as the law requires.",
+          "background": "The Archivist keeps the Choir, the ship’s memory of every person it has copied. A copy that drifts from its record is an echo, and the law resets it. The law is old and exact, and she follows it to the letter.",
+          "lead": [
+            "archivist|One recipe of drift. The law does not measure how much. Only that it happened."
+          ],
+          "prompt": "Which record does she read, which does she restore, and what does she write down?",
+          "board": {
+            "instruction": "Lay out the records before giving the order.",
+            "evidence": [
+              "Stone tab: Gus’s record from his scan. He bakes from his grandmother’s recipes and has never changed one. Sealed under the source mark.",
+              "Reed tab: the working Gus, as he is tonight. Eight days ago, on Monday, he folded kelp through the dough for the first time and set out his first tray at dawn.",
+              "The law: the source may never be changed. The echo is restored from the source. What the echo loses must be described, in a separate witness ledger.",
+              "Two entries are drafted for the witness ledger. One describes the procedure. One describes what Gus will lose."
+            ],
+            "stages": [
+              {
+                "mode": "match",
+                "prompt": "Carry out the reconciliation.",
+                "slots": [
+                  "Read from",
+                  "Restore into",
+                  "Write in the witness ledger"
+                ],
+                "pieces": [
+                  "Sealed stone source",
+                  "Gus’s working echo",
+                  "“Kelp folded through the dough. First tray at dawn.”",
+                  "“Echo drifted. Corrected.”"
+                ],
+                "answer": [
+                  0,
+                  1,
+                  2
+                ]
+              }
+            ],
+            "wrong_text": "The law is exact. Read it again."
+          },
+          "hints": [
+            "Which record is the law forbidding her to touch?",
+            "The echo is restored from the source, never the other way round. The ledger must describe what is lost.",
+            "One ledger entry describes what Gus made. The other only describes what you did to him. The law asks for the first."
+          ],
+          "lines": [
+            "i1_archive.reset.01",
+            "i1_archive.reset.02",
+            "i1_archive.reset.03"
+          ],
+          "finding": "archivist|Gus Albano’s echo, reconciled. He will go back to town smiling, without the croissant. I have written down what it was."
+        },
+        "signals": {
+          "difficulty": 3,
+          "title": "The Meridian reels",
+          "requires": [
+            "reset"
+          ],
+          "goal": "Compare the two Meridian test reels.",
+          "background": "Nine years ago two human stations recorded tests of the Meridian engine, a week apart, on opposite sides of their world. The Prefect keeps both reels in his file. Each reel holds the engine’s pulse and the station’s note of a lamp flare at the test site.",
+          "lead": [
+            "archivist|Two human tests of the Meridian engine. The Prefect keeps them in his file.",
+            "archivist|A year ago I noticed something about them. Every ninth night I listen again, to be sure."
+          ],
+          "prompt": "Listen to both reels and read the lamp notes. What should the Archivist file?",
+          "options": [
+            "One test, filed twice",
+            "Two independent tests",
+            "Two tests that share one recorded pulse"
+          ],
+          "answer": 2,
+          "wrong": {
+            "0": "The lamp flares fall at different moments. These are two different nights.",
+            "1": "Two separate engines would not miss the same beat in the same place."
+          },
+          "evidence_labels": [
+            "American station · lamp flare at 0:04",
+            "Chinese station · lamp flare at 0:06"
+          ],
+          "hints": [
+            "Start with the gap near the middle of each pulse.",
+            "The sound matches beat for beat, gap and all. The lamp notes don’t.",
+            "The same pulse rules out two separate engines. Different light rules out one night filed twice."
+          ],
+          "lines": [
+            {
+              "id": "i1_archive.signals.01",
+              "text": "The same pulse. The same missing beat. Different light. Either humans are very consistent, or very careful liars. I will not guess on the record."
+            }
+          ],
+          "finding": "archivist|Two tests, a week and a world apart, with the same pulse and the same missing beat. Only the light differs. I have not written down what I think it means."
+        },
+        "quiet": {
+          "type": "board",
+          "difficulty": 3,
+          "title": "The sealed surveys",
+          "requires": [
+            "signals"
+          ],
+          "goal": "File what the fleet’s sealed records really show.",
+          "background": "In nine hundred years the fleet has found seven worlds with people on them. Every one went quiet soon after the fleet arrived, and the records were sealed. The crew prefer not to ask. In Row Zero of the Gallery, under frost, sleeps the only one of those people the fleet ever brought aboard.",
+          "lead": [
+            {
+              "id": "i1_archive.quiet.01",
+              "text": "The fleet has answered. One word. Deliver.",
+              "delivery": "intercom"
+            },
+            "i1_archive.quiet.02",
+            "archivist|The fleet never takes a Prefect’s word for long. Sooner or later, it sends a Vigil to look."
+          ],
+          "prompt": "Which world did the Row Zero sleeper come from, what did the surveys find, and what should she do with the sealed entry?",
+          "board": {
+            "instruction": "File what is known, and only what is known.",
+            "evidence": [
+              "Seven fleet records, each marked Quiet, each with the year its world went silent. Tirel went silent three hundred years ago. The other six went silent five hundred years ago or more.",
+              "Not one record lists a body, a ruin or a battle. The surveyors found the cities empty.",
+              "Row Zero: one sleeper, not human, brought aboard three hundred years ago. It has never spoken.",
+              "The ship’s own survey log: one entry from the scout’s route, sealed under the Prefect’s own mark. The Archivist has no key to it."
+            ],
+            "stages": [
+              {
+                "mode": "match",
+                "prompt": "File the records.",
+                "slots": [
+                  "Row Zero’s world",
+                  "What the surveys found",
+                  "The Prefect’s sealed entry"
+                ],
+                "pieces": [
+                  "Tirel",
+                  "Empty cities, no bodies",
+                  "Unread. Kept separate.",
+                  "Destroyed in a war",
+                  "One of the seven Quiet worlds"
+                ],
+                "answer": [
+                  0,
+                  1,
+                  2
+                ]
+              }
+            ],
+            "wrong_text": "That is a guess. The record holds only what is known."
+          },
+          "hints": [
+            "Match the sleeper’s three hundred years against the year each world went silent.",
+            "No bodies, no ruins, no battle. File only what the surveyors saw. Don’t guess at a seal you cannot open.",
+            "Match the three hundred years to one silent year. File what the surveyors saw, not what you fear. A seal you cannot open stays a seal."
+          ],
+          "lines": [
+            {
+              "new": "archivist|Tirel went quiet. So did six others. Not one body, in any survey.",
+              "direction": "beside the frosted bed in Row Zero"
+            },
+            "i1_archive.quiet.03"
+          ],
+          "finding": "archivist|The sleeper in Row Zero came from Tirel, three hundred years ago. Seven worlds went quiet, and the surveyors found empty cities, not graves. The Prefect’s sealed entry, I have not read."
+        }
+      },
+      "recap": [
+        "archivist|One echo reconciled, and one croissant written down. Two human tests, a world apart, with one pulse between them. Seven quiet worlds, and not one grave.",
+        "archivist|And a Prefect who has promised the fleet an engine."
+      ],
+      "outro": [
+        {
+          "new": "archivist|Last, as every ninth night, Helen Mercer. A windowless room. Two delegations. And Helen between them, writing in a notebook.",
+          "delivery": "narration"
+        },
+        {
+          "id": "i1_archive.out.01",
+          "text": "Report to the Prefect. Subject: Mercer, Helen. Memory damaged by scan. Engine details in subject’s notebook."
+        },
+        {
+          "id": "i1_archive.out.02",
+          "text": "Her memory is not damaged. I will leave the report as it is."
+        },
+        {
+          "new": "archivist|Then I did what I always do when the work is finished. I listened to the last wind on Veyr.",
+          "delivery": "narration"
+        }
+      ],
+      "next": "The Archivist’s memory of Veyr (p_veyr)."
+    },
+    "p_veyr": {
+      "present": [
+        "archivist"
+      ],
+      "changes": [
+        "C27",
+        "C23 (record becomes a beat)",
+        "U-narration"
+      ],
+      "notes": [
+        "p_veyr.shield is removed; its hotspot (the felt sleeve) can go. The sleeve is now part of the levels background."
+      ],
+      "task_order": [
+        "levels",
+        "record"
+      ],
+      "tasks": {
+        "shield": "DELETE",
+        "levels": {
+          "type": "rows",
+          "difficulty": 2,
+          "title": "Recording levels",
+          "requires": [],
+          "goal": "Set the level so the departure doesn’t distort.",
+          "background": "The Archivist has fitted a felt sleeve over the microphone against the wind. The meter turns red above 0 dB. When the ships rise, their engines will be far louder than the wind.",
+          "lead": [
+            "p_veyr.shield.01"
+          ],
+          "prompt": "How far should she turn the gain down?",
+          "instruction": "Three gusts so far peaked at −9, −3 and −6 dB. The departure engines will be 9 dB louder than the loudest gust. Choose the smallest cut that keeps the engines out of the red.",
+          "rows": [
+            {
+              "label": "Gain adjustment",
+              "options": [
+                "−3 dB",
+                "−6 dB",
+                "−9 dB",
+                "−12 dB"
+              ],
+              "answer": 1
+            }
+          ],
+          "hints": [
+            "Find the loudest gust first.",
+            "The loudest gust peaked at −3 dB. The engines will be 9 dB above that.",
+            "Work out where the engines will peak, then take off exactly that much, and no more."
+          ],
+          "lines": [
+            "p_veyr.levels.01"
+          ],
+          "finding": "archivist|Six decibels of room. When the engines come, they will reach the top of the meter and no further."
+        },
+        "record": {
+          "type": "beat",
+          "difficulty": 1,
+          "title": "Departure recorder",
+          "requires": [
+            "levels"
+          ],
+          "goal": "Record the departure.",
+          "background": "The ships begin to rise: first the wind, then the engines, then silence where the engines were.",
+          "prompt": "Someone who never heard this will want to know how long the silence lasted.",
+          "options": [
+            "Record the whole passage, silence included"
+          ],
+          "answer": 0,
+          "hints": [
+            "There is nothing to solve here.",
+            "There is nothing to solve here.",
+            "Record the whole passage, silence included."
+          ],
+          "lines": [
+            "p_veyr.record.01",
+            "archivist|Forty thousand names. Somebody should remember the quiet after them."
+          ],
+          "finding": "archivist|The wind, the engines, and the quiet after them. One take."
+        }
+      },
+      "delete": [],
+      "recap": [
+        "archivist|One take. The wind over the western towers, the engines rising, and then the quiet.",
+        "archivist|I did not look back. I watched the meter."
+      ],
+      "next": "Chapter 4 (c4_safe)."
+    }
+  }
+}

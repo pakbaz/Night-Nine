@@ -1,0 +1,118 @@
+{
+  "base": "nora_reunion.webp",
+  "source": "assets/characters/campaign/masters/nora_reunion.png",
+  "source_sha256": "fadb86b0f8ca7c9f14590881488c723cc2d2f6b8a3a27223b93c674ebc6224a5",
+  "size": [
+    720,
+    1080
+  ],
+  "origin": "top_left",
+  "foot_anchor": [
+    360,
+    1080
+  ],
+  "frames": {
+    "blink_half": {
+      "atlas_region": [
+        0,
+        0,
+        107,
+        34
+      ],
+      "source_origin": [
+        318,
+        158
+      ]
+    },
+    "blink_closed": {
+      "atlas_region": [
+        0,
+        36,
+        107,
+        34
+      ],
+      "source_origin": [
+        318,
+        158
+      ]
+    },
+    "mouth_parted": {
+      "atlas_region": [
+        0,
+        72,
+        83,
+        63
+      ],
+      "source_origin": [
+        340,
+        211
+      ]
+    },
+    "mouth_open": {
+      "atlas_region": [
+        0,
+        137,
+        83,
+        63
+      ],
+      "source_origin": [
+        340,
+        211
+      ]
+    },
+    "mouth_round": {
+      "atlas_region": [
+        0,
+        202,
+        83,
+        63
+      ],
+      "source_origin": [
+        340,
+        211
+      ]
+    },
+    "mouth_wide": {
+      "atlas_region": [
+        0,
+        267,
+        83,
+        63
+      ],
+      "source_origin": [
+        340,
+        211
+      ]
+    }
+  },
+  "cue_frames": {
+    "X": null,
+    "A": null,
+    "B": "mouth_parted",
+    "C": "mouth_wide",
+    "D": "mouth_open",
+    "E": "mouth_round",
+    "F": "mouth_round",
+    "G": "mouth_parted",
+    "H": "mouth_parted"
+  },
+  "sha256": {
+    "nora_reunion.webp": "650a4044f8575f8e979965a04f1407d4693e60cef8252c0baa1f6bb8e4e236a0",
+    "nora_reunion-face-atlas.png": "d3bc5d80fd2cf21eecb9bdbe4199974c2c6436495754cda04bf956f7b9f27690"
+  },
+  "atlas": "nora_reunion-face-atlas.png",
+  "eye_centers": [
+    [
+      341,
+      180
+    ],
+    [
+      403,
+      171
+    ]
+  ],
+  "mouth_center": [
+    383,
+    242
+  ]
+}

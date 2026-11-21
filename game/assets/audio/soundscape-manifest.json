@@ -131,10 +131,40 @@
     "seconds": 11.75,
     "provenance": "Original deterministic synthesis in tools/build-soundscape.py"
   },
+  "delegates_laugh": {
+    "file": "res://assets/audio/effects/delegates_laugh.wav",
+    "seconds": 1.3186666666666667,
+    "sha256": "7c66db1fe72a1466c994323f3b28f491fdc862750b323097c353ce3051b5a541",
+    "provenance": "assets/audio/delegate-reaction/delegates_laugh.json"
+  },
   "nora_whistle": {
     "file": "res://assets/audio/effects/nora_whistle.wav",
     "sha256": "749a4f877816a5962a23d5c04967fb3c57a38a37d787f702b22f444e95284cea",
     "seconds": 0.98,
+    "provenance": "Original deterministic synthesis in tools/build-soundscape.py"
+  },
+  "nora_whistle_flat": {
+    "file": "res://assets/audio/effects/nora_whistle_flat.wav",
+    "sha256": "80151952cca1b586003d15ce23e30c0d5a490db7454f9ba1839a708d4919bbaa",
+    "seconds": 0.98,
+    "provenance": "Original deterministic synthesis in tools/build-soundscape.py"
+  },
+  "steve_whistle": {
+    "file": "res://assets/audio/effects/steve_whistle.wav",
+    "sha256": "a64988a74ea39d8c43c5c206a6e5e5091e9dc828f87d2691f52908f1599ca19c",
+    "seconds": 1.6,
+    "provenance": "Original deterministic synthesis in tools/build-soundscape.py"
+  },
+  "harbor_winch": {
+    "file": "res://assets/audio/effects/harbor_winch.wav",
+    "sha256": "6e04b2cc0492baa049cc183f58b21aff5f28230a3a10a4c5351483bd9cdcdad6",
+    "seconds": 3.0,
+    "provenance": "Original deterministic synthesis in tools/build-soundscape.py"
+  },
+  "kbwr_ident": {
+    "file": "res://assets/audio/effects/kbwr_ident.wav",
+    "sha256": "a665128c698ff9cdddb56fa231577dd209134e6fdaa3caa58c5dc0466ccc7a3e",
+    "seconds": 12.0,
     "provenance": "Original deterministic synthesis in tools/build-soundscape.py"
   },
   "k7blw": {
@@ -151,8 +181,8 @@
   },
   "ninth_night": {
     "file": "res://assets/audio/effects/ninth_night.wav",
-    "sha256": "7e2a9e3e6ec7d06e191cfd64eebbe03f483880aeb858c59dda99bebf6fe4382d",
-    "seconds": 4.0,
+    "sha256": "258c3a590e1fe234408b7d3755425158ade99bb5324e3ef9a3106946eee65de8",
+    "seconds": 2.0,
     "provenance": "Original deterministic synthesis in tools/build-soundscape.py"
   },
   "veyr_wind": {
@@ -169,15 +199,39 @@
   },
   "wick": {
     "file": "res://assets/audio/effects/wick.wav",
-    "sha256": "ab9f5387c84d31af393960ece5a4238a783435cf3f9c5e36ba92c02eebdb3540",
-    "seconds": 3.55,
+    "sha256": "6b47cdec64411cb33fb3e299f4b2ecb84f19ae61bf2e5afc43f878ef1ae41c94",
+    "seconds": 4.4,
     "provenance": "Original deterministic synthesis in tools/build-soundscape.py"
   },
-  "delegates_laugh": {
-    "file": "res://assets/audio/effects/delegates_laugh.wav",
-    "seconds": 1.3186666666666667,
-    "sha256": "7c66db1fe72a1466c994323f3b28f491fdc862750b323097c353ce3051b5a541",
-    "provenance": "assets/audio/delegate-reaction/delegates_laugh.json"
+  "wick_high_ending": {
+    "file": "res://assets/audio/effects/wick_high_ending.wav",
+    "sha256": "8701744044d254292211a2cb606e0344687d04d2667be051d05e62a6f999ec2a",
+    "seconds": 4.4,
+    "provenance": "Original deterministic synthesis in tools/build-soundscape.py"
+  },
+  "hum_first_reel": {
+    "file": "res://assets/audio/effects/hum_first_reel.wav",
+    "sha256": "c583552ed0f65671bc508c1782fe1ac76feaa2feda4e36e3905c47215c017be3",
+    "seconds": 4.0,
+    "provenance": "Original deterministic synthesis in tools/build-soundscape.py"
+  },
+  "hum_last_reel": {
+    "file": "res://assets/audio/effects/hum_last_reel.wav",
+    "sha256": "97415dd0b55c14e09e792a9e6d4ad9d33394f006fd806679ed3bba63772dd0a7",
+    "seconds": 4.0,
+    "provenance": "Original deterministic synthesis in tools/build-soundscape.py"
+  },
+  "halcyon_hold_seattle": {
+    "file": "res://assets/audio/effects/halcyon_hold_seattle.wav",
+    "sha256": "5bad5b451cae2519fced1871c954669ba7f3ddf46c07aa8cc6030dada22b8675",
+    "seconds": 3.57,
+    "provenance": "Original deterministic synthesis in tools/build-soundscape.py"
+  },
+  "halcyon_hold_denver": {
+    "file": "res://assets/audio/effects/halcyon_hold_denver.wav",
+    "sha256": "0903e6703329871b4309d7c28ea1f01f0bf276c591432bf6c1ccad3dd9050f59",
+    "seconds": 3.87,
+    "provenance": "Original deterministic synthesis in tools/build-soundscape.py"
   },
   "aquarium_pa": {
     "file": "res://assets/audio/effects/aquarium_pa.wav",

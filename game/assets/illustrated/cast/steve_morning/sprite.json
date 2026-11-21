@@ -1,0 +1,118 @@
+{
+  "base": "steve_morning.webp",
+  "source": "assets/characters/campaign/masters/steve_morning.png",
+  "source_sha256": "4830b0392913a41f17759ef49bae0605b545cc10ce6a3e4d95b08b356a9a0b89",
+  "size": [
+    720,
+    1080
+  ],
+  "origin": "top_left",
+  "foot_anchor": [
+    360,
+    1080
+  ],
+  "frames": {
+    "blink_half": {
+      "atlas_region": [
+        0,
+        0,
+        107,
+        38
+      ],
+      "source_origin": [
+        312,
+        133
+      ]
+    },
+    "blink_closed": {
+      "atlas_region": [
+        0,
+        40,
+        107,
+        38
+      ],
+      "source_origin": [
+        312,
+        133
+      ]
+    },
+    "mouth_parted": {
+      "atlas_region": [
+        0,
+        80,
+        83,
+        57
+      ],
+      "source_origin": [
+        339,
+        195
+      ]
+    },
+    "mouth_open": {
+      "atlas_region": [
+        0,
+        139,
+        83,
+        57
+      ],
+      "source_origin": [
+        339,
+        195
+      ]
+    },
+    "mouth_round": {
+      "atlas_region": [
+        0,
+        198,
+        83,
+        57
+      ],
+      "source_origin": [
+        339,
+        195
+      ]
+    },
+    "mouth_wide": {
+      "atlas_region": [
+        0,
+        257,
+        83,
+        57
+      ],
+      "source_origin": [
+        339,
+        195
+      ]
+    }
+  },
+  "cue_frames": {
+    "X": null,
+    "A": null,
+    "B": "mouth_parted",
+    "C": "mouth_wide",
+    "D": "mouth_open",
+    "E": "mouth_round",
+    "F": "mouth_round",
+    "G": "mouth_parted",
+    "H": "mouth_parted"
+  },
+  "sha256": {
+    "steve_morning.webp": "19740b3421349a9bb541db016531b175c6b930759988261d7e6320664e54f9c1",
+    "steve_morning-face-atlas.png": "5f29b538aacec5d5cfeca38cc2217956385a4d2e9220cbbbcd4e838979ee20e0"
+  },
+  "atlas": "steve_morning-face-atlas.png",
+  "eye_centers": [
+    [
+      335,
+      158
+    ],
+    [
+      397,
+      147
+    ]
+  ],
+  "mouth_center": [
+    382,
+    223
+  ]
+}

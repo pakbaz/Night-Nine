@@ -1,0 +1,414 @@
+{
+  "global": {
+    "display": [
+      [
+        "saren",
+        "c3_archive",
+        "The Prefect"
+      ],
+      [
+        "agnes_original",
+        "c9_wake",
+        "Mrs. Penhallow, row three"
+      ],
+      [
+        "iris",
+        "c1_escape",
+        "Nora Reyes"
+      ],
+      [
+        "iris",
+        "c6_iris",
+        "Nora’s copy"
+      ],
+      [
+        "lyle_copy",
+        "c2_ship",
+        "Lyle Boone"
+      ],
+      [
+        "rook_copy",
+        "c4_safe",
+        "Adrian Rook"
+      ],
+      [
+        "pell",
+        "c5_station",
+        "Dale Kittredge"
+      ],
+      [
+        "guard",
+        "c5_station",
+        "Ship attendant"
+      ],
+      [
+        "agnes",
+        "c10_town",
+        "Agnes Penhallow"
+      ],
+      [
+        "agnes",
+        "postcredits",
+        "Agnes (shore echo)"
+      ]
+    ],
+    "spoilers": [
+      {
+        "pattern": "\\bcop(y|ies)\\b",
+        "from": "c2_aquarium",
+        "ignore_case": true,
+        "why": "Steve learns about the copies from Nora's intercom tape."
+      },
+      {
+        "pattern": "\\bIris\\b",
+        "from": "c6_iris",
+        "why": "Nora's copy chooses the name Iris in Chapter 6."
+      },
+      {
+        "pattern": "\\bPell\\b",
+        "from": "c6_jail",
+        "why": "Dale's copy is unmasked in Chapter 6."
+      },
+      {
+        "pattern": "\\bStephen\\b",
+        "from": "c5_station",
+        "why": "Steve's copy names himself in Chapter 5."
+      },
+      {
+        "pattern": "\\bVeyri\\b",
+        "from": "i1_archive",
+        "why": "Humans never use the name before Iris explains it; the Archivist's interlude may."
+      },
+      {
+        "pattern": "\\bTirel\\b",
+        "from": "i1_archive"
+      },
+      {
+        "pattern": "\\bWick\\b",
+        "from": "c9_choir"
+      },
+      {
+        "pattern": "\\bVigil\\b",
+        "from": "i1_archive"
+      },
+      {
+        "pattern": "\\bChoir\\b",
+        "from": "i1_archive"
+      },
+      {
+        "pattern": "Archivist",
+        "from": "i1_archive"
+      },
+      {
+        "pattern": "\\becho(es)?\\b",
+        "from": "i1_archive",
+        "ignore_case": true
+      },
+      {
+        "pattern": "\\b(no engine|Meridian (was|is) a bluff|staged (test|demonstration)s?|fake (test|engine))\\b",
+        "from": "c7_swap",
+        "ignore_case": true
+      },
+      {
+        "pattern": "(Agnes|Penhallow)[^.]{0,140}(Archivist|shore body|echo|Veyr)|(Archivist|Veyr)[^.]{0,140}(Agnes|Penhallow)",
+        "from": "c10_town",
+        "why": "Mrs. Penhallow's secret."
+      },
+      {
+        "pattern": "\\bLong Patience\\b",
+        "from": "c2_ship"
+      },
+      {
+        "pattern": "\\b(Saren|Prefect)\\b",
+        "from": "c2_ship"
+      },
+      {
+        "pattern": "\\bGallery\\b",
+        "from": "c2_ship"
+      },
+      {
+        "pattern": "\\bscan(s|ned|ning)?\\b",
+        "from": "c2_ship",
+        "ignore_case": true
+      },
+      {
+        "pattern": "\\b(Meridian|Sentinel)\\b",
+        "from": "c3_archive"
+      },
+      {
+        "pattern": "the apparent Nora|apparent Nora",
+        "banned": true,
+        "ignore_case": true
+      },
+      {
+        "pattern": "Rook[’']s copy",
+        "from": "c4_safe"
+      },
+      {
+        "pattern": "Lyle[’']s copy",
+        "from": "c3_house"
+      }
+    ],
+    "no_finding": [
+      "p_bay.message",
+      "postcredits.answer",
+      "one_year.newwind"
+    ],
+    "cast_add": {},
+    "notebook_cases": {
+      "greeting": {
+        "title": "Why did I hear the same greeting twice?",
+        "clues": [
+          "c1_flat.saturday",
+          "c1_flat.sunday",
+          "c1_flat.compare",
+          "c1_flat.control",
+          "c1_dinner.family",
+          "c1_escape.order",
+          "c2_aquarium.intercom",
+          "c2_ship.nora"
+        ],
+        "theories": [
+          {
+            "id": "tape_fault",
+            "after": "c1_flat.compare",
+            "text": "Dad’s old recorder is printing one tape onto the other."
+          },
+          {
+            "id": "misheard",
+            "after": "c1_flat.compare",
+            "text": "I was tired and heard a match that was never there."
+          },
+          {
+            "id": "grief",
+            "after": "c1_flat.compare",
+            "text": "Since the boat, I may be reading too much into ordinary things."
+          },
+          {
+            "id": "stand_in",
+            "after": "c1_escape.order",
+            "text": "Someone else has been using Nora’s name."
+          }
+        ]
+      },
+      "aquarium": {
+        "title": "What happened in the north wing?",
+        "clues": [
+          "c1_escape.order",
+          "c2_aquarium.plan",
+          "c2_aquarium.intercom",
+          "c2_ship.nora",
+          "c2_ship.command"
+        ],
+        "theories": [
+          {
+            "id": "maintenance",
+            "after": "c2_aquarium.plan",
+            "text": "The work order was an ordinary repair with the wrong date on it."
+          },
+          {
+            "id": "missing_nora",
+            "after": "c2_aquarium.intercom",
+            "text": "The woman on that tape might still be alive somewhere."
+          }
+        ]
+      },
+      "town": {
+        "title": "How can June and I test a suspicion?",
+        "clues": [
+          "c3_house.crossword",
+          "c3_house.rules",
+          "c3_house.mail",
+          "c3_archive.paper",
+          "c3_archive.cycle"
+        ],
+        "theories": [
+          {
+            "id": "personality",
+            "after": "c3_house.crossword",
+            "text": "A change in someone’s habits could identify a copy."
+          },
+          {
+            "id": "dated_records",
+            "after": "c3_house.crossword",
+            "text": "A fresh private fact, or a dated record that puts someone in two places, could tell us more."
+          }
+        ]
+      },
+      "meridian": {
+        "title": "What is really at Sentinel Point?",
+        "clues": [
+          "c3_archive.power",
+          "i1_archive.signals",
+          "c8_lab.notebook",
+          "c8_lab.props",
+          "c8_rig.path"
+        ],
+        "theories": [
+          {
+            "id": "working_engine",
+            "after": "c3_archive.power",
+            "text": "Meridian runs a world-changing engine on very little power."
+          },
+          {
+            "id": "stage_test",
+            "after": "c3_archive.power",
+            "text": "Meridian’s engine may not be what the press releases say."
+          }
+        ]
+      },
+      "rook": {
+        "title": "What does Rook know about June?",
+        "clues": [
+          "c4_safe.record",
+          "c4_safe.match",
+          "c4_safe.screens"
+        ],
+        "theories": [
+          {
+            "id": "old_friend",
+            "after": "c4_safe.record",
+            "text": "Only June’s old friend could know the right words."
+          },
+          {
+            "id": "borrowed_voice",
+            "after": "c4_safe.record",
+            "text": "Someone else could be playing the performance on her voicemail."
+          }
+        ]
+      },
+      "boat": {
+        "title": "Why did Mom and Dad go out that night?",
+        "clues": [
+          "c5_shack.notes",
+          "c5_shack.club",
+          "c5_shack.log",
+          "c9_choir.note"
+        ],
+        "theories": [
+          {
+            "id": "pleasure_trip",
+            "after": "c5_shack.notes",
+            "text": "They only wanted company on the water."
+          },
+          {
+            "id": "radio_investigation",
+            "after": "c5_shack.notes",
+            "text": "They went out to find the signal Dad was tracking."
+          }
+        ]
+      },
+      "iris": {
+        "title": "Why did she let me leave?",
+        "clues": [
+          "c1_escape.cross",
+          "c3_archive.cycle",
+          "c6_iris.takes",
+          "c6_iris.hold",
+          "c6_jail.exit",
+          "c9_gallery.link"
+        ],
+        "theories": [
+          {
+            "id": "fixed_record",
+            "after": "c1_escape.cross",
+            "text": "She can only repeat what Nora would have done."
+          },
+          {
+            "id": "own_choice",
+            "after": "c1_escape.cross",
+            "text": "She can make a choice Nora never made."
+          }
+        ]
+      },
+      "penhallow": {
+        "title": "Who is Mrs. Penhallow?",
+        "clues": [
+          "c1_pier.bait",
+          "c3_house.rules",
+          "c3_archive.power",
+          "c9_wake.agnes",
+          "c10_report.echo"
+        ],
+        "theories": [
+          {
+            "id": "just_agnes",
+            "after": "c3_house.rules",
+            "text": "She is exactly who she seems: a retired teacher who gets around."
+          },
+          {
+            "id": "someone_else",
+            "after": "c9_wake.agnes",
+            "text": "Someone else has been selling bait on the pier."
+          }
+        ]
+      },
+      "signing": {
+        "title": "Where could a substitution take place?",
+        "clues": [
+          "c7_gate.post",
+          "c7_gate.truck",
+          "c7_swap.map",
+          "c7_swap.tone"
+        ],
+        "theories": [
+          {
+            "id": "podium_only",
+            "after": "c7_gate.post",
+            "text": "We only need to watch the podium."
+          },
+          {
+            "id": "between",
+            "after": "c7_gate.post",
+            "text": "The swap would happen between the hatch and the podium, out of sight."
+          }
+        ]
+      },
+      "choir": {
+        "title": "What is making the tune inside the ship?",
+        "clues": [
+          "c2_ship.nora",
+          "c5_shack.log",
+          "c9_wake.helen",
+          "c9_choir.truth",
+          "c9_choir.wick"
+        ],
+        "theories": [
+          {
+            "id": "ship_machinery",
+            "after": "c2_ship.nora",
+            "text": "I am hearing a familiar tune in ordinary ship noise."
+          },
+          {
+            "id": "choir_memory",
+            "after": "c5_shack.log",
+            "text": "Something on the ship holds people’s memories, and sings them."
+          }
+        ]
+      },
+      "broadcast": {
+        "title": "How can the fleet test our performance?",
+        "clues": [
+          "c8_rig.source",
+          "c8_rig.path",
+          "c10_station.route",
+          "c10_station.relay",
+          "c10_live.second",
+          "c10_report.report"
+        ],
+        "theories": [
+          {
+            "id": "old_test",
+            "after": "c8_rig.source",
+            "text": "We could replay the old Meridian test over the tower."
+          },
+          {
+            "id": "live_reply",
+            "after": "c8_rig.source",
+            "text": "We could answer every cue live, through the ship’s own equipment."
+          }
+        ]
+      }
+    }
+  }
+}

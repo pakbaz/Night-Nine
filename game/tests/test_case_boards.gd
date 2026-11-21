@@ -8,6 +8,7 @@ var examples:= {}
 var case_count:=0
 var stage_count:=0
 var placement_count:=0
+var decoy_count:=0
 var layouts := []
 
 func _initialize() -> void:
@@ -91,15 +92,19 @@ func fresh_room(id: String) -> void:
 				game.campaign.switch_actor(task.actor)
 			check(game.campaign.choose(task.id,int(task.answer),task.get("puzzle",{}).get("solution",[])).ok,"Reach exhibit "+str(task.id))
 			game.campaign.mark_seen(task.lines)
+			if not str(task.get("finding","")).is_empty():
+				game.campaign.mark_seen([task.finding])
 		if i!=task_scene:
 			game.campaign.mark_seen(scene.outro)
 			game.campaign.advance()
 	var wanted: String=game.campaign.task_index[id].actor
 	if not wanted.is_empty():
 		game.campaign.switch_actor(wanted)
+	game.campaign.mark_seen(game.campaign.task_index[id].get("lead",[]))
 	game.started=true
 	game.menu.hide()
 	game._load_stage(false)
+	check(game._can_explore() and game.campaign.available(id),"Board task is available to inspect "+id)
 	game._inspect_on_arrival(id)
 	await frames(4)
 	check(game.case_board.is_visible_in_tree(),"Open the case at "+id)
@@ -118,7 +123,6 @@ func record_view(mode: String,board: Control) -> void:
 
 func review_layouts() -> void:
 	var scroll:=game.interaction.get_parent() as ScrollContainer
-	var panel: Rect2=game.root.get_node("InteractionPanel").get_global_rect()
 	var images:=OS.get_environment("NIGHT_NINE_CASEBOARD_ALL_FRAMES")=="1" and DisplayServer.get_name()!="headless"
 	if images:
 		DirAccess.make_dir_recursive_absolute(destination.path_join("boards"))
@@ -133,18 +137,31 @@ func review_layouts() -> void:
 			var progress: Dictionary=game.campaign.board_draft(task.id)
 			progress.stage=index
 			game.interaction.add_child(board)
-			board.configure(task.id,task.title,task.puzzle,progress)
-			scroll.scroll_vertical=0
+			board.configure(task.id,task.title,task.puzzle,progress,task.goal,task.background,game.campaign.perspective_name(task.id))
 			await frames(3)
 			var name_: String="%s-%d" % [task.id,index+1]
-			var fit: bool=panel.encloses(board.confirm.get_global_rect()) and panel.encloses(board.slots[-1].get_global_rect()) and panel.encloses(board.pieces[-1].get_global_rect())
-			check(fit,"Fit all board controls for "+name_)
+			check(board.goal.text == task.goal and board.background.text == task.background, "Show goal and background on " + name_)
+			check(board.hint_button.text.begins_with("Hint 1 of 3"), "Number the board hint on " + name_)
+			var fit:=true
+			for dimensions: Vector2i in [Vector2i(960,600),Vector2i(1280,720)]:
+				root.size=dimensions
+				game._investigation_size(true)
+				await frames(3)
+				var panel: Rect2=game.root.get_node("InteractionPanel").get_global_rect()
+				for control: Control in [board.goal,board.background,board.pieces[-1],board.slots[-1],board.confirm,board.hint_button]:
+					scroll.ensure_control_visible(control)
+					await frames()
+					var visible:=panel.intersects(control.get_global_rect()) if control==board.background else panel.encloses(control.get_global_rect())
+					fit=fit and visible
+					check(visible,"Reach every board control at %dx%d for %s" % [dimensions.x,dimensions.y,name_])
 			layouts.append({"task":task.id,"step":index+1,"mode":task.puzzle.stages[index].mode,"fits":fit})
 			if images:
 				RenderingServer.force_draw(false)
 				root.get_texture().get_image().save_png(destination.path_join("boards").path_join(name_+".png"))
 			game.interaction.remove_child(board)
 			board.queue_free()
+	root.size=Vector2i(1600,900)
+	game._investigation_size(true)
 
 func run() -> void:
 	destination=OS.get_environment("NIGHT_NINE_QA_DIR")
@@ -164,9 +181,22 @@ func run() -> void:
 			placement_count+=p.solution.size()
 			var merged: Array=[]
 			for row: Dictionary in p.stages:
+				check(row.slots.size()>=1 and row.slots.size()<=5,"Board stage uses one to five slots "+str(task.id))
+				check(row.pieces.size()>=row.slots.size(),"Board has enough pieces "+str(task.id))
+				var piece_ids := {}
+				for piece: String in row.pieces:
+					piece_ids[piece]=true
+				check(piece_ids.size()==row.pieces.size(),"Board piece ids are unique "+str(task.id))
+				var used := {}
+				for answer: int in row.answer:
+					check(answer>=0 and answer<row.pieces.size(),"Board answer names an existing piece "+str(task.id))
+					used[answer]=true
+				check(used.size()==row.slots.size(),"One distinct answer per board slot "+str(task.id))
+				decoy_count+=row.pieces.size()-row.slots.size()
 				merged.append_array(row.answer)
 			check(merged==p.solution,"Canonical finding for "+str(task.id))
-	check(case_count>=32 and stage_count>=80,"Campaign includes all authored multi-stage boards")
+	check(case_count==23 and stage_count==31 and placement_count==96,"Campaign packages the revised board inventory")
+	check(decoy_count==28,"Campaign packages authored decoy pieces")
 	await fresh_room("c1_pier.bait")
 	var id: String=game.case_board.task_id
 	var board: Control=game.case_board
@@ -229,14 +259,20 @@ func run() -> void:
 	legacy=game.campaign.data.duplicate(true)
 	legacy.erase("case_boards")
 	check(game.campaign.restore(legacy) and id in game.campaign.data.done,"Preserve historical findings without replaying a board")
-	await fresh_room("c4_escape.van")
+	await fresh_room("c7_swap.map")
+	var route_stage: Dictionary=game.case_board.stages[0]
+	for i: int in route_stage.answer.size():
+		await mouse(game.case_board.pieces[int(route_stage.answer[i])])
+		await mouse(game.case_board.slots[i])
+	await mouse(game.case_board.confirm)
+	check(game.case_board.stage_index==1,"Advance to the authored route stage")
 	for i: int in 2:
-		await mouse(game.case_board.pieces[int(game.case_board.stages[0].answer[i])])
+		await mouse(game.case_board.pieces[int(game.case_board.stages[1].answer[i])])
 		await mouse(game.case_board.slots[i])
 	await record_view("route",game.case_board)
 	await review_layouts()
 	var out:=FileAccess.open(destination.path_join("case-boards.json"),FileAccess.WRITE)
-	out.store_string(JSON.stringify({"checks":checks,"failures":failures,"boards":case_count,"stages":stage_count,"placements":placement_count,"screens":examples,"layouts":layouts},"  ")+"\n")
+	out.store_string(JSON.stringify({"checks":checks,"failures":failures,"boards":case_count,"stages":stage_count,"placements":placement_count,"decoys":decoy_count,"screens":examples,"layouts":layouts},"  ")+"\n")
 	out.close()
 	print("Case boards: ",checks," checks, ",failures.size()," failures, ",case_count," cases")
 	await game.drain_audio()

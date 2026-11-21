@@ -129,27 +129,23 @@ func _run() -> void:
 	while game.title_card.visible and Time.get_ticks_msec()<card_deadline:
 		await get_tree().process_frame
 	check(game.dialogue_panel.visible,"The Archivist's memory begins after its page")
-	var expected_voice: String=game.voice_manifest.takes["p_veyr.in.01"].file
-	check(game.voice.playing and game.voice.stream!=null and game.voice.stream.resource_path==expected_voice,"Arrival plays the recorded character voice")
-	var playback_before: float=game.voice.get_playback_position()
-	# Stage creation can produce a long frame. Wait for real mixer progress,
-	# using a wall-clock deadline rather than one timer on that same frame.
-	var playback_deadline: int=Time.get_ticks_msec()+1500
-	while game.voice.get_playback_position()<=playback_before and Time.get_ticks_msec()<playback_deadline:
-		await get_tree().create_timer(0.05).timeout
-	check(game.voice.get_playback_position()>playback_before,"Audio mixer advances recorded speech")
+	var arrival_text: String=game.campaign.content.lines[game.active_line].text
+	check(not game.voice.playing and game.line_remaining>=game._reading_time(arrival_text)-.2,
+		"Text-only arrival uses reading time without recorded voice")
 	game._save("qa-mid-dialogue")
 	game._load("qa-mid-dialogue")
 	check(game.dialogue_panel.visible and game.active_line=="p_veyr.in.01","Load repeats the interrupted arrival line")
 	await click(button("Skip scene",game.dialogue_panel))
 	check(not game.dialogue_panel.visible,"Mouse skips arrival dialogue")
 	await click(game.hotspots[0])
-	check(game.root.get_node("InteractionPanel").visible,"Mouse opens world hotspot")
-	await click(button("Fit the felt sleeve",game.interaction))
-	check("p_veyr.shield" in game.campaign.data.done,"Mouse choice records evidence")
-	await key(KEY_SPACE)
-	check(not game.dialogue_panel.visible,"Space advances the last dialogue line")
-	await click(game.hotspots[1])
+	check(game.dialogue_panel.visible and game.active_line=="p_veyr.shield.01","First opening plays the lead-in")
+	await key(KEY_ENTER)
+	check(game.root.get_node("InteractionPanel").visible,"Enter advances the lead-in to the puzzle")
+	check(button("Back",game.interaction)!=null and game.interaction.find_child("Goal",true,false)!=null
+		and game.interaction.find_child("Background",true,false)!=null,"Puzzle shows its goal and background")
+	await click(button("Back",game.interaction))
+	await click(game.hotspots[0])
+	check(game.root.get_node("InteractionPanel").visible and not game.dialogue_panel.visible,"Reopening skips the seen lead-in")
 	var gain := button("−6 dB",game.interaction)
 	check(is_instance_valid(gain),"Recorder puzzle is available")
 	if gain:
@@ -161,7 +157,7 @@ func _run() -> void:
 		await click(button("Apply settings",game.interaction))
 		check("p_veyr.levels" in game.campaign.data.done,"Mouse applies recorder settings")
 	await click(button("Skip scene",game.dialogue_panel))
-	await click(game.hotspots[2])
+	await click(game.hotspots[1])
 	await click(button("Listen: the last wind on Veyr",game.interaction))
 	check(game.voice.playing,"Listen control plays the local cue")
 	var meter: ShaderMaterial = game.stage.recorder
@@ -187,11 +183,11 @@ func _run() -> void:
 	await key(KEY_ESCAPE,game.new_game_confirmation)
 	check("p_veyr.levels" in game.campaign.data.done,"Cancel preserves progress")
 	await click(button("Continue",game.menu))
-	await click(game.hotspots[2])
-	await click(button("Record the whole passage, silence included",game.interaction))
-	await click(button("Skip scene",game.dialogue_panel))
-	await click(game.next_button)
-	await key(KEY_SPACE)
+	await click(game.hotspots[1])
+	await click(button("Continue",game.interaction))
+	var departure_deadline:=Time.get_ticks_msec()+5000
+	while game.campaign.current().id=="p_veyr" and game.active_line!="p_veyr.out.02" and Time.get_ticks_msec()<departure_deadline:
+		await key(KEY_SPACE)
 	check(game.active_line=="p_veyr.out.02","Departure dialogue advances with Space")
 	await click(button("Menu",game.root))
 	await click(button("Save game",game.menu))

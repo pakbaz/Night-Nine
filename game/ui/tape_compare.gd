@@ -4,6 +4,8 @@ signal play_requested(stream: AudioStreamWAV)
 signal stop_requested
 signal finding_requested(settings: Array)
 signal hint_requested
+signal wrong_attempt
+signal answer_requested
 signal closed
 var recording := NightTapeRecording.new()
 var trace: NightTapeTrace
@@ -11,6 +13,10 @@ var slider: HSlider
 var offset_label: Label
 var conclusion: OptionButton
 var feedback: Label
+var goal: Label
+var background: Label
+var hint_button: Button
+var answer_button: Button
 var voice: AudioStreamPlayer
 var active_stream: AudioStreamWAV
 var task_id := ""
@@ -19,10 +25,10 @@ var buttons: Array[BaseButton] = []
 
 func _ready() -> void:
 	set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
-	offset_left = 100
-	offset_right = -100
-	offset_top = 140
-	offset_bottom = -65
+	offset_left = 28
+	offset_right = -28
+	offset_top = 58
+	offset_bottom = -28
 	var style := StyleBoxFlat.new()
 	style.bg_color = Color("11272e")
 	style.border_color = Color("b7976e")
@@ -30,10 +36,18 @@ func _ready() -> void:
 	style.set_corner_radius_all(9)
 	style.set_content_margin_all(24)
 	add_theme_stylebox_override("panel", style)
+	var scroll:=ScrollContainer.new()
+	scroll.horizontal_scroll_mode=ScrollContainer.SCROLL_MODE_DISABLED
+	add_child(scroll)
 	var box := VBoxContainer.new()
+	box.size_flags_horizontal=Control.SIZE_EXPAND_FILL
 	box.add_theme_constant_override("separation", 10)
-	add_child(box)
+	scroll.add_child(box)
 	_label(box, "FRANK’S RECORDER  /  TWO MORNINGS", 26)
+	goal=_label(box,"",18)
+	goal.modulate=Color("e9c276")
+	_label(box,"What Steve knows",16).name="KnowledgeHeading"
+	background=_label(box,"",16)
 	_label(box, "Move Sunday until the breath and first word line up. Compare the rest of the performance, then record your finding.", 18)
 	trace = NightTapeTrace.new()
 	box.add_child(trace)
@@ -84,7 +98,9 @@ func _ready() -> void:
 	var footer := HBoxContainer.new()
 	footer.add_theme_constant_override("separation", 12)
 	box.add_child(footer)
-	_button(footer, "Hint", func(): hint_requested.emit())
+	hint_button=_button(footer, "Hint 1 of 3", func(): hint_requested.emit())
+	answer_button=_button(footer, "Show answer", func(): answer_requested.emit())
+	answer_button.hide()
 	_button(footer, "Reset offset", func(): _set_offset(0))
 	_button(footer, "Back to the room", close)
 	hide()
@@ -97,17 +113,23 @@ func _label(parent: Node, text: String, font_size: int) -> Label:
 	parent.add_child(label)
 	return label
 
-func _button(parent: Node, text: String, action: Callable) -> void:
+func _button(parent: Node, text: String, action: Callable) -> Button:
 	var button := Button.new()
 	button.text = text
 	button.pressed.connect(action)
 	parent.add_child(button)
 	buttons.append(button)
+	return button
 
-func open_task(id: String, master: AudioStreamWAV, player: AudioStreamPlayer, data: Dictionary) -> bool:
+func open_task(id: String, master: AudioStreamWAV, player: AudioStreamPlayer, data: Dictionary,
+		goal_text: String = "", background_text: String = "", perspective: String = "Steve") -> bool:
 	if not recording.configure(master, data.lead_a, data.lead_b):
 		return false
 	voice = player
+	goal.text=goal_text
+	background.text=background_text
+	var heading:=find_child("KnowledgeHeading",true,false) as Label
+	heading.text="What %s knows" % perspective
 	trace.recording = recording
 	if task_id != id:
 		task_id = id
@@ -155,12 +177,15 @@ func _submit() -> void:
 		return
 	if conclusion.selected == 0:
 		feedback.text = "Choose a finding after comparing both takes."
+		wrong_attempt.emit()
 		return
 	if not recording.aligned(slider.value):
 		feedback.text = "Adjust Sunday until the breath and first word are at the same time. Then compare the pauses."
+		wrong_attempt.emit()
 		return
 	if conclusion.selected != 3:
 		feedback.text = "Look past the words. Compare the small peaks and gaps along both recordings."
+		wrong_attempt.emit()
 		return
 	finding_requested.emit([1, 2])
 
@@ -181,6 +206,12 @@ func close() -> void:
 func reset_task() -> void:
 	close()
 	task_id = ""
+
+func set_hint_label(value: String) -> void:
+	hint_button.text=value
+
+func show_answer_offer(on: bool) -> void:
+	answer_button.visible=on
 
 func _process(_delta: float) -> void:
 	if not visible:

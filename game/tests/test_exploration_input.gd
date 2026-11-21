@@ -45,6 +45,8 @@ func test() -> void:
 				campaign.switch_actor(task.actor)
 			campaign.choose(task.id,int(task.answer),task.get("puzzle",{}).get("solution",[]))
 			campaign.mark_seen(task.lines)
+			if not str(task.get("finding","")).is_empty():
+				campaign.mark_seen([task.finding])
 		campaign.mark_seen(scene.outro)
 		if not campaign.advance():
 			push_error("Cannot prepare the opening state.")
@@ -94,6 +96,10 @@ func test() -> void:
 		game._process(.025)
 		action_seen=action_seen or floor_stage.performance_action=="observe"
 	check(action_seen,"Steve observes the whistle on arrival.")
+	if game.dialogue_panel.visible:
+		check(game.active_line in campaign.task_index["c1_pier.whistle"].lead,"The whistle opens with its lead-in")
+		game._skip_dialogue()
+		await process_frame
 	check(game.selected_task=="c1_pier.whistle" and game.root.get_node("InteractionPanel").visible,"Arrival opens the requested evidence.")
 	check(person.body.position.distance_to(floor_stage.point(floor_stage.approach.whistle))<.1,"Actor stops on the registered prop approach.")
 	game.root.get_node("InteractionPanel").hide()
@@ -133,6 +139,8 @@ func solve_staff_door() -> void:
 				campaign.switch_actor(task.actor)
 			campaign.choose(task.id,int(task.answer),task.get("puzzle",{}).get("solution",[]))
 			campaign.mark_seen(task.lines)
+			if not str(task.get("finding","")).is_empty():
+				campaign.mark_seen([task.finding])
 		campaign.mark_seen(scene.outro)
 		if not campaign.advance():
 			check(false,"Prepare the aquarium via a legal campaign history")
@@ -141,6 +149,8 @@ func solve_staff_door() -> void:
 	campaign.mark_seen(campaign.current().intro)
 	campaign.choose(first.id,int(first.answer),first.puzzle.solution)
 	campaign.mark_seen(first.lines)
+	if not str(first.get("finding","")).is_empty():
+		campaign.mark_seen([first.finding])
 	game._load_stage(false)
 	await process_frame
 	await process_frame
@@ -153,6 +163,10 @@ func solve_staff_door() -> void:
 		if not game.stage.is_walking(): break
 		game._process(.025)
 	var task: Dictionary=campaign.task_index["c2_aquarium.guard"]
+	if game.dialogue_panel.visible:
+		check(game.active_line in task.lead,"The guard lead-in plays before the choice")
+		game._skip_dialogue()
+		await process_frame
 	var option: Button
 	for button: Button in game.interaction.find_children("*","Button",true,false):
 		if button.text==task.options[int(task.answer)]:

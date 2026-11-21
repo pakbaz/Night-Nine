@@ -13,15 +13,32 @@ func check(ok: bool, description: String) -> void:
 func _initialize() -> void:
 	var state := NightCampaign.new()
 	var rooms: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://content/illustrated-floor.json"))
+	var landmarks: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://content/illustrated-landmarks.json"))
+	var illustrated: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://content/illustrated-campaign.json"))
 	var scenes := {}
 	for s: Dictionary in state.content.scenes:
 		scenes[s.id] = s
+		if illustrated.has(s.id):
+			var expected := {}
+			for task: Dictionary in s.tasks:
+				expected[task.id] = true
+			var authored := {}
+			for task_id: String in landmarks.get(s.id,{}):
+				authored[task_id] = true
+			check(authored==expected,s.id+" has exactly one painted hotspot per task")
 	for id: String in rooms:
 		var layout: Dictionary = rooms[id]
 		var stage := FLOOR.new()
 		stage.configure_navigation(layout)
 		check(stage.depth[0]<stage.depth[2] and stage.depth[1]<stage.depth[3],id+" valid perspective")
 		var scene: Dictionary = scenes[id]
+		var expected_approaches := {}
+		for task: Dictionary in scene.tasks:
+			expected_approaches[str(task.id).get_slice(".",1)] = true
+		var authored_approaches := {}
+		for key: String in layout.approach:
+			authored_approaches[key] = true
+		check(authored_approaches==expected_approaches,id+" has exactly one approach per task")
 		for role: String in scene.actors:
 			check(layout.spawn.has(role),id+" spawn for "+role)
 		for role: String in layout.spawn:
@@ -34,6 +51,7 @@ func _initialize() -> void:
 				if not layout.approach.has(key):
 					continue
 				var end := stage.point(layout.approach[key])
+				check(stage.on_floor(end),task.id+" approach lies inside the walkable painting")
 				var route := stage.path_to(start,end)
 				check(not route.is_empty(),task.id+" reachable by "+role)
 				var last := start

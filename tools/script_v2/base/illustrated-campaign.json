@@ -1,0 +1,795 @@
+{
+  "c1_flat": {
+    "light": "e9bb87",
+    "air": 0,
+    "opening": [
+      0.26,
+      0.65
+    ],
+    "closing": [
+      0.68,
+      0.38
+    ],
+    "company": [
+      "steve",
+      "iris"
+    ],
+    "off_camera_lines": [
+      "c1_flat.in.01"
+    ],
+    "inserts": {
+      "c1_flat.in.01": "c1_flat.control",
+      "c1_flat.in.03": "c1_flat.control"
+    }
+  },
+  "c1_pier": {
+    "light": "b8d4d8",
+    "air": 2,
+    "opening": [
+      0.25,
+      0.39
+    ],
+    "closing": [
+      0.83,
+      0.55
+    ],
+    "company": [
+      "agnes",
+      "steve",
+      "pell",
+      "lyle_copy"
+    ],
+    "resident": "agnes",
+    "painted_creatures": {
+      "admiral": [
+        0.153,
+        0.487
+      ]
+    },
+    "detail_shots": {
+      "c1_pier.whistle.01": {
+        "target": [
+          0.18,
+          0.805
+        ],
+        "zoom": 2.8,
+        "cut": true
+      }
+    },
+    "creatures": [
+      {
+        "id": "admiral",
+        "foot": [
+          0.176,
+          0.836
+        ],
+        "width": 0.145,
+        "lines": [
+          "c1_pier.whistle.01"
+        ]
+      }
+    ],
+    "departure_painting": "SundayAtLaMarea"
+  },
+  "c1_dinner": {
+    "light": "ffce87",
+    "air": 0,
+    "opening": [
+      0.67,
+      0.32
+    ],
+    "closing": [
+      0.31,
+      0.54
+    ],
+    "company": [
+      "carmen",
+      "steve",
+      "rafa",
+      "mateo",
+      "tomas",
+      "iris",
+      "luis"
+    ],
+    "resident": "carmen"
+  },
+  "c1_escape": {
+    "light": "91c8c9",
+    "air": 1,
+    "opening": [
+      0.31,
+      0.52
+    ],
+    "closing": [
+      0.77,
+      0.32
+    ],
+    "company": [
+      "iris",
+      "steve",
+      "agnes"
+    ],
+    "window": [
+      0.51,
+      0.16,
+      0.42,
+      0.82
+    ],
+    "chapter_insert": true
+  },
+  "c2_aquarium": {
+    "light": "8ebfc1",
+    "air": 2,
+    "opening": [
+      0.23,
+      0.47
+    ],
+    "closing": [
+      0.77,
+      0.59
+    ],
+    "company": [
+      "steve"
+    ],
+    "inserts": {
+      "c2_aquarium.out.01": "c2_aquarium.intercom",
+      "c2_aquarium.intercom": "c2_aquarium.intercom"
+    }
+  },
+  "c2_ship": {
+    "light": "ffc887",
+    "air": 3,
+    "opening": [
+      0.77,
+      0.48
+    ],
+    "closing": [
+      0.24,
+      0.63
+    ],
+    "company": [
+      "steve",
+      "iris",
+      "saren"
+    ],
+    "off_camera_lines": [
+      "c2_ship.escape.01"
+    ],
+    "chapter_insert": true
+  },
+  "c3_house": {
+    "light": "eac397",
+    "air": 0,
+    "opening": [
+      0.28,
+      0.61
+    ],
+    "closing": [
+      0.72,
+      0.45
+    ],
+    "company": [
+      "calder",
+      "steve",
+      "pell"
+    ],
+    "resident": "calder"
+  },
+  "c3_archive": {
+    "light": "e8d4b3",
+    "air": 0,
+    "opening": [
+      0.75,
+      0.39
+    ],
+    "closing": [
+      0.27,
+      0.61
+    ],
+    "company": [
+      "steve",
+      "tomas",
+      "calder"
+    ],
+    "off_camera_lines": [
+      "c3_archive.out.02"
+    ],
+    "inserts": {
+      "c3_archive.out.02": "c3_archive.cycle"
+    },
+    "chapter_insert": true
+  },
+  "i1_archive": {
+    "light": "89d2df",
+    "air": 3,
+    "opening": [
+      0.22,
+      0.33
+    ],
+    "closing": [
+      0.75,
+      0.55
+    ],
+    "company": [
+      "archivist",
+      "gus",
+      "saren"
+    ],
+    "resident": "archivist"
+  },
+  "c4_safe": {
+    "light": "95b4c6",
+    "air": 0,
+    "opening": [
+      0.69,
+      0.31
+    ],
+    "closing": [
+      0.3,
+      0.63
+    ],
+    "company": [
+      "steve",
+      "calder",
+      "rook_copy"
+    ],
+    "off_camera_lines": [
+      "c4_safe.match.01"
+    ]
+  },
+  "c4_escape": {
+    "light": "e0ae74",
+    "air": 0,
+    "opening": [
+      0.22,
+      0.5
+    ],
+    "closing": [
+      0.75,
+      0.36
+    ],
+    "company": [
+      "calder",
+      "steve"
+    ],
+    "chapter_insert": true
+  },
+  "c5_shack": {
+    "light": "e0b385",
+    "air": 1,
+    "opening": [
+      0.75,
+      0.38
+    ],
+    "closing": [
+      0.28,
+      0.62
+    ],
+    "company": [
+      "steve",
+      "luis"
+    ],
+    "inserts": {
+      "c5_shack.club": "c5_shack.club",
+      "c5_shack.log": "c5_shack.log"
+    },
+    "window": [
+      0.46,
+      0.01,
+      0.36,
+      0.45
+    ]
+  },
+  "c5_station": {
+    "light": "e9be8a",
+    "air": 0,
+    "opening": [
+      0.78,
+      0.39
+    ],
+    "closing": [
+      0.36,
+      0.43
+    ],
+    "company": [
+      "steve",
+      "stephen"
+    ],
+    "chapter_insert": true
+  },
+  "c6_iris": {
+    "light": "daae88",
+    "air": 2,
+    "opening": [
+      0.25,
+      0.39
+    ],
+    "closing": [
+      0.71,
+      0.49
+    ],
+    "company": [
+      "iris",
+      "steve",
+      "stephen"
+    ]
+  },
+  "c6_jail": {
+    "light": "d0c8a6",
+    "air": 0,
+    "opening": [
+      0.23,
+      0.37
+    ],
+    "closing": [
+      0.75,
+      0.5
+    ],
+    "company": [
+      "pell",
+      "stephen",
+      "calder",
+      "steve",
+      "lyle_copy",
+      "iris",
+      "gus"
+    ],
+    "creatures": [
+      {
+        "id": "biscuit",
+        "foot": [
+          0.62,
+          0.8
+        ],
+        "width": 0.14
+      }
+    ],
+    "chapter_insert": true
+  },
+  "i2_nora": {
+    "light": "f5c38e",
+    "air": 3,
+    "opening": [
+      0.7,
+      0.55
+    ],
+    "closing": [
+      0.23,
+      0.4
+    ],
+    "company": [
+      "nora",
+      "dale",
+      "lyle"
+    ]
+  },
+  "c7_gate": {
+    "light": "aacabf",
+    "air": 2,
+    "opening": [
+      0.23,
+      0.38
+    ],
+    "closing": [
+      0.77,
+      0.43
+    ],
+    "company": [
+      "stephen",
+      "pell",
+      "ward",
+      "steve",
+      "shaw",
+      "wen"
+    ]
+  },
+  "c7_swap": {
+    "light": "d9cca2",
+    "air": 2,
+    "opening": [
+      0.78,
+      0.42
+    ],
+    "closing": [
+      0.25,
+      0.61
+    ],
+    "company": [
+      "saren",
+      "steve",
+      "rook_copy",
+      "ward",
+      "shaw",
+      "calder",
+      "stephen"
+    ],
+    "chapter_insert": true,
+    "off_camera_lines": [
+      "c7_swap.in.01"
+    ],
+    "inserts": {
+      "c7_swap.in.01": "c7_swap.bus"
+    }
+  },
+  "c8_lab": {
+    "light": "dfb99a",
+    "air": 0,
+    "opening": [
+      0.26,
+      0.55
+    ],
+    "closing": [
+      0.75,
+      0.37
+    ],
+    "company": [
+      "wen",
+      "shaw",
+      "agnes",
+      "steve"
+    ]
+  },
+  "c8_beach": {
+    "light": "ebcfae",
+    "air": 2,
+    "opening": [
+      0.77,
+      0.41
+    ],
+    "closing": [
+      0.27,
+      0.49
+    ],
+    "company": [
+      "saren",
+      "steve"
+    ],
+    "resident": "saren"
+  },
+  "c8_rig": {
+    "light": "f3bd80",
+    "air": 0,
+    "opening": [
+      0.27,
+      0.57
+    ],
+    "closing": [
+      0.74,
+      0.43
+    ],
+    "company": [
+      "shaw",
+      "steve",
+      "iris",
+      "wen",
+      "stephen",
+      "ward"
+    ],
+    "chapter_insert": true
+  },
+  "c9_gallery": {
+    "light": "ffd09c",
+    "air": 3,
+    "opening": [
+      0.24,
+      0.55
+    ],
+    "closing": [
+      0.73,
+      0.42
+    ],
+    "company": [
+      "steve",
+      "nora",
+      "iris",
+      "stephen"
+    ],
+    "off_camera_lines": [
+      "c9_gallery.in.01",
+      "c9_gallery.out.03"
+    ],
+    "reveal_after": {
+      "nora": "c9_gallery.link"
+    },
+    "inserts": {
+      "c9_gallery.in.01": "c9_gallery.link",
+      "c9_gallery.out.03": "c9_gallery.link"
+    }
+  },
+  "c9_wake": {
+    "light": "ffdcb5",
+    "air": 3,
+    "opening": [
+      0.24,
+      0.55
+    ],
+    "closing": [
+      0.78,
+      0.46
+    ],
+    "company": [
+      "nora",
+      "steve",
+      "frank",
+      "helen",
+      "calder",
+      "rook",
+      "agnes_original"
+    ],
+    "reveal_after": {
+      "frank": "c9_wake.frank",
+      "helen": "c9_wake.helen",
+      "rook": "c9_wake.rook",
+      "agnes_original": "c9_wake.agnes"
+    }
+  },
+  "c9_choir": {
+    "light": "a6d2da",
+    "air": 3,
+    "opening": [
+      0.73,
+      0.45
+    ],
+    "closing": [
+      0.28,
+      0.4
+    ],
+    "company": [
+      "saren",
+      "steve",
+      "helen",
+      "frank",
+      "calder"
+    ],
+    "creatures": [
+      {
+        "id": "wick",
+        "foot": [
+          0.55,
+          0.63
+        ],
+        "width": 0.2,
+        "after": "c9_choir.wick",
+        "lines": [
+          "",
+          "c9_choir.wick.01",
+          "c9_choir.wick.02"
+        ]
+      }
+    ],
+    "chapter_insert": true
+  },
+  "c10_station": {
+    "light": "f1be84",
+    "air": 0,
+    "opening": [
+      0.28,
+      0.53
+    ],
+    "closing": [
+      0.77,
+      0.38
+    ],
+    "company": [
+      "steve",
+      "frank"
+    ]
+  },
+  "c10_town": {
+    "light": "e4bf99",
+    "air": 2,
+    "opening": [
+      0.23,
+      0.57
+    ],
+    "closing": [
+      0.77,
+      0.32
+    ],
+    "company": [
+      "nora",
+      "carmen",
+      "wen",
+      "shaw",
+      "steve",
+      "agnes"
+    ]
+  },
+  "c10_live": {
+    "light": "dbaa79",
+    "air": 0,
+    "opening": [
+      0.77,
+      0.53
+    ],
+    "closing": [
+      0.25,
+      0.38
+    ],
+    "company": [
+      "steve",
+      "stephen",
+      "mateo",
+      "carmen",
+      "pell"
+    ],
+    "cutaway": {
+      "room": "c10_town",
+      "group": "c10_live.out"
+    },
+    "creatures": [
+      {
+        "id": "biscuit",
+        "foot": [
+          0.5,
+          0.94
+        ],
+        "width": 0.12,
+        "lines": [
+          "c10_live.out.03"
+        ]
+      },
+      {
+        "id": "admiral",
+        "foot": [
+          0.6,
+          0.92
+        ],
+        "width": 0.2,
+        "lines": [
+          "c10_live.out.04"
+        ]
+      }
+    ],
+    "inserts": {
+      "c10_live.out.01": [
+        0.65,
+        0.48
+      ],
+      "c10_live.out.02": [
+        0.56,
+        0.58
+      ],
+      "c10_live.out.03": [
+        0.5,
+        0.66
+      ],
+      "c10_live.out.04": [
+        0.6,
+        0.63
+      ]
+    }
+  },
+  "c10_report": {
+    "light": "b4d5eb",
+    "air": 3,
+    "opening": [
+      0.25,
+      0.42
+    ],
+    "closing": [
+      0.75,
+      0.3
+    ],
+    "company": [
+      "archivist",
+      "saren",
+      "agnes",
+      "steve"
+    ],
+    "resident": "archivist",
+    "cutaway": {
+      "room": "c10_station",
+      "lines": [
+        "c10_report.in.03",
+        "c10_report.echo.01",
+        "c10_report.survey.02",
+        "c10_report.out.04"
+      ]
+    },
+    "inserts": {
+      "c10_report.report": "c10_report.report"
+    },
+    "chapter_insert": true,
+    "off_camera_lines": [
+      "c10_report.in.01",
+      "c10_report.report.02"
+    ]
+  },
+  "epilogue": {
+    "appearances": {
+      "iris": "iris_epilogue"
+    },
+    "light": "ffdbab",
+    "air": 2,
+    "opening": [
+      0.7,
+      0.33
+    ],
+    "closing": [
+      0.25,
+      0.56
+    ],
+    "company": [
+      "steve",
+      "nora",
+      "iris",
+      "carmen",
+      "lyle",
+      "pell",
+      "dale",
+      "gus",
+      "agnes_original",
+      "agnes",
+      "rook",
+      "rook_copy",
+      "lyle_copy"
+    ],
+    "creatures": [
+      {
+        "id": "biscuit",
+        "foot": [
+          0.61,
+          0.78
+        ],
+        "width": 0.16,
+        "lines": [
+          "epilogue.neighbors.02",
+          "epilogue.neighbors.03"
+        ]
+      }
+    ],
+    "departure_painting": "NinthNightLanterns"
+  },
+  "one_year": {
+    "light": "f4c78c",
+    "air": 0,
+    "opening": [
+      0.24,
+      0.48
+    ],
+    "closing": [
+      0.71,
+      0.48
+    ],
+    "company": [
+      "steve",
+      "stephen",
+      "tomas"
+    ],
+    "departure_painting": "MorningBroadcast"
+  },
+  "postcredits": {
+    "light": "7ec4d8",
+    "air": 3,
+    "opening": [
+      0.72,
+      0.56
+    ],
+    "closing": [
+      0.28,
+      0.35
+    ],
+    "company": [
+      "shaw",
+      "helen"
+    ],
+    "off_camera_lines": [
+      "postcredits.out.01"
+    ],
+    "inserts": {
+      "postcredits.out.01": "postcredits.answer",
+      "postcredits.in.02": "postcredits.answer"
+    },
+    "cutaway": {
+      "room": "postcredits",
+      "file": "postcredits-dawn",
+      "inspect": "postcredits.answer",
+      "after": "postcredits.answer",
+      "lines": [
+        "postcredits.answer.01",
+        "postcredits.out.01"
+      ]
+    }
+  }
+}

@@ -13,6 +13,7 @@ var last_eye := ""
 var last_mouth := ""
 var phase := 0.0
 var appearance := ""
+var base_identity := ""
 var blocking_plane: Node2D
 var eye_shader: ShaderMaterial
 var eye_offset := Vector2.ZERO
@@ -23,7 +24,8 @@ var look_side := 0.0
 var role := ""
 var beat_start := 0.0
 
-func configure(folder: String, actor_id: String, height: float, ground: Vector2, tint: Color, prepared: Dictionary = {}) -> void:
+func configure(folder: String, actor_id: String, height: float, ground: Vector2, tint: Color,
+		prepared: Dictionary = {}, identity: String = "") -> void:
 	var metadata := folder + "/sprite.json"
 	if not prepared.is_empty():
 		manifest=prepared
@@ -38,6 +40,7 @@ func configure(folder: String, actor_id: String, height: float, ground: Vector2,
 	resting_scale = Vector2.ONE * height / maxf(foot.y,1.0)
 	scale = resting_scale
 	appearance = actor_id
+	base_identity = actor_id if identity.is_empty() else identity
 	phase = float(posmod(actor_id.hash(),379))/100.0
 	body = Sprite2D.new()
 	body.name = "Body"
@@ -80,7 +83,7 @@ func take_mark(eyes_at: Vector2, toward: float, next_role: String, now: float) -
 	beat_start = now
 	look_side = signf(toward)
 	# Keep the original lettering and insignia on the first responders' uniforms.
-	var reverse := look_side < 0 and appearance not in ["calder","pell","lyle","mateo","rook","nora","iris","iris_epilogue","nora_toward_steve"]
+	var reverse := look_side < 0 and base_identity not in ["calder","pell","lyle","mateo","rook","nora","iris"]
 	var facing := -1.0 if reverse else 1.0
 	blocking_plane.scale.x = facing
 	base_ground = eyes_at - eye_offset * resting_scale * Vector2(facing,1)

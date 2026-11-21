@@ -1,0 +1,118 @@
+{
+  "base": "archivist_explaining.webp",
+  "source": "assets/characters/campaign/masters/archivist_explaining.png",
+  "source_sha256": "ecb6898cf032922567c2eb2c3ab8e46f0e7c2493ff8ba5a2c01fa532527fb70b",
+  "size": [
+    720,
+    1080
+  ],
+  "origin": "top_left",
+  "foot_anchor": [
+    360,
+    1080
+  ],
+  "frames": {
+    "blink_half": {
+      "atlas_region": [
+        0,
+        0,
+        77,
+        33
+      ],
+      "source_origin": [
+        328,
+        84
+      ]
+    },
+    "blink_closed": {
+      "atlas_region": [
+        0,
+        35,
+        77,
+        33
+      ],
+      "source_origin": [
+        328,
+        84
+      ]
+    },
+    "mouth_parted": {
+      "atlas_region": [
+        0,
+        70,
+        37,
+        31
+      ],
+      "source_origin": [
+        341,
+        126
+      ]
+    },
+    "mouth_open": {
+      "atlas_region": [
+        0,
+        103,
+        37,
+        31
+      ],
+      "source_origin": [
+        341,
+        126
+      ]
+    },
+    "mouth_round": {
+      "atlas_region": [
+        0,
+        136,
+        37,
+        31
+      ],
+      "source_origin": [
+        341,
+        126
+      ]
+    },
+    "mouth_wide": {
+      "atlas_region": [
+        0,
+        169,
+        37,
+        31
+      ],
+      "source_origin": [
+        341,
+        126
+      ]
+    }
+  },
+  "cue_frames": {
+    "X": null,
+    "A": null,
+    "B": "mouth_parted",
+    "C": "mouth_wide",
+    "D": "mouth_open",
+    "E": "mouth_round",
+    "F": "mouth_round",
+    "G": "mouth_parted",
+    "H": "mouth_parted"
+  },
+  "sha256": {
+    "archivist_explaining.webp": "ddb403e3b30d7661bb9f9130414530faefe166bc14bbb88136b5e2d5da41b0cc",
+    "archivist_explaining-face-atlas.png": "bab3476ce60b870046d0f8cef053d4a6c1ccb415ae6c48aa7ec28df7295ab782"
+  },
+  "atlas": "archivist_explaining-face-atlas.png",
+  "eye_centers": [
+    [
+      345,
+      97
+    ],
+    [
+      388,
+      105
+    ]
+  ],
+  "mouth_center": [
+    361,
+    141
+  ]
+}

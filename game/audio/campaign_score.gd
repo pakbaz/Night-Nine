@@ -62,7 +62,7 @@ func play_scene(scene: Dictionary) -> bool:
 	var kind := "bgm" if planned.get("role","bgm") == "bgm" else "scene"
 	return select_track(planned,kind,scene.get("chapter",""),float(planned.get("entry_seconds",0.0)))
 
-## The main title carries on from the last film into the credits.
+## The completion film has an exclusive cue, separate from ordinary menu credits.
 func play_credits() -> bool:
 	var cue: Dictionary = manifest.get("credits",{})
 	if cue.is_empty():

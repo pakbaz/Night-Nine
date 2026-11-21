@@ -1,0 +1,417 @@
+{
+  "scenes": {
+    "p_meeting": {
+      "present": ["helen", "general_us", "general_cn"],
+      "changes": ["C34", "critic C34 (pinyin, no CJK glyphs)", "U-narration"],
+      "notes": [
+        "The web build has no CJK font, so the screen shows pinyin without tone marks. The recording text for the delegate’s line is in Chinese characters (spoken text), with display_text in pinyin.",
+        "p_meeting.record is cut as a task; record.01 opens the departure. Findings are in Helen’s notebook voice (helen, narration)."
+      ],
+      "context": [
+        {"new": "wen|Your mother’s shorthand. Sentinel Point, nine years ago. I was in that room.", "delivery": "narration"}
+      ],
+      "intro": ["p_meeting.in.01", "p_meeting.in.02"],
+      "delete": [],
+      "task_order": ["terms", "confess"],
+      "tasks": {
+        "terms": {
+          "type": "rows",
+          "difficulty": 3,
+          "title": "Interpreter’s notebook",
+          "requires": [],
+          "goal": "Translate exactly what the delegate said.",
+          "background": "Helen interprets for both delegations in a windowless room. Both sides claim a working space-fold engine. Her rule: an interpreter adds nothing and removes nothing.",
+          "lead": [
+            {"new": "general_cn|比较我们的表演。", "display_text": "Bijiao women de biaoyan.", "direction": "in Mandarin, carefully"}
+          ],
+          "prompt": "How should Helen say it in English, and what goes in her shorthand?",
+          "instruction": "Helen’s glossary card: yanshi, a technical demonstration. biaoyan, a performance, as on a stage. The delegate said: bijiao women de biaoyan. An interpreter adds nothing and removes nothing.",
+          "rows": [
+            {"label": "Say aloud", "options": ["He proposes comparing our demonstrations", "He proposes comparing our performances", "He proposes testing which field is stronger"], "answer": 1},
+            {"label": "Shorthand note", "options": ["He chose the stage word", "He agreed to a strength test", "Nothing to note"], "answer": 0}
+          ],
+          "hints": [
+            "Check Helen’s glossary card for the word he actually used.",
+            "Biaoyan is the stage word. Translate it as it is, and note that he chose it.",
+            "He used the second word on Helen’s card, not the first. Say exactly what he said, and note the choice he made."
+          ],
+          "lines": [
+            {"id": "p_meeting.terms.01", "text": "He proposes comparing our performances."},
+            "general_us|Performances. Yes. That is... a fair word.",
+            "p_meeting.terms.02"
+          ],
+          "finding": "helen|He said biaoyan, a performance, as on a stage. I translated it exactly and noted that he chose it. The American heard the word and did not argue."
+        },
+        "confess": {
+          "difficulty": 3,
+          "title": "Joint statement",
+          "lead": [{"new": "helen|Both men were waiting for the other to blink. Somebody had to ask the first question, and it had to be me.", "delivery": "narration"}],
+          "requires": ["terms"],
+          "goal": "Help each side say what really happened, one machine at a time.",
+          "background": "Each side’s observers saw a ring of light on the other side’s screen. Neither side inspected the other’s room. A confession is easier about your own machine than about someone else’s.",
+          "prompt": "What should Helen ask both delegates, and what goes in the joint minutes?",
+          "instruction": "The American observer saw a ring on the Chinese screen. The Chinese observer saw a ring on the American screen. Neither inspected the other room. Each engineering team brought its own projection diagram. The joint minutes are public; the diagrams were offered in closed session.",
+          "rows": [
+            {"label": "Question for both delegates", "options": ["What produced the ring in your room?", "How did the other team produce its ring?", "How far did the other team move the target?"], "answer": 0},
+            {"label": "Entry in the joint minutes", "options": ["Two projectors, one in each room", "Both observers saw a ring", "Both targets moved the same distance"], "answer": 1}
+          ],
+          "hints": [
+            "Separate what an observer saw from what an engineer did.",
+            "Each delegate can explain his own apparatus in private. Both can attest to one thing in public.",
+            "In public, write only what both sides can swear to. In private, each man can only explain his own room."
+          ],
+          "lines": ["p_meeting.confess.01", "p_meeting.confess.02", "p_meeting.confess.03"],
+          "finding": "helen|Each delegate described his own machine, and neither had an engine. In the joint minutes we wrote only what both sides saw: a ring of light."
+        },
+        "record": "DELETE"
+      },
+      "recap": [
+        "helen|Both demonstrations were staged. Both sides admitted it, in this room, to each other. Then they agreed to keep lying, together."
+      ],
+      "outro": [
+        "p_meeting.record.01",
+        {"new": "helen|When they understood that they had bluffed each other, the whole room laughed. Tired laughter. The kind that lets you breathe.", "delivery": "narration"},
+        "p_meeting.out.01"
+      ],
+      "next": "Back to the present: the Meridian laboratory (c8_lab)."
+    },
+    "c8_lab": {
+      "when": "Wednesday, November 7, afternoon",
+      "present": ["steve", "wen", "shaw", "agnes"],
+      "objective": "Work out how the fleet found Earth, and what Shaw’s old reactor can still do.",
+      "changes": ["C33", "C25", "critic C25", "U-relationships", "U-narration", "plot (Mrs. Penhallow is in the lab in person)"],
+      "notes": [
+        "C33 turned Mrs. Penhallow’s line into a memory. The plot puts her in the lab in person (‘Nobody saw her come in’), which keeps her pattern of turning up far from her pier, so she is present here.",
+        "Art (recommended): an insert of Helen’s last notebook page: three pencil strokes, the second joined to the first and climbing higher, a gap, then one long stroke lower than both, with her margin note ‘repeats after the low note’. Reuse it in c9_choir.wick and postcredits.answer.",
+        "New sound asset for lastpage: effect.wick_high_ending (0.8 s at 220 Hz joined to 1.1 s at 330 Hz, 0.5 s silence, 2.0 s at 440 Hz). Reel 07 is effect.ninth_night; Reel 11 is effect.wick.",
+        "Saren’s ultimatum goes out on every screen and radio in the county (broadcast)."
+      ],
+      "context": [
+        "steve|Shaw took us into the Meridian laboratory. It was a film set. The doors were painted on the walls.",
+        "steve|The reactor was a stack of washing-machine drums, theater lights and a fog machine."
+      ],
+      "intro": [
+        {"id": "c8_lab.in.01", "text": "Your mother wrote ‘heard this before’ beside a drum beat that isn’t there. I want to know where she heard it."},
+        "c8_lab.in.02",
+        "c8_lab.in.03",
+        "shaw|Mine fooled four generals.",
+        "wen|Mine fooled six. And a premier."
+      ],
+      "delete": [],
+      "task_order": ["notebook", "props", "lastpage"],
+      "tasks": {
+        "notebook": {
+          "difficulty": 3,
+          "title": "Helen’s shorthand",
+          "requires": [],
+          "goal": "Work out how the fleet found Earth.",
+          "background": "Wen can read Helen’s shorthand, but the pages have come loose. Helen kept scraps on both Meridian tests and on the meeting where both sides confessed. Frank’s logbook margins had Meridian in Helen’s hand, underlined twice.",
+          "lead": ["wen|Help me put her pages back in order."],
+          "prompt": "In what order did things happen, and what does each clue really show?",
+          "board": {
+            "instruction": "Date the pages, then decide what each clue can prove.",
+            "evidence": [
+              "Scrap W, the Chinese test: the same missing beat, a different flare. Wen: “We were sent a copy of H to study before we built ours.”",
+              "Helen’s margin, beside the missing beat: “heard this before”.",
+              "Scrap H, the American test: two drum strikes, a missing beat, a lamp flare.",
+              "Both tests went out over open radio, so each side’s observers could hear the other. The table minutes quote both."
+            ],
+            "stages": [
+              {"mode": "order", "prompt": "Put the three events in order.",
+               "slots": ["First", "Second", "Third"],
+               "pieces": ["Meeting at one table", "Chinese test (scrap W)", "American test (scrap H)"],
+               "answer": [2, 1, 0]},
+              {"mode": "match", "prompt": "What does each clue show?",
+               "slots": ["Shared missing beat", "Different flares", "Open radio"],
+               "pieces": ["Anyone listening could record both", "W was built from a copy of H", "Two separate stagings"],
+               "answer": [1, 2, 0]}
+            ],
+            "wrong_text": "Wen taps a scrap. “Your mother would not have filed it that way.”"
+          },
+          "hints": [
+            "A copy can’t be made before the thing it copies.",
+            "W was built from a copy of H, and the table came after both. Open radio meant anyone listening could record them.",
+            "A copy can’t come before its original, and nobody meets at one table until both tests are done. For each clue, ask what it rules out."
+          ],
+          "lines": [
+            "c8_lab.notebook.01",
+            "steve|Heard this before. Mom heard that missing beat in the bay. In Dad’s reels."
+          ],
+          "finding": "steve|America staged its test first, and China built its own from a copy, missing beat and all. Both went out over open radio, and something out there recorded them. Mom heard that same missing beat again, in the bay. The fleet came because of a show."
+        },
+        "props": {
+          "difficulty": 2,
+          "title": "The reactor",
+          "requires": [],
+          "goal": "Find the two effects that must fire on the same cue.",
+          "background": "Shaw built explosions for Hollywood before she built this. Her reactor has three effects, drums, lamps and fog, and her film log records every frame of the old test.",
+          "lead": ["shaw|Film log’s on the clipboard. Tell me what you see."],
+          "prompt": "Shaw’s film log: drum hits at frames 120, 128 and 136. Lamp flashes at 120, 128 and 136, plus test flashes at 112 and 144 marked rehearsal only. Fog runs from 100 to 190. The meter surges from 120 to 140. Which two crews share one cue?",
+          "options": ["Drums and lamps", "Lamps and fog", "Fog and drums"],
+          "answer": 0,
+          "wrong": {
+            "1": "The fog starts at 100 and drifts to 190. It doesn’t start with anything.",
+            "2": "The fog runs long before and after the drums. They don’t share a start."
+          },
+          "hints": [
+            "Find two effects whose hits land on the same frames.",
+            "The fog outlasts the meter. The flashes at 112 and 144 were rehearsal only.",
+            "Ignore the rehearsal flashes. Which two effects hit on the very same frames?"
+          ],
+          "lines": [
+            "c8_lab.props.01",
+            "steve|They fell for a show once. So we put on another one. Live, this time."
+          ],
+          "finding": "steve|The drums and lamps hit together on frames 120, 128 and 136; the fog just drifts. One cue drives the whole effect. Shaw’s reactor can play again, and this time we play it live."
+        },
+        "lastpage": {
+          "difficulty": 3,
+          "art": "res://assets/illustrated/campaign/inserts/c8_lab-last-notebook-page.webp",
+          "title": "The last page",
+          "requires": ["notebook"],
+          "goal": "Find the sound Helen copied onto her last page.",
+          "background": "The last page isn’t Mandarin. It is three strokes, drawn from one of Frank’s hydrophone reels: the second touches the first and climbs higher; a space follows; then the longest stroke falls below both.",
+          "lead": [
+            "wen|Beside it she wrote: “From Frank’s tapes. I cannot read it, but I know a language when I hear one.”"
+          ],
+          "prompt": "Which reel did Helen draw, and what can Steve honestly file?",
+          "instruction": "Frank’s three reels. Reel 07: 2.0 s at 220 Hz. Reel 11: 0.8 s at 220 Hz joined to 1.1 s at 330 Hz, 0.5 s of silence, then 2.0 s at 165 Hz. Reel 14: 0.8 s at 220 Hz joined to 1.1 s at 330 Hz, 0.5 s of silence, then 2.0 s at 440 Hz.",
+          "sounds": ["effect.ninth_night", "effect.wick", "effect.wick_high_ending"],
+          "evidence_labels": ["Reel 07", "Reel 11", "Reel 14"],
+          "rows": [
+            {"label": "Reel to keep with Helen’s page", "options": ["Reel 07", "Reel 11", "Reel 14"], "answer": 1},
+            {"label": "Notebook finding", "options": ["A match in rhythm and pitch", "A word-for-word translation", "A match in reel length alone"], "answer": 0}
+          ],
+          "hints": [
+            "Turn the numbers into a shape. Which way does each tone go?",
+            "220 to 330 climbs. After the gap, 165 is lower than both; 440 is higher than both.",
+            "Helen’s page ends on a stroke below both of the first two. Which reel ends lower than 220 Hz? And nobody on Earth can translate it yet."
+          ],
+          "lines": ["c8_lab.lastpage.01", "c8_lab.lastpage.02"],
+          "finding": "steve|Mom’s last page is Dad’s Reel 11: two joined tones rising, 220 to 330, a half-second gap, then a long 165, lower than both. Her margin says it repeats after the low note. It’s a language, and nobody on Earth can read it."
+        }
+      },
+      "recap": [
+        "steve|Two countries faked two tests and broadcast them on open radio. Something out there was listening, and it came. Mom heard the proof in the bay.",
+        "steve|Shaw’s reactor still works, if one cue drives the drums and lamps. And Mom’s last page is a language from Dad’s tapes that nobody can read."
+      ],
+      "outro": [
+        {"new": "steve|Mrs. Penhallow was standing by the reactor. Nobody had seen her come in.", "delivery": "narration"},
+        "c8_lab.out.01",
+        "shaw|Smart woman. Who is she?",
+        {"new": "steve|When I turned round, she was gone.", "delivery": "narration"},
+        {"id": "c8_lab.out.02", "text": "Midnight tomorrow, Madam President. The ninth night. The engine, or the scan resumes.", "delivery": "broadcast", "direction": "from every screen and radio in the county"},
+        {"new": "saren|And Mr. Mercer. Come down to the beach at dawn. Alone.", "delivery": "broadcast"}
+      ],
+      "next": "The beach at dawn (c8_beach)."
+    },
+    "c8_beach": {
+      "when": "Thursday, November 8, dawn",
+      "present": ["steve", "saren"],
+      "objective": "Hear Saren’s offer, and check it before you answer.",
+      "changes": ["C16", "critic C16", "C23 (refuse becomes a beat)", "U-relationships", "U-narration"],
+      "notes": [
+        "New audio recording.saren_splice: edit the NEW Helen voicemail take (recording.voicemail) to remove “The bay is singing”, leaving “Come out with us, kiddo. Tonight.” Keep the breath before “kiddo” and leave a slightly unnatural gap. Do not record it separately.",
+        "c8_beach.first is cut; line first.01 and second.01 are dropped."
+      ],
+      "context": [
+        "steve|Dawn on the beach. Saren came alone, the way he said he would: taller than the doorframes on his ship, and perfectly still."
+      ],
+      "intro": [
+        "c8_beach.in.01",
+        {"new": "steve|Mom. Dad. Home by breakfast.", "direction": "barely audible, to himself"},
+        "c8_beach.in.02",
+        "saren|Your mother would like a word."
+      ],
+      "delete": ["c8_beach.first.01", "c8_beach.second.01"],
+      "task_order": ["second", "refuse"],
+      "tasks": {
+        "first": "DELETE",
+        "second": {
+          "difficulty": 2,
+          "title": "Mom’s voice",
+          "requires": [],
+          "goal": "Find out whether Mom really sent that message.",
+          "background": "Mom’s voicemail from the night of the boat is on the cassette in Steve’s cardigan pocket, the one Rook never took, and Dad’s recorder can play it. He has played it at three in the morning for eighteen months. He knows every breath in it.",
+          "lead": [
+            {"new": "helen|Come out with us, kiddo. Tonight.", "audio": "recording.saren_splice", "delivery": "recorded_playback", "direction": "from a small device in Saren’s hand; a splice, made by editing recording.voicemail"}
+          ],
+          "prompt": "Saren plays Mom’s voice: “Come out with us, kiddo. Tonight.” Steve has her voicemail from the night of the boat in his cardigan pocket. Line them up.",
+          "options": ["A new message from Mom", "Words cut from the voicemail and stitched together", "Mom reading words Saren wrote"],
+          "answer": 1,
+          "wrong": {
+            "0": "Listen to the breath before “kiddo”. It’s the same breath, from the same night.",
+            "2": "Every sound in it comes from the voicemail, down to the breath."
+          },
+          "sounds": ["recording.voicemail", "recording.saren_splice"],
+          "evidence_labels": ["Voicemail, the night of the boat", "Saren’s tape"],
+          "hints": [
+            "Line up “kiddo” on both tapes.",
+            "Look at the breath before “kiddo”, and the gap where four words used to be.",
+            "A new message would have a new breath. This one has the voicemail’s breath, and a hole where “The bay is singing” used to be."
+          ],
+          "lines": ["steve|Same breath before ‘kiddo’. And a hole where four words used to be."],
+          "finding": "steve|Saren’s message is Mom’s voicemail, cut and stitched: the same breath before ‘kiddo’, and a gap where ‘The bay is singing’ used to be. He has no message from her. He has my tape."
+        },
+        "refuse": {
+          "type": "beat",
+          "difficulty": 1,
+          "title": "The notebook",
+          "requires": ["second"],
+          "goal": "Answer Saren.",
+          "background": "Mom’s notebook proves there is no engine. If Saren has it, the fleet learns that Earth has nothing to defend itself with. His only proof that Mom and Dad are coming home is a voice he cut out of a voicemail.",
+          "prompt": "Saren waits, perfectly still.",
+          "options": ["Keep the notebook"],
+          "answer": 0,
+          "hints": ["There is nothing to solve here.", "There is nothing to solve here.", "Keep the notebook."],
+          "lines": [
+            {"id": "c8_beach.refuse.01", "text": "That’s my voicemail. You cut my mother out of her own message. No. You don’t get to trade the whole town for my family."}
+          ],
+          "finding": "steve|I kept the notebook. Saren had a promise, my mother’s voice cut to fit it, and nothing else."
+        }
+      },
+      "recap": [
+        "steve|Saren offered me my parents for Mom’s notebook. His proof was my own voicemail, cut to say what he wanted.",
+        "steve|I said no. And for the first time I wondered how many times he’d done this before."
+      ],
+      "outro": [
+        {"id": "c8_beach.out.01", "text": "How many families on Tirel got a message like that?"},
+        {"new": "steve|He was quiet for a long time.", "delivery": "narration"},
+        "c8_beach.out.02",
+        "c8_beach.out.03"
+      ],
+      "next": "Back at Sentinel Point (c8_rig)."
+    },
+    "c8_rig": {
+      "when": "Thursday, November 8, day",
+      "present": ["steve", "stephen", "shaw", "iris", "wen", "ward"],
+      "objective": "Build a show the ship will measure for itself, and plan the way in.",
+      "changes": ["C33", "C04", "C22", "U-relationships", "U-narration"],
+      "notes": [
+        "The source finding records the jack meanings for Chapter 10’s recall puzzle: Birch is Wen’s fixed tester, Elm is Shaw’s hand, Ash is the rehearsal loop.",
+        "source loses its order stage and rig loses its route and order stages (C22).",
+        "Rook’s copy is heard on Frank’s radio (delivery radio). He is reporting the team’s location to Saren. He does not forget anything yet: copies only start to forget when they stop going below or when their originals wake (Chapter 9)."
+      ],
+      "context": [
+        "steve|Back at Sentinel Point, I told them the plan. It had a lot of holes. Shaw filled most of them with gaffer tape."
+      ],
+      "intro": [
+        "c8_rig.in.01",
+        "c8_rig.in.02",
+        "iris|Before you decide. Every sleeper you wake cuts one of us loose, and that one starts to forget. Stephen too.",
+        "steve|Then it isn’t my decision alone.",
+        "c8_rig.in.03",
+        "stephen|Seconded. I’ll write things on my hand.",
+        "steve|Here’s the show. We stage the test again, live, so nothing ever repeats. And while they’re watching it, we wake everyone."
+      ],
+      "delete": [],
+      "task_order": ["source", "path", "rig"],
+      "tasks": {
+        "source": {
+          "difficulty": 3,
+          "title": "Signal sources",
+          "requires": [],
+          "goal": "Find the one feed that answers live.",
+          "background": "The two old tests shared one recorded pulse, and anyone who compared them could tell. Steve’s show has to answer every cue live, so nothing repeats. Wen has three control feeds on three covered jacks, and she can’t see which is which.",
+          "lead": ["wen|Three feeds, three jacks. Shaw, give me a cue."],
+          "prompt": "Which feed can answer a cue the fleet has never seen, and which jack carries it?",
+          "board": {
+            "instruction": "An old film can look live on a single trial. Shaw changes her cue while Wen watches the flares.",
+            "evidence": [
+              "Shaw cues at beat 4 on trial one and beat 7 on trial two. On A, the flare comes at beat 5 both times. On B, it comes at 4, then 7. On C, the flare stays on beat 4 whatever Shaw does.",
+              "Shaw made a rehearsal film on beat 4 and left it looping. Wen’s automatic lamp tester is fixed at beat 5. Shaw’s hand-controlled feed has no fixed beat.",
+              "Wen tests each jack with Shaw’s hand still: Birch flares on 5, Ash on 4, Elm stays dark until Shaw moves."
+            ],
+            "stages": [
+              {"mode": "match", "prompt": "What is behind each feed?",
+               "slots": ["A", "B", "C"],
+               "pieces": ["Rehearsal film", "Fixed tester", "Shaw’s hand"],
+               "answer": [1, 2, 0]},
+              {"mode": "match", "prompt": "Which feed is on each jack?",
+               "slots": ["Ash", "Birch", "Elm"],
+               "pieces": ["C", "B", "A"],
+               "answer": [0, 2, 1]}
+            ],
+            "wrong_text": "Wen shakes her head. “Something in there is a recording pretending to listen.”"
+          },
+          "hints": [
+            "One trial can’t tell a live feed from a loop. Use the changed cue.",
+            "A stays on 5, C stays on 4, B moves with Shaw. Then match the jacks with Shaw’s hand still.",
+            "Shaw’s hand moves the flare. The tester and the loop don’t. With Shaw’s hand still, the jack that stays dark is the live one."
+          ],
+          "lines": ["c8_rig.source.01"],
+          "finding": "steve|Birch is Wen’s fixed tester, stuck on beat 5. Ash is Shaw’s rehearsal loop, stuck on 4. Elm follows Shaw’s hand, live. Only Elm can answer a cue nobody has seen before."
+        },
+        "path": {
+          "difficulty": 2,
+          "title": "Trust path",
+          "requires": ["source"],
+          "goal": "Get the show into the ship’s own measurements, and get the sleepers out.",
+          "background": "The fleet trusts only its own ship. A camera picture or a list of numbers sent from shore proves nothing to them. And if the ship leaves, it takes three hundred sleepers with it.",
+          "lead": ["wen|I ran a paper trial. Three receipts. Only one of them would convince me, if I were them."],
+          "prompt": "Which receipt will the fleet accept, and who does what?",
+          "instruction": "Dock signed ‘camera saw lamps’. Mast signed ‘ship measured lamps’. Shore signed ‘ship received crew’s numbers’. Stephen can open the antenna passage with his crew pass, and he remembers waking in the Gallery beside an occupied Row nine.",
+          "rows": [
+            {"label": "Measurement receipt", "options": ["Dock", "Mast", "Shore"], "answer": 1},
+            {"label": "Stephen’s job", "options": ["Gallery beds", "Antenna passage", "Shore camera"], "answer": 1},
+            {"label": "Everyone else", "options": ["Bring the sleepers through the Gallery", "Wait for the camera receipt", "Read shore figures to the ship"], "answer": 0}
+          ],
+          "hints": [
+            "Read who took the measurement, not who received the page.",
+            "Only one receipt has the ship as the observer. Stephen’s pass opens the antenna passage; Row nine is in the Gallery.",
+            "Find the receipt where the ship itself was the observer. Then give Stephen the job only a crew pass can do."
+          ],
+          "lines": [
+            "c8_rig.path.01",
+            "c8_rig.path.02",
+            {"new": "rook_copy|Prefect, they’re at the Sentinel Point workshop. All of them. They’re building something.", "delivery": "radio", "direction": "on Frank’s radio, a channel he thinks is private"}
+          ],
+          "finding": "steve|The fleet only trusts what its own ship measures, so the show has to go in through the ship’s antenna. Stephen’s pass opens the antenna passage. The rest of us go to the Gallery and wake everyone."
+        },
+        "rig": {
+          "difficulty": 2,
+          "title": "Props and radio",
+          "requires": ["path"],
+          "goal": "Pick the coupler Stephen will carry to the antenna.",
+          "background": "The coupler sits between Shaw’s prop console and the ship’s antenna. It must pass Shaw’s cue outward and keep the stage hum out of the return, or the ship will hear the theater instead of the show.",
+          "lead": ["stephen|Three couplers, identical plugs. I’d like the one that works."],
+          "prompt": "Which coupler passes the cue and keeps the return clean?",
+          "board": {
+            "instruction": "Wen qualifies each coupler on a dummy meter.",
+            "evidence": [
+              "Shaw makes the cue at the prop console. The coupler sits between the console and the load. The return meter reads whatever leaks back toward the console.",
+              "Output connected: A shows cue 8, B cue 0, C cue 8.",
+              "Output pulled, stage hum still playing: A shows return 5, B return 0, C return 0.",
+              "A dead line can look perfect if all you watch is a quiet return."
+            ],
+            "stages": [
+              {"mode": "match", "prompt": "Diagnose each coupler.",
+               "slots": ["A", "B", "C"],
+               "pieces": ["Isolated and passes the cue", "Leaks the stage hum", "Blocks the cue"],
+               "answer": [1, 2, 0]}
+            ],
+            "wrong_text": "Wen checks the meter again. One of those diagnoses doesn’t fit the numbers."
+          },
+          "hints": [
+            "Check the outward and return readings separately.",
+            "B and C both have a clean return. Only one passes Shaw’s cue.",
+            "A dead line also has a clean return. Look for the coupler with a cue going out and nothing coming back."
+          ],
+          "lines": ["c8_rig.rig.01", "c8_rig.rig.02"],
+          "finding": "steve|Coupler A leaks the stage hum, B passes nothing, and C passes Shaw’s cue with a clean return. Stephen carries C to the antenna."
+        }
+      },
+      "recap": [
+        "steve|The plan: Shaw and Wen stage the Meridian test again, live, on Elm through coupler C. Stephen carries the rig into the ship’s antenna, so the ship measures the show for itself.",
+        "steve|The rest of us go to the Gallery and wake everyone, Mom and Dad included. Iris and Stephen voted for it, knowing what it costs them."
+      ],
+      "outro": [
+        "c8_rig.out.01",
+        "c8_rig.out.02",
+        "c8_rig.out.03",
+        {"new": "steve|That night we went back under the bay, through the aquarium tunnel. Pell stayed behind with Biscuit. Ten minutes later he caught up with us, carrying her.", "delivery": "narration"}
+      ],
+      "next": "Chapter 9, the third ninth night (c9_gallery)."
+    }
+  }
+}

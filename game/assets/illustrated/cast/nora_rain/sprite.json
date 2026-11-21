@@ -1,0 +1,118 @@
+{
+  "base": "nora_rain.webp",
+  "source": "assets/characters/campaign/masters/nora_rain.png",
+  "source_sha256": "9d80efbef669819e7dec566df92ea25351daef2bfc8d644114466ce6284ac353",
+  "size": [
+    720,
+    1080
+  ],
+  "origin": "top_left",
+  "foot_anchor": [
+    360,
+    1080
+  ],
+  "frames": {
+    "blink_half": {
+      "atlas_region": [
+        0,
+        0,
+        112,
+        38
+      ],
+      "source_origin": [
+        321,
+        162
+      ]
+    },
+    "blink_closed": {
+      "atlas_region": [
+        0,
+        40,
+        112,
+        38
+      ],
+      "source_origin": [
+        321,
+        162
+      ]
+    },
+    "mouth_parted": {
+      "atlas_region": [
+        0,
+        80,
+        78,
+        63
+      ],
+      "source_origin": [
+        350,
+        221
+      ]
+    },
+    "mouth_open": {
+      "atlas_region": [
+        0,
+        145,
+        78,
+        63
+      ],
+      "source_origin": [
+        350,
+        221
+      ]
+    },
+    "mouth_round": {
+      "atlas_region": [
+        0,
+        210,
+        78,
+        63
+      ],
+      "source_origin": [
+        350,
+        221
+      ]
+    },
+    "mouth_wide": {
+      "atlas_region": [
+        0,
+        275,
+        78,
+        63
+      ],
+      "source_origin": [
+        350,
+        221
+      ]
+    }
+  },
+  "cue_frames": {
+    "X": null,
+    "A": null,
+    "B": "mouth_parted",
+    "C": "mouth_wide",
+    "D": "mouth_open",
+    "E": "mouth_round",
+    "F": "mouth_round",
+    "G": "mouth_parted",
+    "H": "mouth_parted"
+  },
+  "sha256": {
+    "nora_rain.webp": "e6b97d8e0febcbfafcf781a2b1140e417d823f4f926c64d0b9d218804f5cf7a9",
+    "nora_rain-face-atlas.png": "7097508e05f75dbd164f0c5f0b2af1e44167ce44eb5ebd031d3a687355920a99"
+  },
+  "atlas": "nora_rain-face-atlas.png",
+  "eye_centers": [
+    [
+      345,
+      187
+    ],
+    [
+      410,
+      176
+    ]
+  ],
+  "mouth_center": [
+    391,
+    252
+  ]
+}

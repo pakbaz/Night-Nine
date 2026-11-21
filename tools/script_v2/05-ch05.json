@@ -1,0 +1,300 @@
+{
+  "scenes": {
+    "c5_shack": {
+      "when": "Friday, November 2",
+      "present": ["steve", "luis", "operator"],
+      "card": {"chapter": {"kicker": "Chapter 5", "title": "Wanted: Steve Mercer (Two of Him)", "when": "The next morning", "goal": "Steve wants to hide, and to find his mother’s notebook before the crew does."}},
+      "objective": "Open your parents’ boxes. Follow their investigation.",
+      "changes": ["C20", "C23 (club becomes a beat)", "U-relationships", "U-narration", "critic C04 (plant the relay names)"],
+      "notes": [
+        "Nora’s copy has been missing since the stakeout on Tuesday the 30th, which is why the crew can charge Steve with kidnapping. Luis says so here.",
+        "New sound assets for log: effect.hum_first_reel (one steady low hum under radio static) and effect.hum_last_reel (the same note held by many voices, beating slightly against each other).",
+        "Gull, Marsh and Cedar are the club operators Frank calls on in Chapter 10. Marsh lives out past Sentinel Point. Use these names in c10_station.",
+        "Helen’s note is voiced in her own voice as a memory, as Steve reads it."
+      ],
+      "context": [
+        "steve|My face was on every wanted poster in the county. I walked all night and hid in the one place nobody had opened in eighteen months: Dad’s radio shack, on the bluff above the bay.",
+        "steve|Their boxes were still stacked where I’d left them. I’d never been able to open them."
+      ],
+      "intro": [
+        "c5_shack.in.01",
+        "c5_shack.in.02",
+        "c5_shack.in.03",
+        "steve|Luis. They’re saying I took Nora.",
+        "luis|Nora has been gone since Tuesday night. Carmen hasn’t slept. And I have known you since you were nine years old.",
+        "luis|I’ve heard the bay sing since I was a boy. Your father was the only one who ever asked me what it sounded like."
+      ],
+      "delete": [],
+      "task_order": ["notes", "rig", "club", "log"],
+      "tasks": {
+        "notes": {
+          "type": "rows",
+          "difficulty": 2,
+          "title": "Kitchen-table notes",
+          "requires": [],
+          "goal": "Work out where Mom hid her notebook.",
+          "background": "Rook asked about Helen’s notebook again and again. In the boxes are forty-five years of notes Helen and Frank left each other on the kitchen table every morning, and one slip addressed to Steve.",
+          "lead": [
+            "steve|Forty-five years of kitchen-table notes. Every morning, one of them left the other one a note.",
+            {"id": "c5_shack.notes.01", "delivery": "memory"},
+            "c5_shack.notes.02"
+          ],
+          "prompt": "Helen’s slip says the notebook is “with the good stuff”. What did that mean in this family?",
+          "instruction": "March 2, Helen: “Put the anniversary tape with the good stuff.” March 3, Frank: “Done. It’s on the shelf between the Coltrane and the weather carts, next to the boy’s first night at the desk.” March 9, Helen: “Frank, there is soup in the refrigerator. The other container is paint.” Undated, Helen: “Steven. Notebook is with the good stuff. Your first night at the desk.”",
+          "rows": [
+            {"label": "Frank’s “Done” answers", "options": ["The March 2 slip", "The March 9 slip", "The undated slip"], "answer": 0},
+            {"label": "“The good stuff” is", "options": ["Frank’s paint shelf", "The KBWR record library", "The kitchen pantry"], "answer": 1}
+          ],
+          "hints": [
+            "Frank says “Done”. Which slip asked him to do something?",
+            "Coltrane records and weather carts sit together in one building in town.",
+            "Frank’s March 3 note answers a request to put a tape somewhere. Coltrane and weather carts live where Steve used to work."
+          ],
+          "lines": ["steve|The good stuff. Dad’s name for the station library."],
+          "finding": "steve|Dad’s “Done” answers Mom’s March 2 slip: he filed their tape between the Coltrane and the weather carts. The good stuff is the KBWR record library. Mom hid her notebook at my old station."
+        },
+        "rig": {
+          "difficulty": 3,
+          "title": "Frank’s receiver",
+          "requires": [],
+          "goal": "Get Frank’s receiver working and tuned to his radio club.",
+          "background": "Frank was a ham radio operator, call sign K7BLW. His club still meets on the air every Thursday, on the frequency in his log. The receiver needs a battery pack, and its dial has slipped, so it no longer reads true.",
+          "lead": [
+            "steve|Dad’s receiver. Dead battery, and the dial’s slipped since he last used it.",
+            "steve|Every set has a rating card, Dad said. Read it before you plug anything in."
+          ],
+          "prompt": "Which battery pack, and where should Steve set the dial to hear the club?",
+          "instruction": "Receiver card: 12 V DC, centre positive, draws 400 mA. A pack may supply more current than the set draws, never less. Pack RED: 12 V, 300 mA, centre positive. BLUE: 12 V, 800 mA, centre positive. GREY: 12 V, 800 mA, centre negative. Frank’s log: a 3.20 MHz station showed at dial 3.25, and a 3.40 MHz station at dial 3.45. The club transmits on 3.56 MHz.",
+          "rows": [
+            {"label": "Battery pack", "options": ["RED", "GREY", "BLUE"], "answer": 2},
+            {"label": "Dial setting for the club", "options": ["3.51", "3.56", "3.61"], "answer": 2}
+          ],
+          "hints": [
+            "Check all three ratings before trusting a pack’s colour.",
+            "The dial reads high at both of Frank’s logged stations. Set it the same amount above the club’s real frequency.",
+            "Check current and polarity, not colour. One pack fails each test. Then add Frank’s dial error to 3.56."
+          ],
+          "lines": ["c5_shack.rig.01"],
+          "finding": "steve|The BLUE pack has the right polarity and enough current. The dial reads 0.05 high, so the club’s 3.56 sits at 3.61. Dad’s radio is alive."
+        },
+        "club": {
+          "type": "beat",
+          "difficulty": 1,
+          "title": "Thursday club",
+          "requires": ["rig"],
+          "goal": "Call Frank’s radio club.",
+          "background": "For thirty years Frank signed on to his club the same way: “This is K7BLW, Bellwether.” Nobody has heard that call sign in eighteen months. The club meets on Thursdays, but its old hands keep a set on the frequency every night.",
+          "prompt": "Steve keys the microphone.",
+          "options": ["Sign on the way Dad did"],
+          "answer": 0,
+          "hints": ["There is nothing to solve here.", "There is nothing to solve here.", "Sign on the way Dad did."],
+          "lines": [
+            {"new": "steve|This is K7BLW, Bellwether.", "direction": "his voice catching on his father’s call sign"},
+            "c5_shack.club.01",
+            {"id": "c5_shack.club.02", "text": "It’s Steve. Frank’s son. I need your help."},
+            {"new": "operator|This is Gull. It isn’t Thursday, but none of us ever really switch off. Marsh and Cedar are on too. Marsh lives out past Sentinel Point these days.", "delivery": "radio"},
+            {"id": "c5_shack.club.03", "delivery": "radio"}
+          ],
+          "finding": "steve|Dad’s club answered his call sign: Gull, Marsh and Cedar. Marsh lives out past Sentinel Point. They meet every Thursday, and they’ll help."
+        },
+        "log": {
+          "type": "compare",
+          "difficulty": 2,
+          "title": "The last reel",
+          "requires": ["club"],
+          "goal": "Hear what Frank heard on his last reel.",
+          "background": "Frank’s logbooks show that he and Helen tracked the hum for months. He taped it under his radio static every ninth night. His notes get shorter as the reels get stranger.",
+          "lead": [
+            "steve|Dad’s logbooks. Months of them. Every ninth night, the same hum under his static.",
+            "steve|And Mom’s handwriting in the margins. Dates, and the word Meridian, underlined twice."
+          ],
+          "prompt": "Play Frank’s first ninth-night reel and his last. What changed?",
+          "options": ["The same tone, just louder", "Many voices holding one note", "The last reel is a copy of the first"],
+          "answer": 1,
+          "wrong": {
+            "0": "Listen past the volume. The last reel isn’t one sound.",
+            "2": "They don’t line up at all. The last reel has voices the first one doesn’t."
+          },
+          "sounds": ["effect.hum_first_reel", "effect.hum_last_reel"],
+          "evidence_labels": ["Frank’s first reel · March", "Frank’s last reel · the day before the boat"],
+          "hints": [
+            "Listen to the texture, not the loudness.",
+            "The first reel is one steady sound. The last one beats against itself.",
+            "On the last reel the note wobbles against itself, the way several singers do when they hold one pitch."
+          ],
+          "lines": [
+            {"id": "c5_shack.log.01", "delivery": "recorded_playback"},
+            {"id": "c5_shack.log.02", "text": "Dad heard voices in the hum, and he wanted my ears on it. Was that the only reason they asked me along?"}
+          ],
+          "finding": "steve|Dad’s last reel isn’t one hum. It’s many voices holding one note. “It isn’t one voice. It’s a choir.” Mom and Dad weren’t out on the bay for the view. They were investigating, and they wanted my ears."
+        }
+      },
+      "recap": [
+        "steve|Mom and Dad tracked the hum for months. Dad heard a choir in it. Mom wrote Meridian in the margins.",
+        "steve|Dad’s club is back on the air. And Mom’s notebook is in the KBWR record library, at the station that fired me.",
+        "steve|Twice today someone stood on the path below the shack. Both times, by the time I looked, he was gone."
+      ],
+      "outro": [
+        {"id": "c5_shack.out.01", "text": "The good stuff. Dad’s name for the station library. And Mom wrote my first night at the desk, not my first show."},
+        "c5_shack.out.02",
+        "steve|And the KBWR tower is blinking. Five flashes, then dark. Last night it was six.",
+        "steve|Six days, Rook said. It’s counting down to the signing."
+      ],
+      "next": "KBWR, that night (c5_station)."
+    },
+    "c5_station": {
+      "when": "Friday, November 2, night",
+      "present": ["steve", "stephen", "autorick"],
+      "objective": "Get into the record library and find Mom’s notebook.",
+      "changes": ["C30", "critic C30", "C22", "U-relationships", "U-narration", "U-timeline (Halcyon bought KBWR a year ago; Steve was let go three weeks ago)"],
+      "notes": [
+        "Stephen’s lines before he names himself show the speaker as “Steve Mercer?” (line-level display).",
+        "halcyon replaces the dated-stamps quiz with the early-night pattern: Halcyon sent Steve home on ninth nights so the tower could transmit unattended.",
+        "The steve narration between out.02 and out.03 carries the plot’s heart beat: Steve watching his own face learn his grief."
+      ],
+      "context": [
+        "steve|KBWR, after midnight. No humans work here now. Just racks of machines, playing music to nobody.",
+        "steve|And my voice, on the station ident, still playing between the songs."
+      ],
+      "intro": [
+        "c5_station.in.01",
+        "steve|Two fellas. Somebody else is breathing in here."
+      ],
+      "delete": [],
+      "task_order": ["automation", "sleeve", "halcyon", "stephen"],
+      "tasks": {
+        "automation": {
+          "type": "rows",
+          "difficulty": 3,
+          "title": "Unattended console",
+          "requires": [],
+          "goal": "Get through the maintenance door into the record library.",
+          "background": "Steve built KBWR’s automation schedule before Halcyon replaced him with it. The maintenance door to the record library unlatches only while the station ident plays: twelve seconds, in Steve’s own voice.",
+          "lead": ["steve|AutoRick’s console. I wrote half these carts myself."],
+          "prompt": "What should Steve queue, and where should he wait?",
+          "instruction": "AutoRick’s cart list: WEATHER 0:40, IDENT 0:12, NEWS 1:30. The maintenance door unlatches only while IDENT plays. NEWS opens the visitors’ entrance on the far side of the building after it ends. Walking from the console to the booth door takes 15 seconds.",
+          "rows": [
+            {"label": "Queue first", "options": ["WEATHER", "IDENT", "NEWS"], "answer": 0},
+            {"label": "Queue second", "options": ["WEATHER", "IDENT", "NEWS"], "answer": 1},
+            {"label": "Wait at", "options": ["The console", "The booth door"], "answer": 1}
+          ],
+          "hints": [
+            "Can Steve cross the room before the ident ends?",
+            "Something has to play while he walks.",
+            "The ident lasts twelve seconds and the walk takes fifteen. Queue something long enough to walk through, with the ident straight after it."
+          ],
+          "lines": [{"id": "c5_station.automation.01", "text": "I built this schedule before they replaced me with it. And the door still opens for my voice."}],
+          "finding": "steve|WEATHER gave me forty seconds to cross the room. Then my own voice, on the ident, unlatched the maintenance door."
+        },
+        "sleeve": {
+          "difficulty": 3,
+          "title": "First night at the desk",
+          "requires": ["automation"],
+          "goal": "Find the sleeve where Helen hid her notebook.",
+          "background": "Helen’s slip said the notebook was “with the good stuff. Your first night at the desk.” KBWR files every master under its original broadcast, never under a repeat.",
+          "lead": ["steve|The record library. Every master we ever made, filed the way Dad taught me."],
+          "prompt": "Which sleeve did Mom mean?",
+          "board": {
+            "instruction": "Follow Mom’s words through the station’s filing.",
+            "evidence": [
+              "Duty book, three Tuesdays: on the 4th, Steve engineered the midnight show and Jo presented. On the 11th, Jo engineered and Steve presented. On the 18th, Pat replayed the show from the 4th.",
+              "The engineer sits at the desk; the presenter sits at the microphone. Helen always called the engineer’s bench “your desk”.",
+              "Three sleeves on the shelf: blue, yellow and green. The yellow one has a repeat stamp. The blue one has an earlier original date than the green one."
+            ],
+            "stages": [
+              {"mode": "match", "prompt": "Find the sleeve.",
+               "slots": ["Steve’s first night at the desk", "The master for that night", "Its sleeve"],
+               "pieces": ["The 4th", "The 11th", "The 18th", "The original broadcast", "The repeat", "Blue sleeve", "Yellow sleeve"],
+               "answer": [0, 3, 5]}
+            ],
+            "wrong_text": "Steve pulls the wrong sleeve. Mom was always more precise than that."
+          },
+          "hints": [
+            "Steve sat at the engineer’s desk before he ever spoke on air.",
+            "His first night at the desk was the 4th. The 18th was only a repeat, and the yellow sleeve carries the repeat stamp.",
+            "Mom called the engineer’s bench “your desk”. Find the first Tuesday Steve sat there, then the sleeve that holds that night’s original."
+          ],
+          "lines": [
+            {"new": "steve|I knocked the whole shelf over. The blue one landed in my lap.", "direction": "under a pile of records"},
+            "c5_station.sleeve.01"
+          ],
+          "finding": "steve|My first night at the desk was the 4th, when I engineered and Jo presented. The original is in the blue sleeve, and Mom’s notebook was in its back pocket. I can’t read a word of it."
+        },
+        "halcyon": {
+          "type": "rows",
+          "difficulty": 3,
+          "title": "Halcyon’s paperwork",
+          "requires": ["automation"],
+          "goal": "Find out why Halcyon really let Steve go.",
+          "background": "The office is full of paperwork from Halcyon Media Holdings, the company that bought KBWR a year ago and replaced Steve with AutoRick three weeks ago. Steve always thought it was about money.",
+          "lead": ["steve|Halcyon Media Holdings. The company that fired me. Their filing is very tidy."],
+          "prompt": "What do the duty sheets and the tower log say, side by side?",
+          "instruction": "Duty sheets, September: Steve sent home early at 23:30 on the 6th, the 15th and the 24th, “by order of Halcyon”. Tower log: UNATTENDED transmissions from 23:45 to 04:00 on those same three nights. Steve’s last shift: September 28. Tower log since then: UNATTENDED on October 3, 12, 21 and 30.",
+          "rows": [
+            {"label": "Steve’s early nights were", "options": ["Every Friday", "Every ninth night", "Whenever ratings dropped"], "answer": 1},
+            {"label": "The tower transmits alone", "options": ["Every night since the sale", "Only once the building is empty", "Whenever AutoRick reads the news"], "answer": 1},
+            {"label": "Next unattended night", "options": ["November 3", "November 7", "November 8"], "answer": 2}
+          ],
+          "hints": [
+            "Count the days between Steve’s early nights.",
+            "Count the days between Steve’s early nights, then line them up with the tower log.",
+            "Count the gaps between the dates. Compare the tower log with the hours Steve was sent home. Then keep the same step past October 30."
+          ],
+          "lines": ["c5_station.halcyon.01"],
+          "finding": "steve|Halcyon sent me home early every ninth night, and the tower transmitted alone as soon as I left. Then they let me go for good. The next unattended night is November 8."
+        },
+        "stephen": {
+          "difficulty": 3,
+          "title": "The man with my face",
+          "requires": ["sleeve", "halcyon"],
+          "goal": "Find out how far the other man’s memory reaches, without feeding him the answers.",
+          "background": "The man with Steve’s face remembers breakfast with Mom and Dad. He seems to know nothing about the wanted posters. Steve lays three things on the table and lets him talk first, the way June would.",
+          "lead": [
+            {"id": "c5_station.in.02", "display": "Steve Mercer?"},
+            "steve|...That’s my face.",
+            {"new": "stephen|It’s a good face. You’re not doing it any favors.", "display": "Steve Mercer?"}
+          ],
+          "prompt": "Where does his memory end?",
+          "board": {
+            "instruction": "Let him tell it before Steve says what anything is.",
+            "evidence": [
+              "Before he sees anything, he describes breakfast in Dad’s shack: Mom’s jam jar, with a chip in the blue lid.",
+              "He looks at the cassette labelled MOM, LAST CALL, and shrugs. “Mom never leaves voicemails. She calls back.”",
+              "The wanted poster lies face down. He can read it only after Steve turns it over.",
+              "Mom’s last call came from the boat, the night after that breakfast."
+            ],
+            "stages": [
+              {"mode": "match", "prompt": "File what he knows.",
+               "slots": ["Last thing he remembers on his own", "First thing he can’t place", "Something he learned tonight"],
+               "pieces": ["The chipped blue lid", "Mom’s last call", "The wanted poster", "Steve’s first show"],
+               "answer": [0, 1, 2]}
+            ],
+            "wrong_text": "That isn’t what he said. Listen again before deciding what he knows."
+          },
+          "hints": [
+            "Which detail did he give before he saw anything?",
+            "He described the chipped lid before he saw any object. He read the poster only after Steve turned it over.",
+            "Sort each thing by when he could have learned it: before he walked in, never, or after Steve showed him."
+          ],
+          "lines": [
+            {"id": "c5_station.stephen.01", "display": "Steve Mercer?"},
+            "stephen|Call me Stephen. One of us should sound like a grown-up.",
+            "c5_station.stephen.02"
+          ],
+          "finding": "steve|He remembers Mom’s chipped jam jar, and nothing after that breakfast. He doesn’t know about the boat. He doesn’t know they’re gone."
+        }
+      },
+      "recap": [
+        "steve|Mom’s notebook was in the blue sleeve, in a shorthand I can’t read. Halcyon cleared the building every ninth night so the tower could talk to the ship.",
+        "steve|And the man following me all week was me. Sixty-one percent of me, with nothing after the breakfast before the boat."
+      ],
+      "outro": [
+        "c5_station.out.01",
+        {"id": "c5_station.out.02", "text": "No. I had breakfast with them. It never got as far as the boat."},
+        {"new": "steve|I watched my own face learn it. Eighteen months, all at once.", "delivery": "narration"},
+        "c5_station.out.03"
+      ],
+      "next": "Chapter 6 (c6_iris)."
+    }
+  }
+}

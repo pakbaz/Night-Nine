@@ -9,6 +9,10 @@ var recordings := {}
 func verify_native_line() -> void:
 	var line: Dictionary = game.campaign.content.lines[game.active_line]
 	var audio_id: String = line.audio
+	if not game.voice_manifest.get("enabled",true):
+		check(not game.voice.playing and game.line_remaining>=game._reading_time(str(line.get("display_text",line.text)))-.2,
+			"Text-only reading time for "+game.active_line)
+		return
 	var preferred: String = game.voice_manifest.takes[audio_id].file
 	var actual: String = game.voice.stream.resource_path if game.voice.stream else ""
 	check(actual==preferred and actual.begins_with("res://assets/audio/voices/elevenlabs-v4/"),"Preferred native recording for "+game.active_line)
@@ -30,6 +34,8 @@ func check_speaking_face() -> void:
 		var expected := -1.0 if actor_id == "general_us" else 1.0
 		check(game.stage.actors.helen.role=="listener" and signf(game.stage.gaze_targets.helen.x)==expected,"Helen follows the delegate who is speaking")
 	if mouths.has(actor_id) or not game.stage.actors.has(actor_id) or line.get("delivery","live")!="live":
+		return
+	if not game.voice_manifest.get("enabled",true):
 		return
 	var actor: Node = game.stage.actors[actor_id]
 	var deadline := Time.get_ticks_msec()+2500
@@ -114,13 +120,13 @@ func _run() -> void:
 				check(art.texture != null,"Loaded foreground "+slot)
 		var speaker_ids: Array = []
 		while game.dialogue_panel.visible:
-			check(not game.words.text.is_empty() and game.voice.playing,"Arrival speech and caption "+game.active_line)
+			check(not game.words.text.is_empty() and not game.voice.playing,"Text-only arrival caption "+game.active_line)
 			speaker_ids.append(game.active_line)
 			await check_speaking_face()
 			if speaker_ids.size()==1:
 				await get_tree().create_timer(.45).timeout
 				await capture(slot+"-arrival")
-			await click(button("Continue  [Space]",game.dialogue_panel))
+			await click(button("Continue",game.dialogue_panel))
 		await get_tree().create_timer(.55).timeout
 		await capture(slot+"-exploration")
 		check(game.ambience.playing and game.ambience.stream.resource_path.ends_with("/"+slot+".ogg"),"Location ambience "+slot)
@@ -133,6 +139,12 @@ func _run() -> void:
 			check(pin.get_global_rect().has_point(position_on_screen),"Painted prop hit test "+task.id)
 			hit_locations[task.id] = [snappedf(position_on_screen.x,0.1),snappedf(position_on_screen.y,0.1)]
 			await click(pin)
+			if game.dialogue_panel.visible:
+				check(game.active_line in task.get("lead",[]),"Lead-in before painted puzzle "+task.id)
+				while game.dialogue_panel.visible:
+					await check_speaking_face()
+					speaker_ids.append(game.active_line)
+					await click(button("Continue",game.dialogue_panel))
 			check(game.selected_task == task.id and game.root.get_node("InteractionPanel").visible,"Clicked authored prop "+task.id)
 			if task.id == "p_bay.tune":
 				check(game.receiver.record.disabled and game.receiver.players[0].playing,"Receiver starts audibly on the time station")
@@ -145,7 +157,7 @@ func _run() -> void:
 				await click(game.receiver.record)
 			elif task.id == "p_veyr.levels":
 				check(button("Apply settings",game.interaction).disabled,"Unselected recorder gain")
-				await click(button("+6 dB",game.interaction))
+				await click(button("−3 dB",game.interaction))
 				await click(button("Apply settings",game.interaction))
 				check(not task.id in game.campaign.data.done, "Overloading the recorder can be retried")
 				await click(button("−6 dB",game.interaction))
@@ -165,19 +177,19 @@ func _run() -> void:
 				await get_tree().process_frame
 				await click(apply)
 			else:
-				await click(button(task.options[task.answer],game.interaction))
+				await click(button("Continue" if task.get("type","")=="beat" else task.options[task.answer],game.interaction))
 			check(task.id in game.campaign.data.done,"Saved authored outcome "+task.id)
 			while game.dialogue_panel.visible:
 				await check_speaking_face()
 				if game.active_line=="p_meeting.confess.02":
-					var end_at := Time.get_ticks_msec()+roundi(game.voice.stream.get_length()*1000.0)+1200
-					while not game.effect.playing and Time.get_ticks_msec()<end_at:
-						await get_tree().process_frame
-					heard_reaction=game.effect.playing and game.words.text=="[The delegates share a tired laugh.]"
+					await click(button("Continue",game.dialogue_panel))
+					heard_reaction=game.reaction_active and game.words.text=="[The delegates share a tired laugh.]"
 					check(heard_reaction,"The delegates' group laugh follows their spoken line")
 					await capture(slot+"-reaction")
+					await click(button("Continue",game.dialogue_panel))
+					continue
 				speaker_ids.append(game.active_line)
-				await click(button("Continue  [Space]",game.dialogue_panel))
+				await click(button("Continue",game.dialogue_panel))
 			if index==1 and t==0:
 				await click(button("Menu",game.root))
 				await click(button("Save game",game.menu))
@@ -185,19 +197,7 @@ func _run() -> void:
 				check(game.campaign.current().id==slot and task.id in game.campaign.data.done,"Restored illustrated room and solved task")
 				if game.menu.visible:
 					await click(button("Continue",game.menu))
-		check(game.next_button.visible,"Unlocked departure "+slot)
-		# The preceding caption is closing and Godot may still be updating minimum sizes.
-		for frame: int in 3:
-			await get_tree().process_frame
-		await click(game.next_button)
-		if not game.transitioning:
-			print("Departure hit check ",slot," button ",game.next_button.get_global_rect()," hovered ",game.get_viewport().gui_get_hovered_control())
-			await click(game.next_button)
-		check(game.transitioning,"Depart button starts the exit dialogue "+slot)
-		while game.dialogue_panel.visible and str(game.campaign.current().id)==slot:
-			await check_speaking_face()
-			speaker_ids.append(game.active_line)
-			await click(button("Continue  [Space]",game.dialogue_panel))
+		check(game.transitioning,"Last finding automatically starts the recap and exit "+slot)
 		check(game.cut_skip.visible and game.stage.cut_progress>=0.0,"Running authored departure shot "+slot)
 		await get_tree().create_timer(.85).timeout
 		await capture(slot+"-last-light")
@@ -210,8 +210,8 @@ func _run() -> void:
 		details[slot] = {"heard":speaker_ids,"hotspots":hit_locations}
 	check(game.campaign.current().id == "c8_lab","Sentinel Point returns to the Meridian laboratory")
 	check(game.stage.room_id == "c8_lab" and game.stage is Control,"Chapter 8 continues in the illustrated campaign")
-	check(recordings.size()==22,"All prologue recordings played through the production voice lookup")
-	check(mouths.size()==5,"Visible speech pose on every prologue performer")
+	check(recordings.is_empty(),"Text-only prologue plays no character recordings")
+	check(mouths.is_empty(),"Text-only prologue does not fake mouth timing")
 	var result := {"recordings":recordings,"verified_group_laugh":heard_reaction,"speaking_faces":mouths,"checks":checks,"failures":failures,"scenes":details,"captures":screenshots,"next_scene":game.campaign.current().id,"renderer":RenderingServer.get_current_rendering_method()}
 	var output := FileAccess.open(report_root.path_join("prologue-gameplay.json"),FileAccess.WRITE)
 	output.store_string(JSON.stringify(result,"  "))

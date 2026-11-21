@@ -14,15 +14,17 @@ Music plan (November 18, 2026):
   loudest section, so every recording is heard.
 - The three flashback "nights" keep the Three Nights BGM wherever they sit.
 - Bellwether Bay (Tape Anomaly) scores the tape investigation in Chapter 1.
-- The finale is scored with the main title: the live broadcast, the ship
-  rising, the last film and the credits. The short Epilogue theme plays once
-  under the end card.
+- The main title scores the live broadcast, the ship rising and the last
+  departure. Epilogue BGM is reserved for the completion credit film.
+  The short Epilogue theme plays once under the end card.
 """
 import json
 import re
 import subprocess
 import sys
 from pathlib import Path
+
+from ending_reward import apply_music as apply_ending_music
 
 ROOT = Path(__file__).resolve().parents[1]
 MUSIC = ROOT / 'game/content/music.json'
@@ -34,6 +36,7 @@ RES = 'res://assets/audio/music/'
 
 EXTRA_TRACKS = {
     'tape_anomaly': {'file': RES + 'tape-anomaly.mp3', 'lufs': -19.2, 'title': 'Bellwether Bay (Tape Anomaly)'},
+    'ending_reward': {'file': RES + 'epilogue-bgm.mp3', 'lufs': -16.8},
 }
 
 # Scenes whose music is chosen by hand. Values: (track key, start bar or None).
@@ -46,13 +49,8 @@ SCENE_TRACKS = {
     'c1_pier': ('Chapter 1/theme', None),
     'c10_live': ('title', 4),
     'c10_report': ('title', 4),
-    # The Epilogue BGM opens with eight near-silent bars. After the main title's
-    # peak, the epilogue starts on the soft build at bar 8 instead.
-    'epilogue': ('Epilogue/bgm', 8),
-    # One year later starts one bar before the Epilogue BGM's full entrance on
-    # bar 16, skipping its near-silent opening, so the full band arrives a few
-    # seconds into the "Good Morning" card.
-    'one_year': ('Epilogue/bgm', 15),
+    'epilogue': ('Chapter 10/bgm', None),
+    'one_year': ('Chapter 1/bgm', None),
 }
 FLASHBACKS = {'p_veyr', 'p_meeting'}
 
@@ -63,7 +61,7 @@ FLASHBACKS = {'p_veyr', 'p_meeting'}
 # c10_report: the Long Patience rises on the main title's peak.
 # epilogue: the lanterns start the Three Nights theme again, and the closing
 #        storybook mirrors the aftermath over the same bars.
-# one_year: the last film starts the main title, which runs on into the credits.
+# one_year: the last departure reprises the main title before the reward film.
 DEPARTURES = {
     'p_bay': ('Prologue/theme', 34, 3),
     'p_meeting': ('Prologue/theme', 40, 3),
@@ -216,6 +214,7 @@ def main():
     finale = music['chapters']['Epilogue']['theme']
     music['finale'] = {'file': finale['file'], 'lufs': finale['lufs'], 'bpm': finale['bpm'], 'beat': finale['beat'],
                        'entry_seconds': 0.0, 'loop': False}
+    apply_ending_music(music)
     MUSIC.write_text(json.dumps(music, indent=2) + '\n')
     print(json.dumps({'scenes': len(plan), 'departures': list(departures),
                       'climax_bars': {c: g['theme'].get('climax_bar') for c, g in music['chapters'].items() if 'theme' in g}}))

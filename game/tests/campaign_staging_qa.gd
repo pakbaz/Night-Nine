@@ -61,7 +61,7 @@ func _run() -> void:
 	if not capture:
 		game._speak(["i2_nora.message.01"], Callable())
 		check(not game.voice.playing, "Keep the private message unheard before its later reveal")
-		check(game.words.text == "Nora records a private message for Steve.", "Conceal the private message in early subtitles")
+		check(game.words.get_parsed_text() == "Nora records a private message for Steve.", "Conceal the private message in early subtitles")
 		game._skip_dialogue()
 	game._choose("c9_gallery.link", 0, [])
 	await wait_frames(3)
@@ -104,7 +104,7 @@ func _run() -> void:
 	var limit:=Time.get_ticks_msec()+2000
 	while person.last_mouth.is_empty() and game.voice.playing and Time.get_ticks_msec()<limit:
 		await get_tree().process_frame
-	check(not person.last_mouth.is_empty() and person.mouth.visible,"Drive a rendered Steve mouth patch from real playback")
+	check(person.last_mouth.is_empty() and not person.mouth.visible,"Keep text-only Steve dialogue free of fake mouth timing")
 	game._pause_audio(true)
 	var camera_before: Vector2=game.stage.aim
 	var clock_before: float=game.stage.clock
@@ -121,7 +121,7 @@ func _run() -> void:
 	check(game.active_line == "c9_gallery.talk.01", "Restore interrupted reunion with the unheard line")
 	check(game.stage.actors.nora.visible, "Restore Nora's release state")
 	check(game.stage.actors.steve.voice==game.voice, "Restore speech binding after load")
-	check(not game.stage.actors.steve.cues.is_empty(), "Retain mouth timing when replaying an interrupted line")
+	check(game.stage.actors.steve.cues.is_empty(), "Keep interrupted text-only dialogue free of stale mouth timing")
 	var original_timing: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://content/lipsync-manifest.json"))
 	check(game.lipsync_manifest == original_timing, "Preserve the shared timing manifest across speaker changes and loading")
 	game._next_line()
@@ -139,7 +139,7 @@ func _run() -> void:
 	await shot("gallery-exploration")
 	game._speak(["c9_gallery.out.03"], Callable())
 	await wait_frames(3)
-	check(game.voice.playing, "Play Nora's existing intercom recording at the reveal")
+	check(not game.voice.playing, "Keep Nora's revised intercom reveal text-only")
 	check(game.stage.dialogue_shot.type=="insert" and game.stage.dialogue_shot.recorded, "Show the listeners during recorded playback")
 	check(game.stage.actors.nora.voice==null and game.stage.actors.steve.voice==null, "Keep live mouths neutral during the recording")
 	game._skip_dialogue()
@@ -148,8 +148,12 @@ func _run() -> void:
 	game._choose(antenna.id, int(antenna.answer), antenna.get("puzzle",{}).get("solution",[]))
 	game._skip_dialogue()
 	check(game.campaign.can_leave(), "Resolve every Gallery interaction with staged actors")
-	game._depart()
-	game._skip_dialogue()
+	for i: int in 40:
+		if not game.dialogue_panel.visible:
+			break
+		game._next_line()
+	check(game.light_remaining>=0.0 and game.cut_skip.visible,"Automatic recap reaches the Gallery departure cut")
+	game._advance_scene()
 	await wait_frames(3)
 	check(game.campaign.current().id != "c9_gallery", "Leave the staged scene through its normal exit")
 	check(game.stage.room_id=="c9_wake" and game.stage.background.texture.resource_path.ends_with("/c9_wake.webp"),"Replace the prior Gallery painting on transition")

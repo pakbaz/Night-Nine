@@ -1,0 +1,118 @@
+{
+  "base": "calder_casework.webp",
+  "source": "assets/characters/campaign/masters/calder_casework.png",
+  "source_sha256": "00593eeecb951c2ed8a63e9697b8c92fddf32f8acd1759b3ef26432668819dae",
+  "size": [
+    796,
+    1080
+  ],
+  "origin": "top_left",
+  "foot_anchor": [
+    398,
+    1080
+  ],
+  "frames": {
+    "blink_half": {
+      "atlas_region": [
+        0,
+        0,
+        116,
+        38
+      ],
+      "source_origin": [
+        336,
+        135
+      ]
+    },
+    "blink_closed": {
+      "atlas_region": [
+        0,
+        40,
+        116,
+        38
+      ],
+      "source_origin": [
+        336,
+        135
+      ]
+    },
+    "mouth_parted": {
+      "atlas_region": [
+        0,
+        80,
+        85,
+        62
+      ],
+      "source_origin": [
+        365,
+        198
+      ]
+    },
+    "mouth_open": {
+      "atlas_region": [
+        0,
+        144,
+        85,
+        62
+      ],
+      "source_origin": [
+        365,
+        198
+      ]
+    },
+    "mouth_round": {
+      "atlas_region": [
+        0,
+        208,
+        85,
+        62
+      ],
+      "source_origin": [
+        365,
+        198
+      ]
+    },
+    "mouth_wide": {
+      "atlas_region": [
+        0,
+        272,
+        85,
+        62
+      ],
+      "source_origin": [
+        365,
+        198
+      ]
+    }
+  },
+  "cue_frames": {
+    "X": null,
+    "A": null,
+    "B": "mouth_parted",
+    "C": "mouth_wide",
+    "D": "mouth_open",
+    "E": "mouth_round",
+    "F": "mouth_round",
+    "G": "mouth_parted",
+    "H": "mouth_parted"
+  },
+  "sha256": {
+    "calder_casework.webp": "a1815709124864b6bcd7a4240570c156d18fd96f314f544cc79d383c9676c0f7",
+    "calder_casework-face-atlas.png": "ababd4ad3ea74271c45fb8b44d978625049a776154ed68666279c2cbcd4acfa3"
+  },
+  "atlas": "calder_casework-face-atlas.png",
+  "eye_centers": [
+    [
+      360,
+      160
+    ],
+    [
+      430,
+      149
+    ]
+  ],
+  "mouth_center": [
+    410,
+    228
+  ]
+}

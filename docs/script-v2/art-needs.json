@@ -1,0 +1,88 @@
+[
+  {
+    "scene_id": "c1_pier",
+    "short_id": "admiral-haulout",
+    "description": "Admiral the sea lion hauling out beside Steve after answering Steve’s clumsy rising whistle; match the painted harbor and existing c1_pier insert style.",
+    "display": "insert during the whistle lead or finding",
+    "target": "game/assets/illustrated/campaign/inserts/c1_pier-admiral-haulout.webp",
+    "priority": "optional",
+    "status": "skipped (optional, not needed)"
+  },
+  {
+    "scene_id": "c1_dinner",
+    "short_id": "birthday-photo-strip",
+    "description": "Three snapshots of Nora at La Marea stamped 20:04, 20:15 while holding the kitchen check, and 20:29, pinned beside the register.",
+    "display": "insert for c1_dinner.birthday and recalled by c1_escape.order",
+    "target": "game/assets/illustrated/campaign/inserts/c1_dinner-birthday-photo-strip.webp",
+    "priority": "recommended",
+    "status": "made",
+    "wired": "task art: c1_dinner.birthday"
+  },
+  {
+    "scene_id": "c1_escape",
+    "short_id": "north-wing-work-order",
+    "description": "Rain-soaked Bellwether Aquarium work order marked NORTH WING, signed N. Reyes, wall-clock time 20:30, dated on Carmen’s birthday.",
+    "display": "insert for c1_escape.order",
+    "target": "game/assets/illustrated/campaign/inserts/c1_escape-north-wing-work-order.webp",
+    "priority": "recommended",
+    "status": "made",
+    "wired": "task art: c1_escape.order"
+  },
+  {
+    "scene_id": "c3_house",
+    "short_id": "calder-list",
+    "description": "June’s handwritten list headed “People who got better overnight,” with thirty-one names and Lyle Boone near the top.",
+    "display": "insert for the evidence notebook/list",
+    "target": "game/assets/illustrated/campaign/inserts/c3_house-calder-list.webp",
+    "priority": "optional",
+    "status": "skipped (optional, not needed)"
+  },
+  {
+    "scene_id": "c3_archive",
+    "short_id": "boathouse-stakeout",
+    "description": "Midnight view from the boathouse: townspeople walking down Harbor Path into glowing surf, a woman in a good wool coat turning back at the waterline, and a small old woman on the steps.",
+    "display": "departure insert/background variant",
+    "target": "game/assets/illustrated/campaign/inserts/c3_archive-boathouse-stakeout.webp",
+    "priority": "recommended",
+    "status": "made",
+    "wired": "scene departure_art: c3_archive"
+  },
+  {
+    "scene_id": "i1_archive",
+    "short_id": "frosted-meeting-memory",
+    "description": "The windowless Meridian meeting room seen through frost, matching the p_meeting painting and reading clearly as a preserved memory fragment.",
+    "display": "outro background variant or insert",
+    "target": "game/assets/illustrated/campaign/inserts/i1_archive-frosted-meeting-memory.webp",
+    "priority": "required",
+    "status": "made",
+    "wired": "scene departure_art: i1_archive"
+  },
+  {
+    "scene_id": "c6_jail",
+    "short_id": "croissant-van",
+    "description": "Gus’s bakery van at the loading door with an oversized croissant mounted on its roof.",
+    "display": "departure insert",
+    "target": "game/assets/illustrated/campaign/inserts/c6_jail-croissant-van.webp",
+    "priority": "optional",
+    "status": "skipped (optional, not needed)"
+  },
+  {
+    "scene_id": "i2_nora",
+    "short_id": "row-zero-eye",
+    "description": "Row Zero in the amber Gallery, with one enormous eye open beneath cracked frost.",
+    "display": "departure insert",
+    "target": "game/assets/illustrated/campaign/inserts/i2_nora-row-zero-eye.webp",
+    "priority": "optional",
+    "status": "skipped (optional, not needed)"
+  },
+  {
+    "scene_id": "c8_lab",
+    "short_id": "last-notebook-page",
+    "description": "Helen's last notebook page: a short flat stroke, a joined rising stroke, a gap, then a long lower stroke, with the margin note \"repeats after the low note\".",
+    "display": "task art for c8_lab.lastpage, reused in c9_choir.wick and postcredits.answer",
+    "target": "game/assets/illustrated/campaign/inserts/c8_lab-last-notebook-page.webp",
+    "priority": "recommended",
+    "status": "made",
+    "wired": "task art: c8_lab.lastpage, c9_choir.wick, postcredits.answer"
+  }
+]

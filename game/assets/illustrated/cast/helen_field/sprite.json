@@ -1,0 +1,118 @@
+{
+  "base": "helen_field.webp",
+  "source": "assets/characters/campaign/masters/helen_field.png",
+  "source_sha256": "05cea9ab7bfdb54241cd88ae6504a6ab1ea61099b22b0b60ee14184cd5d8e3f4",
+  "size": [
+    810,
+    1080
+  ],
+  "origin": "top_left",
+  "foot_anchor": [
+    405,
+    1080
+  ],
+  "frames": {
+    "blink_half": {
+      "atlas_region": [
+        0,
+        0,
+        109,
+        45
+      ],
+      "source_origin": [
+        391,
+        133
+      ]
+    },
+    "blink_closed": {
+      "atlas_region": [
+        0,
+        47,
+        109,
+        45
+      ],
+      "source_origin": [
+        391,
+        133
+      ]
+    },
+    "mouth_parted": {
+      "atlas_region": [
+        0,
+        94,
+        84,
+        59
+      ],
+      "source_origin": [
+        391,
+        197
+      ]
+    },
+    "mouth_open": {
+      "atlas_region": [
+        0,
+        155,
+        84,
+        59
+      ],
+      "source_origin": [
+        391,
+        197
+      ]
+    },
+    "mouth_round": {
+      "atlas_region": [
+        0,
+        216,
+        84,
+        59
+      ],
+      "source_origin": [
+        391,
+        197
+      ]
+    },
+    "mouth_wide": {
+      "atlas_region": [
+        0,
+        277,
+        84,
+        59
+      ],
+      "source_origin": [
+        391,
+        197
+      ]
+    }
+  },
+  "cue_frames": {
+    "X": null,
+    "A": null,
+    "B": "mouth_parted",
+    "C": "mouth_wide",
+    "D": "mouth_open",
+    "E": "mouth_round",
+    "F": "mouth_round",
+    "G": "mouth_parted",
+    "H": "mouth_parted"
+  },
+  "sha256": {
+    "helen_field.webp": "1efcb6120290d408868853a7bda3ac4b993d2a6f1022357a32687d211cbe7f29",
+    "helen_field-face-atlas.png": "f6953b17e775c7db20d7b48794f5cbaaf844ea2c553c21131a6b2193615a4b38"
+  },
+  "atlas": "helen_field-face-atlas.png",
+  "eye_centers": [
+    [
+      415,
+      148
+    ],
+    [
+      479,
+      164
+    ]
+  ],
+  "mouth_center": [
+    438,
+    226
+  ]
+}

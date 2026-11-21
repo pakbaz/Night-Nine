@@ -32,6 +32,11 @@ def tone(freq, duration, volume=.25):
     count=int(duration*RATE)
     return [volume*math.sin(2*math.pi*freq*i/RATE)*min(1,i/(RATE*.02),(count-i)/(RATE*.04)) for i in range(count)]
 
+def chord(frequencies, duration, volume=.2):
+    count=int(duration*RATE)
+    return [volume*sum(math.sin(2*math.pi*f*i/RATE) for f in frequencies)/len(frequencies)
+            * min(1,i/(RATE*.02),(count-i)/(RATE*.04)) for i in range(count)]
+
 def silence(seconds):
     return [0.0]*int(seconds*RATE)
 
@@ -114,6 +119,21 @@ def main():
         manifest[style]=write(style,ambient(style,100+i),'ambience')
     manifest['delegates_laugh'] = prepare_delegate_reaction()
     manifest['nora_whistle']=write('nora_whistle',tone(739.989,.32)+silence(.16)+tone(880,.5))
+    manifest['nora_whistle_flat']=write('nora_whistle_flat',tone(739.989,.32)+silence(.16)+tone(698.456,.5))
+    rng=random.Random(210)
+    breath=[.08*rng.uniform(-1,1)*math.sin(math.pi*i/(RATE*.8)) for i in range(int(RATE*.8))]
+    manifest['steve_whistle']=write('steve_whistle',breath+tone(739.989,.24,.12)+silence(.19)+tone(880,.37,.13))
+    winch=[]
+    for i in range(RATE*3):
+        t=i/RATE
+        winch.append(.1*math.sin(2*math.pi*46*t)+.025*math.sin(2*math.pi*92*t)+.018*math.sin(2*math.pi*7*t))
+    manifest['harbor_winch']=write('harbor_winch',winch)
+    ident=[]
+    for frequency in (220,277.183,329.628,440):
+        ident+=tone(frequency,.55,.15)+silence(.08)
+    ident+=chord((220,277.183,329.628),1.2,.13)
+    ident=(ident+silence(12))[:RATE*12]
+    manifest['kbwr_ident']=write('kbwr_ident',ident)
     pattern={'K':'-.-','7':'--...','B':'-...','L':'.-..','W':'.--'}
     morse=[]
     unit=.09
@@ -127,10 +147,23 @@ def main():
     for frequency,duration in [(220,.65),(261.626,.65),(293.665,1.0),(261.626,.65),(196,.65),(220,1.3)]:
         motif+=tone(frequency,duration,.13)+silence(.08)
     manifest['lullaby']=write('lullaby',motif)
-    manifest['ninth_night']=write('ninth_night',[.18*math.sin(2*math.pi*82.407*i/RATE)*min(1,i/RATE,(RATE*4-i)/RATE) for i in range(RATE*4)])
+    manifest['ninth_night']=write('ninth_night',tone(220,2.0,.18))
     manifest['veyr_wind']=write('veyr_wind',ambient('veyr',900),'effects')
     manifest['new_wind']=write('new_wind',ambient('veyr',901),'effects')
-    manifest['wick']=write('wick',tone(73.416,.7)+tone(98,1.1)+silence(.25)+tone(65.406,1.5))
+    manifest['wick']=write('wick',tone(220,.8)+tone(330,1.1)+silence(.5)+tone(165,2.0))
+    manifest['wick_high_ending']=write('wick_high_ending',tone(220,.8)+tone(330,1.1)+silence(.5)+tone(440,2.0))
+    static_rng=random.Random(511)
+    static=[.035*static_rng.uniform(-1,1) for _ in range(RATE*4)]
+    first=[static[i]+.11*math.sin(2*math.pi*165*i/RATE) for i in range(len(static))]
+    last=[static[i]+.055*sum(math.sin(2*math.pi*f*i/RATE) for f in (163.5,165,166.8))
+          for i in range(len(static))]
+    manifest['hum_first_reel']=write('hum_first_reel',first)
+    manifest['hum_last_reel']=write('hum_last_reel',last)
+    hold=[]
+    for frequency in (261.626,329.628,392,329.628,293.665,349.228,440,392):
+        hold+=tone(frequency,.34,.1)+silence(.06)
+    manifest['halcyon_hold_seattle']=write('halcyon_hold_seattle',tone(440,.12,.08)+silence(.25)+hold)
+    manifest['halcyon_hold_denver']=write('halcyon_hold_denver',tone(523.251,.12,.08)+silence(.55)+hold)
     manifest.update(evidence_sounds())
     (OUT/'soundscape-manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
     print(json.dumps({'original_cues':len(manifest),'ambient_styles':len(styles)}))

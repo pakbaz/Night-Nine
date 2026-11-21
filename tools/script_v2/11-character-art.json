@@ -1,0 +1,25 @@
+{
+  "global": {
+    "scene_appearances": {
+      "c1_flat": {"steve": "steve_morning", "iris": "nora_warm"},
+      "c1_dinner": {"steve": "steve_morning", "iris": "nora_warm"},
+      "c1_escape": {"steve": "steve_rain", "iris": "nora_rain", "agnes": "agnes_reflective"},
+      "c2_aquarium": {"steve": "steve_rain", "iris": "nora_rain"},
+      "c3_house": {"calder": "calder_casework"},
+      "c3_archive": {"calder": "calder_casework", "agnes": "agnes_reflective"},
+      "i1_archive": {"archivist": "archivist_explaining"},
+      "c5_station": {"steve": "steve_broadcast"},
+      "c6_jail": {"calder": "calder_casework"},
+      "c8_lab": {"agnes": "agnes_reflective"},
+      "c8_rig": {"steve": "steve_broadcast"},
+      "c9_wake": {"nora": "nora_reunion", "helen": "helen_field"},
+      "c9_choir": {"helen": "helen_field"},
+      "c10_station": {"steve": "steve_broadcast"},
+      "c10_town": {"nora": "nora_reunion", "agnes": "agnes_reflective"},
+      "c10_live": {"steve": "steve_broadcast"},
+      "c10_report": {"archivist": "archivist_explaining", "helen": "helen_field"},
+      "epilogue": {"nora": "nora_reunion", "helen": "helen_field", "agnes": "agnes_reflective"},
+      "postcredits": {"helen": "helen_field"}
+    }
+  }
+}

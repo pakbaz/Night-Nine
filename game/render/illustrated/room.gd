@@ -45,6 +45,7 @@ var room_id := ""
 var cast_marks := {}
 var seats := {}
 var gaze_targets := {}
+var meeting_recorder_mark := Vector2.ZERO
 var seated_gaze := {}
 var camera_goal := HALF
 var close_scale := 1.18
@@ -131,10 +132,10 @@ func build_veyr() -> void:
 	recorder = ShaderMaterial.new()
 	recorder.shader = RECORDER
 	rail.material = recorder
-	# Exact UV landmarks on the microphone, meter and the left transport key.
-	for uv: Vector2 in [Vector2(.899,.371),Vector2(.747,.782),Vector2(.576,.694)]:
+	# Exact UV landmarks on the meter and the left transport key.
+	for uv: Vector2 in [Vector2(.747,.782),Vector2(.576,.694)]:
 		targets.append(rail.position + uv * Vector2(1630,543))
-	hit_sizes.assign([Vector2(192,108),Vector2(165,89),Vector2(199,106)])
+	hit_sizes.assign([Vector2(165,89),Vector2(199,106)])
 
 func build_meeting() -> void:
 	painted_room("meeting")
@@ -149,8 +150,9 @@ func build_meeting() -> void:
 	cast_marks["general_cn"] = Vector2(1395,369)
 	actor_at("helen",625,Vector2(754,845),Color("f1ddba"),Vector2(738,299))
 	picture(props,ROOMS+"meeting-foreground.png",Vector2(-12,230),Vector2(1624,755))
-	targets.assign([Vector2(408,745),Vector2(824,733),Vector2(1260,754)])
-	hit_sizes.assign([Vector2(195,118),Vector2(190,108),Vector2(190,106)])
+	targets.assign([Vector2(408,745),Vector2(824,733)])
+	hit_sizes.assign([Vector2(195,118),Vector2(190,108)])
+	meeting_recorder_mark=Vector2(1260,754)
 	seat("helen",false)
 	direct_attention()
 
@@ -189,7 +191,7 @@ func direct_attention(speaker_id: String = "", line_id: String = "") -> void:
 			target = targets[focus]
 		elif room_id == "p_meeting":
 			if line_id == "p_meeting.record.01":
-				target = targets[2]
+				target = meeting_recorder_mark
 			elif speaker_id == "general_us" or line_id == "p_meeting.terms.01":
 				target = cast_marks.general_us
 			else:

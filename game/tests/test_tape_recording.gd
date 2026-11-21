@@ -56,8 +56,8 @@ func _initialize() -> void:
 	var first_hint := campaign.hint("c1_flat.compare")
 	var second_hint := campaign.hint("c1_flat.compare")
 	var final_hint := campaign.hint("c1_flat.compare")
-	check(not first_hint.contains("0.35") and not second_hint.contains("0.35"), "Keep exact timing out of the early hints")
-	check(final_hint.contains("-0.35"), "Provide an explicit accessible solution in the final hint")
+	check(not first_hint.contains("0.35") and not second_hint.contains("0.35") and not final_hint.contains("0.35"), "Hints guide without giving the numeric answer")
+	check(final_hint.contains("ident") and final_hint.contains("breath") and final_hint.contains("click"), "Final hint names the accessible visual and audible landmarks")
 	var report := {"checks": checks, "failures": failures, "master_samples": model.samples.size(),"preferred_master":active.file,"preferred_samples":active_model.samples.size(),"preferred_rate":active_model.rate, "pcm_identity_verified": failures.is_empty()}
 	var file := FileAccess.open("res://../tmp/qa/tape-recording-results.json", FileAccess.WRITE)
 	file.store_string(JSON.stringify(report, "\t"))

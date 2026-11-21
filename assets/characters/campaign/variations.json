@@ -1,0 +1,18 @@
+{
+  "created": "2026-11-20",
+  "purpose": "Scene-specific main-character dialogue portraits. Preserve identity, wardrobe continuity and spoiler-safe expressions.",
+  "generator": "GPT Image",
+  "preparation": "Original alpha retained, prepare-campaign-cast.py generates WebP and six face patches from Apple Vision landmarks.",
+  "portraits": {
+    "steve_morning": {"generation": "image-b316a9f83b793b30.png", "reference": "steve", "pose": "Relaxed, trusting morning with a mug"},
+    "steve_rain": {"generation": "image-45d27323884377bb.png", "reference": "steve", "pose": "Wet investigation, glasses and notebook"},
+    "steve_broadcast": {"generation": "image-d1d48932f684ad1e.png", "reference": "steve", "pose": "Listening through headphones and cueing a colleague"},
+    "nora_warm": {"generation": "image-fe90178bc8f99416.png", "reference": "nora", "pose": "Ordinary affectionate conversation"},
+    "nora_rain": {"generation": "image-f3a9bfdb3eacf66a.png", "reference": "nora", "pose": "Thoughtful in the established yellow raincoat"},
+    "nora_reunion": {"generation": "image-0a9c2052df0e3d9c.png", "reference": "nora", "pose": "Tired, relieved and hopeful"},
+    "helen_field": {"generation": "image-068493e206bf116d.png", "reference": "helen", "pose": "Standing, listening with her notebook"},
+    "calder_casework": {"generation": "image-adee8e86957068bc.png", "reference": "calder", "pose": "Calm investigation with evidence folder"},
+    "agnes_reflective": {"generation": "image-2310180aa51c924a.png", "reference": "agnes", "pose": "Concerned and observant, hands folded"},
+    "archivist_explaining": {"generation": "image-d336e4ccee293cf1.png", "reference": "archivist", "pose": "Open-handed explanation of the archive"}
+  }
+}

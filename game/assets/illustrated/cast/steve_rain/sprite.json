@@ -1,0 +1,118 @@
+{
+  "base": "steve_rain.webp",
+  "source": "assets/characters/campaign/masters/steve_rain.png",
+  "source_sha256": "1cf054e181740f31d22c5c4faabff18178de843ef62fedd16ce0b988437bcaf3",
+  "size": [
+    810,
+    1080
+  ],
+  "origin": "top_left",
+  "foot_anchor": [
+    405,
+    1080
+  ],
+  "frames": {
+    "blink_half": {
+      "atlas_region": [
+        0,
+        0,
+        128,
+        45
+      ],
+      "source_origin": [
+        331,
+        166
+      ]
+    },
+    "blink_closed": {
+      "atlas_region": [
+        0,
+        47,
+        128,
+        45
+      ],
+      "source_origin": [
+        331,
+        166
+      ]
+    },
+    "mouth_parted": {
+      "atlas_region": [
+        0,
+        94,
+        93,
+        66
+      ],
+      "source_origin": [
+        368,
+        249
+      ]
+    },
+    "mouth_open": {
+      "atlas_region": [
+        0,
+        162,
+        93,
+        66
+      ],
+      "source_origin": [
+        368,
+        249
+      ]
+    },
+    "mouth_round": {
+      "atlas_region": [
+        0,
+        230,
+        93,
+        66
+      ],
+      "source_origin": [
+        368,
+        249
+      ]
+    },
+    "mouth_wide": {
+      "atlas_region": [
+        0,
+        298,
+        93,
+        66
+      ],
+      "source_origin": [
+        368,
+        249
+      ]
+    }
+  },
+  "cue_frames": {
+    "X": null,
+    "A": null,
+    "B": "mouth_parted",
+    "C": "mouth_wide",
+    "D": "mouth_open",
+    "E": "mouth_round",
+    "F": "mouth_round",
+    "G": "mouth_parted",
+    "H": "mouth_parted"
+  },
+  "sha256": {
+    "steve_rain.webp": "1071489430fc6128177220fa84b1c2b58c8847d3738e8faa408523b13fa97c3a",
+    "steve_rain-face-atlas.png": "fd6f57c6a82cd053e22cc2cff1b72d766f2de91849d20c16fadb3772ece551c1"
+  },
+  "atlas": "steve_rain-face-atlas.png",
+  "eye_centers": [
+    [
+      356,
+      196
+    ],
+    [
+      434,
+      182
+    ]
+  ],
+  "mouth_center": [
+    416,
+    281
+  ]
+}

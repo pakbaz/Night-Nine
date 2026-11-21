@@ -25,6 +25,7 @@ var foreground: Sprite2D
 var atmosphere: ColorRect
 var curtain: ColorRect
 var chapter_frames: Array[TextureRect]=[]
+var departure_art_layer: TextureRect
 var chapter_film: CHAPTER_FILM
 var motion_material: ShaderMaterial
 var incoming_frame: TextureRect
@@ -307,8 +308,9 @@ func actor_visible(id: String) -> bool:
 	return id in directions.company and (requirement.is_empty() or requirement in done)
 
 func get_performer(id: String) -> Node2D:
-	var appearance: String = directions.get("appearances", {}).get(id, APPEARANCE.get(id,id))
-	if social_pair.has("nora") and social_pair.has("steve") and room_id in ["c9_gallery","c9_wake","epilogue"]:
+	var authored_appearances: Dictionary=directions.get("appearances",{})
+	var appearance: String = authored_appearances.get(id, APPEARANCE.get(id,id))
+	if not authored_appearances.has(id) and social_pair.has("nora") and social_pair.has("steve") and room_id in ["c9_gallery","c9_wake","epilogue"]:
 		var profile := "steve_toward_nora" if id == "steve" else "nora_toward_steve"
 		if FileAccess.file_exists(CAST + profile + "/sprite.json") and ResourceLoader.exists(CAST + profile + "/" + profile + ".webp"):
 			appearance = profile
@@ -344,7 +346,7 @@ func get_performer(id: String) -> Node2D:
 	performer.name=id
 	cast_plane.add_child(performer)
 	var ambient := Color.WHITE.lerp(Color.from_string(directions.light,Color.WHITE),.14)
-	performer.configure(folder,appearance,scale_factor*float(anchor[1]),foot_world,ambient,actor_data)
+	performer.configure(folder,appearance,scale_factor*float(anchor[1]),foot_world,ambient,actor_data,str(APPEARANCE.get(id,id)))
 	performer.phase = float(posmod(id.hash(),379))/100.0
 	actors[id]=performer
 	cast_marks[id]=eye_target
@@ -459,9 +461,9 @@ func begin_dialogue(line: Dictionary, voice: AudioStreamPlayer, _take: Dictionar
 	current_speaker=id if on_camera else ""
 	show_cast(current_speaker)
 	cast_plane.visible=detail.is_empty()
-	var shot_type := "arrival" if line.id==scene_record.intro.front() else "speaker"
+	var shot_type := "arrival" if not scene_record.intro.is_empty() and line.id==scene_record.intro.front() else "speaker"
 	if recorded or not actors.has(current_speaker):
-		shot_type = "arrival" if line.id==scene_record.intro.front() else "insert"
+		shot_type = "arrival" if not scene_record.intro.is_empty() and line.id==scene_record.intro.front() else "insert"
 	if shot_type=="speaker" and line.id in scene_record.outro:
 		shot_type="farewell"
 	dialogue_shot={"speaker":id,"type":shot_type,"recorded":recorded}
@@ -540,10 +542,22 @@ func image_layer(texture: Texture2D, label: String) -> TextureRect:
 	layer.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	return layer
 
+func show_departure_art(path: String) -> void:
+	if is_instance_valid(departure_art_layer) or path.is_empty() or not ResourceLoader.exists(path):
+		return
+	var painting:=load(path) as Texture2D
+	if painting:
+		departure_art_layer=image_layer(painting,"DepartureArt")
+		departure_art_layer.modulate.a=1.0
+		chapter_frames=[departure_art_layer]
+
 func begin_departure_cut() -> void:
 	cut_progress=0.0
 	show_cast("")
-	if directions.get("chapter_insert",false):
+	var authored_departure: String=scene_record.get("departure_art","")
+	if not authored_departure.is_empty():
+		show_departure_art(authored_departure)
+	elif directions.get("chapter_insert",false):
 		for suffix: String in ["","-motion"]:
 			var path:=INSERT_FOLDER+room_id+suffix+".webp"
 			if ResourceLoader.exists(path):
@@ -613,7 +627,7 @@ func set_departure_progress(value: float) -> void:
 	for layer: TextureRect in chapter_frames:
 		layer.pivot_offset=frame.size*.5
 		layer.scale=Vector2.ONE*push
-	chapter_frames[0].modulate.a=smoothstep(0.0,.14,drawing_time)
+	chapter_frames[0].modulate.a=1.0 if is_instance_valid(departure_art_layer) else smoothstep(0.0,.14,drawing_time)
 	if chapter_frames.size()>1:
 		var morph:=smoothstep(.30,.78,drawing_time)
 		if chapter_frames[1].material:

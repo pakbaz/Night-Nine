@@ -20,6 +20,10 @@
     "inserts": {
       "c1_flat.in.01": "c1_flat.control",
       "c1_flat.in.03": "c1_flat.control"
+    },
+    "appearances": {
+      "steve": "steve_morning",
+      "iris": "nora_warm"
     }
   },
   "c1_pier": {
@@ -65,7 +69,7 @@
         ],
         "width": 0.145,
         "lines": [
-          "c1_pier.whistle.01"
+          "c1_pier.whistle.02"
         ]
       }
     ],
@@ -91,7 +95,11 @@
       "iris",
       "luis"
     ],
-    "resident": "carmen"
+    "resident": "carmen",
+    "appearances": {
+      "steve": "steve_morning",
+      "iris": "nora_warm"
+    }
   },
   "c1_escape": {
     "light": "91c8c9",
@@ -115,7 +123,12 @@
       0.42,
       0.82
     ],
-    "chapter_insert": true
+    "chapter_insert": true,
+    "appearances": {
+      "steve": "steve_rain",
+      "iris": "nora_rain",
+      "agnes": "agnes_reflective"
+    }
   },
   "c2_aquarium": {
     "light": "8ebfc1",
@@ -134,6 +147,10 @@
     "inserts": {
       "c2_aquarium.out.01": "c2_aquarium.intercom",
       "c2_aquarium.intercom": "c2_aquarium.intercom"
+    },
+    "appearances": {
+      "steve": "steve_rain",
+      "iris": "nora_rain"
     }
   },
   "c2_ship": {
@@ -173,7 +190,10 @@
       "steve",
       "pell"
     ],
-    "resident": "calder"
+    "resident": "calder",
+    "appearances": {
+      "calder": "calder_casework"
+    }
   },
   "c3_archive": {
     "light": "e8d4b3",
@@ -197,7 +217,11 @@
     "inserts": {
       "c3_archive.out.02": "c3_archive.cycle"
     },
-    "chapter_insert": true
+    "chapter_insert": true,
+    "appearances": {
+      "calder": "calder_casework",
+      "agnes": "agnes_reflective"
+    }
   },
   "i1_archive": {
     "light": "89d2df",
@@ -215,7 +239,10 @@
       "gus",
       "saren"
     ],
-    "resident": "archivist"
+    "resident": "archivist",
+    "appearances": {
+      "archivist": "archivist_explaining"
+    }
   },
   "c4_safe": {
     "light": "95b4c6",
@@ -295,7 +322,10 @@
       "steve",
       "stephen"
     ],
-    "chapter_insert": true
+    "chapter_insert": true,
+    "appearances": {
+      "steve": "steve_broadcast"
+    }
   },
   "c6_iris": {
     "light": "daae88",
@@ -344,7 +374,10 @@
         "width": 0.14
       }
     ],
-    "chapter_insert": true
+    "chapter_insert": true,
+    "appearances": {
+      "calder": "calder_casework"
+    }
   },
   "i2_nora": {
     "light": "f5c38e",
@@ -427,7 +460,10 @@
       "shaw",
       "agnes",
       "steve"
-    ]
+    ],
+    "appearances": {
+      "agnes": "agnes_reflective"
+    }
   },
   "c8_beach": {
     "light": "ebcfae",
@@ -465,7 +501,10 @@
       "stephen",
       "ward"
     ],
-    "chapter_insert": true
+    "chapter_insert": true,
+    "appearances": {
+      "steve": "steve_broadcast"
+    }
   },
   "c9_gallery": {
     "light": "ffd09c",
@@ -521,6 +560,10 @@
       "helen": "c9_wake.helen",
       "rook": "c9_wake.rook",
       "agnes_original": "c9_wake.agnes"
+    },
+    "appearances": {
+      "nora": "nora_reunion",
+      "helen": "helen_field"
     }
   },
   "c9_choir": {
@@ -551,13 +594,15 @@
         "width": 0.2,
         "after": "c9_choir.wick",
         "lines": [
-          "",
           "c9_choir.wick.01",
           "c9_choir.wick.02"
         ]
       }
     ],
-    "chapter_insert": true
+    "chapter_insert": true,
+    "appearances": {
+      "helen": "helen_field"
+    }
   },
   "c10_station": {
     "light": "f1be84",
@@ -573,7 +618,10 @@
     "company": [
       "steve",
       "frank"
-    ]
+    ],
+    "appearances": {
+      "steve": "steve_broadcast"
+    }
   },
   "c10_town": {
     "light": "e4bf99",
@@ -593,7 +641,11 @@
       "shaw",
       "steve",
       "agnes"
-    ]
+    ],
+    "appearances": {
+      "nora": "nora_reunion",
+      "agnes": "agnes_reflective"
+    }
   },
   "c10_live": {
     "light": "dbaa79",
@@ -658,6 +710,9 @@
         0.6,
         0.63
       ]
+    },
+    "appearances": {
+      "steve": "steve_broadcast"
     }
   },
   "c10_report": {
@@ -694,11 +749,18 @@
     "off_camera_lines": [
       "c10_report.in.01",
       "c10_report.report.02"
-    ]
+    ],
+    "appearances": {
+      "archivist": "archivist_explaining",
+      "helen": "helen_field"
+    }
   },
   "epilogue": {
     "appearances": {
-      "iris": "iris_epilogue"
+      "iris": "iris_epilogue",
+      "nora": "nora_reunion",
+      "helen": "helen_field",
+      "agnes": "agnes_reflective"
     },
     "light": "ffdbab",
     "air": 2,
@@ -790,6 +852,9 @@
         "postcredits.answer.01",
         "postcredits.out.01"
       ]
+    },
+    "appearances": {
+      "helen": "helen_field"
     }
   }
 }

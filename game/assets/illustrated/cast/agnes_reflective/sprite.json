@@ -1,0 +1,118 @@
+{
+  "base": "agnes_reflective.webp",
+  "source": "assets/characters/campaign/masters/agnes_reflective.png",
+  "source_sha256": "e510b23fbc1d84f9d10a16d99b674f1c60ed716ab38a2a14e7296b90f7b538f2",
+  "size": [
+    774,
+    1080
+  ],
+  "origin": "top_left",
+  "foot_anchor": [
+    387,
+    1080
+  ],
+  "frames": {
+    "blink_half": {
+      "atlas_region": [
+        0,
+        0,
+        117,
+        54
+      ],
+      "source_origin": [
+        367,
+        147
+      ]
+    },
+    "blink_closed": {
+      "atlas_region": [
+        0,
+        56,
+        117,
+        54
+      ],
+      "source_origin": [
+        367,
+        147
+      ]
+    },
+    "mouth_parted": {
+      "atlas_region": [
+        0,
+        112,
+        84,
+        61
+      ],
+      "source_origin": [
+        411,
+        217
+      ]
+    },
+    "mouth_open": {
+      "atlas_region": [
+        0,
+        175,
+        84,
+        61
+      ],
+      "source_origin": [
+        411,
+        217
+      ]
+    },
+    "mouth_round": {
+      "atlas_region": [
+        0,
+        238,
+        84,
+        61
+      ],
+      "source_origin": [
+        411,
+        217
+      ]
+    },
+    "mouth_wide": {
+      "atlas_region": [
+        0,
+        301,
+        84,
+        61
+      ],
+      "source_origin": [
+        411,
+        217
+      ]
+    }
+  },
+  "cue_frames": {
+    "X": null,
+    "A": null,
+    "B": "mouth_parted",
+    "C": "mouth_wide",
+    "D": "mouth_open",
+    "E": "mouth_round",
+    "F": "mouth_round",
+    "G": "mouth_parted",
+    "H": "mouth_parted"
+  },
+  "sha256": {
+    "agnes_reflective.webp": "cd92ef47b0cd3973f38b7f50441759cb4b3283181ea86ae8aab57ae1f3606687",
+    "agnes_reflective-face-atlas.png": "8bdba2cc14a0d16ce12f64812a789bb35c6235e4d6e10a98d89f197eafabbee8"
+  },
+  "atlas": "agnes_reflective-face-atlas.png",
+  "eye_centers": [
+    [
+      392,
+      185
+    ],
+    [
+      461,
+      164
+    ]
+  ],
+  "mouth_center": [
+    456,
+    247
+  ]
+}

@@ -7,3 +7,7 @@ For the title menu and short chapter transitions, we measured the level of each 
 We decoded every recording as 48 kHz stereo MP3 at 128 kb/s and checked each game file against the supplied original using SHA-256. We measured integrated loudness between −19.1 and −14.0 LUFS. The highest true peak was −0.1 dBTP. We found zero decoded channel samples at or above full scale. The cue sheet preserves the original filenames.
 
 [Cue sheet](cue-sheet.csv) · [Track measurements, silence intervals and hashes](measurements.json) · [Game playback settings](../../../game/content/music.json)
+
+## Completion reward
+
+The original **Epilogue (BGM)** recording is reserved for the final credit film and its three exclusive paintings. It enters at bar 15 (50.174 seconds), with enough music for the full 56.4-second film. It is not used in exploration or ordinary pre-game credits. The short **Epilogue** theme still plays once on the end card after the final radio signal. No new track was generated or substituted; the original audio files and their hashes remain unchanged. `tools/ending_reward.py` applies the same routing in both content generators.

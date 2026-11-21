@@ -1,0 +1,245 @@
+{
+  "scenes": {
+    "c4_safe": {
+      "when": "Thursday, November 1, afternoon and evening",
+      "present": ["steve", "rook_copy", "calder"],
+      "card": {"chapter": {"kicker": "Chapter 4", "title": "Federal Hospitality", "when": "Two days later", "goal": "Steve wants to hand the problem to someone in charge."}},
+      "objective": "Find out whether the man in charge is really Adrian Rook.",
+      "changes": ["C21", "C22", "C28 (record and match)", "critic C02", "U-relationships", "U-narration"],
+      "notes": [
+        "record becomes a rows puzzle (drop the case board). screens keeps the case board with one stage and decoys.",
+        "The karaoke beat and ‘Adrian hates karaoke’ come from the character bible (the real Rook hates karaoke; the copy is very good at it).",
+        "Rook’s notebook question pays off Interlude 1, where the Archivist’s report says ‘Engine details in subject’s notebook’.",
+        "Walt Prior on the placements list pays off Chapter 3."
+      ],
+      "context": [
+        "steve|Adrian Rook arrived the next afternoon with four agents and two black SUVs. He was everything June had promised. Calm. Kind. Thorough.",
+        "steve|He drove us to a safe house in the Coast Range, three hours from anywhere.",
+        "steve|I kept thinking about that text. If someone wanted to cut me off from the one man who could help, that’s exactly what they’d send."
+      ],
+      "intro": [
+        "c4_safe.in.01",
+        "c4_safe.in.02",
+        "c4_safe.in.03",
+        "rook_copy|One more thing, Steve. Your mother kept a notebook. Any idea where?",
+        "steve|Mom kept a lot of notebooks.",
+        "rook_copy|Of course. Take your time.",
+        {"new": "steve|He had already taken every tape I’d brought. Not Mom’s voicemail. That cassette lives in my cardigan pocket, and I didn’t offer it.", "delivery": "narration"}
+      ],
+      "delete": ["c4_safe.out.01"],
+      "task_order": ["record", "match", "screens"],
+      "tasks": {
+        "record": {
+          "type": "rows",
+          "difficulty": 2,
+          "title": "Rook’s office door",
+          "requires": [],
+          "goal": "Get a clean take of Rook’s line to compare with June’s voicemail.",
+          "background": "June keeps Rook’s voicemail on her phone: “Sit tight, June.” Every hour Rook is on hold with ‘the Bureau’, humming along to the music. When the music stops, he leans out of his office and says the same words to her.",
+          "lead": [
+            {"new": "steve|Every hour, on the hour, Rook goes on hold with the Bureau. And he hums along.", "sfx": "hold music through the office door"},
+            "steve|When the music stops, he leans out and tells June the same thing. Word for word, like the voicemail on her phone."
+          ],
+          "prompt": "Where should Steve record, when should he press the button, and what should he keep?",
+          "instruction": "The agents have the karaoke machine going in the lounge. June’s window is outside, beside the generator. The office door has a gap at the bottom. Rook speaks a second or two after the hold music stops. June will want proof that Steve’s take was made in this house, not copied from her phone.",
+          "rows": [
+            {"label": "Where", "options": ["In the lounge", "At the office door", "Under June’s window"], "answer": 1},
+            {"label": "Press record", "options": ["After Rook starts speaking", "When Rook hangs up", "Before the hold music ends"], "answer": 2},
+            {"label": "Keep", "options": ["Just the words, trimmed clean", "The whole take, room sound and all"], "answer": 1}
+          ],
+          "hints": [
+            "Get close to Rook and away from the singing.",
+            "If Steve starts when Rook starts, he’ll clip the first word. The room sound shows where a take was made.",
+            "Stand where only a door is between you and Rook. Start before he speaks. June needs to hear this house around the words."
+          ],
+          "lines": ["c4_safe.record.01", "c4_safe.record.02"],
+          "finding": "steve|I have Rook’s line on Dad’s tape, from outside his door, with this house’s room sound around it. Nobody can say I copied it off June’s phone."
+        },
+        "match": {
+          "difficulty": 2,
+          "title": "Two takes",
+          "requires": ["record"],
+          "goal": "Compare Rook’s voice through the door with June’s voicemail.",
+          "background": "On Sunday, Nora’s good morning came out the same, breath for breath, on two different days. People never say a line exactly the same way twice. A recording always does.",
+          "lead": [
+            "calder|You want my voicemail? Mercer, that’s a federal agent you’re recording.",
+            "steve|Then it won’t matter. Please, June."
+          ],
+          "prompt": "Play June’s voicemail and Steve’s take from the door. What are they?",
+          "options": ["A second reading at a different pace", "The same recorded performance", "A shortened version of the voicemail"],
+          "answer": 1,
+          "wrong": {
+            "0": "The pace doesn’t differ at all. Every pause lands in the same place.",
+            "2": "Nothing is missing. Both takes start and end on the same breath."
+          },
+          "hints": [
+            "Compare the space between “tight” and “June”.",
+            "Follow the small sounds too: the breath, the little click on the S.",
+            "If a man said it twice, something would move: a breath, a pause, the click. Nothing moves."
+          ],
+          "lines": [
+            {"id": "c4_safe.match.01", "text": "Different rooms. Same breath, same pause, same little click on the S. That isn’t a man repeating himself. That’s a recording wearing a man."},
+            "calder|Play it again."
+          ],
+          "finding": "steve|June’s voicemail and Rook’s voice through the door are one recording, breath for breath, like Nora’s good morning. The man running this house isn’t Adrian Rook."
+        },
+        "screens": {
+          "difficulty": 3,
+          "title": "Rook’s monitor wall",
+          "requires": ["match"],
+          "goal": "Find out what Rook’s office is really watching.",
+          "background": "Rook’s office has a locked monitor wall the Bureau never installed. In the aquarium, Steve learned that a corridor looping the same cough on the same beat had nobody in it. The crew love recordings.",
+          "lead": [
+            {"new": "steve|That night the agents dragged out the karaoke machine. Rook sang three songs. Beautifully.", "delivery": "narration"},
+            "calder|Adrian hates karaoke. He walked out of my wedding when the machine came on.",
+            "calder|...Odd behavior proves nothing. My own rule.",
+            "steve|While he was singing, his office door was open."
+          ],
+          "prompt": "Which feed is live, and what do the papers in the drawer say?",
+          "board": {
+            "instruction": "Four feeds show a long hall of sleeping beds. A label on the rack reads GALLERY.",
+            "evidence": [
+              "Feeds 1, 2 and 4: an attendant limps across the frame every forty seconds, at the same spot, coughing on the same step.",
+              "Feed 3: the attendant stops beside a frosted bed at the far end of the hall. The frost cracks, then seals again. Nobody crosses the frame for two minutes.",
+              "On feed 3 the nearest bed tag reads 41B. A roster in the drawer: Bed 41B, Adrian Rook, Federal Bureau of Investigation.",
+              "A file marked PLACEMENTS lists names in Washington and in Beijing. The first is Walt Prior, county planner.",
+              "Two transfer sheets share one number, one with the American seal and one with the Chinese. Behind them is a third with the same number, unsigned: Bed 42B. E. Ward. Dated the day of the accord signing."
+            ],
+            "stages": [
+              {"mode": "match", "prompt": "Read the wall and the drawer.",
+               "slots": ["The live feed", "Asleep in bed 41B", "Bed 42B is waiting for"],
+               "pieces": ["Feed 3", "Feed 1", "Adrian Rook", "E. Ward", "June Calder", "Walt Prior"],
+               "answer": [0, 2, 3]}
+            ],
+            "wrong_text": "Steve looks again. One of these feeds keeps repeating itself."
+          },
+          "hints": [
+            "Which feed never repeats?",
+            "Feeds 1, 2 and 4 loop every forty seconds. Read the bed tag on the one that doesn’t, then the roster and the unsigned sheet.",
+            "Only one feed shows the frost crack and nobody limping past. Read its bed tag against the roster. The unsigned sheet says who 42B is for."
+          ],
+          "lines": [
+            {"id": "c4_safe.screens.01", "text": "Adrian Rook, asleep in bed 41B. Both governments’ seals on the transfer. And an empty bed waiting for President Ward on signing day."},
+            "steve|Walt Prior. From June’s list."
+          ],
+          "finding": "steve|The real Adrian Rook is asleep on that ship, in bed 41B. They have people in Washington and in Beijing. And they’ve made up a bed for President Ward, for the day she signs the accord."
+        }
+      },
+      "recap": [
+        "steve|Rook’s voice is a recording. The real Rook is asleep under the bay. And there’s a bed waiting for the President.",
+        "steve|I had to tell June. Rook had made sure I couldn’t just walk down the hall and do it."
+      ],
+      "outro": [
+        {"new": "rook_copy|June will sit with my team in the east wing tonight. You’ll be more comfortable in the west.", "direction": "kindly, at the office door"},
+        "rook_copy|And Steve. The notebook. Anything at all you remember."
+      ],
+      "next": "The service wing that night (c4_escape)."
+    },
+    "c4_escape": {
+      "when": "Thursday, November 1, night",
+      "present": ["steve"],
+      "objective": "Get the proof to June, then get out of the house.",
+      "changes": ["C21", "critic C21 (simplified to a rows choice)", "U-relationships", "U-narration"],
+      "notes": [
+        "June’s reply comes back through the tube on Dad’s recorder, so her lines are recorded_playback. Steve does not see her again until Chapter 6.",
+        "van becomes a rows puzzle (drop the case board). The escort’s radio, which Steve takes with him, carries Rook’s orders in the departure."
+      ],
+      "context": [
+        "steve|Rook put June in the east wing and me in the west, with an agent at each end of the hall. Kindly. Firmly.",
+        "steve|The house was older than the FBI. In the service corridor, there were brass tubes in the wall."
+      ],
+      "intro": [],
+      "delete": [],
+      "task_order": ["tube", "fault", "van"],
+      "tasks": {
+        "tube": {
+          "difficulty": 2,
+          "title": "Pneumatic post",
+          "requires": [],
+          "goal": "Get the warning and both recordings to June without passing Rook’s desk.",
+          "background": "June is in the east wing. The old pneumatic tubes still run between rooms, and a brass diverter panel picks the destination. The tube map uses the names the builders gave the rooms, not their numbers.",
+          "lead": [
+            "steve|Pneumatic post. Dad would have loved this.",
+            {"id": "c4_escape.in.02", "direction": "writing the note"},
+            "steve|If both takes reach June, she can hear it for herself. Rook’s desk sorts everything else."
+          ],
+          "prompt": "Which room, which capsule, and what goes inside?",
+          "instruction": "Panel: A goes to OAK, B to PINE, C to ALDER. Occupancy docket: June was moved from OAK into the room opposite the linen cupboard. The builder’s sketch: ALDER is opposite the linen cupboard; PINE faces the lift. Standard capsules stop at the interview desk for sorting. Blue maintenance capsules go straight to the room on the diverter.",
+          "rows": [
+            {"label": "Diverter", "options": ["A", "B", "C"], "answer": 2},
+            {"label": "Capsule", "options": ["Standard", "Blue maintenance"], "answer": 1},
+            {"label": "Inside", "options": ["Rook’s voicemail only", "Steve’s take only", "Dad’s recorder, both takes and the note"], "answer": 2}
+          ],
+          "hints": [
+            "June isn’t in her first room any more.",
+            "Find the room opposite the linen cupboard. Standard capsules stop at Rook’s desk. June won’t act on anything she can’t hear for herself.",
+            "The sketch puts ALDER opposite the linen cupboard. A standard capsule stops at Rook’s desk. And June believes what she can hear."
+          ],
+          "lines": [
+            {"id": "c4_escape.tube.01", "text": "I heard both. I’ll keep his attention. You get out. We both know you can’t bluff him in person.", "delivery": "recorded_playback", "direction": "the capsule comes back with Dad’s recorder; June has recorded a reply at the end of the tape"},
+            {"id": "c4_escape.in.01", "delivery": "recorded_playback"},
+            {"new": "steve|Nobody had asked me for that since the funeral.", "delivery": "narration"}
+          ],
+          "finding": "steve|June heard both takes, and she believes me. She’s staying with Rook to keep him busy. I have to get myself out."
+        },
+        "fault": {
+          "difficulty": 3,
+          "title": "Safety test panel",
+          "requires": ["tube"],
+          "goal": "Get the west corridor moved out of the house, while June keeps Rook in the east wing.",
+          "background": "The safe house has a training console for fire drills, run from colour-coded cards. Yesterday’s log shows what each card did. Rook and June are in the front office, in the east wing. The west corridor holds Steve and three agents.",
+          "lead": [
+            "steve|A drill console. If a drill says the west wing has to go, they’ll have to move me. In a van."
+          ],
+          "prompt": "Which card, which mode, and where should the west team assemble?",
+          "instruction": "The drill ticket on the console is signed by the transport escort, who works in the west corridor. Yesterday’s log: SILVER moved only the person who signed. BLUE moved every badge in the signer’s corridor. WHITE moved every badge outside it. Dry run only prints the route. Floor rehearsal moves people along it. The west team is four people, and they must assemble together. The covered court seats three, the transport bay four. The front office seats five, but Rook is using it.",
+          "rows": [
+            {"label": "Exercise card", "options": ["WHITE", "SILVER", "BLUE"], "answer": 2},
+            {"label": "Console mode", "options": ["Dry run", "Floor rehearsal"], "answer": 1},
+            {"label": "West team assembles at", "options": ["Covered court", "Transport bay", "Front office"], "answer": 1}
+          ],
+          "hints": [
+            "Who signed the ticket, and who moves with them?",
+            "BLUE moves the signer’s whole corridor. Only a floor rehearsal moves anyone. Four people need four seats.",
+            "The escort signed the ticket, and he works in the west corridor. Count the west team, then find enough seats somewhere Rook isn’t."
+          ],
+          "lines": ["c4_escape.fault.01"],
+          "finding": "steve|A BLUE drill, for real, on the escort’s own ticket. The whole west corridor, me included, goes to the transport bay. Rook stays in the east wing with June."
+        },
+        "van": {
+          "type": "rows",
+          "difficulty": 2,
+          "title": "Transport van",
+          "requires": ["fault"],
+          "goal": "Get out of the moving van at the one moment the door will open.",
+          "background": "Steve is in the back of the van with one escort. The rear handle only works while the travel catch is off. At the drill briefing the escort explained the rule: the catch comes off when the driver radios ‘slowing for gravel’, and goes back on at the next stop.",
+          "lead": [
+            "steve|One escort. One rear door. And a catch that only comes off for gravel."
+          ],
+          "prompt": "When should Steve pull the handle, and which way should he jump?",
+          "instruction": "The driver radios ‘slowing’ twice: once for a brick canal bridge, once for a gravel bend. After the gravel, the next stop is the weighbridge, where the escort opens the door himself. On the bend, the right side drops away into a soft ditch. On the left is a rock face.",
+          "rows": [
+            {"label": "Pull the handle", "options": ["At the canal bridge", "On the gravel bend", "At the weighbridge"], "answer": 1},
+            {"label": "Jump", "options": ["Left, toward the rock face", "Right, toward the ditch"], "answer": 1}
+          ],
+          "hints": [
+            "The handle only works while the catch is off.",
+            "The catch only comes off for gravel. Check which side is soft.",
+            "The brick bridge has no gravel, and at the weighbridge the escort opens the door himself. A ditch is softer than rock."
+          ],
+          "lines": ["c4_escape.van.01"],
+          "finding": "steve|On the gravel bend, with the catch off, I pulled the handle and jumped for the soft side. Mostly I fell. But I fell out of the van, with the escort’s radio in my hand."
+        }
+      },
+      "recap": [
+        "steve|June has the proof, and she chose to stay with Rook so I could run.",
+        "steve|Now I was in a ditch in the Coast Range with Dad’s recorder, a stolen radio and no plan. And the radio was still talking."
+      ],
+      "outro": [
+        {"id": "c4_escape.out.01", "text": "All units. Steve Mercer, wanted for the abduction of Nora Reyes. And scan Calder tonight. The signing is in six days.", "delivery": "radio"},
+        {"id": "c4_escape.out.02", "text": "Kidnapping Nora. They took her, and I’m the one on the poster. I have to keep moving."}
+      ],
+      "next": "Chapter 5 (c5_shack)."
+    }
+  }
+}

@@ -67,11 +67,25 @@ func watch_dialogue(location: String) -> void:
 		var id: String=game.active_line
 		var line: Dictionary=game.campaign.content.lines[id]
 		check(not game.words.text.is_empty() and not game.stage.dialogue_shot.is_empty(),"Caption and camera for "+id)
+		var delivery_style: Dictionary=game._delivery_style(str(line.get("delivery","live")))
+		if not str(delivery_style.label).is_empty():
+			check(game.speaker.text.contains(str(delivery_style.label))
+				and game.dialogue_panel.get_theme_stylebox("panel").border_color==delivery_style.color,
+				"Style and label "+str(line.get("delivery"))+" delivery on "+id)
+		if game.campaign.current().has("departure_art") and id in game.campaign.current().outro:
+			var departure_layer: TextureRect=game.stage.get("departure_art_layer")
+			check(is_instance_valid(departure_layer) and departure_layer.visible
+				and departure_layer.texture.resource_path==game.campaign.current().departure_art,
+				"Show authored departure art during the outro for "+location)
 		check(game.words.get_content_height()<=game.words.size.y+1.0,"Complete subtitle fits on screen for %s (%d/%d)"%[id,game.words.get_content_height(),game.words.size.y])
-		if line.get("delivery","live")=="private_recording":
-			check(not game.voice.playing,"Keep private recording unheard on "+id)
+		var text_only: bool=not game.voice_manifest.get("enabled",true) \
+			or str(game.voice_manifest.get("takes",{}).get(line.audio,{}).get("text_hash","")) != str(line.text).sha256_text().substr(0,16)
+		if line.get("delivery","live")=="private_recording" or text_only:
+			check(not game.voice.playing,"Keep text-only line unheard on "+id)
+			check(game.line_remaining>=game._reading_time(str(line.get("display_text",line.text)))-.2,
+				"Give text-only caption reading time on "+id)
 		else:
-			var performance: Dictionary=game._recording_for(line.audio)
+			var performance: Dictionary=game._recording_for(line.audio,line.text)
 			var take: Dictionary=performance.take
 			check(take.get("sha256","")==performance.timing.get("audio_sha256","") and not performance.timing.get("cues",[]).is_empty(),"Matching voiced mouth timing for "+id)
 			if require_v4:
@@ -112,7 +126,9 @@ func watch_dialogue(location: String) -> void:
 		if id in ["c1_flat.in.01","c1_flat.in.02","c5_station.in.02","c8_beach.in.01","c9_gallery.talk.02","c10_report.out.01","epilogue.in.02"]:
 			await get_tree().create_timer(.4).timeout
 			await snapshot(id)
-		await press_control(button("Continue  [Space]",game.dialogue_panel))
+		await press_control(button("Continue",game.dialogue_panel))
+		if game.active_line==id and game.reaction_active:
+			await press_control(button("Continue",game.dialogue_panel))
 		if game.active_line==id and game.dialogue_panel.visible:
 			check(false,"Advance recorded line "+id)
 
@@ -121,7 +137,10 @@ func operate(task: Dictionary) -> void:
 		for i: int in task.sounds.size():
 			var play := game.interaction.get_node("ReelPlay%d" % i) as Button
 			await press_control(play)
-			check(game.voice.playing and game.voice.stream.resource_path == str(game._recording_for(task.sounds[i]).take.file), "Preview original recorder cue " + str(i + 1) + " in " + task.id)
+			if game.voice_manifest.get("enabled",true):
+				check(game.voice.playing and game.voice.stream.resource_path == str(game._recording_for(task.sounds[i]).take.file), "Preview original recorder cue " + str(i + 1) + " in " + task.id)
+			else:
+				check(not game.voice.playing,"Keep recorder cue text-only "+str(i+1)+" in "+task.id)
 		var reveal := game.interaction.get_node("ReelCaptions") as CheckButton
 		await press_control(reveal)
 		var captions := game.interaction.get_node("ReelTranscripts") as VBoxContainer
@@ -130,10 +149,17 @@ func operate(task: Dictionary) -> void:
 	if task.has("evidence_labels"):
 		for index: int in task.sounds.size():
 			var listen := game.interaction.get_node("EvidencePlay%d" % index) as Button
-			var strip: Control = game.interaction.get_node("EvidenceTrace%d" % index)
-			check(listen.text.contains(task.evidence_labels[index]) and strip.envelope.size() > 0, "Labeled audio and PCM trace for " + task.id)
+			var strip: Control = game.interaction.get_node_or_null("EvidenceTrace%d" % index)
+			var transcript: Label=game.interaction.get_node_or_null("EvidenceTranscript%d" % index)
+			check(listen.text.contains(task.evidence_labels[index])
+				and ((is_instance_valid(strip) and strip.envelope.size()>0)
+					or (is_instance_valid(transcript) and transcript.text.contains("Text-only transcript"))),
+				"Labeled waveform or text-only evidence for " + task.id)
 			await press_control(listen)
-			check(game.voice.playing and game.voice.stream != null, "Play capture " + str(index + 1) + " for " + task.id)
+			if task.sounds[index].begins_with("effect.") or game.voice_manifest.get("enabled",true):
+				check(game.voice.playing and game.voice.stream != null, "Play capture " + str(index + 1) + " for " + task.id)
+			else:
+				check(not game.voice.playing,"Keep capture text-only "+str(index+1)+" for "+task.id)
 		if task.id == "c2_aquarium.guard":
 			await snapshot("c2_aquarium-corridor-evidence")
 	if task.id=="p_veyr.levels":
@@ -175,7 +201,18 @@ func operate(task: Dictionary) -> void:
 			check(row.selected==int(task.puzzle.solution[i]),"Set "+str(task.puzzle.rows[i].label)+" for "+task.id)
 		await press_control(button("Apply settings",game.interaction))
 	else:
-		await press_control(button(task.options[task.answer],game.interaction))
+		if task.id=="p_bay.message":
+			for wrong_index: int in [1,2]:
+				var missed:=button(task.options[wrong_index],game.interaction)
+				await press_control(missed)
+				check(missed.disabled and game.puzzle_response.text==task.wrong[str(wrong_index)],
+					"Disable wrong option and show its reason "+str(wrong_index))
+			var offer:=button("Need a hint?",game.interaction)
+			check(is_instance_valid(offer) and offer.visible,"Offer hint one after two misses")
+			await press_control(offer)
+			check(game.puzzle_response.text==task.hints[0] and game.hint_button.text=="Hint 2 of 3",
+				"Open hint one only after the player accepts")
+		await press_control(button("Continue" if task.get("type","")=="beat" else task.options[task.answer],game.interaction))
 	if task.has("puzzle") or task.id=="p_bay.tune":
 		puzzle_count+=1
 
@@ -324,11 +361,25 @@ func verify_room(scene: Dictionary) -> void:
 			var deadline := Time.get_ticks_msec()+20000
 			while game.stage.is_walking() and Time.get_ticks_msec()<deadline:
 				await get_tree().process_frame
+		if game.dialogue_panel.visible:
+			check(game.active_line in task.get("lead",[]),"Lead-in starts before the puzzle for "+task.id)
+			await watch_dialogue(slot)
+			for lead_line: String in task.get("lead",[]):
+				check(lead_line in game.campaign.data.seen,"Remember lead-in line "+lead_line)
 		check(game.selected_task==task.id and (game.tape_compare.visible or game.root.get_node("InteractionPanel").visible),"Open from physical object "+task.id)
+		if task.has("art"):
+			var evidence_art: TextureRect=game.get("task_art")
+			check(is_instance_valid(evidence_art) and evidence_art.is_visible_in_tree()
+				and evidence_art.texture.resource_path==task.art,
+				"Show framed task art without replacing the puzzle for "+task.id)
 		if not failures.is_empty():
 			return
 		await operate(task)
 		check(task.id in game.campaign.data.done,"Canonical evidence entered from real controls "+task.id)
+		if task.has("art"):
+			var finding_art: TextureRect=game.get("task_art")
+			check(game.dialogue_panel.visible and is_instance_valid(finding_art) and finding_art.is_visible_in_tree(),
+				"Keep task art visible through the finding for "+task.id)
 		if task.id=="c9_gallery.link":
 			check(game.stage.actor_visible("nora"),"Nora appears after the uncoupling")
 		if task.id=="c6_iris.takes":
@@ -338,13 +389,20 @@ func verify_room(scene: Dictionary) -> void:
 			await press_control(button("Load saved game",game.menu))
 			check(game.campaign.current().id==slot and task.id in game.campaign.data.done and game.active_line==last_line,"Restore the same chapter task and interrupted speech")
 		await watch_dialogue(slot)
-		if task.id == "c1_flat.sunday" and failures.is_empty():
+		var finding: String=task.get("finding","")
+		if not finding.is_empty():
+			check(finding in game.campaign.data.seen,"Play the finding before returning control for "+task.id)
+		if task.id == "c1_flat.compare" and failures.is_empty():
 			await exercise_notebook()
-	check(game.next_button.visible,"Unlocked room exit "+slot)
-	await press_control(game.next_button)
-	check(game.transitioning,"Departure from "+slot)
-	await watch_dialogue(slot)
+	check(game.transitioning,"The cleared scene starts its recap and departure automatically from "+slot)
+	for recap_line: String in scene.get("recap",[]):
+		check(recap_line in game.campaign.data.seen,"Play scene recap before departure "+recap_line)
 	check(game.light_remaining>=0 and game.cut_skip.visible,"Authored terminal shot "+slot)
+	if scene.has("departure_art"):
+		var departure_layer: TextureRect=game.stage.get("departure_art_layer")
+		check(is_instance_valid(departure_layer) and departure_layer.visible
+			and departure_layer.texture.resource_path==scene.departure_art,
+			"Authored departure art takes priority in the cut for "+slot)
 	details.departure_music=game.score.current_file
 	if slot in ["c1_pier", "epilogue", "one_year"]:
 		var story_layers: Array = game.stage.chapter_frames
@@ -364,7 +422,7 @@ func verify_room(scene: Dictionary) -> void:
 					if slot=="one_year":
 						await wait_for_cut(slot,.78)
 						check(not coda.visible,"Return from the new world to Steve before the credits")
-	if chapter and game.stage.directions.get("chapter_insert",false):
+	if chapter and game.stage.directions.get("chapter_insert",false) and not scene.has("departure_art"):
 		if slot=="c3_archive" and not game.stage.chapter_frames.is_empty():
 			await key(KEY_ESCAPE)
 			await press_control(button("Save game",game.menu))
@@ -390,7 +448,7 @@ func verify_room(scene: Dictionary) -> void:
 func inspect_credits(parent: Node, save_picture: bool) -> void:
 	await press_control(button("Credits",parent))
 	check(game.credits_panel.visible,"Open the original game credits")
-	for credit: String in ["Sepehr (S3pehR) Pakbaz","Google Lyria 3.5","Claude Opus 5.5","GPT 6.2 Astra","GPT Image 2.6","ElevenLabs 4"]:
+	for credit: String in ["S3PehR","Google Lyria 3.5","Claude Opus 5.5","GPT Astra 5.2","GPT Image 2.6","ElevenLabs 4","Cloudflare Pages","GitHub Copilot Fusion","[b]Code hosting[/b]\nGitHub\n"]:
 		check(game.credits_body.text.contains(credit),"Show the approved credit for " + credit)
 	if save_picture:
 		await get_tree().create_timer(.83).timeout
@@ -508,8 +566,9 @@ func _run() -> void:
 	if failures.is_empty() and (partial_stop.is_empty() or game.campaign.data.finished):
 		ending_complete=game.campaign.data.finished and game.end_card.visible
 		check(ending_complete,"The postcredits signal leads to the ending")
-		for role: String in performers_seen:
-			check(expressions_seen.has(role),"Visible mouth patch for the speaking "+role)
+		if game.voice_manifest.get("enabled",true):
+			for role: String in performers_seen:
+				check(expressions_seen.has(role),"Visible mouth patch for the speaking "+role)
 		if partial_start.is_empty():
 			for creature: String in ["admiral","biscuit","wick"]:
 				check(creature_cues.has(creature),"Stage "+creature+" in a canonical scene")

@@ -27,7 +27,9 @@ func _check_story_shape(state: NightCampaign) -> void:
 	for id: String in ["p_veyr", "p_meeting", "one_year"]:
 		check(scenes[_scene_index(state, id)].get("card", {}).has("page"), "Time-jump page for " + id)
 	var books: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://content/storybook.json")).books
+	var narration: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://content/narration.json"))
 	var music: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://content/music.json"))
+	check(narration.get("enabled",true)==false,"Rewritten storybooks start in text-only mode")
 	for key: String in ["opening", "aftermath", "after"]:
 		var book: Dictionary = books[key]
 		check(_scene_index(state, str(book.before)) >= 0, "Storybook " + key + " leads into a real scene")
@@ -39,7 +41,8 @@ func _check_story_shape(state: NightCampaign) -> void:
 			last = float(panel.bar)
 			for line: Dictionary in panel.lines:
 				check(float(line.bar) >= float(panel.bar) and not str(line.text).contains("—"), "Caption sits inside its panel in " + key)
-				check(ResourceLoader.exists(str(line.get("narration", ""))), "Recorded narration for: " + str(line.text))
+				check(not str(line.text).is_empty() and (str(line.get("narration","")).is_empty()
+					or ResourceLoader.exists(str(line.narration))),"Caption does not depend on recorded narration: "+str(line.text))
 	check(str(books.opening.before) == str(scenes[0].id), "The opening storybook comes first")
 	for group: Dictionary in music.chapters.values():
 		for track: Dictionary in group.values():
@@ -77,6 +80,39 @@ func _check_migration() -> void:
 	in_prologue.actor = "helen"
 	in_prologue.done = ["p_veyr.shield", "p_veyr.levels", "p_veyr.record"]
 	check(probe.restore(in_prologue) and probe.current().id == "p_bay" and probe.data.done.is_empty() and probe.data.actor == "frank", "Old prologue saves begin at the bay")
+	var v093: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://tests/fixtures/v0.9.3-save.json"))
+	check(probe.restore(v093), "Load a v0.9.3 save fixture")
+	check(probe.current().id == "p_bay" and probe.data.done.is_empty() and probe.data.seen.is_empty(), "Drop removed ids and fall back to the chapter start")
+
+func _check_script_v2_runtime() -> void:
+	var state := NightCampaign.new()
+	var lead_id := "c1_flat.control"
+	var lead: Array = state.unseen_lead(lead_id)
+	check(not lead.is_empty(), "A new lead exposes its lead-in lines")
+	state.mark_seen(lead)
+	check(state.unseen_lead(lead_id).is_empty(), "A lead-in plays only once per save")
+	check(state.perspective_name("p_veyr.levels") == "The Archivist", "Background labels use the scene point of view")
+	check(state.perspective_name("c9_gallery.antenna") == "Stephen", "Background labels use the task actor")
+	check(state.lock_reason("p_bay.message") == "Solve “Frank’s radio” first", "Locked leads name the prerequisite")
+	state.data.scene = _scene_index(state, "p_bay")
+	state.data.actor = "frank"
+	var task: Dictionary = state.task_index["p_bay.message"]
+	state.data.done = ["p_bay.tune"]
+	var miss: Dictionary = state.choose(task.id, 1)
+	check(not miss.ok and miss.reason == task.wrong["1"], "Wrong choices use their authored reason")
+	check(not miss.offer_hint and int(state.data.misses[task.id]) == 1, "The first miss records recoverable progress")
+	miss = state.choose(task.id, 2)
+	check(miss.offer_hint and int(state.data.misses[task.id]) == 2, "Two misses offer hint one without revealing it")
+	for level: int in 3:
+		state.hint(task.id)
+	check(not state.answer_available(task.id), "Hint three alone does not reveal the answer")
+	state.choose(task.id, 1)
+	check(not state.answer_available(task.id), "One later miss keeps the answer hidden")
+	state.choose(task.id, 2)
+	check(state.answer_available(task.id), "Two misses after hint three offer the separate answer")
+	check(state.reveal_answer(task.id) and state.answer_text(task.id).contains(task.options[int(task.answer)]), "Answer reveal is explicit and persistent")
+	var solved: Dictionary = state.choose(task.id, int(task.answer))
+	check(solved.ok and solved.finding == task.finding, "A solved task returns its finding line")
 
 func _initialize() -> void:
 	var state := NightCampaign.new()
@@ -97,17 +133,22 @@ func _initialize() -> void:
 	check(not state.advance(),"Cannot skip an unresolved opening")
 	_check_story_shape(state)
 	_check_migration()
+	_check_script_v2_runtime()
 	check(not state.switch_actor("saren"),"Cannot switch to an unavailable actor")
 	var ids: Dictionary={}
 	for scene: Dictionary in state.content.scenes:
 		check(not ids.has(scene.id),"Unique scene "+scene.id)
 		ids[scene.id]=true
 		for task: Dictionary in scene.tasks:
+			if task.has("art"):
+				check(ResourceLoader.exists(task.art), "Imported task art " + task.id)
 			check(task.answer>=0 and task.answer<task.options.size(),"Valid answer "+task.id)
 			for required: String in task.requires:
 				check(state.task_index.has(required),"Known prerequisite "+required)
 			for line: String in task.lines:
 				check(state.content.lines.has(line),"Known spoken line "+line)
+		if scene.has("departure_art"):
+			check(ResourceLoader.exists(scene.departure_art), "Imported departure art " + scene.id)
 	# Exhaust every valid task order per scene, including wrong answers and actor changes.
 	for scene_index: int in range(state.content.scenes.size()):
 		var frontier: Array[Dictionary]=[state.data.duplicate(true)]
@@ -134,14 +175,14 @@ func _initialize() -> void:
 				state.restore(candidate)
 				if not task.actor.is_empty():
 					state.switch_actor(task.actor)
-				var before:=JSON.stringify(state.data)
-				# Epilogue visits have one action and nothing to get wrong.
+				var before_done: Array=state.data.done.duplicate()
+				# Script-v2 beats have one Continue action and nothing to get wrong.
 				if task.options.size() > 1:
 					var bad: int=(int(task.answer)+1)%task.options.size()
 					check(not state.choose(task.id,bad).ok,"Wrong answer rejected "+task.id)
-					check(JSON.stringify(state.data)==before,"Wrong answer preserves recoverable state")
+					check(state.data.done==before_done and int(state.data.misses.get(task.id,0))>=1,"Wrong answer preserves progress and records the miss")
 				else:
-					check(task.id.begins_with("epilogue."),"Only epilogue visits have a single action "+task.id)
+					check(task.get("type","")=="beat","Only authored beats have a single action "+task.id)
 				var solution: Array=task.get("puzzle",{}).get("solution",[]).duplicate()
 				if task.has("puzzle"):
 					check(not state.choose(task.id,int(task.answer)).ok,"Puzzle cannot bypass settings "+task.id)

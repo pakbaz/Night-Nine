@@ -87,16 +87,20 @@ func _run() -> void:
 	# Chapter cards are timed in story_flow_qa.gd; this check starts at the first line.
 	if game.title_card.visible:
 		game.title_card.finish_now()
-	for index: int in 3:
-		game._next_line()
-	check(game.speaker.text == "NORA REYES", "Show Nora's apparent identity during the first greeting")
 	game._skip_dialogue()
 	for task: Dictionary in game.campaign.current().tasks:
-		if task.id != "c1_flat.compare":
-			game._choose(task.id, int(task.answer))
-			game._skip_dialogue()
+		if task.id == "c1_flat.compare":
+			break
+		game._choose(task.id, int(task.answer))
+		if task.id=="c1_flat.saturday":
+			while game.dialogue_panel.visible and game.active_line!="c1_flat.in.04":
+				game._next_line()
+			check(game.speaker.text == "NORA REYES", "Show Nora's apparent identity during the first greeting")
+		game._skip_dialogue()
 	await frames()
-	await click(game.hotspots[3])
+	var compare_task: Dictionary=game.campaign.task_index["c1_flat.compare"]
+	var compare_index: int=game.campaign.current().tasks.find(compare_task)
+	await click(game.hotspots[compare_index])
 	await wait_for_approach()
 	var panel: NightTapeCompare = game.tape_compare
 	check(panel.visible and not game.root.get_node("InteractionPanel").visible, "Open the waveform workbench from the scene hotspot")
@@ -161,16 +165,24 @@ func _run() -> void:
 	panel.conclusion.select(1)
 	await click(button("Record finding", panel))
 	check("c1_flat.compare" not in game.campaign.data.done, "Aligned words alone are not the correct conclusion")
-	await click(button("Hint", panel))
+	await click(button("Hint 1 of 3", panel))
 	check(not panel.feedback.text.contains("0.35"), "First hint guides observation without the answer")
-	await click(button("Hint", panel))
+	await click(button("Hint 2 of 3", panel))
 	check(not panel.feedback.text.contains("0.35"), "Second hint supplies direction without the exact offset")
-	await click(button("Hint", panel))
-	check(panel.feedback.text.contains("-0.35"), "Final hint provides an accessible solution")
+	await click(button("Hint 3 of 3", panel))
+	check(not panel.feedback.text.begins_with("Answer:"), "Final hint still guides without revealing the answer")
+	for miss: int in 2:
+		panel.conclusion.select(1)
+		await click(button("Record finding",panel))
+	var show_answer:=button("Show answer",panel)
+	check(is_instance_valid(show_answer) and show_answer.visible,"Two misses after hint three offer the separate answer")
+	await click(show_answer)
+	await key(KEY_ENTER,game.answer_confirmation)
+	check(panel.feedback.text.begins_with("Answer:"),"Confirmed answer reveal is separate from hints")
 	await click(button("Back to the room", panel))
 	check(not panel.visible and not game.voice.playing, "Back closes the workbench and stops its audio")
 	await frames()
-	await click(game.hotspots[3])
+	await click(game.hotspots[compare_index])
 	await wait_for_approach()
 	check(is_equal_approx(panel.slider.value, -0.35), "Reopening preserves the current-session offset")
 	var overlay: CheckButton
@@ -180,10 +192,13 @@ func _run() -> void:
 	await click(overlay)
 	check(panel.trace.overlay, "Overlay compares both visible traces")
 	await capture("aligned-overlay")
-	get_window().size = Vector2i(1280, 800)
+	get_window().size = Vector2i(960, 600)
 	await frames(8)
 	var room: Rect2 = game.root.get_global_rect()
-	check(room.encloses(button("Back to the room", panel).get_global_rect()), "Keep the final controls within the smaller window")
+	var back:=button("Back to the room",panel)
+	(panel.get_child(0) as ScrollContainer).ensure_control_visible(back)
+	await frames(3)
+	check(room.encloses(back.get_global_rect()), "Keep the final controls within the 960 by 600 window")
 	await capture("small-window")
 	panel.conclusion.select(3)
 	await click(button("Record finding", panel))
@@ -191,7 +206,7 @@ func _run() -> void:
 	check(game.dialogue_panel.visible and game.active_line == "c1_flat.compare.01", "Play Steve's recorded discovery")
 	game._skip_dialogue()
 	game._save("tape-solved")
-	check(game._load("tape-solved") and game.campaign.can_leave(), "Save and load preserve the completed investigation")
+	check(game._load("tape-solved") and "c1_flat.compare" in game.campaign.data.done, "Save and load preserve the completed comparison")
 	check(not panel.visible, "Loading clears the transient workbench")
 	var report := {"checks": checks, "failures": failures, "input": "viewport mouse drag and keyboard events", "physical_audio_output_verified": false}
 	var file := FileAccess.open(folder.path_join("tape-results.json"), FileAccess.WRITE)

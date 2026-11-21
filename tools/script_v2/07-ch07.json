@@ -1,0 +1,257 @@
+{
+  "scenes": {
+    "c7_gate": {
+      "when": "Wednesday, November 7, morning",
+      "present": ["steve", "stephen", "pell", "rook_copy", "ward", "shaw"],
+      "card": {"chapter": {"kicker": "Chapter 7", "title": "The President’s Other Appointment", "when": "The day of the signing", "goal": "Steve wants to stop the swap of the President."}},
+      "coach": "Three of you today: Steve, Stephen and Pell. Press Q to switch between them.",
+      "objective": "Get two Steves and a mail carrier into the signing. Watch the President.",
+      "changes": ["C14", "critic C14 (left wrist)", "C22", "U-relationships", "U-narration", "U-cast (no new gate_guard voice: Rook’s copy works the gate)"],
+      "notes": [
+        "C14 asked for a new gate_guard role. Rook’s copy runs the FBI liaison at the event (plot), so he works the checkpoint instead. No new voice is needed.",
+        "badge and post become rows puzzles (drop the case boards). truck stays a choice with a new prompt.",
+        "Ward’s ribbon burn on her left wrist is the clue that solves c7_swap.map. Keep ‘left wrist’ in every mention."
+      ],
+      "context": [
+        "steve|Sentinel Point. An old antenna field in the fog north of town, flags on every mast, and the President of the United States due at noon."
+      ],
+      "intro": [],
+      "delete": [],
+      "task_order": ["badge", "post", "truck"],
+      "tasks": {
+        "badge": {
+          "type": "rows",
+          "difficulty": 3,
+          "title": "The checkpoint",
+          "requires": [],
+          "goal": "Get the sound truck, and Steve, through the gate.",
+          "background": "Halcyon Media is the official broadcaster, and its sound truck needs a crew. Stephen still carries the crew’s credentials. Steve has Frank’s tape of the ninth-night tone in his pocket and no pass at all. Both their faces are on every wanted poster in the county.",
+          "lead": [
+            "c7_gate.in.01",
+            "steve|My face is on every poster in the county. So is yours.",
+            "stephen|Then one of us should hide. I vote you."
+          ],
+          "prompt": "Which window, who drives, and where does Steve ride?",
+          "instruction": "Gate card, event time: red 11:10, deliveries on foot. Blue 11:30, contracted crew vehicles. Gold 11:50, signatories. Red takes no vehicles. At gold, the President’s detail searches every vehicle with dogs. At blue, a vehicle is waved through if the driver’s crew pass scans green. Stephen’s Halcyon pass reads LOYAL ASSET. Steve has no pass.",
+          "rows": [
+            {"label": "Window", "options": ["Red 11:10", "Blue 11:30", "Gold 11:50"], "answer": 1},
+            {"label": "At the wheel", "options": ["Steve", "Stephen"], "answer": 1},
+            {"label": "Steve rides", "options": ["In the cab", "Under the sound desk", "On foot through red"], "answer": 1}
+          ],
+          "hints": [
+            "Which window lets a vehicle in without a search?",
+            "Only a crew pass waves a vehicle through at blue. Steve has none, and his face is on the poster.",
+            "Red takes no vehicles and gold brings the dogs. At blue only the driver’s pass is scanned, so the man without one must not be seen."
+          ],
+          "lines": [
+            {"new": "rook_copy|You look like this poster.", "direction": "at the gate, holding up a wanted poster"},
+            "stephen|I get that a lot. Scan me.",
+            "rook_copy|Saren’s hunter. Any luck?",
+            "stephen|He’s very close. I can feel it.",
+            "c7_gate.badge.01"
+          ],
+          "finding": "steve|Blue window, 11:30. Stephen drove, his pass scanned green, and I rode under the sound desk. Rook’s copy waved us through and wished Stephen luck finding me."
+        },
+        "post": {
+          "type": "rows",
+          "difficulty": 2,
+          "title": "Accord mail",
+          "requires": [],
+          "goal": "Get the letter into the President’s own hand, and a receipt back.",
+          "background": "Pell walks in as the mail, with a registered letter for the President. Registered mail needs the addressee’s own signature, and Pell never leaves without a receipt.",
+          "lead": ["c7_gate.in.02"],
+          "prompt": "Which hatch, and what does Pell take back?",
+          "instruction": "Three hatches. The press desk stamps copies for publicity. The stage door signs for scenery, on behalf of the venue. The delegation clerk can call the President to the hatch herself. The letter is a white sheet with a yellow carbon clipped beneath it; the signer’s pen presses through both.",
+          "rows": [
+            {"label": "Hatch", "options": ["Press desk", "Stage door", "Delegation hatch"], "answer": 2},
+            {"label": "Pell takes back", "options": ["The white original", "The yellow carbon", "A publicity stamp"], "answer": 1}
+          ],
+          "hints": [
+            "Only one hatch can bring the President herself.",
+            "The white original stays with the delegation. Pell keeps the sheet her pen pressed through.",
+            "The press desk only stamps copies, and the stage door signs for scenery. A pen pressing through leaves its mark on the sheet underneath."
+          ],
+          "lines": [
+            "c7_gate.post.01",
+            "c7_gate.post.02",
+            "ward|Ribbon burn on my left wrist, from the accord folder. My first wound in office.",
+            {"new": "pell|Eleven fifty-four. Left wrist, bandaged. Noted for the record.", "direction": "writing on the counterfoil, then saluting"}
+          ],
+          "finding": "steve|Pell put the letter into Ward’s own hand at the delegation hatch at 11:54 and came back with the yellow carbon. And a note for the record: left wrist, bandaged. A fresh ribbon burn."
+        },
+        "truck": {
+          "difficulty": 2,
+          "title": "Halcyon broadcast truck",
+          "requires": ["badge"],
+          "goal": "Prove the back-fence speakers are working.",
+          "background": "Halcyon’s truck runs every speaker on the site. The back fence failed its sound check. For what Steve plans to play, he needs the whole site, the fence included.",
+          "lead": [
+            {"new": "steve|I climbed out from under the sound desk, tripped over a cable and fell straight into the shot of a live television camera.", "delivery": "narration"},
+            "c7_gate.truck.01",
+            {"id": "c7_gate.truck.02", "text": "Evelyn Shaw. I ran the sound stage for Meridian, back when it had a budget. Stay off the cables."},
+            "shaw|The back fence failed the check. Sound crosses three hundred and forty meters in a second, and the fence is a hundred and seventy meters out. Tell me what it actually heard."
+          ],
+          "prompt": "Three strips show the test click. Camera monitor: 0.0 s. Stage van: 2.0 s, after the satellite delay. Halcyon truck, fence line: 0.5 s. Which strip shows what the fence actually heard?",
+          "options": ["Camera monitor, 0.0 s", "Stage van, 2.0 s", "Halcyon truck fence line, 0.5 s"],
+          "answer": 2,
+          "wrong": {
+            "0": "That’s the click leaving the desk. Nothing travels 170 meters in no time.",
+            "1": "Two seconds is the satellite delay on the television feed, not the fence."
+          },
+          "hints": [
+            "How long does sound take to reach the fence?",
+            "Half of what it covers in one second.",
+            "One second covers 340 meters, and the fence is half that far. Which strip shows that delay, with no satellite in the way?"
+          ],
+          "lines": [
+            "shaw|Half a second. Good ears. Who taught you?",
+            "steve|My dad."
+          ],
+          "finding": "steve|Sound covers 170 meters in half a second. The fence-line strip in the Halcyon truck shows the click at 0.5 s, so the fence hears the desk. Every speaker on the site is mine."
+        }
+      },
+      "recap": [
+        "steve|We were in. Stephen as a loyal asset, Pell as the mail, and me at the sound desk with Dad’s tape of the ninth-night tone.",
+        "steve|Ward signed for Pell’s letter at 11:54, with a fresh bandage on her left wrist. The public ceremony starts at 11:58."
+      ],
+      "outro": [
+        "steve|If they swap her, it happens between the hatch and the podium.",
+        "stephen|So we watch the hatch. I’m very good at being looked at.",
+        {"new": "steve|In the fog between the antennas, an old woman was walking a dog. Mrs. Penhallow. Miles from her pier, again.", "delivery": "narration"}
+      ],
+      "next": "The ceremony (c7_swap)."
+    },
+    "c7_swap": {
+      "when": "Wednesday, November 7, 11:54 to noon",
+      "present": ["steve", "stephen", "calder", "rook_copy", "ward", "wen", "shaw"],
+      "objective": "Find the real President, then make every copy on the site give itself away.",
+      "changes": ["C15", "critic C15 (left wrist)", "C22", "U-relationships", "U-narration"],
+      "notes": [
+        "Saren speaks through Stephen’s earpiece (delivery radio). He has not met Steve before.",
+        "Wen’s introduction and the notebook lines move here from c7_gate (C15). Shaw’s line ends the chapter.",
+        "The tone reasoning in the intro uses what the player has seen: the ninth-night processions (Chapters 1 and 3) and Frank’s reels (Chapter 5). It does not point at Mrs. Penhallow."
+      ],
+      "context": [
+        "steve|Every ninth night, when the bay sounds that tone, every copy near Bellwether walks to the water. Dad taped it.",
+        "steve|If it played on every speaker at once, every copy on the site would answer it at once. In front of everybody."
+      ],
+      "intro": [
+        {"id": "c7_swap.in.01", "delivery": "radio", "direction": "through Stephen’s earpiece, which Stephen holds out to Steve"},
+        "steve|What’s Tirel?",
+        {"new": "steve|He didn’t answer.", "delivery": "narration"}
+      ],
+      "delete": [],
+      "task_order": ["map", "bus", "tone"],
+      "tasks": {
+        "map": {
+          "difficulty": 3,
+          "title": "Event monitor",
+          "requires": [],
+          "goal": "Work out which Ward is real, and where the real one went.",
+          "background": "Iris says the President’s physician scanned her at a checkup weeks ago. A copy made from that scan would know everything up to the checkup and nothing about this morning. Pell’s counterfoil from 11:54 is in Stephen’s pocket.",
+          "lead": [
+            "stephen|I just gave the press a short interview. They loved me. Now, four feeds and one President. Possibly two."
+          ],
+          "prompt": "Which woman is the President, and which way did she go?",
+          "board": {
+            "instruction": "Sort the sightings, then walk June to the real President.",
+            "evidence": [
+              "Pell’s counterfoil: Ward signed for her letter at 11:54. Pell’s margin: left wrist, bandaged.",
+              "Podium camera, 11:57: Ward’s coat at the lectern. The left cuff slides back as she waves. The wrist is bare.",
+              "Camera E, 11:56: the physician helps a patient with a bandaged left wrist down a stair. Only the east stair has a chipped tile, and the only door at its foot opens into the service tunnel.",
+              "Lift log, 11:55: door opened; weight 0 kg throughout."
+            ],
+            "stages": [
+              {"mode": "match", "prompt": "Who is who?",
+               "slots": ["The original Ward", "Made from the old scan", "A decoy"],
+               "pieces": ["Woman at the lectern", "Lift trip", "Patient on camera E"],
+               "answer": [2, 0, 1]},
+              {"mode": "route", "prompt": "Walk June from the last time Ward was seen in person to where she is now.",
+               "slots": ["Start", "Follow", "Take", "Search"],
+               "pieces": ["Service tunnel", "Physician with patient", "Delegation hatch", "East stair"],
+               "answer": [2, 1, 3, 0]}
+            ],
+            "wrong_text": "Stephen squints at the feeds. One of these sightings is pinned on the wrong person."
+          },
+          "hints": [
+            "Start from the last time someone who knows her saw her in person.",
+            "What happened to Ward this morning that an old scan could not know?",
+            "Ward hurt her left wrist this morning, after the old scan. Look for the bandage, then follow the chipped tile."
+          ],
+          "lines": [
+            "c7_swap.map.01",
+            {"id": "c7_swap.map.02", "delivery": "radio"},
+            {"new": "saren|Mr. Mercer, the sound desk is a very small room.", "delivery": "radio", "direction": "through Stephen’s earpiece"}
+          ],
+          "finding": "steve|The woman at the lectern has a bare wrist, so she was made from the old scan. The real Ward, with this morning’s bandage, went down the east stair with the physician into the service tunnel. June and Iris are going after her."
+        },
+        "bus": {
+          "type": "rows",
+          "difficulty": 3,
+          "title": "Sound desk routing",
+          "requires": [],
+          "goal": "Send the tone to every speaker on the site, but not to the television feed.",
+          "background": "Steve has Frank’s tone cued at the sound desk. He needs it on every site speaker at once, and June needs a private line back from the tunnel.",
+          "lead": ["steve|Dad’s tape. Cued, and ready."],
+          "prompt": "Which send carries the tone, and which return carries June’s reply?",
+          "instruction": "Test sends, and who heard them. Amber: the lectern and the press van. Blue: the lectern, the back fence and the service steps. Green: the back fence and the service steps. Test returns. Copper: Steve, Stephen and the lectern. Slate: Steve and Stephen. Pearl: Steve alone. The press van feeds the national broadcast and must stay on ceremony audio; Steve wants the copies here to answer, not every copy watching at home. June’s reply is for Steve and Stephen alone.",
+          "rows": [
+            {"label": "Tone send", "options": ["Amber", "Green", "Blue"], "answer": 2},
+            {"label": "June’s return", "options": ["Slate", "Pearl", "Copper"], "answer": 0}
+          ],
+          "hints": [
+            "Trace the tone and June’s reply separately.",
+            "Green misses the lectern. Amber reaches the press van. Copper would put June on the lectern speaker.",
+            "The tone needs the lectern and the fence but not the press van. June’s words are for Steve and Stephen, and nobody else."
+          ],
+          "lines": ["c7_swap.bus.01"],
+          "finding": "steve|The tone goes out on Blue: the lectern, the back fence and the service steps, but not the press van. June’s reply comes back on Slate, to Stephen and me alone."
+        },
+        "tone": {
+          "difficulty": 3,
+          "title": "Ceremony cue",
+          "requires": ["map", "bus"],
+          "goal": "Play the tone at the one moment that works.",
+          "background": "When the tone plays, every copy on the site will stop and turn toward the sea. June and Iris need to have the real Ward in hand before that happens, or the crew will move her.",
+          "lead": [
+            {"new": "calder|Service tunnel. We see them. Give us a few seconds.", "delivery": "radio"}
+          ],
+          "prompt": "Ward’s double reaches the lectern at 11:58:10. June and Iris reach the patient at 11:58:14. The site speakers hand over to the anthem at 11:58:18. The tone takes two seconds. When should Steve start it?",
+          "options": ["11:58:11", "11:58:15", "11:58:17"],
+          "answer": 1,
+          "wrong": {
+            "0": "June and Iris don’t reach the patient until :14. The crew would move her the moment the copies turned.",
+            "2": "Two seconds from :17 runs past :18, into the anthem. The tone would be cut off."
+          },
+          "hints": [
+            "Mark the first moment when June and Iris are with the real Ward.",
+            "The two-second tone must finish by :18.",
+            "Start no earlier than :14, and early enough that two seconds end by :18."
+          ],
+          "lines": [
+            {"new": "steve|Fourteen people stopped in the fog and turned toward the sea.", "delivery": "narration", "sfx": "effect.ninth_tone on every site speaker"},
+            "c7_swap.tone.01",
+            {"id": "c7_swap.tone.02", "delivery": "radio"}
+          ],
+          "finding": "steve|At 11:58:15 Dad’s tone went out on every site speaker. Fourteen people stopped and turned toward the sea, the woman at the microphone among them. June and Iris had the real President."
+        }
+      },
+      "recap": [
+        "steve|Fourteen copies turned toward the sea at once, in front of everyone who mattered. The real President was in a service tunnel, with a bandaged wrist and June Calder.",
+        "steve|Iris told me later that the tone pulled at her too. She held on to June’s sleeve and counted Sunday dinners until it passed.",
+        "steve|Rook’s copy slipped away into the fog. Before he went, he asked me one thing."
+      ],
+      "outro": [
+        "c7_swap.out.01",
+        {"new": "steve|An hour later, in a locked room under the array, the President of the United States thanked me.", "delivery": "narration"},
+        {"id": "c7_swap.out.02", "text": "Thank you, Mr. Mercer. Their Prefect wants one thing from us by the ninth night. Our space-fold engine."},
+        {"id": "c7_gate.out.01", "text": "Lin Wen. I was the other side’s engineer at Sentinel Point, nine years ago. Helen wrote this? Where is she?", "direction": "seeing the notebook in Steve’s hand"},
+        "c7_gate.out.02",
+        {"id": "c7_gate.out.03", "text": "This page... Madam President. He should hear it from us."},
+        "ward|Now we owe you an explanation.",
+        "c7_swap.out.03"
+      ],
+      "next": "Chapter 8: the flashback to Sentinel Point, nine years ago (p_meeting)."
+    }
+  }
+}

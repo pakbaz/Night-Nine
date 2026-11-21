@@ -56,6 +56,7 @@ func arrive(id: String, intro: bool = false, task_id: String = "") -> void:
 			if lead.id == task_id:
 				if not lead.actor.is_empty():
 					game.campaign.switch_actor(lead.actor)
+				game.campaign.mark_seen(lead.get("lead",[]))
 				break
 			solve(lead)
 	if not intro:
@@ -72,6 +73,8 @@ func solve(task: Dictionary) -> void:
 		game.campaign.switch_actor(task.actor)
 	game.campaign.choose(task.id,int(task.answer),task.get("puzzle",{}).get("solution",[]))
 	game.campaign.mark_seen(task.lines)
+	if not str(task.get("finding","")).is_empty():
+		game.campaign.mark_seen([task.finding])
 
 func work_at(id: String, action: String, expect_art: bool = true) -> void:
 	var task: Dictionary = game.campaign.task_index[id]
@@ -206,12 +209,17 @@ func run() -> void:
 	var nora: Node = game.stage.actors.nora
 	steve = game.stage.actors.steve
 	check(nora.appearance=="nora_toward_steve" and steve.appearance=="steve_toward_nora","Select the matched inward-facing art for the live reunion")
+	check(nora.get("base_identity")=="nora" and steve.get("base_identity")=="steve","Keep variant portraits tied to their base identities")
 	check(steve.look_side>0 and nora.look_side<0 and nora.blocking_plane.scale.x>0,"Keep the two painted profiles looking at each other")
 	check(steve.voice==game.voice and nora.voice==null,"Keep the original performance on Steve")
 	await frame("reunion-steve")
 	game._next_line()
 	check(nora.voice==game.voice and steve.voice==null,"Switch the original voice and mouth timing to Nora")
 	await frame("reunion-nora")
+	game.stage.directions["appearances"]={"nora":"nora"}
+	var authored_nora: Node=game.stage.get_performer("nora")
+	check(authored_nora.appearance=="nora","Explicit scene appearance overrides the reunion fallback")
+	game.stage.directions.erase("appearances")
 	var report := {"checks":checks,"failures":failures,"renderer":RenderingServer.get_current_rendering_method(),
 		"captured":capture,"measurements":measurements}
 	var file := FileAccess.open(output.path_join("social-staging.json"),FileAccess.WRITE)

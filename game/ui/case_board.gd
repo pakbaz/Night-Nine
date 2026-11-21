@@ -3,6 +3,8 @@ extends VBoxContainer
 signal draft_changed(draft: Dictionary)
 signal submitted(values: Array)
 signal hint_requested
+signal wrong_attempt
+signal answer_requested
 signal closed
 
 const INK := Color("f1ead8")
@@ -23,6 +25,10 @@ var step_label: Label
 var prompt: Label
 var response: Label
 var confirm: Button
+var goal: Label
+var background: Label
+var hint_button: Button
+var answer_button: Button
 var lines: BoardLines
 
 class EvidenceButton extends Button:
@@ -69,7 +75,7 @@ class BoardLines extends Control:
 					var origin := pieces[tile].get_global_rect()
 					var start := Vector2(origin.end.x,origin.get_center().y)-global_position
 					var bend := lerpf(start.x,point.x,.25+.1*tile)
-					color=THREADS[tile]
+					color=THREADS[tile % THREADS.size()]
 					draw_polyline(PackedVector2Array([start,Vector2(bend,start.y),Vector2(bend,point.y),point]),color,2.0,true)
 					draw_circle(point,3.0,color,true,-1,true)
 				else:
@@ -78,23 +84,34 @@ class BoardLines extends Control:
 				draw_circle(point,4.0,color,true,-1,true)
 			previous=point
 
-func configure(id: String, title: String, puzzle: Dictionary, progress: Dictionary) -> void:
+func configure(id: String, title: String, puzzle: Dictionary, progress: Dictionary,
+		goal_text: String = "", background_text: String = "", perspective: String = "Steve") -> void:
 	task_id = id
 	stages = puzzle.stages
 	draft = progress.duplicate(true)
 	stage_index = int(draft.stage)
 	size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	add_theme_constant_override("separation",12)
+	add_theme_constant_override("separation",8)
 	var headline := HBoxContainer.new()
 	add_child(headline)
-	var heading := label_at(headline,title,30,INK)
+	var heading := label_at(headline,title,26,INK)
 	heading.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	step_label = label_at(headline,"",17,GOLD)
 	step_label.autowrap_mode = TextServer.AUTOWRAP_OFF
 	step_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
-	label_at(self,puzzle.instruction,18,MUTED)
+	goal = label_at(self, goal_text, 18, GOLD)
+	goal.name = "Goal"
+	var context_scroll := ScrollContainer.new()
+	context_scroll.custom_minimum_size.y = 72
+	context_scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
+	add_child(context_scroll)
+	var context := column(context_scroll, 0)
+	label_at(context, "What %s knows" % perspective, 16, TEAL)
+	background = label_at(context, background_text, 16, MUTED)
+	background.name = "Background"
+	label_at(self,puzzle.instruction,16,MUTED)
 	var body := HBoxContainer.new()
-	body.add_theme_constant_override("separation",24)
+	body.add_theme_constant_override("separation",12)
 	add_child(body)
 	var notes_panel := PanelContainer.new()
 	var paper := StyleBoxFlat.new()
@@ -103,13 +120,13 @@ func configure(id: String, title: String, puzzle: Dictionary, progress: Dictiona
 	paper.set_border_width_all(1)
 	paper.set_content_margin_all(14)
 	notes_panel.add_theme_stylebox_override("panel",paper)
-	notes_panel.custom_minimum_size.x=330
+	notes_panel.custom_minimum_size.x=235
 	body.add_child(notes_panel)
 	var notes_column:=VBoxContainer.new()
 	notes_panel.add_child(notes_column)
 	label_at(notes_column,"Case notes",21,Color("403a2d"))
 	var scroll:=ScrollContainer.new()
-	scroll.custom_minimum_size.y=345
+	scroll.custom_minimum_size.y=210
 	scroll.size_flags_vertical=Control.SIZE_EXPAND_FILL
 	scroll.horizontal_scroll_mode=ScrollContainer.SCROLL_MODE_DISABLED
 	scroll.focus_mode=Control.FOCUS_ALL
@@ -121,10 +138,10 @@ func configure(id: String, title: String, puzzle: Dictionary, progress: Dictiona
 		rule.modulate=Color("655b42")
 		notes.add_child(rule)
 		label_at(notes,item,18,Color("242b28"))
-	bank = column(body,285)
-	var right := column(body,432)
+	bank = column(body,210)
+	var right := column(body,300)
 	right.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	prompt = label_at(right,"",20,INK)
+	prompt = label_at(right,"",17,INK)
 	var graph := PanelContainer.new()
 	graph.add_theme_stylebox_override("panel",StyleBoxEmpty.new())
 	right.add_child(graph)
@@ -135,13 +152,15 @@ func configure(id: String, title: String, puzzle: Dictionary, progress: Dictiona
 	lane.add_theme_constant_override("separation",7)
 	graph.add_child(lane)
 	lane.resized.connect(func(): lines.queue_redraw())
-	response = label_at(self,"",17,GOLD)
-	var actions := HBoxContainer.new()
+	response = label_at(self,"",16,GOLD)
+	var actions := HFlowContainer.new()
 	actions.add_theme_constant_override("separation",10)
 	add_child(actions)
 	confirm = button_at(actions,"","CheckBoard",func(): check_step())
 	button_at(actions,"Clear this step","ClearBoard",func(): clear_step())
-	button_at(actions,"Hint","BoardHint",func(): hint_requested.emit())
+	hint_button = button_at(actions,"Hint 1 of 3","BoardHint",func(): hint_requested.emit())
+	answer_button = button_at(actions,"Show answer","BoardAnswer",func(): answer_requested.emit())
+	answer_button.hide()
 	button_at(actions,"Back to scene","CloseBoard",func(): closed.emit())
 	build_step()
 
@@ -177,8 +196,8 @@ func evidence_button(parent: Node,id: String) -> EvidenceButton:
 	b.alignment=HORIZONTAL_ALIGNMENT_LEFT
 	b.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART
 	b.size_flags_horizontal=Control.SIZE_EXPAND_FILL
-	b.custom_minimum_size.y=44
-	b.add_theme_font_size_override("font_size",17)
+	b.custom_minimum_size.y=38
+	b.add_theme_font_size_override("font_size",15)
 	parent.add_child(b)
 	return b
 
@@ -205,8 +224,8 @@ func build_step() -> void:
 		var temp: int=order[i]
 		order[i]=order[other]
 		order[other]=temp
-	var same := true
-	for i: int in order.size():
+	var same: bool = order.size() >= stage.answer.size()
+	for i: int in stage.answer.size():
 		same = same and int(order[i])==int(stage.answer[i])
 	if same:
 		order.append(order.pop_front())
@@ -298,6 +317,7 @@ func check_step() -> void:
 			matches+=1
 	if matches!=row.size():
 		response.text="%d of %d placements fit the evidence. Recheck the case notes or ask for a hint." % [matches,row.size()]
+		wrong_attempt.emit()
 		return
 	if stage_index+1 < stages.size():
 		stage_index+=1
@@ -309,3 +329,9 @@ func check_step() -> void:
 		for entries: Array in draft.placements:
 			values.append_array(entries)
 		submitted.emit(values)
+
+func set_hint_label(value: String) -> void:
+	hint_button.text = value
+
+func show_answer_offer(on: bool) -> void:
+	answer_button.visible = on

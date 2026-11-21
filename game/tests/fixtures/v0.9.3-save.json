@@ -1,0 +1,16 @@
+{
+  "schema": 2,
+  "game": "night-nine",
+  "content": "campaign-2",
+  "scene": 99,
+  "scene_id": "removed_prologue_scene",
+  "chapter": "Prologue",
+  "actor": "frank",
+  "done": ["removed.task"],
+  "seen": ["removed.line"],
+  "finished": false,
+  "hints": {"removed.task": 2},
+  "walk_positions": {},
+  "notebook": {"marks": {}, "notes": {}},
+  "case_boards": {}
+}
