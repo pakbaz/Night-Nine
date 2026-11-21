@@ -1,0 +1,16 @@
+{
+  "audio_id": "c7_gate.truck.lead.02",
+  "plan_sha256": "65d4e3930bb0bf1340a134b766d830d3598d3c47655f794b3c4c18faa9cb392b",
+  "source_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "1df1dc320a63ce726fcb1bd1d9cd318fb4affca7674fadd05e19f631d9ce311a",
+  "expected": "The back fence failed the check. Sound crosses three hundred and forty meters in a second, and the fence is a hundred and seventy meters out. Tell me what it actually heard.",
+  "recognized": "The back fence failed the check. Sound crosses 340 meters in a second, and the fence is 170 meters out. Tell me what it actually heard.",
+  "first_recognition": "The back fence failed the check. Sound crosses 340 meters in a second, and the fence is 170 meters out. Tell me what it actually heard.",
+  "word_edits": 1,
+  "status": "manual_review_required",
+  "listening_reviewed": false,
+  "seconds": 10.4,
+  "sample_rate": 48000,
+  "peak": 0.440582275390625,
+  "rms": 0.038850829005241394
+}

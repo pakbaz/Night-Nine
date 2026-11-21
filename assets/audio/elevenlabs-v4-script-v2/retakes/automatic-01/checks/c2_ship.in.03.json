@@ -1,0 +1,16 @@
+{
+  "audio_id": "c2_ship.in.03",
+  "plan_sha256": "65d4e3930bb0bf1340a134b766d830d3598d3c47655f794b3c4c18faa9cb392b",
+  "source_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "8c1986e64ea2e7a584f82165d7f51f093ee152d363bcea4118bb2b8b4255baff",
+  "expected": "I’d prefer the exit. Does that come with music too?",
+  "recognized": "I prefer the exit. Does that come with music too?",
+  "first_recognition": "I prefer the exit. Does that come with music too?",
+  "word_edits": 1,
+  "status": "manual_review_required",
+  "listening_reviewed": false,
+  "seconds": 3.36,
+  "sample_rate": 48000,
+  "peak": 0.32147216796875,
+  "rms": 0.03881813585758209
+}

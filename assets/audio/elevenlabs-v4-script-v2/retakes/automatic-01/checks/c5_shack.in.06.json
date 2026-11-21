@@ -1,0 +1,16 @@
+{
+  "audio_id": "c5_shack.in.06",
+  "plan_sha256": "65d4e3930bb0bf1340a134b766d830d3598d3c47655f794b3c4c18faa9cb392b",
+  "source_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "d9437b786f90b144acf21c26632f49782cf97ef6655920273ca75737f3d8ff39",
+  "expected": "I’ve heard the bay sing since I was a boy. Your father was the only one who ever asked me what it sounded like.",
+  "recognized": "I've heard the bass sing since I was a boy. Your father was the only one who ever asked me what it sounded like.",
+  "first_recognition": "I've heard the bass sing since I was a boy. Your father was the only one who ever asked me what it sounded like.",
+  "word_edits": 1,
+  "status": "manual_review_required",
+  "listening_reviewed": false,
+  "seconds": 7.12,
+  "sample_rate": 48000,
+  "peak": 0.930511474609375,
+  "rms": 0.081271231174469
+}

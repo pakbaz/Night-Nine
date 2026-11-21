@@ -1,0 +1,16 @@
+{
+  "audio_id": "c9_wake.agnes.find",
+  "plan_sha256": "18fd00bf480049512db432288644a885233061f7f6fb1f990ccb98f43b25c584",
+  "source_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "1f1236918d95572af05f627e2a649d59544a47cf3b277302efd64e8a6637e204",
+  "expected": "Mrs. Penhallow’s glasses, from the middle tray. Her bed tag says she’s been asleep in here for three years. So who has been selling me bait?",
+  "recognized": "Mrs. Penhallow's glasses from the middle tray. Her bed tag says she's been asleep in here for three years. So who has been selling me bait?",
+  "first_recognition": "Mrs. Penhallow's glasses from the middle tray. Her bed tag says she's been asleep in here for three years. So who has been selling me bait?",
+  "word_edits": 0,
+  "status": "automated_qa_passed",
+  "listening_reviewed": false,
+  "seconds": 9.52,
+  "sample_rate": 48000,
+  "peak": 0.326995849609375,
+  "rms": 0.04043104127049446
+}

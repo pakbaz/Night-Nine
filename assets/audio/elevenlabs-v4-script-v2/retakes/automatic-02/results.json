@@ -1,0 +1,20 @@
+{
+  "plan_sha256": "18fd00bf480049512db432288644a885233061f7f6fb1f990ccb98f43b25c584",
+  "passed": [
+    "c8_lab.lastpage.find",
+    "c9_wake.agnes.find"
+  ],
+  "held": [
+    "c1_dinner.family.lead.05",
+    "c2_ship.in.03",
+    "c2_ship.intake.01",
+    "c4_safe.screens.01",
+    "c5_shack.in.06",
+    "c5_shack.rig.lead.01",
+    "c5_station.automation.lead.01",
+    "c7_gate.truck.lead.02",
+    "c8_lab.in.05"
+  ],
+  "activated": false,
+  "original_masters_preserved": true
+}

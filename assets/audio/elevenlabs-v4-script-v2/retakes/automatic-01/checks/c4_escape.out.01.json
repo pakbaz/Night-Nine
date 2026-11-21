@@ -1,0 +1,16 @@
+{
+  "audio_id": "c4_escape.out.01",
+  "plan_sha256": "65d4e3930bb0bf1340a134b766d830d3598d3c47655f794b3c4c18faa9cb392b",
+  "source_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "d2f7ccd98208855c7a76e65af6101c042386e46f9c59a2f91a10e2937a118c86",
+  "expected": "All units. Steve Mercer, wanted for the abduction of Nora Reyes. And scan Calder tonight. The signing is in six days.",
+  "recognized": "All units, Steve Mercer, wanted for the abduction of Nora Reyes. And scan Calder tonight. The signing is in six days.",
+  "first_recognition": "All units, Steve Mercer, wanted for the abduction of Nora Reyes. And scan Calder tonight. The signing is in six days.",
+  "word_edits": 0,
+  "status": "automated_qa_passed",
+  "listening_reviewed": false,
+  "seconds": 8.88,
+  "sample_rate": 48000,
+  "peak": 0.6280517578125,
+  "rms": 0.055491190403699875
+}

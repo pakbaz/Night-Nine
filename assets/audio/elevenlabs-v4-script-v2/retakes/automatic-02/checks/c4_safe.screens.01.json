@@ -1,0 +1,16 @@
+{
+  "audio_id": "c4_safe.screens.01",
+  "plan_sha256": "18fd00bf480049512db432288644a885233061f7f6fb1f990ccb98f43b25c584",
+  "source_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "235a991d4abb3ad40386c6aa182b9b34ad5b878c7b6b89c000868a8547ab781a",
+  "expected": "Adrian Rook, asleep in bed 41B. Both governments’ seals on the transfer. And an empty bed waiting for President Ward on signing day.",
+  "recognized": "Adrian Rook, asleep in bed 41B, both government seals on the transfer, and an empty bed waiting for President Ward on signing day.",
+  "first_recognition": "Adrian Rook, asleep in bed 41B, both government seals on the transfer, and an empty bed waiting for President Ward on signing day.",
+  "word_edits": 1,
+  "status": "manual_review_required",
+  "listening_reviewed": false,
+  "seconds": 10.24,
+  "sample_rate": 48000,
+  "peak": 0.49365234375,
+  "rms": 0.04436200484633446
+}

@@ -103,3 +103,7 @@ Evidence in the publishing checkout:
 - `tmp/current-full-walkthrough-2/report/campaign-render/results.json`
 - `tmp/current-story-timing/report/story-flow.json`
 - `tmp/grouped-credits/report-verified/score-route.json` and `credits-01.png` through `credits-04.png`
+
+Cloudflare run `44887914139` subsequently deployed commit `2f5b7e2` successfully to `https://9513f884.night-nine.pages.dev`. Direct browser inspection confirmed the N9 loading screen, title startup, the complete AI-credit page and the combined GitHub/Copilot/Cloudflare page. Screenshots are `tmp/grouped-credits/cloud-n9-loading.png`, `cloud-ai-credits.png` and `cloud-hosting-credits.png`.
+
+The automatic voice correction pass made 28 requests across 17 flagged lines, using 1,163 included ElevenLabs credits. Eight lines have new candidates passing the unchanged zero-word-edit check. Nine remain unresolved after two takes. Original masters, playback gates and the canonical review inventory are unchanged; see the pipeline document for the candidate locations and remaining approval requirements.

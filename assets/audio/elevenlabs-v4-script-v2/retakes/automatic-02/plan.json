@@ -1,0 +1,366 @@
+{
+  "schema": 1,
+  "campaign": "script-v2",
+  "model_id": "eleven_v4",
+  "output_format": "mp3_44100_192",
+  "inputs": {
+    "recording_list": "580d1b3981ce67e66f411a942626f1e5107dc3968ef2ee4a2031f36c9bb86522",
+    "script": "7f51e71b741158e3962c51e846962f015628ed8e09752666bb7c8ba74bcab6c0",
+    "casting": "cb91065c437c743d50eea2958d5149a6d0a35b9d20430a66cb8a548b921246db"
+  },
+  "rows": 11,
+  "row_characters": 1118,
+  "unique_audio_ids": 11,
+  "speech_requests": 11,
+  "derived_edits": 0,
+  "utterance_characters": 1118,
+  "request_characters": 1118,
+  "ordered_audio_ids": [
+    "c1_dinner.family.lead.05",
+    "c2_ship.in.03",
+    "c2_ship.intake.01",
+    "c4_safe.screens.01",
+    "c5_shack.in.06",
+    "c5_shack.rig.lead.01",
+    "c5_station.automation.lead.01",
+    "c7_gate.truck.lead.02",
+    "c8_lab.in.05",
+    "c8_lab.lastpage.find",
+    "c9_wake.agnes.find"
+  ],
+  "items": {
+    "c1_dinner.family.lead.05": {
+      "audio_id": "c1_dinner.family.lead.05",
+      "kind": "speech",
+      "line_ids": [
+        "c1_dinner.family.lead.05"
+      ],
+      "scenes": [
+        "c1_dinner"
+      ],
+      "speaker": "mateo",
+      "cast_role": "mateo",
+      "voice_id": "pHTIXPU0D9wgfJsumeMt",
+      "text": "Funny. Lyle Boone hasn’t missed one of the Little League games I coach since June either.",
+      "text_sha256": "17cf9efb3de1585f7936852768629ca599d59dbb8fbdaa348694f98582c99adf",
+      "synthesis_text": "Funny. Lyle Boone hasn’t missed one of the Little League games I coach since June either.",
+      "synthesis_text_sha256": "17cf9efb3de1585f7936852768629ca599d59dbb8fbdaa348694f98582c99adf",
+      "delivery": "live",
+      "direction": "",
+      "v4_audio_tag": "",
+      "previous_text": "She called my show every episode to fix my tide tables. The last call was May seventeenth.",
+      "next_text": "Eat before it gets cold, Steve. Then tell us what is troubling you.",
+      "voice_settings": {
+        "stability": 0.78,
+        "similarity_boost": 0.78
+      },
+      "language_code": "en",
+      "model_id": "eleven_v4",
+      "output_format": "mp3_44100_192",
+      "seed": 507172873
+    },
+    "c2_ship.in.03": {
+      "audio_id": "c2_ship.in.03",
+      "kind": "speech",
+      "line_ids": [
+        "c2_ship.in.03"
+      ],
+      "scenes": [
+        "c2_ship"
+      ],
+      "speaker": "steve",
+      "cast_role": "steve",
+      "voice_id": "vveagfomyMCJLZsOPRP2",
+      "text": "I’d prefer the exit. Does that come with music too?",
+      "text_sha256": "305820095adb669ec22d22a10493f58242c7c90f93b16be4301a24faf238da7a",
+      "synthesis_text": "I’d prefer the exit. Does that come with music too?",
+      "synthesis_text_sha256": "305820095adb669ec22d22a10493f58242c7c90f93b16be4301a24faf238da7a",
+      "delivery": "live",
+      "direction": "",
+      "v4_audio_tag": "",
+      "previous_text": "Would peaceful human hold music assist your experience?",
+      "next_text": "“You are the author of your own story.” This is from a human book. Is it helping?",
+      "voice_settings": {
+        "stability": 0.78,
+        "similarity_boost": 0.78
+      },
+      "language_code": "en",
+      "model_id": "eleven_v4",
+      "output_format": "mp3_44100_192",
+      "seed": 2806594708
+    },
+    "c2_ship.intake.01": {
+      "audio_id": "c2_ship.intake.01",
+      "kind": "speech",
+      "line_ids": [
+        "c2_ship.intake.01"
+      ],
+      "scenes": [
+        "c2_ship"
+      ],
+      "speaker": "steve",
+      "cast_role": "steve",
+      "voice_id": "vveagfomyMCJLZsOPRP2",
+      "text": "Come on, Admiral. You never missed this one.",
+      "text_sha256": "edadb08ef0fac1f4dc74edc75f6f0a19e77678eb6fbbb3513aee5c4b51015621",
+      "synthesis_text": "Come on, Admiral. You never missed this one.",
+      "synthesis_text_sha256": "edadb08ef0fac1f4dc74edc75f6f0a19e77678eb6fbbb3513aee5c4b51015621",
+      "delivery": "live",
+      "direction": "",
+      "v4_audio_tag": "",
+      "previous_text": "The tunnel’s flooding. The underwater speakers still work... I fixed them, the day I met her.",
+      "next_text": "Nora’s real whistle, through the speakers I fixed the day we met. Admiral came down through the dark and dragged me to the surface.",
+      "voice_settings": {
+        "stability": 0.78,
+        "similarity_boost": 0.78
+      },
+      "language_code": "en",
+      "model_id": "eleven_v4",
+      "output_format": "mp3_44100_192",
+      "seed": 2624315274
+    },
+    "c4_safe.screens.01": {
+      "audio_id": "c4_safe.screens.01",
+      "kind": "speech",
+      "line_ids": [
+        "c4_safe.screens.01"
+      ],
+      "scenes": [
+        "c4_safe"
+      ],
+      "speaker": "steve",
+      "cast_role": "steve",
+      "voice_id": "vveagfomyMCJLZsOPRP2",
+      "text": "Adrian Rook, asleep in bed 41B. Both governments’ seals on the transfer. And an empty bed waiting for President Ward on signing day.",
+      "text_sha256": "b8258054910a82f05fc83c752036edc63f684510c4b28eaff556b4330206bd0a",
+      "synthesis_text": "Adrian Rook, asleep in bed 41B. Both governments’ seals on the transfer. And an empty bed waiting for President Ward on signing day.",
+      "synthesis_text_sha256": "b8258054910a82f05fc83c752036edc63f684510c4b28eaff556b4330206bd0a",
+      "delivery": "live",
+      "direction": "",
+      "v4_audio_tag": "",
+      "previous_text": "While he was singing, his office door was open.",
+      "next_text": "Walt Prior. From June’s list.",
+      "voice_settings": {
+        "stability": 0.78,
+        "similarity_boost": 0.78
+      },
+      "language_code": "en",
+      "model_id": "eleven_v4",
+      "output_format": "mp3_44100_192",
+      "seed": 3448744139
+    },
+    "c5_shack.in.06": {
+      "audio_id": "c5_shack.in.06",
+      "kind": "speech",
+      "line_ids": [
+        "c5_shack.in.06"
+      ],
+      "scenes": [
+        "c5_shack"
+      ],
+      "speaker": "luis",
+      "cast_role": "luis",
+      "voice_id": "5sPGxVw5vqj7a08c5Xbw",
+      "text": "I’ve heard the bay sing since I was a boy. Your father was the only one who ever asked me what it sounded like.",
+      "text_sha256": "c82e2e69bc11679d3f832b68d21dd95a5d17893c89d205e6df2914b34c7edf89",
+      "synthesis_text": "I’ve heard the bay sing since I was a boy. Your father was the only one who ever asked me what it sounded like.",
+      "synthesis_text_sha256": "c82e2e69bc11679d3f832b68d21dd95a5d17893c89d205e6df2914b34c7edf89",
+      "delivery": "live",
+      "direction": "",
+      "v4_audio_tag": "",
+      "previous_text": "Nora has been gone since Tuesday night. Carmen hasn’t slept. And I have known you since you were nine years old.",
+      "next_text": "Forty-five years of kitchen-table notes. Every morning, one of them left the other one a note.",
+      "voice_settings": {
+        "stability": 0.78,
+        "similarity_boost": 0.78
+      },
+      "language_code": "en",
+      "model_id": "eleven_v4",
+      "output_format": "mp3_44100_192",
+      "seed": 2129312483
+    },
+    "c5_shack.rig.lead.01": {
+      "audio_id": "c5_shack.rig.lead.01",
+      "kind": "speech",
+      "line_ids": [
+        "c5_shack.rig.lead.01"
+      ],
+      "scenes": [
+        "c5_shack"
+      ],
+      "speaker": "steve",
+      "cast_role": "steve",
+      "voice_id": "vveagfomyMCJLZsOPRP2",
+      "text": "Dad’s receiver. Dead battery, and the dial’s slipped since he last used it.",
+      "text_sha256": "46157378deaf237c624e329dca1e8246e41d76a6feffb07211c36e6144fb6ca1",
+      "synthesis_text": "Dad’s receiver. Dead battery, and the dial’s slipped since he last used it.",
+      "synthesis_text_sha256": "46157378deaf237c624e329dca1e8246e41d76a6feffb07211c36e6144fb6ca1",
+      "delivery": "live",
+      "direction": "",
+      "v4_audio_tag": "",
+      "previous_text": "Dad’s “Done” answers Mom’s March 2 slip: he filed their tape between the Coltrane and the weather carts. The good stuff is the KBWR record library. Mom hid her notebook at my old station.",
+      "next_text": "Every set has a rating card, Dad said. Read it before you plug anything in.",
+      "voice_settings": {
+        "stability": 0.78,
+        "similarity_boost": 0.78
+      },
+      "language_code": "en",
+      "model_id": "eleven_v4",
+      "output_format": "mp3_44100_192",
+      "seed": 1766617721
+    },
+    "c5_station.automation.lead.01": {
+      "audio_id": "c5_station.automation.lead.01",
+      "kind": "speech",
+      "line_ids": [
+        "c5_station.automation.lead.01"
+      ],
+      "scenes": [
+        "c5_station"
+      ],
+      "speaker": "steve",
+      "cast_role": "steve",
+      "voice_id": "vveagfomyMCJLZsOPRP2",
+      "text": "AutoRick’s console. I wrote half these carts myself.",
+      "text_sha256": "920ca4e476e3c2a37761d555c6f2e63544c8df45ded3c8565907bfe960beca94",
+      "synthesis_text": "AutoRick’s console. I wrote half these carts myself.",
+      "synthesis_text_sha256": "920ca4e476e3c2a37761d555c6f2e63544c8df45ded3c8565907bfe960beca94",
+      "delivery": "live",
+      "direction": "",
+      "v4_audio_tag": "",
+      "previous_text": "Two fellas. Somebody else is breathing in here.",
+      "next_text": "I built this schedule before they replaced me with it. And the door still opens for my voice.",
+      "voice_settings": {
+        "stability": 0.78,
+        "similarity_boost": 0.78
+      },
+      "language_code": "en",
+      "model_id": "eleven_v4",
+      "output_format": "mp3_44100_192",
+      "seed": 3394874057
+    },
+    "c7_gate.truck.lead.02": {
+      "audio_id": "c7_gate.truck.lead.02",
+      "kind": "speech",
+      "line_ids": [
+        "c7_gate.truck.lead.02"
+      ],
+      "scenes": [
+        "c7_gate"
+      ],
+      "speaker": "shaw",
+      "cast_role": "shaw",
+      "voice_id": "lRGgBdmdfHYNiqPVpbiS",
+      "text": "The back fence failed the check. Sound crosses three hundred and forty meters in a second, and the fence is a hundred and seventy meters out. Tell me what it actually heard.",
+      "text_sha256": "b45f70700842900ae38281fe0a71f6f3902b54f16e058ad1f4c7f983e62d7b03",
+      "synthesis_text": "The back fence failed the check. Sound crosses three hundred and forty meters in a second, and the fence is a hundred and seventy meters out. Tell me what it actually heard.",
+      "synthesis_text_sha256": "b45f70700842900ae38281fe0a71f6f3902b54f16e058ad1f4c7f983e62d7b03",
+      "delivery": "live",
+      "direction": "",
+      "v4_audio_tag": "",
+      "previous_text": "Evelyn Shaw. I ran the sound stage for Meridian, back when it had a budget. Stay off the cables.",
+      "next_text": "Half a second. Good ears. Who taught you?",
+      "voice_settings": {
+        "stability": 0.78,
+        "similarity_boost": 0.78
+      },
+      "language_code": "en",
+      "model_id": "eleven_v4",
+      "output_format": "mp3_44100_192",
+      "seed": 1903896431
+    },
+    "c8_lab.in.05": {
+      "audio_id": "c8_lab.in.05",
+      "kind": "speech",
+      "line_ids": [
+        "c8_lab.in.05"
+      ],
+      "scenes": [
+        "c8_lab"
+      ],
+      "speaker": "wen",
+      "cast_role": "wen",
+      "voice_id": "OtI9u7gjScKYR7rOqBX2",
+      "text": "Mine fooled six. And a premier.",
+      "text_sha256": "d2edba9c458a57f26570439271c810849a5c2aabe0dbc69de2a6c9c8ed4e4472",
+      "synthesis_text": "Mine fooled six. And a premier.",
+      "synthesis_text_sha256": "d2edba9c458a57f26570439271c810849a5c2aabe0dbc69de2a6c9c8ed4e4472",
+      "delivery": "live",
+      "direction": "",
+      "v4_audio_tag": "",
+      "previous_text": "Mine fooled four generals.",
+      "next_text": "Help me put her pages back in order.",
+      "voice_settings": {
+        "stability": 0.78,
+        "similarity_boost": 0.78
+      },
+      "language_code": "en",
+      "model_id": "eleven_v4",
+      "output_format": "mp3_44100_192",
+      "seed": 3152631282
+    },
+    "c8_lab.lastpage.find": {
+      "audio_id": "c8_lab.lastpage.find",
+      "kind": "speech",
+      "line_ids": [
+        "c8_lab.lastpage.find"
+      ],
+      "scenes": [
+        "c8_lab"
+      ],
+      "speaker": "steve",
+      "cast_role": "steve",
+      "voice_id": "vveagfomyMCJLZsOPRP2",
+      "text": "Mom’s last page is Dad’s Reel 11: two joined tones rising, 220 to 330, a half-second gap, then a long 165, lower than both. Her margin says it repeats after the low note. It’s a language, and nobody on Earth can read it.",
+      "text_sha256": "ffd46e988981b65aa29efee696b681fdc48b707ba4bc9ff94d4ca6c67669fc57",
+      "synthesis_text": "Mom’s last page is Dad’s Reel 11: two joined tones rising, 220 to 330, a half-second gap, then a long 165, lower than both. Her margin says it repeats after the low note. It’s a language, and nobody on Earth can read it.",
+      "synthesis_text_sha256": "ffd46e988981b65aa29efee696b681fdc48b707ba4bc9ff94d4ca6c67669fc57",
+      "delivery": "narration",
+      "direction": "",
+      "v4_audio_tag": "",
+      "previous_text": "Then we keep listening.",
+      "next_text": "Two countries faked two tests and broadcast them on open radio. Something out there was listening, and it came. Mom heard the proof in the bay.",
+      "voice_settings": {
+        "stability": 0.78,
+        "similarity_boost": 0.78
+      },
+      "language_code": "en",
+      "model_id": "eleven_v4",
+      "output_format": "mp3_44100_192",
+      "seed": 2912913284
+    },
+    "c9_wake.agnes.find": {
+      "audio_id": "c9_wake.agnes.find",
+      "kind": "speech",
+      "line_ids": [
+        "c9_wake.agnes.find"
+      ],
+      "scenes": [
+        "c9_wake"
+      ],
+      "speaker": "steve",
+      "cast_role": "steve",
+      "voice_id": "vveagfomyMCJLZsOPRP2",
+      "text": "Mrs. Penhallow’s glasses, from the middle tray. Her bed tag says she’s been asleep in here for three years. So who has been selling me bait?",
+      "text_sha256": "c52c47438e5d2863b6c87fb4880b19bd3a1f9d5ef28a0bf106e3964673a4f404",
+      "synthesis_text": "Mrs. Penhallow’s glasses, from the middle tray. Her bed tag says she’s been asleep in here for three years. So who has been selling me bait?",
+      "synthesis_text_sha256": "c52c47438e5d2863b6c87fb4880b19bd3a1f9d5ef28a0bf106e3964673a4f404",
+      "delivery": "narration",
+      "direction": "",
+      "v4_audio_tag": "",
+      "previous_text": "My glasses. Has somebody changed the price of bait while I was gone?",
+      "next_text": "Dad woke to his call sign, Mom to her lullaby, Adrian Rook to June’s voice, and Mrs. Penhallow to her reading glasses.",
+      "voice_settings": {
+        "stability": 0.78,
+        "similarity_boost": 0.78
+      },
+      "language_code": "en",
+      "model_id": "eleven_v4",
+      "output_format": "mp3_44100_192",
+      "seed": 1985289711
+    }
+  },
+  "source_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "retake_attempt": 2,
+  "plan_sha256": "18fd00bf480049512db432288644a885233061f7f6fb1f990ccb98f43b25c584"
+}

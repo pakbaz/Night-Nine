@@ -1,0 +1,16 @@
+{
+  "audio_id": "c5_shack.rig.lead.01",
+  "plan_sha256": "18fd00bf480049512db432288644a885233061f7f6fb1f990ccb98f43b25c584",
+  "source_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "a3fa7c64074eed708f833066d6f6a86788c23b58b0d7af66dea95c3a841edabe",
+  "expected": "Dad’s receiver. Dead battery, and the dial’s slipped since he last used it.",
+  "recognized": "Dad's receiver. Dead battery, and the dial slipped since he last used it.",
+  "first_recognition": "Dad's receiver. Dead battery, and the dial slipped since he last used it.",
+  "word_edits": 1,
+  "status": "manual_review_required",
+  "listening_reviewed": false,
+  "seconds": 5.04,
+  "sample_rate": 48000,
+  "peak": 0.401763916015625,
+  "rms": 0.039132602512836456
+}

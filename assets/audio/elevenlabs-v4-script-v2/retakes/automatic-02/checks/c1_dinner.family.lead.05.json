@@ -1,0 +1,16 @@
+{
+  "audio_id": "c1_dinner.family.lead.05",
+  "plan_sha256": "18fd00bf480049512db432288644a885233061f7f6fb1f990ccb98f43b25c584",
+  "source_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "2f45d1cded36c253eb60305ab7f6fd481d7110d1e1b206b1e92e16540cd63884",
+  "expected": "Funny. Lyle Boone hasn’t missed one of the Little League games I coach since June either.",
+  "recognized": "Funny, Lyle Boone hasn't missed one of the Little League games I coached since June either.",
+  "first_recognition": "Funny, Lyle Boone hasn't missed one of the Little League games I coached since June either.",
+  "word_edits": 1,
+  "status": "manual_review_required",
+  "listening_reviewed": false,
+  "seconds": 5.76,
+  "sample_rate": 48000,
+  "peak": 0.71649169921875,
+  "rms": 0.08800595253705978
+}

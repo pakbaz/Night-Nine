@@ -1,0 +1,16 @@
+{
+  "audio_id": "c1_dinner.out.03",
+  "plan_sha256": "65d4e3930bb0bf1340a134b766d830d3598d3c47655f794b3c4c18faa9cb392b",
+  "source_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "f92b62f01715f9c023849aab62ccd61f86e95fa4ff9b948624bc226e1819271b",
+  "expected": "Next Sunday, Steve. The plate will be warm.",
+  "recognized": "Next Sunday, Steve, the plate will be warm.",
+  "first_recognition": "Next Sunday, Steve, the plate will be warm.",
+  "word_edits": 0,
+  "status": "automated_qa_passed",
+  "listening_reviewed": false,
+  "seconds": 3.12,
+  "sample_rate": 48000,
+  "peak": 0.340484619140625,
+  "rms": 0.0403415821492672
+}

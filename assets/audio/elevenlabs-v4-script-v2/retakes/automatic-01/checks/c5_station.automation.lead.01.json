@@ -1,0 +1,16 @@
+{
+  "audio_id": "c5_station.automation.lead.01",
+  "plan_sha256": "65d4e3930bb0bf1340a134b766d830d3598d3c47655f794b3c4c18faa9cb392b",
+  "source_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "51ca914e5b4223ee2e96d4e4a675f2e6630eb26bdbd0c6e11819e8bb6455ee24",
+  "expected": "AutoRick’s console. I wrote half these carts myself.",
+  "recognized": "Autorix console. I rode half these carts myself.",
+  "first_recognition": "Autorix console. I rode half these carts myself.",
+  "word_edits": 3,
+  "status": "manual_review_required",
+  "listening_reviewed": false,
+  "seconds": 3.92,
+  "sample_rate": 48000,
+  "peak": 0.538116455078125,
+  "rms": 0.040250014513731
+}

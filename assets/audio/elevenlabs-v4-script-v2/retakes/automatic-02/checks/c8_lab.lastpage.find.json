@@ -1,0 +1,16 @@
+{
+  "audio_id": "c8_lab.lastpage.find",
+  "plan_sha256": "18fd00bf480049512db432288644a885233061f7f6fb1f990ccb98f43b25c584",
+  "source_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "06d52ad79bc76cdf11f7edab475ffe988ce8ac64a78a7e722c1ad8f14581d897",
+  "expected": "Mom’s last page is Dad’s Reel 11: two joined tones rising, 220 to 330, a half-second gap, then a long 165, lower than both. Her margin says it repeats after the low note. It’s a language, and nobody on Earth can read it.",
+  "recognized": "Mom's last page is Dad's reel 11. Two joined tones rising. 220 to 330. A half-second gap, then a long 165. Lower than both. Her margin says it repeats after the low note. It's a language, and nobody on earth can read it.",
+  "first_recognition": "Mom's last page is Dad's reel 11. Two joined tones rising. 220 to 330. A half-second gap, then a long 165. Lower than both. Her margin says it repeats after the low note. It's a language, and nobody on earth can read it.",
+  "word_edits": 0,
+  "status": "automated_qa_passed",
+  "listening_reviewed": false,
+  "seconds": 19.44,
+  "sample_rate": 48000,
+  "peak": 0.360076904296875,
+  "rms": 0.03748929128050804
+}

@@ -105,3 +105,17 @@ Open `manual-review.html` in a browser beside its `masters/` directory to listen
 Final activation requires a truthful review receipt for every held ID. No mismatch or ambiguity is auto-accepted.
 
 The additional native story-flow rerun also remains blocked by timing failures in both tested renderers. See the voice-staging follow-up in `docs/play-report-2026-11-20.md`. Passing the audio-file checks does not make the complete voiced game release-ready.
+
+## November 21 automatic retakes
+
+At the user's request, two bounded passes re-recorded 17 lines with unresolved word differences. The first pass used a new frozen seed and stability of at least 0.62. Only its 11 remaining failures received a second take at stability 0.78. Script text, model, casting and voice identities stayed unchanged.
+
+The 28 requests consumed **1,163 included credits**, summed from the API billing receipts. Read-only account checks confirmed that paid overage remained disabled before and after generation. No transcription API was used.
+
+All candidates, request receipts, frozen plans, decoded masters and independent local ASR reports are preserved under `assets/audio/elevenlabs-v4-script-v2/retakes/automatic-01/` and `automatic-02/`. The original production masters and receipts are untouched.
+
+Eight lines now have a candidate with zero word edits: `c10_live.first.02`, `c1_dinner.out.03`, `c1_flat.compare.02`, `c4_escape.out.01`, `c7_gate.out.05`, `c7_swap.recap.03`, `c8_lab.lastpage.find` and `c9_wake.agnes.find`. Nine selected lines still disagree with the local recognizer after both attempts. No short-line or homophone gate was relaxed.
+
+These are candidate results, not a listening approval or an activated voice pack. They have not replaced the canonical takes or their lip-sync data; the canonical 120-hold report therefore remains unchanged. A separate independent transcription check requires the user's explicit authorization. Further repeated generation is paused rather than spending credits on the same unresolved recognition results.
+
+The latest text-only CoreAudio/Compatibility story-flow run passed all 94 executed assertions. Earlier Dummy-driver failures remain recorded in the play report.

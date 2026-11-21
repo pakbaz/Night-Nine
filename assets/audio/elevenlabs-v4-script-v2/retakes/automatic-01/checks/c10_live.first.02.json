@@ -1,0 +1,16 @@
+{
+  "audio_id": "c10_live.first.02",
+  "plan_sha256": "65d4e3930bb0bf1340a134b766d830d3598d3c47655f794b3c4c18faa9cb392b",
+  "source_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "9cf2f27f057022ba8feabe5dfe5e96154ddbd9364dfd6eca0fe0125848d50bff",
+  "expected": "Field lights following. We can match that.",
+  "recognized": "Field lights following. We can match that.",
+  "first_recognition": "The field lights following. We can match that.",
+  "word_edits": 0,
+  "status": "automated_qa_passed",
+  "listening_reviewed": false,
+  "seconds": 2.8,
+  "sample_rate": 48000,
+  "peak": 0.47723388671875,
+  "rms": 0.05822635814547539
+}
