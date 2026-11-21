@@ -1,0 +1,61 @@
+{
+  "schema": 1,
+  "plan_sha256": "5e6c7b37af92b77cc875b855c9cbb16a299b9a3fedb5664cc378a6f6d93f2243",
+  "source_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "casting_sha256": "cb91065c437c743d50eea2958d5149a6d0a35b9d20430a66cb8a548b921246db",
+  "count": 3,
+  "entries": [
+    {
+      "audio_id": "book.opening.5.1",
+      "reason": "retake_candidate_asr_mismatch",
+      "speaker": "steve",
+      "identity": "steve",
+      "voice_id": "vveagfomyMCJLZsOPRP2",
+      "line_ids": [
+        "book.opening.5.1"
+      ],
+      "expected": "Eighteen months ago, they rowed out into the bay after dark. They said the water was making a sound.",
+      "recognized": "Eighteen months ago, they rode out into the bay after dark. They said the water was making a sound.",
+      "word_edits": 1,
+      "review_direction": "Same voice, firmer and more dominant, with more vocal variation; louder alone is not enough.",
+      "wav": "masters/book.opening.5.1.wav",
+      "check": "checks/book.opening.5.1.json",
+      "audio_sha256": "a70b0a98c43220a17675c465e8a6e43d882e31d30fd4a378b762a1fe6c38a333"
+    },
+    {
+      "audio_id": "c10_live.second.01",
+      "reason": "retake_candidate_asr_mismatch",
+      "speaker": "steve",
+      "identity": "steve",
+      "voice_id": "vveagfomyMCJLZsOPRP2",
+      "line_ids": [
+        "c10_live.second.01"
+      ],
+      "expected": "Holding. Now, Wen.",
+      "recognized": "Holding. Now. When.",
+      "word_edits": 1,
+      "review_direction": "Keep the exact words and voice. Use a clear pause and direct-address emphasis for Wen as a person's name; add no words.",
+      "wav": "masters/c10_live.second.01.wav",
+      "check": "checks/c10_live.second.01.json",
+      "audio_sha256": "93db66d0df94658827fe681c513d2a3ca95684ab27367ff3196d1d33fe768cde"
+    },
+    {
+      "audio_id": "c7_swap.in.02",
+      "reason": "retake_candidate_asr_mismatch",
+      "speaker": "steve",
+      "identity": "steve",
+      "voice_id": "vveagfomyMCJLZsOPRP2",
+      "line_ids": [
+        "c7_swap.in.02"
+      ],
+      "expected": "What’s Tirel?",
+      "recognized": "What's T-Rell?",
+      "word_edits": 2,
+      "review_direction": "Do not say T-Roll. Make the first Tee syllable longer and separate it clearly from Rel; keep the written subtitle Tirel.",
+      "wav": "masters/c7_swap.in.02.wav",
+      "check": "checks/c7_swap.in.02.json",
+      "audio_sha256": "baf77c46debe4bc286384c59ccdcd4efc6125e107cac23bdd41e95d3c2a37414"
+    }
+  ],
+  "bundle": "three user-directed retake candidates; listening approval required"
+}

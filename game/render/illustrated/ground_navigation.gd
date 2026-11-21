@@ -17,7 +17,7 @@ func radius(at: Vector2) -> float:
 	if footprint_depth.size()!=4:
 		return 0.0
 	var t := clampf(inverse_lerp(footprint_depth[0],footprint_depth[2],at.y/900.0),0.0,1.0)
-	return clampf(lerpf(footprint_depth[1],footprint_depth[3],t)*900.0*.045,4.0,26.0)
+	return clampf(lerpf(footprint_depth[1],footprint_depth[3],t)*900.0*.05,4.0,30.0)
 
 func circle(center: Vector2, width: float) -> PackedVector2Array:
 	var ring := PackedVector2Array()
@@ -54,7 +54,7 @@ func bake(outline: PackedVector2Array, depth: Array, solids: Array, people: Pack
 		add_edge_clearance(source,solid)
 	for foot: Vector2 in people:
 		# Allow for two stances, including the shoulders of a nearby companion.
-		source.add_obstruction_outline(circle(foot,radius(foot)*3.3))
+		source.add_obstruction_outline(circle(foot,radius(foot)*3.5))
 	mesh = NavigationPolygon.new()
 	mesh.agent_radius = 0.0
 	NavigationServer2D.bake_from_source_geometry_data(mesh,source)

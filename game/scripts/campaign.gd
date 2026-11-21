@@ -1216,7 +1216,7 @@ func _show_reel_index(task: Dictionary) -> void:
 	for i: int in task.sounds.size():
 		var id: String = task.sounds[i]
 		var label: String = task.audition_labels[i]
-		var take: Dictionary = _recording_for(id).take
+		var take: Dictionary = sound_manifest.get(id.trim_prefix("effect."), {}) if id.begins_with("effect.") else _recording_for(id).take
 		var play := _button(interaction, "Listen · " + label, func(): _play_audio(id))
 		play.name = "ReelPlay%d" % i
 		play.disabled = take.is_empty()
@@ -1692,7 +1692,7 @@ func _sync_score_mix(starting_audio: bool = false) -> void:
 		return
 	score.set_lift(6.0 if title_card.visible else 0.0)
 	if storybook.visible or title_card.visible:
-		score.set_mix(voice.playing,false,false)
+		score.set_mix(voice.playing,false,false,-14.0 if storybook.visible else -10.0)
 		return
 	var evidence := tape_compare.visible or (listening_inspection and interaction.is_visible_in_tree())
 	var spoken_scene := dialogue_panel.visible

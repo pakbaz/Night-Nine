@@ -360,6 +360,7 @@ class PipelineTests(unittest.TestCase):
             with patch.object(pipeline, "PRODUCTION", folder):
                 pipeline.generate(candidate, preflight, FakeApi())
             pipeline.atomic_json(folder / "plan.json", candidate)
+            pipeline.atomic_json(folder / "results.json", {"passed": ["shared.take"], "held": []})
             master = folder / "masters/shared.take.wav"
             pipeline.atomic_bytes(master, b"fixture-audio")
             report = {
@@ -377,13 +378,80 @@ class PipelineTests(unittest.TestCase):
                 "script_or_keyterm_prompt_sent": False, "response": {"text": report["recognized"]},
             }
             pipeline.atomic_json(SCRATCH / "production/independent-asr/scribe-v3/shared.take.json", evidence)
-            self.assertEqual(pipeline.verified_retakes(plan, checker),
-                             {"shared.take": (folder, candidate["plan_sha256"])})
+            with patch.object(pipeline, "PRODUCTION", SCRATCH / "production"):
+                self.assertEqual(pipeline.verified_retakes(plan, checker),
+                                 {"shared.take": (folder, candidate["plan_sha256"])})
+            evidence_path = SCRATCH / "production/independent-asr/scribe-v3/shared.take.json"
+            evidence_path.unlink()
+            report["recognized"] = "A transcript that does not match."
+            pipeline.atomic_json(folder / "checks/shared.take.json", report)
+            manual_review = {
+                "schema": 1, "decision": "reviewed", "reviewed_by": "S3PehR",
+                "reviewed_at": "2026-11-21T11:19:35-08:00",
+                "plan_sha256": candidate["plan_sha256"],
+                "source_plan_sha256": plan["plan_sha256"],
+                "decisions": {"shared.take": "accept"},
+                "audio_sha256": {"shared.take": report["wav_sha256"]},
+            }
+            pipeline.atomic_json(folder / "manual-review.json", manual_review)
+            with patch.object(pipeline, "PRODUCTION", SCRATCH / "production"):
+                self.assertEqual(pipeline.verified_retakes(plan, checker),
+                                 {"shared.take": (folder, candidate["plan_sha256"])})
+            manual_review["audio_sha256"]["shared.take"] = "stale-audio"
+            pipeline.atomic_json(folder / "manual-review.json", manual_review)
+            with patch.object(pipeline, "PRODUCTION", SCRATCH / "production"):
+                with self.assertRaisesRegex(ValueError, "Manual retake review is stale"):
+                    pipeline.verified_retakes(plan, checker)
+            (folder / "manual-review.json").unlink()
             candidate["items"]["shared.take"]["voice_id"] = "different-voice"
             freeze(candidate)
             pipeline.atomic_json(folder / "plan.json", candidate)
-            with self.assertRaisesRegex(ValueError, "script or casting"):
-                pipeline.verified_retakes(plan, checker)
+            with patch.object(pipeline, "PRODUCTION", SCRATCH / "production"):
+                with self.assertRaisesRegex(ValueError, "script or casting"):
+                    pipeline.verified_retakes(plan, checker)
+
+    def test_partial_review_records_accepted_takes_and_retakes_without_activation(self):
+        overlay_data = {
+            "campaign": {"takes": {
+                "accepted": {"status": "automated_qa_passed"},
+                "retake": {"status": "manual_review_required"},
+            }},
+            "narration": {"takes": {}},
+            "review": {"hard_holds": {"accepted": "asr_mismatch", "retake": "asr_mismatch"}},
+        }
+        receipt = {
+            "decision": "reviewed", "reviewed_by": "S3PehR", "reviewed_at": "2026-11-21T11:19:35-08:00",
+            "decisions": {"accepted": "accept", "retake": "retake"},
+            "retake_notes": {"retake": "Needs a new take."},
+        }
+        result = pipeline.apply_manual_review(
+            overlay_data, receipt, SCRATCH / "root/review.json", SCRATCH / "root",
+        )
+        self.assertEqual(result["review"]["hard_holds"], {"retake": "asr_mismatch"})
+        self.assertEqual(result["campaign"]["takes"]["accepted"]["status"], "manual_review_passed")
+        self.assertEqual(result["campaign"]["takes"]["retake"]["status"], "retake_requested")
+        self.assertFalse(result["quality_approved"])
+        self.assertEqual(result["review"]["retake_requests"], {"retake": "Needs a new take."})
+
+        result["campaign"]["takes"]["retake"]["status"] = "manual_review_required"
+        resolved = pipeline.apply_manual_review(
+            result,
+            receipt | {"decisions": {"retake": "accept"}, "retake_notes": {}},
+            SCRATCH / "root/retake-review.json", SCRATCH / "root",
+        )
+        self.assertTrue(resolved["quality_approved"])
+
+    def test_empty_manual_review_page_reports_no_pending_review(self):
+        plan = {
+            "plan_sha256": "a" * 64,
+            "inputs": {"casting": "b" * 64},
+            "items": {},
+        }
+        review_root = SCRATCH / "empty-review"
+        pipeline.write_manual_review_files(plan, {}, {}, review_root)
+        page = (review_root / "manual-review.html").read_text()
+        self.assertIn("No listening review is pending.", page)
+        self.assertNotIn("Review only these 0 held takes", page)
 
     def test_changed_cast_is_rejected_even_when_text_is_unchanged(self):
         root = SCRATCH / "cast-root"

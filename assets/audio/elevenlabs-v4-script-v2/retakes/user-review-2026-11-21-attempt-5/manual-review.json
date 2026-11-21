@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "decision": "reviewed",
+  "reviewed_by": "S3PehR",
+  "reviewed_at": "2026-11-21T12:26:39-08:00",
+  "plan_sha256": "5e6c7b37af92b77cc875b855c9cbb16a299b9a3fedb5664cc378a6f6d93f2243",
+  "source_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "decisions": {
+    "book.opening.5.1": "accept",
+    "c10_live.second.01": "accept",
+    "c7_swap.in.02": "accept"
+  },
+  "audio_sha256": {
+    "book.opening.5.1": "a70b0a98c43220a17675c465e8a6e43d882e31d30fd4a378b762a1fe6c38a333",
+    "c10_live.second.01": "93db66d0df94658827fe681c513d2a3ca95684ab27367ff3196d1d33fe768cde",
+    "c7_swap.in.02": "baf77c46debe4bc286384c59ccdcd4efc6125e107cac23bdd41e95d3c2a37414"
+  },
+  "notes": {
+    "book.opening.5.1": "",
+    "c10_live.second.01": "",
+    "c7_swap.in.02": ""
+  }
+}

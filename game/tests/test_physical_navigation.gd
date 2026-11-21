@@ -7,6 +7,7 @@ var checks := 0
 var failures: Array[String] = []
 var last_arrival := ""
 var coverage := {}
+var movement_trace := {}
 
 func check(ok: bool, description: String) -> void:
 	checks+=1
@@ -63,7 +64,7 @@ func run() -> void:
 		min_gap=minf(min_gap,((body.position-other.position)*floor_stage.navigation.FLATTEN).length())
 		if floor_stage.route.is_empty():
 			break
-	check(body.position.distance_to(beyond)<.5 and min_gap>=floor_stage.navigation.radius(other.position)*3.1,
+	check(body.position.distance_to(beyond)<.5 and min_gap>=floor_stage.navigation.radius(other.position)*3.3,
 		"A moving companion triggers replanning with shoe clearance throughout")
 	check(floor_stage.walk_to_person("stephen","test.hello"),"A character interaction finds a reachable nearby stance")
 	for tick: int in 300:
@@ -109,7 +110,8 @@ func run() -> void:
 		isolated.free()
 	floor_stage.free()
 	verify_campaign(campaign,rooms)
-	var result := {"rooms":coverage,"registered_blockers":n_solids,"story_gates":n_doors,"checks":checks,"failures":failures}
+	var result := {"rooms":coverage,"movement_trace":movement_trace,"registered_blockers":n_solids,
+		"story_gates":n_doors,"checks":checks,"failures":failures}
 	var destination := OS.get_environment("NIGHT_NINE_QA_DIR")
 	if not destination.is_empty():
 		DirAccess.make_dir_recursive_absolute(destination)
@@ -158,6 +160,7 @@ func verify_campaign(campaign: NightCampaign, layouts: Dictionary) -> void:
 				verify_jail_staging(stage)
 			stage.approach_finished.connect(func(id: String): last_arrival=id)
 			var room_results := {}
+			var room_trace := {}
 			for id: String in scene.actors:
 				stage.select_walker(id)
 				var completed := before_scene.duplicate()
@@ -165,6 +168,7 @@ func verify_campaign(campaign: NightCampaign, layouts: Dictionary) -> void:
 				var floor_stage: Node2D=stage.floor_stage
 				check(stage.walking_view() and floor_stage.visible,scene.id+" visible walking floor for "+id)
 				var reached: Array = []
+				var actor_trace := {}
 				for i: int in scene.tasks.size():
 					var task: Dictionary=scene.tasks[i]
 					var label := str(task.id)+" via "+id
@@ -172,16 +176,41 @@ func verify_campaign(campaign: NightCampaign, layouts: Dictionary) -> void:
 					last_arrival=""
 					var started := stage.walk_task(task.id)
 					check(started,label+" registers a physical route")
+					var route_clear := true
+					var route_start: Vector2=floor_stage.bodies[id].body.position
+					for waypoint: Vector2 in floor_stage.route:
+						route_clear=route_clear and floor_stage.clear_segment(route_start,waypoint)
+						route_start=waypoint
+					check(route_clear,label+" planned segments clear props and standing characters")
 					var on_ground := true
 					var acted := false
+					var min_peer_margin := INF
+					var trace: Array = []
+					var initial_foot: Vector2=floor_stage.bodies[id].body.position
+					trace.append([roundf(initial_foot.x/ART.x*10000.0)/10000.0,
+						roundf(initial_foot.y/ART.y*10000.0)/10000.0])
 					for frame: int in 650:
 						if not stage.is_walking():
 							break
 						stage.tick_walk(.025,Vector2.ZERO)
-						on_ground=on_ground and floor_stage.on_floor(floor_stage.bodies[id].body.position)
+						var foot: Vector2=floor_stage.bodies[id].body.position
+						on_ground=on_ground and floor_stage.on_floor(foot)
+						for peer: String in floor_stage.bodies:
+							if peer==id or not floor_stage.bodies[peer].body.visible:
+								continue
+							var peer_foot: Vector2=floor_stage.bodies[peer].body.position
+							var gap: float=((foot-peer_foot)*floor_stage.navigation.FLATTEN).length()
+							min_peer_margin=minf(min_peer_margin,gap-floor_stage.navigation.radius(peer_foot)*3.3)
+						trace.append([roundf(foot.x/ART.x*10000.0)/10000.0,
+							roundf(foot.y/ART.y*10000.0)/10000.0])
 						acted=acted or not floor_stage.performance_action.is_empty()
 					check(on_ground,label+" feet clear solids and other people throughout")
+					if min_peer_margin<INF:
+						check(min_peer_margin>=-.5,label+" keeps personal space from every standing character")
 					check(acted and last_arrival==task.id,label+" action and arrival callback")
+					actor_trace[task.id]={"frames":trace.size()-1,"points":trace,
+						"route_clear":route_clear,
+						"minimum_peer_margin":min_peer_margin if min_peer_margin<INF else -1.0}
 					if scene.id=="c8_beach":
 						var guest: Dictionary=floor_stage.bodies.get("saren",{})
 						var lead: Dictionary=floor_stage.bodies[id]
@@ -198,8 +227,10 @@ func verify_campaign(campaign: NightCampaign, layouts: Dictionary) -> void:
 					stage.set_focus(-1)
 					check(floor_stage.visible,label+" returns to exploration")
 				room_results[id]=reached
+				room_trace[id]=actor_trace
 			stage.free()
 			coverage[scene.id]=room_results
+			movement_trace[scene.id]=room_trace
 		for task: Dictionary in scene.tasks:
 			before_scene.append(task.id)
 

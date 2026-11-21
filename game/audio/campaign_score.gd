@@ -226,8 +226,8 @@ func begin_fade(seconds: float) -> void:
 	elapsed = 0.0
 	duration = seconds
 
-func set_mix(speech: bool, evidence: bool, menu_open: bool) -> void:
-	var target := CLUE_DB if evidence else (-10.0 if speech else (-4.0 if menu_open else 0.0))
+func set_mix(speech: bool, evidence: bool, menu_open: bool, speech_duck_db: float = -10.0) -> void:
+	var target := CLUE_DB if evidence else (speech_duck_db if speech else (-4.0 if menu_open else 0.0))
 	if target == duck_target_db:
 		return
 	duck_target_db = target

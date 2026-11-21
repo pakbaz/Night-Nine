@@ -1,0 +1,25 @@
+{
+  "audio_id": "c7_swap.in.02",
+  "source_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "plan_sha256": "5e6c7b37af92b77cc875b855c9cbb16a299b9a3fedb5664cc378a6f6d93f2243",
+  "expected": "What’s Tirel?",
+  "synthesis_text": "What’s Teee... Rel?",
+  "recognized": "What's T-Rell?",
+  "word_edits": 2,
+  "listening_reviewed": false,
+  "candidate_audio_sha256": "baf77c46debe4bc286384c59ccdcd4efc6125e107cac23bdd41e95d3c2a37414",
+  "wav_sha256": "baf77c46debe4bc286384c59ccdcd4efc6125e107cac23bdd41e95d3c2a37414",
+  "generation_plan_sha256": "5e6c7b37af92b77cc875b855c9cbb16a299b9a3fedb5664cc378a6f6d93f2243",
+  "pronunciation_override": {
+    "canonical_text": "What’s Tirel?",
+    "spoken_as": "Tee-rel",
+    "synthesis_text": "What’s Teee... Rel?",
+    "approved_by": "S3PehR",
+    "approved_at": "2026-11-21T12:24:59-08:00"
+  },
+  "review_direction": "Do not say T-Roll. Make the first Tee syllable longer and separate it clearly from Rel; keep the written subtitle Tirel.",
+  "seconds": 2.48,
+  "sample_rate": 48000,
+  "peak": 0.239593505859375,
+  "rms": 0.030987590551376343
+}

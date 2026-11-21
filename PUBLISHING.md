@@ -37,20 +37,20 @@ Clearing site data, private browsing and storage eviction can remove saves and c
 
 Cloudflare Pages free-plan limits verified on 2026-11-20 are **25 MiB per file** and **20,000 files per site**. This project keeps every deployed file at or below 24 MiB and no more than 5,000 files. Direct upload does not use Cloudflare build minutes. Static hosting needs no Pages Functions.
 
-The automated review deployment is configured in `.github/workflows/cloudflare-pages.yml`. It builds the checked web export on pushes to `main` and uploads only `builds/web` to the Cloudflare `review` branch. It does not publish `source.zip`, editor caches, test output, screenshots, logs or other development artifacts. The stable review URL is:
+The automated deployment is configured in `.github/workflows/cloudflare-pages.yml`. Every relevant push to `main` runs the voice-pipeline and campaign tests and build checks, then uploads only `builds/web` to the Cloudflare `review` branch. A stable version tag such as `v1.0.0` runs the same checks and deploys to Cloudflare's `main` production branch. Prerelease tags do not deploy production. The workflow does not publish `source.zip`, editor caches, test output, screenshots, logs or other development artifacts. The stable review URL is:
 
 ```text
 https://review.night-nine.pages.dev
 ```
 
-The review deployment is live and automatic deployment is configured. The `night-nine` project uses `main` as its production branch; this workflow publishes only to the separate `review` branch at the URL above. The public repository has both required Actions secrets. For a new repository:
+The `night-nine` project uses `main` as its production branch. Push a stable version tag in `v1.MAJOR.MINOR.PATCH` form to deploy production automatically; regular pushes to `main` update only the review URL. The public repository has both required Actions secrets. For a new repository:
 
 1. Add `CLOUDFLARE_ACCOUNT_ID` and `CLOUDFLARE_API_TOKEN` as repository Actions secrets. Use a Cloudflare API token scoped to **Cloudflare Pages: Edit** for the selected account; do not use the broad Wrangler OAuth token. Missing secrets cause the workflow to report that deployment was skipped.
-2. Push a game, art, site, media-credit, license or deployment-workflow change to `main`, or run **Deploy Night Nine review to Cloudflare Pages** from the Actions tab on `main`.
+2. Push a game, art, site, asset, media-credit, license or deployment-workflow change to `main` to refresh the review site. Push a stable `v1.MAJOR.MINOR.PATCH` tag to run the production deployment.
 
-The workflow builds from the checked-out Git commit, downloads the official Godot 4.7.2 editor and matching template, verifies their SHA-512 hashes, and runs the site integrity and size checks before upload. The browser package is text-only until the generated voices receive listening approval. The review deployment does not make the game release-ready.
+The workflow builds from the checked-out Git commit, downloads the official Godot 4.7.2 editor and matching template, verifies their SHA-512 hashes, runs the campaign test suite and site integrity and size checks, then uploads the browser package. The approved character voices and storybook narration are enabled. The review deployment does not make the game release-ready.
 
-When both campaign and storybook voice playback gates are closed, the builder removes the staged replacement-voice directory from its temporary export snapshot. This keeps unapproved recordings out of the web download without changing the source checkout or voice manifests. Once playback is approved and enabled, the normal export retains the required runtime recordings.
+When both campaign and storybook voice playback gates are closed, the builder removes the staged replacement-voice directory from its temporary export snapshot. This keeps unapproved recordings out of the web download without changing the source checkout or voice manifests. With playback approved and enabled, the normal export retains the required runtime recordings.
 
 To build and upload manually after configuring Wrangler authentication:
 

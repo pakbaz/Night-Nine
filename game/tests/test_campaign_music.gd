@@ -133,7 +133,12 @@ func run() -> void:
 		check(heard.file != catalog.credits.file, "Keep the ending reward music out of " + str(scene.id))
 		if scene.id == "p_bay":
 			await create_timer(.35).timeout
-			check(not game.voice.playing and game.score.duck_db > -3.0, "Keep text-only dialogue silent without falsely ducking the score")
+			if game.voice_manifest.get("enabled",true):
+				check(game.voice.playing and game.score.duck_target_db <= -9.0 and game.score.duck_db < -3.0,
+					"Play approved dialogue and duck the score beneath it")
+			else:
+				check(not game.voice.playing and game.score.duck_db > -3.0,
+					"Keep text-only dialogue silent without falsely ducking the score")
 		finish_lines()
 		var deck := player()
 		if scene.id == "c1_dinner":

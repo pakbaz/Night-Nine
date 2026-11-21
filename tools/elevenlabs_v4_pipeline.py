@@ -568,6 +568,21 @@ def decode_mp3(audio_id, production=None):
         "-map", "0:a:0", "-map_metadata", "-1", "-ac", "1", "-ar", "48000",
         "-c:a", "pcm_s16le", str(pending),
     ], check=True)
+    plan_path = production / "plan.json"
+    if plan_path.is_file():
+        item = read_json(plan_path).get("items", {}).get(audio_id, {})
+        gain_db = item.get("master_gain_db", 0)
+        if not isinstance(gain_db, (int, float)) or not math.isfinite(gain_db) or abs(gain_db) > 12:
+            raise ValueError(f"Invalid master gain for {audio_id}")
+        if gain_db:
+            import numpy as np
+            import soundfile as sf
+            samples, rate = sf.read(pending, dtype="float32")
+            peak = float(np.max(np.abs(samples))) if len(samples) else 0
+            gain = 10 ** (gain_db / 20)
+            if peak * gain > .95:
+                gain = .95 / peak
+            sf.write(pending, samples * gain, rate, subtype="PCM_16")
     os.replace(pending, target)
     return target
 
@@ -690,16 +705,46 @@ def assess_transcript(report, checker):
 
 def verified_retakes(plan, checker):
     selected = {}
-    for folder in sorted((PRODUCTION / "retakes").glob("automatic-*")):
+    for folder in sorted((PRODUCTION / "retakes").glob("*")):
+        if not (folder / "plan.json").is_file() or not (folder / "results.json").is_file():
+            continue
         candidate_plan = read_json(folder / "plan.json")
         verify_frozen_inputs(candidate_plan)
         if candidate_plan.get("source_plan_sha256") != plan["plan_sha256"]:
             raise ValueError(f"Stale retake source plan: {folder.name}")
+        manual_review_path = folder / "manual-review.json"
+        manual_review = read_json(manual_review_path) if manual_review_path.is_file() else {}
+        if manual_review and (
+            manual_review.get("schema") != 1
+            or manual_review.get("decision") != "reviewed"
+            or not str(manual_review.get("reviewed_by", "")).strip()
+            or not str(manual_review.get("reviewed_at", "")).strip()
+            or manual_review.get("plan_sha256") != candidate_plan["plan_sha256"]
+            or manual_review.get("source_plan_sha256") != plan["plan_sha256"]
+            or set(manual_review.get("decisions", {})) != set(candidate_plan["items"])
+            or any(value not in {"accept", "retake"} for value in manual_review["decisions"].values())
+            or set(manual_review.get("audio_sha256", {})) != set(candidate_plan["items"])
+        ):
+            raise ValueError(f"Invalid or stale manual retake review: {folder.name}")
+        pronunciations = candidate_plan.get("user_approved_pronunciations", {})
         for audio_id, candidate in candidate_plan["items"].items():
             original = plan["items"][audio_id]
+            override = pronunciations.get(audio_id)
             if any(candidate.get(key) != value for key, value in original.items()
-                   if key not in {"voice_settings", "seed"}):
+                   if key not in {"voice_settings", "seed", "synthesis_text", "synthesis_text_sha256"}):
                 raise ValueError(f"Retake changed script or casting: {audio_id}")
+            if candidate.get("synthesis_text") != original["synthesis_text"]:
+                if (
+                    not isinstance(override, dict)
+                    or override.get("canonical_text") != original["text"]
+                    or override.get("synthesis_text") != candidate["synthesis_text"]
+                    or candidate.get("text") != original["text"]
+                    or candidate.get("synthesis_text_sha256") != text_sha(candidate["synthesis_text"])
+                    or not str(override.get("spoken_as", "")).strip()
+                ):
+                    raise ValueError(f"Unapproved phonetic spelling change: {audio_id}")
+            elif override and override.get("synthesis_text") != candidate["synthesis_text"]:
+                raise ValueError(f"Retake pronunciation evidence does not match: {audio_id}")
             if not proven_generation(candidate, candidate_plan["plan_sha256"], folder):
                 continue
             report_path = folder / "checks" / f"{audio_id}.json"
@@ -713,10 +758,22 @@ def verified_retakes(plan, checker):
                 or report.get("wav_sha256") != file_sha(folder / "masters" / f"{audio_id}.wav")
             ):
                 raise ValueError(f"Stale retake check: {audio_id}")
-            if comparison_distance(original["text"], report["recognized"], checker):
-                continue
             report["plan_sha256"] = plan["plan_sha256"]
-            if assess_transcript(report, checker) is None and report.get("independent_asr"):
+            if comparison_distance(original["text"], report["recognized"], checker):
+                if manual_review.get("decisions", {}).get(audio_id) != "accept":
+                    continue
+            elif (
+                manual_review.get("decisions", {}).get(audio_id) != "accept"
+                and assess_transcript(report, checker) is not None
+            ):
+                continue
+            if manual_review.get("decisions", {}).get(audio_id) == "accept":
+                master_sha = file_sha(folder / "masters" / f"{audio_id}.wav")
+                if manual_review["audio_sha256"].get(audio_id) != master_sha:
+                    raise ValueError(f"Manual retake review is stale: {audio_id}")
+            if manual_review.get("decisions", {}).get(audio_id) == "accept" or (
+                assess_transcript(report, checker) is None and report.get("independent_asr")
+            ):
                 selected[audio_id] = (folder, candidate_plan["plan_sha256"])
     return selected
 
@@ -888,11 +945,17 @@ def preserve_recorder_pcm(runtime):
     atomic_bytes(settings, revised.encode())
 
 
-def write_manual_review_files(plan, checks, hard_holds):
+def write_manual_review_files(plan, checks, hard_holds, review_root=None):
+    review_root = Path(review_root or PRODUCTION)
     entries = []
     for audio_id, reason in sorted(hard_holds.items()):
         item = plan["items"][audio_id]
         report = checks[audio_id]
+        audio = PRODUCTION / report.get("master", f"masters/{audio_id}.wav")
+        try:
+            relative_audio = os.path.relpath(audio, review_root)
+        except ValueError as error:
+            raise ValueError(f"Cannot create local review link for {audio_id}") from error
         entries.append({
             "audio_id": audio_id,
             "reason": reason,
@@ -903,7 +966,7 @@ def write_manual_review_files(plan, checks, hard_holds):
             "expected": item["text"],
             "recognized": report["recognized"],
             "word_edits": report["word_edits"],
-            "wav": report.get("master", f"masters/{audio_id}.wav"),
+            "wav": relative_audio,
             "check": f"checks/{audio_id}.json",
         })
     payload = {
@@ -913,8 +976,8 @@ def write_manual_review_files(plan, checks, hard_holds):
         "count": len(entries),
         "entries": entries,
     }
-    atomic_json(PRODUCTION / "manual-review-required.json", payload)
-    csv_path = PRODUCTION / "manual-review-required.csv"
+    atomic_json(review_root / "manual-review-required.json", payload)
+    csv_path = review_root / "manual-review-required.csv"
     csv_path.parent.mkdir(parents=True, exist_ok=True)
     pending = csv_path.with_name(csv_path.name + f".partial-{uuid.uuid4().hex}")
     with pending.open("w", newline="", encoding="utf-8") as handle:
@@ -943,16 +1006,23 @@ def write_manual_review_files(plan, checks, hard_holds):
                 html.escape(entry["recognized"]),
             )
         )
+    heading = "Night Nine: required voice review" if entries else "Night Nine: voice review status"
+    message = (
+        f"Review only these {len(entries)} held takes. This page does not approve anything."
+        if entries else "No listening review is pending. Decisions are recorded in the final voice review receipt."
+    )
     page = """<!doctype html><meta charset="utf-8"><title>Night Nine voice review</title>
 <style>body{font:16px system-ui;max-width:1000px;margin:2rem auto;padding:0 1rem;background:#151719;color:#eee}
 section{border:1px solid #555;border-radius:8px;padding:1rem;margin:1rem 0}audio{width:100%%}
 code{color:#d8ba7d}b{color:#a9d6ce}</style>
-<h1>Night Nine: required voice review</h1>
+<h1>%s</h1>
 <p><strong>Story spoilers below.</strong> Listen before judging transcript differences.</p>
-<p>Plan <code>%s</code>. Review only these %d held takes. This page does not approve anything.</p>
-%s
-""" % (html.escape(plan["plan_sha256"]), len(entries), "\n".join(cards))
-    atomic_bytes(PRODUCTION / "manual-review.html", page.encode())
+<p>Plan <code>%s</code>. %s</p>
+%s""" % (
+        html.escape(heading), html.escape(plan["plan_sha256"]),
+        html.escape(message), "\n".join(cards),
+    )
+    atomic_bytes(review_root / "manual-review.html", page.encode())
 
 
 def validate_and_stage(plan):
@@ -1232,6 +1302,65 @@ def validate_and_stage(plan):
     return overlay
 
 
+def apply_manual_review(overlay, review, receipt_ref, reviewer_root=ROOT):
+    all_takes = overlay["campaign"]["takes"] | overlay["narration"]["takes"]
+    holds = overlay.get("review", {}).get("hard_holds", {})
+    decisions = review.get("decisions")
+    if not isinstance(decisions, dict):
+        reviewed = set(review.get("reviewed_audio_ids", []))
+        decisions = {audio_id: "accept" for audio_id in reviewed}
+    if (
+        review.get("decision") not in {"accepted", "reviewed"}
+        or not str(review.get("reviewed_by", "")).strip()
+        or not str(review.get("reviewed_at", "")).strip()
+        or set(decisions) != set(holds)
+        or any(value not in {"accept", "retake"} for value in decisions.values())
+        or set(decisions) - set(all_takes)
+    ):
+        raise ValueError("Manual review receipt must truthfully decide every held take")
+    accepted = {audio_id for audio_id, decision in decisions.items() if decision == "accept"}
+    retakes = {audio_id for audio_id, decision in decisions.items() if decision == "retake"}
+    for audio_id in accepted:
+        all_takes[audio_id]["listening_reviewed"] = True
+        all_takes[audio_id]["status"] = "manual_review_passed"
+    for audio_id in retakes:
+        all_takes[audio_id]["listening_reviewed"] = True
+        all_takes[audio_id]["status"] = "retake_requested"
+    overlay["review"]["resolved_holds"] = {
+        **overlay["review"].get("resolved_holds", {}),
+        **{audio_id: holds[audio_id] for audio_id in accepted},
+    }
+    overlay["review"]["hard_holds"] = {
+        audio_id: holds[audio_id] for audio_id in sorted(retakes)
+    }
+    receipts = overlay["review"].get("manual_review_receipts", [])
+    receipt_ref = str(Path(receipt_ref).resolve().relative_to(Path(reviewer_root).resolve()))
+    if receipt_ref not in receipts:
+        receipts.append(receipt_ref)
+    overlay["review"]["manual_review_receipts"] = receipts
+    overlay["review"]["retake_requests"] = {
+        **overlay["review"].get("retake_requests", {}),
+        **{audio_id: review.get("retake_notes", {}).get(audio_id, "") for audio_id in sorted(retakes)},
+    }
+    overlay["review"]["reviewed_by"] = review["reviewed_by"]
+    overlay["review"]["reviewed_at"] = review["reviewed_at"]
+    invalid = {
+        audio_id: take.get("status")
+        for audio_id, take in all_takes.items()
+        if take.get("status") not in {"automated_qa_passed", "manual_review_passed"}
+        and not (take.get("status") == "retake_requested" and audio_id in retakes)
+    }
+    if invalid:
+        raise ValueError(f"Voice overlay still has invalid takes: {invalid}")
+    ready = not overlay.get("review", {}).get("hard_holds") and all(
+        take.get("status") in {"automated_qa_passed", "manual_review_passed"}
+        for take in all_takes.values()
+    )
+    overlay["review"]["activation_ready"] = ready
+    overlay["quality_approved"] = ready
+    return overlay
+
+
 def activate_overlay(plan, review_path=None):
     verify_frozen_inputs(plan)
     overlay = read_json(OVERLAY_PATH)
@@ -1244,35 +1373,27 @@ def activate_overlay(plan, review_path=None):
     if set(all_takes) != set(plan["items"]):
         raise ValueError("Staged overlay is incomplete")
     holds = overlay.get("review", {}).get("hard_holds", {})
-    if holds:
-        if review_path is None:
-            raise ValueError("Actual review is required for held takes")
+    if holds and review_path is None:
+        raise ValueError("Actual review is required for held takes")
+    if review_path is not None:
         review = read_json(review_path)
-        reviewed = set(review.get("reviewed_audio_ids", []))
         if (
             review.get("plan_sha256") != plan["plan_sha256"]
             or review.get("casting_sha256") != plan["inputs"]["casting"]
-            or review.get("decision") != "accepted"
-            or not str(review.get("reviewed_by", "")).strip()
-            or not str(review.get("reviewed_at", "")).strip()
-            or reviewed != set(holds)
         ):
-            raise ValueError("Manual review receipt must truthfully cover every held take")
-        for audio_id in reviewed:
-            all_takes[audio_id]["listening_reviewed"] = True
-            all_takes[audio_id]["status"] = "manual_review_passed"
-        overlay["review"]["resolved_holds"] = holds
-        overlay["review"]["hard_holds"] = {}
-        overlay["review"]["manual_review_receipt"] = str(Path(review_path).relative_to(ROOT))
-    invalid = {
-        audio_id: take.get("status")
-        for audio_id, take in all_takes.items()
-        if take.get("status") not in {"automated_qa_passed", "manual_review_passed"}
-    }
-    if invalid:
-        raise ValueError(f"Voice overlay still has invalid takes: {invalid}")
-    overlay["review"]["activation_ready"] = True
-    overlay["quality_approved"] = True
+            raise ValueError("Manual review receipt is stale")
+        overlay = apply_manual_review(overlay, review, review_path)
+    elif not holds:
+        all_takes = overlay["campaign"]["takes"] | overlay["narration"]["takes"]
+        invalid = {
+            audio_id: take.get("status")
+            for audio_id, take in all_takes.items()
+            if take.get("status") not in {"automated_qa_passed", "manual_review_passed"}
+        }
+        if invalid:
+            raise ValueError(f"Voice overlay still has invalid takes: {invalid}")
+        overlay["review"]["activation_ready"] = True
+        overlay["quality_approved"] = True
     atomic_json(OVERLAY_PATH, overlay)
     return overlay
 

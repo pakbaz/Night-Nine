@@ -1,0 +1,25 @@
+{
+  "audio_id": "c10_live.second.01",
+  "source_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "plan_sha256": "5e6c7b37af92b77cc875b855c9cbb16a299b9a3fedb5664cc378a6f6d93f2243",
+  "expected": "Holding. Now, Wen.",
+  "synthesis_text": "Holding. Now... Wen.",
+  "recognized": "Holding. Now. When.",
+  "word_edits": 1,
+  "listening_reviewed": false,
+  "candidate_audio_sha256": "93db66d0df94658827fe681c513d2a3ca95684ab27367ff3196d1d33fe768cde",
+  "wav_sha256": "93db66d0df94658827fe681c513d2a3ca95684ab27367ff3196d1d33fe768cde",
+  "generation_plan_sha256": "5e6c7b37af92b77cc875b855c9cbb16a299b9a3fedb5664cc378a6f6d93f2243",
+  "pronunciation_override": {
+    "canonical_text": "Holding. Now, Wen.",
+    "spoken_as": "Wen as a person's name, with direct-address emphasis; no added words.",
+    "synthesis_text": "Holding. Now... Wen.",
+    "approved_by": "S3PehR",
+    "approved_at": "2026-11-21T12:24:59-08:00"
+  },
+  "review_direction": "Keep the exact words and voice. Use a clear pause and direct-address emphasis for Wen as a person's name; add no words.",
+  "seconds": 2.72,
+  "sample_rate": 48000,
+  "peak": 0.4580078125,
+  "rms": 0.04446348920464516
+}

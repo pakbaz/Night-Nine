@@ -8,7 +8,7 @@ A painted point-and-click mystery set in Bellwether. Steve Mercer hears the same
 
 ## Play
 
-**[Play the Cloudflare Pages review build](https://review.night-nine.pages.dev)**. First load is about 403 MiB. The preview is deployed from `main` to a separate `review` branch. The current build uses subtitles; generated replacement voices remain disabled, and native story timing is still under investigation.
+**[Play the Cloudflare Pages review build](https://review.night-nine.pages.dev)**. The preview is deployed from `main` to a separate `review` branch. It includes the approved character voices and storybook narration, with the opening music mixed beneath the narration.
 
 Cloudflare Pages is the only game host. GitHub hosts the source and runs the build/deployment workflow; GitHub Pages is retired.
 
@@ -70,4 +70,4 @@ You can play the official release for free. The Night Nine contributors license 
 
 When publishing downloads, provide the matching complete corresponding source alongside the binaries. See [the Cloudflare publishing guide](PUBLISHING.md) for the build and deployment steps.
 
-The review site is a public preview, not a final release. The revised script currently runs with subtitles and voice playback disabled while 120 generated takes await listening review. The native story-timing investigation is also open. Historical recordings remain preserved. [Complete story walkthrough (spoilers)](docs/story-walkthrough.md) · [Script and recording handoff](docs/script-v2/README.md)
+The review site is a public preview, not a final release. The approved voice set and storybook narration are enabled; historical recordings remain preserved. [Complete story walkthrough (spoilers)](docs/story-walkthrough.md) · [Script and recording handoff](docs/script-v2/README.md)

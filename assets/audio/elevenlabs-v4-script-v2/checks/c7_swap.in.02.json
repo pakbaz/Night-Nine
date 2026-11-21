@@ -1,26 +1,31 @@
 {
   "audio_id": "c7_swap.in.02",
+  "source_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
   "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
-  "wav_sha256": "c1cc23d1490b2491d6ee14a627a611f95a5e243a82bd973b882a67028a0fb440",
   "expected": "What’s Tirel?",
-  "recognized": "What's Tyrell?",
-  "word_edits": 1,
-  "word_error_rate": 0.3333333333333333,
-  "listening_review_required": true,
-  "seconds": 1.2,
+  "synthesis_text": "What’s Teee... Rel?",
+  "recognized": "What's Tirel?",
+  "word_edits": 0,
+  "listening_reviewed": false,
+  "candidate_audio_sha256": "baf77c46debe4bc286384c59ccdcd4efc6125e107cac23bdd41e95d3c2a37414",
+  "wav_sha256": "baf77c46debe4bc286384c59ccdcd4efc6125e107cac23bdd41e95d3c2a37414",
+  "generation_plan_sha256": "5e6c7b37af92b77cc875b855c9cbb16a299b9a3fedb5664cc378a6f6d93f2243",
+  "pronunciation_override": {
+    "canonical_text": "What’s Tirel?",
+    "spoken_as": "Tee-rel",
+    "synthesis_text": "What’s Teee... Rel?",
+    "approved_by": "S3PehR",
+    "approved_at": "2026-11-21T12:24:59-08:00"
+  },
+  "review_direction": "Do not say T-Roll. Make the first Tee syllable longer and separate it clearly from Rel; keep the written subtitle Tirel.",
+  "seconds": 2.48,
   "sample_rate": 48000,
-  "peak": 0.25750732421875,
-  "rms": 0.039085857570171356,
-  "first_recognition": "What's Tyrol?",
+  "peak": 0.239593505859375,
+  "rms": 0.030987590551376343,
+  "first_recognition": "What's T-Rell?",
   "recognition_pass": "story_vocabulary_2",
+  "word_error_rate": 0.0,
   "asr_revision": 2,
   "transcript_comparison": "strict normalized English spoken forms",
-  "local_recognized": "What's Tirel?",
-  "independent_asr": {
-    "file": "independent-asr/scribe-v3/c7_swap.in.02.json",
-    "sha256": "1b88ef77049b2d4ed8569e8580dc7b8a1bbb1a31259f2ef56e9a1660b905a466",
-    "model": "scribe_v3",
-    "word_edits": 1,
-    "listening_reviewed": false
-  }
+  "master": "retakes/user-review-2026-11-21-attempt-5/masters/c7_swap.in.02.wav"
 }

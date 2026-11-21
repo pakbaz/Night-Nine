@@ -1,19 +1,22 @@
-name: Deploy Night Nine review to Cloudflare Pages
+name: Test and deploy Night Nine to Cloudflare Pages
 
 on:
   push:
     branches:
       - main
+    tags:
+      - v1.*
     paths:
       - art/**
       - game/**
       - site/**
+      - assets/**
+      - tools/**
       - MEDIA.md
+      - README.md
+      - PUBLISHING.md
       - LICENSE
       - .github/workflows/cloudflare-pages.yml
-      - tools/build-pages.py
-      - tools/split-site.py
-      - tools/check-site.py
   workflow_dispatch:
 
 concurrency:
@@ -24,8 +27,8 @@ permissions:
   contents: read
 
 jobs:
-  deploy-review:
-    if: github.ref == 'refs/heads/main'
+  deploy-pages:
+    if: github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/tags/v1.')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -51,9 +54,30 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Install test dependencies
+        run: python -m pip install -r tools/requirements-test.txt
+
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
+
+      - name: Validate stable V1 release tag
+        if: github.ref_type == 'tag'
+        env:
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: |
+          if [[ ! "$RELEASE_TAG" =~ ^v1\.[0-9]+\.[0-9]+$ ]]; then
+            echo "Production deploys require a stable v1.MAJOR.MINOR.PATCH tag." >&2
+            exit 1
+          fi
+
+      - name: Run voice pipeline tests
+        run: python tools/test-elevenlabs-v4-pipeline.py
+
+      - name: Run campaign tests
+        env:
+          GODOT_BIN: ${{ runner.temp }}/Godot_v4.7.2-stable_linux.x86_64
+        run: bash tools/test-campaign.sh
 
       - name: Build and verify the static review site
         run: |
@@ -81,16 +105,20 @@ jobs:
             echo "configured=false" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Deploy the review branch
+      - name: Deploy the review or production branch
         if: steps.cloudflare.outputs.configured == 'true'
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         run: |
           set -euo pipefail
+          branch=review
+          if [[ "$GITHUB_REF_TYPE" == "tag" ]]; then
+            branch=main
+          fi
           npx --yes wrangler@4.166.0 pages deploy builds/web \
             --project-name night-nine \
-            --branch review
+            --branch "$branch"
 
       - name: Report that Cloudflare setup is required
         if: steps.cloudflare.outputs.configured != 'true'
@@ -98,6 +126,13 @@ jobs:
           echo "Build passed, but no deployment was made. Add CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID as repository Actions secrets." >> "$GITHUB_STEP_SUMMARY"
           echo "Create the night-nine Pages project first; see PUBLISHING.md."
 
-      - name: Publish review URL
+      - name: Publish deployment URL
         if: steps.cloudflare.outputs.configured == 'true'
-        run: echo "Review the game at https://review.night-nine.pages.dev" >> "$GITHUB_STEP_SUMMARY"
+        env:
+          GITHUB_REF_TYPE: ${{ github.ref_type }}
+        run: |
+          if [[ "$GITHUB_REF_TYPE" == "tag" ]]; then
+            echo "Production: https://night-nine.pages.dev" >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "Review: https://review.night-nine.pages.dev" >> "$GITHUB_STEP_SUMMARY"
+          fi

@@ -15,7 +15,8 @@ func verify_native_line() -> void:
 		return
 	var preferred: String = game.voice_manifest.takes[audio_id].file
 	var actual: String = game.voice.stream.resource_path if game.voice.stream else ""
-	check(actual==preferred and actual.begins_with("res://assets/audio/voices/elevenlabs-v4/"),"Preferred native recording for "+game.active_line)
+	check(actual==preferred and actual.begins_with("res://assets/audio/voices/elevenlabs-v4-script-v2/"),
+		"Play the approved recording for "+game.active_line)
 	recordings[game.active_line]=actual
 
 func check_speaking_face() -> void:
@@ -120,7 +121,7 @@ func _run() -> void:
 				check(art.texture != null,"Loaded foreground "+slot)
 		var speaker_ids: Array = []
 		while game.dialogue_panel.visible:
-			check(not game.words.text.is_empty() and not game.voice.playing,"Text-only arrival caption "+game.active_line)
+			check(not game.words.text.is_empty(),"Show arrival caption "+game.active_line)
 			speaker_ids.append(game.active_line)
 			await check_speaking_face()
 			if speaker_ids.size()==1:
@@ -210,8 +211,12 @@ func _run() -> void:
 		details[slot] = {"heard":speaker_ids,"hotspots":hit_locations}
 	check(game.campaign.current().id == "c8_lab","Sentinel Point returns to the Meridian laboratory")
 	check(game.stage.room_id == "c8_lab" and game.stage is Control,"Chapter 8 continues in the illustrated campaign")
-	check(recordings.is_empty(),"Text-only prologue plays no character recordings")
-	check(mouths.is_empty(),"Text-only prologue does not fake mouth timing")
+	if game.voice_manifest.get("enabled",true):
+		check(not recordings.is_empty(),"Play the approved prologue recordings")
+		check(not mouths.is_empty(),"Use recorded timing for prologue mouth animation")
+	else:
+		check(recordings.is_empty(),"Text-only prologue plays no character recordings")
+		check(mouths.is_empty(),"Text-only prologue does not fake mouth timing")
 	var result := {"recordings":recordings,"verified_group_laugh":heard_reaction,"speaking_faces":mouths,"checks":checks,"failures":failures,"scenes":details,"captures":screenshots,"next_scene":game.campaign.current().id,"renderer":RenderingServer.get_current_rendering_method()}
 	var output := FileAccess.open(report_root.path_join("prologue-gameplay.json"),FileAccess.WRITE)
 	output.store_string(JSON.stringify(result,"  "))

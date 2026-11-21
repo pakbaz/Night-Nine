@@ -28,8 +28,10 @@ func _check_story_shape(state: NightCampaign) -> void:
 		check(scenes[_scene_index(state, id)].get("card", {}).has("page"), "Time-jump page for " + id)
 	var books: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://content/storybook.json")).books
 	var narration: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://content/narration.json"))
+	var voice: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://content/voice-manifest.json"))
 	var music: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://content/music.json"))
-	check(narration.get("enabled",true)==false,"Rewritten storybooks start in text-only mode")
+	var narration_enabled: bool = bool(narration.get("enabled",true))
+	check(narration_enabled == bool(voice.get("enabled",true)), "Storybook and dialogue voice activation match")
 	for key: String in ["opening", "aftermath", "after"]:
 		var book: Dictionary = books[key]
 		check(_scene_index(state, str(book.before)) >= 0, "Storybook " + key + " leads into a real scene")
@@ -41,6 +43,7 @@ func _check_story_shape(state: NightCampaign) -> void:
 			last = float(panel.bar)
 			for line: Dictionary in panel.lines:
 				check(float(line.bar) >= float(panel.bar) and not str(line.text).contains("—"), "Caption sits inside its panel in " + key)
+				check(str(line.get("narration","")).is_empty() != narration_enabled, "Narration follows the approved voice gate: " + str(line.text))
 				check(not str(line.text).is_empty() and (str(line.get("narration","")).is_empty()
 					or ResourceLoader.exists(str(line.narration))),"Caption does not depend on recorded narration: "+str(line.text))
 	check(str(books.opening.before) == str(scenes[0].id), "The opening storybook comes first")

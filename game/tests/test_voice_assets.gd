@@ -20,13 +20,16 @@ func _initialize() -> void:
 	for line: Dictionary in content.lines.values():
 		required[line.audio] = true
 	check(takes.size()==required.size(),"Recorded-take inventory matches the current script")
-	check(manifest.get("enabled",true)==false,"Rewritten campaign starts in text-only mode")
+	var narration: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://content/narration.json"))
+	var voice_enabled: bool = bool(manifest.get("enabled",true))
+	check(voice_enabled == bool(narration.get("enabled",true)), "Campaign and storybook share the approved voice gate")
 	var private: Dictionary = content.lines["i2_nora.message.01"]
 	var replay: Dictionary = content.lines["c9_gallery.out.03"]
 	check(private.audio == replay.audio and private.text == replay.text, "Retain one Nora intercom recording from capture to replay")
 	check(private.delivery == "private_recording" and replay.delivery == "recorded_playback", "Preserve the final plot's delayed message reveal")
 	var first_line: Dictionary = content.lines["p_bay.in.02"]
-	check(player._recording_for(first_line.audio, first_line.text).take.is_empty(), "Disabled voice mode returns no spoken take")
+	check(player._recording_for(first_line.audio, first_line.text).take.is_empty() == not voice_enabled,
+		"Current voice gate controls spoken takes")
 	player.voice_manifest.enabled = true
 	check(not player._recording_for(first_line.audio, first_line.text).take.is_empty(), "Matching text hash enables the current take")
 	check(player._recording_for(first_line.audio, first_line.text + " revised").take.is_empty(), "A revised line never plays an old take")
@@ -44,7 +47,7 @@ func _initialize() -> void:
 				continue
 			var stream: AudioStream = load(path)
 			check(stream!=null and absf(stream.get_length()-float(take.seconds))<0.04,"Decoded duration "+id)
-			check(take.get("status","") in ["automated_checks_passed","reviewed"],"Transcript status "+id)
+			check(take.get("status","") in ["automated_qa_passed","manual_review_passed"],"Transcript status "+id)
 			if take.has("fallback"):
 				var selected := player._recording_for(id)
 				check(selected.take.file == path and selected.timing.audio_sha256 == take.sha256, "Active voice and mouth cues "+id)

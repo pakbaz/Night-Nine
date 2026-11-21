@@ -8,6 +8,7 @@ var report_root := ""
 var shots: Array[String] = []
 var timing := []
 var narrated := 0
+var opening_mix_checked := false
 var silent_lines: Array = []
 var fates: Array = []
 ## Frames longer than a quarter second, with where the music was. A throttled or
@@ -32,6 +33,18 @@ func check(ok: bool, message: String) -> void:
 	if not ok:
 		failures.append(message)
 		push_error(message)
+
+func verify_opening_mix() -> void:
+	opening_mix_checked = true
+	check(game.storybook.visible and game.voice.playing, "Play the opening narration over the storybook")
+	check(game.score.current_file.ends_with("prologue-theme.mp3"), "Keep opening music under the narration")
+	check(game.score.duck_db <= -13.9, "Lower opening music under the voice")
+	if game.score.active_index >= 0:
+		var deck: AudioStreamPlayer = game.score.players[game.score.active_index]
+		check(deck.playing and deck.volume_db > game.score.SILENT_DB, "Keep the opening music audible while ducked")
+	else:
+		check(false, "Keep the opening music deck active")
+	check(game.voice.volume_linear > 0.0, "Keep the opening voice audible")
 
 func capture(label: String) -> void:
 	for frame: int in 3:
@@ -155,12 +168,15 @@ func _run() -> void:
 		if game.voice.playing and str(game.voice.stream.resource_path) == str(line.get("narration", "")):
 			narrated += 1
 		else:
-			silent_lines.append({"text": line.text, "narration": line.get("narration", ""), "music_seconds": snappedf(game.score.position(), .01), "book_index": game.storybook.index}))
+			silent_lines.append({"text": line.text, "narration": line.get("narration", ""), "music_seconds": snappedf(game.score.position(), .01), "book_index": game.storybook.index})
+		if str(line.get("narration", "")).ends_with("/book.opening.5.1.wav"):
+			get_tree().create_timer(.2).timeout.connect(verify_opening_mix))
 	game._new_game()
 	await get_tree().process_frame
 	check(game.storybook.visible and game.campaign.current().id == "p_bay", "New game opens with the backstory, before the bay")
 	check(game.score.current_file.ends_with("prologue-theme.mp3"), "The backstory plays over the Three Nights theme")
 	await watch_book("01-opening", 2)
+	check(opening_mix_checked, "Check the opening narration and music mix")
 	check(await until(func(): return game.title_card.visible, 3.0), "The prologue card follows the backstory")
 	check(game.score.current_file.ends_with("prologue-bgm.mp3"), "The bay brings in its own music under the card")
 	await wait(1.6)
@@ -240,8 +256,8 @@ func _run() -> void:
 	game.title_card.finish_now()
 	await finish_dialogue()
 	await capture("18-one-year")
-	check(narrated == 0 and silent_lines.size() >= 20, "Text-only storybook keeps every reached caption readable without voice")
-	check(fates.all(func(f: Dictionary): return f.fate != "audio_error"), "Text-only caption playback reports no audio errors")
+	check(narrated > 0 and silent_lines.is_empty(), "Reached storybook captions use their approved recordings")
+	check(fates.all(func(f: Dictionary): return f.fate != "audio_error"), "Storybook narration reports no audio errors")
 	var file := FileAccess.open(report_root.path_join("story-flow.json"), FileAccess.WRITE)
 	file.store_string(JSON.stringify({"checks": checks, "failures": failures, "timing": timing, "silent_lines": silent_lines, "narration": fates, "longest_frame": snappedf(longest_frame, .001), "hitches": hitches, "screenshots": shots}, "  ") + "\n")
 	file.close()

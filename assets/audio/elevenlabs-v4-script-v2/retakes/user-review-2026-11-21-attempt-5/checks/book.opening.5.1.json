@@ -1,0 +1,19 @@
+{
+  "audio_id": "book.opening.5.1",
+  "source_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "plan_sha256": "5e6c7b37af92b77cc875b855c9cbb16a299b9a3fedb5664cc378a6f6d93f2243",
+  "expected": "Eighteen months ago, they rowed out into the bay after dark. They said the water was making a sound.",
+  "synthesis_text": "Eighteen months ago, they rowed out into the bay after dark. They said the water was making a sound.",
+  "recognized": "Eighteen months ago, they rode out into the bay after dark. They said the water was making a sound.",
+  "word_edits": 1,
+  "listening_reviewed": false,
+  "candidate_audio_sha256": "a70b0a98c43220a17675c465e8a6e43d882e31d30fd4a378b762a1fe6c38a333",
+  "wav_sha256": "a70b0a98c43220a17675c465e8a6e43d882e31d30fd4a378b762a1fe6c38a333",
+  "generation_plan_sha256": "5e6c7b37af92b77cc875b855c9cbb16a299b9a3fedb5664cc378a6f6d93f2243",
+  "pronunciation_override": null,
+  "review_direction": "Same voice, firmer and more dominant, with more vocal variation; louder alone is not enough.",
+  "seconds": 6.8,
+  "sample_rate": 48000,
+  "peak": 0.666259765625,
+  "rms": 0.0614958330988884
+}

@@ -138,7 +138,9 @@ func operate(task: Dictionary) -> void:
 			var play := game.interaction.get_node("ReelPlay%d" % i) as Button
 			await press_control(play)
 			if game.voice_manifest.get("enabled",true):
-				check(game.voice.playing and game.voice.stream.resource_path == str(game._recording_for(task.sounds[i]).take.file), "Preview original recorder cue " + str(i + 1) + " in " + task.id)
+				var id: String = task.sounds[i]
+				var take: Dictionary = game.sound_manifest.get(id.trim_prefix("effect."), {}) if id.begins_with("effect.") else game._recording_for(id).take
+				check(game.voice.playing and game.voice.stream.resource_path == str(take.get("file","")), "Preview original recorder cue " + str(i + 1) + " in " + task.id)
 			else:
 				check(not game.voice.playing,"Keep recorder cue text-only "+str(i+1)+" in "+task.id)
 		var reveal := game.interaction.get_node("ReelCaptions") as CheckButton

@@ -104,7 +104,11 @@ func _run() -> void:
 	var limit:=Time.get_ticks_msec()+2000
 	while person.last_mouth.is_empty() and game.voice.playing and Time.get_ticks_msec()<limit:
 		await get_tree().process_frame
-	check(person.last_mouth.is_empty() and not person.mouth.visible,"Keep text-only Steve dialogue free of fake mouth timing")
+	if game.voice_manifest.get("enabled",true):
+		check(person.voice==game.voice and not person.cues.is_empty() and not person.last_mouth.is_empty() and person.mouth.visible,
+			"Drive Steve's mouth with the approved recording timing")
+	else:
+		check(person.last_mouth.is_empty() and not person.mouth.visible,"Keep text-only Steve dialogue free of fake mouth timing")
 	game._pause_audio(true)
 	var camera_before: Vector2=game.stage.aim
 	var clock_before: float=game.stage.clock
@@ -121,7 +125,11 @@ func _run() -> void:
 	check(game.active_line == "c9_gallery.talk.01", "Restore interrupted reunion with the unheard line")
 	check(game.stage.actors.nora.visible, "Restore Nora's release state")
 	check(game.stage.actors.steve.voice==game.voice, "Restore speech binding after load")
-	check(game.stage.actors.steve.cues.is_empty(), "Keep interrupted text-only dialogue free of stale mouth timing")
+	if game.voice_manifest.get("enabled",true):
+		check(game.stage.actors.steve.voice==game.voice and not game.stage.actors.steve.cues.is_empty(),
+			"Restore interrupted dialogue with the matching voice timing")
+	else:
+		check(game.stage.actors.steve.cues.is_empty(), "Keep interrupted text-only dialogue free of stale mouth timing")
 	var original_timing: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://content/lipsync-manifest.json"))
 	check(game.lipsync_manifest == original_timing, "Preserve the shared timing manifest across speaker changes and loading")
 	game._next_line()
@@ -139,7 +147,13 @@ func _run() -> void:
 	await shot("gallery-exploration")
 	game._speak(["c9_gallery.out.03"], Callable())
 	await wait_frames(3)
-	check(not game.voice.playing, "Keep Nora's revised intercom reveal text-only")
+	var replay: Dictionary=game.campaign.content.lines["c9_gallery.out.03"]
+	var replay_take: Dictionary=game._recording_for(replay.audio,replay.text).take
+	if game.voice_manifest.get("enabled",true):
+		check(not replay_take.is_empty() and game.voice.playing and game.voice.stream.resource_path==replay_take.file,
+			"Play Nora's approved intercom reveal recording")
+	else:
+		check(not game.voice.playing, "Keep Nora's revised intercom reveal text-only")
 	check(game.stage.dialogue_shot.type=="insert" and game.stage.dialogue_shot.recorded, "Show the listeners during recorded playback")
 	check(game.stage.actors.nora.voice==null and game.stage.actors.steve.voice==null, "Keep live mouths neutral during the recording")
 	game._skip_dialogue()

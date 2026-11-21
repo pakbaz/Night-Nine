@@ -129,9 +129,14 @@ func _run() -> void:
 	while game.title_card.visible and Time.get_ticks_msec()<card_deadline:
 		await get_tree().process_frame
 	check(game.dialogue_panel.visible,"The Archivist's memory begins after its page")
-	var arrival_text: String=game.campaign.content.lines[game.active_line].text
-	check(not game.voice.playing and game.line_remaining>=game._reading_time(arrival_text)-.2,
-		"Text-only arrival uses reading time without recorded voice")
+	var arrival: Dictionary=game.campaign.content.lines[game.active_line]
+	var arrival_take: Dictionary=game._recording_for(arrival.audio,arrival.text).take
+	if game.voice_manifest.get("enabled",true):
+		check(not arrival_take.is_empty() and game.voice.playing and game.voice.stream.resource_path==arrival_take.file,
+			"Play the approved arrival recording")
+	else:
+		check(not game.voice.playing and game.line_remaining>=game._reading_time(arrival.text)-.2,
+			"Text-only arrival uses reading time without recorded voice")
 	game._save("qa-mid-dialogue")
 	game._load("qa-mid-dialogue")
 	check(game.dialogue_panel.visible and game.active_line=="p_veyr.in.01","Load repeats the interrupted arrival line")

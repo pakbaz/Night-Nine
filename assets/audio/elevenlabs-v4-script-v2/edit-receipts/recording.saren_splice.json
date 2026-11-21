@@ -3,18 +3,6 @@
   "audio_id": "recording.saren_splice",
   "source_audio_id": "recording.voicemail",
   "source_sha256": "60826a238807a1e738911ae2f12428816261618e0251fa757377a3ee1a3ec532",
-  "source_intervals": [
-    [
-      0.06,
-      1.2
-    ],
-    [
-      3.04,
-      3.52
-    ]
-  ],
-  "gap_seconds": 0.22,
-  "output_sha256": "057b76d8e492bb8af592ab7e0417d131d2f9243c6b9e9ba4d2627b2f01f8ac4e",
   "alignment": {
     "file": "independent-asr/scribe-v3/recording.voicemail.json",
     "sha256": "b41b726869a639e0d9c6852bee46dfd1da628ca137d207b2232606ff94063086",
@@ -71,5 +59,17 @@
       "start": 2.84,
       "end": 3.16
     }
-  ]
+  ],
+  "source_intervals": [
+    [
+      0.06,
+      1.2
+    ],
+    [
+      3.04,
+      3.52
+    ]
+  ],
+  "gap_seconds": 0.22,
+  "output_sha256": "057b76d8e492bb8af592ab7e0417d131d2f9243c6b9e9ba4d2627b2f01f8ac4e"
 }

@@ -1,0 +1,27 @@
+{
+  "candidate_plan_sha256": "5e6c7b37af92b77cc875b855c9cbb16a299b9a3fedb5664cc378a6f6d93f2243",
+  "generated": [
+    {
+      "audio_id": "book.opening.5.1",
+      "character_cost": 44,
+      "request_id": "VMyfYb5dWhszh4SmCQCJ",
+      "audio_sha256": "f421543aa56e95fd2f4233d67a80ceb3887946c17f142126441f17f3b30c6b66"
+    },
+    {
+      "audio_id": "c10_live.second.01",
+      "character_cost": 9,
+      "request_id": "MuE0WWffS6mM8axNpLtH",
+      "audio_sha256": "4de9ab9654424d4a4a6cb880956f4a08b74f7ed48c60e874061e22e477ddb2f1"
+    },
+    {
+      "audio_id": "c7_swap.in.02",
+      "character_cost": 8,
+      "request_id": "mUi75I0rH2MchE9bSmQN",
+      "audio_sha256": "d32af78f601ac885815d2378a9e86f29c695c34d23779e2dec74b1c6124fed78"
+    }
+  ],
+  "estimated_included_credits": 139,
+  "included_credits_before": 97976,
+  "included_credits_after": 97976,
+  "paid_overage_enabled": false
+}

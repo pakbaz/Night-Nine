@@ -1,81 +1,81 @@
 {
   "schema": 1,
-  "enabled": false,
+  "enabled": true,
   "voice": "ElevenLabs v4, approved Night Nine cast",
   "books": {
     "opening": [
       {
-        "file": "",
+        "file": "res://assets/audio/voices/elevenlabs-v4-script-v2/book.opening.1.1.wav",
         "seconds": 3.36,
         "caption": "Bellwether. A fishing town on the Pacific coast.",
         "status": "automated_qa_passed",
         "text_hash": "850eeb865472c02f"
       },
       {
-        "file": "",
+        "file": "res://assets/audio/voices/elevenlabs-v4-script-v2/book.opening.1.2.wav",
         "seconds": 4.72,
         "caption": "Six thousand people, one radio station, and a lot of fog.",
         "status": "automated_qa_passed",
         "text_hash": "b7af617247da6173"
       },
       {
-        "file": "",
+        "file": "res://assets/audio/voices/elevenlabs-v4-script-v2/book.opening.2.1.wav",
         "seconds": 6.8,
         "caption": "I’m Steve Mercer. For twelve years I ran the night shift at KBWR, the town radio station.",
         "status": "automated_qa_passed",
         "text_hash": "3b4333776d6e6e70"
       },
       {
-        "file": "",
+        "file": "res://assets/audio/voices/elevenlabs-v4-script-v2/book.opening.2.2.wav",
         "seconds": 5.52,
         "caption": "Nobody hears the night engineer. The night engineer hears everything.",
         "status": "automated_qa_passed",
         "text_hash": "9b9d04d392b5dae3"
       },
       {
-        "file": "",
+        "file": "res://assets/audio/voices/elevenlabs-v4-script-v2/book.opening.3.1.wav",
         "seconds": 7.6,
         "caption": "My dad, Frank, taught me how to listen. Every sound has a source, he used to say. Go and find it.",
         "status": "automated_qa_passed",
         "text_hash": "7eb0a6c18776584c"
       },
       {
-        "file": "",
+        "file": "res://assets/audio/voices/elevenlabs-v4-script-v2/book.opening.3.2.wav",
         "seconds": 6.32,
         "caption": "Ham radio, every night. Strangers from all over the world, all of them his friends.",
         "status": "automated_qa_passed",
         "text_hash": "67f21e632a8a523c"
       },
       {
-        "file": "",
+        "file": "res://assets/audio/voices/elevenlabs-v4-script-v2/book.opening.4.1.wav",
         "seconds": 7.36,
         "caption": "My mom, Helen, was an interpreter. Government work, rooms with no windows. She never talked about it.",
         "status": "automated_qa_passed",
         "text_hash": "af6b35afd2607245"
       },
       {
-        "file": "",
+        "file": "res://assets/audio/voices/elevenlabs-v4-script-v2/book.opening.4.2.wav",
         "seconds": 4.24,
         "caption": "She could hear what people meant, even when they said something else.",
         "status": "automated_qa_passed",
         "text_hash": "9437e9c87bc40810"
       },
       {
-        "file": "",
-        "seconds": 6.56,
+        "file": "res://assets/audio/voices/elevenlabs-v4-script-v2/book.opening.5.1.wav",
+        "seconds": 6.8,
         "caption": "Eighteen months ago, they rowed out into the bay after dark. They said the water was making a sound.",
-        "status": "manual_review_required",
+        "status": "manual_review_passed",
         "text_hash": "0ad4b12aa2eb1d1d"
       },
       {
-        "file": "",
+        "file": "res://assets/audio/voices/elevenlabs-v4-script-v2/book.opening.5.2.wav",
         "seconds": 1.92,
         "caption": "They asked me to come along.",
         "status": "automated_qa_passed",
         "text_hash": "1b9c2b12504fb6de"
       },
       {
-        "file": "",
+        "file": "res://assets/audio/voices/elevenlabs-v4-script-v2/book.opening.5.3.wav",
         "seconds": 2.32,
         "caption": "I said no. I had a shift.",
         "status": "automated_qa_passed",
@@ -84,70 +84,70 @@
     ],
     "aftermath": [
       {
-        "file": "",
+        "file": "res://assets/audio/voices/elevenlabs-v4-script-v2/book.aftermath.1.1.wav",
         "seconds": 4.16,
         "caption": "In the morning, their boat drifted back to shore. Empty.",
         "status": "automated_qa_passed",
         "text_hash": "79d0e6f299b7d11c"
       },
       {
-        "file": "",
+        "file": "res://assets/audio/voices/elevenlabs-v4-script-v2/book.aftermath.1.2.wav",
         "seconds": 2.32,
         "caption": "Dad’s radio was still on.",
         "status": "automated_qa_passed",
         "text_hash": "91576310f42b3899"
       },
       {
-        "file": "",
+        "file": "res://assets/audio/voices/elevenlabs-v4-script-v2/book.aftermath.2.1.wav",
         "seconds": 3.6,
         "caption": "Nobody found them. That was eighteen months ago.",
         "status": "automated_qa_passed",
         "text_hash": "691fddf3bbd8b984"
       },
       {
-        "file": "",
+        "file": "res://assets/audio/voices/elevenlabs-v4-script-v2/book.aftermath.2.2.wav",
         "seconds": 9.12,
         "caption": "Mom called me from the boat that night. I kept her voicemail on a cassette. Most nights I play it at three in the morning. I don’t know what I’m listening for.",
         "status": "automated_qa_passed",
         "text_hash": "8605c6966c10db8a"
       },
       {
-        "file": "",
+        "file": "res://assets/audio/voices/elevenlabs-v4-script-v2/book.aftermath.3.1.wav",
         "seconds": 4.72,
         "caption": "A year ago a company called Halcyon Media bought KBWR.",
         "status": "automated_qa_passed",
         "text_hash": "ebde4cf81d57da4f"
       },
       {
-        "file": "",
+        "file": "res://assets/audio/voices/elevenlabs-v4-script-v2/book.aftermath.3.2.wav",
         "seconds": 6.56,
         "caption": "Three weeks ago they replaced me with a machine called DJ AutoRick. It reads yesterday’s weather.",
         "status": "automated_qa_passed",
         "text_hash": "45d35c3d92488a13"
       },
       {
-        "file": "",
+        "file": "res://assets/audio/voices/elevenlabs-v4-script-v2/book.aftermath.4.1.wav",
         "seconds": 7.44,
         "caption": "And then there’s Nora. Nora Reyes runs the animals at the aquarium and argues with everybody, me included.",
         "status": "automated_qa_passed",
         "text_hash": "b82fa2aeb435e228"
       },
       {
-        "file": "",
+        "file": "res://assets/audio/voices/elevenlabs-v4-script-v2/book.aftermath.4.2.wav",
         "seconds": 10.4,
         "caption": "After the boat I went quiet. She pushed, then shouted, then stopped. Lately she’s been endlessly patient with me. I figured I’d worn her out.",
         "status": "automated_qa_passed",
         "text_hash": "bb69fc45319b40d6"
       },
       {
-        "file": "",
+        "file": "res://assets/audio/voices/elevenlabs-v4-script-v2/book.aftermath.5.1.wav",
         "seconds": 5.84,
         "caption": "So now I’m home in the mornings, with Dad’s old tape recorder and nothing left to fix.",
         "status": "automated_qa_passed",
         "text_hash": "3bfb6d437edde880"
       },
       {
-        "file": "",
+        "file": "res://assets/audio/voices/elevenlabs-v4-script-v2/book.aftermath.5.2.wav",
         "seconds": 3.44,
         "caption": "This is the story of how I started counting nights.",
         "status": "automated_qa_passed",
@@ -156,77 +156,77 @@
     ],
     "after": [
       {
-        "file": "",
+        "file": "res://assets/audio/voices/elevenlabs-v4-script-v2/book.after.1.1.wav",
         "seconds": 6.56,
         "caption": "Before the ship left, the Choir gave the copies one last gift. They don’t need the ninth night anymore.",
         "status": "automated_qa_passed",
         "text_hash": "00970f1023d62b85"
       },
       {
-        "file": "",
+        "file": "res://assets/audio/voices/elevenlabs-v4-script-v2/book.after.1.2.wav",
         "seconds": 6.72,
         "caption": "More than two hundred of them stayed. Bellwether has a lot of new neighbors with familiar faces.",
         "status": "automated_qa_passed",
         "text_hash": "0905c35c40148180"
       },
       {
-        "file": "",
+        "file": "res://assets/audio/voices/elevenlabs-v4-script-v2/book.after.2.1.wav",
         "seconds": 7.44,
         "caption": "Iris chose a face of her own. People still say hello to the wrong Steve sometimes. We both say hello back.",
         "status": "automated_qa_passed",
         "text_hash": "57ef81efbc3ba18c"
       },
       {
-        "file": "",
+        "file": "res://assets/audio/voices/elevenlabs-v4-script-v2/book.after.3.1.wav",
         "seconds": 4.32,
         "caption": "Mom and Dad came home. Dad is back on the radio every Thursday.",
         "status": "automated_qa_passed",
         "text_hash": "dd3be557fd490dbf"
       },
       {
-        "file": "",
+        "file": "res://assets/audio/voices/elevenlabs-v4-script-v2/book.after.3.2.wav",
         "seconds": 5.2,
         "caption": "Dad labels everything now. The paint, the radios, me.",
         "status": "automated_qa_passed",
         "text_hash": "082697bbcf16a46b"
       },
       {
-        "file": "",
+        "file": "res://assets/audio/voices/elevenlabs-v4-script-v2/book.after.4.1.wav",
         "seconds": 2.32,
         "caption": "I don’t play the old voicemail anymore.",
         "status": "automated_qa_passed",
         "text_hash": "b9310592318c6925"
       },
       {
-        "file": "",
+        "file": "res://assets/audio/voices/elevenlabs-v4-script-v2/book.after.4.2.wav",
         "seconds": 4.24,
         "caption": "The ring isn’t in the sock drawer anymore. Ask Nora where it is.",
         "status": "automated_qa_passed",
         "text_hash": "d674ff570909fb5c"
       },
       {
-        "file": "",
+        "file": "res://assets/audio/voices/elevenlabs-v4-script-v2/book.after.5.1.wav",
         "seconds": 3.84,
         "caption": "KBWR has live hosts again. Two of them.",
         "status": "automated_qa_passed",
         "text_hash": "9e873156188c1656"
       },
       {
-        "file": "",
+        "file": "res://assets/audio/voices/elevenlabs-v4-script-v2/book.after.5.2.wav",
         "seconds": 4.16,
         "caption": "Stephen and I still argue about which one of us is the upgrade.",
         "status": "automated_qa_passed",
         "text_hash": "f45582d027c54e66"
       },
       {
-        "file": "",
+        "file": "res://assets/audio/voices/elevenlabs-v4-script-v2/book.after.6.1.wav",
         "seconds": 4.32,
         "caption": "One year after the ninth night, a package arrived at the station.",
         "status": "automated_qa_passed",
         "text_hash": "7f90f46840034d99"
       },
       {
-        "file": "",
+        "file": "res://assets/audio/voices/elevenlabs-v4-script-v2/book.after.6.2.wav",
         "seconds": 2.88,
         "caption": "From very, very far away.",
         "status": "automated_qa_passed",
