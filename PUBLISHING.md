@@ -43,10 +43,10 @@ The automated review deployment is configured in `.github/workflows/cloudflare-p
 https://review.night-nine.pages.dev
 ```
 
-The first review deployment is live. The `night-nine` project uses `main` as its production branch and the deployed `review` branch is available at the URL above. The repository already has `CLOUDFLARE_ACCOUNT_ID`; automatic deployments need one additional secret:
+The review deployment is live and automatic deployment is configured. The `night-nine` project uses `main` as its production branch; this workflow publishes only to the separate `review` branch at the URL above. The public repository has both required Actions secrets. For a new repository:
 
-1. Add `CLOUDFLARE_API_TOKEN` as a repository Actions secret. Use a Cloudflare API token scoped to **Cloudflare Pages: Edit** for this account; do not use the broad Wrangler OAuth token. Until this secret exists, push builds are verified but deployment is skipped.
-2. Push a game, art, or site change to `main`, or run **Deploy Night Nine review to Cloudflare Pages** from the Actions tab on `main`.
+1. Add `CLOUDFLARE_ACCOUNT_ID` and `CLOUDFLARE_API_TOKEN` as repository Actions secrets. Use a Cloudflare API token scoped to **Cloudflare Pages: Edit** for the selected account; do not use the broad Wrangler OAuth token. Missing secrets cause the workflow to report that deployment was skipped.
+2. Push a game, art, site, media-credit, license or deployment-workflow change to `main`, or run **Deploy Night Nine review to Cloudflare Pages** from the Actions tab on `main`.
 
 The workflow builds from the checked-out Git commit, downloads the official Godot 4.7.2 editor and matching template, verifies their SHA-512 hashes, and runs the site integrity and size checks before upload. The browser package is text-only until the generated voices receive listening approval. The review deployment does not make the game release-ready.
 
@@ -61,8 +61,8 @@ npx wrangler@4.166.0 pages deploy builds/web --project-name night-nine --branch 
 
 The portable ZIP and `source.zip` are optional local artifacts and are not uploaded to Pages. The site builder exports a committed Git snapshot and excludes local `tmp/`, `builds/`, engine caches, account data and debug reports.
 
-## Legacy GitHub Pages workflow
+## GitHub Pages retirement
 
-`.github/workflows/pages.yml` remains as a manual legacy path. It builds and checks the same chunked site, uploads `source.zip` as a workflow artifact, and can attach it to an existing GitHub Release when a `release_tag` input is supplied. It still deploys the site to GitHub Pages, so do not run it for the Cloudflare release.
+Cloudflare Pages is the only game host. GitHub Pages is disabled for `pakbaz/Night-Nine`, and the legacy publishing workflow and its checkpoint-generation template have been removed. GitHub continues to host the public source repository and run the Cloudflare workflow. Historical tags remain unchanged.
 
-Keep the repository private until publication is approved. Do not enable or deploy either public host as a side effect of pushing source.
+Browser saves belong to their original site address. Saves from the retired GitHub Pages address do not automatically transfer to Cloudflare; import an existing exported backup through **Menu → Browser storage**. No browser saves or caches are deleted by this hosting change.

@@ -155,6 +155,8 @@ class ReleasePackagingTests(unittest.TestCase):
     def test_complete_release_contains_runtime_dependencies(self):
         files, meta = milestones.make_snapshot(10, False)
         self.assertEqual(meta["scenes"], 34)
+        self.assertFalse(".github/workflows/pages.yml" in files,
+                         "Checkpoints must not recreate the retired hosting workflow.")
         for name in ("game/content/storybook.json", "game/ui/storybook.gd", "game/ui/title_card.gd"):
             self.assertTrue(name in files, name)
         for name in files:

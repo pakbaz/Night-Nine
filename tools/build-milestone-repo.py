@@ -456,7 +456,6 @@ def make_snapshot(stage, strict):
         for name in ("test_physical_navigation.gd", "test_social_staging.gd", "test_campaign_music.gd", "test_case_boards.gd", "test_animation_handoff.gd"):
             for suffix in ("", ".uid"):
                 files["game/qa/" + name + suffix] = GAME / "tests" / (name + suffix)
-        files[".github/workflows/pages.yml"] = SUPPORT / "pages.yml"
         files["tools/build-pages.py"] = SUPPORT / "build-pages.py"
         files["site/index.html"] = SUPPORT / "pages-index.html"
         for name in [

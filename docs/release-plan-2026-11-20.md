@@ -1,6 +1,6 @@
 # Night Nine release plan: script v2, zero-cost hosting, credits, first full play
 
-Written 2026-11-20. This is the working brief for any agent that continues the project. It replaces earlier open questions.
+Written 2026-11-20; hosting and credits updated 2026-11-21. This is the working brief for any agent that continues the project. It replaces earlier open questions.
 
 ## Hard rules
 
@@ -15,7 +15,7 @@ Written 2026-11-20. This is the working brief for any agent that continues the p
 | Topic | Decision |
 | --- | --- |
 | Game host | Cloudflare Pages free plan, direct upload (no Cloudflare build minutes). Static files only, no Functions. Bandwidth for static assets is not metered. |
-| Code host | GitHub (`pakbaz/Night-Nine`). The compact source ZIP moves from the site to a GitHub Release asset. |
+| Code host | GitHub (`pakbaz/Night-Nine`). The site links to its exact committed source archive. Optional local source ZIPs are not deployed. GitHub Pages is retired. |
 | Large files | Split `play.pck` and `play.wasm` into parts of at most 24 MiB. A small loader in the page rebuilds them in the browser. The engine does not change. |
 | Scale | Browsers cache the parts after the first visit (service worker plus HTTP cache). Part names carry their hash, so they cache forever. A new release only re-downloads changed parts. |
 | Voice during testing | Text only with subtitles. The engine plays a recording only when the recording's text hash matches the line. Until recording, the manifest switch `enabled` is false. |
@@ -27,16 +27,16 @@ Written 2026-11-20. This is the working brief for any agent that continues the p
 One card per row. Role first, then name.
 
 - Original story (written 25 years ago), plot, music, voice and creative design decisions: S3PehR
-- Game script and creative narration: Claude Opus 5.5
-- Core game engine, builds and creative stage design: GPT Astra 5.2
+- Creative narration, game script refinements and gameplay design: Claude Opus 5.5
+- Game engine core design and stages setup: GPT Astra 6.2
 - Artwork and pictures, including characters: GPT Image 2.6
 - Music creation: Google Lyria 3.5
 - Voices: ElevenLabs 4
-- Deployment script and bug fixes: GitHub Copilot Fusion
+- Deployment, verification, testing and game debugging: GitHub Copilot Fusion
 - Code hosting: GitHub
 - Game hosting: Cloudflare Pages
 
-Credit names follow the user's requested spelling, including "S3PehR" and "GPT Astra 5.2".
+Credit names follow the user's requested spelling, including "S3PehR" and "GPT Astra 6.2".
 
 ## Milestones
 
@@ -72,7 +72,7 @@ User expansion on November 20: ten main-character variations across nineteen sce
 - The service worker caches parts and works offline after a full first load.
 - `_headers` sets long cache lifetimes for hashed parts and short ones for the HTML.
 - `tools/check-site.py` fails the build on any file over 24 MiB or any broken manifest. It runs in the GitHub workflow.
-- `source.zip` leaves the site. The Pages workflow publishes it as a GitHub Release asset.
+- `source.zip` stays outside the site. The landing page links to the exact GitHub commit archive.
 - A local test serves the site and loads it in a real browser.
 
 ### M5. Credits
@@ -81,8 +81,8 @@ Update `game/ui/closing_credits.gd`, the tests that count credit cards, `README.
 ### M6. One full text-only play
 Play the whole game from the prologue to the final signal with subtitles and no voice using the scripted QA runs (`--story-qa`, `--campaign-qa`), then run the same full Control-input walkthrough in an isolated browser test export. Also inspect the ordinary chunked browser build directly: opening, puzzles, feedback, automatic transitions, portraits, and save/reload behavior. Distinguish scripted coverage from direct browser interaction in `docs/play-report-2026-11-20.md`; do not call an automated run a human playthrough. Record every problem and fix blocking ones. A blocker is a puzzle that cannot be solved, a lead that never unlocks, a missing line, a spoiler, or text that does not fit its panel.
 
-### M7. Deploy (needs the user's go)
-Create the Cloudflare Pages project, deploy with Wrangler direct upload, check the live URL, and keep the GitHub Pages workflow off. The public release date is December 24, 2026. Do not publish before the user says so.
+### M7. Deploy (review preview authorized)
+The user authorized the live preview at https://review.night-nine.pages.dev. Pushes to `main` deploy checked builds to the Cloudflare `review` branch. GitHub Pages and its publishing workflow are retired. Keep the production branch separate from the review preview; the planned final release date remains December 24, 2026.
 
 ### M8. Voices (authorized after M3 and M6 plus walkthrough presentation)
 Add the 24 library voices to the account, record the lines in `docs/script-v2/recording-list.csv` with `eleven_v4`, install them, set the manifest switch to true, and rerun M6 with sound.

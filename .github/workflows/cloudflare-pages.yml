@@ -8,6 +8,9 @@ on:
       - art/**
       - game/**
       - site/**
+      - MEDIA.md
+      - LICENSE
+      - .github/workflows/cloudflare-pages.yml
       - tools/build-pages.py
       - tools/split-site.py
       - tools/check-site.py

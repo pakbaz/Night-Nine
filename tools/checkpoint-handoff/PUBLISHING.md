@@ -1,6 +1,6 @@
-# Publish Night Nine on GitHub Pages
+# Build a Night Nine chapter checkpoint
 
-Night Nine is a web game, published on GitHub Pages. There are no installers.
+Night Nine is a web game hosted on Cloudflare Pages. This generated checkpoint is for local review and contains no publishing workflow. There are no installers.
 
 ## Build and preview
 
@@ -28,10 +28,8 @@ Use **Menu → Browser storage**:
 
 Clearing site data, private browsing and storage eviction can remove saves and cached resources. Persistent storage reduces eviction risk; it does not prevent deliberate deletion. Export a backup before changing browsers, devices, domains or site data. There is no cloud save account or cross-device synchronization.
 
-## Deploy
+## Current game hosting
 
-The `Publish Night Nine to GitHub Pages` workflow is manual. It checks the source, exports the Web build and uploads only the static website and not the editable masters. The builder refuses a site at or above the 1 GiB Pages size limit.
+GitHub Pages is retired. Use the current `main` branch of [pakbaz/Night-Nine](https://github.com/pakbaz/Night-Nine) and its `PUBLISHING.md` to build and deploy the current game to Cloudflare Pages.
 
-In the repository, select **Settings → Pages → Build and deployment → GitHub Actions**. Then run the Pages workflow for the desired committed revision.
-
-Keep the repository private until publication is approved. GitHub Pages from private repositories requires a supported account plan, and the website is normally public even when its repository is private. Do not enable public deployment as a side effect of pushing source.
+This checkpoint exporter retains the historical compact source archive and 1 GiB local output budget. It does not split large files for Cloudflare's per-file limit; its output is for local preview, not direct Cloudflare upload. The current release builder performs that splitting and keeps source archives outside the deployed site.
