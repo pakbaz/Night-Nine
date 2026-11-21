@@ -3,6 +3,7 @@
 import argparse
 import hashlib
 import html
+import json
 import os
 from pathlib import Path
 import re
@@ -69,6 +70,16 @@ def inject_chunk_loader(page):
         marker, '<script src="night-nine-loader.js"></script>\n\t\t' + marker, 1)
 
 
+def prune_unapproved_voice_assets(game):
+        voice = json.loads((game / "content/voice-manifest.json").read_text())
+        narration = json.loads((game / "content/narration.json").read_text())
+        if voice.get("enabled", True) or narration.get("enabled", True):
+            return
+        staging = game / "assets/audio/voices/elevenlabs-v4-script-v2"
+        if staging.exists():
+            shutil.rmtree(staging)
+
+
 def build(repo, output, godot, template, source_url, archive_path, source_archive):
     if not (repo / "game/content/checkpoint.json").is_file():
         raise ValueError("Run this command from the public Night Nine release repository.")
@@ -95,6 +106,7 @@ def build(repo, output, godot, template, source_url, archive_path, source_archiv
             archive.extractall(temp)
         snapshot = temp / "Night-Nine"
         game = snapshot / "game"
+        prune_unapproved_voice_assets(game)
         if template:
             target = snapshot / ".tools/templates"
             target.mkdir(parents=True)

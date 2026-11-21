@@ -1,0 +1,100 @@
+name: Deploy Night Nine review to Cloudflare Pages
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - art/**
+      - game/**
+      - site/**
+      - tools/build-pages.py
+      - tools/split-site.py
+      - tools/check-site.py
+  workflow_dispatch:
+
+concurrency:
+  group: night-nine-cloudflare-review
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  deploy-review:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Download the official Godot 4.7.2 editor and matching Web template
+        shell: bash
+        working-directory: ${{ runner.temp }}
+        run: |
+          set -euo pipefail
+          base=https://github.com/godotengine/godot-builds/releases/download/4.7.2-stable
+          editor=Godot_v4.7.2-stable_linux.x86_64.zip
+          templates=Godot_v4.7.2-stable_export_templates.tpz
+          curl --fail --location --retry 3 --output "$editor" "$base/$editor"
+          curl --fail --location --retry 3 --output "$templates" "$base/$templates"
+          echo "9aa00f7a605200940bce3027a567b782f49bd8e940dd06ae9e987bd65aee1b1467edd56ed84fcdcbdd44354bf613bdbb4e5d2913e925850368e150c59ed54c65  $editor" | sha512sum --check
+          echo "ca4d71c4d7b81dfc15d1a98baa07534aa95b03fdda78a0075b06672e1648d2e5f40980c9adc28d23e1b92e732ee7bf3461997aa804af74ec2fcd7a93ccb84079  $templates" | sha512sum --check
+          unzip -q "$editor"
+          unzip -q "$templates" templates/web_nothreads_release.zip
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Build and verify the static review site
+        run: |
+          python3 tools/build-pages.py \
+            --godot "$RUNNER_TEMP/Godot_v4.7.2-stable_linux.x86_64" \
+            --template "$RUNNER_TEMP/templates/web_nothreads_release.zip" \
+            --output builds/web \
+            --source-archive builds/source.zip
+          python3 tools/check-site.py builds/web
+          if find builds/web -type f \( -name '*.zip' -o -name '*.log' -o -name '*.raw.json' \) -print -quit | grep -q .; then
+            echo "Unexpected source, log, or raw debug artifact in the Pages site." >&2
+            exit 1
+          fi
+
+      - name: Check Cloudflare deployment secrets
+        id: cloudflare
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          set -euo pipefail
+          if [[ -n "$CLOUDFLARE_API_TOKEN" && -n "$CLOUDFLARE_ACCOUNT_ID" ]]; then
+            echo "configured=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "configured=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Deploy the review branch
+        if: steps.cloudflare.outputs.configured == 'true'
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          set -euo pipefail
+          npx --yes wrangler@4.166.0 pages deploy builds/web \
+            --project-name night-nine \
+            --branch review
+
+      - name: Report that Cloudflare setup is required
+        if: steps.cloudflare.outputs.configured != 'true'
+        run: |
+          echo "Build passed, but no deployment was made. Add CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID as repository Actions secrets." >> "$GITHUB_STEP_SUMMARY"
+          echo "Create the night-nine Pages project first; see PUBLISHING.md."
+
+      - name: Publish review URL
+        if: steps.cloudflare.outputs.configured == 'true'
+        run: echo "Review the game at https://review.night-nine.pages.dev" >> "$GITHUB_STEP_SUMMARY"

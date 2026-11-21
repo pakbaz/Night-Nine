@@ -6,6 +6,8 @@ A painted point-and-click mystery set in Bellwether. Steve Mercer hears the same
 
 ## Play
 
+**[Cloudflare Pages review build](https://review.night-nine.pages.dev)** (first deployment pending). The preview is deployed from `main` to a separate `review` branch. First deployment requires the `night-nine` Cloudflare Pages project and the repository Actions secrets described in [PUBLISHING.md](PUBLISHING.md). The review build uses subtitles; generated replacement voices remain disabled, and native story timing is still under investigation.
+
 Play in a desktop browser with WebGL 2. There is no installer. To edit or test the source, open `game/project.godot` in Godot 4.7.2, wait for import, then press F5.
 
 Select **New game**. Click an object to investigate, or use **Objects** for a keyboard-accessible list. In rooms with a walkable floor, click a spot or use WASD to move. Open the notebook to review evidence, case theories and the transcript. After initial setup, you can play the full story offline.
@@ -61,4 +63,4 @@ You can play the official release for free. The Night Nine contributors license 
 
 When publishing downloads, provide the matching complete corresponding source alongside the binaries. See [the GitHub publishing guide](PUBLISHING.md) for the local branch, annotated tags and release steps.
 
-The code repository is public. Public game deployment remains manual and has not been performed for this revision. The revised script currently runs with subtitles and voice playback disabled while the confirmed ElevenLabs cast is recorded and checked. Historical recordings remain preserved. [Complete story walkthrough (spoilers)](docs/story-walkthrough.md) · [Script and recording handoff](docs/script-v2/README.md)
+The review site will be a public preview, not a final release. The revised script currently runs with subtitles and voice playback disabled while 120 generated takes await listening review. The native story-timing investigation is also open. Historical recordings remain preserved. [Complete story walkthrough (spoilers)](docs/story-walkthrough.md) · [Script and recording handoff](docs/script-v2/README.md)

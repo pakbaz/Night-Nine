@@ -46,6 +46,31 @@ def resources(value):
 
 
 class ReleasePackagingTests(unittest.TestCase):
+    def test_web_export_omits_voice_staging_only_while_both_playback_gates_are_closed(self):
+        with tempfile.TemporaryDirectory(dir=ROOT) as directory:
+            game = Path(directory) / "game"
+            content = game / "content"
+            staged = game / "assets/audio/voices/elevenlabs-v4-script-v2"
+            historic = game / "assets/audio/voices/recording.greeting.wav"
+            content.mkdir(parents=True)
+            staged.mkdir(parents=True)
+            (content / "voice-manifest.json").write_text(json.dumps({"enabled": False}))
+            (content / "narration.json").write_text(json.dumps({"enabled": False}))
+            (staged / "take.wav").write_bytes(b"unapproved")
+            historic.parent.mkdir(parents=True, exist_ok=True)
+            historic.write_bytes(b"historic")
+
+            build_pages.prune_unapproved_voice_assets(game)
+
+            self.assertFalse(staged.exists())
+            self.assertTrue(historic.exists())
+
+            staged.mkdir()
+            (staged / "take.wav").write_bytes(b"approved")
+            (content / "voice-manifest.json").write_text(json.dumps({"enabled": True}))
+            build_pages.prune_unapproved_voice_assets(game)
+            self.assertTrue((staged / "take.wav").exists())
+
     def test_split_files_reassemble_exactly_with_bounded_parts(self):
         with tempfile.TemporaryDirectory(dir=ROOT) as directory:
             site = Path(directory)

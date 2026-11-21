@@ -33,18 +33,34 @@ Use **Menu → Browser storage**:
 
 Clearing site data, private browsing and storage eviction can remove saves and cached resources. Persistent storage reduces eviction risk; it does not prevent deliberate deletion. Export a backup before changing browsers, devices, domains or site data. There is no cloud save account or cross-device synchronization.
 
-## Cloudflare Pages deploy
+## Cloudflare Pages review deployment
 
 Cloudflare Pages free-plan limits verified on 2026-11-20 are **25 MiB per file** and **20,000 files per site**. This project keeps every deployed file at or below 24 MiB and no more than 5,000 files. Direct upload does not use Cloudflare build minutes. Static hosting needs no Pages Functions.
 
-Create the `night-nine` Pages project manually when publication is approved, then direct-upload the checked site:
+The automated review deployment is configured in `.github/workflows/cloudflare-pages.yml`. It builds the checked web export on pushes to `main` and uploads only `builds/web` to the Cloudflare `review` branch. It does not publish `source.zip`, editor caches, test output, screenshots, logs or other development artifacts. The stable review URL is:
+
+```text
+https://review.night-nine.pages.dev
+```
+
+Before the first run:
+
+1. Create a Cloudflare Pages project named `night-nine`, with `main` as its production branch. The workflow deploys to `review`, not the production branch.
+2. Add repository Actions secrets `CLOUDFLARE_API_TOKEN` (scoped to Pages edit for this account) and `CLOUDFLARE_ACCOUNT_ID`.
+3. Push to `main`, or run **Deploy Night Nine review to Cloudflare Pages** from the Actions tab on `main`.
+
+The workflow builds from the checked-out Git commit, downloads the official Godot 4.7.2 editor and matching template, verifies their SHA-512 hashes, and runs the site integrity and size checks before upload. The browser package is text-only until the generated voices receive listening approval. The review deployment does not make the game release-ready.
+
+When both campaign and storybook voice playback gates are closed, the builder removes the staged replacement-voice directory from its temporary export snapshot. This keeps unapproved recordings out of the web download without changing the source checkout or voice manifests. Once playback is approved and enabled, the normal export retains the required runtime recordings.
+
+To build and upload manually after configuring Wrangler authentication:
 
 ```sh
 python3 tools/check-site.py builds/web
-npx wrangler pages deploy builds/web --project-name night-nine
+npx wrangler@4.166.0 pages deploy builds/web --project-name night-nine --branch review
 ```
 
-Do not run Wrangler until the user approves deployment. Wrangler login and project creation are deliberately outside the build.
+The portable ZIP and `source.zip` are optional local artifacts and are not uploaded to Pages. The site builder exports a committed Git snapshot and excludes local `tmp/`, `builds/`, engine caches, account data and debug reports.
 
 ## Legacy GitHub Pages workflow
 
