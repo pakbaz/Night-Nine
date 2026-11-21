@@ -100,10 +100,6 @@ func run() -> void:
 	game = load("res://scenes/campaign.tscn").instantiate()
 	root.add_child(game)
 	await frames(4)
-	var logo := game.title_art.get_node_or_null("N9Logo") as TextureRect
-	check(logo != null and logo.is_visible_in_tree(), "Show the N9 logo under the title before play")
-	if logo != null:
-		check(not logo.get_global_rect().intersects(game.menu.get_global_rect()), "Keep the N9 logo clear of the title-menu buttons")
 	verify_track("title",catalog.title)
 	var title_deck := player()
 	game._open_credits()
@@ -120,8 +116,6 @@ func run() -> void:
 	game.music_volume.value=old_volume
 	game._new_game()
 	await frames(1)
-	if logo != null:
-		check(not logo.is_visible_in_tree(), "Keep the title logo out of the opening story")
 	check(game.storybook.visible and game.score.current_file.ends_with("prologue-theme.mp3"), "Open the backstory on the Three Nights theme")
 	recordings[game.score.current_file] = true
 	await clear_overlays()

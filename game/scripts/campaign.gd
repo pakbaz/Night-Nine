@@ -21,7 +21,6 @@ var interaction: VBoxContainer
 var dialogue_panel: PanelContainer
 var menu: PanelContainer
 var title_art: TextureRect
-var title_logo: TextureRect
 var menu_settings: VBoxContainer
 var menu_resume: Button
 var menu_save: Button
@@ -485,15 +484,6 @@ func _build_menu() -> void:
 	title_art.mouse_filter = Control.MOUSE_FILTER_STOP
 	root.add_child(title_art)
 	title_art.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
-	title_logo = TextureRect.new()
-	title_logo.name = "N9Logo"
-	title_logo.texture = preload("res://icon.svg")
-	title_logo.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
-	title_logo.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
-	title_logo.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	title_art.add_child(title_logo)
-	title_logo.position = Vector2(100, 425)
-	title_logo.size = Vector2(80, 80)
 	menu = _panel(root)
 	menu.position = Vector2(62,126)
 	menu.size = Vector2(470,720)
@@ -638,13 +628,12 @@ func _volume_control(label: String, key: String, initial: float, change: Callabl
 
 func _layout_menu() -> void:
 	title_art.visible = not started and menu.visible
-	title_logo.visible = not settings_open
 	menu_settings.visible = settings_open
 	menu_heading.visible = started
 	menu_save.visible = started
 	menu_resume.visible = started or saves.read_slot("autosave").get("ok", false)
 	menu_load.visible = started or saves.read_slot("manual").get("ok", false)
-	menu.position = Vector2(78, 103) if started or settings_open else Vector2(100, 525)
+	menu.position = Vector2(78, 103) if started or settings_open else Vector2(100, 473)
 	menu.size = Vector2(430 if settings_open else 357, 0)
 
 func _build_credits() -> void:
