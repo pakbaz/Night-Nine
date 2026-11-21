@@ -14,5 +14,13 @@
   "first_recognition": "We did that yesterday.",
   "recognition_pass": "independent",
   "asr_revision": 2,
-  "transcript_comparison": "strict normalized English spoken forms"
+  "transcript_comparison": "strict normalized English spoken forms",
+  "local_recognized": "We did that yesterday.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/one_year.in.03.json",
+    "sha256": "dc4a3e0ca1bdf34bf15cf45bfd786cb47eb0acd3ba30e0e0e61e3f0fe4ed2f7a",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  }
 }

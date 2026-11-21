@@ -3,7 +3,7 @@
   "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
   "wav_sha256": "c45e8a7b7a60a01d9f1cf0b57a8653c7bd651e65cd104d3b3bb5e84ae765c466",
   "expected": "How many families on Tirel got a message like that?",
-  "recognized": "How many families on Tyrell got a message like that?",
+  "recognized": "How many families on Terrell got a message like that?",
   "word_edits": 1,
   "word_error_rate": 0.1,
   "listening_review_required": true,
@@ -14,5 +14,13 @@
   "first_recognition": "How many families on Tyrell got a message like that?",
   "recognition_pass": "independent",
   "asr_revision": 2,
-  "transcript_comparison": "strict normalized English spoken forms"
+  "transcript_comparison": "strict normalized English spoken forms",
+  "local_recognized": "How many families on Tyrell got a message like that?",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c8_beach.out.01.json",
+    "sha256": "b3dbeecdc3825f2c22d8efabbe2450e40a254dcaaa11c44febc7dff58a957ac3",
+    "model": "scribe_v3",
+    "word_edits": 1,
+    "listening_reviewed": false
+  }
 }

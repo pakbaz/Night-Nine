@@ -14,5 +14,13 @@
   "first_recognition": "Holding. Now. When.",
   "recognition_pass": "independent",
   "asr_revision": 2,
-  "transcript_comparison": "strict normalized English spoken forms"
+  "transcript_comparison": "strict normalized English spoken forms",
+  "local_recognized": "Holding. Now. When.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c10_live.second.01.json",
+    "sha256": "8f29301ec33f600893db8db8cd23651a3e101ef54e6891147a7ceab189ee82ac",
+    "model": "scribe_v3",
+    "word_edits": 1,
+    "listening_reviewed": false
+  }
 }

@@ -1,0 +1,53 @@
+{
+  "audio_id": "c5_shack.in.03",
+  "audio_sha256": "f537db757b4b8b207b2d647fbc7027863858d923b47b48d533d90487c712195a",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/c5_shack.in.03.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Eat first.",
+  "recognized": "Eat first.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "a245000e45e2eaa67be3c7ab8aa1aef0",
+  "character_cost": "0",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Eat first.",
+    "words": [
+      {
+        "text": "Eat",
+        "start": 0.06,
+        "end": 0.2,
+        "type": "word",
+        "logprob": -0.03939042240381241
+      },
+      {
+        "text": " ",
+        "start": 0.2,
+        "end": 0.34,
+        "type": "spacing",
+        "logprob": -0.0007976687629707158
+      },
+      {
+        "text": "first.",
+        "start": 0.34,
+        "end": 0.8,
+        "type": "word",
+        "logprob": -0.0006822468130849302
+      }
+    ],
+    "transcription_id": "CrCt3N6C95BwL1qAbtMl",
+    "audio_duration_secs": 1.28
+  },
+  "listening_reviewed": false
+}

@@ -3,7 +3,7 @@
   "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
   "wav_sha256": "c1234b18139f34a257c70cb5333197f76cb56c1e7d60182cb96d799fd0e9489e",
   "expected": "Three things nobody thought to change. Walt Prior’s name in ink, in two places at once. A lab that will change the world, running on less power than a laundromat. And three years of tape that never missed a ninth night.",
-  "recognized": "Three things nobody thought to change. Walt Pryor's name in ink, in two places at once. A lab that will change the world, running on less power than a laundromat. And three years of tape that never missed a ninth night.",
+  "recognized": "Three things nobody thought to change: Walt Pryor's name in ink in two places at once, a lab that will change the world running on less power than a laundromat, and three years of tape that never missed a ninth night.",
   "word_edits": 1,
   "word_error_rate": 0.023809523809523808,
   "listening_review_required": true,
@@ -15,5 +15,13 @@
   "recognition_pass": "independent",
   "asr_revision": 2,
   "transcript_comparison": "strict normalized English spoken forms",
-  "independent_phrase_transcription": "Three things nobody thought to change. Walt Pryor's name in ink. in two places at once. A lab that will change the world. Running on less power than a laundromat. and three years of tape. that never missed a ninth night."
+  "independent_phrase_transcription": "Three things nobody thought to change. Walt Pryor's name in ink. in two places at once. A lab that will change the world. Running on less power than a laundromat. and three years of tape. that never missed a ninth night.",
+  "local_recognized": "Three things nobody thought to change. Walt Pryor's name in ink, in two places at once. A lab that will change the world, running on less power than a laundromat. And three years of tape that never missed a ninth night.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c3_archive.recap.01.json",
+    "sha256": "8f991bb3a6148119310d0b7b0fe9d2b1ca59e4e6b23d164c76cd06b8dee4f214",
+    "model": "scribe_v3",
+    "word_edits": 1,
+    "listening_reviewed": false
+  }
 }

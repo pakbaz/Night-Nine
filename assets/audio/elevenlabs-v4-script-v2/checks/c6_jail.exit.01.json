@@ -3,9 +3,9 @@
   "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
   "wav_sha256": "f3bc81498e43412e2c846c2b088272737326043c685037ac5ec2aa50c9bb1e41",
   "expected": "Bus A. Twenty-nine past. They gave me a seat in the front row.",
-  "recognized": "Bus A, 29 passed. They gave me a seat in the front row.",
-  "word_edits": 1,
-  "word_error_rate": 0.07692307692307693,
+  "recognized": "Bus A, 29 past. They gave me a seat in the front row.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
   "listening_review_required": true,
   "seconds": 5.12,
   "sample_rate": 48000,
@@ -15,5 +15,13 @@
   "recognition_pass": "independent",
   "asr_revision": 2,
   "transcript_comparison": "strict normalized English spoken forms",
-  "independent_phrase_transcription": "Bus A. 29 passed. They gave me a seat in the front row."
+  "independent_phrase_transcription": "Bus A. 29 passed. They gave me a seat in the front row.",
+  "local_recognized": "Bus A, 29 passed. They gave me a seat in the front row.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c6_jail.exit.01.json",
+    "sha256": "c7528941ce8b86150005b5dde7252d6359dc582f187333a0879ac137b2eebbfc",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  }
 }

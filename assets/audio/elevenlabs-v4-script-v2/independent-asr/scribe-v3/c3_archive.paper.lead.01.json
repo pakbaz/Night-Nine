@@ -1,0 +1,263 @@
+{
+  "audio_id": "c3_archive.paper.lead.01",
+  "audio_sha256": "0e0c7f651cf80ae42ed8519926225a2810dce7a80ed43f45d8c39600a0f11e2c",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/c3_archive.paper.lead.01.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Walt Prior. County planner. I went to his going-away party in April. He cried into the punch.",
+  "recognized": "Walt Pryor, county planner. I went to his going-away party in April. He cried into the punch.",
+  "word_edits": 1,
+  "request_id": null,
+  "trace_id": "427f951f941f396b7c4c95964b6077d0",
+  "character_cost": "2",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Walt Pryor, county planner. I went to his going-away party in April. He cried into the punch.",
+    "words": [
+      {
+        "text": "Walt",
+        "start": 0.1,
+        "end": 0.32,
+        "type": "word",
+        "logprob": -0.005148367490619421
+      },
+      {
+        "text": " ",
+        "start": 0.32,
+        "end": 0.46,
+        "type": "spacing",
+        "logprob": -0.10245741903781891
+      },
+      {
+        "text": "Pryor,",
+        "start": 0.46,
+        "end": 0.84,
+        "type": "word",
+        "logprob": -0.0853939771708004
+      },
+      {
+        "text": " ",
+        "start": 0.84,
+        "end": 0.84,
+        "type": "spacing",
+        "logprob": -0.01616619899868965
+      },
+      {
+        "text": "county",
+        "start": 1.38,
+        "end": 1.64,
+        "type": "word",
+        "logprob": -0.01616619899868965
+      },
+      {
+        "text": " ",
+        "start": 1.64,
+        "end": 1.72,
+        "type": "spacing",
+        "logprob": -0.00014530557382386178
+      },
+      {
+        "text": "planner.",
+        "start": 1.72,
+        "end": 2.08,
+        "type": "word",
+        "logprob": -0.00013034608559792105
+      },
+      {
+        "text": " ",
+        "start": 2.08,
+        "end": 2.08,
+        "type": "spacing",
+        "logprob": -1.5497195136049413e-06
+      },
+      {
+        "text": "I",
+        "start": 2.78,
+        "end": 2.82,
+        "type": "word",
+        "logprob": -1.5497195136049413e-06
+      },
+      {
+        "text": " ",
+        "start": 2.82,
+        "end": 2.86,
+        "type": "spacing",
+        "logprob": -7.152531907195225e-06
+      },
+      {
+        "text": "went",
+        "start": 2.86,
+        "end": 3.0,
+        "type": "word",
+        "logprob": -7.152531907195225e-06
+      },
+      {
+        "text": " ",
+        "start": 3.0,
+        "end": 3.04,
+        "type": "spacing",
+        "logprob": -2.3841855067985307e-07
+      },
+      {
+        "text": "to",
+        "start": 3.04,
+        "end": 3.1,
+        "type": "word",
+        "logprob": -2.3841855067985307e-07
+      },
+      {
+        "text": " ",
+        "start": 3.1,
+        "end": 3.14,
+        "type": "spacing",
+        "logprob": -1.5497195136049413e-06
+      },
+      {
+        "text": "his",
+        "start": 3.14,
+        "end": 3.3,
+        "type": "word",
+        "logprob": -1.5497195136049413e-06
+      },
+      {
+        "text": " ",
+        "start": 3.3,
+        "end": 3.34,
+        "type": "spacing",
+        "logprob": -0.00010513706365600228
+      },
+      {
+        "text": "going-away",
+        "start": 3.34,
+        "end": 3.82,
+        "type": "word",
+        "logprob": -0.0023978851473657413
+      },
+      {
+        "text": " ",
+        "start": 3.82,
+        "end": 3.94,
+        "type": "spacing",
+        "logprob": -7.510157047363464e-06
+      },
+      {
+        "text": "party",
+        "start": 3.94,
+        "end": 4.2,
+        "type": "word",
+        "logprob": -7.510157047363464e-06
+      },
+      {
+        "text": " ",
+        "start": 4.2,
+        "end": 4.22,
+        "type": "spacing",
+        "logprob": -2.3841855067985307e-07
+      },
+      {
+        "text": "in",
+        "start": 4.22,
+        "end": 4.34,
+        "type": "word",
+        "logprob": -2.3841855067985307e-07
+      },
+      {
+        "text": " ",
+        "start": 4.34,
+        "end": 4.42,
+        "type": "spacing",
+        "logprob": -2.372236667724792e-05
+      },
+      {
+        "text": "April.",
+        "start": 4.42,
+        "end": 4.76,
+        "type": "word",
+        "logprob": -5.86660635235603e-05
+      },
+      {
+        "text": " ",
+        "start": 4.76,
+        "end": 5.22,
+        "type": "spacing",
+        "logprob": -8.4638240878121e-06
+      },
+      {
+        "text": "He",
+        "start": 5.24,
+        "end": 5.36,
+        "type": "word",
+        "logprob": -8.4638240878121e-06
+      },
+      {
+        "text": " ",
+        "start": 5.36,
+        "end": 5.44,
+        "type": "spacing",
+        "logprob": -5.769562994828448e-05
+      },
+      {
+        "text": "cried",
+        "start": 5.44,
+        "end": 5.86,
+        "type": "word",
+        "logprob": -5.769562994828448e-05
+      },
+      {
+        "text": " ",
+        "start": 5.86,
+        "end": 5.9,
+        "type": "spacing",
+        "logprob": -1.4305104514278355e-06
+      },
+      {
+        "text": "into",
+        "start": 5.9,
+        "end": 6.08,
+        "type": "word",
+        "logprob": -1.4305104514278355e-06
+      },
+      {
+        "text": " ",
+        "start": 6.08,
+        "end": 6.1,
+        "type": "spacing",
+        "logprob": 0.0
+      },
+      {
+        "text": "the",
+        "start": 6.1,
+        "end": 6.22,
+        "type": "word",
+        "logprob": 0.0
+      },
+      {
+        "text": " ",
+        "start": 6.22,
+        "end": 6.28,
+        "type": "spacing",
+        "logprob": -3.814624506048858e-05
+      },
+      {
+        "text": "punch.",
+        "start": 6.28,
+        "end": 6.68,
+        "type": "word",
+        "logprob": -4.8000212700571865e-05
+      }
+    ],
+    "transcription_id": "iHltWq8fL1d4Kuq7ZrvG",
+    "audio_duration_secs": 7.12
+  },
+  "listening_reviewed": false
+}

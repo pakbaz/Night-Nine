@@ -1,0 +1,53 @@
+{
+  "audio_id": "epilogue.out.03",
+  "audio_sha256": "f784172297ab4e51487660e8f4b452f50cf9860d2fddccb3af85d224233d25f8",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/epilogue.out.03.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Every day.",
+  "recognized": "every day.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "e0c7cfa5df747eaf35f8172e160eae93",
+  "character_cost": "0",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "every day.",
+    "words": [
+      {
+        "text": "every",
+        "start": 0.08,
+        "end": 0.32,
+        "type": "word",
+        "logprob": -0.11336168646812439
+      },
+      {
+        "text": " ",
+        "start": 0.32,
+        "end": 0.44,
+        "type": "spacing",
+        "logprob": -0.0010442048078402877
+      },
+      {
+        "text": "day.",
+        "start": 0.44,
+        "end": 0.78,
+        "type": "word",
+        "logprob": -0.0009073388355318457
+      }
+    ],
+    "transcription_id": "3ykxC3Z6O85WvkjlhVlP",
+    "audio_duration_secs": 1.04
+  },
+  "listening_reviewed": false
+}

@@ -3,7 +3,7 @@
   "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
   "wav_sha256": "3267fc77337a5a1b93bb27742b69246a0226b65dfeb9bbd310cbddac97430062",
   "expected": "Good. Witnesses.",
-  "recognized": "Good witnesses.",
+  "recognized": "Good. Witnesses.",
   "word_edits": 0,
   "word_error_rate": 0.0,
   "listening_review_required": true,
@@ -14,5 +14,13 @@
   "first_recognition": "Good witnesses.",
   "recognition_pass": "independent",
   "asr_revision": 2,
-  "transcript_comparison": "strict normalized English spoken forms"
+  "transcript_comparison": "strict normalized English spoken forms",
+  "local_recognized": "Good witnesses.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c9_gallery.out.05.json",
+    "sha256": "0a78b1b3b1a3680db65991b45b9105634de110294771e6089d97cc721ca80730",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  }
 }

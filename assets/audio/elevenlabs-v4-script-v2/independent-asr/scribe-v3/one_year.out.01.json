@@ -1,0 +1,67 @@
+{
+  "audio_id": "one_year.out.01",
+  "audio_sha256": "6c788e6af3365e3aef3eb33556b17780913bb75de76aa1a28f6260b24ed62b25",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/one_year.out.01.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Good morning, Bellwether.",
+  "recognized": "Good morning, Bellwether.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "436d2b8a01f90755ddec064c9b1790bb",
+  "character_cost": "0",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Good morning, Bellwether.",
+    "words": [
+      {
+        "text": "Good",
+        "start": 0.04,
+        "end": 0.16,
+        "type": "word",
+        "logprob": -0.00012289722508285195
+      },
+      {
+        "text": " ",
+        "start": 0.16,
+        "end": 0.2,
+        "type": "spacing",
+        "logprob": -4.792098479811102e-05
+      },
+      {
+        "text": "morning,",
+        "start": 0.2,
+        "end": 0.56,
+        "type": "word",
+        "logprob": -0.0069261816515791
+      },
+      {
+        "text": " ",
+        "start": 0.56,
+        "end": 0.72,
+        "type": "spacing",
+        "logprob": -0.528294563293457
+      },
+      {
+        "text": "Bellwether.",
+        "start": 0.72,
+        "end": 1.2,
+        "type": "word",
+        "logprob": -0.19408583212630634
+      }
+    ],
+    "transcription_id": "RW2bnObThHbW10EpPhiz",
+    "audio_duration_secs": 1.52
+  },
+  "listening_reviewed": false
+}

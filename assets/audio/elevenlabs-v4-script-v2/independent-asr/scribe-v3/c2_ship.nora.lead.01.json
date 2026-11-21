@@ -1,0 +1,39 @@
+{
+  "audio_id": "c2_ship.nora.lead.01",
+  "audio_sha256": "96bf66a8be8ac4dd6dddf9bbbbc505a41ac607c06accae904d12f354280e3767",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/c2_ship.nora.lead.01.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Nora.",
+  "recognized": "Nora.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "3ee05881ee7f07a55f8e2e4d0050444d",
+  "character_cost": "0",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Nora.",
+    "words": [
+      {
+        "text": "Nora.",
+        "start": 0.1,
+        "end": 0.52,
+        "type": "word",
+        "logprob": -0.0022907956212293358
+      }
+    ],
+    "transcription_id": "bAlNuWQLEVboriv6olXt",
+    "audio_duration_secs": 0.96
+  },
+  "listening_reviewed": false
+}

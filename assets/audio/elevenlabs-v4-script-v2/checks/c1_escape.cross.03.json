@@ -14,5 +14,13 @@
   "first_recognition": "Steve.",
   "recognition_pass": "independent",
   "asr_revision": 2,
-  "transcript_comparison": "strict normalized English spoken forms"
+  "transcript_comparison": "strict normalized English spoken forms",
+  "local_recognized": "Steve.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c1_escape.cross.03.json",
+    "sha256": "1887101a81dc0763a44c10347c5f46756eee11a6964525eea9c9e9888455152f",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  }
 }

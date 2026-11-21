@@ -1,0 +1,67 @@
+{
+  "audio_id": "c3_archive.power.lead.01",
+  "audio_sha256": "67688a4f15363f20f150650e6d8f9caf46add138df393ad451d76d12395c65fc",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/c3_archive.power.lead.01.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Steven. You’re slouching.",
+  "recognized": "Stephen, you're slouching.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "2c2347a8fce13b85a0c401aa95732f34",
+  "character_cost": "1",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Stephen, you're slouching.",
+    "words": [
+      {
+        "text": "Stephen,",
+        "start": 0.18,
+        "end": 0.64,
+        "type": "word",
+        "logprob": -0.061557418055599555
+      },
+      {
+        "text": " ",
+        "start": 0.64,
+        "end": 0.64,
+        "type": "spacing",
+        "logprob": -2.3841574147809297e-05
+      },
+      {
+        "text": "you're",
+        "start": 1.26,
+        "end": 1.4,
+        "type": "word",
+        "logprob": -1.7324894846145373e-05
+      },
+      {
+        "text": " ",
+        "start": 1.4,
+        "end": 1.5,
+        "type": "spacing",
+        "logprob": -0.0013441346818581223
+      },
+      {
+        "text": "slouching.",
+        "start": 1.5,
+        "end": 2.14,
+        "type": "word",
+        "logprob": -0.0008115351892683976
+      }
+    ],
+    "transcription_id": "nfzx795eM1QkdLv4M0Ie",
+    "audio_duration_secs": 2.56
+  },
+  "listening_reviewed": false
+}

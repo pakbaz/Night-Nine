@@ -14,5 +14,13 @@
   "first_recognition": "Stephen, you're slouching.",
   "recognition_pass": "independent",
   "asr_revision": 2,
-  "transcript_comparison": "strict normalized English spoken forms"
+  "transcript_comparison": "strict normalized English spoken forms",
+  "local_recognized": "Stephen, you're slouching.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c3_archive.power.lead.01.json",
+    "sha256": "d6d45cdd10d7026740047fd45ba266c394888f1820f3a80d88faf0f1fc4b177e",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  }
 }

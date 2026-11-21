@@ -3,9 +3,9 @@
   "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
   "wav_sha256": "692ead1623e978854b86ac3a5f1e86bbf858da1407b7b64825af134805ade82c",
   "expected": "I’ve heard the bay sing since I was a boy. Your father was the only one who ever asked me what it sounded like.",
-  "recognized": "I've heard the bass sing since I was a boy. Your father was the only one who ever asked me what it sounded like.",
-  "word_edits": 1,
-  "word_error_rate": 0.04,
+  "recognized": "I've heard the bay sing since I was a boy. Your father was the only one who ever asked me what it sounded like.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
   "listening_review_required": true,
   "seconds": 7.12,
   "sample_rate": 48000,
@@ -15,5 +15,13 @@
   "recognition_pass": "independent",
   "asr_revision": 2,
   "transcript_comparison": "strict normalized English spoken forms",
-  "independent_phrase_transcription": "I've heard the bass sing since I was a boy. Your father was the only one who ever asked me what it sounded like."
+  "independent_phrase_transcription": "I've heard the bass sing since I was a boy. Your father was the only one who ever asked me what it sounded like.",
+  "local_recognized": "I've heard the bass sing since I was a boy. Your father was the only one who ever asked me what it sounded like.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c5_shack.in.06.json",
+    "sha256": "9cc0cead906f875bde3288373a7cb3d1e57a249a068b80a0d82e48939013e15f",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  }
 }

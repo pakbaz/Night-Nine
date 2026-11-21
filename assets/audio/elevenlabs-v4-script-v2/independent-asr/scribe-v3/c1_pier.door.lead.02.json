@@ -1,0 +1,67 @@
+{
+  "audio_id": "c1_pier.door.lead.02",
+  "audio_sha256": "4a4e3c94568d9113ace2a96b28dd6bd37f8523d7015c6fc21202fd2e67030b49",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/c1_pier.door.lead.02.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "...Thank you, Lyle.",
+  "recognized": "Thank you, Lyle.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "f5af460671c943f99995ee3b5ee1ea2e",
+  "character_cost": "0",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Thank you, Lyle.",
+    "words": [
+      {
+        "text": "Thank",
+        "start": 0.1,
+        "end": 0.3,
+        "type": "word",
+        "logprob": -1.966933996300213e-05
+      },
+      {
+        "text": " ",
+        "start": 0.3,
+        "end": 0.36,
+        "type": "spacing",
+        "logprob": -1.7881377516459906e-06
+      },
+      {
+        "text": "you,",
+        "start": 0.36,
+        "end": 0.44,
+        "type": "word",
+        "logprob": -2.175566976347909e-06
+      },
+      {
+        "text": " ",
+        "start": 0.44,
+        "end": 0.52,
+        "type": "spacing",
+        "logprob": -0.0057383328676223755
+      },
+      {
+        "text": "Lyle.",
+        "start": 0.52,
+        "end": 0.86,
+        "type": "word",
+        "logprob": -0.004594719368833466
+      }
+    ],
+    "transcription_id": "cnryhmY7KcwEar2sn6t2",
+    "audio_duration_secs": 1.2
+  },
+  "listening_reviewed": false
+}

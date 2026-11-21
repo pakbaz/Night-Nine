@@ -3,9 +3,9 @@
   "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
   "wav_sha256": "f28662215451ce374eb26d752260a2e048b75f30fef3d0ef1d15bc3328eda179",
   "expected": "Walt Prior. From June’s list.",
-  "recognized": "Walt Pryor from June's List.",
+  "recognized": "Walt Pryor, from June's list.",
   "word_edits": 1,
-  "word_error_rate": 0.2,
+  "word_error_rate": 0.16666666666666666,
   "listening_review_required": true,
   "seconds": 2.64,
   "sample_rate": 48000,
@@ -15,5 +15,13 @@
   "recognition_pass": "independent",
   "asr_revision": 2,
   "transcript_comparison": "strict normalized English spoken forms",
-  "independent_phrase_transcription": "Walt Pryor from June's list."
+  "independent_phrase_transcription": "Walt Pryor from June's list.",
+  "local_recognized": "Walt Pryor from June's List.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c4_safe.screens.02.json",
+    "sha256": "cd5bdf600433a23d4291870867ace39efe5924007138b9af7faf9a2aeba0f935",
+    "model": "scribe_v3",
+    "word_edits": 1,
+    "listening_reviewed": false
+  }
 }

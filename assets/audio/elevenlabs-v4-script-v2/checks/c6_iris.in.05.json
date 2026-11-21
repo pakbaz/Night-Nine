@@ -14,5 +14,13 @@
   "first_recognition": "Take it off.",
   "recognition_pass": "independent",
   "asr_revision": 2,
-  "transcript_comparison": "strict normalized English spoken forms"
+  "transcript_comparison": "strict normalized English spoken forms",
+  "local_recognized": "Take it off.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c6_iris.in.05.json",
+    "sha256": "e2be20386fbbe9e8682cd1eaa434f99b498f0a2930264584979550afaaed8166",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  }
 }

@@ -1,0 +1,81 @@
+{
+  "audio_id": "c10_report.survey.02",
+  "audio_sha256": "435490e26762515e82ce322f2f36155d036a3133a095b15a7bf8a902e3b0102c",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/c10_report.survey.02.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Then finish the mission.",
+  "recognized": "Then finish the mission.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "b0545c9f858a3f4b2f7690a2bc6c5bf0",
+  "character_cost": "0",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Then finish the mission.",
+    "words": [
+      {
+        "text": "Then",
+        "start": 0.06,
+        "end": 0.22,
+        "type": "word",
+        "logprob": -0.003561940509825945
+      },
+      {
+        "text": " ",
+        "start": 0.22,
+        "end": 0.38,
+        "type": "spacing",
+        "logprob": -0.0003044141922146082
+      },
+      {
+        "text": "finish",
+        "start": 0.38,
+        "end": 0.72,
+        "type": "word",
+        "logprob": -0.0003044141922146082
+      },
+      {
+        "text": " ",
+        "start": 0.72,
+        "end": 0.76,
+        "type": "spacing",
+        "logprob": -2.3841855067985307e-07
+      },
+      {
+        "text": "the",
+        "start": 0.76,
+        "end": 0.86,
+        "type": "word",
+        "logprob": -2.3841855067985307e-07
+      },
+      {
+        "text": " ",
+        "start": 0.86,
+        "end": 0.9,
+        "type": "spacing",
+        "logprob": -7.974783511599526e-05
+      },
+      {
+        "text": "mission.",
+        "start": 0.9,
+        "end": 1.36,
+        "type": "word",
+        "logprob": -8.219140636356315e-05
+      }
+    ],
+    "transcription_id": "lTF1KfRNepHY3nT9OuOg",
+    "audio_duration_secs": 1.52
+  },
+  "listening_reviewed": false
+}

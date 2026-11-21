@@ -1,0 +1,67 @@
+{
+  "audio_id": "c10_live.second.01",
+  "audio_sha256": "273d68c9825464a6c70c2ba205b1c3e86fe9bc1b453d8bb80a45edfdf9000bb1",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/c10_live.second.01.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Holding. Now, Wen.",
+  "recognized": "Holding. Now. When.",
+  "word_edits": 1,
+  "request_id": null,
+  "trace_id": "a0f7c460a2c63c696580c051cc955dac",
+  "character_cost": "1",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Holding. Now. When.",
+    "words": [
+      {
+        "text": "Holding.",
+        "start": 0.06,
+        "end": 0.56,
+        "type": "word",
+        "logprob": -0.06437645200639963
+      },
+      {
+        "text": " ",
+        "start": 0.56,
+        "end": 0.98,
+        "type": "spacing",
+        "logprob": -5.6503606174374e-05
+      },
+      {
+        "text": "Now.",
+        "start": 0.98,
+        "end": 1.32,
+        "type": "word",
+        "logprob": -0.04529187708521931
+      },
+      {
+        "text": " ",
+        "start": 1.32,
+        "end": 1.7,
+        "type": "spacing",
+        "logprob": -0.0005799042410217226
+      },
+      {
+        "text": "When.",
+        "start": 1.7,
+        "end": 2.02,
+        "type": "word",
+        "logprob": -0.02060380536131561
+      }
+    ],
+    "transcription_id": "sv24pnvv9Nkd5rZ92YrW",
+    "audio_duration_secs": 2.24
+  },
+  "listening_reviewed": false
+}

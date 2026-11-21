@@ -5,7 +5,7 @@
   "expected": "June’s list has thirty-one names, and most of them are feelings. Two are records: Lyle’s sign-in book and Walt Prior’s permit. Mrs. Penhallow isn’t on it.",
   "recognized": "June's list has 31 names, and most of them are feelings. Two are records, Lyle's sign-in book and Walt Pryor's permit. Mrs. Penhallow isn't on it.",
   "word_edits": 1,
-  "word_error_rate": 0.034482758620689655,
+  "word_error_rate": 0.03225806451612903,
   "listening_review_required": true,
   "seconds": 11.52,
   "sample_rate": 48000,
@@ -15,5 +15,13 @@
   "recognition_pass": "story_vocabulary_2",
   "asr_revision": 2,
   "transcript_comparison": "strict normalized English spoken forms",
-  "independent_phrase_transcription": "June's list has 31 names, and most of them are feelings. Two are records, Lyle's sign-in book and Walt Pryor's permit. Mrs. Penhalo isn't on it."
+  "independent_phrase_transcription": "June's list has 31 names, and most of them are feelings. Two are records, Lyle's sign-in book and Walt Pryor's permit. Mrs. Penhalo isn't on it.",
+  "local_recognized": "June's list has 31 names, and most of them are feelings. Two are records, Lyle's sign-in book and Walt Pryor's permit. Mrs. Penhallow isn't on it.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c3_house.rules.find.json",
+    "sha256": "429543c777635206f3882396d7e77f22f7b61fb805878477d3633ed1c650102c",
+    "model": "scribe_v3",
+    "word_edits": 1,
+    "listening_reviewed": false
+  }
 }

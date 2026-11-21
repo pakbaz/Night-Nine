@@ -3,9 +3,9 @@
   "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
   "wav_sha256": "1dd02b36727857e63e6077a122ab0081000b9de07db4f436192e13cb1173a1cc",
   "expected": "Mine fooled four generals.",
-  "recognized": "Mind fooled four generals.",
-  "word_edits": 1,
-  "word_error_rate": 0.25,
+  "recognized": "Mine fooled four generals.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
   "listening_review_required": true,
   "seconds": 2.4,
   "sample_rate": 48000,
@@ -14,5 +14,13 @@
   "first_recognition": "Mind fooled four generals.",
   "recognition_pass": "independent",
   "asr_revision": 2,
-  "transcript_comparison": "strict normalized English spoken forms"
+  "transcript_comparison": "strict normalized English spoken forms",
+  "local_recognized": "Mind fooled four generals.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c8_lab.in.04.json",
+    "sha256": "0d3fd3fa7439bc4a0bcfb252ec38c7697985d60f672e62f4a892d43fd2ab17f5",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  }
 }

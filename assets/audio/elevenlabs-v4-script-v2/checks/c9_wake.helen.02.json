@@ -3,7 +3,7 @@
   "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
   "wav_sha256": "b475a8eccb5b64bb1336708e224a79fcc4dd2e309d88c7d56370a1c4cb606061",
   "expected": "Steven. Oh, my boy.",
-  "recognized": "Stephen. Oh my boy.",
+  "recognized": "Steven. Oh, my boy.",
   "word_edits": 0,
   "word_error_rate": 0.0,
   "listening_review_required": true,
@@ -14,5 +14,13 @@
   "first_recognition": "Stephen. Oh my boy.",
   "recognition_pass": "independent",
   "asr_revision": 2,
-  "transcript_comparison": "strict normalized English spoken forms"
+  "transcript_comparison": "strict normalized English spoken forms",
+  "local_recognized": "Stephen. Oh my boy.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c9_wake.helen.02.json",
+    "sha256": "d8ccd0486bfc1165cf617e89911e5ef47fcdf28e6ba8a9ec6bca7bb550b76e7d",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  }
 }

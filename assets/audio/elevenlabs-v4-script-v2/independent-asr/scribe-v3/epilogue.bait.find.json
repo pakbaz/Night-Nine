@@ -1,0 +1,417 @@
+{
+  "audio_id": "epilogue.bait.find",
+  "audio_sha256": "c8397e4bc6a2bc2d78596db293e0130786b4b9a1acbf156a021a664a299f497f",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/epilogue.bait.find.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Two Mrs. Penhallows, one counter, and people are finally buying bait. One Adrian Rook stays. The other one leaves with the ship, to find out who he is.",
+  "recognized": "Two Mrs. Penhallows, one counter, and people are finally buying bait. One Adrian Rook stays, the other one leaves with the ship to find out who he is.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "68b5e480b7b2bc1d4dcec72bbbe83820",
+  "character_cost": "3",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Two Mrs. Penhallows, one counter, and people are finally buying bait. One Adrian Rook stays, the other one leaves with the ship to find out who he is.",
+    "words": [
+      {
+        "text": "Two",
+        "start": 0.06,
+        "end": 0.22,
+        "type": "word",
+        "logprob": -0.00014077626110520214
+      },
+      {
+        "text": " ",
+        "start": 0.22,
+        "end": 0.3,
+        "type": "spacing",
+        "logprob": -0.0024647116661071777
+      },
+      {
+        "text": "Mrs.",
+        "start": 0.3,
+        "end": 0.44,
+        "type": "word",
+        "logprob": -0.001898328471725108
+      },
+      {
+        "text": " ",
+        "start": 0.44,
+        "end": 0.7,
+        "type": "spacing",
+        "logprob": -0.15371619164943695
+      },
+      {
+        "text": "Penhallows,",
+        "start": 0.7,
+        "end": 1.48,
+        "type": "word",
+        "logprob": -0.0582194737537727
+      },
+      {
+        "text": " ",
+        "start": 1.48,
+        "end": 1.78,
+        "type": "spacing",
+        "logprob": -1.645074735279195e-05
+      },
+      {
+        "text": "one",
+        "start": 1.78,
+        "end": 1.92,
+        "type": "word",
+        "logprob": -1.645074735279195e-05
+      },
+      {
+        "text": " ",
+        "start": 1.92,
+        "end": 2.06,
+        "type": "spacing",
+        "logprob": -0.0013308010529726744
+      },
+      {
+        "text": "counter,",
+        "start": 2.06,
+        "end": 2.5,
+        "type": "word",
+        "logprob": -0.0012206305727886502
+      },
+      {
+        "text": " ",
+        "start": 2.5,
+        "end": 2.7,
+        "type": "spacing",
+        "logprob": -1.5497195136049413e-06
+      },
+      {
+        "text": "and",
+        "start": 2.7,
+        "end": 2.8,
+        "type": "word",
+        "logprob": -1.5497195136049413e-06
+      },
+      {
+        "text": " ",
+        "start": 2.8,
+        "end": 2.92,
+        "type": "spacing",
+        "logprob": -5.602820692729438e-06
+      },
+      {
+        "text": "people",
+        "start": 2.92,
+        "end": 3.2,
+        "type": "word",
+        "logprob": -5.602820692729438e-06
+      },
+      {
+        "text": " ",
+        "start": 3.2,
+        "end": 3.24,
+        "type": "spacing",
+        "logprob": -8.344646857949556e-07
+      },
+      {
+        "text": "are",
+        "start": 3.24,
+        "end": 3.56,
+        "type": "word",
+        "logprob": -8.344646857949556e-07
+      },
+      {
+        "text": " ",
+        "start": 3.56,
+        "end": 3.62,
+        "type": "spacing",
+        "logprob": -9.179073458653875e-06
+      },
+      {
+        "text": "finally",
+        "start": 3.62,
+        "end": 4.12,
+        "type": "word",
+        "logprob": -9.179073458653875e-06
+      },
+      {
+        "text": " ",
+        "start": 4.12,
+        "end": 4.16,
+        "type": "spacing",
+        "logprob": -1.5616295058862306e-05
+      },
+      {
+        "text": "buying",
+        "start": 4.16,
+        "end": 4.5,
+        "type": "word",
+        "logprob": -1.5616295058862306e-05
+      },
+      {
+        "text": " ",
+        "start": 4.5,
+        "end": 4.54,
+        "type": "spacing",
+        "logprob": -0.00047398300375789404
+      },
+      {
+        "text": "bait.",
+        "start": 4.54,
+        "end": 4.88,
+        "type": "word",
+        "logprob": -0.0003820950885710772
+      },
+      {
+        "text": " ",
+        "start": 4.88,
+        "end": 4.88,
+        "type": "spacing",
+        "logprob": -1.1086402082582936e-05
+      },
+      {
+        "text": "One",
+        "start": 5.4,
+        "end": 5.56,
+        "type": "word",
+        "logprob": -1.1086402082582936e-05
+      },
+      {
+        "text": " ",
+        "start": 5.56,
+        "end": 5.74,
+        "type": "spacing",
+        "logprob": -0.004560783039778471
+      },
+      {
+        "text": "Adrian",
+        "start": 5.74,
+        "end": 6.12,
+        "type": "word",
+        "logprob": -0.004560783039778471
+      },
+      {
+        "text": " ",
+        "start": 6.12,
+        "end": 6.24,
+        "type": "spacing",
+        "logprob": -0.0046312687918543816
+      },
+      {
+        "text": "Rook",
+        "start": 6.24,
+        "end": 6.42,
+        "type": "word",
+        "logprob": -0.0046312687918543816
+      },
+      {
+        "text": " ",
+        "start": 6.42,
+        "end": 6.62,
+        "type": "spacing",
+        "logprob": -0.08916541188955307
+      },
+      {
+        "text": "stays,",
+        "start": 6.62,
+        "end": 7.1,
+        "type": "word",
+        "logprob": -0.16308400904138884
+      },
+      {
+        "text": " ",
+        "start": 7.1,
+        "end": 7.4,
+        "type": "spacing",
+        "logprob": -8.344646857949556e-07
+      },
+      {
+        "text": "the",
+        "start": 7.4,
+        "end": 7.48,
+        "type": "word",
+        "logprob": -8.344646857949556e-07
+      },
+      {
+        "text": " ",
+        "start": 7.48,
+        "end": 7.52,
+        "type": "spacing",
+        "logprob": -6.854299135738984e-05
+      },
+      {
+        "text": "other",
+        "start": 7.52,
+        "end": 7.72,
+        "type": "word",
+        "logprob": -6.854299135738984e-05
+      },
+      {
+        "text": " ",
+        "start": 7.72,
+        "end": 7.8,
+        "type": "spacing",
+        "logprob": -4.768360213347478e-06
+      },
+      {
+        "text": "one",
+        "start": 7.8,
+        "end": 7.92,
+        "type": "word",
+        "logprob": -4.768360213347478e-06
+      },
+      {
+        "text": " ",
+        "start": 7.92,
+        "end": 8.06,
+        "type": "spacing",
+        "logprob": -6.890059739816934e-05
+      },
+      {
+        "text": "leaves",
+        "start": 8.06,
+        "end": 8.3,
+        "type": "word",
+        "logprob": -6.890059739816934e-05
+      },
+      {
+        "text": " ",
+        "start": 8.3,
+        "end": 8.32,
+        "type": "spacing",
+        "logprob": -1.4305104514278355e-06
+      },
+      {
+        "text": "with",
+        "start": 8.32,
+        "end": 8.42,
+        "type": "word",
+        "logprob": -1.4305104514278355e-06
+      },
+      {
+        "text": " ",
+        "start": 8.42,
+        "end": 8.46,
+        "type": "spacing",
+        "logprob": -7.152555099310121e-07
+      },
+      {
+        "text": "the",
+        "start": 8.46,
+        "end": 8.56,
+        "type": "word",
+        "logprob": -7.152555099310121e-07
+      },
+      {
+        "text": " ",
+        "start": 8.56,
+        "end": 8.6,
+        "type": "spacing",
+        "logprob": -2.9444261599564925e-05
+      },
+      {
+        "text": "ship",
+        "start": 8.6,
+        "end": 8.9,
+        "type": "word",
+        "logprob": -2.9444261599564925e-05
+      },
+      {
+        "text": " ",
+        "start": 8.9,
+        "end": 9.18,
+        "type": "spacing",
+        "logprob": -0.0020905323326587677
+      },
+      {
+        "text": "to",
+        "start": 9.18,
+        "end": 9.28,
+        "type": "word",
+        "logprob": -0.0020905323326587677
+      },
+      {
+        "text": " ",
+        "start": 9.28,
+        "end": 9.32,
+        "type": "spacing",
+        "logprob": -5.722029527532868e-06
+      },
+      {
+        "text": "find",
+        "start": 9.32,
+        "end": 9.54,
+        "type": "word",
+        "logprob": -5.722029527532868e-06
+      },
+      {
+        "text": " ",
+        "start": 9.54,
+        "end": 9.6,
+        "type": "spacing",
+        "logprob": -4.768370445162873e-07
+      },
+      {
+        "text": "out",
+        "start": 9.6,
+        "end": 9.76,
+        "type": "word",
+        "logprob": -4.768370445162873e-07
+      },
+      {
+        "text": " ",
+        "start": 9.76,
+        "end": 9.82,
+        "type": "spacing",
+        "logprob": -2.50339189733495e-06
+      },
+      {
+        "text": "who",
+        "start": 9.82,
+        "end": 9.94,
+        "type": "word",
+        "logprob": -2.50339189733495e-06
+      },
+      {
+        "text": " ",
+        "start": 9.94,
+        "end": 10.0,
+        "type": "spacing",
+        "logprob": -3.2186455882765586e-06
+      },
+      {
+        "text": "he",
+        "start": 10.0,
+        "end": 10.14,
+        "type": "word",
+        "logprob": -3.2186455882765586e-06
+      },
+      {
+        "text": " ",
+        "start": 10.14,
+        "end": 10.22,
+        "type": "spacing",
+        "logprob": -9.536738616588991e-07
+      },
+      {
+        "text": "is.",
+        "start": 10.22,
+        "end": 10.56,
+        "type": "word",
+        "logprob": -8.622709174233023e-06
+      }
+    ],
+    "transcription_id": "wyRDcal4lhAayp7hTJ2v",
+    "audio_duration_secs": 10.88
+  },
+  "listening_reviewed": false
+}

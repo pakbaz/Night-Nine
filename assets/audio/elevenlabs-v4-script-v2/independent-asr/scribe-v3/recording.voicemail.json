@@ -1,0 +1,165 @@
+{
+  "audio_id": "recording.voicemail",
+  "audio_sha256": "60826a238807a1e738911ae2f12428816261618e0251fa757377a3ee1a3ec532",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/recording.voicemail.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Come out with us, kiddo. The bay is singing tonight.",
+  "recognized": "Come out with us, kiddo. The bay is singing tonight.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "d2981ee21b0b6343f6f6cfd5b03a848e",
+  "character_cost": "1",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Come out with us, kiddo. The bay is singing tonight.",
+    "words": [
+      {
+        "text": "Come",
+        "start": 0.06,
+        "end": 0.2,
+        "type": "word",
+        "logprob": -0.0012443665182217956
+      },
+      {
+        "text": " ",
+        "start": 0.2,
+        "end": 0.28,
+        "type": "spacing",
+        "logprob": -1.6689286894688848e-06
+      },
+      {
+        "text": "out",
+        "start": 0.28,
+        "end": 0.4,
+        "type": "word",
+        "logprob": -1.6689286894688848e-06
+      },
+      {
+        "text": " ",
+        "start": 0.4,
+        "end": 0.44,
+        "type": "spacing",
+        "logprob": -2.622600959512056e-06
+      },
+      {
+        "text": "with",
+        "start": 0.44,
+        "end": 0.56,
+        "type": "word",
+        "logprob": -2.622600959512056e-06
+      },
+      {
+        "text": " ",
+        "start": 0.56,
+        "end": 0.64,
+        "type": "spacing",
+        "logprob": -2.145764938177308e-06
+      },
+      {
+        "text": "us,",
+        "start": 0.64,
+        "end": 0.76,
+        "type": "word",
+        "logprob": -7.192242568028935e-06
+      },
+      {
+        "text": " ",
+        "start": 0.76,
+        "end": 0.88,
+        "type": "spacing",
+        "logprob": -0.002518222201615572
+      },
+      {
+        "text": "kiddo.",
+        "start": 0.88,
+        "end": 1.2,
+        "type": "word",
+        "logprob": -0.001287839045592894
+      },
+      {
+        "text": " ",
+        "start": 1.2,
+        "end": 1.2,
+        "type": "spacing",
+        "logprob": -2.0265558760002023e-06
+      },
+      {
+        "text": "The",
+        "start": 1.76,
+        "end": 1.9,
+        "type": "word",
+        "logprob": -2.0265558760002023e-06
+      },
+      {
+        "text": " ",
+        "start": 1.9,
+        "end": 1.96,
+        "type": "spacing",
+        "logprob": -0.003298320807516575
+      },
+      {
+        "text": "bay",
+        "start": 1.96,
+        "end": 2.16,
+        "type": "word",
+        "logprob": -0.003298320807516575
+      },
+      {
+        "text": " ",
+        "start": 2.16,
+        "end": 2.24,
+        "type": "spacing",
+        "logprob": -2.3841855067985307e-07
+      },
+      {
+        "text": "is",
+        "start": 2.24,
+        "end": 2.48,
+        "type": "word",
+        "logprob": -2.3841855067985307e-07
+      },
+      {
+        "text": " ",
+        "start": 2.48,
+        "end": 2.6,
+        "type": "spacing",
+        "logprob": -2.396077979938127e-05
+      },
+      {
+        "text": "singing",
+        "start": 2.6,
+        "end": 2.98,
+        "type": "word",
+        "logprob": -2.396077979938127e-05
+      },
+      {
+        "text": " ",
+        "start": 2.98,
+        "end": 3.04,
+        "type": "spacing",
+        "logprob": -6.198863957251888e-06
+      },
+      {
+        "text": "tonight.",
+        "start": 3.04,
+        "end": 3.52,
+        "type": "word",
+        "logprob": -1.2352854014352488e-05
+      }
+    ],
+    "transcription_id": "Wu9RH7rd932H08MfQjXX",
+    "audio_duration_secs": 4.16
+  },
+  "listening_reviewed": false
+}

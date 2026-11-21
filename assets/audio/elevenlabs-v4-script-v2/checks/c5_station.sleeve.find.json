@@ -3,9 +3,9 @@
   "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
   "wav_sha256": "9bba88de6393780c0e5b092359979dc594f50ac1e703741eb282f00cc9a44528",
   "expected": "My first night at the desk was the 4th, when I engineered and Jo presented. The original is in the blue sleeve, and Mom’s notebook was in its back pocket. I can’t read a word of it.",
-  "recognized": "My first night at the desk was the fourth, when I engineered and Joe presented. The original is in the blue sleeve, and Mom's notebook was in its back pocket. I can't read a word of it.",
+  "recognized": "My first night at the desk was the 4th, when I engineered and Joe presented. The original is in the blue sleeve, and mom's notebook was in its back pocket. I can't read a word of it.",
   "word_edits": 1,
-  "word_error_rate": 0.02631578947368421,
+  "word_error_rate": 0.02564102564102564,
   "listening_review_required": true,
   "seconds": 11.28,
   "sample_rate": 48000,
@@ -15,5 +15,13 @@
   "recognition_pass": "independent",
   "asr_revision": 2,
   "transcript_comparison": "strict normalized English spoken forms",
-  "independent_phrase_transcription": "My first night at the desk was the fourth. When I engineered and Joe presented. The original is in the blue sleeve. And mom's notebook was in its back pocket. I can't read a word of it."
+  "independent_phrase_transcription": "My first night at the desk was the fourth. When I engineered and Joe presented. The original is in the blue sleeve. And mom's notebook was in its back pocket. I can't read a word of it.",
+  "local_recognized": "My first night at the desk was the fourth, when I engineered and Joe presented. The original is in the blue sleeve, and Mom's notebook was in its back pocket. I can't read a word of it.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c5_station.sleeve.find.json",
+    "sha256": "a110fb6efdafbee730e319e1f948c87b953739265789d9810117093ea255c571",
+    "model": "scribe_v3",
+    "word_edits": 1,
+    "listening_reviewed": false
+  }
 }

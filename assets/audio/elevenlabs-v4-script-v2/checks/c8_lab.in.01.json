@@ -3,9 +3,9 @@
   "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
   "wav_sha256": "31e06b1be3f40ed99ffe9db2640789b5759e924a936fd870667ad50921ccea9c",
   "expected": "Your mother wrote ‘heard this before’ beside a drum beat that isn’t there. I want to know where she heard it.",
-  "recognized": "Your mother wrote, heard this before, beside a drumbeat that isn't there. I want to know where she heard it.",
-  "word_edits": 2,
-  "word_error_rate": 0.09090909090909091,
+  "recognized": "Your mother wrote, \"Heard this before,\" beside a drum beat that isn't there. I want to know where she heard it.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
   "listening_review_required": true,
   "seconds": 7.36,
   "sample_rate": 48000,
@@ -15,5 +15,13 @@
   "recognition_pass": "independent",
   "asr_revision": 2,
   "transcript_comparison": "strict normalized English spoken forms",
-  "independent_phrase_transcription": "Your mother wrote, heard this before, beside a drumbeat that isn't there. I want to know where she heard it. Now, let's go."
+  "independent_phrase_transcription": "Your mother wrote, heard this before, beside a drumbeat that isn't there. I want to know where she heard it. Now, let's go.",
+  "local_recognized": "Your mother wrote, heard this before, beside a drumbeat that isn't there. I want to know where she heard it.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c8_lab.in.01.json",
+    "sha256": "8a909524d40ab31bbb5fd50fa5e2426506b7d25e64af52172a6caf4c8e8469d3",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  }
 }

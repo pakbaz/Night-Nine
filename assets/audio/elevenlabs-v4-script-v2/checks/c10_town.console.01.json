@@ -14,5 +14,13 @@
   "first_recognition": "Your timing is late.",
   "recognition_pass": "independent",
   "asr_revision": 2,
-  "transcript_comparison": "strict normalized English spoken forms"
+  "transcript_comparison": "strict normalized English spoken forms",
+  "local_recognized": "Your timing is late.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c10_town.console.01.json",
+    "sha256": "b23a7fb7385e15e9e2c8f004997bf6b7c152f21677bf14081581e14df7b640cc",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  }
 }

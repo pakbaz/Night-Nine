@@ -1,0 +1,417 @@
+{
+  "audio_id": "c6_iris.takes.04",
+  "audio_sha256": "20768e6ab50bcd2a9ce5d6bd000a292adb01684a6222d2fb8e990d6cd6eceaa2",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/c6_iris.takes.04.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Before I was Nora, I was a junior crew member with a duty and a record. We call ourselves Veyri. None of us had ever had a self.",
+  "recognized": "Before I was Nora, I was a junior crew member with a duty and a record. We call ourselves very. None of us had ever had a self.",
+  "word_edits": 1,
+  "request_id": null,
+  "trace_id": "0786e37c387a162a632eab8d880ca2d4",
+  "character_cost": "3",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Before I was Nora, I was a junior crew member with a duty and a record. We call ourselves very. None of us had ever had a self.",
+    "words": [
+      {
+        "text": "Before",
+        "start": 0.06,
+        "end": 0.38,
+        "type": "word",
+        "logprob": -0.00031573555315844715
+      },
+      {
+        "text": " ",
+        "start": 0.38,
+        "end": 0.46,
+        "type": "spacing",
+        "logprob": -3.4927710657939315e-05
+      },
+      {
+        "text": "I",
+        "start": 0.46,
+        "end": 0.52,
+        "type": "word",
+        "logprob": -3.4927710657939315e-05
+      },
+      {
+        "text": " ",
+        "start": 0.52,
+        "end": 0.56,
+        "type": "spacing",
+        "logprob": -3.302042750874534e-05
+      },
+      {
+        "text": "was",
+        "start": 0.56,
+        "end": 0.7,
+        "type": "word",
+        "logprob": -3.302042750874534e-05
+      },
+      {
+        "text": " ",
+        "start": 0.7,
+        "end": 0.76,
+        "type": "spacing",
+        "logprob": -0.005069260019809008
+      },
+      {
+        "text": "Nora,",
+        "start": 0.76,
+        "end": 1.08,
+        "type": "word",
+        "logprob": -0.004059723345562816
+      },
+      {
+        "text": " ",
+        "start": 1.08,
+        "end": 1.08,
+        "type": "spacing",
+        "logprob": -1.7881377516459906e-06
+      },
+      {
+        "text": "I",
+        "start": 1.52,
+        "end": 1.52,
+        "type": "word",
+        "logprob": -1.7881377516459906e-06
+      },
+      {
+        "text": " ",
+        "start": 1.52,
+        "end": 1.56,
+        "type": "spacing",
+        "logprob": -2.145764938177308e-06
+      },
+      {
+        "text": "was",
+        "start": 1.56,
+        "end": 1.64,
+        "type": "word",
+        "logprob": -2.145764938177308e-06
+      },
+      {
+        "text": " ",
+        "start": 1.64,
+        "end": 1.7,
+        "type": "spacing",
+        "logprob": -7.152555099310121e-07
+      },
+      {
+        "text": "a",
+        "start": 1.7,
+        "end": 1.78,
+        "type": "word",
+        "logprob": -7.152555099310121e-07
+      },
+      {
+        "text": " ",
+        "start": 1.78,
+        "end": 1.86,
+        "type": "spacing",
+        "logprob": -0.0004167880106251687
+      },
+      {
+        "text": "junior",
+        "start": 1.86,
+        "end": 2.16,
+        "type": "word",
+        "logprob": -0.0004167880106251687
+      },
+      {
+        "text": " ",
+        "start": 2.16,
+        "end": 2.28,
+        "type": "spacing",
+        "logprob": -4.136476854910143e-05
+      },
+      {
+        "text": "crew",
+        "start": 2.28,
+        "end": 2.48,
+        "type": "word",
+        "logprob": -4.136476854910143e-05
+      },
+      {
+        "text": " ",
+        "start": 2.48,
+        "end": 2.52,
+        "type": "spacing",
+        "logprob": -0.0001380348257953301
+      },
+      {
+        "text": "member",
+        "start": 2.52,
+        "end": 2.9,
+        "type": "word",
+        "logprob": -0.0001380348257953301
+      },
+      {
+        "text": " ",
+        "start": 2.9,
+        "end": 2.94,
+        "type": "spacing",
+        "logprob": -6.556489552167477e-06
+      },
+      {
+        "text": "with",
+        "start": 2.94,
+        "end": 3.04,
+        "type": "word",
+        "logprob": -6.556489552167477e-06
+      },
+      {
+        "text": " ",
+        "start": 3.04,
+        "end": 3.1,
+        "type": "spacing",
+        "logprob": 0.0
+      },
+      {
+        "text": "a",
+        "start": 3.1,
+        "end": 3.22,
+        "type": "word",
+        "logprob": 0.0
+      },
+      {
+        "text": " ",
+        "start": 3.22,
+        "end": 3.26,
+        "type": "spacing",
+        "logprob": -3.9219088648678735e-05
+      },
+      {
+        "text": "duty",
+        "start": 3.26,
+        "end": 3.68,
+        "type": "word",
+        "logprob": -3.9219088648678735e-05
+      },
+      {
+        "text": " ",
+        "start": 3.68,
+        "end": 3.68,
+        "type": "spacing",
+        "logprob": -1.0728830375228426e-06
+      },
+      {
+        "text": "and",
+        "start": 3.68,
+        "end": 3.78,
+        "type": "word",
+        "logprob": -1.0728830375228426e-06
+      },
+      {
+        "text": " ",
+        "start": 3.78,
+        "end": 3.84,
+        "type": "spacing",
+        "logprob": -1.1920928244535389e-07
+      },
+      {
+        "text": "a",
+        "start": 3.84,
+        "end": 3.9,
+        "type": "word",
+        "logprob": -1.1920928244535389e-07
+      },
+      {
+        "text": " ",
+        "start": 3.9,
+        "end": 3.94,
+        "type": "spacing",
+        "logprob": -3.671578815556131e-05
+      },
+      {
+        "text": "record.",
+        "start": 3.94,
+        "end": 4.3,
+        "type": "word",
+        "logprob": -3.278197177028882e-05
+      },
+      {
+        "text": " ",
+        "start": 4.3,
+        "end": 4.3,
+        "type": "spacing",
+        "logprob": -8.106198947643861e-06
+      },
+      {
+        "text": "We",
+        "start": 4.82,
+        "end": 4.92,
+        "type": "word",
+        "logprob": -8.106198947643861e-06
+      },
+      {
+        "text": " ",
+        "start": 4.92,
+        "end": 4.98,
+        "type": "spacing",
+        "logprob": -1.1205610462639015e-05
+      },
+      {
+        "text": "call",
+        "start": 4.98,
+        "end": 5.16,
+        "type": "word",
+        "logprob": -1.1205610462639015e-05
+      },
+      {
+        "text": " ",
+        "start": 5.16,
+        "end": 5.2,
+        "type": "spacing",
+        "logprob": -2.145764938177308e-06
+      },
+      {
+        "text": "ourselves",
+        "start": 5.2,
+        "end": 5.68,
+        "type": "word",
+        "logprob": -2.145764938177308e-06
+      },
+      {
+        "text": " ",
+        "start": 5.68,
+        "end": 5.92,
+        "type": "spacing",
+        "logprob": -0.3874216675758362
+      },
+      {
+        "text": "very.",
+        "start": 5.92,
+        "end": 6.26,
+        "type": "word",
+        "logprob": -0.30995130490191514
+      },
+      {
+        "text": " ",
+        "start": 6.26,
+        "end": 6.26,
+        "type": "spacing",
+        "logprob": -3.194758028257638e-05
+      },
+      {
+        "text": "None",
+        "start": 6.9,
+        "end": 7.02,
+        "type": "word",
+        "logprob": -3.194758028257638e-05
+      },
+      {
+        "text": " ",
+        "start": 7.02,
+        "end": 7.06,
+        "type": "spacing",
+        "logprob": -2.3841855067985307e-07
+      },
+      {
+        "text": "of",
+        "start": 7.06,
+        "end": 7.14,
+        "type": "word",
+        "logprob": -2.3841855067985307e-07
+      },
+      {
+        "text": " ",
+        "start": 7.14,
+        "end": 7.2,
+        "type": "spacing",
+        "logprob": -2.0265558760002023e-06
+      },
+      {
+        "text": "us",
+        "start": 7.2,
+        "end": 7.36,
+        "type": "word",
+        "logprob": -2.0265558760002023e-06
+      },
+      {
+        "text": " ",
+        "start": 7.36,
+        "end": 7.4,
+        "type": "spacing",
+        "logprob": -2.9205850296420977e-05
+      },
+      {
+        "text": "had",
+        "start": 7.4,
+        "end": 7.64,
+        "type": "word",
+        "logprob": -2.9205850296420977e-05
+      },
+      {
+        "text": " ",
+        "start": 7.64,
+        "end": 7.72,
+        "type": "spacing",
+        "logprob": -5.960446742392378e-06
+      },
+      {
+        "text": "ever",
+        "start": 7.72,
+        "end": 7.94,
+        "type": "word",
+        "logprob": -5.960446742392378e-06
+      },
+      {
+        "text": " ",
+        "start": 7.94,
+        "end": 7.98,
+        "type": "spacing",
+        "logprob": -2.0265558760002023e-06
+      },
+      {
+        "text": "had",
+        "start": 7.98,
+        "end": 8.1,
+        "type": "word",
+        "logprob": -2.0265558760002023e-06
+      },
+      {
+        "text": " ",
+        "start": 8.1,
+        "end": 8.14,
+        "type": "spacing",
+        "logprob": -3.576278118089249e-07
+      },
+      {
+        "text": "a",
+        "start": 8.14,
+        "end": 8.22,
+        "type": "word",
+        "logprob": -3.576278118089249e-07
+      },
+      {
+        "text": " ",
+        "start": 8.22,
+        "end": 8.28,
+        "type": "spacing",
+        "logprob": -0.0001282609737245366
+      },
+      {
+        "text": "self.",
+        "start": 8.28,
+        "end": 8.66,
+        "type": "word",
+        "logprob": -0.00011262210828135721
+      }
+    ],
+    "transcription_id": "u8k0i0npgP0mCnyopqpK",
+    "audio_duration_secs": 9.36
+  },
+  "listening_reviewed": false
+}

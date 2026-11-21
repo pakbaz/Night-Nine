@@ -3,7 +3,7 @@
   "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
   "wav_sha256": "0d94a763abc720b08d22448b5dca5b32626921470ee784d4c40eba35adf59e3d",
   "expected": "Your parents’ records are in good order, Mr. Mercer. So is mine. I have never been wrong on the record. Not on Tirel, and not here.",
-  "recognized": "Your parents' records are in good order, Mr Mercer. So is mine. I have never been wrong on the record. Not on Tyrell and not here.",
+  "recognized": "Your parents' records are in good order, Mr. Mercer. So is mine. I have never been wrong on the record, not on Tyrrell and not here.",
   "word_edits": 1,
   "word_error_rate": 0.038461538461538464,
   "listening_review_required": true,
@@ -14,5 +14,13 @@
   "first_recognition": "Your parents' records are in good order, Mr Mercer. So is mine. I have never been wrong on the record. Not on Tyrell and not here.",
   "recognition_pass": "independent",
   "asr_revision": 2,
-  "transcript_comparison": "strict normalized English spoken forms"
+  "transcript_comparison": "strict normalized English spoken forms",
+  "local_recognized": "Your parents' records are in good order, Mr Mercer. So is mine. I have never been wrong on the record. Not on Tyrell and not here.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c7_swap.in.01.json",
+    "sha256": "94526550dac9c3aef74331a5f2764e5f75fc56109b3b2dff485b35488be0a134",
+    "model": "scribe_v3",
+    "word_edits": 1,
+    "listening_reviewed": false
+  }
 }

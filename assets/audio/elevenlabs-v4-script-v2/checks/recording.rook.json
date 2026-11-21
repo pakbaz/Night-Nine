@@ -14,5 +14,13 @@
   "first_recognition": "Sit tight, June.",
   "recognition_pass": "independent",
   "asr_revision": 2,
-  "transcript_comparison": "strict normalized English spoken forms"
+  "transcript_comparison": "strict normalized English spoken forms",
+  "local_recognized": "Sit tight, June.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/recording.rook.json",
+    "sha256": "360348cf2718414a00ddf1d3e44d83fce016d4c68e5db527e020f3c982b6c128",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  }
 }

@@ -3,9 +3,9 @@
   "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
   "wav_sha256": "a42a2560c8419ae7b5f4cfb01d520e351fd7a2614f9d4af5d7a8ba1f02db45a1",
   "expected": "Funny. Lyle Boone hasn’t missed one of the Little League games I coach since June either.",
-  "recognized": "Funny, Lyle Boone hasn't missed one of the Little League games I coached since June either.",
-  "word_edits": 1,
-  "word_error_rate": 0.058823529411764705,
+  "recognized": "Funny, Lyle Boone hasn't missed one of the Little League games I coach since June either.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
   "listening_review_required": true,
   "seconds": 5.84,
   "sample_rate": 48000,
@@ -15,5 +15,13 @@
   "recognition_pass": "independent",
   "asr_revision": 2,
   "transcript_comparison": "strict normalized English spoken forms",
-  "independent_phrase_transcription": "Funny Lyle Boone hasn't missed one of the Little League games I coached since June either."
+  "independent_phrase_transcription": "Funny Lyle Boone hasn't missed one of the Little League games I coached since June either.",
+  "local_recognized": "Funny, Lyle Boone hasn't missed one of the Little League games I coached since June either.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c1_dinner.family.lead.05.json",
+    "sha256": "170c8d7cb8e74b10f2f7e912914b10157048f849babdc2df5a3beb7bcf8a528d",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  }
 }

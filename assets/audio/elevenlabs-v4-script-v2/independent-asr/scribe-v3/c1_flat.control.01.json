@@ -1,0 +1,109 @@
+{
+  "audio_id": "c1_flat.control.01",
+  "audio_sha256": "68b73c2948dff34f93923385534d870d58d7d3374d2bb5c73e3ceeeef623aca1",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/c1_flat.control.01.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Testing. One, two. Testing... one, two.",
+  "recognized": "Testing, one, two. Testing, one, two.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "571804dc7f0b3885b75a0de0b65404dc",
+  "character_cost": "1",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Testing, one, two. Testing, one, two.",
+    "words": [
+      {
+        "text": "Testing,",
+        "start": 0.08,
+        "end": 0.56,
+        "type": "word",
+        "logprob": -0.0036181862706143875
+      },
+      {
+        "text": " ",
+        "start": 0.56,
+        "end": 0.94,
+        "type": "spacing",
+        "logprob": -0.001765955938026309
+      },
+      {
+        "text": "one,",
+        "start": 1.0,
+        "end": 1.16,
+        "type": "word",
+        "logprob": -0.0013337353038878064
+      },
+      {
+        "text": " ",
+        "start": 1.16,
+        "end": 1.46,
+        "type": "spacing",
+        "logprob": -2.253030106658116e-05
+      },
+      {
+        "text": "two.",
+        "start": 1.46,
+        "end": 1.78,
+        "type": "word",
+        "logprob": -2.345415077797952e-05
+      },
+      {
+        "text": " ",
+        "start": 1.78,
+        "end": 2.12,
+        "type": "spacing",
+        "logprob": -0.0003474347176961601
+      },
+      {
+        "text": "Testing,",
+        "start": 2.12,
+        "end": 2.6,
+        "type": "word",
+        "logprob": -0.0003043034008669565
+      },
+      {
+        "text": " ",
+        "start": 2.6,
+        "end": 3.0,
+        "type": "spacing",
+        "logprob": -7.152531907195225e-06
+      },
+      {
+        "text": "one,",
+        "start": 3.06,
+        "end": 3.22,
+        "type": "word",
+        "logprob": -6.169060327465559e-06
+      },
+      {
+        "text": " ",
+        "start": 3.22,
+        "end": 3.5,
+        "type": "spacing",
+        "logprob": -1.9192511899746023e-05
+      },
+      {
+        "text": "two.",
+        "start": 3.5,
+        "end": 3.78,
+        "type": "word",
+        "logprob": -1.9788546069321455e-05
+      }
+    ],
+    "transcription_id": "vEZlRjE6InWKEE0Tgx4h",
+    "audio_duration_secs": 4.0
+  },
+  "listening_reviewed": false
+}

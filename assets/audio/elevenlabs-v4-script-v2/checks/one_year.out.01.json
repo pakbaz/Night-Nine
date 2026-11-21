@@ -14,5 +14,13 @@
   "first_recognition": "Good morning, dull weather.",
   "recognition_pass": "story_vocabulary_1",
   "asr_revision": 2,
-  "transcript_comparison": "strict normalized English spoken forms"
+  "transcript_comparison": "strict normalized English spoken forms",
+  "local_recognized": "Good morning, Bellwether.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/one_year.out.01.json",
+    "sha256": "2dc28ac563f55a0d98ac37adc8eb845be237a797914dacf5d1972a5c5a940dfd",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  }
 }

@@ -14,5 +14,13 @@
   "first_recognition": "We're on it.",
   "recognition_pass": "independent",
   "asr_revision": 2,
-  "transcript_comparison": "strict normalized English spoken forms"
+  "transcript_comparison": "strict normalized English spoken forms",
+  "local_recognized": "We're on it.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c7_swap.map.02.json",
+    "sha256": "ea1fa0990f7393813cecd78e8a95b1d35b604575ba527772a6eb193b8cbe1b9d",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  }
 }

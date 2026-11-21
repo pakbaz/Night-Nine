@@ -1,0 +1,53 @@
+{
+  "audio_id": "c9_gallery.out.05",
+  "audio_sha256": "3267fc77337a5a1b93bb27742b69246a0226b65dfeb9bbd310cbddac97430062",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/c9_gallery.out.05.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Good. Witnesses.",
+  "recognized": "Good. Witnesses.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "37256b6aa1537115345a93219fe2b875",
+  "character_cost": "1",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Good. Witnesses.",
+    "words": [
+      {
+        "text": "Good.",
+        "start": 0.12,
+        "end": 0.38,
+        "type": "word",
+        "logprob": -0.00018589821411296725
+      },
+      {
+        "text": " ",
+        "start": 0.38,
+        "end": 0.38,
+        "type": "spacing",
+        "logprob": -0.00031096869497559965
+      },
+      {
+        "text": "Witnesses.",
+        "start": 0.96,
+        "end": 1.58,
+        "type": "word",
+        "logprob": -0.0014121129031991586
+      }
+    ],
+    "transcription_id": "OH3qjlEbCSDKQ5AfIqvt",
+    "audio_duration_secs": 2.24
+  },
+  "listening_reviewed": false
+}

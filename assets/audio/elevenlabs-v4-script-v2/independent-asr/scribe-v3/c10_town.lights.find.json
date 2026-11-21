@@ -1,0 +1,403 @@
+{
+  "audio_id": "c10_town.lights.find",
+  "audio_sha256": "c508ac1e7789cc18d444e120e1685853bc47e9c5dbf16e2b8b55f47c40827dbd",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/c10_town.lights.find.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Nora set it up in ten minutes. Orchard starts on my cue, Pier answers what it sees, and the spare phone stays free for the fire crew.",
+  "recognized": "Nora set it up in 10 minutes. Orchard starts on my cue, Pierre answers what it sees, and the spare phone stays free for the fire crew.",
+  "word_edits": 1,
+  "request_id": null,
+  "trace_id": "0cfe64f09d9e39044e0707ef24277022",
+  "character_cost": "3",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Nora set it up in 10 minutes. Orchard starts on my cue, Pierre answers what it sees, and the spare phone stays free for the fire crew.",
+    "words": [
+      {
+        "text": "Nora",
+        "start": 0.1,
+        "end": 0.34,
+        "type": "word",
+        "logprob": -0.0016295991372317076
+      },
+      {
+        "text": " ",
+        "start": 0.34,
+        "end": 0.44,
+        "type": "spacing",
+        "logprob": -3.075552376685664e-05
+      },
+      {
+        "text": "set",
+        "start": 0.44,
+        "end": 0.62,
+        "type": "word",
+        "logprob": -3.075552376685664e-05
+      },
+      {
+        "text": " ",
+        "start": 0.62,
+        "end": 0.66,
+        "type": "spacing",
+        "logprob": -1.1920928244535389e-07
+      },
+      {
+        "text": "it",
+        "start": 0.66,
+        "end": 0.74,
+        "type": "word",
+        "logprob": -1.1920928244535389e-07
+      },
+      {
+        "text": " ",
+        "start": 0.74,
+        "end": 0.82,
+        "type": "spacing",
+        "logprob": -1.4305104514278355e-06
+      },
+      {
+        "text": "up",
+        "start": 0.82,
+        "end": 1.0,
+        "type": "word",
+        "logprob": -1.4305104514278355e-06
+      },
+      {
+        "text": " ",
+        "start": 1.0,
+        "end": 1.06,
+        "type": "spacing",
+        "logprob": -5.960462772236497e-07
+      },
+      {
+        "text": "in",
+        "start": 1.06,
+        "end": 1.22,
+        "type": "word",
+        "logprob": -5.960462772236497e-07
+      },
+      {
+        "text": " ",
+        "start": 1.22,
+        "end": 1.28,
+        "type": "spacing",
+        "logprob": -0.0010351543314754963
+      },
+      {
+        "text": "10",
+        "start": 1.28,
+        "end": 1.5,
+        "type": "word",
+        "logprob": -6.079643753764685e-06
+      },
+      {
+        "text": " ",
+        "start": 1.5,
+        "end": 1.58,
+        "type": "spacing",
+        "logprob": -1.07287787614041e-05
+      },
+      {
+        "text": "minutes.",
+        "start": 1.6,
+        "end": 2.0,
+        "type": "word",
+        "logprob": -9.939023186689155e-06
+      },
+      {
+        "text": " ",
+        "start": 2.0,
+        "end": 2.4,
+        "type": "spacing",
+        "logprob": -0.0009646529797464609
+      },
+      {
+        "text": "Orchard",
+        "start": 2.4,
+        "end": 2.72,
+        "type": "word",
+        "logprob": -0.0009646529797464609
+      },
+      {
+        "text": " ",
+        "start": 2.72,
+        "end": 2.84,
+        "type": "spacing",
+        "logprob": -2.4437606043647975e-05
+      },
+      {
+        "text": "starts",
+        "start": 2.84,
+        "end": 3.08,
+        "type": "word",
+        "logprob": -2.4437606043647975e-05
+      },
+      {
+        "text": " ",
+        "start": 3.08,
+        "end": 3.14,
+        "type": "spacing",
+        "logprob": -2.3841855067985307e-07
+      },
+      {
+        "text": "on",
+        "start": 3.14,
+        "end": 3.28,
+        "type": "word",
+        "logprob": -2.3841855067985307e-07
+      },
+      {
+        "text": " ",
+        "start": 3.28,
+        "end": 3.32,
+        "type": "spacing",
+        "logprob": -2.0265373677830212e-05
+      },
+      {
+        "text": "my",
+        "start": 3.34,
+        "end": 3.54,
+        "type": "word",
+        "logprob": -2.0265373677830212e-05
+      },
+      {
+        "text": " ",
+        "start": 3.54,
+        "end": 3.6,
+        "type": "spacing",
+        "logprob": -0.004766649100929499
+      },
+      {
+        "text": "cue,",
+        "start": 3.62,
+        "end": 3.88,
+        "type": "word",
+        "logprob": -0.0036833543781540357
+      },
+      {
+        "text": " ",
+        "start": 3.88,
+        "end": 4.2,
+        "type": "spacing",
+        "logprob": -0.9235807061195374
+      },
+      {
+        "text": "Pierre",
+        "start": 4.2,
+        "end": 4.5,
+        "type": "word",
+        "logprob": -0.9235807061195374
+      },
+      {
+        "text": " ",
+        "start": 4.5,
+        "end": 4.58,
+        "type": "spacing",
+        "logprob": -0.00015793983766343445
+      },
+      {
+        "text": "answers",
+        "start": 4.58,
+        "end": 4.92,
+        "type": "word",
+        "logprob": -0.00015793983766343445
+      },
+      {
+        "text": " ",
+        "start": 4.92,
+        "end": 4.94,
+        "type": "spacing",
+        "logprob": -6.794906312279636e-06
+      },
+      {
+        "text": "what",
+        "start": 4.94,
+        "end": 5.02,
+        "type": "word",
+        "logprob": -6.794906312279636e-06
+      },
+      {
+        "text": " ",
+        "start": 5.02,
+        "end": 5.06,
+        "type": "spacing",
+        "logprob": -8.344646857949556e-07
+      },
+      {
+        "text": "it",
+        "start": 5.06,
+        "end": 5.18,
+        "type": "word",
+        "logprob": -8.344646857949556e-07
+      },
+      {
+        "text": " ",
+        "start": 5.18,
+        "end": 5.26,
+        "type": "spacing",
+        "logprob": -5.6980417866725475e-05
+      },
+      {
+        "text": "sees,",
+        "start": 5.26,
+        "end": 5.7,
+        "type": "word",
+        "logprob": -7.853106944821775e-05
+      },
+      {
+        "text": " ",
+        "start": 5.7,
+        "end": 5.94,
+        "type": "spacing",
+        "logprob": -2.145764938177308e-06
+      },
+      {
+        "text": "and",
+        "start": 5.94,
+        "end": 6.02,
+        "type": "word",
+        "logprob": -2.145764938177308e-06
+      },
+      {
+        "text": " ",
+        "start": 6.02,
+        "end": 6.06,
+        "type": "spacing",
+        "logprob": 0.0
+      },
+      {
+        "text": "the",
+        "start": 6.06,
+        "end": 6.16,
+        "type": "word",
+        "logprob": 0.0
+      },
+      {
+        "text": " ",
+        "start": 6.16,
+        "end": 6.2,
+        "type": "spacing",
+        "logprob": -3.576214658096433e-05
+      },
+      {
+        "text": "spare",
+        "start": 6.26,
+        "end": 6.44,
+        "type": "word",
+        "logprob": -3.576214658096433e-05
+      },
+      {
+        "text": " ",
+        "start": 6.44,
+        "end": 6.56,
+        "type": "spacing",
+        "logprob": -1.7762025890988298e-05
+      },
+      {
+        "text": "phone",
+        "start": 6.56,
+        "end": 6.82,
+        "type": "word",
+        "logprob": -1.7762025890988298e-05
+      },
+      {
+        "text": " ",
+        "start": 6.82,
+        "end": 6.98,
+        "type": "spacing",
+        "logprob": -1.0132738680113107e-05
+      },
+      {
+        "text": "stays",
+        "start": 6.98,
+        "end": 7.2,
+        "type": "word",
+        "logprob": -1.0132738680113107e-05
+      },
+      {
+        "text": " ",
+        "start": 7.2,
+        "end": 7.36,
+        "type": "spacing",
+        "logprob": -5.602820692729438e-06
+      },
+      {
+        "text": "free",
+        "start": 7.36,
+        "end": 7.66,
+        "type": "word",
+        "logprob": -5.602820692729438e-06
+      },
+      {
+        "text": " ",
+        "start": 7.66,
+        "end": 7.7,
+        "type": "spacing",
+        "logprob": -3.576278118089249e-07
+      },
+      {
+        "text": "for",
+        "start": 7.7,
+        "end": 7.78,
+        "type": "word",
+        "logprob": -3.576278118089249e-07
+      },
+      {
+        "text": " ",
+        "start": 7.78,
+        "end": 7.82,
+        "type": "spacing",
+        "logprob": 0.0
+      },
+      {
+        "text": "the",
+        "start": 7.82,
+        "end": 7.92,
+        "type": "word",
+        "logprob": 0.0
+      },
+      {
+        "text": " ",
+        "start": 7.92,
+        "end": 7.96,
+        "type": "spacing",
+        "logprob": -1.764281842042692e-05
+      },
+      {
+        "text": "fire",
+        "start": 7.96,
+        "end": 8.18,
+        "type": "word",
+        "logprob": -1.764281842042692e-05
+      },
+      {
+        "text": " ",
+        "start": 8.18,
+        "end": 8.3,
+        "type": "spacing",
+        "logprob": -6.925819616299123e-05
+      },
+      {
+        "text": "crew.",
+        "start": 8.3,
+        "end": 8.58,
+        "type": "word",
+        "logprob": -6.019871289026923e-05
+      }
+    ],
+    "transcription_id": "M9PYiBcfUKIOt7NOcrV3",
+    "audio_duration_secs": 8.88
+  },
+  "listening_reviewed": false
+}

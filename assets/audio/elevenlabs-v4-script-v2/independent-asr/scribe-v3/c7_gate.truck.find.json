@@ -1,0 +1,515 @@
+{
+  "audio_id": "c7_gate.truck.find",
+  "audio_sha256": "1fcb3c88a0078d3bbe9d1c15ca0fa394162c6a69ae27aec4774b09cc38d8a358",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/c7_gate.truck.find.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Sound covers 170 meters in half a second. The fence-line strip in the Halcyon truck shows the click at 0.5 s, so the fence hears the desk. Every speaker on the site is mine.",
+  "recognized": "Sound covers 170 meters in half a second. The fence line strip in the Halcyon truck shows the click at 0.5 seconds, so the fence hears the desk. Every speaker on the site is mine.",
+  "word_edits": 2,
+  "request_id": null,
+  "trace_id": "4ab7730484709cb5b740cdb800640f76",
+  "character_cost": "4",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Sound covers 170 meters in half a second. The fence line strip in the Halcyon truck shows the click at 0.5 seconds, so the fence hears the desk. Every speaker on the site is mine.",
+    "words": [
+      {
+        "text": "Sound",
+        "start": 0.14,
+        "end": 0.4,
+        "type": "word",
+        "logprob": -0.0002388668799540028
+      },
+      {
+        "text": " ",
+        "start": 0.4,
+        "end": 0.52,
+        "type": "spacing",
+        "logprob": -1.537788011773955e-05
+      },
+      {
+        "text": "covers",
+        "start": 0.52,
+        "end": 0.82,
+        "type": "word",
+        "logprob": -1.537788011773955e-05
+      },
+      {
+        "text": " ",
+        "start": 0.82,
+        "end": 1.12,
+        "type": "spacing",
+        "logprob": -0.00011681827891152352
+      },
+      {
+        "text": "170",
+        "start": 1.12,
+        "end": 1.94,
+        "type": "word",
+        "logprob": -1.649036054611012e-05
+      },
+      {
+        "text": " ",
+        "start": 1.94,
+        "end": 2.02,
+        "type": "spacing",
+        "logprob": -0.00024244230007752776
+      },
+      {
+        "text": "meters",
+        "start": 2.02,
+        "end": 2.58,
+        "type": "word",
+        "logprob": -0.00024244230007752776
+      },
+      {
+        "text": " ",
+        "start": 2.58,
+        "end": 2.62,
+        "type": "spacing",
+        "logprob": -1.5497195136049413e-06
+      },
+      {
+        "text": "in",
+        "start": 2.62,
+        "end": 2.76,
+        "type": "word",
+        "logprob": -1.5497195136049413e-06
+      },
+      {
+        "text": " ",
+        "start": 2.76,
+        "end": 2.82,
+        "type": "spacing",
+        "logprob": -4.053033626405522e-05
+      },
+      {
+        "text": "half",
+        "start": 2.82,
+        "end": 3.04,
+        "type": "word",
+        "logprob": -4.053033626405522e-05
+      },
+      {
+        "text": " ",
+        "start": 3.04,
+        "end": 3.08,
+        "type": "spacing",
+        "logprob": -3.576278118089249e-07
+      },
+      {
+        "text": "a",
+        "start": 3.08,
+        "end": 3.16,
+        "type": "word",
+        "logprob": -3.576278118089249e-07
+      },
+      {
+        "text": " ",
+        "start": 3.16,
+        "end": 3.22,
+        "type": "spacing",
+        "logprob": -1.5616295058862306e-05
+      },
+      {
+        "text": "second.",
+        "start": 3.22,
+        "end": 3.68,
+        "type": "word",
+        "logprob": -1.362381414894896e-05
+      },
+      {
+        "text": " ",
+        "start": 3.68,
+        "end": 3.88,
+        "type": "spacing",
+        "logprob": -2.0265558760002023e-06
+      },
+      {
+        "text": "The",
+        "start": 3.88,
+        "end": 4.019,
+        "type": "word",
+        "logprob": -2.0265558760002023e-06
+      },
+      {
+        "text": " ",
+        "start": 4.019,
+        "end": 4.059,
+        "type": "spacing",
+        "logprob": -0.03226705640554428
+      },
+      {
+        "text": "fence",
+        "start": 4.059,
+        "end": 4.26,
+        "type": "word",
+        "logprob": -0.03226705640554428
+      },
+      {
+        "text": " ",
+        "start": 4.26,
+        "end": 4.34,
+        "type": "spacing",
+        "logprob": -0.14283372461795807
+      },
+      {
+        "text": "line",
+        "start": 4.34,
+        "end": 4.5,
+        "type": "word",
+        "logprob": -0.14283372461795807
+      },
+      {
+        "text": " ",
+        "start": 4.5,
+        "end": 4.64,
+        "type": "spacing",
+        "logprob": -7.1403817855753e-05
+      },
+      {
+        "text": "strip",
+        "start": 4.64,
+        "end": 4.92,
+        "type": "word",
+        "logprob": -7.1403817855753e-05
+      },
+      {
+        "text": " ",
+        "start": 4.92,
+        "end": 4.96,
+        "type": "spacing",
+        "logprob": -4.529942543740617e-06
+      },
+      {
+        "text": "in",
+        "start": 4.96,
+        "end": 5.02,
+        "type": "word",
+        "logprob": -4.529942543740617e-06
+      },
+      {
+        "text": " ",
+        "start": 5.02,
+        "end": 5.06,
+        "type": "spacing",
+        "logprob": -4.768370445162873e-07
+      },
+      {
+        "text": "the",
+        "start": 5.06,
+        "end": 5.12,
+        "type": "word",
+        "logprob": -4.768370445162873e-07
+      },
+      {
+        "text": " ",
+        "start": 5.12,
+        "end": 5.16,
+        "type": "spacing",
+        "logprob": -0.011492125689983368
+      },
+      {
+        "text": "Halcyon",
+        "start": 5.16,
+        "end": 5.64,
+        "type": "word",
+        "logprob": -0.012656614716563905
+      },
+      {
+        "text": " ",
+        "start": 5.64,
+        "end": 5.74,
+        "type": "spacing",
+        "logprob": -0.00025567124248482287
+      },
+      {
+        "text": "truck",
+        "start": 5.74,
+        "end": 6.02,
+        "type": "word",
+        "logprob": -0.00025567124248482287
+      },
+      {
+        "text": " ",
+        "start": 6.02,
+        "end": 6.16,
+        "type": "spacing",
+        "logprob": -1.2159273865108844e-05
+      },
+      {
+        "text": "shows",
+        "start": 6.16,
+        "end": 6.44,
+        "type": "word",
+        "logprob": -1.2159273865108844e-05
+      },
+      {
+        "text": " ",
+        "start": 6.44,
+        "end": 6.48,
+        "type": "spacing",
+        "logprob": -2.3841855067985307e-07
+      },
+      {
+        "text": "the",
+        "start": 6.48,
+        "end": 6.58,
+        "type": "word",
+        "logprob": -2.3841855067985307e-07
+      },
+      {
+        "text": " ",
+        "start": 6.58,
+        "end": 6.62,
+        "type": "spacing",
+        "logprob": -5.090107151772827e-05
+      },
+      {
+        "text": "click",
+        "start": 6.62,
+        "end": 6.94,
+        "type": "word",
+        "logprob": -5.090107151772827e-05
+      },
+      {
+        "text": " ",
+        "start": 6.94,
+        "end": 7.0,
+        "type": "spacing",
+        "logprob": -1.5497195136049413e-06
+      },
+      {
+        "text": "at",
+        "start": 7.0,
+        "end": 7.16,
+        "type": "word",
+        "logprob": -1.5497195136049413e-06
+      },
+      {
+        "text": " ",
+        "start": 7.16,
+        "end": 7.24,
+        "type": "spacing",
+        "logprob": -1.0251946150674485e-05
+      },
+      {
+        "text": "0.5",
+        "start": 7.5,
+        "end": 8.32,
+        "type": "word",
+        "logprob": -1.7762010429578368e-05
+      },
+      {
+        "text": " ",
+        "start": 8.32,
+        "end": 8.38,
+        "type": "spacing",
+        "logprob": -3.9219088648678735e-05
+      },
+      {
+        "text": "seconds,",
+        "start": 8.38,
+        "end": 8.86,
+        "type": "word",
+        "logprob": -0.0012565057527353929
+      },
+      {
+        "text": " ",
+        "start": 8.86,
+        "end": 8.86,
+        "type": "spacing",
+        "logprob": -1.1920922133867862e-06
+      },
+      {
+        "text": "so",
+        "start": 9.18,
+        "end": 9.26,
+        "type": "word",
+        "logprob": -1.1920922133867862e-06
+      },
+      {
+        "text": " ",
+        "start": 9.26,
+        "end": 9.3,
+        "type": "spacing",
+        "logprob": 0.0
+      },
+      {
+        "text": "the",
+        "start": 9.3,
+        "end": 9.46,
+        "type": "word",
+        "logprob": 0.0
+      },
+      {
+        "text": " ",
+        "start": 9.46,
+        "end": 9.52,
+        "type": "spacing",
+        "logprob": -2.753696753643453e-05
+      },
+      {
+        "text": "fence",
+        "start": 9.52,
+        "end": 9.86,
+        "type": "word",
+        "logprob": -2.753696753643453e-05
+      },
+      {
+        "text": " ",
+        "start": 9.86,
+        "end": 10.06,
+        "type": "spacing",
+        "logprob": -8.380061626667157e-05
+      },
+      {
+        "text": "hears",
+        "start": 10.06,
+        "end": 10.34,
+        "type": "word",
+        "logprob": -8.380061626667157e-05
+      },
+      {
+        "text": " ",
+        "start": 10.34,
+        "end": 10.38,
+        "type": "spacing",
+        "logprob": -3.576278118089249e-07
+      },
+      {
+        "text": "the",
+        "start": 10.38,
+        "end": 10.48,
+        "type": "word",
+        "logprob": -3.576278118089249e-07
+      },
+      {
+        "text": " ",
+        "start": 10.48,
+        "end": 10.52,
+        "type": "spacing",
+        "logprob": -0.00011836781777674332
+      },
+      {
+        "text": "desk.",
+        "start": 10.52,
+        "end": 10.94,
+        "type": "word",
+        "logprob": -9.533798333904997e-05
+      },
+      {
+        "text": " ",
+        "start": 10.94,
+        "end": 10.94,
+        "type": "spacing",
+        "logprob": -2.6702524337451905e-05
+      },
+      {
+        "text": "Every",
+        "start": 11.46,
+        "end": 11.68,
+        "type": "word",
+        "logprob": -2.6702524337451905e-05
+      },
+      {
+        "text": " ",
+        "start": 11.68,
+        "end": 11.84,
+        "type": "spacing",
+        "logprob": -3.0278701160568744e-05
+      },
+      {
+        "text": "speaker",
+        "start": 11.84,
+        "end": 12.16,
+        "type": "word",
+        "logprob": -3.0278701160568744e-05
+      },
+      {
+        "text": " ",
+        "start": 12.16,
+        "end": 12.2,
+        "type": "spacing",
+        "logprob": -2.3841855067985307e-07
+      },
+      {
+        "text": "on",
+        "start": 12.2,
+        "end": 12.28,
+        "type": "word",
+        "logprob": -2.3841855067985307e-07
+      },
+      {
+        "text": " ",
+        "start": 12.28,
+        "end": 12.32,
+        "type": "spacing",
+        "logprob": -8.344646857949556e-07
+      },
+      {
+        "text": "the",
+        "start": 12.32,
+        "end": 12.42,
+        "type": "word",
+        "logprob": -8.344646857949556e-07
+      },
+      {
+        "text": " ",
+        "start": 12.42,
+        "end": 12.48,
+        "type": "spacing",
+        "logprob": -1.847726889536716e-05
+      },
+      {
+        "text": "site",
+        "start": 12.48,
+        "end": 12.88,
+        "type": "word",
+        "logprob": -1.847726889536716e-05
+      },
+      {
+        "text": " ",
+        "start": 12.88,
+        "end": 12.94,
+        "type": "spacing",
+        "logprob": -3.576278118089249e-07
+      },
+      {
+        "text": "is",
+        "start": 12.94,
+        "end": 13.08,
+        "type": "word",
+        "logprob": -3.576278118089249e-07
+      },
+      {
+        "text": " ",
+        "start": 13.08,
+        "end": 13.16,
+        "type": "spacing",
+        "logprob": -0.00018344627460464835
+      },
+      {
+        "text": "mine.",
+        "start": 13.16,
+        "end": 13.54,
+        "type": "word",
+        "logprob": -0.00015321805913117714
+      }
+    ],
+    "transcription_id": "k1yNxbrWXXw79dzs56cq",
+    "audio_duration_secs": 13.84
+  },
+  "listening_reviewed": false
+}

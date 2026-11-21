@@ -14,5 +14,13 @@
   "first_recognition": "That price is robbery.",
   "recognition_pass": "independent",
   "asr_revision": 2,
-  "transcript_comparison": "strict normalized English spoken forms"
+  "transcript_comparison": "strict normalized English spoken forms",
+  "local_recognized": "That price is robbery.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/epilogue.bait.01.json",
+    "sha256": "d2f80144ae6319f1a8bc5d6c0a757967a95dc1013a62bb23b09e27519bea24d5",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  }
 }

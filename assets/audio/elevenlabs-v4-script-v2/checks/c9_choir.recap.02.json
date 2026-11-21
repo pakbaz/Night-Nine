@@ -3,7 +3,7 @@
   "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
   "wav_sha256": "679f28b37ad10c973ec6d21b996ef8d41b5e57382ad4c8cb618234ca5cba2f45",
   "expected": "Tirel hid. All seven worlds hid. The Veyri have spent nine hundred years afraid of neighbors who were afraid of them.",
-  "recognized": "Tyrell hid. All seven worlds hid. The very have spent 900 years afraid of neighbors who were afraid of them.",
+  "recognized": "Tyrell hid. All seven worlds hid. The Vari have spent 900 years afraid of neighbors who were afraid of them.",
   "word_edits": 2,
   "word_error_rate": 0.1,
   "listening_review_required": true,
@@ -15,5 +15,13 @@
   "recognition_pass": "independent",
   "asr_revision": 2,
   "transcript_comparison": "strict normalized English spoken forms",
-  "independent_phrase_transcription": "Tyrell Hid All seven worlds hid. The very have spent 900 years afraid of neighbors who were afraid of them."
+  "independent_phrase_transcription": "Tyrell Hid All seven worlds hid. The very have spent 900 years afraid of neighbors who were afraid of them.",
+  "local_recognized": "Tyrell hid. All seven worlds hid. The very have spent 900 years afraid of neighbors who were afraid of them.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c9_choir.recap.02.json",
+    "sha256": "77993959ea2f43d45ae705bd753e6533075a9ff0249f72271fa5d3e6f3c2ca6d",
+    "model": "scribe_v3",
+    "word_edits": 2,
+    "listening_reviewed": false
+  }
 }

@@ -14,5 +14,13 @@
   "first_recognition": "Eat first.",
   "recognition_pass": "independent",
   "asr_revision": 2,
-  "transcript_comparison": "strict normalized English spoken forms"
+  "transcript_comparison": "strict normalized English spoken forms",
+  "local_recognized": "Eat first.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c5_shack.in.03.json",
+    "sha256": "76ee6d92d135f1028f2b6a4813763ebbdc5d67289b76d3562aee69c9de44ffcd",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  }
 }

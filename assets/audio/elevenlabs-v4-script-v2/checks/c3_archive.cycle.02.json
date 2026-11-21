@@ -14,5 +14,13 @@
   "first_recognition": "I'm coming.",
   "recognition_pass": "independent",
   "asr_revision": 2,
-  "transcript_comparison": "strict normalized English spoken forms"
+  "transcript_comparison": "strict normalized English spoken forms",
+  "local_recognized": "I'm coming.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c3_archive.cycle.02.json",
+    "sha256": "ce47ba8f1084a88a7cb5df1ce22661204ad214937545a072556698fffee6a4d1",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  }
 }

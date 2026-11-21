@@ -3,9 +3,9 @@
   "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
   "wav_sha256": "bcac8867e69e612af45e004a5fda855649dbf1d90055e7ad266a28a57b88185a",
   "expected": "AutoRick’s console. I wrote half these carts myself.",
-  "recognized": "Autorix console. I wrote half these cards myself.",
-  "word_edits": 3,
-  "word_error_rate": 0.3333333333333333,
+  "recognized": "AutoRix console. I wrote half these carts myself.",
+  "word_edits": 2,
+  "word_error_rate": 0.2222222222222222,
   "listening_review_required": true,
   "seconds": 3.84,
   "sample_rate": 48000,
@@ -15,5 +15,13 @@
   "recognition_pass": "independent",
   "asr_revision": 2,
   "transcript_comparison": "strict normalized English spoken forms",
-  "independent_phrase_transcription": "Autorix console. I wrote half these cards myself."
+  "independent_phrase_transcription": "Autorix console. I wrote half these cards myself.",
+  "local_recognized": "Autorix console. I wrote half these cards myself.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c5_station.automation.lead.01.json",
+    "sha256": "fb00341837f2b72697dc8e91c2a03a86d9f46e38d066549a34f3de5729a28c77",
+    "model": "scribe_v3",
+    "word_edits": 2,
+    "listening_reviewed": false
+  }
 }

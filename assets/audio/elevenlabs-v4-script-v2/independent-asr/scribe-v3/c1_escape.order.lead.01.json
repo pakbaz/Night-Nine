@@ -1,0 +1,151 @@
+{
+  "audio_id": "c1_escape.order.lead.01",
+  "audio_sha256": "963ad65d4a0a0e4cc86e77fff19deda35fffd5b7149cd5b30146090ea91e04f4",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/c1_escape.order.lead.01.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Something in the lining. Soaked. Aquarium letterhead... north wing?",
+  "recognized": "Something in the lining, soaked. Aquarium letterhead. North Wing?",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "84c2b4132abf148c1c8511871d4fde4c",
+  "character_cost": "2",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Something in the lining, soaked. Aquarium letterhead. North Wing?",
+    "words": [
+      {
+        "text": "Something",
+        "start": 0.12,
+        "end": 0.46,
+        "type": "word",
+        "logprob": -0.00034648136352188885
+      },
+      {
+        "text": " ",
+        "start": 0.46,
+        "end": 0.52,
+        "type": "spacing",
+        "logprob": -3.576278118089249e-07
+      },
+      {
+        "text": "in",
+        "start": 0.52,
+        "end": 0.58,
+        "type": "word",
+        "logprob": -3.576278118089249e-07
+      },
+      {
+        "text": " ",
+        "start": 0.58,
+        "end": 0.64,
+        "type": "spacing",
+        "logprob": 0.0
+      },
+      {
+        "text": "the",
+        "start": 0.64,
+        "end": 0.7,
+        "type": "word",
+        "logprob": 0.0
+      },
+      {
+        "text": " ",
+        "start": 0.7,
+        "end": 0.8,
+        "type": "spacing",
+        "logprob": -0.00015722469834145159
+      },
+      {
+        "text": "lining,",
+        "start": 0.8,
+        "end": 1.28,
+        "type": "word",
+        "logprob": -0.0014087104646023363
+      },
+      {
+        "text": " ",
+        "start": 1.28,
+        "end": 1.82,
+        "type": "spacing",
+        "logprob": -0.00018737945356406271
+      },
+      {
+        "text": "soaked.",
+        "start": 1.82,
+        "end": 2.3,
+        "type": "word",
+        "logprob": -0.00017896801208345487
+      },
+      {
+        "text": " ",
+        "start": 2.3,
+        "end": 2.82,
+        "type": "spacing",
+        "logprob": -0.001890778075903654
+      },
+      {
+        "text": "Aquarium",
+        "start": 2.82,
+        "end": 3.44,
+        "type": "word",
+        "logprob": -0.001890778075903654
+      },
+      {
+        "text": " ",
+        "start": 3.44,
+        "end": 3.56,
+        "type": "spacing",
+        "logprob": -0.04364089295268059
+      },
+      {
+        "text": "letterhead.",
+        "start": 3.56,
+        "end": 4.2,
+        "type": "word",
+        "logprob": -0.08700445776974614
+      },
+      {
+        "text": " ",
+        "start": 4.2,
+        "end": 4.64,
+        "type": "spacing",
+        "logprob": -0.0004829194222111255
+      },
+      {
+        "text": "North",
+        "start": 4.64,
+        "end": 4.88,
+        "type": "word",
+        "logprob": -0.0004829194222111255
+      },
+      {
+        "text": " ",
+        "start": 4.88,
+        "end": 4.98,
+        "type": "spacing",
+        "logprob": -0.5649359226226807
+      },
+      {
+        "text": "Wing?",
+        "start": 4.98,
+        "end": 5.24,
+        "type": "word",
+        "logprob": -0.45233902970794587
+      }
+    ],
+    "transcription_id": "bM7SgwJWvPuzeppoD8Tn",
+    "audio_duration_secs": 5.6
+  },
+  "listening_reviewed": false
+}

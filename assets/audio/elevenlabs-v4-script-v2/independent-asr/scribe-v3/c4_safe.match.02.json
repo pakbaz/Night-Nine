@@ -1,0 +1,67 @@
+{
+  "audio_id": "c4_safe.match.02",
+  "audio_sha256": "ef3b57daa1d8f6636c816d722047639badae7f604f0848dbd3002dfc86afe509",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/c4_safe.match.02.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Play it again.",
+  "recognized": "Play it again.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "06b8ab331df7520ccd25271a6f6d217f",
+  "character_cost": "0",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Play it again.",
+    "words": [
+      {
+        "text": "Play",
+        "start": 0.04,
+        "end": 0.2,
+        "type": "word",
+        "logprob": -0.0014665097696706653
+      },
+      {
+        "text": " ",
+        "start": 0.2,
+        "end": 0.24,
+        "type": "spacing",
+        "logprob": -8.4638240878121e-06
+      },
+      {
+        "text": "it",
+        "start": 0.24,
+        "end": 0.3,
+        "type": "word",
+        "logprob": -8.4638240878121e-06
+      },
+      {
+        "text": " ",
+        "start": 0.3,
+        "end": 0.34,
+        "type": "spacing",
+        "logprob": -4.887569048150908e-06
+      },
+      {
+        "text": "again.",
+        "start": 0.34,
+        "end": 0.7,
+        "type": "word",
+        "logprob": -2.0125718189471325e-05
+      }
+    ],
+    "transcription_id": "MjSHeqslpEnhJHzNnfNz",
+    "audio_duration_secs": 1.2
+  },
+  "listening_reviewed": false
+}

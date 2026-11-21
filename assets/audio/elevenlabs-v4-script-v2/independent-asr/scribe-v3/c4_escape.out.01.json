@@ -1,0 +1,319 @@
+{
+  "audio_id": "c4_escape.out.01",
+  "audio_sha256": "d2f7ccd98208855c7a76e65af6101c042386e46f9c59a2f91a10e2937a118c86",
+  "file": "assets/audio/elevenlabs-v4-script-v2/retakes/automatic-01/masters/c4_escape.out.01.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "All units. Steve Mercer, wanted for the abduction of Nora Reyes. And scan Calder tonight. The signing is in six days.",
+  "recognized": "All units, Steve Mercer wanted for the abduction of Nora Reyes. And scam Calder tonight. The signing is in six days.",
+  "word_edits": 1,
+  "request_id": null,
+  "trace_id": "178591b41da6f78fd0c96cafcd18f8de",
+  "character_cost": "3",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "All units, Steve Mercer wanted for the abduction of Nora Reyes. And scam Calder tonight. The signing is in six days.",
+    "words": [
+      {
+        "text": "All",
+        "start": 0.08,
+        "end": 0.18,
+        "type": "word",
+        "logprob": -5.721882189391181e-05
+      },
+      {
+        "text": " ",
+        "start": 0.18,
+        "end": 0.34,
+        "type": "spacing",
+        "logprob": -5.400034933700226e-05
+      },
+      {
+        "text": "units,",
+        "start": 0.34,
+        "end": 0.7,
+        "type": "word",
+        "logprob": -9.337237558308213e-05
+      },
+      {
+        "text": " ",
+        "start": 0.7,
+        "end": 0.7,
+        "type": "spacing",
+        "logprob": -4.339123915997334e-05
+      },
+      {
+        "text": "Steve",
+        "start": 1.18,
+        "end": 1.42,
+        "type": "word",
+        "logprob": -4.339123915997334e-05
+      },
+      {
+        "text": " ",
+        "start": 1.42,
+        "end": 1.54,
+        "type": "spacing",
+        "logprob": -0.0002996472467202693
+      },
+      {
+        "text": "Mercer",
+        "start": 1.54,
+        "end": 1.96,
+        "type": "word",
+        "logprob": -0.0002996472467202693
+      },
+      {
+        "text": " ",
+        "start": 1.96,
+        "end": 2.34,
+        "type": "spacing",
+        "logprob": -0.3133288323879242
+      },
+      {
+        "text": "wanted",
+        "start": 2.34,
+        "end": 2.6,
+        "type": "word",
+        "logprob": -0.3133288323879242
+      },
+      {
+        "text": " ",
+        "start": 2.6,
+        "end": 2.64,
+        "type": "spacing",
+        "logprob": -7.152555099310121e-07
+      },
+      {
+        "text": "for",
+        "start": 2.64,
+        "end": 2.72,
+        "type": "word",
+        "logprob": -7.152555099310121e-07
+      },
+      {
+        "text": " ",
+        "start": 2.72,
+        "end": 2.76,
+        "type": "spacing",
+        "logprob": -1.1920928244535389e-07
+      },
+      {
+        "text": "the",
+        "start": 2.76,
+        "end": 2.82,
+        "type": "word",
+        "logprob": -1.1920928244535389e-07
+      },
+      {
+        "text": " ",
+        "start": 2.82,
+        "end": 2.88,
+        "type": "spacing",
+        "logprob": -0.00011050090688513592
+      },
+      {
+        "text": "abduction",
+        "start": 2.88,
+        "end": 3.38,
+        "type": "word",
+        "logprob": -0.00011050090688513592
+      },
+      {
+        "text": " ",
+        "start": 3.38,
+        "end": 3.42,
+        "type": "spacing",
+        "logprob": 0.0
+      },
+      {
+        "text": "of",
+        "start": 3.42,
+        "end": 3.54,
+        "type": "word",
+        "logprob": 0.0
+      },
+      {
+        "text": " ",
+        "start": 3.54,
+        "end": 3.6,
+        "type": "spacing",
+        "logprob": -0.0008939084364101291
+      },
+      {
+        "text": "Nora",
+        "start": 3.6,
+        "end": 3.86,
+        "type": "word",
+        "logprob": -0.0008939084364101291
+      },
+      {
+        "text": " ",
+        "start": 3.86,
+        "end": 3.94,
+        "type": "spacing",
+        "logprob": -0.006952972617000341
+      },
+      {
+        "text": "Reyes.",
+        "start": 3.96,
+        "end": 4.4,
+        "type": "word",
+        "logprob": -0.07769479967343311
+      },
+      {
+        "text": " ",
+        "start": 4.4,
+        "end": 4.4,
+        "type": "spacing",
+        "logprob": -8.237022848334163e-05
+      },
+      {
+        "text": "And",
+        "start": 4.9,
+        "end": 4.98,
+        "type": "word",
+        "logprob": -8.237022848334163e-05
+      },
+      {
+        "text": " ",
+        "start": 4.98,
+        "end": 5.14,
+        "type": "spacing",
+        "logprob": -0.37863126397132874
+      },
+      {
+        "text": "scam",
+        "start": 5.14,
+        "end": 5.36,
+        "type": "word",
+        "logprob": -0.37863126397132874
+      },
+      {
+        "text": " ",
+        "start": 5.36,
+        "end": 5.5,
+        "type": "spacing",
+        "logprob": -0.003896740498021245
+      },
+      {
+        "text": "Calder",
+        "start": 5.5,
+        "end": 5.82,
+        "type": "word",
+        "logprob": -0.003896740498021245
+      },
+      {
+        "text": " ",
+        "start": 5.82,
+        "end": 5.92,
+        "type": "spacing",
+        "logprob": -0.00021360022947192192
+      },
+      {
+        "text": "tonight.",
+        "start": 5.92,
+        "end": 6.28,
+        "type": "word",
+        "logprob": -0.002222248411271721
+      },
+      {
+        "text": " ",
+        "start": 6.28,
+        "end": 6.64,
+        "type": "spacing",
+        "logprob": -6.556489552167477e-06
+      },
+      {
+        "text": "The",
+        "start": 6.64,
+        "end": 6.76,
+        "type": "word",
+        "logprob": -6.556489552167477e-06
+      },
+      {
+        "text": " ",
+        "start": 6.76,
+        "end": 6.82,
+        "type": "spacing",
+        "logprob": -0.00020919041708111763
+      },
+      {
+        "text": "signing",
+        "start": 6.82,
+        "end": 7.16,
+        "type": "word",
+        "logprob": -0.00020919041708111763
+      },
+      {
+        "text": " ",
+        "start": 7.16,
+        "end": 7.2,
+        "type": "spacing",
+        "logprob": -7.152555099310121e-07
+      },
+      {
+        "text": "is",
+        "start": 7.2,
+        "end": 7.28,
+        "type": "word",
+        "logprob": -7.152555099310121e-07
+      },
+      {
+        "text": " ",
+        "start": 7.28,
+        "end": 7.32,
+        "type": "spacing",
+        "logprob": -2.3841855067985307e-07
+      },
+      {
+        "text": "in",
+        "start": 7.32,
+        "end": 7.5,
+        "type": "word",
+        "logprob": -2.3841855067985307e-07
+      },
+      {
+        "text": " ",
+        "start": 7.5,
+        "end": 7.58,
+        "type": "spacing",
+        "logprob": -0.00764752272516489
+      },
+      {
+        "text": "six",
+        "start": 7.58,
+        "end": 7.8,
+        "type": "word",
+        "logprob": -0.00764752272516489
+      },
+      {
+        "text": " ",
+        "start": 7.8,
+        "end": 7.88,
+        "type": "spacing",
+        "logprob": -8.4638240878121e-06
+      },
+      {
+        "text": "days.",
+        "start": 7.88,
+        "end": 8.3,
+        "type": "word",
+        "logprob": -1.11340716102859e-05
+      }
+    ],
+    "transcription_id": "AzBIgJ9ptUN35u9mjbhX",
+    "audio_duration_secs": 8.88
+  },
+  "listening_reviewed": false
+}

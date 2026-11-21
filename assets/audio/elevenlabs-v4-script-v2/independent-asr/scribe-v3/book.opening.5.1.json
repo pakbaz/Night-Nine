@@ -1,0 +1,291 @@
+{
+  "audio_id": "book.opening.5.1",
+  "audio_sha256": "13fd0f43c66c11d5a570373af391490335e2ecb9dddc09ee8412cde09ae1de62",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/book.opening.5.1.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Eighteen months ago, they rowed out into the bay after dark. They said the water was making a sound.",
+  "recognized": "Eighteen months ago, they rode out into the bay after dark. They said the water was making a sound.",
+  "word_edits": 1,
+  "request_id": null,
+  "trace_id": "84a147936b0e81217e2c5c65e05c6f38",
+  "character_cost": "2",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Eighteen months ago, they rode out into the bay after dark. They said the water was making a sound.",
+    "words": [
+      {
+        "text": "Eighteen",
+        "start": 0.06,
+        "end": 0.44,
+        "type": "word",
+        "logprob": -0.21955001651440398
+      },
+      {
+        "text": " ",
+        "start": 0.44,
+        "end": 0.54,
+        "type": "spacing",
+        "logprob": -3.5523738915799186e-05
+      },
+      {
+        "text": "months",
+        "start": 0.54,
+        "end": 0.78,
+        "type": "word",
+        "logprob": -3.5523738915799186e-05
+      },
+      {
+        "text": " ",
+        "start": 0.78,
+        "end": 0.84,
+        "type": "spacing",
+        "logprob": -1.7881377516459906e-06
+      },
+      {
+        "text": "ago,",
+        "start": 0.84,
+        "end": 1.2,
+        "type": "word",
+        "logprob": -5.841213521762256e-06
+      },
+      {
+        "text": " ",
+        "start": 1.2,
+        "end": 1.38,
+        "type": "spacing",
+        "logprob": -7.867782187531702e-06
+      },
+      {
+        "text": "they",
+        "start": 1.38,
+        "end": 1.58,
+        "type": "word",
+        "logprob": -7.867782187531702e-06
+      },
+      {
+        "text": " ",
+        "start": 1.58,
+        "end": 1.62,
+        "type": "spacing",
+        "logprob": -0.3875775933265686
+      },
+      {
+        "text": "rode",
+        "start": 1.62,
+        "end": 1.84,
+        "type": "word",
+        "logprob": -0.3875775933265686
+      },
+      {
+        "text": " ",
+        "start": 1.84,
+        "end": 1.92,
+        "type": "spacing",
+        "logprob": -2.3841855067985307e-07
+      },
+      {
+        "text": "out",
+        "start": 1.92,
+        "end": 2.12,
+        "type": "word",
+        "logprob": -2.3841855067985307e-07
+      },
+      {
+        "text": " ",
+        "start": 2.12,
+        "end": 2.18,
+        "type": "spacing",
+        "logprob": -2.264974000354414e-06
+      },
+      {
+        "text": "into",
+        "start": 2.18,
+        "end": 2.4,
+        "type": "word",
+        "logprob": -2.264974000354414e-06
+      },
+      {
+        "text": " ",
+        "start": 2.4,
+        "end": 2.44,
+        "type": "spacing",
+        "logprob": -1.1920928244535389e-07
+      },
+      {
+        "text": "the",
+        "start": 2.44,
+        "end": 2.56,
+        "type": "word",
+        "logprob": -1.1920928244535389e-07
+      },
+      {
+        "text": " ",
+        "start": 2.56,
+        "end": 2.6,
+        "type": "spacing",
+        "logprob": -0.0001081169830285944
+      },
+      {
+        "text": "bay",
+        "start": 2.6,
+        "end": 3.04,
+        "type": "word",
+        "logprob": -0.0001081169830285944
+      },
+      {
+        "text": " ",
+        "start": 3.04,
+        "end": 3.12,
+        "type": "spacing",
+        "logprob": -1.823885577323381e-05
+      },
+      {
+        "text": "after",
+        "start": 3.12,
+        "end": 3.34,
+        "type": "word",
+        "logprob": -1.823885577323381e-05
+      },
+      {
+        "text": " ",
+        "start": 3.34,
+        "end": 3.44,
+        "type": "spacing",
+        "logprob": -3.2305197237292305e-05
+      },
+      {
+        "text": "dark.",
+        "start": 3.44,
+        "end": 3.8,
+        "type": "word",
+        "logprob": -2.8514428049675188e-05
+      },
+      {
+        "text": " ",
+        "start": 3.8,
+        "end": 4.1,
+        "type": "spacing",
+        "logprob": -1.9907753085135482e-05
+      },
+      {
+        "text": "They",
+        "start": 4.1,
+        "end": 4.24,
+        "type": "word",
+        "logprob": -1.9907753085135482e-05
+      },
+      {
+        "text": " ",
+        "start": 4.24,
+        "end": 4.28,
+        "type": "spacing",
+        "logprob": -1.7881377516459906e-06
+      },
+      {
+        "text": "said",
+        "start": 4.28,
+        "end": 4.46,
+        "type": "word",
+        "logprob": -1.7881377516459906e-06
+      },
+      {
+        "text": " ",
+        "start": 4.46,
+        "end": 4.5,
+        "type": "spacing",
+        "logprob": -5.960462772236497e-07
+      },
+      {
+        "text": "the",
+        "start": 4.5,
+        "end": 4.64,
+        "type": "word",
+        "logprob": -5.960462772236497e-07
+      },
+      {
+        "text": " ",
+        "start": 4.64,
+        "end": 4.7,
+        "type": "spacing",
+        "logprob": -1.5735502529423684e-05
+      },
+      {
+        "text": "water",
+        "start": 4.7,
+        "end": 5.1,
+        "type": "word",
+        "logprob": -1.5735502529423684e-05
+      },
+      {
+        "text": " ",
+        "start": 5.1,
+        "end": 5.14,
+        "type": "spacing",
+        "logprob": -9.536738616588991e-07
+      },
+      {
+        "text": "was",
+        "start": 5.14,
+        "end": 5.3,
+        "type": "word",
+        "logprob": -9.536738616588991e-07
+      },
+      {
+        "text": " ",
+        "start": 5.3,
+        "end": 5.36,
+        "type": "spacing",
+        "logprob": -5.602820692729438e-06
+      },
+      {
+        "text": "making",
+        "start": 5.36,
+        "end": 5.62,
+        "type": "word",
+        "logprob": -5.602820692729438e-06
+      },
+      {
+        "text": " ",
+        "start": 5.62,
+        "end": 5.66,
+        "type": "spacing",
+        "logprob": 0.0
+      },
+      {
+        "text": "a",
+        "start": 5.66,
+        "end": 5.76,
+        "type": "word",
+        "logprob": 0.0
+      },
+      {
+        "text": " ",
+        "start": 5.76,
+        "end": 5.84,
+        "type": "spacing",
+        "logprob": -6.318072337307967e-06
+      },
+      {
+        "text": "sound.",
+        "start": 5.84,
+        "end": 6.34,
+        "type": "word",
+        "logprob": -2.6423365549514227e-05
+      }
+    ],
+    "transcription_id": "CKra14jfRZIEkwv6FcVt",
+    "audio_duration_secs": 6.56
+  },
+  "listening_reviewed": false
+}

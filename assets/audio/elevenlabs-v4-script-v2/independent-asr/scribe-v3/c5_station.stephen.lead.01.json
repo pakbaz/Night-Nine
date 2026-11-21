@@ -1,0 +1,67 @@
+{
+  "audio_id": "c5_station.stephen.lead.01",
+  "audio_sha256": "d8d99da0da4ccf66d6062cfafe6f6cbdfdf1218eac749fd6b0a8e3e04c19d208",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/c5_station.stephen.lead.01.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "...That’s my face.",
+  "recognized": "That's my face.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "78e90589044766e8b084301261bf8859",
+  "character_cost": "0",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "That's my face.",
+    "words": [
+      {
+        "text": "That's",
+        "start": 0.1,
+        "end": 0.36,
+        "type": "word",
+        "logprob": -0.00011476933453498835
+      },
+      {
+        "text": " ",
+        "start": 0.36,
+        "end": 0.4,
+        "type": "spacing",
+        "logprob": -1.0132738680113107e-05
+      },
+      {
+        "text": "my",
+        "start": 0.4,
+        "end": 0.5,
+        "type": "word",
+        "logprob": -1.0132738680113107e-05
+      },
+      {
+        "text": " ",
+        "start": 0.5,
+        "end": 0.68,
+        "type": "spacing",
+        "logprob": -1.0132738680113107e-05
+      },
+      {
+        "text": "face.",
+        "start": 0.68,
+        "end": 1.14,
+        "type": "word",
+        "logprob": -1.9502274517435582e-05
+      }
+    ],
+    "transcription_id": "CWUc4Q51dHtYAWjItDGC",
+    "audio_duration_secs": 1.36
+  },
+  "listening_reviewed": false
+}

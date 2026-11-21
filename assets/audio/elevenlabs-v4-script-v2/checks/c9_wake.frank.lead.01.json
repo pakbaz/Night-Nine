@@ -14,5 +14,13 @@
   "first_recognition": "Dad, it's Steve.",
   "recognition_pass": "independent",
   "asr_revision": 2,
-  "transcript_comparison": "strict normalized English spoken forms"
+  "transcript_comparison": "strict normalized English spoken forms",
+  "local_recognized": "Dad, it's Steve.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c9_wake.frank.lead.01.json",
+    "sha256": "6b8bd6cca255e3a5e3e01d5d07e6d26757a60208b6e318c0f7600bc832e6b9e6",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  }
 }

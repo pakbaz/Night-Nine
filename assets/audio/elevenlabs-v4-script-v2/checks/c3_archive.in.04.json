@@ -14,5 +14,13 @@
   "first_recognition": "I did.",
   "recognition_pass": "independent",
   "asr_revision": 2,
-  "transcript_comparison": "strict normalized English spoken forms"
+  "transcript_comparison": "strict normalized English spoken forms",
+  "local_recognized": "I did.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c3_archive.in.04.json",
+    "sha256": "77755cb9fe0e4da357bfe4b67ffcb723b7c675b773adaba8e3c8aae30ea1ac5e",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  }
 }

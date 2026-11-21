@@ -1,0 +1,53 @@
+{
+  "audio_id": "c7_gate.truck.04",
+  "audio_sha256": "abf12f30079f6d57c7061b2928b9fc9ad30a723746ba2dbde30b873ed2ed7b80",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/c7_gate.truck.04.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "My dad.",
+  "recognized": "My dad.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "2ebbe18b8077dc3f36a1c5703f416b86",
+  "character_cost": "0",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "My dad.",
+    "words": [
+      {
+        "text": "My",
+        "start": 0.06,
+        "end": 0.18,
+        "type": "word",
+        "logprob": -0.0068242815323174
+      },
+      {
+        "text": " ",
+        "start": 0.18,
+        "end": 0.22,
+        "type": "spacing",
+        "logprob": -0.002609540708363056
+      },
+      {
+        "text": "dad.",
+        "start": 0.24,
+        "end": 0.58,
+        "type": "word",
+        "logprob": -0.0019732482669496676
+      }
+    ],
+    "transcription_id": "CnhCvtYLsTY25c8Q0FHB",
+    "audio_duration_secs": 0.96
+  },
+  "listening_reviewed": false
+}

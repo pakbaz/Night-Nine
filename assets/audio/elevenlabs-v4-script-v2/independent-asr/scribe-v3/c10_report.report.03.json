@@ -1,0 +1,67 @@
+{
+  "audio_id": "c10_report.report.03",
+  "audio_sha256": "36b4c69cd72061871b93e96a47efc15e2aeb8fa6cf95d67c5a76fc170e940a0c",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/c10_report.report.03.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Neither do I.",
+  "recognized": "Neither do I.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "3454224203a774041bc060c2573348c1",
+  "character_cost": "0",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Neither do I.",
+    "words": [
+      {
+        "text": "Neither",
+        "start": 0.1,
+        "end": 0.36,
+        "type": "word",
+        "logprob": -0.0006194579764269292
+      },
+      {
+        "text": " ",
+        "start": 0.36,
+        "end": 0.44,
+        "type": "spacing",
+        "logprob": -4.172316494077677e-06
+      },
+      {
+        "text": "do",
+        "start": 0.44,
+        "end": 0.56,
+        "type": "word",
+        "logprob": -4.172316494077677e-06
+      },
+      {
+        "text": " ",
+        "start": 0.56,
+        "end": 0.7,
+        "type": "spacing",
+        "logprob": -6.794906312279636e-06
+      },
+      {
+        "text": "I.",
+        "start": 0.7,
+        "end": 0.92,
+        "type": "word",
+        "logprob": -4.237737016410392e-05
+      }
+    ],
+    "transcription_id": "REZWOS4n9YZPjYXQ5KTj",
+    "audio_duration_secs": 1.52
+  },
+  "listening_reviewed": false
+}

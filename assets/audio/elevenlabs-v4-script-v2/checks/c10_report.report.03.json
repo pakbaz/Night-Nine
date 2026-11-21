@@ -14,5 +14,13 @@
   "first_recognition": "Neither do I.",
   "recognition_pass": "independent",
   "asr_revision": 2,
-  "transcript_comparison": "strict normalized English spoken forms"
+  "transcript_comparison": "strict normalized English spoken forms",
+  "local_recognized": "Neither do I.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c10_report.report.03.json",
+    "sha256": "53bb1716a8ebc1daff75b8f9bb9cc738181cd1e835e5efb9c27ac6ad135eab30",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  }
 }

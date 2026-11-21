@@ -14,5 +14,13 @@
   "first_recognition": "Then we keep listening.",
   "recognition_pass": "independent",
   "asr_revision": 2,
-  "transcript_comparison": "strict normalized English spoken forms"
+  "transcript_comparison": "strict normalized English spoken forms",
+  "local_recognized": "Then we keep listening.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c8_lab.lastpage.02.json",
+    "sha256": "11e0fe0d3a8c5b08fd0201f43b7f7d409380ba21f4eaa209d9484d5ed859eab8",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  }
 }

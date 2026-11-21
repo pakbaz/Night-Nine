@@ -1,0 +1,291 @@
+{
+  "audio_id": "c7_gate.truck.02",
+  "audio_sha256": "f614a85253273d9289762621324015ed0b3711aa26e9dafea0a8844af3a39df6",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/c7_gate.truck.02.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Evelyn Shaw. I ran the sound stage for Meridian, back when it had a budget. Stay off the cables.",
+  "recognized": "Evelyn Shaw: \"I ran the sound stage for Meridian, back when it had a budget. Stay off the cables.\"",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "5734d2099b1686a05f3801c7f91c28c5",
+  "character_cost": "2",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Evelyn Shaw: \"I ran the sound stage for Meridian, back when it had a budget. Stay off the cables.\"",
+    "words": [
+      {
+        "text": "Evelyn",
+        "start": 0.06,
+        "end": 0.36,
+        "type": "word",
+        "logprob": -0.000335513196963196
+      },
+      {
+        "text": " ",
+        "start": 0.36,
+        "end": 0.5,
+        "type": "spacing",
+        "logprob": -0.0009003399754874408
+      },
+      {
+        "text": "Shaw:",
+        "start": 0.5,
+        "end": 0.84,
+        "type": "word",
+        "logprob": -0.04007350555621088
+      },
+      {
+        "text": " ",
+        "start": 0.84,
+        "end": 0.84,
+        "type": "spacing",
+        "logprob": -0.02641272358596325
+      },
+      {
+        "text": "\"I",
+        "start": 0.84,
+        "end": 1.54,
+        "type": "word",
+        "logprob": -0.013206898234500386
+      },
+      {
+        "text": " ",
+        "start": 1.54,
+        "end": 1.58,
+        "type": "spacing",
+        "logprob": -1.549708758830093e-05
+      },
+      {
+        "text": "ran",
+        "start": 1.58,
+        "end": 1.74,
+        "type": "word",
+        "logprob": -1.549708758830093e-05
+      },
+      {
+        "text": " ",
+        "start": 1.74,
+        "end": 1.76,
+        "type": "spacing",
+        "logprob": -7.152555099310121e-07
+      },
+      {
+        "text": "the",
+        "start": 1.76,
+        "end": 1.86,
+        "type": "word",
+        "logprob": -7.152555099310121e-07
+      },
+      {
+        "text": " ",
+        "start": 1.86,
+        "end": 1.92,
+        "type": "spacing",
+        "logprob": -0.0015770867466926575
+      },
+      {
+        "text": "sound",
+        "start": 1.92,
+        "end": 2.12,
+        "type": "word",
+        "logprob": -0.0015770867466926575
+      },
+      {
+        "text": " ",
+        "start": 2.12,
+        "end": 2.2,
+        "type": "spacing",
+        "logprob": -0.47429949045181274
+      },
+      {
+        "text": "stage",
+        "start": 2.2,
+        "end": 2.42,
+        "type": "word",
+        "logprob": -0.47429949045181274
+      },
+      {
+        "text": " ",
+        "start": 2.42,
+        "end": 2.48,
+        "type": "spacing",
+        "logprob": -9.536738616588991e-07
+      },
+      {
+        "text": "for",
+        "start": 2.48,
+        "end": 2.6,
+        "type": "word",
+        "logprob": -9.536738616588991e-07
+      },
+      {
+        "text": " ",
+        "start": 2.6,
+        "end": 2.62,
+        "type": "spacing",
+        "logprob": -0.002123364945873618
+      },
+      {
+        "text": "Meridian,",
+        "start": 2.62,
+        "end": 3.16,
+        "type": "word",
+        "logprob": -0.06590901625653107
+      },
+      {
+        "text": " ",
+        "start": 3.16,
+        "end": 3.5,
+        "type": "spacing",
+        "logprob": -1.7046782886609435e-05
+      },
+      {
+        "text": "back",
+        "start": 3.5,
+        "end": 3.7,
+        "type": "word",
+        "logprob": -1.7046782886609435e-05
+      },
+      {
+        "text": " ",
+        "start": 3.7,
+        "end": 3.74,
+        "type": "spacing",
+        "logprob": -9.417489309271332e-06
+      },
+      {
+        "text": "when",
+        "start": 3.74,
+        "end": 3.82,
+        "type": "word",
+        "logprob": -9.417489309271332e-06
+      },
+      {
+        "text": " ",
+        "start": 3.82,
+        "end": 3.86,
+        "type": "spacing",
+        "logprob": -4.768370445162873e-07
+      },
+      {
+        "text": "it",
+        "start": 3.86,
+        "end": 3.92,
+        "type": "word",
+        "logprob": -4.768370445162873e-07
+      },
+      {
+        "text": " ",
+        "start": 3.92,
+        "end": 3.96,
+        "type": "spacing",
+        "logprob": -1.311301275563892e-06
+      },
+      {
+        "text": "had",
+        "start": 3.96,
+        "end": 4.08,
+        "type": "word",
+        "logprob": -1.311301275563892e-06
+      },
+      {
+        "text": " ",
+        "start": 4.08,
+        "end": 4.12,
+        "type": "spacing",
+        "logprob": 0.0
+      },
+      {
+        "text": "a",
+        "start": 4.12,
+        "end": 4.24,
+        "type": "word",
+        "logprob": 0.0
+      },
+      {
+        "text": " ",
+        "start": 4.24,
+        "end": 4.28,
+        "type": "spacing",
+        "logprob": -5.578839045483619e-05
+      },
+      {
+        "text": "budget.",
+        "start": 4.28,
+        "end": 4.66,
+        "type": "word",
+        "logprob": -6.517103299432035e-05
+      },
+      {
+        "text": " ",
+        "start": 4.66,
+        "end": 4.66,
+        "type": "spacing",
+        "logprob": -0.00011121608258690685
+      },
+      {
+        "text": "Stay",
+        "start": 5.28,
+        "end": 5.6,
+        "type": "word",
+        "logprob": -0.00011121608258690685
+      },
+      {
+        "text": " ",
+        "start": 5.6,
+        "end": 5.7,
+        "type": "spacing",
+        "logprob": -0.0001006075763143599
+      },
+      {
+        "text": "off",
+        "start": 5.7,
+        "end": 5.92,
+        "type": "word",
+        "logprob": -0.0001006075763143599
+      },
+      {
+        "text": " ",
+        "start": 5.92,
+        "end": 5.96,
+        "type": "spacing",
+        "logprob": -3.099436753473128e-06
+      },
+      {
+        "text": "the",
+        "start": 5.96,
+        "end": 6.04,
+        "type": "word",
+        "logprob": -3.099436753473128e-06
+      },
+      {
+        "text": " ",
+        "start": 6.04,
+        "end": 6.1,
+        "type": "spacing",
+        "logprob": -3.40932747349143e-05
+      },
+      {
+        "text": "cables.\"",
+        "start": 6.1,
+        "end": 6.62,
+        "type": "word",
+        "logprob": -0.0008514274086337537
+      }
+    ],
+    "transcription_id": "V0cS4BuHJNui9WkKfZrx",
+    "audio_duration_secs": 7.04
+  },
+  "listening_reviewed": false
+}

@@ -1,0 +1,347 @@
+{
+  "audio_id": "c4_safe.screens.01",
+  "audio_sha256": "63823ce696098f3cc6f4273460d36cc910199b78a35410552bdf1c8ffee17c22",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/c4_safe.screens.01.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Adrian Rook, asleep in bed 41B. Both governments’ seals on the transfer. And an empty bed waiting for President Ward on signing day.",
+  "recognized": "Adrian Rook, asleep in bed 41B, both government seals on the transfer, and an empty bed waiting for President Ward on signing day.",
+  "word_edits": 1,
+  "request_id": null,
+  "trace_id": "eb4b6b065e70de1e9753f303df7fa095",
+  "character_cost": "3",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Adrian Rook, asleep in bed 41B, both government seals on the transfer, and an empty bed waiting for President Ward on signing day.",
+    "words": [
+      {
+        "text": "Adrian",
+        "start": 0.06,
+        "end": 0.48,
+        "type": "word",
+        "logprob": -0.0039406754076480865
+      },
+      {
+        "text": " ",
+        "start": 0.48,
+        "end": 0.62,
+        "type": "spacing",
+        "logprob": -0.0026519864331930876
+      },
+      {
+        "text": "Rook,",
+        "start": 0.62,
+        "end": 0.9,
+        "type": "word",
+        "logprob": -0.004959967546164989
+      },
+      {
+        "text": " ",
+        "start": 0.9,
+        "end": 1.26,
+        "type": "spacing",
+        "logprob": -0.0001656871900195256
+      },
+      {
+        "text": "asleep",
+        "start": 1.26,
+        "end": 1.72,
+        "type": "word",
+        "logprob": -0.0001656871900195256
+      },
+      {
+        "text": " ",
+        "start": 1.72,
+        "end": 1.78,
+        "type": "spacing",
+        "logprob": -4.768370445162873e-07
+      },
+      {
+        "text": "in",
+        "start": 1.78,
+        "end": 1.86,
+        "type": "word",
+        "logprob": -4.768370445162873e-07
+      },
+      {
+        "text": " ",
+        "start": 1.86,
+        "end": 1.96,
+        "type": "spacing",
+        "logprob": -0.0026958573143929243
+      },
+      {
+        "text": "bed",
+        "start": 1.96,
+        "end": 2.22,
+        "type": "word",
+        "logprob": -0.0026958573143929243
+      },
+      {
+        "text": " ",
+        "start": 2.22,
+        "end": 2.54,
+        "type": "spacing",
+        "logprob": -6.6756979322235566e-06
+      },
+      {
+        "text": "41B,",
+        "start": 2.54,
+        "end": 3.34,
+        "type": "word",
+        "logprob": -0.04718440808323976
+      },
+      {
+        "text": " ",
+        "start": 3.34,
+        "end": 3.34,
+        "type": "spacing",
+        "logprob": -5.4834770708112046e-05
+      },
+      {
+        "text": "both",
+        "start": 3.7,
+        "end": 3.96,
+        "type": "word",
+        "logprob": -5.4834770708112046e-05
+      },
+      {
+        "text": " ",
+        "start": 3.96,
+        "end": 4.0,
+        "type": "spacing",
+        "logprob": -0.0001333863037871197
+      },
+      {
+        "text": "government",
+        "start": 4.0,
+        "end": 4.36,
+        "type": "word",
+        "logprob": -0.0001333863037871197
+      },
+      {
+        "text": " ",
+        "start": 4.36,
+        "end": 4.54,
+        "type": "spacing",
+        "logprob": -0.00024828212917782366
+      },
+      {
+        "text": "seals",
+        "start": 4.54,
+        "end": 4.94,
+        "type": "word",
+        "logprob": -0.00024828212917782366
+      },
+      {
+        "text": " ",
+        "start": 4.94,
+        "end": 4.98,
+        "type": "spacing",
+        "logprob": -2.3841855067985307e-07
+      },
+      {
+        "text": "on",
+        "start": 4.98,
+        "end": 5.06,
+        "type": "word",
+        "logprob": -2.3841855067985307e-07
+      },
+      {
+        "text": " ",
+        "start": 5.06,
+        "end": 5.1,
+        "type": "spacing",
+        "logprob": 0.0
+      },
+      {
+        "text": "the",
+        "start": 5.1,
+        "end": 5.18,
+        "type": "word",
+        "logprob": 0.0
+      },
+      {
+        "text": " ",
+        "start": 5.18,
+        "end": 5.22,
+        "type": "spacing",
+        "logprob": -1.4305012882687151e-05
+      },
+      {
+        "text": "transfer,",
+        "start": 5.22,
+        "end": 5.78,
+        "type": "word",
+        "logprob": -0.004250364494509995
+      },
+      {
+        "text": " ",
+        "start": 5.78,
+        "end": 5.78,
+        "type": "spacing",
+        "logprob": -5.960462772236497e-07
+      },
+      {
+        "text": "and",
+        "start": 6.14,
+        "end": 6.24,
+        "type": "word",
+        "logprob": -5.960462772236497e-07
+      },
+      {
+        "text": " ",
+        "start": 6.24,
+        "end": 6.28,
+        "type": "spacing",
+        "logprob": -2.861018856492592e-06
+      },
+      {
+        "text": "an",
+        "start": 6.28,
+        "end": 6.4,
+        "type": "word",
+        "logprob": -2.861018856492592e-06
+      },
+      {
+        "text": " ",
+        "start": 6.4,
+        "end": 6.46,
+        "type": "spacing",
+        "logprob": -2.5987286790041253e-05
+      },
+      {
+        "text": "empty",
+        "start": 6.46,
+        "end": 6.72,
+        "type": "word",
+        "logprob": -2.5987286790041253e-05
+      },
+      {
+        "text": " ",
+        "start": 6.72,
+        "end": 6.88,
+        "type": "spacing",
+        "logprob": -4.541770613286644e-05
+      },
+      {
+        "text": "bed",
+        "start": 6.88,
+        "end": 7.22,
+        "type": "word",
+        "logprob": -4.541770613286644e-05
+      },
+      {
+        "text": " ",
+        "start": 7.22,
+        "end": 7.48,
+        "type": "spacing",
+        "logprob": -5.090107151772827e-05
+      },
+      {
+        "text": "waiting",
+        "start": 7.48,
+        "end": 7.72,
+        "type": "word",
+        "logprob": -5.090107151772827e-05
+      },
+      {
+        "text": " ",
+        "start": 7.72,
+        "end": 7.76,
+        "type": "spacing",
+        "logprob": -3.576278118089249e-07
+      },
+      {
+        "text": "for",
+        "start": 7.76,
+        "end": 7.92,
+        "type": "word",
+        "logprob": -3.576278118089249e-07
+      },
+      {
+        "text": " ",
+        "start": 7.92,
+        "end": 7.96,
+        "type": "spacing",
+        "logprob": -0.00046302087139338255
+      },
+      {
+        "text": "President",
+        "start": 7.96,
+        "end": 8.34,
+        "type": "word",
+        "logprob": -0.00046302087139338255
+      },
+      {
+        "text": " ",
+        "start": 8.34,
+        "end": 8.5,
+        "type": "spacing",
+        "logprob": -0.0003849719068966806
+      },
+      {
+        "text": "Ward",
+        "start": 8.5,
+        "end": 8.8,
+        "type": "word",
+        "logprob": -0.0003849719068966806
+      },
+      {
+        "text": " ",
+        "start": 8.8,
+        "end": 8.88,
+        "type": "spacing",
+        "logprob": -8.106198947643861e-06
+      },
+      {
+        "text": "on",
+        "start": 8.88,
+        "end": 9.02,
+        "type": "word",
+        "logprob": -8.106198947643861e-06
+      },
+      {
+        "text": " ",
+        "start": 9.02,
+        "end": 9.08,
+        "type": "spacing",
+        "logprob": -0.0005301024066284299
+      },
+      {
+        "text": "signing",
+        "start": 9.08,
+        "end": 9.4,
+        "type": "word",
+        "logprob": -0.0005301024066284299
+      },
+      {
+        "text": " ",
+        "start": 9.4,
+        "end": 9.5,
+        "type": "spacing",
+        "logprob": -6.5205356804654e-05
+      },
+      {
+        "text": "day.",
+        "start": 9.5,
+        "end": 9.76,
+        "type": "word",
+        "logprob": -5.42385764674691e-05
+      }
+    ],
+    "transcription_id": "Fn3QGtrbWpOoHiy2knlr",
+    "audio_duration_secs": 10.16
+  },
+  "listening_reviewed": false
+}

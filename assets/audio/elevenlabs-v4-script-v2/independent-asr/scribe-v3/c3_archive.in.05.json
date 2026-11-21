@@ -1,0 +1,53 @@
+{
+  "audio_id": "c3_archive.in.05",
+  "audio_sha256": "70aa68d0de25de7c49a57418c15d52312fe629a2ec6cb90430864df37572fa0d",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/c3_archive.in.05.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "...Cool. Why?",
+  "recognized": "Cool. Why?",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "939e9037ec76b89193078631a30285e5",
+  "character_cost": "1",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Cool. Why?",
+    "words": [
+      {
+        "text": "Cool.",
+        "start": 0.12,
+        "end": 0.46,
+        "type": "word",
+        "logprob": -0.00020771252166014166
+      },
+      {
+        "text": " ",
+        "start": 0.46,
+        "end": 1.0,
+        "type": "spacing",
+        "logprob": -6.9141146923357155e-06
+      },
+      {
+        "text": "Why?",
+        "start": 1.0,
+        "end": 1.32,
+        "type": "word",
+        "logprob": -6.04985189056606e-06
+      }
+    ],
+    "transcription_id": "Ws1WUCZnuy4ICWfBC2Vy",
+    "audio_duration_secs": 1.92
+  },
+  "listening_reviewed": false
+}

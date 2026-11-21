@@ -1,0 +1,81 @@
+{
+  "audio_id": "c8_lab.in.04",
+  "audio_sha256": "1dd02b36727857e63e6077a122ab0081000b9de07db4f436192e13cb1173a1cc",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/c8_lab.in.04.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Mine fooled four generals.",
+  "recognized": "Mine fooled four generals.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "82df197c68a52621e8ebdf80d338b726",
+  "character_cost": "1",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Mine fooled four generals.",
+    "words": [
+      {
+        "text": "Mine",
+        "start": 0.1,
+        "end": 0.34,
+        "type": "word",
+        "logprob": -0.010014999657869339
+      },
+      {
+        "text": " ",
+        "start": 0.34,
+        "end": 0.46,
+        "type": "spacing",
+        "logprob": -0.0010030006524175406
+      },
+      {
+        "text": "fooled",
+        "start": 0.46,
+        "end": 0.7,
+        "type": "word",
+        "logprob": -0.0010030006524175406
+      },
+      {
+        "text": " ",
+        "start": 0.7,
+        "end": 0.92,
+        "type": "spacing",
+        "logprob": -0.00011693747364915907
+      },
+      {
+        "text": "four",
+        "start": 0.92,
+        "end": 1.12,
+        "type": "word",
+        "logprob": -0.00011693747364915907
+      },
+      {
+        "text": " ",
+        "start": 1.12,
+        "end": 1.26,
+        "type": "spacing",
+        "logprob": -0.00022968991834204644
+      },
+      {
+        "text": "generals.",
+        "start": 1.26,
+        "end": 1.86,
+        "type": "word",
+        "logprob": -0.00022533307168891447
+      }
+    ],
+    "transcription_id": "fNBMgSz6dpReLntuKBZE",
+    "audio_duration_secs": 2.4
+  },
+  "listening_reviewed": false
+}

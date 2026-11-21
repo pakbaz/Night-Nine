@@ -1,0 +1,53 @@
+{
+  "audio_id": "c10_town.out.04",
+  "audio_sha256": "4b97aea3a92f694e08bb07475c2b0692b977bc6ccff0af7d594b348bdbbca76e",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/c10_town.out.04.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Lamps up.",
+  "recognized": "Lamps up.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "24e02d973acca84e234aede6ae3d6e27",
+  "character_cost": "0",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Lamps up.",
+    "words": [
+      {
+        "text": "Lamps",
+        "start": 0.08,
+        "end": 0.36,
+        "type": "word",
+        "logprob": -0.0032566800946369767
+      },
+      {
+        "text": " ",
+        "start": 0.36,
+        "end": 0.46,
+        "type": "spacing",
+        "logprob": -0.0077669997699558735
+      },
+      {
+        "text": "up.",
+        "start": 0.46,
+        "end": 0.64,
+        "type": "word",
+        "logprob": -0.005216740615045031
+      }
+    ],
+    "transcription_id": "ctmVLQgalqAYDTttde9i",
+    "audio_duration_secs": 0.8
+  },
+  "listening_reviewed": false
+}

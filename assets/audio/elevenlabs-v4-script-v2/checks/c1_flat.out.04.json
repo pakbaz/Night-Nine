@@ -14,5 +14,13 @@
   "first_recognition": "Whatever you like, sleepyhead.",
   "recognition_pass": "independent",
   "asr_revision": 2,
-  "transcript_comparison": "strict normalized English spoken forms"
+  "transcript_comparison": "strict normalized English spoken forms",
+  "local_recognized": "Whatever you like, sleepyhead.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c1_flat.out.04.json",
+    "sha256": "620c8b77282c4cc99900d92466665026ccaa92c0188ea2503b4659a933afc869",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  }
 }

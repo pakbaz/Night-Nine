@@ -14,5 +14,13 @@
   "first_recognition": "I need a moment.",
   "recognition_pass": "independent",
   "asr_revision": 2,
-  "transcript_comparison": "strict normalized English spoken forms"
+  "transcript_comparison": "strict normalized English spoken forms",
+  "local_recognized": "I need a moment.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c8_beach.in.02.json",
+    "sha256": "f2554a1f5cebae876817127d6fbc50b4a3957907f01204a57c330a20cc31663f",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  }
 }

@@ -15,5 +15,13 @@
   "recognition_pass": "story_vocabulary_1",
   "asr_revision": 2,
   "transcript_comparison": "strict normalized English spoken forms",
-  "independent_phrase_transcription": "Pelcyon sent me home early every ninth night. and the tower transmitted alone as soon as I left. Then they let me go for good. The next unattended night is November 8th."
+  "independent_phrase_transcription": "Pelcyon sent me home early every ninth night. and the tower transmitted alone as soon as I left. Then they let me go for good. The next unattended night is November 8th.",
+  "local_recognized": "Halcyon sent me home early every ninth night, and the tower transmitted alone as soon as I left. Then they let me go for good. The next unattended night is November 8th.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c5_station.halcyon.find.json",
+    "sha256": "a7294b5f0117cf68b8d3a304a18f0e44a3ac0d18a8e015fa4148c2172fdf5b2d",
+    "model": "scribe_v3",
+    "word_edits": 1,
+    "listening_reviewed": false
+  }
 }

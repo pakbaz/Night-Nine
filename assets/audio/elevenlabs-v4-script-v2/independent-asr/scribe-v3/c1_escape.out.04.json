@@ -1,0 +1,81 @@
+{
+  "audio_id": "c1_escape.out.04",
+  "audio_sha256": "ffefeac2c39d24d1d165f13e845ec0c6e3f8acecca17b7417e28bacc320dfbcf",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/c1_escape.out.04.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Mrs. Penhallow? ...Mrs. Penhallow?",
+  "recognized": "Mrs. Penhallow? Mrs. Penhallow?",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "c682cfa4452672e2d72896974d23f4f6",
+  "character_cost": "1",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Mrs. Penhallow? Mrs. Penhallow?",
+    "words": [
+      {
+        "text": "Mrs.",
+        "start": 0.04,
+        "end": 0.16,
+        "type": "word",
+        "logprob": -0.0002453227906471511
+      },
+      {
+        "text": " ",
+        "start": 0.16,
+        "end": 0.4,
+        "type": "spacing",
+        "logprob": -0.4311152994632721
+      },
+      {
+        "text": "Penhallow?",
+        "start": 0.4,
+        "end": 0.94,
+        "type": "word",
+        "logprob": -0.17303699963958935
+      },
+      {
+        "text": " ",
+        "start": 0.94,
+        "end": 1.44,
+        "type": "spacing",
+        "logprob": -0.0008829509024508297
+      },
+      {
+        "text": "Mrs.",
+        "start": 1.44,
+        "end": 1.58,
+        "type": "word",
+        "logprob": -0.0006623621884074282
+      },
+      {
+        "text": " ",
+        "start": 1.58,
+        "end": 1.8,
+        "type": "spacing",
+        "logprob": -0.0003156163729727268
+      },
+      {
+        "text": "Penhallow?",
+        "start": 1.8,
+        "end": 2.32,
+        "type": "word",
+        "logprob": -0.0002354919139179401
+      }
+    ],
+    "transcription_id": "EBilIhY3wqr1oIpfXgJF",
+    "audio_duration_secs": 2.64
+  },
+  "listening_reviewed": false
+}

@@ -1,0 +1,207 @@
+{
+  "audio_id": "c6_jail.exit.01",
+  "audio_sha256": "f3bc81498e43412e2c846c2b088272737326043c685037ac5ec2aa50c9bb1e41",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/c6_jail.exit.01.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Bus A. Twenty-nine past. They gave me a seat in the front row.",
+  "recognized": "Bus A, 29 past. They gave me a seat in the front row.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "40b5955c85f0261a794fb36bb90039b3",
+  "character_cost": "2",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Bus A, 29 past. They gave me a seat in the front row.",
+    "words": [
+      {
+        "text": "Bus",
+        "start": 0.08,
+        "end": 0.28,
+        "type": "word",
+        "logprob": -0.0007347744540311396
+      },
+      {
+        "text": " ",
+        "start": 0.28,
+        "end": 0.48,
+        "type": "spacing",
+        "logprob": -0.004810189828276634
+      },
+      {
+        "text": "A,",
+        "start": 0.48,
+        "end": 0.68,
+        "type": "word",
+        "logprob": -0.004235121072269976
+      },
+      {
+        "text": " ",
+        "start": 0.68,
+        "end": 1.44,
+        "type": "spacing",
+        "logprob": -0.0001546025014249608
+      },
+      {
+        "text": "29",
+        "start": 1.44,
+        "end": 1.82,
+        "type": "word",
+        "logprob": -0.0002515552841941826
+      },
+      {
+        "text": " ",
+        "start": 1.82,
+        "end": 1.94,
+        "type": "spacing",
+        "logprob": -0.034033678472042084
+      },
+      {
+        "text": "past.",
+        "start": 1.94,
+        "end": 2.4,
+        "type": "word",
+        "logprob": -0.02725619459815789
+      },
+      {
+        "text": " ",
+        "start": 2.4,
+        "end": 2.4,
+        "type": "spacing",
+        "logprob": -9.727005090098828e-05
+      },
+      {
+        "text": "They",
+        "start": 2.94,
+        "end": 3.08,
+        "type": "word",
+        "logprob": -9.727005090098828e-05
+      },
+      {
+        "text": " ",
+        "start": 3.08,
+        "end": 3.12,
+        "type": "spacing",
+        "logprob": -0.00013374387344811112
+      },
+      {
+        "text": "gave",
+        "start": 3.12,
+        "end": 3.26,
+        "type": "word",
+        "logprob": -0.00013374387344811112
+      },
+      {
+        "text": " ",
+        "start": 3.26,
+        "end": 3.3,
+        "type": "spacing",
+        "logprob": -3.2186455882765586e-06
+      },
+      {
+        "text": "me",
+        "start": 3.3,
+        "end": 3.38,
+        "type": "word",
+        "logprob": -3.2186455882765586e-06
+      },
+      {
+        "text": " ",
+        "start": 3.38,
+        "end": 3.42,
+        "type": "spacing",
+        "logprob": -5.960462772236497e-07
+      },
+      {
+        "text": "a",
+        "start": 3.42,
+        "end": 3.5,
+        "type": "word",
+        "logprob": -5.960462772236497e-07
+      },
+      {
+        "text": " ",
+        "start": 3.5,
+        "end": 3.58,
+        "type": "spacing",
+        "logprob": -0.00014768941036891192
+      },
+      {
+        "text": "seat",
+        "start": 3.58,
+        "end": 3.74,
+        "type": "word",
+        "logprob": -0.00014768941036891192
+      },
+      {
+        "text": " ",
+        "start": 3.74,
+        "end": 3.76,
+        "type": "spacing",
+        "logprob": -1.0728830375228426e-06
+      },
+      {
+        "text": "in",
+        "start": 3.76,
+        "end": 3.82,
+        "type": "word",
+        "logprob": -1.0728830375228426e-06
+      },
+      {
+        "text": " ",
+        "start": 3.82,
+        "end": 3.86,
+        "type": "spacing",
+        "logprob": -2.3841855067985307e-07
+      },
+      {
+        "text": "the",
+        "start": 3.86,
+        "end": 3.96,
+        "type": "word",
+        "logprob": -2.3841855067985307e-07
+      },
+      {
+        "text": " ",
+        "start": 3.96,
+        "end": 4.0,
+        "type": "spacing",
+        "logprob": -6.794906312279636e-06
+      },
+      {
+        "text": "front",
+        "start": 4.019,
+        "end": 4.2,
+        "type": "word",
+        "logprob": -6.794906312279636e-06
+      },
+      {
+        "text": " ",
+        "start": 4.2,
+        "end": 4.3,
+        "type": "spacing",
+        "logprob": -3.683499380713329e-05
+      },
+      {
+        "text": "row.",
+        "start": 4.3,
+        "end": 4.56,
+        "type": "word",
+        "logprob": -4.81294027849799e-05
+      }
+    ],
+    "transcription_id": "THVu62Y90j0XzmWicBhb",
+    "audio_duration_secs": 5.12
+  },
+  "listening_reviewed": false
+}

@@ -1,0 +1,81 @@
+{
+  "audio_id": "c10_town.console.02",
+  "audio_sha256": "c3fc94a857fa2d794554a6561d14bff1629dbac72dc69ff632c97c82090bc853",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/c10_town.console.02.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Your lamps are dim.",
+  "recognized": "Your lamps are dim.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "9042a59aedfd2f13983b502727585492",
+  "character_cost": "1",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Your lamps are dim.",
+    "words": [
+      {
+        "text": "Your",
+        "start": 0.08,
+        "end": 0.18,
+        "type": "word",
+        "logprob": -0.0002790300059132278
+      },
+      {
+        "text": " ",
+        "start": 0.18,
+        "end": 0.3,
+        "type": "spacing",
+        "logprob": -4.970903682988137e-05
+      },
+      {
+        "text": "lamps",
+        "start": 0.3,
+        "end": 0.6,
+        "type": "word",
+        "logprob": -4.970903682988137e-05
+      },
+      {
+        "text": " ",
+        "start": 0.6,
+        "end": 0.64,
+        "type": "spacing",
+        "logprob": -2.145764938177308e-06
+      },
+      {
+        "text": "are",
+        "start": 0.64,
+        "end": 0.84,
+        "type": "word",
+        "logprob": -2.145764938177308e-06
+      },
+      {
+        "text": " ",
+        "start": 0.84,
+        "end": 0.9,
+        "type": "spacing",
+        "logprob": -7.152301259338856e-05
+      },
+      {
+        "text": "dim.",
+        "start": 0.9,
+        "end": 1.26,
+        "type": "word",
+        "logprob": -5.9185430018260377e-05
+      }
+    ],
+    "transcription_id": "VA5WL1VJZtY0ROAp9kKP",
+    "audio_duration_secs": 1.76
+  },
+  "listening_reviewed": false
+}

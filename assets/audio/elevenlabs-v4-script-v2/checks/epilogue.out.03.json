@@ -14,5 +14,13 @@
   "first_recognition": "every day.",
   "recognition_pass": "independent",
   "asr_revision": 2,
-  "transcript_comparison": "strict normalized English spoken forms"
+  "transcript_comparison": "strict normalized English spoken forms",
+  "local_recognized": "every day.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/epilogue.out.03.json",
+    "sha256": "da4706928c75d23b3346b9b45fc80351005141e332703c1eda78ee3d0d991433",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  }
 }

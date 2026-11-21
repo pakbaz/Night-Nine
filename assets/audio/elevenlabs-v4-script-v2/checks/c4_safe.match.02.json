@@ -14,5 +14,13 @@
   "first_recognition": "Play it again.",
   "recognition_pass": "independent",
   "asr_revision": 2,
-  "transcript_comparison": "strict normalized English spoken forms"
+  "transcript_comparison": "strict normalized English spoken forms",
+  "local_recognized": "Play it again.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c4_safe.match.02.json",
+    "sha256": "cf1f5de9029b1a61662f41f831c1ca2837b4c24627975d48c85351e0745470e0",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  }
 }

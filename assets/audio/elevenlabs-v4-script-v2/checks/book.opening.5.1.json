@@ -14,5 +14,13 @@
   "first_recognition": "Eighteen months ago, they rode out into the bay after dark. They said the water was making a sound.",
   "recognition_pass": "independent",
   "asr_revision": 2,
-  "transcript_comparison": "strict normalized English spoken forms"
+  "transcript_comparison": "strict normalized English spoken forms",
+  "local_recognized": "Eighteen months ago, they rode out into the bay after dark. They said the water was making a sound.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/book.opening.5.1.json",
+    "sha256": "d66d56dbfab896da84a21bf8e16929212d63cd85e4e212b17a5a57712855ca5b",
+    "model": "scribe_v3",
+    "word_edits": 1,
+    "listening_reviewed": false
+  }
 }

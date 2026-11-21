@@ -5,7 +5,7 @@
   "expected": "Dad’s receiver. Dead battery, and the dial’s slipped since he last used it.",
   "recognized": "Dad's receiver, dead battery, and the dial slipped since he last used it.",
   "word_edits": 1,
-  "word_error_rate": 0.07142857142857142,
+  "word_error_rate": 0.06666666666666667,
   "listening_review_required": true,
   "seconds": 5.12,
   "sample_rate": 48000,
@@ -15,5 +15,13 @@
   "recognition_pass": "independent",
   "asr_revision": 2,
   "transcript_comparison": "strict normalized English spoken forms",
-  "independent_phrase_transcription": "Dad's Receiver Dead battery, and the dial slipped since he last used it."
+  "independent_phrase_transcription": "Dad's Receiver Dead battery, and the dial slipped since he last used it.",
+  "local_recognized": "Dad's receiver, dead battery, and the dial slipped since he last used it.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c5_shack.rig.lead.01.json",
+    "sha256": "1103d070c099502da1cb40e29b086e582c84e66855a13593b0da10dec3ab52f4",
+    "model": "scribe_v3",
+    "word_edits": 1,
+    "listening_reviewed": false
+  }
 }

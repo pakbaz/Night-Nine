@@ -3,9 +3,9 @@
   "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
   "wav_sha256": "e1553c480f463b95b8a4ffb2788b08fc35e0a5590ea7742c023497db20588123",
   "expected": "He said biaoyan, a performance, as on a stage. I translated it exactly and noted that he chose it. The American heard the word and did not argue.",
-  "recognized": "He said, a performance, as on a stage. I translated it exactly and noted that he chose it. The American heard the word and did not argue.",
-  "word_edits": 1,
-  "word_error_rate": 0.03571428571428571,
+  "recognized": "He said, \"biao yan,\" a performance, as on a stage. I translated it exactly and noted that he chose it. The American heard the word and did not argue.",
+  "word_edits": 2,
+  "word_error_rate": 0.07142857142857142,
   "listening_review_required": true,
   "seconds": 12.56,
   "sample_rate": 48000,
@@ -15,5 +15,13 @@
   "recognition_pass": "independent",
   "asr_revision": 2,
   "transcript_comparison": "strict normalized English spoken forms",
-  "independent_phrase_transcription": "He said 表演. A performance. as on a stage. I translated it exactly and noted that he chose it. The American heard the word and did not argue."
+  "independent_phrase_transcription": "He said 表演. A performance. as on a stage. I translated it exactly and noted that he chose it. The American heard the word and did not argue.",
+  "local_recognized": "He said, a performance, as on a stage. I translated it exactly and noted that he chose it. The American heard the word and did not argue.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/p_meeting.terms.find.json",
+    "sha256": "bfdda608aefdcc7ac8b40a07e6af8f8909405c5ac2dfd5564276b0db8a149365",
+    "model": "scribe_v3",
+    "word_edits": 2,
+    "listening_reviewed": false
+  }
 }

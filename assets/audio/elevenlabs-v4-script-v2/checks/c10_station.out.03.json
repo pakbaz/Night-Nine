@@ -3,7 +3,7 @@
   "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
   "wav_sha256": "946c86984d5fa4d5817d0dae46baa0a7d713812af200a2963c4a491a36c018f1",
   "expected": "Everywhere?",
-  "recognized": "everywhere?",
+  "recognized": "Everywhere?",
   "word_edits": 0,
   "word_error_rate": 0.0,
   "listening_review_required": true,
@@ -14,5 +14,13 @@
   "first_recognition": "everywhere?",
   "recognition_pass": "independent",
   "asr_revision": 2,
-  "transcript_comparison": "strict normalized English spoken forms"
+  "transcript_comparison": "strict normalized English spoken forms",
+  "local_recognized": "everywhere?",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c10_station.out.03.json",
+    "sha256": "366eda47e0f0e324cbea1bdc9fe2565c8307d6caa304977c2aef8abe7cf4d615",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  }
 }

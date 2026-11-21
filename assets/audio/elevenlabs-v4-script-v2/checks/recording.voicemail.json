@@ -66,5 +66,13 @@
   "first_recognition": "Come out with us, kiddo. The bay is singing tonight.",
   "recognition_pass": "independent",
   "asr_revision": 2,
-  "transcript_comparison": "strict normalized English spoken forms"
+  "transcript_comparison": "strict normalized English spoken forms",
+  "local_recognized": "Come out with us, kiddo. The bay is singing tonight.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/recording.voicemail.json",
+    "sha256": "b41b726869a639e0d9c6852bee46dfd1da628ca137d207b2232606ff94063086",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  }
 }

@@ -1,0 +1,39 @@
+{
+  "audio_id": "c1_pier.whistle.lead.02",
+  "audio_sha256": "f5fd8a09b4e0c2187345db2d0df78b44173ed9c1b23acdc357946ce04240276d",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/c1_pier.whistle.lead.02.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Watch.",
+  "recognized": "Watch.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "ee22b2eb705669de83107a8f3ca089b9",
+  "character_cost": "0",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Watch.",
+    "words": [
+      {
+        "text": "Watch.",
+        "start": 0.08,
+        "end": 0.46,
+        "type": "word",
+        "logprob": -0.06636539497655274
+      }
+    ],
+    "transcription_id": "vCgn0AzZEoN12V3wQO8E",
+    "audio_duration_secs": 0.8
+  },
+  "listening_reviewed": false
+}

@@ -14,5 +14,13 @@
   "first_recognition": "Look after yourself.",
   "recognition_pass": "independent",
   "asr_revision": 2,
-  "transcript_comparison": "strict normalized English spoken forms"
+  "transcript_comparison": "strict normalized English spoken forms",
+  "local_recognized": "Look after yourself.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/epilogue.bait.03.json",
+    "sha256": "5abf7f2f91b33342417829a8ba7834f7157b4f017501a333ff01362e6bf27b42",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  }
 }

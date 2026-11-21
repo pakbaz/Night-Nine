@@ -1,0 +1,39 @@
+{
+  "audio_id": "c6_jail.mail.lead.03",
+  "audio_sha256": "799008774cfd8eab24a4c6c2cda2cd5430c5834ac61f4d2e02fec82aca93548d",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/c6_jail.mail.lead.03.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Correctly.",
+  "recognized": "correctly.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "bb4b776f50f39b70464188dfe9b4783a",
+  "character_cost": "0",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "correctly.",
+    "words": [
+      {
+        "text": "correctly.",
+        "start": 0.08,
+        "end": 0.68,
+        "type": "word",
+        "logprob": -0.4860577553634357
+      }
+    ],
+    "transcription_id": "Wd02yP4Iyj8Xmj5MPRYe",
+    "audio_duration_secs": 1.2
+  },
+  "listening_reviewed": false
+}

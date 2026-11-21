@@ -3,7 +3,7 @@
   "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
   "wav_sha256": "d5059649c45d0f4ae666c21e73dbf159d84224de06cd0513c33385e355f0ff3d",
   "expected": "The real Nora recorded this here on May 29. Someone else has been living her life with me for five months. Her whistle rises. The one Admiral ignored falls.",
-  "recognized": "The Real Nora recorded this here on May 29th. Someone else has been living her life with me for five months. Her whistle rises. The one Admiral ignored falls.",
+  "recognized": "The real Nora recorded this here on May 29th. Someone else has been living her life with me for five months. Her whistle rises. The one Admiral ignored falls.",
   "word_edits": 1,
   "word_error_rate": 0.034482758620689655,
   "listening_review_required": true,
@@ -15,5 +15,13 @@
   "recognition_pass": "independent",
   "asr_revision": 2,
   "transcript_comparison": "strict normalized English spoken forms",
-  "independent_phrase_transcription": "The Real Nora recorded this year on May 29th. Someone else has been living her life with me for five months. Her whistle rises. The one Admiral ignored. Falls."
+  "independent_phrase_transcription": "The Real Nora recorded this year on May 29th. Someone else has been living her life with me for five months. Her whistle rises. The one Admiral ignored. Falls.",
+  "local_recognized": "The Real Nora recorded this here on May 29th. Someone else has been living her life with me for five months. Her whistle rises. The one Admiral ignored falls.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c2_aquarium.intercom.find.json",
+    "sha256": "a9ce953242c8c5566f01b05219c327e49a96285613c1e2cf727e13730f308d76",
+    "model": "scribe_v3",
+    "word_edits": 1,
+    "listening_reviewed": false
+  }
 }

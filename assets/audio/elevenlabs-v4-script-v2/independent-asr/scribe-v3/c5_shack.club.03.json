@@ -1,0 +1,53 @@
+{
+  "audio_id": "c5_shack.club.03",
+  "audio_sha256": "a5b199993e3dbfe94e92edd2a3a82ead6db5657428da75dff365d4ca4a9a42b1",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/c5_shack.club.03.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Any time, kid.",
+  "recognized": "Anytime, kid.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "8143d5d3727d2585ac6f47ffe3f5cb19",
+  "character_cost": "0",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Anytime, kid.",
+    "words": [
+      {
+        "text": "Anytime,",
+        "start": 0.06,
+        "end": 0.54,
+        "type": "word",
+        "logprob": -0.007215192819217009
+      },
+      {
+        "text": " ",
+        "start": 0.54,
+        "end": 0.66,
+        "type": "spacing",
+        "logprob": -0.001312228967435658
+      },
+      {
+        "text": "kid.",
+        "start": 0.66,
+        "end": 0.9,
+        "type": "word",
+        "logprob": -0.001013972272630781
+      }
+    ],
+    "transcription_id": "KTyA14M56alr2TxzhJeb",
+    "audio_duration_secs": 1.6
+  },
+  "listening_reviewed": false
+}

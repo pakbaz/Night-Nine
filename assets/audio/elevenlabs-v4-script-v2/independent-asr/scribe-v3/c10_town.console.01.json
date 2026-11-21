@@ -1,0 +1,81 @@
+{
+  "audio_id": "c10_town.console.01",
+  "audio_sha256": "f9d05a992e4948d294f1ba0435bbfffd83e7aabe013117156e365b4093609d64",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/c10_town.console.01.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Your timing is late.",
+  "recognized": "Your timing is late.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "23c5b853554ce43be75c84712c932b1d",
+  "character_cost": "1",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Your timing is late.",
+    "words": [
+      {
+        "text": "Your",
+        "start": 0.1,
+        "end": 0.2,
+        "type": "word",
+        "logprob": -0.0005631053354591131
+      },
+      {
+        "text": " ",
+        "start": 0.2,
+        "end": 0.34,
+        "type": "spacing",
+        "logprob": -2.372236667724792e-05
+      },
+      {
+        "text": "timing",
+        "start": 0.34,
+        "end": 0.78,
+        "type": "word",
+        "logprob": -2.372236667724792e-05
+      },
+      {
+        "text": " ",
+        "start": 0.78,
+        "end": 0.82,
+        "type": "spacing",
+        "logprob": -4.768370445162873e-07
+      },
+      {
+        "text": "is",
+        "start": 0.82,
+        "end": 1.0,
+        "type": "word",
+        "logprob": -4.768370445162873e-07
+      },
+      {
+        "text": " ",
+        "start": 1.0,
+        "end": 1.12,
+        "type": "spacing",
+        "logprob": -5.400034933700226e-05
+      },
+      {
+        "text": "late.",
+        "start": 1.12,
+        "end": 1.48,
+        "type": "word",
+        "logprob": -5.276063602650538e-05
+      }
+    ],
+    "transcription_id": "1Q2uYiYS9w7WTyGo34pI",
+    "audio_duration_secs": 2.0
+  },
+  "listening_reviewed": false
+}

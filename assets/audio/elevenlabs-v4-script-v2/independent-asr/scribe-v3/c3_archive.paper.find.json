@@ -1,0 +1,501 @@
+{
+  "audio_id": "c3_archive.paper.find",
+  "audio_sha256": "897a404463a2050acf43317dbb5168ec3028f22845f73849801e89666a49fb70",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/c3_archive.paper.find.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "On May 3, Walt Prior was answering questions in Washington while someone signed his name at our counter to reopen the aquarium’s old seawater intake. Later, somebody changed the computer. Nobody changed the ink.",
+  "recognized": "On May 3rd, Walt Pryor was answering questions in Washington while someone signed his name at our counter to reopen the aquarium's old seawater intake. Later, somebody changed the computer. Nobody changed the ink.",
+  "word_edits": 2,
+  "request_id": null,
+  "trace_id": "5b5f02dfe2001bf7c210ff966fd84e10",
+  "character_cost": "4",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "On May 3rd, Walt Pryor was answering questions in Washington while someone signed his name at our counter to reopen the aquarium's old seawater intake. Later, somebody changed the computer. Nobody changed the ink.",
+    "words": [
+      {
+        "text": "On",
+        "start": 0.06,
+        "end": 0.16,
+        "type": "word",
+        "logprob": -4.4225667807040736e-05
+      },
+      {
+        "text": " ",
+        "start": 0.16,
+        "end": 0.24,
+        "type": "spacing",
+        "logprob": -3.266281055402942e-05
+      },
+      {
+        "text": "May",
+        "start": 0.24,
+        "end": 0.36,
+        "type": "word",
+        "logprob": -3.266281055402942e-05
+      },
+      {
+        "text": " ",
+        "start": 0.36,
+        "end": 0.54,
+        "type": "spacing",
+        "logprob": -0.00015662873920518905
+      },
+      {
+        "text": "3rd,",
+        "start": 0.54,
+        "end": 0.9,
+        "type": "word",
+        "logprob": -7.086574976256088e-05
+      },
+      {
+        "text": " ",
+        "start": 0.9,
+        "end": 1.24,
+        "type": "spacing",
+        "logprob": -0.00013624693383462727
+      },
+      {
+        "text": "Walt",
+        "start": 1.24,
+        "end": 1.4,
+        "type": "word",
+        "logprob": -0.00013624693383462727
+      },
+      {
+        "text": " ",
+        "start": 1.4,
+        "end": 1.52,
+        "type": "spacing",
+        "logprob": -0.5305222272872925
+      },
+      {
+        "text": "Pryor",
+        "start": 1.52,
+        "end": 1.88,
+        "type": "word",
+        "logprob": -0.5305222272872925
+      },
+      {
+        "text": " ",
+        "start": 1.88,
+        "end": 2.0,
+        "type": "spacing",
+        "logprob": -7.510157047363464e-06
+      },
+      {
+        "text": "was",
+        "start": 2.0,
+        "end": 2.18,
+        "type": "word",
+        "logprob": -7.510157047363464e-06
+      },
+      {
+        "text": " ",
+        "start": 2.18,
+        "end": 2.24,
+        "type": "spacing",
+        "logprob": -3.325883881188929e-05
+      },
+      {
+        "text": "answering",
+        "start": 2.24,
+        "end": 2.64,
+        "type": "word",
+        "logprob": -3.325883881188929e-05
+      },
+      {
+        "text": " ",
+        "start": 2.64,
+        "end": 2.68,
+        "type": "spacing",
+        "logprob": -3.6954811548639555e-06
+      },
+      {
+        "text": "questions",
+        "start": 2.68,
+        "end": 3.14,
+        "type": "word",
+        "logprob": -3.6954811548639555e-06
+      },
+      {
+        "text": " ",
+        "start": 3.14,
+        "end": 3.18,
+        "type": "spacing",
+        "logprob": 0.0
+      },
+      {
+        "text": "in",
+        "start": 3.18,
+        "end": 3.32,
+        "type": "word",
+        "logprob": 0.0
+      },
+      {
+        "text": " ",
+        "start": 3.32,
+        "end": 3.36,
+        "type": "spacing",
+        "logprob": -1.7881233361549675e-05
+      },
+      {
+        "text": "Washington",
+        "start": 3.36,
+        "end": 4.0,
+        "type": "word",
+        "logprob": -1.7881233361549675e-05
+      },
+      {
+        "text": " ",
+        "start": 4.0,
+        "end": 4.12,
+        "type": "spacing",
+        "logprob": -0.0010424185311421752
+      },
+      {
+        "text": "while",
+        "start": 4.12,
+        "end": 4.3,
+        "type": "word",
+        "logprob": -0.0010424185311421752
+      },
+      {
+        "text": " ",
+        "start": 4.3,
+        "end": 4.36,
+        "type": "spacing",
+        "logprob": -6.318072337307967e-06
+      },
+      {
+        "text": "someone",
+        "start": 4.36,
+        "end": 4.64,
+        "type": "word",
+        "logprob": -6.318072337307967e-06
+      },
+      {
+        "text": " ",
+        "start": 4.64,
+        "end": 4.8,
+        "type": "spacing",
+        "logprob": -2.062299427052494e-05
+      },
+      {
+        "text": "signed",
+        "start": 4.8,
+        "end": 5.08,
+        "type": "word",
+        "logprob": -2.062299427052494e-05
+      },
+      {
+        "text": " ",
+        "start": 5.08,
+        "end": 5.12,
+        "type": "spacing",
+        "logprob": -2.0265558760002023e-06
+      },
+      {
+        "text": "his",
+        "start": 5.12,
+        "end": 5.3,
+        "type": "word",
+        "logprob": -2.0265558760002023e-06
+      },
+      {
+        "text": " ",
+        "start": 5.3,
+        "end": 5.36,
+        "type": "spacing",
+        "logprob": -4.291525328881107e-06
+      },
+      {
+        "text": "name",
+        "start": 5.36,
+        "end": 5.58,
+        "type": "word",
+        "logprob": -4.291525328881107e-06
+      },
+      {
+        "text": " ",
+        "start": 5.58,
+        "end": 5.6,
+        "type": "spacing",
+        "logprob": -1.1920928244535389e-07
+      },
+      {
+        "text": "at",
+        "start": 5.6,
+        "end": 5.68,
+        "type": "word",
+        "logprob": -1.1920928244535389e-07
+      },
+      {
+        "text": " ",
+        "start": 5.68,
+        "end": 5.72,
+        "type": "spacing",
+        "logprob": -1.7881377516459906e-06
+      },
+      {
+        "text": "our",
+        "start": 5.72,
+        "end": 5.84,
+        "type": "word",
+        "logprob": -1.7881377516459906e-06
+      },
+      {
+        "text": " ",
+        "start": 5.84,
+        "end": 5.9,
+        "type": "spacing",
+        "logprob": -4.732496745418757e-05
+      },
+      {
+        "text": "counter",
+        "start": 5.9,
+        "end": 6.44,
+        "type": "word",
+        "logprob": -4.732496745418757e-05
+      },
+      {
+        "text": " ",
+        "start": 6.44,
+        "end": 6.5,
+        "type": "spacing",
+        "logprob": -3.576278118089249e-07
+      },
+      {
+        "text": "to",
+        "start": 6.5,
+        "end": 6.62,
+        "type": "word",
+        "logprob": -3.576278118089249e-07
+      },
+      {
+        "text": " ",
+        "start": 6.62,
+        "end": 6.66,
+        "type": "spacing",
+        "logprob": -0.00029452278977259994
+      },
+      {
+        "text": "reopen",
+        "start": 6.66,
+        "end": 7.12,
+        "type": "word",
+        "logprob": -0.00029452278977259994
+      },
+      {
+        "text": " ",
+        "start": 7.12,
+        "end": 7.14,
+        "type": "spacing",
+        "logprob": -2.3841855067985307e-07
+      },
+      {
+        "text": "the",
+        "start": 7.14,
+        "end": 7.22,
+        "type": "word",
+        "logprob": -2.3841855067985307e-07
+      },
+      {
+        "text": " ",
+        "start": 7.22,
+        "end": 7.26,
+        "type": "spacing",
+        "logprob": -0.000906175933778286
+      },
+      {
+        "text": "aquarium's",
+        "start": 7.26,
+        "end": 7.92,
+        "type": "word",
+        "logprob": -0.0007267050309792466
+      },
+      {
+        "text": " ",
+        "start": 7.92,
+        "end": 7.98,
+        "type": "spacing",
+        "logprob": -2.634490556374658e-05
+      },
+      {
+        "text": "old",
+        "start": 7.98,
+        "end": 8.18,
+        "type": "word",
+        "logprob": -2.634490556374658e-05
+      },
+      {
+        "text": " ",
+        "start": 8.18,
+        "end": 8.32,
+        "type": "spacing",
+        "logprob": -0.0009415484382770956
+      },
+      {
+        "text": "seawater",
+        "start": 8.32,
+        "end": 8.76,
+        "type": "word",
+        "logprob": -0.0009415484382770956
+      },
+      {
+        "text": " ",
+        "start": 8.76,
+        "end": 8.84,
+        "type": "spacing",
+        "logprob": -5.8412379075889476e-06
+      },
+      {
+        "text": "intake.",
+        "start": 8.84,
+        "end": 9.32,
+        "type": "word",
+        "logprob": -5.262223599597096e-06
+      },
+      {
+        "text": " ",
+        "start": 9.32,
+        "end": 9.68,
+        "type": "spacing",
+        "logprob": -2.1457441107486375e-05
+      },
+      {
+        "text": "Later,",
+        "start": 9.68,
+        "end": 10.02,
+        "type": "word",
+        "logprob": -1.804014656651513e-05
+      },
+      {
+        "text": " ",
+        "start": 10.02,
+        "end": 10.36,
+        "type": "spacing",
+        "logprob": -1.847726889536716e-05
+      },
+      {
+        "text": "somebody",
+        "start": 10.36,
+        "end": 10.66,
+        "type": "word",
+        "logprob": -1.847726889536716e-05
+      },
+      {
+        "text": " ",
+        "start": 10.66,
+        "end": 10.78,
+        "type": "spacing",
+        "logprob": -1.7881233361549675e-05
+      },
+      {
+        "text": "changed",
+        "start": 10.78,
+        "end": 11.1,
+        "type": "word",
+        "logprob": -1.7881233361549675e-05
+      },
+      {
+        "text": " ",
+        "start": 11.1,
+        "end": 11.14,
+        "type": "spacing",
+        "logprob": 0.0
+      },
+      {
+        "text": "the",
+        "start": 11.14,
+        "end": 11.22,
+        "type": "word",
+        "logprob": 0.0
+      },
+      {
+        "text": " ",
+        "start": 11.22,
+        "end": 11.24,
+        "type": "spacing",
+        "logprob": -0.00011801023356383666
+      },
+      {
+        "text": "computer.",
+        "start": 11.24,
+        "end": 11.8,
+        "type": "word",
+        "logprob": -0.010311017867125984
+      },
+      {
+        "text": " ",
+        "start": 11.8,
+        "end": 12.24,
+        "type": "spacing",
+        "logprob": -6.949660019017756e-05
+      },
+      {
+        "text": "Nobody",
+        "start": 12.24,
+        "end": 12.56,
+        "type": "word",
+        "logprob": -6.949660019017756e-05
+      },
+      {
+        "text": " ",
+        "start": 12.56,
+        "end": 12.68,
+        "type": "spacing",
+        "logprob": -1.8358061424805783e-05
+      },
+      {
+        "text": "changed",
+        "start": 12.68,
+        "end": 12.98,
+        "type": "word",
+        "logprob": -1.8358061424805783e-05
+      },
+      {
+        "text": " ",
+        "start": 12.98,
+        "end": 13.02,
+        "type": "spacing",
+        "logprob": 0.0
+      },
+      {
+        "text": "the",
+        "start": 13.02,
+        "end": 13.12,
+        "type": "word",
+        "logprob": 0.0
+      },
+      {
+        "text": " ",
+        "start": 13.12,
+        "end": 13.2,
+        "type": "spacing",
+        "logprob": -0.00010179955279454589
+      },
+      {
+        "text": "ink.",
+        "start": 13.2,
+        "end": 13.44,
+        "type": "word",
+        "logprob": -8.27272801871004e-05
+      }
+    ],
+    "transcription_id": "O3m9LC30XCmihVLdczyi",
+    "audio_duration_secs": 13.84
+  },
+  "listening_reviewed": false
+}

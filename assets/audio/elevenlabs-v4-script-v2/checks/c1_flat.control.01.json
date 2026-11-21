@@ -14,5 +14,13 @@
   "first_recognition": "Testing, one, two. Testing, one, two.",
   "recognition_pass": "independent",
   "asr_revision": 2,
-  "transcript_comparison": "strict normalized English spoken forms"
+  "transcript_comparison": "strict normalized English spoken forms",
+  "local_recognized": "Testing, one, two. Testing, one, two.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c1_flat.control.01.json",
+    "sha256": "c4d548a728b4bc53fc594782d24de7b8c3e883bb7fa22d425ab3335dce7040ad",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  }
 }

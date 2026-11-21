@@ -1,0 +1,53 @@
+{
+  "audio_id": "c7_swap.in.02",
+  "audio_sha256": "c1cc23d1490b2491d6ee14a627a611f95a5e243a82bd973b882a67028a0fb440",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/c7_swap.in.02.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "What’s Tirel?",
+  "recognized": "What's Tyrell?",
+  "word_edits": 1,
+  "request_id": null,
+  "trace_id": "5578218ec4abfa14e8ab9021f761dbfe",
+  "character_cost": "0",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "What's Tyrell?",
+    "words": [
+      {
+        "text": "What's",
+        "start": 0.08,
+        "end": 0.48,
+        "type": "word",
+        "logprob": -3.031830961693534e-05
+      },
+      {
+        "text": " ",
+        "start": 0.48,
+        "end": 0.54,
+        "type": "spacing",
+        "logprob": -1.016153335571289
+      },
+      {
+        "text": "Tyrell?",
+        "start": 0.54,
+        "end": 1.04,
+        "type": "word",
+        "logprob": -0.3387222076962644
+      }
+    ],
+    "transcription_id": "UxAVbinzLbLyT4kPX43j",
+    "audio_duration_secs": 1.2
+  },
+  "listening_reviewed": false
+}

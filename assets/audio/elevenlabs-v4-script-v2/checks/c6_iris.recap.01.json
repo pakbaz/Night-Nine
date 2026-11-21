@@ -5,7 +5,7 @@
   "expected": "Nora’s copy sent the warning about Rook. She stopped going into the water, and she doesn’t replay any more. She chooses.",
   "recognized": "Nora's copy sent the warning about Rook. She stopped going into the water, and she doesn't replay anymore. She chooses.",
   "word_edits": 2,
-  "word_error_rate": 0.09090909090909091,
+  "word_error_rate": 0.08695652173913043,
   "listening_review_required": true,
   "seconds": 8.32,
   "sample_rate": 48000,
@@ -15,5 +15,13 @@
   "recognition_pass": "independent",
   "asr_revision": 2,
   "transcript_comparison": "strict normalized English spoken forms",
-  "independent_phrase_transcription": "Nora's copy sent the warning about Rook. She stopped going into the water. And she doesn't replay anymore. She chooses."
+  "independent_phrase_transcription": "Nora's copy sent the warning about Rook. She stopped going into the water. And she doesn't replay anymore. She chooses.",
+  "local_recognized": "Nora's copy sent the warning about Rook. She stopped going into the water, and she doesn't replay anymore. She chooses.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c6_iris.recap.01.json",
+    "sha256": "b3407eabb19331fccd6b1b55f79e75cb78b3ec376c90c039274dbb0e2120b2fa",
+    "model": "scribe_v3",
+    "word_edits": 2,
+    "listening_reviewed": false
+  }
 }

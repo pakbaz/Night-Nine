@@ -1,0 +1,109 @@
+{
+  "audio_id": "recording.saren_splice",
+  "audio_sha256": "057b76d8e492bb8af592ab7e0417d131d2f9243c6b9e9ba4d2627b2f01f8ac4e",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/recording.saren_splice.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Come out with us, kiddo. Tonight.",
+  "recognized": "Come out with us, kiddo, tonight.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "232931e3ec9dce9d43dc78d1b984dda4",
+  "character_cost": "1",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Come out with us, kiddo, tonight.",
+    "words": [
+      {
+        "text": "Come",
+        "start": 0.04,
+        "end": 0.16,
+        "type": "word",
+        "logprob": -0.00017069313616957515
+      },
+      {
+        "text": " ",
+        "start": 0.16,
+        "end": 0.24,
+        "type": "spacing",
+        "logprob": -3.933898824470816e-06
+      },
+      {
+        "text": "out",
+        "start": 0.24,
+        "end": 0.36,
+        "type": "word",
+        "logprob": -3.933898824470816e-06
+      },
+      {
+        "text": " ",
+        "start": 0.36,
+        "end": 0.4,
+        "type": "spacing",
+        "logprob": -2.145764938177308e-06
+      },
+      {
+        "text": "with",
+        "start": 0.4,
+        "end": 0.54,
+        "type": "word",
+        "logprob": -2.145764938177308e-06
+      },
+      {
+        "text": " ",
+        "start": 0.54,
+        "end": 0.6,
+        "type": "spacing",
+        "logprob": -2.861018856492592e-06
+      },
+      {
+        "text": "us,",
+        "start": 0.6,
+        "end": 0.72,
+        "type": "word",
+        "logprob": -2.705955769973419e-05
+      },
+      {
+        "text": " ",
+        "start": 0.72,
+        "end": 0.84,
+        "type": "spacing",
+        "logprob": -0.0015587572706863284
+      },
+      {
+        "text": "kiddo,",
+        "start": 0.84,
+        "end": 1.14,
+        "type": "word",
+        "logprob": -0.001203682677441975
+      },
+      {
+        "text": " ",
+        "start": 1.14,
+        "end": 1.44,
+        "type": "spacing",
+        "logprob": -1.5735502529423684e-05
+      },
+      {
+        "text": "tonight.",
+        "start": 1.44,
+        "end": 1.88,
+        "type": "word",
+        "logprob": -1.749379953253083e-05
+      }
+    ],
+    "transcription_id": "3uefrU4A4nl3JhDvGW8U",
+    "audio_duration_secs": 1.94
+  },
+  "listening_reviewed": false
+}

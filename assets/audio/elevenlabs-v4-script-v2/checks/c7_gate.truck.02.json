@@ -3,9 +3,9 @@
   "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
   "wav_sha256": "f614a85253273d9289762621324015ed0b3711aa26e9dafea0a8844af3a39df6",
   "expected": "Evelyn Shaw. I ran the sound stage for Meridian, back when it had a budget. Stay off the cables.",
-  "recognized": "Evelyn Shaw. I ran the soundstage for Meridian, back when it had a budget. Stay off the cables.",
-  "word_edits": 2,
-  "word_error_rate": 0.10526315789473684,
+  "recognized": "Evelyn Shaw: \"I ran the sound stage for Meridian, back when it had a budget. Stay off the cables.\"",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
   "listening_review_required": true,
   "seconds": 7.04,
   "sample_rate": 48000,
@@ -15,5 +15,13 @@
   "recognition_pass": "independent",
   "asr_revision": 2,
   "transcript_comparison": "strict normalized English spoken forms",
-  "independent_phrase_transcription": "Evelyn Shaw I ran the soundstage for Meridian. back when it had a budget. Stay off the cables."
+  "independent_phrase_transcription": "Evelyn Shaw I ran the soundstage for Meridian. back when it had a budget. Stay off the cables.",
+  "local_recognized": "Evelyn Shaw. I ran the soundstage for Meridian, back when it had a budget. Stay off the cables.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c7_gate.truck.02.json",
+    "sha256": "e7545062ec43dfe7e2470825aad8665ec9fa5491e00a40c5b74de79c7101a28f",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  }
 }

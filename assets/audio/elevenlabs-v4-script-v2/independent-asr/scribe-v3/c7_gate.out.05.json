@@ -1,0 +1,193 @@
+{
+  "audio_id": "c7_gate.out.05",
+  "audio_sha256": "2409582e5f2ee82d5d66734ce6371d041e6d8aa5b7f3339b2d220d9a79c03e2c",
+  "file": "assets/audio/elevenlabs-v4-script-v2/retakes/automatic-01/masters/c7_gate.out.05.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "So we watch the hatch. I’m very good at being looked at.",
+  "recognized": "So we watch the hatch. I'm very good at being looked at.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "3476de3a509511a91a1bc71b55554c71",
+  "character_cost": "1",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "So we watch the hatch. I'm very good at being looked at.",
+    "words": [
+      {
+        "text": "So",
+        "start": 0.08,
+        "end": 0.18,
+        "type": "word",
+        "logprob": -4.23184028477408e-05
+      },
+      {
+        "text": " ",
+        "start": 0.18,
+        "end": 0.22,
+        "type": "spacing",
+        "logprob": -0.0021872424986213446
+      },
+      {
+        "text": "we",
+        "start": 0.22,
+        "end": 0.34,
+        "type": "word",
+        "logprob": -0.0021872424986213446
+      },
+      {
+        "text": " ",
+        "start": 0.34,
+        "end": 0.38,
+        "type": "spacing",
+        "logprob": -0.029941212385892868
+      },
+      {
+        "text": "watch",
+        "start": 0.38,
+        "end": 0.68,
+        "type": "word",
+        "logprob": -0.029941212385892868
+      },
+      {
+        "text": " ",
+        "start": 0.68,
+        "end": 0.72,
+        "type": "spacing",
+        "logprob": -0.04407079890370369
+      },
+      {
+        "text": "the",
+        "start": 0.72,
+        "end": 0.82,
+        "type": "word",
+        "logprob": -0.04407079890370369
+      },
+      {
+        "text": " ",
+        "start": 0.82,
+        "end": 0.88,
+        "type": "spacing",
+        "logprob": -0.0006995138246566057
+      },
+      {
+        "text": "hatch.",
+        "start": 0.88,
+        "end": 1.26,
+        "type": "word",
+        "logprob": -0.0005902792648460794
+      },
+      {
+        "text": " ",
+        "start": 1.26,
+        "end": 1.7,
+        "type": "spacing",
+        "logprob": -2.3483953555114567e-05
+      },
+      {
+        "text": "I'm",
+        "start": 1.7,
+        "end": 1.86,
+        "type": "word",
+        "logprob": -2.6583104954625014e-05
+      },
+      {
+        "text": " ",
+        "start": 1.86,
+        "end": 2.04,
+        "type": "spacing",
+        "logprob": -1.2040065485052764e-05
+      },
+      {
+        "text": "very",
+        "start": 2.04,
+        "end": 2.36,
+        "type": "word",
+        "logprob": -1.2040065485052764e-05
+      },
+      {
+        "text": " ",
+        "start": 2.36,
+        "end": 2.4,
+        "type": "spacing",
+        "logprob": -8.22540732769994e-06
+      },
+      {
+        "text": "good",
+        "start": 2.4,
+        "end": 2.58,
+        "type": "word",
+        "logprob": -8.22540732769994e-06
+      },
+      {
+        "text": " ",
+        "start": 2.58,
+        "end": 2.62,
+        "type": "spacing",
+        "logprob": -1.0728830375228426e-06
+      },
+      {
+        "text": "at",
+        "start": 2.62,
+        "end": 2.72,
+        "type": "word",
+        "logprob": -1.0728830375228426e-06
+      },
+      {
+        "text": " ",
+        "start": 2.72,
+        "end": 2.78,
+        "type": "spacing",
+        "logprob": -7.152531907195225e-06
+      },
+      {
+        "text": "being",
+        "start": 2.78,
+        "end": 3.02,
+        "type": "word",
+        "logprob": -7.152531907195225e-06
+      },
+      {
+        "text": " ",
+        "start": 3.02,
+        "end": 3.06,
+        "type": "spacing",
+        "logprob": -1.156323378381785e-05
+      },
+      {
+        "text": "looked",
+        "start": 3.06,
+        "end": 3.3,
+        "type": "word",
+        "logprob": -1.156323378381785e-05
+      },
+      {
+        "text": " ",
+        "start": 3.3,
+        "end": 3.38,
+        "type": "spacing",
+        "logprob": -3.933898824470816e-06
+      },
+      {
+        "text": "at.",
+        "start": 3.38,
+        "end": 3.56,
+        "type": "word",
+        "logprob": -2.1735273852148868e-05
+      }
+    ],
+    "transcription_id": "CrKp4RjKql3TbiODUvce",
+    "audio_duration_secs": 3.76
+  },
+  "listening_reviewed": false
+}

@@ -1,0 +1,67 @@
+{
+  "audio_id": "c9_wake.frank.02",
+  "audio_sha256": "324d8863d4ba95bed123e3e2a98be1c0170e2c7f203c2878d329f3dd92c70103",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/c9_wake.frank.02.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Right here, Dad.",
+  "recognized": "Right here, Dad.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "548ba8d70a2b072272150ed5101e2da2",
+  "character_cost": "0",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Right here, Dad.",
+    "words": [
+      {
+        "text": "Right",
+        "start": 0.08,
+        "end": 0.26,
+        "type": "word",
+        "logprob": -0.00047231485950760543
+      },
+      {
+        "text": " ",
+        "start": 0.26,
+        "end": 0.32,
+        "type": "spacing",
+        "logprob": -1.0490362910786644e-05
+      },
+      {
+        "text": "here,",
+        "start": 0.32,
+        "end": 0.48,
+        "type": "word",
+        "logprob": -1.7714239220367745e-05
+      },
+      {
+        "text": " ",
+        "start": 0.48,
+        "end": 0.58,
+        "type": "spacing",
+        "logprob": -0.048808056861162186
+      },
+      {
+        "text": "Dad.",
+        "start": 0.58,
+        "end": 0.86,
+        "type": "word",
+        "logprob": -0.036612986490581534
+      }
+    ],
+    "transcription_id": "GmmhJjrhn8wWdKm1tz2X",
+    "audio_duration_secs": 1.28
+  },
+  "listening_reviewed": false
+}

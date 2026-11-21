@@ -3,9 +3,9 @@
   "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
   "wav_sha256": "e2e51b2c15e9e4bc3c6543ad92d1c9329c5d2e0ef8c020a2a5798fc227e855b3",
   "expected": "K7BLW log, eleven-oh-four. Eight-fifteen, narrow band. Not one tone. Several, holding the same note.",
-  "recognized": "K7BLW log 1104, 815, narrow band. Not one tone, several holding the same note.",
-  "word_edits": 2,
-  "word_error_rate": 0.13333333333333333,
+  "recognized": "K7BLW log, 11:04, 815 narrowband. Not one tone, several holding the same note.",
+  "word_edits": 4,
+  "word_error_rate": 0.26666666666666666,
   "listening_review_required": true,
   "seconds": 10.64,
   "sample_rate": 48000,
@@ -15,5 +15,13 @@
   "recognition_pass": "story_vocabulary_2",
   "asr_revision": 2,
   "transcript_comparison": "strict normalized English spoken forms",
-  "independent_phrase_transcription": "K7BLW Log 1104. 8.15 Narrow band Not one tone. Several. holding the same note."
+  "independent_phrase_transcription": "K7BLW Log 1104. 8.15 Narrow band Not one tone. Several. holding the same note.",
+  "local_recognized": "K7BLW log 1104, 815, narrow band. Not one tone, several holding the same note.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/p_bay.tune.find.json",
+    "sha256": "b19b7730cc2aba2a6577ff45ea658fc4cbb8f1af0a04c961a43585e489ab1c2f",
+    "model": "scribe_v3",
+    "word_edits": 4,
+    "listening_reviewed": false
+  }
 }

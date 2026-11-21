@@ -3,9 +3,9 @@
   "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
   "wav_sha256": "c1cc23d1490b2491d6ee14a627a611f95a5e243a82bd973b882a67028a0fb440",
   "expected": "What’s Tirel?",
-  "recognized": "What's Tirel?",
-  "word_edits": 0,
-  "word_error_rate": 0.0,
+  "recognized": "What's Tyrell?",
+  "word_edits": 1,
+  "word_error_rate": 0.3333333333333333,
   "listening_review_required": true,
   "seconds": 1.2,
   "sample_rate": 48000,
@@ -14,5 +14,13 @@
   "first_recognition": "What's Tyrol?",
   "recognition_pass": "story_vocabulary_2",
   "asr_revision": 2,
-  "transcript_comparison": "strict normalized English spoken forms"
+  "transcript_comparison": "strict normalized English spoken forms",
+  "local_recognized": "What's Tirel?",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c7_swap.in.02.json",
+    "sha256": "1b88ef77049b2d4ed8569e8580dc7b8a1bbb1a31259f2ef56e9a1660b905a466",
+    "model": "scribe_v3",
+    "word_edits": 1,
+    "listening_reviewed": false
+  }
 }

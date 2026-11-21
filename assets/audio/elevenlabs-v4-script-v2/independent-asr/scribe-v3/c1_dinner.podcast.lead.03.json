@@ -1,0 +1,67 @@
+{
+  "audio_id": "c1_dinner.podcast.lead.03",
+  "audio_sha256": "c6720823a84985e34e14c5d3195f618f1622c0cbe07cb35db624537f465a7a41",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/c1_dinner.podcast.lead.03.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "...You heard it?",
+  "recognized": "You heard it?",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "8af3e1eba2390c93fa0f8b8c5fcc6c8b",
+  "character_cost": "0",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "You heard it?",
+    "words": [
+      {
+        "text": "You",
+        "start": 0.1,
+        "end": 0.16,
+        "type": "word",
+        "logprob": -8.22540732769994e-06
+      },
+      {
+        "text": " ",
+        "start": 0.16,
+        "end": 0.24,
+        "type": "spacing",
+        "logprob": -2.8132995794294402e-05
+      },
+      {
+        "text": "heard",
+        "start": 0.24,
+        "end": 0.46,
+        "type": "word",
+        "logprob": -2.8132995794294402e-05
+      },
+      {
+        "text": " ",
+        "start": 0.46,
+        "end": 0.5,
+        "type": "spacing",
+        "logprob": -5.960462772236497e-07
+      },
+      {
+        "text": "it?",
+        "start": 0.5,
+        "end": 0.66,
+        "type": "word",
+        "logprob": -9.377676065014384e-06
+      }
+    ],
+    "transcription_id": "mpwJYC6Du86wSH4539St",
+    "audio_duration_secs": 1.12
+  },
+  "listening_reviewed": false
+}

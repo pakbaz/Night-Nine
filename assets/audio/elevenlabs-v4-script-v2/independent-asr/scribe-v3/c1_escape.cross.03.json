@@ -1,0 +1,39 @@
+{
+  "audio_id": "c1_escape.cross.03",
+  "audio_sha256": "cd3b652cd0400d6864da4f76cee30ce4c78706a9abfefaa4231845f2009abeb5",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/c1_escape.cross.03.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Steve.",
+  "recognized": "Steve.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "5a0b51b29da577a252cb77958372082d",
+  "character_cost": "0",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Steve.",
+    "words": [
+      {
+        "text": "Steve.",
+        "start": 0.14,
+        "end": 0.52,
+        "type": "word",
+        "logprob": -0.00019075562643896168
+      }
+    ],
+    "transcription_id": "lOj1pCQQhJYMQdWdfAw4",
+    "audio_duration_secs": 0.96
+  },
+  "listening_reviewed": false
+}

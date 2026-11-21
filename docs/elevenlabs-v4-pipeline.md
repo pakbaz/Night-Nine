@@ -1,6 +1,6 @@
 # ElevenLabs v4 production pipeline
 
-Status: all 873 audio IDs have been generated and structurally validated. Playback remains disabled because strict QA held 120 takes for actual review.
+Status: all 873 audio IDs have been generated and structurally validated. Automated QA passes 829; playback remains disabled while 44 takes require listening review.
 
 ## Frozen production
 
@@ -22,19 +22,21 @@ The read-only preflight confirmed `eleven_v4`, the approved voices, sufficient i
 
 Each paid request gets an adjacent MP3 and JSON receipt with its exact request ID, trace ID, character cost, model, voice ID, plan hash, text hashes, and audio hash. An inflight marker is written before every POST. Any auth, rights, rate, network, or uncertain-response failure stops the run. A restart skips only matching, complete receipts and refuses unresolved inflight requests.
 
-Validation is offline:
+Staging is offline. It can consume saved, explicitly authorized independent transcription evidence:
 
 - Decode to mono 48 kHz PCM without overwriting historical masters.
 - Run the local Whisper QA model without downloading weights.
 - Mark exact independent ASR matches as `automated_qa_passed` only after format, finite-sample, level, duration, hash, and lip-sync checks also pass.
 - Never claim an automated take was listening-reviewed.
-- Hard-hold true transcript mismatches, short ASR-ambiguous clips, and uncertain voicemail/splice boundaries for actual review.
+- Hard-hold unresolved transcript differences, short clips without two exact model transcripts, and uncertain voicemail/splice boundaries for actual review.
 - Build and verify Rhubarb mouth cues.
 - Preserve `recording.greeting` as one uncompressed waveform everywhere it is reused.
 - Build `recording.saren_splice` only from proven word boundaries in the new Helen voicemail, with a source/edit receipt.
 - Stage new runtime WAVs under `game/assets/audio/voices/elevenlabs-v4-script-v2/`.
 - Keep voice and storybook narration disabled until the complete set has either passed automated QA or received actual review for its hard holds.
 - On every replay, reject a changed casting fingerprint or any take whose exact speaker, canonical copy identity, voice ID, or model no longer matches the authoritative cast. This includes reused fixed recordings.
+
+The original lip-sync receipts and raw output are a local cache under `assets/audio/lipsync-elevenlabs-v4-script-v2/`. Fresh checkouts generate that cache locally. Corrected takes use separate hash-named revisions, preserving their previous cues.
 
 ## Recovery and validation commands
 
@@ -88,7 +90,7 @@ The helper is a no-op before an overlay exists. Once recordings are staged, it v
 
 ## Current blockers
 
-Strict automated QA passed 753 of 873 audio IDs. The remaining 120 are held: 63 exact-ASR mismatches and 57 short ASR-ambiguous clips. Review only those takes with:
+Strict automated QA initially passed 753 of 873 audio IDs and held 120: 63 exact-ASR mismatches and 57 short ASR-ambiguous clips. After the independent check and correction below, 829 pass and 44 remain held: 42 transcript differences and two short ambiguities. Review only the current held takes with:
 
 - `assets/audio/elevenlabs-v4-script-v2/manual-review.html`
 - `assets/audio/elevenlabs-v4-script-v2/manual-review-required.csv`
@@ -96,13 +98,13 @@ Strict automated QA passed 753 of 873 audio IDs. The remaining 120 are held: 63 
 
 Deterministic comparator triage cleared 17 false positives caused only by equivalent clock formatting or possessive punctuation. Different times, changed clue values, dropped/added words, and lexical or homophone differences remain held.
 
-The final audit removed automatic `Wen`/`when` and `Tirel`/`Tyrell` substitutions. A failing regression demonstrated the unsafe acceptance before the fix. Revalidation added six holds and reclassified one existing short hold as a mismatch, producing the current 120. The earlier 114-hold count in `comparator-triage.json` describes the intermediate formatting-only pass.
+The final comparator audit removed automatic `Wen`/`when` and `Tirel`/`Tyrell` substitutions. A failing regression demonstrated the unsafe acceptance before the fix. Revalidation added six holds and reclassified one existing short hold as a mismatch, producing the earlier 120. The 114-hold count in `comparator-triage.json` describes the intermediate formatting-only pass.
 
 Fresh Godot import validation passes all 2,623 voice-asset checks. The publishing copy initially failed to draw the legacy voicemail waveform because four fallback `.wav.import` settings had not been copied. Those evidence imports now retain uncompressed PCM, matching the production preparation and preserving the actual-sample comparison assertions.
 
 Open `manual-review.html` in a browser beside its `masters/` directory to listen. The page contains story spoilers and does not approve or change recordings. Account preflight, account-add receipts, quota summaries and inflight state stay local and are excluded from the public repository.
 
-Final activation requires a truthful review receipt for every held ID. No mismatch or ambiguity is auto-accepted.
+Final activation requires a truthful review receipt for every remaining held ID. No unresolved mismatch or ambiguity is auto-accepted.
 
 The additional native story-flow rerun also remains blocked by timing failures in both tested renderers. See the voice-staging follow-up in `docs/play-report-2026-11-20.md`. Passing the audio-file checks does not make the complete voiced game release-ready.
 
@@ -110,12 +112,24 @@ The additional native story-flow rerun also remains blocked by timing failures i
 
 At the user's request, two bounded passes re-recorded 17 lines with unresolved word differences. The first pass used a new frozen seed and stability of at least 0.62. Only its 11 remaining failures received a second take at stability 0.78. Script text, model, casting and voice identities stayed unchanged.
 
-The 28 requests consumed **1,163 included credits**, summed from the API billing receipts. Read-only account checks confirmed that paid overage remained disabled before and after generation. No transcription API was used.
+The 28 requests consumed **1,163 included credits**, summed from the API billing receipts. Read-only account checks confirmed that paid overage remained disabled before and after generation. That generation pass used local transcription only; the separately authorized Scribe check is recorded below.
 
 All candidates, request receipts, frozen plans, decoded masters and independent local ASR reports are preserved under `assets/audio/elevenlabs-v4-script-v2/retakes/automatic-01/` and `automatic-02/`. The original production masters and receipts are untouched.
 
 Eight lines now have a candidate with zero word edits: `c10_live.first.02`, `c1_dinner.out.03`, `c1_flat.compare.02`, `c4_escape.out.01`, `c7_gate.out.05`, `c7_swap.recap.03`, `c8_lab.lastpage.find` and `c9_wake.agnes.find`. Nine selected lines still disagree with the local recognizer after both attempts. No short-line or homophone gate was relaxed.
 
-These are candidate results, not a listening approval or an activated voice pack. They have not replaced the canonical takes or their lip-sync data; the canonical 120-hold report therefore remains unchanged. A separate independent transcription check requires the user's explicit authorization. Further repeated generation is paused rather than spending credits on the same unresolved recognition results.
+These were candidate results, not a listening approval or an activated voice pack. Subsequent independent checking accepted six candidates for staging, as described below. Further repeated generation is paused rather than spending credits on the same unresolved recognition results.
 
 The latest text-only CoreAudio/Compatibility story-flow run passed all 94 executed assertions. Earlier Dummy-driver failures remain recorded in the play report.
+
+## Independent transcription and splice repair
+
+The user explicitly authorized ElevenLabs transcription within included credits only. Scribe v3 processed the 120 originally held clips, the source voicemail, and the repaired splice: **122 requests, 183 credits reported in saved billing headers**. The observed account-wide included-credit change was 219; the difference is not reconciled, so the header sum is not an exact account-usage total. Paid overage was checked and remained disabled. No expected script, keyterms or transcript-edit instructions were sent. Raw responses, word timings, input hashes and request metadata are retained under `independent-asr/scribe-v3*/`.
+
+The original splice really lost a word: both models omitted "Tonight." The source-bound Scribe alignment located it at 3.04-3.52 seconds; the old cached alignment cut at 2.84-3.16. The corrected 1.94-second splice now transcribes exactly. Its old waveform and edit receipt are preserved in hash-named `masters/history/` and `edit-receipts/history/` files. Future staging requires the matching independent source alignment and rejects stale, prompted or inconsistent evidence.
+
+Independent evidence is compared with the unchanged strict comparator and bound to the actual waveform, script and production plan. Longer lines can pass an exact independent transcription. Lines of four words or fewer require exact local and independent transcripts. Local recognition is retained separately so replaying a saved Scribe result cannot masquerade as two independent checks. `listening_reviewed` remains false.
+
+Six retakes passed both models and were adopted with fresh mouth cues: `c10_live.first.02`, `c1_dinner.out.03`, `c7_gate.out.05`, `c7_swap.recap.03`, `c8_lab.lastpage.find` and `c9_wake.agnes.find`. Each keeps its actual candidate generation-plan hash and request ID alongside the canonical script-plan identity. Original masters and generation receipts remain intact. The two other locally passing candidates disagreed with Scribe and were not adopted.
+
+The resulting inventory is **829 automated passes and 44 holds**, not a listening-approved release. Some remaining differences are names, homophones, spelling or date formatting; others may be real word errors. No lexical substitutions or script edits were used to hide them. Both playback gates remain disabled pending listening review, followed by a complete voiced walkthrough.

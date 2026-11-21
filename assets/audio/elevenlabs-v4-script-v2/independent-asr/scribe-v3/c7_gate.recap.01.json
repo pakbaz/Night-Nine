@@ -1,0 +1,389 @@
+{
+  "audio_id": "c7_gate.recap.01",
+  "audio_sha256": "7d20771efe3282b60cfa4aa050dcd0620748232d3b0ec28e931a547cc96211cf",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/c7_gate.recap.01.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "We were in. Stephen as a loyal asset, Pell as the mail, and me at the sound desk with Dad’s tape of the ninth-night tone.",
+  "recognized": "We were in, Stephen as a loyal asset, Pel as the male, and me at the sound desk with Dad's tape of the ninth night tone.",
+  "word_edits": 2,
+  "request_id": null,
+  "trace_id": "7fe9bd2630898dcd4302ceb9e60d162f",
+  "character_cost": "3",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "We were in, Stephen as a loyal asset, Pel as the male, and me at the sound desk with Dad's tape of the ninth night tone.",
+    "words": [
+      {
+        "text": "We",
+        "start": 0.06,
+        "end": 0.16,
+        "type": "word",
+        "logprob": -3.576272320060525e-06
+      },
+      {
+        "text": " ",
+        "start": 0.16,
+        "end": 0.18,
+        "type": "spacing",
+        "logprob": -2.288792165927589e-05
+      },
+      {
+        "text": "were",
+        "start": 0.2,
+        "end": 0.32,
+        "type": "word",
+        "logprob": -2.288792165927589e-05
+      },
+      {
+        "text": " ",
+        "start": 0.32,
+        "end": 0.42,
+        "type": "spacing",
+        "logprob": -2.3841855067985307e-07
+      },
+      {
+        "text": "in,",
+        "start": 0.42,
+        "end": 0.66,
+        "type": "word",
+        "logprob": -0.15922774871188494
+      },
+      {
+        "text": " ",
+        "start": 0.66,
+        "end": 0.66,
+        "type": "spacing",
+        "logprob": -0.3135293424129486
+      },
+      {
+        "text": "Stephen",
+        "start": 1.1,
+        "end": 1.58,
+        "type": "word",
+        "logprob": -0.3135293424129486
+      },
+      {
+        "text": " ",
+        "start": 1.58,
+        "end": 1.64,
+        "type": "spacing",
+        "logprob": -1.168244216387393e-05
+      },
+      {
+        "text": "as",
+        "start": 1.64,
+        "end": 1.72,
+        "type": "word",
+        "logprob": -1.168244216387393e-05
+      },
+      {
+        "text": " ",
+        "start": 1.72,
+        "end": 1.78,
+        "type": "spacing",
+        "logprob": -1.0728830375228426e-06
+      },
+      {
+        "text": "a",
+        "start": 1.78,
+        "end": 1.8,
+        "type": "word",
+        "logprob": -1.0728830375228426e-06
+      },
+      {
+        "text": " ",
+        "start": 1.8,
+        "end": 1.9,
+        "type": "spacing",
+        "logprob": -0.00012540031457319856
+      },
+      {
+        "text": "loyal",
+        "start": 1.9,
+        "end": 2.24,
+        "type": "word",
+        "logprob": -0.00012540031457319856
+      },
+      {
+        "text": " ",
+        "start": 2.24,
+        "end": 2.34,
+        "type": "spacing",
+        "logprob": -6.496695277746767e-05
+      },
+      {
+        "text": "asset,",
+        "start": 2.34,
+        "end": 2.8,
+        "type": "word",
+        "logprob": -5.505306270000195e-05
+      },
+      {
+        "text": " ",
+        "start": 2.8,
+        "end": 3.04,
+        "type": "spacing",
+        "logprob": -0.6465557217597961
+      },
+      {
+        "text": "Pel",
+        "start": 3.04,
+        "end": 3.48,
+        "type": "word",
+        "logprob": -0.6465557217597961
+      },
+      {
+        "text": " ",
+        "start": 3.48,
+        "end": 3.54,
+        "type": "spacing",
+        "logprob": -4.684815212385729e-05
+      },
+      {
+        "text": "as",
+        "start": 3.54,
+        "end": 3.68,
+        "type": "word",
+        "logprob": -4.684815212385729e-05
+      },
+      {
+        "text": " ",
+        "start": 3.68,
+        "end": 3.72,
+        "type": "spacing",
+        "logprob": -8.344646857949556e-07
+      },
+      {
+        "text": "the",
+        "start": 3.72,
+        "end": 3.8,
+        "type": "word",
+        "logprob": -8.344646857949556e-07
+      },
+      {
+        "text": " ",
+        "start": 3.8,
+        "end": 3.86,
+        "type": "spacing",
+        "logprob": -0.016013583168387413
+      },
+      {
+        "text": "male,",
+        "start": 3.86,
+        "end": 4.18,
+        "type": "word",
+        "logprob": -0.013249504519626499
+      },
+      {
+        "text": " ",
+        "start": 4.18,
+        "end": 4.4,
+        "type": "spacing",
+        "logprob": -3.576278118089249e-07
+      },
+      {
+        "text": "and",
+        "start": 4.4,
+        "end": 4.54,
+        "type": "word",
+        "logprob": -3.576278118089249e-07
+      },
+      {
+        "text": " ",
+        "start": 4.54,
+        "end": 4.62,
+        "type": "spacing",
+        "logprob": -2.50339189733495e-06
+      },
+      {
+        "text": "me",
+        "start": 4.62,
+        "end": 5.0,
+        "type": "word",
+        "logprob": -2.50339189733495e-06
+      },
+      {
+        "text": " ",
+        "start": 5.0,
+        "end": 5.06,
+        "type": "spacing",
+        "logprob": -7.748573807475623e-06
+      },
+      {
+        "text": "at",
+        "start": 5.06,
+        "end": 5.12,
+        "type": "word",
+        "logprob": -7.748573807475623e-06
+      },
+      {
+        "text": " ",
+        "start": 5.12,
+        "end": 5.16,
+        "type": "spacing",
+        "logprob": -5.960462772236497e-07
+      },
+      {
+        "text": "the",
+        "start": 5.16,
+        "end": 5.28,
+        "type": "word",
+        "logprob": -5.960462772236497e-07
+      },
+      {
+        "text": " ",
+        "start": 5.28,
+        "end": 5.32,
+        "type": "spacing",
+        "logprob": -0.00018571082910057157
+      },
+      {
+        "text": "sound",
+        "start": 5.32,
+        "end": 5.6,
+        "type": "word",
+        "logprob": -0.00018571082910057157
+      },
+      {
+        "text": " ",
+        "start": 5.6,
+        "end": 5.64,
+        "type": "spacing",
+        "logprob": -9.905801562126726e-05
+      },
+      {
+        "text": "desk",
+        "start": 5.64,
+        "end": 6.02,
+        "type": "word",
+        "logprob": -9.905801562126726e-05
+      },
+      {
+        "text": " ",
+        "start": 6.02,
+        "end": 6.14,
+        "type": "spacing",
+        "logprob": -5.435795901576057e-05
+      },
+      {
+        "text": "with",
+        "start": 6.14,
+        "end": 6.3,
+        "type": "word",
+        "logprob": -5.435795901576057e-05
+      },
+      {
+        "text": " ",
+        "start": 6.3,
+        "end": 6.34,
+        "type": "spacing",
+        "logprob": -0.2256353497505188
+      },
+      {
+        "text": "Dad's",
+        "start": 6.34,
+        "end": 6.7,
+        "type": "word",
+        "logprob": -0.13538275956594817
+      },
+      {
+        "text": " ",
+        "start": 6.7,
+        "end": 6.76,
+        "type": "spacing",
+        "logprob": -6.6756979322235566e-06
+      },
+      {
+        "text": "tape",
+        "start": 6.76,
+        "end": 7.08,
+        "type": "word",
+        "logprob": -6.6756979322235566e-06
+      },
+      {
+        "text": " ",
+        "start": 7.08,
+        "end": 7.14,
+        "type": "spacing",
+        "logprob": -2.3841855067985307e-07
+      },
+      {
+        "text": "of",
+        "start": 7.14,
+        "end": 7.22,
+        "type": "word",
+        "logprob": -2.3841855067985307e-07
+      },
+      {
+        "text": " ",
+        "start": 7.22,
+        "end": 7.28,
+        "type": "spacing",
+        "logprob": -0.0013998481445014477
+      },
+      {
+        "text": "the",
+        "start": 7.28,
+        "end": 7.38,
+        "type": "word",
+        "logprob": -0.0013998481445014477
+      },
+      {
+        "text": " ",
+        "start": 7.38,
+        "end": 7.42,
+        "type": "spacing",
+        "logprob": -0.12052733451128006
+      },
+      {
+        "text": "ninth",
+        "start": 7.42,
+        "end": 7.68,
+        "type": "word",
+        "logprob": -0.12052733451128006
+      },
+      {
+        "text": " ",
+        "start": 7.68,
+        "end": 7.8,
+        "type": "spacing",
+        "logprob": -0.021271776407957077
+      },
+      {
+        "text": "night",
+        "start": 7.8,
+        "end": 8.039,
+        "type": "word",
+        "logprob": -0.021271776407957077
+      },
+      {
+        "text": " ",
+        "start": 8.039,
+        "end": 8.1,
+        "type": "spacing",
+        "logprob": -0.00016807096835691482
+      },
+      {
+        "text": "tone.",
+        "start": 8.1,
+        "end": 8.42,
+        "type": "word",
+        "logprob": -0.00013793765574519057
+      }
+    ],
+    "transcription_id": "kxMOJ4PyStFeb0tvEaug",
+    "audio_duration_secs": 8.8
+  },
+  "listening_reviewed": false
+}

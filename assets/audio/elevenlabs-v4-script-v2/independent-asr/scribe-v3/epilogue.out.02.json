@@ -1,0 +1,81 @@
+{
+  "audio_id": "epilogue.out.02",
+  "audio_sha256": "b84e8138d472b47e61636fb439bb5102832822cb1fddc8801ca130eb52b1a012",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/epilogue.out.02.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "And an actual conversation.",
+  "recognized": "and an actual conversation.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "563a43e56c4474141f0c90791a8d6f74",
+  "character_cost": "1",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "and an actual conversation.",
+    "words": [
+      {
+        "text": "and",
+        "start": 0.06,
+        "end": 0.16,
+        "type": "word",
+        "logprob": -1.5616295058862306e-05
+      },
+      {
+        "text": " ",
+        "start": 0.16,
+        "end": 0.2,
+        "type": "spacing",
+        "logprob": -1.2397689715726301e-05
+      },
+      {
+        "text": "an",
+        "start": 0.2,
+        "end": 0.4,
+        "type": "word",
+        "logprob": -1.2397689715726301e-05
+      },
+      {
+        "text": " ",
+        "start": 0.4,
+        "end": 0.52,
+        "type": "spacing",
+        "logprob": -5.566918844124302e-05
+      },
+      {
+        "text": "actual",
+        "start": 0.52,
+        "end": 0.86,
+        "type": "word",
+        "logprob": -5.566918844124302e-05
+      },
+      {
+        "text": " ",
+        "start": 0.86,
+        "end": 0.96,
+        "type": "spacing",
+        "logprob": -2.47952248173533e-05
+      },
+      {
+        "text": "conversation.",
+        "start": 0.96,
+        "end": 1.76,
+        "type": "word",
+        "logprob": -0.00033277556436727394
+      }
+    ],
+    "transcription_id": "IexaEce1m1J7T9WVMyqw",
+    "audio_duration_secs": 2.16
+  },
+  "listening_reviewed": false
+}

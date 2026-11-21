@@ -1,0 +1,53 @@
+{
+  "audio_id": "c3_archive.in.04",
+  "audio_sha256": "d49a3d89c8c092bff1aa28ae4f812aaec40b0bbcc3841e2018a952e30e967c50",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/c3_archive.in.04.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "I did.",
+  "recognized": "I did.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "704f874abcba456f12ee40a5fe08e9f2",
+  "character_cost": "0",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "I did.",
+    "words": [
+      {
+        "text": "I",
+        "start": 0.12,
+        "end": 0.18,
+        "type": "word",
+        "logprob": -2.264974000354414e-06
+      },
+      {
+        "text": " ",
+        "start": 0.18,
+        "end": 0.24,
+        "type": "spacing",
+        "logprob": -5.245195097813848e-06
+      },
+      {
+        "text": "did.",
+        "start": 0.24,
+        "end": 0.54,
+        "type": "word",
+        "logprob": -9.685678151072352e-06
+      }
+    ],
+    "transcription_id": "bQR821SDlAhareIeph22",
+    "audio_duration_secs": 0.88
+  },
+  "listening_reviewed": false
+}

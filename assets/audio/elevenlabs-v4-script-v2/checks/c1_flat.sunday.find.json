@@ -3,9 +3,9 @@
   "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
   "wav_sha256": "80670525cfb69ef6046f90d65f2136bd0fca3d15455d7410aeb58107dda006cc",
   "expected": "Blue cassette, Sunday, 7:15. The ident again, and Nora again. Now I can time the machine.",
-  "recognized": "Blue Cassette Sunday, 7-15. The ident again. And Nora again. Now I can time the machine.",
-  "word_edits": 2,
-  "word_error_rate": 0.125,
+  "recognized": "Blue cassette, Sunday, 7:15. The ident again, and Nora again. Now I can time the machine.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
   "listening_review_required": true,
   "seconds": 7.92,
   "sample_rate": 48000,
@@ -15,5 +15,13 @@
   "recognition_pass": "independent_phrases",
   "asr_revision": 2,
   "transcript_comparison": "strict normalized English spoken forms",
-  "independent_phrase_transcription": "Blue Cassette Sunday, 7-15. The ident again. And Nora again. Now I can time the machine."
+  "independent_phrase_transcription": "Blue Cassette Sunday, 7-15. The ident again. And Nora again. Now I can time the machine.",
+  "local_recognized": "Blue Cassette Sunday, 7-15. The ident again. And Nora again. Now I can time the machine.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c1_flat.sunday.find.json",
+    "sha256": "9fdc320df6260dd80f3076fb868210618cfe7b5a25cf4a4b0b84012f1118fc48",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  }
 }

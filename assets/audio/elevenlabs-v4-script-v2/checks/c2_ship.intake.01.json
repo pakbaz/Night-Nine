@@ -14,5 +14,13 @@
   "first_recognition": "Come on, Admiral. You never miss this one.",
   "recognition_pass": "independent",
   "asr_revision": 2,
-  "transcript_comparison": "strict normalized English spoken forms"
+  "transcript_comparison": "strict normalized English spoken forms",
+  "local_recognized": "Come on, Admiral. You never miss this one.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c2_ship.intake.01.json",
+    "sha256": "afd7f2e809aaca29d8ac266f3a60e6861db1b9ab4c8890e5de1d4ce109a4e51c",
+    "model": "scribe_v3",
+    "word_edits": 1,
+    "listening_reviewed": false
+  }
 }

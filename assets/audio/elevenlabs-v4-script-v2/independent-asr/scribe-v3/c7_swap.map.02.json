@@ -1,0 +1,67 @@
+{
+  "audio_id": "c7_swap.map.02",
+  "audio_sha256": "e632669f5df62f1660cb1881f4e8e0b6d11a2ae8236bc60582a8165eb8b3a014",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/c7_swap.map.02.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "We’re on it.",
+  "recognized": "We're on it.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "6e7a58f3bff3a9bedee84e6ad7eb2230",
+  "character_cost": "0",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "We're on it.",
+    "words": [
+      {
+        "text": "We're",
+        "start": 0.08,
+        "end": 0.26,
+        "type": "word",
+        "logprob": -2.214861524407752e-05
+      },
+      {
+        "text": " ",
+        "start": 0.26,
+        "end": 0.34,
+        "type": "spacing",
+        "logprob": -1.7881377516459906e-06
+      },
+      {
+        "text": "on",
+        "start": 0.34,
+        "end": 0.46,
+        "type": "word",
+        "logprob": -1.7881377516459906e-06
+      },
+      {
+        "text": " ",
+        "start": 0.46,
+        "end": 0.52,
+        "type": "spacing",
+        "logprob": -2.264974000354414e-06
+      },
+      {
+        "text": "it.",
+        "start": 0.52,
+        "end": 0.68,
+        "type": "word",
+        "logprob": -0.00010957555135367632
+      }
+    ],
+    "transcription_id": "M5MSL59zY7rhYSwiV2Cq",
+    "audio_duration_secs": 1.12
+  },
+  "listening_reviewed": false
+}

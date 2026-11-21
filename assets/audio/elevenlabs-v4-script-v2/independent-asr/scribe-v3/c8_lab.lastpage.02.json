@@ -1,0 +1,81 @@
+{
+  "audio_id": "c8_lab.lastpage.02",
+  "audio_sha256": "4bc5ca29e6606b215becb17391f45e958eede499886c9ddce7c8ccc4356531d3",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/c8_lab.lastpage.02.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Then we keep listening.",
+  "recognized": "Then we keep listening.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "c989d2059d42cea2e8cc9094bdbb7a73",
+  "character_cost": "0",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Then we keep listening.",
+    "words": [
+      {
+        "text": "Then",
+        "start": 0.08,
+        "end": 0.22,
+        "type": "word",
+        "logprob": -0.00035482310340739787
+      },
+      {
+        "text": " ",
+        "start": 0.22,
+        "end": 0.26,
+        "type": "spacing",
+        "logprob": -0.00012706902634818107
+      },
+      {
+        "text": "we",
+        "start": 0.26,
+        "end": 0.36,
+        "type": "word",
+        "logprob": -0.00012706902634818107
+      },
+      {
+        "text": " ",
+        "start": 0.36,
+        "end": 0.4,
+        "type": "spacing",
+        "logprob": -1.585470999998506e-05
+      },
+      {
+        "text": "keep",
+        "start": 0.4,
+        "end": 0.6,
+        "type": "word",
+        "logprob": -1.585470999998506e-05
+      },
+      {
+        "text": " ",
+        "start": 0.6,
+        "end": 0.66,
+        "type": "spacing",
+        "logprob": -4.994744449504651e-05
+      },
+      {
+        "text": "listening.",
+        "start": 0.66,
+        "end": 1.16,
+        "type": "word",
+        "logprob": -5.4238672237261196e-05
+      }
+    ],
+    "transcription_id": "YeeDRDcGZInPOKzz5qyc",
+    "audio_duration_secs": 1.52
+  },
+  "listening_reviewed": false
+}

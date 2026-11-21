@@ -1,0 +1,81 @@
+{
+  "audio_id": "one_year.in.03",
+  "audio_sha256": "250f324d1b28b3ca54d61b2363678487bda364ac972237bee3a2bfad843bbe5e",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/one_year.in.03.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "We did that yesterday.",
+  "recognized": "We did that yesterday.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "d1f609f32a22889f89b31c6530089266",
+  "character_cost": "0",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "We did that yesterday.",
+    "words": [
+      {
+        "text": "We",
+        "start": 0.08,
+        "end": 0.18,
+        "type": "word",
+        "logprob": -1.5616295058862306e-05
+      },
+      {
+        "text": " ",
+        "start": 0.18,
+        "end": 0.2,
+        "type": "spacing",
+        "logprob": -5.006777428206988e-06
+      },
+      {
+        "text": "did",
+        "start": 0.2,
+        "end": 0.34,
+        "type": "word",
+        "logprob": -5.006777428206988e-06
+      },
+      {
+        "text": " ",
+        "start": 0.34,
+        "end": 0.4,
+        "type": "spacing",
+        "logprob": -1.0728830375228426e-06
+      },
+      {
+        "text": "that",
+        "start": 0.4,
+        "end": 0.58,
+        "type": "word",
+        "logprob": -1.0728830375228426e-06
+      },
+      {
+        "text": " ",
+        "start": 0.58,
+        "end": 0.62,
+        "type": "spacing",
+        "logprob": -3.015949550899677e-05
+      },
+      {
+        "text": "yesterday.",
+        "start": 0.62,
+        "end": 1.24,
+        "type": "word",
+        "logprob": -3.012373381352518e-05
+      }
+    ],
+    "transcription_id": "7xXfxqzslc8CTSRfUEf3",
+    "audio_duration_secs": 1.6
+  },
+  "listening_reviewed": false
+}

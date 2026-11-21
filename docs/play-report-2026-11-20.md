@@ -107,3 +107,11 @@ Evidence in the publishing checkout:
 Cloudflare run `44887914139` subsequently deployed commit `2f5b7e2` successfully to `https://9513f884.night-nine.pages.dev`. Direct browser inspection confirmed the N9 loading screen, title startup, the complete AI-credit page and the combined GitHub/Copilot/Cloudflare page. Screenshots are `tmp/grouped-credits/cloud-n9-loading.png`, `cloud-ai-credits.png` and `cloud-hosting-credits.png`.
 
 The automatic voice correction pass made 28 requests across 17 flagged lines, using 1,163 included ElevenLabs credits. Eight lines have new candidates passing the unchanged zero-word-edit check. Nine remain unresolved after two takes. Original masters, playback gates and the canonical review inventory are unchanged; see the pipeline document for the candidate locations and remaining approval requirements.
+
+### Independent voice check and confirmed splice correction
+
+After explicit authorization for included-credit-only transcription, 122 Scribe v3 responses reported 183 credits in their billing headers. Account-wide included usage changed by 219 credits over the observed interval; that difference remains unreconciled. Paid overage remained disabled. The expected script was never sent to the transcription service. The full 120-clip hold list, source voicemail and repaired splice have saved, hash-bound responses.
+
+Both recognizers confirmed that the old Saren splice dropped "Tonight." A sample-retention regression failed before the fix. The splicer now uses the independently verified source boundaries, preserves the old waveform and receipt, and rejects stale or inconsistent alignment evidence. Independent transcription of the repaired clip returns the complete expected line.
+
+Six retakes passed both recognizers and now have matching runtime audio and new lip-sync revisions. Strict evidence-based staging passes 829 of 873 IDs, leaving 44 holds: 42 transcript differences and two short ambiguities. No listening approval was invented and both playback gates remain disabled. Twelve pipeline tests, twelve packaging tests and all 2,623 Godot voice-asset checks pass. These checks do not replace the still-pending voiced walkthrough or smoothness assessment.

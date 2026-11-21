@@ -14,5 +14,13 @@
   "first_recognition": "The vigil is turning.",
   "recognition_pass": "independent",
   "asr_revision": 2,
-  "transcript_comparison": "strict normalized English spoken forms"
+  "transcript_comparison": "strict normalized English spoken forms",
+  "local_recognized": "The vigil is turning.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c10_report.out.04.json",
+    "sha256": "17794ce33dd9590c137f52644d81c8f06219ac981e8c801555152c74e420ca41",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  }
 }

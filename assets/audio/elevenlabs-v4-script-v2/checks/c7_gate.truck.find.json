@@ -15,5 +15,13 @@
   "recognition_pass": "independent",
   "asr_revision": 2,
   "transcript_comparison": "strict normalized English spoken forms",
-  "independent_phrase_transcription": "Sound covers 170 meters in half a second. The fence line strip in the Halcyon truck shows the click at 0.5 seconds, so the fence hears the desk. Every speaker on the site is mine."
+  "independent_phrase_transcription": "Sound covers 170 meters in half a second. The fence line strip in the Halcyon truck shows the click at 0.5 seconds, so the fence hears the desk. Every speaker on the site is mine.",
+  "local_recognized": "Sound covers 170 meters in half a second. The fence line strip in the Halcyon truck shows the click at 0.5 seconds, so the fence hears the desk. Every speaker on the site is mine.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c7_gate.truck.find.json",
+    "sha256": "05dda1ea0dbe27371cb3e1ec468db5f3ce836a8185f9b9ed309d38a091356d1c",
+    "model": "scribe_v3",
+    "word_edits": 2,
+    "listening_reviewed": false
+  }
 }

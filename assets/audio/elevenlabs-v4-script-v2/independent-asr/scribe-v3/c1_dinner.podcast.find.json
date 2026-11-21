@@ -1,0 +1,277 @@
+{
+  "audio_id": "c1_dinner.podcast.find",
+  "audio_sha256": "1070793bd6832bb269c8d23687a8e328f5781d9132defbb4fcd8e3d32c0a7e35",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/c1_dinner.podcast.find.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Tomás’s loud nights come every nine nights: September 24, October 3, October 12. The next one is tonight.",
+  "recognized": "Tomas's loud nights come every nine nights: September 24th, October 3rd, October 12th. The next one is tonight.",
+  "word_edits": 3,
+  "request_id": null,
+  "trace_id": "284804009d5095125c8b3ffdc5a8e455",
+  "character_cost": "3",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Tomas's loud nights come every nine nights: September 24th, October 3rd, October 12th. The next one is tonight.",
+    "words": [
+      {
+        "text": "Tomas's",
+        "start": 0.04,
+        "end": 0.6,
+        "type": "word",
+        "logprob": -0.5959185588040522
+      },
+      {
+        "text": " ",
+        "start": 0.6,
+        "end": 0.66,
+        "type": "spacing",
+        "logprob": -0.004281402565538883
+      },
+      {
+        "text": "loud",
+        "start": 0.66,
+        "end": 0.92,
+        "type": "word",
+        "logprob": -0.004281402565538883
+      },
+      {
+        "text": " ",
+        "start": 0.92,
+        "end": 0.98,
+        "type": "spacing",
+        "logprob": -6.437094270950183e-05
+      },
+      {
+        "text": "nights",
+        "start": 0.98,
+        "end": 1.3,
+        "type": "word",
+        "logprob": -6.437094270950183e-05
+      },
+      {
+        "text": " ",
+        "start": 1.3,
+        "end": 1.44,
+        "type": "spacing",
+        "logprob": -8.583032467868179e-06
+      },
+      {
+        "text": "come",
+        "start": 1.44,
+        "end": 1.74,
+        "type": "word",
+        "logprob": -8.583032467868179e-06
+      },
+      {
+        "text": " ",
+        "start": 1.74,
+        "end": 1.82,
+        "type": "spacing",
+        "logprob": -2.3841830625315197e-06
+      },
+      {
+        "text": "every",
+        "start": 1.82,
+        "end": 2.08,
+        "type": "word",
+        "logprob": -2.3841830625315197e-06
+      },
+      {
+        "text": " ",
+        "start": 2.08,
+        "end": 2.28,
+        "type": "spacing",
+        "logprob": -0.0025127525441348553
+      },
+      {
+        "text": "nine",
+        "start": 2.28,
+        "end": 2.54,
+        "type": "word",
+        "logprob": -0.0025127525441348553
+      },
+      {
+        "text": " ",
+        "start": 2.54,
+        "end": 2.66,
+        "type": "spacing",
+        "logprob": -1.680836794548668e-05
+      },
+      {
+        "text": "nights:",
+        "start": 2.66,
+        "end": 3.04,
+        "type": "word",
+        "logprob": -0.08400016159430379
+      },
+      {
+        "text": " ",
+        "start": 3.04,
+        "end": 3.06,
+        "type": "spacing",
+        "logprob": -6.580135959666222e-05
+      },
+      {
+        "text": "September",
+        "start": 3.46,
+        "end": 3.84,
+        "type": "word",
+        "logprob": -6.580135959666222e-05
+      },
+      {
+        "text": " ",
+        "start": 3.84,
+        "end": 4.04,
+        "type": "spacing",
+        "logprob": -2.3841830625315197e-06
+      },
+      {
+        "text": "24th,",
+        "start": 4.04,
+        "end": 4.68,
+        "type": "word",
+        "logprob": -2.2768459893995895e-05
+      },
+      {
+        "text": " ",
+        "start": 4.68,
+        "end": 4.94,
+        "type": "spacing",
+        "logprob": -9.560128091834486e-05
+      },
+      {
+        "text": "October",
+        "start": 4.96,
+        "end": 5.38,
+        "type": "word",
+        "logprob": -9.560128091834486e-05
+      },
+      {
+        "text": " ",
+        "start": 5.38,
+        "end": 5.52,
+        "type": "spacing",
+        "logprob": -9.536697689327411e-06
+      },
+      {
+        "text": "3rd,",
+        "start": 5.52,
+        "end": 5.88,
+        "type": "word",
+        "logprob": -3.737104148626713e-05
+      },
+      {
+        "text": " ",
+        "start": 5.88,
+        "end": 5.88,
+        "type": "spacing",
+        "logprob": -0.00013243274588603526
+      },
+      {
+        "text": "October",
+        "start": 6.22,
+        "end": 6.6,
+        "type": "word",
+        "logprob": -0.00013243274588603526
+      },
+      {
+        "text": " ",
+        "start": 6.6,
+        "end": 6.7,
+        "type": "spacing",
+        "logprob": -3.4570634852570947e-06
+      },
+      {
+        "text": "12th.",
+        "start": 6.7,
+        "end": 7.16,
+        "type": "word",
+        "logprob": -1.0299613995812251e-05
+      },
+      {
+        "text": " ",
+        "start": 7.16,
+        "end": 7.48,
+        "type": "spacing",
+        "logprob": -1.6212332411669195e-05
+      },
+      {
+        "text": "The",
+        "start": 7.48,
+        "end": 7.56,
+        "type": "word",
+        "logprob": -1.6212332411669195e-05
+      },
+      {
+        "text": " ",
+        "start": 7.56,
+        "end": 7.62,
+        "type": "spacing",
+        "logprob": -2.0265558760002023e-06
+      },
+      {
+        "text": "next",
+        "start": 7.62,
+        "end": 7.88,
+        "type": "word",
+        "logprob": -2.0265558760002023e-06
+      },
+      {
+        "text": " ",
+        "start": 7.88,
+        "end": 7.96,
+        "type": "spacing",
+        "logprob": -5.006777428206988e-06
+      },
+      {
+        "text": "one",
+        "start": 7.96,
+        "end": 8.119,
+        "type": "word",
+        "logprob": -5.006777428206988e-06
+      },
+      {
+        "text": " ",
+        "start": 8.119,
+        "end": 8.3,
+        "type": "spacing",
+        "logprob": -4.768370445162873e-07
+      },
+      {
+        "text": "is",
+        "start": 8.3,
+        "end": 8.44,
+        "type": "word",
+        "logprob": -4.768370445162873e-07
+      },
+      {
+        "text": " ",
+        "start": 8.44,
+        "end": 8.48,
+        "type": "spacing",
+        "logprob": -8.22540732769994e-06
+      },
+      {
+        "text": "tonight.",
+        "start": 8.48,
+        "end": 8.94,
+        "type": "word",
+        "logprob": -1.20549153734828e-05
+      }
+    ],
+    "transcription_id": "fwMOqH7JvuAldNpUd2Zv",
+    "audio_duration_secs": 9.2
+  },
+  "listening_reviewed": false
+}

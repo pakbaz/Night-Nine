@@ -1,0 +1,67 @@
+{
+  "audio_id": "recording.greeting",
+  "audio_sha256": "d7671c393c22c88536d23f2374bf810a2bb4517375029247a724ac203b7b0ed3",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/recording.greeting.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Good morning, sleepyhead.",
+  "recognized": "Good morning, sleepyhead.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "2da46794d0d4676d7ea16179fc48ed9c",
+  "character_cost": "1",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Good morning, sleepyhead.",
+    "words": [
+      {
+        "text": "Good",
+        "start": 0.06,
+        "end": 0.18,
+        "type": "word",
+        "logprob": -4.51792984677013e-05
+      },
+      {
+        "text": " ",
+        "start": 0.18,
+        "end": 0.24,
+        "type": "spacing",
+        "logprob": -6.913899414939806e-05
+      },
+      {
+        "text": "morning,",
+        "start": 0.24,
+        "end": 0.56,
+        "type": "word",
+        "logprob": -7.14186935510952e-05
+      },
+      {
+        "text": " ",
+        "start": 0.56,
+        "end": 0.7,
+        "type": "spacing",
+        "logprob": -0.001336158369667828
+      },
+      {
+        "text": "sleepyhead.",
+        "start": 0.7,
+        "end": 1.28,
+        "type": "word",
+        "logprob": -0.14160210570976647
+      }
+    ],
+    "transcription_id": "JKmjTeCMpmoDZfTgeec3",
+    "audio_duration_secs": 1.76
+  },
+  "listening_reviewed": false
+}

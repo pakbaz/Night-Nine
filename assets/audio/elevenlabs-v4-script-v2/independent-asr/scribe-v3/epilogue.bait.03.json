@@ -1,0 +1,67 @@
+{
+  "audio_id": "epilogue.bait.03",
+  "audio_sha256": "aa8861bae29ce413223eae6820769976e1df9986c481ef4b44f1e45898150af6",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/epilogue.bait.03.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Look after yourself.",
+  "recognized": "Look after yourself.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "08b9f2d57bb46e5206e991d93004ffec",
+  "character_cost": "1",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Look after yourself.",
+    "words": [
+      {
+        "text": "Look",
+        "start": 0.08,
+        "end": 0.22,
+        "type": "word",
+        "logprob": -0.00015031162183731794
+      },
+      {
+        "text": " ",
+        "start": 0.22,
+        "end": 0.32,
+        "type": "spacing",
+        "logprob": -2.1457441107486375e-05
+      },
+      {
+        "text": "after",
+        "start": 0.32,
+        "end": 0.54,
+        "type": "word",
+        "logprob": -2.1457441107486375e-05
+      },
+      {
+        "text": " ",
+        "start": 0.54,
+        "end": 0.6,
+        "type": "spacing",
+        "logprob": -1.0251946150674485e-05
+      },
+      {
+        "text": "yourself.",
+        "start": 0.6,
+        "end": 1.12,
+        "type": "word",
+        "logprob": -1.221223929961626e-05
+      }
+    ],
+    "transcription_id": "gnfvDphrrBnY2SB9W8N6",
+    "audio_duration_secs": 1.68
+  },
+  "listening_reviewed": false
+}

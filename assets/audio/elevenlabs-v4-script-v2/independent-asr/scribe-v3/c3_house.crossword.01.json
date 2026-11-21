@@ -1,0 +1,81 @@
+{
+  "audio_id": "c3_house.crossword.01",
+  "audio_sha256": "021c627f04dbcd7c218c459ced46c540d42702dbfdc1285c8ba46d3a26cbbe3d",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/c3_house.crossword.01.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Seven letters. Maritime... marmite?",
+  "recognized": "Seven letters. Maritime Marmite?",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "0663c3df299f24bfce12c4b2c9e2d4a4",
+  "character_cost": "1",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Seven letters. Maritime Marmite?",
+    "words": [
+      {
+        "text": "Seven",
+        "start": 0.12,
+        "end": 0.38,
+        "type": "word",
+        "logprob": -0.0009270184673368931
+      },
+      {
+        "text": " ",
+        "start": 0.38,
+        "end": 0.48,
+        "type": "spacing",
+        "logprob": -9.643566590966657e-05
+      },
+      {
+        "text": "letters.",
+        "start": 0.48,
+        "end": 1.02,
+        "type": "word",
+        "logprob": -0.00039999135242396733
+      },
+      {
+        "text": " ",
+        "start": 1.02,
+        "end": 1.02,
+        "type": "spacing",
+        "logprob": -0.0008175606490112841
+      },
+      {
+        "text": "Maritime",
+        "start": 1.38,
+        "end": 2.2,
+        "type": "word",
+        "logprob": -0.0008175606490112841
+      },
+      {
+        "text": " ",
+        "start": 2.2,
+        "end": 2.76,
+        "type": "spacing",
+        "logprob": -0.0164042841643095
+      },
+      {
+        "text": "Marmite?",
+        "start": 2.76,
+        "end": 3.3,
+        "type": "word",
+        "logprob": -0.008399036851415076
+      }
+    ],
+    "transcription_id": "oiglQfgqi8JCResnCBLb",
+    "audio_duration_secs": 3.6
+  },
+  "listening_reviewed": false
+}

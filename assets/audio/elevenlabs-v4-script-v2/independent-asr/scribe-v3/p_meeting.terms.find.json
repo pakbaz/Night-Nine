@@ -1,0 +1,431 @@
+{
+  "audio_id": "p_meeting.terms.find",
+  "audio_sha256": "e1553c480f463b95b8a4ffb2788b08fc35e0a5590ea7742c023497db20588123",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/p_meeting.terms.find.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "He said biaoyan, a performance, as on a stage. I translated it exactly and noted that he chose it. The American heard the word and did not argue.",
+  "recognized": "He said, \"biao yan,\" a performance, as on a stage. I translated it exactly and noted that he chose it. The American heard the word and did not argue.",
+  "word_edits": 2,
+  "request_id": null,
+  "trace_id": "e79c66316f150d14a1632d41a21bb377",
+  "character_cost": "4",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "He said, \"biao yan,\" a performance, as on a stage. I translated it exactly and noted that he chose it. The American heard the word and did not argue.",
+    "words": [
+      {
+        "text": "He",
+        "start": 0.08,
+        "end": 0.2,
+        "type": "word",
+        "logprob": -0.005290080793201923
+      },
+      {
+        "text": " ",
+        "start": 0.2,
+        "end": 0.26,
+        "type": "spacing",
+        "logprob": -1.0371154530730564e-05
+      },
+      {
+        "text": "said,",
+        "start": 0.26,
+        "end": 0.5,
+        "type": "word",
+        "logprob": -0.1640904068517557
+      },
+      {
+        "text": " ",
+        "start": 0.5,
+        "end": 0.64,
+        "type": "spacing",
+        "logprob": -0.007938619703054428
+      },
+      {
+        "text": "\"biao",
+        "start": 0.64,
+        "end": 0.94,
+        "type": "word",
+        "logprob": -0.15056328363716603
+      },
+      {
+        "text": " ",
+        "start": 0.94,
+        "end": 1.04,
+        "type": "spacing",
+        "logprob": -0.00656519178301096
+      },
+      {
+        "text": "yan,\"",
+        "start": 1.04,
+        "end": 1.32,
+        "type": "word",
+        "logprob": -0.014306039176881313
+      },
+      {
+        "text": " ",
+        "start": 1.32,
+        "end": 1.32,
+        "type": "spacing",
+        "logprob": -0.0005648924270644784
+      },
+      {
+        "text": "a",
+        "start": 1.92,
+        "end": 1.96,
+        "type": "word",
+        "logprob": -0.0005648924270644784
+      },
+      {
+        "text": " ",
+        "start": 1.96,
+        "end": 2.0,
+        "type": "spacing",
+        "logprob": -1.3112935448589269e-05
+      },
+      {
+        "text": "performance,",
+        "start": 2.0,
+        "end": 2.76,
+        "type": "word",
+        "logprob": -0.0009439044305660597
+      },
+      {
+        "text": " ",
+        "start": 2.76,
+        "end": 3.2,
+        "type": "spacing",
+        "logprob": -9.65590606938349e-06
+      },
+      {
+        "text": "as",
+        "start": 3.2,
+        "end": 3.3,
+        "type": "word",
+        "logprob": -9.65590606938349e-06
+      },
+      {
+        "text": " ",
+        "start": 3.3,
+        "end": 3.36,
+        "type": "spacing",
+        "logprob": -3.576272320060525e-06
+      },
+      {
+        "text": "on",
+        "start": 3.36,
+        "end": 3.44,
+        "type": "word",
+        "logprob": -3.576272320060525e-06
+      },
+      {
+        "text": " ",
+        "start": 3.44,
+        "end": 3.5,
+        "type": "spacing",
+        "logprob": 0.0
+      },
+      {
+        "text": "a",
+        "start": 3.5,
+        "end": 3.56,
+        "type": "word",
+        "logprob": 0.0
+      },
+      {
+        "text": " ",
+        "start": 3.56,
+        "end": 3.64,
+        "type": "spacing",
+        "logprob": -7.748573807475623e-06
+      },
+      {
+        "text": "stage.",
+        "start": 3.64,
+        "end": 4.16,
+        "type": "word",
+        "logprob": -2.0602713599752558e-05
+      },
+      {
+        "text": " ",
+        "start": 4.16,
+        "end": 4.16,
+        "type": "spacing",
+        "logprob": -3.373566141817719e-05
+      },
+      {
+        "text": "I",
+        "start": 5.14,
+        "end": 5.2,
+        "type": "word",
+        "logprob": -3.373566141817719e-05
+      },
+      {
+        "text": " ",
+        "start": 5.2,
+        "end": 5.28,
+        "type": "spacing",
+        "logprob": -3.2066785934148356e-05
+      },
+      {
+        "text": "translated",
+        "start": 5.28,
+        "end": 5.9,
+        "type": "word",
+        "logprob": -3.2066785934148356e-05
+      },
+      {
+        "text": " ",
+        "start": 5.9,
+        "end": 5.94,
+        "type": "spacing",
+        "logprob": -3.576278118089249e-07
+      },
+      {
+        "text": "it",
+        "start": 5.94,
+        "end": 6.06,
+        "type": "word",
+        "logprob": -3.576278118089249e-07
+      },
+      {
+        "text": " ",
+        "start": 6.06,
+        "end": 6.14,
+        "type": "spacing",
+        "logprob": -1.0609570381348021e-05
+      },
+      {
+        "text": "exactly",
+        "start": 6.14,
+        "end": 6.98,
+        "type": "word",
+        "logprob": -1.0609570381348021e-05
+      },
+      {
+        "text": " ",
+        "start": 6.98,
+        "end": 7.04,
+        "type": "spacing",
+        "logprob": -7.056941103655845e-05
+      },
+      {
+        "text": "and",
+        "start": 7.04,
+        "end": 7.18,
+        "type": "word",
+        "logprob": -7.056941103655845e-05
+      },
+      {
+        "text": " ",
+        "start": 7.18,
+        "end": 7.24,
+        "type": "spacing",
+        "logprob": -3.933898824470816e-06
+      },
+      {
+        "text": "noted",
+        "start": 7.24,
+        "end": 7.58,
+        "type": "word",
+        "logprob": -3.933898824470816e-06
+      },
+      {
+        "text": " ",
+        "start": 7.58,
+        "end": 7.64,
+        "type": "spacing",
+        "logprob": -9.536738616588991e-07
+      },
+      {
+        "text": "that",
+        "start": 7.64,
+        "end": 7.74,
+        "type": "word",
+        "logprob": -9.536738616588991e-07
+      },
+      {
+        "text": " ",
+        "start": 7.74,
+        "end": 7.8,
+        "type": "spacing",
+        "logprob": -1.6689286894688848e-06
+      },
+      {
+        "text": "he",
+        "start": 7.8,
+        "end": 7.92,
+        "type": "word",
+        "logprob": -1.6689286894688848e-06
+      },
+      {
+        "text": " ",
+        "start": 7.92,
+        "end": 8.0,
+        "type": "spacing",
+        "logprob": -1.8596476365928538e-05
+      },
+      {
+        "text": "chose",
+        "start": 8.0,
+        "end": 8.28,
+        "type": "word",
+        "logprob": -1.8596476365928538e-05
+      },
+      {
+        "text": " ",
+        "start": 8.28,
+        "end": 8.34,
+        "type": "spacing",
+        "logprob": -4.768370445162873e-07
+      },
+      {
+        "text": "it.",
+        "start": 8.36,
+        "end": 8.52,
+        "type": "word",
+        "logprob": -1.1006820007726978e-05
+      },
+      {
+        "text": " ",
+        "start": 8.52,
+        "end": 8.52,
+        "type": "spacing",
+        "logprob": -6.794906312279636e-06
+      },
+      {
+        "text": "The",
+        "start": 9.34,
+        "end": 9.4,
+        "type": "word",
+        "logprob": -6.794906312279636e-06
+      },
+      {
+        "text": " ",
+        "start": 9.4,
+        "end": 9.46,
+        "type": "spacing",
+        "logprob": -1.7762025890988298e-05
+      },
+      {
+        "text": "American",
+        "start": 9.46,
+        "end": 9.94,
+        "type": "word",
+        "logprob": -1.7762025890988298e-05
+      },
+      {
+        "text": " ",
+        "start": 9.94,
+        "end": 10.02,
+        "type": "spacing",
+        "logprob": -4.529942543740617e-06
+      },
+      {
+        "text": "heard",
+        "start": 10.02,
+        "end": 10.22,
+        "type": "word",
+        "logprob": -4.529942543740617e-06
+      },
+      {
+        "text": " ",
+        "start": 10.22,
+        "end": 10.28,
+        "type": "spacing",
+        "logprob": -2.3841855067985307e-07
+      },
+      {
+        "text": "the",
+        "start": 10.28,
+        "end": 10.36,
+        "type": "word",
+        "logprob": -2.3841855067985307e-07
+      },
+      {
+        "text": " ",
+        "start": 10.36,
+        "end": 10.42,
+        "type": "spacing",
+        "logprob": -8.237022848334163e-05
+      },
+      {
+        "text": "word",
+        "start": 10.42,
+        "end": 10.82,
+        "type": "word",
+        "logprob": -8.237022848334163e-05
+      },
+      {
+        "text": " ",
+        "start": 10.82,
+        "end": 10.88,
+        "type": "spacing",
+        "logprob": -5.245195097813848e-06
+      },
+      {
+        "text": "and",
+        "start": 10.88,
+        "end": 10.98,
+        "type": "word",
+        "logprob": -5.245195097813848e-06
+      },
+      {
+        "text": " ",
+        "start": 10.98,
+        "end": 11.02,
+        "type": "spacing",
+        "logprob": -3.433168603805825e-05
+      },
+      {
+        "text": "did",
+        "start": 11.02,
+        "end": 11.14,
+        "type": "word",
+        "logprob": -3.433168603805825e-05
+      },
+      {
+        "text": " ",
+        "start": 11.14,
+        "end": 11.2,
+        "type": "spacing",
+        "logprob": -3.4570634852570947e-06
+      },
+      {
+        "text": "not",
+        "start": 11.2,
+        "end": 11.38,
+        "type": "word",
+        "logprob": -3.4570634852570947e-06
+      },
+      {
+        "text": " ",
+        "start": 11.38,
+        "end": 11.46,
+        "type": "spacing",
+        "logprob": -3.0517112463712692e-05
+      },
+      {
+        "text": "argue.",
+        "start": 11.46,
+        "end": 11.86,
+        "type": "word",
+        "logprob": -4.068901762366295e-05
+      }
+    ],
+    "transcription_id": "S8cgn1AXom6sZ7VgsL7z",
+    "audio_duration_secs": 12.56
+  },
+  "listening_reviewed": false
+}

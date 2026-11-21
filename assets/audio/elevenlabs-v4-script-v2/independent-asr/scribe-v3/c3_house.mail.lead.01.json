@@ -1,0 +1,81 @@
+{
+  "audio_id": "c3_house.mail.lead.01",
+  "audio_sha256": "6f48161dfabcb80cc7542e57509fb2e07f96218db56a8e7f56ffe5ca95a8c8f1",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/c3_house.mail.lead.01.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Good morning, Officer Biscuit.",
+  "recognized": "Good morning, Officer Biscuit.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "3fad939fe26b5f24eb418b9aebfe3077",
+  "character_cost": "1",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Good morning, Officer Biscuit.",
+    "words": [
+      {
+        "text": "Good",
+        "start": 0.06,
+        "end": 0.18,
+        "type": "word",
+        "logprob": -7.772143726469949e-05
+      },
+      {
+        "text": " ",
+        "start": 0.18,
+        "end": 0.24,
+        "type": "spacing",
+        "logprob": -0.00012861855793744326
+      },
+      {
+        "text": "morning,",
+        "start": 0.24,
+        "end": 0.56,
+        "type": "word",
+        "logprob": -0.00011403134544707427
+      },
+      {
+        "text": " ",
+        "start": 0.56,
+        "end": 0.68,
+        "type": "spacing",
+        "logprob": -0.00039593485416844487
+      },
+      {
+        "text": "Officer",
+        "start": 0.68,
+        "end": 1.0,
+        "type": "word",
+        "logprob": -0.00039593485416844487
+      },
+      {
+        "text": " ",
+        "start": 1.0,
+        "end": 1.1,
+        "type": "spacing",
+        "logprob": -0.004519605077803135
+      },
+      {
+        "text": "Biscuit.",
+        "start": 1.1,
+        "end": 1.5,
+        "type": "word",
+        "logprob": -0.003961136279940547
+      }
+    ],
+    "transcription_id": "CcjfZjXt5rHJBdM8AVES",
+    "audio_duration_secs": 2.08
+  },
+  "listening_reviewed": false
+}

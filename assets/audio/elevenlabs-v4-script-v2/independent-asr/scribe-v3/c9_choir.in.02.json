@@ -1,0 +1,39 @@
+{
+  "audio_id": "c9_choir.in.02",
+  "audio_sha256": "c2538dd73174629cc6afc321653b81c591cb2905cbf2eb7719486421adb900cc",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/c9_choir.in.02.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Stop.",
+  "recognized": "Stop.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "69a3891fedfb1672a896e44e5a9fd56f",
+  "character_cost": "0",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Stop.",
+    "words": [
+      {
+        "text": "Stop.",
+        "start": 0.18,
+        "end": 0.54,
+        "type": "word",
+        "logprob": -0.0005319005460478366
+      }
+    ],
+    "transcription_id": "L9L8eytTHrYz0XFqVSO3",
+    "audio_duration_secs": 1.12
+  },
+  "listening_reviewed": false
+}

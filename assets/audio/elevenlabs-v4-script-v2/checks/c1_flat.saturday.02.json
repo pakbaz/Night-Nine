@@ -3,9 +3,9 @@
   "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
   "wav_sha256": "1308a096de17563a6f70d9fd1a0a611c182c74bb73f6111413aca7592b9c5e6c",
   "expected": "Morning, Nor.",
-  "recognized": "Morning, Noor.",
-  "word_edits": 1,
-  "word_error_rate": 0.5,
+  "recognized": "Morning, Nor.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
   "listening_review_required": true,
   "seconds": 1.04,
   "sample_rate": 48000,
@@ -14,5 +14,13 @@
   "first_recognition": "Morning, Noor.",
   "recognition_pass": "independent",
   "asr_revision": 2,
-  "transcript_comparison": "strict normalized English spoken forms"
+  "transcript_comparison": "strict normalized English spoken forms",
+  "local_recognized": "Morning, Noor.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c1_flat.saturday.02.json",
+    "sha256": "34269d8c919a6ca737c4b8cc2c5768b82607c32fc8d1600167d7b1d32513a49d",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  }
 }

@@ -1,0 +1,39 @@
+{
+  "audio_id": "c10_station.out.03",
+  "audio_sha256": "946c86984d5fa4d5817d0dae46baa0a7d713812af200a2963c4a491a36c018f1",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/c10_station.out.03.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Everywhere?",
+  "recognized": "Everywhere?",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "8a6ae029fe7b5385904f34651d59dc97",
+  "character_cost": "0",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Everywhere?",
+    "words": [
+      {
+        "text": "Everywhere?",
+        "start": 0.08,
+        "end": 0.6,
+        "type": "word",
+        "logprob": -0.007718064806381749
+      }
+    ],
+    "transcription_id": "vpf1xi1w6hTBT6yZsdIW",
+    "audio_duration_secs": 0.88
+  },
+  "listening_reviewed": false
+}

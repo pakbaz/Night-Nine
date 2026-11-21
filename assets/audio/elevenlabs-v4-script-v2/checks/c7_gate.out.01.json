@@ -3,9 +3,9 @@
   "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
   "wav_sha256": "d405bb71be2f7fd89404d2e34e9955531b2788644a7d55d006772f5f288e7f0a",
   "expected": "Lin Wen. I was the other side’s engineer at Sentinel Point, nine years ago. Helen wrote this? Where is she?",
-  "recognized": "Linwen, I was the other side's engineer at Sentinel Point nine years ago. Helen wrote this? Where is she?",
-  "word_edits": 2,
-  "word_error_rate": 0.10526315789473684,
+  "recognized": "Ling Wen, I was the other side's engineer at Sentinel Point nine years ago. Helen wrote this? Where is she?",
+  "word_edits": 1,
+  "word_error_rate": 0.05,
   "listening_review_required": true,
   "seconds": 8.24,
   "sample_rate": 48000,
@@ -15,5 +15,13 @@
   "recognition_pass": "independent",
   "asr_revision": 2,
   "transcript_comparison": "strict normalized English spoken forms",
-  "independent_phrase_transcription": "Linwen I was the other side's engineer at Sentinel Point 9 years ago. Helen wrote this? Where is she?"
+  "independent_phrase_transcription": "Linwen I was the other side's engineer at Sentinel Point 9 years ago. Helen wrote this? Where is she?",
+  "local_recognized": "Linwen, I was the other side's engineer at Sentinel Point nine years ago. Helen wrote this? Where is she?",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c7_gate.out.01.json",
+    "sha256": "31ec2afd78b4fb63118f03de4439a15c6f858baa81dd86085486684fe383131b",
+    "model": "scribe_v3",
+    "word_edits": 1,
+    "listening_reviewed": false
+  }
 }

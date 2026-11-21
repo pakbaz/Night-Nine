@@ -14,5 +14,13 @@
   "first_recognition": "He didn't answer.",
   "recognition_pass": "independent",
   "asr_revision": 2,
-  "transcript_comparison": "strict normalized English spoken forms"
+  "transcript_comparison": "strict normalized English spoken forms",
+  "local_recognized": "He didn't answer.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c7_swap.in.03.json",
+    "sha256": "b01eaafcf65584a41755b3d679e59ebb1705e7acb4c6e205db6c4114924644e0",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  }
 }

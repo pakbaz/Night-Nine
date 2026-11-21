@@ -14,5 +14,13 @@
   "first_recognition": "Nora set it up in 10 minutes. Orchard starts on my cue, Pierre answers what it sees, and the spare phone stays free for the fire crew.",
   "recognition_pass": "independent",
   "asr_revision": 2,
-  "transcript_comparison": "strict normalized English spoken forms"
+  "transcript_comparison": "strict normalized English spoken forms",
+  "local_recognized": "Nora set it up in 10 minutes. Orchard starts on my cue, Pierre answers what it sees, and the spare phone stays free for the fire crew.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c10_town.lights.find.json",
+    "sha256": "15039d066a58fdc0bc1c38b6f75cf16aef19431b1549d5181d1b9e9277a886e9",
+    "model": "scribe_v3",
+    "word_edits": 1,
+    "listening_reviewed": false
+  }
 }

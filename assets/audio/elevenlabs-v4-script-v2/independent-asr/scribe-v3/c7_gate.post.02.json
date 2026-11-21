@@ -1,0 +1,81 @@
+{
+  "audio_id": "c7_gate.post.02",
+  "audio_sha256": "6f711b23619ace15218a7fc661eb6d7a8fe3e12edfce0bae57d883810698174c",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/c7_gate.post.02.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "An increasingly rare achievement.",
+  "recognized": "an increasingly rare achievement.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "9e11e8565b60c21598a886f8c8efc167",
+  "character_cost": "1",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "an increasingly rare achievement.",
+    "words": [
+      {
+        "text": "an",
+        "start": 0.04,
+        "end": 0.12,
+        "type": "word",
+        "logprob": -0.002851588884368539
+      },
+      {
+        "text": " ",
+        "start": 0.12,
+        "end": 0.16,
+        "type": "spacing",
+        "logprob": -4.768258077092469e-05
+      },
+      {
+        "text": "increasingly",
+        "start": 0.16,
+        "end": 0.94,
+        "type": "word",
+        "logprob": -4.768258077092469e-05
+      },
+      {
+        "text": " ",
+        "start": 0.94,
+        "end": 1.14,
+        "type": "spacing",
+        "logprob": -2.634490556374658e-05
+      },
+      {
+        "text": "rare",
+        "start": 1.14,
+        "end": 1.38,
+        "type": "word",
+        "logprob": -2.634490556374658e-05
+      },
+      {
+        "text": " ",
+        "start": 1.38,
+        "end": 1.46,
+        "type": "spacing",
+        "logprob": -4.2914423829643056e-05
+      },
+      {
+        "text": "achievement.",
+        "start": 1.46,
+        "end": 2.1,
+        "type": "word",
+        "logprob": -4.519913909462048e-05
+      }
+    ],
+    "transcription_id": "96IcCCBN6MiVyHSQPCLP",
+    "audio_duration_secs": 2.56
+  },
+  "listening_reviewed": false
+}

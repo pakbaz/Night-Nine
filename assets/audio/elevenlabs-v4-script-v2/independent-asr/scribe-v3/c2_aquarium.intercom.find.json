@@ -1,0 +1,431 @@
+{
+  "audio_id": "c2_aquarium.intercom.find",
+  "audio_sha256": "d5059649c45d0f4ae666c21e73dbf159d84224de06cd0513c33385e355f0ff3d",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/c2_aquarium.intercom.find.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "The real Nora recorded this here on May 29. Someone else has been living her life with me for five months. Her whistle rises. The one Admiral ignored falls.",
+  "recognized": "The real Nora recorded this here on May 29th. Someone else has been living her life with me for five months. Her whistle rises. The one Admiral ignored falls.",
+  "word_edits": 1,
+  "request_id": null,
+  "trace_id": "f562ff5a1c35666876db84a8f2b840bc",
+  "character_cost": "4",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "The real Nora recorded this here on May 29th. Someone else has been living her life with me for five months. Her whistle rises. The one Admiral ignored falls.",
+    "words": [
+      {
+        "text": "The",
+        "start": 0.06,
+        "end": 0.16,
+        "type": "word",
+        "logprob": -2.622600959512056e-06
+      },
+      {
+        "text": " ",
+        "start": 0.16,
+        "end": 0.26,
+        "type": "spacing",
+        "logprob": -0.00022230061586014926
+      },
+      {
+        "text": "real",
+        "start": 0.26,
+        "end": 0.46,
+        "type": "word",
+        "logprob": -0.00022230061586014926
+      },
+      {
+        "text": " ",
+        "start": 0.46,
+        "end": 0.56,
+        "type": "spacing",
+        "logprob": -0.006030104123055935
+      },
+      {
+        "text": "Nora",
+        "start": 0.56,
+        "end": 0.88,
+        "type": "word",
+        "logprob": -0.006030104123055935
+      },
+      {
+        "text": " ",
+        "start": 0.88,
+        "end": 0.98,
+        "type": "spacing",
+        "logprob": -1.9073304429184645e-05
+      },
+      {
+        "text": "recorded",
+        "start": 0.98,
+        "end": 1.46,
+        "type": "word",
+        "logprob": -1.9073304429184645e-05
+      },
+      {
+        "text": " ",
+        "start": 1.46,
+        "end": 1.46,
+        "type": "spacing",
+        "logprob": -1.9073468138230965e-06
+      },
+      {
+        "text": "this",
+        "start": 1.46,
+        "end": 1.72,
+        "type": "word",
+        "logprob": -1.9073468138230965e-06
+      },
+      {
+        "text": " ",
+        "start": 1.72,
+        "end": 1.76,
+        "type": "spacing",
+        "logprob": -0.00036113892565481365
+      },
+      {
+        "text": "here",
+        "start": 1.78,
+        "end": 2.18,
+        "type": "word",
+        "logprob": -0.00036113892565481365
+      },
+      {
+        "text": " ",
+        "start": 2.18,
+        "end": 2.24,
+        "type": "spacing",
+        "logprob": -1.680836794548668e-05
+      },
+      {
+        "text": "on",
+        "start": 2.24,
+        "end": 2.4,
+        "type": "word",
+        "logprob": -1.680836794548668e-05
+      },
+      {
+        "text": " ",
+        "start": 2.4,
+        "end": 2.46,
+        "type": "spacing",
+        "logprob": -1.811964830267243e-05
+      },
+      {
+        "text": "May",
+        "start": 2.46,
+        "end": 2.66,
+        "type": "word",
+        "logprob": -1.811964830267243e-05
+      },
+      {
+        "text": " ",
+        "start": 2.66,
+        "end": 2.82,
+        "type": "spacing",
+        "logprob": -1.9311717551317997e-05
+      },
+      {
+        "text": "29th.",
+        "start": 2.82,
+        "end": 3.4,
+        "type": "word",
+        "logprob": -0.0064781564129589245
+      },
+      {
+        "text": " ",
+        "start": 3.4,
+        "end": 3.4,
+        "type": "spacing",
+        "logprob": -0.055076152086257935
+      },
+      {
+        "text": "Someone",
+        "start": 3.84,
+        "end": 4.12,
+        "type": "word",
+        "logprob": -0.055076152086257935
+      },
+      {
+        "text": " ",
+        "start": 4.12,
+        "end": 4.28,
+        "type": "spacing",
+        "logprob": -1.5497195136049413e-06
+      },
+      {
+        "text": "else",
+        "start": 4.28,
+        "end": 4.58,
+        "type": "word",
+        "logprob": -1.5497195136049413e-06
+      },
+      {
+        "text": " ",
+        "start": 4.58,
+        "end": 4.62,
+        "type": "spacing",
+        "logprob": -4.172316494077677e-06
+      },
+      {
+        "text": "has",
+        "start": 4.62,
+        "end": 4.78,
+        "type": "word",
+        "logprob": -4.172316494077677e-06
+      },
+      {
+        "text": " ",
+        "start": 4.78,
+        "end": 4.8,
+        "type": "spacing",
+        "logprob": -2.9802276912960224e-06
+      },
+      {
+        "text": "been",
+        "start": 4.8,
+        "end": 4.96,
+        "type": "word",
+        "logprob": -2.9802276912960224e-06
+      },
+      {
+        "text": " ",
+        "start": 4.96,
+        "end": 5.02,
+        "type": "spacing",
+        "logprob": -1.0013530300057027e-05
+      },
+      {
+        "text": "living",
+        "start": 5.02,
+        "end": 5.28,
+        "type": "word",
+        "logprob": -1.0013530300057027e-05
+      },
+      {
+        "text": " ",
+        "start": 5.28,
+        "end": 5.32,
+        "type": "spacing",
+        "logprob": -2.9802276912960224e-06
+      },
+      {
+        "text": "her",
+        "start": 5.32,
+        "end": 5.48,
+        "type": "word",
+        "logprob": -2.9802276912960224e-06
+      },
+      {
+        "text": " ",
+        "start": 5.48,
+        "end": 5.56,
+        "type": "spacing",
+        "logprob": -2.0265558760002023e-06
+      },
+      {
+        "text": "life",
+        "start": 5.56,
+        "end": 5.8,
+        "type": "word",
+        "logprob": -2.0265558760002023e-06
+      },
+      {
+        "text": " ",
+        "start": 5.8,
+        "end": 5.84,
+        "type": "spacing",
+        "logprob": -1.0728830375228426e-06
+      },
+      {
+        "text": "with",
+        "start": 5.84,
+        "end": 6.0,
+        "type": "word",
+        "logprob": -1.0728830375228426e-06
+      },
+      {
+        "text": " ",
+        "start": 6.0,
+        "end": 6.06,
+        "type": "spacing",
+        "logprob": -1.6689286894688848e-06
+      },
+      {
+        "text": "me",
+        "start": 6.06,
+        "end": 6.32,
+        "type": "word",
+        "logprob": -1.6689286894688848e-06
+      },
+      {
+        "text": " ",
+        "start": 6.32,
+        "end": 6.36,
+        "type": "spacing",
+        "logprob": -5.960462772236497e-07
+      },
+      {
+        "text": "for",
+        "start": 6.36,
+        "end": 6.44,
+        "type": "word",
+        "logprob": -5.960462772236497e-07
+      },
+      {
+        "text": " ",
+        "start": 6.44,
+        "end": 6.68,
+        "type": "spacing",
+        "logprob": -0.0005800233921036124
+      },
+      {
+        "text": "five",
+        "start": 6.68,
+        "end": 6.96,
+        "type": "word",
+        "logprob": -0.0005800233921036124
+      },
+      {
+        "text": " ",
+        "start": 6.96,
+        "end": 7.1,
+        "type": "spacing",
+        "logprob": -3.528532761265524e-05
+      },
+      {
+        "text": "months.",
+        "start": 7.1,
+        "end": 7.54,
+        "type": "word",
+        "logprob": -3.496177045495382e-05
+      },
+      {
+        "text": " ",
+        "start": 7.54,
+        "end": 7.54,
+        "type": "spacing",
+        "logprob": -0.00011562632425921038
+      },
+      {
+        "text": "Her",
+        "start": 8.08,
+        "end": 8.24,
+        "type": "word",
+        "logprob": -0.00011562632425921038
+      },
+      {
+        "text": " ",
+        "start": 8.24,
+        "end": 8.28,
+        "type": "spacing",
+        "logprob": -0.0004450284468475729
+      },
+      {
+        "text": "whistle",
+        "start": 8.28,
+        "end": 8.56,
+        "type": "word",
+        "logprob": -0.0004450284468475729
+      },
+      {
+        "text": " ",
+        "start": 8.56,
+        "end": 8.7,
+        "type": "spacing",
+        "logprob": -9.703165414975956e-05
+      },
+      {
+        "text": "rises.",
+        "start": 8.7,
+        "end": 9.34,
+        "type": "word",
+        "logprob": -0.01504531731310029
+      },
+      {
+        "text": " ",
+        "start": 9.34,
+        "end": 9.7,
+        "type": "spacing",
+        "logprob": -1.6331539882230572e-05
+      },
+      {
+        "text": "The",
+        "start": 9.7,
+        "end": 9.78,
+        "type": "word",
+        "logprob": -1.6331539882230572e-05
+      },
+      {
+        "text": " ",
+        "start": 9.78,
+        "end": 9.86,
+        "type": "spacing",
+        "logprob": -6.55629628454335e-05
+      },
+      {
+        "text": "one",
+        "start": 9.86,
+        "end": 10.0,
+        "type": "word",
+        "logprob": -6.55629628454335e-05
+      },
+      {
+        "text": " ",
+        "start": 10.0,
+        "end": 10.16,
+        "type": "spacing",
+        "logprob": -0.0013327058404684067
+      },
+      {
+        "text": "Admiral",
+        "start": 10.16,
+        "end": 10.5,
+        "type": "word",
+        "logprob": -0.0013327058404684067
+      },
+      {
+        "text": " ",
+        "start": 10.5,
+        "end": 10.56,
+        "type": "spacing",
+        "logprob": -0.000289159914245829
+      },
+      {
+        "text": "ignored",
+        "start": 10.56,
+        "end": 11.1,
+        "type": "word",
+        "logprob": -0.000289159914245829
+      },
+      {
+        "text": " ",
+        "start": 11.1,
+        "end": 11.38,
+        "type": "spacing",
+        "logprob": -0.00252404878847301
+      },
+      {
+        "text": "falls.",
+        "start": 11.38,
+        "end": 11.9,
+        "type": "word",
+        "logprob": -0.0021063939317779536
+      }
+    ],
+    "transcription_id": "RnCygATpuOaf31n7OCdK",
+    "audio_duration_secs": 12.32
+  },
+  "listening_reviewed": false
+}

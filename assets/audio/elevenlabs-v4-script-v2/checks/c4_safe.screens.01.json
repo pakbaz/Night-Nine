@@ -3,7 +3,7 @@
   "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
   "wav_sha256": "63823ce696098f3cc6f4273460d36cc910199b78a35410552bdf1c8ffee17c22",
   "expected": "Adrian Rook, asleep in bed 41B. Both governments’ seals on the transfer. And an empty bed waiting for President Ward on signing day.",
-  "recognized": "Adrian Rook Asleep in bed 41B Both government seals on the transfer. and an empty bed waiting for President Ward on signing day.",
+  "recognized": "Adrian Rook, asleep in bed 41B, both government seals on the transfer, and an empty bed waiting for President Ward on signing day.",
   "word_edits": 1,
   "word_error_rate": 0.041666666666666664,
   "listening_review_required": true,
@@ -15,5 +15,13 @@
   "recognition_pass": "independent_phrases",
   "asr_revision": 2,
   "transcript_comparison": "strict normalized English spoken forms",
-  "independent_phrase_transcription": "Adrian Rook Asleep in bed 41B Both government seals on the transfer. and an empty bed waiting for President Ward on signing day."
+  "independent_phrase_transcription": "Adrian Rook Asleep in bed 41B Both government seals on the transfer. and an empty bed waiting for President Ward on signing day.",
+  "local_recognized": "Adrian Rook Asleep in bed 41B Both government seals on the transfer. and an empty bed waiting for President Ward on signing day.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c4_safe.screens.01.json",
+    "sha256": "5585b4ba5073bf1b2354ecc357f067bc1af9498227a2ab98ab122f97cee8b132",
+    "model": "scribe_v3",
+    "word_edits": 1,
+    "listening_reviewed": false
+  }
 }

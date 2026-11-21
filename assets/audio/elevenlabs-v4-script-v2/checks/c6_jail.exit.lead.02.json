@@ -5,7 +5,7 @@
   "expected": "Ben’s a tree in the school play tonight. He’s been practising being a tree for a month.",
   "recognized": "Ben's a tree in the school play tonight. He's been practicing being a tree for a month.",
   "word_edits": 1,
-  "word_error_rate": 0.058823529411764705,
+  "word_error_rate": 0.05263157894736842,
   "listening_review_required": true,
   "seconds": 5.92,
   "sample_rate": 48000,
@@ -15,5 +15,13 @@
   "recognition_pass": "independent",
   "asr_revision": 2,
   "transcript_comparison": "strict normalized English spoken forms",
-  "independent_phrase_transcription": "Benz a tree in the school play tonight. He's been practicing being a tree for a month."
+  "independent_phrase_transcription": "Benz a tree in the school play tonight. He's been practicing being a tree for a month.",
+  "local_recognized": "Ben's a tree in the school play tonight. He's been practicing being a tree for a month.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c6_jail.exit.lead.02.json",
+    "sha256": "9a4931260902648c1c7d640a49b2a405bd66b85731c974cd5fae90f4baed363a",
+    "model": "scribe_v3",
+    "word_edits": 1,
+    "listening_reviewed": false
+  }
 }

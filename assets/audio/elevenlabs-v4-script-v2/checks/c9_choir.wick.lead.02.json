@@ -3,9 +3,9 @@
   "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
   "wav_sha256": "ddd5f898d365dc297291967f93b32f1b36f5f2cc44f1f2d32da169aabc44ed56",
   "expected": "Row Zero holds one who is not human. We took it from Tirel. We call it Wick. It has not stopped dreaming.",
-  "recognized": "Row Zero holds one who is not human. We took it from Tyrell. We call it Wick. It has not stopped dreaming.",
-  "word_edits": 1,
-  "word_error_rate": 0.045454545454545456,
+  "recognized": "Row zero holds one who is not human. We took it from Tyrell. We call it Wyck. It has not stopped dreaming.",
+  "word_edits": 2,
+  "word_error_rate": 0.09090909090909091,
   "listening_review_required": true,
   "seconds": 8.96,
   "sample_rate": 48000,
@@ -14,5 +14,13 @@
   "first_recognition": "Row Zero holds one who is not human. We took it from Tyrell. We call it Wick. It has not stopped dreaming.",
   "recognition_pass": "independent",
   "asr_revision": 2,
-  "transcript_comparison": "strict normalized English spoken forms"
+  "transcript_comparison": "strict normalized English spoken forms",
+  "local_recognized": "Row Zero holds one who is not human. We took it from Tyrell. We call it Wick. It has not stopped dreaming.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c9_choir.wick.lead.02.json",
+    "sha256": "0571853d4c3c69696a0101eb7c61af027ceecdc80f958cfff99c48326ceea798",
+    "model": "scribe_v3",
+    "word_edits": 2,
+    "listening_reviewed": false
+  }
 }

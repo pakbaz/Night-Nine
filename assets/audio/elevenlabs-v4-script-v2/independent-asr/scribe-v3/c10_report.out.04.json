@@ -1,0 +1,81 @@
+{
+  "audio_id": "c10_report.out.04",
+  "audio_sha256": "4b73e43ddb1c129f3a9dd031780ec9644e144788cd494d94a7de72556ec25912",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/c10_report.out.04.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "The Vigil is turning.",
+  "recognized": "The vigil is turning.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "ac63dbaa71a5456ab40b58241e1b7516",
+  "character_cost": "1",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "The vigil is turning.",
+    "words": [
+      {
+        "text": "The",
+        "start": 0.08,
+        "end": 0.14,
+        "type": "word",
+        "logprob": -4.7205765440594405e-05
+      },
+      {
+        "text": " ",
+        "start": 0.14,
+        "end": 0.24,
+        "type": "spacing",
+        "logprob": -0.09232551604509354
+      },
+      {
+        "text": "vigil",
+        "start": 0.24,
+        "end": 0.6,
+        "type": "word",
+        "logprob": -0.09232551604509354
+      },
+      {
+        "text": " ",
+        "start": 0.6,
+        "end": 0.78,
+        "type": "spacing",
+        "logprob": -1.4305104514278355e-06
+      },
+      {
+        "text": "is",
+        "start": 0.78,
+        "end": 0.98,
+        "type": "word",
+        "logprob": -1.4305104514278355e-06
+      },
+      {
+        "text": " ",
+        "start": 0.98,
+        "end": 1.04,
+        "type": "spacing",
+        "logprob": -2.5987286790041253e-05
+      },
+      {
+        "text": "turning.",
+        "start": 1.04,
+        "end": 1.54,
+        "type": "word",
+        "logprob": -2.886310312533169e-05
+      }
+    ],
+    "transcription_id": "4QUl5JJYBqlIqSzNDw6R",
+    "audio_duration_secs": 2.0
+  },
+  "listening_reviewed": false
+}

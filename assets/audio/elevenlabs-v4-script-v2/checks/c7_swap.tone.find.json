@@ -3,9 +3,9 @@
   "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
   "wav_sha256": "ce32213abb266a2f70da01f08ca22e6a90234e67b7fc5f679a1a516719bd111a",
   "expected": "At 11:58:15 Dad’s tone went out on every site speaker. Fourteen people stopped and turned toward the sea, the woman at the microphone among them. June and Iris had the real President.",
-  "recognized": "at 11 58 15 Dad's tone went out on every sight speaker. Fourteen people stopped and turned toward the sea. the woman at the microphone among them. June and Iris had the real president.",
-  "word_edits": 3,
-  "word_error_rate": 0.09090909090909091,
+  "recognized": "At 11:58:15, Dad's tone went out on every site speaker. Fourteen people stopped and turned toward the sea, the woman at the microphone among them. June and Iris had the real president.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
   "listening_review_required": true,
   "seconds": 12.88,
   "sample_rate": 48000,
@@ -15,5 +15,13 @@
   "recognition_pass": "independent_phrases",
   "asr_revision": 2,
   "transcript_comparison": "strict normalized English spoken forms",
-  "independent_phrase_transcription": "at 11 58 15 Dad's tone went out on every sight speaker. Fourteen people stopped and turned toward the sea. the woman at the microphone among them. June and Iris had the real president."
+  "independent_phrase_transcription": "at 11 58 15 Dad's tone went out on every sight speaker. Fourteen people stopped and turned toward the sea. the woman at the microphone among them. June and Iris had the real president.",
+  "local_recognized": "at 11 58 15 Dad's tone went out on every sight speaker. Fourteen people stopped and turned toward the sea. the woman at the microphone among them. June and Iris had the real president.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c7_swap.tone.find.json",
+    "sha256": "24ebb700e137d877c84ad46994759219acab6e56756e1f24dd1badbfbf55bb49",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  }
 }

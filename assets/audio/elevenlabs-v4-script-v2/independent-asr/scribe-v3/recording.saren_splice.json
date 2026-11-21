@@ -1,0 +1,95 @@
+{
+  "audio_id": "recording.saren_splice",
+  "audio_sha256": "117cef297d19146ef202ac22073518fdd4b370cdc2be95d23951bd5a81163397",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/recording.saren_splice.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Come out with us, kiddo. Tonight.",
+  "recognized": "Come out with us, kiddo.",
+  "word_edits": 1,
+  "request_id": null,
+  "trace_id": "b8285ea0b593719d57f8e523fdd15aab",
+  "character_cost": "1",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Come out with us, kiddo.",
+    "words": [
+      {
+        "text": "Come",
+        "start": 0.06,
+        "end": 0.2,
+        "type": "word",
+        "logprob": -0.0005152089870534837
+      },
+      {
+        "text": " ",
+        "start": 0.2,
+        "end": 0.26,
+        "type": "spacing",
+        "logprob": -1.9073304429184645e-05
+      },
+      {
+        "text": "out",
+        "start": 0.26,
+        "end": 0.4,
+        "type": "word",
+        "logprob": -1.9073304429184645e-05
+      },
+      {
+        "text": " ",
+        "start": 0.4,
+        "end": 0.44,
+        "type": "spacing",
+        "logprob": -6.079655122448457e-06
+      },
+      {
+        "text": "with",
+        "start": 0.44,
+        "end": 0.56,
+        "type": "word",
+        "logprob": -6.079655122448457e-06
+      },
+      {
+        "text": " ",
+        "start": 0.56,
+        "end": 0.62,
+        "type": "spacing",
+        "logprob": -0.00011395759065635502
+      },
+      {
+        "text": "us,",
+        "start": 0.62,
+        "end": 0.76,
+        "type": "word",
+        "logprob": -9.885912489456435e-05
+      },
+      {
+        "text": " ",
+        "start": 0.76,
+        "end": 0.86,
+        "type": "spacing",
+        "logprob": -0.0023988301400095224
+      },
+      {
+        "text": "kiddo.",
+        "start": 0.86,
+        "end": 1.18,
+        "type": "word",
+        "logprob": -0.0013426219690397072
+      }
+    ],
+    "transcription_id": "AptV0yj7XujoqyMbz0P9",
+    "audio_duration_secs": 1.795
+  },
+  "listening_reviewed": false
+}

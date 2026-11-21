@@ -14,5 +14,13 @@
   "first_recognition": "Lamps up.",
   "recognition_pass": "independent",
   "asr_revision": 2,
-  "transcript_comparison": "strict normalized English spoken forms"
+  "transcript_comparison": "strict normalized English spoken forms",
+  "local_recognized": "Lamps up.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c10_town.out.04.json",
+    "sha256": "deaaf0a2ce6bf619e6f5c7d1368fe8ea5fed8b05de6630ca37a7f974cf8ff172",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  }
 }

@@ -1,0 +1,67 @@
+{
+  "audio_id": "c9_wake.frank.lead.01",
+  "audio_sha256": "b23c71083603ac1782e47bcbeb180d2eea55e144ecdc53c3aa201dc0485ef803",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/c9_wake.frank.lead.01.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Dad. It’s Steve.",
+  "recognized": "Dad, it's Steve.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "8db82ea25706cea8372a2c100e432fa7",
+  "character_cost": "1",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Dad, it's Steve.",
+    "words": [
+      {
+        "text": "Dad,",
+        "start": 0.06,
+        "end": 0.38,
+        "type": "word",
+        "logprob": -0.0014778006116102915
+      },
+      {
+        "text": " ",
+        "start": 0.38,
+        "end": 0.8,
+        "type": "spacing",
+        "logprob": -2.8609820219571702e-05
+      },
+      {
+        "text": "it's",
+        "start": 0.8,
+        "end": 0.96,
+        "type": "word",
+        "logprob": -3.945684031236851e-05
+      },
+      {
+        "text": " ",
+        "start": 0.96,
+        "end": 1.08,
+        "type": "spacing",
+        "logprob": -8.5588610090781e-05
+      },
+      {
+        "text": "Steve.",
+        "start": 1.08,
+        "end": 1.54,
+        "type": "word",
+        "logprob": -7.521796639290794e-05
+      }
+    ],
+    "transcription_id": "XsMdxCRdr6oTH7uKIx0O",
+    "audio_duration_secs": 1.92
+  },
+  "listening_reviewed": false
+}

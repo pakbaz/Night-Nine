@@ -14,5 +14,13 @@
   "first_recognition": "You heard it?",
   "recognition_pass": "independent",
   "asr_revision": 2,
-  "transcript_comparison": "strict normalized English spoken forms"
+  "transcript_comparison": "strict normalized English spoken forms",
+  "local_recognized": "You heard it?",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c1_dinner.podcast.lead.03.json",
+    "sha256": "83c5387e3b4c4d827bbdebea63f9b2ab8b8feda247aac2a862f9b4e79aebabf2",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  }
 }

@@ -1,0 +1,81 @@
+{
+  "audio_id": "c7_swap.tone.02",
+  "audio_sha256": "29e3e3632d2b8e66e2c78e617b5920d83ec57c604c5293b35d740fcebebb86b6",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/c7_swap.tone.02.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "We have President Ward.",
+  "recognized": "We have President Ward.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "25bc63605839a84c466ff4d35b65f900",
+  "character_cost": "1",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "We have President Ward.",
+    "words": [
+      {
+        "text": "We",
+        "start": 0.1,
+        "end": 0.2,
+        "type": "word",
+        "logprob": -2.455681169521995e-05
+      },
+      {
+        "text": " ",
+        "start": 0.2,
+        "end": 0.26,
+        "type": "spacing",
+        "logprob": -7.390948667307384e-06
+      },
+      {
+        "text": "have",
+        "start": 0.26,
+        "end": 0.42,
+        "type": "word",
+        "logprob": -7.390948667307384e-06
+      },
+      {
+        "text": " ",
+        "start": 0.42,
+        "end": 0.56,
+        "type": "spacing",
+        "logprob": -0.00021443451987579465
+      },
+      {
+        "text": "President",
+        "start": 0.56,
+        "end": 0.96,
+        "type": "word",
+        "logprob": -0.00021443451987579465
+      },
+      {
+        "text": " ",
+        "start": 0.96,
+        "end": 1.08,
+        "type": "spacing",
+        "logprob": -0.0004145239945501089
+      },
+      {
+        "text": "Ward.",
+        "start": 1.08,
+        "end": 1.42,
+        "type": "word",
+        "logprob": -0.00035162151471013203
+      }
+    ],
+    "transcription_id": "dOHCpCQtkjRk9vlfbpPB",
+    "audio_duration_secs": 2.0
+  },
+  "listening_reviewed": false
+}

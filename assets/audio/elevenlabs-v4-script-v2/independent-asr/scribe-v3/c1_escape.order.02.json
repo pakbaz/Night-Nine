@@ -1,0 +1,53 @@
+{
+  "audio_id": "c1_escape.order.02",
+  "audio_sha256": "065c98e9675b2e6e4a41f487a8973b74f92fbef1beb0dc0a3eb2fcd10311a4e1",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/c1_escape.order.02.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "What notebook?",
+  "recognized": "What notebook?",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "b26fd7534de330d7ad3c37cca7c50c82",
+  "character_cost": "0",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "What notebook?",
+    "words": [
+      {
+        "text": "What",
+        "start": 0.1,
+        "end": 0.24,
+        "type": "word",
+        "logprob": -1.168244216387393e-05
+      },
+      {
+        "text": " ",
+        "start": 0.24,
+        "end": 0.32,
+        "type": "spacing",
+        "logprob": -8.082063141046092e-05
+      },
+      {
+        "text": "notebook?",
+        "start": 0.32,
+        "end": 0.84,
+        "type": "word",
+        "logprob": -7.340351647952857e-05
+      }
+    ],
+    "transcription_id": "9cpxh4yofR3IuUviQU1L",
+    "audio_duration_secs": 1.2
+  },
+  "listening_reviewed": false
+}

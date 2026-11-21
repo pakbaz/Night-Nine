@@ -1,0 +1,53 @@
+{
+  "audio_id": "c3_archive.cycle.02",
+  "audio_sha256": "4b7fe8db5707c38ed8babaf1d13d7bf61be0c40d282c2bdd0b9c22486ca55d5b",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/c3_archive.cycle.02.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "I’m coming.",
+  "recognized": "I'm coming.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "60e67a3c76b54a2b719d8c00c39e6c06",
+  "character_cost": "0",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "I'm coming.",
+    "words": [
+      {
+        "text": "I'm",
+        "start": 0.1,
+        "end": 0.24,
+        "type": "word",
+        "logprob": -9.226164759941942e-05
+      },
+      {
+        "text": " ",
+        "start": 0.24,
+        "end": 0.3,
+        "type": "spacing",
+        "logprob": -8.391981828026474e-05
+      },
+      {
+        "text": "coming.",
+        "start": 0.3,
+        "end": 0.66,
+        "type": "word",
+        "logprob": -7.618868403369561e-05
+      }
+    ],
+    "transcription_id": "F8Ka0jnCbOqom6Ne43aU",
+    "audio_duration_secs": 1.12
+  },
+  "listening_reviewed": false
+}

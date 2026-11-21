@@ -1,0 +1,81 @@
+{
+  "audio_id": "c9_wake.helen.02",
+  "audio_sha256": "b475a8eccb5b64bb1336708e224a79fcc4dd2e309d88c7d56370a1c4cb606061",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/c9_wake.helen.02.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Steven. Oh, my boy.",
+  "recognized": "Steven. Oh, my boy.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "93940a478b648766edc4bc119beffcff",
+  "character_cost": "1",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Steven. Oh, my boy.",
+    "words": [
+      {
+        "text": "Steven.",
+        "start": 0.2,
+        "end": 0.7,
+        "type": "word",
+        "logprob": -0.1453248688152858
+      },
+      {
+        "text": " ",
+        "start": 0.7,
+        "end": 0.7,
+        "type": "spacing",
+        "logprob": -0.00025960413040593266
+      },
+      {
+        "text": "Oh,",
+        "start": 1.42,
+        "end": 1.58,
+        "type": "word",
+        "logprob": -0.0002239679015474394
+      },
+      {
+        "text": " ",
+        "start": 1.58,
+        "end": 1.96,
+        "type": "spacing",
+        "logprob": -6.90197994117625e-05
+      },
+      {
+        "text": "my",
+        "start": 1.96,
+        "end": 2.1,
+        "type": "word",
+        "logprob": -6.90197994117625e-05
+      },
+      {
+        "text": " ",
+        "start": 2.1,
+        "end": 2.28,
+        "type": "spacing",
+        "logprob": -2.169585604860913e-05
+      },
+      {
+        "text": "boy.",
+        "start": 2.28,
+        "end": 2.68,
+        "type": "word",
+        "logprob": -0.0001011642948469671
+      }
+    ],
+    "transcription_id": "v4jhqVXtTJ1SrhmZMWnZ",
+    "audio_duration_secs": 3.6
+  },
+  "listening_reviewed": false
+}

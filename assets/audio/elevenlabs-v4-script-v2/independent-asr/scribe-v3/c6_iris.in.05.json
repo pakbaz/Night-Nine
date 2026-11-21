@@ -1,0 +1,67 @@
+{
+  "audio_id": "c6_iris.in.05",
+  "audio_sha256": "2a8d7c7f2f978abab7483b27aa3b64ca19c1dba384c69555eb866abfd3191f36",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/c6_iris.in.05.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Take it off.",
+  "recognized": "Take it off.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "3c7d400636c47c41a453d292ef89ea7a",
+  "character_cost": "0",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Take it off.",
+    "words": [
+      {
+        "text": "Take",
+        "start": 0.08,
+        "end": 0.24,
+        "type": "word",
+        "logprob": -0.18031856417655945
+      },
+      {
+        "text": " ",
+        "start": 0.24,
+        "end": 0.28,
+        "type": "spacing",
+        "logprob": -0.0003277718205936253
+      },
+      {
+        "text": "it",
+        "start": 0.28,
+        "end": 0.34,
+        "type": "word",
+        "logprob": -0.0003277718205936253
+      },
+      {
+        "text": " ",
+        "start": 0.34,
+        "end": 0.44,
+        "type": "spacing",
+        "logprob": -6.615896563744172e-05
+      },
+      {
+        "text": "off.",
+        "start": 0.44,
+        "end": 0.76,
+        "type": "word",
+        "logprob": -6.249349644349422e-05
+      }
+    ],
+    "transcription_id": "aOsaW4QW8cIvYylEDZ2D",
+    "audio_duration_secs": 1.2
+  },
+  "listening_reviewed": false
+}

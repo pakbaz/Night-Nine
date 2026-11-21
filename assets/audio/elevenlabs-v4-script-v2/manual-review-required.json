@@ -2,23 +2,8 @@
   "schema": 1,
   "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
   "casting_sha256": "cb91065c437c743d50eea2958d5149a6d0a35b9d20430a66cb8a548b921246db",
-  "count": 120,
+  "count": 44,
   "entries": [
-    {
-      "audio_id": "book.aftermath.4.2",
-      "reason": "asr_mismatch",
-      "speaker": "steve",
-      "identity": "steve",
-      "voice_id": "vveagfomyMCJLZsOPRP2",
-      "line_ids": [
-        "book.aftermath.4.2"
-      ],
-      "expected": "After the boat I went quiet. She pushed, then shouted, then stopped. Lately she’s been endlessly patient with me. I figured I’d worn her out.",
-      "recognized": "After the boat, I went quiet. She pushed, then shouted, then stopped. Lately, she's been endlessly patient with me. I figured I'd warn her out.",
-      "word_edits": 1,
-      "wav": "masters/book.aftermath.4.2.wav",
-      "check": "checks/book.aftermath.4.2.json"
-    },
     {
       "audio_id": "book.opening.5.1",
       "reason": "asr_mismatch",
@@ -35,21 +20,6 @@
       "check": "checks/book.opening.5.1.json"
     },
     {
-      "audio_id": "c10_live.first.02",
-      "reason": "asr_mismatch",
-      "speaker": "shaw",
-      "identity": "shaw",
-      "voice_id": "lRGgBdmdfHYNiqPVpbiS",
-      "line_ids": [
-        "c10_live.first.02"
-      ],
-      "expected": "Field lights following. We can match that.",
-      "recognized": "Field lights following. We can notch that.",
-      "word_edits": 1,
-      "wav": "masters/c10_live.first.02.wav",
-      "check": "checks/c10_live.first.02.json"
-    },
-    {
       "audio_id": "c10_live.first.find",
       "reason": "asr_mismatch",
       "speaker": "steve",
@@ -59,7 +29,7 @@
         "c10_live.first.find"
       ],
       "expected": "I called Orchard. When a fresh Pier flash answered Orchard’s change, I released Shaw’s lights. A reply, made live, that nobody could have recorded.",
-      "recognized": "I called Orchard. When a fresh peer flash answered Orchard's change, I released Shaw's lights. A reply, made live, that nobody could have recorded.",
+      "recognized": "I called Orchard. When a fresh peer flash answered Orchard's change, I released Shaw's lights, a reply made live that nobody could have recorded.",
       "word_edits": 1,
       "wav": "masters/c10_live.first.find.wav",
       "check": "checks/c10_live.first.find.json"
@@ -80,96 +50,6 @@
       "check": "checks/c10_live.second.01.json"
     },
     {
-      "audio_id": "c10_report.out.04",
-      "reason": "short_asr_ambiguity",
-      "speaker": "steve",
-      "identity": "steve",
-      "voice_id": "vveagfomyMCJLZsOPRP2",
-      "line_ids": [
-        "c10_report.out.04"
-      ],
-      "expected": "The Vigil is turning.",
-      "recognized": "The vigil is turning.",
-      "word_edits": 0,
-      "wav": "masters/c10_report.out.04.wav",
-      "check": "checks/c10_report.out.04.json"
-    },
-    {
-      "audio_id": "c10_report.report.03",
-      "reason": "short_asr_ambiguity",
-      "speaker": "archivist",
-      "identity": "archivist",
-      "voice_id": "6HXfTcSnxaoT6uM4pTRP",
-      "line_ids": [
-        "c10_report.report.03"
-      ],
-      "expected": "Neither do I.",
-      "recognized": "Neither do I.",
-      "word_edits": 0,
-      "wav": "masters/c10_report.report.03.wav",
-      "check": "checks/c10_report.report.03.json"
-    },
-    {
-      "audio_id": "c10_report.survey.02",
-      "reason": "short_asr_ambiguity",
-      "speaker": "agnes",
-      "identity": "agnes",
-      "voice_id": "jVMsZEw3hfmEAe9OUUtS",
-      "line_ids": [
-        "c10_report.survey.02"
-      ],
-      "expected": "Then finish the mission.",
-      "recognized": "Then finish the mission.",
-      "word_edits": 0,
-      "wav": "masters/c10_report.survey.02.wav",
-      "check": "checks/c10_report.survey.02.json"
-    },
-    {
-      "audio_id": "c10_station.out.03",
-      "reason": "short_asr_ambiguity",
-      "speaker": "steve",
-      "identity": "steve",
-      "voice_id": "vveagfomyMCJLZsOPRP2",
-      "line_ids": [
-        "c10_station.out.03"
-      ],
-      "expected": "Everywhere?",
-      "recognized": "everywhere?",
-      "word_edits": 0,
-      "wav": "masters/c10_station.out.03.wav",
-      "check": "checks/c10_station.out.03.json"
-    },
-    {
-      "audio_id": "c10_town.console.01",
-      "reason": "short_asr_ambiguity",
-      "speaker": "wen",
-      "identity": "wen",
-      "voice_id": "OtI9u7gjScKYR7rOqBX2",
-      "line_ids": [
-        "c10_town.console.01"
-      ],
-      "expected": "Your timing is late.",
-      "recognized": "Your timing is late.",
-      "word_edits": 0,
-      "wav": "masters/c10_town.console.01.wav",
-      "check": "checks/c10_town.console.01.json"
-    },
-    {
-      "audio_id": "c10_town.console.02",
-      "reason": "short_asr_ambiguity",
-      "speaker": "shaw",
-      "identity": "shaw",
-      "voice_id": "lRGgBdmdfHYNiqPVpbiS",
-      "line_ids": [
-        "c10_town.console.02"
-      ],
-      "expected": "Your lamps are dim.",
-      "recognized": "Your lamps are dim.",
-      "word_edits": 0,
-      "wav": "masters/c10_town.console.02.wav",
-      "check": "checks/c10_town.console.02.json"
-    },
-    {
       "audio_id": "c10_town.in.09",
       "reason": "asr_mismatch",
       "speaker": "agnes",
@@ -179,8 +59,8 @@
         "c10_town.in.09"
       ],
       "expected": "Veyr was our home, Steven. Our sun failed. That is the last wind that ever blew through our city.",
-      "recognized": "there was our home stephen our son failed that is the last wind that ever blew through our city",
-      "word_edits": 2,
+      "recognized": "There was our home, Stephen. Our sun failed. That is the last wind that ever blew through our city.",
+      "word_edits": 1,
       "wav": "masters/c10_town.in.09.wav",
       "check": "checks/c10_town.in.09.json"
     },
@@ -200,81 +80,6 @@
       "check": "checks/c10_town.lights.find.json"
     },
     {
-      "audio_id": "c10_town.out.04",
-      "reason": "short_asr_ambiguity",
-      "speaker": "shaw",
-      "identity": "shaw",
-      "voice_id": "lRGgBdmdfHYNiqPVpbiS",
-      "line_ids": [
-        "c10_town.out.04"
-      ],
-      "expected": "Lamps up.",
-      "recognized": "Lamps up.",
-      "word_edits": 0,
-      "wav": "masters/c10_town.out.04.wav",
-      "check": "checks/c10_town.out.04.json"
-    },
-    {
-      "audio_id": "c1_dinner.family.lead.05",
-      "reason": "asr_mismatch",
-      "speaker": "mateo",
-      "identity": "mateo",
-      "voice_id": "pHTIXPU0D9wgfJsumeMt",
-      "line_ids": [
-        "c1_dinner.family.lead.05"
-      ],
-      "expected": "Funny. Lyle Boone hasn’t missed one of the Little League games I coach since June either.",
-      "recognized": "Funny, Lyle Boone hasn't missed one of the Little League games I coached since June either.",
-      "word_edits": 1,
-      "wav": "masters/c1_dinner.family.lead.05.wav",
-      "check": "checks/c1_dinner.family.lead.05.json"
-    },
-    {
-      "audio_id": "c1_dinner.in.04",
-      "reason": "asr_mismatch",
-      "speaker": "tomas",
-      "identity": "tomas",
-      "voice_id": "KcCKZnyrGenSzoMrpu7I",
-      "line_ids": [
-        "c1_dinner.in.04"
-      ],
-      "expected": "She used to call it a crime against chilies.",
-      "recognized": "She used to call it a crime against Chili's.",
-      "word_edits": 2,
-      "wav": "masters/c1_dinner.in.04.wav",
-      "check": "checks/c1_dinner.in.04.json"
-    },
-    {
-      "audio_id": "c1_dinner.out.03",
-      "reason": "asr_mismatch",
-      "speaker": "carmen",
-      "identity": "carmen",
-      "voice_id": "XjJZDs8qBsxY4vx0TGuV",
-      "line_ids": [
-        "c1_dinner.out.03"
-      ],
-      "expected": "Next Sunday, Steve. The plate will be warm.",
-      "recognized": "Next Sunday, Steve, the plate will be worn.",
-      "word_edits": 1,
-      "wav": "masters/c1_dinner.out.03.wav",
-      "check": "checks/c1_dinner.out.03.json"
-    },
-    {
-      "audio_id": "c1_dinner.podcast.02",
-      "reason": "short_asr_ambiguity",
-      "speaker": "steve",
-      "identity": "steve",
-      "voice_id": "vveagfomyMCJLZsOPRP2",
-      "line_ids": [
-        "c1_dinner.podcast.02"
-      ],
-      "expected": "I’m listening now.",
-      "recognized": "I'm listening now.",
-      "word_edits": 0,
-      "wav": "masters/c1_dinner.podcast.02.wav",
-      "check": "checks/c1_dinner.podcast.02.json"
-    },
-    {
       "audio_id": "c1_dinner.podcast.find",
       "reason": "asr_mismatch",
       "speaker": "steve",
@@ -284,100 +89,10 @@
         "c1_dinner.podcast.find"
       ],
       "expected": "Tomás’s loud nights come every nine nights: September 24, October 3, October 12. The next one is tonight.",
-      "recognized": "Tomás's loud nights come every nine nights. September 24th, October 3rd, October 12th. The next one is tonight.",
+      "recognized": "Tomas's loud nights come every nine nights: September 24th, October 3rd, October 12th. The next one is tonight.",
       "word_edits": 3,
       "wav": "masters/c1_dinner.podcast.find.wav",
       "check": "checks/c1_dinner.podcast.find.json"
-    },
-    {
-      "audio_id": "c1_dinner.podcast.lead.03",
-      "reason": "short_asr_ambiguity",
-      "speaker": "tomas",
-      "identity": "tomas",
-      "voice_id": "KcCKZnyrGenSzoMrpu7I",
-      "line_ids": [
-        "c1_dinner.podcast.lead.03"
-      ],
-      "expected": "...You heard it?",
-      "recognized": "You heard it?",
-      "word_edits": 0,
-      "wav": "masters/c1_dinner.podcast.lead.03.wav",
-      "check": "checks/c1_dinner.podcast.lead.03.json"
-    },
-    {
-      "audio_id": "c1_escape.cross.02",
-      "reason": "short_asr_ambiguity",
-      "speaker": "iris",
-      "identity": "nora",
-      "voice_id": "m8AHWg36LJTQWKmfeGVv",
-      "line_ids": [
-        "c1_escape.cross.02"
-      ],
-      "expected": "Steve... go.",
-      "recognized": "Steve, go.",
-      "word_edits": 0,
-      "wav": "masters/c1_escape.cross.02.wav",
-      "check": "checks/c1_escape.cross.02.json"
-    },
-    {
-      "audio_id": "c1_escape.cross.03",
-      "reason": "short_asr_ambiguity",
-      "speaker": "iris",
-      "identity": "nora",
-      "voice_id": "m8AHWg36LJTQWKmfeGVv",
-      "line_ids": [
-        "c1_escape.cross.03"
-      ],
-      "expected": "Steve.",
-      "recognized": "Steve.",
-      "word_edits": 0,
-      "wav": "masters/c1_escape.cross.03.wav",
-      "check": "checks/c1_escape.cross.03.json"
-    },
-    {
-      "audio_id": "c1_escape.order.02",
-      "reason": "short_asr_ambiguity",
-      "speaker": "steve",
-      "identity": "steve",
-      "voice_id": "vveagfomyMCJLZsOPRP2",
-      "line_ids": [
-        "c1_escape.order.02"
-      ],
-      "expected": "What notebook?",
-      "recognized": "What notebook?",
-      "word_edits": 0,
-      "wav": "masters/c1_escape.order.02.wav",
-      "check": "checks/c1_escape.order.02.json"
-    },
-    {
-      "audio_id": "c1_escape.order.lead.01",
-      "reason": "asr_mismatch",
-      "speaker": "steve",
-      "identity": "steve",
-      "voice_id": "vveagfomyMCJLZsOPRP2",
-      "line_ids": [
-        "c1_escape.order.lead.01"
-      ],
-      "expected": "Something in the lining. Soaked. Aquarium letterhead... north wing?",
-      "recognized": "Something in the lining. Soaked. Aquarium letterhead. Northwing?",
-      "word_edits": 2,
-      "wav": "masters/c1_escape.order.lead.01.wav",
-      "check": "checks/c1_escape.order.lead.01.json"
-    },
-    {
-      "audio_id": "c1_escape.out.04",
-      "reason": "short_asr_ambiguity",
-      "speaker": "steve",
-      "identity": "steve",
-      "voice_id": "vveagfomyMCJLZsOPRP2",
-      "line_ids": [
-        "c1_escape.out.04"
-      ],
-      "expected": "Mrs. Penhallow? ...Mrs. Penhallow?",
-      "recognized": "Mrs. Penhallow? Mrs. Penhallow?",
-      "word_edits": 0,
-      "wav": "masters/c1_escape.out.04.wav",
-      "check": "checks/c1_escape.out.04.json"
     },
     {
       "audio_id": "c1_flat.compare.02",
@@ -395,38 +110,8 @@
       "check": "checks/c1_flat.compare.02.json"
     },
     {
-      "audio_id": "c1_flat.control.01",
-      "reason": "short_asr_ambiguity",
-      "speaker": "steve",
-      "identity": "steve",
-      "voice_id": "vveagfomyMCJLZsOPRP2",
-      "line_ids": [
-        "c1_flat.control.01"
-      ],
-      "expected": "Testing. One, two. Testing... one, two.",
-      "recognized": "Testing, one, two. Testing, one, two.",
-      "word_edits": 0,
-      "wav": "masters/c1_flat.control.01.wav",
-      "check": "checks/c1_flat.control.01.json"
-    },
-    {
-      "audio_id": "c1_flat.out.04",
-      "reason": "short_asr_ambiguity",
-      "speaker": "iris",
-      "identity": "nora",
-      "voice_id": "m8AHWg36LJTQWKmfeGVv",
-      "line_ids": [
-        "c1_flat.out.04"
-      ],
-      "expected": "Whatever you like, sleepyhead.",
-      "recognized": "Whatever you like, sleepyhead.",
-      "word_edits": 0,
-      "wav": "masters/c1_flat.out.04.wav",
-      "check": "checks/c1_flat.out.04.json"
-    },
-    {
       "audio_id": "c1_flat.saturday.02",
-      "reason": "asr_mismatch",
+      "reason": "short_asr_ambiguity",
       "speaker": "steve",
       "identity": "steve",
       "voice_id": "vveagfomyMCJLZsOPRP2",
@@ -434,55 +119,10 @@
         "c1_flat.saturday.02"
       ],
       "expected": "Morning, Nor.",
-      "recognized": "Morning, Noor.",
-      "word_edits": 1,
+      "recognized": "Morning, Nor.",
+      "word_edits": 0,
       "wav": "masters/c1_flat.saturday.02.wav",
       "check": "checks/c1_flat.saturday.02.json"
-    },
-    {
-      "audio_id": "c1_flat.sunday.find",
-      "reason": "asr_mismatch",
-      "speaker": "steve",
-      "identity": "steve",
-      "voice_id": "vveagfomyMCJLZsOPRP2",
-      "line_ids": [
-        "c1_flat.sunday.find"
-      ],
-      "expected": "Blue cassette, Sunday, 7:15. The ident again, and Nora again. Now I can time the machine.",
-      "recognized": "Blue Cassette Sunday, 7-15. The ident again. And Nora again. Now I can time the machine.",
-      "word_edits": 2,
-      "wav": "masters/c1_flat.sunday.find.wav",
-      "check": "checks/c1_flat.sunday.find.json"
-    },
-    {
-      "audio_id": "c1_pier.door.lead.02",
-      "reason": "short_asr_ambiguity",
-      "speaker": "steve",
-      "identity": "steve",
-      "voice_id": "vveagfomyMCJLZsOPRP2",
-      "line_ids": [
-        "c1_pier.door.lead.02"
-      ],
-      "expected": "...Thank you, Lyle.",
-      "recognized": "Thank you, Lyle.",
-      "word_edits": 0,
-      "wav": "masters/c1_pier.door.lead.02.wav",
-      "check": "checks/c1_pier.door.lead.02.json"
-    },
-    {
-      "audio_id": "c1_pier.whistle.lead.02",
-      "reason": "short_asr_ambiguity",
-      "speaker": "iris",
-      "identity": "nora",
-      "voice_id": "m8AHWg36LJTQWKmfeGVv",
-      "line_ids": [
-        "c1_pier.whistle.lead.02"
-      ],
-      "expected": "Watch.",
-      "recognized": "Watch.",
-      "word_edits": 0,
-      "wav": "masters/c1_pier.whistle.lead.02.wav",
-      "check": "checks/c1_pier.whistle.lead.02.json"
     },
     {
       "audio_id": "c2_aquarium.intercom.find",
@@ -494,7 +134,7 @@
         "c2_aquarium.intercom.find"
       ],
       "expected": "The real Nora recorded this here on May 29. Someone else has been living her life with me for five months. Her whistle rises. The one Admiral ignored falls.",
-      "recognized": "The Real Nora recorded this here on May 29th. Someone else has been living her life with me for five months. Her whistle rises. The one Admiral ignored falls.",
+      "recognized": "The real Nora recorded this here on May 29th. Someone else has been living her life with me for five months. Her whistle rises. The one Admiral ignored falls.",
       "word_edits": 1,
       "wav": "masters/c2_aquarium.intercom.find.wav",
       "check": "checks/c2_aquarium.intercom.find.json"
@@ -530,81 +170,6 @@
       "check": "checks/c2_ship.intake.01.json"
     },
     {
-      "audio_id": "c2_ship.nora.lead.01",
-      "reason": "short_asr_ambiguity",
-      "speaker": "steve",
-      "identity": "steve",
-      "voice_id": "vveagfomyMCJLZsOPRP2",
-      "line_ids": [
-        "c2_ship.nora.lead.01"
-      ],
-      "expected": "Nora.",
-      "recognized": "Nora.",
-      "word_edits": 0,
-      "wav": "masters/c2_ship.nora.lead.01.wav",
-      "check": "checks/c2_ship.nora.lead.01.json"
-    },
-    {
-      "audio_id": "c3_archive.cycle.02",
-      "reason": "short_asr_ambiguity",
-      "speaker": "tomas",
-      "identity": "tomas",
-      "voice_id": "KcCKZnyrGenSzoMrpu7I",
-      "line_ids": [
-        "c3_archive.cycle.02"
-      ],
-      "expected": "I’m coming.",
-      "recognized": "I'm coming.",
-      "word_edits": 0,
-      "wav": "masters/c3_archive.cycle.02.wav",
-      "check": "checks/c3_archive.cycle.02.json"
-    },
-    {
-      "audio_id": "c3_archive.cycle.03",
-      "reason": "short_asr_ambiguity",
-      "speaker": "calder",
-      "identity": "calder",
-      "voice_id": "wa4sQVgbDDzUDEzJwch3",
-      "line_ids": [
-        "c3_archive.cycle.03"
-      ],
-      "expected": "You’re not.",
-      "recognized": "You're not.",
-      "word_edits": 0,
-      "wav": "masters/c3_archive.cycle.03.wav",
-      "check": "checks/c3_archive.cycle.03.json"
-    },
-    {
-      "audio_id": "c3_archive.in.04",
-      "reason": "short_asr_ambiguity",
-      "speaker": "steve",
-      "identity": "steve",
-      "voice_id": "vveagfomyMCJLZsOPRP2",
-      "line_ids": [
-        "c3_archive.in.04"
-      ],
-      "expected": "I did.",
-      "recognized": "I did.",
-      "word_edits": 0,
-      "wav": "masters/c3_archive.in.04.wav",
-      "check": "checks/c3_archive.in.04.json"
-    },
-    {
-      "audio_id": "c3_archive.in.05",
-      "reason": "short_asr_ambiguity",
-      "speaker": "tomas",
-      "identity": "tomas",
-      "voice_id": "KcCKZnyrGenSzoMrpu7I",
-      "line_ids": [
-        "c3_archive.in.05"
-      ],
-      "expected": "...Cool. Why?",
-      "recognized": "Cool. Why?",
-      "word_edits": 0,
-      "wav": "masters/c3_archive.in.05.wav",
-      "check": "checks/c3_archive.in.05.json"
-    },
-    {
       "audio_id": "c3_archive.paper.find",
       "reason": "asr_mismatch",
       "speaker": "steve",
@@ -629,25 +194,10 @@
         "c3_archive.paper.lead.01"
       ],
       "expected": "Walt Prior. County planner. I went to his going-away party in April. He cried into the punch.",
-      "recognized": "Walt Pryor, County Planner. I went to his going away party in April. He cried into the punch.",
+      "recognized": "Walt Pryor, county planner. I went to his going-away party in April. He cried into the punch.",
       "word_edits": 1,
       "wav": "masters/c3_archive.paper.lead.01.wav",
       "check": "checks/c3_archive.paper.lead.01.json"
-    },
-    {
-      "audio_id": "c3_archive.power.lead.01",
-      "reason": "short_asr_ambiguity",
-      "speaker": "agnes",
-      "identity": "agnes",
-      "voice_id": "jVMsZEw3hfmEAe9OUUtS",
-      "line_ids": [
-        "c3_archive.power.lead.01"
-      ],
-      "expected": "Steven. You’re slouching.",
-      "recognized": "Stephen, you're slouching.",
-      "word_edits": 0,
-      "wav": "masters/c3_archive.power.lead.01.wav",
-      "check": "checks/c3_archive.power.lead.01.json"
     },
     {
       "audio_id": "c3_archive.recap.01",
@@ -659,40 +209,10 @@
         "c3_archive.recap.01"
       ],
       "expected": "Three things nobody thought to change. Walt Prior’s name in ink, in two places at once. A lab that will change the world, running on less power than a laundromat. And three years of tape that never missed a ninth night.",
-      "recognized": "Three things nobody thought to change. Walt Pryor's name in ink, in two places at once. A lab that will change the world, running on less power than a laundromat. And three years of tape that never missed a ninth night.",
+      "recognized": "Three things nobody thought to change: Walt Pryor's name in ink in two places at once, a lab that will change the world running on less power than a laundromat, and three years of tape that never missed a ninth night.",
       "word_edits": 1,
       "wav": "masters/c3_archive.recap.01.wav",
       "check": "checks/c3_archive.recap.01.json"
-    },
-    {
-      "audio_id": "c3_house.crossword.01",
-      "reason": "short_asr_ambiguity",
-      "speaker": "steve",
-      "identity": "steve",
-      "voice_id": "vveagfomyMCJLZsOPRP2",
-      "line_ids": [
-        "c3_house.crossword.01"
-      ],
-      "expected": "Seven letters. Maritime... marmite?",
-      "recognized": "Seven letters. Maritime Marmite?",
-      "word_edits": 0,
-      "wav": "masters/c3_house.crossword.01.wav",
-      "check": "checks/c3_house.crossword.01.json"
-    },
-    {
-      "audio_id": "c3_house.mail.lead.01",
-      "reason": "short_asr_ambiguity",
-      "speaker": "pell",
-      "identity": "dale",
-      "voice_id": "kSSJYNGo5Kev6qgwVloV",
-      "line_ids": [
-        "c3_house.mail.lead.01"
-      ],
-      "expected": "Good morning, Officer Biscuit.",
-      "recognized": "Good morning, Officer Biscuit!",
-      "word_edits": 0,
-      "wav": "masters/c3_house.mail.lead.01.wav",
-      "check": "checks/c3_house.mail.lead.01.json"
     },
     {
       "audio_id": "c3_house.rules.find",
@@ -725,21 +245,6 @@
       "check": "checks/c4_escape.out.01.json"
     },
     {
-      "audio_id": "c4_safe.match.02",
-      "reason": "short_asr_ambiguity",
-      "speaker": "calder",
-      "identity": "calder",
-      "voice_id": "wa4sQVgbDDzUDEzJwch3",
-      "line_ids": [
-        "c4_safe.match.02"
-      ],
-      "expected": "Play it again.",
-      "recognized": "Play it again.",
-      "word_edits": 0,
-      "wav": "masters/c4_safe.match.02.wav",
-      "check": "checks/c4_safe.match.02.json"
-    },
-    {
       "audio_id": "c4_safe.screens.01",
       "reason": "asr_mismatch",
       "speaker": "steve",
@@ -749,7 +254,7 @@
         "c4_safe.screens.01"
       ],
       "expected": "Adrian Rook, asleep in bed 41B. Both governments’ seals on the transfer. And an empty bed waiting for President Ward on signing day.",
-      "recognized": "Adrian Rook Asleep in bed 41B Both government seals on the transfer. and an empty bed waiting for President Ward on signing day.",
+      "recognized": "Adrian Rook, asleep in bed 41B, both government seals on the transfer, and an empty bed waiting for President Ward on signing day.",
       "word_edits": 1,
       "wav": "masters/c4_safe.screens.01.wav",
       "check": "checks/c4_safe.screens.01.json"
@@ -764,55 +269,10 @@
         "c4_safe.screens.02"
       ],
       "expected": "Walt Prior. From June’s list.",
-      "recognized": "Walt Pryor from June's List.",
+      "recognized": "Walt Pryor, from June's list.",
       "word_edits": 1,
       "wav": "masters/c4_safe.screens.02.wav",
       "check": "checks/c4_safe.screens.02.json"
-    },
-    {
-      "audio_id": "c5_shack.club.03",
-      "reason": "short_asr_ambiguity",
-      "speaker": "operator",
-      "identity": "operator",
-      "voice_id": "yeV5pw6QxLLhU2SzG4vx",
-      "line_ids": [
-        "c5_shack.club.03"
-      ],
-      "expected": "Any time, kid.",
-      "recognized": "anytime kid",
-      "word_edits": 0,
-      "wav": "masters/c5_shack.club.03.wav",
-      "check": "checks/c5_shack.club.03.json"
-    },
-    {
-      "audio_id": "c5_shack.in.03",
-      "reason": "short_asr_ambiguity",
-      "speaker": "luis",
-      "identity": "luis",
-      "voice_id": "5sPGxVw5vqj7a08c5Xbw",
-      "line_ids": [
-        "c5_shack.in.03"
-      ],
-      "expected": "Eat first.",
-      "recognized": "Eat first.",
-      "word_edits": 0,
-      "wav": "masters/c5_shack.in.03.wav",
-      "check": "checks/c5_shack.in.03.json"
-    },
-    {
-      "audio_id": "c5_shack.in.06",
-      "reason": "asr_mismatch",
-      "speaker": "luis",
-      "identity": "luis",
-      "voice_id": "5sPGxVw5vqj7a08c5Xbw",
-      "line_ids": [
-        "c5_shack.in.06"
-      ],
-      "expected": "I’ve heard the bay sing since I was a boy. Your father was the only one who ever asked me what it sounded like.",
-      "recognized": "I've heard the bass sing since I was a boy. Your father was the only one who ever asked me what it sounded like.",
-      "word_edits": 1,
-      "wav": "masters/c5_shack.in.06.wav",
-      "check": "checks/c5_shack.in.06.json"
     },
     {
       "audio_id": "c5_shack.notes.find",
@@ -854,25 +314,10 @@
         "c5_station.automation.lead.01"
       ],
       "expected": "AutoRick’s console. I wrote half these carts myself.",
-      "recognized": "Autorix console. I wrote half these cards myself.",
-      "word_edits": 3,
+      "recognized": "AutoRix console. I wrote half these carts myself.",
+      "word_edits": 2,
       "wav": "masters/c5_station.automation.lead.01.wav",
       "check": "checks/c5_station.automation.lead.01.json"
-    },
-    {
-      "audio_id": "c5_station.ctx.02",
-      "reason": "asr_mismatch",
-      "speaker": "steve",
-      "identity": "steve",
-      "voice_id": "vveagfomyMCJLZsOPRP2",
-      "line_ids": [
-        "c5_station.ctx.02"
-      ],
-      "expected": "And my voice, on the station ident, still playing between the songs.",
-      "recognized": "and my voice on the station I dent still playing between the songs.",
-      "word_edits": 2,
-      "wav": "masters/c5_station.ctx.02.wav",
-      "check": "checks/c5_station.ctx.02.json"
     },
     {
       "audio_id": "c5_station.halcyon.find",
@@ -899,40 +344,10 @@
         "c5_station.sleeve.find"
       ],
       "expected": "My first night at the desk was the 4th, when I engineered and Jo presented. The original is in the blue sleeve, and Mom’s notebook was in its back pocket. I can’t read a word of it.",
-      "recognized": "My first night at the desk was the fourth, when I engineered and Joe presented. The original is in the blue sleeve, and Mom's notebook was in its back pocket. I can't read a word of it.",
+      "recognized": "My first night at the desk was the 4th, when I engineered and Joe presented. The original is in the blue sleeve, and mom's notebook was in its back pocket. I can't read a word of it.",
       "word_edits": 1,
       "wav": "masters/c5_station.sleeve.find.wav",
       "check": "checks/c5_station.sleeve.find.json"
-    },
-    {
-      "audio_id": "c5_station.stephen.lead.01",
-      "reason": "short_asr_ambiguity",
-      "speaker": "steve",
-      "identity": "steve",
-      "voice_id": "vveagfomyMCJLZsOPRP2",
-      "line_ids": [
-        "c5_station.stephen.lead.01"
-      ],
-      "expected": "...That’s my face.",
-      "recognized": "That's my face.",
-      "word_edits": 0,
-      "wav": "masters/c5_station.stephen.lead.01.wav",
-      "check": "checks/c5_station.stephen.lead.01.json"
-    },
-    {
-      "audio_id": "c6_iris.in.05",
-      "reason": "short_asr_ambiguity",
-      "speaker": "steve",
-      "identity": "steve",
-      "voice_id": "vveagfomyMCJLZsOPRP2",
-      "line_ids": [
-        "c6_iris.in.05"
-      ],
-      "expected": "Take it off.",
-      "recognized": "Take it off.",
-      "word_edits": 0,
-      "wav": "masters/c6_iris.in.05.wav",
-      "check": "checks/c6_iris.in.05.json"
     },
     {
       "audio_id": "c6_iris.recap.01",
@@ -965,21 +380,6 @@
       "check": "checks/c6_iris.takes.04.json"
     },
     {
-      "audio_id": "c6_jail.exit.01",
-      "reason": "asr_mismatch",
-      "speaker": "lyle_copy",
-      "identity": "lyle",
-      "voice_id": "CwhRBWXzGAHq8TQ4Fs17",
-      "line_ids": [
-        "c6_jail.exit.01"
-      ],
-      "expected": "Bus A. Twenty-nine past. They gave me a seat in the front row.",
-      "recognized": "Bus A, 29 passed. They gave me a seat in the front row.",
-      "word_edits": 1,
-      "wav": "masters/c6_jail.exit.01.wav",
-      "check": "checks/c6_jail.exit.01.json"
-    },
-    {
       "audio_id": "c6_jail.exit.lead.02",
       "reason": "asr_mismatch",
       "speaker": "lyle_copy",
@@ -995,36 +395,6 @@
       "check": "checks/c6_jail.exit.lead.02.json"
     },
     {
-      "audio_id": "c6_jail.mail.lead.02",
-      "reason": "short_asr_ambiguity",
-      "speaker": "steve",
-      "identity": "steve",
-      "voice_id": "vveagfomyMCJLZsOPRP2",
-      "line_ids": [
-        "c6_jail.mail.lead.02"
-      ],
-      "expected": "Where?",
-      "recognized": "Where?",
-      "word_edits": 0,
-      "wav": "masters/c6_jail.mail.lead.02.wav",
-      "check": "checks/c6_jail.mail.lead.02.json"
-    },
-    {
-      "audio_id": "c6_jail.mail.lead.03",
-      "reason": "short_asr_ambiguity",
-      "speaker": "pell",
-      "identity": "dale",
-      "voice_id": "kSSJYNGo5Kev6qgwVloV",
-      "line_ids": [
-        "c6_jail.mail.lead.03"
-      ],
-      "expected": "Correctly.",
-      "recognized": "correctly.",
-      "word_edits": 0,
-      "wav": "masters/c6_jail.mail.lead.03.wav",
-      "check": "checks/c6_jail.mail.lead.03.json"
-    },
-    {
       "audio_id": "c7_gate.out.01",
       "reason": "asr_mismatch",
       "speaker": "wen",
@@ -1034,40 +404,10 @@
         "c7_gate.out.01"
       ],
       "expected": "Lin Wen. I was the other side’s engineer at Sentinel Point, nine years ago. Helen wrote this? Where is she?",
-      "recognized": "Linwen, I was the other side's engineer at Sentinel Point nine years ago. Helen wrote this? Where is she?",
-      "word_edits": 2,
+      "recognized": "Ling Wen, I was the other side's engineer at Sentinel Point nine years ago. Helen wrote this? Where is she?",
+      "word_edits": 1,
       "wav": "masters/c7_gate.out.01.wav",
       "check": "checks/c7_gate.out.01.json"
-    },
-    {
-      "audio_id": "c7_gate.out.05",
-      "reason": "asr_mismatch",
-      "speaker": "stephen",
-      "identity": "steve",
-      "voice_id": "vveagfomyMCJLZsOPRP2",
-      "line_ids": [
-        "c7_gate.out.05"
-      ],
-      "expected": "So we watch the hatch. I’m very good at being looked at.",
-      "recognized": "So we watched the hatch. I'm very good at being looked at.",
-      "word_edits": 1,
-      "wav": "masters/c7_gate.out.05.wav",
-      "check": "checks/c7_gate.out.05.json"
-    },
-    {
-      "audio_id": "c7_gate.post.02",
-      "reason": "short_asr_ambiguity",
-      "speaker": "ward",
-      "identity": "ward",
-      "voice_id": "lVpo6IOLjDX4LxkYRZyj",
-      "line_ids": [
-        "c7_gate.post.02"
-      ],
-      "expected": "An increasingly rare achievement.",
-      "recognized": "an increasingly rare achievement.",
-      "word_edits": 0,
-      "wav": "masters/c7_gate.post.02.wav",
-      "check": "checks/c7_gate.post.02.json"
     },
     {
       "audio_id": "c7_gate.recap.01",
@@ -1079,40 +419,10 @@
         "c7_gate.recap.01"
       ],
       "expected": "We were in. Stephen as a loyal asset, Pell as the mail, and me at the sound desk with Dad’s tape of the ninth-night tone.",
-      "recognized": "We were in. Stephen as a loyal asset, Pell as the male, and me at the sound desk with Dad's tape of the Ninth Night Tone.",
-      "word_edits": 1,
+      "recognized": "We were in, Stephen as a loyal asset, Pel as the male, and me at the sound desk with Dad's tape of the ninth night tone.",
+      "word_edits": 2,
       "wav": "masters/c7_gate.recap.01.wav",
       "check": "checks/c7_gate.recap.01.json"
-    },
-    {
-      "audio_id": "c7_gate.truck.02",
-      "reason": "asr_mismatch",
-      "speaker": "shaw",
-      "identity": "shaw",
-      "voice_id": "lRGgBdmdfHYNiqPVpbiS",
-      "line_ids": [
-        "c7_gate.truck.02"
-      ],
-      "expected": "Evelyn Shaw. I ran the sound stage for Meridian, back when it had a budget. Stay off the cables.",
-      "recognized": "Evelyn Shaw. I ran the soundstage for Meridian, back when it had a budget. Stay off the cables.",
-      "word_edits": 2,
-      "wav": "masters/c7_gate.truck.02.wav",
-      "check": "checks/c7_gate.truck.02.json"
-    },
-    {
-      "audio_id": "c7_gate.truck.04",
-      "reason": "short_asr_ambiguity",
-      "speaker": "steve",
-      "identity": "steve",
-      "voice_id": "vveagfomyMCJLZsOPRP2",
-      "line_ids": [
-        "c7_gate.truck.04"
-      ],
-      "expected": "My dad.",
-      "recognized": "my dad.",
-      "word_edits": 0,
-      "wav": "masters/c7_gate.truck.04.wav",
-      "check": "checks/c7_gate.truck.04.json"
     },
     {
       "audio_id": "c7_gate.truck.find",
@@ -1154,14 +464,14 @@
         "c7_swap.in.01"
       ],
       "expected": "Your parents’ records are in good order, Mr. Mercer. So is mine. I have never been wrong on the record. Not on Tirel, and not here.",
-      "recognized": "Your parents' records are in good order, Mr Mercer. So is mine. I have never been wrong on the record. Not on Tyrell and not here.",
+      "recognized": "Your parents' records are in good order, Mr. Mercer. So is mine. I have never been wrong on the record, not on Tyrrell and not here.",
       "word_edits": 1,
       "wav": "masters/c7_swap.in.01.wav",
       "check": "checks/c7_swap.in.01.json"
     },
     {
       "audio_id": "c7_swap.in.02",
-      "reason": "short_asr_ambiguity",
+      "reason": "asr_mismatch",
       "speaker": "steve",
       "identity": "steve",
       "voice_id": "vveagfomyMCJLZsOPRP2",
@@ -1169,85 +479,10 @@
         "c7_swap.in.02"
       ],
       "expected": "What’s Tirel?",
-      "recognized": "What's Tirel?",
-      "word_edits": 0,
+      "recognized": "What's Tyrell?",
+      "word_edits": 1,
       "wav": "masters/c7_swap.in.02.wav",
       "check": "checks/c7_swap.in.02.json"
-    },
-    {
-      "audio_id": "c7_swap.in.03",
-      "reason": "short_asr_ambiguity",
-      "speaker": "steve",
-      "identity": "steve",
-      "voice_id": "vveagfomyMCJLZsOPRP2",
-      "line_ids": [
-        "c7_swap.in.03"
-      ],
-      "expected": "He didn’t answer.",
-      "recognized": "He didn't answer.",
-      "word_edits": 0,
-      "wav": "masters/c7_swap.in.03.wav",
-      "check": "checks/c7_swap.in.03.json"
-    },
-    {
-      "audio_id": "c7_swap.map.02",
-      "reason": "short_asr_ambiguity",
-      "speaker": "calder",
-      "identity": "calder",
-      "voice_id": "wa4sQVgbDDzUDEzJwch3",
-      "line_ids": [
-        "c7_swap.map.02"
-      ],
-      "expected": "We’re on it.",
-      "recognized": "We're on it.",
-      "word_edits": 0,
-      "wav": "masters/c7_swap.map.02.wav",
-      "check": "checks/c7_swap.map.02.json"
-    },
-    {
-      "audio_id": "c7_swap.recap.03",
-      "reason": "asr_mismatch",
-      "speaker": "steve",
-      "identity": "steve",
-      "voice_id": "vveagfomyMCJLZsOPRP2",
-      "line_ids": [
-        "c7_swap.recap.03"
-      ],
-      "expected": "Rook’s copy slipped away into the fog. Before he went, he asked me one thing.",
-      "recognized": "Rook's copy slicked away into the fog. Before he went, he asked me one thing.",
-      "word_edits": 1,
-      "wav": "masters/c7_swap.recap.03.wav",
-      "check": "checks/c7_swap.recap.03.json"
-    },
-    {
-      "audio_id": "c7_swap.tone.02",
-      "reason": "short_asr_ambiguity",
-      "speaker": "calder",
-      "identity": "calder",
-      "voice_id": "wa4sQVgbDDzUDEzJwch3",
-      "line_ids": [
-        "c7_swap.tone.02"
-      ],
-      "expected": "We have President Ward.",
-      "recognized": "We have President Ward.",
-      "word_edits": 0,
-      "wav": "masters/c7_swap.tone.02.wav",
-      "check": "checks/c7_swap.tone.02.json"
-    },
-    {
-      "audio_id": "c7_swap.tone.find",
-      "reason": "asr_mismatch",
-      "speaker": "steve",
-      "identity": "steve",
-      "voice_id": "vveagfomyMCJLZsOPRP2",
-      "line_ids": [
-        "c7_swap.tone.find"
-      ],
-      "expected": "At 11:58:15 Dad’s tone went out on every site speaker. Fourteen people stopped and turned toward the sea, the woman at the microphone among them. June and Iris had the real President.",
-      "recognized": "at 11 58 15 Dad's tone went out on every sight speaker. Fourteen people stopped and turned toward the sea. the woman at the microphone among them. June and Iris had the real president.",
-      "word_edits": 3,
-      "wav": "masters/c7_swap.tone.find.wav",
-      "check": "checks/c7_swap.tone.find.json"
     },
     {
       "audio_id": "c8_beach.ctx.01",
@@ -1259,25 +494,10 @@
         "c8_beach.ctx.01"
       ],
       "expected": "Dawn on the beach. Saren came alone, the way he said he would: taller than the doorframes on his ship, and perfectly still.",
-      "recognized": "Dawn on the Beach Saren came alone, the way he said he would, taller than the door frames on his ship, and perfectly still.",
+      "recognized": "Dawn on the beach. Saren came alone, the way he said he would, taller than the door frames on his ship and perfectly still.",
       "word_edits": 2,
       "wav": "masters/c8_beach.ctx.01.wav",
       "check": "checks/c8_beach.ctx.01.json"
-    },
-    {
-      "audio_id": "c8_beach.in.02",
-      "reason": "short_asr_ambiguity",
-      "speaker": "steve",
-      "identity": "steve",
-      "voice_id": "vveagfomyMCJLZsOPRP2",
-      "line_ids": [
-        "c8_beach.in.02"
-      ],
-      "expected": "I need a moment.",
-      "recognized": "I need a moment.",
-      "word_edits": 0,
-      "wav": "masters/c8_beach.in.02.wav",
-      "check": "checks/c8_beach.in.02.json"
     },
     {
       "audio_id": "c8_beach.out.01",
@@ -1289,7 +509,7 @@
         "c8_beach.out.01"
       ],
       "expected": "How many families on Tirel got a message like that?",
-      "recognized": "How many families on Tyrell got a message like that?",
+      "recognized": "How many families on Terrell got a message like that?",
       "word_edits": 1,
       "wav": "masters/c8_beach.out.01.wav",
       "check": "checks/c8_beach.out.01.json"
@@ -1304,29 +524,14 @@
         "c8_beach.second.find"
       ],
       "expected": "Saren’s message is Mom’s voicemail, cut and stitched: the same breath before ‘kiddo’, and a gap where ‘The bay is singing’ used to be. He has no message from her. He has my tape.",
-      "recognized": "Saren's message is mom's voicemail, cut and stitched, the same breath before kiddo, and a gap where the bae's singing used to be. He has no message from her. He has my tape.",
+      "recognized": "Seren's message is Mom's voicemail, cut and stitched, the same breath before kiddo, and a gap where the bay's singing used to be. He has no message from her. He has my tape.",
       "word_edits": 1,
       "wav": "masters/c8_beach.second.find.wav",
       "check": "checks/c8_beach.second.find.json"
     },
     {
-      "audio_id": "c8_lab.in.01",
-      "reason": "asr_mismatch",
-      "speaker": "wen",
-      "identity": "wen",
-      "voice_id": "OtI9u7gjScKYR7rOqBX2",
-      "line_ids": [
-        "c8_lab.in.01"
-      ],
-      "expected": "Your mother wrote ‘heard this before’ beside a drum beat that isn’t there. I want to know where she heard it.",
-      "recognized": "Your mother wrote, heard this before, beside a drumbeat that isn't there. I want to know where she heard it.",
-      "word_edits": 2,
-      "wav": "masters/c8_lab.in.01.wav",
-      "check": "checks/c8_lab.in.01.json"
-    },
-    {
       "audio_id": "c8_lab.in.04",
-      "reason": "asr_mismatch",
+      "reason": "short_asr_ambiguity",
       "speaker": "shaw",
       "identity": "shaw",
       "voice_id": "lRGgBdmdfHYNiqPVpbiS",
@@ -1334,85 +539,10 @@
         "c8_lab.in.04"
       ],
       "expected": "Mine fooled four generals.",
-      "recognized": "Mind fooled four generals.",
-      "word_edits": 1,
+      "recognized": "Mine fooled four generals.",
+      "word_edits": 0,
       "wav": "masters/c8_lab.in.04.wav",
       "check": "checks/c8_lab.in.04.json"
-    },
-    {
-      "audio_id": "c8_lab.in.05",
-      "reason": "asr_mismatch",
-      "speaker": "wen",
-      "identity": "wen",
-      "voice_id": "OtI9u7gjScKYR7rOqBX2",
-      "line_ids": [
-        "c8_lab.in.05"
-      ],
-      "expected": "Mine fooled six. And a premier.",
-      "recognized": "MindFold 6 and a Premier",
-      "word_edits": 2,
-      "wav": "masters/c8_lab.in.05.wav",
-      "check": "checks/c8_lab.in.05.json"
-    },
-    {
-      "audio_id": "c8_lab.lastpage.02",
-      "reason": "short_asr_ambiguity",
-      "speaker": "steve",
-      "identity": "steve",
-      "voice_id": "vveagfomyMCJLZsOPRP2",
-      "line_ids": [
-        "c8_lab.lastpage.02"
-      ],
-      "expected": "Then we keep listening.",
-      "recognized": "Then we keep listening.",
-      "word_edits": 0,
-      "wav": "masters/c8_lab.lastpage.02.wav",
-      "check": "checks/c8_lab.lastpage.02.json"
-    },
-    {
-      "audio_id": "c8_lab.lastpage.find",
-      "reason": "asr_mismatch",
-      "speaker": "steve",
-      "identity": "steve",
-      "voice_id": "vveagfomyMCJLZsOPRP2",
-      "line_ids": [
-        "c8_lab.lastpage.find"
-      ],
-      "expected": "Mom’s last page is Dad’s Reel 11: two joined tones rising, 220 to 330, a half-second gap, then a long 165, lower than both. Her margin says it repeats after the low note. It’s a language, and nobody on Earth can read it.",
-      "recognized": "Mom's last page is Dad's reel 11. Two joint tones rising. 220 to 330. A half-second gap, then a long 165. Lower than both. Her margin says it repeats after the low note. It's a language, and nobody on earth can read it.",
-      "word_edits": 1,
-      "wav": "masters/c8_lab.lastpage.find.wav",
-      "check": "checks/c8_lab.lastpage.find.json"
-    },
-    {
-      "audio_id": "c8_rig.out.02",
-      "reason": "short_asr_ambiguity",
-      "speaker": "steve",
-      "identity": "steve",
-      "voice_id": "vveagfomyMCJLZsOPRP2",
-      "line_ids": [
-        "c8_rig.out.02"
-      ],
-      "expected": "Frank.",
-      "recognized": "Frank",
-      "word_edits": 0,
-      "wav": "masters/c8_rig.out.02.wav",
-      "check": "checks/c8_rig.out.02.json"
-    },
-    {
-      "audio_id": "c9_choir.in.02",
-      "reason": "short_asr_ambiguity",
-      "speaker": "choir",
-      "identity": "choir",
-      "voice_id": "ksryVoNAGZT8GxWCTiVm",
-      "line_ids": [
-        "c9_choir.in.02"
-      ],
-      "expected": "Stop.",
-      "recognized": "Stop.",
-      "word_edits": 0,
-      "wav": "masters/c9_choir.in.02.wav",
-      "check": "checks/c9_choir.in.02.json"
     },
     {
       "audio_id": "c9_choir.recap.02",
@@ -1424,7 +554,7 @@
         "c9_choir.recap.02"
       ],
       "expected": "Tirel hid. All seven worlds hid. The Veyri have spent nine hundred years afraid of neighbors who were afraid of them.",
-      "recognized": "Tyrell hid. All seven worlds hid. The very have spent 900 years afraid of neighbors who were afraid of them.",
+      "recognized": "Tyrell hid. All seven worlds hid. The Vari have spent 900 years afraid of neighbors who were afraid of them.",
       "word_edits": 2,
       "wav": "masters/c9_choir.recap.02.wav",
       "check": "checks/c9_choir.recap.02.json"
@@ -1454,7 +584,7 @@
         "c9_choir.wick.find"
       ],
       "expected": "Page 12: two joined strokes rising, a gap, one long low stroke, and then it starts again. Mom followed Wick from phrase to phrase. Tirel was never destroyed. It hid. They all hid.",
-      "recognized": "Page 12. Two joined strokes rising. A gap. One long, low stroke. And then it starts again. Mom followed Wick from phrase to phrase. Tyrell was never destroyed. It hid. They all hid.",
+      "recognized": "Page 12. Two joined strokes rising, a gap, one long low stroke, and then it starts again. Mom followed Wick from phrase to phrase. Terrell was never destroyed. It hid. They all hid.",
       "word_edits": 1,
       "wav": "masters/c9_choir.wick.find.wav",
       "check": "checks/c9_choir.wick.find.json"
@@ -1469,8 +599,8 @@
         "c9_choir.wick.lead.02"
       ],
       "expected": "Row Zero holds one who is not human. We took it from Tirel. We call it Wick. It has not stopped dreaming.",
-      "recognized": "Row Zero holds one who is not human. We took it from Tyrell. We call it Wick. It has not stopped dreaming.",
-      "word_edits": 1,
+      "recognized": "Row zero holds one who is not human. We took it from Tyrell. We call it Wyck. It has not stopped dreaming.",
+      "word_edits": 2,
       "wav": "masters/c9_choir.wick.lead.02.wav",
       "check": "checks/c9_choir.wick.lead.02.json"
     },
@@ -1484,160 +614,10 @@
         "c9_gallery.antenna.find"
       ],
       "expected": "Stephen’s pass opened the inner pad. June saw the lamp light from the deck and called it in, and Stephen went on alone to the antenna with the rig. I stayed where I promised.",
-      "recognized": "Steven's pass opened the inner pad. June saw the lamplight from the deck and called it in, and Steven went on alone to the antenna with the rig. I stayed where I promised.",
+      "recognized": "Stephen's pass opened the inner pad. June saw the lamplight from the deck and called it in, and Stephen went on alone to the antenna with the rig. I stayed where I promised.",
       "word_edits": 2,
       "wav": "masters/c9_gallery.antenna.find.wav",
       "check": "checks/c9_gallery.antenna.find.json"
-    },
-    {
-      "audio_id": "c9_gallery.out.05",
-      "reason": "short_asr_ambiguity",
-      "speaker": "nora",
-      "identity": "nora",
-      "voice_id": "m8AHWg36LJTQWKmfeGVv",
-      "line_ids": [
-        "c9_gallery.out.05"
-      ],
-      "expected": "Good. Witnesses.",
-      "recognized": "Good witnesses.",
-      "word_edits": 0,
-      "wav": "masters/c9_gallery.out.05.wav",
-      "check": "checks/c9_gallery.out.05.json"
-    },
-    {
-      "audio_id": "c9_wake.agnes.find",
-      "reason": "asr_mismatch",
-      "speaker": "steve",
-      "identity": "steve",
-      "voice_id": "vveagfomyMCJLZsOPRP2",
-      "line_ids": [
-        "c9_wake.agnes.find"
-      ],
-      "expected": "Mrs. Penhallow’s glasses, from the middle tray. Her bed tag says she’s been asleep in here for three years. So who has been selling me bait?",
-      "recognized": "This is Penhallow's glasses from the middle tray. Her bed tag says she's been asleep in here for three years. So who has been selling me bait?",
-      "word_edits": 2,
-      "wav": "masters/c9_wake.agnes.find.wav",
-      "check": "checks/c9_wake.agnes.find.json"
-    },
-    {
-      "audio_id": "c9_wake.frank.02",
-      "reason": "short_asr_ambiguity",
-      "speaker": "steve",
-      "identity": "steve",
-      "voice_id": "vveagfomyMCJLZsOPRP2",
-      "line_ids": [
-        "c9_wake.frank.02"
-      ],
-      "expected": "Right here, Dad.",
-      "recognized": "Right here, Dad.",
-      "word_edits": 0,
-      "wav": "masters/c9_wake.frank.02.wav",
-      "check": "checks/c9_wake.frank.02.json"
-    },
-    {
-      "audio_id": "c9_wake.frank.lead.01",
-      "reason": "short_asr_ambiguity",
-      "speaker": "steve",
-      "identity": "steve",
-      "voice_id": "vveagfomyMCJLZsOPRP2",
-      "line_ids": [
-        "c9_wake.frank.lead.01"
-      ],
-      "expected": "Dad. It’s Steve.",
-      "recognized": "Dad, it's Steve.",
-      "word_edits": 0,
-      "wav": "masters/c9_wake.frank.lead.01.wav",
-      "check": "checks/c9_wake.frank.lead.01.json"
-    },
-    {
-      "audio_id": "c9_wake.helen.02",
-      "reason": "short_asr_ambiguity",
-      "speaker": "helen",
-      "identity": "helen",
-      "voice_id": "5u41aNhyCU6hXOcjPPv0",
-      "line_ids": [
-        "c9_wake.helen.02"
-      ],
-      "expected": "Steven. Oh, my boy.",
-      "recognized": "Stephen. Oh my boy.",
-      "word_edits": 0,
-      "wav": "masters/c9_wake.helen.02.wav",
-      "check": "checks/c9_wake.helen.02.json"
-    },
-    {
-      "audio_id": "epilogue.bait.01",
-      "reason": "short_asr_ambiguity",
-      "speaker": "agnes_original",
-      "identity": "agnes",
-      "voice_id": "jVMsZEw3hfmEAe9OUUtS",
-      "line_ids": [
-        "epilogue.bait.01"
-      ],
-      "expected": "That price is robbery.",
-      "recognized": "That price is robbery.",
-      "word_edits": 0,
-      "wav": "masters/epilogue.bait.01.wav",
-      "check": "checks/epilogue.bait.01.json"
-    },
-    {
-      "audio_id": "epilogue.bait.03",
-      "reason": "short_asr_ambiguity",
-      "speaker": "rook",
-      "identity": "rook",
-      "voice_id": "iPYqcpY8j8Ap4jUf28I3",
-      "line_ids": [
-        "epilogue.bait.03"
-      ],
-      "expected": "Look after yourself.",
-      "recognized": "Look after yourself.",
-      "word_edits": 0,
-      "wav": "masters/epilogue.bait.03.wav",
-      "check": "checks/epilogue.bait.03.json"
-    },
-    {
-      "audio_id": "epilogue.bait.find",
-      "reason": "asr_mismatch",
-      "speaker": "steve",
-      "identity": "steve",
-      "voice_id": "vveagfomyMCJLZsOPRP2",
-      "line_ids": [
-        "epilogue.bait.find"
-      ],
-      "expected": "Two Mrs. Penhallows, one counter, and people are finally buying bait. One Adrian Rook stays. The other one leaves with the ship, to find out who he is.",
-      "recognized": "Two misses Penhallows, one counter, and people are finally buying bait. One Adrian Rook stays. The other one leaves with the ship to find out who he is.",
-      "word_edits": 1,
-      "wav": "masters/epilogue.bait.find.wav",
-      "check": "checks/epilogue.bait.find.json"
-    },
-    {
-      "audio_id": "epilogue.out.02",
-      "reason": "short_asr_ambiguity",
-      "speaker": "nora",
-      "identity": "nora",
-      "voice_id": "m8AHWg36LJTQWKmfeGVv",
-      "line_ids": [
-        "epilogue.out.02"
-      ],
-      "expected": "And an actual conversation.",
-      "recognized": "and an actual conversation.",
-      "word_edits": 0,
-      "wav": "masters/epilogue.out.02.wav",
-      "check": "checks/epilogue.out.02.json"
-    },
-    {
-      "audio_id": "epilogue.out.03",
-      "reason": "short_asr_ambiguity",
-      "speaker": "steve",
-      "identity": "steve",
-      "voice_id": "vveagfomyMCJLZsOPRP2",
-      "line_ids": [
-        "epilogue.out.03"
-      ],
-      "expected": "Every day.",
-      "recognized": "every day.",
-      "word_edits": 0,
-      "wav": "masters/epilogue.out.03.wav",
-      "check": "checks/epilogue.out.03.json"
     },
     {
       "audio_id": "i1_archive.quiet.04",
@@ -1649,55 +629,10 @@
         "i1_archive.quiet.04"
       ],
       "expected": "Tirel went quiet. So did six others. Not one body, in any survey.",
-      "recognized": "Tyrell went quiet. So did six others. Not one body in any survey.",
+      "recognized": "Tyril went quiet. So did six others. Not one body in any survey.",
       "word_edits": 1,
       "wav": "masters/i1_archive.quiet.04.wav",
       "check": "checks/i1_archive.quiet.04.json"
-    },
-    {
-      "audio_id": "one_year.in.03",
-      "reason": "short_asr_ambiguity",
-      "speaker": "steve",
-      "identity": "steve",
-      "voice_id": "vveagfomyMCJLZsOPRP2",
-      "line_ids": [
-        "one_year.in.03"
-      ],
-      "expected": "We did that yesterday.",
-      "recognized": "We did that yesterday.",
-      "word_edits": 0,
-      "wav": "masters/one_year.in.03.wav",
-      "check": "checks/one_year.in.03.json"
-    },
-    {
-      "audio_id": "one_year.newwind.02",
-      "reason": "short_asr_ambiguity",
-      "speaker": "steve",
-      "identity": "steve",
-      "voice_id": "vveagfomyMCJLZsOPRP2",
-      "line_ids": [
-        "one_year.newwind.02"
-      ],
-      "expected": "Ready? We’re on.",
-      "recognized": "Ready? We're on.",
-      "word_edits": 0,
-      "wav": "masters/one_year.newwind.02.wav",
-      "check": "checks/one_year.newwind.02.json"
-    },
-    {
-      "audio_id": "one_year.out.01",
-      "reason": "short_asr_ambiguity",
-      "speaker": "steve",
-      "identity": "steve",
-      "voice_id": "vveagfomyMCJLZsOPRP2",
-      "line_ids": [
-        "one_year.out.01"
-      ],
-      "expected": "Good morning, Bellwether.",
-      "recognized": "Good morning, Bellwether.",
-      "word_edits": 0,
-      "wav": "masters/one_year.out.01.wav",
-      "check": "checks/one_year.out.01.json"
     },
     {
       "audio_id": "p_bay.tune.find",
@@ -1709,8 +644,8 @@
         "p_bay.tune.find"
       ],
       "expected": "K7BLW log, eleven-oh-four. Eight-fifteen, narrow band. Not one tone. Several, holding the same note.",
-      "recognized": "K7BLW log 1104, 815, narrow band. Not one tone, several holding the same note.",
-      "word_edits": 2,
+      "recognized": "K7BLW log, 11:04, 815 narrowband. Not one tone, several holding the same note.",
+      "word_edits": 4,
       "wav": "masters/p_bay.tune.find.wav",
       "check": "checks/p_bay.tune.find.json"
     },
@@ -1724,87 +659,10 @@
         "p_meeting.terms.find"
       ],
       "expected": "He said biaoyan, a performance, as on a stage. I translated it exactly and noted that he chose it. The American heard the word and did not argue.",
-      "recognized": "He said, a performance, as on a stage. I translated it exactly and noted that he chose it. The American heard the word and did not argue.",
-      "word_edits": 1,
+      "recognized": "He said, \"biao yan,\" a performance, as on a stage. I translated it exactly and noted that he chose it. The American heard the word and did not argue.",
+      "word_edits": 2,
       "wav": "masters/p_meeting.terms.find.wav",
       "check": "checks/p_meeting.terms.find.json"
-    },
-    {
-      "audio_id": "p_meeting.terms.lead.01",
-      "reason": "short_asr_ambiguity",
-      "speaker": "general_cn",
-      "identity": "general_cn",
-      "voice_id": "RBUtdrDRjER5aScqHwAS",
-      "line_ids": [
-        "p_meeting.terms.lead.01"
-      ],
-      "expected": "比较我们的表演。",
-      "recognized": "比较我们的表演。",
-      "word_edits": 0,
-      "wav": "masters/p_meeting.terms.lead.01.wav",
-      "check": "checks/p_meeting.terms.lead.01.json"
-    },
-    {
-      "audio_id": "p_veyr.in.02",
-      "reason": "short_asr_ambiguity",
-      "speaker": "archivist",
-      "identity": "archivist",
-      "voice_id": "6HXfTcSnxaoT6uM4pTRP",
-      "line_ids": [
-        "p_veyr.in.02"
-      ],
-      "expected": "One recording remains.",
-      "recognized": "One recording remains.",
-      "word_edits": 0,
-      "wav": "masters/p_veyr.in.02.wav",
-      "check": "checks/p_veyr.in.02.json"
-    },
-    {
-      "audio_id": "recording.greeting",
-      "reason": "short_asr_ambiguity",
-      "speaker": "iris",
-      "identity": "nora",
-      "voice_id": "m8AHWg36LJTQWKmfeGVv",
-      "line_ids": [
-        "c1_flat.in.04",
-        "c1_flat.sunday.01"
-      ],
-      "expected": "Good morning, sleepyhead.",
-      "recognized": "Good morning, sleepyhead.",
-      "word_edits": 0,
-      "wav": "masters/recording.greeting.wav",
-      "check": "checks/recording.greeting.json"
-    },
-    {
-      "audio_id": "recording.rook",
-      "reason": "short_asr_ambiguity",
-      "speaker": "rook_copy",
-      "identity": "rook",
-      "voice_id": "iPYqcpY8j8Ap4jUf28I3",
-      "line_ids": [
-        "c3_archive.out.02",
-        "c4_safe.record.01"
-      ],
-      "expected": "Sit tight, June.",
-      "recognized": "Sit tight, June.",
-      "word_edits": 0,
-      "wav": "masters/recording.rook.wav",
-      "check": "checks/recording.rook.json"
-    },
-    {
-      "audio_id": "recording.saren_splice",
-      "reason": "asr_mismatch",
-      "speaker": "helen",
-      "identity": "helen",
-      "voice_id": "5u41aNhyCU6hXOcjPPv0",
-      "line_ids": [
-        "c8_beach.second.lead.01"
-      ],
-      "expected": "Come out with us, kiddo. Tonight.",
-      "recognized": "Come out with us, kiddo.",
-      "word_edits": 1,
-      "wav": "masters/recording.saren_splice.wav",
-      "check": "checks/recording.saren_splice.json"
     }
   ]
 }

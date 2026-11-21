@@ -3,9 +3,9 @@
   "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
   "wav_sha256": "8bd889ac731abbcb3e8cdff58e66bd6eb2063c446acf97720587f699e3762cec",
   "expected": "I called Orchard. When a fresh Pier flash answered Orchard’s change, I released Shaw’s lights. A reply, made live, that nobody could have recorded.",
-  "recognized": "I called Orchard. When a fresh peer flash answered Orchard's change, I released Shaw's lights. A reply, made live, that nobody could have recorded.",
+  "recognized": "I called Orchard. When a fresh peer flash answered Orchard's change, I released Shaw's lights, a reply made live that nobody could have recorded.",
   "word_edits": 1,
-  "word_error_rate": 0.041666666666666664,
+  "word_error_rate": 0.038461538461538464,
   "listening_review_required": true,
   "seconds": 9.92,
   "sample_rate": 48000,
@@ -15,5 +15,13 @@
   "recognition_pass": "independent",
   "asr_revision": 2,
   "transcript_comparison": "strict normalized English spoken forms",
-  "independent_phrase_transcription": "I called Orchard. When a fresh peer flash answered Orchard's change, I released Shaw's lights. A reply made live. that nobody could have recorded."
+  "independent_phrase_transcription": "I called Orchard. When a fresh peer flash answered Orchard's change, I released Shaw's lights. A reply made live. that nobody could have recorded.",
+  "local_recognized": "I called Orchard. When a fresh peer flash answered Orchard's change, I released Shaw's lights. A reply, made live, that nobody could have recorded.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c10_live.first.find.json",
+    "sha256": "99229f996c38c85f104711a263b23fabf23f9f98c093b2c27b6922c3d2b27a6b",
+    "model": "scribe_v3",
+    "word_edits": 1,
+    "listening_reviewed": false
+  }
 }

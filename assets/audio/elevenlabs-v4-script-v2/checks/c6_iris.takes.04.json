@@ -15,5 +15,13 @@
   "recognition_pass": "independent",
   "asr_revision": 2,
   "transcript_comparison": "strict normalized English spoken forms",
-  "independent_phrase_transcription": "Before I was Nora. I was a junior crew member with a duty and a record. We call ourselves very. None of us had ever had a self."
+  "independent_phrase_transcription": "Before I was Nora. I was a junior crew member with a duty and a record. We call ourselves very. None of us had ever had a self.",
+  "local_recognized": "Before I was Nora, I was a junior crew member with a duty and a record. We call ourselves very. None of us had ever had a self.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c6_iris.takes.04.json",
+    "sha256": "723e5f605afa35f50c80bc15060347b83982ba73a75a21ead564df45b47bc33b",
+    "model": "scribe_v3",
+    "word_edits": 1,
+    "listening_reviewed": false
+  }
 }

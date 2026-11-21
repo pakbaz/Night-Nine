@@ -3,7 +3,7 @@
   "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
   "wav_sha256": "2fb0329f165d90906f8021f1afed917b3e18ee422f8d9166eeaa581f7788645f",
   "expected": "Frank.",
-  "recognized": "Frank",
+  "recognized": "Frank.",
   "word_edits": 0,
   "word_error_rate": 0.0,
   "listening_review_required": true,
@@ -14,5 +14,13 @@
   "first_recognition": "Frank",
   "recognition_pass": "independent",
   "asr_revision": 2,
-  "transcript_comparison": "strict normalized English spoken forms"
+  "transcript_comparison": "strict normalized English spoken forms",
+  "local_recognized": "Frank",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c8_rig.out.02.json",
+    "sha256": "ef0e03c2e2459013a9f72927fe1342841b837ad2b164b5f1c1bc0690cba8d6bd",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  }
 }

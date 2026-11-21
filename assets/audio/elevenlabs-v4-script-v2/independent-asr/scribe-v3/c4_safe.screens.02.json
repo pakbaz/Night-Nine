@@ -1,0 +1,95 @@
+{
+  "audio_id": "c4_safe.screens.02",
+  "audio_sha256": "f28662215451ce374eb26d752260a2e048b75f30fef3d0ef1d15bc3328eda179",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/c4_safe.screens.02.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Walt Prior. From June’s list.",
+  "recognized": "Walt Pryor, from June's list.",
+  "word_edits": 1,
+  "request_id": null,
+  "trace_id": "f93eb20628f4a1bc879a1fb20886c25e",
+  "character_cost": "1",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Walt Pryor, from June's list.",
+    "words": [
+      {
+        "text": "Walt",
+        "start": 0.1,
+        "end": 0.32,
+        "type": "word",
+        "logprob": -0.0024479443673044443
+      },
+      {
+        "text": " ",
+        "start": 0.32,
+        "end": 0.48,
+        "type": "spacing",
+        "logprob": -0.2355475127696991
+      },
+      {
+        "text": "Pryor,",
+        "start": 0.48,
+        "end": 0.94,
+        "type": "word",
+        "logprob": -0.28372784952322644
+      },
+      {
+        "text": " ",
+        "start": 0.94,
+        "end": 1.34,
+        "type": "spacing",
+        "logprob": -2.95634672511369e-05
+      },
+      {
+        "text": "from",
+        "start": 1.34,
+        "end": 1.46,
+        "type": "word",
+        "logprob": -2.95634672511369e-05
+      },
+      {
+        "text": " ",
+        "start": 1.46,
+        "end": 1.58,
+        "type": "spacing",
+        "logprob": -0.0005523824947886169
+      },
+      {
+        "text": "June's",
+        "start": 1.58,
+        "end": 1.9,
+        "type": "word",
+        "logprob": -0.00037026167744140065
+      },
+      {
+        "text": " ",
+        "start": 1.9,
+        "end": 1.96,
+        "type": "spacing",
+        "logprob": -0.014384973794221878
+      },
+      {
+        "text": "list.",
+        "start": 1.96,
+        "end": 2.36,
+        "type": "word",
+        "logprob": -0.011518540699762525
+      }
+    ],
+    "transcription_id": "fjoSdcqDHDLvG2snNFUm",
+    "audio_duration_secs": 2.64
+  },
+  "listening_reviewed": false
+}

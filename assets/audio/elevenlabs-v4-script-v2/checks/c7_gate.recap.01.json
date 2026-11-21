@@ -3,9 +3,9 @@
   "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
   "wav_sha256": "7d20771efe3282b60cfa4aa050dcd0620748232d3b0ec28e931a547cc96211cf",
   "expected": "We were in. Stephen as a loyal asset, Pell as the mail, and me at the sound desk with Dad’s tape of the ninth-night tone.",
-  "recognized": "We were in. Stephen as a loyal asset, Pell as the male, and me at the sound desk with Dad's tape of the Ninth Night Tone.",
-  "word_edits": 1,
-  "word_error_rate": 0.038461538461538464,
+  "recognized": "We were in, Stephen as a loyal asset, Pel as the male, and me at the sound desk with Dad's tape of the ninth night tone.",
+  "word_edits": 2,
+  "word_error_rate": 0.07407407407407407,
   "listening_review_required": true,
   "seconds": 8.8,
   "sample_rate": 48000,
@@ -15,5 +15,13 @@
   "recognition_pass": "independent",
   "asr_revision": 2,
   "transcript_comparison": "strict normalized English spoken forms",
-  "independent_phrase_transcription": "we were in. Steven as a loyal asset, Pell as the male, and me at the sound desk with Dad's tape of the Ninth Night Tone."
+  "independent_phrase_transcription": "we were in. Steven as a loyal asset, Pell as the male, and me at the sound desk with Dad's tape of the Ninth Night Tone.",
+  "local_recognized": "We were in. Stephen as a loyal asset, Pell as the male, and me at the sound desk with Dad's tape of the Ninth Night Tone.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c7_gate.recap.01.json",
+    "sha256": "4c468562397130c0fb5fe65fe562f0c95d7e6ddf8fc26349bd8bcf94203844f3",
+    "model": "scribe_v3",
+    "word_edits": 2,
+    "listening_reviewed": false
+  }
 }

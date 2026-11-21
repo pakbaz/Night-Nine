@@ -14,5 +14,13 @@
   "first_recognition": "correctly.",
   "recognition_pass": "independent",
   "asr_revision": 2,
-  "transcript_comparison": "strict normalized English spoken forms"
+  "transcript_comparison": "strict normalized English spoken forms",
+  "local_recognized": "correctly.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c6_jail.mail.lead.03.json",
+    "sha256": "0525b1932185a7f155b1d7bf3ff4ea112c1196b6165163a1d3fb2ed1f3fa2025",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  }
 }

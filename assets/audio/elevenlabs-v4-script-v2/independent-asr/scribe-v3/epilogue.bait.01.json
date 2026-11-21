@@ -1,0 +1,81 @@
+{
+  "audio_id": "epilogue.bait.01",
+  "audio_sha256": "3ba60a6f7d275e4c8d25fd106c191704d3e0337cfb58ce010045711898e92771",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/epilogue.bait.01.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "That price is robbery.",
+  "recognized": "That price is robbery.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "15ce4067da8f05b4b9c583ed2175c587",
+  "character_cost": "1",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "That price is robbery.",
+    "words": [
+      {
+        "text": "That",
+        "start": 0.06,
+        "end": 0.26,
+        "type": "word",
+        "logprob": -0.0004469349514693022
+      },
+      {
+        "text": " ",
+        "start": 0.26,
+        "end": 0.32,
+        "type": "spacing",
+        "logprob": -5.435795901576057e-05
+      },
+      {
+        "text": "price",
+        "start": 0.32,
+        "end": 0.62,
+        "type": "word",
+        "logprob": -5.435795901576057e-05
+      },
+      {
+        "text": " ",
+        "start": 0.62,
+        "end": 0.66,
+        "type": "spacing",
+        "logprob": -7.152555099310121e-07
+      },
+      {
+        "text": "is",
+        "start": 0.66,
+        "end": 0.78,
+        "type": "word",
+        "logprob": -7.152555099310121e-07
+      },
+      {
+        "text": " ",
+        "start": 0.78,
+        "end": 0.98,
+        "type": "spacing",
+        "logprob": -0.0001954841281985864
+      },
+      {
+        "text": "robbery.",
+        "start": 0.98,
+        "end": 1.54,
+        "type": "word",
+        "logprob": -0.0001876325040939264
+      }
+    ],
+    "transcription_id": "uh83LHFu0k7m8F9Vfuzc",
+    "audio_duration_secs": 1.92
+  },
+  "listening_reviewed": false
+}

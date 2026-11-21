@@ -1,0 +1,67 @@
+{
+  "audio_id": "c7_swap.in.03",
+  "audio_sha256": "93cde8d40f094b98418f49589715a243794fdbe234f7699c1111a141e51f2408",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/c7_swap.in.03.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "He didn’t answer.",
+  "recognized": "He didn't answer.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "18a0e1a87b4c8cb27b51fd1d3e7f57f6",
+  "character_cost": "0",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "He didn't answer.",
+    "words": [
+      {
+        "text": "He",
+        "start": 0.08,
+        "end": 0.18,
+        "type": "word",
+        "logprob": -3.6954811548639555e-06
+      },
+      {
+        "text": " ",
+        "start": 0.18,
+        "end": 0.2,
+        "type": "spacing",
+        "logprob": -5.125986263010418e-06
+      },
+      {
+        "text": "didn't",
+        "start": 0.2,
+        "end": 0.44,
+        "type": "word",
+        "logprob": -0.00022613087412537425
+      },
+      {
+        "text": " ",
+        "start": 0.44,
+        "end": 0.54,
+        "type": "spacing",
+        "logprob": -2.8132995794294402e-05
+      },
+      {
+        "text": "answer.",
+        "start": 0.54,
+        "end": 0.96,
+        "type": "word",
+        "logprob": -2.6634399026599048e-05
+      }
+    ],
+    "transcription_id": "kPKzpFP8s6e4S78Kri6p",
+    "audio_duration_secs": 1.28
+  },
+  "listening_reviewed": false
+}

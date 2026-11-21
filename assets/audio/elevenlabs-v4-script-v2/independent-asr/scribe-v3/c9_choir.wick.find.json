@@ -1,0 +1,487 @@
+{
+  "audio_id": "c9_choir.wick.find",
+  "audio_sha256": "5e001bad8c20b736feed3b6116cea700a97ffbbd1e1b7680662bd6282146fb16",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/c9_choir.wick.find.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Page 12: two joined strokes rising, a gap, one long low stroke, and then it starts again. Mom followed Wick from phrase to phrase. Tirel was never destroyed. It hid. They all hid.",
+  "recognized": "Page 12. Two joined strokes rising, a gap, one long low stroke, and then it starts again. Mom followed Wick from phrase to phrase. Terrell was never destroyed. It hid. They all hid.",
+  "word_edits": 1,
+  "request_id": null,
+  "trace_id": "796dfdfdbb2095a23ea39ebe3a0c3d34",
+  "character_cost": "5",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Page 12. Two joined strokes rising, a gap, one long low stroke, and then it starts again. Mom followed Wick from phrase to phrase. Terrell was never destroyed. It hid. They all hid.",
+    "words": [
+      {
+        "text": "Page",
+        "start": 0.06,
+        "end": 0.32,
+        "type": "word",
+        "logprob": -0.00013863079948350787
+      },
+      {
+        "text": " ",
+        "start": 0.32,
+        "end": 0.42,
+        "type": "spacing",
+        "logprob": -0.00030119650182314217
+      },
+      {
+        "text": "12.",
+        "start": 0.42,
+        "end": 0.94,
+        "type": "word",
+        "logprob": -0.0006048033454438458
+      },
+      {
+        "text": " ",
+        "start": 0.94,
+        "end": 1.28,
+        "type": "spacing",
+        "logprob": -0.00016366096679121256
+      },
+      {
+        "text": "Two",
+        "start": 1.28,
+        "end": 1.52,
+        "type": "word",
+        "logprob": -0.00016366096679121256
+      },
+      {
+        "text": " ",
+        "start": 1.52,
+        "end": 1.68,
+        "type": "spacing",
+        "logprob": -0.007789828814566135
+      },
+      {
+        "text": "joined",
+        "start": 1.68,
+        "end": 1.96,
+        "type": "word",
+        "logprob": -0.007789828814566135
+      },
+      {
+        "text": " ",
+        "start": 1.96,
+        "end": 2.04,
+        "type": "spacing",
+        "logprob": -2.52720492426306e-05
+      },
+      {
+        "text": "strokes",
+        "start": 2.12,
+        "end": 2.48,
+        "type": "word",
+        "logprob": -2.52720492426306e-05
+      },
+      {
+        "text": " ",
+        "start": 2.48,
+        "end": 2.6,
+        "type": "spacing",
+        "logprob": -3.194758028257638e-05
+      },
+      {
+        "text": "rising,",
+        "start": 2.6,
+        "end": 3.14,
+        "type": "word",
+        "logprob": -0.000987226704767506
+      },
+      {
+        "text": " ",
+        "start": 3.14,
+        "end": 3.44,
+        "type": "spacing",
+        "logprob": -9.536738616588991e-07
+      },
+      {
+        "text": "a",
+        "start": 3.46,
+        "end": 3.52,
+        "type": "word",
+        "logprob": -9.536738616588991e-07
+      },
+      {
+        "text": " ",
+        "start": 3.52,
+        "end": 3.58,
+        "type": "spacing",
+        "logprob": -1.3470558769768104e-05
+      },
+      {
+        "text": "gap,",
+        "start": 3.58,
+        "end": 3.92,
+        "type": "word",
+        "logprob": -0.003551758524736215
+      },
+      {
+        "text": " ",
+        "start": 3.92,
+        "end": 4.28,
+        "type": "spacing",
+        "logprob": -1.2993727978027891e-05
+      },
+      {
+        "text": "one",
+        "start": 4.28,
+        "end": 4.54,
+        "type": "word",
+        "logprob": -1.2993727978027891e-05
+      },
+      {
+        "text": " ",
+        "start": 4.54,
+        "end": 4.74,
+        "type": "spacing",
+        "logprob": -2.1576648578047752e-05
+      },
+      {
+        "text": "long",
+        "start": 4.74,
+        "end": 5.18,
+        "type": "word",
+        "logprob": -2.1576648578047752e-05
+      },
+      {
+        "text": " ",
+        "start": 5.18,
+        "end": 5.38,
+        "type": "spacing",
+        "logprob": -0.14273875951766968
+      },
+      {
+        "text": "low",
+        "start": 5.38,
+        "end": 5.6,
+        "type": "word",
+        "logprob": -0.14273875951766968
+      },
+      {
+        "text": " ",
+        "start": 5.6,
+        "end": 5.82,
+        "type": "spacing",
+        "logprob": -3.0874729418428615e-05
+      },
+      {
+        "text": "stroke,",
+        "start": 5.82,
+        "end": 6.22,
+        "type": "word",
+        "logprob": -0.0001142092005466111
+      },
+      {
+        "text": " ",
+        "start": 6.22,
+        "end": 6.54,
+        "type": "spacing",
+        "logprob": -2.9802276912960224e-06
+      },
+      {
+        "text": "and",
+        "start": 6.54,
+        "end": 6.68,
+        "type": "word",
+        "logprob": -2.9802276912960224e-06
+      },
+      {
+        "text": " ",
+        "start": 6.68,
+        "end": 6.74,
+        "type": "spacing",
+        "logprob": -3.933898824470816e-06
+      },
+      {
+        "text": "then",
+        "start": 6.74,
+        "end": 6.96,
+        "type": "word",
+        "logprob": -3.933898824470816e-06
+      },
+      {
+        "text": " ",
+        "start": 6.96,
+        "end": 7.24,
+        "type": "spacing",
+        "logprob": -6.437280717364047e-06
+      },
+      {
+        "text": "it",
+        "start": 7.24,
+        "end": 7.34,
+        "type": "word",
+        "logprob": -6.437280717364047e-06
+      },
+      {
+        "text": " ",
+        "start": 7.34,
+        "end": 7.42,
+        "type": "spacing",
+        "logprob": -6.079655122448457e-06
+      },
+      {
+        "text": "starts",
+        "start": 7.42,
+        "end": 7.68,
+        "type": "word",
+        "logprob": -6.079655122448457e-06
+      },
+      {
+        "text": " ",
+        "start": 7.68,
+        "end": 7.74,
+        "type": "spacing",
+        "logprob": -3.933898824470816e-06
+      },
+      {
+        "text": "again.",
+        "start": 7.74,
+        "end": 8.16,
+        "type": "word",
+        "logprob": -1.8893934717804466e-05
+      },
+      {
+        "text": " ",
+        "start": 8.16,
+        "end": 8.58,
+        "type": "spacing",
+        "logprob": -0.001437702914699912
+      },
+      {
+        "text": "Mom",
+        "start": 8.58,
+        "end": 8.82,
+        "type": "word",
+        "logprob": -0.001437702914699912
+      },
+      {
+        "text": " ",
+        "start": 8.82,
+        "end": 8.98,
+        "type": "spacing",
+        "logprob": -1.8954096958623268e-05
+      },
+      {
+        "text": "followed",
+        "start": 8.98,
+        "end": 9.3,
+        "type": "word",
+        "logprob": -1.8954096958623268e-05
+      },
+      {
+        "text": " ",
+        "start": 9.3,
+        "end": 9.4,
+        "type": "spacing",
+        "logprob": -0.07052852213382721
+      },
+      {
+        "text": "Wick",
+        "start": 9.4,
+        "end": 9.66,
+        "type": "word",
+        "logprob": -0.07052852213382721
+      },
+      {
+        "text": " ",
+        "start": 9.66,
+        "end": 9.78,
+        "type": "spacing",
+        "logprob": -1.5139465176616795e-05
+      },
+      {
+        "text": "from",
+        "start": 9.78,
+        "end": 9.92,
+        "type": "word",
+        "logprob": -1.5139465176616795e-05
+      },
+      {
+        "text": " ",
+        "start": 9.92,
+        "end": 10.04,
+        "type": "spacing",
+        "logprob": -1.0490362910786644e-05
+      },
+      {
+        "text": "phrase",
+        "start": 10.04,
+        "end": 10.5,
+        "type": "word",
+        "logprob": -1.0490362910786644e-05
+      },
+      {
+        "text": " ",
+        "start": 10.5,
+        "end": 10.54,
+        "type": "spacing",
+        "logprob": -2.3841855067985307e-07
+      },
+      {
+        "text": "to",
+        "start": 10.54,
+        "end": 10.66,
+        "type": "word",
+        "logprob": -2.3841855067985307e-07
+      },
+      {
+        "text": " ",
+        "start": 10.66,
+        "end": 10.7,
+        "type": "spacing",
+        "logprob": -1.3947389561508317e-05
+      },
+      {
+        "text": "phrase.",
+        "start": 10.7,
+        "end": 11.24,
+        "type": "word",
+        "logprob": -2.312608220173778e-05
+      },
+      {
+        "text": " ",
+        "start": 11.24,
+        "end": 11.24,
+        "type": "spacing",
+        "logprob": -0.2693490982055664
+      },
+      {
+        "text": "Terrell",
+        "start": 11.72,
+        "end": 12.18,
+        "type": "word",
+        "logprob": -0.2693490982055664
+      },
+      {
+        "text": " ",
+        "start": 12.18,
+        "end": 12.24,
+        "type": "spacing",
+        "logprob": -2.586808113846928e-05
+      },
+      {
+        "text": "was",
+        "start": 12.24,
+        "end": 12.42,
+        "type": "word",
+        "logprob": -2.586808113846928e-05
+      },
+      {
+        "text": " ",
+        "start": 12.42,
+        "end": 12.52,
+        "type": "spacing",
+        "logprob": -2.455681169521995e-05
+      },
+      {
+        "text": "never",
+        "start": 12.52,
+        "end": 12.72,
+        "type": "word",
+        "logprob": -2.455681169521995e-05
+      },
+      {
+        "text": " ",
+        "start": 12.72,
+        "end": 12.8,
+        "type": "spacing",
+        "logprob": -3.8742269680369645e-05
+      },
+      {
+        "text": "destroyed.",
+        "start": 12.8,
+        "end": 13.46,
+        "type": "word",
+        "logprob": -0.0011119085138489027
+      },
+      {
+        "text": " ",
+        "start": 13.46,
+        "end": 13.76,
+        "type": "spacing",
+        "logprob": -3.933898824470816e-06
+      },
+      {
+        "text": "It",
+        "start": 13.76,
+        "end": 13.88,
+        "type": "word",
+        "logprob": -3.933898824470816e-06
+      },
+      {
+        "text": " ",
+        "start": 13.88,
+        "end": 13.96,
+        "type": "spacing",
+        "logprob": -0.0001616347290109843
+      },
+      {
+        "text": "hid.",
+        "start": 13.96,
+        "end": 14.28,
+        "type": "word",
+        "logprob": -0.0018749473165371455
+      },
+      {
+        "text": " ",
+        "start": 14.28,
+        "end": 14.6,
+        "type": "spacing",
+        "logprob": -1.823885577323381e-05
+      },
+      {
+        "text": "They",
+        "start": 14.6,
+        "end": 14.8,
+        "type": "word",
+        "logprob": -1.823885577323381e-05
+      },
+      {
+        "text": " ",
+        "start": 14.8,
+        "end": 14.9,
+        "type": "spacing",
+        "logprob": -5.364403477869928e-06
+      },
+      {
+        "text": "all",
+        "start": 14.9,
+        "end": 15.14,
+        "type": "word",
+        "logprob": -5.364403477869928e-06
+      },
+      {
+        "text": " ",
+        "start": 15.14,
+        "end": 15.2,
+        "type": "spacing",
+        "logprob": -0.00020489977032411844
+      },
+      {
+        "text": "hid.",
+        "start": 15.2,
+        "end": 15.5,
+        "type": "word",
+        "logprob": -0.00016800933371996507
+      }
+    ],
+    "transcription_id": "shonL56fLb9dPepZJgv9",
+    "audio_duration_secs": 15.84
+  },
+  "listening_reviewed": false
+}

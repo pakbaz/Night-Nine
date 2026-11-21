@@ -1,0 +1,67 @@
+{
+  "audio_id": "recording.rook",
+  "audio_sha256": "bc35baff4dc9c8f5d4b8028d0948ab76d1a69b7f98ac4136431cf4aae2610620",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/recording.rook.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Sit tight, June.",
+  "recognized": "Sit tight, June.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "2adab2fe71f0969a21dd1c602b272e7c",
+  "character_cost": "0",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Sit tight, June.",
+    "words": [
+      {
+        "text": "Sit",
+        "start": 0.08,
+        "end": 0.24,
+        "type": "word",
+        "logprob": -0.0005258131423033774
+      },
+      {
+        "text": " ",
+        "start": 0.24,
+        "end": 0.3,
+        "type": "spacing",
+        "logprob": -0.00020811776630580425
+      },
+      {
+        "text": "tight,",
+        "start": 0.3,
+        "end": 0.52,
+        "type": "word",
+        "logprob": -0.00017406725358644812
+      },
+      {
+        "text": " ",
+        "start": 0.52,
+        "end": 0.64,
+        "type": "spacing",
+        "logprob": -0.0017880895175039768
+      },
+      {
+        "text": "June.",
+        "start": 0.64,
+        "end": 0.9,
+        "type": "word",
+        "logprob": -0.001435073039465351
+      }
+    ],
+    "transcription_id": "6FyvTTp9X8bT3RuJVvTB",
+    "audio_duration_secs": 1.12
+  },
+  "listening_reviewed": false
+}

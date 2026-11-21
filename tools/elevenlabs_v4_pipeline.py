@@ -448,16 +448,17 @@ def add_voices(plan, preflight, client):
     return completed
 
 
-def receipt_paths(audio_id):
+def receipt_paths(audio_id, production=None):
     safe_id(audio_id)
+    production = production or PRODUCTION
     return (
-        PRODUCTION / "downloads" / f"{audio_id}.mp3",
-        PRODUCTION / "receipts" / f"{audio_id}.json",
+        production / "downloads" / f"{audio_id}.mp3",
+        production / "receipts" / f"{audio_id}.json",
     )
 
 
-def proven_generation(item, plan_sha):
-    audio, receipt = receipt_paths(item["audio_id"])
+def proven_generation(item, plan_sha, production=None):
+    audio, receipt = receipt_paths(item["audio_id"], production)
     if not audio.exists() and not receipt.exists():
         return False
     if not audio.is_file() or not receipt.is_file():
@@ -556,9 +557,10 @@ def generate(plan, preflight, client, limit=None):
     return generated
 
 
-def decode_mp3(audio_id):
-    source, _ = receipt_paths(audio_id)
-    target = PRODUCTION / "masters" / f"{audio_id}.wav"
+def decode_mp3(audio_id, production=None):
+    production = production or PRODUCTION
+    source, _ = receipt_paths(audio_id, production)
+    target = production / "masters" / f"{audio_id}.wav"
     target.parent.mkdir(parents=True, exist_ok=True)
     pending = target.with_name(target.name + f".partial-{uuid.uuid4().hex}.wav")
     subprocess.run([
@@ -638,6 +640,87 @@ def comparison_distance(expected, recognized, checker):
     return checker["distance"](left, right)
 
 
+def assess_transcript(report, checker):
+    expected = report["expected"]
+    local = report.get("local_recognized", report["recognized"])
+    local_edits = comparison_distance(expected, local, checker)
+    word_count = len(transcript_words(expected, checker))
+    report.update(recognized=local, word_edits=local_edits,
+                  word_error_rate=local_edits / max(1, word_count))
+    report.pop("independent_asr", None)
+    independent_edits = None
+    audio_id = safe_id(report["audio_id"])
+    for path in sorted((PRODUCTION / "independent-asr").glob(f"scribe-v3*/{audio_id}.json")):
+        evidence = read_json(path)
+        if evidence.get("audio_sha256") != report["wav_sha256"]:
+            continue
+        fields = evidence.get("request_fields", {})
+        recognized = evidence.get("recognized")
+        if (
+            evidence.get("audio_id") != audio_id
+            or evidence.get("production_plan_sha256") != report["plan_sha256"]
+            or evidence.get("expected") != expected
+            or evidence.get("model_id") != "scribe_v3"
+            or fields.get("model_id") != "scribe_v3"
+            or evidence.get("script_or_keyterm_prompt_sent") is not False
+            or any(key in fields for key in ("keyterms", "transcript_edit", "prompt", "text"))
+            or not isinstance(recognized, str)
+            or recognized != evidence.get("response", {}).get("text")
+        ):
+            raise ValueError(f"Unverified independent transcript for {audio_id}")
+        edits = comparison_distance(expected, recognized, checker)
+        if edits != evidence.get("word_edits") or independent_edits is not None:
+            raise ValueError(f"Changed or duplicate independent transcript for {audio_id}")
+        independent_edits = edits
+        report["local_recognized"] = local
+        report["independent_asr"] = {
+            "file": path.relative_to(PRODUCTION).as_posix(), "sha256": file_sha(path),
+            "model": "scribe_v3", "word_edits": edits, "listening_reviewed": False,
+        }
+        report.update(recognized=recognized, word_edits=edits,
+                      word_error_rate=edits / max(1, word_count))
+    if independent_edits is None:
+        report.pop("local_recognized", None)
+    if report["word_edits"]:
+        return "asr_mismatch"
+    if word_count <= 4 and (local_edits or independent_edits != 0):
+        return "short_asr_ambiguity"
+    return None
+
+
+def verified_retakes(plan, checker):
+    selected = {}
+    for folder in sorted((PRODUCTION / "retakes").glob("automatic-*")):
+        candidate_plan = read_json(folder / "plan.json")
+        verify_frozen_inputs(candidate_plan)
+        if candidate_plan.get("source_plan_sha256") != plan["plan_sha256"]:
+            raise ValueError(f"Stale retake source plan: {folder.name}")
+        for audio_id, candidate in candidate_plan["items"].items():
+            original = plan["items"][audio_id]
+            if any(candidate.get(key) != value for key, value in original.items()
+                   if key not in {"voice_settings", "seed"}):
+                raise ValueError(f"Retake changed script or casting: {audio_id}")
+            if not proven_generation(candidate, candidate_plan["plan_sha256"], folder):
+                continue
+            report_path = folder / "checks" / f"{audio_id}.json"
+            if not report_path.is_file():
+                continue
+            report = read_json(report_path)
+            if (
+                report.get("plan_sha256") != candidate_plan["plan_sha256"]
+                or report.get("source_plan_sha256") != plan["plan_sha256"]
+                or report.get("expected") != original["text"]
+                or report.get("wav_sha256") != file_sha(folder / "masters" / f"{audio_id}.wav")
+            ):
+                raise ValueError(f"Stale retake check: {audio_id}")
+            if comparison_distance(original["text"], report["recognized"], checker):
+                continue
+            report["plan_sha256"] = plan["plan_sha256"]
+            if assess_transcript(report, checker) is None and report.get("independent_asr"):
+                selected[audio_id] = (folder, candidate_plan["plan_sha256"])
+    return selected
+
+
 def transcribe_pauses(model, master, audio_id):
     import numpy as np
     import soundfile as sf
@@ -687,8 +770,34 @@ def word_timings(segments):
 def create_saren_splice(source_path, source_sha, timings):
     import numpy as np
     import soundfile as sf
+    alignment_path = PRODUCTION / "independent-asr/scribe-v3/recording.voicemail.json"
+    if not alignment_path.is_file():
+        raise ValueError("Saren splice requires independent source-word alignment")
+    alignment = read_json(alignment_path)
+    response = alignment.get("response", {})
+    fields = alignment.get("request_fields", {})
+    if (
+        file_sha(source_path) != source_sha
+        or alignment.get("audio_sha256") != source_sha
+        or alignment.get("audio_id") != "recording.voicemail"
+        or alignment.get("model_id") != "scribe_v3"
+        or fields.get("model_id") != "scribe_v3"
+        or fields.get("timestamps_granularity") != "word"
+        or alignment.get("script_or_keyterm_prompt_sent") is not False
+        or any(key in fields for key in ("keyterms", "transcript_edit", "prompt", "text"))
+        or alignment.get("word_edits") != 0
+        or response.get("text") != alignment.get("recognized")
+    ):
+        raise ValueError("Stale or unverified Saren source alignment")
+    previous_timings = timings
+    timings = word_timings([{"words": [
+        {"word": entry["text"], "start": entry["start"], "end": entry["end"]}
+        for entry in response.get("words", []) if entry.get("type") == "word"
+    ]}])
     tokens = [entry["word"] for entry in timings]
     wanted = ["come", "out", "with", "us", "kiddo", "the", "bay", "is", "singing", "tonight"]
+    if tokens != wanted or re.findall(r"\w+", response.get("text", "").lower()) != wanted:
+        raise ValueError("Unexpected transcript in Saren source alignment")
     start = next((index for index in range(len(tokens) - len(wanted) + 1)
                   if tokens[index:index + len(wanted)] == wanted), None)
     if start is None:
@@ -698,6 +807,11 @@ def create_saren_splice(source_path, source_sha, timings):
     samples, rate = sf.read(source_path, dtype="float32")
     if samples.ndim != 1 or rate != 48000:
         raise ValueError("Saren splice source must be mono 48 kHz")
+    previous_end = 0.0
+    for entry in timings:
+        if not previous_end <= entry["start"] < entry["end"] <= len(samples) / rate:
+            raise ValueError("Invalid source-word alignment bounds for Saren splice")
+        previous_end = entry["end"]
     pad = round(rate * .025)
     first = samples[max(0, round(phrase[0]["start"] * rate) - pad):
                     min(len(samples), round(phrase[-1]["end"] * rate) + pad)]
@@ -708,12 +822,25 @@ def create_saren_splice(source_path, source_sha, timings):
     output.parent.mkdir(parents=True, exist_ok=True)
     pending = output.with_name(output.name + f".partial-{uuid.uuid4().hex}.wav")
     sf.write(pending, np.concatenate((first, gap, final)), rate, "PCM_16")
+    receipt_path = PRODUCTION / "edit-receipts/recording.saren_splice.json"
+    if output.is_file() and file_sha(output) != file_sha(pending):
+        previous_sha = file_sha(output)
+        if not receipt_path.is_file() or read_json(receipt_path).get("output_sha256") != previous_sha:
+            raise ValueError("Cannot preserve the previous Saren splice without its matching receipt")
+        atomic_bytes(PRODUCTION / "masters/history" / f"{previous_sha}.wav", output.read_bytes())
+        atomic_bytes(PRODUCTION / "edit-receipts/history" / f"{previous_sha}.json", receipt_path.read_bytes())
     os.replace(pending, output)
     receipt = {
         "schema": 1,
         "audio_id": "recording.saren_splice",
         "source_audio_id": "recording.voicemail",
         "source_sha256": source_sha,
+        "alignment": {
+            "file": alignment_path.relative_to(PRODUCTION).as_posix(),
+            "sha256": file_sha(alignment_path),
+            "model": alignment["model_id"],
+        },
+        "superseded_word_timings": previous_timings,
         "source_intervals": [
             [phrase[0]["start"], phrase[-1]["end"]],
             [tonight["start"], tonight["end"]],
@@ -721,7 +848,7 @@ def create_saren_splice(source_path, source_sha, timings):
         "gap_seconds": DERIVED["recording.saren_splice"]["gap_seconds"],
         "output_sha256": file_sha(output),
     }
-    atomic_json(PRODUCTION / "edit-receipts/recording.saren_splice.json", receipt)
+    atomic_json(receipt_path, receipt)
     return output, receipt
 
 
@@ -776,7 +903,7 @@ def write_manual_review_files(plan, checks, hard_holds):
             "expected": item["text"],
             "recognized": report["recognized"],
             "word_edits": report["word_edits"],
-            "wav": f"masters/{audio_id}.wav",
+            "wav": report.get("master", f"masters/{audio_id}.wav"),
             "check": f"checks/{audio_id}.json",
         })
     payload = {
@@ -830,6 +957,7 @@ code{color:#d8ba7d}b{color:#a9d6ce}</style>
 
 def validate_and_stage(plan):
     verify_frozen_inputs(plan)
+    previous_overlay = read_json(OVERLAY_PATH) if OVERLAY_PATH.is_file() else {}
     missing = [audio_id for audio_id, item in plan["items"].items()
                if item["kind"] == "speech" and not proven_generation(item, plan["plan_sha256"])]
     if missing:
@@ -841,6 +969,7 @@ def validate_and_stage(plan):
     checker = runpy.run_path(str(ROOT / "tools/check-voice-candidates.py"))
     lips = runpy.run_path(str(ROOT / "tools/generate-lipsync.py"))
     model = load(str(ROOT / ".tools/models/whisper-qa"))
+    retakes = verified_retakes(plan, checker)
     checks = {}
     hard_holds = {}
     automated = []
@@ -849,11 +978,15 @@ def validate_and_stage(plan):
         item = plan["items"][audio_id]
         if item["kind"] != "speech":
             continue
-        master = decode_mp3(audio_id)
+        folder, generation_plan_sha = retakes.get(audio_id, (PRODUCTION, plan["plan_sha256"]))
+        master = decode_mp3(audio_id, folder)
         facts = audio_facts(master)
         wav_sha = file_sha(master)
         check_path = PRODUCTION / "checks" / f"{audio_id}.json"
         cached = read_json(check_path) if check_path.is_file() else {}
+        if folder != PRODUCTION and cached.get("wav_sha256") != wav_sha:
+            cached = read_json(folder / "checks" / f"{audio_id}.json")
+            cached["plan_sha256"] = plan["plan_sha256"]
         if (
             cached.get("audio_id") == audio_id
             and cached.get("plan_sha256") == plan["plan_sha256"]
@@ -862,7 +995,7 @@ def validate_and_stage(plan):
             and (audio_id != "recording.voicemail" or cached.get("word_timings"))
         ):
             report = cached
-            recognized = report["recognized"]
+            recognized = report.get("local_recognized", report["recognized"])
         else:
             result = model.generate(
                 str(master), language="en", temperature=0, condition_on_previous_text=False,
@@ -927,17 +1060,22 @@ def validate_and_stage(plan):
             "word_error_rate": edits / max(1, len(expected_words)),
             "asr_revision": 2,
             "transcript_comparison": "strict normalized English spoken forms",
+            "local_recognized": recognized,
         })
+        if folder != PRODUCTION:
+            report["generation_plan_sha256"] = generation_plan_sha
+            report["master"] = master.relative_to(PRODUCTION).as_posix()
+        else:
+            report.pop("generation_plan_sha256", None)
+            report.pop("master", None)
         if segmented:
             report["independent_phrase_transcription"] = segmented
+        hold = assess_transcript(report, checker)
         atomic_json(PRODUCTION / "checks" / f"{audio_id}.json", report)
         checks[audio_id] = report
         masters[audio_id] = master
-        word_count = len(transcript_words(item["text"], checker))
-        if edits:
-            hard_holds[audio_id] = "asr_mismatch"
-        elif word_count <= 4:
-            hard_holds[audio_id] = "short_asr_ambiguity"
+        if hold:
+            hard_holds[audio_id] = hold
         else:
             automated.append(audio_id)
     source = checks["recording.voicemail"]
@@ -973,14 +1111,12 @@ def validate_and_stage(plan):
         "edit_receipt": "assets/audio/elevenlabs-v4-script-v2/edit-receipts/recording.saren_splice.json",
         **audio_facts(splice),
     }
+    splice_hold = assess_transcript(splice_report, checker)
     atomic_json(PRODUCTION / "checks/recording.saren_splice.json", splice_report)
     checks["recording.saren_splice"] = splice_report
     masters["recording.saren_splice"] = splice
-    splice_words = len(transcript_words(splice_item["text"], checker))
-    if splice_edits:
-        hard_holds["recording.saren_splice"] = "asr_mismatch"
-    elif splice_words <= 4:
-        hard_holds["recording.saren_splice"] = "short_asr_ambiguity"
+    if splice_hold:
+        hard_holds["recording.saren_splice"] = splice_hold
     else:
         automated.append("recording.saren_splice")
     takes = {}
@@ -1015,7 +1151,11 @@ def validate_and_stage(plan):
             atomic_bytes(runtime, master.read_bytes())
             if audio_id == "recording.greeting" or audio_id in evidence_audio_ids:
                 preserve_recorder_pcm(runtime)
-            receipt = read_json(PRODUCTION / "receipts" / f"{audio_id}.json") if item["kind"] == "speech" else {}
+            folder, generation_plan_sha = retakes.get(audio_id, (PRODUCTION, plan["plan_sha256"]))
+            receipt = read_json(folder / "receipts" / f"{audio_id}.json") if item["kind"] == "speech" else {}
+            revision = "elevenlabs-v4-script-v2"
+            if item["kind"] == "derived" or audio_id in retakes:
+                revision += "-" + file_sha(runtime)[:12]
             take = {
                 "id": audio_id,
                 "speaker": item["speaker"],
@@ -1034,10 +1174,12 @@ def validate_and_stage(plan):
                 "listening_reviewed": False,
                 "asr_report": f"assets/audio/elevenlabs-v4-script-v2/checks/{audio_id}.json",
                 "word_error_rate": report["word_error_rate"],
-                "lip_sync_revision": "elevenlabs-v4-script-v2",
+                "lip_sync_revision": revision,
                 "text_hash": text_sha(item["text"])[:16],
                 "plan_sha256": plan["plan_sha256"],
             }
+            if folder != PRODUCTION:
+                take["generation_plan_sha256"] = generation_plan_sha
             if item["kind"] == "derived":
                 take["derived_from"] = edit_receipt
                 take["source_request_id"] = read_json(
@@ -1046,7 +1188,7 @@ def validate_and_stage(plan):
             takes[audio_id] = take
             cue_jobs[pool.submit(
                 lips["generate_cues"], audio_id, take,
-                ROOT / "assets/audio/lipsync-elevenlabs-v4-script-v2",
+                ROOT / "assets/audio" / ("lipsync-" + revision),
                 generator_hash, generator_version,
             )] = audio_id
         for future in as_completed(cue_jobs):
@@ -1055,9 +1197,15 @@ def validate_and_stage(plan):
             timing[audio_id] = {key: cue[key] for key in (
                 "audio_sha256", "seconds", "cues", "visual_timing_reviewed",
             )}
-    campaign_ids = {audio_id for audio_id, item in plan["items"].items()
+    campaign_set = {audio_id for audio_id, item in plan["items"].items()
                     if not item["line_ids"][0].startswith("book.")}
-    narration_ids = set(plan["items"]) - campaign_ids
+    narration_set = set(plan["items"]) - campaign_set
+    def existing_order(section, required):
+        previous = previous_overlay.get(section, {}).get("takes", {})
+        return ([key for key in previous if key in required]
+                + [key for key in plan["ordered_audio_ids"] if key in required and key not in previous])
+    campaign_ids = existing_order("campaign", campaign_set)
+    narration_ids = existing_order("narration", narration_set)
     overlay = {
         "schema": 1,
         "model": MODEL,

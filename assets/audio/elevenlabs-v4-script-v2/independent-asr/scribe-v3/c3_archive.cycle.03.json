@@ -1,0 +1,53 @@
+{
+  "audio_id": "c3_archive.cycle.03",
+  "audio_sha256": "b07f28df8744d64e8f8e6692b879bdc0820c0fd73aae6522c5af1c16765ae18d",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/c3_archive.cycle.03.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "You’re not.",
+  "recognized": "You're not.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "1e31264bc7016104a19679ec990fef5d",
+  "character_cost": "0",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "You're not.",
+    "words": [
+      {
+        "text": "You're",
+        "start": 0.08,
+        "end": 0.24,
+        "type": "word",
+        "logprob": -1.172209128223282e-05
+      },
+      {
+        "text": " ",
+        "start": 0.24,
+        "end": 0.3,
+        "type": "spacing",
+        "logprob": -5.245195097813848e-06
+      },
+      {
+        "text": "not.",
+        "start": 0.3,
+        "end": 0.64,
+        "type": "word",
+        "logprob": -0.0003509793793909921
+      }
+    ],
+    "transcription_id": "NncVyGkqI7PODGhlzrB4",
+    "audio_duration_secs": 1.04
+  },
+  "listening_reviewed": false
+}

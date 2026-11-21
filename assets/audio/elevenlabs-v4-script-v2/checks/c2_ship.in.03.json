@@ -15,5 +15,13 @@
   "recognition_pass": "independent",
   "asr_revision": 2,
   "transcript_comparison": "strict normalized English spoken forms",
-  "independent_phrase_transcription": "I prefer the exit. Does that come with music too?"
+  "independent_phrase_transcription": "I prefer the exit. Does that come with music too?",
+  "local_recognized": "I prefer the exit. Does that come with music too?",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c2_ship.in.03.json",
+    "sha256": "168c4bf7e43e632e441a5036a942dde4ac5ca0edf8d10305dc4dbea2863c26c4",
+    "model": "scribe_v3",
+    "word_edits": 1,
+    "listening_reviewed": false
+  }
 }

@@ -14,5 +14,13 @@
   "first_recognition": "Stop.",
   "recognition_pass": "independent",
   "asr_revision": 2,
-  "transcript_comparison": "strict normalized English spoken forms"
+  "transcript_comparison": "strict normalized English spoken forms",
+  "local_recognized": "Stop.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c9_choir.in.02.json",
+    "sha256": "be3ad29d320ca6e892477bdcf5d48193f66d6a643875348c9ae2e6c38bdcb615",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  }
 }

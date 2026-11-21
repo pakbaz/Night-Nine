@@ -14,5 +14,13 @@
   "first_recognition": "That's my face.",
   "recognition_pass": "independent",
   "asr_revision": 2,
-  "transcript_comparison": "strict normalized English spoken forms"
+  "transcript_comparison": "strict normalized English spoken forms",
+  "local_recognized": "That's my face.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c5_station.stephen.lead.01.json",
+    "sha256": "a72e15951ec6e1786e808627325f654ac86136f64002a558d29fdeca1e34eaae",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  }
 }

@@ -3,9 +3,9 @@
   "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
   "wav_sha256": "1070793bd6832bb269c8d23687a8e328f5781d9132defbb4fcd8e3d32c0a7e35",
   "expected": "Tomás’s loud nights come every nine nights: September 24, October 3, October 12. The next one is tonight.",
-  "recognized": "Tomás's loud nights come every nine nights. September 24th, October 3rd, October 12th. The next one is tonight.",
+  "recognized": "Tomas's loud nights come every nine nights: September 24th, October 3rd, October 12th. The next one is tonight.",
   "word_edits": 3,
-  "word_error_rate": 0.16666666666666666,
+  "word_error_rate": 0.15789473684210525,
   "listening_review_required": true,
   "seconds": 9.2,
   "sample_rate": 48000,
@@ -15,5 +15,13 @@
   "recognition_pass": "independent",
   "asr_revision": 2,
   "transcript_comparison": "strict normalized English spoken forms",
-  "independent_phrase_transcription": "Tomás's loud nights come every nine nights. September 24th. October 3rd October 12th. The next one is tonight."
+  "independent_phrase_transcription": "Tomás's loud nights come every nine nights. September 24th. October 3rd October 12th. The next one is tonight.",
+  "local_recognized": "Tomás's loud nights come every nine nights. September 24th, October 3rd, October 12th. The next one is tonight.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c1_dinner.podcast.find.json",
+    "sha256": "0af48893e2af542b7637d3821a1f445601abcec0faec7cac5d97b75722a12ef9",
+    "model": "scribe_v3",
+    "word_edits": 3,
+    "listening_reviewed": false
+  }
 }

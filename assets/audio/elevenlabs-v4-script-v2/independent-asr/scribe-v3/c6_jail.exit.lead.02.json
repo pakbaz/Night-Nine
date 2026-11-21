@@ -1,0 +1,263 @@
+{
+  "audio_id": "c6_jail.exit.lead.02",
+  "audio_sha256": "8f67e498b677fe5158672710eb3dc0a18a7c4104c4bef611c5889fc6a2f0d51d",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/c6_jail.exit.lead.02.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Ben’s a tree in the school play tonight. He’s been practising being a tree for a month.",
+  "recognized": "Ben's a tree in the school play tonight. He's been practicing being a tree for a month.",
+  "word_edits": 1,
+  "request_id": null,
+  "trace_id": "a825d2c2dcd4b7951b866bb3adfe87f0",
+  "character_cost": "2",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Ben's a tree in the school play tonight. He's been practicing being a tree for a month.",
+    "words": [
+      {
+        "text": "Ben's",
+        "start": 0.1,
+        "end": 0.32,
+        "type": "word",
+        "logprob": -0.00025234652559902315
+      },
+      {
+        "text": " ",
+        "start": 0.32,
+        "end": 0.38,
+        "type": "spacing",
+        "logprob": -5.960462772236497e-07
+      },
+      {
+        "text": "a",
+        "start": 0.38,
+        "end": 0.48,
+        "type": "word",
+        "logprob": -5.960462772236497e-07
+      },
+      {
+        "text": " ",
+        "start": 0.48,
+        "end": 0.58,
+        "type": "spacing",
+        "logprob": -3.111314072157256e-05
+      },
+      {
+        "text": "tree",
+        "start": 0.58,
+        "end": 0.84,
+        "type": "word",
+        "logprob": -3.111314072157256e-05
+      },
+      {
+        "text": " ",
+        "start": 0.84,
+        "end": 0.9,
+        "type": "spacing",
+        "logprob": -1.5497195136049413e-06
+      },
+      {
+        "text": "in",
+        "start": 0.9,
+        "end": 0.96,
+        "type": "word",
+        "logprob": -1.5497195136049413e-06
+      },
+      {
+        "text": " ",
+        "start": 0.96,
+        "end": 1.0,
+        "type": "spacing",
+        "logprob": 0.0
+      },
+      {
+        "text": "the",
+        "start": 1.0,
+        "end": 1.08,
+        "type": "word",
+        "logprob": 0.0
+      },
+      {
+        "text": " ",
+        "start": 1.08,
+        "end": 1.12,
+        "type": "spacing",
+        "logprob": -2.1576648578047752e-05
+      },
+      {
+        "text": "school",
+        "start": 1.12,
+        "end": 1.34,
+        "type": "word",
+        "logprob": -2.1576648578047752e-05
+      },
+      {
+        "text": " ",
+        "start": 1.34,
+        "end": 1.46,
+        "type": "spacing",
+        "logprob": -2.6225699912174605e-05
+      },
+      {
+        "text": "play",
+        "start": 1.46,
+        "end": 1.7,
+        "type": "word",
+        "logprob": -2.6225699912174605e-05
+      },
+      {
+        "text": " ",
+        "start": 1.7,
+        "end": 1.74,
+        "type": "spacing",
+        "logprob": -1.9192511899746023e-05
+      },
+      {
+        "text": "tonight.",
+        "start": 1.74,
+        "end": 2.08,
+        "type": "word",
+        "logprob": -2.2053447310099727e-05
+      },
+      {
+        "text": " ",
+        "start": 2.08,
+        "end": 2.6,
+        "type": "spacing",
+        "logprob": -4.529942543740617e-06
+      },
+      {
+        "text": "He's",
+        "start": 2.6,
+        "end": 2.76,
+        "type": "word",
+        "logprob": -6.616078252363877e-06
+      },
+      {
+        "text": " ",
+        "start": 2.76,
+        "end": 2.78,
+        "type": "spacing",
+        "logprob": -7.510157047363464e-06
+      },
+      {
+        "text": "been",
+        "start": 2.78,
+        "end": 2.96,
+        "type": "word",
+        "logprob": -7.510157047363464e-06
+      },
+      {
+        "text": " ",
+        "start": 2.96,
+        "end": 3.0,
+        "type": "spacing",
+        "logprob": -0.00012742661056108773
+      },
+      {
+        "text": "practicing",
+        "start": 3.0,
+        "end": 3.6,
+        "type": "word",
+        "logprob": -0.00012742661056108773
+      },
+      {
+        "text": " ",
+        "start": 3.6,
+        "end": 3.62,
+        "type": "spacing",
+        "logprob": -3.886147169396281e-05
+      },
+      {
+        "text": "being",
+        "start": 3.62,
+        "end": 3.82,
+        "type": "word",
+        "logprob": -3.886147169396281e-05
+      },
+      {
+        "text": " ",
+        "start": 3.82,
+        "end": 3.86,
+        "type": "spacing",
+        "logprob": -2.3841855067985307e-07
+      },
+      {
+        "text": "a",
+        "start": 3.86,
+        "end": 3.94,
+        "type": "word",
+        "logprob": -2.3841855067985307e-07
+      },
+      {
+        "text": " ",
+        "start": 3.94,
+        "end": 4.04,
+        "type": "spacing",
+        "logprob": -9.775113539944869e-06
+      },
+      {
+        "text": "tree",
+        "start": 4.04,
+        "end": 4.28,
+        "type": "word",
+        "logprob": -9.775113539944869e-06
+      },
+      {
+        "text": " ",
+        "start": 4.28,
+        "end": 4.4,
+        "type": "spacing",
+        "logprob": -1.4305104514278355e-06
+      },
+      {
+        "text": "for",
+        "start": 4.4,
+        "end": 4.5,
+        "type": "word",
+        "logprob": -1.4305104514278355e-06
+      },
+      {
+        "text": " ",
+        "start": 4.5,
+        "end": 4.56,
+        "type": "spacing",
+        "logprob": -3.576278118089249e-07
+      },
+      {
+        "text": "a",
+        "start": 4.56,
+        "end": 4.6,
+        "type": "word",
+        "logprob": -3.576278118089249e-07
+      },
+      {
+        "text": " ",
+        "start": 4.6,
+        "end": 4.76,
+        "type": "spacing",
+        "logprob": -3.242440288886428e-05
+      },
+      {
+        "text": "month.",
+        "start": 4.76,
+        "end": 5.1,
+        "type": "word",
+        "logprob": -3.1252211859585564e-05
+      }
+    ],
+    "transcription_id": "vj1s3xRE7ChhSYaRfzZf",
+    "audio_duration_secs": 5.92
+  },
+  "listening_reviewed": false
+}

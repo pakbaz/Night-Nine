@@ -3,9 +3,9 @@
   "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
   "wav_sha256": "60b917c615afe8c38ed91065181566d684fbdbaa9decc8c8908566cd3a39dfd5",
   "expected": "And my voice, on the station ident, still playing between the songs.",
-  "recognized": "and my voice on the station I dent still playing between the songs.",
-  "word_edits": 2,
-  "word_error_rate": 0.16666666666666666,
+  "recognized": "And my voice on the station ident, still playing between the songs.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
   "listening_review_required": true,
   "seconds": 4.96,
   "sample_rate": 48000,
@@ -15,5 +15,13 @@
   "recognition_pass": "independent",
   "asr_revision": 2,
   "transcript_comparison": "strict normalized English spoken forms",
-  "independent_phrase_transcription": "and my voice on the station I dent. Still playing between the songs."
+  "independent_phrase_transcription": "and my voice on the station I dent. Still playing between the songs.",
+  "local_recognized": "and my voice on the station I dent still playing between the songs.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c5_station.ctx.02.json",
+    "sha256": "3df65ad4b8d5d3c1236f77eb2559e71ff9b9c8c6ea5ecf546f66393b86df0645",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  }
 }

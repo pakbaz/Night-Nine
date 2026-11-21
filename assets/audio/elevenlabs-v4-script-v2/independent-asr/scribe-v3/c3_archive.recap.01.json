@@ -1,0 +1,599 @@
+{
+  "audio_id": "c3_archive.recap.01",
+  "audio_sha256": "c1234b18139f34a257c70cb5333197f76cb56c1e7d60182cb96d799fd0e9489e",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/c3_archive.recap.01.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Three things nobody thought to change. Walt Prior’s name in ink, in two places at once. A lab that will change the world, running on less power than a laundromat. And three years of tape that never missed a ninth night.",
+  "recognized": "Three things nobody thought to change: Walt Pryor's name in ink in two places at once, a lab that will change the world running on less power than a laundromat, and three years of tape that never missed a ninth night.",
+  "word_edits": 1,
+  "request_id": null,
+  "trace_id": "b4386ab79a370dd5b3f4177fa756f5f2",
+  "character_cost": "5",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Three things nobody thought to change: Walt Pryor's name in ink in two places at once, a lab that will change the world running on less power than a laundromat, and three years of tape that never missed a ninth night.",
+    "words": [
+      {
+        "text": "Three",
+        "start": 0.06,
+        "end": 0.24,
+        "type": "word",
+        "logprob": -0.00029988560709170997
+      },
+      {
+        "text": " ",
+        "start": 0.24,
+        "end": 0.34,
+        "type": "spacing",
+        "logprob": -2.622600959512056e-06
+      },
+      {
+        "text": "things",
+        "start": 0.34,
+        "end": 0.8,
+        "type": "word",
+        "logprob": -2.622600959512056e-06
+      },
+      {
+        "text": " ",
+        "start": 0.8,
+        "end": 0.96,
+        "type": "spacing",
+        "logprob": -5.304672595229931e-05
+      },
+      {
+        "text": "nobody",
+        "start": 1.02,
+        "end": 1.38,
+        "type": "word",
+        "logprob": -5.304672595229931e-05
+      },
+      {
+        "text": " ",
+        "start": 1.38,
+        "end": 1.46,
+        "type": "spacing",
+        "logprob": -4.887569048150908e-06
+      },
+      {
+        "text": "thought",
+        "start": 1.46,
+        "end": 1.72,
+        "type": "word",
+        "logprob": -4.887569048150908e-06
+      },
+      {
+        "text": " ",
+        "start": 1.72,
+        "end": 1.78,
+        "type": "spacing",
+        "logprob": -1.1920928244535389e-07
+      },
+      {
+        "text": "to",
+        "start": 1.78,
+        "end": 1.88,
+        "type": "word",
+        "logprob": -1.1920928244535389e-07
+      },
+      {
+        "text": " ",
+        "start": 1.88,
+        "end": 1.94,
+        "type": "spacing",
+        "logprob": -6.794906312279636e-06
+      },
+      {
+        "text": "change:",
+        "start": 1.94,
+        "end": 2.44,
+        "type": "word",
+        "logprob": -0.05539766377777206
+      },
+      {
+        "text": " ",
+        "start": 2.44,
+        "end": 2.44,
+        "type": "spacing",
+        "logprob": -0.00024911639047786593
+      },
+      {
+        "text": "Walt",
+        "start": 2.88,
+        "end": 3.08,
+        "type": "word",
+        "logprob": -0.00024911639047786593
+      },
+      {
+        "text": " ",
+        "start": 3.08,
+        "end": 3.16,
+        "type": "spacing",
+        "logprob": -0.2523587942123413
+      },
+      {
+        "text": "Pryor's",
+        "start": 3.16,
+        "end": 3.6,
+        "type": "word",
+        "logprob": -0.18026116908255777
+      },
+      {
+        "text": " ",
+        "start": 3.6,
+        "end": 3.66,
+        "type": "spacing",
+        "logprob": -3.6954811548639555e-06
+      },
+      {
+        "text": "name",
+        "start": 3.66,
+        "end": 4.0,
+        "type": "word",
+        "logprob": -3.6954811548639555e-06
+      },
+      {
+        "text": " ",
+        "start": 4.0,
+        "end": 4.04,
+        "type": "spacing",
+        "logprob": -7.867782187531702e-06
+      },
+      {
+        "text": "in",
+        "start": 4.04,
+        "end": 4.24,
+        "type": "word",
+        "logprob": -7.867782187531702e-06
+      },
+      {
+        "text": " ",
+        "start": 4.24,
+        "end": 4.34,
+        "type": "spacing",
+        "logprob": -5.8530047681415454e-05
+      },
+      {
+        "text": "ink",
+        "start": 4.34,
+        "end": 4.62,
+        "type": "word",
+        "logprob": -5.8530047681415454e-05
+      },
+      {
+        "text": " ",
+        "start": 4.62,
+        "end": 4.94,
+        "type": "spacing",
+        "logprob": -0.005934594664722681
+      },
+      {
+        "text": "in",
+        "start": 4.94,
+        "end": 5.12,
+        "type": "word",
+        "logprob": -0.005934594664722681
+      },
+      {
+        "text": " ",
+        "start": 5.12,
+        "end": 5.2,
+        "type": "spacing",
+        "logprob": -1.764281842042692e-05
+      },
+      {
+        "text": "two",
+        "start": 5.2,
+        "end": 5.36,
+        "type": "word",
+        "logprob": -1.764281842042692e-05
+      },
+      {
+        "text": " ",
+        "start": 5.36,
+        "end": 5.48,
+        "type": "spacing",
+        "logprob": -8.4638240878121e-06
+      },
+      {
+        "text": "places",
+        "start": 5.48,
+        "end": 6.1,
+        "type": "word",
+        "logprob": -8.4638240878121e-06
+      },
+      {
+        "text": " ",
+        "start": 6.1,
+        "end": 6.14,
+        "type": "spacing",
+        "logprob": -4.768370445162873e-07
+      },
+      {
+        "text": "at",
+        "start": 6.14,
+        "end": 6.28,
+        "type": "word",
+        "logprob": -4.768370445162873e-07
+      },
+      {
+        "text": " ",
+        "start": 6.28,
+        "end": 6.34,
+        "type": "spacing",
+        "logprob": -2.7418097943154862e-06
+      },
+      {
+        "text": "once,",
+        "start": 6.34,
+        "end": 6.74,
+        "type": "word",
+        "logprob": -0.0004645720558983157
+      },
+      {
+        "text": " ",
+        "start": 6.74,
+        "end": 6.74,
+        "type": "spacing",
+        "logprob": -4.529942543740617e-06
+      },
+      {
+        "text": "a",
+        "start": 7.22,
+        "end": 7.26,
+        "type": "word",
+        "logprob": -4.529942543740617e-06
+      },
+      {
+        "text": " ",
+        "start": 7.26,
+        "end": 7.34,
+        "type": "spacing",
+        "logprob": -3.7788631743751466e-05
+      },
+      {
+        "text": "lab",
+        "start": 7.34,
+        "end": 7.7,
+        "type": "word",
+        "logprob": -3.7788631743751466e-05
+      },
+      {
+        "text": " ",
+        "start": 7.7,
+        "end": 7.76,
+        "type": "spacing",
+        "logprob": -2.145764938177308e-06
+      },
+      {
+        "text": "that",
+        "start": 7.76,
+        "end": 7.86,
+        "type": "word",
+        "logprob": -2.145764938177308e-06
+      },
+      {
+        "text": " ",
+        "start": 7.86,
+        "end": 7.9,
+        "type": "spacing",
+        "logprob": -8.22540732769994e-06
+      },
+      {
+        "text": "will",
+        "start": 7.9,
+        "end": 8.06,
+        "type": "word",
+        "logprob": -8.22540732769994e-06
+      },
+      {
+        "text": " ",
+        "start": 8.06,
+        "end": 8.14,
+        "type": "spacing",
+        "logprob": -1.1324817933200393e-05
+      },
+      {
+        "text": "change",
+        "start": 8.14,
+        "end": 8.5,
+        "type": "word",
+        "logprob": -1.1324817933200393e-05
+      },
+      {
+        "text": " ",
+        "start": 8.5,
+        "end": 8.54,
+        "type": "spacing",
+        "logprob": -1.1920928244535389e-07
+      },
+      {
+        "text": "the",
+        "start": 8.54,
+        "end": 8.66,
+        "type": "word",
+        "logprob": -1.1920928244535389e-07
+      },
+      {
+        "text": " ",
+        "start": 8.66,
+        "end": 8.7,
+        "type": "spacing",
+        "logprob": -2.9444261599564925e-05
+      },
+      {
+        "text": "world",
+        "start": 8.7,
+        "end": 9.12,
+        "type": "word",
+        "logprob": -2.9444261599564925e-05
+      },
+      {
+        "text": " ",
+        "start": 9.12,
+        "end": 9.46,
+        "type": "spacing",
+        "logprob": -0.0010553987231105566
+      },
+      {
+        "text": "running",
+        "start": 9.46,
+        "end": 9.7,
+        "type": "word",
+        "logprob": -0.0010553987231105566
+      },
+      {
+        "text": " ",
+        "start": 9.7,
+        "end": 9.76,
+        "type": "spacing",
+        "logprob": -2.3841855067985307e-07
+      },
+      {
+        "text": "on",
+        "start": 9.76,
+        "end": 9.86,
+        "type": "word",
+        "logprob": -2.3841855067985307e-07
+      },
+      {
+        "text": " ",
+        "start": 9.86,
+        "end": 9.98,
+        "type": "spacing",
+        "logprob": -1.168244216387393e-05
+      },
+      {
+        "text": "less",
+        "start": 9.98,
+        "end": 10.16,
+        "type": "word",
+        "logprob": -1.168244216387393e-05
+      },
+      {
+        "text": " ",
+        "start": 10.16,
+        "end": 10.3,
+        "type": "spacing",
+        "logprob": -7.390948667307384e-06
+      },
+      {
+        "text": "power",
+        "start": 10.3,
+        "end": 10.76,
+        "type": "word",
+        "logprob": -7.390948667307384e-06
+      },
+      {
+        "text": " ",
+        "start": 10.76,
+        "end": 10.8,
+        "type": "spacing",
+        "logprob": -3.3378546504536644e-06
+      },
+      {
+        "text": "than",
+        "start": 10.8,
+        "end": 10.9,
+        "type": "word",
+        "logprob": -3.3378546504536644e-06
+      },
+      {
+        "text": " ",
+        "start": 10.9,
+        "end": 10.96,
+        "type": "spacing",
+        "logprob": 0.0
+      },
+      {
+        "text": "a",
+        "start": 10.96,
+        "end": 11.0,
+        "type": "word",
+        "logprob": 0.0
+      },
+      {
+        "text": " ",
+        "start": 11.0,
+        "end": 11.08,
+        "type": "spacing",
+        "logprob": -0.00016115797916427255
+      },
+      {
+        "text": "laundromat,",
+        "start": 11.08,
+        "end": 11.76,
+        "type": "word",
+        "logprob": -0.00020043449926147744
+      },
+      {
+        "text": " ",
+        "start": 11.76,
+        "end": 11.76,
+        "type": "spacing",
+        "logprob": -9.536738616588991e-07
+      },
+      {
+        "text": "and",
+        "start": 12.18,
+        "end": 12.36,
+        "type": "word",
+        "logprob": -9.536738616588991e-07
+      },
+      {
+        "text": " ",
+        "start": 12.36,
+        "end": 12.42,
+        "type": "spacing",
+        "logprob": -0.00025293012731708586
+      },
+      {
+        "text": "three",
+        "start": 12.42,
+        "end": 12.64,
+        "type": "word",
+        "logprob": -0.00025293012731708586
+      },
+      {
+        "text": " ",
+        "start": 12.64,
+        "end": 12.74,
+        "type": "spacing",
+        "logprob": -4.768360213347478e-06
+      },
+      {
+        "text": "years",
+        "start": 12.74,
+        "end": 12.96,
+        "type": "word",
+        "logprob": -4.768360213347478e-06
+      },
+      {
+        "text": " ",
+        "start": 12.96,
+        "end": 13.02,
+        "type": "spacing",
+        "logprob": -1.1920928244535389e-07
+      },
+      {
+        "text": "of",
+        "start": 13.02,
+        "end": 13.16,
+        "type": "word",
+        "logprob": -1.1920928244535389e-07
+      },
+      {
+        "text": " ",
+        "start": 13.16,
+        "end": 13.22,
+        "type": "spacing",
+        "logprob": -9.894321920000948e-06
+      },
+      {
+        "text": "tape",
+        "start": 13.22,
+        "end": 13.56,
+        "type": "word",
+        "logprob": -9.894321920000948e-06
+      },
+      {
+        "text": " ",
+        "start": 13.56,
+        "end": 13.76,
+        "type": "spacing",
+        "logprob": -5.960462772236497e-07
+      },
+      {
+        "text": "that",
+        "start": 13.78,
+        "end": 13.98,
+        "type": "word",
+        "logprob": -5.960462772236497e-07
+      },
+      {
+        "text": " ",
+        "start": 13.98,
+        "end": 14.08,
+        "type": "spacing",
+        "logprob": -1.2159273865108844e-05
+      },
+      {
+        "text": "never",
+        "start": 14.08,
+        "end": 14.36,
+        "type": "word",
+        "logprob": -1.2159273865108844e-05
+      },
+      {
+        "text": " ",
+        "start": 14.36,
+        "end": 14.42,
+        "type": "spacing",
+        "logprob": -6.079655122448457e-06
+      },
+      {
+        "text": "missed",
+        "start": 14.42,
+        "end": 14.78,
+        "type": "word",
+        "logprob": -6.079655122448457e-06
+      },
+      {
+        "text": " ",
+        "start": 14.78,
+        "end": 14.84,
+        "type": "spacing",
+        "logprob": -4.768370445162873e-07
+      },
+      {
+        "text": "a",
+        "start": 14.84,
+        "end": 14.9,
+        "type": "word",
+        "logprob": -4.768370445162873e-07
+      },
+      {
+        "text": " ",
+        "start": 14.9,
+        "end": 14.96,
+        "type": "spacing",
+        "logprob": -0.05225265398621559
+      },
+      {
+        "text": "ninth",
+        "start": 14.96,
+        "end": 15.3,
+        "type": "word",
+        "logprob": -0.05225265398621559
+      },
+      {
+        "text": " ",
+        "start": 15.3,
+        "end": 15.36,
+        "type": "spacing",
+        "logprob": -8.105902816168964e-05
+      },
+      {
+        "text": "night.",
+        "start": 15.36,
+        "end": 15.68,
+        "type": "word",
+        "logprob": -7.174133073325113e-05
+      }
+    ],
+    "transcription_id": "UjroLkbU7XSjGNAdLKoY",
+    "audio_duration_secs": 16.08
+  },
+  "listening_reviewed": false
+}

@@ -236,6 +236,155 @@ class PipelineTests(unittest.TestCase):
                 campaign, storybook, {"takes": {}}, {"takes": {}}, {}, voice_overlay, root,
             )
 
+    def splice_fixture(self):
+        import numpy as np
+        import soundfile as sf
+        source = SCRATCH / "voicemail.wav"
+        samples = np.zeros(48000 * 4, dtype=np.float32)
+        samples[round(3.20 * 48000):round(3.50 * 48000)] = .5
+        sf.write(source, samples, 48000, "PCM_16")
+        text = "Come out with us, kiddo. The bay is singing tonight."
+        tokens = ["come", "out", "with", "us", "kiddo", "the", "bay", "is", "singing", "tonight"]
+        boundaries = [(0.06, .2), (.28, .4), (.44, .56), (.64, .76), (.88, 1.2),
+                      (1.76, 1.9), (1.96, 2.16), (2.24, 2.48), (2.60, 2.98), (3.04, 3.52)]
+        timings = [{"word": word, "start": start, "end": end}
+                   for word, (start, end) in zip(tokens, boundaries)]
+        evidence = {
+            "audio_id": "recording.voicemail", "audio_sha256": pipeline.file_sha(source),
+            "model_id": "scribe_v3", "script_or_keyterm_prompt_sent": False,
+            "request_fields": {"model_id": "scribe_v3", "timestamps_granularity": "word"},
+            "expected": text, "recognized": text, "word_edits": 0,
+            "response": {"text": text, "words": [
+                {"text": item["word"], "start": item["start"], "end": item["end"], "type": "word"}
+                for item in timings
+            ]},
+        }
+        path = SCRATCH / "production/independent-asr/scribe-v3/recording.voicemail.json"
+        pipeline.atomic_json(path, evidence)
+        timings[-1] = {"word": "tonight", "start": 2.84, "end": 3.16}
+        return source, timings, path, evidence
+
+    def test_splice_keeps_entire_final_word_using_source_bound_alignment(self):
+        import numpy as np
+        import soundfile as sf
+        source, timings, _, _ = self.splice_fixture()
+        with patch.object(pipeline, "PRODUCTION", SCRATCH / "production"):
+            output, receipt = pipeline.create_saren_splice(source, pipeline.file_sha(source), timings)
+        samples, _ = sf.read(output)
+        self.assertEqual(np.count_nonzero(samples == .5), round(.30 * 48000))
+        self.assertEqual(receipt["source_intervals"][-1], [3.04, 3.52])
+
+    def test_splice_rejects_stale_or_prompted_alignment(self):
+        source, timings, path, evidence = self.splice_fixture()
+        for changes in (
+            {"audio_sha256": "stale"},
+            {"script_or_keyterm_prompt_sent": True},
+            {"response": {"text": "Come out with us, kiddo.", "words": evidence["response"]["words"]}},
+        ):
+            with self.subTest(changes=changes):
+                pipeline.atomic_json(path, evidence | changes)
+                with patch.object(pipeline, "PRODUCTION", SCRATCH / "production"):
+                    with self.assertRaisesRegex(ValueError, "alignment"):
+                        pipeline.create_saren_splice(source, pipeline.file_sha(source), timings)
+
+    def test_short_lines_need_two_exact_transcripts_and_keep_local_evidence(self):
+        checker = {
+            "words": lambda text: __import__("re").findall(r"[a-z0-9']+", text.lower()),
+            "distance": lambda left, right: 0 if left == right else 1,
+        }
+        report = {"audio_id": "short", "plan_sha256": "plan", "wav_sha256": "wav",
+                  "expected": "Hold the line.", "recognized": "Hold the line."}
+        evidence = {
+            "audio_id": "short", "production_plan_sha256": "plan", "audio_sha256": "wav",
+            "expected": report["expected"], "recognized": report["expected"], "word_edits": 0,
+            "model_id": "scribe_v3", "script_or_keyterm_prompt_sent": False,
+            "request_fields": {"model_id": "scribe_v3"},
+            "response": {"text": report["expected"]},
+        }
+        path = SCRATCH / "production/independent-asr/scribe-v3/short.json"
+        with patch.object(pipeline, "PRODUCTION", SCRATCH / "production"):
+            self.assertEqual(pipeline.assess_transcript(dict(report), checker), "short_asr_ambiguity")
+            pipeline.atomic_json(path, evidence)
+            self.assertIsNone(pipeline.assess_transcript(dict(report), checker))
+            ambiguous = report | {"recognized": "Hold line."}
+            self.assertEqual(pipeline.assess_transcript(ambiguous, checker), "short_asr_ambiguity")
+            self.assertEqual(pipeline.assess_transcript(ambiguous, checker), "short_asr_ambiguity")
+            self.assertEqual(ambiguous["local_recognized"], "Hold line.")
+            pipeline.atomic_json(path, evidence | {"audio_sha256": "old-wav"})
+            self.assertEqual(pipeline.assess_transcript(dict(report), checker), "short_asr_ambiguity")
+
+    def test_independent_review_rejects_changed_clue_and_edited_response(self):
+        checker = {
+            "words": lambda text: __import__("re").findall(r"[a-z0-9']+", text.lower()),
+            "distance": lambda left, right: 0 if left == right else 1,
+        }
+        report = {"audio_id": "clue", "plan_sha256": "plan", "wav_sha256": "wav",
+                  "expected": "Set the clock to 06:01.", "recognized": "Set the clock to 06:02."}
+        evidence = {
+            "audio_id": "clue", "production_plan_sha256": "plan", "audio_sha256": "wav",
+            "expected": report["expected"], "recognized": report["recognized"], "word_edits": 1,
+            "model_id": "scribe_v3", "script_or_keyterm_prompt_sent": False,
+            "request_fields": {"model_id": "scribe_v3"},
+            "response": {"text": report["recognized"]},
+        }
+        path = SCRATCH / "production/independent-asr/scribe-v3/clue.json"
+        with patch.object(pipeline, "PRODUCTION", SCRATCH / "production"):
+            pipeline.atomic_json(path, evidence)
+            self.assertEqual(pipeline.assess_transcript(dict(report), checker), "asr_mismatch")
+            pipeline.atomic_json(path, evidence | {"recognized": report["expected"], "word_edits": 0})
+            with self.assertRaisesRegex(ValueError, "independent transcript"):
+                pipeline.assess_transcript(dict(report), checker)
+
+    def test_retakes_require_original_cast_and_both_transcripts(self):
+        checker = {
+            "words": lambda text: text.lower().split(),
+            "distance": lambda left, right: 0 if left == right else 1,
+        }
+        plan = pipeline.build_plan(self.csv_path, self.script_path, self.cast_path)
+        candidate = json.loads(json.dumps(plan))
+        candidate["source_plan_sha256"] = plan["plan_sha256"]
+
+        def freeze(value):
+            payload = json.loads(json.dumps(value))
+            payload.pop("plan_sha256", None)
+            for item in payload["items"].values():
+                item.pop("seed", None)
+            value["plan_sha256"] = pipeline.canonical_sha(payload)
+
+        freeze(candidate)
+        folder = SCRATCH / "production/retakes/automatic-01"
+        preflight = {"plan_sha256": candidate["plan_sha256"], "voices": {"voice-one": {"rate": 1}}}
+        preflight["preflight_sha256"] = pipeline.canonical_sha(preflight)
+        patches = self.globals()
+        with patches[0], patches[1], patches[2], patches[3]:
+            with patch.object(pipeline, "PRODUCTION", folder):
+                pipeline.generate(candidate, preflight, FakeApi())
+            pipeline.atomic_json(folder / "plan.json", candidate)
+            master = folder / "masters/shared.take.wav"
+            pipeline.atomic_bytes(master, b"fixture-audio")
+            report = {
+                "audio_id": "shared.take", "plan_sha256": candidate["plan_sha256"],
+                "source_plan_sha256": plan["plan_sha256"], "wav_sha256": pipeline.file_sha(master),
+                "expected": "One proven take.", "recognized": "One proven take.",
+            }
+            pipeline.atomic_json(folder / "checks/shared.take.json", report)
+            self.assertEqual(pipeline.verified_retakes(plan, checker), {})
+            evidence = {
+                "audio_id": "shared.take", "production_plan_sha256": plan["plan_sha256"],
+                "audio_sha256": report["wav_sha256"], "expected": report["expected"],
+                "recognized": report["recognized"], "word_edits": 0,
+                "model_id": "scribe_v3", "request_fields": {"model_id": "scribe_v3"},
+                "script_or_keyterm_prompt_sent": False, "response": {"text": report["recognized"]},
+            }
+            pipeline.atomic_json(SCRATCH / "production/independent-asr/scribe-v3/shared.take.json", evidence)
+            self.assertEqual(pipeline.verified_retakes(plan, checker),
+                             {"shared.take": (folder, candidate["plan_sha256"])})
+            candidate["items"]["shared.take"]["voice_id"] = "different-voice"
+            freeze(candidate)
+            pipeline.atomic_json(folder / "plan.json", candidate)
+            with self.assertRaisesRegex(ValueError, "script or casting"):
+                pipeline.verified_retakes(plan, checker)
+
     def test_changed_cast_is_rejected_even_when_text_is_unchanged(self):
         root = SCRATCH / "cast-root"
         casting_path = root / "docs/voice-casting-2026-11-20.json"

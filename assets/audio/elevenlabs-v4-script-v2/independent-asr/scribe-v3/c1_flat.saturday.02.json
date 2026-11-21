@@ -1,0 +1,53 @@
+{
+  "audio_id": "c1_flat.saturday.02",
+  "audio_sha256": "1308a096de17563a6f70d9fd1a0a611c182c74bb73f6111413aca7592b9c5e6c",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/c1_flat.saturday.02.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Morning, Nor.",
+  "recognized": "Morning, Nor.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "deb2f245fd7278de0866ba455260fe81",
+  "character_cost": "0",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Morning, Nor.",
+    "words": [
+      {
+        "text": "Morning,",
+        "start": 0.08,
+        "end": 0.38,
+        "type": "word",
+        "logprob": -0.0005347739531771367
+      },
+      {
+        "text": " ",
+        "start": 0.38,
+        "end": 0.48,
+        "type": "spacing",
+        "logprob": -0.3646607995033264
+      },
+      {
+        "text": "Nor.",
+        "start": 0.48,
+        "end": 0.72,
+        "type": "word",
+        "logprob": -0.27369108601124026
+      }
+    ],
+    "transcription_id": "1IvByH2v9OgLdTWwt0PH",
+    "audio_duration_secs": 1.04
+  },
+  "listening_reviewed": false
+}

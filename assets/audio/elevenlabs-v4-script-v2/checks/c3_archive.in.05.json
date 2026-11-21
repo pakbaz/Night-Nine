@@ -14,5 +14,13 @@
   "first_recognition": "Cool. Why?",
   "recognition_pass": "independent",
   "asr_revision": 2,
-  "transcript_comparison": "strict normalized English spoken forms"
+  "transcript_comparison": "strict normalized English spoken forms",
+  "local_recognized": "Cool. Why?",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c3_archive.in.05.json",
+    "sha256": "b5562d4967362683e3a324d687d4582c24c907fe2f7162bdc84f2af902c44a6c",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  }
 }

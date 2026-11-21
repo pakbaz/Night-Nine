@@ -14,5 +14,13 @@
   "first_recognition": "One recording remains.",
   "recognition_pass": "independent",
   "asr_revision": 2,
-  "transcript_comparison": "strict normalized English spoken forms"
+  "transcript_comparison": "strict normalized English spoken forms",
+  "local_recognized": "One recording remains.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/p_veyr.in.02.json",
+    "sha256": "6e7d282f50694ac4943357cea5804fc0eb3d3d2d0d80e38e944948a3675a192b",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  }
 }

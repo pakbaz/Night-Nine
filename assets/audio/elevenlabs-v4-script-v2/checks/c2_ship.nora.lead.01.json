@@ -14,5 +14,13 @@
   "first_recognition": "Nora.",
   "recognition_pass": "independent",
   "asr_revision": 2,
-  "transcript_comparison": "strict normalized English spoken forms"
+  "transcript_comparison": "strict normalized English spoken forms",
+  "local_recognized": "Nora.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c2_ship.nora.lead.01.json",
+    "sha256": "e8acece50e88f62fb1b6cc845672f83f5eebc870113c55c73b72ceb8804dbe47",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  }
 }

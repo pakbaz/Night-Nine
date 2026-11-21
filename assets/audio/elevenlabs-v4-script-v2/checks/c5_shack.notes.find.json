@@ -5,7 +5,7 @@
   "expected": "Dad’s “Done” answers Mom’s March 2 slip: he filed their tape between the Coltrane and the weather carts. The good stuff is the KBWR record library. Mom hid her notebook at my old station.",
   "recognized": "Dad's done answers Mom's March 2nd slip. He filed their tape between the Coltrane and the weather carts. The good stuff is the KBWR record library. Mom hid her notebook at my old station.",
   "word_edits": 1,
-  "word_error_rate": 0.029411764705882353,
+  "word_error_rate": 0.027777777777777776,
   "listening_review_required": true,
   "seconds": 13.36,
   "sample_rate": 48000,
@@ -15,5 +15,13 @@
   "recognition_pass": "independent",
   "asr_revision": 2,
   "transcript_comparison": "strict normalized English spoken forms",
-  "independent_phrase_transcription": "Dad's done answers mom's March 2nd slip. He filed their tape between the Coltrane and the weather carts. The good stuff is the KBWR record library. Mom hid her notebook at my old station."
+  "independent_phrase_transcription": "Dad's done answers mom's March 2nd slip. He filed their tape between the Coltrane and the weather carts. The good stuff is the KBWR record library. Mom hid her notebook at my old station.",
+  "local_recognized": "Dad's done answers Mom's March 2nd slip. He filed their tape between the Coltrane and the weather carts. The good stuff is the KBWR record library. Mom hid her notebook at my old station.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c5_shack.notes.find.json",
+    "sha256": "bcc647ea2d1c963181f1d7b5d336b7748037aa140b1fb72d0a5d0ae04f0b5550",
+    "model": "scribe_v3",
+    "word_edits": 1,
+    "listening_reviewed": false
+  }
 }

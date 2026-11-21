@@ -14,5 +14,13 @@
   "first_recognition": "Thank you, Lyle.",
   "recognition_pass": "independent",
   "asr_revision": 2,
-  "transcript_comparison": "strict normalized English spoken forms"
+  "transcript_comparison": "strict normalized English spoken forms",
+  "local_recognized": "Thank you, Lyle.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c1_pier.door.lead.02.json",
+    "sha256": "758ce90cfafc010d76d62705a23d19b2952fffe445dd142cbcd0edf656ac38c6",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  }
 }

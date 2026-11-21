@@ -15,5 +15,13 @@
   "recognition_pass": "independent",
   "asr_revision": 2,
   "transcript_comparison": "strict normalized English spoken forms",
-  "independent_phrase_transcription": "The back fence failed the check. Sound crosses 340 meters in a second. and the fence is 170 meters out. Tell me what it actually heard."
+  "independent_phrase_transcription": "The back fence failed the check. Sound crosses 340 meters in a second. and the fence is 170 meters out. Tell me what it actually heard.",
+  "local_recognized": "The back fence failed the check. Sound crosses 340 meters in a second, and the fence is 170 meters out. Tell me what it actually heard.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c7_gate.truck.lead.02.json",
+    "sha256": "a3f5b6ed59823612a69a3f531ef2267598df38fc7627fddefc4bc7f56a59d33f",
+    "model": "scribe_v3",
+    "word_edits": 1,
+    "listening_reviewed": false
+  }
 }

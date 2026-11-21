@@ -1,0 +1,88 @@
+{
+  "audio_id": "p_meeting.terms.lead.01",
+  "audio_sha256": "d7b3c3f5cc6b30954b0c2d330b98e7b80f9081981431aa12127f0dfb8d1b099b",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/p_meeting.terms.lead.01.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "比较我们的表演。",
+  "recognized": "比较我们的表演。",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "6de01aee143c6aa8d260d6ce9b39ea30",
+  "character_cost": "1",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "比较我们的表演。",
+    "words": [
+      {
+        "text": "比",
+        "start": 0.06,
+        "end": 0.2,
+        "type": "word",
+        "logprob": -0.004583448171615601
+      },
+      {
+        "text": "较",
+        "start": 0.2,
+        "end": 0.44,
+        "type": "word",
+        "logprob": -0.004583448171615601
+      },
+      {
+        "text": "我",
+        "start": 0.44,
+        "end": 0.56,
+        "type": "word",
+        "logprob": -0.00015496007108595222
+      },
+      {
+        "text": "们",
+        "start": 0.56,
+        "end": 0.68,
+        "type": "word",
+        "logprob": -0.00015496007108595222
+      },
+      {
+        "text": "的",
+        "start": 0.68,
+        "end": 0.8,
+        "type": "word",
+        "logprob": -0.00015496007108595222
+      },
+      {
+        "text": "表",
+        "start": 0.8,
+        "end": 1.04,
+        "type": "word",
+        "logprob": -0.0004233417857903987
+      },
+      {
+        "text": "演",
+        "start": 1.18,
+        "end": 1.26,
+        "type": "word",
+        "logprob": -0.0004233417857903987
+      },
+      {
+        "text": "。",
+        "start": 1.26,
+        "end": 1.26,
+        "type": "word",
+        "logprob": -0.00010299152199877426
+      }
+    ],
+    "transcription_id": "hzqVb2ZWSqLaJjA0AaXD",
+    "audio_duration_secs": 1.84
+  },
+  "listening_reviewed": false
+}

@@ -1,0 +1,207 @@
+{
+  "audio_id": "p_bay.tune.find",
+  "audio_sha256": "e2e51b2c15e9e4bc3c6543ad92d1c9329c5d2e0ef8c020a2a5798fc227e855b3",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/p_bay.tune.find.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "K7BLW log, eleven-oh-four. Eight-fifteen, narrow band. Not one tone. Several, holding the same note.",
+  "recognized": "K7BLW log, 11:04, 815 narrowband. Not one tone, several holding the same note.",
+  "word_edits": 4,
+  "request_id": null,
+  "trace_id": "406f04893d74310d2029011447a2183f",
+  "character_cost": "3",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "K7BLW log, 11:04, 815 narrowband. Not one tone, several holding the same note.",
+    "words": [
+      {
+        "text": "K7BLW",
+        "start": 0.04,
+        "end": 1.76,
+        "type": "word",
+        "logprob": -0.01516169780297787
+      },
+      {
+        "text": " ",
+        "start": 1.76,
+        "end": 1.86,
+        "type": "spacing",
+        "logprob": -0.0031273288186639547
+      },
+      {
+        "text": "log,",
+        "start": 1.86,
+        "end": 2.18,
+        "type": "word",
+        "logprob": -0.019468087528366596
+      },
+      {
+        "text": " ",
+        "start": 2.18,
+        "end": 2.2,
+        "type": "spacing",
+        "logprob": -4.0531076592742465e-06
+      },
+      {
+        "text": "11:04,",
+        "start": 2.54,
+        "end": 3.52,
+        "type": "word",
+        "logprob": -0.0229138321959302
+      },
+      {
+        "text": " ",
+        "start": 3.52,
+        "end": 3.52,
+        "type": "spacing",
+        "logprob": -1.0728830375228426e-06
+      },
+      {
+        "text": "815",
+        "start": 4.28,
+        "end": 5.0,
+        "type": "word",
+        "logprob": -0.012193380874426415
+      },
+      {
+        "text": " ",
+        "start": 5.0,
+        "end": 5.0,
+        "type": "spacing",
+        "logprob": -0.2847459614276886
+      },
+      {
+        "text": "narrowband.",
+        "start": 5.36,
+        "end": 6.1,
+        "type": "word",
+        "logprob": -0.25889560152691876
+      },
+      {
+        "text": " ",
+        "start": 6.1,
+        "end": 6.1,
+        "type": "spacing",
+        "logprob": -3.135155202471651e-05
+      },
+      {
+        "text": "Not",
+        "start": 6.72,
+        "end": 6.88,
+        "type": "word",
+        "logprob": -3.135155202471651e-05
+      },
+      {
+        "text": " ",
+        "start": 6.88,
+        "end": 7.04,
+        "type": "spacing",
+        "logprob": -2.3007127310847864e-05
+      },
+      {
+        "text": "one",
+        "start": 7.04,
+        "end": 7.22,
+        "type": "word",
+        "logprob": -2.3007127310847864e-05
+      },
+      {
+        "text": " ",
+        "start": 7.22,
+        "end": 7.36,
+        "type": "spacing",
+        "logprob": -9.894321920000948e-06
+      },
+      {
+        "text": "tone,",
+        "start": 7.36,
+        "end": 7.74,
+        "type": "word",
+        "logprob": -0.00022668785677524284
+      },
+      {
+        "text": " ",
+        "start": 7.74,
+        "end": 7.74,
+        "type": "spacing",
+        "logprob": -6.937739817658439e-05
+      },
+      {
+        "text": "several",
+        "start": 8.18,
+        "end": 8.54,
+        "type": "word",
+        "logprob": -6.937739817658439e-05
+      },
+      {
+        "text": " ",
+        "start": 8.54,
+        "end": 8.88,
+        "type": "spacing",
+        "logprob": -0.05493894964456558
+      },
+      {
+        "text": "holding",
+        "start": 8.88,
+        "end": 9.2,
+        "type": "word",
+        "logprob": -0.05493894964456558
+      },
+      {
+        "text": " ",
+        "start": 9.2,
+        "end": 9.24,
+        "type": "spacing",
+        "logprob": -2.3841855067985307e-07
+      },
+      {
+        "text": "the",
+        "start": 9.24,
+        "end": 9.4,
+        "type": "word",
+        "logprob": -2.3841855067985307e-07
+      },
+      {
+        "text": " ",
+        "start": 9.4,
+        "end": 9.48,
+        "type": "spacing",
+        "logprob": -3.814689989667386e-06
+      },
+      {
+        "text": "same",
+        "start": 9.48,
+        "end": 9.72,
+        "type": "word",
+        "logprob": -3.814689989667386e-06
+      },
+      {
+        "text": " ",
+        "start": 9.72,
+        "end": 9.82,
+        "type": "spacing",
+        "logprob": -1.645074735279195e-05
+      },
+      {
+        "text": "note.",
+        "start": 9.82,
+        "end": 10.14,
+        "type": "word",
+        "logprob": -6.048108625691384e-05
+      }
+    ],
+    "transcription_id": "XJwUO05pb7q0VSfHbkQC",
+    "audio_duration_secs": 10.64
+  },
+  "listening_reviewed": false
+}

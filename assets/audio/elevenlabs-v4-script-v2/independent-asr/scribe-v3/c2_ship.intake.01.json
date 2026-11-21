@@ -1,0 +1,137 @@
+{
+  "audio_id": "c2_ship.intake.01",
+  "audio_sha256": "de8e25bf60b635c1533244700de600037a1508a0ad2469a2c0909e976c025a4f",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/c2_ship.intake.01.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Come on, Admiral. You never missed this one.",
+  "recognized": "Come on, Admiral. You never miss this one.",
+  "word_edits": 1,
+  "request_id": null,
+  "trace_id": "0b12f1a9479e4e19a6e5842f5bad5abf",
+  "character_cost": "1",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Come on, Admiral. You never miss this one.",
+    "words": [
+      {
+        "text": "Come",
+        "start": 0.04,
+        "end": 0.16,
+        "type": "word",
+        "logprob": -0.00011634149996098131
+      },
+      {
+        "text": " ",
+        "start": 0.16,
+        "end": 0.24,
+        "type": "spacing",
+        "logprob": -2.145764938177308e-06
+      },
+      {
+        "text": "on,",
+        "start": 0.24,
+        "end": 0.36,
+        "type": "word",
+        "logprob": -9.070631585927913e-05
+      },
+      {
+        "text": " ",
+        "start": 0.36,
+        "end": 0.48,
+        "type": "spacing",
+        "logprob": -0.00609847204759717
+      },
+      {
+        "text": "Admiral.",
+        "start": 0.48,
+        "end": 0.9,
+        "type": "word",
+        "logprob": -0.0645967698073946
+      },
+      {
+        "text": " ",
+        "start": 0.9,
+        "end": 1.2,
+        "type": "spacing",
+        "logprob": -5.722029527532868e-06
+      },
+      {
+        "text": "You",
+        "start": 1.2,
+        "end": 1.3,
+        "type": "word",
+        "logprob": -5.722029527532868e-06
+      },
+      {
+        "text": " ",
+        "start": 1.3,
+        "end": 1.48,
+        "type": "spacing",
+        "logprob": -0.0001294529065489769
+      },
+      {
+        "text": "never",
+        "start": 1.48,
+        "end": 1.72,
+        "type": "word",
+        "logprob": -0.0001294529065489769
+      },
+      {
+        "text": " ",
+        "start": 1.72,
+        "end": 1.82,
+        "type": "spacing",
+        "logprob": -0.026730328798294067
+      },
+      {
+        "text": "miss",
+        "start": 1.82,
+        "end": 2.06,
+        "type": "word",
+        "logprob": -0.026730328798294067
+      },
+      {
+        "text": " ",
+        "start": 2.06,
+        "end": 2.12,
+        "type": "spacing",
+        "logprob": -1.311301275563892e-06
+      },
+      {
+        "text": "this",
+        "start": 2.12,
+        "end": 2.32,
+        "type": "word",
+        "logprob": -1.311301275563892e-06
+      },
+      {
+        "text": " ",
+        "start": 2.32,
+        "end": 2.4,
+        "type": "spacing",
+        "logprob": -4.291525328881107e-06
+      },
+      {
+        "text": "one.",
+        "start": 2.44,
+        "end": 2.66,
+        "type": "word",
+        "logprob": -7.68895233704825e-06
+      }
+    ],
+    "transcription_id": "OeeeaJfX6qff5xFYykuU",
+    "audio_duration_secs": 2.88
+  },
+  "listening_reviewed": false
+}

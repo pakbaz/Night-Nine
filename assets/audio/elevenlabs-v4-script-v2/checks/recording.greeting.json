@@ -14,5 +14,13 @@
   "first_recognition": "Good morning, sleepyhead.",
   "recognition_pass": "independent",
   "asr_revision": 2,
-  "transcript_comparison": "strict normalized English spoken forms"
+  "transcript_comparison": "strict normalized English spoken forms",
+  "local_recognized": "Good morning, sleepyhead.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/recording.greeting.json",
+    "sha256": "d644000e1eabc04b883b60541876ae150cc0e0b07f200be397f77f0ddd352525",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  }
 }

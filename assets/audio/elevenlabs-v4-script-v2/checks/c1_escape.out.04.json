@@ -14,5 +14,13 @@
   "first_recognition": "Mrs. Penhalo? Mrs. Penhalo?",
   "recognition_pass": "story_vocabulary_2",
   "asr_revision": 2,
-  "transcript_comparison": "strict normalized English spoken forms"
+  "transcript_comparison": "strict normalized English spoken forms",
+  "local_recognized": "Mrs. Penhallow? Mrs. Penhallow?",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c1_escape.out.04.json",
+    "sha256": "81c2cb9bf9c57e21ab711dea14de68f4816b024bf0448159409f4ab93ba54429",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  }
 }

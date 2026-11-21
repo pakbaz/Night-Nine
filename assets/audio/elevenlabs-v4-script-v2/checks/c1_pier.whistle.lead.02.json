@@ -14,5 +14,13 @@
   "first_recognition": "Watch.",
   "recognition_pass": "independent",
   "asr_revision": 2,
-  "transcript_comparison": "strict normalized English spoken forms"
+  "transcript_comparison": "strict normalized English spoken forms",
+  "local_recognized": "Watch.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c1_pier.whistle.lead.02.json",
+    "sha256": "635d8276c7ff57631a9e9fa7811abd82b16ce8e32944b271b5e31d9362e24cef",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  }
 }

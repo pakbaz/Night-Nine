@@ -14,5 +14,13 @@
   "first_recognition": "You're not.",
   "recognition_pass": "independent",
   "asr_revision": 2,
-  "transcript_comparison": "strict normalized English spoken forms"
+  "transcript_comparison": "strict normalized English spoken forms",
+  "local_recognized": "You're not.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c3_archive.cycle.03.json",
+    "sha256": "ae00b041620982ef956e16f7d2cebb0d0c84a826e814f3018c1c690f8bfbceb5",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  }
 }

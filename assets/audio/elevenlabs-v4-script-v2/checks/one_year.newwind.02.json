@@ -14,5 +14,13 @@
   "first_recognition": "Ready? We're on.",
   "recognition_pass": "independent",
   "asr_revision": 2,
-  "transcript_comparison": "strict normalized English spoken forms"
+  "transcript_comparison": "strict normalized English spoken forms",
+  "local_recognized": "Ready? We're on.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/one_year.newwind.02.json",
+    "sha256": "0dc86876a8de488d3eb9e82e0d9ccb49cdce15f3c1c785dd02ceffa99aa9bbc9",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  }
 }

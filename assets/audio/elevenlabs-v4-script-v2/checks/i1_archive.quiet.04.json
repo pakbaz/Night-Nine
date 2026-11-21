@@ -3,7 +3,7 @@
   "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
   "wav_sha256": "3b1e15d51b1e70523dab0f3cd63ceedd5b1e5c3a26cc0c656cc64eff7d1d9425",
   "expected": "Tirel went quiet. So did six others. Not one body, in any survey.",
-  "recognized": "Tyrell went quiet. So did six others. Not one body in any survey.",
+  "recognized": "Tyril went quiet. So did six others. Not one body in any survey.",
   "word_edits": 1,
   "word_error_rate": 0.07692307692307693,
   "listening_review_required": true,
@@ -14,5 +14,13 @@
   "first_recognition": "Tyrell went quiet. So did six others. Not one body in any survey.",
   "recognition_pass": "independent",
   "asr_revision": 2,
-  "transcript_comparison": "strict normalized English spoken forms"
+  "transcript_comparison": "strict normalized English spoken forms",
+  "local_recognized": "Tyrell went quiet. So did six others. Not one body in any survey.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/i1_archive.quiet.04.json",
+    "sha256": "b314ce92de00dcfc0e0d9b164044ed3c2100670db14d1b58c342cce7444af651",
+    "model": "scribe_v3",
+    "word_edits": 1,
+    "listening_reviewed": false
+  }
 }

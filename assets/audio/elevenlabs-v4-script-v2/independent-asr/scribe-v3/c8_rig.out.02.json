@@ -1,0 +1,39 @@
+{
+  "audio_id": "c8_rig.out.02",
+  "audio_sha256": "2fb0329f165d90906f8021f1afed917b3e18ee422f8d9166eeaa581f7788645f",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/c8_rig.out.02.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Frank.",
+  "recognized": "Frank.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "60753dd84b179e87e1decbf12224b654",
+  "character_cost": "0",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Frank.",
+    "words": [
+      {
+        "text": "Frank.",
+        "start": 0.12,
+        "end": 0.54,
+        "type": "word",
+        "logprob": -0.0003145597183902282
+      }
+    ],
+    "transcription_id": "QMlQnB7lTiABAi9xYAFK",
+    "audio_duration_secs": 0.96
+  },
+  "listening_reviewed": false
+}

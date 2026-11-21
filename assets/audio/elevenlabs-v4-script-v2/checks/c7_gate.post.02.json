@@ -14,5 +14,13 @@
   "first_recognition": "an increasingly rare achievement.",
   "recognition_pass": "independent",
   "asr_revision": 2,
-  "transcript_comparison": "strict normalized English spoken forms"
+  "transcript_comparison": "strict normalized English spoken forms",
+  "local_recognized": "an increasingly rare achievement.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c7_gate.post.02.json",
+    "sha256": "b69a84520023f906b8b6defb4469aab8f1009d83a156365996592123b013af4a",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  }
 }

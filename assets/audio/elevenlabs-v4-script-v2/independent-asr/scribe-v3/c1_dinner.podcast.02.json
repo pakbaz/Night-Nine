@@ -1,0 +1,67 @@
+{
+  "audio_id": "c1_dinner.podcast.02",
+  "audio_sha256": "285e19b7b85a54fa939c7ed497c1183c9d57e8b4ceca946a56a21e4d82652523",
+  "file": "assets/audio/elevenlabs-v4-script-v2/masters/c1_dinner.podcast.02.wav",
+  "production_plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "I’m listening now.",
+  "recognized": "I'm listening now.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "589b05d9faa143e069108cdaacce72b0",
+  "character_cost": "0",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "I'm listening now.",
+    "words": [
+      {
+        "text": "I'm",
+        "start": 0.08,
+        "end": 0.18,
+        "type": "word",
+        "logprob": -6.0001761236587e-06
+      },
+      {
+        "text": " ",
+        "start": 0.18,
+        "end": 0.24,
+        "type": "spacing",
+        "logprob": -1.2755313036905136e-05
+      },
+      {
+        "text": "listening",
+        "start": 0.24,
+        "end": 0.62,
+        "type": "word",
+        "logprob": -1.2755313036905136e-05
+      },
+      {
+        "text": " ",
+        "start": 0.62,
+        "end": 0.72,
+        "type": "spacing",
+        "logprob": -7.629365427419543e-06
+      },
+      {
+        "text": "now.",
+        "start": 0.72,
+        "end": 1.06,
+        "type": "word",
+        "logprob": -7.808177997503662e-06
+      }
+    ],
+    "transcription_id": "aE2JVQTBC6s4oHtY988N",
+    "audio_duration_secs": 1.44
+  },
+  "listening_reviewed": false
+}

@@ -3,9 +3,9 @@
   "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
   "wav_sha256": "8f4d6d19ff1e7dc1f0e048c64e2748f6d60e76714e09830e4b1a8de1fee43e51",
   "expected": "Saren’s message is Mom’s voicemail, cut and stitched: the same breath before ‘kiddo’, and a gap where ‘The bay is singing’ used to be. He has no message from her. He has my tape.",
-  "recognized": "Saren's message is mom's voicemail, cut and stitched, the same breath before kiddo, and a gap where the bae's singing used to be. He has no message from her. He has my tape.",
+  "recognized": "Seren's message is Mom's voicemail, cut and stitched, the same breath before kiddo, and a gap where the bay's singing used to be. He has no message from her. He has my tape.",
   "word_edits": 1,
-  "word_error_rate": 0.029411764705882353,
+  "word_error_rate": 0.027777777777777776,
   "listening_review_required": true,
   "seconds": 13.44,
   "sample_rate": 48000,
@@ -15,5 +15,13 @@
   "recognition_pass": "story_vocabulary_1",
   "asr_revision": 2,
   "transcript_comparison": "strict normalized English spoken forms",
-  "independent_phrase_transcription": "Saren's message is mom's voicemail. Cut. and stitched, the same breath before kiddo, and a gap where the bae's singing used to be. He has no message from her. He has my tape."
+  "independent_phrase_transcription": "Saren's message is mom's voicemail. Cut. and stitched, the same breath before kiddo, and a gap where the bae's singing used to be. He has no message from her. He has my tape.",
+  "local_recognized": "Saren's message is mom's voicemail, cut and stitched, the same breath before kiddo, and a gap where the bae's singing used to be. He has no message from her. He has my tape.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c8_beach.second.find.json",
+    "sha256": "7c806912504b96941ec8de763944444e9d4b9dee5e760d708f9b91627b60f3fc",
+    "model": "scribe_v3",
+    "word_edits": 1,
+    "listening_reviewed": false
+  }
 }

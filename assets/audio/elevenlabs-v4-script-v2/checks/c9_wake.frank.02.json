@@ -14,5 +14,13 @@
   "first_recognition": "Right here, Dad.",
   "recognition_pass": "independent",
   "asr_revision": 2,
-  "transcript_comparison": "strict normalized English spoken forms"
+  "transcript_comparison": "strict normalized English spoken forms",
+  "local_recognized": "Right here, Dad.",
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c9_wake.frank.02.json",
+    "sha256": "8e23274dcaac49c94d16652ca5ebc4f41eabae8216f68b869e723f4a7e8f81c3",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  }
 }
