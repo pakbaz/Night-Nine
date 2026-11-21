@@ -1,0 +1,18 @@
+{
+  "audio_id": "one_year.in.03",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "250f324d1b28b3ca54d61b2363678487bda364ac972237bee3a2bfad843bbe5e",
+  "expected": "We did that yesterday.",
+  "recognized": "We did that yesterday.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 1.6,
+  "sample_rate": 48000,
+  "peak": 0.28173828125,
+  "rms": 0.04224344342947006,
+  "first_recognition": "We did that yesterday.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

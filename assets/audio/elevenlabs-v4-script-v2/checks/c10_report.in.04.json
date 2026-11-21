@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_report.in.04",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "56a3f7e093d9c9d8406abd809421754903a24b515e4eb0f79f12747d4cdac06c",
+  "expected": "For a year I told you the engine was in a notebook, Saren. So you would keep looking, instead of telling the fleet there was nothing here to fear.",
+  "recognized": "For a year, I told you the engine was in a notebook, Saren. So you would keep looking, instead of telling the fleet there was nothing here to fear.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 9.92,
+  "sample_rate": 48000,
+  "peak": 0.87542724609375,
+  "rms": 0.16456210613250732,
+  "first_recognition": "For a year, I told you the engine was in a notebook, Saren. So you would keep looking, instead of telling the fleet there was nothing here to fear.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

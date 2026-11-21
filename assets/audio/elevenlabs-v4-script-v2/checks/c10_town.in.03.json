@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_town.in.03",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "5d68002a9a1cef7a63fa8e41f3899c5676e25c30b27da2e82ee9e3974ec63fbc",
+  "expected": "Listen to your local radio. Tonight, we need you to take part.",
+  "recognized": "Listen to your local radio. Tonight, we need you to take part.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.96,
+  "sample_rate": 48000,
+  "peak": 0.2674560546875,
+  "rms": 0.03912343457341194,
+  "first_recognition": "Listen to your local radio. Tonight, we need you to take part.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

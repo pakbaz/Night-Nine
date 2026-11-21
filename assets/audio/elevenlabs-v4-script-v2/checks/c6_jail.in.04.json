@@ -1,0 +1,18 @@
+{
+  "audio_id": "c6_jail.in.04",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "3309f2f659853eb1438471daf598f7b41dcf06e80077dbfcf06804fa9590ed9a",
+  "expected": "The Sheriff is at her desk. The Sheriff is also in cell two. One of those is a staffing problem.",
+  "recognized": "The sheriff is at her desk. The sheriff is also in cell 2. One of those is a staffing problem.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 6.8,
+  "sample_rate": 48000,
+  "peak": 0.30560302734375,
+  "rms": 0.03879281133413315,
+  "first_recognition": "The sheriff is at her desk. The sheriff is also in cell 2. One of those is a staffing problem.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

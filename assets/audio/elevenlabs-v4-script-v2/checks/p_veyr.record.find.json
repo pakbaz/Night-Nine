@@ -1,0 +1,18 @@
+{
+  "audio_id": "p_veyr.record.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "bf9a88c3c48ec0f07ddcce465f02fa94a5149267cbe7921fdac58deb06e94018",
+  "expected": "The wind, the engines, and the quiet after them. One take.",
+  "recognized": "The wind, the engines, and the quiet after them. One take.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 5.68,
+  "sample_rate": 48000,
+  "peak": 0.86328125,
+  "rms": 0.13883788883686066,
+  "first_recognition": "The wind, the engines, and the quiet after them. One take.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

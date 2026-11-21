@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_report.out.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "f432aba26e92ca418fbfe9506e94c242edf0c923626a795162ffa8d872418e32",
+  "expected": "They are dangerous, and they sing. Go around.",
+  "recognized": "They are dangerous, and they sing. Go around.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.24,
+  "sample_rate": 48000,
+  "peak": 0.91802978515625,
+  "rms": 0.15845008194446564,
+  "first_recognition": "They are dangerous, and they sing. Go around.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

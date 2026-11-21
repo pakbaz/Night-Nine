@@ -1,0 +1,18 @@
+{
+  "audio_id": "c6_iris.takes.lead.03",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "113049d68ab45b5c7072ac2b25eaedc4908061c468b301f3b43453a3e3d06244",
+  "expected": "Then say something for me. Twice. “I stayed because I wanted to.”",
+  "recognized": "Then say something for me. Twice. I stayed because I wanted to.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 5.44,
+  "sample_rate": 48000,
+  "peak": 0.4063720703125,
+  "rms": 0.03444850444793701,
+  "first_recognition": "Then say something for me. Twice. I stayed because I wanted to.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

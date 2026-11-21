@@ -1,0 +1,15 @@
+{
+  "operation": "text_to_speech",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "audio_id": "c7_gate.truck.lead.02",
+  "voice_id": "lRGgBdmdfHYNiqPVpbiS",
+  "model_id": "eleven_v4",
+  "text_sha256": "b45f70700842900ae38281fe0a71f6f3902b54f16e058ad1f4c7f983e62d7b03",
+  "synthesis_text_sha256": "b45f70700842900ae38281fe0a71f6f3902b54f16e058ad1f4c7f983e62d7b03",
+  "request_id": "f6HHEJ0EJRKaK616WGRa",
+  "trace_id": "ce1eb81c8fda71b427ae98e26a10cfc9",
+  "character_cost": 76,
+  "output_format": "mp3_44100_192",
+  "audio_sha256": "3ffcbd03765d53c93df692ffe298415dc79d87774c6d0bb4d301273d49b5b108",
+  "response_bytes": 258968
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "c5_shack.club.04",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "bc966e15cb6f41d8a465ee36e777de102e0663ad7973ef93a28ba1935bb7c5ef",
+  "expected": "This is K7BLW, Bellwether.",
+  "recognized": "This is K7BLW, Bellwether.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 3.6,
+  "sample_rate": 48000,
+  "peak": 0.4866943359375,
+  "rms": 0.053427863866090775,
+  "first_recognition": "This is K7BLW, Bellwether.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

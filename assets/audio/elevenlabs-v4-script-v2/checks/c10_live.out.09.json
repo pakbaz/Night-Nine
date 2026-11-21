@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_live.out.09",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "763e605e3a3dc2321a5a1417bed50a9a75d9284344c3d548c40eba92fe7ae307",
+  "expected": "He says this is undignified.",
+  "recognized": "He says this is undignified.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 2.24,
+  "sample_rate": 48000,
+  "peak": 0.79571533203125,
+  "rms": 0.08582118898630142,
+  "first_recognition": "He says this is undignified.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

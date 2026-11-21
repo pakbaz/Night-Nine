@@ -1,0 +1,18 @@
+{
+  "audio_id": "c1_pier.door.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "e42d082a01354de9edf16e66208361c9e95966955927298ce7c280f978280633",
+  "expected": "They’re both pitching today. I promised I’d watch every inning.",
+  "recognized": "They're both pitching today. I promised I'd watch every inning.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.16,
+  "sample_rate": 48000,
+  "peak": 0.50830078125,
+  "rms": 0.0639549121260643,
+  "first_recognition": "They're both pitching today. I promised I'd watch every inning.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

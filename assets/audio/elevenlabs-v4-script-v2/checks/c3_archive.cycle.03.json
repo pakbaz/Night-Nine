@@ -1,0 +1,18 @@
+{
+  "audio_id": "c3_archive.cycle.03",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "b07f28df8744d64e8f8e6692b879bdc0820c0fd73aae6522c5af1c16765ae18d",
+  "expected": "You’re not.",
+  "recognized": "You're not.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 1.04,
+  "sample_rate": 48000,
+  "peak": 0.462860107421875,
+  "rms": 0.07436468452215195,
+  "first_recognition": "You're not.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

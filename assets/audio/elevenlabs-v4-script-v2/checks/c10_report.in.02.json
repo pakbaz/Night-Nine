@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_report.in.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "9565ec6ff1a253f04aaf3ff5eaa3bb9d34750c98e9abba6ae17ecf82160db91c",
+  "expected": "To do so would violate every record we have kept.",
+  "recognized": "To do so would violate every record we have kept.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.08,
+  "sample_rate": 48000,
+  "peak": 0.820648193359375,
+  "rms": 0.15661369264125824,
+  "first_recognition": "To do so would violate every record we have kept.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

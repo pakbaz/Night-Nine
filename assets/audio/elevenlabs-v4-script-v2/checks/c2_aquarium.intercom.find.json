@@ -1,0 +1,19 @@
+{
+  "audio_id": "c2_aquarium.intercom.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "d5059649c45d0f4ae666c21e73dbf159d84224de06cd0513c33385e355f0ff3d",
+  "expected": "The real Nora recorded this here on May 29. Someone else has been living her life with me for five months. Her whistle rises. The one Admiral ignored falls.",
+  "recognized": "The Real Nora recorded this here on May 29th. Someone else has been living her life with me for five months. Her whistle rises. The one Admiral ignored falls.",
+  "word_edits": 1,
+  "word_error_rate": 0.034482758620689655,
+  "listening_review_required": true,
+  "seconds": 12.32,
+  "sample_rate": 48000,
+  "peak": 0.387847900390625,
+  "rms": 0.03986940160393715,
+  "first_recognition": "The Real Nora recorded this here on May 29th. Someone else has been living her life with me for five months. Her whistle rises. The one Admiral ignored falls.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms",
+  "independent_phrase_transcription": "The Real Nora recorded this year on May 29th. Someone else has been living her life with me for five months. Her whistle rises. The one Admiral ignored. Falls."
+}

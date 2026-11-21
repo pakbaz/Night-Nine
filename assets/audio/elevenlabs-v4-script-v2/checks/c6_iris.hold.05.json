@@ -1,0 +1,18 @@
+{
+  "audio_id": "c6_iris.hold.05",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "bfff18c1ea3589bde86e7a73fe6189a053855e3a430b415e5919bc14caef6690",
+  "expected": "And on Wednesday, at the signing, he means to put a copy of your President in her chair. Her own physician scanned her weeks ago.",
+  "recognized": "And on Wednesday, at the signing, he means to put a copy of your president in her chair. Her own physician scanned her weeks ago.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 8.32,
+  "sample_rate": 48000,
+  "peak": 0.5333251953125,
+  "rms": 0.06139383837580681,
+  "first_recognition": "And on Wednesday, at the signing, he means to put a copy of your president in her chair. Her own physician scanned her weeks ago.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

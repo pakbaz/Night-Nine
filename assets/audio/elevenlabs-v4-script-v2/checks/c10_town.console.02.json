@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_town.console.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "c3fc94a857fa2d794554a6561d14bff1629dbac72dc69ff632c97c82090bc853",
+  "expected": "Your lamps are dim.",
+  "recognized": "Your lamps are dim.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 1.76,
+  "sample_rate": 48000,
+  "peak": 0.286041259765625,
+  "rms": 0.04152200371026993,
+  "first_recognition": "Your lamps are dim.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

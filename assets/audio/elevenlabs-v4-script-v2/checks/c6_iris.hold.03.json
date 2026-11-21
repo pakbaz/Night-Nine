@@ -1,0 +1,18 @@
+{
+  "audio_id": "c6_iris.hold.03",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "e0c917ffbd5c0cee46184d700ad17d486be3aef8ffd452c221075f00fe14b351",
+  "expected": "Four minutes past midnight. That’s when the water lit up.",
+  "recognized": "Four minutes past midnight. That's when the water lit up.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.0,
+  "sample_rate": 48000,
+  "peak": 0.298095703125,
+  "rms": 0.038723304867744446,
+  "first_recognition": "Four minutes past midnight. That's when the water lit up.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

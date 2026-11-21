@@ -1,0 +1,18 @@
+{
+  "audio_id": "c6_iris.recap.03",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "943c99e10f7f32db5a39aea3087b55585b01ff440e48c0691ec5764054b8e69f",
+  "expected": "And she told me about June. They scanned her at the safe house. Her copy took the Sheriff’s desk this morning, and the real June is in her own cell until the ninth night.",
+  "recognized": "And she told me about June. They scanned her at the safe house. Her copy took the sheriff's desk this morning, and the real June is in her own cell until the ninth night.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 10.56,
+  "sample_rate": 48000,
+  "peak": 0.36199951171875,
+  "rms": 0.03734136372804642,
+  "first_recognition": "And she told me about June. They scanned her at the safe house. Her copy took the sheriff's desk this morning, and the real June is in her own cell until the ninth night.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

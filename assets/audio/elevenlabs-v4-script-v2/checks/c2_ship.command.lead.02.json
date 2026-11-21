@@ -1,0 +1,18 @@
+{
+  "audio_id": "c2_ship.command.lead.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "8d44f5f8a1042263452e0f802121affa3c295a7f4a65f309b9927afaa6885c4b",
+  "expected": "Thank you, Prefect. And fastened again.",
+  "recognized": "Thank you, Prefect. And fastened again.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 3.6,
+  "sample_rate": 48000,
+  "peak": 0.927001953125,
+  "rms": 0.1323130875825882,
+  "first_recognition": "Thank you, Prefect. And fastened again.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

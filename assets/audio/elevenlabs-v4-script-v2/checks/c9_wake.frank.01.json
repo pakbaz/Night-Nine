@@ -1,0 +1,18 @@
+{
+  "audio_id": "c9_wake.frank.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "76a64fe750ee9e47b23a8e88d9e42cc0d80f6af37a52d4ced5bd86fe7874317b",
+  "expected": "K7BLW receiving. Helen? Steve?",
+  "recognized": "K7BLW receiving. Helen? Steve?",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.64,
+  "sample_rate": 48000,
+  "peak": 0.429718017578125,
+  "rms": 0.06602558493614197,
+  "first_recognition": "K7BLW receiving. Helen? Steve?",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

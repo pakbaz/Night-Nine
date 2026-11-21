@@ -1,0 +1,18 @@
+{
+  "audio_id": "c8_beach.second.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "1e99e3dd9a21414d0bf47b9b823ffe94ac5039c522b12294e16160ba104982a4",
+  "expected": "Same breath before ‘kiddo’. And a hole where four words used to be.",
+  "recognized": "Same breath before kiddo, and a hole where four words used to be.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 5.04,
+  "sample_rate": 48000,
+  "peak": 0.435455322265625,
+  "rms": 0.03948196396231651,
+  "first_recognition": "Same breath before kiddo, and a hole where four words used to be.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

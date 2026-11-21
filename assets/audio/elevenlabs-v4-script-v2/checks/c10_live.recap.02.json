@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_live.recap.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "fba2860162b3586e75693ce398609e0518c0f7296b54aae6a8b66d46480013a2",
+  "expected": "To the Vigil’s instruments, Earth had just tested an engine that could reach the fleet in an afternoon.",
+  "recognized": "To the vigil's instruments, Earth had just tested an engine that could reach the fleet in an afternoon.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 6.24,
+  "sample_rate": 48000,
+  "peak": 0.301483154296875,
+  "rms": 0.03694577142596245,
+  "first_recognition": "To the vigil's instruments, Earth had just tested an engine that could reach the fleet in an afternoon.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

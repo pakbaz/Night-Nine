@@ -1,0 +1,18 @@
+{
+  "audio_id": "c9_choir.out.06",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "2f9762776a34ec42b8618c120eb5002a41d5dec04b72a986ff9b3943dd25b867",
+  "expected": "The rig was in pieces. And all over town, the copies had begun to forget.",
+  "recognized": "The rig was in pieces, and all over town the copies had begun to forget.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 5.68,
+  "sample_rate": 48000,
+  "peak": 0.28704833984375,
+  "rms": 0.033738624304533005,
+  "first_recognition": "The rig was in pieces, and all over town the copies had begun to forget.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

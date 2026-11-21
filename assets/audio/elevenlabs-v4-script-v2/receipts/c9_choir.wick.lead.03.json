@@ -1,0 +1,15 @@
+{
+  "operation": "text_to_speech",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "audio_id": "c9_choir.wick.lead.03",
+  "voice_id": "m8AHWg36LJTQWKmfeGVv",
+  "model_id": "eleven_v4",
+  "text_sha256": "72cd0725d3024952f3883049eb42b3501d3f81d09c7918b3b89e5d682b77a1a0",
+  "synthesis_text_sha256": "72cd0725d3024952f3883049eb42b3501d3f81d09c7918b3b89e5d682b77a1a0",
+  "request_id": "VJJ96Vz86laXFiaJFGU7",
+  "trace_id": "11778e8391882b069696573ce9690fdd",
+  "character_cost": 26,
+  "output_format": "mp3_44100_192",
+  "audio_sha256": "eb121d7743e4a762d54c34ff76054164f921b60545762919498e840e60cb260b",
+  "response_bytes": 101607
+}

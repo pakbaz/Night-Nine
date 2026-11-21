@@ -1,0 +1,18 @@
+{
+  "audio_id": "p_meeting.ctx.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "628e55fa4684480a6b147b88079bb43a0cf9f8731398663ee3c9655f7b5077c1",
+  "expected": "Your mother’s shorthand. Sentinel Point, nine years ago. I was in that room.",
+  "recognized": "Your mother's shorthand. Sentinel Point, nine years ago. I was in that room.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 6.16,
+  "sample_rate": 48000,
+  "peak": 0.568878173828125,
+  "rms": 0.06934767216444016,
+  "first_recognition": "Your mother's shorthand. Sentinel Point, nine years ago. I was in that room.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "c6_iris.alibi.lead.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "49e397711630481e457e36b2b9bcf0fb0931ba5577aa6d2d34fa6b1aa46b7a81",
+  "expected": "Three errands, three clocks. Nobody in this town agrees what time it is.",
+  "recognized": "Three errands, three clocks. Nobody in this town agrees what time it is.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 5.2,
+  "sample_rate": 48000,
+  "peak": 0.4127197265625,
+  "rms": 0.041871074587106705,
+  "first_recognition": "Three errands, three clocks. Nobody in this town agrees what time it is.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

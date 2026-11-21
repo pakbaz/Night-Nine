@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_town.in.07",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "513c5e107d2424669ff37213e2e36f108af927a80188f4939067b3d843782b65",
+  "expected": "You’re one of them. You’re the records officer Iris told me about.",
+  "recognized": "You're one of them. You're the records officer Iris told me about.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.0,
+  "sample_rate": 48000,
+  "peak": 0.39825439453125,
+  "rms": 0.038010645657777786,
+  "first_recognition": "You're one of them. You're the records officer Iris told me about.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

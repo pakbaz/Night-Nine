@@ -1,0 +1,19 @@
+{
+  "audio_id": "c1_flat.in.06",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "c513541b81341f02ad66f0f3dd51571cebae81d26eaff8562e63316cbe4f5c61",
+  "expected": "Dad’s recorder runs slow. Old belts. Everyone on it sounds a little sleepy.",
+  "recognized": "Dad's recorder runs slow. Old belts. Everyone on it sounds a little sleepy.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 5.84,
+  "sample_rate": 48000,
+  "peak": 0.43487548828125,
+  "rms": 0.03655952215194702,
+  "first_recognition": "Dad's recorder runs slow. Old belt. Everyone on it sounds a little sleepy.",
+  "recognition_pass": "independent_phrases",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms",
+  "independent_phrase_transcription": "Dad's recorder runs slow. Old belts. Everyone on it sounds a little sleepy."
+}

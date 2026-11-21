@@ -1,0 +1,18 @@
+{
+  "audio_id": "c1_escape.order.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "e9cb16affdeac1a34b7bb5ed86d4bab345565050e8194ce7ddbf782b1ad9350a",
+  "expected": "Noon to midnight at La Marea. Mateo and Rafa both saw her. She couldn’t have been in the north wing.",
+  "recognized": "Noon to midnight at La Marea, Mateo and Rafa both saw her. She couldn't have been in the north wing.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 6.64,
+  "sample_rate": 48000,
+  "peak": 0.368682861328125,
+  "rms": 0.04072743281722069,
+  "first_recognition": "Noon to midnight at La Marea, Mateo and Rafa both saw her. She couldn't have been in the north wing.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "c3_archive.cycle.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "c5c06654a7beb0e5a996b2570e3ad7563b59c52e5e7ffc166b6a37718644e61d",
+  "expected": "Nine nights apart, for three years. It never missed one.",
+  "recognized": "Nine nights apart for three years. It never missed one.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.56,
+  "sample_rate": 48000,
+  "peak": 0.359710693359375,
+  "rms": 0.037471022456884384,
+  "first_recognition": "Nine nights apart for three years. It never missed one.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

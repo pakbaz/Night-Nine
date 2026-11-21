@@ -1,0 +1,18 @@
+{
+  "audio_id": "epilogue.coffee.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "96238afe4516ab7a01f1b59329c19a71acd82c8af668314f175047090cf71ba5",
+  "expected": "I’ll be there. Then Nora and I have somewhere to be.",
+  "recognized": "I'll be there. Then Nora and I have somewhere to be.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 3.44,
+  "sample_rate": 48000,
+  "peak": 0.537872314453125,
+  "rms": 0.04786955192685127,
+  "first_recognition": "I'll be there. Then Nora and I have somewhere to be.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

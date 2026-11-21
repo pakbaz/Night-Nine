@@ -1,0 +1,18 @@
+{
+  "audio_id": "c4_safe.ctx.03",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "63823fcaeb15e9fb59fea6831d3df8acdf53e69145afc822f61dfe4cdb0a9881",
+  "expected": "I kept thinking about that text. If someone wanted to cut me off from the one man who could help, that’s exactly what they’d send.",
+  "recognized": "I kept thinking about that text. If someone wanted to cut me off from the one man who could help, that's exactly what they'd send.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 7.84,
+  "sample_rate": 48000,
+  "peak": 0.30975341796875,
+  "rms": 0.03717905282974243,
+  "first_recognition": "I kept thinking about that text. If someone wanted to cut me off from the one man who could help, that's exactly what they'd send.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

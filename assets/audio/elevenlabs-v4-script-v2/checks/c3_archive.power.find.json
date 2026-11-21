@@ -1,0 +1,18 @@
+{
+  "audio_id": "c3_archive.power.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "bded19eefee7401b3e4ace91aa4b253853fecc8d5c696ee861a4d371ee6e2359",
+  "expected": "Last month Sentinel Point used 640 units. The laundromat next door used 882. Whatever Meridian is building out there, it runs on less power than a row of dryers.",
+  "recognized": "Last month, Sentinel Point used 640 units. The laundromat next door used 882. Whatever Meridian is building out there, it runs on less power than a row of dryers.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 12.88,
+  "sample_rate": 48000,
+  "peak": 0.51275634765625,
+  "rms": 0.041822969913482666,
+  "first_recognition": "Last month, Sentinel Point used 640 units. The laundromat next door used 882. Whatever Meridian is building out there, it runs on less power than a row of dryers.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

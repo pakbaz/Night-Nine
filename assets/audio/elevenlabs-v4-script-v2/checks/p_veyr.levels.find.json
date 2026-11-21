@@ -1,0 +1,18 @@
+{
+  "audio_id": "p_veyr.levels.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "7af7c89fddda15006dddc7b04bc82ff1a5ff3cb61eddc3a27d3e57f905c05da5",
+  "expected": "Six decibels of room. When the engines come, they will reach the top of the meter and no further.",
+  "recognized": "6 decibels of room. When the engines come, they will reach the top of the meter and no further.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 7.44,
+  "sample_rate": 48000,
+  "peak": 0.871490478515625,
+  "rms": 0.1497919112443924,
+  "first_recognition": "6 decibels of room. When the engines come, they will reach the top of the meter and no further.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

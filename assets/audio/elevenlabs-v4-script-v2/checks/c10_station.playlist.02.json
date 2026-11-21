@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_station.playlist.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "64fed55ea3b981ed899799134fdadaf063610f06ec81543bca9f23e6dfdfc940",
+  "expected": "Thank you, Rick. We’re live now.",
+  "recognized": "Thank you, Rick. We're live now.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 2.24,
+  "sample_rate": 48000,
+  "peak": 0.4185791015625,
+  "rms": 0.04971044138073921,
+  "first_recognition": "Thank you, Rick. We're live now.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

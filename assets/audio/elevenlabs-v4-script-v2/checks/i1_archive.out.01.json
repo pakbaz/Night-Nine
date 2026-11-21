@@ -1,0 +1,18 @@
+{
+  "audio_id": "i1_archive.out.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "b46d841edd717fb90d6ad0e674d1d96c7677ae112dd8a0661e27a7612b7addaa",
+  "expected": "Report to the Prefect. Subject: Mercer, Helen. Memory damaged by scan. Engine details in subject’s notebook.",
+  "recognized": "Report to the Prefect. Subject, Mercer, Helen. Memory damaged by scan. Engine details in subject's notebook.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 9.92,
+  "sample_rate": 48000,
+  "peak": 0.889434814453125,
+  "rms": 0.13563962280750275,
+  "first_recognition": "Report to the Prefect. Mercer, Helm. Memory damaged by scan. Engine details in subject's notebook.",
+  "recognition_pass": "story_vocabulary_1",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

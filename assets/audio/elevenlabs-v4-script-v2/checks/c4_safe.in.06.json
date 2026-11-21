@@ -1,0 +1,18 @@
+{
+  "audio_id": "c4_safe.in.06",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "4594ea9cc5d4140043732a4866554d9975107e70f33972feb2b84dad49772585",
+  "expected": "Of course. Take your time.",
+  "recognized": "Of course, take your time.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 2.56,
+  "sample_rate": 48000,
+  "peak": 0.269439697265625,
+  "rms": 0.021486682817339897,
+  "first_recognition": "Of course, take your time.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

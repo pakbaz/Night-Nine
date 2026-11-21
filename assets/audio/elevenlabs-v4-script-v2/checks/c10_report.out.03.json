@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_report.out.03",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "afdf17cc4b538b0440f422e18c9ba594d9394430a0cf8cde1e3e0dff1a086659",
+  "expected": "Wick is adding a message for Tirel.",
+  "recognized": "Wick is adding a message for Tirel.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 2.96,
+  "sample_rate": 48000,
+  "peak": 0.448028564453125,
+  "rms": 0.05593587085604668,
+  "first_recognition": "WIC is adding a message for Tyrell.",
+  "recognition_pass": "story_vocabulary_2",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

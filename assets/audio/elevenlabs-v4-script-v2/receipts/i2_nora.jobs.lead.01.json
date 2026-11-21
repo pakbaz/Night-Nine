@@ -1,0 +1,15 @@
+{
+  "operation": "text_to_speech",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "audio_id": "i2_nora.jobs.lead.01",
+  "voice_id": "m8AHWg36LJTQWKmfeGVv",
+  "model_id": "eleven_v4",
+  "text_sha256": "ca618d04a21cdd6534bb96391584d255eb6b4db0e2ea44f0a21569e13173cdd7",
+  "synthesis_text_sha256": "ca618d04a21cdd6534bb96391584d255eb6b4db0e2ea44f0a21569e13173cdd7",
+  "request_id": "QzrQ889MZUCL8Yvq3MU6",
+  "trace_id": "26d7cab69dc205b2b3ad0e44e59fda7b",
+  "character_cost": 18,
+  "output_format": "mp3_44100_192",
+  "audio_sha256": "391468d38acb66263ce8678279ff8b91d8f2fcfef5b4bc0a1eba977f388437a6",
+  "response_bytes": 72768
+}

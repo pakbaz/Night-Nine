@@ -1,0 +1,18 @@
+{
+  "audio_id": "p_bay.recap.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "b6da3831c73ec413bdb4d3abd221443fd500cdab2c204b23b48643e397ec8b7a",
+  "expected": "Eleven-forty. The note is climbing. Helen says it has a shape, like speech. We’re going to follow it out.",
+  "recognized": "1140. The note is climbing. Helen says it has a shape, like speech. We're going to follow it out.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 8.56,
+  "sample_rate": 48000,
+  "peak": 0.484100341796875,
+  "rms": 0.058085255324840546,
+  "first_recognition": "1140. The note is climbing. Helen says it has a shape, like speech. We're going to follow it out.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

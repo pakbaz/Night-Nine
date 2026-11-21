@@ -1,0 +1,18 @@
+{
+  "audio_id": "c7_gate.badge.05",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "4e437249a2b3762a1a6eda5596d5452dd9277e3d9dcc387ddcddf0482d87a124",
+  "expected": "He’s very close. I can feel it.",
+  "recognized": "He's very close. I can feel it.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 2.88,
+  "sample_rate": 48000,
+  "peak": 0.28814697265625,
+  "rms": 0.03391100838780403,
+  "first_recognition": "He's very close. I can feel it.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

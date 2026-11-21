@@ -1,0 +1,18 @@
+{
+  "audio_id": "c2_aquarium.intercom.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "2a60e61dcb2c3f1060bf06256af959651106936b1719566940090096a1987b64",
+  "expected": "I’m keeping all of it.",
+  "recognized": "I'm keeping all of it.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 1.68,
+  "sample_rate": 48000,
+  "peak": 0.312835693359375,
+  "rms": 0.03879304602742195,
+  "first_recognition": "I'm keeping all of it.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

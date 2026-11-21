@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_live.in.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "3bdcf56aaaac7f50e16e23886af65b0faebc30259eabbc2ee9ba58c7ebe86d15",
+  "expected": "Steve. Who’s... Frank. Dad. It’s on my hand.",
+  "recognized": "Steve, who's Frank? Dad, it's on my hand.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.4,
+  "sample_rate": 48000,
+  "peak": 0.574188232421875,
+  "rms": 0.04491966962814331,
+  "first_recognition": "Steve, who's Frank? Dad, it's on my hand.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

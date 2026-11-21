@@ -1,0 +1,18 @@
+{
+  "audio_id": "c3_archive.out.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "91b1c7b200d434a6b3df4f08ea88c53bfeca4d5d85649295b549bbc274e2af3f",
+  "expected": "Two hundred and seventy-four. My list had thirty-one.",
+  "recognized": "274. My list had 31.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.24,
+  "sample_rate": 48000,
+  "peak": 0.432159423828125,
+  "rms": 0.06296982616186142,
+  "first_recognition": "274. My list had 31.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

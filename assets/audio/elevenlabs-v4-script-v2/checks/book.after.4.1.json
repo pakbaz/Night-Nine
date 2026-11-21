@@ -1,0 +1,18 @@
+{
+  "audio_id": "book.after.4.1",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "c119ac485f1ec932fab2ccdd52a6b268588fed7e379567689e164647cc073376",
+  "expected": "I don’t play the old voicemail anymore.",
+  "recognized": "I don't play the old voicemail anymore.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 2.32,
+  "sample_rate": 48000,
+  "peak": 0.397491455078125,
+  "rms": 0.045836735516786575,
+  "first_recognition": "I don't play the old voicemail anymore.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

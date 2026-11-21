@@ -1,0 +1,19 @@
+{
+  "audio_id": "c2_ship.nora.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "78cb403fa5e3830ca88320a9dfce59da09920b30fd1ceaf0305d2bcd9e67933b",
+  "expected": "Nora is alive. Her breath keeps its own time, a little behind the ship’s. She’s asleep, not gone.",
+  "recognized": "Nora is alive. Her breath keeps its own time, a little behind the ships. She's asleep, not gone.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 7.44,
+  "sample_rate": 48000,
+  "peak": 0.2940673828125,
+  "rms": 0.03657600283622742,
+  "first_recognition": "Nora is alive. Her breath keeps its own time, a little behind the ships. She's asleep, not gone.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms",
+  "independent_phrase_transcription": "Nora is alive. Her breath keeps its own time. a little behind the ships. She's asleep. not gone."
+}

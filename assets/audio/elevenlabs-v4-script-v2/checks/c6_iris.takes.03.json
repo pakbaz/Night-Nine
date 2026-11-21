@@ -1,0 +1,18 @@
+{
+  "audio_id": "c6_iris.takes.03",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "725fb08ff38b074e2d751da6d27b517edd3ddb0d5edb97ad0e6c5b33461b7f1d",
+  "expected": "Two different takes. You’re choosing what to say.",
+  "recognized": "Two different takes. You're choosing what to say.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 3.52,
+  "sample_rate": 48000,
+  "peak": 0.272705078125,
+  "rms": 0.03448314964771271,
+  "first_recognition": "Two different takes. You're choosing what to say.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

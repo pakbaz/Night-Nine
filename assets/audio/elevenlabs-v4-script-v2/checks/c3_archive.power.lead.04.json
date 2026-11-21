@@ -1,0 +1,18 @@
+{
+  "audio_id": "c3_archive.power.lead.04",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "b3621199753a41ae6c017bf494864ca463f2239e396651b918c8467b733dae3c",
+  "expected": "She’s wrapped it in the business page. Something’s circled. ‘Meridian Labs: the engine that will change the world.’",
+  "recognized": "She's wrapped it in the business page. Something's circled. Meridian Labs, the engine that will change the world.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 8.0,
+  "sample_rate": 48000,
+  "peak": 0.3782958984375,
+  "rms": 0.04080924391746521,
+  "first_recognition": "She's wrapped it in the business page. Something's circled. Meridian Labs, the engine that will change the world.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

@@ -1,0 +1,19 @@
+{
+  "audio_id": "c6_jail.exit.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "fba14c853591c25f268c45472eab80d767c1931d073fd40c54f5a765577d8c9f",
+  "expected": "Lyle’s copy could still make Ben’s play: Bus A at 18:29, at the school by 18:38. He chose the front row over his orders, and let us go.",
+  "recognized": "Lyle's copy could still make Ben's play, Bus A at 1829, at the school by 1838. He chose the front row over his orders and let us go.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 11.36,
+  "sample_rate": 48000,
+  "peak": 0.55804443359375,
+  "rms": 0.03861761465668678,
+  "first_recognition": "Lyle's copy could still make Ben's play, Bus A at 1829, at the school by 1838. He chose the front row over his orders and let us go.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms",
+  "independent_phrase_transcription": "Lyle's copy could still make Ben's play. Bus A at 1829, at the school by 1838. He chose the front row over his orders and let us go."
+}

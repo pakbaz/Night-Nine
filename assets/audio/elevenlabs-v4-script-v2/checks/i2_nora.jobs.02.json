@@ -1,0 +1,18 @@
+{
+  "audio_id": "i2_nora.jobs.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "6e8a71709514307500a232aaf56e82639c55f69f3f31a2dfa7a6e4d30d2c6c28",
+  "expected": "I’ll remember the turns.",
+  "recognized": "I'll remember the turns.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 1.76,
+  "sample_rate": 48000,
+  "peak": 0.724822998046875,
+  "rms": 0.08324304968118668,
+  "first_recognition": "I'll remember the turns.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

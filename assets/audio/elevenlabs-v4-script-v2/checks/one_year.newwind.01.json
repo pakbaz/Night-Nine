@@ -1,0 +1,18 @@
+{
+  "audio_id": "one_year.newwind.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "db85086d445689a88082a09bddb6776ff8181170ba8b55a78c31b8f760538e35",
+  "expected": "Sounds like home. A new one.",
+  "recognized": "Sounds like home, a new one.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 2.24,
+  "sample_rate": 48000,
+  "peak": 0.311737060546875,
+  "rms": 0.044863224029541016,
+  "first_recognition": "Sounds like home, a new one.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

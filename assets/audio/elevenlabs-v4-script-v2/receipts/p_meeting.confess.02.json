@@ -1,0 +1,15 @@
+{
+  "operation": "text_to_speech",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "audio_id": "p_meeting.confess.02",
+  "voice_id": "RBUtdrDRjER5aScqHwAS",
+  "model_id": "eleven_v4",
+  "text_sha256": "418eea4cf504772bcf3a74aa5880f1552786c5fc3df4f3e14a39fc01d03e1ae8",
+  "synthesis_text_sha256": "418eea4cf504772bcf3a74aa5880f1552786c5fc3df4f3e14a39fc01d03e1ae8",
+  "request_id": "x8JBtwV5L2cx1sM8qkbv",
+  "trace_id": "89dac1679acdafe920bf89c2d01e9212",
+  "character_cost": 17,
+  "output_format": "mp3_44100_192",
+  "audio_sha256": "acce55cc2024de8b7763bae031aa9c7e780b9b407f5e689a69a22daf29ac180c",
+  "response_bytes": 67125
+}

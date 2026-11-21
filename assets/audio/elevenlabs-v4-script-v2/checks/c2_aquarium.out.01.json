@@ -1,0 +1,18 @@
+{
+  "audio_id": "c2_aquarium.out.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "039f15c5beb8384a45a8e127a9a1f16020e6cfcbf988134911dcbb02ebf93c09",
+  "expected": "My name is Nora Reyes, and somebody just walked out of here wearing my face.",
+  "recognized": "My name is Nora Reyes, and somebody just walked out of here wearing my face.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 5.36,
+  "sample_rate": 48000,
+  "peak": 0.54913330078125,
+  "rms": 0.07189389318227768,
+  "first_recognition": "My name is Nora Reyes, and somebody just walked out of here wearing my face.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

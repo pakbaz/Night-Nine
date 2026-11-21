@@ -1,0 +1,18 @@
+{
+  "audio_id": "book.aftermath.2.2",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "3a133f4a32ddb6e415e935cc37364044315e4306ddc35304b63ff9325b92a37b",
+  "expected": "Mom called me from the boat that night. I kept her voicemail on a cassette. Most nights I play it at three in the morning. I don’t know what I’m listening for.",
+  "recognized": "Mom called me from the boat that night. I kept her voicemail on a cassette. Most nights, I play it at 3 in the morning. I don't know what I'm listening for.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 9.12,
+  "sample_rate": 48000,
+  "peak": 0.278045654296875,
+  "rms": 0.033641327172517776,
+  "first_recognition": "Mom called me from the boat that night. I kept her voicemail on a cassette. Most nights, I play it at 3 in the morning. I don't know what I'm listening for.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "book.after.1.2",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "bbe8cd9dd07abc408770ce44ce5a2fbe0c04295aa92fd659c6e378df8d9ead08",
+  "expected": "More than two hundred of them stayed. Bellwether has a lot of new neighbors with familiar faces.",
+  "recognized": "More than 200 of them stayed. Bellwether has a lot of new neighbors with familiar faces.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 6.72,
+  "sample_rate": 48000,
+  "peak": 0.526275634765625,
+  "rms": 0.04184534773230553,
+  "first_recognition": "More than 200 of them stayed. Bellwether has a lot of new neighbors with familiar faces.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

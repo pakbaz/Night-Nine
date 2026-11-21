@@ -1,0 +1,19 @@
+{
+  "audio_id": "c7_swap.recap.03",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "48e356a344d900d1c429f7876f2b6525970ccc71f3e7fcdb28ed677c365ccd16",
+  "expected": "Rook’s copy slipped away into the fog. Before he went, he asked me one thing.",
+  "recognized": "Rook's copy slicked away into the fog. Before he went, he asked me one thing.",
+  "word_edits": 1,
+  "word_error_rate": 0.06666666666666667,
+  "listening_review_required": true,
+  "seconds": 6.24,
+  "sample_rate": 48000,
+  "peak": 0.2823486328125,
+  "rms": 0.03514883294701576,
+  "first_recognition": "Rook's copy slicked away into the fog. Before he went, he asked me one thing.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms",
+  "independent_phrase_transcription": "Rook's copy slicked away into the fog. Before he went, He asked me one thing."
+}

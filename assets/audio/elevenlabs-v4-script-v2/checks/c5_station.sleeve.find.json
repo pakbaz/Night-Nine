@@ -1,0 +1,19 @@
+{
+  "audio_id": "c5_station.sleeve.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "9bba88de6393780c0e5b092359979dc594f50ac1e703741eb282f00cc9a44528",
+  "expected": "My first night at the desk was the 4th, when I engineered and Jo presented. The original is in the blue sleeve, and Mom’s notebook was in its back pocket. I can’t read a word of it.",
+  "recognized": "My first night at the desk was the fourth, when I engineered and Joe presented. The original is in the blue sleeve, and Mom's notebook was in its back pocket. I can't read a word of it.",
+  "word_edits": 1,
+  "word_error_rate": 0.02631578947368421,
+  "listening_review_required": true,
+  "seconds": 11.28,
+  "sample_rate": 48000,
+  "peak": 0.34814453125,
+  "rms": 0.03782951831817627,
+  "first_recognition": "My first night at the desk was the fourth, when I engineered and Joe presented. The original is in the blue sleeve, and Mom's notebook was in its back pocket. I can't read a word of it.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms",
+  "independent_phrase_transcription": "My first night at the desk was the fourth. When I engineered and Joe presented. The original is in the blue sleeve. And mom's notebook was in its back pocket. I can't read a word of it."
+}

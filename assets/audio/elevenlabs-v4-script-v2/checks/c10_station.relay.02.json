@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_station.relay.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "5e7253bab3bf7fc985a5d2b1b8b12ff8b1d0725f4e7d4fd9a1989858fc77df26",
+  "expected": "Understood. Sentinel Point, do you read?",
+  "recognized": "Understood. Sentinel Point, do you read?",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 3.36,
+  "sample_rate": 48000,
+  "peak": 0.3505859375,
+  "rms": 0.0300456453114748,
+  "first_recognition": "Understood. Sentinel Point, do you read?",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

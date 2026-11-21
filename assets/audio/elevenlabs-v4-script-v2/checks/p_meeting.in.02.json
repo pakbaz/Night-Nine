@@ -1,0 +1,18 @@
+{
+  "audio_id": "p_meeting.in.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "9a6edaab4727820d5faefe361416aa6759ee330c2112b1574d925ba6eb830758",
+  "expected": "After you explain the difference between practical and actual.",
+  "recognized": "after you explain the difference between practical and actual.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.16,
+  "sample_rate": 48000,
+  "peak": 0.7066650390625,
+  "rms": 0.05981602147221565,
+  "first_recognition": "after you explain the difference between practical and actual.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

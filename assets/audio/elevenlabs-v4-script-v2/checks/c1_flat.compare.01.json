@@ -1,0 +1,18 @@
+{
+  "audio_id": "c1_flat.compare.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "b0a3c5e7b9e4190592e2310415be3671ee34f8e122bbc1c1780a7124498983d3",
+  "expected": "Twelve seconds, both days. Dad’s recorder runs true.",
+  "recognized": "12 seconds, both days. Dad's recorder runs true.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.4,
+  "sample_rate": 48000,
+  "peak": 0.37762451171875,
+  "rms": 0.0347018800675869,
+  "first_recognition": "12 seconds, both days. Dad's recorder runs true.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

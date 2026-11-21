@@ -1,0 +1,19 @@
+{
+  "audio_id": "c10_live.first.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "ab9a6a51c311fe70973e5c054586265240e03a884e784c7c3f6e4460a0bca31c",
+  "expected": "Field lights following. We can match that.",
+  "recognized": "Field lights following. We can notch that.",
+  "word_edits": 1,
+  "word_error_rate": 0.14285714285714285,
+  "listening_review_required": true,
+  "seconds": 2.88,
+  "sample_rate": 48000,
+  "peak": 0.438812255859375,
+  "rms": 0.05398087948560715,
+  "first_recognition": "Field lights following. We can notch that.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms",
+  "independent_phrase_transcription": "Field lights following. We can notch that."
+}

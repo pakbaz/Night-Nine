@@ -1,0 +1,18 @@
+{
+  "audio_id": "c4_escape.fault.lead.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "ba322e31cf36ac96b3305594fcea40603748db51b44d1b2074ff2f1996124c03",
+  "expected": "A drill console. If a drill says the west wing has to go, they’ll have to move me. In a van.",
+  "recognized": "A drill console. If a drill says the West Wing has to go, they'll have to move me. In a van.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 6.8,
+  "sample_rate": 48000,
+  "peak": 0.29168701171875,
+  "rms": 0.0364297479391098,
+  "first_recognition": "A drill console. If a drill says the West Wing has to go, they'll have to move me. In a van.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

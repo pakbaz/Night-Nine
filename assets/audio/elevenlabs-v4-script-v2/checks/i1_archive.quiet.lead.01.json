@@ -1,0 +1,18 @@
+{
+  "audio_id": "i1_archive.quiet.lead.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "f012d1de42aec897c285d9c8178f312e0d8a4e7a04177e6ede3dd8c40b0ba1d7",
+  "expected": "The fleet never takes a Prefect’s word for long. Sooner or later, it sends a Vigil to look.",
+  "recognized": "The fleet never takes a prefect's word for long. Sooner or later, it sends a vigil to look.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 7.04,
+  "sample_rate": 48000,
+  "peak": 0.888275146484375,
+  "rms": 0.15247951447963715,
+  "first_recognition": "The fleet never takes a prefect's word for long. Sooner or later, it sends a vigil to look.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

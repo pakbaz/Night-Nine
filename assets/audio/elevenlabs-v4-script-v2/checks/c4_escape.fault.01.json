@@ -1,0 +1,18 @@
+{
+  "audio_id": "c4_escape.fault.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "a4ff605cc3e82e9ed4359c723e3356b0b2763eee51302dfdd5b13e517898d688",
+  "expected": "Test circuit. No heat, no flame. Just enough bureaucracy to get us outside.",
+  "recognized": "Test circuit. No heat, no flame. Just enough bureaucracy to get us outside.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 6.0,
+  "sample_rate": 48000,
+  "peak": 0.41668701171875,
+  "rms": 0.0365707203745842,
+  "first_recognition": "Test circuit. No heat, no flame. Just enough bureaucracy to get us outside.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

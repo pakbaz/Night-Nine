@@ -1,0 +1,18 @@
+{
+  "audio_id": "c7_swap.bus.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "adaf8420245b5336162f2d26ffa59fc383d0751a3523e9684eafce6a2f879314",
+  "expected": "The tone goes out on Blue: the lectern, the back fence and the service steps, but not the press van. June’s reply comes back on Slate, to Stephen and me alone.",
+  "recognized": "The tone goes out on blue. The lectern, the back fence, and the service steps, but not the press van. June's reply comes back on slate, to Stephen and me alone.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 11.12,
+  "sample_rate": 48000,
+  "peak": 0.385406494140625,
+  "rms": 0.0390242338180542,
+  "first_recognition": "The tone goes out on blue. The lectern, the back fence, and the service steps, but not the press van. June's reply comes back on slate, to Stephen and me alone.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

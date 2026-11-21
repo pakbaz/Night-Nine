@@ -1,0 +1,18 @@
+{
+  "audio_id": "c1_escape.cross.04",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "53df1b0e17aa62233506e21cee1b4dedee08b734c45867e4eef43d7f0f94fd0c",
+  "expected": "Don’t. Please. I don’t know who you are tonight.",
+  "recognized": "Don't. Please. I don't know who you are tonight.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 3.84,
+  "sample_rate": 48000,
+  "peak": 0.3255615234375,
+  "rms": 0.03521982580423355,
+  "first_recognition": "Don't. Please. I don't know who you are tonight.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

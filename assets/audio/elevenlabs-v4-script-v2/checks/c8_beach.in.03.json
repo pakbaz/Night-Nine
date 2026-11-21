@@ -1,0 +1,18 @@
+{
+  "audio_id": "c8_beach.in.03",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "9b63654a68b2c46146381a476e6d7963c0a159462421f01142c356df2df1322b",
+  "expected": "Mom. Dad. Home by breakfast.",
+  "recognized": "Mom, Dad, home by breakfast.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 3.04,
+  "sample_rate": 48000,
+  "peak": 0.171783447265625,
+  "rms": 0.01599450781941414,
+  "first_recognition": "Mom, Dad, home by breakfast.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

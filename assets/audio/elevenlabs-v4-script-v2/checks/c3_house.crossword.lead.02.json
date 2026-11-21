@@ -1,0 +1,18 @@
+{
+  "audio_id": "c3_house.crossword.lead.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "c5708099e6facecb52bc22cf0348594b32ce4715f9a9657ed8fa31a4f5793d62",
+  "expected": "I was at the station all morning, and Biscuit isn’t a witness. So you tell me. What could I ask you that the man at the market couldn’t answer?",
+  "recognized": "I was at the station all morning, and Biscuit isn't a witness. So you tell me, what could I ask you that the man at the market couldn't answer?",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 9.36,
+  "sample_rate": 48000,
+  "peak": 0.464996337890625,
+  "rms": 0.06442031264305115,
+  "first_recognition": "I was at the station all morning, and Biscuit isn't a witness. So you tell me, what could I ask you that the man at the market couldn't answer?",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

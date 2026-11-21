@@ -1,0 +1,18 @@
+{
+  "audio_id": "i1_archive.quiet.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "3587cf4e3a7c2de3665fc98a0d5207f0ffd4169abc226aa960f28422044784ec",
+  "expected": "The sleeper in Row Zero came from Tirel, three hundred years ago. Seven worlds went quiet, and the surveyors found empty cities, not graves. The Prefect’s sealed entry, I have not read.",
+  "recognized": "The sleeper in row zero came from Tirel, 300 years ago. Seven worlds went quiet, and the surveyors found empty cities, not graves. The prefect's sealed entry I have not read.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 16.08,
+  "sample_rate": 48000,
+  "peak": 0.920501708984375,
+  "rms": 0.12898707389831543,
+  "first_recognition": "The sleeper in row zero came from Tyrol, 300 years ago. Seven worlds went quiet, and the surveyors found empty cities, not graves. The prefect's sealed entry I have not read.",
+  "recognition_pass": "story_vocabulary_3",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_report.out.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "136b19425e49a866df2e3106523a3981c010f61b7c4e350488794882fdb8bcbf",
+  "expected": "Here are three hundred and twelve lives you should meet. And here is a world where we can live.",
+  "recognized": "Here are 312 lives you should meet, and here is a world where we can live.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 6.56,
+  "sample_rate": 48000,
+  "peak": 0.847686767578125,
+  "rms": 0.15330226719379425,
+  "first_recognition": "Here are 312 lives you should meet, and here is a world where we can live.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

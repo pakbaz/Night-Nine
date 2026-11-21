@@ -1,0 +1,18 @@
+{
+  "audio_id": "c9_choir.out.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "d8e29d36366c06d38d06f98ffdf802105231f21408ce204596f50bca6e713110",
+  "expected": "I should have told you what we were doing.",
+  "recognized": "I should have told you what we were doing.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 2.72,
+  "sample_rate": 48000,
+  "peak": 0.235260009765625,
+  "rms": 0.044956423342227936,
+  "first_recognition": "I should have told you what we were doing.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "i1_archive.in.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "e47bd76eece7a290adb1839d81f153cc98525fbfe45daf17ecbacb5c9c29b3a3",
+  "expected": "I invented a kelp croissant. Nobody asked for it. I wanted to know what it would taste like.",
+  "recognized": "I invented a kelp croissant. Nobody asked for it. I wanted to know what it would taste like.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 6.56,
+  "sample_rate": 48000,
+  "peak": 0.777740478515625,
+  "rms": 0.08139371871948242,
+  "first_recognition": "I invented a kelp croissant. Nobody asked for it. I wanted to know what it would taste like.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

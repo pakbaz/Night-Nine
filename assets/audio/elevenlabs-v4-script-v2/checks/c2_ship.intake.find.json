@@ -1,0 +1,18 @@
+{
+  "audio_id": "c2_ship.intake.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "b6143f69d37562856b67724163175166b1a6fc652130b3381236b9ac0138d5d3",
+  "expected": "Nora’s real whistle, through the speakers I fixed the day we met. Admiral came down through the dark and dragged me to the surface.",
+  "recognized": "Nora's real whistle, through the speakers I fixed the day we met. Admiral came down through the dark and dragged me to the surface.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 8.08,
+  "sample_rate": 48000,
+  "peak": 0.338287353515625,
+  "rms": 0.03949694335460663,
+  "first_recognition": "Nora's real whistle, through the speakers I fixed the day we met. Admiral came down through the dark and dragged me to the surface.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

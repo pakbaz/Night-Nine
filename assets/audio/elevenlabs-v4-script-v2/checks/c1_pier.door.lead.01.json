@@ -1,0 +1,18 @@
+{
+  "audio_id": "c1_pier.door.lead.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "5a512f1b1d52e726d89f4fb6d6d8a9b524937a12ff4194f4d0ce8d58ed3fc163",
+  "expected": "Steve. I owe you an apology. When your folks went missing, I never called you back. That wasn’t right.",
+  "recognized": "Steve, I owe you an apology. When your folks went missing, I never called you back. That wasn't right.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 7.36,
+  "sample_rate": 48000,
+  "peak": 0.64501953125,
+  "rms": 0.06045544892549515,
+  "first_recognition": "Steve, I owe you an apology. When your folks went missing, I never called you back. That wasn't right.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

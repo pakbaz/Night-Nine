@@ -1,0 +1,18 @@
+{
+  "audio_id": "c5_station.stephen.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "0c29a01f56f7ef4ddee4b5f24eaeac5190c1b1b91d96fa82574ccece0c26940d",
+  "expected": "Sixty-one percent. That’s what the attendant said. I assumed the rest was a compliment.",
+  "recognized": "61%. That's what the attendant said. I assumed the rest was a compliment.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 5.44,
+  "sample_rate": 48000,
+  "peak": 0.3941650390625,
+  "rms": 0.03795802965760231,
+  "first_recognition": "61%. That's what the attendant said. I assumed the rest was a compliment.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

@@ -1,0 +1,15 @@
+{
+  "operation": "text_to_speech",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "audio_id": "c2_aquarium.in.02",
+  "voice_id": "vveagfomyMCJLZsOPRP2",
+  "model_id": "eleven_v4",
+  "text_sha256": "b31a41a91d0eecf46b26b07d6eb2a1bcdc8b55da1ff3c2a27cc8f333047e64e4",
+  "synthesis_text_sha256": "b31a41a91d0eecf46b26b07d6eb2a1bcdc8b55da1ff3c2a27cc8f333047e64e4",
+  "request_id": "g50bBm083n729OB8xiGP",
+  "trace_id": "2899b5bae1fc3d6b3d0dd766d1ddccac",
+  "character_cost": 22,
+  "output_format": "mp3_44100_192",
+  "audio_sha256": "b41dc5d0826f098473abc0c2cc3d89ac6a12599393f9d4ba3b564e0cdac4f43e",
+  "response_bytes": 80291
+}

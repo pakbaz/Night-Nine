@@ -1,0 +1,19 @@
+{
+  "audio_id": "c8_lab.props.lead.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "182c8082d638b8be2be466de0734496a220b73bfa918f923aa17247200036fb1",
+  "expected": "Film log’s on the clipboard. Tell me what you see.",
+  "recognized": "Film logs on the clipboard. Tell me what you see.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 3.2,
+  "sample_rate": 48000,
+  "peak": 0.42254638671875,
+  "rms": 0.05320996418595314,
+  "first_recognition": "Film logs on the clipboard. Tell me what you see.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms",
+  "independent_phrase_transcription": "Film logs on the clipboard. Tell me what you see."
+}

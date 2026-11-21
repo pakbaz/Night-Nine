@@ -1,0 +1,18 @@
+{
+  "audio_id": "c1_pier.whistle.lead.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "f5fd8a09b4e0c2187345db2d0df78b44173ed9c1b23acdc357946ce04240276d",
+  "expected": "Watch.",
+  "recognized": "Watch.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 0.8,
+  "sample_rate": 48000,
+  "peak": 0.42510986328125,
+  "rms": 0.055206555873155594,
+  "first_recognition": "Watch.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

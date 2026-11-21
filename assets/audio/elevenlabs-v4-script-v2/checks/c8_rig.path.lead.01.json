@@ -1,0 +1,18 @@
+{
+  "audio_id": "c8_rig.path.lead.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "7fd2aa2eb6ff5d8b45d51be904d0e7c2482ffaca9fbf2888b76a2f084c2c431e",
+  "expected": "I ran a paper trial. Three receipts. Only one of them would convince me, if I were them.",
+  "recognized": "I ran a paper trial. Three receipts. Only one of them would convince me, if I were them.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 6.56,
+  "sample_rate": 48000,
+  "peak": 0.78204345703125,
+  "rms": 0.07348047941923141,
+  "first_recognition": "I ran a paper trial. Three receipts. Only one of them would convince me, if I were them.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

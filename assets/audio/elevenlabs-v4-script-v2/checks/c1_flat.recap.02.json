@@ -1,0 +1,18 @@
+{
+  "audio_id": "c1_flat.recap.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "e95d0e31a3d26e32fa189c99a03e7e08d9cb6e0fe9b3ec998ae6e98b936fdf8d",
+  "expected": "I tried to remember our last real conversation. I couldn’t. Before the boat, she never said anything the same way twice.",
+  "recognized": "I tried to remember our last real conversation. I couldn't. Before the boat, she never said anything the same way twice.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 8.88,
+  "sample_rate": 48000,
+  "peak": 0.299713134765625,
+  "rms": 0.03247268125414848,
+  "first_recognition": "I tried to remember our last real conversation. I couldn't. Before the boat, she never said anything the same way twice.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

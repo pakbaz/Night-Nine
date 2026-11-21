@@ -1,0 +1,18 @@
+{
+  "audio_id": "c3_house.in.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "19a5955ccb3d9fc6fbb83236abd65c4379cf3b019199d58bb334be3f87bd8299",
+  "expected": "Forty-seven casseroles. Your town is either very worried or very hungry.",
+  "recognized": "47 casseroles. Your town is either very worried or very hungry.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 6.0,
+  "sample_rate": 48000,
+  "peak": 0.441314697265625,
+  "rms": 0.06107615306973457,
+  "first_recognition": "47 casseroles. Your town is either very worried or very hungry.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

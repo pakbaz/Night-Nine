@@ -1,0 +1,19 @@
+{
+  "audio_id": "c6_iris.takes.04",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "20768e6ab50bcd2a9ce5d6bd000a292adb01684a6222d2fb8e990d6cd6eceaa2",
+  "expected": "Before I was Nora, I was a junior crew member with a duty and a record. We call ourselves Veyri. None of us had ever had a self.",
+  "recognized": "Before I was Nora, I was a junior crew member with a duty and a record. We call ourselves very. None of us had ever had a self.",
+  "word_edits": 1,
+  "word_error_rate": 0.03571428571428571,
+  "listening_review_required": true,
+  "seconds": 9.36,
+  "sample_rate": 48000,
+  "peak": 0.4207763671875,
+  "rms": 0.056895408779382706,
+  "first_recognition": "Before I was Nora, I was a junior crew member with a duty and a record. We call ourselves very. None of us had ever had a self.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms",
+  "independent_phrase_transcription": "Before I was Nora. I was a junior crew member with a duty and a record. We call ourselves very. None of us had ever had a self."
+}

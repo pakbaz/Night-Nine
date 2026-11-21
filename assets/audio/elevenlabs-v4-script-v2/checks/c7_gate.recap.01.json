@@ -1,0 +1,19 @@
+{
+  "audio_id": "c7_gate.recap.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "7d20771efe3282b60cfa4aa050dcd0620748232d3b0ec28e931a547cc96211cf",
+  "expected": "We were in. Stephen as a loyal asset, Pell as the mail, and me at the sound desk with Dad’s tape of the ninth-night tone.",
+  "recognized": "We were in. Stephen as a loyal asset, Pell as the male, and me at the sound desk with Dad's tape of the Ninth Night Tone.",
+  "word_edits": 1,
+  "word_error_rate": 0.038461538461538464,
+  "listening_review_required": true,
+  "seconds": 8.8,
+  "sample_rate": 48000,
+  "peak": 0.40283203125,
+  "rms": 0.03804606571793556,
+  "first_recognition": "We were in. Stephen as a loyal asset, Pell as the male, and me at the sound desk with Dad's tape of the Ninth Night Tone.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms",
+  "independent_phrase_transcription": "we were in. Steven as a loyal asset, Pell as the male, and me at the sound desk with Dad's tape of the Ninth Night Tone."
+}

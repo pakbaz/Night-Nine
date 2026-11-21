@@ -1,0 +1,18 @@
+{
+  "audio_id": "c2_ship.recap.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "7aa7685037ee5b69c803d382a4fc1f6a63136ad19ef524fb664d76a020274fc8",
+  "expected": "There is a ship under the bay. Nora is asleep on it, alive, with hundreds of others. At the far end of the hall, one bed lay under frost, and something too tall to be human slept in it. The guards never looked at it.",
+  "recognized": "There is a ship under the bay. Nora is asleep on it, alive, with hundreds of others. At the far end of the hall, one bed lay under frost, and something too tall to be human slept in it. The guards never looked at it.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 15.2,
+  "sample_rate": 48000,
+  "peak": 0.35614013671875,
+  "rms": 0.0358557403087616,
+  "first_recognition": "There is a ship under the bay. Nora is asleep on it, alive, with hundreds of others. At the far end of the hall, one bed lay under frost, and something too tall to be human slept in it. The guards never looked at it.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

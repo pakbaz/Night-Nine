@@ -1,0 +1,18 @@
+{
+  "audio_id": "c3_archive.in.05",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "70aa68d0de25de7c49a57418c15d52312fe629a2ec6cb90430864df37572fa0d",
+  "expected": "...Cool. Why?",
+  "recognized": "Cool. Why?",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 1.92,
+  "sample_rate": 48000,
+  "peak": 0.573974609375,
+  "rms": 0.06993161141872406,
+  "first_recognition": "Cool. Why?",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

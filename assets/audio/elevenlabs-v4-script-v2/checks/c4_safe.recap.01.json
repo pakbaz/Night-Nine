@@ -1,0 +1,18 @@
+{
+  "audio_id": "c4_safe.recap.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "3e1b941bc46ec4d86553b6697219500289ae2bcbc2fcb4ebb0914f808595e9fe",
+  "expected": "Rook’s voice is a recording. The real Rook is asleep under the bay. And there’s a bed waiting for the President.",
+  "recognized": "Rook's voice is a recording. The real Rook is asleep under the bay. And there's a bed waiting for the president.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 7.36,
+  "sample_rate": 48000,
+  "peak": 0.279937744140625,
+  "rms": 0.03736843168735504,
+  "first_recognition": "Rook's voice is a recording. The real Rook is asleep under the bay. And there's a bed waiting for the president.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

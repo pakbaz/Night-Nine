@@ -1,0 +1,18 @@
+{
+  "audio_id": "c2_ship.out.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "bd78574194d85d9a63d2d12bc196a1b0368dc58247619401db90dfc94a4b07d6",
+  "expected": "Mercer. Breathe first. Explain afterward.",
+  "recognized": "Mercer, breathe first. Explain afterward.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 3.84,
+  "sample_rate": 48000,
+  "peak": 0.471832275390625,
+  "rms": 0.05943642929196358,
+  "first_recognition": "Mercer, breathe first. Explain afterward.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

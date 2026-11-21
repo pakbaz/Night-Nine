@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_station.out.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "e58af304dbc8df09702a7f4180b73821bef40b6709e4da2399a1ee8ad3aecb68",
+  "expected": "Coast relay ready. They’re answering from everywhere, Frank.",
+  "recognized": "Coast Relay ready. They're answering from everywhere, Frank.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.24,
+  "sample_rate": 48000,
+  "peak": 0.333526611328125,
+  "rms": 0.03308148309588432,
+  "first_recognition": "Coast Relay ready. They're answering from everywhere, Frank.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

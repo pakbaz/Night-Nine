@@ -1,0 +1,18 @@
+{
+  "audio_id": "c6_jail.out.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "d0d02ce392f1f622f5818eb5e6b456818d0a331555ab03b5d3a7110bb299a8bb",
+  "expected": "Nora found the ring a year ago. It is not mine to answer.",
+  "recognized": "Nora found the ring a year ago. It is not mine to answer.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.16,
+  "sample_rate": 48000,
+  "peak": 0.372039794921875,
+  "rms": 0.058271780610084534,
+  "first_recognition": "Nora found the ring a year ago. It is not mine to answer.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "book.after.6.2",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "42dc158fb9a83a4f653d2c9e76d1c36c4c8eba2bb642dd31cf2f75079971c6b5",
+  "expected": "From very, very far away.",
+  "recognized": "from very, very far away.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 2.88,
+  "sample_rate": 48000,
+  "peak": 0.297210693359375,
+  "rms": 0.039619527757167816,
+  "first_recognition": "from very, very far away.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

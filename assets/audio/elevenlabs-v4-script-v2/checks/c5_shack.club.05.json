@@ -1,0 +1,18 @@
+{
+  "audio_id": "c5_shack.club.05",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "fa3315b627329a3290a368c42d27b05ee3232a0c6abdbe69989c7f4062900efd",
+  "expected": "This is Gull. It isn’t Thursday, but none of us ever really switch off. Marsh and Cedar are on too. Marsh lives out past Sentinel Point these days.",
+  "recognized": "This is Gull. It isn't Thursday, but none of us ever really switch off. Marsh and Cedar are on too. Marsh lives out past Sentinel Point these days.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 10.4,
+  "sample_rate": 48000,
+  "peak": 0.2232666015625,
+  "rms": 0.02248113602399826,
+  "first_recognition": "This is Gull. It isn't Thursday, but none of us ever really switch off. Marsh and Cedar are on too. Marsh lives out past Sentinel Point these days.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

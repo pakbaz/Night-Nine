@@ -1,0 +1,18 @@
+{
+  "audio_id": "i2_nora.patrol.lead.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "c6fc213b376a51324dd0e710eae03262a4bd5a1b6774d938b0b5550e0b56bdff",
+  "expected": "Boots. Then the pump. Then the far door. Again and again.",
+  "recognized": "Boots, then the pump, then the far door, again and again.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 5.36,
+  "sample_rate": 48000,
+  "peak": 0.5255126953125,
+  "rms": 0.058366645127534866,
+  "first_recognition": "Boots, then the pump, then the far door, again and again.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_live.in.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "11a36504f5fc03d5b1f17f015540d8c4ace0a16a43b35d40ddf1416a29159d7f",
+  "expected": "Bellwether, this is Steve Mercer, live. I can’t do this alone, and for once I’m not going to try.",
+  "recognized": "Bellwether, this is Steve Mercer, live. I can't do this alone, and for once, I'm not going to try.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 6.8,
+  "sample_rate": 48000,
+  "peak": 0.632659912109375,
+  "rms": 0.04693136364221573,
+  "first_recognition": "Bellwether, this is Steve Mercer, live. I can't do this alone, and for once, I'm not going to try.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

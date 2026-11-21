@@ -1,0 +1,18 @@
+{
+  "audio_id": "p_bay.out.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "a6a49f8e5b211732e301453f3b6801d2bc3c4b6a565b5744e114213fe34304dc",
+  "expected": "Helen. It’s tuning to us.",
+  "recognized": "Helen, it's tuning to us.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 2.88,
+  "sample_rate": 48000,
+  "peak": 0.375030517578125,
+  "rms": 0.0557657852768898,
+  "first_recognition": "Helen, it's tuning to us.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

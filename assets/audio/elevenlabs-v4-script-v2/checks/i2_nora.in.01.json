@@ -1,0 +1,18 @@
+{
+  "audio_id": "i2_nora.in.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "52a83b5c9da6b7d8e49a7aee426f9820df15f3e72c7fbce2559fe8a3df826caa",
+  "expected": "I can move my hand. That’s a start.",
+  "recognized": "I can move my hand. That's a start.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 2.72,
+  "sample_rate": 48000,
+  "peak": 0.42401123046875,
+  "rms": 0.05776562541723251,
+  "first_recognition": "I can move my hand. That's a start.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

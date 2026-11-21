@@ -1,0 +1,18 @@
+{
+  "audio_id": "i2_nora.ctx.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "d1d14f7e0471350a102d641142868fb92ebeef2296520d854792e8e0b390b5ef",
+  "expected": "I woke up in amber light, in a bed I didn’t choose, in a hall that went on forever.",
+  "recognized": "I woke up in amber light, in a bed I didn't choose, in a hall that went on forever.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 6.64,
+  "sample_rate": 48000,
+  "peak": 0.410980224609375,
+  "rms": 0.053913846611976624,
+  "first_recognition": "I woke up in amber light, in a bed I didn't choose, in a hall that went on forever.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

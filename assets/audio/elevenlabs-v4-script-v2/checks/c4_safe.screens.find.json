@@ -1,0 +1,18 @@
+{
+  "audio_id": "c4_safe.screens.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "edd6fd8088fe8a4030c890b6adfd64faab4b83e9b7cc9e5ed72345e92bb1b6b5",
+  "expected": "The real Adrian Rook is asleep on that ship, in bed 41B. They have people in Washington and in Beijing. And they’ve made up a bed for President Ward, for the day she signs the accord.",
+  "recognized": "The real Adrian Rook is asleep on that ship in bed 41B. They have people in Washington and in Beijing, and they've made up a bed for President Ward for the day she signs the accord.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 12.48,
+  "sample_rate": 48000,
+  "peak": 0.333099365234375,
+  "rms": 0.040249526500701904,
+  "first_recognition": "The real Adrienne Rook is asleep on that ship, in bed 41B. They have people in Washington and in Beijing, and they've made up a bed for President Ward for the day she signs the accord.",
+  "recognition_pass": "story_vocabulary_1",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

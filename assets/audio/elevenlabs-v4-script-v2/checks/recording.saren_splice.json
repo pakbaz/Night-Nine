@@ -1,0 +1,15 @@
+{
+  "audio_id": "recording.saren_splice",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "117cef297d19146ef202ac22073518fdd4b370cdc2be95d23951bd5a81163397",
+  "expected": "Come out with us, kiddo. Tonight.",
+  "recognized": "Come out with us, kiddo.",
+  "word_edits": 1,
+  "word_error_rate": 0.16666666666666666,
+  "listening_review_required": true,
+  "edit_receipt": "assets/audio/elevenlabs-v4-script-v2/edit-receipts/recording.saren_splice.json",
+  "seconds": 1.795,
+  "sample_rate": 48000,
+  "peak": 0.50238037109375,
+  "rms": 0.07798737287521362
+}

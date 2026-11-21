@@ -1,0 +1,18 @@
+{
+  "audio_id": "c5_shack.recap.03",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "c06994a314c770553cd096f37fa214309653f064a26353516c43c953a5c1ab86",
+  "expected": "Twice today someone stood on the path below the shack. Both times, by the time I looked, he was gone.",
+  "recognized": "Twice today, someone stood on the path below the shack. Both times, by the time I looked, he was gone.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 6.96,
+  "sample_rate": 48000,
+  "peak": 0.469573974609375,
+  "rms": 0.03507647663354874,
+  "first_recognition": "Twice today, someone stood on the path below the shack. Both times, by the time I looked, he was gone.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

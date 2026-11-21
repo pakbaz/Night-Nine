@@ -1,0 +1,19 @@
+{
+  "audio_id": "c8_lab.in.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "31e06b1be3f40ed99ffe9db2640789b5759e924a936fd870667ad50921ccea9c",
+  "expected": "Your mother wrote ‘heard this before’ beside a drum beat that isn’t there. I want to know where she heard it.",
+  "recognized": "Your mother wrote, heard this before, beside a drumbeat that isn't there. I want to know where she heard it.",
+  "word_edits": 2,
+  "word_error_rate": 0.09090909090909091,
+  "listening_review_required": true,
+  "seconds": 7.36,
+  "sample_rate": 48000,
+  "peak": 0.551727294921875,
+  "rms": 0.07794220745563507,
+  "first_recognition": "Your mother wrote, heard this before, beside a drumbeat that isn't there. I want to know where she heard it.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms",
+  "independent_phrase_transcription": "Your mother wrote, heard this before, beside a drumbeat that isn't there. I want to know where she heard it. Now, let's go."
+}

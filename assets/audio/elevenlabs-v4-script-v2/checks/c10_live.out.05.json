@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_live.out.05",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "e0971737abb0f5bf74a0efedbec7c19801f0dbcc2e584739edaa9ed10f5b6601",
+  "expected": "Mr. Mercer. Turn it off, or I will come up that tower and finish your scan on air.",
+  "recognized": "Mr. Mercer, turn it off or I will come up that tower and finish your scan on air.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 5.84,
+  "sample_rate": 48000,
+  "peak": 0.53875732421875,
+  "rms": 0.04913877695798874,
+  "first_recognition": "Mr. Mercer, turn it off or I will come up that tower and finish your scan on air.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

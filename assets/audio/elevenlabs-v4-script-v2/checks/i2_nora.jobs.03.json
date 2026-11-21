@@ -1,0 +1,18 @@
+{
+  "audio_id": "i2_nora.jobs.03",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "530368d089cea32e79c4fed9cf549a3317cf341b0ebfd58c91bfd7d9675f6335",
+  "expected": "Good. I’ll handle the pump.",
+  "recognized": "Good, I'll handle the pump.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 2.08,
+  "sample_rate": 48000,
+  "peak": 0.703582763671875,
+  "rms": 0.07723081856966019,
+  "first_recognition": "Good, I'll handle the pump.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

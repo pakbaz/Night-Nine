@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_town.in.06",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "7de279ebbf26d3acf950035b4aba8f1493e56822d9dd2445d840f0444dc47dea",
+  "expected": "Mrs. Penhallow, I have never heard you say anything that wasn’t about bait.",
+  "recognized": "Mrs. Penhallow, I have never heard you say anything that wasn't about bait.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 5.2,
+  "sample_rate": 48000,
+  "peak": 0.309661865234375,
+  "rms": 0.04158613458275795,
+  "first_recognition": "Mrs. Penhalo, I have never heard you say anything that wasn't about bait.",
+  "recognition_pass": "story_vocabulary_2",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_town.lights.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "c508ac1e7789cc18d444e120e1685853bc47e9c5dbf16e2b8b55f47c40827dbd",
+  "expected": "Nora set it up in ten minutes. Orchard starts on my cue, Pier answers what it sees, and the spare phone stays free for the fire crew.",
+  "recognized": "Nora set it up in 10 minutes. Orchard starts on my cue, Pierre answers what it sees, and the spare phone stays free for the fire crew.",
+  "word_edits": 1,
+  "word_error_rate": 0.037037037037037035,
+  "listening_review_required": true,
+  "seconds": 8.88,
+  "sample_rate": 48000,
+  "peak": 0.511749267578125,
+  "rms": 0.04579794779419899,
+  "first_recognition": "Nora set it up in 10 minutes. Orchard starts on my cue, Pierre answers what it sees, and the spare phone stays free for the fire crew.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

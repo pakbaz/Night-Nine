@@ -1,0 +1,19 @@
+{
+  "audio_id": "c7_gate.out.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "d405bb71be2f7fd89404d2e34e9955531b2788644a7d55d006772f5f288e7f0a",
+  "expected": "Lin Wen. I was the other side’s engineer at Sentinel Point, nine years ago. Helen wrote this? Where is she?",
+  "recognized": "Linwen, I was the other side's engineer at Sentinel Point nine years ago. Helen wrote this? Where is she?",
+  "word_edits": 2,
+  "word_error_rate": 0.10526315789473684,
+  "listening_review_required": true,
+  "seconds": 8.24,
+  "sample_rate": 48000,
+  "peak": 0.768096923828125,
+  "rms": 0.0827011987566948,
+  "first_recognition": "Linwen, I was the other side's engineer at Sentinel Point nine years ago. Helen wrote this? Where is she?",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms",
+  "independent_phrase_transcription": "Linwen I was the other side's engineer at Sentinel Point 9 years ago. Helen wrote this? Where is she?"
+}

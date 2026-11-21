@@ -1,0 +1,18 @@
+{
+  "audio_id": "c2_ship.in.04",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "6f1ebcfb35bd8d920681ef8c11f829b87758a61de01ecb1ace6d44ecec75b640",
+  "expected": "They walked me down the old intake tunnel, under the bay. At the end of it there was a ship.",
+  "recognized": "They walked me down the old intake tunnel, under the bay. At the end of it, there was a ship.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 5.92,
+  "sample_rate": 48000,
+  "peak": 0.3199462890625,
+  "rms": 0.039617959409952164,
+  "first_recognition": "They walked me down the old intake tunnel, under the bay. At the end of it, there was a ship.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

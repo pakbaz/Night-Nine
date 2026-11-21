@@ -1,0 +1,18 @@
+{
+  "audio_id": "c1_pier.whistle.03",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "de4c7ce7ff591fed51552cf1adb4f3bffe7b7beb1de38721ed61ac48465e0e29",
+  "expected": "...He came for me. I can’t even whistle.",
+  "recognized": "He came for me. I can't even whistle.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 3.2,
+  "sample_rate": 48000,
+  "peak": 0.239349365234375,
+  "rms": 0.03767896071076393,
+  "first_recognition": "He came for me. I can't even whistle.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

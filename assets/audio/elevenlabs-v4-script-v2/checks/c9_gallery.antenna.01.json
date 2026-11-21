@@ -1,0 +1,18 @@
+{
+  "audio_id": "c9_gallery.antenna.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "7b20b0138f04dd40d7a6987f7795f678bcc199e4d3d81ab4ec10473842e5fc9c",
+  "expected": "Calder saw the lamp. I’m heading up to the antenna. Don’t wait for me.",
+  "recognized": "Calder saw the lamp. I'm heading up to the antenna. Don't wait for me.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.4,
+  "sample_rate": 48000,
+  "peak": 0.366058349609375,
+  "rms": 0.04479990527033806,
+  "first_recognition": "Calder saw the lamp. I'm heading up to the antenna. Don't wait for me.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

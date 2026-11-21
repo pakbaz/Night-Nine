@@ -1,0 +1,18 @@
+{
+  "audio_id": "c9_wake.helen.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "911e242b491f161a63c71cb1c81c9bb3f3c36a7220ce97be951cb7fad0d0333a",
+  "expected": "Up, up, back down through the first rise, then home, held: 1-3-5-3-1-1. Mom’s lullaby, the one the ship’s hum kept almost playing. She woke up singing the last note.",
+  "recognized": "Up, up, back down through the first rise, then home. Held. 1-3-5-3-1-1. Mom's lullaby, the one the ship's hum kept almost playing. She woke up singing the last note.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 14.16,
+  "sample_rate": 48000,
+  "peak": 0.563446044921875,
+  "rms": 0.03643431141972542,
+  "first_recognition": "Up, up, back down through the first rise, then home. Held. One, three, five, three, one, one. Mom's lullaby, the one the ship's hum kept almost playing. She woke up singing the last note.",
+  "recognition_pass": "story_vocabulary_2",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "c5_station.stephen.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "7fd9dc7468d6b065a10a3bb51ad16ca6578bda557576db40cb024e28eb4e0148",
+  "expected": "Sit down. There’s something you need to know.",
+  "recognized": "Sit down. There's something you need to know.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 2.72,
+  "sample_rate": 48000,
+  "peak": 0.30987548828125,
+  "rms": 0.034483425319194794,
+  "first_recognition": "Sit down. There's something you need to know.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

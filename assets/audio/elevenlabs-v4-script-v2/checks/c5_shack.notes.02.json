@@ -1,0 +1,18 @@
+{
+  "audio_id": "c5_shack.notes.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "469f142c127051b0c29180e1e1b227db9a213692590672999203ace82d834669",
+  "expected": "I missed you both so much I stopped looking at anything you left.",
+  "recognized": "I missed you both so much, I stopped looking at anything you left.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.4,
+  "sample_rate": 48000,
+  "peak": 0.286773681640625,
+  "rms": 0.03910990059375763,
+  "first_recognition": "I missed you both so much, I stopped looking at anything you left.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

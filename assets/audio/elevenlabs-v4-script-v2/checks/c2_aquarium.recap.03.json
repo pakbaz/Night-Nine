@@ -1,0 +1,18 @@
+{
+  "audio_id": "c2_aquarium.recap.03",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "a5b30e5f5085b81d81bfcb81289f2a62f941478012943fcc0554d7b7907e9a97",
+  "expected": "If she was alive in May, she might be alive now.",
+  "recognized": "If she was alive in May, she might be alive now.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 3.76,
+  "sample_rate": 48000,
+  "peak": 0.270782470703125,
+  "rms": 0.039852067828178406,
+  "first_recognition": "If she was alive in May, she might be alive now.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

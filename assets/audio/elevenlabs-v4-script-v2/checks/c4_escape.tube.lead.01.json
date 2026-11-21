@@ -1,0 +1,19 @@
+{
+  "audio_id": "c4_escape.tube.lead.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "68e99fb168dd895ab92aa88d7c96bd20cc90a84675a0abff1fccb8963e93a2ce",
+  "expected": "Pneumatic post. Dad would have loved this.",
+  "recognized": "Pneumatic post. Dad would have loved this.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 3.36,
+  "sample_rate": 48000,
+  "peak": 0.264984130859375,
+  "rms": 0.03623737022280693,
+  "first_recognition": "Pneumatic post. Tad would have loved this.",
+  "recognition_pass": "independent_phrases",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms",
+  "independent_phrase_transcription": "Pneumatic post. Dad would have loved this."
+}

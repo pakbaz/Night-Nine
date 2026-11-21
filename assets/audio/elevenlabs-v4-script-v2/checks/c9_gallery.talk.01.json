@@ -1,0 +1,18 @@
+{
+  "audio_id": "c9_gallery.talk.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "38123b4dd67eb1d28cec48e6bcf9722f076206ffa93a34fe651dcf2a53f05005",
+  "expected": "I was afraid that if I wanted something, I would lose it too. That doesn’t excuse leaving you alone.",
+  "recognized": "I was afraid that if I wanted something, I would lose it too. That doesn't excuse leaving you alone.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 6.56,
+  "sample_rate": 48000,
+  "peak": 0.275665283203125,
+  "rms": 0.03848579525947571,
+  "first_recognition": "I was afraid that if I wanted something, I would lose it too. That doesn't excuse leaving you alone.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

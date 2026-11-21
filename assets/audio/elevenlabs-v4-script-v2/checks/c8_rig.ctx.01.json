@@ -1,0 +1,18 @@
+{
+  "audio_id": "c8_rig.ctx.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "c8a8338779cd43eaabc966b47a0b1edbd471115b1ce5173d93a698a5e6bccb5e",
+  "expected": "Back at Sentinel Point, I told them the plan. It had a lot of holes. Shaw filled most of them with gaffer tape.",
+  "recognized": "Back at Sentinel Point, I told them the plan. It had a lot of holes. Shaw filled most of them with gaffer tape.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 7.12,
+  "sample_rate": 48000,
+  "peak": 0.40399169921875,
+  "rms": 0.04207586497068405,
+  "first_recognition": "Back at Sentinel Point, I told them the plan. It had a lot of holes. Shaw filled most of them with gaffer tape.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

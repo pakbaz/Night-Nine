@@ -1,0 +1,18 @@
+{
+  "audio_id": "epilogue.neighbors.03",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "4430cb552bed8f8989e1762cc7338976d8220e61dc364bc071d494addd71fb08",
+  "expected": "Best news I’ve had in years.",
+  "recognized": "Best news I've had in years!",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 2.48,
+  "sample_rate": 48000,
+  "peak": 0.788909912109375,
+  "rms": 0.09102712571620941,
+  "first_recognition": "Best news I've had in years!",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

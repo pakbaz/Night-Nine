@@ -1,0 +1,18 @@
+{
+  "audio_id": "epilogue.bait.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "3ba60a6f7d275e4c8d25fd106c191704d3e0337cfb58ce010045711898e92771",
+  "expected": "That price is robbery.",
+  "recognized": "That price is robbery.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 1.92,
+  "sample_rate": 48000,
+  "peak": 0.262542724609375,
+  "rms": 0.04310458526015282,
+  "first_recognition": "That price is robbery.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

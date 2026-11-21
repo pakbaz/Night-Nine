@@ -1,0 +1,18 @@
+{
+  "audio_id": "c8_lab.in.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "8b7d68ecf76ae3680c8fe6a4c197faca882a8c551a544036e427b0b0c7285168",
+  "expected": "Mine had a better explosion.",
+  "recognized": "Mine had a better explosion.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 2.16,
+  "sample_rate": 48000,
+  "peak": 0.361907958984375,
+  "rms": 0.050529010593891144,
+  "first_recognition": "Mine had a better explosion.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

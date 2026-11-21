@@ -1,0 +1,18 @@
+{
+  "audio_id": "c5_station.out.03",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "a5b9b67f49f0efc9c5da3b82c54ad5ea828bc23e0771a9b368aa795c112d5052",
+  "expected": "Then that explains what I saw when I woke up. Mom and Dad are on that ship, Steve. Row nine. They’re asleep. They’re alive.",
+  "recognized": "Then that explains what I saw when I woke up. Mom and Dad are on that ship, Steve. Row 9. They're asleep. They're alive.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 8.48,
+  "sample_rate": 48000,
+  "peak": 0.34783935546875,
+  "rms": 0.04197108373045921,
+  "first_recognition": "Then that explains what I saw when I woke up. Mom and Dad are on that ship, Steve. Row 9. They're asleep. They're alive.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

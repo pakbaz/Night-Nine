@@ -1,0 +1,18 @@
+{
+  "audio_id": "epilogue.bait.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "acba247c52dea2358ecd11e254101ac2990755e1f20cefce4c2a8d95681b8972",
+  "expected": "It is a competitive market. We are each other’s competition.",
+  "recognized": "It is a competitive market. We are each other's competition.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 3.92,
+  "sample_rate": 48000,
+  "peak": 0.261688232421875,
+  "rms": 0.043268587440252304,
+  "first_recognition": "It is a competitive market. We are each other's competition.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "c3_archive.out.09",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "cfc0439a92ba0ffe6f3f474c141ac8d320ee07c1bdddc7818aa620f6bb2f3dc3",
+  "expected": "Mrs. Penhallow was on the boathouse steps, watching. She isn’t on your list.",
+  "recognized": "Mrs. Penhallow was on the boathouse steps, watching. She isn't on your list.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 5.68,
+  "sample_rate": 48000,
+  "peak": 0.3037109375,
+  "rms": 0.03957343474030495,
+  "first_recognition": "Mrs. Penhalo was on the boathouse steps, watching. She isn't on your list.",
+  "recognition_pass": "story_vocabulary_2",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

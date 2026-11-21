@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_live.out.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "89a6cad3fb3a56c11f05bcbdf883e3f398d2a305870aea540535ec4b0100c2de",
+  "expected": "Then he can go through us.",
+  "recognized": "Then He can go through us.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 1.92,
+  "sample_rate": 48000,
+  "peak": 0.416961669921875,
+  "rms": 0.04472365230321884,
+  "first_recognition": "Then He can go through us.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

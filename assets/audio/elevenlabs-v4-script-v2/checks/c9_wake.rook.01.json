@@ -1,0 +1,18 @@
+{
+  "audio_id": "c9_wake.rook.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "bea23aba34a688e99b5ca870f44efa3aa488db95e18c50a39c4d456b619abddc",
+  "expected": "Adrian. It’s June. Come back to work.",
+  "recognized": "Adrian, it's June. Come back to work.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 3.92,
+  "sample_rate": 48000,
+  "peak": 0.463714599609375,
+  "rms": 0.054757144302129745,
+  "first_recognition": "Adrian, it's June. Come back to work.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

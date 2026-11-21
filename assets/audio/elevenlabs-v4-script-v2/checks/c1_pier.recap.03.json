@@ -1,0 +1,18 @@
+{
+  "audio_id": "c1_pier.recap.03",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "ec370ea3078f8ea306871ea181fe876dce34f34c245029eff59587bc790af774",
+  "expected": "Dinner at La Marea was at six. Carmen has kept my plate warm every Sunday since the boat. She throws it out every Monday.",
+  "recognized": "Dinner at La Marea was at 6. Carmen has kept my plate warm every Sunday since the boat. She throws it out every Monday.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 8.24,
+  "sample_rate": 48000,
+  "peak": 0.410888671875,
+  "rms": 0.042633939534425735,
+  "first_recognition": "Dinner at La Marea was at 6. Carmen has kept my plate warm every Sunday since the boat. She throws it out every Monday.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

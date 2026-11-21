@@ -1,0 +1,18 @@
+{
+  "audio_id": "c1_pier.recap.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "c97a75502e5e021659db73ff658b87a79fecc87fb3791ebf7e5afad6586bd098",
+  "expected": "One odd thing is an accident. Three is a list.",
+  "recognized": "One odd thing is an accident. Three is a list.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.16,
+  "sample_rate": 48000,
+  "peak": 0.297821044921875,
+  "rms": 0.03585902974009514,
+  "first_recognition": "One odd thing is an accident. Three is a list.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

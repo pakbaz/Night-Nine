@@ -1,0 +1,18 @@
+{
+  "audio_id": "one_year.in.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "2d236fdd406ff487994579c4ffa55943b4e732a65ca46bd21adb91a7f8be076b",
+  "expected": "Welcome to I Told You So. This week, a respectful review of everyone who owes me an apology.",
+  "recognized": "Welcome to I Told You So. This week, a respectful review of everyone who owes me an apology.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 6.48,
+  "sample_rate": 48000,
+  "peak": 0.774566650390625,
+  "rms": 0.09988377243280411,
+  "first_recognition": "Welcome to I Told You So. This week, a respectful review of everyone who owes me an apology.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

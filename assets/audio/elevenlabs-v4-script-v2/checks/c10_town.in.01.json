@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_town.in.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "1f63593cfd729e10160aa4eb175a347b3a02d97d0bc30aad76eb489efc28a9b1",
+  "expected": "Carmen calls the restaurant list. Mateo calls the fire crews. Rafa calls everyone who owes him a favor.",
+  "recognized": "Carmen calls the restaurant list. Mateo calls the fire crews. Rafa calls everyone who owes him a favor.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 7.04,
+  "sample_rate": 48000,
+  "peak": 0.63165283203125,
+  "rms": 0.06982779502868652,
+  "first_recognition": "Carmen calls the restaurant list. Mateo calls the fire crews. Rafa calls everyone who owes him a favor.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

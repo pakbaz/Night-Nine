@@ -1,0 +1,18 @@
+{
+  "audio_id": "c9_choir.truth.lead.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "060d2b5ff7515c35f7dc04a72e41414000c49ca330c03531ee76103205c764dd",
+  "expected": "You want a record that changed? I’ve been keeping a list.",
+  "recognized": "You want a record that changed? I've been keeping a list.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 3.84,
+  "sample_rate": 48000,
+  "peak": 0.33831787109375,
+  "rms": 0.03606867045164108,
+  "first_recognition": "You want a record that changed? I've been keeping a list.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

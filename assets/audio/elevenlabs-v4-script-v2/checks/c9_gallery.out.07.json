@@ -1,0 +1,18 @@
+{
+  "audio_id": "c9_gallery.out.07",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "ba91c461fc164c409bcac2820f0d77e601c7800779228266ae33203b3306dc0c",
+  "expected": "Nora and Iris looked at each other. Neither of them knew what to say.",
+  "recognized": "Nora and Iris looked at each other. Neither of them knew what to say.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.56,
+  "sample_rate": 48000,
+  "peak": 0.287017822265625,
+  "rms": 0.040137309581041336,
+  "first_recognition": "Nora and Iris looked at each other. Neither of them knew what to say.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

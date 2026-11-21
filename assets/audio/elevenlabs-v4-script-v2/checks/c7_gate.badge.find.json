@@ -1,0 +1,19 @@
+{
+  "audio_id": "c7_gate.badge.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "ac90af942997b2cd467dd49bf353317253c65a267121002c6968f398a1db6ac8",
+  "expected": "Blue window, 11:30. Stephen drove, his pass scanned green, and I rode under the sound desk. Rook’s copy waved us through and wished Stephen luck finding me.",
+  "recognized": "Blue window, 1130. Stephen drove, his pass scanned green, and I rode under the sound desk. Rook's copy waved us through and wished Stephen luck finding me.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 11.76,
+  "sample_rate": 48000,
+  "peak": 0.343994140625,
+  "rms": 0.041355304419994354,
+  "first_recognition": "Blue window, 1130. Stephen drove, his pass scanned green, and I rode under the sound desk. Rook's copy waved us through and wished Stephen luck finding me.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms",
+  "independent_phrase_transcription": "Blue Window, 1130 Steven Drove His pass scanned green, and I rode under the sound desk. Rook's copy waved us through and wished Steven luck finding me."
+}

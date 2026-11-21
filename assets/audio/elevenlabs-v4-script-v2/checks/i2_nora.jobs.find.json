@@ -1,0 +1,18 @@
+{
+  "audio_id": "i2_nora.jobs.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "2c2bb7dcce75a26070d54f80a4c334030fbd38a235618c2b8c5c62dd5020fae0",
+  "expected": "Lyle keeps the hatch from catching. Dale remembers every turn. I take the pumps. Water is the one thing on this ship I understand.",
+  "recognized": "Lyle keeps the hatch from catching. Dale remembers every turn. I take the pumps. Water is the one thing on this ship I understand.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 8.72,
+  "sample_rate": 48000,
+  "peak": 0.718780517578125,
+  "rms": 0.06280289590358734,
+  "first_recognition": "Lyle keeps the hatch from catching. Dale remembers every turn. I take the pumps. Water is the one thing on this ship I understand.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

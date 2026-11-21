@@ -1,0 +1,18 @@
+{
+  "audio_id": "p_veyr.out.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "a328a204ea9e6deb2b597b6e367da30d152cec1d4a27dcc11a20de6455b1e86b",
+  "expected": "Wind through the western towers. Last evening. Original take.",
+  "recognized": "Wind through the Western Towers. Last Evening. Original Take.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 5.36,
+  "sample_rate": 48000,
+  "peak": 0.894866943359375,
+  "rms": 0.1459151655435562,
+  "first_recognition": "Wind through the Western Towers. Last Evening. Original Take.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

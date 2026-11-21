@@ -1,0 +1,18 @@
+{
+  "audio_id": "c4_safe.match.lead.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "ed436db7f1bf06b29ba0abfcf0675a82891b707c233e6cd6174ff9cfdb3481cc",
+  "expected": "You want my voicemail? Mercer, that’s a federal agent you’re recording.",
+  "recognized": "You want my voicemail? Mercer, that's a federal agent you're recording.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.72,
+  "sample_rate": 48000,
+  "peak": 0.45123291015625,
+  "rms": 0.07197948545217514,
+  "first_recognition": "You want my voicemail? Mercer, that's a federal agent you're recording.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

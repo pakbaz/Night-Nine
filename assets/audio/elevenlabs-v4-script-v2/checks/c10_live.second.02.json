@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_live.second.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "40aee8bca6e310a979d924aefa29c257c6213ed5503fcb24eec1e536c659ae12",
+  "expected": "Grid response confirmed. Both networks.",
+  "recognized": "Grid response confirmed. Both networks.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 3.12,
+  "sample_rate": 48000,
+  "peak": 0.873504638671875,
+  "rms": 0.09075915068387985,
+  "first_recognition": "Grid response confirmed. Both networks.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

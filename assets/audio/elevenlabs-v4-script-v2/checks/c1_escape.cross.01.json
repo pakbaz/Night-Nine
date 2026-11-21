@@ -1,0 +1,18 @@
+{
+  "audio_id": "c1_escape.cross.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "bcf66bc7db9e5fca6b3c8ae5e7a095e66c3ab713c60b8391628b96c3c296a149",
+  "expected": "Sorry. Sorry. Those were your irises.",
+  "recognized": "Sorry, sorry. Those were your irises.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 3.52,
+  "sample_rate": 48000,
+  "peak": 0.404541015625,
+  "rms": 0.03589164838194847,
+  "first_recognition": "Sorry, sorry. Those were your irises.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

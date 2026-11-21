@@ -1,0 +1,18 @@
+{
+  "audio_id": "c4_escape.ctx.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "8f15f7c52912bb845a8273217b323bbffe5fc93d601dabdf3b6cb230b9c9c3ec",
+  "expected": "The house was older than the FBI. In the service corridor, there were brass tubes in the wall.",
+  "recognized": "The house was older than the FBI. In the service corridor, there were brass tubes in the wall.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 6.24,
+  "sample_rate": 48000,
+  "peak": 0.367340087890625,
+  "rms": 0.04123895987868309,
+  "first_recognition": "The house was older than the FBI. In the service corridor, there were brass tubes in the wall.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

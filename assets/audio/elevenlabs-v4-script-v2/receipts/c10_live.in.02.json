@@ -1,0 +1,15 @@
+{
+  "operation": "text_to_speech",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "audio_id": "c10_live.in.02",
+  "voice_id": "vveagfomyMCJLZsOPRP2",
+  "model_id": "eleven_v4",
+  "text_sha256": "f902b2aa7e7d6ccd91171443083d3fea35367b88a968f0d2023f7e89935a27a1",
+  "synthesis_text_sha256": "f902b2aa7e7d6ccd91171443083d3fea35367b88a968f0d2023f7e89935a27a1",
+  "request_id": "dHD5a1EIXtqFQXFn0kwQ",
+  "trace_id": "6b30171f228c008d2fbea437949ae629",
+  "character_cost": 19,
+  "output_format": "mp3_44100_192",
+  "audio_sha256": "dffcd7b87fe1435a7d47d5edad57dbb835f427ed11e9ced7a615f6c84e0dd045",
+  "response_bytes": 107249
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_report.out.04",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "4b73e43ddb1c129f3a9dd031780ec9644e144788cd494d94a7de72556ec25912",
+  "expected": "The Vigil is turning.",
+  "recognized": "The vigil is turning.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 2.0,
+  "sample_rate": 48000,
+  "peak": 0.32177734375,
+  "rms": 0.041405826807022095,
+  "first_recognition": "The vigil is turning.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

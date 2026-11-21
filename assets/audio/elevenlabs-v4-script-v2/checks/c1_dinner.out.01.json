@@ -1,0 +1,18 @@
+{
+  "audio_id": "c1_dinner.out.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "50aca0abbffa4963f41da5c62a9da6cebff88af9e997565439798820338bf6cc",
+  "expected": "She stopped arguing with me. My daughter has argued with me since she could talk.",
+  "recognized": "She stopped arguing with me. My daughter has argued with me since she could talk.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 5.68,
+  "sample_rate": 48000,
+  "peak": 0.36920166015625,
+  "rms": 0.0383993424475193,
+  "first_recognition": "She stopped arguing with me. My daughter has argued with me since she could talk.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

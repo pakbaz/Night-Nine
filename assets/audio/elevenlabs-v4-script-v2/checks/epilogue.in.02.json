@@ -1,0 +1,18 @@
+{
+  "audio_id": "epilogue.in.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "6e40e0a14110f356ebce7ee6af0819f802df9c97ceb6da0a65a7ca0b0fffbf48",
+  "expected": "A face of my own. It will take getting used to.",
+  "recognized": "A face of my own. It will take getting used to.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 3.68,
+  "sample_rate": 48000,
+  "peak": 0.411376953125,
+  "rms": 0.0483415387570858,
+  "first_recognition": "A face of my own. It will take getting used to.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

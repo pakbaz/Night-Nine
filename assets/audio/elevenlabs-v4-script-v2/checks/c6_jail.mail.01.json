@@ -1,0 +1,18 @@
+{
+  "audio_id": "c6_jail.mail.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "5d7e744ee1e14d832d8249f52f8be1ded55eb44e3ed92962f90d4d7e3e3fb985",
+  "expected": "Correctly delivered. Biscuit may inspect the chain of custody.",
+  "recognized": "correctly delivered. Biscuit may inspect the chain of custody.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 5.12,
+  "sample_rate": 48000,
+  "peak": 0.89599609375,
+  "rms": 0.07491593807935715,
+  "first_recognition": "correctly delivered. Biscuit may inspect the chain of custody.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

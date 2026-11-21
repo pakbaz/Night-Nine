@@ -1,0 +1,18 @@
+{
+  "audio_id": "i1_archive.reset.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "c2b3c1bd3e533cb37f48ac7601fdbe9c6450db6f01da8bfcc23d47aa9e1f16f2",
+  "expected": "Good evening. May I help you?",
+  "recognized": "Good evening. May I help you?",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 2.4,
+  "sample_rate": 48000,
+  "peak": 0.670379638671875,
+  "rms": 0.08741195499897003,
+  "first_recognition": "Good evening. May I help you?",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

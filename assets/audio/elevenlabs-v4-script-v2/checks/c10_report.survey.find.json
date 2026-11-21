@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_report.survey.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "d8bea7433634ff7c5e97e41906e8740502f702ce960a815051f3983c780b1575",
+  "expected": "Reach 2: water, air and three separate surveys of empty ground. The Prefect found a home for the fleet and sealed it, because a home would have ended his mission.",
+  "recognized": "Reach two, water, air, and three separate surveys of empty ground. The prefect found a home for the fleet and sealed it because a home would have ended his mission.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 12.8,
+  "sample_rate": 48000,
+  "peak": 0.89471435546875,
+  "rms": 0.1372070163488388,
+  "first_recognition": "Reach two, water, air, and three separate surveys of empty ground. The prefect found a home for the fleet and sealed it because a home would have ended his mission.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "c7_swap.in.03",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "93cde8d40f094b98418f49589715a243794fdbe234f7699c1111a141e51f2408",
+  "expected": "He didn’t answer.",
+  "recognized": "He didn't answer.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 1.28,
+  "sample_rate": 48000,
+  "peak": 0.317840576171875,
+  "rms": 0.04468309506773949,
+  "first_recognition": "He didn't answer.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

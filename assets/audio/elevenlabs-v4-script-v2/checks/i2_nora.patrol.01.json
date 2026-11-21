@@ -1,0 +1,18 @@
+{
+  "audio_id": "i2_nora.patrol.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "95e93dc1d7490ce99437ca29c3f548c2fd7f91622f89f351f5de54cb9ca008a9",
+  "expected": "Wait. Now. Keep low. We can argue about my tone after we’re out.",
+  "recognized": "Wait, now, keep low. We can argue about my tone after we're out.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 5.84,
+  "sample_rate": 48000,
+  "peak": 0.67034912109375,
+  "rms": 0.05410858243703842,
+  "first_recognition": "Wait, now, keep low. We can argue about my tone after we're out.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "i1_archive.out.04",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "9f9139a6516473f4b2d2cf353ceed95b3b6ff1efcf980e991b2bef950131e5b4",
+  "expected": "Then I did what I always do when the work is finished. I listened to the last wind on Veyr.",
+  "recognized": "Then I did what I always do when the work is finished. I listened to the last wind on Veyr.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 6.72,
+  "sample_rate": 48000,
+  "peak": 0.817169189453125,
+  "rms": 0.13633088767528534,
+  "first_recognition": "Then I did what I always do when the work is finished. I listened to the last wind on Verre.",
+  "recognition_pass": "story_vocabulary_1",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

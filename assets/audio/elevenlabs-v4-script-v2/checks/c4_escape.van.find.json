@@ -1,0 +1,18 @@
+{
+  "audio_id": "c4_escape.van.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "437ff363fef4c0d94aa4f2915d51cf97cd908b16c37b18fcb39983a3d90dfbf6",
+  "expected": "On the gravel bend, with the catch off, I pulled the handle and jumped for the soft side. Mostly I fell. But I fell out of the van, with the escort’s radio in my hand.",
+  "recognized": "On the gravel bend, with the catch-off, I pulled the handle and jumped for the soft side. Mostly, I fell. But I fell out of the van, with the escort's radio in my hand.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 11.28,
+  "sample_rate": 48000,
+  "peak": 0.41119384765625,
+  "rms": 0.03965257480740547,
+  "first_recognition": "On the gravel bend, with the catch-off, I pulled the handle and jumped for the soft side. Mostly, I fell. But I fell out of the van, with the escort's radio in my hand.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

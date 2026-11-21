@@ -1,0 +1,18 @@
+{
+  "audio_id": "c7_gate.truck.lead.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "3cc62022f95dfd99b62bc69cbdf20c7e84ea41a3101c95962e18dd3740d1ea1b",
+  "expected": "I climbed out from under the sound desk, tripped over a cable and fell straight into the shot of a live television camera.",
+  "recognized": "I climbed out from under the sound desk, tripped over a cable, and fell straight into the shot of a live television camera.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 7.44,
+  "sample_rate": 48000,
+  "peak": 0.50921630859375,
+  "rms": 0.04044884443283081,
+  "first_recognition": "I climbed out from under the sound desk, tripped over a cable, and fell straight into the shot of a live television camera.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

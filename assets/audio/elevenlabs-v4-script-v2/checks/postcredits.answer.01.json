@@ -1,0 +1,18 @@
+{
+  "audio_id": "postcredits.answer.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "64e798eed092b1d7bdf1d44f815bdd89532c3c190b07a63dc90e4b0478b1cbfa",
+  "expected": "I know this language now. Give me a moment.",
+  "recognized": "I know this language now. Give me a moment.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 3.6,
+  "sample_rate": 48000,
+  "peak": 0.367401123046875,
+  "rms": 0.056618209928274155,
+  "first_recognition": "I know this language now. Give me a moment.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

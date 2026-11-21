@@ -1,0 +1,18 @@
+{
+  "audio_id": "c7_gate.out.03",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "d4fbc48cd20aedbdae834234911c2ab2df6ec7238a3a7e4bc2dda5e2d8fd6a68",
+  "expected": "This page... Madam President. He should hear it from us.",
+  "recognized": "This page, Madam President, he should hear it from us.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.96,
+  "sample_rate": 48000,
+  "peak": 0.653533935546875,
+  "rms": 0.07867205142974854,
+  "first_recognition": "This page, Madam President, he should hear it from us.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

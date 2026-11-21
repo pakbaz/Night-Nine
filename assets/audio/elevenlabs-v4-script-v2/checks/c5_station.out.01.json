@@ -1,0 +1,18 @@
+{
+  "audio_id": "c5_station.out.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "23a7cb8500bdee569a9a5f29ac3f34d1b4aa834c72822bf213373c0620ccc266",
+  "expected": "They disappeared eighteen months ago. I said no to the boat trip.",
+  "recognized": "They disappeared 18 months ago. I said no to the boat trip.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.72,
+  "sample_rate": 48000,
+  "peak": 0.2928466796875,
+  "rms": 0.04347006976604462,
+  "first_recognition": "They disappeared 18 months ago. I said no to the boat trip.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

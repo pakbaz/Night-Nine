@@ -1,0 +1,18 @@
+{
+  "audio_id": "recording.offer",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "60cd2cc0b903181384f073764c2698790299366d558105e7d1db2e0c4117733a",
+  "expected": "Give me the notebook. Helen and Frank will walk out of the sea tomorrow morning.",
+  "recognized": "Give me the notebook. Helen and Frank will walk out of the sea tomorrow morning.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.88,
+  "sample_rate": 48000,
+  "peak": 0.454254150390625,
+  "rms": 0.033141303807497025,
+  "first_recognition": "Give me the notebook. Helen and Frank will walk out of the sea tomorrow morning.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

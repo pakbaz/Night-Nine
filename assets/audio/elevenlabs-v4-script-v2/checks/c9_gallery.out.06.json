@@ -1,0 +1,18 @@
+{
+  "audio_id": "c9_gallery.out.06",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "30d4f5439039274864301713d5771b378f0f26a909dd4024aaec92f07a0bb7f7",
+  "expected": "I left you something. Slot B. Press play.",
+  "recognized": "I left you something. Slot B. Press play.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.16,
+  "sample_rate": 48000,
+  "peak": 0.538482666015625,
+  "rms": 0.047903720289468765,
+  "first_recognition": "I left you something. Slot B. Press play.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "c8_rig.recap.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "fda77b7e0b72542a7b0c37d7321fe1db920529149475594d5c863b882d8eeb24",
+  "expected": "The plan: Shaw and Wen stage the Meridian test again, live, on Elm through coupler C. Stephen carries the rig into the ship’s antenna, so the ship measures the show for itself.",
+  "recognized": "The plan. Shaw and Wen stage the meridian test again, live, on Elm through Coupler C. Steven carries the rig into the ship's antenna, so the ship measures the show for itself.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 12.0,
+  "sample_rate": 48000,
+  "peak": 0.47332763671875,
+  "rms": 0.04400279372930527,
+  "first_recognition": "The plan. Shaw and Wen stage the meridian test again, live, on Elm through Coupler C. Steven carries the rig into the ship's antenna, so the ship measures the show for itself.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

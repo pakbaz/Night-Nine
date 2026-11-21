@@ -1,0 +1,18 @@
+{
+  "audio_id": "c4_safe.match.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "b2d8e1af36caf263a3ac3063eb55e36edeedc76473674f8822a828bc79d91938",
+  "expected": "June’s voicemail and Rook’s voice through the door are one recording, breath for breath, like Nora’s good morning. The man running this house isn’t Adrian Rook.",
+  "recognized": "June's voicemail and Rook's voice through the door are one recording, breath for breath, like Nora's good morning. The man running this house isn't Adrian Rook.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 10.72,
+  "sample_rate": 48000,
+  "peak": 0.323760986328125,
+  "rms": 0.03960069641470909,
+  "first_recognition": "June's voicemail and Rook's voice through the door are one recording, breath for breath, like Nora's good morning. The man running this house isn't Adrian Rook.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

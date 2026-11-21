@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_live.out.08",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "2773f817ef47aae1a0ccf624e5b2d08d62917b3e62206b16c40263ef988f6f45",
+  "expected": "He’s sitting down. Mateo is sitting on him.",
+  "recognized": "He's sitting down. Mateo is sitting on him.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 3.68,
+  "sample_rate": 48000,
+  "peak": 0.32244873046875,
+  "rms": 0.036138612776994705,
+  "first_recognition": "He's sitting down. Mateo is sitting on him.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

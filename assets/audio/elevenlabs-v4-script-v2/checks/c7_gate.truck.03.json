@@ -1,0 +1,18 @@
+{
+  "audio_id": "c7_gate.truck.03",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "79c7c7e196ae2048339951a4cce187116bdb955b979403c25f46b90662c88630",
+  "expected": "Half a second. Good ears. Who taught you?",
+  "recognized": "Half a second. Good ears. Who taught you?",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 3.6,
+  "sample_rate": 48000,
+  "peak": 0.477569580078125,
+  "rms": 0.03731739521026611,
+  "first_recognition": "Half a second. Good ears. Who taught you?",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

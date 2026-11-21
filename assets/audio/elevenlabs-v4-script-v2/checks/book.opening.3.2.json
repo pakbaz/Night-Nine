@@ -1,0 +1,18 @@
+{
+  "audio_id": "book.opening.3.2",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "555504b7c50c2ff21cf7e0522d41499e53ca44f69e0abc6fe56f25f70a9d5504",
+  "expected": "Ham radio, every night. Strangers from all over the world, all of them his friends.",
+  "recognized": "ham radio every night strangers from all over the world all of them his friends",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 6.32,
+  "sample_rate": 48000,
+  "peak": 0.2874755859375,
+  "rms": 0.03638365492224693,
+  "first_recognition": "ham radio every night strangers from all over the world all of them his friends",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

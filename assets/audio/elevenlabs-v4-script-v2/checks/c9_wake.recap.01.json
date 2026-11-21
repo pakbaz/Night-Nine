@@ -1,0 +1,18 @@
+{
+  "audio_id": "c9_wake.recap.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "1c3a0efbb260497ca616ea356e7d06c50d27633d327015f02a976f2c09b3ace8",
+  "expected": "Dad woke to his call sign, Mom to her lullaby, Adrian Rook to June’s voice, and Mrs. Penhallow to her reading glasses.",
+  "recognized": "Dad woke to his call sign, Mom to her lullaby, Adrian Rook to June's voice, and Mrs. Penhallow to her reading glasses.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 8.8,
+  "sample_rate": 48000,
+  "peak": 0.345916748046875,
+  "rms": 0.03877049311995506,
+  "first_recognition": "Dad woke to his call sign, Mom to her lullaby, Adrian Rook to June's voice, and Mrs. Penhalo to her reading glasses.",
+  "recognition_pass": "story_vocabulary_2",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

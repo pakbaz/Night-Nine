@@ -1,0 +1,18 @@
+{
+  "audio_id": "recording.greeting",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "d7671c393c22c88536d23f2374bf810a2bb4517375029247a724ac203b7b0ed3",
+  "expected": "Good morning, sleepyhead.",
+  "recognized": "Good morning, sleepyhead.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 1.76,
+  "sample_rate": 48000,
+  "peak": 0.327484130859375,
+  "rms": 0.06294246762990952,
+  "first_recognition": "Good morning, sleepyhead.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

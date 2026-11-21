@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Reapply a verified script-v2 voice overlay after script_v2.py rebuilds content."""
 import argparse
+import copy
 import hashlib
 import json
 import os
@@ -47,6 +48,35 @@ def storybook_inventory(storybook):
                 key = f"book.{name}.{panel_index}.{line_index}"
                 result[key] = line
     return result
+
+
+def restore_missing_storybook_panels(storybook, book_takes, root=ROOT):
+    """Restore unchanged timed panels that script_v2's playable projection truncated."""
+    base_path = root / "tools/script_v2/base/storybook.json"
+    if not base_path.is_file():
+        return
+    base = read_json(base_path)
+    for name, book in storybook.get("books", {}).items():
+        source = base.get("books", {}).get(name, {})
+        panels = book.get("panels", [])
+        source_panels = source.get("panels", [])
+        while len(panels) < len(source_panels):
+            panel_index = len(panels) + 1
+            source_panel = source_panels[panel_index - 1]
+            expected = []
+            for line_index, line in enumerate(source_panel.get("lines", []), 1):
+                line_id = f"book.{name}.{panel_index}.{line_index}"
+                take = book_takes.get(line_id)
+                if not take or take.get("text") != line.get("text"):
+                    expected = []
+                    break
+                expected.append(line_id)
+            if not expected:
+                break
+            restored = copy.deepcopy(source_panel)
+            for line in restored.get("lines", []):
+                line["narration"] = ""
+            panels.append(restored)
 
 
 def validate_runtime_take(
@@ -107,10 +137,11 @@ def merge_overlay(
         ):
             raise ValueError(f"Conflicting reused audio text for {line['audio']}")
         previous["speakers"].add(line["speaker"])
-    book_required = storybook_inventory(storybook)
     campaign_takes = overlay.get("campaign", {}).get("takes", {})
     book_takes = overlay.get("narration", {}).get("takes", {})
     timings = overlay.get("lipsync", {}).get("takes", {})
+    restore_missing_storybook_panels(storybook, book_takes, root)
+    book_required = storybook_inventory(storybook)
     if set(campaign_takes) != set(campaign_required):
         raise ValueError("Voice overlay campaign inventory is stale")
     if set(book_takes) != set(book_required):

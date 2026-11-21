@@ -1,0 +1,18 @@
+{
+  "audio_id": "c3_house.in.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "339cfa0e6adffb15e29767901c022e23a6218ca9bb16f88951ca8834c4149076",
+  "expected": "Nora is asleep on a ship under the bay. I know exactly how that sounds.",
+  "recognized": "Nora is asleep on a ship under the bay. I know exactly how that sounds.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 5.76,
+  "sample_rate": 48000,
+  "peak": 0.311859130859375,
+  "rms": 0.035952579230070114,
+  "first_recognition": "Nora is asleep on a ship under the bay. I know exactly how that sounds.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

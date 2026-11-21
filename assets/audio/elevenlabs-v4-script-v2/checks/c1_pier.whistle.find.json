@@ -1,0 +1,18 @@
+{
+  "audio_id": "c1_pier.whistle.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "1d7b6321095d3a62726c193b18270bf622ea15f5f87dc97a82312bcb7624d814",
+  "expected": "Admiral hears fine. He came to my clumsy whistle and turned away from Nora’s. Her second note went down. It always used to go up.",
+  "recognized": "Admiral hears fine. He came to my clumsy whistle and turned away from Nora's. Her second note went down. It always used to go up.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 8.88,
+  "sample_rate": 48000,
+  "peak": 0.313140869140625,
+  "rms": 0.0389496348798275,
+  "first_recognition": "Admiral hears fine. He came to my clumsy whistle and turned away from Nora's. Her second note went down. It always used to go up.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_live.out.06",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "42ca1e5d0de353b53015ce5511fcffe31dcbe9328f5f35367fa0ec69bc0a7d97",
+  "expected": "You’re on air now, Prefect. Your whole fleet is listening. Say that again.",
+  "recognized": "You're on air now, Prefect. Your whole fleet is listening. Say that again.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 5.6,
+  "sample_rate": 48000,
+  "peak": 0.399139404296875,
+  "rms": 0.04160524904727936,
+  "first_recognition": "You're on air now, Prefect. Your whole fleet is listening. Say that again.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

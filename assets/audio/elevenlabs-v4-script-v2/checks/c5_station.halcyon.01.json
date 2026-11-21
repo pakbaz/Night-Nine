@@ -1,0 +1,18 @@
+{
+  "audio_id": "c5_station.halcyon.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "9b71271b040d60427cdfb5381739e20ee71155d704b10a9b887cbb571d81e419",
+  "expected": "They needed the tower, and they needed the building empty. I was the last person here.",
+  "recognized": "They needed the tower, and they needed the building empty. I was the last person here.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 6.08,
+  "sample_rate": 48000,
+  "peak": 0.330108642578125,
+  "rms": 0.034097470343112946,
+  "first_recognition": "They needed the tower, and they needed the building empty. I was the last person here.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

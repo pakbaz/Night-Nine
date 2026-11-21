@@ -1,0 +1,18 @@
+{
+  "audio_id": "c8_rig.source.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "d35c2b633bb3224545bb978bde7a2f7d8435d3448282df5fe68d2b211794f4e0",
+  "expected": "Birch is Wen’s fixed tester, stuck on beat 5. Ash is Shaw’s rehearsal loop, stuck on 4. Elm follows Shaw’s hand, live. Only Elm can answer a cue nobody has seen before.",
+  "recognized": "Birch is Wen's fixed tester, stuck on beat 5. Ash is Shaw's rehearsal loop, stuck on 4. Elm follows Shaw's hand, live. Only Elm can answer a cue nobody has seen before.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 14.16,
+  "sample_rate": 48000,
+  "peak": 0.465667724609375,
+  "rms": 0.04150868579745293,
+  "first_recognition": "Birch is Wen's fixed tester, stuck on beat 5. Ash is Shaw's rehearsal loop, stuck on 4. Elm follows Shaw's hand, live. Only Elm can answer a cue nobody has seen before.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

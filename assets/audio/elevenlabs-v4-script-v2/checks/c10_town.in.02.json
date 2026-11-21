@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_town.in.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "2bcfde79a927e27406bde1e5c17c8dc4a24d72ab54a5df15221b37bf305805cb",
+  "expected": "That is a long list.",
+  "recognized": "That is a long list.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 2.08,
+  "sample_rate": 48000,
+  "peak": 0.268798828125,
+  "rms": 0.04805272817611694,
+  "first_recognition": "That is a long list.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

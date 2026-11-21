@@ -1,0 +1,19 @@
+{
+  "audio_id": "c6_jail.exit.lead.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "8f67e498b677fe5158672710eb3dc0a18a7c4104c4bef611c5889fc6a2f0d51d",
+  "expected": "Ben’s a tree in the school play tonight. He’s been practising being a tree for a month.",
+  "recognized": "Ben's a tree in the school play tonight. He's been practicing being a tree for a month.",
+  "word_edits": 1,
+  "word_error_rate": 0.058823529411764705,
+  "listening_review_required": true,
+  "seconds": 5.92,
+  "sample_rate": 48000,
+  "peak": 0.618499755859375,
+  "rms": 0.06540574878454208,
+  "first_recognition": "Ben's a tree in the school play tonight. He's been practicing being a tree for a month.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms",
+  "independent_phrase_transcription": "Benz a tree in the school play tonight. He's been practicing being a tree for a month."
+}

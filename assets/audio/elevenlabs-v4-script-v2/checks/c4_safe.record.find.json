@@ -1,0 +1,18 @@
+{
+  "audio_id": "c4_safe.record.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "6a6604e2c12ae4225a2af66d1c7603e5599a5a080c7f2e260ffb30608fee66ac",
+  "expected": "I have Rook’s line on Dad’s tape, from outside his door, with this house’s room sound around it. Nobody can say I copied it off June’s phone.",
+  "recognized": "I have Rook's line on Dad's tape from outside his door with this house's room sound around it. Nobody can say I copied it off June's phone.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 8.8,
+  "sample_rate": 48000,
+  "peak": 0.295257568359375,
+  "rms": 0.03848513588309288,
+  "first_recognition": "I have Rook's line on Dad's tape from outside his door with this house's room sound around it. Nobody can say I copied it off June's phone.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

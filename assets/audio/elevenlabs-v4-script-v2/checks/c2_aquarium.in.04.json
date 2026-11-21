@@ -1,0 +1,18 @@
+{
+  "audio_id": "c2_aquarium.in.04",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "bee8a5d96b53fb268a83510ffb32096e9481cc88694c7481a419a16371737013",
+  "expected": "I knew the back way in. Four years of visiting her at work.",
+  "recognized": "I knew the back way in, four years of visiting her at work.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.16,
+  "sample_rate": 48000,
+  "peak": 0.409271240234375,
+  "rms": 0.040046364068984985,
+  "first_recognition": "I knew the back way in, four years of visiting her at work.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

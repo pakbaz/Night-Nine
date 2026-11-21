@@ -1,0 +1,18 @@
+{
+  "audio_id": "c5_shack.in.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "12edfbf2502a078332b508fce43f13b9bab510c02b57df617ce47ee2e2e20ee7",
+  "expected": "Food. I know where your father used to come to think.",
+  "recognized": "Food. I know where your father used to come to think.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 3.6,
+  "sample_rate": 48000,
+  "peak": 0.846954345703125,
+  "rms": 0.10048358887434006,
+  "first_recognition": "Food. I know where your father used to come to think.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

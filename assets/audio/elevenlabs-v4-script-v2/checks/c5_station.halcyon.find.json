@@ -1,0 +1,19 @@
+{
+  "audio_id": "c5_station.halcyon.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "c382930f99c90f094e965163cc3b821470ce6ab23212db909aeafd68f842c788",
+  "expected": "Halcyon sent me home early every ninth night, and the tower transmitted alone as soon as I left. Then they let me go for good. The next unattended night is November 8.",
+  "recognized": "Halcyon sent me home early every ninth night, and the tower transmitted alone as soon as I left. Then they let me go for good. The next unattended night is November 8th.",
+  "word_edits": 1,
+  "word_error_rate": 0.03125,
+  "listening_review_required": true,
+  "seconds": 11.2,
+  "sample_rate": 48000,
+  "peak": 0.4598388671875,
+  "rms": 0.03846374899148941,
+  "first_recognition": "Halcyon sent me home early every 9th night, and the tower transmitted alone as soon as I left. Then, they let me go for good. The next unattended night is November 8th.",
+  "recognition_pass": "story_vocabulary_1",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms",
+  "independent_phrase_transcription": "Pelcyon sent me home early every ninth night. and the tower transmitted alone as soon as I left. Then they let me go for good. The next unattended night is November 8th."
+}

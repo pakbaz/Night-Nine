@@ -1,0 +1,18 @@
+{
+  "audio_id": "c8_rig.in.03",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "26f4009783b4f0f847e9a39637892550166ebc05dacc3fcd6a1ce8990003ebbc",
+  "expected": "Wake them. Even if we start forgetting. I vote to do it.",
+  "recognized": "Wake them, even if we start forgetting. I vote to do it.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.64,
+  "sample_rate": 48000,
+  "peak": 0.676849365234375,
+  "rms": 0.06842368841171265,
+  "first_recognition": "Wake them, even if we start forgetting. I vote to do it.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "c3_archive.out.06",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "a040bc0375155ff112bc3a9a991ad4729d054aff223cdc0093c82c8361e6b99c",
+  "expected": "Nobody’s swimming. They’re walking until they’re gone.",
+  "recognized": "Nobody's swimming. They're walking until they're gone.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 3.92,
+  "sample_rate": 48000,
+  "peak": 0.57940673828125,
+  "rms": 0.06954800337553024,
+  "first_recognition": "Nobody's swimming. They're walking until they're gone.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

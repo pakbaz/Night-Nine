@@ -1,0 +1,18 @@
+{
+  "audio_id": "p_bay.tune.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "4f2494e9d9369da7ebb5eeb7fc5296daad927fcfc32ce52e3e5be2a40153591e",
+  "expected": "There you are. Hear that, Helen? More than one voice, all holding the same note.",
+  "recognized": "There you are. Hear that, Helen? More than one voice, all holding the same note.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 6.24,
+  "sample_rate": 48000,
+  "peak": 0.367767333984375,
+  "rms": 0.06542249023914337,
+  "first_recognition": "There you are. Hear that, Helen? More than one voice, all holding the same note.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

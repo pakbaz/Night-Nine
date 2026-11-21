@@ -1,0 +1,18 @@
+{
+  "audio_id": "c5_shack.in.05",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "a0ea7d0454e3ff4c610d7b5acf6b59a4530f8986e489825affb29690454ed956",
+  "expected": "Nora has been gone since Tuesday night. Carmen hasn’t slept. And I have known you since you were nine years old.",
+  "recognized": "Nora has been gone since Tuesday night. Carmen hasn't slept. And I have known you since you were nine years old.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 7.76,
+  "sample_rate": 48000,
+  "peak": 0.78497314453125,
+  "rms": 0.08163618296384811,
+  "first_recognition": "Nora has been gone since Tuesday night. Carmen hasn't slept. And I have known you since you were nine years old.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

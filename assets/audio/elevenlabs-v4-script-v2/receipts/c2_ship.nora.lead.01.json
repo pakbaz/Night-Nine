@@ -1,0 +1,15 @@
+{
+  "operation": "text_to_speech",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "audio_id": "c2_ship.nora.lead.01",
+  "voice_id": "vveagfomyMCJLZsOPRP2",
+  "model_id": "eleven_v4",
+  "text_sha256": "79b7237491826229ad609106384511ae2190f85467c28e39ef35ebbe65ee7a68",
+  "synthesis_text_sha256": "79b7237491826229ad609106384511ae2190f85467c28e39ef35ebbe65ee7a68",
+  "request_id": "iM9EWKjMXKeiMPKMLUkc",
+  "trace_id": "42f5ccee21e60404291921d121feecee",
+  "character_cost": 2,
+  "output_format": "mp3_44100_192",
+  "audio_sha256": "def595d5d4e0015168366380d27fe937ca383ebe858d9d6669ed7156a3a87c98",
+  "response_bytes": 24493
+}

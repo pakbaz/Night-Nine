@@ -1,0 +1,18 @@
+{
+  "audio_id": "c6_jail.mail.lead.03",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "799008774cfd8eab24a4c6c2cda2cd5430c5834ac61f4d2e02fec82aca93548d",
+  "expected": "Correctly.",
+  "recognized": "correctly.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 1.2,
+  "sample_rate": 48000,
+  "peak": 0.48358154296875,
+  "rms": 0.06633102148771286,
+  "first_recognition": "correctly.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

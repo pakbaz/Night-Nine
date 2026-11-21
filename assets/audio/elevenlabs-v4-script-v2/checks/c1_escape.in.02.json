@@ -1,0 +1,18 @@
+{
+  "audio_id": "c1_escape.in.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "eddc1236b42f0b39acd45189c9319fdf22e39d39cda0d9be4951bc9184e992cb",
+  "expected": "Nora? The deadbolt’s locked, and the key’s gone.",
+  "recognized": "Nora, the deadbolt's locked and the key's gone.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 3.6,
+  "sample_rate": 48000,
+  "peak": 0.42449951171875,
+  "rms": 0.0395243838429451,
+  "first_recognition": "Nora, the deadbolt's locked and the key's gone.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

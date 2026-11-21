@@ -1,0 +1,18 @@
+{
+  "audio_id": "c3_house.rules.lead.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "e559aef8d744c65f3056be3b9dd333fc938aa5d1047cc7b40d1d5802fe14345f",
+  "expected": "Lyle’s on it. My own deputy. Fourteen years, and this summer he started filing his reports on time.",
+  "recognized": "Lyle's on it. My own deputy. 14 years, and this summer he started filing his reports on time.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 7.44,
+  "sample_rate": 48000,
+  "peak": 0.58209228515625,
+  "rms": 0.06871166080236435,
+  "first_recognition": "Lyle's on it. My own deputy. 14 years, and this summer he started filing his reports on time.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

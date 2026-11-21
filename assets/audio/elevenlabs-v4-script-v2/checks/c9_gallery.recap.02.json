@@ -1,0 +1,18 @@
+{
+  "audio_id": "c9_gallery.recap.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "ee2d00f264e898ad7fe9a65b36428f83304dc33e1cc3c8167de8b59dae4d4999",
+  "expected": "Stephen is on his way to the antenna with the rig. Mom and Dad are somewhere in this hall, in row nine.",
+  "recognized": "Steven is on his way to the antenna with the rig. Mom and Dad are somewhere in this hall, in row 9.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 6.32,
+  "sample_rate": 48000,
+  "peak": 0.26251220703125,
+  "rms": 0.04409788176417351,
+  "first_recognition": "Steven is on his way to the antenna with the rig. Mom and Dad are somewhere in this hall, in row 9.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

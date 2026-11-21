@@ -1,0 +1,18 @@
+{
+  "audio_id": "c1_pier.bait.lead.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "b94865a3518cf2fb4062fb583c53e26988ce6f5a9bce81fd72d4017a59df2c00",
+  "expected": "That note. It’s under Mom’s voicemail. I always thought it was the phone line.",
+  "recognized": "That note, it's under mom's voicemail. I always thought it was the phone line.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.88,
+  "sample_rate": 48000,
+  "peak": 0.27520751953125,
+  "rms": 0.034692149609327316,
+  "first_recognition": "That note, it's under mom's voicemail. I always thought it was the phone line.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

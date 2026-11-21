@@ -1,0 +1,18 @@
+{
+  "audio_id": "p_meeting.terms.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "67c4c54a3fbce8039a70e8a56abbb9a13da7f89b12fc881bb2b641dfe421b4e9",
+  "expected": "He proposes comparing our performances.",
+  "recognized": "He proposes comparing our performances.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 3.28,
+  "sample_rate": 48000,
+  "peak": 0.38421630859375,
+  "rms": 0.05725488439202309,
+  "first_recognition": "He proposes comparing our performances.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

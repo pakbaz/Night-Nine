@@ -1,0 +1,18 @@
+{
+  "audio_id": "i2_nora.pump.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "9b752760de4408e75ecf48c444c87609ed2cb222dea16182410c0d959dd6dbe4",
+  "expected": "Pressure down. Nobody’s breathing changes. That’s our route.",
+  "recognized": "Pressure down. Nobody's breathing changes. That's our route.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.32,
+  "sample_rate": 48000,
+  "peak": 0.717742919921875,
+  "rms": 0.060097601264715195,
+  "first_recognition": "Pressure down. Nobody's breathing changes. That's our route.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

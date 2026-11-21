@@ -1,0 +1,18 @@
+{
+  "audio_id": "i2_nora.pump.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "722b2dfa1c9d9a3c183c8522b687d977584f371f924bdfa7c492fa9da5c98c47",
+  "expected": "The Blue branch keeps the beds at 4 and drops the RETURN to 2. The hatch can open, and nobody’s breathing changes.",
+  "recognized": "The blue branch keeps the beds at four and drops the return to two. The hatch can open and nobody's breathing changes.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 7.6,
+  "sample_rate": 48000,
+  "peak": 0.618316650390625,
+  "rms": 0.06080296263098717,
+  "first_recognition": "The blue branch keeps the beds at four and drops the return to two. The hatch can open and nobody's breathing changes.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

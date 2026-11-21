@@ -1,0 +1,18 @@
+{
+  "audio_id": "c9_gallery.in.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "723f869598d7065bef68fe534ad011bb623f43b55ed83842524612fff4e60f08",
+  "expected": "I’m so glad to hear you angry.",
+  "recognized": "I'm so glad to hear you angry.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 2.4,
+  "sample_rate": 48000,
+  "peak": 0.3077392578125,
+  "rms": 0.04868374764919281,
+  "first_recognition": "I'm so glad to hear you angry.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

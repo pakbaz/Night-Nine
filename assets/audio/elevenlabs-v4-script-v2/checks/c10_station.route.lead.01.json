@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_station.route.lead.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "25c3abee3c43abf5650e94c241ff77ac00b81b7c0e52c524e98d196f334d9249",
+  "expected": "Same labels as the rig. You remember which is which, I hope.",
+  "recognized": "Same labels as the rig. You remember which is which, I hope.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.4,
+  "sample_rate": 48000,
+  "peak": 0.612518310546875,
+  "rms": 0.08124066889286041,
+  "first_recognition": "Same labels as the rig. You remember which is which, I hope.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

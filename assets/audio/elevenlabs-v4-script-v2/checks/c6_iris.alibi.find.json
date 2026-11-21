@@ -1,0 +1,19 @@
+{
+  "audio_id": "c6_iris.alibi.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "e21764860b729eb1337c73c28b33aeddbd0e1d910d6f7a8f8a421f378f818c08",
+  "expected": "At 8:10 by the radio, Stephen stood beside his own wanted poster at Gus’s bread window while Gus fixed the smudge. Half the town is searching the market.",
+  "recognized": "At 8.10 by the radio, Stephen stood beside his own wanted poster at Gus's bread window while Gus fixed the smudge. Half the town is searching the market.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 10.08,
+  "sample_rate": 48000,
+  "peak": 0.34130859375,
+  "rms": 0.04093536362051964,
+  "first_recognition": "At 8.10 by the radio, Stephen stood beside his own wanted poster at Gus's bread window while Gus fixed the smudge. Half the town is searching the market.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms",
+  "independent_phrase_transcription": "At 8.10 by the radio, Steven stood beside his own wanted poster at Gus's bread window while Gus fixed the smudge. Half the town is searching the market."
+}

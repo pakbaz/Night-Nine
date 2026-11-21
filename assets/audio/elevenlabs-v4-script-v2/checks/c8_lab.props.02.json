@@ -1,0 +1,18 @@
+{
+  "audio_id": "c8_lab.props.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "39e025bc2f84f55c78c003822ab5a27554198309fc281d773e99a3c818923eae",
+  "expected": "They fell for a show once. So we put on another one. Live, this time.",
+  "recognized": "They fell for a show once, so we put on another one. Live this time.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 5.52,
+  "sample_rate": 48000,
+  "peak": 0.352264404296875,
+  "rms": 0.04158030450344086,
+  "first_recognition": "They fell for a show once, so we put on another one. Live this time.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

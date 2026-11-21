@@ -1,0 +1,18 @@
+{
+  "audio_id": "c9_choir.in.03",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "1809180065127cc552b6404c959d34640a02f0bda7db9863144968a58eb25200",
+  "expected": "Four thousand years of unchanged records. Three hundred and twelve human lives. Show us one record that changed, and we will choose.",
+  "recognized": "4,000 years of unchanged records, 312 human lives. Show us one record that changed, and we will choose.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 10.8,
+  "sample_rate": 48000,
+  "peak": 0.773529052734375,
+  "rms": 0.13281315565109253,
+  "first_recognition": "4,000 years of unchanged records, 312 human lives. Show us one record that changed, and we will choose.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

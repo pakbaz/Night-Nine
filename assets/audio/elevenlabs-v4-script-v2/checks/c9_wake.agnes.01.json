@@ -1,0 +1,18 @@
+{
+  "audio_id": "c9_wake.agnes.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "fd5ce053e322c89ea11930277a7aa09c425cc3f735f816bc684a970a801dc479",
+  "expected": "My glasses. Has somebody changed the price of bait while I was gone?",
+  "recognized": "My glasses. Has somebody changed the price of bait while I was gone?",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.88,
+  "sample_rate": 48000,
+  "peak": 0.329345703125,
+  "rms": 0.04495350271463394,
+  "first_recognition": "My glasses. Has somebody changed the price of bait while I was gone?",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "epilogue.in.04",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "92eaf7a0c4284ede800604b68571049a7922f647427d2bde37a226d75aeefbf0",
+  "expected": "Dinner is still at six.",
+  "recognized": "Dinner is still at 6.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 2.08,
+  "sample_rate": 48000,
+  "peak": 0.302886962890625,
+  "rms": 0.04141705855727196,
+  "first_recognition": "Dinner is still at 6.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

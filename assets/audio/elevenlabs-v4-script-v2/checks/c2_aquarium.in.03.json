@@ -1,0 +1,18 @@
+{
+  "audio_id": "c2_aquarium.in.03",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "d596f45b2d380102a439b374f0f36b1a81d2edd5e2aea635678d463cffdd895c",
+  "expected": "There was one place in town with Nora’s name on it that night. The north wing of her aquarium.",
+  "recognized": "There was one place in town with Nora's name on it that night, the north wing of her aquarium.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 5.92,
+  "sample_rate": 48000,
+  "peak": 0.264678955078125,
+  "rms": 0.036721229553222656,
+  "first_recognition": "There was one place in town with Nora's name on it that night, the north wing of her aquarium.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

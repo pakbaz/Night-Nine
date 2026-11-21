@@ -1,0 +1,18 @@
+{
+  "audio_id": "c3_archive.out.05",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "b1463b3812225a8fb6126c392174089673b5e7203e502129016b5802faa516b8",
+  "expected": "That’s Lyle. Gus again. Half the Rotary Club. Nobody’s talking.",
+  "recognized": "That's Lyle. Gus again. Half the Rotary Club. Nobody's talking.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 5.2,
+  "sample_rate": 48000,
+  "peak": 0.27642822265625,
+  "rms": 0.020548220723867416,
+  "first_recognition": "That's Lyle. Gus again. Half the Rotary Club. Nobody's talking.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

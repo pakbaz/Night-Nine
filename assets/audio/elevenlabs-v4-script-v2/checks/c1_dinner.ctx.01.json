@@ -1,0 +1,18 @@
+{
+  "audio_id": "c1_dinner.ctx.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "02ae273ac3e3ac2b26903ea96f5a19fc2f6737e895dbcd73b8c2ccc5a49db193",
+  "expected": "La Marea. The Reyes family restaurant, and for four years my Sunday table.",
+  "recognized": "La Marea, the Reyes family restaurant, and for four years, my Sunday table.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 5.76,
+  "sample_rate": 48000,
+  "peak": 0.332275390625,
+  "rms": 0.04506592079997063,
+  "first_recognition": "La Marea, the Reyes family restaurant, and for four years, my Sunday table.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

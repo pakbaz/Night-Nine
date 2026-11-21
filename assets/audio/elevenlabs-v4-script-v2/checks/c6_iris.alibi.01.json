@@ -1,0 +1,18 @@
+{
+  "audio_id": "c6_iris.alibi.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "5f678a4a4199f8d70160b5991de76463ff034bccc0b6f70b0cacd20076a83d8e",
+  "expected": "Good morning. Yes, that’s my face on the poster. Terrible photograph.",
+  "recognized": "Good morning. Yes, that's my face on the poster. Terrible photograph.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 5.2,
+  "sample_rate": 48000,
+  "peak": 0.410064697265625,
+  "rms": 0.03590629994869232,
+  "first_recognition": "Good morning. Yes, that's my face on the poster. Terrible photograph.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

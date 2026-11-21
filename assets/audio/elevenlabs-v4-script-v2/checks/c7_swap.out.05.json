@@ -1,0 +1,18 @@
+{
+  "audio_id": "c7_swap.out.05",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "b004b12e5fd0d2d6271bc660fff2be946a89b7a52ef58ff861237c08a08a5099",
+  "expected": "Now we owe you an explanation.",
+  "recognized": "Now we owe you an explanation.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 2.72,
+  "sample_rate": 48000,
+  "peak": 0.26788330078125,
+  "rms": 0.0456063337624073,
+  "first_recognition": "Now we owe you an explanation.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

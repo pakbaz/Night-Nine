@@ -1,0 +1,18 @@
+{
+  "audio_id": "c4_safe.screens.lead.04",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "85b45224abbe4904b9b88524b9c846cc056a242449fc4281d029f8351597ba38",
+  "expected": "While he was singing, his office door was open.",
+  "recognized": "While he was singing, his office door was open.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 3.2,
+  "sample_rate": 48000,
+  "peak": 0.570770263671875,
+  "rms": 0.04315311089158058,
+  "first_recognition": "While he was singing, his office door was open.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

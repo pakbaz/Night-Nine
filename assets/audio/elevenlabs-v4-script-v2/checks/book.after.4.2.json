@@ -1,0 +1,18 @@
+{
+  "audio_id": "book.after.4.2",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "7253823d5162d3e11e65d251f49aa1000abb75501e247c9176b183bbf80b8424",
+  "expected": "The ring isn’t in the sock drawer anymore. Ask Nora where it is.",
+  "recognized": "The ring isn't in the sock drawer anymore. Ask Nora where it is.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.24,
+  "sample_rate": 48000,
+  "peak": 0.32769775390625,
+  "rms": 0.04170898348093033,
+  "first_recognition": "The ring isn't in the sock drawer anymore. Ask Nora where it is.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "c3_archive.paper.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "787f8b358493a883e82d013db604ba5a3772f797145f4bf5c83eddb7f21246b7",
+  "expected": "And somebody went back and fixed the computer. Nobody bothered with the ink.",
+  "recognized": "And somebody went back and fixed the computer. Nobody bothered with the ink.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.88,
+  "sample_rate": 48000,
+  "peak": 0.4541015625,
+  "rms": 0.06339167803525925,
+  "first_recognition": "And somebody went back and fixed the computer. Nobody bothered with the ink.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

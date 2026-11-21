@@ -1,0 +1,15 @@
+{
+  "operation": "text_to_speech",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "audio_id": "c3_house.crossword.lead.03",
+  "voice_id": "wa4sQVgbDDzUDEzJwch3",
+  "model_id": "eleven_v4",
+  "text_sha256": "cc8d4c0568a86ce6fc485778d3a858b7ab3c85750d1518cd928cef73972182f0",
+  "synthesis_text_sha256": "cc8d4c0568a86ce6fc485778d3a858b7ab3c85750d1518cd928cef73972182f0",
+  "request_id": "Cuy1owvdMHjEswosYnof",
+  "trace_id": "0c45ef9d7d518e336c614db403d45f09",
+  "character_cost": 44,
+  "output_format": "mp3_44100_192",
+  "audio_sha256": "da91a6dc1436385bcd18d31eb246bb24431a4e802706f68dbbc42c514043b408",
+  "response_bytes": 176212
+}

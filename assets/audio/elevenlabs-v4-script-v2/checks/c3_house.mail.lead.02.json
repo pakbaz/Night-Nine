@@ -1,0 +1,18 @@
+{
+  "audio_id": "c3_house.mail.lead.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "b384b6b6ac7bbd419d761f5ab1efd75eca2495a49f254d1068d5648cbea0165d",
+  "expected": "On Monday the post office told me Dale had already brought your letters here. Before I’d called them. So I asked for the paperwork.",
+  "recognized": "On Monday, the post office told me Dale had already brought your letters here, before I'd called them. So I asked for the paperwork.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 7.92,
+  "sample_rate": 48000,
+  "peak": 0.57708740234375,
+  "rms": 0.0715174749493599,
+  "first_recognition": "On Monday, the post office told me Dale had already brought your letters here, before I'd called them. So I asked for the paperwork.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

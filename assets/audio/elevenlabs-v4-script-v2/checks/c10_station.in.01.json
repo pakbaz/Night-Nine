@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_station.in.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "475b8ec1ae611af85d266ec5f0eeb1f72b87fa2eb7d4b0b79acce792898e431c",
+  "expected": "Good morning! Up next, another hour of uninterrupted favorites.",
+  "recognized": "Good morning. Up next, another hour of uninterrupted favorites.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.88,
+  "sample_rate": 48000,
+  "peak": 0.641998291015625,
+  "rms": 0.05876977741718292,
+  "first_recognition": "Good morning. Up next, another hour of uninterrupted favorites.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

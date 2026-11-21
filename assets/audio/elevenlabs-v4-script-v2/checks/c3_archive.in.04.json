@@ -1,0 +1,18 @@
+{
+  "audio_id": "c3_archive.in.04",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "d49a3d89c8c092bff1aa28ae4f812aaec40b0bbcc3841e2018a952e30e967c50",
+  "expected": "I did.",
+  "recognized": "I did.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 0.88,
+  "sample_rate": 48000,
+  "peak": 0.229827880859375,
+  "rms": 0.041431933641433716,
+  "first_recognition": "I did.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

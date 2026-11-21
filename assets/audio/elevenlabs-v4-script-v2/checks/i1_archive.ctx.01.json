@@ -1,0 +1,18 @@
+{
+  "audio_id": "i1_archive.ctx.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "a211da8352bdad9f1559a757b5ce8607d61144894438b83141fc735edafd63e2",
+  "expected": "Every ninth night they come below, and I compare each of them with the record they were made from.",
+  "recognized": "Every ninth night they come below, and I compare each of them with the record they were made from.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 6.0,
+  "sample_rate": 48000,
+  "peak": 0.88134765625,
+  "rms": 0.15443076193332672,
+  "first_recognition": "Every ninth night they come below, and I compare each of them with the record they were made from.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "book.after.2.1",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "138eead7097832ffbe4c22d781283587b6b819a856a376a1c979d293296c3d0b",
+  "expected": "Iris chose a face of her own. People still say hello to the wrong Steve sometimes. We both say hello back.",
+  "recognized": "Iris chose a face of her own. People still say hello to the wrong Steve sometimes. We both say hello back.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 7.44,
+  "sample_rate": 48000,
+  "peak": 0.48919677734375,
+  "rms": 0.045524656772613525,
+  "first_recognition": "Iris chose a face of her own. People still say hello to the wrong Steve sometimes. We both say hello back.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "epilogue.recap.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "9f3910eb2c9c65754adf49e8b1964bc6bd1c81ce1196f72c678a60afc4a219e0",
+  "expected": "Bellwether kept its new neighbors. And on every ninth night now, the town puts lanterns on the water.",
+  "recognized": "Bellwether kept its new neighbors, and on every ninth night now, the town puts lanterns on the water.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 6.72,
+  "sample_rate": 48000,
+  "peak": 0.40045166015625,
+  "rms": 0.03589637205004692,
+  "first_recognition": "Bellwether kept its new neighbors, and on every ninth night now, the town puts lanterns on the water.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

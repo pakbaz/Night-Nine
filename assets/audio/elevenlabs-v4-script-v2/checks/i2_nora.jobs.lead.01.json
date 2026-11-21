@@ -1,0 +1,18 @@
+{
+  "audio_id": "i2_nora.jobs.lead.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "6803498f7a3d7da44818232bea792c5873edcaf7181c65aa636942e24b1f6725",
+  "expected": "Everybody’s good at something. Even Dale.",
+  "recognized": "Everybody's good at something, even Dale.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 2.96,
+  "sample_rate": 48000,
+  "peak": 0.51055908203125,
+  "rms": 0.07438946515321732,
+  "first_recognition": "Everybody's good at something, even Dale.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

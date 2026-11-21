@@ -1,0 +1,18 @@
+{
+  "audio_id": "c9_choir.truth.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "ba0a8d5cec7e408941e54477b96dc181dfea85f0c44ce80e095d913a67763280",
+  "expected": "We remember birthdays, quarrels, songs and the things people tried again. Open the doors. Wake them.",
+  "recognized": "We remember birthdays, quarrels, songs, and the things people tried again. Open the doors. Wake them.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 8.56,
+  "sample_rate": 48000,
+  "peak": 0.85211181640625,
+  "rms": 0.1335914433002472,
+  "first_recognition": "We remember birthdays, quarrels, songs, and the things people tried again. Open the doors. Wake them.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

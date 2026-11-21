@@ -1,0 +1,15 @@
+{
+  "operation": "text_to_speech",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "audio_id": "c10_town.in.09",
+  "voice_id": "jVMsZEw3hfmEAe9OUUtS",
+  "model_id": "eleven_v4",
+  "text_sha256": "48f124a773cfcb2716b760b61d0d232f46b92f2feebe1a4dad0b76c28c25716d",
+  "synthesis_text_sha256": "48f124a773cfcb2716b760b61d0d232f46b92f2feebe1a4dad0b76c28c25716d",
+  "request_id": "3sT79n9pj8zApKeuNEpz",
+  "trace_id": "5ae0dd86e44d37ed36afb15db355192f",
+  "character_cost": 43,
+  "output_format": "mp3_44100_192",
+  "audio_sha256": "bbaf44089f6494cc4b3ceeac2be164825784f3a47a976c725fdb23b46d69ae07",
+  "response_bytes": 190005
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_town.wind.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "af5fb782e4b99e94fe894b4e12fe39985f5c0059df0b40292f9dbb81a0f5c4f3",
+  "expected": "A recording can remind them of home. We’ll answer it with something happening now.",
+  "recognized": "A recording can remind them of home. We'll answer it with something happening now.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 5.04,
+  "sample_rate": 48000,
+  "peak": 0.341888427734375,
+  "rms": 0.04080589488148689,
+  "first_recognition": "A recording can remind them of home. We'll answer it with something happening now.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "c7_gate.post.03",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "81ff96f9bf5ca69fbd5a35fcf5f9c445db2d1ef37df0c51f43bcc7a72eace41e",
+  "expected": "Ribbon burn on my left wrist, from the accord folder. My first wound in office.",
+  "recognized": "Ribbon burn on my left wrist from the Accord folder, my first wound in office.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 6.16,
+  "sample_rate": 48000,
+  "peak": 0.287567138671875,
+  "rms": 0.033551573753356934,
+  "first_recognition": "Ribbon burn on my left wrist from the Accord folder, my first wound in office.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

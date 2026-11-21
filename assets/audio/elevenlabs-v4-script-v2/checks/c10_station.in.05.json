@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_station.in.05",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "acca202f824e3b7c0108081fcdef430f59baa7f2bbd1d3f11846bac0a9a08400",
+  "expected": "We don’t need the rig. KBWR’s tower already talks to the ship.",
+  "recognized": "We don't need the rig. KBWR's tower already talks to the ship.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.88,
+  "sample_rate": 48000,
+  "peak": 0.312652587890625,
+  "rms": 0.0463605597615242,
+  "first_recognition": "We don't need the rig. KBWR's tower already talks to the ship.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

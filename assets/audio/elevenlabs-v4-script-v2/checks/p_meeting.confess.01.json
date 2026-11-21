@@ -1,0 +1,18 @@
+{
+  "audio_id": "p_meeting.confess.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "72a00d3947acc2515ffcc083d70f954fbdd4c1cf05d210cef64c4239725ea79c",
+  "expected": "There was no space-fold engine.",
+  "recognized": "There was no spacefold engine.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 2.4,
+  "sample_rate": 48000,
+  "peak": 0.52935791015625,
+  "rms": 0.06539299339056015,
+  "first_recognition": "There was no space fold engine.",
+  "recognition_pass": "story_vocabulary_1",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_town.console.03",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "e4ed07bca79e1b28ac0f836b496ddf01e5d7d81b62df111a6ee9ef4cef5ef503",
+  "expected": "Wonderful. You can both fix it while we’re on air.",
+  "recognized": "Wonderful, you can both fix it while we're on air.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 3.36,
+  "sample_rate": 48000,
+  "peak": 0.439666748046875,
+  "rms": 0.04827553406357765,
+  "first_recognition": "Wonderful, you can both fix it while we're on air.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "p_meeting.record.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "60ef18c984dc19b70adab45c6fa314a380b51865a8f85d83d7680801744d87ae",
+  "expected": "Dates. Names. What each person actually said. Someone may need the truth one day.",
+  "recognized": "Dates, names, what each person actually said. Someone may need the truth one day.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 7.68,
+  "sample_rate": 48000,
+  "peak": 0.4049072265625,
+  "rms": 0.048047665506601334,
+  "first_recognition": "Dates, names, what each person actually said. Someone may need the truth one day.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

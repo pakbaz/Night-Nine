@@ -1,0 +1,18 @@
+{
+  "audio_id": "c1_dinner.podcast.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "285e19b7b85a54fa939c7ed497c1183c9d57e8b4ceca946a56a21e4d82652523",
+  "expected": "I’m listening now.",
+  "recognized": "I'm listening now.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 1.44,
+  "sample_rate": 48000,
+  "peak": 0.2701416015625,
+  "rms": 0.05086013302206993,
+  "first_recognition": "I'm listening now.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

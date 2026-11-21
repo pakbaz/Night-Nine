@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_station.in.04",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "da8abaf0392466c416220fd48c309784b8d3ff14bc8c67178af3c0a8e596b293",
+  "expected": "The rig is in pieces. We need another way onto their antenna.",
+  "recognized": "The rig is in pieces. We need another way onto their antenna.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.32,
+  "sample_rate": 48000,
+  "peak": 0.3804931640625,
+  "rms": 0.0456886813044548,
+  "first_recognition": "The rig is in pieces. We need another way onto their antenna.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

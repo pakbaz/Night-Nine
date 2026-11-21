@@ -1,0 +1,18 @@
+{
+  "audio_id": "c5_shack.out.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "e2174151666a31bfc48b51d2de002622e56a5a0ab46e4bdbd64a06fb53f6e444",
+  "expected": "The good stuff. Dad’s name for the station library. And Mom wrote my first night at the desk, not my first show.",
+  "recognized": "The Good Stuff, Dad's name for the station library, and Mom wrote my first night at the desk, not my first show.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 7.36,
+  "sample_rate": 48000,
+  "peak": 0.32757568359375,
+  "rms": 0.03738181293010712,
+  "first_recognition": "The Good Stuff, Dad's name for the station library, and Mom wrote my first night at the desk, not my first show.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

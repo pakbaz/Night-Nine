@@ -1,0 +1,18 @@
+{
+  "audio_id": "c3_archive.power.lead.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "df721b44ee171a590422bee0b79ebb1db420553c56e5f9640f6405a239132fed",
+  "expected": "Mrs. Penhallow? You’re miles from your pier.",
+  "recognized": "Mrs. Penhallow? You're miles from your pier.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 3.2,
+  "sample_rate": 48000,
+  "peak": 0.253143310546875,
+  "rms": 0.045865580439567566,
+  "first_recognition": "Mrs. Penhello, you're miles from your pier.",
+  "recognition_pass": "story_vocabulary_2",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

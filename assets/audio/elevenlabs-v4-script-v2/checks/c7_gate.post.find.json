@@ -1,0 +1,19 @@
+{
+  "audio_id": "c7_gate.post.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "40be39308f149f5d36ad2bb0bc76aead1977d2144cf2a2c482b7ce33974a5de0",
+  "expected": "Pell put the letter into Ward’s own hand at the delegation hatch at 11:54 and came back with the yellow carbon. And a note for the record: left wrist, bandaged. A fresh ribbon burn.",
+  "recognized": "Pell put the letter into Ward's own hand at the delegation hatch at 1154 and came back with the yellow carbon. And a note for the record. Left wrist, bandaged. A fresh ribbon burn.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 12.8,
+  "sample_rate": 48000,
+  "peak": 0.40765380859375,
+  "rms": 0.04215584322810173,
+  "first_recognition": "Pell put the letter into Ward's own hand at the delegation hatch at 1154 and came back with the yellow carbon. And a note for the record. Left wrist, bandaged. A fresh ribbon burn.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms",
+  "independent_phrase_transcription": "Pell put the letter into Ward's own hand at the delegation hatch at 1154 and came back with the yellow carbon. And a note for the record. Left wrist. Bandaged. A fresh ribbon burn."
+}

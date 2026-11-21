@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_report.echo.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "c98ae8ec1c531810c881e747b061d14ca55b0cd4e0dc72f9f731d3dc9bf83d06",
+  "expected": "You can spend another nine hundred years remembering home, or let someone make a new one.",
+  "recognized": "You can spend another 900 years remembering home, or let someone make a new one.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 5.84,
+  "sample_rate": 48000,
+  "peak": 0.35760498046875,
+  "rms": 0.0471641831099987,
+  "first_recognition": "You can spend another 900 years remembering home, or let someone make a new one.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

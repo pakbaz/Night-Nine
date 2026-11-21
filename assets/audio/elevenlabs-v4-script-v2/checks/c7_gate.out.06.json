@@ -1,0 +1,18 @@
+{
+  "audio_id": "c7_gate.out.06",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "e4c6d45feb9899ce308f04a3818aebc04dedf3de258fd1a5a3c18d0a1953d31c",
+  "expected": "In the fog between the antennas, an old woman was walking a dog. Mrs. Penhallow. Miles from her pier, again.",
+  "recognized": "In the fog between the antennas, an old woman was walking a dog. Mrs. Penhallow, miles from her pier, again.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 8.72,
+  "sample_rate": 48000,
+  "peak": 0.35272216796875,
+  "rms": 0.0406949445605278,
+  "first_recognition": "In the fog between the antennas, an old woman was walking a dog. Mrs. Penhallow, miles from her pier, again.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

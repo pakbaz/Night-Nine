@@ -1,0 +1,19 @@
+{
+  "audio_id": "c1_dinner.out.03",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "6801a0b38fa53300575a4f95301e6b58523b91248853556a9241ef2437cb8422",
+  "expected": "Next Sunday, Steve. The plate will be warm.",
+  "recognized": "Next Sunday, Steve, the plate will be worn.",
+  "word_edits": 1,
+  "word_error_rate": 0.125,
+  "listening_review_required": true,
+  "seconds": 3.12,
+  "sample_rate": 48000,
+  "peak": 0.28857421875,
+  "rms": 0.03790735453367233,
+  "first_recognition": "Next Sunday, Steve, the plate will be worn.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms",
+  "independent_phrase_transcription": "Next Sunday, Steve. The plate will be worn."
+}

@@ -1,0 +1,19 @@
+{
+  "audio_id": "c3_archive.paper.lead.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "0e0c7f651cf80ae42ed8519926225a2810dce7a80ed43f45d8c39600a0f11e2c",
+  "expected": "Walt Prior. County planner. I went to his going-away party in April. He cried into the punch.",
+  "recognized": "Walt Pryor, County Planner. I went to his going away party in April. He cried into the punch.",
+  "word_edits": 1,
+  "word_error_rate": 0.05555555555555555,
+  "listening_review_required": true,
+  "seconds": 7.12,
+  "sample_rate": 48000,
+  "peak": 0.44580078125,
+  "rms": 0.05420935899019241,
+  "first_recognition": "Walt Pryor, County Planner. I went to his going away party in April. He cried into the punch.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms",
+  "independent_phrase_transcription": "Walt Pryor County Planner. I went to his going-away party in April. He cried into the punch."
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "c4_safe.record.lead.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "f836aadfedb76a64fead9df974fd05b825a0b5f6bc29084f0c81770c4165d590",
+  "expected": "Every hour, on the hour, Rook goes on hold with the Bureau. And he hums along.",
+  "recognized": "Every hour on the hour, Rook goes on hold with the Bureau, and he hums along.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 5.84,
+  "sample_rate": 48000,
+  "peak": 0.325439453125,
+  "rms": 0.03980255499482155,
+  "first_recognition": "Every hour on the hour, Rook goes on hold with the Bureau, and he hums along.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

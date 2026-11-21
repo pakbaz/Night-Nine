@@ -1,0 +1,18 @@
+{
+  "audio_id": "book.opening.5.3",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "60b6a50dee4aced207755c709fbffe11984f21be80e2fe7d9358f3dcbc66b4b6",
+  "expected": "I said no. I had a shift.",
+  "recognized": "I said no. I had a shift.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 2.32,
+  "sample_rate": 48000,
+  "peak": 0.4805908203125,
+  "rms": 0.04632318392395973,
+  "first_recognition": "I said no. I had a shift.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

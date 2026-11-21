@@ -1,0 +1,18 @@
+{
+  "audio_id": "c8_rig.in.04",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "199eaa736dc2b301bbf5de66e739fd14cd3eb8529c5448fd63c2d8f543cb41c6",
+  "expected": "Before you decide. Every sleeper you wake cuts one of us loose, and that one starts to forget. Stephen too.",
+  "recognized": "Before you decide, every sleeper you wake cuts one of us loose, and that one starts to forget. Steven, too.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 8.4,
+  "sample_rate": 48000,
+  "peak": 0.443450927734375,
+  "rms": 0.05088285729289055,
+  "first_recognition": "Before you decide, every sleeper you wake cuts one of us loose, and that one starts to forget. Steven, too.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

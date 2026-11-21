@@ -1,0 +1,18 @@
+{
+  "audio_id": "book.after.5.2",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "5392005581e2b853a9d0c591cc022b10d1b6e22499766b0976f66e9a20a58a64",
+  "expected": "Stephen and I still argue about which one of us is the upgrade.",
+  "recognized": "Steven and I still argue about which one of us is the upgrade.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.16,
+  "sample_rate": 48000,
+  "peak": 0.364013671875,
+  "rms": 0.044686391949653625,
+  "first_recognition": "Steven and I still argue about which one of us is the upgrade.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

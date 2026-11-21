@@ -1,0 +1,18 @@
+{
+  "audio_id": "c9_choir.truth.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "a0114bdc7fbcd174139d26f043d70ef6e7391e7074972e080d2f50055de21d04",
+  "expected": "Nora’s good morning and Rook’s line were recordings, played back. Iris chose her words twice, differently. The same voice that once replayed Nora now speaks for itself. The Choir heard a record change, and chose.",
+  "recognized": "Nora's Good Morning and Rook's line were recordings, played back. Iris chose her words twice, differently. The same voice that once replayed Nora now speaks for itself. The choir heard a record change and chose.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 15.68,
+  "sample_rate": 48000,
+  "peak": 0.3685302734375,
+  "rms": 0.038974374532699585,
+  "first_recognition": "Nora's Good Morning and Rook's line were recordings, played back. Iris chose her words twice, differently. The same voice that once replayed Nora now speaks for itself. The choir heard a record change and chose.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

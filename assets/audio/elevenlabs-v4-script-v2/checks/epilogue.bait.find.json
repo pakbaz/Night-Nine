@@ -1,0 +1,19 @@
+{
+  "audio_id": "epilogue.bait.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "c8397e4bc6a2bc2d78596db293e0130786b4b9a1acbf156a021a664a299f497f",
+  "expected": "Two Mrs. Penhallows, one counter, and people are finally buying bait. One Adrian Rook stays. The other one leaves with the ship, to find out who he is.",
+  "recognized": "Two misses Penhallows, one counter, and people are finally buying bait. One Adrian Rook stays. The other one leaves with the ship to find out who he is.",
+  "word_edits": 1,
+  "word_error_rate": 0.03571428571428571,
+  "listening_review_required": true,
+  "seconds": 10.88,
+  "sample_rate": 48000,
+  "peak": 0.36541748046875,
+  "rms": 0.040201812982559204,
+  "first_recognition": "Two misses Penhallows, one counter, and people are finally buying bait. One Adrian Rook stays. The other one leaves with the ship to find out who he is.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms",
+  "independent_phrase_transcription": "Two Mrs. Penhallows, one counter, and people are f***ing. Finally buying bait. One Adrian Rook stays, the other one leaves with the ship. to find out who he is."
+}

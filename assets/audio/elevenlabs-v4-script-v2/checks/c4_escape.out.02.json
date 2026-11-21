@@ -1,0 +1,18 @@
+{
+  "audio_id": "c4_escape.out.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "027c81848c7fd60232ceb73a1d28c66603a057c8f6a92b8835e6b86fce3e5123",
+  "expected": "Kidnapping Nora. They took her, and I’m the one on the poster. I have to keep moving.",
+  "recognized": "kidnapping Nora. They took her, and I'm the one on the poster. I have to keep moving.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 6.16,
+  "sample_rate": 48000,
+  "peak": 0.354949951171875,
+  "rms": 0.03806968033313751,
+  "first_recognition": "kidnapping Nora. They took her, and I'm the one on the poster. I have to keep moving.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

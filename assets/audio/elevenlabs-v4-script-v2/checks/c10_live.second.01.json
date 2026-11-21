@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_live.second.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "273d68c9825464a6c70c2ba205b1c3e86fe9bc1b453d8bb80a45edfdf9000bb1",
+  "expected": "Holding. Now, Wen.",
+  "recognized": "Holding. Now. When.",
+  "word_edits": 1,
+  "word_error_rate": 0.3333333333333333,
+  "listening_review_required": true,
+  "seconds": 2.24,
+  "sample_rate": 48000,
+  "peak": 0.526641845703125,
+  "rms": 0.04915158823132515,
+  "first_recognition": "Holding. Now. When.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

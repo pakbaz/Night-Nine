@@ -1,0 +1,70 @@
+{
+  "audio_id": "recording.voicemail",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "60826a238807a1e738911ae2f12428816261618e0251fa757377a3ee1a3ec532",
+  "expected": "Come out with us, kiddo. The bay is singing tonight.",
+  "recognized": "Come out with us, kiddo. The bay is singing tonight.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.16,
+  "sample_rate": 48000,
+  "peak": 0.50238037109375,
+  "rms": 0.06431662291288376,
+  "word_timings": [
+    {
+      "word": "come",
+      "start": 0.0,
+      "end": 0.2
+    },
+    {
+      "word": "out",
+      "start": 0.2,
+      "end": 0.36
+    },
+    {
+      "word": "with",
+      "start": 0.36,
+      "end": 0.54
+    },
+    {
+      "word": "us",
+      "start": 0.54,
+      "end": 0.76
+    },
+    {
+      "word": "kiddo",
+      "start": 0.86,
+      "end": 1.18
+    },
+    {
+      "word": "the",
+      "start": 1.36,
+      "end": 1.84
+    },
+    {
+      "word": "bay",
+      "start": 1.84,
+      "end": 2.1
+    },
+    {
+      "word": "is",
+      "start": 2.1,
+      "end": 2.38
+    },
+    {
+      "word": "singing",
+      "start": 2.38,
+      "end": 2.84
+    },
+    {
+      "word": "tonight",
+      "start": 2.84,
+      "end": 3.16
+    }
+  ],
+  "first_recognition": "Come out with us, kiddo. The bay is singing tonight.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

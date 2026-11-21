@@ -1,0 +1,18 @@
+{
+  "audio_id": "c7_gate.ctx.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "f0a385fc346e219d87fd1a50551f5b7b61d2ec7e3d52ae88e6d6eadf1a1fb718",
+  "expected": "Sentinel Point. An old antenna field in the fog north of town, flags on every mast, and the President of the United States due at noon.",
+  "recognized": "Sentinel Point, an old antenna field in the fog north of town, flags on every mast, and the President of the United States due at noon.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 9.36,
+  "sample_rate": 48000,
+  "peak": 0.504638671875,
+  "rms": 0.043250709772109985,
+  "first_recognition": "Sentinel Point, an old antenna field in the fog north of town, flags on every mast, and the President of the United States due at noon.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "c3_archive.ctx.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "f2e489a8fe70fb870da42f34cd15a071dd5ed8be08e8e04d8d46049044e98851",
+  "expected": "Town Hall, after five. June had the keys, and I had a phone call to make.",
+  "recognized": "Town Hall, after 5. June had the keys, and I had a phone call to make.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 5.84,
+  "sample_rate": 48000,
+  "peak": 0.345703125,
+  "rms": 0.0362606942653656,
+  "first_recognition": "Town Hall, after 5. June had the keys, and I had a phone call to make.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "c5_shack.rig.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "13f6dea6ad509b351c4b24a5d00f00884bf2478776e67a1b978588a558981d35",
+  "expected": "The BLUE pack has the right polarity and enough current. The dial reads 0.05 high, so the club’s 3.56 sits at 3.61. Dad’s radio is alive.",
+  "recognized": "The blue pack has the right polarity and enough current. The dial reads 0.05 high, so the club's 3.56 sits at 3.61. Dad's radio is alive.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 12.8,
+  "sample_rate": 48000,
+  "peak": 0.43707275390625,
+  "rms": 0.04423977807164192,
+  "first_recognition": "The blue pack has the right polarity and enough current. The dial reads 0.05 high, so the club's 3.56 sits at 3.61. Dad's radio is alive.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

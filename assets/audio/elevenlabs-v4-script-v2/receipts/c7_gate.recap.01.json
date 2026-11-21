@@ -1,0 +1,15 @@
+{
+  "operation": "text_to_speech",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "audio_id": "c7_gate.recap.01",
+  "voice_id": "vveagfomyMCJLZsOPRP2",
+  "model_id": "eleven_v4",
+  "text_sha256": "8269b8a551d09d53a517bd4c7593d3213a38e11b599099f163ff11e38206e4c0",
+  "synthesis_text_sha256": "8269b8a551d09d53a517bd4c7593d3213a38e11b599099f163ff11e38206e4c0",
+  "request_id": "OZkKlNGWO4SHaWS1aDHM",
+  "trace_id": "89b794c5b9ae9dfb6ac940449f2c4e26",
+  "character_cost": 53,
+  "output_format": "mp3_44100_192",
+  "audio_sha256": "79931e6e011e590011373ae6de400f541d3525b4bbf85676cbcb278c934a2daf",
+  "response_bytes": 212575
+}

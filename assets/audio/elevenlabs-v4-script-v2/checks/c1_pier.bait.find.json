@@ -1,0 +1,18 @@
+{
+  "audio_id": "c1_pier.bait.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "cb66f7fd261d696b7c2500720fbd54ff92131a002cad79a60cc1e536427edb4a",
+  "expected": "The low note comes from the water, under the floating dock. Agnes only hums along. June heard it without her. And it is the note under Mom’s voicemail.",
+  "recognized": "The low note comes from the water, under the floating dock. Agnes only hums along. June heard it without her. And it is the note under Mom's voicemail.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 10.4,
+  "sample_rate": 48000,
+  "peak": 0.296661376953125,
+  "rms": 0.03939959406852722,
+  "first_recognition": "The low note comes from the water, under the floating dock. Agnes only hums along. June heard it without her. And it is the note under Mom's voicemail.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

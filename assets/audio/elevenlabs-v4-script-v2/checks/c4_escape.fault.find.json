@@ -1,0 +1,18 @@
+{
+  "audio_id": "c4_escape.fault.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "23758fc0db0bb96514e1d6f5bfcd3874613142564123a741dfe300bef015c3fd",
+  "expected": "A BLUE drill, for real, on the escort’s own ticket. The whole west corridor, me included, goes to the transport bay. Rook stays in the east wing with June.",
+  "recognized": "A blue drill. For real. On the escort's own ticket. The whole west corridor, me included, goes to the transport bay. Rook stays in the east wing with June.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 10.72,
+  "sample_rate": 48000,
+  "peak": 0.394622802734375,
+  "rms": 0.04492852836847305,
+  "first_recognition": "A blue drill. For real. On the escort's own ticket. The whole west corridor, me included, goes to the transport bay. Rook stays in the east wing with June.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

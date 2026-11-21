@@ -1,0 +1,18 @@
+{
+  "audio_id": "postcredits.out.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "c7e08d98d0c013550b8fb45186f8dda759425b5bc37b3f89ef1b8593af86dd9a",
+  "expected": "Hello. We heard the singing.",
+  "recognized": "Hello, we heard the singing.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 2.64,
+  "sample_rate": 48000,
+  "peak": 0.52862548828125,
+  "rms": 0.06839202344417572,
+  "first_recognition": "Hello, we heard the singing.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

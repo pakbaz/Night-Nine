@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_station.route.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "6fa2d958f041c72d658e7785403085bb7fe694365992404332a0de116a81cb0a",
+  "expected": "The route was here the whole time. It’s why they bought the station.",
+  "recognized": "The route was here the whole time. It's why they bought the station.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.08,
+  "sample_rate": 48000,
+  "peak": 0.430389404296875,
+  "rms": 0.03956664353609085,
+  "first_recognition": "The route was here the whole time. It's why they bought the station.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

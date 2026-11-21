@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_report.out.05",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "953405c326746a1f8319a416e5e1cd488063e7ea643e366a154b29e570fc491e",
+  "expected": "And now, the forecast for yesterday: sunny, with a chance of spaceships!",
+  "recognized": "And now, the forecast for yesterday. Sunny with a chance of spaceships.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 5.92,
+  "sample_rate": 48000,
+  "peak": 0.685546875,
+  "rms": 0.05800921097397804,
+  "first_recognition": "And now, the forecast for yesterday. Sunny with a chance of spaceships.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

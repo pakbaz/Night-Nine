@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_report.report.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "05a36b6924ab820dce38abdc107b0a07fdd921d4a078b6aa2fc5c08a79b49cad",
+  "expected": "Saren, you will remain yourself. You will have to remember being wrong.",
+  "recognized": "Saren, you will remain yourself. You will have to remember being wrong.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 5.92,
+  "sample_rate": 48000,
+  "peak": 0.8551025390625,
+  "rms": 0.16310758888721466,
+  "first_recognition": "sarin you will remain yourself you will have to remember being wrong",
+  "recognition_pass": "story_vocabulary_1",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

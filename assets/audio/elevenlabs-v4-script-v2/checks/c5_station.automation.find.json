@@ -1,0 +1,18 @@
+{
+  "audio_id": "c5_station.automation.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "757b58679b8d7d9d2b495d5020f360e1022528c3cfcd40c3da33af9a7812a9d1",
+  "expected": "WEATHER gave me forty seconds to cross the room. Then my own voice, on the ident, unlatched the maintenance door.",
+  "recognized": "Weather gave me 40 seconds to cross the room. Then my own voice, on the ident, unlatched the maintenance door.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 7.2,
+  "sample_rate": 48000,
+  "peak": 0.3775634765625,
+  "rms": 0.03801017254590988,
+  "first_recognition": "Weather gave me 40 seconds to cross the room. Then my own voice, on the ident, unlatched the maintenance door.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

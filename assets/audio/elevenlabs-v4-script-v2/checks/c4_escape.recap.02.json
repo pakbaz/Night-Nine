@@ -1,0 +1,18 @@
+{
+  "audio_id": "c4_escape.recap.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "a336af255d7a24ad4f69e5975f7e69e58b37b67c06e785995d9b15b7bad76209",
+  "expected": "Now I was in a ditch in the Coast Range with Dad’s recorder, a stolen radio and no plan. And the radio was still talking.",
+  "recognized": "Now I was in a ditch in the coast range with dad's recorder, a stolen radio, and no plan. And the radio was still talking.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 8.88,
+  "sample_rate": 48000,
+  "peak": 0.33538818359375,
+  "rms": 0.0383053757250309,
+  "first_recognition": "Now I was in a ditch in the coast range with dad's recorder, a stolen radio, and no plan. And the radio was still talking.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

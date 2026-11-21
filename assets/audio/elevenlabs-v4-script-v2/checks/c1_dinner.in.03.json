@@ -1,0 +1,18 @@
+{
+  "audio_id": "c1_dinner.in.03",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "3de93f2563c67f84f9cb7496b03f4d9d80917bcb3be248d63e5e174bb58d4eae",
+  "expected": "Nora, the mole. More chilies this time, or less?",
+  "recognized": "Nora, the mole. More chilies this time or less?",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.4,
+  "sample_rate": 48000,
+  "peak": 0.361602783203125,
+  "rms": 0.04539905861020088,
+  "first_recognition": "Nora, the mole. More chilis this time or less?",
+  "recognition_pass": "story_vocabulary_1",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

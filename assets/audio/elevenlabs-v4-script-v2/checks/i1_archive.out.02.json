@@ -1,0 +1,18 @@
+{
+  "audio_id": "i1_archive.out.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "b9ea5dc8b7248ebd6e29cac21bd3bc463ba375d0ec57da15a2e61abeeebbeb22",
+  "expected": "Her memory is not damaged. I will leave the report as it is.",
+  "recognized": "Her memory is not damaged. I will leave the report as it is.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 5.04,
+  "sample_rate": 48000,
+  "peak": 0.898773193359375,
+  "rms": 0.16307295858860016,
+  "first_recognition": "Her memory is not damaged. I will leave the report as it is.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

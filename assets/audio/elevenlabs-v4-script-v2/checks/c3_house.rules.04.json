@@ -1,0 +1,18 @@
+{
+  "audio_id": "c3_house.rules.04",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "34ee5cfcbb90101cb160709e4411178f01e363e84026759d450b789f7102dfcd",
+  "expected": "Agnes? She hasn’t changed in forty years. She still corrects my grammar.",
+  "recognized": "Agnes? She hasn't changed in 40 years! She still corrects my grammar.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 5.36,
+  "sample_rate": 48000,
+  "peak": 0.49285888671875,
+  "rms": 0.058682773262262344,
+  "first_recognition": "Agnes? She hasn't changed in 40 years! She still corrects my grammar.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

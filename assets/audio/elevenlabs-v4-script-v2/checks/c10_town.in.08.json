@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_town.in.08",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "f279421cae792c4495d634cc01af214258ad7635b75988823be2923663004af7",
+  "expected": "Part of her. The part that stayed for the people.",
+  "recognized": "part of her the part that stayed for the people",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 3.28,
+  "sample_rate": 48000,
+  "peak": 0.34881591796875,
+  "rms": 0.040558211505413055,
+  "first_recognition": "part of her the part that stayed for the people",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "c9_choir.in.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "c2538dd73174629cc6afc321653b81c591cb2905cbf2eb7719486421adb900cc",
+  "expected": "Stop.",
+  "recognized": "Stop.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 1.12,
+  "sample_rate": 48000,
+  "peak": 0.797088623046875,
+  "rms": 0.08473565429449081,
+  "first_recognition": "Stop.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

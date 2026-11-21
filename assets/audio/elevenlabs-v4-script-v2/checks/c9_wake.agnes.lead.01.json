@@ -1,0 +1,18 @@
+{
+  "audio_id": "c9_wake.agnes.lead.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "02a4ac0fc613c57b02088543d202028f447cca41d3f57c3de75d45824b1ce59d",
+  "expected": "Mrs. Penhallow? She taught half this town. She’s squinting at me like I spelled something wrong.",
+  "recognized": "Mrs. Penhallow? She taught half this town. She's squinting at me like I spelled something wrong.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 6.48,
+  "sample_rate": 48000,
+  "peak": 0.432159423828125,
+  "rms": 0.04631252586841583,
+  "first_recognition": "Mrs. Penhallow? She taught half this town. She's squinting at me like I spelled something wrong.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

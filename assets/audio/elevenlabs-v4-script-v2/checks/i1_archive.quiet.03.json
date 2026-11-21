@@ -1,0 +1,18 @@
+{
+  "audio_id": "i1_archive.quiet.03",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "5d750bc6b1a840b40133244a6dfce00b452bc6dc0beb1d71cc8709def034243e",
+  "expected": "Three hundred years, and you still will not tell me where your people went.",
+  "recognized": "300 years and you still will not tell me where your people went.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 5.44,
+  "sample_rate": 48000,
+  "peak": 0.742034912109375,
+  "rms": 0.16118113696575165,
+  "first_recognition": "300 years and you still will not tell me where your people went.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

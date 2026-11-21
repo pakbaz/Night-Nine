@@ -1,0 +1,18 @@
+{
+  "audio_id": "c9_choir.wick.lead.03",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "9fa42bbda01781068c700ff31a39a72330bb47ec9460d6166b88b7af39466036",
+  "expected": "That’s the one under the frost. It hums when you talk to it.",
+  "recognized": "That's the one under the frost. It hums when you talk to it.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.16,
+  "sample_rate": 48000,
+  "peak": 0.439453125,
+  "rms": 0.049962375313043594,
+  "first_recognition": "That's the one under the frost. It hums when you talk to it.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

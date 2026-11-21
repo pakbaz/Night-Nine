@@ -1,0 +1,18 @@
+{
+  "audio_id": "c8_beach.refuse.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "5349e21a8fd43a0858c2da8dce8be7e0b2e39b8389b256e0ac58fde0e6408542",
+  "expected": "That’s my voicemail. You cut my mother out of her own message. No. You don’t get to trade the whole town for my family.",
+  "recognized": "That's my voicemail. You cut my mother out of her own message. No, you don't get to trade the whole town for my family.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 8.64,
+  "sample_rate": 48000,
+  "peak": 0.490509033203125,
+  "rms": 0.05533013492822647,
+  "first_recognition": "That's my voicemail. You cut my mother out of her own message. No, you don't get to trade the whole town for my family.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

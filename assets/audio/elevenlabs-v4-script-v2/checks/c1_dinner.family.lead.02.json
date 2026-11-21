@@ -1,0 +1,18 @@
+{
+  "audio_id": "c1_dinner.family.lead.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "9a700472f37f512b3bfd82beef1623265598f6b9a95f04e49fd3caf8fdbe369f",
+  "expected": "With me? She fought me about her driving every week. The last real fight was Memorial Day weekend.",
+  "recognized": "With me, she fought me about her driving every week. The last real fight was Memorial Day weekend.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 7.28,
+  "sample_rate": 48000,
+  "peak": 0.889404296875,
+  "rms": 0.09055695682764053,
+  "first_recognition": "With me, she fought me about her driving every week. The last real fight was Memorial Day weekend.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

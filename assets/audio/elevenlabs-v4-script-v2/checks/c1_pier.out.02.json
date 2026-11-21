@@ -1,0 +1,18 @@
+{
+  "audio_id": "c1_pier.out.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "386cddfad660fdfc5a6084e6a51df45c8b35209f13a1c5134ecdb809e84c1cc2",
+  "expected": "They haven’t been home in eighteen months, Dale. You know that.",
+  "recognized": "They haven't been home in 18 months, Dale. You know that.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.0,
+  "sample_rate": 48000,
+  "peak": 0.240478515625,
+  "rms": 0.04173910990357399,
+  "first_recognition": "They haven't been home in 18 months, Dale. You know that.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

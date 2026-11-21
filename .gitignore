@@ -15,3 +15,8 @@ __pycache__/
 .mcp.json
 mcp-config.json
 *.raw.json
+/assets/audio/elevenlabs-v4-script-v2/preflight.json
+/assets/audio/elevenlabs-v4-script-v2/production-summary.json
+/assets/audio/elevenlabs-v4-script-v2/account-voice-receipts/
+/assets/audio/elevenlabs-v4-script-v2/inflight/
+/assets/audio/elevenlabs-v4-script-v2/asr-phrases/

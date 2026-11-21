@@ -1,0 +1,18 @@
+{
+  "audio_id": "c9_choir.note.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "867582023213dd3938ac7a5b0a4705627989008ee0cb67bd2232ae21eeb71291",
+  "expected": "We wanted your ears, kiddo. We always liked having the rest of you along too.",
+  "recognized": "We wanted your ears, kiddo. We always liked having the rest of you along, too.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 5.44,
+  "sample_rate": 48000,
+  "peak": 0.384521484375,
+  "rms": 0.06502023339271545,
+  "first_recognition": "We wanted your ears, kiddo. We always liked having the rest of you along, too.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

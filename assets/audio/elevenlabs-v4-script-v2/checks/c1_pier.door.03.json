@@ -1,0 +1,18 @@
+{
+  "audio_id": "c1_pier.door.03",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "398878f7c130c536e546815c44161f94b3c9a4185d29b11f14c8ec3650cac357",
+  "expected": "Every one since June. Haven’t missed one. Ask the boys.",
+  "recognized": "Everyone since June. Haven't missed one. Ask the boys.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.32,
+  "sample_rate": 48000,
+  "peak": 0.704254150390625,
+  "rms": 0.0662163570523262,
+  "first_recognition": "Everyone since June. Haven't missed one. Ask the boys.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

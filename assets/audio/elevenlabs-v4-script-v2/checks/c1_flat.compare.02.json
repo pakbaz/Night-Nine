@@ -1,0 +1,19 @@
+{
+  "audio_id": "c1_flat.compare.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "84422c07f2770431fd253f52af98b30f20ba83c834912774ed10032c5668ed34",
+  "expected": "And Nora... lines up too. The breath. The little click before “morning.”",
+  "recognized": "And Nora winds up too. The breath. The little click before morning.",
+  "word_edits": 1,
+  "word_error_rate": 0.08333333333333333,
+  "listening_review_required": true,
+  "seconds": 5.84,
+  "sample_rate": 48000,
+  "peak": 0.2415771484375,
+  "rms": 0.03128704056143761,
+  "first_recognition": "And Nora winds up too. The breath. The little click before morning.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms",
+  "independent_phrase_transcription": "and Nora. winds up too. The breath. The little click before morning."
+}

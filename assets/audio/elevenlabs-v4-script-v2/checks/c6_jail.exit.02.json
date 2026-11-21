@@ -1,0 +1,18 @@
+{
+  "audio_id": "c6_jail.exit.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "30f9fe520d5f44e61792c1e2c82a107a9a50f6e82b35a480cb627013fddef411",
+  "expected": "Then you’d better get there. We can talk tomorrow.",
+  "recognized": "Then you'd better get there. We can talk tomorrow.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 3.04,
+  "sample_rate": 48000,
+  "peak": 0.44561767578125,
+  "rms": 0.06728087365627289,
+  "first_recognition": "Then you'd better get there. We can talk tomorrow.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

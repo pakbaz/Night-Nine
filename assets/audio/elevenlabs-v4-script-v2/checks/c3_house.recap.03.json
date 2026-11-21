@@ -1,0 +1,18 @@
+{
+  "audio_id": "c3_house.recap.03",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "a07ccc3c59cafd7293c5607647f7d05b364297b64c911fd23b0f21b7c53da44d",
+  "expected": "Paper is harder to replace than people. And June has keys to the Town Hall archive.",
+  "recognized": "Paper is harder to replace than people, and June has keys to the Town Hall Archive.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 5.84,
+  "sample_rate": 48000,
+  "peak": 0.38922119140625,
+  "rms": 0.03734615817666054,
+  "first_recognition": "Paper is harder to replace than people, and June has keys to the Town Hall Archive.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

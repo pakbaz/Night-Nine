@@ -1,0 +1,18 @@
+{
+  "audio_id": "c8_beach.in.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "1baeba40e704d0727239e664af10587ec4f362c30443a026a4f58291429ebb0a",
+  "expected": "I need a moment.",
+  "recognized": "I need a moment.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 1.28,
+  "sample_rate": 48000,
+  "peak": 0.29376220703125,
+  "rms": 0.04492388665676117,
+  "first_recognition": "I need a moment.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

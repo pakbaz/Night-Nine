@@ -1,0 +1,18 @@
+{
+  "audio_id": "c1_flat.compare.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "b6104282f992b67055a8a6206b13fffc0ca232f08d8954b8efb5baf68e3ef373",
+  "expected": "The ident matches, so the recorder is fine. Nora’s good morning matches just as perfectly. People don’t do that. Recordings do.",
+  "recognized": "The ident matches, so the recorder is fine. Nora's good morning matches just as perfectly. People don't do that. Recordings do.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 9.52,
+  "sample_rate": 48000,
+  "peak": 0.357940673828125,
+  "rms": 0.038902658969163895,
+  "first_recognition": "The ident matches, so the recorder is fine. Nora's good morning matches just as perfectly. People don't do that. Recordings do.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "c6_jail.mail.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "4136b52f47d8f17c2099172076e3408a4c06d88fc754ea2ecec468bb5100dbc5",
+  "expected": "The key was in the Jail drawer, slot 9, where entries 17 and 18 share a slot. And on today’s crossword I circled the square where 23 Across crosses 8 Down, and posted it through June’s slot. Only she has it.",
+  "recognized": "The key was in the jail drawer, slot 9, where entries 17 and 18 share a slot. And on today's crossword, I circled the square where 23 across crosses 8 down, and posted it through June's slot. Only she has it.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 15.68,
+  "sample_rate": 48000,
+  "peak": 0.4383544921875,
+  "rms": 0.04183583706617355,
+  "first_recognition": "The key was in the jail drawer, slot 9, where entries 17 and 18 share a slot. And on today's crossword, I circled the square where 23 across crosses 8 down, and posted it through June's slot. Only she has it.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

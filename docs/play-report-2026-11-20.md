@@ -54,7 +54,21 @@ The browser test's worst scene-level p95 frame time was 34.5 ms; the five slowes
 
 Replacement speech is now authorized for production. Activation still requires a complete checked set, correct cast identities, fixed-recording reuse, verified voicemail editing, and valid audio/lip-sync hashes. Ambiguous or failed takes must remain held rather than receive invented listening approval.
 
-The two legacy chapter-snapshot packaging tests are currently blocked by missing new-voice timings while the script is text-only. They are not counted among the seven passing static-site tests. Reconcile those snapshot tests and validate the final voice-enabled release before shipping.
+The legacy chapter-snapshot packager has since been repaired to retain script-v2 lead-ins, findings, recaps, narration, ending artwork, take metadata and the disabled-playback gate. Its structural tests use rehearsal snapshots; a separate regression confirms strict releases reject unapproved playback. All 11 publishing-repository packaging tests pass. These are structural checks, not a voice-enabled chapter playthrough.
+
+All 873 replacement audio IDs have now been produced: 872 speech requests and one verified local splice. Strict automated QA passes 753; 120 remain held for listening review (63 transcript mismatches and 57 short ambiguities). The final audit removed name-to-homophone substitutions instead of treating them as approval. Campaign voices and storybook narration remain disabled.
+
+The fresh publishing import now passes all 2,623 voice-asset checks. Its initial legacy-voicemail waveform failure was traced to compressed fallback import settings omitted during copying. Restoring uncompressed PCM fixed it without changing the recording or weakening the waveform checks. See `docs/elevenlabs-v4-pipeline.md` for the review handoff.
+
+The exported and fully played browser build above predates these voice-staging changes. A complete approved voice-enabled run and a new size/memory check are still required before a voiced release.
+
+### Voice-staging follow-up: unresolved native timing
+
+The fresh staging copy passes 1,845 campaign-core checks, 351 soundtrack checks, 2,623 voice-asset checks, seven pipeline tests and 11 packaging tests. Restoring the two previously truncated closing panels adds 12 campaign-content checks and six rendered-story checks.
+
+The additional rendered story-flow run is **not passing**: 24 of 96 assertions failed with Metal, and 23 of 96 with the compatibility renderer, both using the silent Dummy audio driver. The first failure is the expected transition from the opening book to the prologue card; later checks cascade from that state. A diagnostic captured the opening still visible at audio time 61.19 seconds, before its 63.27-second end, after the test's wait expired. Neither complete run recorded a frame longer than 0.15 seconds.
+
+A separate short Dummy-driver probe also showed audio time behind wall time, but this does not establish the cause of the full-run failures. The current native story timing remains an unresolved release gate. The completed browser walkthrough earlier in this report is historical evidence, not a passing result for this new staging revision. No timing assertions were weakened. An earlier attempt with a frame cutoff was incomplete and is not counted as a complete run.
 
 The code repository is public. This work has not deployed a public game build. Cloudflare deployment remains subject to the user's separate go-ahead.
 
@@ -65,3 +79,5 @@ The code repository is public. This work has not deployed a public game build. C
 - `tmp/final-text-web-*.png`: direct browser screenshots, including wrong-answer feedback, Chapter 1 portraits, reload and offline continuation.
 - `tmp/final-credits-qa/score-route.json`: final credit spelling and soundtrack check.
 - `docs/story-walkthrough.md`: full spoiler-marked story and puzzle solutions.
+- `GitHub/Night-Nine/tmp/voice-story-recheck/`: complete Metal failure report and clock diagnostics in the local publishing checkout.
+- `GitHub/Night-Nine/tmp/voice-story-compatibility/`: complete compatibility-renderer failure report in the local publishing checkout.

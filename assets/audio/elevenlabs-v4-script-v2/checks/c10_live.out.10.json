@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_live.out.10",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "6ec9e5b6dc72b503df5ee5819df5f5389064c9e014207bd56859b48f3ba8778f",
+  "expected": "Take me back to the ship. I will not sign anything.",
+  "recognized": "Take me back to the ship. I will not sign anything.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 3.76,
+  "sample_rate": 48000,
+  "peak": 0.443084716796875,
+  "rms": 0.0394287183880806,
+  "first_recognition": "Take me back to the ship. I will not sign anything.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

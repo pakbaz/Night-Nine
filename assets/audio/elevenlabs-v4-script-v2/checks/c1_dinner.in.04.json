@@ -1,0 +1,18 @@
+{
+  "audio_id": "c1_dinner.in.04",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "7265b2514622a81362a6f633eba6291d811eec158a7b973e3fdf4cc4202e5225",
+  "expected": "She used to call it a crime against chilies.",
+  "recognized": "She used to call it a crime against Chili's.",
+  "word_edits": 2,
+  "word_error_rate": 0.2222222222222222,
+  "listening_review_required": true,
+  "seconds": 3.2,
+  "sample_rate": 48000,
+  "peak": 0.57843017578125,
+  "rms": 0.09667550027370453,
+  "first_recognition": "She used to call it a crime against Chili's.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

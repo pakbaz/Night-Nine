@@ -1,0 +1,18 @@
+{
+  "audio_id": "c4_escape.tube.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "b6bf6b23b8a7f5596dd6d6208145d023b3277556b765e97b74aaab0533537488",
+  "expected": "I heard both. I’ll keep his attention. You get out. We both know you can’t bluff him in person.",
+  "recognized": "I heard both. I'll keep his attention. You get out. We both know you can't bluff him in person.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 6.96,
+  "sample_rate": 48000,
+  "peak": 0.556976318359375,
+  "rms": 0.05407010018825531,
+  "first_recognition": "I heard both. I'll keep his attention. You get out. We both know you can't bluff him in person.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

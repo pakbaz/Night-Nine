@@ -1,0 +1,18 @@
+{
+  "audio_id": "c8_lab.props.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "a4df3f0df24dd7fcd1abab5962cc8ad78ea5759d196a810daf79f53607dc4130",
+  "expected": "Those drums survived six films and a congressional visit. They can manage one more show.",
+  "recognized": "Those drums survived six films and a congressional visit. They can manage one more show.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 5.76,
+  "sample_rate": 48000,
+  "peak": 0.338287353515625,
+  "rms": 0.04110350087285042,
+  "first_recognition": "Those drums survived six films and a congressional visit. They can manage one more show.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

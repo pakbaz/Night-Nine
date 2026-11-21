@@ -1,0 +1,18 @@
+{
+  "audio_id": "c4_safe.record.lead.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "d4d0dc85e6a02ec22e01482f87ceb04c0ec7a89fe15cdf679438c76af47bcc71",
+  "expected": "When the music stops, he leans out and tells June the same thing. Word for word, like the voicemail on her phone.",
+  "recognized": "When the music stops, he leans out and tells June the same thing, word for word, like the voicemail on her phone.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 7.28,
+  "sample_rate": 48000,
+  "peak": 0.412384033203125,
+  "rms": 0.04114378243684769,
+  "first_recognition": "When the music stops, he leans out and tells June the same thing, word for word, like the voicemail on her phone.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

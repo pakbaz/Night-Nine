@@ -1,0 +1,18 @@
+{
+  "audio_id": "c8_rig.out.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "e741a793b7b8fdfbfe69edfa3ed4f343871bd189df31b7b602a65368e3f4fd67",
+  "expected": "Dad’s name. I know it. I just...",
+  "recognized": "Dad's name. I know it. I just...",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 3.2,
+  "sample_rate": 48000,
+  "peak": 0.261749267578125,
+  "rms": 0.0346623957157135,
+  "first_recognition": "Dad's name. I know it. I just...",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

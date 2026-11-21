@@ -141,6 +141,41 @@ class PipelineTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "Paid overage"):
             pipeline.subscription_guard(enabled, 1)
 
+    def test_asr_comparator_normalizes_only_proven_formatting_equivalents(self):
+        checker = {
+            "words": lambda text: __import__("re").findall(r"[a-z0-9']+", text.lower()),
+            "distance": lambda left, right: 0 if left == right else 1,
+        }
+        equivalent = [
+            ("The ident ran at 06:01.", "The ident ran at 0601."),
+            ("At 23:42 the lamp failed.", "At 23.42 the lamp failed."),
+            ("Nora arrived at 7:15.", "Nora arrived at 7.15."),
+            ("The Prefect’s file is sealed.", "The prefects file is sealed."),
+        ]
+        for expected, recognized in equivalent:
+            self.assertEqual(
+                pipeline.comparison_distance(expected, recognized, checker), 0,
+                (expected, recognized),
+            )
+        different = [
+            ("The ident ran at 06:01.", "The ident ran at 06:02."),
+            ("At 23:42 the lamp failed.", "At 23:24 the lamp failed."),
+            ("The ident ran at 06:01.", "The ident at 0601."),
+            ("The ident ran at 06:01.", "The ident ran at 0601 again."),
+            ("Nora arrived at 20:04.", "Nora arrived at 2014."),
+            ("The click was at 0.5 seconds.", "The click was at 5 seconds."),
+            ("The plate will be warm.", "The plate will be worn."),
+            ("A fresh Pier flash.", "A fresh peer flash."),
+            ("They rowed into the bay.", "They rode into the bay."),
+            ("Wen returned to the station.", "When returned to the station."),
+            ("We arrived at Tirel.", "We arrived at Tyrell."),
+        ]
+        for expected, recognized in different:
+            self.assertNotEqual(
+                pipeline.comparison_distance(expected, recognized, checker), 0,
+                (expected, recognized),
+            )
+
     def test_manifest_integrity_checks_audio_text_and_timing(self):
         root = SCRATCH / "root"
         casting_path = root / "docs/voice-casting-2026-11-20.json"

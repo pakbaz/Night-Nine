@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_report.in.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "9a7a64d56efd5e1fbb6eaec550ca643ee01ee9dab9fed80a810248051f6c4418",
+  "expected": "I will not confirm this report.",
+  "recognized": "I will not confirm this report.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 2.24,
+  "sample_rate": 48000,
+  "peak": 0.35992431640625,
+  "rms": 0.03715548291802406,
+  "first_recognition": "I will not confirm this report.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

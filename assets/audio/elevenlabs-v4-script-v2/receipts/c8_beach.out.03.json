@@ -1,0 +1,15 @@
+{
+  "operation": "text_to_speech",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "audio_id": "c8_beach.out.03",
+  "voice_id": "vveagfomyMCJLZsOPRP2",
+  "model_id": "eleven_v4",
+  "text_sha256": "4bdd13229faec96ec8358c43c3b6612312d974d06d4fd45cd2c2120d426c4adc",
+  "synthesis_text_sha256": "4bdd13229faec96ec8358c43c3b6612312d974d06d4fd45cd2c2120d426c4adc",
+  "request_id": "8bYdCS0Qo7psRsgVr0ci",
+  "trace_id": "bec77c01cf55cf0fa8377b3fd6126acd",
+  "character_cost": 11,
+  "output_format": "mp3_44100_192",
+  "audio_sha256": "31cbff81d54cec336ac772bf524c795ca8b58d1bd990fe05c20bbc261c8cb8d4",
+  "response_bytes": 65244
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "i2_nora.out.04",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "8f042b55cf36214ca0f3c1ed2046e18b71e43abf4120cf35e816c0b8fe0446ed",
+  "expected": "Under the frost, something opened one enormous eye. It looked at me. Then it closed again.",
+  "recognized": "Under the frost, something opened one enormous eye. It looked at me. Then it closed again.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 7.28,
+  "sample_rate": 48000,
+  "peak": 0.46978759765625,
+  "rms": 0.049793556332588196,
+  "first_recognition": "Under the frost, something opened one enormous eye. It looked at me. Then it closed again.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

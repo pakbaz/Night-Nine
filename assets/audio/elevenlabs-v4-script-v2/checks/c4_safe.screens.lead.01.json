@@ -1,0 +1,18 @@
+{
+  "audio_id": "c4_safe.screens.lead.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "53312672179e4758f8023d655ae9c58358001dc6f5fe022cb47b9c6a13aed9a8",
+  "expected": "That night the agents dragged out the karaoke machine. Rook sang three songs. Beautifully.",
+  "recognized": "That night, the agents dragged out the karaoke machine. Rook sang three songs. Beautifully.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 6.8,
+  "sample_rate": 48000,
+  "peak": 0.3526611328125,
+  "rms": 0.034328870475292206,
+  "first_recognition": "That night, the agents dragged out the karaoke machine. Rook sang three songs. Beautifully.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "c3_house.recap.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "4608b533e6fc01051451d0d45b9f67fa98ae87f92ef5e76007d73d7632fd23e4",
+  "expected": "Somebody with my face was at the market this morning. Lyle passes things to Dale. And two names on June’s list have paper behind them.",
+  "recognized": "Somebody with my face was at the market this morning. Lyle passes things to Dale, and two names on June's list have paper behind them.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 9.04,
+  "sample_rate": 48000,
+  "peak": 0.367218017578125,
+  "rms": 0.03852881118655205,
+  "first_recognition": "Somebody with my face was at the market this morning. Lyle passes things to Dale, and two names on June's list have paper behind them.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

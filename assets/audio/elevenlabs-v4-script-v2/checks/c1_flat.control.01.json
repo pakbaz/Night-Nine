@@ -1,0 +1,18 @@
+{
+  "audio_id": "c1_flat.control.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "68b73c2948dff34f93923385534d870d58d7d3374d2bb5c73e3ceeeef623aca1",
+  "expected": "Testing. One, two. Testing... one, two.",
+  "recognized": "Testing, one, two. Testing, one, two.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.0,
+  "sample_rate": 48000,
+  "peak": 0.466949462890625,
+  "rms": 0.044069550931453705,
+  "first_recognition": "Testing, one, two. Testing, one, two.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

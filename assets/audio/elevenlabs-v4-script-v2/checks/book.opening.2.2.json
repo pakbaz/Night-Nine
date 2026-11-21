@@ -1,0 +1,18 @@
+{
+  "audio_id": "book.opening.2.2",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "b12b32539dc704eaeb35b34df48f9ab88a81f310e4019ef0eb1aacb892657c33",
+  "expected": "Nobody hears the night engineer. The night engineer hears everything.",
+  "recognized": "Nobody hears the Night Engineer. The Night Engineer hears everything.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 5.52,
+  "sample_rate": 48000,
+  "peak": 0.33306884765625,
+  "rms": 0.03719961270689964,
+  "first_recognition": "Nobody hears the Night Engineer. The Night Engineer hears everything.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

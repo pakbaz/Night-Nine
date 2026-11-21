@@ -1,0 +1,19 @@
+{
+  "audio_id": "c5_station.ctx.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "60b917c615afe8c38ed91065181566d684fbdbaa9decc8c8908566cd3a39dfd5",
+  "expected": "And my voice, on the station ident, still playing between the songs.",
+  "recognized": "and my voice on the station I dent still playing between the songs.",
+  "word_edits": 2,
+  "word_error_rate": 0.16666666666666666,
+  "listening_review_required": true,
+  "seconds": 4.96,
+  "sample_rate": 48000,
+  "peak": 0.382415771484375,
+  "rms": 0.03810146450996399,
+  "first_recognition": "and my voice on the station I dent still playing between the songs.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms",
+  "independent_phrase_transcription": "and my voice on the station I dent. Still playing between the songs."
+}

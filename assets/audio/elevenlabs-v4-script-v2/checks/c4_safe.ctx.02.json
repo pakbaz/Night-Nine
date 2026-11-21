@@ -1,0 +1,18 @@
+{
+  "audio_id": "c4_safe.ctx.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "7daf8623e2863bf506c4d2c09c249a7ee5bfa1cf89e8c07921f0bde5a390788f",
+  "expected": "He drove us to a safe house in the Coast Range, three hours from anywhere.",
+  "recognized": "He drove us to a safe house in the coast range, three hours from anywhere.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.8,
+  "sample_rate": 48000,
+  "peak": 0.31134033203125,
+  "rms": 0.04051043838262558,
+  "first_recognition": "He drove us to a safe house in the coast range, three hours from anywhere.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

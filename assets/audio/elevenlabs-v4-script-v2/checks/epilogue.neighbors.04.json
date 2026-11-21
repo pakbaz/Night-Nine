@@ -1,0 +1,18 @@
+{
+  "audio_id": "epilogue.neighbors.04",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "9007c480c24a0f569b22b1b7c405c6d456a10bf6c75fad5bf96929cad8d26549",
+  "expected": "Kelp croissant. Someone wrote it in my notebook. I’m going to try it.",
+  "recognized": "Kelp Croissant. Someone wrote it in my notebook. I'm going to try it.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.96,
+  "sample_rate": 48000,
+  "peak": 0.786865234375,
+  "rms": 0.10012674331665039,
+  "first_recognition": "Kelp Croissant. Someone wrote it in my notebook. I'm going to try it.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "c9_choir.wick.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "5e001bad8c20b736feed3b6116cea700a97ffbbd1e1b7680662bd6282146fb16",
+  "expected": "Page 12: two joined strokes rising, a gap, one long low stroke, and then it starts again. Mom followed Wick from phrase to phrase. Tirel was never destroyed. It hid. They all hid.",
+  "recognized": "Page 12. Two joined strokes rising. A gap. One long, low stroke. And then it starts again. Mom followed Wick from phrase to phrase. Tyrell was never destroyed. It hid. They all hid.",
+  "word_edits": 1,
+  "word_error_rate": 0.03125,
+  "listening_review_required": true,
+  "seconds": 15.84,
+  "sample_rate": 48000,
+  "peak": 0.29998779296875,
+  "rms": 0.03649117425084114,
+  "first_recognition": "Page 12. Two joined strokes rising. A gap. One long, low stroke. And then it starts again. Mom followed Wick from phrase to phrase. Tyrell was never destroyed. It hid. They all hid.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "c2_ship.in.07",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "48997aee5d052d5bc5e2a293b27fa8f5b16392263e54d8cc235074b6317894e1",
+  "expected": "The scan proceeds from the oldest memories. You are now nineteen. Congratulations on your driving test.",
+  "recognized": "The scan proceeds from the oldest memories. You are now 19. Congratulations on your driving test!",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 8.16,
+  "sample_rate": 48000,
+  "peak": 0.90057373046875,
+  "rms": 0.15551981329917908,
+  "first_recognition": "The scan proceeds from the oldest memories. You are now 19. Congratulations on your driving test!",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

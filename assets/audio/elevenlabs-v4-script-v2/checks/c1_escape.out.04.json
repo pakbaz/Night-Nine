@@ -1,0 +1,18 @@
+{
+  "audio_id": "c1_escape.out.04",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "ffefeac2c39d24d1d165f13e845ec0c6e3f8acecca17b7417e28bacc320dfbcf",
+  "expected": "Mrs. Penhallow? ...Mrs. Penhallow?",
+  "recognized": "Mrs. Penhallow? Mrs. Penhallow?",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 2.64,
+  "sample_rate": 48000,
+  "peak": 0.41986083984375,
+  "rms": 0.05351724848151207,
+  "first_recognition": "Mrs. Penhalo? Mrs. Penhalo?",
+  "recognition_pass": "story_vocabulary_2",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

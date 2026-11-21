@@ -1,0 +1,19 @@
+{
+  "audio_id": "c3_archive.out.04",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "59b935e916b231965ce188e8dabc6589455220a60f55b9e25488632ab447d087",
+  "expected": "At 23:42 the pier lamp went out. Eleven minutes later, the footsteps started.",
+  "recognized": "At 23.42, the pier lamp went out. Eleven minutes later, the footsteps started.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 6.4,
+  "sample_rate": 48000,
+  "peak": 0.28570556640625,
+  "rms": 0.041319478303194046,
+  "first_recognition": "At 23.42, the pier lamp went out. Eleven minutes later, the footsteps started.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms",
+  "independent_phrase_transcription": "At 23.42, the pier lamp went out. Eleven minutes later, the footsteps started."
+}

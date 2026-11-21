@@ -1,0 +1,18 @@
+{
+  "audio_id": "c4_safe.in.03",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "03b9ce81026ede1b6b5562e2f6a23b2fc513c25f3d72a86c1ed91e518080bce0",
+  "expected": "That’s what worries me.",
+  "recognized": "That's what worries me.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 1.76,
+  "sample_rate": 48000,
+  "peak": 0.19189453125,
+  "rms": 0.03520476445555687,
+  "first_recognition": "That's what worries me.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

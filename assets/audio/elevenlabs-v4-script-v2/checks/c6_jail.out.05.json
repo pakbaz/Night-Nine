@@ -1,0 +1,18 @@
+{
+  "audio_id": "c6_jail.out.05",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "d66e9dac81ca4cb39de4d93b395823142c198c2484e0a54222e558f789924d14",
+  "expected": "A copy who stops going below starts to forget. Nora’s memories go first.",
+  "recognized": "A copy who stops going below starts to forget. Nora's memories go first.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 5.84,
+  "sample_rate": 48000,
+  "peak": 0.37396240234375,
+  "rms": 0.055222079157829285,
+  "first_recognition": "A copy who stops going below starts to forget. Nora's memories go first.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

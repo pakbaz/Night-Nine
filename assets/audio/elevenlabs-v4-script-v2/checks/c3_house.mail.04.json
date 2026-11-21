@@ -1,0 +1,18 @@
+{
+  "audio_id": "c3_house.mail.04",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "16f407b87261b5a00af2a6136914166a068ee235e522415544db49e87cb4474d",
+  "expected": "Lyle took my call at ten past six.",
+  "recognized": "Lyle took my call at 10 past 6.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 2.88,
+  "sample_rate": 48000,
+  "peak": 0.46343994140625,
+  "rms": 0.06652982532978058,
+  "first_recognition": "Lyle took my call at 10 past 6.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

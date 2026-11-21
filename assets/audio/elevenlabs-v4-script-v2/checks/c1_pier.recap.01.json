@@ -1,0 +1,18 @@
+{
+  "audio_id": "c1_pier.recap.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "86c3a887347afcef7c28c7810834bb7f8726dbf3d588cf7588961574f14dd5d0",
+  "expected": "Admiral turned away from Nora’s whistle. Lyle Boone apologized to me. And the bay is humming the note that has been under Mom’s voice for eighteen months.",
+  "recognized": "Admiral turned away from Nora's whistle. Lyle Boone apologized to me. And the bay is humming the note that has been under Mom's voice for 18 months.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 10.88,
+  "sample_rate": 48000,
+  "peak": 0.386474609375,
+  "rms": 0.03827308863401413,
+  "first_recognition": "Admiral turned away from Nora's whistle. Lyle Boone apologized to me. And the bae is humming the note that has been under Mom's voice for 18 months.",
+  "recognition_pass": "story_vocabulary_1",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

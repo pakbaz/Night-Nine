@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_live.in.03",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "b375fc5497327974d0e3465015b9f48fa46caa08cae3002a8eb062f3e6a27551",
+  "expected": "It’s on mine too. Stay with me.",
+  "recognized": "It's on mine too. Stay with me.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 2.56,
+  "sample_rate": 48000,
+  "peak": 0.318878173828125,
+  "rms": 0.048308998346328735,
+  "first_recognition": "It's on mine too. Stay with me.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_live.third.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "abc849cf121e0b3534c009226ddd34f6c6be1004b93cadffee66fd2108c57deb",
+  "expected": "The wind on Veyr rang out through 52. At 53, with nobody else on the line, the Choir answered. Nothing repeated, because nothing was recorded.",
+  "recognized": "The wind on Veyr rang out through 52. At 53, with nobody else on the line, the choir answered. Nothing repeated, because nothing was recorded.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 10.88,
+  "sample_rate": 48000,
+  "peak": 0.331329345703125,
+  "rms": 0.03721054270863533,
+  "first_recognition": "The wind on Ver rang out through 52. At 53, with nobody else on the line, the choir answered. Nothing repeated, because nothing was recorded.",
+  "recognition_pass": "story_vocabulary_1",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

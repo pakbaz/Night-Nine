@@ -1,0 +1,18 @@
+{
+  "audio_id": "epilogue.neighbors.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "b1751aff2dadf48a476eafce54f65dc6609e089cb5b13283172402d7a99fb2a8",
+  "expected": "Two boys. Two fathers. We’ll have to learn.",
+  "recognized": "Two boys, two fathers. We'll have to learn.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.16,
+  "sample_rate": 48000,
+  "peak": 0.571044921875,
+  "rms": 0.05945272743701935,
+  "first_recognition": "Two boys, two fathers. We'll have to learn.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

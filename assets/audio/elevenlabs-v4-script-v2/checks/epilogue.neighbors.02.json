@@ -1,0 +1,18 @@
+{
+  "audio_id": "epilogue.neighbors.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "7130a5fef831651ed1939f5ad326b6fd75347cfc3dedb8cf91bdf4dab274893c",
+  "expected": "Dale has retired. Biscuit and I will maintain the route.",
+  "recognized": "Dale has retired. Biscuit and I will maintain the route.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.08,
+  "sample_rate": 48000,
+  "peak": 0.802825927734375,
+  "rms": 0.08035043627023697,
+  "first_recognition": "Dale has retired. Biscuit and I will maintain the route.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

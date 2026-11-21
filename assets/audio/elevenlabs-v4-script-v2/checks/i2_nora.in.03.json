@@ -1,0 +1,18 @@
+{
+  "audio_id": "i2_nora.in.03",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "3e90dc689ebce707308b9707570b0b98fd6f51ee969e333366596214cf5a1b56",
+  "expected": "Names first. Complaints after we have a plan.",
+  "recognized": "Names first, complaints after we have a plan.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 3.6,
+  "sample_rate": 48000,
+  "peak": 0.553619384765625,
+  "rms": 0.06275387853384018,
+  "first_recognition": "Names first, complaints after we have a plan.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

@@ -1,0 +1,15 @@
+{
+  "operation": "text_to_speech",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "audio_id": "c1_dinner.podcast.lead.03",
+  "voice_id": "KcCKZnyrGenSzoMrpu7I",
+  "model_id": "eleven_v4",
+  "text_sha256": "f10fd9131d29de7345794ad71aa7b31ce0359acedb97e248055774b408632624",
+  "synthesis_text_sha256": "f10fd9131d29de7345794ad71aa7b31ce0359acedb97e248055774b408632624",
+  "request_id": "YysNwQzVqLVKzU9aQMdG",
+  "trace_id": "dcf32299f02821c7881ae439fb5eeb45",
+  "character_cost": 7,
+  "output_format": "mp3_44100_192",
+  "audio_sha256": "0bb29abbe4d4b01cb9a8d9f268e9a3e5c57a233cd0af63cda38f0eccd952f9ab",
+  "response_bytes": 28255
+}

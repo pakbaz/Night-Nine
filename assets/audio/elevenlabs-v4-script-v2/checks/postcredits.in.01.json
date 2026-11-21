@@ -1,0 +1,18 @@
+{
+  "audio_id": "postcredits.in.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "c3e26cc13387d6082aa93554d5058961704491ad87f97f8cc6e75ddb7dc3570b",
+  "expected": "Madam President. This time I didn’t build it.",
+  "recognized": "Madam President, this time I didn't build it.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 3.6,
+  "sample_rate": 48000,
+  "peak": 0.2886962890625,
+  "rms": 0.042034927755594254,
+  "first_recognition": "Madam President, this time I didn't build it.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

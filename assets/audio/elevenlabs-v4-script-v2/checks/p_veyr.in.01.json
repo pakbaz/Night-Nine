@@ -1,0 +1,18 @@
+{
+  "audio_id": "p_veyr.in.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "641392ac4d9ef19034bde77502153ae8b3b3bb90165b5f8fd7ec981f7bc0b7e2",
+  "expected": "There are forty thousand names on the departure register. I have checked every one.",
+  "recognized": "There are 40,000 names on the departure register. I have checked every one.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 5.68,
+  "sample_rate": 48000,
+  "peak": 0.9049072265625,
+  "rms": 0.1424463391304016,
+  "first_recognition": "There are 40,000 names on the departure register. I have checked every one.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

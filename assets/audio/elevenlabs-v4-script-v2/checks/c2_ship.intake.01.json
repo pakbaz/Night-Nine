@@ -1,0 +1,18 @@
+{
+  "audio_id": "c2_ship.intake.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "de8e25bf60b635c1533244700de600037a1508a0ad2469a2c0909e976c025a4f",
+  "expected": "Come on, Admiral. You never missed this one.",
+  "recognized": "Come on, Admiral. You never miss this one.",
+  "word_edits": 1,
+  "word_error_rate": 0.125,
+  "listening_review_required": true,
+  "seconds": 2.88,
+  "sample_rate": 48000,
+  "peak": 0.24041748046875,
+  "rms": 0.03995087370276451,
+  "first_recognition": "Come on, Admiral. You never miss this one.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

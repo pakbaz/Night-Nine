@@ -1,0 +1,18 @@
+{
+  "audio_id": "c9_wake.recap.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "079a3c1dfc3ce0db2bca6354801101d5af6706ba452e5716d60a943792c8f8ee",
+  "expected": "Somewhere above us, Rook’s copy was losing the man he’d been pretending to be. And he was telling Saren everything he had left.",
+  "recognized": "Somewhere above us, Rook's copy was losing the man he'd been pretending to be, and he was telling Saren everything he had left.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 8.0,
+  "sample_rate": 48000,
+  "peak": 0.433349609375,
+  "rms": 0.036344531923532486,
+  "first_recognition": "Somewhere above us, Rook's copy was losing the man he'd been pretending to be, and he was telling Saren everything he had left.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

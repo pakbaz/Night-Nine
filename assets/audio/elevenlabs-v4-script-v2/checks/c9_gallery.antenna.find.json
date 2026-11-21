@@ -1,0 +1,19 @@
+{
+  "audio_id": "c9_gallery.antenna.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "1017bb6c03cfe56dc2d03bc342a3c604bbc97ceeb16c27d184b373a199a9f94a",
+  "expected": "Stephen’s pass opened the inner pad. June saw the lamp light from the deck and called it in, and Stephen went on alone to the antenna with the rig. I stayed where I promised.",
+  "recognized": "Steven's pass opened the inner pad. June saw the lamplight from the deck and called it in, and Steven went on alone to the antenna with the rig. I stayed where I promised.",
+  "word_edits": 2,
+  "word_error_rate": 0.05714285714285714,
+  "listening_review_required": true,
+  "seconds": 10.88,
+  "sample_rate": 48000,
+  "peak": 0.433837890625,
+  "rms": 0.04022395610809326,
+  "first_recognition": "Steven's pass opened the inner pad. June saw the lamplight from the deck and called it in, and Steven went on alone to the antenna with the rig. I stayed where I promised.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms",
+  "independent_phrase_transcription": "Stevens Pass opened the inner pad. June saw the lamplight from the deck and called it in. And Steven went on alone to the antenna with the rig. I stayed where I promised."
+}

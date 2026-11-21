@@ -1,0 +1,19 @@
+{
+  "audio_id": "c6_iris.recap.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "98decccf5dcc17c2f43deaaa72964c7c0e3dcbcf8b6b78bb3de1cd232aabfc6e",
+  "expected": "Nora’s copy sent the warning about Rook. She stopped going into the water, and she doesn’t replay any more. She chooses.",
+  "recognized": "Nora's copy sent the warning about Rook. She stopped going into the water, and she doesn't replay anymore. She chooses.",
+  "word_edits": 2,
+  "word_error_rate": 0.09090909090909091,
+  "listening_review_required": true,
+  "seconds": 8.32,
+  "sample_rate": 48000,
+  "peak": 0.3548583984375,
+  "rms": 0.037142183631658554,
+  "first_recognition": "Nora's copy sent the warning about Rook. She stopped going into the water, and she doesn't replay anymore. She chooses.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms",
+  "independent_phrase_transcription": "Nora's copy sent the warning about Rook. She stopped going into the water. And she doesn't replay anymore. She chooses."
+}

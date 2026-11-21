@@ -1,0 +1,19 @@
+{
+  "audio_id": "c5_shack.rig.lead.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "7c57e54f38b2795d89293c274ca9c1d6d9e82af994a2a264c4399423ff49ed1f",
+  "expected": "Dad’s receiver. Dead battery, and the dial’s slipped since he last used it.",
+  "recognized": "Dad's receiver, dead battery, and the dial slipped since he last used it.",
+  "word_edits": 1,
+  "word_error_rate": 0.07142857142857142,
+  "listening_review_required": true,
+  "seconds": 5.12,
+  "sample_rate": 48000,
+  "peak": 0.4002685546875,
+  "rms": 0.03897266834974289,
+  "first_recognition": "Dad's receiver, dead battery, and the dial slipped since he last used it.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms",
+  "independent_phrase_transcription": "Dad's Receiver Dead battery, and the dial slipped since he last used it."
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "c1_flat.in.05",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "19c99c7d31c563d8de69ac69711e212f2073e3b970756408070f459f850dc01e",
+  "expected": "Your tape’s wearing thin, Mom. I’ll move you to a fresh one. Just as soon as Dad’s recorder runs true.",
+  "recognized": "Your tape's wearing thin, Mom. I'll move you to a fresh one, just as soon as Dad's recorder runs true.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 6.24,
+  "sample_rate": 48000,
+  "peak": 0.37335205078125,
+  "rms": 0.04127540811896324,
+  "first_recognition": "Your tape's wearing thin, Mom. I'll move you to a fresh one, just as soon as Dad's recorder runs true.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

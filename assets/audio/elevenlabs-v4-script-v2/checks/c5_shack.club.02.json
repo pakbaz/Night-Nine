@@ -1,0 +1,18 @@
+{
+  "audio_id": "c5_shack.club.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "1cf0ce9170428e663f0b9b5bcd12b1b798c1900add727b09841bc7d706e629c3",
+  "expected": "It’s Steve. Frank’s son. I need your help.",
+  "recognized": "It's Steve, Frank's son. I need your help.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 3.2,
+  "sample_rate": 48000,
+  "peak": 0.35418701171875,
+  "rms": 0.04209933429956436,
+  "first_recognition": "It's Steve, Frank's son. I need your help.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

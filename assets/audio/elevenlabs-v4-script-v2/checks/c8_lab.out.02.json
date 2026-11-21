@@ -1,0 +1,18 @@
+{
+  "audio_id": "c8_lab.out.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "9a006753d2a5d5bc59b770e4a94a75ddf7ba86b2a4a971b9c7f5a90553149d81",
+  "expected": "Midnight tomorrow, Madam President. The ninth night. The engine, or the scan resumes.",
+  "recognized": "Midnight tomorrow, Madam President. The ninth night. The engine, or the scan, resumes.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 7.12,
+  "sample_rate": 48000,
+  "peak": 0.39056396484375,
+  "rms": 0.028767699375748634,
+  "first_recognition": "Midnight tomorrow, Madam President. The ninth night. The engine, or the scan, resumes.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

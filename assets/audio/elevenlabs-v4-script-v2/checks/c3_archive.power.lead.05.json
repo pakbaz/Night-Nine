@@ -1,0 +1,19 @@
+{
+  "audio_id": "c3_archive.power.lead.05",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "08989c15d94245e4937771c9b4b9c79e91b6d13b3acf13b7137487f2f9ff5b47",
+  "expected": "Sentinel Point. It was a radio array when I was a girl. Now it’s Meridian’s. Federal money, an armed gate, and on November seventh the President flies in to sign something there.",
+  "recognized": "Sentinel Point. It was a radio array when I was a girl. Now it's Meridians. Federal money, an armed gate, and on November 7th, the president flies in to sign something there.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 12.08,
+  "sample_rate": 48000,
+  "peak": 0.486785888671875,
+  "rms": 0.06268616020679474,
+  "first_recognition": "Sentinel Point. It was a radio array when I was a girl. Now it's Meridians. Federal money, an armed gate, and on November 7th, the president flies in to sign something there.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms",
+  "independent_phrase_transcription": "Sentinel Point It was a radio array when I was a girl. Now it's meridians Federal money, an armed gate. And on November 7th, the president flies in to sign something there."
+}

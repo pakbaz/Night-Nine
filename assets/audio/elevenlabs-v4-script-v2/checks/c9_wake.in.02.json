@@ -1,0 +1,18 @@
+{
+  "audio_id": "c9_wake.in.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "4a3e67e19e9a858446434287b7ee041085c5cf3a2595fb5edb8397164c1a5c0c",
+  "expected": "I brought the sounds. I think they can hear us.",
+  "recognized": "I brought the sounds. I think they can hear us.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 3.2,
+  "sample_rate": 48000,
+  "peak": 0.45355224609375,
+  "rms": 0.034868910908699036,
+  "first_recognition": "I brought the sounds. I think they can hear us.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

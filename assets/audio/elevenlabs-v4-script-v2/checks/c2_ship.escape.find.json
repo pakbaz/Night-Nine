@@ -1,0 +1,18 @@
+{
+  "audio_id": "c2_ship.escape.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "0a9504efaeafdf84b4ac24864f9df77b2f6c60b0bd35df66bec058a8fd7b7350",
+  "expected": "The Prefect’s own voice opened the chair, at the notch marked sixty-one. The scan stopped at sixty-one percent.",
+  "recognized": "The prefect's own voice opened the chair at the notch marked 61. The scan stopped at 61%.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 8.16,
+  "sample_rate": 48000,
+  "peak": 0.300445556640625,
+  "rms": 0.03615013137459755,
+  "first_recognition": "The prefect's own voice opened the chair at the notch marked 61. The scan stopped at 61%.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

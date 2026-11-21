@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_station.out.04",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "0bc73e0909bcf1bfaa1b8e712384f493f2faabd43b150345965f149a3d4e719e",
+  "expected": "Every continent, kiddo. Hams never really switch off.",
+  "recognized": "Every continent, kiddo. Hams never really switch off.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.16,
+  "sample_rate": 48000,
+  "peak": 0.41058349609375,
+  "rms": 0.06936556845903397,
+  "first_recognition": "Every continent, kiddo. Hams never really switch off.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

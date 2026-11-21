@@ -1,0 +1,15 @@
+{
+  "operation": "text_to_speech",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "audio_id": "epilogue.neighbors.02",
+  "voice_id": "kSSJYNGo5Kev6qgwVloV",
+  "model_id": "eleven_v4",
+  "text_sha256": "2310a5cf635a5bea704ffd20124266a16aac849c6f5053da39b11d2aae235d9b",
+  "synthesis_text_sha256": "2310a5cf635a5bea704ffd20124266a16aac849c6f5053da39b11d2aae235d9b",
+  "request_id": "gQCrmWPoD03QDe4pOdJC",
+  "trace_id": "cb73450e4a2912b6327369fe17e79d4f",
+  "character_cost": 25,
+  "output_format": "mp3_44100_192",
+  "audio_sha256": "7fc2ba48d2bbae0b6cb76f632562e3fb8112a2cb5aca46df473eca570e5982fc",
+  "response_bytes": 99726
+}

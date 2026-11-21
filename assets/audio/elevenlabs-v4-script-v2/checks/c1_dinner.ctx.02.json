@@ -1,0 +1,18 @@
+{
+  "audio_id": "c1_dinner.ctx.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "f1d3e2f8a751e87d38b6c38a5c661427b8843830c6fd77cb1a03efaabc7afff9",
+  "expected": "Luis still keeps Dad’s old chair at the bar. Nobody sits in it.",
+  "recognized": "Luis still keeps dad's old chair at the bar. Nobody sits in it.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.32,
+  "sample_rate": 48000,
+  "peak": 0.36627197265625,
+  "rms": 0.043003834784030914,
+  "first_recognition": "Luis still keeps dad's old chair at the bar. Nobody sits in it.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

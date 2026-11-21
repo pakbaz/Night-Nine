@@ -1,0 +1,18 @@
+{
+  "audio_id": "p_meeting.terms.lead.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "d7b3c3f5cc6b30954b0c2d330b98e7b80f9081981431aa12127f0dfb8d1b099b",
+  "expected": "比较我们的表演。",
+  "recognized": "比较我们的表演。",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 1.84,
+  "sample_rate": 48000,
+  "peak": 0.619903564453125,
+  "rms": 0.0699043869972229,
+  "first_recognition": "to be our performance.",
+  "recognition_pass": "story_vocabulary_2",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "c6_jail.out.03",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "a853d4bd0bc373ff9324ed7aa8d8d915f3b4fb6b48f581b39fdb69da9d3d4a37",
+  "expected": "We’re starting to forget. Stephen and I have days.",
+  "recognized": "We're starting to forget. Steven and I have days.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.0,
+  "sample_rate": 48000,
+  "peak": 0.32183837890625,
+  "rms": 0.043698735535144806,
+  "first_recognition": "We're starting to forget. Steven and I have days.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

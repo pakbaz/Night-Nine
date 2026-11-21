@@ -1,0 +1,18 @@
+{
+  "audio_id": "c9_gallery.talk.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "103edcf396b3947e8147f5918e61a2dc64512b04aa55615997fbd6acc16fd417",
+  "expected": "I told Nora the truth about the thirteen months: I was afraid that if I wanted something, I’d lose it too. She told me to keep talking.",
+  "recognized": "I told Nora the truth about the 13 months. I was afraid that if I wanted something, I'd lose it too. She told me to keep talking.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 9.44,
+  "sample_rate": 48000,
+  "peak": 0.3157958984375,
+  "rms": 0.03675008565187454,
+  "first_recognition": "I told Nora the truth about the 13 months. I was afraid that if I wanted something, I'd lose it too. She told me to keep talking.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

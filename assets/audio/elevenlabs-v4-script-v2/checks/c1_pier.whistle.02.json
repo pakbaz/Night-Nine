@@ -1,0 +1,18 @@
+{
+  "audio_id": "c1_pier.whistle.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "cc1f75231beab783bb3ce0f743f0c29c7ba840d79aea7ad5f86a0eed355e30bc",
+  "expected": "Nothing. He’s looking right at you.",
+  "recognized": "Nothing. He's looking right at you.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 2.8,
+  "sample_rate": 48000,
+  "peak": 0.27362060546875,
+  "rms": 0.03740736097097397,
+  "first_recognition": "Nothing. He's looking right at you.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

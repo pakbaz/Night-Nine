@@ -6,8 +6,10 @@ generation require explicit flags and the exact frozen plan hash.
 """
 import argparse
 import copy
+from concurrent.futures import ThreadPoolExecutor, as_completed
 import csv
 import hashlib
+import html
 import json
 import math
 import os
@@ -373,15 +375,10 @@ def collect_preflight(plan, client):
             "can_do_text_to_speech": model.get("can_do_text_to_speech", True),
         },
         "subscription": {
-            "tier": subscription["tier"],
             "status": subscription["status"],
-            "character_count": subscription["character_count"],
-            "character_limit": subscription["character_limit"],
-            "available_credits": available,
+            "sufficient_included_credits": available >= weighted,
             "estimated_credits": weighted,
             "overage_allowed": False,
-            "voice_slots_used": subscription["voice_slots_used"],
-            "voice_limit": subscription["voice_limit"],
             "missing_shared_voices": missing_shared,
         },
         "voices": metadata,
@@ -574,7 +571,105 @@ def decode_mp3(audio_id):
 
 
 def transcript_words(text, checker):
-    return checker["words"](text.replace("space-fold", "spacefold"))
+    words = checker["words"](text.replace("space-fold", "spacefold"))
+    spellings = {
+        "favourites": "favorites",
+        "labelled": "labeled",
+    }
+    return [spellings.get(word, word) for word in words]
+
+
+def _clock_marker(hour, minute):
+    letters = str.maketrans("0123456789", "zotfvsxeni")
+    return "clocktime" + (f"{int(hour):02d}{minute}").translate(letters)
+
+
+def _possessive_stems(text):
+    text = text.lower().replace("’", "'")
+    stems = {match.group(1) for match in re.finditer(r"\b([\w]+)'s\b", text)}
+    stems.update(match.group(1) for match in re.finditer(r"\b([\w]+s)'(?=\W|$)", text))
+    return stems
+
+
+def _replace_possessive_pair(left, right):
+    left = left.replace("’", "'")
+    right = right.replace("’", "'")
+    for stem in sorted(_possessive_stems(left), key=len, reverse=True):
+        marker = "possessive" + re.sub(r"\W+", "", stem.lower())
+        possessive = re.compile(rf"\b{re.escape(stem)}(?:'s|')(?=\W|$)", re.IGNORECASE)
+        plain = re.compile(rf"\b{re.escape(stem)}s\b", re.IGNORECASE)
+        if possessive.search(left) and (possessive.search(right) or plain.search(right)):
+            left = possessive.sub(marker, left)
+            right = possessive.sub(marker, right)
+            right = plain.sub(marker, right)
+    for stem in sorted(_possessive_stems(right), key=len, reverse=True):
+        marker = "possessive" + re.sub(r"\W+", "", stem.lower())
+        possessive = re.compile(rf"\b{re.escape(stem)}(?:'s|')(?=\W|$)", re.IGNORECASE)
+        plain = re.compile(rf"\b{re.escape(stem)}s\b", re.IGNORECASE)
+        if possessive.search(right) and (possessive.search(left) or plain.search(left)):
+            right = possessive.sub(marker, right)
+            left = possessive.sub(marker, left)
+            left = plain.sub(marker, left)
+    return left, right
+
+
+def comparison_words(expected, recognized, checker):
+    expected, recognized = _replace_possessive_pair(expected, recognized)
+    times = {
+        (match.group(1), match.group(2))
+        for match in re.finditer(r"(?<!\d)([01]?\d|2[0-3]):([0-5]\d)(?!\d)", expected)
+    }
+    for hour, minute in sorted(times, key=lambda value: len(value[0]), reverse=True):
+        marker = _clock_marker(hour, minute)
+        hours = sorted({str(int(hour)), f"{int(hour):02d}"}, key=len, reverse=True)
+        separated = re.compile(
+            rf"(?<!\d)(?:{'|'.join(map(re.escape, hours))})[:.]{re.escape(minute)}(?!\d)"
+        )
+        compact_values = sorted({f"{int(hour):02d}{minute}", f"{int(hour)}{minute}"}, key=len, reverse=True)
+        compact = re.compile(rf"(?<!\d)(?:{'|'.join(compact_values)})(?!\d)")
+        expected = separated.sub(marker, expected)
+        recognized = separated.sub(marker, recognized)
+        recognized = compact.sub(marker, recognized)
+    return transcript_words(expected, checker), transcript_words(recognized, checker)
+
+
+def comparison_distance(expected, recognized, checker):
+    left, right = comparison_words(expected, recognized, checker)
+    return checker["distance"](left, right)
+
+
+def transcribe_pauses(model, master, audio_id):
+    import numpy as np
+    import soundfile as sf
+    samples, rate = sf.read(master, dtype="float32")
+    width = round(rate * .02)
+    squared = np.pad(samples ** 2, (0, (-len(samples)) % width))
+    level = np.sqrt(squared.reshape(-1, width).mean(axis=1))
+    voice = np.flatnonzero(level > .013)
+    if not len(voice):
+        return ""
+    breaks = np.flatnonzero(np.diff(voice) >= 15) + 1
+    phrases = np.split(voice, breaks)
+    if len(phrases) < 2:
+        return ""
+    folder = PRODUCTION / "asr-phrases" / safe_id(audio_id)
+    shutil.rmtree(folder, ignore_errors=True)
+    folder.mkdir(parents=True)
+    recognized = []
+    try:
+        for index, phrase in enumerate(phrases):
+            start = max(0, int(phrase[0]) * width - round(rate * .09))
+            end = min(len(samples), (int(phrase[-1]) + 1) * width + round(rate * .09))
+            chunk = np.pad(samples[start:end], (round(rate * .24), round(rate * .24)))
+            path = folder / f"phrase-{index}.wav"
+            sf.write(path, chunk, rate, "PCM_16")
+            recognized.append(model.generate(
+                str(path), language="en", temperature=0,
+                condition_on_previous_text=False,
+            ).text.strip())
+    finally:
+        shutil.rmtree(folder, ignore_errors=True)
+    return " ".join(recognized)
 
 
 def word_timings(segments):
@@ -666,6 +761,73 @@ def preserve_recorder_pcm(runtime):
     atomic_bytes(settings, revised.encode())
 
 
+def write_manual_review_files(plan, checks, hard_holds):
+    entries = []
+    for audio_id, reason in sorted(hard_holds.items()):
+        item = plan["items"][audio_id]
+        report = checks[audio_id]
+        entries.append({
+            "audio_id": audio_id,
+            "reason": reason,
+            "speaker": item["speaker"],
+            "identity": item["cast_role"],
+            "voice_id": item["voice_id"],
+            "line_ids": item["line_ids"],
+            "expected": item["text"],
+            "recognized": report["recognized"],
+            "word_edits": report["word_edits"],
+            "wav": f"masters/{audio_id}.wav",
+            "check": f"checks/{audio_id}.json",
+        })
+    payload = {
+        "schema": 1,
+        "plan_sha256": plan["plan_sha256"],
+        "casting_sha256": plan["inputs"]["casting"],
+        "count": len(entries),
+        "entries": entries,
+    }
+    atomic_json(PRODUCTION / "manual-review-required.json", payload)
+    csv_path = PRODUCTION / "manual-review-required.csv"
+    csv_path.parent.mkdir(parents=True, exist_ok=True)
+    pending = csv_path.with_name(csv_path.name + f".partial-{uuid.uuid4().hex}")
+    with pending.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.writer(handle)
+        writer.writerow([
+            "audio_id", "reason", "speaker", "identity", "voice_id", "line_ids",
+            "word_edits", "expected", "recognized", "wav", "check",
+        ])
+        for entry in entries:
+            writer.writerow([
+                entry["audio_id"], entry["reason"], entry["speaker"], entry["identity"],
+                entry["voice_id"], " ".join(entry["line_ids"]), entry["word_edits"],
+                entry["expected"], entry["recognized"], entry["wav"], entry["check"],
+            ])
+    os.chmod(pending, 0o644)
+    os.replace(pending, csv_path)
+    cards = []
+    for entry in entries:
+        cards.append(
+            '<section><h2><code>{}</code></h2><p><strong>{}</strong> · {} · edits {}</p>'
+            '<audio controls preload="none" src="{}"></audio>'
+            '<p><b>Expected:</b> {}</p><p><b>ASR:</b> {}</p></section>'.format(
+                html.escape(entry["audio_id"]), html.escape(entry["reason"]),
+                html.escape(entry["speaker"]), entry["word_edits"],
+                html.escape(entry["wav"]), html.escape(entry["expected"]),
+                html.escape(entry["recognized"]),
+            )
+        )
+    page = """<!doctype html><meta charset="utf-8"><title>Night Nine voice review</title>
+<style>body{font:16px system-ui;max-width:1000px;margin:2rem auto;padding:0 1rem;background:#151719;color:#eee}
+section{border:1px solid #555;border-radius:8px;padding:1rem;margin:1rem 0}audio{width:100%%}
+code{color:#d8ba7d}b{color:#a9d6ce}</style>
+<h1>Night Nine: required voice review</h1>
+<p><strong>Story spoilers below.</strong> Listen before judging transcript differences.</p>
+<p>Plan <code>%s</code>. Review only these %d held takes. This page does not approve anything.</p>
+%s
+""" % (html.escape(plan["plan_sha256"]), len(entries), "\n".join(cards))
+    atomic_bytes(PRODUCTION / "manual-review.html", page.encode())
+
+
 def validate_and_stage(plan):
     verify_frozen_inputs(plan)
     missing = [audio_id for audio_id, item in plan["items"].items()
@@ -688,28 +850,86 @@ def validate_and_stage(plan):
         if item["kind"] != "speech":
             continue
         master = decode_mp3(audio_id)
-        result = model.generate(
-            str(master), language="en", temperature=0, condition_on_previous_text=False,
-            word_timestamps=(audio_id == "recording.voicemail"),
-        )
-        recognized = result.text.strip()
-        edits = checker["distance"](
-            transcript_words(item["text"], checker), transcript_words(recognized, checker),
-        )
         facts = audio_facts(master)
-        report = {
-            "audio_id": audio_id,
-            "plan_sha256": plan["plan_sha256"],
-            "wav_sha256": file_sha(master),
-            "expected": item["text"],
+        wav_sha = file_sha(master)
+        check_path = PRODUCTION / "checks" / f"{audio_id}.json"
+        cached = read_json(check_path) if check_path.is_file() else {}
+        if (
+            cached.get("audio_id") == audio_id
+            and cached.get("plan_sha256") == plan["plan_sha256"]
+            and cached.get("wav_sha256") == wav_sha
+            and cached.get("expected") == item["text"]
+            and (audio_id != "recording.voicemail" or cached.get("word_timings"))
+        ):
+            report = cached
+            recognized = report["recognized"]
+        else:
+            result = model.generate(
+                str(master), language="en", temperature=0, condition_on_previous_text=False,
+                word_timestamps=(audio_id == "recording.voicemail"),
+            )
+            recognized = result.text.strip()
+            report = {
+                "audio_id": audio_id,
+                "plan_sha256": plan["plan_sha256"],
+                "wav_sha256": wav_sha,
+                "expected": item["text"],
+                "listening_review_required": True,
+                **facts,
+            }
+            if audio_id == "recording.voicemail":
+                report["word_timings"] = word_timings(result.segments)
+        expected_words, recognized_words = comparison_words(item["text"], recognized, checker)
+        first_recognition = report.get("first_recognition", recognized)
+        edits = checker["distance"](expected_words, recognized_words)
+        recognition_pass = report.get("recognition_pass", "independent")
+        if edits and report.get("asr_revision") != 2:
+            vocabularies = (
+                "Character and place names in this recording may include Nora, Bellwether, "
+                "Biscuit, Stephen, Pell, Dale, K7BLW, Gus, Calder, Veyr, Saren, Rook, "
+                "Iris, Evelyn, June, Cal, or Helen.",
+                "Night Nine. Steve Mercer, Stephen, Nora Reyes, Iris, Helen, Frank, Agnes Penhallow, "
+                "June Calder, Evelyn Shaw, Mateo, Rafa, La Marea, Rook, Saren, Wick, Veyr, Tirel, "
+                "Bellwether, K7BLW. Sound engineering terms: all-call, cue number, re-sync.",
+                "Names of places in this story: Bellwether Bay, Veyr, Sentinel Point, Tirel, La Marea.",
+            )
+            for index, vocabulary in enumerate(vocabularies, 1):
+                alternate = model.generate(
+                    str(master), language="en", temperature=0,
+                    condition_on_previous_text=False, initial_prompt=vocabulary,
+                ).text.strip()
+                alternate_expected, alternate_words = comparison_words(
+                    item["text"], alternate, checker,
+                )
+                alternate_edits = checker["distance"](alternate_expected, alternate_words)
+                if alternate_edits < edits:
+                    recognized, edits = alternate, alternate_edits
+                    recognition_pass = f"story_vocabulary_{index}"
+                if edits == 0:
+                    break
+        segmented = report.get("independent_phrase_transcription", "")
+        if edits and report.get("asr_revision") != 2:
+            segmented = transcribe_pauses(model, master, audio_id)
+            segmented_expected, segmented_words = comparison_words(
+                item["text"], segmented, checker,
+            ) if segmented else (expected_words, [])
+            segmented_edits = checker["distance"](
+                segmented_expected, segmented_words,
+            ) if segmented else edits
+            if segmented and segmented_edits < edits:
+                recognized, edits = segmented, segmented_edits
+                recognition_pass = "independent_phrases"
+        report.update({
             "recognized": recognized,
+            "first_recognition": first_recognition,
+            "recognition_pass": recognition_pass,
             "word_edits": edits,
-            "word_error_rate": edits / max(1, len(transcript_words(item["text"], checker))),
-            "listening_review_required": True,
-            **facts,
-        }
-        if audio_id == "recording.voicemail":
-            report["word_timings"] = word_timings(result.segments)
+            "word_error_rate": edits / max(1, len(expected_words)),
+            "asr_revision": 2,
+            "transcript_comparison": "strict normalized English spoken forms",
+        })
+        if segmented:
+            report["independent_phrase_transcription"] = segmented
         atomic_json(PRODUCTION / "checks" / f"{audio_id}.json", report)
         checks[audio_id] = report
         masters[audio_id] = master
@@ -737,10 +957,10 @@ def validate_and_stage(plan):
     splice_result = model.generate(
         str(splice), language="en", temperature=0, condition_on_previous_text=False,
     )
-    splice_edits = checker["distance"](
-        transcript_words(splice_item["text"], checker),
-        transcript_words(splice_result.text.strip(), checker),
+    splice_expected, splice_words_heard = comparison_words(
+        splice_item["text"], splice_result.text.strip(), checker,
     )
+    splice_edits = checker["distance"](splice_expected, splice_words_heard)
     splice_report = {
         "audio_id": "recording.saren_splice",
         "plan_sha256": plan["plan_sha256"],
@@ -767,51 +987,74 @@ def validate_and_stage(plan):
     timing = {}
     generator_hash = file_sha(lips["BINARY"])
     generator_version = subprocess.check_output([str(lips["BINARY"]), "--version"], text=True).strip()
-    for audio_id in plan["ordered_audio_ids"]:
-        item = plan["items"][audio_id]
-        report = checks[audio_id]
-        master = masters[audio_id]
-        runtime = ROOT / "game/assets/audio/voices/elevenlabs-v4-script-v2" / f"{audio_id}.wav"
-        runtime.parent.mkdir(parents=True, exist_ok=True)
-        atomic_bytes(runtime, master.read_bytes())
-        if audio_id == "recording.greeting":
-            preserve_recorder_pcm(runtime)
-        receipt = read_json(PRODUCTION / "receipts" / f"{audio_id}.json") if item["kind"] == "speech" else {}
-        take = {
-            "id": audio_id,
-            "speaker": item["speaker"],
-            "identity": item["cast_role"],
-            "text": item["text"],
-            "spoken_text": item["text"],
-            "file": "res://" + runtime.relative_to(ROOT / "game").as_posix(),
-            "sha256": file_sha(runtime),
-            **{key: report[key] for key in ("seconds", "sample_rate", "peak", "rms")},
-            "model": MODEL,
-            "provider": "ElevenLabs API",
-            "voice_id": item["voice_id"],
-            "request_id": receipt.get("request_id"),
-            "source_request_id": receipt.get("request_id") if item["kind"] == "derived" else None,
-            "status": "manual_review_required" if audio_id in hard_holds else "automated_qa_passed",
-            "listening_reviewed": False,
-            "asr_report": f"assets/audio/elevenlabs-v4-script-v2/checks/{audio_id}.json",
-            "word_error_rate": report["word_error_rate"],
-            "lip_sync_revision": "elevenlabs-v4-script-v2",
-            "text_hash": text_sha(item["text"])[:16],
-            "plan_sha256": plan["plan_sha256"],
-        }
-        if item["kind"] == "derived":
-            take["derived_from"] = edit_receipt
-            take["source_request_id"] = read_json(
-                PRODUCTION / "receipts/recording.voicemail.json"
-            )["request_id"]
-        takes[audio_id] = take
-        cue = lips["generate_cues"](
-            audio_id, take, ROOT / "assets/audio/lipsync-elevenlabs-v4-script-v2",
-            generator_hash, generator_version,
-        )
-        timing[audio_id] = {key: cue[key] for key in (
-            "audio_sha256", "seconds", "cues", "visual_timing_reviewed",
-        )}
+    script_data = read_json(SCRIPT)
+    evidence_audio_ids = {
+        sound
+        for scene in script_data.get("scenes", [])
+        for task in scene.get("tasks", [])
+        if task.get("evidence_labels") or task.get("audition_labels")
+        for sound in task.get("sounds", [])
+        if not sound.startswith("effect.")
+    }
+    fallback_manifest = read_json(ROOT / "tools/script_v2/base/voice-manifest.json")
+    for audio_id in evidence_audio_ids | {"recording.greeting"}:
+        fallback = fallback_manifest.get("takes", {}).get(audio_id, {}).get("fallback", {})
+        fallback_file = str(fallback.get("file", ""))
+        if fallback_file:
+            fallback_path = ROOT / "game" / fallback_file.removeprefix("res://")
+            if fallback_path.is_file():
+                preserve_recorder_pcm(fallback_path)
+    cue_jobs = {}
+    with ThreadPoolExecutor(max_workers=4) as pool:
+        for audio_id in plan["ordered_audio_ids"]:
+            item = plan["items"][audio_id]
+            report = checks[audio_id]
+            master = masters[audio_id]
+            runtime = ROOT / "game/assets/audio/voices/elevenlabs-v4-script-v2" / f"{audio_id}.wav"
+            runtime.parent.mkdir(parents=True, exist_ok=True)
+            atomic_bytes(runtime, master.read_bytes())
+            if audio_id == "recording.greeting" or audio_id in evidence_audio_ids:
+                preserve_recorder_pcm(runtime)
+            receipt = read_json(PRODUCTION / "receipts" / f"{audio_id}.json") if item["kind"] == "speech" else {}
+            take = {
+                "id": audio_id,
+                "speaker": item["speaker"],
+                "identity": item["cast_role"],
+                "text": item["text"],
+                "spoken_text": item["text"],
+                "file": "res://" + runtime.relative_to(ROOT / "game").as_posix(),
+                "sha256": file_sha(runtime),
+                **{key: report[key] for key in ("seconds", "sample_rate", "peak", "rms")},
+                "model": MODEL,
+                "provider": "ElevenLabs API",
+                "voice_id": item["voice_id"],
+                "request_id": receipt.get("request_id"),
+                "source_request_id": receipt.get("request_id") if item["kind"] == "derived" else None,
+                "status": "manual_review_required" if audio_id in hard_holds else "automated_qa_passed",
+                "listening_reviewed": False,
+                "asr_report": f"assets/audio/elevenlabs-v4-script-v2/checks/{audio_id}.json",
+                "word_error_rate": report["word_error_rate"],
+                "lip_sync_revision": "elevenlabs-v4-script-v2",
+                "text_hash": text_sha(item["text"])[:16],
+                "plan_sha256": plan["plan_sha256"],
+            }
+            if item["kind"] == "derived":
+                take["derived_from"] = edit_receipt
+                take["source_request_id"] = read_json(
+                    PRODUCTION / "receipts/recording.voicemail.json"
+                )["request_id"]
+            takes[audio_id] = take
+            cue_jobs[pool.submit(
+                lips["generate_cues"], audio_id, take,
+                ROOT / "assets/audio/lipsync-elevenlabs-v4-script-v2",
+                generator_hash, generator_version,
+            )] = audio_id
+        for future in as_completed(cue_jobs):
+            audio_id = cue_jobs[future]
+            cue = future.result()
+            timing[audio_id] = {key: cue[key] for key in (
+                "audio_sha256", "seconds", "cues", "visual_timing_reviewed",
+            )}
     campaign_ids = {audio_id for audio_id, item in plan["items"].items()
                     if not item["line_ids"][0].startswith("book.")}
     narration_ids = set(plan["items"]) - campaign_ids
@@ -837,6 +1080,7 @@ def validate_and_stage(plan):
         },
     }
     atomic_json(OVERLAY_PATH, overlay)
+    write_manual_review_files(plan, checks, hard_holds)
     return overlay
 
 

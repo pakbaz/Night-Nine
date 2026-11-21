@@ -1,0 +1,18 @@
+{
+  "audio_id": "c1_flat.saturday.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "1308a096de17563a6f70d9fd1a0a611c182c74bb73f6111413aca7592b9c5e6c",
+  "expected": "Morning, Nor.",
+  "recognized": "Morning, Noor.",
+  "word_edits": 1,
+  "word_error_rate": 0.5,
+  "listening_review_required": true,
+  "seconds": 1.04,
+  "sample_rate": 48000,
+  "peak": 0.328460693359375,
+  "rms": 0.054161615669727325,
+  "first_recognition": "Morning, Noor.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

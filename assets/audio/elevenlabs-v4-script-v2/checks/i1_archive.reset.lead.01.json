@@ -1,0 +1,18 @@
+{
+  "audio_id": "i1_archive.reset.lead.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "ad534657176ab391bc5cb6e8a15534aa0230ce22056b65b2a7856cd3faeb2988",
+  "expected": "One recipe of drift. The law does not measure how much. Only that it happened.",
+  "recognized": "One recipe of drift. The law does not measure how much, only that it happened.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 7.12,
+  "sample_rate": 48000,
+  "peak": 0.8861083984375,
+  "rms": 0.15951763093471527,
+  "first_recognition": "One recipe of drift. The law does not measure how much, only that it happened.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

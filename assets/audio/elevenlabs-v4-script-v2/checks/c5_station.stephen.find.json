@@ -1,0 +1,18 @@
+{
+  "audio_id": "c5_station.stephen.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "c325b8c18466a5798995b66b257f0b6fc418cc60131c073557bf3983b634caaa",
+  "expected": "He remembers Mom’s chipped jam jar, and nothing after that breakfast. He doesn’t know about the boat. He doesn’t know they’re gone.",
+  "recognized": "He remembers mom's chipped jam jar and nothing after that breakfast. He doesn't know about the boat. He doesn't know they're gone.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 8.64,
+  "sample_rate": 48000,
+  "peak": 0.2734375,
+  "rms": 0.03499768674373627,
+  "first_recognition": "He remembers mom's chipped jam jar and nothing after that breakfast. He doesn't know about the boat. He doesn't know they're gone.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "i1_archive.signals.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "5ce10f2908b9947ce4e8647cf1bb00cdfa102148634d77462f5e8087279725f3",
+  "expected": "The same pulse. The same missing beat. Different light. Either humans are very consistent, or very careful liars. I will not guess on the record.",
+  "recognized": "The same pulse, the same missing beat, different light. Either humans are very consistent or very careful liars. I will not guess on the record.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 13.28,
+  "sample_rate": 48000,
+  "peak": 0.7755126953125,
+  "rms": 0.11903409659862518,
+  "first_recognition": "The same pulse, the same missing beat, different light. Either humans are very consistent or very careful liars. I will not guess on the record.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

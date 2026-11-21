@@ -1,0 +1,18 @@
+{
+  "audio_id": "c4_safe.out.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "c523ff7f51b55f5eece268d203504ad75c7320b5494e0738d8a3456fb5e1c9bc",
+  "expected": "June will sit with my team in the east wing tonight. You’ll be more comfortable in the west.",
+  "recognized": "June will sit with my team in the East Wing tonight. You'll be more comfortable in the West.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 5.52,
+  "sample_rate": 48000,
+  "peak": 0.32757568359375,
+  "rms": 0.031720854341983795,
+  "first_recognition": "June will sit with my team in the East Wing tonight. You'll be more comfortable in the West.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

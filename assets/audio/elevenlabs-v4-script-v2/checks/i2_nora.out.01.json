@@ -1,0 +1,18 @@
+{
+  "audio_id": "i2_nora.out.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "180a0fa1b34a4b1465bcf15658e4e781c70c93c1ebf4f2026f0c56447d9b807d",
+  "expected": "Helen. Frank. Steve is going to be so glad.",
+  "recognized": "Helen, Frank, Steve is going to be so glad.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.24,
+  "sample_rate": 48000,
+  "peak": 0.478668212890625,
+  "rms": 0.05626232177019119,
+  "first_recognition": "Helen, Frank, Steve is going to be so glad.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

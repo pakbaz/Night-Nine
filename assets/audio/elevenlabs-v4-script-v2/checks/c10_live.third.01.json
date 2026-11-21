@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_live.third.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "fba59fbbf8fe30130403ee09f8545d7ddf05a868a71a02fc9bdcc34d10742e9d",
+  "expected": "We are here. We have changed. Listen.",
+  "recognized": "We are here. We have changed. Listen.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 3.84,
+  "sample_rate": 48000,
+  "peak": 0.774871826171875,
+  "rms": 0.1152094230055809,
+  "first_recognition": "We are here. We have changed. Listen.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "c9_choir.note.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "eaf498cd0855bde80b15d69654141465b784a4bea0de9c3535e3a585f4a0c369",
+  "expected": "I thought saying no was the worst thing I’d ever done.",
+  "recognized": "I thought saying no was the worst thing I'd ever done.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 3.92,
+  "sample_rate": 48000,
+  "peak": 0.235321044921875,
+  "rms": 0.04030556231737137,
+  "first_recognition": "I thought saying no was the worst thing I'd ever done.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

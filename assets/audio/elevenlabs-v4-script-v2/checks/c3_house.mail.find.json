@@ -1,0 +1,19 @@
+{
+  "audio_id": "c3_house.mail.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "c00b5bd603fbf1d5777d01f2109aee549f01a66e3816ad436401410d809b9182",
+  "expected": "Dale had my letters bundled for June’s house at 08:04. The post office didn’t know until 08:12. The only other person who knew was Lyle, who took June’s call at ten past six. They talk to each other.",
+  "recognized": "Dale had my letters bundled for June's house at 0804. The post office didn't know until 0812. The only other person who knew was Lyle, who took June's call at ten past six. They talk to each other.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 14.16,
+  "sample_rate": 48000,
+  "peak": 0.412811279296875,
+  "rms": 0.0411958284676075,
+  "first_recognition": "Dale had my letters bundled for June's house at 08.04. The post office didn't know until 08.12. The only other person who knew was Lyle, who took June's call at 10 past 6. They talked to each other.",
+  "recognition_pass": "independent_phrases",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms",
+  "independent_phrase_transcription": "Dale had my letters bundled for June's house at 0804. The post office didn't know until 0812. The only other person who knew was Lyle, who took June's call at ten past six. They talk to each other."
+}

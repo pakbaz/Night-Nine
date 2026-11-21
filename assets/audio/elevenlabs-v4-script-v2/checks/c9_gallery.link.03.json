@@ -1,0 +1,18 @@
+{
+  "audio_id": "c9_gallery.link.03",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "215b1dd3bd05ce14c0d495370a220b015261695f43703cf04653bdd25208524d",
+  "expected": "It’s dropping, Iris. Fast.",
+  "recognized": "It's dropping, Iris. Fast.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 2.56,
+  "sample_rate": 48000,
+  "peak": 0.744476318359375,
+  "rms": 0.06376450508832932,
+  "first_recognition": "It's dropping, Iris. Fast.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

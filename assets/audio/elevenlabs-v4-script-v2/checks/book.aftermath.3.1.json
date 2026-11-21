@@ -1,0 +1,18 @@
+{
+  "audio_id": "book.aftermath.3.1",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "02ffc91faac16fb2475d9931f9a39297678027278cfbe4ad3f6d7cceff030ba5",
+  "expected": "A year ago a company called Halcyon Media bought KBWR.",
+  "recognized": "A year ago, a company called Halcyon Media bought KBWR.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.72,
+  "sample_rate": 48000,
+  "peak": 0.315765380859375,
+  "rms": 0.04163741692900658,
+  "first_recognition": "A year ago, a company called Halcyon Media bought KBWR.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

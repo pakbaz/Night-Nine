@@ -1,0 +1,19 @@
+{
+  "audio_id": "c7_gate.out.05",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "5fdaa666edc207175e864cdacc9b899406bc86d15f2ef883ce35558e1745e799",
+  "expected": "So we watch the hatch. I’m very good at being looked at.",
+  "recognized": "So we watched the hatch. I'm very good at being looked at.",
+  "word_edits": 1,
+  "word_error_rate": 0.07692307692307693,
+  "listening_review_required": true,
+  "seconds": 4.16,
+  "sample_rate": 48000,
+  "peak": 0.30145263671875,
+  "rms": 0.03534374386072159,
+  "first_recognition": "So we watched the hatch. I'm very good at being looked at.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms",
+  "independent_phrase_transcription": "So we watched The Hatch. I'm very good at being looked at."
+}

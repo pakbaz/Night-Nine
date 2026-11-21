@@ -1,0 +1,18 @@
+{
+  "audio_id": "c9_choir.out.04",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "15bbe8bfab32ff1f9cdaf43f54be4f37b8a7452c39bd416a3050dbbd7d9aca05",
+  "expected": "Something enormous just came out of the sky. We have one hour.",
+  "recognized": "Something enormous just came out of the sky. We have one hour.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.8,
+  "sample_rate": 48000,
+  "peak": 0.510650634765625,
+  "rms": 0.0801716074347496,
+  "first_recognition": "Something enormous just came out of the sky. We have one hour.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

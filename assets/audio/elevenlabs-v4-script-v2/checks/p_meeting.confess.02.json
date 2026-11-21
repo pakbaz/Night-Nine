@@ -1,0 +1,18 @@
+{
+  "audio_id": "p_meeting.confess.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "35697500134588f0defcd94940b29e465573bcfcdc45173d42b2fabce67469bb",
+  "expected": "There was no engine at our test either.",
+  "recognized": "There was no engine at our test either.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 2.72,
+  "sample_rate": 48000,
+  "peak": 0.635772705078125,
+  "rms": 0.07316148281097412,
+  "first_recognition": "There was no engine at our test either.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

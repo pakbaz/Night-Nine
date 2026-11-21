@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_live.third.03",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "986a5f880b5bf9976dd002c80acb7fb6eccae496230ca85554d92864188223b4",
+  "expected": "For the first time in nine hundred years, the fleet stopped to listen.",
+  "recognized": "For the first time in 900 years, the fleet stopped to listen.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 5.2,
+  "sample_rate": 48000,
+  "peak": 0.343780517578125,
+  "rms": 0.03755653277039528,
+  "first_recognition": "For the first time in 900 years, the fleet stopped to listen.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

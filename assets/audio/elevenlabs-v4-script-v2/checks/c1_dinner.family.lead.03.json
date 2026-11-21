@@ -1,0 +1,18 @@
+{
+  "audio_id": "c1_dinner.family.lead.03",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "25619509a28829fc42967ace352af096ab0e0bcb72ea6a12f51b2eebe0b12a0c",
+  "expected": "She sent my mole back every Sunday for ten years. Too sweet. The first Sunday in June, she ate the whole plate.",
+  "recognized": "She sent my mole back every Sunday for 10 years. Too sweet. The first Sunday in June, she ate the whole plate.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 8.32,
+  "sample_rate": 48000,
+  "peak": 0.644500732421875,
+  "rms": 0.0655137449502945,
+  "first_recognition": "She sent my mole back every Sunday for 10 years. Too sweet. The first Sunday in June, she ate the whole plate.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

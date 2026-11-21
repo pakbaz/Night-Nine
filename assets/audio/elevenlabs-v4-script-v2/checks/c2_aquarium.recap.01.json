@@ -1,0 +1,18 @@
+{
+  "audio_id": "c2_aquarium.recap.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "ccce4280afa933022a9353f8ec9df16c8d09c74fd0a7d09159ba0cc7d7c8c5e4",
+  "expected": "The north wing is no repair job. It’s a holding station, with cots, Nora’s real coat, and her voice on a tape from May.",
+  "recognized": "The North Wing is no repair job. It's a holding station with cots, Nora's real coat, and her voice on a tape from May.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 8.8,
+  "sample_rate": 48000,
+  "peak": 0.376190185546875,
+  "rms": 0.038392286747694016,
+  "first_recognition": "The North Wing is no repair job. It's a holding station with cots, Nora's real coat, and her voice on a tape from May.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

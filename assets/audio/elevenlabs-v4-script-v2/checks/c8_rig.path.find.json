@@ -1,0 +1,18 @@
+{
+  "audio_id": "c8_rig.path.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "9444ada2b88c08cf57d3975f992870c4898915d9f7062501399b406e8934d615",
+  "expected": "The fleet only trusts what its own ship measures, so the show has to go in through the ship’s antenna. Stephen’s pass opens the antenna passage. The rest of us go to the Gallery and wake everyone.",
+  "recognized": "The fleet only trusts what its own ship measures, so the show has to go in through the ship's antenna. Stephen's pass opens the antenna passage. The rest of us go to the gallery and wake everyone.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 11.68,
+  "sample_rate": 48000,
+  "peak": 0.477325439453125,
+  "rms": 0.04261887073516846,
+  "first_recognition": "The fleet only trusts what its own ship measures, so the show has to go in through the ship's antenna. Stephen's pass opens the antenna passage. The rest of us go to the gallery and wake everyone.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

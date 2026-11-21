@@ -1,0 +1,18 @@
+{
+  "audio_id": "c9_gallery.in.06",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "c31b295639781e9f5d52052b06d529bb72eb0257661413b57d6b8fb77f5a86e6",
+  "expected": "I’ll take your word for it. I wasn’t conscious for the good part.",
+  "recognized": "I'll take your word for it. I wasn't conscious for the good part.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 3.6,
+  "sample_rate": 48000,
+  "peak": 0.297515869140625,
+  "rms": 0.036954980343580246,
+  "first_recognition": "I'll take your word for it. I wasn't conscious for the good part.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

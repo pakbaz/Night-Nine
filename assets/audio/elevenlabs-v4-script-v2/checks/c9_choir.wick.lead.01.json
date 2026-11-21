@@ -1,0 +1,18 @@
+{
+  "audio_id": "c9_choir.wick.lead.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "0f668b11a334aa681d95f025b2f120a2d44d9e75ccf9496267f4ff093ef95802",
+  "expected": "The frost broke. Something tall sat up in Row Zero for the first time in three hundred years. It looked at Mom, and it bowed.",
+  "recognized": "The frost broke. Something tall sat up in row zero for the first time in 300 years. It looked at mom and it bowed.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 9.76,
+  "sample_rate": 48000,
+  "peak": 0.34033203125,
+  "rms": 0.03368089348077774,
+  "first_recognition": "The frost broke. Something tall sat up in row zero for the first time in 300 years. It looked at mom and it bowed.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

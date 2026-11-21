@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_live.in.04",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "8125cd9a473218ddbfacccdb5b4fdfe7f6814fb9cba25118c82e097812409b50",
+  "expected": "I knocked over the microphone stand, caught it and kept going.",
+  "recognized": "I knocked over the microphone stand, caught it, and kept going.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 3.76,
+  "sample_rate": 48000,
+  "peak": 0.34698486328125,
+  "rms": 0.040507517755031586,
+  "first_recognition": "I knocked over the microphone stand, caught it, and kept going.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "c1_pier.door.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "55c59b3faf39b461584d5c8015cc3a00b55f50e2ccbd4135c28aef8f4408fa9b",
+  "expected": "Lyle Boone has gone to every game since June. Before that he missed them all. And he apologized to me.",
+  "recognized": "Lyle Boone has gone to every game since June. Before that, he missed them all. And he apologized to me.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 7.52,
+  "sample_rate": 48000,
+  "peak": 0.352630615234375,
+  "rms": 0.040489282459020615,
+  "first_recognition": "Lyle Boone has gone to every game since June. Before that, he missed them all. And he apologized to me.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

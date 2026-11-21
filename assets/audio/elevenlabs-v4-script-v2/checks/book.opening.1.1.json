@@ -1,0 +1,18 @@
+{
+  "audio_id": "book.opening.1.1",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "40cb03743aa76448f7615e0be622343267334736474837dc1178e9b628b23874",
+  "expected": "Bellwether. A fishing town on the Pacific coast.",
+  "recognized": "Bellwether, a fishing town on the Pacific coast.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 3.36,
+  "sample_rate": 48000,
+  "peak": 0.4207763671875,
+  "rms": 0.04691632464528084,
+  "first_recognition": "Bellwether, a fishing town on the Pacific coast.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_station.relay.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "4a352bc6ac8a2787d0059c867c36aa7d6e7e5c9190c199b860b6352d1f6ce212",
+  "expected": "The official line sent back yesterday’s cue. Cedar can repeat a cue but can’t see the field. Marsh, out past Sentinel Point, answered with a fresh wind reading. Marsh is our eyes, and Gull carries the cues down the coast.",
+  "recognized": "The official line sent back yesterday's cue. Cedar can repeat a cue, but can't see the field. Marsh, out past Sentinel Point, answered with a fresh wind reading. Marsh is our eyes, and Gull carries the cues down the coast.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 14.24,
+  "sample_rate": 48000,
+  "peak": 0.464202880859375,
+  "rms": 0.03987143933773041,
+  "first_recognition": "The official line sent back yesterday's cue. Cedar can repeat a cue, but can't see the field. Marsh, out past Sentinel Point, answered with a fresh wind reading. Marsh is our eyes, and Gull carries the cues down the coast.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

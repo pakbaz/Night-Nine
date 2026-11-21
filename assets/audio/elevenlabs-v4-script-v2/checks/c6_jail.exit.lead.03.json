@@ -1,0 +1,18 @@
+{
+  "audio_id": "c6_jail.exit.lead.03",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "5a865ca908e131a24197850c30ecb8e35e51399cf8a2e436b031a7539c84cf4a",
+  "expected": "Lyle. Your relief has signed.",
+  "recognized": "Lyle, your relief has signed.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 2.64,
+  "sample_rate": 48000,
+  "peak": 0.537872314453125,
+  "rms": 0.06873694062232971,
+  "first_recognition": "Lyle, your relief has signed.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

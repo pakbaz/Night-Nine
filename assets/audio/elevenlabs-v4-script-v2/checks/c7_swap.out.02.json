@@ -1,0 +1,18 @@
+{
+  "audio_id": "c7_swap.out.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "d8f6ecd38bf7fa2c7865533d314624c2495143afb8e51abc1d46b613e4248b51",
+  "expected": "Thank you, Mr. Mercer. Their Prefect wants one thing from us by the ninth night. Our space-fold engine.",
+  "recognized": "Thank you, Mr. Mercer. Their prefect wants one thing from us by the ninth night, our spacefold engine.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 7.68,
+  "sample_rate": 48000,
+  "peak": 0.34716796875,
+  "rms": 0.03550887480378151,
+  "first_recognition": "Thank you, Mr. Mercer. Their prefect wants one thing from us by the ninth night, our spacefold engine.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

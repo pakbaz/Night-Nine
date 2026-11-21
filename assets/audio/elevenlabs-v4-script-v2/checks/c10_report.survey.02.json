@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_report.survey.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "435490e26762515e82ce322f2f36155d036a3133a095b15a7bf8a902e3b0102c",
+  "expected": "Then finish the mission.",
+  "recognized": "Then finish the mission.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 1.52,
+  "sample_rate": 48000,
+  "peak": 0.416534423828125,
+  "rms": 0.06284180283546448,
+  "first_recognition": "Then finish the mission.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

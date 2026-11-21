@@ -1,0 +1,18 @@
+{
+  "audio_id": "c6_jail.ctx.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "0bcfd4528814e8e53a3af8b6e708f55a4e1c701817aceaef2a589e1301b5f719",
+  "expected": "The Sheriff’s office, at noon. June’s copy was at June’s desk, hunting me. June was in cell two.",
+  "recognized": "The sheriff's office, at noon. June's copy was at June's desk, hunting me. June was in cell 2.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 7.36,
+  "sample_rate": 48000,
+  "peak": 0.386444091796875,
+  "rms": 0.04185202345252037,
+  "first_recognition": "The sheriff's office, at noon. June's copy was at June's desk, hunting me. June was in cell 2.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

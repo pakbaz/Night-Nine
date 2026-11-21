@@ -1,0 +1,18 @@
+{
+  "audio_id": "c1_flat.in.07",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "f8c137779c6612352dc557297b2cf4c63067cb66f5631c6f691002ebc69bfeda",
+  "expected": "There’s an easy test. KBWR still plays my old station ident at a quarter past seven every morning. I made that ident. It runs exactly twelve seconds.",
+  "recognized": "There's an easy test. KBWR still plays my old station ident at a quarter past seven every morning. I made that ident. It runs exactly 12 seconds.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 11.36,
+  "sample_rate": 48000,
+  "peak": 0.4013671875,
+  "rms": 0.0416778139770031,
+  "first_recognition": "There's an easy test. KBWR still plays my old station ident at a quarter past seven every morning. I made that ident. It runs exactly 12 seconds.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

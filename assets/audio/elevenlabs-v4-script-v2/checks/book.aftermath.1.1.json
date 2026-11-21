@@ -1,0 +1,18 @@
+{
+  "audio_id": "book.aftermath.1.1",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "41bed529ae072c6dce50fe0fba3a004e08df5f220224eaa58ac37630e5d3c761",
+  "expected": "In the morning, their boat drifted back to shore. Empty.",
+  "recognized": "In the morning, their boat drifted back to shore, empty.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.16,
+  "sample_rate": 48000,
+  "peak": 0.337860107421875,
+  "rms": 0.04102432355284691,
+  "first_recognition": "In the morning, their boat drifted back to shore, empty.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

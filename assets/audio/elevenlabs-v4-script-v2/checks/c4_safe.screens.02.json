@@ -1,0 +1,19 @@
+{
+  "audio_id": "c4_safe.screens.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "f28662215451ce374eb26d752260a2e048b75f30fef3d0ef1d15bc3328eda179",
+  "expected": "Walt Prior. From June’s list.",
+  "recognized": "Walt Pryor from June's List.",
+  "word_edits": 1,
+  "word_error_rate": 0.2,
+  "listening_review_required": true,
+  "seconds": 2.64,
+  "sample_rate": 48000,
+  "peak": 0.510406494140625,
+  "rms": 0.04517557844519615,
+  "first_recognition": "Walt Pryor from June's List.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms",
+  "independent_phrase_transcription": "Walt Pryor from June's list."
+}

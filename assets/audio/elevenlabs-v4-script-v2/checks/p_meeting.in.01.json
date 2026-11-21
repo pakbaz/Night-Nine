@@ -1,0 +1,18 @@
+{
+  "audio_id": "p_meeting.in.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "aa955f27d88cc29698c3044e96f7f67ba6b9ad7b6836a98615e028fa9b6201d9",
+  "expected": "We are prepared to discuss the practical status of our demonstration.",
+  "recognized": "We are prepared to discuss the practical status of our demonstration.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.16,
+  "sample_rate": 48000,
+  "peak": 0.851959228515625,
+  "rms": 0.06349072605371475,
+  "first_recognition": "We are prepared to discuss the practical status of our demonstration.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

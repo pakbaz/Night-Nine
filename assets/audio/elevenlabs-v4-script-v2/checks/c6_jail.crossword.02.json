@@ -1,0 +1,18 @@
+{
+  "audio_id": "c6_jail.crossword.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "29fd1b1d341b13258593e581c6fede7a008f66d927c5d6335f8d491b81f45e58",
+  "expected": "June. We’re getting you out.",
+  "recognized": "June. We're getting you out.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 2.16,
+  "sample_rate": 48000,
+  "peak": 0.5225830078125,
+  "rms": 0.05774972215294838,
+  "first_recognition": "June. We're getting you out.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "c8_lab.lastpage.lead.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "f6cc3a502d12dff9fb9a004f35834b788a9f1e741b1b67178d6b7dc997071ba0",
+  "expected": "Beside it she wrote: “From Frank’s tapes. I cannot read it, but I know a language when I hear one.”",
+  "recognized": "Beside it, she wrote, from Frank's tapes. I cannot read it, but I know a language when I hear one.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 7.6,
+  "sample_rate": 48000,
+  "peak": 0.4993896484375,
+  "rms": 0.06463315337896347,
+  "first_recognition": "Beside it, she wrote, from Frank's tapes. I cannot read it, but I know a language when I hear one.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_report.recap.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "7bde39b4e57c2831a1dfcc28d4dbb2743dce1d8133be52f7170fb702f033837a",
+  "expected": "The report is confirmed. The fleet will measure an engine that does not exist, meet three hundred and twelve people, and learn of a home it was never told about.",
+  "recognized": "The report is confirmed. The fleet will measure an engine that does not exist, meet 312 people, and learn of a home it was never told about.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 11.44,
+  "sample_rate": 48000,
+  "peak": 0.896453857421875,
+  "rms": 0.15348367393016815,
+  "first_recognition": "The report is confirmed. The fleet will measure an engine that does not exist, meet 312 people, and learn of a home it was never told about.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

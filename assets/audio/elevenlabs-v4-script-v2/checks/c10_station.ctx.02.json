@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_station.ctx.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "a20e2b7bbd72f33e80a523f436c3f98ec6723289e45ed8f793dc772397c07bdd",
+  "expected": "Then I remembered Halcyon’s tower. Every ninth night for a year it had talked to the ship, alone.",
+  "recognized": "Then I remembered Halcyon's tower. Every ninth night for a year, it had talked to the ship, alone.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 6.88,
+  "sample_rate": 48000,
+  "peak": 0.2923583984375,
+  "rms": 0.03794543072581291,
+  "first_recognition": "Then I remembered Halcyon's tower. Every ninth night for a year, it had talked to the ship, alone.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

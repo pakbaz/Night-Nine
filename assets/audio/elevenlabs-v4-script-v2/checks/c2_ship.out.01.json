@@ -1,0 +1,18 @@
+{
+  "audio_id": "c2_ship.out.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "a238cc5cab66cc20442714cec0bb64c10e45d05073bbd3a3e549fb5ef0d116a9",
+  "expected": "The tunnel’s flooding. The underwater speakers still work... I fixed them, the day I met her.",
+  "recognized": "The tunnel's flooding. The underwater speakers still work. I fixed them the day I met her.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 5.92,
+  "sample_rate": 48000,
+  "peak": 0.308990478515625,
+  "rms": 0.03957527130842209,
+  "first_recognition": "The tunnel's flooding. The underwater speakers still work. I fixed them the day I met her.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

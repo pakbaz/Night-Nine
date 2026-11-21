@@ -1,0 +1,18 @@
+{
+  "audio_id": "book.aftermath.3.2",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "4d64842fd7edd9512e74be1cf25209ce20365ba795a08e5a61c70627782fb08c",
+  "expected": "Three weeks ago they replaced me with a machine called DJ AutoRick. It reads yesterday’s weather.",
+  "recognized": "Three weeks ago, they replaced me with a machine called DJ Autorick. It reads yesterday's weather.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 6.56,
+  "sample_rate": 48000,
+  "peak": 0.309814453125,
+  "rms": 0.042986877262592316,
+  "first_recognition": "Three weeks ago, they replaced me with a machine called DJ Autorick. It reads yesterday's weather.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

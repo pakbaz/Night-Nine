@@ -1,0 +1,18 @@
+{
+  "audio_id": "i1_archive.in.04",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "c6742262b5f3f61a57af6d77c0ac7d742c3f03fca8ea5d3778e5ce73d8da7435",
+  "expected": "It was a very good croissant.",
+  "recognized": "It was a very good croissant.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 2.32,
+  "sample_rate": 48000,
+  "peak": 0.77032470703125,
+  "rms": 0.08780800551176071,
+  "first_recognition": "It was a very good croissant.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

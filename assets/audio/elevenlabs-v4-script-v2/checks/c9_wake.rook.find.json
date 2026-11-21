@@ -1,0 +1,18 @@
+{
+  "audio_id": "c9_wake.rook.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "d8475ac7cfffd3f0149fb3a5ddd28e650084dec4ce9d76f4ba4c5f107bb1c9cd",
+  "expected": "No recording this time. June talked to him, and the real Adrian Rook woke up asking about his pajamas.",
+  "recognized": "No recording this time. June talked to him, and the real Adrian Rook woke up asking about his pajamas.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 7.04,
+  "sample_rate": 48000,
+  "peak": 0.34832763671875,
+  "rms": 0.03769064322113991,
+  "first_recognition": "No recording this time. June talked to him, and the real Adrian Rook woke up asking about his pajamas.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

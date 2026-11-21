@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_report.echo.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "b2bc938ccffe45b4b6afc78dec3afa07c9e85d8965382bf2631c838fa9fb26ee",
+  "expected": "I remember the wind. You remember the people.",
+  "recognized": "I remember the wind. You remember the people.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.24,
+  "sample_rate": 48000,
+  "peak": 0.874267578125,
+  "rms": 0.14710739254951477,
+  "first_recognition": "I remember the wind. You remember the people.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

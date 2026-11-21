@@ -1,0 +1,18 @@
+{
+  "audio_id": "c9_wake.frank.lead.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "6a0395fd32f38c30229cd772e4c68a03f32b2342c50a1a027b552ad2d847a894",
+  "expected": "Nothing. He used to say a call sign is a name you can hear through static.",
+  "recognized": "Nothing. He used to say a call sign is a name you can hear through static.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.8,
+  "sample_rate": 48000,
+  "peak": 0.518218994140625,
+  "rms": 0.03934817388653755,
+  "first_recognition": "Nothing. He used to say a call sign is a name you can hear through static.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

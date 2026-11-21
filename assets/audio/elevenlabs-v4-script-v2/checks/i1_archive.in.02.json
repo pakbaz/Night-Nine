@@ -1,0 +1,18 @@
+{
+  "audio_id": "i1_archive.in.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "a286136360944ee3c5b637dd77c89b28119fe8e40b503be4b5d244e6a1f03187",
+  "expected": "Your record contains no such recipe.",
+  "recognized": "Your record contains no such recipe.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 3.28,
+  "sample_rate": 48000,
+  "peak": 0.8369140625,
+  "rms": 0.1483915150165558,
+  "first_recognition": "Your record contains no such recipe.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

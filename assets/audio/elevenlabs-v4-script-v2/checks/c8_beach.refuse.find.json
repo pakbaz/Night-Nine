@@ -1,0 +1,18 @@
+{
+  "audio_id": "c8_beach.refuse.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "f1fa3ddef70fee919c54d034208275d5bf089d8fafddde6104525abdb408c856",
+  "expected": "I kept the notebook. Saren had a promise, my mother’s voice cut to fit it, and nothing else.",
+  "recognized": "I kept the notebook. Saren had a promise. My mother's voice cut to fit it. And nothing else.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 6.88,
+  "sample_rate": 48000,
+  "peak": 0.391265869140625,
+  "rms": 0.03218746557831764,
+  "first_recognition": "I kept the notebook. Saren had a promise. My mother's voice cut to fit it. And nothing else.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "c3_house.mail.lead.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "6f48161dfabcb80cc7542e57509fb2e07f96218db56a8e7f56ffe5ca95a8c8f1",
+  "expected": "Good morning, Officer Biscuit.",
+  "recognized": "Good morning, Officer Biscuit!",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 2.08,
+  "sample_rate": 48000,
+  "peak": 0.5867919921875,
+  "rms": 0.08278501033782959,
+  "first_recognition": "Good morning, Officer Biscuit!",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "c1_escape.out.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "98ba5b9f2ef21d8115b5441f1d2a7989ab7bbaf1b9fe577eeae9b8084b1f844d",
+  "expected": "Ninth night, Steven. Count them.",
+  "recognized": "ninth night stephen count them",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 3.12,
+  "sample_rate": 48000,
+  "peak": 0.228973388671875,
+  "rms": 0.02829463966190815,
+  "first_recognition": "ninth night stephen count them",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

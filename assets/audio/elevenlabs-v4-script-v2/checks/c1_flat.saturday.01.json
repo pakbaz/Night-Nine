@@ -1,0 +1,18 @@
+{
+  "audio_id": "c1_flat.saturday.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "bcc64124ae700cc48fe9e59d1a2c07ef1f4591ab6f3adecd745afcc4adcf6121",
+  "expected": "Saturday, kitchen, quarter past seven. Dad always said to put the date on everything.",
+  "recognized": "Saturday, kitchen, quarter past seven. Dad always said to put the date on everything.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 5.68,
+  "sample_rate": 48000,
+  "peak": 0.400665283203125,
+  "rms": 0.033872973173856735,
+  "first_recognition": "Saturday, kitchen, quarter past seven. Dad always said to put the date on everything.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

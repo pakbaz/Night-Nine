@@ -1,0 +1,18 @@
+{
+  "audio_id": "i1_archive.recap.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "e1cbdc53e10c10faf2fb8a2fe9d579994486f3ab3f8bbf6596a40979d3136eae",
+  "expected": "One echo reconciled, and one croissant written down. Two human tests, a world apart, with one pulse between them. Seven quiet worlds, and not one grave.",
+  "recognized": "One echo reconciled and one croissant written down. Two human tests, a world apart, with one pulse between them. Seven quiet worlds and not one grave.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 14.48,
+  "sample_rate": 48000,
+  "peak": 0.880218505859375,
+  "rms": 0.12729085981845856,
+  "first_recognition": "One echo reconciled and one croissant written down. Two human tests, a world apart, with one pulse between them. Seven quiet worlds and not one grave.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

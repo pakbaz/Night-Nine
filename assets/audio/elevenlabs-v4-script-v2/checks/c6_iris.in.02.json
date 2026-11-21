@@ -1,0 +1,18 @@
+{
+  "audio_id": "c6_iris.in.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "5b24481cb9e7676ef87b72eee2328e452249dc8f6dc5e1e270bdced0911c09ba",
+  "expected": "I sent the message about Rook. No capitals, the way Nora texts. Please listen before you decide what I am.",
+  "recognized": "I sent the message about Rook. No capitals, the way Nora texts. Please listen before you decide what I am.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 7.84,
+  "sample_rate": 48000,
+  "peak": 0.5447998046875,
+  "rms": 0.05457090213894844,
+  "first_recognition": "I sent the message about Rook. No capitals, the way Nora texts. Please listen before you decide what I am.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_live.out.07",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "13f5a6ea7526adb5b5fd88d9727eaa07988400f99121f7d827149d7b41003847",
+  "expected": "The town stood on the pier in his way. June. The Reyes brothers. Carmen with a ladle. Pell with Biscuit. Stephen. And two hundred copies who had decided where they lived.",
+  "recognized": "The town stood on the pier in his way. June, the Reyes brothers, Carmen with a ladle, Pell with Biscuit, Stephen, and 200 copies who had decided where they lived.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 13.2,
+  "sample_rate": 48000,
+  "peak": 0.385955810546875,
+  "rms": 0.03616843372583389,
+  "first_recognition": "The town stood on the pier in his way. June, the Reyes brothers, Carmen with a ladle, Pell with Biscuit, Stephen, and 200 copies who had decided where they lived.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "c7_gate.badge.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "d87dbbf540e25d0e1187fd12d1f626dfc50cc5ba9fee6a96f12d58d0adf680af",
+  "expected": "I’m expected. I’m usually expected everywhere.",
+  "recognized": "I'm expected. I'm usually expected everywhere.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 3.84,
+  "sample_rate": 48000,
+  "peak": 0.36126708984375,
+  "rms": 0.03437662124633789,
+  "first_recognition": "I'm expected. I'm usually expected everywhere.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

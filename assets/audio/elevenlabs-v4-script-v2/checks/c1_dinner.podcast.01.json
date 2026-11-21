@@ -1,0 +1,18 @@
+{
+  "audio_id": "c1_dinner.podcast.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "051000dd4daa05609244eac26a2fce97e8fed38c2bc8c6944615672bca2fb6d5",
+  "expected": "You can borrow them. You could also have listened any time in the last three years.",
+  "recognized": "You can borrow them. You could also have listened any time in the last three years.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 5.36,
+  "sample_rate": 48000,
+  "peak": 0.874603271484375,
+  "rms": 0.11307631433010101,
+  "first_recognition": "You can borrow them. You could also have listened any time in the last three years.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

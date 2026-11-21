@@ -1,0 +1,18 @@
+{
+  "audio_id": "c3_archive.out.10",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "83ccde71406f340e52b6a6b4f3d44ad9ea4acdd9ec00885a075580cf57322443",
+  "expected": "She isn’t on anyone’s. Ninety-one years old, on a boathouse step at midnight. Counting.",
+  "recognized": "She isn't on anyone's. 91 years old, on a boathouse step at midnight, counting.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 7.36,
+  "sample_rate": 48000,
+  "peak": 0.470703125,
+  "rms": 0.051766883581876755,
+  "first_recognition": "She isn't on anyone's. 91 years old, on a boathouse step at midnight, counting.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

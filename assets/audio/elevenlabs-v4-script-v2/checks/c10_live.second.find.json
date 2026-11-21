@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_live.second.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "caaacbdf1ad80c93ae57055acf84a1b5ca54ac24ed348699a215778da7eeead9",
+  "expected": "Reed went silent when the coast was unplugged, so Reed is the real coast return. Its reply landed at 42 for Shaw, and Wen took 43 and 44. Both grids answered, live.",
+  "recognized": "Reed went silent when the coast was unplugged, so Reed is the real coast return. Its reply landed at 42 for Shaw, and Wen took 43 and 44. Both grids answered, live.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 14.0,
+  "sample_rate": 48000,
+  "peak": 0.48004150390625,
+  "rms": 0.03978744521737099,
+  "first_recognition": "Reed went silent when the coast was unplugged, so Reed is the real coast return. Its reply landed at 42 for Shaw, and Wen took 43 and 44. Both grids answered, live.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

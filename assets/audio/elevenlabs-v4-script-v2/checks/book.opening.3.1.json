@@ -1,0 +1,18 @@
+{
+  "audio_id": "book.opening.3.1",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "063fe52a2c5f13deecf41985753956e9f957c999ede68c71fbb391fd8181e33b",
+  "expected": "My dad, Frank, taught me how to listen. Every sound has a source, he used to say. Go and find it.",
+  "recognized": "My dad, Frank, taught me how to listen. Every sound has a source, he used to say. Go and find it.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 7.6,
+  "sample_rate": 48000,
+  "peak": 0.363983154296875,
+  "rms": 0.037768635898828506,
+  "first_recognition": "My dad, Frank, taught me how to listen. Every sound has a source, he used to say. Go and find it.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

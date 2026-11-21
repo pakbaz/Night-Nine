@@ -1,0 +1,18 @@
+{
+  "audio_id": "c1_dinner.recap.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "6df2475cf3b2e3ce4184db3a5868bc5fc9a22faea2de90d6f958fae1c9446f6b",
+  "expected": "Nora changed between the end of May and the first Sunday in June. Lyle changed in June. Carmen noticed. Admiral noticed. I didn’t.",
+  "recognized": "Nora changed between the end of May and the first Sunday in June. Lyle changed in June. Carmen noticed. Admiral noticed. I didn't.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 10.0,
+  "sample_rate": 48000,
+  "peak": 0.342041015625,
+  "rms": 0.035181038081645966,
+  "first_recognition": "Nora changed between the end of May and the first Sunday in June. Lyle changed in June. Carmen noticed. Admiral noticed. I didn't.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

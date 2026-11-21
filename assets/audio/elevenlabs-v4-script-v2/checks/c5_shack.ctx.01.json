@@ -1,0 +1,18 @@
+{
+  "audio_id": "c5_shack.ctx.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "ed903e2f7a176cb10dedf7d554c24a9dc7ee8da9b150df567b58c7e5a8fb1457",
+  "expected": "My face was on every wanted poster in the county. I walked all night and hid in the one place nobody had opened in eighteen months: Dad’s radio shack, on the bluff above the bay.",
+  "recognized": "My face was on every wanted poster in the county. I walked all night and hid in the one place nobody had opened in 18 months. Dad's Radio Shack, on the bluff above the bay.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 11.84,
+  "sample_rate": 48000,
+  "peak": 0.292388916015625,
+  "rms": 0.041077885776758194,
+  "first_recognition": "My face was on every wanted poster in the county. I walked all night and hid in the one place nobody had opened in 18 months. Dad's Radio Shack, on the bluff above the bay.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_town.console.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "1f44f040e706ed316bb6258d72148c67c4a6d9d5fa81ae75a2bd54b0e9902de2",
+  "expected": "Shaw calls the lamps when she sees the harbor answer, and Wen raises the grid on Shaw’s mark. Nine years of rivalry, one cue sheet.",
+  "recognized": "Shaw calls the lamps when she sees the harbor answer, and Wen raises the grid on Shaw's mark. Nine years of rivalry, one cue sheet.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 9.68,
+  "sample_rate": 48000,
+  "peak": 0.43682861328125,
+  "rms": 0.03639758750796318,
+  "first_recognition": "Shaw calls the lamps when she sees the harbor answer, and Wen raises the grid on Shaw's mark. Nine years of rivalry, one cue sheet.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

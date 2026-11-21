@@ -1,0 +1,18 @@
+{
+  "audio_id": "c1_pier.bait.lead.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "ee4651775e026ac61c1ff242f874c73ecc1ad91ed8954f0eca86dcb4eeefa782",
+  "expected": "It’s loud today, Steven. It always is, on certain nights.",
+  "recognized": "It's loud today, Stephen. It always is, on certain nights.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.64,
+  "sample_rate": 48000,
+  "peak": 0.378173828125,
+  "rms": 0.0465850792825222,
+  "first_recognition": "It's loud today, Stephen. It always is, on certain nights.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

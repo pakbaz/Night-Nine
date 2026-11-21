@@ -1,0 +1,18 @@
+{
+  "audio_id": "c5_shack.log.lead.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "d10d641d9d7e248fb7fb97a9875ef52d1b3b7cc4490aa55392db0d041a9edb31",
+  "expected": "Dad’s logbooks. Months of them. Every ninth night, the same hum under his static.",
+  "recognized": "Dad's logbooks. Months of them. Every ninth night, the same hum under his static.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 6.64,
+  "sample_rate": 48000,
+  "peak": 0.379791259765625,
+  "rms": 0.035561319440603256,
+  "first_recognition": "Dad's logbooks. Months of them. Every ninth night, the same hum under his static.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

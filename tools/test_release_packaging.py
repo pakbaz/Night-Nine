@@ -7,6 +7,7 @@ import subprocess
 import sys
 import tempfile
 import unittest
+from unittest.mock import patch
 import zipfile
 
 
@@ -127,7 +128,7 @@ class ReleasePackagingTests(unittest.TestCase):
             self.assertNotIn('["play.wasm","play.pck"]', result)
 
     def test_complete_release_contains_runtime_dependencies(self):
-        files, meta = milestones.make_snapshot(10, True)
+        files, meta = milestones.make_snapshot(10, False)
         self.assertEqual(meta["scenes"], 34)
         for name in ("game/content/storybook.json", "game/ui/storybook.gd", "game/ui/title_card.gd"):
             self.assertTrue(name in files, name)
@@ -142,11 +143,14 @@ class ReleasePackagingTests(unittest.TestCase):
                     self.assertTrue("game/" + resource[6:] in files, resource)
         for scene in ("p_bay", "p_veyr", "p_meeting"):
             self.assertIn(f"game/assets/audio/ambience-prologue/{scene}.ogg", files)
+        for name in files:
+            if name.startswith("game/") and Path(name).suffix in milestones.MEDIA_EXT:
+                self.assertTrue(name + ".import" in files, name)
 
     def test_checkpoint_catalogs_only_include_reachable_story(self):
         for stage in (0, 3, 7, 8):
             with self.subTest(stage=stage):
-                files, _ = milestones.make_snapshot(stage, True)
+                files, _ = milestones.make_snapshot(stage, False)
                 scenes = json.loads(read_entry(files, "game/content/campaign.json"))["scenes"]
                 scene_ids = {scene["id"] for scene in scenes}
                 books = json.loads(read_entry(files, "game/content/storybook.json"))["books"]
@@ -161,6 +165,46 @@ class ReleasePackagingTests(unittest.TestCase):
                 for catalog in (books, music):
                     for resource in resources(catalog):
                         self.assertTrue("game/" + resource[6:] in files, resource)
+
+    def test_snapshot_keeps_script_v2_dialogue_and_reward_dependencies(self):
+        files, _ = milestones.make_snapshot(10, False)
+        campaign = json.loads(read_entry(files, "game/content/campaign.json"))
+        for scene in campaign["scenes"]:
+            for line_id in scene.get("recap", []):
+                self.assertTrue(line_id in campaign["lines"], line_id)
+            for task in scene["tasks"]:
+                for line_id in task.get("lead", []):
+                    self.assertTrue(line_id in campaign["lines"], line_id)
+                if task.get("finding"):
+                    self.assertTrue(task["finding"] in campaign["lines"], task["finding"])
+            for resource in resources(scene):
+                self.assertTrue("game/" + resource[6:] in files, resource)
+        for name in ("home-at-last", "family-radio", "bellwether-together"):
+            self.assertTrue(f"game/assets/illustrated/campaign/rewards/{name}.webp" in files, name)
+        narration = json.loads(read_entry(files, "game/content/narration.json"))
+        for resource in resources(narration):
+            self.assertTrue("game/" + resource[6:] in files, resource)
+
+    def test_snapshot_preserves_disabled_voice_gate_and_identity_metadata(self):
+        original_read = milestones.read
+
+        def disabled_manifest(path):
+            data = original_read(path)
+            if Path(path).name == "voice-manifest.json":
+                data["enabled"] = False
+            return data
+
+        with patch.object(milestones, "read", side_effect=disabled_manifest):
+            files, _ = milestones.make_snapshot(10, False)
+            voice = json.loads(read_entry(files, "game/content/voice-manifest.json"))
+            self.assertIs(voice.get("enabled"), False)
+            source = original_read(milestones.GAME / "content/voice-manifest.json")
+            for take_id, take in voice["takes"].items():
+                for field in ("voice_id", "text_hash", "status", "listening_reviewed"):
+                    if field in source["takes"][take_id]:
+                        self.assertEqual(take.get(field), source["takes"][take_id][field])
+            with self.assertRaisesRegex(RuntimeError, "Voice playback is not approved"):
+                milestones.make_snapshot(10, True)
 
 
 

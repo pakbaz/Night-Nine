@@ -1,0 +1,18 @@
+{
+  "audio_id": "c9_choir.out.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "e226a3904c1365c1df75fb4dad857bc580b0e85ccc5902c46054e8c0d0dc9d12",
+  "expected": "You’d have been the third person in the Gallery, kiddo. Then who would have come for us?",
+  "recognized": "You'd have been the third person in the gallery, kiddo. Then who would have come for us?",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 5.52,
+  "sample_rate": 48000,
+  "peak": 0.33978271484375,
+  "rms": 0.06568785756826401,
+  "first_recognition": "You'd have been the third person in the gallery, kiddo. Then who would have come for us?",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

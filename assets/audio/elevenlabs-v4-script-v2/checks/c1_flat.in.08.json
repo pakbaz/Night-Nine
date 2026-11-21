@@ -1,0 +1,18 @@
+{
+  "audio_id": "c1_flat.in.08",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "de8d209c1cd1b42c6de72e2ee05978a25c5ecb71ee2eb9c1191a6d12343470a0",
+  "expected": "Record it two mornings running. If it lasts twelve seconds both times, the machine runs true.",
+  "recognized": "Record it two mornings running. If it lasts 12 seconds both times, the machine runs true.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 6.24,
+  "sample_rate": 48000,
+  "peak": 0.396484375,
+  "rms": 0.042799077928066254,
+  "first_recognition": "Record it two mornings running. If it lasts 12 seconds both times, the machine runs true.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

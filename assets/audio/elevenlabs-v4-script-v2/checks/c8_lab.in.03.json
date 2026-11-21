@@ -1,0 +1,18 @@
+{
+  "audio_id": "c8_lab.in.03",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "cd7ddabb9ce8513a363b309e454e237dff11630405c970ed53dcf64e46e221f3",
+  "expected": "Mine required fewer washing machines.",
+  "recognized": "Mine required fewer washing machines.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 3.12,
+  "sample_rate": 48000,
+  "peak": 0.564056396484375,
+  "rms": 0.08313370496034622,
+  "first_recognition": "Mine required fewer washing machines.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

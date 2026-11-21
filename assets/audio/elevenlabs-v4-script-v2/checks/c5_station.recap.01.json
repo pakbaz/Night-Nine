@@ -1,0 +1,18 @@
+{
+  "audio_id": "c5_station.recap.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "71a0d12b5b0557fde7f150e9834eb8a2c7c1e6b4adbabdbf3e0f5ed23f34a950",
+  "expected": "Mom’s notebook was in the blue sleeve, in a shorthand I can’t read. Halcyon cleared the building every ninth night so the tower could talk to the ship.",
+  "recognized": "Mom's notebook was in the blue sleeve, in a shorthand I can't read. Halcyon cleared the building every ninth night so the tower could talk to the ship.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 9.68,
+  "sample_rate": 48000,
+  "peak": 0.35308837890625,
+  "rms": 0.03734587877988815,
+  "first_recognition": "Mom's notebook was in the blue sleeve, in a shorthand I can't read. Halcyon cleared the building every ninth night so the tower could talk to the ship.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

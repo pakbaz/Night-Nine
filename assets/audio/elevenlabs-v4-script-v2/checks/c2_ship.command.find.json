@@ -1,0 +1,18 @@
+{
+  "audio_id": "c2_ship.command.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "45165a417d80f01fe44731dab8647774423ab6c7d05bc888249742c09d10823f",
+  "expected": "The Prefect’s release command is on Dad’s tape: four seconds, from “Release” to the click.",
+  "recognized": "The Prefect's release command is on Dad's tape. Four seconds, from release to the click.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 6.24,
+  "sample_rate": 48000,
+  "peak": 0.325225830078125,
+  "rms": 0.03789553418755531,
+  "first_recognition": "The Prefect's release command is on Dad's tape. Four seconds, from release to the click.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

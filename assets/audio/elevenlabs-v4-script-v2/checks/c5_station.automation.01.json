@@ -1,0 +1,18 @@
+{
+  "audio_id": "c5_station.automation.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "38c93893e7de8195694e2c17962f9bd8ccd7b8deb806447c8d909df9b1790e14",
+  "expected": "I built this schedule before they replaced me with it. And the door still opens for my voice.",
+  "recognized": "I built this schedule before they replaced me with it, and the door still opens for my voice.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 6.16,
+  "sample_rate": 48000,
+  "peak": 0.399017333984375,
+  "rms": 0.038920048624277115,
+  "first_recognition": "I built this schedule before they replaced me with it, and the door still opens for my voice.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

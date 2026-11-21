@@ -1,0 +1,18 @@
+{
+  "audio_id": "c1_dinner.family.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "4e69484c79733a436fda0df4632f886973cd4bb84186460ec918c887e4d27dab",
+  "expected": "Whatever you think is best, Mamá.",
+  "recognized": "Whatever you think is best, mama.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 2.16,
+  "sample_rate": 48000,
+  "peak": 0.432098388671875,
+  "rms": 0.06556594371795654,
+  "first_recognition": "Whatever you think is best, mama.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

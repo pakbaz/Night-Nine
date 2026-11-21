@@ -1,0 +1,18 @@
+{
+  "audio_id": "c6_iris.hold.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "98fc08278cbf6ac6d6d6f4624873507904bbce99a8495e3f0c4ca17752473333",
+  "expected": "Rook was never waiting for the Bureau.",
+  "recognized": "Rook was never waiting for the Bureau.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 2.64,
+  "sample_rate": 48000,
+  "peak": 0.260833740234375,
+  "rms": 0.0428142175078392,
+  "first_recognition": "Rook was never waiting for the Bureau.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "c4_safe.match.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "ef3b57daa1d8f6636c816d722047639badae7f604f0848dbd3002dfc86afe509",
+  "expected": "Play it again.",
+  "recognized": "Play it again.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 1.2,
+  "sample_rate": 48000,
+  "peak": 0.4732666015625,
+  "rms": 0.06073305383324623,
+  "first_recognition": "Play it again.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

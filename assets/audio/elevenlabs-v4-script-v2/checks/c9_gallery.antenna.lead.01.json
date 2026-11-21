@@ -1,0 +1,18 @@
+{
+  "audio_id": "c9_gallery.antenna.lead.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "9b442415058323d3dcb84a6b1ad55f28532f8338c8b0c4230076d0590d285b51",
+  "expected": "One door, one pass, one very important face. Let’s go.",
+  "recognized": "One door, one pass, one very important face. Let's go.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 5.2,
+  "sample_rate": 48000,
+  "peak": 0.48321533203125,
+  "rms": 0.0451003797352314,
+  "first_recognition": "One door, one pass, one very important face. Let's go.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

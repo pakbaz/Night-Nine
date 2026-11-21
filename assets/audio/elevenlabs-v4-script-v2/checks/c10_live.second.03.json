@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_live.second.03",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "06948a9a507248095451ded7ac21d2629b914bc227150c4db9d4ffc8b2aef011",
+  "expected": "The far relay has you.",
+  "recognized": "The FAR Relay has you.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 2.0,
+  "sample_rate": 48000,
+  "peak": 0.29962158203125,
+  "rms": 0.03704453632235527,
+  "first_recognition": "The FAR Relay has you.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

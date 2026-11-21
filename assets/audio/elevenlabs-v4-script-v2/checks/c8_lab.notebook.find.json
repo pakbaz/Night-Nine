@@ -1,0 +1,18 @@
+{
+  "audio_id": "c8_lab.notebook.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "b03d91c87a7f53548e75bfe12f4cc70804acb129fb5fc554edb00873342a78b2",
+  "expected": "America staged its test first, and China built its own from a copy, missing beat and all. Both went out over open radio, and something out there recorded them. Mom heard that same missing beat again, in the bay. The fleet came because of a show.",
+  "recognized": "America staged its test first, and China built its own from a copy, missing beat and all. Both went out over open radio, and something out there recorded them. Mom heard that same missing beat again, in the bay. The fleet came because of a show.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 16.4,
+  "sample_rate": 48000,
+  "peak": 0.406036376953125,
+  "rms": 0.03794889524579048,
+  "first_recognition": "America staged its test first, and China built its own from a copy, missing beat and all. Both went out over open radio, and something out there recorded them. Mom heard that same missing beat again, in the bay. The fleet came because of a show.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

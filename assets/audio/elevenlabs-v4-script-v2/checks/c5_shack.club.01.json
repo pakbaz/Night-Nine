@@ -1,0 +1,18 @@
+{
+  "audio_id": "c5_shack.club.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "42d9bfd4d811ae8b25703b1e7dcfb805da53ab4a4e6af204ce94b188001f1b53",
+  "expected": "K7BLW? Frank? We thought we’d lost you.",
+  "recognized": "K7BLW? Frank? We thought we'd lost you.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.56,
+  "sample_rate": 48000,
+  "peak": 0.233734130859375,
+  "rms": 0.02486475743353367,
+  "first_recognition": "K7BLW? Frank? We thought we'd lost you.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

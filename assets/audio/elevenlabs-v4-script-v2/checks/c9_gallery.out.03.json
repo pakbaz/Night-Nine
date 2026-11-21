@@ -1,0 +1,18 @@
+{
+  "audio_id": "c9_gallery.out.03",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "fbdcf35ed352449535b8b314f971c724c34762805410901b02deed2ddf2d77e5",
+  "expected": "Steve, if you ever hear this message: I am furious with you. I love you. Please stop making me do both alone.",
+  "recognized": "Steve, if you ever hear this message, I am furious with you. I love you. Please stop making me do both alone.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 8.96,
+  "sample_rate": 48000,
+  "peak": 0.483001708984375,
+  "rms": 0.05688900500535965,
+  "first_recognition": "Steve, if you ever hear this message, I am furious with you. I love you. Please stop making me do both alone.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

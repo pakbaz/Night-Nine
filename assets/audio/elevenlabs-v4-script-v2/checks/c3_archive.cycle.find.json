@@ -1,0 +1,19 @@
+{
+  "audio_id": "c3_archive.cycle.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "d7c0f8f8b48fe2d02f2b713dc5ffe50229ea9031fb07aa3b224b175f9d036306",
+  "expected": "Three years of tape, and the bay never missed a ninth night. The next one is Tuesday the 30th. June and I will be at the boathouse window by 23:40, before the pier lamp dims.",
+  "recognized": "Three years of tape, and the bay never missed a ninth night. The next one is Tuesday the 30th. June and I will be at the boathouse window by 2340, before the pier lamp dims.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 12.4,
+  "sample_rate": 48000,
+  "peak": 0.330535888671875,
+  "rms": 0.04100586846470833,
+  "first_recognition": "Three years of tape, and the bay never missed a ninth night. The next one is Tuesday the 30th. June and I will be at the boathouse window by 2340, before the pier lamp dims.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms",
+  "independent_phrase_transcription": "Three years of tape. and the bane never missed a ninth night. The next one is Tuesday the 30th. June and I will be at the boathouse window by 2340 before the pier lamp dims."
+}

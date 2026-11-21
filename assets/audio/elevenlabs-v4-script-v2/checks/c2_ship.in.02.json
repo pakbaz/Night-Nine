@@ -1,0 +1,18 @@
+{
+  "audio_id": "c2_ship.in.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "50a7d859d370e266001576d416cf53ea38a702e5337b0bbc8b8ca8f33cf15663",
+  "expected": "Would peaceful human hold music assist your experience?",
+  "recognized": "Would peaceful human hold music assist your experience?",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.08,
+  "sample_rate": 48000,
+  "peak": 0.895355224609375,
+  "rms": 0.15243645012378693,
+  "first_recognition": "Would peaceful human hold music assist your experience?",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

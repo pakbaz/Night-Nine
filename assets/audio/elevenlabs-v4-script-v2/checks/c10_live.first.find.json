@@ -1,0 +1,19 @@
+{
+  "audio_id": "c10_live.first.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "8bd889ac731abbcb3e8cdff58e66bd6eb2063c446acf97720587f699e3762cec",
+  "expected": "I called Orchard. When a fresh Pier flash answered Orchard’s change, I released Shaw’s lights. A reply, made live, that nobody could have recorded.",
+  "recognized": "I called Orchard. When a fresh peer flash answered Orchard's change, I released Shaw's lights. A reply, made live, that nobody could have recorded.",
+  "word_edits": 1,
+  "word_error_rate": 0.041666666666666664,
+  "listening_review_required": true,
+  "seconds": 9.92,
+  "sample_rate": 48000,
+  "peak": 0.586700439453125,
+  "rms": 0.043803855776786804,
+  "first_recognition": "I called Orchard. When a fresh peer flash answered Orchard's change, I released Shaw's lights. A reply, made live, that nobody could have recorded.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms",
+  "independent_phrase_transcription": "I called Orchard. When a fresh peer flash answered Orchard's change, I released Shaw's lights. A reply made live. that nobody could have recorded."
+}

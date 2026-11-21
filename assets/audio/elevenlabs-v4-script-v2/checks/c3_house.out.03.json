@@ -1,0 +1,18 @@
+{
+  "audio_id": "c3_house.out.03",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "425abc7d3ada426dd3eaa5b730176209c496aa144924f5091827e6c28bbb541e",
+  "expected": "Town Hall closes at five. I have keys.",
+  "recognized": "Town Hall closes at 5. I have keys.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 3.68,
+  "sample_rate": 48000,
+  "peak": 0.50921630859375,
+  "rms": 0.06880679726600647,
+  "first_recognition": "Town Hall closes at 5. I have keys.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

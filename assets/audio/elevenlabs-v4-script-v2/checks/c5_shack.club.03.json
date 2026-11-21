@@ -1,0 +1,18 @@
+{
+  "audio_id": "c5_shack.club.03",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "a5b199993e3dbfe94e92edd2a3a82ead6db5657428da75dff365d4ca4a9a42b1",
+  "expected": "Any time, kid.",
+  "recognized": "anytime kid",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 1.6,
+  "sample_rate": 48000,
+  "peak": 0.321685791015625,
+  "rms": 0.03581133484840393,
+  "first_recognition": "anytime kid",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

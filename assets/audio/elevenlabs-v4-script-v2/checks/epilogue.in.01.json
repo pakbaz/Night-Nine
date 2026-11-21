@@ -1,0 +1,18 @@
+{
+  "audio_id": "epilogue.in.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "344c63c665a2d97946044171d56780e7aaaed4f42039663dd5763020717bf90e",
+  "expected": "Your memories are yours now. You need no more re-syncs.",
+  "recognized": "Your memories are yours now. You need no more resyncs.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.4,
+  "sample_rate": 48000,
+  "peak": 0.732269287109375,
+  "rms": 0.13960175216197968,
+  "first_recognition": "Your memories are yours now. You need no more resyncs.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

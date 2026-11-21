@@ -1,0 +1,18 @@
+{
+  "audio_id": "book.opening.1.2",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "ed4de0d343b09de341ee5e199277684bad79d8af890fd51105feeedb13d9aa65",
+  "expected": "Six thousand people, one radio station, and a lot of fog.",
+  "recognized": "6,000 people, one radio station, and a lot of fog.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.72,
+  "sample_rate": 48000,
+  "peak": 0.504913330078125,
+  "rms": 0.04390162602066994,
+  "first_recognition": "6,000 people, one radio station, and a lot of fog.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

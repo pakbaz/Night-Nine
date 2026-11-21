@@ -1,0 +1,18 @@
+{
+  "audio_id": "c8_lab.props.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "e8d24c886d8746a74e91ec00b0db0761284d140cbcf3d869dc89d8f441c0d692",
+  "expected": "The drums and lamps hit together on frames 120, 128 and 136; the fog just drifts. One cue drives the whole effect. Shaw’s reactor can play again, and this time we play it live.",
+  "recognized": "The drums and lamps hit together on frames 120, 128, and 136. The fog just drifts. One cue drives the whole effect. Shaw's reactor can play again, and this time, we play it live.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 15.84,
+  "sample_rate": 48000,
+  "peak": 0.38494873046875,
+  "rms": 0.03652448207139969,
+  "first_recognition": "The drums and lamps hit together on frames 120, 128, and 136. The fog just drifts. One cue drives the whole effect. Shaw's reactor can play again, and this time, we play it live.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

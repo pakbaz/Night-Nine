@@ -1,0 +1,18 @@
+{
+  "audio_id": "c7_gate.badge.lead.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "65f443e1b02b76e6870850c3335bd4e148a2d237bf263c8fff0ec8ee0f5528a9",
+  "expected": "My face is on every poster in the county. So is yours.",
+  "recognized": "My face is on every poster in the county. So is yours.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.16,
+  "sample_rate": 48000,
+  "peak": 0.441436767578125,
+  "rms": 0.04576066881418228,
+  "first_recognition": "My face is on every poster in the county. So is yours.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

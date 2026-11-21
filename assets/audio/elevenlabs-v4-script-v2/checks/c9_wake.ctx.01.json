@@ -1,0 +1,18 @@
+{
+  "audio_id": "c9_wake.ctx.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "ed3a71b353e99a3ffb9d5e743998baac96dbfbfbbadc31268fe673f4421601e2",
+  "expected": "Row nine. Mom and Dad, side by side, the way they always slept. I’d brought every sound I had.",
+  "recognized": "Row 9. Mom and Dad, side by side, the way they always slept. I'd brought every sound I had.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 7.36,
+  "sample_rate": 48000,
+  "peak": 0.42840576171875,
+  "rms": 0.04087015613913536,
+  "first_recognition": "Row 9. Mom and Dad, side by side, the way they always slept. I'd brought every sound I had.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

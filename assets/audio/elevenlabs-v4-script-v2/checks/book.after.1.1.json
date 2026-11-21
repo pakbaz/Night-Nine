@@ -1,0 +1,18 @@
+{
+  "audio_id": "book.after.1.1",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "0d202d5e22b5a2153a51c5386042d75a9954c9300f87f51b06908b351c82f08b",
+  "expected": "Before the ship left, the Choir gave the copies one last gift. They don’t need the ninth night anymore.",
+  "recognized": "Before the ship left, the choir gave the copies one last gift. They don't need the Ninth Night anymore.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 6.56,
+  "sample_rate": 48000,
+  "peak": 0.34454345703125,
+  "rms": 0.03733222931623459,
+  "first_recognition": "Before the ship left, the choir gave the copies one last gift. They don't need the Ninth Night anymore.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "book.aftermath.5.2",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "6a2f61722f0a1558c113461a4621ffc935770ceeb7a84afcfcd8b820bc774408",
+  "expected": "This is the story of how I started counting nights.",
+  "recognized": "This is the story of how I started counting nights.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 3.44,
+  "sample_rate": 48000,
+  "peak": 0.389068603515625,
+  "rms": 0.037436023354530334,
+  "first_recognition": "This is the story of how I started counting nights.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

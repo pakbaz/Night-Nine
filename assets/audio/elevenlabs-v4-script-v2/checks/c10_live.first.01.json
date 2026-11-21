@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_live.first.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "b2728c3f8f302c96dfd6e2dbf3804243e9cfb059a182f7912d69f9c3b810fd07",
+  "expected": "First street ready. Second street ready. Look at the harbor, Steve.",
+  "recognized": "First street ready, second street ready. Look at the harbor, Steve.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.8,
+  "sample_rate": 48000,
+  "peak": 0.5870361328125,
+  "rms": 0.06021556630730629,
+  "first_recognition": "First street ready, second street ready. Look at the harbor, Steve.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

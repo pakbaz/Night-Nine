@@ -1,0 +1,18 @@
+{
+  "audio_id": "c8_lab.recap.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "f51c6a20b1474291069af7977963170293ede6bd23ca98a61cf5a8e909c30ff5",
+  "expected": "Two countries faked two tests and broadcast them on open radio. Something out there was listening, and it came. Mom heard the proof in the bay.",
+  "recognized": "Two countries faked two tests and broadcast them on open radio. Something out there was listening, and it came. Mom heard the proof in the bay.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 9.76,
+  "sample_rate": 48000,
+  "peak": 0.2845458984375,
+  "rms": 0.03517644852399826,
+  "first_recognition": "Two countries faked two tests and broadcast them on open radio. Something out there was listening, and it came. Mom heard the proof in the bay.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

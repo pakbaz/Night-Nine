@@ -1,0 +1,18 @@
+{
+  "audio_id": "c5_shack.out.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "f48bc310864f1909139e99ac0aa1c65b63848de51e91f9078676ee224a0eda3f",
+  "expected": "I know where the notebook is.",
+  "recognized": "I know where the notebook is.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 1.84,
+  "sample_rate": 48000,
+  "peak": 0.299530029296875,
+  "rms": 0.045378368347883224,
+  "first_recognition": "I know where the notebook is.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

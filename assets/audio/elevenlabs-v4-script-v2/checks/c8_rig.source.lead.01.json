@@ -1,0 +1,18 @@
+{
+  "audio_id": "c8_rig.source.lead.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "a60db3e5a475c046c5a57a8858ca99098cdf64653e0a8ab4ad494555f520b451",
+  "expected": "Three feeds, three jacks. Shaw, give me a cue.",
+  "recognized": "Three feeds, three jacks. Shaw, give me a cue.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.08,
+  "sample_rate": 48000,
+  "peak": 0.915863037109375,
+  "rms": 0.09044712036848068,
+  "first_recognition": "Three feeds, three jacks. Shaw, give me a cue.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

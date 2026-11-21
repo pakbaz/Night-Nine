@@ -1,0 +1,18 @@
+{
+  "audio_id": "c3_archive.cycle.lead.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "14844201fd49f8fcd40dd3f85a457c07aa927150ad3dcc9cf26b0e63b03bba81",
+  "expected": "Every ninth night for three years, I was out there with a recorder. I wrote down everything, from wherever I was standing.",
+  "recognized": "Every ninth night for three years, I was out there with a recorder. I wrote down everything from wherever I was standing.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 8.72,
+  "sample_rate": 48000,
+  "peak": 0.8782958984375,
+  "rms": 0.10428472608327866,
+  "first_recognition": "Every ninth night for three years, I was out there with a recorder. I wrote down everything from wherever I was standing.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

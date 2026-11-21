@@ -1,0 +1,18 @@
+{
+  "audio_id": "c5_station.sleeve.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "590c1e1f900028230650dff7efb9b4988da9f3122d6a0ae800350199ef79e5d6",
+  "expected": "I knocked the whole shelf over. The blue one landed in my lap.",
+  "recognized": "I knocked the whole shelf over. The blue one landed in my lap.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.08,
+  "sample_rate": 48000,
+  "peak": 0.29443359375,
+  "rms": 0.03534051775932312,
+  "first_recognition": "I knocked the whole shelf over. The blue one landed in my lap.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

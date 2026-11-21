@@ -1,0 +1,18 @@
+{
+  "audio_id": "c2_ship.nora.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "7252920e456a1784d41060a1b774fc045cdb0f0f9c735e9c47f6d7240f28fb25",
+  "expected": "I kept waiting until I knew what to say. I’m here now. I should have been here sooner.",
+  "recognized": "I kept waiting until I knew what to say. I'm here now. I should have been here sooner.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 5.92,
+  "sample_rate": 48000,
+  "peak": 0.252044677734375,
+  "rms": 0.037976764142513275,
+  "first_recognition": "I kept waiting until I knew what to say. I'm here now. I should have been here sooner.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

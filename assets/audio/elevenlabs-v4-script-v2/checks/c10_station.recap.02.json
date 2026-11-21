@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_station.recap.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "fa6d2f8e8c23a9256e91fc099bcb7728b563a120258ad2eb0e1c81fb8e73c218",
+  "expected": "Dad’s club is relaying the cues. Marsh at Sentinel Point, Gull down the coast, and then anyone on Earth with a radio.",
+  "recognized": "Dad's Club is relaying the cues. Marsh at Sentinel Point, Gull down the coast, and then anyone on Earth with a radio.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 7.92,
+  "sample_rate": 48000,
+  "peak": 0.494720458984375,
+  "rms": 0.047734297811985016,
+  "first_recognition": "Dad's Club is relaying the cues. Marsh at Sentinel Point, Gull down the coast, and then anyone on Earth with a radio.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

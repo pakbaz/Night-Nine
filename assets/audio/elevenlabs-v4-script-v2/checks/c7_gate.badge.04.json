@@ -1,0 +1,18 @@
+{
+  "audio_id": "c7_gate.badge.04",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "ee096f48bfdfb98febfcb73cafa7e4227f345df7c7c4dc28fcd01a9325fe2895",
+  "expected": "Saren’s hunter. Any luck?",
+  "recognized": "Saren's Hunter. Any luck?",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 2.64,
+  "sample_rate": 48000,
+  "peak": 0.409393310546875,
+  "rms": 0.04346496984362602,
+  "first_recognition": "Saren's Hunter. Any luck?",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

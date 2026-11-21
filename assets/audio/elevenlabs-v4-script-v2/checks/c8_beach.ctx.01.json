@@ -1,0 +1,19 @@
+{
+  "audio_id": "c8_beach.ctx.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "45e22a7e0d91fc3b1a127cf6cf71b007934341eacecc9e4af029911af0733ce1",
+  "expected": "Dawn on the beach. Saren came alone, the way he said he would: taller than the doorframes on his ship, and perfectly still.",
+  "recognized": "Dawn on the Beach Saren came alone, the way he said he would, taller than the door frames on his ship, and perfectly still.",
+  "word_edits": 2,
+  "word_error_rate": 0.08695652173913043,
+  "listening_review_required": true,
+  "seconds": 8.88,
+  "sample_rate": 48000,
+  "peak": 0.4078369140625,
+  "rms": 0.04150528460741043,
+  "first_recognition": "Dawn on the Beach Saren came alone, the way he said he would, taller than the door frames on his ship, and perfectly still.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms",
+  "independent_phrase_transcription": "Dawn on the Beach Saren came alone. the way he said he would. taller than the door frames on his ship. and perfectly still."
+}

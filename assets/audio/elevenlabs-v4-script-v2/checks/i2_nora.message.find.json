@@ -1,0 +1,18 @@
+{
+  "audio_id": "i2_nora.message.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "ab2bc8a7d43ebbb6ba417897617b429e9464d61dd1b97a8d5a6ab94ddddbe7c2",
+  "expected": "My message for Steve is in Slot B, by my bed. It will wait for him.",
+  "recognized": "My message for Steve is in slot B by my bed. It will wait for him.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 5.04,
+  "sample_rate": 48000,
+  "peak": 0.48797607421875,
+  "rms": 0.055656831711530685,
+  "first_recognition": "My message for Steve is in slot B by my bed. It will wait for him.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

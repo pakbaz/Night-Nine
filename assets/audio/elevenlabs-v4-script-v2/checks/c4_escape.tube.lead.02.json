@@ -1,0 +1,18 @@
+{
+  "audio_id": "c4_escape.tube.lead.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "5139c7d3df5891ce81424285f08656be8f7a5a288375af3b34bc33420e942633",
+  "expected": "If both takes reach June, she can hear it for herself. Rook’s desk sorts everything else.",
+  "recognized": "If both takes reach June, she can hear it for herself. Rook's desk sorts everything else.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 6.08,
+  "sample_rate": 48000,
+  "peak": 0.54833984375,
+  "rms": 0.04163239151239395,
+  "first_recognition": "If both takes reach June, she can hear it for herself. Rook's desk sorts everything else.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

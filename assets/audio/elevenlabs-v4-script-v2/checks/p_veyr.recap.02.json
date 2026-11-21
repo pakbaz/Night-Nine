@@ -1,0 +1,18 @@
+{
+  "audio_id": "p_veyr.recap.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "230862b8824efd3075c984f27dcbfe48685ba52b2dda39dc6aeb19d3bc2f06a0",
+  "expected": "I did not look back. I watched the meter.",
+  "recognized": "I did not look back. I watched the meter.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 3.6,
+  "sample_rate": 48000,
+  "peak": 0.782135009765625,
+  "rms": 0.12862800061702728,
+  "first_recognition": "I did not look back. I watched the meter.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

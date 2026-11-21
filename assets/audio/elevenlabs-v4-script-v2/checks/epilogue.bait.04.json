@@ -1,0 +1,18 @@
+{
+  "audio_id": "epilogue.bait.04",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "42508f87a2768ab6dda9e0b0a84817a0c8edc475c08a75dbc98a11cfc562c61f",
+  "expected": "I’ll have to find out who that is.",
+  "recognized": "I'll have to find out who that is.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 2.32,
+  "sample_rate": 48000,
+  "peak": 0.340606689453125,
+  "rms": 0.029142722487449646,
+  "first_recognition": "I'll have to find out who that is.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

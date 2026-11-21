@@ -1,0 +1,18 @@
+{
+  "audio_id": "i1_archive.quiet.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "49bf0109ab26cdd9ffd0fbf8d240ca5684aacd40a9e957b003d6391017a8ef8c",
+  "expected": "The fleet has answered. One word. Deliver.",
+  "recognized": "The fleet has answered. One word. Deliver.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.16,
+  "sample_rate": 48000,
+  "peak": 0.29827880859375,
+  "rms": 0.024307243525981903,
+  "first_recognition": "The fleet has answered. One word. Deliver.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

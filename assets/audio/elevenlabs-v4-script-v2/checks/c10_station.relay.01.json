@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_station.relay.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "5bbb7fb65e54455ae01188be64a6e41452f08c1985c53058b5a401416317ec48",
+  "expected": "Short messages. Repeat the cue number, then pass it on.",
+  "recognized": "Short messages. Repeat the cue number, then pass it on.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.24,
+  "sample_rate": 48000,
+  "peak": 0.39520263671875,
+  "rms": 0.060634538531303406,
+  "first_recognition": "Short messages. Repeat the Q number, then pass it on.",
+  "recognition_pass": "story_vocabulary_2",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

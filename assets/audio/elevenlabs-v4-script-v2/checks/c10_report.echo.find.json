@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_report.echo.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "eb4164f7027c2ac4e2ff319a43ed5f00a099b25d440dc3b9aad6fca1ab869853",
+  "expected": "My echo stood behind the bait counter last winter and let the boats pay in spring. I remember the wind. She remembers the people. I will let her win.",
+  "recognized": "My echo stood behind the bait counter last winter and let the boats pay in spring. I remember the wind. She remembers the people. I will let her win.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 11.92,
+  "sample_rate": 48000,
+  "peak": 0.832122802734375,
+  "rms": 0.13081207871437073,
+  "first_recognition": "My echo stood behind the bait counter last winter and let the boats pay in spring. I remember the wind. She remembers the people. I will let her win.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

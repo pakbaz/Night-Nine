@@ -1,0 +1,18 @@
+{
+  "audio_id": "i1_archive.signals.lead.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "cdb034f2cf3b12521b1aaa70340818590757835f05a1d281a11726727d2a3891",
+  "expected": "A year ago I noticed something about them. Every ninth night I listen again, to be sure.",
+  "recognized": "A year ago, I noticed something about them. Every ninth night, I listen again, to be sure.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 7.28,
+  "sample_rate": 48000,
+  "peak": 0.848114013671875,
+  "rms": 0.13609296083450317,
+  "first_recognition": "A year ago, I noticed something about them. Every ninth night, I listen again, to be sure.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_live.recap.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "4799688ecdf42bb2e864facc41ca9d1f96a94981cdaf72f5fef1dd290b759f79",
+  "expected": "Porch lights, field lamps, two national grids, a planet’s worth of radios and three hundred and twelve human voices. None of it recorded. All of it answering.",
+  "recognized": "Porch lights, field lamps, two national grids, a planet's worth of radios, and 312 human voices. None of it recorded. All of it answering.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 11.92,
+  "sample_rate": 48000,
+  "peak": 0.410491943359375,
+  "rms": 0.03961697593331337,
+  "first_recognition": "Porch lights, field lamps, two national grids, a planet's worth of radios, and 312 human voices. None of it recorded. All of it answering.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

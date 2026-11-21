@@ -1,0 +1,18 @@
+{
+  "audio_id": "c9_wake.helen.lead.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "5e2b55cd0b2088f18d6239d5c3c793e3c625137c979182e430421866d7b31824",
+  "expected": "That’s the song in the hum. All this time, the ship was humming Mom’s lullaby.",
+  "recognized": "That's the song in the hum. All this time, the ship was humming mom's lullaby.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 5.52,
+  "sample_rate": 48000,
+  "peak": 0.31182861328125,
+  "rms": 0.039328593760728836,
+  "first_recognition": "That's the song in the hum. All this time, the ship was humming mom's lullaby.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

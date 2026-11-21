@@ -1,0 +1,18 @@
+{
+  "audio_id": "p_meeting.confess.lead.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "d0ee736dafdc029477aa0690c35ab508f23439afdb5de9256d22768e1893c030",
+  "expected": "Both men were waiting for the other to blink. Somebody had to ask the first question, and it had to be me.",
+  "recognized": "Both men were waiting for the other to blink. Somebody had to ask the first question, and it had to be me.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 7.36,
+  "sample_rate": 48000,
+  "peak": 0.595733642578125,
+  "rms": 0.05603129416704178,
+  "first_recognition": "Both men were waiting for the other to blink. Somebody had to ask the first question, and it had to be me.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

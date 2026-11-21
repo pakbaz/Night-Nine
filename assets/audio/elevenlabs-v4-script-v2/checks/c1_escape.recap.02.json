@@ -1,0 +1,18 @@
+{
+  "audio_id": "c1_escape.recap.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "f57c9a7d819f6705aedc0e3648a02b27f5a1c10e3b33fb3a5258a6282c45189c",
+  "expected": "And Tomás’s tapes say the bay sings tonight.",
+  "recognized": "And Tomás' tapes say the bay sings tonight.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 3.52,
+  "sample_rate": 48000,
+  "peak": 0.365325927734375,
+  "rms": 0.04105586186051369,
+  "first_recognition": "And Tomás' tapes say the bay sings tonight.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

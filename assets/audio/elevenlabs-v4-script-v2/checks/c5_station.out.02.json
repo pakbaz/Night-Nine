@@ -1,0 +1,18 @@
+{
+  "audio_id": "c5_station.out.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "2050260bfea1f70324df3f634878def900410e7a3291dde53fc82fca259edb61",
+  "expected": "No. I had breakfast with them. It never got as far as the boat.",
+  "recognized": "No, I had breakfast with them. It never got as far as the boat.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.32,
+  "sample_rate": 48000,
+  "peak": 0.449615478515625,
+  "rms": 0.041070468723773956,
+  "first_recognition": "No, I had breakfast with them. It never got as far as the boat.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "c2_ship.escape.lead.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "4d2c56c43e0c986ba8cb5d77744751803db97771c6a4f6fec4434b4a91304007",
+  "expected": "Fifty-eight percent. Fifty-nine. You are doing very well.",
+  "recognized": "58% 59 You are doing very well.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 5.2,
+  "sample_rate": 48000,
+  "peak": 0.92047119140625,
+  "rms": 0.14681240916252136,
+  "first_recognition": "58% 59 You are doing very well.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

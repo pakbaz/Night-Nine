@@ -1,0 +1,15 @@
+{
+  "operation": "text_to_speech",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "audio_id": "c1_dinner.family.lead.02",
+  "voice_id": "pHTIXPU0D9wgfJsumeMt",
+  "model_id": "eleven_v4",
+  "text_sha256": "a98cbf25c2cf79fa19a409114e8159ed9c9c41209f99dff40969e4f8f7b6ea33",
+  "synthesis_text_sha256": "a98cbf25c2cf79fa19a409114e8159ed9c9c41209f99dff40969e4f8f7b6ea33",
+  "request_id": "T2K44F0rYOizThoucoou",
+  "trace_id": "f587fbb8739d5c0d99728b39e1a7ef3f",
+  "character_cost": 43,
+  "output_format": "mp3_44100_192",
+  "audio_sha256": "8e6605b5581c218b1b7445d7f9e213c3a5e124b80e867d34d0fc685ea989acd0",
+  "response_bytes": 176212
+}

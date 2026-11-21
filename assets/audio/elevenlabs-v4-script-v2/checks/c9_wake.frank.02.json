@@ -1,0 +1,18 @@
+{
+  "audio_id": "c9_wake.frank.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "324d8863d4ba95bed123e3e2a98be1c0170e2c7f203c2878d329f3dd92c70103",
+  "expected": "Right here, Dad.",
+  "recognized": "Right here, Dad.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 1.28,
+  "sample_rate": 48000,
+  "peak": 0.5545654296875,
+  "rms": 0.0590079203248024,
+  "first_recognition": "Right here, Dad.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

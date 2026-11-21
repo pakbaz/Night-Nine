@@ -1,0 +1,18 @@
+{
+  "audio_id": "c3_house.crossword.lead.03",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "4e7dc4c4ea53196c5441f1b14b64c25228161e1270685944fa6e4b5c1ec3bca7",
+  "expected": "Don’t tell me something sweet. Copies can be sweet. Don’t act strange. Grieving people act strange.",
+  "recognized": "Don't tell me something sweet. Copies can be sweet. Don't act strange. Grieving people act strange.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 7.28,
+  "sample_rate": 48000,
+  "peak": 0.438262939453125,
+  "rms": 0.05138310790061951,
+  "first_recognition": "Don't tell me something sweet. Copies can be sweet. Don't act strange. Grieving people act strange.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

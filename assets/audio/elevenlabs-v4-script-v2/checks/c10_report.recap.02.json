@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_report.recap.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "2d35be5dee9367b78cdba4d6310ee37955e8a1c7e8f3c6942cd584c985b44172",
+  "expected": "I did not reconcile Saren. He will have to live with being wrong. So will I.",
+  "recognized": "I did not reconcile Saren. He will have to live with being wrong. So will I.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 6.32,
+  "sample_rate": 48000,
+  "peak": 0.834869384765625,
+  "rms": 0.14745177328586578,
+  "first_recognition": "I did not reconcile Saren. He will have to live with being wrong. So will I.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

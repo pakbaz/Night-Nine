@@ -1,0 +1,15 @@
+{
+  "operation": "text_to_speech",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "audio_id": "c9_choir.truth.02",
+  "voice_id": "vveagfomyMCJLZsOPRP2",
+  "model_id": "eleven_v4",
+  "text_sha256": "6c114ac06025253f2a303627de87bf9d1141c2e729c2b69ffc67c931a3903d2a",
+  "synthesis_text_sha256": "6c114ac06025253f2a303627de87bf9d1141c2e729c2b69ffc67c931a3903d2a",
+  "request_id": "QDmm6HqWaME6jZFqdbi6",
+  "trace_id": "8b523fa088bb8811f60d359ccb0f2c62",
+  "character_cost": 38,
+  "output_format": "mp3_44100_192",
+  "audio_sha256": "81b8cc2cf3029072e91321c7eb8ead55b788272564fcd87775fbd2d8b418346f",
+  "response_bytes": 163047
+}

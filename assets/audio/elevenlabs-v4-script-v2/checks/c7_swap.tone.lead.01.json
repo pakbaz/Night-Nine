@@ -1,0 +1,18 @@
+{
+  "audio_id": "c7_swap.tone.lead.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "3c018187685ccbdf097e3a4de97c03f91e9377c0035325cf9de45df567db7c27",
+  "expected": "Service tunnel. We see them. Give us a few seconds.",
+  "recognized": "Service tunnel. We see them. Give us a few seconds.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.16,
+  "sample_rate": 48000,
+  "peak": 0.43316650390625,
+  "rms": 0.04827013611793518,
+  "first_recognition": "Service tunnel. We see them. Give us a few seconds.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

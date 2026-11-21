@@ -1,0 +1,18 @@
+{
+  "audio_id": "c1_flat.sunday.03",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "4d590e5a2253b631f03ba11c1d28686348f585e518fa5007c41590b7eb526ce5",
+  "expected": "The voice of the coast, now with zero humans!",
+  "recognized": "The Voice of the Coast, now with Zero Humans.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 3.92,
+  "sample_rate": 48000,
+  "peak": 0.518157958984375,
+  "rms": 0.061582256108522415,
+  "first_recognition": "The Voice of the Coast, now with Zero Humans.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

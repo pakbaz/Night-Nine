@@ -1,0 +1,15 @@
+{
+  "operation": "text_to_speech",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "audio_id": "c1_pier.whistle.03",
+  "voice_id": "vveagfomyMCJLZsOPRP2",
+  "model_id": "eleven_v4",
+  "text_sha256": "a4ef2f2c75a58f9c6b5cccfae5df270e84eca580bbc5a6546c4aab09a55c119f",
+  "synthesis_text_sha256": "a4ef2f2c75a58f9c6b5cccfae5df270e84eca580bbc5a6546c4aab09a55c119f",
+  "request_id": "BzUvEEE2SYtlbzhFlWhR",
+  "trace_id": "1088ebb9c03aab9f614ed0342c2f4eec",
+  "character_cost": 18,
+  "output_format": "mp3_44100_192",
+  "audio_sha256": "053aef06d577d9ec2cecc452519631f099142e02d0f95c416c06994b9a8eb751",
+  "response_bytes": 78410
+}

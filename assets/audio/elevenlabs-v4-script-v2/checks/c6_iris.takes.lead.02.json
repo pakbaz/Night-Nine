@@ -1,0 +1,18 @@
+{
+  "audio_id": "c6_iris.takes.lead.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "8478ea87290fbd95911c6da5af1f2cdba22e7c2615dc9f5ae43fbbe194c15df2",
+  "expected": "The first time I missed going below, it was an accident. I was chasing you. The second time, I chose.",
+  "recognized": "The first time I missed going below, it was an accident. I was chasing you. The second time I chose.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 7.44,
+  "sample_rate": 48000,
+  "peak": 0.462188720703125,
+  "rms": 0.047071751207113266,
+  "first_recognition": "The first time I missed going below, it was an accident. I was chasing you. The second time I chose.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

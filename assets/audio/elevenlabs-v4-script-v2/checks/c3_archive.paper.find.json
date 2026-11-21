@@ -1,0 +1,19 @@
+{
+  "audio_id": "c3_archive.paper.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "897a404463a2050acf43317dbb5168ec3028f22845f73849801e89666a49fb70",
+  "expected": "On May 3, Walt Prior was answering questions in Washington while someone signed his name at our counter to reopen the aquarium’s old seawater intake. Later, somebody changed the computer. Nobody changed the ink.",
+  "recognized": "On May 3rd, Walt Pryor was answering questions in Washington while someone signed his name at our counter to reopen the aquarium's old seawater intake. Later, somebody changed the computer. Nobody changed the ink.",
+  "word_edits": 2,
+  "word_error_rate": 0.058823529411764705,
+  "listening_review_required": true,
+  "seconds": 13.84,
+  "sample_rate": 48000,
+  "peak": 0.440643310546875,
+  "rms": 0.04088602587580681,
+  "first_recognition": "On May 3rd, Walt Pryor was answering questions in Washington while someone signed his name at our counter to reopen the aquarium's old seawater intake. Later, somebody changed the computer. Nobody changed the ink.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms",
+  "independent_phrase_transcription": "On May 3rd, Walt Pryor was answering questions in Washington while someone signed his name at our counter to reopen the aquarium's old seawater intake. Later, somebody changed the computer. Nobody changed the ink."
+}

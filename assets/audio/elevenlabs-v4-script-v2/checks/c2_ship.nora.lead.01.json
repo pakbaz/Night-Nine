@@ -1,0 +1,18 @@
+{
+  "audio_id": "c2_ship.nora.lead.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "96bf66a8be8ac4dd6dddf9bbbbc505a41ac607c06accae904d12f354280e3767",
+  "expected": "Nora.",
+  "recognized": "Nora.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 0.96,
+  "sample_rate": 48000,
+  "peak": 0.285430908203125,
+  "rms": 0.05085799843072891,
+  "first_recognition": "Nora.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

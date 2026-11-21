@@ -1,0 +1,18 @@
+{
+  "audio_id": "c8_beach.in.04",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "4e5e9a882da3ce3c5c855bae3ec06abc3800a25611451375901b516031410111",
+  "expected": "Your mother would like a word.",
+  "recognized": "Your mother would like a word.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 1.84,
+  "sample_rate": 48000,
+  "peak": 0.227691650390625,
+  "rms": 0.03015768714249134,
+  "first_recognition": "Your mother would like a word.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

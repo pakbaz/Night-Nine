@@ -1,0 +1,18 @@
+{
+  "audio_id": "c8_beach.recap.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "8f2ca7353f3c4ab7c997c4165e39514ae595002989225dad3682c813a051db75",
+  "expected": "Saren offered me my parents for Mom’s notebook. His proof was my own voicemail, cut to say what he wanted.",
+  "recognized": "Saren offered me my parents for mom's notebook. His proof was my own voicemail, cut to say what he wanted.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 7.44,
+  "sample_rate": 48000,
+  "peak": 0.349365234375,
+  "rms": 0.03541642054915428,
+  "first_recognition": "sarin offered me my parents for mom's notebook his proof was my own voicemail cut to say what he wanted",
+  "recognition_pass": "story_vocabulary_1",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

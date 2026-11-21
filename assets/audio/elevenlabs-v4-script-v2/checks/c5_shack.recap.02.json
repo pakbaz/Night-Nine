@@ -1,0 +1,18 @@
+{
+  "audio_id": "c5_shack.recap.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "b2800ea0e3d3e6def30cb339a88cd9549f6dc1a3de3d589e441250f2735f9b89",
+  "expected": "Dad’s club is back on the air. And Mom’s notebook is in the KBWR record library, at the station that fired me.",
+  "recognized": "Dad's club is back on the air, and Mom's notebook is in the KBWR record library, at the station that fired me.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 8.08,
+  "sample_rate": 48000,
+  "peak": 0.335296630859375,
+  "rms": 0.03968873247504234,
+  "first_recognition": "Dad's club is back on the air, and Mom's notebook is in the KBWR record library, at the station that fired me.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

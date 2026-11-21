@@ -1,0 +1,18 @@
+{
+  "audio_id": "p_veyr.out.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "f6db28cd41ac26067ef9071490292693f97ba62d8bbc13b6d731b5c4c578dd9a",
+  "expected": "I will remember where we lived.",
+  "recognized": "I will remember where we lived.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 2.48,
+  "sample_rate": 48000,
+  "peak": 0.740203857421875,
+  "rms": 0.17495998740196228,
+  "first_recognition": "I will remember where we lived.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

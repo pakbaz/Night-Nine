@@ -1,0 +1,18 @@
+{
+  "audio_id": "c2_ship.nora.lead.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "5130f896e1b48e55ed45209e41eb4e8872d36a9313a658d894e3ac22c21fc677",
+  "expected": "That hum. It’s almost a song. I know it from somewhere.",
+  "recognized": "That hum, it's almost a song. I know it from somewhere.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.88,
+  "sample_rate": 48000,
+  "peak": 0.22393798828125,
+  "rms": 0.03165193274617195,
+  "first_recognition": "That hum, it's almost a song. I know it from somewhere.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

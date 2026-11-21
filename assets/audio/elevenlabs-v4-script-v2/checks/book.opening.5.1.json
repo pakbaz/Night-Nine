@@ -1,0 +1,18 @@
+{
+  "audio_id": "book.opening.5.1",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "13fd0f43c66c11d5a570373af391490335e2ecb9dddc09ee8412cde09ae1de62",
+  "expected": "Eighteen months ago, they rowed out into the bay after dark. They said the water was making a sound.",
+  "recognized": "Eighteen months ago, they rode out into the bay after dark. They said the water was making a sound.",
+  "word_edits": 1,
+  "word_error_rate": 0.05263157894736842,
+  "listening_review_required": true,
+  "seconds": 6.56,
+  "sample_rate": 48000,
+  "peak": 0.3594970703125,
+  "rms": 0.03796921297907829,
+  "first_recognition": "Eighteen months ago, they rode out into the bay after dark. They said the water was making a sound.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

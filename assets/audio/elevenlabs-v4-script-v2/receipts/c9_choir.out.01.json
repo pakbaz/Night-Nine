@@ -1,0 +1,15 @@
+{
+  "operation": "text_to_speech",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "audio_id": "c9_choir.out.01",
+  "voice_id": "pqHfZKP75CvOlQylNhV4",
+  "model_id": "eleven_v4",
+  "text_sha256": "67b56d2987dea67b7a9976d79c199a5309e60884774ed9404ea2d163860e476f",
+  "synthesis_text_sha256": "67b56d2987dea67b7a9976d79c199a5309e60884774ed9404ea2d163860e476f",
+  "request_id": "N4322jIQW8UlzIWMDaYC",
+  "trace_id": "b6050a7bbf77172809b03470b7384721",
+  "character_cost": 39,
+  "output_format": "mp3_44100_192",
+  "audio_sha256": "4d9b7a664d5f6a4df30a1239dbca546ff10f84932ad303d48d0df34bdac4a58c",
+  "response_bytes": 134208
+}

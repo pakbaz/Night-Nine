@@ -1,0 +1,18 @@
+{
+  "audio_id": "p_meeting.out.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "1f1d6d56aaf43aafb70d7853f4259fb08d8e7403912a0d4525a7333fb1fd8695",
+  "expected": "Everyone agreed to keep lying. It may be the most honest thing I have seen.",
+  "recognized": "Everyone agreed to keep lying. It may be the most honest thing I have seen.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 5.6,
+  "sample_rate": 48000,
+  "peak": 0.502197265625,
+  "rms": 0.05765123665332794,
+  "first_recognition": "Everyone agreed to keep lying. It may be the most honest thing I have seen.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

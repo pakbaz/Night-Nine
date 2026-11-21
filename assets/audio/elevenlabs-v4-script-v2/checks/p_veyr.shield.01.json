@@ -1,0 +1,18 @@
+{
+  "audio_id": "p_veyr.shield.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "518f89a94c895be7b39fe91bfb0c2401ce63d769f6afa4ad738bc36322c1f6ec",
+  "expected": "Now I can hear the city, beneath the wind.",
+  "recognized": "Now I can hear the city beneath the wind.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.0,
+  "sample_rate": 48000,
+  "peak": 0.891571044921875,
+  "rms": 0.13558025658130646,
+  "first_recognition": "Now I can hear the city beneath the wind.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

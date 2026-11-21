@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_town.wind.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "7bce26775d1d1c4b1b86526341e867b43e1a42c4ef281e6fd0649b3faec8d84f",
+  "expected": "The Veyr wind plays through to Mrs. Penhallow’s pencil mark, after the last gust. Then the Choir’s return opens, live. Home as it was, then a voice answering them now.",
+  "recognized": "The Veyr wind plays through to Mrs. Penhallow's pencil mark after the last gust. Then the choir's return opens, live, home as it was, then a voice answering them now.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 12.4,
+  "sample_rate": 48000,
+  "peak": 0.343505859375,
+  "rms": 0.03786492347717285,
+  "first_recognition": "The bare wind plays through to Mrs. Penhallow's pencil mark after the last gust. Then the choir's return opens, live, home as it was, then a voice answering them now.",
+  "recognition_pass": "story_vocabulary_3",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

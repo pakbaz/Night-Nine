@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_live.out.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "444aaacc88fab3ec1baf6c99b1df6286307aa85c7f1d5bc8e0f33a9f5e5b8938",
+  "expected": "Saren is on the pier. He’s going for the tower.",
+  "recognized": "Saren is on the pier. He's going for the tower.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 3.36,
+  "sample_rate": 48000,
+  "peak": 0.89404296875,
+  "rms": 0.12198254466056824,
+  "first_recognition": "Saren is on the pier. He's going for the tower.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

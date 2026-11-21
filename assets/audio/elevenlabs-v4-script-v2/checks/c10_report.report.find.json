@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_report.report.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "ec48ce5bd7973df7bfbcfdab24d12ae5dd83e2c2e76e39677d1ba05f0ca83ea2",
+  "expected": "The danger, measured aboard our own ship. A home, surveyed empty three times. And three hundred and twelve people worth meeting. I have confirmed the report.",
+  "recognized": "The danger, measured aboard our own ship. A home, surveyed empty three times, and 312 people worth meeting. I have confirmed the report.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 13.36,
+  "sample_rate": 48000,
+  "peak": 0.875518798828125,
+  "rms": 0.14212435483932495,
+  "first_recognition": "The danger, measured aboard our own ship. A home, surveyed empty three times, and 312 people worth meeting. I have confirmed the report.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

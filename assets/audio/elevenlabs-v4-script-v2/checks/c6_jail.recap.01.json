@@ -1,0 +1,18 @@
+{
+  "audio_id": "c6_jail.recap.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "f952587eabe44b50681d35daa627666750b7936f800b9d944f9b5ff9b504fa61",
+  "expected": "June is out of her cell, and her copy is still at her desk, hunting me. Pell chose a beagle over his orders. Lyle’s copy chose a school play.",
+  "recognized": "June is out of her cell, and her copy is still at her desk, hunting me. Pell chose a beagle over his orders. Lyle's copy chose a school play.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 10.32,
+  "sample_rate": 48000,
+  "peak": 0.33099365234375,
+  "rms": 0.03651190921664238,
+  "first_recognition": "June is out of her cell, and her copy is still at her desk, hunting me. Pell chose a beagle over his orders. Lyle's copy chose a school play.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

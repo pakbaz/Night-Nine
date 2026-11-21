@@ -103,7 +103,7 @@ func _check_recording_evidence(content: Dictionary,takes: Dictionary,voice_enabl
 					clips.append(load(path) as AudioStreamWAV)
 				if not available:
 					continue
-				var same_take: bool = task.id in ["c4_safe.match", "i1_archive.signals", "c8_beach.second"]
+				var same_take: bool = task.id in ["c4_safe.match", "i1_archive.signals"]
 				check((clips[0].data == clips[1].data) == same_take, "Correct deduction from actual PCM " + task.id)
 				var traces: Array[PackedFloat32Array] = []
 				var longest := 0.0

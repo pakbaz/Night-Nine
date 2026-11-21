@@ -1,0 +1,18 @@
+{
+  "audio_id": "c5_station.stephen.lead.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "a56045dda67e10bc8b28a0cc77c1017f8cd6ad113f36c41de1f558757d5d87e5",
+  "expected": "It’s a good face. You’re not doing it any favors.",
+  "recognized": "It's a good face. You're not doing it any favors.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 3.76,
+  "sample_rate": 48000,
+  "peak": 0.32733154296875,
+  "rms": 0.035152796655893326,
+  "first_recognition": "It's a good face. You're not doing it any favors.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

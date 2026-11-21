@@ -1,0 +1,18 @@
+{
+  "audio_id": "i1_archive.ctx.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "85e8310ee4be91741fbd061ce1a47ed5e7434820981799ed025590c87a87a39f",
+  "expected": "Two hundred and seventy-four tonight. One of them has changed.",
+  "recognized": "274 tonight one of them has changed",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 5.2,
+  "sample_rate": 48000,
+  "peak": 0.6422119140625,
+  "rms": 0.12147963047027588,
+  "first_recognition": "274 tonight one of them has changed",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

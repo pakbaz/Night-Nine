@@ -1,0 +1,18 @@
+{
+  "audio_id": "c3_house.crossword.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "aab6b07a3d4b3ce12e28ddac0d2a3aca14f152f995ad86a7f5b64cc67e4c5804",
+  "expected": "The chair never got as far as Sunday night. My 911 call was on June’s machine, word for word. Whoever Carmen saw at the market, it wasn’t me.",
+  "recognized": "The chair never got as far as Sunday night. My 911 call was on June's machine, word for word. Whoever Carmen saw at the market, it wasn't me.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 10.0,
+  "sample_rate": 48000,
+  "peak": 0.377471923828125,
+  "rms": 0.04031239449977875,
+  "first_recognition": "The chair never got as far as Sunday night. My 911 call was on June's machine, word for word. Whoever Carmen saw at the market, it wasn't me.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

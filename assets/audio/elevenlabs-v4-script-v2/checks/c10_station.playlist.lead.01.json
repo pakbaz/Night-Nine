@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_station.playlist.lead.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "1e9c61d8f68254ad9666bfcc58c38dd86e65f181338685cbcd372a7277cb89dd",
+  "expected": "Rick keeps a log of everything. Including the last time a human got the microphone.",
+  "recognized": "Rick keeps a log of everything, including the last time a human got the microphone.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 5.36,
+  "sample_rate": 48000,
+  "peak": 0.34039306640625,
+  "rms": 0.04247203841805458,
+  "first_recognition": "Rick keeps a log of everything, including the last time a human got the microphone.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

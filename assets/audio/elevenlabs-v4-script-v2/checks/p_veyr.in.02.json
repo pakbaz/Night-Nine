@@ -1,0 +1,18 @@
+{
+  "audio_id": "p_veyr.in.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "cd9ca26a39676c44fd2c037af287b2cbe8fe31baa94de7d8f076e2757d51c38c",
+  "expected": "One recording remains.",
+  "recognized": "One recording remains.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 2.4,
+  "sample_rate": 48000,
+  "peak": 0.888214111328125,
+  "rms": 0.16546203196048737,
+  "first_recognition": "One recording remains.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

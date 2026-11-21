@@ -1,0 +1,18 @@
+{
+  "audio_id": "c9_choir.in.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "3e2a09f4e47cbf15e469e3aa841289fa29b75a66b3760f7fd6f8f9265f1bbccb",
+  "expected": "We will finish your scan. This time there will be no interruption.",
+  "recognized": "We will finish your scan. This time there will be no interruption.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.56,
+  "sample_rate": 48000,
+  "peak": 0.287322998046875,
+  "rms": 0.029833680018782616,
+  "first_recognition": "We will finish your scan. This time there will be no interruption.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

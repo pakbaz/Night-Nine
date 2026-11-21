@@ -1,0 +1,18 @@
+{
+  "audio_id": "postcredits.in.03",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "124cbf3000dfd7705d76e09957dbefac65687e7bb39df89dcd69b30330c779d0",
+  "expected": "You’re going to want to hear this.",
+  "recognized": "You're going to want to hear this.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 2.08,
+  "sample_rate": 48000,
+  "peak": 0.30438232421875,
+  "rms": 0.04354787617921829,
+  "first_recognition": "You're going to want to hear this.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "c7_swap.out.04",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "5cd492d9f93f85f8a11e5c1bf8dbbae755a46622678d7f6d7bbf1f2bf9cbd2e7",
+  "expected": "An hour later, in a locked room under the array, the President of the United States thanked me.",
+  "recognized": "An hour later, in a locked room under the array, the President of the United States thanked me.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 6.32,
+  "sample_rate": 48000,
+  "peak": 0.320220947265625,
+  "rms": 0.03730753809213638,
+  "first_recognition": "An hour later, in a locked room under the array, the President of the United States thanked me.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_report.in.03",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "931fd09a43c19988270a62361afaefbfa405cbfba7082a2827b16c4baafe96a6",
+  "expected": "You have spent three years selling bait to people you like. Tell them what you learned.",
+  "recognized": "You have spent three years selling bait to people you like. Tell them what you learned.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 5.84,
+  "sample_rate": 48000,
+  "peak": 0.397796630859375,
+  "rms": 0.04104733467102051,
+  "first_recognition": "You have spent three years selling bait to people you like. Tell them what you learned.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

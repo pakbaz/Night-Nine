@@ -1,0 +1,18 @@
+{
+  "audio_id": "book.after.3.1",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "5919b4c8179072c4a8dd07882c8d5db80e35ad8f6e1977391375777d40755513",
+  "expected": "Mom and Dad came home. Dad is back on the radio every Thursday.",
+  "recognized": "Mom and Dad came home. Dad is back on the radio every Thursday.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.32,
+  "sample_rate": 48000,
+  "peak": 0.364410400390625,
+  "rms": 0.042977474629879,
+  "first_recognition": "Mom and Dad came home. Dad is back on the radio every Thursday.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

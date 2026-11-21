@@ -1,0 +1,18 @@
+{
+  "audio_id": "c8_lab.in.04",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "1dd02b36727857e63e6077a122ab0081000b9de07db4f436192e13cb1173a1cc",
+  "expected": "Mine fooled four generals.",
+  "recognized": "Mind fooled four generals.",
+  "word_edits": 1,
+  "word_error_rate": 0.25,
+  "listening_review_required": true,
+  "seconds": 2.4,
+  "sample_rate": 48000,
+  "peak": 0.369873046875,
+  "rms": 0.04584754630923271,
+  "first_recognition": "Mind fooled four generals.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "i1_archive.reset.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "d73595911b83cfa71910f99fcf6fb8d23c86095c0c382c812f4eaf4acf79df5a",
+  "expected": "Return to the stored record.",
+  "recognized": "Return to the stored record.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 2.32,
+  "sample_rate": 48000,
+  "peak": 0.913848876953125,
+  "rms": 0.14120106399059296,
+  "first_recognition": "Return to the stored record.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

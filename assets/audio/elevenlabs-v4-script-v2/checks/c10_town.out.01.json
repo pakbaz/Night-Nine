@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_town.out.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "b2277b38572758042c5acf79c0f690870df3e4df1f35898e68ce96b9e9f2deea",
+  "expected": "I brought something in my bucket.",
+  "recognized": "I brought something in my bucket.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 2.24,
+  "sample_rate": 48000,
+  "peak": 0.3621826171875,
+  "rms": 0.048637036234140396,
+  "first_recognition": "I brought something in my bucket.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

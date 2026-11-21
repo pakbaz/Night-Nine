@@ -1,0 +1,18 @@
+{
+  "audio_id": "c7_swap.bus.lead.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "dd61f5ea2d36554be0a36333e50583a0c348e5c4458aecbb28e5f1e84f587f74",
+  "expected": "Dad’s tape. Cued, and ready.",
+  "recognized": "Dad's tape, cued and ready.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 2.64,
+  "sample_rate": 48000,
+  "peak": 0.423126220703125,
+  "rms": 0.043706562370061874,
+  "first_recognition": "Dad's tape, cued and ready.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

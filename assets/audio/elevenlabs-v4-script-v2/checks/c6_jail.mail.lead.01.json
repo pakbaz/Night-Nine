@@ -1,0 +1,18 @@
+{
+  "audio_id": "c6_jail.mail.lead.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "9050cd29015d7124cf5227cab893dc127e37103936bfbd4a7b17c67362847141",
+  "expected": "The cell key was returned to the post this morning. I filed it.",
+  "recognized": "The cell key was returned to the post this morning. I filed it.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.48,
+  "sample_rate": 48000,
+  "peak": 0.902801513671875,
+  "rms": 0.07985047250986099,
+  "first_recognition": "The cell key was returned to the post this morning. I filed it.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

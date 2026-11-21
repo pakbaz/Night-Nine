@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "audio_id": "recording.saren_splice",
+  "source_audio_id": "recording.voicemail",
+  "source_sha256": "60826a238807a1e738911ae2f12428816261618e0251fa757377a3ee1a3ec532",
+  "source_intervals": [
+    [
+      0.0,
+      1.18
+    ],
+    [
+      2.84,
+      3.16
+    ]
+  ],
+  "gap_seconds": 0.22,
+  "output_sha256": "117cef297d19146ef202ac22073518fdd4b370cdc2be95d23951bd5a81163397"
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "c1_pier.in.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "7ff21dc273c6af05c2def18f55ff66c2d18edbef4f049c6dadb1c484f610d358",
+  "expected": "Fish don’t sing, Steven. Something under them does.",
+  "recognized": "fish don't sing stephen something under them does",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 3.84,
+  "sample_rate": 48000,
+  "peak": 0.346771240234375,
+  "rms": 0.04252360761165619,
+  "first_recognition": "fish don't sing stephen something under them does",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

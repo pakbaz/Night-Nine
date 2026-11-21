@@ -1,0 +1,18 @@
+{
+  "audio_id": "c9_gallery.talk.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "8e632c6aad2311585e16ea4b2dbdb8867cc1826c7d9cd4b1cb386f5b866b041a",
+  "expected": "Then keep talking. We have a lot to do.",
+  "recognized": "Then keep talking. We have a lot to do.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 2.88,
+  "sample_rate": 48000,
+  "peak": 0.499237060546875,
+  "rms": 0.0625176727771759,
+  "first_recognition": "Then keep talking. We have a lot to do.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

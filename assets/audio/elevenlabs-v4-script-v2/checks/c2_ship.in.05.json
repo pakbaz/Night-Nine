@@ -1,0 +1,18 @@
+{
+  "audio_id": "c2_ship.in.05",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "4f6b5b988ed8b5669ae172b8b15ea9f0e71cd25df5ba16b6c25f5d44d73fca5b",
+  "expected": "Glass corridors. Slow light. And a hum that was almost a tune.",
+  "recognized": "glass corridors, slow light, and a hum that was almost a tune.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 5.68,
+  "sample_rate": 48000,
+  "peak": 0.319244384765625,
+  "rms": 0.034801922738552094,
+  "first_recognition": "glass corridors, slow light, and a hum that was almost a tune.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

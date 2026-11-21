@@ -1,0 +1,18 @@
+{
+  "audio_id": "c5_shack.notes.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "eebd132ea36324d6a736a7c4b1f335bea7d3fbaf7016e9d1b3c8d9a4363ab665",
+  "expected": "Frank, there is soup in the refrigerator. The other container is paint. Please read both labels.",
+  "recognized": "Frank, there is soup in the refrigerator. The other container is paint. Please read both labels.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 7.68,
+  "sample_rate": 48000,
+  "peak": 0.516754150390625,
+  "rms": 0.05391613021492958,
+  "first_recognition": "Frank, there is soup in the refrigerator. The other container is paint. Please read both labels.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

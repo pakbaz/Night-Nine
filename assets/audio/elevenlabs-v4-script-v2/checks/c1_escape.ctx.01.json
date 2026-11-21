@@ -1,0 +1,18 @@
+{
+  "audio_id": "c1_escape.ctx.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "e902df78f29109b7398fdfeb3f2578dd3115cf4634a68f50652118880ac4456f",
+  "expected": "Home. Nora took a phone call in the bedroom and closed the door. She never closes the door.",
+  "recognized": "Home. Nora took a phone call in the bedroom and closed the door. She never closes the door.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 6.48,
+  "sample_rate": 48000,
+  "peak": 0.361297607421875,
+  "rms": 0.035722341388463974,
+  "first_recognition": "Home. Nora took a phone call in the bedroom and closed the door. She never closes the door.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

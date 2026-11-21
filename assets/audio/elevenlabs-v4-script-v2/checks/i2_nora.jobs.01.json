@@ -1,0 +1,18 @@
+{
+  "audio_id": "i2_nora.jobs.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "fe122ebfaa64bd3a9fe265229d62a1b65eba06746872e2ac3db84d7d35b0827b",
+  "expected": "I can keep that latch from catching.",
+  "recognized": "I can keep that latch from catching.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 2.32,
+  "sample_rate": 48000,
+  "peak": 0.539398193359375,
+  "rms": 0.06318894773721695,
+  "first_recognition": "I can keep that latch from catching.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

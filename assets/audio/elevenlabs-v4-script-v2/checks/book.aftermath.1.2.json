@@ -1,0 +1,18 @@
+{
+  "audio_id": "book.aftermath.1.2",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "5ad786f8f369ffc0b68c14ebb317982de7673bb613605244517cd2912f89afd5",
+  "expected": "Dad’s radio was still on.",
+  "recognized": "Dad's radio was still on.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 2.32,
+  "sample_rate": 48000,
+  "peak": 0.305694580078125,
+  "rms": 0.04359559714794159,
+  "first_recognition": "Dad's radio was still on.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

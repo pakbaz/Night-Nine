@@ -1,0 +1,18 @@
+{
+  "audio_id": "c9_wake.frank.lead.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "b23c71083603ac1782e47bcbeb180d2eea55e144ecdc53c3aa201dc0485ef803",
+  "expected": "Dad. It’s Steve.",
+  "recognized": "Dad, it's Steve.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 1.92,
+  "sample_rate": 48000,
+  "peak": 0.319793701171875,
+  "rms": 0.03220663592219353,
+  "first_recognition": "Dad, it's Steve.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

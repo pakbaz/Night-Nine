@@ -1,0 +1,18 @@
+{
+  "audio_id": "epilogue.coffee.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "598b8ac90e2e59eccc007f41a4d0a215c4e34c4396222423e14884a15547b6b6",
+  "expected": "Steve, we’re home. There is coffee. Your father has labeled the paint.",
+  "recognized": "Steve, we're home. There is coffee. Your father has labeled the paint.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 5.52,
+  "sample_rate": 48000,
+  "peak": 0.558441162109375,
+  "rms": 0.07732170820236206,
+  "first_recognition": "Steve, we're home. There is coffee. Your father has labeled the paint.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

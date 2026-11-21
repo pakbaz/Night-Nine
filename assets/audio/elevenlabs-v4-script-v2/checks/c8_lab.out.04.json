@@ -1,0 +1,18 @@
+{
+  "audio_id": "c8_lab.out.04",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "c871789f4161c2f792c2ab2766694bd4f246ea9c536244c2263507983a0da323",
+  "expected": "Smart woman. Who is she?",
+  "recognized": "smart woman who is she",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 2.48,
+  "sample_rate": 48000,
+  "peak": 0.323974609375,
+  "rms": 0.03634774312376976,
+  "first_recognition": "smart woman who is she",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

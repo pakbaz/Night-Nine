@@ -1,0 +1,18 @@
+{
+  "audio_id": "c7_swap.map.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "052a2c99c239f771c5b251937a3be7497d2967bbc527631ae9f6a45c98cd2079",
+  "expected": "The woman at the lectern has a bare wrist, so she was made from the old scan. The real Ward, with this morning’s bandage, went down the east stair with the physician into the service tunnel. June and Iris are going after her.",
+  "recognized": "The woman at the lectern has a bare wrist, so she was made from the old scan. The real ward, with this morning's bandage, went down the east stair with the physician into the service tunnel. June and Iris are going after her.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 13.6,
+  "sample_rate": 48000,
+  "peak": 0.3275146484375,
+  "rms": 0.03987051546573639,
+  "first_recognition": "The woman at the lectern has a bare wrist, so she was made from the old scan. The real ward, with this morning's bandage, went down the east stair with the physician into the service tunnel. June and Iris are going after her.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

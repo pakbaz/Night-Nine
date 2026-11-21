@@ -1,0 +1,18 @@
+{
+  "audio_id": "c7_gate.badge.lead.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "25cada1636f4681f9dd2f68b52fe233efb600b270a12c829b2cf92bc4e1af12a",
+  "expected": "Then one of us should hide. I vote you.",
+  "recognized": "then one of us should hide. I vote you.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 2.88,
+  "sample_rate": 48000,
+  "peak": 0.327911376953125,
+  "rms": 0.04997694492340088,
+  "first_recognition": "then one of us should hide. I vote you.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

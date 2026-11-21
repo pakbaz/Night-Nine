@@ -1,0 +1,18 @@
+{
+  "audio_id": "c9_choir.wick.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "a8b53083a321e1bbf9550c0a1a3590771b702bcf5b8cff61ffca9e9e0c7e5a4e",
+  "expected": "I heard you in the hum. The Choir was dreaming with you.",
+  "recognized": "I heard you in the hum. The choir was dreaming with you.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.8,
+  "sample_rate": 48000,
+  "peak": 0.406890869140625,
+  "rms": 0.04910246655344963,
+  "first_recognition": "I heard you in the hum. The choir was dreaming with you.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

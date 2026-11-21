@@ -1,0 +1,18 @@
+{
+  "audio_id": "c1_flat.sunday.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "25f3b6464721fe77c475b022ee2d43836c9e23129c96fc9cf5e5e9073e379661",
+  "expected": "Morning, Nor. Blue tape, Sunday. Date on everything, Dad.",
+  "recognized": "Morning, Nor. Blue tape, Sunday. Date on everything, Dad.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.88,
+  "sample_rate": 48000,
+  "peak": 0.3946533203125,
+  "rms": 0.040572866797447205,
+  "first_recognition": "Morning, Nor. Blue tape, Sunday. Date on everything, Dad.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

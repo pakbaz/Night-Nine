@@ -1,0 +1,18 @@
+{
+  "audio_id": "book.after.3.2",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "b2f46c04037e7a7a386d738fb64967caca3ac7c80c3e0fcb4ceed2c6636e4d1c",
+  "expected": "Dad labels everything now. The paint, the radios, me.",
+  "recognized": "Dad labels everything now. The paint, the radios, me.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 5.2,
+  "sample_rate": 48000,
+  "peak": 0.324920654296875,
+  "rms": 0.04063798859715462,
+  "first_recognition": "Dad labels everything now. The paint, the radios, me.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

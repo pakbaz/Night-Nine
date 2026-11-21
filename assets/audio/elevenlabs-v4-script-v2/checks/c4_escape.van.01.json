@@ -1,0 +1,18 @@
+{
+  "audio_id": "c4_escape.van.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "b04b9312835ba4cd7477666153b037bc29a8b396e559afce1a17e22f44ce96ff",
+  "expected": "I meant to land on my feet. The ditch had other plans.",
+  "recognized": "I meant to land on my feet. The ditch had other plans.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.08,
+  "sample_rate": 48000,
+  "peak": 0.287322998046875,
+  "rms": 0.03677650913596153,
+  "first_recognition": "I meant to land on my feet. The ditch had other plans.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

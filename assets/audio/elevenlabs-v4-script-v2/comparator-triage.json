@@ -1,0 +1,47 @@
+{
+  "schema": 1,
+  "scope": "deterministic ASR formatting/tokenization only",
+  "rules": [
+    "clock punctuation/compaction for the same HH:MM value",
+    "possessive apostrophe formatting for the same spoken token"
+  ],
+  "cleared_ids": [
+    "c10_station.playlist.find",
+    "c1_dinner.birthday.find",
+    "c1_flat.saturday.find",
+    "c3_archive.cycle.find",
+    "c3_archive.out.04",
+    "c3_archive.recap.02",
+    "c3_house.mail.find",
+    "c6_iris.alibi.find",
+    "c6_jail.distract.find",
+    "c6_jail.exit.find",
+    "c7_gate.badge.find",
+    "c7_gate.post.find",
+    "c7_gate.recap.02",
+    "c10_report.survey.lead.01",
+    "c2_ship.nora.find",
+    "c3_archive.power.lead.05",
+    "c8_lab.props.lead.01"
+  ],
+  "before": {
+    "held": 131,
+    "asr_mismatch": 73,
+    "short_asr_ambiguity": 58
+  },
+  "after": {
+    "held": 114,
+    "asr_mismatch": 56,
+    "short_asr_ambiguity": 58
+  },
+  "negative_controls": [
+    "different clock values remain different",
+    "dropped words remain different",
+    "added words remain different",
+    "changed clue values remain different",
+    "lexical and homophone differences remain different"
+  ],
+  "clip_id_whitelists": false,
+  "edit_distance_threshold_changed": false,
+  "listening_reviews_created": false
+}

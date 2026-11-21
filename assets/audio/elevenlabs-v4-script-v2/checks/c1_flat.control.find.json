@@ -1,0 +1,18 @@
+{
+  "audio_id": "c1_flat.control.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "3f910c6e2c1043cca198e894cca60f920b0b072f2aed02845a6217b9cc1cd4dd",
+  "expected": "Crossed out: the tape. It holds only what happened in the room. That leaves my ears, my grief, or Nora.",
+  "recognized": "crossed out, the tape. It holds only what happened in the room. That leaves my ears, my grief, or Nora.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 8.4,
+  "sample_rate": 48000,
+  "peak": 0.481475830078125,
+  "rms": 0.03341817110776901,
+  "first_recognition": "crossed out, the tape. It holds only what happened in the room. That leaves my ears, my grief, or Nora.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

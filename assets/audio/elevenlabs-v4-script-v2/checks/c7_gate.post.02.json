@@ -1,0 +1,18 @@
+{
+  "audio_id": "c7_gate.post.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "6f711b23619ace15218a7fc661eb6d7a8fe3e12edfce0bae57d883810698174c",
+  "expected": "An increasingly rare achievement.",
+  "recognized": "an increasingly rare achievement.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 2.56,
+  "sample_rate": 48000,
+  "peak": 0.214599609375,
+  "rms": 0.03154738247394562,
+  "first_recognition": "an increasingly rare achievement.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

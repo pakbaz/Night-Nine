@@ -1,0 +1,19 @@
+{
+  "audio_id": "c8_lab.in.05",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "cf21e995e9efe9eb68cfdf6404c47117a1fbff2d43782e154a0395ad1faefa1b",
+  "expected": "Mine fooled six. And a premier.",
+  "recognized": "MindFold 6 and a Premier",
+  "word_edits": 2,
+  "word_error_rate": 0.3333333333333333,
+  "listening_review_required": true,
+  "seconds": 3.28,
+  "sample_rate": 48000,
+  "peak": 0.54522705078125,
+  "rms": 0.08312278240919113,
+  "first_recognition": "MindFold 6 and a Premier",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms",
+  "independent_phrase_transcription": "Mindfold 6 and a premiere"
+}

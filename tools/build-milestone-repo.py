@@ -297,6 +297,13 @@ def make_snapshot(stage, strict):
     }
     catalog_assets(files, storybooks)
     files["game/content/storybook.json"] = serialized(storybooks)
+    narration = read(GAME / "content/narration.json")
+    narration["books"] = {
+        key: entry for key, entry in narration["books"].items()
+        if key in storybooks["books"]
+    }
+    catalog_assets(files, narration)
+    files["game/content/narration.json"] = serialized(narration)
     films = read(GAME / "content/films.json")
     files["game/content/films.json"] = serialized({room: film for room, film in films.items() if room in scene_ids})
     used_lines = set()
@@ -304,10 +311,13 @@ def make_snapshot(stage, strict):
     fx = {"ninth_night"}
     cast = set(PROLOGUE_CAST)
     for scene in scenes:
-        used_lines.update(scene["intro"] + scene["outro"])
+        used_lines.update(scene["intro"] + scene["outro"] + scene.get("recap", []))
+        catalog_assets(files, scene)
         cast.update(scene["actors"])
         for t in scene["tasks"]:
-            used_lines.update(t["lines"])
+            used_lines.update(t["lines"] + t.get("lead", []))
+            if t.get("finding"):
+                used_lines.add(t["finding"])
             signals.update(t.get("sounds", []))
             if t.get("puzzle", {}).get("recording"):
                 signals.add(t["puzzle"]["recording"])
@@ -325,7 +335,13 @@ def make_snapshot(stage, strict):
     take_ids = {s for s in signals if not s.startswith("effect.")} | {
         line["audio"] for line in visible_lines.values()
     }
-    voice = read(GAME / "content/voice-manifest.json")["takes"]
+    voice_manifest = read(GAME / "content/voice-manifest.json")
+    if strict and (
+        not voice_manifest.get("enabled", True)
+        or not narration.get("enabled", True)
+    ):
+        raise RuntimeError("Voice playback is not approved; use --rehearsal for a text-only snapshot.")
+    voice = voice_manifest["takes"]
     timing = read(GAME / "content/lipsync-manifest.json")["takes"]
     takes = {}
     cues = {}
@@ -335,28 +351,11 @@ def make_snapshot(stage, strict):
             continue
         v = voice[id]
         c = timing[id]
-        if strict and v.get("model") != "elevenlabs_v4":
+        if strict and v.get("model") not in {"elevenlabs_v4", "eleven_v4"}:
             raise RuntimeError("Final ElevenLabs take pending: " + id)
         if v["sha256"] != c["audio_sha256"]:
             raise RuntimeError("Stale timing " + id)
-        takes[id] = {
-            k: v[k]
-            for k in [
-                "id",
-                "speaker",
-                "identity",
-                "text",
-                "spoken_text",
-                "file",
-                "seconds",
-                "sha256",
-                "sample_rate",
-                "model",
-                "provider",
-                "preset",
-            ]
-            if k in v
-        }
+        takes[id] = dict(v)
         asset(files, v["file"])
         cues[id] = c
     campaign.update(
@@ -384,7 +383,7 @@ def make_snapshot(stage, strict):
     campaign["notebook_cases"] = cases
     files["game/content/campaign.json"] = serialized(campaign)
     files["game/content/voice-manifest.json"] = serialized(
-        {"schema": 1, "takes": takes}
+        {**voice_manifest, "takes": takes}
     )
     files["game/content/lipsync-manifest.json"] = serialized(
         {"schema": 1, "generator": "Rhubarb Lip Sync", "takes": cues}
@@ -452,6 +451,8 @@ def make_snapshot(stage, strict):
         }
     files["game/assets/audio/soundscape-manifest.json"] = serialized(public_sounds)
     if stage == 10:
+        for painting in sorted((GAME / "assets/illustrated/campaign/rewards").glob("*.webp")):
+            copy_sources(files, str(painting.relative_to(GAME)))
         for name in ("test_physical_navigation.gd", "test_social_staging.gd", "test_campaign_music.gd", "test_case_boards.gd", "test_animation_handoff.gd"):
             for suffix in ("", ".uid"):
                 files["game/qa/" + name + suffix] = GAME / "tests" / (name + suffix)

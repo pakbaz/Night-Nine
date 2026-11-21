@@ -1,0 +1,18 @@
+{
+  "audio_id": "c2_aquarium.plan.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "96fe3f14e19bde3a2bd20853ef093c1c9c2f2263260781ce1a070452df66dc02",
+  "expected": "Nora showed me this plan the week I fixed the underwater speakers. She said the pumps were the heartbeat of the place.",
+  "recognized": "Nora showed me this plan the week I fixed the underwater speakers. She said the pumps were the heartbeat of the place.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 6.96,
+  "sample_rate": 48000,
+  "peak": 0.29241943359375,
+  "rms": 0.03655851632356644,
+  "first_recognition": "Nora showed me this plan the week I fixed the underwater speakers. She said the pumps were the heartbeat of the place.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

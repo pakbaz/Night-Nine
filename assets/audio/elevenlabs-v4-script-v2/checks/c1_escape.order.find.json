@@ -1,0 +1,18 @@
+{
+  "audio_id": "c1_escape.order.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "acf65e95dabaf96f01c4bfa5d7b3f1906272f82402145162ba1d612dce190e5c",
+  "expected": "Someone signed Nora’s name in the north wing while she was at her mother’s birthday, across the bay. And now Nora has locked me in.",
+  "recognized": "Someone signed Nora's name in the north wing while she was at her mother's birthday, across the bay. And now, Nora has locked me in.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 8.0,
+  "sample_rate": 48000,
+  "peak": 0.289581298828125,
+  "rms": 0.04479242488741875,
+  "first_recognition": "Someone signed Nora's name in the north wing while she was at her mother's birthday, across the bay. And now, Nora has locked me in.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

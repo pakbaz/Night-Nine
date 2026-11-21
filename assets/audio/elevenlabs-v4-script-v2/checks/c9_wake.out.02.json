@@ -1,0 +1,18 @@
+{
+  "audio_id": "c9_wake.out.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "fa090e532a17493ec82fecf1915865d44adf75e384f6d9b7d5a87fca3f663f28",
+  "expected": "Take Stephen. Break the apparatus. Bring me the original.",
+  "recognized": "Take Steven. Break the apparatus. Bring me the original.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 3.68,
+  "sample_rate": 48000,
+  "peak": 0.49639892578125,
+  "rms": 0.045046236366033554,
+  "first_recognition": "Take Steven. Break the apparatus. Bring me the original.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "c6_iris.out.03",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "b2d8923e355dc0586f379bcbd6e96adb8a51608ba288361cef96b75c9d77982f",
+  "expected": "Iris. After the flowers on the balcony.",
+  "recognized": "Iris, after the flowers on the balcony.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 2.8,
+  "sample_rate": 48000,
+  "peak": 0.5228271484375,
+  "rms": 0.06322602927684784,
+  "first_recognition": "Iris, after the flowers on the balcony.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

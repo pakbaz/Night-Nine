@@ -1,0 +1,18 @@
+{
+  "audio_id": "c1_dinner.birthday.lead.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "8eec9b7386b20f38570efc296fd90564920652a3f38b5ad3ee15747822da12e3",
+  "expected": "Look at this. My birthday, last month.",
+  "recognized": "Look at this, my birthday last month.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 3.6,
+  "sample_rate": 48000,
+  "peak": 0.4710693359375,
+  "rms": 0.04011114686727524,
+  "first_recognition": "Look at this, my birthday last month.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "c1_flat.out.03",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "fe304804d6d0099b87f0d404fd9931b7485edada2bb11ed4a64d2e4913775083",
+  "expected": "Nor? Walk the pier with me this afternoon? Like we used to. We could say hi to Admiral.",
+  "recognized": "Nor walk the pier with me this afternoon like we used to. We could say hi to Admiral.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 5.52,
+  "sample_rate": 48000,
+  "peak": 0.371490478515625,
+  "rms": 0.04313088208436966,
+  "first_recognition": "Nor walk the pier with me this afternoon like we used to. We could say hi to Admiral.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

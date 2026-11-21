@@ -1,0 +1,18 @@
+{
+  "audio_id": "p_meeting.terms.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "75ad8f226ea965a3531cb34859ab75b8ff32bc6e80c3788b26814f82353d2b59",
+  "expected": "That would be a useful place to begin.",
+  "recognized": "That would be a useful place to begin.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 2.8,
+  "sample_rate": 48000,
+  "peak": 0.562042236328125,
+  "rms": 0.05987844616174698,
+  "first_recognition": "That would be a useful place to begin.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

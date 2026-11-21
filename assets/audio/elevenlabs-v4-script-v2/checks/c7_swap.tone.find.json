@@ -1,0 +1,19 @@
+{
+  "audio_id": "c7_swap.tone.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "ce32213abb266a2f70da01f08ca22e6a90234e67b7fc5f679a1a516719bd111a",
+  "expected": "At 11:58:15 Dad’s tone went out on every site speaker. Fourteen people stopped and turned toward the sea, the woman at the microphone among them. June and Iris had the real President.",
+  "recognized": "at 11 58 15 Dad's tone went out on every sight speaker. Fourteen people stopped and turned toward the sea. the woman at the microphone among them. June and Iris had the real president.",
+  "word_edits": 3,
+  "word_error_rate": 0.09090909090909091,
+  "listening_review_required": true,
+  "seconds": 12.88,
+  "sample_rate": 48000,
+  "peak": 0.471923828125,
+  "rms": 0.03714228421449661,
+  "first_recognition": "At 1158.15, Dad's tone went out on every sight speaker. Fourteen people stopped and turned toward the sea, the woman at the microphone among them. June and Iris had the real president.",
+  "recognition_pass": "independent_phrases",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms",
+  "independent_phrase_transcription": "at 11 58 15 Dad's tone went out on every sight speaker. Fourteen people stopped and turned toward the sea. the woman at the microphone among them. June and Iris had the real president."
+}

@@ -1,0 +1,19 @@
+{
+  "audio_id": "book.aftermath.4.2",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "ed95eafa94838a16ab1add79e8abe5ce1f1bc56e47817fa08a103440f9cb1443",
+  "expected": "After the boat I went quiet. She pushed, then shouted, then stopped. Lately she’s been endlessly patient with me. I figured I’d worn her out.",
+  "recognized": "After the boat, I went quiet. She pushed, then shouted, then stopped. Lately, she's been endlessly patient with me. I figured I'd warn her out.",
+  "word_edits": 1,
+  "word_error_rate": 0.038461538461538464,
+  "listening_review_required": true,
+  "seconds": 10.4,
+  "sample_rate": 48000,
+  "peak": 0.5010986328125,
+  "rms": 0.037158384919166565,
+  "first_recognition": "After the boat, I went quiet. She pushed, then shouted, then stopped. Lately, she's been endlessly patient with me. I figured I'd warn her out.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms",
+  "independent_phrase_transcription": "After the boat, I went quiet. She pushed. Then shouted... then stopped. Lately, she's been endlessly patient with me. I figured I'd warn her out."
+}

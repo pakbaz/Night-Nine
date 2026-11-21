@@ -1,0 +1,18 @@
+{
+  "audio_id": "c9_wake.in.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "bf3378d788ffe99e29c2f01d349952351e1ade90b99459cf4d703d34268e5074",
+  "expected": "We’ve kept the service route open. Tell me who to wake first.",
+  "recognized": "We've kept the service route open. Tell me who to wake first.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 3.76,
+  "sample_rate": 48000,
+  "peak": 0.423431396484375,
+  "rms": 0.05690552666783333,
+  "first_recognition": "We've kept the service route open. Tell me who to wake first.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

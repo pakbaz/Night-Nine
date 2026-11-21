@@ -1,0 +1,18 @@
+{
+  "audio_id": "c6_iris.hold.04",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "8acb5b39d4131316dec394fe54867fdc7f130ac7226b955a419086d47d9c36e9",
+  "expected": "Saren believes your mother wrote down how the engine works. A records officer told him so. I have never seen him want anything more.",
+  "recognized": "Saren believes your mother wrote down how the engine works. A records officer told him so. I have never seen him want anything more.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 8.4,
+  "sample_rate": 48000,
+  "peak": 0.641448974609375,
+  "rms": 0.061538852751255035,
+  "first_recognition": "Saren believes your mother wrote down how the engine works. A records officer told him so. I have never seen him want anything more.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

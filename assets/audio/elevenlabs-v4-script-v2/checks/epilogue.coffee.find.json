@@ -1,0 +1,18 @@
+{
+  "audio_id": "epilogue.coffee.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "041db71c9e0ea3d8a30bd1d254c5ac5db6feea49131317cd8429f2637d94164d",
+  "expected": "Mom and Dad are home. There’s a note on the table. And Nora is waiting at the door.",
+  "recognized": "Mom and dad are home. There's a note on the table, and Nora is waiting at the door.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 5.12,
+  "sample_rate": 48000,
+  "peak": 0.36602783203125,
+  "rms": 0.04120957478880882,
+  "first_recognition": "Mom and dad are home. There's a note on the table, and Nora is waiting at the door.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

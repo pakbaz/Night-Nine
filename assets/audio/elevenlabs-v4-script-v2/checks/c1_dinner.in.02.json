@@ -1,0 +1,18 @@
+{
+  "audio_id": "c1_dinner.in.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "b7c770c274fd21cdc49b59c8848231539911df2423033d7c1a9568904b15afc4",
+  "expected": "I kept the sauce separate. You used to like it that way.",
+  "recognized": "I kept the sauce separate. You used to like it that way.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 3.36,
+  "sample_rate": 48000,
+  "peak": 0.69036865234375,
+  "rms": 0.06027444824576378,
+  "first_recognition": "I kept the sauce separate. You used to like it that way.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "c8_lab.out.05",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "5cc19352ccaaa6581c3c8336cf33b6795d91f7374629cc28b8c461d8892b3f50",
+  "expected": "When I turned round, she was gone.",
+  "recognized": "When I turned round, she was gone.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 2.64,
+  "sample_rate": 48000,
+  "peak": 0.24530029296875,
+  "rms": 0.03949587047100067,
+  "first_recognition": "When I turned round, she was gone.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "p_meeting.out.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "27b0aca26edbad74ce4be9a0fa405b11b93c419b5c66438e8d5f812ffac5fa2a",
+  "expected": "When they understood that they had bluffed each other, the whole room laughed. Tired laughter. The kind that lets you breathe.",
+  "recognized": "When they understood that they had bluffed each other, the whole room laughed. Tired laughter. The kind that lets you breathe.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 9.76,
+  "sample_rate": 48000,
+  "peak": 0.535186767578125,
+  "rms": 0.04857412725687027,
+  "first_recognition": "When they understood that they had bluffed each other, the whole room laughed. Tired laughter. The kind that lets you breathe.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

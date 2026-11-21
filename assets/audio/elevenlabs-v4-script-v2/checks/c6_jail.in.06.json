@@ -1,0 +1,18 @@
+{
+  "audio_id": "c6_jail.in.06",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "ed1e600b326e8926129115b279acedd8ccbccf2d197d7a8e997379fa3df5aec2",
+  "expected": "I have fed Biscuit twice a day since the Sheriff went away. If I report you properly, they will reset me, and I will not remember her.",
+  "recognized": "I have fed Biscuit twice a day since the sheriff went away. If I report you properly, they will reset me and I will not remember her.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 9.52,
+  "sample_rate": 48000,
+  "peak": 0.7498779296875,
+  "rms": 0.07847841084003448,
+  "first_recognition": "I have fed Biscuit twice a day since the sheriff went away. If I report you properly, they will reset me and I will not remember her.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

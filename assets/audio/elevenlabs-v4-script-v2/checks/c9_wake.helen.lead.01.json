@@ -1,0 +1,18 @@
+{
+  "audio_id": "c9_wake.helen.lead.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "9166d4e4f6599e3c1adc6e369e854e2964227e923612c2d27d468895b5e3c8bb",
+  "expected": "Your mother. Play her the song, kiddo. I’ll write it down for you.",
+  "recognized": "Your mother. Play her the song, kiddo. I'll write it down for you.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.64,
+  "sample_rate": 48000,
+  "peak": 0.421783447265625,
+  "rms": 0.0626169890165329,
+  "first_recognition": "Your mother. Play her the song, kiddo. I'll write it down for you.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "c9_wake.frank.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "3ef94c308337871bb38c0fefafc84a303e8313c7ee52773c79f3d8fd09cf193e",
+  "expected": "Dad’s card is K7BLW. The scratched head lost the last group, the W: dot, dash, dash. I sent it again, and Dad answered his own call sign.",
+  "recognized": "Dad's card is K7BLW. The scratched head lost the last group, the W. Dot, dash, dash. I sent it again, and Dad answered his own call sign.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 12.96,
+  "sample_rate": 48000,
+  "peak": 0.412353515625,
+  "rms": 0.0395018607378006,
+  "first_recognition": "Dad's card is K7BLW. The scratched head lost the last group, the W. Dot, dash, dash. I sent it again, and Dad answered his own call sign.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

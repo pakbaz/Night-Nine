@@ -1,0 +1,18 @@
+{
+  "audio_id": "c7_swap.bus.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "394557846041a5c815e6091e10200d8756813d171d379fbaed301ab9b6609775",
+  "expected": "All-call. Enough level to reach the back fence. Leave the microphone clear.",
+  "recognized": "All call. Enough level to reach the back fence. Leave the microphone clear.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.8,
+  "sample_rate": 48000,
+  "peak": 0.626861572265625,
+  "rms": 0.04669031873345375,
+  "first_recognition": "All call. Enough level to reach the back fence. Leave the microphone clear.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

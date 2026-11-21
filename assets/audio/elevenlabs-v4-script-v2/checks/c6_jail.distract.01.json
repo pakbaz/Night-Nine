@@ -1,0 +1,18 @@
+{
+  "audio_id": "c6_jail.distract.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "a39f042ec1407d6235bc41e2167d9f13081b3b81e96e548adb617e77915dc72a",
+  "expected": "I would like a better photograph. My family will be seeing these.",
+  "recognized": "I would like a better photograph. My family will be seeing these.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.08,
+  "sample_rate": 48000,
+  "peak": 0.369781494140625,
+  "rms": 0.0390741266310215,
+  "first_recognition": "I would like a better photograph. My family will be seeing these.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

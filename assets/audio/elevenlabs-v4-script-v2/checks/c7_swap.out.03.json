@@ -1,0 +1,18 @@
+{
+  "audio_id": "c7_swap.out.03",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "9150c9f0a82d0a1d3d36fb3bdcb277c7b87f6491fa7d7544ed094050324768bb",
+  "expected": "There is no engine. There never was.",
+  "recognized": "There is no engine. There never was.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 2.96,
+  "sample_rate": 48000,
+  "peak": 0.325592041015625,
+  "rms": 0.0490153543651104,
+  "first_recognition": "There is no engine. There never was.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

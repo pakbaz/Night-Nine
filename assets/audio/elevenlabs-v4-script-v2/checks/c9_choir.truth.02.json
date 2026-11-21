@@ -1,0 +1,18 @@
+{
+  "audio_id": "c9_choir.truth.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "58b7ae6d74095b6a81ee13c6a664b7507eab7fc3dcb948881fd735ab384d5dbb",
+  "expected": "Same voice. In October she played back a recording. On Monday she chose her own words.",
+  "recognized": "same voice. in october she played back a recording. on monday she chose her own words.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 6.72,
+  "sample_rate": 48000,
+  "peak": 0.353973388671875,
+  "rms": 0.03903556987643242,
+  "first_recognition": "same voice. in october she played back a recording. on monday she chose her own words.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

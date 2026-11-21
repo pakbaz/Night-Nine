@@ -1,0 +1,18 @@
+{
+  "audio_id": "c7_swap.out.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "0d95d3a8d6babbfb1155969b43bfb84152335e512ce849dc1dfe01b8fcd5c1be",
+  "expected": "Is he awake? The other one?",
+  "recognized": "Is he awake? The other one?",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 2.72,
+  "sample_rate": 48000,
+  "peak": 0.233673095703125,
+  "rms": 0.02579551935195923,
+  "first_recognition": "Is he awake? The other one?",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "p_veyr.record.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "69c682523bf74d200bf50bd2d4e7a8054f2ba470631fc91548aee03d837af606",
+  "expected": "Forty thousand names. Somebody should remember the quiet after them.",
+  "recognized": "40,000 names. Somebody should remember the quiet after them.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 5.92,
+  "sample_rate": 48000,
+  "peak": 0.8209228515625,
+  "rms": 0.11604177951812744,
+  "first_recognition": "40,000 names. Somebody should remember the quiet after them.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "c1_pier.in.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "f328fe4ac3dcbe35c56645007f2b3758b9c003bd4d3ed20d07f9dab7804f3cc2",
+  "expected": "Admiral! That was my lunch. You’re six hundred pounds of sea lion, and you don’t even like rye.",
+  "recognized": "Admiral, that was my lunch. You're 600 pounds of sea lion, and you don't even like rye.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 6.4,
+  "sample_rate": 48000,
+  "peak": 0.55755615234375,
+  "rms": 0.04852062836289406,
+  "first_recognition": "Admiral, that was my lunch. You're 600 pounds of sea lion, and you don't even like rye.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

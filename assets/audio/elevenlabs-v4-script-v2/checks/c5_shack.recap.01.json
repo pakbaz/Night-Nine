@@ -1,0 +1,18 @@
+{
+  "audio_id": "c5_shack.recap.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "164bb9a8f342165647ae500a543e7453db572316c2ff9aafe9dfe5a4ed1cd9e0",
+  "expected": "Mom and Dad tracked the hum for months. Dad heard a choir in it. Mom wrote Meridian in the margins.",
+  "recognized": "Mom and Dad tracked the hum for months. Dad heard a choir in it. Mom wrote Meridian in the margins.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 7.36,
+  "sample_rate": 48000,
+  "peak": 0.4010009765625,
+  "rms": 0.03934996575117111,
+  "first_recognition": "Mom and Dad tracked the hum for months. Dad heard a choir in it. Mom wrote Meridian in the margins.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

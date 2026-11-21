@@ -1,0 +1,18 @@
+{
+  "audio_id": "c5_shack.out.04",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "38daaed57b8d66064df3dc606a673a1d2fb809eca0db02500f378ba8330c4f74",
+  "expected": "Six days, Rook said. It’s counting down to the signing.",
+  "recognized": "Six days, Rook said. It's counting down to the signing.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.16,
+  "sample_rate": 48000,
+  "peak": 0.3323974609375,
+  "rms": 0.037875186651945114,
+  "first_recognition": "Six days, Rook said. It's counting down to the signing.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

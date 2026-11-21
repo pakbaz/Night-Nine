@@ -1,0 +1,18 @@
+{
+  "audio_id": "c9_gallery.ctx.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "5f954fd421e665d5d6cb841c003925858bca8fd111207f489c541b424c4680bb",
+  "expected": "The third ninth night. We came in through the intake tunnel, soaked to the knees.",
+  "recognized": "The third, ninth night. We came in through the intake tunnel, soaked to the knees.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 5.68,
+  "sample_rate": 48000,
+  "peak": 0.302520751953125,
+  "rms": 0.03967687487602234,
+  "first_recognition": "The third, ninth night. We came in through the intake tunnel, soaked to the knees.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

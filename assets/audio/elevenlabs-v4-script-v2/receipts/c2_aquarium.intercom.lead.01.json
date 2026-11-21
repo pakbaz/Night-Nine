@@ -1,0 +1,15 @@
+{
+  "operation": "text_to_speech",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "audio_id": "c2_aquarium.intercom.lead.01",
+  "voice_id": "vveagfomyMCJLZsOPRP2",
+  "model_id": "eleven_v4",
+  "text_sha256": "083a9e9be25463bd694f5a886ae33de9348a6cd83ae4dbbf8c0eaacebea0e6d2",
+  "synthesis_text_sha256": "083a9e9be25463bd694f5a886ae33de9348a6cd83ae4dbbf8c0eaacebea0e6d2",
+  "request_id": "0eAp7t8CLnq9YzKwEkZT",
+  "trace_id": "b1be1d17f4d079e93a36946e255f23c5",
+  "character_cost": 31,
+  "output_format": "mp3_44100_192",
+  "audio_sha256": "a8ca2d62203a391eeb262ce9aa67323eeb812a79ce13835308e28bdee64cf5c2",
+  "response_bytes": 145492
+}

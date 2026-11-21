@@ -1,0 +1,18 @@
+{
+  "audio_id": "c6_iris.recap.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "93e4fcb5b4f3aa6d950e27b32e7d5ca6dec397b67dcb2ef305a9c34c1c39c15a",
+  "expected": "Copies far from the bay stay in step on hold. Saren wants Mom’s notebook, and on Wednesday he wants the President.",
+  "recognized": "Copies far from the bay stay in step on hold. Saren wants Mom's notebook, and on Wednesday, he wants the president.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 8.08,
+  "sample_rate": 48000,
+  "peak": 0.421661376953125,
+  "rms": 0.03797801956534386,
+  "first_recognition": "Copies far from the bay stay in step on hold. Saren wants Mom's notebook, and on Wednesday, he wants the president.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "c1_escape.power.lead.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "9d78426b379dd92e28b496ff92b8726e4e7998351f04f3c7a69151aa97ae1e22",
+  "expected": "The balcony. Mr. Bell’s gate is the only other way down.",
+  "recognized": "The balcony, Mr. Bell's gate is the only other way down.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.0,
+  "sample_rate": 48000,
+  "peak": 0.456939697265625,
+  "rms": 0.04313073679804802,
+  "first_recognition": "At the balcony, Mr. Bell's gate is the only other way down.",
+  "recognition_pass": "story_vocabulary_2",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

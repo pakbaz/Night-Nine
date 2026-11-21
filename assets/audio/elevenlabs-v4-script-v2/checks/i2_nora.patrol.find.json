@@ -1,0 +1,18 @@
+{
+  "audio_id": "i2_nora.patrol.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "75fd69715743aa63ff373d6011598399b67814bd144b6f57a8337ee72540ee28",
+  "expected": "The guard’s lap is twelve counts. On the next lap the far door shuts at 20 and the boots come back at 26. Four counts to cross. We can move.",
+  "recognized": "The guard's lap is 12 counts. On the next lap, the far door shuts at 20 and the boots come back at 26. Four counts to cross. We can move.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 10.16,
+  "sample_rate": 48000,
+  "peak": 0.484405517578125,
+  "rms": 0.05705569311976433,
+  "first_recognition": "The guard's lap is 12 counts. On the next lap, the far door shuts at 20 and the boots come back at 26. Four counts to cross. We can move.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

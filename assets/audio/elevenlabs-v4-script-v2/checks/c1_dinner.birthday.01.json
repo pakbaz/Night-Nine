@@ -1,0 +1,18 @@
+{
+  "audio_id": "c1_dinner.birthday.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "807dd332065871001329ac2f229beed9603939fabcbbafe32d703818bbd9b4a6",
+  "expected": "I drove her here at noon. Rafa drove her home. Midnight, give or take ten minutes.",
+  "recognized": "I drove her here at noon. Rafa drove her home. Midnight, give or take ten minutes.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 6.56,
+  "sample_rate": 48000,
+  "peak": 0.818084716796875,
+  "rms": 0.08882942795753479,
+  "first_recognition": "I drove her here at noon. Rafa drove her home. Midnight, give or take ten minutes.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

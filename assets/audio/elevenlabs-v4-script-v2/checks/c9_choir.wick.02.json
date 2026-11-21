@@ -1,0 +1,18 @@
+{
+  "audio_id": "c9_choir.wick.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "fcffdfdf7ee61dcaa7b4b875c0d2f195633189f539c89550d1bebdd97961afc7",
+  "expected": "Tirel hid. All seven worlds hid. They watched you erase yourselves and were afraid you would erase them.",
+  "recognized": "Tyrell hid. All seven worlds hid. They watched you erase yourselves and were afraid you would erase them.",
+  "word_edits": 1,
+  "word_error_rate": 0.05555555555555555,
+  "listening_review_required": true,
+  "seconds": 9.04,
+  "sample_rate": 48000,
+  "peak": 0.40594482421875,
+  "rms": 0.05354781821370125,
+  "first_recognition": "Tyrell hid. All seven worlds hid. They watched you erase yourselves and were afraid you would erase them.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "c1_pier.door.lead.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "4a4e3c94568d9113ace2a96b28dd6bd37f8523d7015c6fc21202fd2e67030b49",
+  "expected": "...Thank you, Lyle.",
+  "recognized": "Thank you, Lyle.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 1.2,
+  "sample_rate": 48000,
+  "peak": 0.345184326171875,
+  "rms": 0.041908252984285355,
+  "first_recognition": "Thank you, Lyle.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_live.third.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "03fa58844313438a593dacea365b65785afab838bff361bc00ce03d5efdcc1f8",
+  "expected": "Keep the voices clear. Let them hear every one.",
+  "recognized": "Keep the voices clear. Let them hear everyone.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.16,
+  "sample_rate": 48000,
+  "peak": 0.308013916015625,
+  "rms": 0.0388588085770607,
+  "first_recognition": "Keep the voices clear. Let them hear everyone.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

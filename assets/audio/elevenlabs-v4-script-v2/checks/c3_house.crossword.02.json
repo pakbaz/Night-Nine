@@ -1,0 +1,18 @@
+{
+  "audio_id": "c3_house.crossword.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "ad580e1ae597457f56540434c1153ae280bbbd950cd140103de4c0f3c4e90cbf",
+  "expected": "No copy is that bad at this. And you’ve put coffee in my lap.",
+  "recognized": "No copy is that bad at this. And you've put coffee in my lap.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.4,
+  "sample_rate": 48000,
+  "peak": 0.484619140625,
+  "rms": 0.06618690490722656,
+  "first_recognition": "No copy is that bad at this. And you've put coffee in my lap.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

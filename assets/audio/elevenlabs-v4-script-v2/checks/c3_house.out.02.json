@@ -1,0 +1,18 @@
+{
+  "audio_id": "c3_house.out.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "9e6cd2be9376f2ef36939fe4589a7ab77f307da3ef3d7f1a224b30d0fe8c84ee",
+  "expected": "Then let’s find out which of them got better, and which of them got replaced.",
+  "recognized": "Then let's find out which of them got better, and which of them got replaced.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.64,
+  "sample_rate": 48000,
+  "peak": 0.388885498046875,
+  "rms": 0.043253663927316666,
+  "first_recognition": "Then let's find out which of them got better, and which of them got replaced.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

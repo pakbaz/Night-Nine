@@ -1,0 +1,18 @@
+{
+  "audio_id": "epilogue.in.03",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "c71d3e79d078573f878f6ccc9e733c81332087489f5dbef018775f175f463154",
+  "expected": "Thank you for helping us. I haven’t forgiven the kidnapping.",
+  "recognized": "Thank you for helping us. I haven't forgiven the kidnapping.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.08,
+  "sample_rate": 48000,
+  "peak": 0.480072021484375,
+  "rms": 0.04854700714349747,
+  "first_recognition": "Thank you for helping us. I haven't forgiven the kidnapping.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

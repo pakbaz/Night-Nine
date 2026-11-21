@@ -1,0 +1,18 @@
+{
+  "audio_id": "c6_jail.mail.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "d5fa4effcad5be79e56b821cf7e35b81198562cbeed60c5ce9c38cb1544a987c",
+  "expected": "June’s own crossword is in the jail pile. I’ll circle one square and post it through her slot.",
+  "recognized": "June's own crossword is in the jail pile. I'll circle one square and post it through her slot.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 6.0,
+  "sample_rate": 48000,
+  "peak": 0.3489990234375,
+  "rms": 0.041680388152599335,
+  "first_recognition": "June's own crossword is in the jail pile. I'll circle one square and post it through her slot.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "one_year.newwind.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "06597e3a6e13b84ef0f167044c28d734414655ace084348cffa09b6013826e1c",
+  "expected": "Ready? We’re on.",
+  "recognized": "Ready? We're on.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 1.6,
+  "sample_rate": 48000,
+  "peak": 0.358856201171875,
+  "rms": 0.06236650049686432,
+  "first_recognition": "Ready? We're on.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "c7_swap.ctx.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "10b3e0b0569a54023e07c36bcb969680d86162062d4750d1a045841b165125d1",
+  "expected": "If it played on every speaker at once, every copy on the site would answer it at once. In front of everybody.",
+  "recognized": "If it played on every speaker at once, every copy on the site would answer it at once, in front of everybody.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 7.36,
+  "sample_rate": 48000,
+  "peak": 0.341156005859375,
+  "rms": 0.03564726561307907,
+  "first_recognition": "If it played on every speaker at once, every copy on the site would answer it at once, in front of everybody.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

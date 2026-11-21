@@ -1,0 +1,18 @@
+{
+  "audio_id": "book.after.5.1",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "5f633bd88a12c844bbc25acb50e4db3120fe2af2ca9b5429a3291caacb4d9b9a",
+  "expected": "KBWR has live hosts again. Two of them.",
+  "recognized": "KBWR has live hosts again, two of them.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 3.84,
+  "sample_rate": 48000,
+  "peak": 0.383941650390625,
+  "rms": 0.051465995609760284,
+  "first_recognition": "KBWR has live hosts again, two of them.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

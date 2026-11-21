@@ -1,0 +1,18 @@
+{
+  "audio_id": "c1_dinner.family.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "83ffbd5e88cded9891cc70b0f4856a9a7af8e3094f749399c05c0094c0173403",
+  "expected": "Eat before it gets cold, Steve. Then tell us what is troubling you.",
+  "recognized": "Eat before it gets cold, Steve. Then tell us what is troubling you.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.32,
+  "sample_rate": 48000,
+  "peak": 0.860137939453125,
+  "rms": 0.08704625815153122,
+  "first_recognition": "Eat before it gets cold, Steve. Then tell us what is troubling you.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "c1_flat.recap.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "ec5606e046e8b742dad5346cd7e9e41ec02a81e54e079a2405cd439fe5ce0a77",
+  "expected": "Dad’s recorder runs true, and the tape is clean. And the woman I love said good morning twice, the way a cassette would.",
+  "recognized": "Dad's recorder runs true, and the tape is clean. And the woman I love said good morning twice, the way a cassette would.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 8.16,
+  "sample_rate": 48000,
+  "peak": 0.31982421875,
+  "rms": 0.03747530281543732,
+  "first_recognition": "Dad's recorder runs true, and the tape is clean. And the woman I love said good morning twice, the way a cassette would.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

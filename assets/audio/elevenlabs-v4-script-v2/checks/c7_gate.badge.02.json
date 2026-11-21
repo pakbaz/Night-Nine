@@ -1,0 +1,18 @@
+{
+  "audio_id": "c7_gate.badge.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "2a011e41802bf13045737b18a9e2cf59feb8cf8c2d7a2e79dd0d8747d305c14e",
+  "expected": "You look like this poster.",
+  "recognized": "You look like this poster.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 1.84,
+  "sample_rate": 48000,
+  "peak": 0.309600830078125,
+  "rms": 0.030109796673059464,
+  "first_recognition": "You look like this poster.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

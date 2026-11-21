@@ -1,0 +1,18 @@
+{
+  "audio_id": "c9_gallery.link.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "84d84ffebc450411d33097493918e32c9b41e943d9fb064b108ee98dc692d53b",
+  "expected": "These memories were borrowed. The choice is mine.",
+  "recognized": "These memories were borrowed. The choice is mine.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 3.68,
+  "sample_rate": 48000,
+  "peak": 0.34429931640625,
+  "rms": 0.056034788489341736,
+  "first_recognition": "These memories were borrowed. The choice is mine.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

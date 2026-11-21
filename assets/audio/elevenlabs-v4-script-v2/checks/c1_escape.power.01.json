@@ -1,0 +1,18 @@
+{
+  "audio_id": "c1_escape.power.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "4af49e668365753dee6f4cd2d0af77bec4b635c6de68599dcf2ef7cd07fa1a44",
+  "expected": "I fixed this latch for Mr. Bell last winter. He paid me in fruitcake. Tonight it’s worth every slice.",
+  "recognized": "I fixed this latch for Mr. Bell last winter. He paid me in fruitcake. Tonight, it's worth every slice.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 7.28,
+  "sample_rate": 48000,
+  "peak": 0.46514892578125,
+  "rms": 0.03573599085211754,
+  "first_recognition": "I fixed this latch for Mr. Bell last winter. He paid me in fruitcake. Tonight, it's worth every slice.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

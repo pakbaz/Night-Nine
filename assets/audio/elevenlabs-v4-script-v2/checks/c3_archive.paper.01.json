@@ -1,0 +1,18 @@
+{
+  "audio_id": "c3_archive.paper.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "cfed816ea22c26b38869e06c9f0f9556140b0570e70ff1b87ac7eb01f73ff4d6",
+  "expected": "Two places. Same time. Witnesses on both documents.",
+  "recognized": "Two places, same time, witnesses on both documents.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.56,
+  "sample_rate": 48000,
+  "peak": 0.414947509765625,
+  "rms": 0.04147673398256302,
+  "first_recognition": "Two places, same time, witnesses on both documents.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

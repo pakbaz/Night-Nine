@@ -1,0 +1,19 @@
+{
+  "audio_id": "c10_town.in.09",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "7697abeea26552738b70630c360d3ba8425f39692640a1f4eb16492c5fefdf32",
+  "expected": "Veyr was our home, Steven. Our sun failed. That is the last wind that ever blew through our city.",
+  "recognized": "there was our home stephen our son failed that is the last wind that ever blew through our city",
+  "word_edits": 2,
+  "word_error_rate": 0.10526315789473684,
+  "listening_review_required": true,
+  "seconds": 7.84,
+  "sample_rate": 48000,
+  "peak": 0.34716796875,
+  "rms": 0.04090050235390663,
+  "first_recognition": "there was our home stephen our son failed that is the last wind that ever blew through our city",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms",
+  "independent_phrase_transcription": "there was our home stephen Our son failed. That is the last wind that ever blew through our city."
+}

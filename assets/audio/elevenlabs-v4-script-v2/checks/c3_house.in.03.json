@@ -1,0 +1,18 @@
+{
+  "audio_id": "c3_house.in.03",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "1fcdce052d1547b25a6b326ba7a131b62ebe12a954e62ca5f1690e26591f29fb",
+  "expected": "Then we start with what you can prove.",
+  "recognized": "Then we start with what you can prove.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 2.64,
+  "sample_rate": 48000,
+  "peak": 0.480438232421875,
+  "rms": 0.05995362251996994,
+  "first_recognition": "Then we start with what you can prove.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

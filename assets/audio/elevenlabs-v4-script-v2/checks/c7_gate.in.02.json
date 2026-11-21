@@ -1,0 +1,18 @@
+{
+  "audio_id": "c7_gate.in.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "1f5aac2ca186b3aa34737040b3c37a4459c389de2b40379589106c09776819ce",
+  "expected": "Registered mail for the President. Delivery cannot be delayed.",
+  "recognized": "Registered mail for the president. Delivery cannot be delayed.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.48,
+  "sample_rate": 48000,
+  "peak": 0.871307373046875,
+  "rms": 0.08373895287513733,
+  "first_recognition": "Registered mail for the president. Delivery cannot be delayed.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

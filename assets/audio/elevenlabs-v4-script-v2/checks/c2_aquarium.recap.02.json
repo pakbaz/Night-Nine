@@ -1,0 +1,18 @@
+{
+  "audio_id": "c2_aquarium.recap.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "95d3c85233a7ef0d9706c71f9e5cd50d6a059738d0f628f710e39a2227a4d416",
+  "expected": "The woman who said good morning to me yesterday was not Nora. Nora was here, frightened, whistling for help. And I didn’t hear it for five months.",
+  "recognized": "The woman who said good morning to me yesterday was not Nora. Nora was here, frightened, whistling for help. And I didn't hear it for five months.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 10.32,
+  "sample_rate": 48000,
+  "peak": 0.422882080078125,
+  "rms": 0.03626539558172226,
+  "first_recognition": "The woman who said good morning to me yesterday was not Nora. Nora was here, frightened, whistling for help. And I didn't hear it for five months.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

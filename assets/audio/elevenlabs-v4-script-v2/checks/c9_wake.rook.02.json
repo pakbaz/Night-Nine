@@ -1,0 +1,18 @@
+{
+  "audio_id": "c9_wake.rook.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "8369c18912e9f470e1ff619f0ca25e00e9528389887c208a5a5c3b521e5a6b6c",
+  "expected": "June? Why am I in pajamas?",
+  "recognized": "June? Why am I in pajamas?",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 3.04,
+  "sample_rate": 48000,
+  "peak": 0.137939453125,
+  "rms": 0.019571684300899506,
+  "first_recognition": "June? Why am I in pajamas?",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

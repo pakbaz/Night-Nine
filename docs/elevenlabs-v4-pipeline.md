@@ -1,8 +1,8 @@
 # ElevenLabs v4 production pipeline
 
-Status: prepared and dry-run only. No voices were added and no speech was generated.
+Status: all 873 audio IDs have been generated and structurally validated. Playback remains disabled because strict QA held 120 takes for actual review.
 
-## Frozen dry run
+## Frozen production
 
 - Plan: `assets/audio/elevenlabs-v4-script-v2/plan.json`
 - Plan SHA-256: `62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889`
@@ -10,17 +10,11 @@ Status: prepared and dry-run only. No voices were added and no speech was genera
 - 872 billed speech requests and one verified local edit, `recording.saren_splice`
 - 66,442 unique utterance characters
 - 66,497 request characters after supported Eleven v4 whisper tags
-- Estimated charge: 67,405 plan credits
+- 872 complete billed-request receipts and one locally verified splice receipt
 
 The estimate includes the Voice Library multiplier reported for AGEIS-7: 3x credits for its seven lines. Its `fiat_rate` metadata is 0.25, but ElevenLabs documents this legacy custom rate as a credit multiplier, not automatic account overage. Every other selected voice reports a 1x rate.
 
-The read-only preflight confirmed:
-
-- `eleven_v4` is currently available for text to speech.
-- The account has sufficient included credits for the frozen plan.
-- Paid overage is disabled and the pipeline refuses to run if it becomes enabled.
-- All 24 shared voices are currently discoverable and fit in the available slots.
-- The two premade voices are available.
+The read-only preflight confirmed `eleven_v4`, the approved voices, sufficient included credits, and disabled paid overage before generation.
 
 ## Safety and resume behavior
 
@@ -42,7 +36,7 @@ Validation is offline:
 - Keep voice and storybook narration disabled until the complete set has either passed automated QA or received actual review for its hard holds.
 - On every replay, reject a changed casting fingerprint or any take whose exact speaker, canonical copy identity, voice ID, or model no longer matches the authoritative cast. This includes reused fixed recordings.
 
-## Commands after parent GO
+## Recovery and validation commands
 
 Rebuild the plan and repeat the read-only checks first. A changed script or cast produces a new hash and blocks stale resume.
 
@@ -94,6 +88,20 @@ The helper is a no-op before an overlay exists. Once recordings are staged, it v
 
 ## Current blockers
 
-1. Parent GO after art review, full play, and walkthrough.
-2. The 24 shared voices still need to be added to the account.
-3. Final activation requires complete local ASR/lip-sync validation. Only hard-held mismatches or ambiguities require actual listening review. No quality failure is auto-accepted.
+Strict automated QA passed 753 of 873 audio IDs. The remaining 120 are held: 63 exact-ASR mismatches and 57 short ASR-ambiguous clips. Review only those takes with:
+
+- `assets/audio/elevenlabs-v4-script-v2/manual-review.html`
+- `assets/audio/elevenlabs-v4-script-v2/manual-review-required.csv`
+- `assets/audio/elevenlabs-v4-script-v2/manual-review-required.json`
+
+Deterministic comparator triage cleared 17 false positives caused only by equivalent clock formatting or possessive punctuation. Different times, changed clue values, dropped/added words, and lexical or homophone differences remain held.
+
+The final audit removed automatic `Wen`/`when` and `Tirel`/`Tyrell` substitutions. A failing regression demonstrated the unsafe acceptance before the fix. Revalidation added six holds and reclassified one existing short hold as a mismatch, producing the current 120. The earlier 114-hold count in `comparator-triage.json` describes the intermediate formatting-only pass.
+
+Fresh Godot import validation passes all 2,623 voice-asset checks. The publishing copy initially failed to draw the legacy voicemail waveform because four fallback `.wav.import` settings had not been copied. Those evidence imports now retain uncompressed PCM, matching the production preparation and preserving the actual-sample comparison assertions.
+
+Open `manual-review.html` in a browser beside its `masters/` directory to listen. The page contains story spoilers and does not approve or change recordings. Account preflight, account-add receipts, quota summaries and inflight state stay local and are excluded from the public repository.
+
+Final activation requires a truthful review receipt for every held ID. No mismatch or ambiguity is auto-accepted.
+
+The additional native story-flow rerun also remains blocked by timing failures in both tested renderers. See the voice-staging follow-up in `docs/play-report-2026-11-20.md`. Passing the audio-file checks does not make the complete voiced game release-ready.

@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_town.lights.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "d0f5ac87b826712a2e36bab6222ef4f709b2363402f22db13bb728232199fd1f",
+  "expected": "Listen, repeat the cue, then switch. And leave a line free for anyone who needs help.",
+  "recognized": "Listen, repeat the cue, then switch, and leave a line free for anyone who needs help.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 6.24,
+  "sample_rate": 48000,
+  "peak": 0.5367431640625,
+  "rms": 0.05674668028950691,
+  "first_recognition": "Listen, repeat the cue, then switch, and leave a line free for anyone who needs help.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

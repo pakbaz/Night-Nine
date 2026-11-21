@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_town.wind.lead.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "b9e06bb52c1fba2b7462b86c47ccaf66e594c6e2f1206b83ffd40b22e538fee8",
+  "expected": "There is a pencil mark after the last gust. I made it myself.",
+  "recognized": "there is a pencil mark after the last gust i made it myself",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.64,
+  "sample_rate": 48000,
+  "peak": 0.356689453125,
+  "rms": 0.039231039583683014,
+  "first_recognition": "there is a pencil mark after the last gust i made it myself",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

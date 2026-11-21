@@ -1,0 +1,18 @@
+{
+  "audio_id": "c9_wake.helen.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "b475a8eccb5b64bb1336708e224a79fcc4dd2e309d88c7d56370a1c4cb606061",
+  "expected": "Steven. Oh, my boy.",
+  "recognized": "Stephen. Oh my boy.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 3.6,
+  "sample_rate": 48000,
+  "peak": 0.272308349609375,
+  "rms": 0.029345005750656128,
+  "first_recognition": "Stephen. Oh my boy.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

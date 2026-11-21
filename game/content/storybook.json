@@ -425,6 +425,62 @@
               "seconds": 5.7
             }
           ]
+        },
+        {
+          "bar": 47.5,
+          "image": "res://assets/illustrated/campaign/rooms/one_year.webp",
+          "from": [
+            0.4,
+            0.5,
+            1.12
+          ],
+          "to": [
+            0.55,
+            0.45,
+            1.0
+          ],
+          "lines": [
+            {
+              "bar": 47.75,
+              "text": "KBWR has live hosts again. Two of them.",
+              "narration": "",
+              "seconds": 3.65
+            },
+            {
+              "bar": 49.017,
+              "text": "Stephen and I still argue about which one of us is the upgrade.",
+              "narration": "",
+              "seconds": 3.772
+            }
+          ]
+        },
+        {
+          "bar": 50.5,
+          "image": "res://assets/illustrated/campaign/films/one_year.webp",
+          "from": [
+            0.5,
+            0.55,
+            1.0
+          ],
+          "to": [
+            0.62,
+            0.42,
+            1.15
+          ],
+          "lines": [
+            {
+              "bar": 50.75,
+              "text": "One year after the ninth night, a package arrived at the station.",
+              "narration": "",
+              "seconds": 3.867
+            },
+            {
+              "bar": 52.085,
+              "text": "From very, very far away.",
+              "narration": "",
+              "seconds": 2.963
+            }
+          ]
         }
       ]
     }

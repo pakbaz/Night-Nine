@@ -1,0 +1,18 @@
+{
+  "audio_id": "c7_swap.map.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "bba82830791999cb078d2d781fbd3458ea3ac2d4e3f9fa5665becdf586e15785",
+  "expected": "Service tunnel, east stairs. The doctor has the real President.",
+  "recognized": "Service tunnel, east stairs. The doctor has the real president.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.24,
+  "sample_rate": 48000,
+  "peak": 0.48388671875,
+  "rms": 0.0500195175409317,
+  "first_recognition": "Service tunnel, east stairs. The doctor has the real president.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

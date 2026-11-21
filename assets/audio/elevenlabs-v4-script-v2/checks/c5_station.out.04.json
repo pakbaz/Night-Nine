@@ -1,0 +1,18 @@
+{
+  "audio_id": "c5_station.out.04",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "dcbdbac23a9658b3008aa62f2e9164602373f109720267e573ae240ecab937e9",
+  "expected": "I watched my own face learn it. Eighteen months, all at once.",
+  "recognized": "I watched my own face learn it. 18 months. All at once.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 5.12,
+  "sample_rate": 48000,
+  "peak": 0.204254150390625,
+  "rms": 0.03581209108233452,
+  "first_recognition": "I watched my own face learn it. 18 months. All at once.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

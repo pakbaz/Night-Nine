@@ -1,0 +1,18 @@
+{
+  "audio_id": "c1_dinner.family.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "12f17121e17d3fc1cf3a0225646ffb7d646cdcb8c00559736f434a6c66d0e98a",
+  "expected": "Nora stopped arguing with her family between the end of May and the first Sunday in June. Lyle changed in June too. I was on nights. I never noticed.",
+  "recognized": "Nora stopped arguing with her family between the end of May and the first Sunday in June. Lyle changed in June, too. I was on nights. I never noticed.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 10.56,
+  "sample_rate": 48000,
+  "peak": 0.373260498046875,
+  "rms": 0.03824074938893318,
+  "first_recognition": "Nora stopped arguing with her family between the end of May and the first Sunday in June. Lyle changed in June, too. I was on nights. I never noticed.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

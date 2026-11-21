@@ -1,0 +1,18 @@
+{
+  "audio_id": "i1_archive.recap.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "98289c155785c5b7d2a60a38371952ed2da153b04e9b3ceee18a099e2def2a02",
+  "expected": "And a Prefect who has promised the fleet an engine.",
+  "recognized": "and a prefect who has promised the fleet an engine.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 3.92,
+  "sample_rate": 48000,
+  "peak": 0.845977783203125,
+  "rms": 0.13570676743984222,
+  "first_recognition": "and a prefect who has promised the fleet an engine.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

@@ -1,0 +1,19 @@
+{
+  "audio_id": "c8_lab.lastpage.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "46077be43f264915ddb2a3b34cbdd8250da8bc70195634c91aa55baeedd8f4b7",
+  "expected": "Mom’s last page is Dad’s Reel 11: two joined tones rising, 220 to 330, a half-second gap, then a long 165, lower than both. Her margin says it repeats after the low note. It’s a language, and nobody on Earth can read it.",
+  "recognized": "Mom's last page is Dad's reel 11. Two joint tones rising. 220 to 330. A half-second gap, then a long 165. Lower than both. Her margin says it repeats after the low note. It's a language, and nobody on earth can read it.",
+  "word_edits": 1,
+  "word_error_rate": 0.023255813953488372,
+  "listening_review_required": true,
+  "seconds": 19.36,
+  "sample_rate": 48000,
+  "peak": 0.359710693359375,
+  "rms": 0.03824498504400253,
+  "first_recognition": "Mom's last page is Dad's reel 11. Two joint tones rising. 220 to 330. A half-second gap, then a long 165. Lower than both. Her margin says it repeats after the low note. It's a language, and nobody on earth can read it.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms",
+  "independent_phrase_transcription": "Mom's last page is Dad's reel 11. Two joint tones rising. 220 to 330. A half second gap. Then a long 165. lower than both. Her margin says it repeats after the low note. It's a language. and nobody on earth can read it."
+}

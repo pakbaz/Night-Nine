@@ -1,0 +1,19 @@
+{
+  "audio_id": "c1_dinner.birthday.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "050bcf949cfa96abfc80c900a20f815ab5978124e1778f6c45e90ad8b0c7960f",
+  "expected": "Carmen’s birthday: Nora at La Marea at 20:04, 20:15 and 20:29. Mateo drove her in at noon. Rafa drove her home at midnight.",
+  "recognized": "Carmen's birthday. Nora at La Marea at 2004, 2015, and 2029. Mateo drove her in at noon. Rafa drove her home at midnight.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 10.64,
+  "sample_rate": 48000,
+  "peak": 0.462066650390625,
+  "rms": 0.048450835049152374,
+  "first_recognition": "Carmen's birthday. Nora at La Marea at 2004, 2015, and 2029. Mateo drove her in at noon. Rafa drove her home at midnight.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms",
+  "independent_phrase_transcription": "Carmen's birthday. Nora at La Marea at 2004, 2015, and 2029. Mateo drove her in at noon. Rafa drove her home at midnight."
+}

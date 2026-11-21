@@ -1,0 +1,15 @@
+{
+  "operation": "text_to_speech",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "audio_id": "c5_shack.club.02",
+  "voice_id": "vveagfomyMCJLZsOPRP2",
+  "model_id": "eleven_v4",
+  "text_sha256": "4479322f0c26ced7924453f7aa910952cf1e904f58b67870731ede2f4e832cea",
+  "synthesis_text_sha256": "4479322f0c26ced7924453f7aa910952cf1e904f58b67870731ede2f4e832cea",
+  "request_id": "TNZymICu3DzchAZpEYm3",
+  "trace_id": "1d155e48486862c1b9d7cc18344f509c",
+  "character_cost": 18,
+  "output_format": "mp3_44100_192",
+  "audio_sha256": "af850efdaaeee15808d71be477fb9492f0ca6bc5fbf0d834931ca660fc948857",
+  "response_bytes": 78410
+}

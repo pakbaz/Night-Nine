@@ -1,0 +1,18 @@
+{
+  "audio_id": "c1_flat.out.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "c2fab274d0a96081db7ffdfc92740d18c5d51e94fb7e2d906a413ab2698b9a4c",
+  "expected": "I need evidence. Being afraid of something doesn’t make it true.",
+  "recognized": "I need evidence. Being afraid of something doesn't make it true.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.32,
+  "sample_rate": 48000,
+  "peak": 0.362274169921875,
+  "rms": 0.03989093750715256,
+  "first_recognition": "I need evidence. Being afraid of something doesn't make it true.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

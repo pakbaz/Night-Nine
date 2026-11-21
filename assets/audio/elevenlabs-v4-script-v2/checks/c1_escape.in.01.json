@@ -1,0 +1,18 @@
+{
+  "audio_id": "c1_escape.in.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "5f212a086de6a6ffdc9fb9eb2c9eb35a075fd48aa8763ccff0ae0705d00cf6e3",
+  "expected": "No. He does not know where the notebook is. Tonight? Understood.",
+  "recognized": "No, he does not know where the notebook is. Tonight? Understood.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.96,
+  "sample_rate": 48000,
+  "peak": 0.55377197265625,
+  "rms": 0.057230282574892044,
+  "first_recognition": "No, he does not know where the notebook is. Tonight? Understood.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

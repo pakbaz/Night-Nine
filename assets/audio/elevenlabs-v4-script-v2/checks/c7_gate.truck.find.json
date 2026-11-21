@@ -1,0 +1,19 @@
+{
+  "audio_id": "c7_gate.truck.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "1fcb3c88a0078d3bbe9d1c15ca0fa394162c6a69ae27aec4774b09cc38d8a358",
+  "expected": "Sound covers 170 meters in half a second. The fence-line strip in the Halcyon truck shows the click at 0.5 s, so the fence hears the desk. Every speaker on the site is mine.",
+  "recognized": "Sound covers 170 meters in half a second. The fence line strip in the Halcyon truck shows the click at 0.5 seconds, so the fence hears the desk. Every speaker on the site is mine.",
+  "word_edits": 2,
+  "word_error_rate": 0.058823529411764705,
+  "listening_review_required": true,
+  "seconds": 13.84,
+  "sample_rate": 48000,
+  "peak": 0.433380126953125,
+  "rms": 0.04048038646578789,
+  "first_recognition": "Sound covers 170 meters in half a second. The fence line strip in the Halcyon truck shows the click at 0.5 seconds, so the fence hears the desk. Every speaker on the site is mine.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms",
+  "independent_phrase_transcription": "Sound covers 170 meters in half a second. The fence line strip in the Halcyon truck shows the click at 0.5 seconds, so the fence hears the desk. Every speaker on the site is mine."
+}

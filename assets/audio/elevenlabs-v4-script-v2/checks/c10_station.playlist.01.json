@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_station.playlist.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "8785b48ee90055f5ece867ad086c18597e37ce675adc3e97c51fcd078fd5d5be",
+  "expected": "And yesterday’s forecast was sunny!",
+  "recognized": "And yesterday's forecast was sunny.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 2.64,
+  "sample_rate": 48000,
+  "peak": 0.491302490234375,
+  "rms": 0.062239207327365875,
+  "first_recognition": "And yesterday's forecast was sunny.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

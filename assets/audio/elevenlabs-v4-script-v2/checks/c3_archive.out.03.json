@@ -1,0 +1,18 @@
+{
+  "audio_id": "c3_archive.out.03",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "43e867f8acf31ea25db31245e67e156f5026dfa264a830193991a80e3b60db1c",
+  "expected": "“He remembers June. That doesn’t mean he’s Adrian.” No capitals. No apostrophes.",
+  "recognized": "He remembers June. That doesn't mean he's Adrian. No capitals, no apostrophes.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 6.56,
+  "sample_rate": 48000,
+  "peak": 0.430572509765625,
+  "rms": 0.04001317545771599,
+  "first_recognition": "He remembers June. That doesn't mean he's Adrian. No capitals, no apostrophes.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

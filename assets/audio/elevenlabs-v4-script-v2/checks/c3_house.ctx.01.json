@@ -1,0 +1,18 @@
+{
+  "audio_id": "c3_house.ctx.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "6e916e2a8e19cc21589fcff2fbb934428300a2ebb5e897e0d067caf44e97a074",
+  "expected": "June Calder pulled me off the beach at dawn on Monday and drove me to her house, not the station. She called it protective custody. Her beagle, Biscuit, slept through the whole thing.",
+  "recognized": "June Calder pulled me off the beach at dawn on Monday and drove me to her house, not the station. She called it protective custody. Her beagle, Biscuit, slept through the whole thing.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 11.76,
+  "sample_rate": 48000,
+  "peak": 0.396881103515625,
+  "rms": 0.040118519216775894,
+  "first_recognition": "June Calder pulled me off the beach at dawn on Monday and drove me to her house, not the station. She called it protective custody. Her beagle, Biscuit, slept through the whole thing.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

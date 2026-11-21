@@ -1,0 +1,18 @@
+{
+  "audio_id": "c9_gallery.out.04",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "23ab2ebbc775517d0a3afdfff325c7e2c3646ac9aadeb68d7825e83ea9099b22",
+  "expected": "I think everyone heard that.",
+  "recognized": "I think everyone heard that.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 2.08,
+  "sample_rate": 48000,
+  "peak": 0.317474365234375,
+  "rms": 0.04055609926581383,
+  "first_recognition": "I think everyone heard that.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

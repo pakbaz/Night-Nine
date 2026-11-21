@@ -1,0 +1,18 @@
+{
+  "audio_id": "c8_rig.path.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "c9fecb95338d936946377100aa16cf9e821fe2b27547e18e45f73fc0a4ccf680",
+  "expected": "The ship must measure the event.",
+  "recognized": "The ship must measure the event.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 2.32,
+  "sample_rate": 48000,
+  "peak": 0.554534912109375,
+  "rms": 0.08784373104572296,
+  "first_recognition": "The ship must measure the event.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

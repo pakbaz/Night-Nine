@@ -1,0 +1,18 @@
+{
+  "audio_id": "c4_escape.van.lead.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "8f4864da73b152c12265d49655cf2fd4ed97123315be4139cc69ca483f9eaa3a",
+  "expected": "One escort. One rear door. And a catch that only comes off for gravel.",
+  "recognized": "One escort, one rear door, and a catch that only comes off for gravel.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 5.28,
+  "sample_rate": 48000,
+  "peak": 0.322662353515625,
+  "rms": 0.03976373001933098,
+  "first_recognition": "One escort, one rear door, and a catch that only comes off for gravel.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

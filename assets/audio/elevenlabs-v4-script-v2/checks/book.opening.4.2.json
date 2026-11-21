@@ -1,0 +1,18 @@
+{
+  "audio_id": "book.opening.4.2",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "afb4bb35a0e096c9f3e5959ee2e4d726fd5a6652da1b388363df8c7f6006a56b",
+  "expected": "She could hear what people meant, even when they said something else.",
+  "recognized": "She could hear what people meant, even when they said something else.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.24,
+  "sample_rate": 48000,
+  "peak": 0.27587890625,
+  "rms": 0.03633534535765648,
+  "first_recognition": "She could hear what people meant, even when they said something else.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

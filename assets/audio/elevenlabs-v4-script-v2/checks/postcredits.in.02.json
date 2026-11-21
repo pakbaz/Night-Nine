@@ -1,0 +1,18 @@
+{
+  "audio_id": "postcredits.in.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "d470f1c0ae8e233a538c1a365e05d8837783d537ccb17cf6fbc95b107dfb2ae5",
+  "expected": "Evelyn, it is three in the morning.",
+  "recognized": "Evelyn, it is three in the morning.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 2.72,
+  "sample_rate": 48000,
+  "peak": 0.311920166015625,
+  "rms": 0.032966189086437225,
+  "first_recognition": "Evelyn, it is three in the morning.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

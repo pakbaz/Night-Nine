@@ -1,0 +1,18 @@
+{
+  "audio_id": "c6_jail.crossword.03",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "1bf8ba6bf64b2fb07a3343329ecf9d1e552d55724c43bafee996e65875d3e658",
+  "expected": "Desk June circled a T. Close. Wrong.",
+  "recognized": "Desk June circled a T. Close. Wrong.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.0,
+  "sample_rate": 48000,
+  "peak": 0.350128173828125,
+  "rms": 0.037164099514484406,
+  "first_recognition": "Desk June circled a T. Close. Wrong.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

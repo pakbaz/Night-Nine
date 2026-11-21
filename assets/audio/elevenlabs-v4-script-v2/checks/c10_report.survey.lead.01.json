@@ -1,0 +1,19 @@
+{
+  "audio_id": "c10_report.survey.lead.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "c89fb74733e0fe13f129aef1ab89c144296448835fdb891ede1e0a99d9b2e7fc",
+  "expected": "There is a sealed survey in the Prefect’s file. He told us every world was taken.",
+  "recognized": "There is a sealed survey in the prefects file. He told us every world was taken.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 6.48,
+  "sample_rate": 48000,
+  "peak": 0.82623291015625,
+  "rms": 0.1338266134262085,
+  "first_recognition": "There is a sealed survey in the prefects file. He told us every world was taken.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms",
+  "independent_phrase_transcription": "There is a sealed survey in the Prefects file. He told us every world was taken."
+}

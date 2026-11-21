@@ -1,0 +1,18 @@
+{
+  "audio_id": "c8_beach.out.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "24abd1840e8c66ee949a6380693ec051a436c0f6e21663c04118702db9d46a20",
+  "expected": "You should consider your parents.",
+  "recognized": "You should consider your parents.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 2.08,
+  "sample_rate": 48000,
+  "peak": 0.22308349609375,
+  "rms": 0.029413817450404167,
+  "first_recognition": "You should consider your parents.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

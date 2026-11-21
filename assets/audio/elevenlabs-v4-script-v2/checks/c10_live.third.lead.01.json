@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_live.third.lead.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "d9bfb675b8ba7d506bf654a8776a62a8c722ed162501fd674253bea2a2845f9e",
+  "expected": "Last cue. The wind on Veyr, and then the Choir. Nobody talks over them.",
+  "recognized": "Last cue, the wind on Veyr and then the choir. Nobody talks over them.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 5.84,
+  "sample_rate": 48000,
+  "peak": 0.591461181640625,
+  "rms": 0.04233810305595398,
+  "first_recognition": "Last cue, the wind on Vär and then the choir. Nobody talks over them.",
+  "recognition_pass": "story_vocabulary_1",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

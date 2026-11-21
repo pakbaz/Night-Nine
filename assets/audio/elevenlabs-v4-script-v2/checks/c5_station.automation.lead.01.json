@@ -1,0 +1,19 @@
+{
+  "audio_id": "c5_station.automation.lead.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "bcac8867e69e612af45e004a5fda855649dbf1d90055e7ad266a28a57b88185a",
+  "expected": "AutoRick’s console. I wrote half these carts myself.",
+  "recognized": "Autorix console. I wrote half these cards myself.",
+  "word_edits": 3,
+  "word_error_rate": 0.3333333333333333,
+  "listening_review_required": true,
+  "seconds": 3.84,
+  "sample_rate": 48000,
+  "peak": 0.455322265625,
+  "rms": 0.04016729071736336,
+  "first_recognition": "Autorix console. I wrote half these cards myself.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms",
+  "independent_phrase_transcription": "Autorix console. I wrote half these cards myself."
+}

@@ -1,0 +1,18 @@
+{
+  "audio_id": "c10_town.out.05",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "7ce22094d59fe32a97e6835a881c0a23bfbd8eeb6f57df185396cceaaaad1233",
+  "expected": "Grid up. Late, but up.",
+  "recognized": "Grid up. Late, but up.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 2.96,
+  "sample_rate": 48000,
+  "peak": 0.69140625,
+  "rms": 0.08018963783979416,
+  "first_recognition": "Grid up. Late, but up.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

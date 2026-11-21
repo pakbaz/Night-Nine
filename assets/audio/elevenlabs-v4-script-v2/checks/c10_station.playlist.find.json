@@ -1,0 +1,19 @@
+{
+  "audio_id": "c10_station.playlist.find",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "7b4667c63983d458866d39ab1904d72320204a064b5aed6c911369db4ea84422",
+  "expected": "06:01 was the ident, 06:03 the traffic and 06:05 the bulletin, the one that hands the air to a human. I signed the bulletin as duty host, and KBWR was mine again.",
+  "recognized": "0601 was the ident, 0603 the traffic, and 0605 the bulletin, the one that hands the air to a human. I signed the bulletin as duty host, and KBWR was mine again.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 13.2,
+  "sample_rate": 48000,
+  "peak": 0.468902587890625,
+  "rms": 0.04303902015089989,
+  "first_recognition": "0601 was the ident, 0603 the traffic, and 0605 the bulletin, the one that hands the air to a human. I signed the bulletin as duty host, and KBWR was mine again.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms",
+  "independent_phrase_transcription": "0601 was the ident. 0603 the traffic, and 0605 the bulletin. The one that hands the air to a human. I signed the bulletin as duty host, and KBWR was mine again."
+}

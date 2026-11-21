@@ -1,0 +1,18 @@
+{
+  "audio_id": "c1_escape.order.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "065c98e9675b2e6e4a41f487a8973b74f92fbef1beb0dc0a3eb2fcd10311a4e1",
+  "expected": "What notebook?",
+  "recognized": "What notebook?",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 1.2,
+  "sample_rate": 48000,
+  "peak": 0.256622314453125,
+  "rms": 0.03227165713906288,
+  "first_recognition": "What notebook?",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

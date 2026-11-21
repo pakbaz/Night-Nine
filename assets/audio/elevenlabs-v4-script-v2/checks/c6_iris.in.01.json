@@ -1,0 +1,18 @@
+{
+  "audio_id": "c6_iris.in.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "6ab22289417be7e537654bef9b7b68e49148f5c498192b29f9ab5826606fcb26",
+  "expected": "You hide. I’ll be charming in public. We should each use our strengths.",
+  "recognized": "You hide. I'll be charming in public. We should each use our strengths.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 4.96,
+  "sample_rate": 48000,
+  "peak": 0.303131103515625,
+  "rms": 0.04040122777223587,
+  "first_recognition": "You hide. I'll be charming in public. We should each use our strengths.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

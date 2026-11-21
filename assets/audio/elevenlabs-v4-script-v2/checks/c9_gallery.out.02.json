@@ -1,0 +1,18 @@
+{
+  "audio_id": "c9_gallery.out.02",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "c97b63e433f372cf8fb4e20d44883bee5712fa7b5da882056a74568dc8e3eaa5",
+  "expected": "Sock drawer. I was afraid.",
+  "recognized": "Sock drawer. I was afraid.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 2.24,
+  "sample_rate": 48000,
+  "peak": 0.60546875,
+  "rms": 0.03911684453487396,
+  "first_recognition": "Sock drawer. I was afraid.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}

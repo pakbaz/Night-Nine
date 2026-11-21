@@ -1,0 +1,18 @@
+{
+  "audio_id": "c4_escape.ctx.01",
+  "plan_sha256": "62defb34544fc3952ffeaad2e9c50f3f5b631cdea29074defa724e17996ca889",
+  "wav_sha256": "06693cf48e3c412b327b092d6e67f8172598facf31fccb1f285c80bf47f4585a",
+  "expected": "Rook put June in the east wing and me in the west, with an agent at each end of the hall. Kindly. Firmly.",
+  "recognized": "Rook put June in the east wing and me in the west, with an agent at each end of the hall. Kindly. Firmly.",
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "listening_review_required": true,
+  "seconds": 7.92,
+  "sample_rate": 48000,
+  "peak": 0.3695068359375,
+  "rms": 0.037289783358573914,
+  "first_recognition": "Rook put June in the east wing and me in the west, with an agent at each end of the hall. Kindly. Firmly.",
+  "recognition_pass": "independent",
+  "asr_revision": 2,
+  "transcript_comparison": "strict normalized English spoken forms"
+}
