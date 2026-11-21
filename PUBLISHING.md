@@ -43,11 +43,10 @@ The automated review deployment is configured in `.github/workflows/cloudflare-p
 https://review.night-nine.pages.dev
 ```
 
-Before the first run:
+The first review deployment is live. The `night-nine` project uses `main` as its production branch and the deployed `review` branch is available at the URL above. The repository already has `CLOUDFLARE_ACCOUNT_ID`; automatic deployments need one additional secret:
 
-1. Create a Cloudflare Pages project named `night-nine`, with `main` as its production branch. The workflow deploys to `review`, not the production branch.
-2. Add repository Actions secrets `CLOUDFLARE_API_TOKEN` (scoped to Pages edit for this account) and `CLOUDFLARE_ACCOUNT_ID`.
-3. Push to `main`, or run **Deploy Night Nine review to Cloudflare Pages** from the Actions tab on `main`.
+1. Add `CLOUDFLARE_API_TOKEN` as a repository Actions secret. Use a Cloudflare API token scoped to **Cloudflare Pages: Edit** for this account; do not use the broad Wrangler OAuth token. Until this secret exists, push builds are verified but deployment is skipped.
+2. Push a game, art, or site change to `main`, or run **Deploy Night Nine review to Cloudflare Pages** from the Actions tab on `main`.
 
 The workflow builds from the checked-out Git commit, downloads the official Godot 4.7.2 editor and matching template, verifies their SHA-512 hashes, and runs the site integrity and size checks before upload. The browser package is text-only until the generated voices receive listening approval. The review deployment does not make the game release-ready.
 

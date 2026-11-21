@@ -3,6 +3,7 @@
 builds/
 export_credentials.cfg
 .tools/
+.wrangler/
 tmp/
 .playwright-mcp/
 __pycache__/
