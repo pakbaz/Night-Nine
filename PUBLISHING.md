@@ -13,7 +13,7 @@ python3 tools/build-pages.py --godot /path/to/godot \
 python3 -m http.server 8000 --bind 127.0.0.1 --directory builds
 ```
 
-Open `http://localhost:8000/web/`. Service workers require HTTPS or localhost. The first download includes the engine and game pack. The service worker caches these resources and the landing page for later visits, including offline play once the cache is complete. A new game-pack version can require a new download.
+For a plain local HTTP server, open `http://localhost:8000/web/play.html`. The Cloudflare landing page links directly to `/play`, avoiding its `.html` redirect. Portable ZIPs retain the `.html` link for simple HTTP servers. Service workers require HTTPS or localhost. The first download includes the engine and game pack. The service worker caches these resources and the landing page for later visits, including offline play once the cache is complete. A new game-pack version can require a new download.
 
 The loading screen shows download progress and plays **Mysterious Take 1** during the first successful load in that browser. If autoplay is blocked, select **Play loading music**. The track stops before the game opens and stays silent on later visits, including game updates. Clearing site data resets this preference. The original MP3 is `site/loading-screen-music.mp3`; it loads separately from the game pack.
 

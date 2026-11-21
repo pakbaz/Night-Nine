@@ -8,6 +8,7 @@ import sys
 import tempfile
 import unittest
 from unittest.mock import patch
+from urllib.parse import urljoin
 import zipfile
 
 
@@ -45,7 +46,39 @@ def resources(value):
         yield value
 
 
+def write_offline_worker(site):
+    worker = site / "play.service.worker.js"
+    worker.write_text(
+        "const CACHE_VERSION = 'export';\n"
+        "const CACHE_PREFIX = 'old';\n"
+        "const CACHED_FILES = [\"play.html\",\"play.js\"];\n"
+        "const CACHEABLE_FILES = [\"play.wasm\",\"play.pck\"];\n"
+        "const FULL_CACHE = CACHED_FILES.concat(CACHEABLE_FILES);\n"
+        "function remember(event, cache, response) {\n"
+        "  cache.put(event.request, response.clone());\n"
+        "}\n"
+        "async function cachedNavigation(event, cache) {\n"
+        "  const isNavigate = event.request.mode === 'navigate';\n"
+        "  let cached = await cache.match(event.request);\n"
+        "  if (cached != null) {\n"
+        "    return cached;\n"
+        "  }\n"
+        "  return null;\n"
+        "}\n")
+    (site / "chunks.json").write_text('{"release":"test"}')
+    (site / "night-nine-loader.js").write_text("loader")
+    (site / "loading-screen-music.mp3").write_bytes(b"take-one")
+    return worker
+
+
 class ReleasePackagingTests(unittest.TestCase):
+    def test_play_button_uses_the_cloudflare_route_without_a_redirect(self):
+        landing = (ROOT / "site/index.html").read_text()
+        link = re.search(r'<a class="play" href="([^"]+)">', landing)
+        self.assertIsNotNone(link)
+        self.assertEqual(urljoin("https://night-nine.test/", link.group(1)),
+                         "https://night-nine.test/play")
+
     def test_web_export_omits_voice_staging_only_while_both_playback_gates_are_closed(self):
         with tempfile.TemporaryDirectory(dir=ROOT) as directory:
             game = Path(directory) / "game"
@@ -135,17 +168,7 @@ class ReleasePackagingTests(unittest.TestCase):
     def test_offline_worker_caches_shell_but_not_unsplit_payloads(self):
         with tempfile.TemporaryDirectory(dir=ROOT) as directory:
             site = Path(directory)
-            worker = site / "play.service.worker.js"
-            worker.write_text(
-                "const CACHE_VERSION = 'export';\n"
-                "const CACHE_PREFIX = 'old';\n"
-                "const CACHED_FILES = [\"play.html\",\"play.js\"];\n"
-                "const CACHEABLE_FILES = [\"play.wasm\",\"play.pck\"];\n"
-                "const FULL_CACHE = CACHED_FILES.concat(CACHEABLE_FILES);\n"
-                "cache.put(event.request, response.clone());\n")
-            (site / "chunks.json").write_text('{"release":"test"}')
-            (site / "night-nine-loader.js").write_text("loader")
-            (site / "loading-screen-music.mp3").write_bytes(b"take-one")
+            worker = write_offline_worker(site)
             build_pages.prepare_offline_cache(site)
             result = worker.read_text()
             self.assertRegex(result, r"const CACHE_VERSION = 'export\\|nn-[0-9a-f]{16}';")
@@ -158,6 +181,45 @@ class ReleasePackagingTests(unittest.TestCase):
             build_pages.prepare_offline_cache(site)
             next_version = re.search(r"const CACHE_VERSION = '[^']+';", worker.read_text()).group()
             self.assertNotEqual(first_version, next_version, "Refresh offline audio when the loading theme changes.")
+
+    @unittest.skipUnless(shutil.which("node"), "Node.js is required for the service worker test.")
+    def test_cached_navigation_handles_clean_and_redirected_html_routes(self):
+        with tempfile.TemporaryDirectory(dir=ROOT) as directory:
+            site = Path(directory)
+            worker = write_offline_worker(site)
+            build_pages.prepare_offline_cache(site)
+            result = subprocess.run(["node", "--input-type=module", "-e", """
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import vm from 'node:vm';
+const context = {
+    URL, Response,
+    self: {registration: {scope: 'https://night-nine.test/game/'}},
+    cache: {
+        async match(request) {
+            const url = new URL(request.url || request);
+            if (!url.pathname.endsWith('/play.html')) return undefined;
+            const response = new Response('<html>Night Nine</html>', {
+                headers: {'Content-Type': 'text/html'}, status: 200,
+            });
+            Object.defineProperty(response, 'redirected', {value: true});
+            return response;
+        },
+    },
+};
+vm.createContext(context);
+vm.runInContext(readFileSync(process.argv[1], 'utf8'), context);
+for (const path of ['play.html', 'play']) {
+    context.event = {request: {url: 'https://night-nine.test/game/' + path, mode: 'navigate'}};
+    const response = await vm.runInContext('cachedNavigation(event, cache)', context);
+    assert.ok(response, `Serve cached ${path} without needing the network`);
+    assert.equal(response.redirected, false, 'Manual navigations cannot use followed redirect responses');
+    assert.equal(response.status, 200);
+    assert.equal(response.headers.get('Content-Type'), 'text/html');
+    assert.equal(await response.text(), '<html>Night Nine</html>');
+}
+""", str(worker)], capture_output=True, text=True)
+            self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
 
     def test_complete_release_contains_runtime_dependencies(self):
         files, meta = milestones.make_snapshot(10, False)

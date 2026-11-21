@@ -62,6 +62,28 @@ def prepare_offline_cache(site):
     cache_write = "event.waitUntil(cache.put(event.request, response.clone()));"
     if cache_write not in text:
         text = text.replace("cache.put(event.request, response.clone());", cache_write)
+    if "let cacheRequest = event.request;" not in text:
+        lookup = "let cached = await cache.match(event.request);"
+        if text.count(lookup) != 1 or text.count("return cached;") != 1:
+            raise ValueError("Unexpected Godot service worker cached-navigation handler.")
+        text = text.replace(lookup,
+            "let cacheRequest = event.request;\n"
+            "\t\t\t\tif (isNavigate) {\n"
+            "\t\t\t\t\tconst navigationUrl = new URL(event.request.url);\n"
+            "\t\t\t\t\tif (navigationUrl.pathname === new URL('play', self.registration.scope).pathname) {\n"
+            "\t\t\t\t\t\tnavigationUrl.pathname += '.html';\n"
+            "\t\t\t\t\t\tcacheRequest = navigationUrl.href;\n"
+            "\t\t\t\t\t}\n"
+            "\t\t\t\t}\n"
+            "\t\t\t\tlet cached = await cache.match(cacheRequest);", 1)
+        # Pages follows .html redirects while precaching. Browser navigations
+        # use manual redirects and reject those followed-response URL lists.
+        text = text.replace("return cached;",
+            "return isNavigate && cached.redirected\n"
+            "\t\t\t\t\t\t? new Response(cached.body, {\n"
+            "\t\t\t\t\t\t\tstatus: cached.status, statusText: cached.statusText, headers: cached.headers,\n"
+            "\t\t\t\t\t\t})\n"
+            "\t\t\t\t\t\t: cached;", 1)
     worker.write_text(text)
 
 
@@ -160,7 +182,11 @@ def build(repo, output, godot, template, source_url, archive_path, source_archiv
                 packaged = Path(zip_dir) / archive_path.name
                 with zipfile.ZipFile(packaged, "w", zipfile.ZIP_DEFLATED, compresslevel=5) as archive:
                     for item in sorted(site.iterdir()):
-                        archive.write(item, "Night-Nine/" + item.name)
+                        if item.name == "index.html":
+                            archive.writestr("Night-Nine/index.html",
+                                item.read_text().replace('href="play"', 'href="play.html"'))
+                        else:
+                            archive.write(item, "Night-Nine/" + item.name)
                     archive.writestr("README.txt",
                         f"Night Nine {version} for desktop web browsers\n\n"
                         "Extract the archive. In the folder containing Night-Nine, run:\n\n"
