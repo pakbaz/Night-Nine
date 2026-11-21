@@ -11,7 +11,7 @@ This directory contains the editable production sources. Godot loads the optimiz
 | `audio/lipsync-elevenlabs-v4/` | Timing data for the existing dialogue |
 | `audio/ambience-campaign/` | Location ambience masters |
 | `audio/ambience-prologue/` | Flashback ambience masters |
-| `audio/soundtrack/` | Cue sheet and recording measurements; the MP3s are in `game/assets/audio/music/` |
+| `audio/soundtrack/` | Cue sheet and recording measurements; in-game MP3s are in `game/assets/audio/music/`, and the standalone loading theme is in `site/loading-screen-music.mp3` |
 | `concepts/characters/` | Approved character references used by the production artwork |
 | `cover/` | Cover artwork |
 

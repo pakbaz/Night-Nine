@@ -332,6 +332,8 @@ func _drop_waiting(fate: String) -> void:
 
 func _clear_captions() -> void:
 	for caption: Label in captions:
+		if caption.get_parent() == caption_box:
+			caption_box.remove_child(caption)
 		caption.queue_free()
 	captions.clear()
 	caption_times.clear()

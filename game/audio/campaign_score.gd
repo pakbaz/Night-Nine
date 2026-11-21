@@ -25,9 +25,11 @@ var duck_target_db := 0.0
 var lift_db := 0.0
 var lift_target_db := 0.0
 ## Location music rides up through its quietest passages, like a mixer on the fader.
-const FLOOR_BELOW_TARGET := 7.0
-const MAX_RIDE_DB := 9.0
+const FLOOR_BELOW_TARGET := 7.5
+const MAX_RIDE_DB := 4.5
 var ride_db := 0.0
+var ride_target_db := 0.0
+var ride_bar := -1
 var powers := PackedFloat32Array([0.0,0.0])
 var starting_power := PackedFloat32Array([0.0,0.0])
 var trim := PackedFloat32Array([0.0,0.0])
@@ -195,6 +197,8 @@ func select_track(track: Dictionary, kind: String, chapter_id: String, start: fl
 	cue = kind
 	if next != active_index:
 		ride_db = 0.0
+		ride_target_db = 0.0
+		ride_bar = -1
 	active_index = next
 	trim[next] = clampf(float(TARGET_LUFS[kind]) - float(track.get("lufs",-16.0)),-24.0,6.0)
 	begin_fade(float(FADE_SECONDS[kind]))
@@ -245,13 +249,21 @@ func _ride_target() -> float:
 	if at < 0.0 or loud.is_empty():
 		return ride_db
 	var bar := int(floor((at - float(current_track.get("beat", 0.0))) / bar_length(current_track)))
+	if bar == ride_bar:
+		return ride_target_db
+	ride_bar = bar
 	var looping: bool = players[active_index].stream is AudioStreamMP3 and players[active_index].stream.loop
+	var previous := posmod(bar - 1, loud.size()) if looping else clampi(bar - 1, 0, loud.size() - 1)
+	var current := clampi(bar, 0, loud.size() - 1)
 	var next := posmod(bar + 1, loud.size()) if looping else clampi(bar + 1, 0, loud.size() - 1)
-	# Read the louder of this bar and the next, so the fader is already down when a loud passage arrives.
-	var louder := maxf(float(loud[clampi(bar, 0, loud.size() - 1)]), float(loud[next]))
-	var heard := louder + float(TARGET_LUFS[cue]) - float(current_track.get("lufs", -16.0))
+	# Use the middle loudness of three bars. This avoids fast one-bar rides
+	# and keeps the level correction within one normalized range.
+	var values := [float(loud[previous]), float(loud[current]), float(loud[next])]
+	values.sort()
+	var heard := float(values[1]) + float(TARGET_LUFS[cue]) - float(current_track.get("lufs", -16.0))
 	var floor_lufs := float(TARGET_LUFS[cue]) - FLOOR_BELOW_TARGET
-	return clampf(floor_lufs - heard, 0.0, MAX_RIDE_DB)
+	ride_target_db = clampf(floor_lufs - heard, 0.0, MAX_RIDE_DB)
+	return ride_target_db
 
 func set_lift(db: float) -> void:
 	lift_target_db = db
@@ -282,8 +294,8 @@ func _process(delta: float) -> void:
 		changed = true
 	var ride_target := _ride_target()
 	if not is_equal_approx(ride_db,ride_target):
-		# Rise slowly through a quiet passage, and come down fast before a loud one.
-		ride_db = move_toward(ride_db,ride_target,(1.5 if ride_target > ride_db else 9.0)*delta)
+		# Normalize each bar and ease the level change in both directions.
+		ride_db = move_toward(ride_db,ride_target,(0.65 if ride_target > ride_db else 1.8)*delta)
 		changed = true
 	if not is_equal_approx(lift_db,lift_target_db):
 		# Rise quickly with the card, settle gently as the scene begins.

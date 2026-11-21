@@ -79,6 +79,11 @@ jobs:
           GODOT_BIN: ${{ runner.temp }}/Godot_v4.7.2-stable_linux.x86_64
         run: bash tools/test-campaign.sh
 
+      - name: Run browser loading and soundtrack routing tests
+        run: |
+          python tools/test_release_packaging.py
+          python tools/test-ending-reward.py
+
       - name: Build and verify the static review site
         run: |
           python3 tools/build-pages.py \

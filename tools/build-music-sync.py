@@ -15,7 +15,8 @@ Music plan (November 18, 2026):
 - The three flashback "nights" keep the Three Nights BGM wherever they sit.
 - Bellwether Bay (Tape Anomaly) scores the tape investigation in Chapter 1.
 - The main title scores the live broadcast, the ship rising and the last
-  departure. Epilogue BGM is reserved for the completion credit film.
+  departure. Mysterious Take 2 is reserved for the completion credit film.
+  The original Epilogue BGM plays in the epilogue.
   The short Epilogue theme plays once under the end card.
 """
 import json
@@ -49,7 +50,7 @@ SCENE_TRACKS = {
     'c1_pier': ('Chapter 1/theme', None),
     'c10_live': ('title', 4),
     'c10_report': ('title', 4),
-    'epilogue': ('Chapter 10/bgm', None),
+    'epilogue': ('Epilogue/bgm', None),
     'one_year': ('Chapter 1/bgm', None),
 }
 FLASHBACKS = {'p_veyr', 'p_meeting'}

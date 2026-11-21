@@ -15,6 +15,8 @@ python3 -m http.server 8000 --bind 127.0.0.1 --directory builds
 
 Open `http://localhost:8000/web/`. Service workers require HTTPS or localhost. The first download includes the engine and game pack. The service worker caches these resources and the landing page for later visits, including offline play once the cache is complete. A new game-pack version can require a new download.
 
+The loading screen shows download progress and plays **Mysterious Take 1** during the first successful load in that browser. If autoplay is blocked, select **Play loading music**. The track stops before the game opens and stays silent on later visits, including game updates. Clearing site data resets this preference. The original MP3 is `site/loading-screen-music.mp3`; it loads separately from the game pack.
+
 `build-pages.py` splits `play.pck` and `play.wasm` into immutable parts no larger than 24 MiB, writes `chunks.json`, installs the browser loader, patches the service worker and runs `tools/check-site.py`. The check also enforces a 5,000-file release limit and verifies every part and whole-file hash.
 
 The website does not contain `source.zip`. The builder writes that matching source archive next to the site, at `builds/source.zip` in the example. The landing page links to the exact GitHub commit archive. Downloads from a private repository require GitHub access. If distributing the game publicly, make its corresponding source accessible under the project license.

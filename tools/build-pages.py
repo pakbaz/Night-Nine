@@ -33,7 +33,9 @@ def prepare_offline_cache(site):
     chunks = site / "chunks.json"
     loader = site / "night-nine-loader.js"
     if chunks.is_file() and loader.is_file():
-        release = hashlib.sha256(chunks.read_bytes() + b"\0" + loader.read_bytes()).hexdigest()[:16]
+        music = site / "loading-screen-music.mp3"
+        release = hashlib.sha256(
+            chunks.read_bytes() + b"\0" + loader.read_bytes() + b"\0" + music.read_bytes()).hexdigest()[:16]
 
         def cache_version(match):
             base = re.sub(r"\|nn-[0-9a-f]{16}$", "", match.group(1))
@@ -49,7 +51,8 @@ def prepare_offline_cache(site):
         raise ValueError("Unexpected Godot service worker cacheable-file list.")
     shell_push = (
         "CACHED_FILES.push('./', 'index.html', 'cover.jpg', 'LICENSE.txt', "
-        "'MEDIA.txt', 'THIRD-PARTY.txt', 'chunks.json', 'night-nine-loader.js');")
+        "'MEDIA.txt', 'THIRD-PARTY.txt', 'chunks.json', 'night-nine-loader.js', "
+        "'loading-screen-music.mp3');")
     if "CACHED_FILES.push(" in text:
         text, push_count = re.subn(r"CACHED_FILES\.push\([^\n]+\);", shell_push, text)
         if push_count != 1:
@@ -141,7 +144,7 @@ def build(repo, output, godot, template, source_url, archive_path, source_archiv
         page = (snapshot / "site/index.html").read_text().replace("@@SIZE@@", str(round(size)))
         (site / "index.html").write_text(page.replace("@@EDITABLE_SOURCE@@", html.escape(source_url, quote=True)))
         (site / "play.html").write_text(inject_chunk_loader((site / "play.html").read_text()))
-        for name in ("night-nine-loader.js", "_headers"):
+        for name in ("night-nine-loader.js", "loading-screen-music.mp3", "_headers"):
             shutil.copyfile(snapshot / "site" / name, site / name)
         shutil.copyfile(snapshot / "art/night-nine.jpg", site / "cover.jpg")
         shutil.copyfile(snapshot / "LICENSE", site / "LICENSE.txt")

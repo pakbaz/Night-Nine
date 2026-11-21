@@ -9,6 +9,137 @@
 	let cachePromise;
 	let progressTotal = 0;
 	const progressByFile = new Map();
+	const firstLoadKey = `night-nine:loaded:${new URL('.', document.baseURI).pathname}`;
+	let loadingActive = true;
+	let loadingMusic;
+	let musicPending = false;
+	let musicButton;
+	let loadingObserver;
+
+	function ensureProgressLabel() {
+		let label = document.getElementById('status-progress-label');
+		if (!label) {
+			label = document.createElement('div');
+			label.id = 'status-progress-label';
+			label.setAttribute?.('aria-live', 'polite');
+			label.style.cssText =
+				'position:absolute;left:0;right:0;bottom:calc(10% - 2rem);' +
+				'text-align:center;color:#f6dcac;font:700 1rem/1.2 system-ui,sans-serif;' +
+				'text-shadow:0 1px 3px #000;pointer-events:none;';
+			const status = document.getElementById('status');
+			status?.append(label);
+		}
+		return label;
+	}
+
+	function updateProgressLabel() {
+		const label = ensureProgressLabel();
+		const loaded = Array.from(progressByFile.values()).reduce((sum, value) => sum + value, 0);
+		const percent = progressTotal ? Math.min(100, Math.max(0, Math.floor(loaded / progressTotal * 100))) : 0;
+		label.textContent = `${percent}%`;
+	}
+
+	function clearMusicRetry() {
+		window.removeEventListener('pointerdown', startLoadingMusic);
+		window.removeEventListener('keydown', startLoadingMusic);
+		musicButton?.remove();
+		musicButton = null;
+	}
+
+	function stopLoadingMusic() {
+		loadingActive = false;
+		clearMusicRetry();
+		loadingObserver?.disconnect();
+		if (loadingMusic) {
+			loadingMusic.pause();
+			loadingMusic.currentTime = 0;
+			loadingMusic.remove();
+		}
+	}
+
+	function finishLoading() {
+		if (!loadingActive) {
+			return;
+		}
+		try {
+			window.localStorage.setItem(firstLoadKey, '1');
+		} catch (error) {
+			console.warn('Night Nine could not remember the completed first load.', error);
+		}
+		stopLoadingMusic();
+	}
+
+	function isFirstLoad() {
+		try {
+			return window.localStorage.getItem(firstLoadKey) !== '1';
+		} catch (error) {
+			console.warn('Night Nine loading music is disabled because browser storage is unavailable.', error);
+			return false;
+		}
+	}
+
+	function startLoadingMusic() {
+		if (!loadingActive || musicPending) {
+			return;
+		}
+		if (!loadingMusic) {
+			loadingMusic = document.createElement('audio');
+			loadingMusic.src = new URL('loading-screen-music.mp3', document.baseURI).href;
+			loadingMusic.loop = true;
+			loadingMusic.preload = 'auto';
+			loadingMusic.volume = 0.35;
+			loadingMusic.setAttribute('aria-hidden', 'true');
+			document.body.append(loadingMusic);
+		}
+		musicPending = true;
+		loadingMusic.play().then(() => {
+			musicPending = false;
+			if (!loadingActive) {
+				loadingMusic.pause();
+			}
+			clearMusicRetry();
+		}).catch((error) => {
+			musicPending = false;
+			if (!loadingActive) {
+				return;
+			}
+			if (error.name !== 'NotAllowedError') {
+				console.warn('Night Nine could not play the loading music.', error);
+				clearMusicRetry();
+				return;
+			}
+			if (!musicButton) {
+				musicButton = document.createElement('button');
+				musicButton.type = 'button';
+				musicButton.textContent = 'Play loading music';
+				musicButton.style.cssText = 'position:absolute;bottom:3%;left:50%;transform:translateX(-50%);' +
+					'padding:.55rem 1rem;font:inherit;cursor:pointer;';
+				musicButton.addEventListener('click', startLoadingMusic);
+				document.getElementById('status')?.append(musicButton);
+			}
+			window.addEventListener('pointerdown', startLoadingMusic, {once: true});
+			window.addEventListener('keydown', startLoadingMusic, {once: true});
+		});
+	}
+
+	if (document.getElementById('status') && isFirstLoad()) {
+		startLoadingMusic();
+	}
+	window.addEventListener('pagehide', stopLoadingMusic, {once: true});
+	if (typeof MutationObserver !== 'undefined') {
+		loadingObserver = new MutationObserver(() => {
+			const status = document.getElementById('status');
+			if (!status || status.isConnected === false) {
+				finishLoading();
+			} else if (document.getElementById('status-notice')?.style.display === 'block') {
+				stopLoadingMusic();
+			}
+		});
+		// Godot removes the overlay itself when ready; observe its parent.
+		loadingObserver.observe(document.body, {
+			childList: true, subtree: true, attributes: true, attributeFilter: ['style'],
+		});
+	}
 
 	function sleep(milliseconds) {
 		return new Promise((resolve) => setTimeout(resolve, milliseconds));
@@ -33,12 +164,14 @@
 		progress.style.display = 'block';
 		progress.max = progressTotal;
 		progress.value = Array.from(progressByFile.values()).reduce((sum, value) => sum + value, 0);
+		updateProgressLabel();
 	}
 
 	function showFailure(error) {
 		const status = document.getElementById('status');
 		const progress = document.getElementById('status-progress');
 		const notice = document.getElementById('status-notice');
+		stopLoadingMusic();
 		if (!status || !notice) {
 			return;
 		}
@@ -69,6 +202,7 @@
 			throw new Error('chunks.json is invalid.');
 		}
 		progressTotal = manifest.files.reduce((sum, entry) => sum + entry.size, 0);
+		updateProgressLabel();
 		return manifest;
 	}
 
@@ -189,5 +323,5 @@
 		}
 	};
 
-	window.NightNineChunks = {showFailure};
+	window.NightNineChunks = {showFailure, stopLoadingMusic};
 }());

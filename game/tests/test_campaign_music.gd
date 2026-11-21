@@ -157,7 +157,7 @@ func run() -> void:
 			await create_timer(1.2).timeout
 			check(game.score.ride_db > .5 and game.score.ride_db <= game.score.MAX_RIDE_DB, "Ride the Chapter 1 BGM up through a quiet passage")
 			deck.seek(float(heard.beat) + bar * (peak + .1))
-			await create_timer(.6).timeout
+			await create_timer(2.2).timeout
 			check(game.score.ride_db < .1, "Bring the ride down before a loud passage")
 		if scene.id == "c1_pier":
 			deck.seek(29.0)
@@ -215,7 +215,7 @@ func run() -> void:
 	for name: String in DirAccess.get_files_at("res://assets/audio/music"):
 		if name.ends_with(".mp3"):
 			mp3s += 1
-	check(recordings.size()==mp3s and mp3s==30, "Hear all 30 supplied recordings")
+	check(recordings.size()==mp3s and mp3s==31, "Hear all 31 supplied in-game recordings")
 	var file := FileAccess.open(report_dir.path_join("score-route.json"),FileAccess.WRITE)
 	file.store_string(JSON.stringify({"checks":checks,"failures":errors,"stream_count":recordings.size(),"recordings":recordings.keys(),"audio_driver":AudioServer.get_driver_name()},"  ")+"\n")
 	file.close()

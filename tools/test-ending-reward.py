@@ -9,17 +9,17 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class EndingRewardTests(unittest.TestCase):
-    def test_reward_is_reserved_and_keeps_the_original_recording(self):
+    def test_take_two_scores_credits_and_keeps_the_original_epilogue_in_play(self):
         music = json.loads((ROOT / 'tools/script_v2/base/music.json').read_text())
         original = copy.deepcopy(music['chapters']['Epilogue']['bgm'])
         apply_music(music)
-        self.assertEqual(music['credits']['file'], original['file'])
+        self.assertEqual(music['credits']['file'], 'res://assets/audio/music/credits-mysterious.mp3')
         self.assertFalse(music['credits']['loop'])
-        self.assertGreater(music['credits']['entry_seconds'], 40)
-        self.assertLess(music['credits']['entry_seconds'] + 56.4, 174.955)
+        self.assertEqual(music['credits']['entry_seconds'], 0.0)
         for section in ('scene_music', 'departures'):
-            self.assertTrue(all(cue['file'] != original['file'] for cue in music[section].values()))
-        self.assertNotEqual(music['chapters']['Epilogue']['bgm']['file'], original['file'])
+            self.assertTrue(all(cue['file'] != music['credits']['file'] for cue in music[section].values()))
+        self.assertEqual(music['scene_music']['epilogue']['file'], original['file'])
+        self.assertEqual(music['chapters']['Epilogue']['bgm']['file'], original['file'])
         self.assertEqual(music['finale']['file'], 'res://assets/audio/music/epilogue-theme.mp3')
 
     def test_repeated_generation_keeps_the_same_reward(self):

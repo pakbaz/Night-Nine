@@ -10,4 +10,10 @@ We decoded every recording as 48 kHz stereo MP3 at 128 kb/s and checked each gam
 
 ## Completion reward
 
-The original **Epilogue (BGM)** recording is reserved for the final credit film and its three exclusive paintings. It enters at bar 15 (50.174 seconds), with enough music for the full 56.4-second film. It is not used in exploration or ordinary pre-game credits. The short **Epilogue** theme still plays once on the end card after the final radio signal. No new track was generated or substituted; the original audio files and their hashes remain unchanged. `tools/ending_reward.py` applies the same routing in both content generators.
+**Night Nine Loading Theme (Mysterious Take 2)** now scores the final credit film from the start, without looping. Its original MP3 is preserved as `game/assets/audio/music/credits-mysterious.mp3`. Its integrated loudness is -16.87 LUFS, measured with FFmpeg EBU R128; the score applies the existing credits-level trim.
+
+The original **Epilogue (BGM)** now plays in the epilogue, so all 30 earlier recordings remain in the game alongside Take 2. The short **Epilogue** theme still plays once on the end card after the final radio signal. `tools/ending_reward.py` applies the same routing in both content generators.
+
+## First loading screen
+
+**Night Nine Loading Theme (Mysterious Take 1)** is preserved as `site/loading-screen-music.mp3`, outside the game pack so it can play during the download. Its integrated loudness is -16.88 LUFS. The browser uses a fixed 35% gain, with no dynamic volume riding, only on the first successful load per browser and site path. Playback ends when the loading overlay closes and never resumes over the intro narration. Browser autoplay restrictions require a click or key press.

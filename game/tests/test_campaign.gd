@@ -117,6 +117,20 @@ func _check_script_v2_runtime() -> void:
 	var solved: Dictionary = state.choose(task.id, int(task.answer))
 	check(solved.ok and solved.finding == task.finding, "A solved task returns its finding line")
 
+func _check_storybook_caption_cleanup() -> void:
+	var STORYBOOK := load("res://ui/storybook.gd")
+	var book = STORYBOOK.new()
+	root.add_child(book)
+	var old_label := Label.new()
+	old_label.text = "Opening line"
+	book.caption_box.add_child(old_label)
+	book.captions.append(old_label)
+	book.caption_times.append(0.0)
+	book._clear_captions()
+	check(book.captions.is_empty() and book.caption_box.get_child_count() == 0,
+		"Story opening removes old caption nodes immediately")
+	book.queue_free()
+
 func _initialize() -> void:
 	var state := NightCampaign.new()
 	check(state.content.scenes.size()==34,"Every authored location is present")
@@ -137,6 +151,7 @@ func _initialize() -> void:
 	_check_story_shape(state)
 	_check_migration()
 	_check_script_v2_runtime()
+	_check_storybook_caption_cleanup()
 	check(not state.switch_actor("saren"),"Cannot switch to an unavailable actor")
 	var ids: Dictionary={}
 	for scene: Dictionary in state.content.scenes:
