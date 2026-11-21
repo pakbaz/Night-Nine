@@ -16,6 +16,18 @@ milestones = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(milestones)
 
 
+def load_tool(name, filename):
+    tool_spec = importlib.util.spec_from_file_location(name, ROOT / "tools" / filename)
+    tool = importlib.util.module_from_spec(tool_spec)
+    tool_spec.loader.exec_module(tool)
+    return tool
+
+
+split_site = load_tool("split_site", "split-site.py")
+check_site = load_tool("check_site", "check-site.py")
+build_pages = load_tool("build_pages", "build-pages.py")
+
+
 def read_entry(files, name):
     value = files[name]
     return value.read_text() if isinstance(value, Path) else value.decode()
@@ -33,6 +45,87 @@ def resources(value):
 
 
 class ReleasePackagingTests(unittest.TestCase):
+    def test_split_files_reassemble_exactly_with_bounded_parts(self):
+        with tempfile.TemporaryDirectory(dir=ROOT) as directory:
+            site = Path(directory)
+            originals = {
+                "play.pck": (b"pack-data-" * (3 * 1024 * 1024)) + b"end",
+                "play.wasm": (b"\0asm-test-" * (2 * 1024 * 1024)) + b"end",
+            }
+            for name, data in originals.items():
+                (site / name).write_bytes(data)
+
+            manifest = split_site.split_site(site)
+
+            for file_entry in manifest["files"]:
+                rebuilt = b"".join((site / part["name"]).read_bytes()
+                                   for part in file_entry["parts"])
+                self.assertEqual(originals[file_entry["name"]], rebuilt)
+                self.assertEqual(file_entry["sha256"], split_site.sha256_bytes(rebuilt))
+                self.assertTrue(all(part["size"] <= split_site.MAX_FILE_SIZE
+                                    for part in file_entry["parts"]))
+                self.assertFalse((site / file_entry["name"]).exists())
+            check_site.check_site(site)
+
+    def test_check_site_rejects_25_mib_file(self):
+        with tempfile.TemporaryDirectory(dir=ROOT) as directory:
+            site = Path(directory)
+            (site / "too-large.bin").write_bytes(b"\0" * (25 * 1024 * 1024))
+            with self.assertRaisesRegex(ValueError, "too-large.bin.*24 MiB"):
+                check_site.check_site(site)
+
+    def test_check_site_rejects_missing_part(self):
+        with tempfile.TemporaryDirectory(dir=ROOT) as directory:
+            site = Path(directory)
+            (site / "play.pck").write_bytes(b"pck")
+            (site / "play.wasm").write_bytes(b"wasm")
+            manifest = split_site.split_site(site, chunk_size=2)
+            (site / manifest["files"][0]["parts"][0]["name"]).unlink()
+            with self.assertRaisesRegex(ValueError, "Missing part"):
+                check_site.check_site(site)
+
+    def test_check_site_rejects_corrupted_manifest(self):
+        with tempfile.TemporaryDirectory(dir=ROOT) as directory:
+            site = Path(directory)
+            (site / "play.pck").write_bytes(b"pck")
+            (site / "play.wasm").write_bytes(b"wasm")
+            split_site.split_site(site, chunk_size=2)
+            (site / "chunks.json").write_text("{broken")
+            with self.assertRaisesRegex(ValueError, "chunks.json"):
+                check_site.check_site(site)
+
+    @unittest.skipUnless(shutil.which("node"), "Node.js is required for the browser loader test.")
+    def test_browser_loader_verifies_and_retries_parts(self):
+        result = subprocess.run(["node", ROOT / "tools/test_chunk_loader.mjs"],
+                                capture_output=True, text=True)
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+
+    def test_post_processed_html_loads_chunk_loader_before_engine(self):
+        source = '<script src="play.js"></script>'
+        result = build_pages.inject_chunk_loader(source)
+        self.assertIn('<script src="night-nine-loader.js"></script>', result)
+        self.assertLess(result.index("night-nine-loader.js"), result.index("play.js"))
+
+    def test_offline_worker_caches_shell_but_not_unsplit_payloads(self):
+        with tempfile.TemporaryDirectory(dir=ROOT) as directory:
+            site = Path(directory)
+            worker = site / "play.service.worker.js"
+            worker.write_text(
+                "const CACHE_VERSION = 'export';\n"
+                "const CACHE_PREFIX = 'old';\n"
+                "const CACHED_FILES = [\"play.html\",\"play.js\"];\n"
+                "const CACHEABLE_FILES = [\"play.wasm\",\"play.pck\"];\n"
+                "const FULL_CACHE = CACHED_FILES.concat(CACHEABLE_FILES);\n"
+                "cache.put(event.request, response.clone());\n")
+            (site / "chunks.json").write_text('{"release":"test"}')
+            (site / "night-nine-loader.js").write_text("loader")
+            build_pages.prepare_offline_cache(site)
+            result = worker.read_text()
+            self.assertRegex(result, r"const CACHE_VERSION = 'export\\|nn-[0-9a-f]{16}';")
+            self.assertIn("const CACHEABLE_FILES = [];", result)
+            self.assertIn("'chunks.json', 'night-nine-loader.js'", result)
+            self.assertNotIn('["play.wasm","play.pck"]', result)
+
     def test_complete_release_contains_runtime_dependencies(self):
         files, meta = milestones.make_snapshot(10, True)
         self.assertEqual(meta["scenes"], 34)

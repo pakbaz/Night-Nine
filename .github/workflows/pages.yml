@@ -1,6 +1,12 @@
-name: Publish Night Nine to GitHub Pages
+name: "Legacy: Publish Night Nine to GitHub Pages"
 
-on: workflow_dispatch
+on:
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: Existing GitHub Release tag to receive source.zip (optional)
+        required: false
+        type: string
 
 permissions:
   contents: read
@@ -12,6 +18,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
         with:
@@ -32,7 +40,20 @@ jobs:
           unzip -q "$templates" templates/web_nothreads_release.zip
       - name: Build the offline game and matching source
         run: |
-          python3 tools/build-pages.py --godot "$RUNNER_TEMP/Godot_v4.7.2-stable_linux.x86_64" --template "$RUNNER_TEMP/templates/web_nothreads_release.zip" --output builds/web
+          python3 tools/build-pages.py --godot "$RUNNER_TEMP/Godot_v4.7.2-stable_linux.x86_64" --template "$RUNNER_TEMP/templates/web_nothreads_release.zip" --output builds/web --source-archive builds/source.zip
+          python3 tools/check-site.py builds/web
+      - name: Keep the matching source as a workflow artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: night-nine-source
+          path: builds/source.zip
+          if-no-files-found: error
+      - name: Attach source to an existing GitHub Release
+        if: inputs.release_tag != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ inputs.release_tag }}
+        run: gh release upload "$RELEASE_TAG" builds/source.zip --clobber
       - uses: actions/upload-pages-artifact@v4
         with:
           path: builds/web

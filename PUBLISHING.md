@@ -1,6 +1,6 @@
-# Publish Night Nine on GitHub Pages
+# Publish Night Nine on Cloudflare Pages
 
-Night Nine is a web game, published on GitHub Pages. There are no installers.
+Night Nine is a static web game. The release target is Cloudflare Pages on the free plan. There are no installers, Pages Functions or Workers.
 
 ## Build and preview
 
@@ -8,13 +8,18 @@ Use the standard Godot 4.7.2 editor and its matching `web_nothreads_release.zip`
 
 ```sh
 python3 tools/build-pages.py --godot /path/to/godot \
-  --template /path/to/web_nothreads_release.zip --output builds/web
+  --template /path/to/web_nothreads_release.zip --output builds/web \
+  --source-archive builds/source.zip
 python3 -m http.server 8000 --bind 127.0.0.1 --directory builds
 ```
 
 Open `http://localhost:8000/web/`. Service workers require HTTPS or localhost. The first download includes the engine and game pack. The service worker caches these resources and the landing page for later visits, including offline play once the cache is complete. A new game-pack version can require a new download.
 
-The site includes a compact playable source archive. Editable artwork, audio masters and authoring tools remain in Git and are linked at the exact build commit rather than copied into the size-limited Pages site. Downloads from a private repository require GitHub access. If distributing the game publicly, also make its corresponding source accessible to players under the project license.
+`build-pages.py` splits `play.pck` and `play.wasm` into immutable parts no larger than 24 MiB, writes `chunks.json`, installs the browser loader, patches the service worker and runs `tools/check-site.py`. The check also enforces a 5,000-file release limit and verifies every part and whole-file hash.
+
+The website does not contain `source.zip`. The builder writes that matching source archive next to the site, at `builds/source.zip` in the example. The landing page links to the exact GitHub commit archive. Downloads from a private repository require GitHub access. If distributing the game publicly, make its corresponding source accessible under the project license.
+
+Use `--archive builds/Night-Nine-web.zip` to also make a portable copy of the static site. It contains the chunked browser game, not an embedded source checkout. Its README links to the matching source URL.
 
 ## Saves and storage
 
@@ -28,14 +33,21 @@ Use **Menu → Browser storage**:
 
 Clearing site data, private browsing and storage eviction can remove saves and cached resources. Persistent storage reduces eviction risk; it does not prevent deliberate deletion. Export a backup before changing browsers, devices, domains or site data. There is no cloud save account or cross-device synchronization.
 
-## Deploy
+## Cloudflare Pages deploy
 
-The `Publish Night Nine to GitHub Pages` workflow is manual. It checks the source, exports the Web build and uploads only the static website and not the editable masters. The builder refuses a site at or above the 1 GiB Pages size limit.
+Cloudflare Pages free-plan limits verified on 2026-11-20 are **25 MiB per file** and **20,000 files per site**. This project keeps every deployed file at or below 24 MiB and no more than 5,000 files. Direct upload does not use Cloudflare build minutes. Static hosting needs no Pages Functions.
 
-The current test build is about **712 MiB total**. Loading the playable game uses about **377 MiB** on a cold visit. GitHub documents a **soft** limit of **100 GB of Pages bandwidth per month**, not a guaranteed allowance. That is roughly **270 cold game loads per month** if no one downloads the optional source archive, or about **144** if each visitor also downloads its roughly 334 MiB compact source ZIP. Browser caching can reduce repeat traffic after it has cached the game pack, but the browser check could not confirm offline behavior in this build. Treat these figures as planning estimates, not a traffic guarantee.
+Create the `night-nine` Pages project manually when publication is approved, then direct-upload the checked site:
 
-Downloads from the website, including the optional `source.zip`, count as Pages traffic. Cloning the public repository or downloading an archive directly from its GitHub repository page uses GitHub's repository service rather than the Pages site's bandwidth. It still transfers a sizable source tree. Put the game pack on a CDN or another host if expected traffic approaches the Pages soft limit.
+```sh
+python3 tools/check-site.py builds/web
+npx wrangler pages deploy builds/web --project-name night-nine
+```
 
-In the repository, select **Settings → Pages → Build and deployment → GitHub Actions**. Then run the Pages workflow for the desired committed revision.
+Do not run Wrangler until the user approves deployment. Wrangler login and project creation are deliberately outside the build.
 
-Keep the repository private until publication is approved. GitHub Pages from private repositories requires a supported account plan, and the website is normally public even when its repository is private. Do not enable public deployment as a side effect of pushing source.
+## Legacy GitHub Pages workflow
+
+`.github/workflows/pages.yml` remains as a manual legacy path. It builds and checks the same chunked site, uploads `source.zip` as a workflow artifact, and can attach it to an existing GitHub Release when a `release_tag` input is supplied. It still deploys the site to GitHub Pages, so do not run it for the Cloudflare release.
+
+Keep the repository private until publication is approved. Do not enable or deploy either public host as a side effect of pushing source.

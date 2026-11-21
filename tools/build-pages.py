@@ -1,17 +1,20 @@
 #!/usr/bin/env python3
 """Build an offline-capable Pages game and compact source from one Git commit."""
 import argparse
+import hashlib
 import html
 import os
 from pathlib import Path
 import re
 import shutil
 import subprocess
+import sys
 import tempfile
 import zipfile
 
 
 SOURCE_PATHS = ("game", "art", "site", "tools/build-pages.py",
+                "tools/split-site.py", "tools/check-site.py",
                 "README.md", "PUBLISHING.md", "LICENSE", "MEDIA.md")
 
 
@@ -22,23 +25,60 @@ def run(*args, **kwargs):
 def prepare_offline_cache(site):
     worker = site / "play.service.worker.js"
     text = worker.read_text()
-    text, count = re.subn(r"const CACHE_PREFIX = '[^']*';",
+    text, count = re.subn(r"const CACHE_PREFIX = [^\n]+;",
                          "const CACHE_PREFIX = 'night-nine:' + self.registration.scope + ':';", text)
     if count != 1 or "const FULL_CACHE = " not in text:
         raise ValueError("Unexpected Godot service worker; cannot configure the offline cache.")
-    text = text.replace("const FULL_CACHE = ",
-                        "CACHED_FILES.push('./', 'index.html', 'cover.jpg', 'LICENSE.txt', "
-                        "'MEDIA.txt', 'THIRD-PARTY.txt');\nconst FULL_CACHE = ", 1)
-    text = text.replace("cache.put(event.request, response.clone());",
-                        "event.waitUntil(cache.put(event.request, response.clone()));")
+    chunks = site / "chunks.json"
+    loader = site / "night-nine-loader.js"
+    if chunks.is_file() and loader.is_file():
+        release = hashlib.sha256(chunks.read_bytes() + b"\0" + loader.read_bytes()).hexdigest()[:16]
+
+        def cache_version(match):
+            base = re.sub(r"\|nn-[0-9a-f]{16}$", "", match.group(1))
+            return f"const CACHE_VERSION = '{base}|nn-{release}';"
+
+        text, version_count = re.subn(
+            r"const CACHE_VERSION = '([^']*)';", cache_version, text)
+        if version_count != 1:
+            raise ValueError("Unexpected Godot service worker cache version.")
+    text, cacheable_count = re.subn(
+        r"const CACHEABLE_FILES = \[[^\n]*\];", "const CACHEABLE_FILES = [];", text)
+    if cacheable_count != 1:
+        raise ValueError("Unexpected Godot service worker cacheable-file list.")
+    shell_push = (
+        "CACHED_FILES.push('./', 'index.html', 'cover.jpg', 'LICENSE.txt', "
+        "'MEDIA.txt', 'THIRD-PARTY.txt', 'chunks.json', 'night-nine-loader.js');")
+    if "CACHED_FILES.push(" in text:
+        text, push_count = re.subn(r"CACHED_FILES\.push\([^\n]+\);", shell_push, text)
+        if push_count != 1:
+            raise ValueError("Unexpected Godot service worker shell-file list.")
+    else:
+        text = text.replace("const FULL_CACHE = ", shell_push + "\nconst FULL_CACHE = ", 1)
+    cache_write = "event.waitUntil(cache.put(event.request, response.clone()));"
+    if cache_write not in text:
+        text = text.replace("cache.put(event.request, response.clone());", cache_write)
     worker.write_text(text)
 
 
-def build(repo, output, godot, template, source_url, archive_path):
+def inject_chunk_loader(page):
+    marker = '<script src="play.js"></script>'
+    if page.count(marker) != 1:
+        raise ValueError("Unexpected Godot HTML shell; cannot install the chunk loader.")
+    return page.replace(
+        marker, '<script src="night-nine-loader.js"></script>\n\t\t' + marker, 1)
+
+
+def build(repo, output, godot, template, source_url, archive_path, source_archive):
     if not (repo / "game/content/checkpoint.json").is_file():
         raise ValueError("Run this command from the public Night Nine release repository.")
     if output.exists():
         raise FileExistsError(f"Choose a new output directory: {output}")
+    source_archive = source_archive or output.parent / "source.zip"
+    if source_archive.exists():
+        raise FileExistsError(f"Choose a new source archive: {source_archive}")
+    if source_archive.is_relative_to(output):
+        raise ValueError("Choose a source archive path outside the website directory.")
     if archive_path and archive_path.exists():
         raise FileExistsError(f"Choose a new archive: {archive_path}")
     if archive_path and archive_path.is_relative_to(output):
@@ -50,8 +90,8 @@ def build(repo, output, godot, template, source_url, archive_path):
         site.mkdir()
         # Keep editable masters in Git, not in the size-limited Pages artifact.
         run("git", "-C", repo, "archive", "--format=zip", "--prefix=Night-Nine/",
-            "--output", site / "source.zip", "HEAD", *SOURCE_PATHS)
-        with zipfile.ZipFile(site / "source.zip") as archive:
+            "--output", temp / "source.zip", "HEAD", *SOURCE_PATHS)
+        with zipfile.ZipFile(temp / "source.zip") as archive:
             archive.extractall(temp)
         snapshot = temp / "Night-Nine"
         game = snapshot / "game"
@@ -88,14 +128,17 @@ def build(repo, output, godot, template, source_url, archive_path):
             source_url = f"https://github.com/{github}/archive/{commit}.zip"
         page = (snapshot / "site/index.html").read_text().replace("@@SIZE@@", str(round(size)))
         (site / "index.html").write_text(page.replace("@@EDITABLE_SOURCE@@", html.escape(source_url, quote=True)))
+        (site / "play.html").write_text(inject_chunk_loader((site / "play.html").read_text()))
+        for name in ("night-nine-loader.js", "_headers"):
+            shutil.copyfile(snapshot / "site" / name, site / name)
         shutil.copyfile(snapshot / "art/night-nine.jpg", site / "cover.jpg")
         shutil.copyfile(snapshot / "LICENSE", site / "LICENSE.txt")
         shutil.copyfile(snapshot / "MEDIA.md", site / "MEDIA.txt")
         shutil.copyfile(game / "LICENSES.txt", site / "THIRD-PARTY.txt")
         (site / ".nojekyll").touch()
+        run(sys.executable, snapshot / "tools/split-site.py", site)
         prepare_offline_cache(site)
-        if sum(p.stat().st_size for p in site.iterdir() if p.is_file()) >= 1024**3:
-            raise ValueError("The Pages site exceeds the 1 GiB site limit.")
+        run(sys.executable, snapshot / "tools/check-site.py", site)
         if archive_path:
             archive_path.parent.mkdir(parents=True, exist_ok=True)
             with tempfile.TemporaryDirectory(dir=archive_path.parent) as zip_dir:
@@ -111,14 +154,17 @@ def build(repo, output, godot, template, source_url, archive_path):
                         "and select Play in browser. Keep the same site address to continue your saved game.\n\n"
                         "The game caches resources after loading. Browser saves stay on the same origin. "
                         "Use Menu > Browser storage to export/import backups or request persistent storage.\n\n"
-                        f"Complete source and masters: {source_url}\n"
-                        "You can also open the compact Godot checkout in Night-Nine/source.zip.\n")
+                        f"Playable source and editable masters: {source_url}\n")
                 with zipfile.ZipFile(packaged) as archive:
                     if archive.testzip():
                         raise RuntimeError("The portable browser archive failed its integrity check.")
                 packaged.rename(archive_path)
+        source_archive.parent.mkdir(parents=True, exist_ok=True)
+        (temp / "source.zip").rename(source_archive)
         site.rename(output)
-        print(f"Play at index.html over HTTP. First load is about {size:.1f} MiB. Output: {output}", flush=True)
+        print(
+            f"Play at index.html over HTTP. First load is about {size:.1f} MiB. "
+            f"Output: {output}. Source: {source_archive}", flush=True)
 
 
 if __name__ == "__main__":
@@ -128,7 +174,10 @@ if __name__ == "__main__":
     parser.add_argument("--template", type=Path, help="Official web_nothreads_release.zip for Godot 4.7.2.")
     parser.add_argument("--source-url", help="Download URL for the matching full source archive with editable masters.")
     parser.add_argument("--archive", type=Path, help="Also create a portable ZIP of the static site.")
+    parser.add_argument("--source-archive", type=Path,
+                        help="Source ZIP path (default: source.zip next to the site directory).")
     options = parser.parse_args()
     build(Path(__file__).resolve().parents[1], options.output.resolve(), options.godot,
           options.template.resolve() if options.template else None, options.source_url,
-          options.archive.resolve() if options.archive else None)
+          options.archive.resolve() if options.archive else None,
+          options.source_archive.resolve() if options.source_archive else None)
