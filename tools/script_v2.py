@@ -416,6 +416,16 @@ def validate(content, edits, merge):
         sid = scene['id']
         ids = {t['id'] for t in scene['tasks']}
         present = set(scene.get('present', [])) | set(g.get('always_present', []))
+        # The scene departs on its own after its last lead, so a topic can only wait for
+        # a lead that some other lead requires; that lead can never be solved last.
+        needs = {t['id']: set(t.get('requires', [])) for t in scene['tasks']}
+        required = set()
+        frontier = [r for reqs in needs.values() for r in reqs]
+        while frontier:
+            task_id = frontier.pop()
+            if task_id not in required:
+                required.add(task_id)
+                frontier.extend(needs.get(task_id, ()))
         for topic in scene.get('talk', []):
             where = topic['id']
             label = str(topic.get('topic', ''))
@@ -428,6 +438,8 @@ def validate(content, edits, merge):
                 merge.issue('error', where, 'talk topic needs at least two lines')
             if topic.get('after') and topic['after'] not in ids:
                 merge.issue('error', where, f"talk after names unknown task {topic['after']}")
+            elif topic.get('after') and topic['after'] not in required:
+                merge.issue('error', where, f"talk after {topic['after']} could be the last lead, so the topic might never be heard")
             if speaker not in cast:
                 merge.issue('error', where, f'unknown talk speaker {speaker}')
             elif speaker not in present:

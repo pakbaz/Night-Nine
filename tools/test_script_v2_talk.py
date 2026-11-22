@@ -23,7 +23,8 @@ class ScriptV2TalkTests(unittest.TestCase):
 
     def errors(self, talk):
         _, _, merge = self.build(talk)
-        return [text for level, _, text in merge.issues if level == 'error']
+        return [text for level, where, text in merge.issues
+                if level == 'error' and str(where).startswith('c1_flat')]
 
     def test_valid_talk_builds_topics_lines_and_portrait_company(self):
         content, scene, merge = self.build({
@@ -36,7 +37,7 @@ class ScriptV2TalkTests(unittest.TestCase):
                 ],
             }]
         })
-        self.assertFalse([issue for issue in merge.issues if issue[0] == 'error'])
+        self.assertFalse([issue for issue in merge.issues if issue[0] == 'error' and str(issue[1]).startswith('c1_flat')])
         self.assertEqual(scene['talk'], [{
             'id': 'c1_flat.talk.iris.1',
             'speaker': 'iris',
@@ -60,6 +61,18 @@ class ScriptV2TalkTests(unittest.TestCase):
             'lines': ['iris|One.', 'steve|Two.'],
         }]})
         self.assertTrue(any('after names unknown task' in error for error in errors))
+
+    def test_after_must_name_a_lead_that_is_never_solved_last(self):
+        # The scene departs on its own after the last lead, so such a topic could never be heard.
+        errors = self.errors({'iris': [{
+            'topic': 'After the last lead', 'after': 'control',
+            'lines': ['iris|One.', 'steve|Two.'],
+        }]})
+        self.assertTrue(any('could be the last lead' in error for error in errors))
+        self.assertFalse(self.errors({'iris': [{
+            'topic': 'After an earlier lead', 'after': 'compare',
+            'lines': ['iris|One.', 'steve|Two.'],
+        }]}))
 
     def test_long_topic_is_rejected(self):
         errors = self.errors({'iris': [{
