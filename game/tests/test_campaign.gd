@@ -56,7 +56,7 @@ func _check_story_shape(state: NightCampaign) -> void:
 		if scene.id != "postcredits":
 			var plan: Dictionary = music.scene_music.get(scene.id, {})
 			check(ResourceLoader.exists(str(plan.get("file", ""))), "Planned music for " + str(scene.id))
-	check(music.scene_music.c1_flat.file.ends_with("tape-anomaly.mp3") and music.scene_music.c10_live.file == music.title.file, "Tape Anomaly for the tapes; the main title for the finale")
+	check(music.scene_music.c1_flat.file == music.chapters["Chapter 1"].theme.file and music.scene_music.c1_pier.file.ends_with("tape-anomaly.mp3") and music.scene_music.c10_live.file == music.title.file, "The Chapter 1 theme for the morning, Tape Anomaly on the pier; the main title for the finale")
 
 func _check_migration() -> void:
 	var old_order: Array = NightCampaign.ORDER_V1
