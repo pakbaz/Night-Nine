@@ -353,14 +353,16 @@ def make_snapshot(stage, strict):
             fx.add(id[7:])
             continue
         v = voice[id]
-        c = timing[id]
+        c = timing.get(id)
         if strict and v.get("model") not in {"elevenlabs_v4", "eleven_v4"}:
             raise RuntimeError("Final ElevenLabs take pending: " + id)
-        if v["sha256"] != c["audio_sha256"]:
+        # Takes recorded after lip sync was retired carry no mouth cues.
+        if c is not None and v["sha256"] != c["audio_sha256"]:
             raise RuntimeError("Stale timing " + id)
         takes[id] = dict(v)
         asset(files, v["file"])
-        cues[id] = c
+        if c is not None:
+            cues[id] = c
     campaign.update(
         {
             "source": "Night Nine original story",

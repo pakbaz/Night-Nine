@@ -272,6 +272,27 @@ class ApiClient:
         with self._request("POST", path, body=body, params=params) as response:
             return response.read(), {key.lower(): value for key, value in response.headers.items()}
 
+    def post_multipart(self, path, fields, file_name, payload):
+        boundary = "nightnine" + uuid.uuid4().hex
+        parts = []
+        for key, value in fields.items():
+            parts.append(f'--{boundary}\r\nContent-Disposition: form-data; name="{key}"\r\n\r\n{value}\r\n'.encode())
+        parts.append((f'--{boundary}\r\nContent-Disposition: form-data; name="file"; filename="{file_name}"\r\n'
+                      'Content-Type: audio/wav\r\n\r\n').encode() + payload + b"\r\n")
+        parts.append(f"--{boundary}--\r\n".encode())
+        request = urllib.request.Request(
+            self.base_url + path, data=b"".join(parts), method="POST",
+            headers={"xi-api-key": self.api_key, "Content-Type": f"multipart/form-data; boundary={boundary}"},
+        )
+        try:
+            with urllib.request.urlopen(request, timeout=180) as response:
+                return json.loads(response.read()), {key.lower(): value for key, value in response.headers.items()}
+        except urllib.error.HTTPError as error:
+            detail = error.read(2048).decode(errors="replace")
+            raise RuntimeError(f"ElevenLabs HTTP {error.code} for POST {path}: {detail}") from error
+        except urllib.error.URLError as error:
+            raise RuntimeError(f"Uncertain ElevenLabs outcome for POST {path}: {error.reason}") from error
+
 
 def models_list(raw):
     return raw if isinstance(raw, list) else raw.get("models", [])
@@ -655,7 +676,7 @@ def comparison_distance(expected, recognized, checker):
     return checker["distance"](left, right)
 
 
-def assess_transcript(report, checker):
+def assess_transcript(report, checker, production=None):
     expected = report["expected"]
     local = report.get("local_recognized", report["recognized"])
     local_edits = comparison_distance(expected, local, checker)
@@ -665,7 +686,8 @@ def assess_transcript(report, checker):
     report.pop("independent_asr", None)
     independent_edits = None
     audio_id = safe_id(report["audio_id"])
-    for path in sorted((PRODUCTION / "independent-asr").glob(f"scribe-v3*/{audio_id}.json")):
+    production = Path(production) if production else PRODUCTION
+    for path in sorted((production / "independent-asr").glob(f"scribe-v3*/{audio_id}.json")):
         evidence = read_json(path)
         if evidence.get("audio_sha256") != report["wav_sha256"]:
             continue
@@ -689,7 +711,7 @@ def assess_transcript(report, checker):
         independent_edits = edits
         report["local_recognized"] = local
         report["independent_asr"] = {
-            "file": path.relative_to(PRODUCTION).as_posix(), "sha256": file_sha(path),
+            "file": path.relative_to(production).as_posix(), "sha256": file_sha(path),
             "model": "scribe_v3", "word_edits": edits, "listening_reviewed": False,
         }
         report.update(recognized=recognized, word_edits=edits,

@@ -85,6 +85,7 @@ jobs:
           python tools/test_release_packaging.py
           python tools/test-ending-reward.py
           python tools/test_script_v2_talk.py
+          python tools/test-voice-additions.py
 
       - name: Build and verify the static review site
         run: |

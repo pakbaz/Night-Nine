@@ -9,6 +9,8 @@ This directory contains the editable production sources. Godot loads the optimiz
 | `cinematics/campaign/` | Chapter-film artwork, moving subjects and shot directions |
 | `audio/elevenlabs-v4/recordings/` | Existing approved dialogue recordings |
 | `audio/lipsync-elevenlabs-v4/` | Timing data for the existing dialogue |
+| `audio/elevenlabs-v4-script-v2/` | Frozen ElevenLabs v4 production plan, receipts, masters, checks and approved overlay |
+| `audio/elevenlabs-v4-additions/` | Resumable later-dialogue batches, validation reports and approved additions overlay; runtime WAVs live under `game/assets/audio/voices/elevenlabs-v4-additions/` |
 | `audio/ambience-campaign/` | Location ambience masters |
 | `audio/ambience-prologue/` | Flashback ambience masters |
 | `audio/soundtrack/` | Cue sheet and recording measurements; in-game MP3s are in `game/assets/audio/music/`, and the standalone loading theme is in `site/loading-screen-music.mp3` |

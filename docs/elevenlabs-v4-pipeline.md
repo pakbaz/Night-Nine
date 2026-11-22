@@ -88,6 +88,50 @@ apply_overlay_to_content_dir(content_dir)
 
 The helper is a no-op before an overlay exists. Once recordings are staged, it verifies the current casting fingerprint, copy aliases, speaker and voice identities, model, campaign/storybook inventories, exact text hashes, audio hashes, and mouth-cue hashes before restoring the overlay. It injects storybook narration only when the complete validated set has been activated.
 
+## Later additions
+
+New or rewritten dialogue is recorded separately from the frozen 873-take production:
+
+```bash
+python3 tools/script_v2.py --apply
+python3 tools/voice_additions.py plan
+python3 tools/voice_additions.py generate \
+  --plan-sha256 <hash printed by plan> \
+  --allow-billed-generation
+.tools/local-media-env/bin/python tools/voice_additions.py validate
+```
+
+If validation lists failures, first ask ElevenLabs Scribe for an independent transcript of the held takes. No script, key terms or prompt is sent. Then validate again:
+
+```bash
+.tools/local-media-env/bin/python tools/voice_additions.py independent \
+  --plan-sha256 <same hash> \
+  --allow-billed-transcription
+.tools/local-media-env/bin/python tools/voice_additions.py validate
+```
+
+The same rules as the frozen production apply: a longer line passes on an exact independent transcript, and a line of four words or fewer needs exact local and independent transcripts. For takes that still fail, request only their next bounded attempt, check them again, and validate:
+
+```bash
+python3 tools/voice_additions.py retake \
+  --plan-sha256 <same hash> \
+  --allow-billed-generation
+```
+
+`retake` skips short lines whose local transcript is already exact, because only an independent check is missing; pass `--include-short` to regenerate them anyway. Each line is limited to three deterministic attempts. Generation refuses a changed plan hash, missing billing flag, enabled paid overage, insufficient included credits, partial receipt, or unresolved inflight marker. Never delete an inflight marker until the uncertain request has been reconciled; doing so could bill the same line twice.
+
+When every take passes (or with `--partial`, leaving failed lines missing), stage, archive the batch and rebuild the content:
+
+```bash
+.tools/local-media-env/bin/python tools/voice_additions.py stage
+python3 tools/voice_additions.py archive
+python3 tools/script_v2.py --apply
+```
+
+`archive` moves the batch's attempts, receipts, checks and transcripts to `batches/<first 16 characters of the plan hash>/`, so a later batch can record a reworded line under the same audio ID. If a line keeps failing after three attempts, reword it and record it in a new batch rather than relaxing the comparison.
+
+The additions tool keeps raw attempts and receipts under `assets/audio/elevenlabs-v4-additions/`, stages 48 kHz mono PCM16 runtime files under `game/assets/audio/voices/elevenlabs-v4-additions/`, and merges only takes whose current text, cast identity, voice, waveform hash, and QA status still match. It does not generate mouth cues. Confirm that `game/content/voice-manifest.json` has an empty `missing` list before release.
+
 ## Current blockers
 
 Strict automated QA initially passed 753 of 873 audio IDs and held 120: 63 exact-ASR mismatches and 57 short ASR-ambiguous clips. After the independent check and correction below, 829 pass and 44 remain held: 42 transcript differences and two short ambiguities. Review only the current held takes with:
@@ -133,3 +177,7 @@ Independent evidence is compared with the unchanged strict comparator and bound 
 Six retakes passed both models and were adopted with fresh mouth cues: `c10_live.first.02`, `c1_dinner.out.03`, `c7_gate.out.05`, `c7_swap.recap.03`, `c8_lab.lastpage.find` and `c9_wake.agnes.find`. Each keeps its actual candidate generation-plan hash and request ID alongside the canonical script-plan identity. Original masters and generation receipts remain intact. The two other locally passing candidates disagreed with Scribe and were not adopted.
 
 The resulting inventory is **829 automated passes and 44 holds**, not a listening-approved release. Some remaining differences are names, homophones, spelling or date formatting; others may be real word errors. No lexical substitutions or script edits were used to hide them. Both playback gates remain disabled pending listening review, followed by a complete voiced walkthrough.
+
+## November 21 Chapter 1 additions
+
+Chapter 1 and the prologue gained 100 new or reworded voiced lines: small talk, ordinary morning conversation, the pier and work-order leads, and updated findings. Two batches used 4,765 + 167 characters of speech, plus 7 retakes and 27 Scribe transcription requests (the saved evidence keeps the latest per line), within included credits with paid overage disabled. Local Whisper passed 79 of the first 100 takes. Independent Scribe transcripts and retakes cleared all but two lines, where both recognizers wrote "AutoRick" as two words. Those two lines were reworded ("the new radio host", "the radio") and recorded in the second batch, which passed. No comparison rule was relaxed and no take was marked as listening-reviewed.
