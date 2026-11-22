@@ -232,6 +232,7 @@ def public_control_files(files, stage, all_scenes):
         "ui/fullscreen_button.gd",
         "ui/mark_icon.gd",
         "audio/campaign_score.gd",
+        "audio/audio_clock.gd",
     ]:
         copy_sources(files, name)
     copy_sources(files, "core/save_repository.gd")

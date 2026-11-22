@@ -149,7 +149,11 @@ func position() -> float:
 		return -1.0
 	# Correct for the time since the last mix, but never by more than one buffer:
 	# a stalled mixer under heavy load must not make the clock jump ahead.
-	return players[active_index].get_playback_position() + minf(AudioServer.get_time_since_last_mix(), .05)
+	var at: float = players[active_index].get_playback_position()
+	# The published web engine already reports the audible position.
+	if OS.has_feature("web"):
+		return at
+	return at + minf(AudioServer.get_time_since_last_mix(), .05)
 
 func seek(seconds: float) -> void:
 	if active_index >= 0 and players[active_index].stream:

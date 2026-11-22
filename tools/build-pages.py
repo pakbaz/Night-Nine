@@ -87,6 +87,42 @@ def prepare_offline_cache(site):
     worker.write_text(text)
 
 
+# Godot 4.7's web sample playback reports positions through a pooled AudioWorklet that it
+# holds at zero for a full second after every start, so waveform playheads trailed the
+# sound by a second. Its pause also divides by the sample rate, so a resumed voice
+# started over. Take the position from the audio clock instead, minus the output latency,
+# and pause and resume from that position.
+WEB_AUDIO_PATCHES = (
+    ("getPlaybackPosition(){return this._playbackPosition}",
+     "getPlaybackPosition(){if(!this.isStarted||this.isCanceled){return this._playbackPosition}"
+     "if(this.isPaused){return this.offset+this.pauseTime}"
+     "const ctx=GodotAudio.ctx;const delay=(ctx.baseLatency||0)+(ctx.outputLatency||0);"
+     "return this.offset+(this._resumedFrom||0)"
+     "+Math.max(0,ctx.currentTime-this._sourceStartTime-delay)*this.getPitchScale()}"),
+    ("restart(){this.isPaused=false;this.pauseTime=0;this._resetSourceStartTime();this._restart()}",
+     "restart(){this.isPaused=false;this.pauseTime=0;this._resumedFrom=0;"
+     "this._resetSourceStartTime();this._restart()}"),
+    ("_pause(){if(!this.isStarted){return}this.isPaused=true;"
+     "this.pauseTime=(GodotAudio.ctx.currentTime-this._sourceStartTime)/this.getPlaybackRate();"
+     "this._source.stop()}",
+     "_pause(){if(!this.isStarted){return}this.pauseTime=this.getPlaybackPosition()-this.offset;"
+     "this.isPaused=true;this._source.stop()}"),
+    ("_unpause(){this._restart();this.isPaused=false;this.pauseTime=0}",
+     "_unpause(){this._resumedFrom=this.pauseTime;this._restart();this._resetSourceStartTime();"
+     "this.isPaused=false;this.pauseTime=0}"),
+)
+
+
+def patch_web_audio_position(site):
+    library = site / "play.js"
+    text = library.read_text()
+    for original, patched in WEB_AUDIO_PATCHES:
+        if text.count(original) != 1:
+            raise ValueError("Unexpected Godot web audio; cannot fix sample playback positions.")
+        text = text.replace(original, patched, 1)
+    library.write_text(text)
+
+
 def inject_chunk_loader(page):
     marker = '<script src="play.js"></script>'
     if page.count(marker) != 1:
@@ -166,6 +202,7 @@ def build(repo, output, godot, template, source_url, archive_path, source_archiv
         page = (snapshot / "site/index.html").read_text().replace("@@SIZE@@", str(round(size)))
         (site / "index.html").write_text(page.replace("@@EDITABLE_SOURCE@@", html.escape(source_url, quote=True)))
         (site / "play.html").write_text(inject_chunk_loader((site / "play.html").read_text()))
+        patch_web_audio_position(site)
         for name in ("night-nine-loader.js", "loading-screen-music.mp3", "_headers"):
             shutil.copyfile(snapshot / "site" / name, site / name)
         shutil.copyfile(snapshot / "art/night-nine.jpg", site / "cover.jpg")

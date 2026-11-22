@@ -52,6 +52,13 @@ func _initialize() -> void:
 	check(together.data != a.data and together.data != b.data,
 		"Aligned playback mixes the naturally different voices")
 	check(a.mix_rate == 48000 and not a.stereo, "Playback keeps the authored format")
+	# Inside the accepted tolerance the tapes click into exact alignment, so identical
+	# parts play as one voice instead of two copies a centisecond apart.
+	check(model.playback("both", -0.34).data == together.data and model.playback("both", -0.36).data == together.data,
+		"An accepted near-alignment plays exactly like the true alignment")
+	check(model.playback("both", -0.33).data != together.data, "A rejected offset keeps its own timing")
+	check(is_equal_approx(model.effective_offset(-0.34), -0.35) and is_equal_approx(model.effective_offset(0.2), 0.2),
+		"Draw and play the effective offset")
 	check(model.peaks_a.size() > 1000 and model.peaks_b.size() > 1000,
 		"Create independent waveform peaks for both tapes")
 	var tapes: Dictionary = metadata.tapes

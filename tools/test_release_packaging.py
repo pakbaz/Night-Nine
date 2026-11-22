@@ -153,6 +153,59 @@ class ReleasePackagingTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "chunks.json"):
                 check_site.check_site(site)
 
+    @unittest.skipUnless(shutil.which("node"), "Node.js is required for the web audio test.")
+    def test_web_audio_position_follows_the_audible_sound(self):
+        fixture = ROOT / "tools/fixtures/web-audio"
+        with tempfile.TemporaryDirectory() as directory:
+            site = Path(directory)
+            (site / "play.js").write_text("const GodotAudio={" + (fixture / "sample-node.js").read_text() + "};")
+            build_pages.patch_web_audio_position(site)
+            result = subprocess.run(["node", "--input-type=module", "-e", r"""
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+const library = fs.readFileSync(process.argv[1], 'utf8');
+const near = (actual, expected, what) => assert.ok(Math.abs(actual - expected) < 1e-9, `${what}: ${actual} != ${expected}`);
+const started = [];
+const ctx = { currentTime: 3, sampleRate: 48000, baseLatency: 0.01, outputLatency: 0.04,
+	createBufferSource: () => ({ playbackRate: { value: 1 }, connect() {}, disconnect() {}, stop() {},
+		start(when, offset) { started.push(offset); }, addEventListener() {}, removeEventListener() {} }) };
+globalThis.AudioWorkletNode = class { constructor() { this.port = { postMessage() {} }; }
+	get parameters() { return { get: () => ({ setValueAtTime() {} }) }; } connect() {} disconnect() {} };
+globalThis.GodotRuntime = { error: (e) => { throw e; } };
+globalThis.GodotAudio = new Function(library + '; return GodotAudio;')();
+Object.assign(GodotAudio, {
+	ctx, sampleNodes: new Map(), audioPositionWorkletNodes: [], audioPositionWorkletPromise: Promise.resolve(),
+	Sample: { getSample: () => ({ sampleRate: 48000, loopMode: 'disabled', getAudioBuffer: () => ({}) }) },
+	Bus: { getBus: () => ({}) },
+	SampleNodeBus: { create: () => ({ setVolume() {}, getInputNode: () => ({}), clear() {} }) },
+	deleteSampleNode: (id) => GodotAudio.sampleNodes.delete(id),
+});
+const voice = GodotAudio.SampleNode.create({ id: 'a', streamObjectId: 's', busIndex: 0 }, { offset: 0, start: true });
+near(voice.getPlaybackPosition(), 0, 'before the first block');
+await Promise.resolve(); await Promise.resolve();
+// Audible from the first block: the clock minus the output latency, with no hold at zero.
+ctx.currentTime = 3.1; near(voice.getPlaybackPosition(), 0.05, 'a tenth of a second in');
+ctx.currentTime = 4; near(voice.getPlaybackPosition(), 0.95, 'one second in');
+// Pausing holds the position; resuming continues from it instead of restarting the clip.
+GodotAudio.SampleNode.pauseSampleNode('a', true);
+ctx.currentTime = 6; near(voice.getPlaybackPosition(), 0.95, 'held while paused');
+GodotAudio.SampleNode.pauseSampleNode('a', false);
+near(started.at(-1), 0.95, 'resumed source starts where the listener was');
+ctx.currentTime = 6.5; near(voice.getPlaybackPosition(), 1.4, 'continues after resuming');
+// A clip with an offset and a pitch scale.
+const music = GodotAudio.SampleNode.create({ id: 'b', streamObjectId: 's', busIndex: 0 }, { offset: 2, pitchScale: 2, start: true });
+await Promise.resolve(); await Promise.resolve();
+ctx.currentTime = 6.75; near(music.getPlaybackPosition(), 2 + 0.2 * 2, 'offset and pitch');
+""", str(site / "play.js")], capture_output=True, text=True)
+            self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+
+    def test_web_audio_patch_refuses_an_unexpected_engine(self):
+        with tempfile.TemporaryDirectory() as directory:
+            site = Path(directory)
+            (site / "play.js").write_text("const GodotAudio={};")
+            with self.assertRaisesRegex(ValueError, "Unexpected Godot web audio"):
+                build_pages.patch_web_audio_position(site)
+
     @unittest.skipUnless(shutil.which("node"), "Node.js is required for the browser loader test.")
     def test_browser_loader_verifies_and_retries_parts(self):
         result = subprocess.run(["node", ROOT / "tools/test_chunk_loader.mjs"],

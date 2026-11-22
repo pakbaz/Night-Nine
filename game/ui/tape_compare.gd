@@ -269,10 +269,7 @@ func _process(_delta: float) -> void:
 	if not visible:
 		return
 	if is_instance_valid(voice) and voice.playing and voice.stream == active_stream:
-		var correction := 0.0
-		if not voice.stream_paused and not OS.has_feature("movie"):
-			correction = AudioServer.get_time_since_last_mix() - AudioServer.get_output_latency()
-		trace.playhead = recording.timeline_start + maxf(0, voice.get_playback_position() + correction)
+		trace.playhead = recording.timeline_start + maxf(0, NightAudioClock.audible_position(voice))
 	else:
 		trace.playhead = -100
 	trace.queue_redraw()

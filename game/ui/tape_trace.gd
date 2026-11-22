@@ -40,7 +40,7 @@ func _draw() -> void:
 			color.a = 0.65
 		var middle := 120.0 if overlay else 66.0 + row * 132.0
 		draw_line(Vector2(LEFT, middle), Vector2(size.x - RIGHT, middle), Color(0.5, 0.6, 0.6, 0.3), 1)
-		var row_offset := 0.0 if row == 0 else offset
+		var row_offset := 0.0 if row == 0 else recording.effective_offset(offset)
 		var peaks := recording.peaks_a if row == 0 else recording.peaks_b
 		for index: int in peaks.size():
 			var x := time_x(row_offset + float(index * NightTapeRecording.BIN_FRAMES) / recording.rate)

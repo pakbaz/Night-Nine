@@ -115,6 +115,11 @@ func aligned(offset: float) -> bool:
 	# One centisecond of adjustment tolerance avoids a pixel-perfect input gate.
 	return is_finite(offset) and absf(offset - expected_offset) <= 0.015
 
+## Inside the accepted tolerance the tapes click into exact alignment, so identical parts
+## play and draw as one voice instead of two copies a centisecond apart.
+func effective_offset(offset: float) -> float:
+	return expected_offset if aligned(offset) else offset
+
 func playback(mode: String, offset: float) -> AudioStreamWAV:
 	if samples_a.is_empty() or samples_b.is_empty() \
 			or mode not in ["a", "b", "both"] or not is_finite(offset):
@@ -123,7 +128,7 @@ func playback(mode: String, offset: float) -> AudioStreamWAV:
 	var out := PackedByteArray()
 	out.resize(count * 2)
 	var start_a := roundi(-timeline_start * rate)
-	var start_b := roundi((clampf(offset, -0.75, 0.75) - timeline_start) * rate)
+	var start_b := roundi((clampf(effective_offset(offset), -0.75, 0.75) - timeline_start) * rate)
 	for index: int in count:
 		var a_index := index - start_a
 		var b_index := index - start_b
