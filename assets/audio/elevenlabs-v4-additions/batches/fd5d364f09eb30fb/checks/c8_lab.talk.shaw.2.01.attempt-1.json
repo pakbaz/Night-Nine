@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c8_lab.talk.shaw.2.01",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "2c558273f799940475e90b05538b791d4126f3acfa8fe37a62c9415883061bc4",
+  "expected": "Thirty years of explosions, and I can still hear a mouse cough in the next room.",
+  "recognized": "30 years of explosions and I can still hear a mouse cough in the next room.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 5.28,
+  "sample_rate": 48000,
+  "peak": 0.322784423828125,
+  "rms": 0.0397795189508081,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

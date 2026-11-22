@@ -1,0 +1,277 @@
+{
+  "audio_id": "c9_wake.agnes.lead.03",
+  "audio_sha256": "b8257fd9cdd7c24f90b1df287e05b8d458306c39669bdb2c7d9561509ec43332",
+  "file": "assets/audio/elevenlabs-v4-additions/masters/c9_wake.agnes.lead.03.attempt-1.wav",
+  "production_plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "The row list says the sleeper marked O.T. is on her left, and M.V. is on her right.",
+  "recognized": "The row list says the sleeper marked OT is on her left and MV is on her right.",
+  "word_edits": 4,
+  "request_id": null,
+  "trace_id": "91d4f7b5d8a237305a9f8871052d2d8a",
+  "character_cost": "2",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "The row list says the sleeper marked OT is on her left and MV is on her right.",
+    "words": [
+      {
+        "text": "The",
+        "start": 0.1,
+        "end": 0.16,
+        "type": "word",
+        "logprob": -2.145764938177308e-06
+      },
+      {
+        "text": " ",
+        "start": 0.16,
+        "end": 0.26,
+        "type": "spacing",
+        "logprob": -0.014682808890938759
+      },
+      {
+        "text": "row",
+        "start": 0.26,
+        "end": 0.42,
+        "type": "word",
+        "logprob": -0.014682808890938759
+      },
+      {
+        "text": " ",
+        "start": 0.42,
+        "end": 0.5,
+        "type": "spacing",
+        "logprob": -0.00023064337437972426
+      },
+      {
+        "text": "list",
+        "start": 0.5,
+        "end": 0.8,
+        "type": "word",
+        "logprob": -0.00023064337437972426
+      },
+      {
+        "text": " ",
+        "start": 0.8,
+        "end": 0.92,
+        "type": "spacing",
+        "logprob": -5.483612312673358e-06
+      },
+      {
+        "text": "says",
+        "start": 0.92,
+        "end": 1.14,
+        "type": "word",
+        "logprob": -5.483612312673358e-06
+      },
+      {
+        "text": " ",
+        "start": 1.14,
+        "end": 1.16,
+        "type": "spacing",
+        "logprob": -7.033323527139146e-06
+      },
+      {
+        "text": "the",
+        "start": 1.2,
+        "end": 1.3,
+        "type": "word",
+        "logprob": -7.033323527139146e-06
+      },
+      {
+        "text": " ",
+        "start": 1.3,
+        "end": 1.36,
+        "type": "spacing",
+        "logprob": -0.0005945583689026535
+      },
+      {
+        "text": "sleeper",
+        "start": 1.36,
+        "end": 1.66,
+        "type": "word",
+        "logprob": -0.0005945583689026535
+      },
+      {
+        "text": " ",
+        "start": 1.66,
+        "end": 1.78,
+        "type": "spacing",
+        "logprob": -4.386805812828243e-05
+      },
+      {
+        "text": "marked",
+        "start": 1.78,
+        "end": 2.02,
+        "type": "word",
+        "logprob": -4.386805812828243e-05
+      },
+      {
+        "text": " ",
+        "start": 2.02,
+        "end": 2.22,
+        "type": "spacing",
+        "logprob": -0.007476326543837786
+      },
+      {
+        "text": "OT",
+        "start": 2.22,
+        "end": 2.78,
+        "type": "word",
+        "logprob": -0.007476326543837786
+      },
+      {
+        "text": " ",
+        "start": 2.78,
+        "end": 2.9,
+        "type": "spacing",
+        "logprob": -3.814689989667386e-06
+      },
+      {
+        "text": "is",
+        "start": 2.9,
+        "end": 2.98,
+        "type": "word",
+        "logprob": -3.814689989667386e-06
+      },
+      {
+        "text": " ",
+        "start": 2.98,
+        "end": 3.02,
+        "type": "spacing",
+        "logprob": -3.576278118089249e-07
+      },
+      {
+        "text": "on",
+        "start": 3.02,
+        "end": 3.12,
+        "type": "word",
+        "logprob": -3.576278118089249e-07
+      },
+      {
+        "text": " ",
+        "start": 3.12,
+        "end": 3.16,
+        "type": "spacing",
+        "logprob": -4.291525328881107e-06
+      },
+      {
+        "text": "her",
+        "start": 3.16,
+        "end": 3.3,
+        "type": "word",
+        "logprob": -4.291525328881107e-06
+      },
+      {
+        "text": " ",
+        "start": 3.3,
+        "end": 3.38,
+        "type": "spacing",
+        "logprob": -1.0132738680113107e-05
+      },
+      {
+        "text": "left",
+        "start": 3.38,
+        "end": 3.72,
+        "type": "word",
+        "logprob": -1.0132738680113107e-05
+      },
+      {
+        "text": " ",
+        "start": 3.72,
+        "end": 4.019,
+        "type": "spacing",
+        "logprob": -0.033650610595941544
+      },
+      {
+        "text": "and",
+        "start": 4.019,
+        "end": 4.26,
+        "type": "word",
+        "logprob": -0.033650610595941544
+      },
+      {
+        "text": " ",
+        "start": 4.26,
+        "end": 4.38,
+        "type": "spacing",
+        "logprob": -0.000359351426595822
+      },
+      {
+        "text": "MV",
+        "start": 4.38,
+        "end": 4.88,
+        "type": "word",
+        "logprob": -0.000359351426595822
+      },
+      {
+        "text": " ",
+        "start": 4.88,
+        "end": 5.0,
+        "type": "spacing",
+        "logprob": -2.9802276912960224e-06
+      },
+      {
+        "text": "is",
+        "start": 5.0,
+        "end": 5.08,
+        "type": "word",
+        "logprob": -2.9802276912960224e-06
+      },
+      {
+        "text": " ",
+        "start": 5.08,
+        "end": 5.12,
+        "type": "spacing",
+        "logprob": -9.536738616588991e-07
+      },
+      {
+        "text": "on",
+        "start": 5.12,
+        "end": 5.22,
+        "type": "word",
+        "logprob": -9.536738616588991e-07
+      },
+      {
+        "text": " ",
+        "start": 5.22,
+        "end": 5.26,
+        "type": "spacing",
+        "logprob": -7.271740287251305e-06
+      },
+      {
+        "text": "her",
+        "start": 5.26,
+        "end": 5.34,
+        "type": "word",
+        "logprob": -7.271740287251305e-06
+      },
+      {
+        "text": " ",
+        "start": 5.34,
+        "end": 5.44,
+        "type": "spacing",
+        "logprob": -4.768360213347478e-06
+      },
+      {
+        "text": "right.",
+        "start": 5.44,
+        "end": 5.72,
+        "type": "word",
+        "logprob": -6.318066349801181e-06
+      }
+    ],
+    "transcription_id": "xdmj6AtpeLvHiuIBm75B",
+    "audio_duration_secs": 6.16
+  },
+  "listening_reviewed": false
+}

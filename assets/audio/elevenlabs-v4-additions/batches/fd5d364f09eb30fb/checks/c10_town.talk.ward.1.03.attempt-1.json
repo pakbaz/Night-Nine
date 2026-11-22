@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c10_town.talk.ward.1.03",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "b9c5d86ea8399c9518738661eb42033b19153ef18481e08df3f1c101d862cd97",
+  "expected": "Bandaged, and still mine. Thank you for that.",
+  "recognized": "Bandaged. And still mine. Thank you for that.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 3.92,
+  "sample_rate": 48000,
+  "peak": 0.2738037109375,
+  "rms": 0.028465623532349927,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

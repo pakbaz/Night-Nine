@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "audio_id": "c4_safe.talk.rook_copy.2.03",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "d53bd6cec7af45c504bb27f59f9c91086cfb3d3d560a7798b93813313ccbc9d1",
+  "expected": "That isn’t really an answer.",
+  "recognized": "That isn't really an answer.",
+  "local_recognized": "But that isn't really an answer.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 2.16,
+  "sample_rate": 48000,
+  "peak": 0.206024169921875,
+  "rms": 0.03973533190214913,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c4_safe.talk.rook_copy.2.03.json",
+    "sha256": "26791b347870bb6290c41cf8ffce378fa28779a9796e891b75a2fa9230e4ee28",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  },
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

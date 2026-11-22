@@ -1,0 +1,95 @@
+{
+  "audio_id": "c4_safe.talk.rook_copy.2.03",
+  "audio_sha256": "d53bd6cec7af45c504bb27f59f9c91086cfb3d3d560a7798b93813313ccbc9d1",
+  "file": "assets/audio/elevenlabs-v4-additions/masters/c4_safe.talk.rook_copy.2.03.attempt-1.wav",
+  "production_plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "That isn’t really an answer.",
+  "recognized": "That isn't really an answer.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "8b9543b9249221291de358d533c0a924",
+  "character_cost": "1",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "That isn't really an answer.",
+    "words": [
+      {
+        "text": "That",
+        "start": 0.08,
+        "end": 0.22,
+        "type": "word",
+        "logprob": -9.298280929215252e-06
+      },
+      {
+        "text": " ",
+        "start": 0.22,
+        "end": 0.46,
+        "type": "spacing",
+        "logprob": -2.5987286790041253e-05
+      },
+      {
+        "text": "isn't",
+        "start": 0.46,
+        "end": 0.76,
+        "type": "word",
+        "logprob": -6.324666928776423e-05
+      },
+      {
+        "text": " ",
+        "start": 0.76,
+        "end": 0.82,
+        "type": "spacing",
+        "logprob": -6.079655122448457e-06
+      },
+      {
+        "text": "really",
+        "start": 0.82,
+        "end": 1.06,
+        "type": "word",
+        "logprob": -6.079655122448457e-06
+      },
+      {
+        "text": " ",
+        "start": 1.06,
+        "end": 1.1,
+        "type": "spacing",
+        "logprob": -4.887569048150908e-06
+      },
+      {
+        "text": "an",
+        "start": 1.1,
+        "end": 1.2,
+        "type": "word",
+        "logprob": -4.887569048150908e-06
+      },
+      {
+        "text": " ",
+        "start": 1.2,
+        "end": 1.28,
+        "type": "spacing",
+        "logprob": -2.8967437174287625e-05
+      },
+      {
+        "text": "answer.",
+        "start": 1.28,
+        "end": 1.78,
+        "type": "word",
+        "logprob": -2.6549241218682645e-05
+      }
+    ],
+    "transcription_id": "ulzV1ryHDOeQnb3PlRRb",
+    "audio_duration_secs": 2.16
+  },
+  "listening_reviewed": false
+}

@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c10_station.route.lead.03",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "e134a157cfb265c96698677e1e7a67e4ac3e7a618a45923641ee900d6efa85ae",
+  "expected": "Returns: A is the booth echo, B is a shore camera, and C is measured aboard their ship.",
+  "recognized": "returns. A is the booth echo, B is a shore camera, and C is measured aboard their ship.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 7.36,
+  "sample_rate": 48000,
+  "peak": 0.734039306640625,
+  "rms": 0.08003408783935503,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

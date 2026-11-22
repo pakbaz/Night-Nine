@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "i2_nora.talk.lyle.2.01",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "5d644d2b3bbbff9528cdc5cb62561901bf20aed67b4bace1558e0fe58fdaf629",
+  "expected": "I should be at work. Somebody must be covering my shifts.",
+  "recognized": "I should be at work. Somebody must be covering my shifts.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 3.92,
+  "sample_rate": 48000,
+  "peak": 0.446044921875,
+  "rms": 0.05976099500621525,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

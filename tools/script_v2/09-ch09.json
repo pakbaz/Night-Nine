@@ -63,23 +63,29 @@
         },
         "antenna": {
           "type": "rows",
-          "difficulty": 2,
+          "difficulty": 1,
           "title": "Antenna service door",
           "requires": ["talk"],
-          "goal": "Get Stephen and the rig through the inner door, without a false all-clear.",
-          "background": "The rig has to reach the ship’s antenna. Stephen has the only crew pass. June has a visitor slip from a sleeping official’s pocket. Steve promised Nora he would not leave her again.",
-          "lead": ["stephen|One door, one pass, one very important face. Let’s go."],
+          "goal": "Get Stephen and the rig through the inner door, and make sure it really opened.",
+          "background": "The rig has to reach the ship’s antenna. Only a crew pass opens the inner door, and Stephen has the only one. June has a visitor slip that gets her onto the observation deck. The door’s lamp can only be seen from that deck. Steve promised Nora he would stay by her bed.",
+          "lead": [
+            "stephen|One door, one pass, one very important face. Let’s go.",
+            "calder|This visitor slip gets me onto the observation deck. It won’t open a single door.",
+            "stephen|The lamp for the inner door is round the bend. You can only see it from the deck.",
+            "steve|And I stay right here by Nora’s bed. I promised her.",
+            "stephen|Then I don’t walk on until somebody sees that lamp light up."
+          ],
           "prompt": "Who stands where, and when does Stephen go on?",
-          "instruction": "The inner pad accepts only a crew pass. Its status lamp is round the bend, visible only from the observation deck, and it stays dark until the pass is accepted. June’s visitor slip admits her to the deck but cannot open anything. Steve promised to stay by Nora’s bed. Stephen must not leave for the antenna until someone has seen the lamp light.",
+          "instruction": "Only a crew pass opens the inner door. Its lamp can only be seen from the observation deck. Steve stays by Nora. Stephen waits until someone sees the lamp light.",
           "rows": [
-            {"label": "At the inner pad", "options": ["Stephen", "June", "Steve"], "answer": 0},
-            {"label": "On the observation deck", "options": ["Stephen", "June", "Steve"], "answer": 1},
-            {"label": "Stephen goes on", "options": ["As soon as he presents the pass", "When June calls that the lamp is lit", "When the lamp goes dark"], "answer": 1}
+            {"label": "Who opens the inner door?", "options": ["Stephen", "June", "Steve"], "answer": 0},
+            {"label": "Who watches from the deck?", "options": ["Stephen", "June", "Steve"], "answer": 1},
+            {"label": "When does Stephen go on?", "options": ["As soon as he shows the pass", "When June sees the lamp light", "When the lamp goes dark"], "answer": 1}
           ],
           "hints": [
-            "Separate permission to open the door from permission to watch it.",
-            "Only Stephen can work the pad. Only the deck can see the lamp. Steve made a promise.",
-            "Put each person where only they can do the job, and let Stephen move only on word from someone who can see the lamp."
+            "Each job needs something only one person has: a pass, a view of the lamp, or a promise to keep.",
+            "Only the crew pass opens the door. Only the deck can see the lamp. Steve is staying with Nora.",
+            "Stephen should move only after the person who can see the lamp says it is lit."
           ],
           "lines": [
             {"id": "c9_gallery.antenna.01", "text": "Calder saw the lamp. I’m heading up to the antenna. Don’t wait for me."}
@@ -100,7 +106,98 @@
         "c9_gallery.out.05",
         {"new": "steve|Nora and Iris looked at each other. Neither of them knew what to say.", "delivery": "narration"}
       ],
-      "next": "Row nine, and the beds around it (c9_wake)."
+      "next": "Row nine, and the beds around it (c9_wake).",
+      "talk": {
+        "nora": [
+          {
+            "topic": "Her mother",
+            "after": "talk",
+            "lines": [
+              "nora|Did my mother notice? That it wasn’t me at her table?",
+              "steve|She said you’d stopped arguing with her. That’s how she knew something was wrong.",
+              "nora|Good. I’m going to argue with her all week."
+            ]
+          },
+          {
+            "topic": "Admiral",
+            "after": "talk",
+            "lines": [
+              "nora|Is anybody feeding Admiral properly? He gets sulky.",
+              "steve|He stole my sandwich on the pier. Rye bread.",
+              "nora|He hates rye. He was making a point.",
+              "steve|He came to my whistle, Nor. Not hers. That’s when I started to wonder."
+            ]
+          },
+          {
+            "topic": "The neighbors here",
+            "after": "link",
+            "lines": [
+              "nora|I know half this hall by name now. It’s like a very cold party.",
+              "steve|Who is the best company down here?",
+              "nora|Dale Kittredge. He says he’s never been this late with the mail in thirty years."
+            ]
+          }
+        ],
+        "iris": [
+          {
+            "topic": "Nora’s coat",
+            "after": "link",
+            "lines": [
+              "nora|You wore my favorite coat for five months.",
+              "iris|It is a good coat. I sewed the top button back on.",
+              "nora|I’ve been meaning to do that for two years.",
+              "iris|I know. I remembered meaning to."
+            ]
+          },
+          {
+            "topic": "What she keeps",
+            "after": "link",
+            "lines": [
+              "iris|I keep reaching for things she knows. Some of them are already gone.",
+              "steve|Do you want me to stop asking you things?",
+              "iris|No. Keep asking. I want to find out which answers are mine."
+            ]
+          }
+        ],
+        "stephen": [
+          {
+            "topic": "The name on his hand",
+            "lines": [
+              "steve|Is the name still there?",
+              "stephen|Frank. Dad. I check it every few minutes. I hate that I have to.",
+              "steve|Then I’ll check it with you. Every few minutes."
+            ]
+          }
+        ],
+        "calder": [
+          {
+            "topic": "The visitor slip",
+            "lines": [
+              "calder|I took this slip from a sleeping man in a very nice suit.",
+              "steve|Is that strictly legal, Sheriff Calder?",
+              "calder|I’ll write myself a ticket when we get home."
+            ]
+          },
+          {
+            "topic": "Adrian",
+            "lines": [
+              "calder|Adrian Rook is somewhere in this hall. The real one.",
+              "steve|We’ll find him, June. I promise.",
+              "calder|Good. He still owes me a coffee from twenty years ago."
+            ]
+          }
+        ],
+        "guard": [
+          {
+            "topic": "The attendant’s offer",
+            "lines": [
+              "guard|Would you like to be scanned while you wait?",
+              "steve|Still no, thank you. Very kind of you to ask again.",
+              "guard|Your answer has been noted. The offer remains open."
+            ]
+          }
+        ]
+      }
     },
     "c9_wake": {
       "present": ["steve", "nora", "frank", "helen", "calder", "rook", "agnes_original"],
@@ -120,49 +217,57 @@
       "task_order": ["frank", "helen", "rook", "agnes"],
       "tasks": {
         "frank": {
-          "difficulty": 3,
+          "difficulty": 2,
           "title": "Frank’s bed",
           "requires": [],
           "goal": "Wake Dad with the one sound he always answers.",
-          "background": "Frank answered to his call sign faster than to his own name. The bed microphone picks up whatever the sleeper hears. Nora found three call cards in the bedside tray, and the Thursday club’s recording is on Dad’s cassette.",
-          "lead": ["steve|Dad. It’s Steve.", {"new": "steve|Nothing. He used to say a call sign is a name you can hear through static.", "delivery": "narration"}],
-          "prompt": "Which card is Frank’s, and which group did the scratched playback head lose?",
-          "instruction": "Cards: K7BWL, K7BLW and K9BLW. Frank’s bed microphone catches five groups: −·− / −−··· / −··· / ·−·· / ·−−. The desk key: K −·−, B −···, L ·−··, W ·−−, 7 −−···, 9 −−−−·. A scratched playback head can lose the last group, so the operator asks for that group again.",
+          "background": "Frank always answered his call sign, K7BLW, faster than his own name. Nora found three call cards in his bedside tray. Dad’s cassette has the Thursday club sending his call sign in Morse code, one letter or number at a time. The cassette is scratched, and the scratch always loses the last one.",
+          "lead": [
+            "steve|Dad. It’s Steve.",
+            {"new": "steve|Nothing. He used to say a call sign is a name you can hear through static.", "delivery": "narration"},
+            "nora|There are three call cards in his tray. They all look almost the same.",
+            "steve|Dad’s call sign is on his old cassette, in Morse. But the tape is scratched. It always loses the very last letter."
+          ],
+          "prompt": "Which card is Dad’s, and which letter has to be sent again?",
+          "instruction": "Dad’s call sign is K7BLW. The scratched cassette loses the last letter, so that one is sent again. The desk key: K is −·−, 7 is −−···, B is −···, L is ·−··, W is ·−−.",
           "rows": [
-            {"label": "Card", "options": ["K7BWL", "K9BLW", "K7BLW"], "answer": 2},
-            {"label": "Final group to repeat", "options": ["·−··", "·−−", "−···"], "answer": 1}
+            {"label": "Which card is Dad’s?", "options": ["K7BWL", "K9BLW", "K7BLW"], "answer": 2},
+            {"label": "Which letter is sent again?", "options": ["L: ·−··", "W: ·−−", "B: −···"], "answer": 1}
           ],
           "hints": [
-            "Compare the second group to tell the two digits apart.",
-            "The fourth group has four marks and the fifth has three.",
-            "Read the five groups against the desk key, one at a time. The group to send again is whichever comes last."
+            "Compare each card with Dad’s call sign, one character at a time.",
+            "Two cards are off by one character. For the second row, think about where the scratch is.",
+            "The scratch loses whatever comes last. Read Dad’s call sign to its final letter, then find that letter in the desk key."
           ],
           "lines": ["c9_wake.frank.01", "c9_wake.frank.02"],
-          "finding": "steve|Dad’s card is K7BLW. The scratched head lost the last group, the W: dot, dash, dash. I sent it again, and Dad answered his own call sign."
+          "finding": "steve|Dad’s card is K7BLW. The scratched cassette lost the last letter, the W: dot, dash, dash. I sent it again, and Dad answered his own call sign."
         },
         "helen": {
           "type": "rows",
-          "difficulty": 3,
+          "difficulty": 2,
           "title": "Helen’s bed",
           "requires": [],
           "goal": "Wake Mom with the song she sang Steve every night until he was ten.",
-          "background": "Helen sang Steve the same lullaby every night and never told him its words. Under the ship, the hum has been almost playing a tune Steve knew. Frank, awake now, pencils the tune for him.",
+          "background": "Helen sang Steve the same lullaby every night and never told him its words. Under the ship, the hum has been almost playing a tune Steve knew. Frank, awake now, draws the tune for him. The music box in the drawer numbers its notes: 1 is home, 3 is higher, 5 is highest.",
           "lead": [
             "frank|Your mother. Play her the song, kiddo. I’ll write it down for you.",
-            "steve|That’s the song in the hum. All this time, the ship was humming Mom’s lullaby."
+            "steve|That’s the song in the hum. All this time, the ship was humming Mom’s lullaby.",
+            "frank|It starts at home. Up once, then up again. Back down to the middle note, then home, and hold it."
           ],
-          "prompt": "Frank pencilled the tune: home note, up, higher still, back down through the first rise, then home, held for two beats. Three music-box cylinders sit in the drawer, pinned in scale steps with 1 as home. Which one is it?",
+          "prompt": "Dad drew the tune: home, up, higher, back to the middle note, home, and hold. Which music-box cylinder plays it?",
+          "instruction": "The cylinders number their notes: 1 is home, 3 is the middle note, 5 is the top. Pick the one that matches Dad’s drawing.",
           "rows": [
-            {"label": "Cylinder", "options": ["1-3-5-3-1-1", "1-3-5-5-1-1", "1-5-3-3-1-1"], "answer": 0}
+            {"label": "Which cylinder plays Mom’s song?", "options": ["1-3-5-3-1-1", "1-3-5-5-1-1", "1-5-3-3-1-1"], "answer": 0}
           ],
           "hints": [
-            "Follow the shape: up, up, down, down, hold.",
-            "Only one climbs twice and comes back down through the same step.",
-            "The tune comes back down through the same step it went up through, then holds home. Only one cylinder repeats a step on the way down."
+            "Read Dad’s drawing one step at a time, starting from home, which is 1.",
+            "The tune climbs twice, so it starts 1, then 3, then 5.",
+            "After the top note, the tune steps back to the middle note before it goes home. Only one cylinder does that."
           ],
           "sounds": ["effect.lullaby"],
           "lines": ["c9_wake.helen.01", "c9_wake.helen.02"],
-          "finding": "steve|Up, up, back down through the first rise, then home, held: 1-3-5-3-1-1. Mom’s lullaby, the one the ship’s hum kept almost playing. She woke up singing the last note."
+          "finding": "steve|Home, up, higher, back to the middle, then home and hold. Mom’s lullaby, the one the ship’s hum kept almost playing. She woke up singing the last note.",
+          "note": "Cylinder 1-3-5-3-1-1: home, up, higher, back to the middle, then home, held. Mom’s lullaby, the one the ship’s hum kept almost playing. She woke up singing the last note."
         },
         "rook": {
           "type": "beat",
@@ -182,34 +287,44 @@
           "finding": "steve|No recording this time. June talked to him, and the real Adrian Rook woke up asking about his pajamas."
         },
         "agnes": {
-          "difficulty": 2,
+          "difficulty": 1,
           "title": "Row three",
           "requires": ["frank", "helen", "rook"],
           "goal": "Help the woman in row three wake up and see where she is.",
-          "background": "Days ago Nora found Mrs. Penhallow asleep in row three, between two strangers. She is ninety-one, half awake and squinting at Nora’s name badge. Three belongings have slid off their trays.",
-          "lead": ["nora|Mrs. Penhallow? She taught half this town. She’s squinting at me like I spelled something wrong."],
+          "background": "Days ago Nora found Mrs. Penhallow asleep in row three, between two strangers. She is ninety-one, half awake and squinting at Nora’s name badge. Three belongings have slid off their trays: a ledger stamped O.T., a glasses case with a bait-shop price sticker, and gloves stitched M.V.",
+          "lead": [
+            "nora|Mrs. Penhallow? She taught half this town. She’s squinting at me like I spelled something wrong.",
+            "nora|Her glasses case still has a price sticker from her bait shop. That one is hers.",
+            "nora|The row list says the sleeper marked OT is on her left, and MV is on her right."
+          ],
           "prompt": "Which tray does each belonging go back to?",
           "board": {
-            "instruction": "Put each belonging back before handing anything to a half-awake stranger.",
+            "instruction": "Put each belonging back on its owner’s tray.",
             "evidence": [
-              "The tray labels slid off in one piece. From left to right the beds are III-1, III-2 and III-3. Mrs. Penhallow is in the middle bed.",
-              "Three belongings: a ledger stamped O.T.; a glasses case with a crooked bait-shop price sticker; gloves stitched M.V.",
-              "The row inventory: ‘O.T. left of the shopkeeper; M.V. right of the shopkeeper.’"
+              "Mrs. Penhallow sleeps in the middle bed.",
+              "Her glasses case has a price sticker from her bait shop.",
+              "The row list says the sleeper marked O.T. is on her left.",
+              "The row list says the sleeper marked M.V. is on her right."
             ],
             "stages": [
-              {"mode": "match", "prompt": "Return the belongings.",
-               "slots": ["III-1", "III-2", "III-3"],
-               "pieces": ["M.V. gloves", "Glasses case", "O.T. ledger"],
+              {"mode": "match", "prompt": "Which tray does each belonging go to?",
+               "slots": ["Left bed", "Middle bed: Mrs. Penhallow", "Right bed"],
+               "pieces": ["Gloves stitched M.V.", "Glasses case", "Ledger stamped O.T."],
                "answer": [2, 1, 0]}
             ],
-            "wrong_text": "Nora checks the inventory again. Somebody’s gloves are on the wrong tray."
+            "wrong_text": "Nora checks the row list again. Somebody’s things are on the wrong tray."
           },
           "hints": [
-            "Mrs. Penhallow is the shopkeeper. Start with her bed.",
-            "O.T. is to her left and M.V. to her right. The case with the bait-shop sticker is hers.",
-            "Fill the middle tray first, with the one belonging that came from a bait shop. The inventory places the other two around her."
+            "Start with Mrs. Penhallow. Which belonging is clearly hers?",
+            "The bait-shop sticker belongs in the middle. Now read the row list for the two strangers.",
+            "The row list names one sleeper on her left and one on her right. Match each set of initials to its side."
           ],
-          "lines": ["c9_wake.agnes.01"],
+          "lines": [
+            "c9_wake.agnes.01",
+            "agnes_original|Who has been minding my bait stall, Steven?",
+            "steve|I thought you had, Mrs. Penhallow. Every Sunday on the pier.",
+            "agnes_original|On Sundays? I never open on Sundays. Sunday is for church and the crossword."
+          ],
           "finding": "steve|Mrs. Penhallow’s glasses, from the middle tray. Her bed tag says she’s been asleep in here for three years. So who has been selling me bait?"
         }
       },
@@ -221,7 +336,92 @@
         {"id": "c9_wake.out.01", "delivery": "radio"},
         {"id": "c9_wake.out.02", "delivery": "intercom"}
       ],
-      "next": "The scan chair, and the Choir (c9_choir)."
+      "next": "The scan chair, and the Choir (c9_choir).",
+      "talk": {
+        "nora": [
+          {
+            "topic": "The service route",
+            "lines": [
+              "nora|We kept this aisle open with a mop handle and a lot of shouting.",
+              "steve|All that shouting? I can believe that.",
+              "nora|Mostly mine. Dale helped. He shouts like a man who has met a lot of dogs."
+            ]
+          },
+          {
+            "topic": "Meeting his mom again",
+            "after": "helen",
+            "lines": [
+              "nora|Your mother just asked me if I’m eating enough. On a spaceship.",
+              "steve|That’s how she says I love you.",
+              "nora|I know. My mother does the exact same thing with soup."
+            ]
+          }
+        ],
+        "frank": [
+          {
+            "topic": "Eighteen months",
+            "after": "frank",
+            "lines": [
+              "frank|How long were we under, kiddo?",
+              "steve|Eighteen months, Dad. A year and a half.",
+              "frank|That’s a lot of Thursdays. The club must think I quit.",
+              "steve|They don’t. I called them on your radio. Gull nearly cried."
+            ]
+          },
+          {
+            "topic": "The boat",
+            "after": "frank",
+            "lines": [
+              "frank|Did the boat make it back?",
+              "steve|It drifted in the next morning. Your radio was still on.",
+              "frank|Good radio. I told your mother it was a good radio."
+            ]
+          }
+        ],
+        "helen": [
+          {
+            "topic": "The lullaby",
+            "after": "helen",
+            "lines": [
+              "steve|You never told me the words, Mom.",
+              "helen|There weren’t any, Steven. I made up the tune your first night home from the hospital.",
+              "steve|The ship has been humming it for months.",
+              "helen|Then the ship has good taste."
+            ]
+          },
+          {
+            "topic": "Nora",
+            "after": "helen",
+            "lines": [
+              "helen|Is that Nora? She looks so tired.",
+              "steve|She ran this whole hall while you were asleep, Mom.",
+              "helen|Then she has earned a proper dinner. I’ll talk to Carmen."
+            ]
+          }
+        ],
+        "calder": [
+          {
+            "topic": "Adrian’s first words",
+            "after": "rook",
+            "lines": [
+              "calder|He asked about his pajamas before he asked about me.",
+              "steve|He’s awake, June. That’s what matters.",
+              "calder|I know. I’m still telling everyone at the office."
+            ]
+          }
+        ],
+        "rook": [
+          {
+            "topic": "His clothes",
+            "after": "rook",
+            "lines": [
+              "rook|Where are my clothes? Who has been wearing my clothes?",
+              "calder|A man with your face, Adrian. He had your manners too, mostly.",
+              "rook|Then he owes me a dry cleaning bill."
+            ]
+          }
+        ]
+      }
     },
     "c9_choir": {
       "present": ["steve", "saren", "choir", "nora", "helen", "frank", "calder"],
@@ -245,35 +445,38 @@
       "task_order": ["truth", "wick", "note"],
       "tasks": {
         "truth": {
-          "difficulty": 3,
+          "difficulty": 2,
           "title": "Choir console",
           "requires": [],
           "goal": "Show the Choir one record that changed and is still the same person.",
           "background": "The Choir is the ship’s memory. Every Veyri aboard is a copy of a copy, loaded from records that never change. For three years it has also held three hundred and twelve human lives. Steve has kept his list through all of it, with a date on everything.",
           "lead": [
-            "steve|You want a record that changed? I’ve been keeping a list."
+            "steve|You want a record that changed? I’ve been keeping a list.",
+            "steve|Nora’s good morning, on Saturday and on Sunday. The same breath, the same pause, both days.",
+            "steve|Rook telling June to sit tight. The same take on her voicemail and through a door in the mountains.",
+            "steve|And Iris, on Monday. She said the same words twice, and the second time she paused somewhere new."
           ],
           "prompt": "Which entries on Steve’s list show a record played back, and which shows a record that changed?",
           "board": {
-            "instruction": "Sort the season’s evidence for the Choir.",
+            "instruction": "Put each recording from Steve’s list next to what it shows.",
             "evidence": [
-              "Nora’s good morning, Saturday and Sunday, from the woman living as Nora: breath for breath the same, on two days.",
-              "Rook’s “Sit tight, June”: breath for breath the same, in June’s voicemail and through a door in the mountains.",
-              "Iris, on Monday, twice: “I stayed because I wanted to.” The second time she paused in a new place.",
-              "Saren’s message from Mom: cut from her voicemail and stitched together."
+              "Nora’s good morning was the same, breath for breath, on Saturday and on Sunday.",
+              "Rook’s “Sit tight, June” was the same, breath for breath, on June’s voicemail and through the safe-house door.",
+              "Iris said “I stayed because I wanted to” twice on Monday. The second time, she paused in a new place.",
+              "Saren’s message from Mom was cut from her old voicemail and stitched together."
             ],
             "stages": [
-              {"mode": "match", "prompt": "What is each tape?",
-               "slots": ["One take, played on two days", "One take, played in two places", "A record that changed"],
+              {"mode": "match", "prompt": "Which recording fits each question?",
+               "slots": ["Which take played on two different days?", "Which take played in two different places?", "Which voice changed its own words?"],
                "pieces": ["Nora’s good morning", "Rook’s “Sit tight, June”", "Iris’s two takes", "Saren’s message from Mom"],
                "answer": [0, 1, 2]}
             ],
             "wrong_text": "The Choir is silent. That is not the record it asked for."
           },
           "hints": [
-            "Which pairs match breath for breath, and which don’t?",
-            "The good morning and Rook’s line were one take each, replayed. Only one voice chose its words twice.",
-            "Two entries describe takes that match breath for breath. Ask where each was played: on two days, or in two places. One voice moved its pause."
+            "Two of these were one recording, played twice. One was a person choosing her words again.",
+            "Ask of each repeated recording: was it heard on two days, or in two places?",
+            "Saturday and Sunday are two days. A voicemail and a door in the mountains are two places. Who moved a pause?"
           ],
           "lines": [
             "steve|Same voice. In October she played back a recording. On Monday she chose her own words.",
@@ -284,25 +487,28 @@
         "wick": {
           "type": "rows",
           "art": "res://assets/illustrated/campaign/inserts/c8_lab-last-notebook-page.webp",
-          "difficulty": 3,
+          "difficulty": 2,
           "title": "Row Zero: Wick",
           "requires": ["truth"],
           "goal": "Help Mom follow Wick into its next phrase.",
-          "background": "The frost broke. The sleeper in Row Zero, from Tirel, sat up for the first time in three hundred years. It looked at Helen and bowed. Helen has her notebook, and her last page is the phrase from Frank’s Reel 11. Her margin says it repeats after the low note.",
+          "background": "The frost broke. The sleeper in Row Zero, from Tirel, sat up for the first time in three hundred years. It looked at Helen and bowed. Helen’s last notebook page holds the phrase from Frank’s Reel 11: two joined notes rising, a short gap, then one long low note. Her margin says the phrase starts again after the low note.",
           "lead": [
             {"new": "steve|The frost broke. Something tall sat up in Row Zero for the first time in three hundred years. It looked at Mom, and it bowed.", "delivery": "narration"},
             "choir|Row Zero holds one who is not human. We took it from Tirel. We call it Wick. It has not stopped dreaming.",
-            "nora|That’s the one under the frost. It hums when you talk to it."
+            "nora|That’s the one under the frost. It hums when you talk to it.",
+            "helen|That’s the phrase from your father’s tapes. Two joined notes going up, a little gap, then one long low note.",
+            "helen|I wrote it in my margin, Steven. After the low note, it starts all over again."
           ],
-          "prompt": "Wick sings 220 Hz joined to 330 Hz, half a second of silence, then 165 Hz. Helen spreads three late pages on the stand. Which page is it, and how does Wick’s next phrase begin?",
+          "prompt": "Wick sings 220 rising to 330, joined, then a short gap, then a long 165, lower than both. Which page matches, and how does the next phrase begin?",
+          "instruction": "Pick the notebook page with the same shape as Wick’s phrase. Helen’s margin says the phrase starts again after the low note.",
           "rows": [
-            {"label": "Page", "options": ["Page 9: three separate strokes, each lower", "Page 12: two joined strokes rising, a gap, one long low stroke", "Page 4: one long stroke, a gap, two joined strokes falling"], "answer": 1},
-            {"label": "Wick’s next phrase begins with", "options": ["The long low stroke", "A gap", "Two joined strokes"], "answer": 2}
+            {"label": "Which page matches Wick?", "options": ["Page 9: three separate falling strokes", "Page 12: two joined strokes rising, a gap, one long low stroke", "Page 4: one long stroke, a gap, two joined strokes falling"], "answer": 1},
+            {"label": "How does the next phrase begin?", "options": ["With the long low stroke", "With a gap", "With two joined strokes"], "answer": 2}
           ],
           "hints": [
-            "Turn the numbers into a shape, the way you did at the lab.",
-            "220 to 330 climbs, joined. Then a gap, then 165, lower than both. Helen’s margin: it repeats after the low note.",
-            "Joined and rising, a gap, then low: find the page with that shape. Helen’s margin says what comes after the low note."
+            "Turn the numbers into a shape, the way you did at the lab: up, gap, down.",
+            "220 to 330 climbs, joined. Then a gap, then 165, lower than both. Only one page starts by climbing.",
+            "Helen’s margin says the phrase starts again after the low note. How did it start the first time?"
           ],
           "sounds": ["effect.wick"],
           "lines": ["c9_choir.wick.01", "c9_choir.wick.02"],
@@ -335,7 +541,53 @@
         "choir|The Vigil. It followed us here in silence, to check the Prefect’s word. His report goes out in one hour.",
         {"new": "steve|The rig was in pieces. And all over town, the copies had begun to forget.", "delivery": "narration"}
       ],
-      "next": "Chapter 10 (c10_station)."
+      "next": "Chapter 10 (c10_station).",
+      "talk": {
+        "nora": [
+          {
+            "topic": "Three hundred people",
+            "after": "truth",
+            "lines": [
+              "nora|Three hundred people just woke up in wet pajamas.",
+              "steve|And not one of them has shoes.",
+              "nora|I’m starting a line for blankets. Somebody has to."
+            ]
+          }
+        ],
+        "frank": [
+          {
+            "topic": "Steve’s list",
+            "after": "truth",
+            "lines": [
+              "frank|You kept a list, kiddo. Dates and everything.",
+              "steve|You taught me. Put a date on everything.",
+              "frank|I did, didn’t I? Good. I’m glad something stuck."
+            ]
+          }
+        ],
+        "helen": [
+          {
+            "topic": "Wick’s song",
+            "after": "wick",
+            "lines": [
+              "helen|It sings in phrases, like a person thinking out loud.",
+              "steve|Can you understand what it says?",
+              "helen|Not every word. But I can hear when it means something."
+            ]
+          }
+        ],
+        "calder": [
+          {
+            "topic": "Open doors",
+            "after": "truth",
+            "lines": [
+              "calder|Every door on this ship just opened at once.",
+              "steve|Is everybody all right down there?",
+              "calder|Dale Kittredge is asking for his mailbag. So yes, I think so."
+            ]
+          }
+        ]
+      }
     }
   }
 }

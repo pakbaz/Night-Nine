@@ -1,0 +1,109 @@
+{
+  "audio_id": "c3_archive.talk.tomas.3.04",
+  "audio_sha256": "29e3767cca95c7c172832554017125d8974724ef1b89a54a669e4a24c43942b2",
+  "file": "assets/audio/elevenlabs-v4-additions/masters/c3_archive.talk.tomas.3.04.attempt-1.wav",
+  "production_plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "You’d get along with Mrs. Penhallow.",
+  "recognized": "You'd get along with Mrs. Penhallow.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "8018dcc8a4856aa99d7e45704ebda61a",
+  "character_cost": "1",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "You'd get along with Mrs. Penhallow.",
+    "words": [
+      {
+        "text": "You'd",
+        "start": 0.08,
+        "end": 0.2,
+        "type": "word",
+        "logprob": -5.011253633711021e-05
+      },
+      {
+        "text": " ",
+        "start": 0.2,
+        "end": 0.24,
+        "type": "spacing",
+        "logprob": -5.960462772236497e-07
+      },
+      {
+        "text": "get",
+        "start": 0.24,
+        "end": 0.34,
+        "type": "word",
+        "logprob": -5.960462772236497e-07
+      },
+      {
+        "text": " ",
+        "start": 0.34,
+        "end": 0.4,
+        "type": "spacing",
+        "logprob": -7.033323527139146e-06
+      },
+      {
+        "text": "along",
+        "start": 0.42,
+        "end": 0.72,
+        "type": "word",
+        "logprob": -7.033323527139146e-06
+      },
+      {
+        "text": " ",
+        "start": 0.72,
+        "end": 0.76,
+        "type": "spacing",
+        "logprob": -1.6689286894688848e-06
+      },
+      {
+        "text": "with",
+        "start": 0.76,
+        "end": 0.9,
+        "type": "word",
+        "logprob": -1.6689286894688848e-06
+      },
+      {
+        "text": " ",
+        "start": 0.9,
+        "end": 0.94,
+        "type": "spacing",
+        "logprob": -0.00018880968855228275
+      },
+      {
+        "text": "Mrs.",
+        "start": 0.94,
+        "end": 1.08,
+        "type": "word",
+        "logprob": -0.00016103762573038694
+      },
+      {
+        "text": " ",
+        "start": 1.08,
+        "end": 1.32,
+        "type": "spacing",
+        "logprob": -0.28749316930770874
+      },
+      {
+        "text": "Penhallow.",
+        "start": 1.32,
+        "end": 1.92,
+        "type": "word",
+        "logprob": -0.11531253898574505
+      }
+    ],
+    "transcription_id": "fBVuS9p8yv203h7rRbK1",
+    "audio_duration_secs": 2.24
+  },
+  "listening_reviewed": false
+}

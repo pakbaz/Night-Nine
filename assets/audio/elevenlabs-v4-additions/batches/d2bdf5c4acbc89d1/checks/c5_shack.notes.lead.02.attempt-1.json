@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c5_shack.notes.lead.02",
+  "attempt": 1,
+  "plan_sha256": "d2bdf5c4acbc89d16422f6915440fe295d460d09b3bf365d836f4c6f285a412b",
+  "wav_sha256": "366d5a9b79020a8463944a5cba5fae5a6dc421ecb9b023f09397b00b1468149a",
+  "expected": "Coltrane was Dad’s favorite record. And weather carts are the little weather tapes we played on air at KBWR.",
+  "recognized": "Coltrane was Dad's favorite record, and Weather Carts are the little weather tapes we played on air at KBWR.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 6.72,
+  "sample_rate": 48000,
+  "peak": 0.34222412109375,
+  "rms": 0.04648410411013897,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

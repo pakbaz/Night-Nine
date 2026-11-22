@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c8_rig.rig.lead.04",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "f9a3660081bbe8b80a4cbbbb5a0bcbb101b120b70a0c810ca0b6f14dbf35f8d9",
+  "expected": "Careful. A dead coupler also lets nothing back. It looks perfect until you check the cue.",
+  "recognized": "Careful! A dead coupler also lets nothing back. It looks perfect until you check the cue.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 6.88,
+  "sample_rate": 48000,
+  "peak": 0.662628173828125,
+  "rms": 0.06453292715551542,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c7_gate.truck.lead.03",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "257cce10f9aef609643f551e9f29eb41033c2cb8dbe628817ddd88df51035e96",
+  "expected": "The camera monitor shows the click the moment it leaves this desk.",
+  "recognized": "The camera monitor shows the click the moment it leaves this desk.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.16,
+  "sample_rate": 48000,
+  "peak": 0.2816162109375,
+  "rms": 0.04257014845674513,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

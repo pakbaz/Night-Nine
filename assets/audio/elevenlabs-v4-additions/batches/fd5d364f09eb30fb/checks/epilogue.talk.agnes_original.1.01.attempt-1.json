@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "epilogue.talk.agnes_original.1.01",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "43567b29353fa25f52a919b3170cd336ce7601583deaba664cc238ea2157c72c",
+  "expected": "She charges ten cents less than me for worms. On purpose.",
+  "recognized": "she charges ten cents less than me for worms on purpose",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.8,
+  "sample_rate": 48000,
+  "peak": 0.349273681640625,
+  "rms": 0.03826149357232389,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

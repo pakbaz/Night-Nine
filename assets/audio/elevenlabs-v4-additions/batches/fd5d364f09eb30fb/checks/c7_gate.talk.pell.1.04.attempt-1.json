@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c7_gate.talk.pell.1.04",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "02e9317effe06d6e623f1d76f330ae99548308bab63c049f6c48b83ad3369e61",
+  "expected": "She is a very important beagle. She has a schedule.",
+  "recognized": "She is a very important beagle. She has a schedule.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.24,
+  "sample_rate": 48000,
+  "peak": 0.6934814453125,
+  "rms": 0.07455646050688546,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

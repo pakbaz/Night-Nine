@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c5_shack.talk.operator.2.02",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "70de8a8b876522fb83911c9be76a756a855bc871c0853dfe0a75f1186ffe4e2f",
+  "expected": "Tell Marsh I’d like to hear that sometime.",
+  "recognized": "Tell Marsh I'd like to hear that sometime.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 2.56,
+  "sample_rate": 48000,
+  "peak": 0.298004150390625,
+  "rms": 0.03900845136819329,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

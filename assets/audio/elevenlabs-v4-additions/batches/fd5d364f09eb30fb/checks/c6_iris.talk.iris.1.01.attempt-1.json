@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c6_iris.talk.iris.1.01",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "b171f7d1089564caac1e4664d4407c4a5ddd693060ca5164bc625ea12c1942cc",
+  "expected": "Have you seen Admiral since you went missing?",
+  "recognized": "Have you seen Admiral since you went missing?",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 2.64,
+  "sample_rate": 48000,
+  "peak": 0.286590576171875,
+  "rms": 0.043508735560801266,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

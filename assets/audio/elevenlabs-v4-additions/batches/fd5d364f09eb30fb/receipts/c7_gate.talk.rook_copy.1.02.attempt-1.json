@@ -1,0 +1,17 @@
+{
+  "operation": "text_to_speech",
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "audio_id": "c7_gate.talk.rook_copy.1.02",
+  "attempt": 1,
+  "voice_id": "vveagfomyMCJLZsOPRP2",
+  "model_id": "eleven_v4",
+  "text_sha256": "a236bb36bdc318651265b1c67f215430e0375271735e1789df9bcae34445b430",
+  "synthesis_text_sha256": "a236bb36bdc318651265b1c67f215430e0375271735e1789df9bcae34445b430",
+  "request_id": "KkMQVxTBptDqXqBLX4TI",
+  "trace_id": "c8e2c24131d92a6c683702d387a5ca37",
+  "character_cost": 16,
+  "output_format": "mp3_44100_192",
+  "audio_sha256": "14cad0e2a36abce9a7b168e42ad2294b89c2b02ca9e86f3785d3320893fb6a47",
+  "response_bytes": 55213,
+  "seed": 3197165604
+}

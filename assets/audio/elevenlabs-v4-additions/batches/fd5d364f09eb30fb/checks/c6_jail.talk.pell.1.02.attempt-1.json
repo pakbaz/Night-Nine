@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c6_jail.talk.pell.1.02",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "4b7f64a32986470af5d6a6dc05007dee130868e45115704c6293d9923955a51b",
+  "expected": "She eats at seven and at five. She prefers the blue bowl. I am not yet sure she prefers me.",
+  "recognized": "She eats at 7 and at 5. She prefers the blue bowl. I am not yet sure she prefers me.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 8.24,
+  "sample_rate": 48000,
+  "peak": 0.77093505859375,
+  "rms": 0.07039521774045188,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

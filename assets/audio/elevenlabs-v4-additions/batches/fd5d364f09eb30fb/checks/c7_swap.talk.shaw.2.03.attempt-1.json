@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c7_swap.talk.shaw.2.03",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "77c3ca4f53c6f3690fca58eaca087a65659c6f911adb4350b91009c9592e92e6",
+  "expected": "Then I would have hired him in a heartbeat.",
+  "recognized": "Then I would have hired him in a heartbeat.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 2.72,
+  "sample_rate": 48000,
+  "peak": 0.297454833984375,
+  "rms": 0.0447593387559472,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

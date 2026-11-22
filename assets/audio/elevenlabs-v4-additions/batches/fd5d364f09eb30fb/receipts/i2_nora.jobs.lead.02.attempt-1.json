@@ -1,0 +1,17 @@
+{
+  "operation": "text_to_speech",
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "audio_id": "i2_nora.jobs.lead.02",
+  "attempt": 1,
+  "voice_id": "CwhRBWXzGAHq8TQ4Fs17",
+  "model_id": "eleven_v4",
+  "text_sha256": "240d6d116dc7a29482591c544a8eb701e9bf6ca6aadee8ea79f6ca5da1014fa0",
+  "synthesis_text_sha256": "240d6d116dc7a29482591c544a8eb701e9bf6ca6aadee8ea79f6ca5da1014fa0",
+  "request_id": "cE0mQquoVXql1YPD5DSB",
+  "trace_id": "596ca95106561e6fc68958701fc009ac",
+  "character_cost": 27,
+  "output_format": "mp3_44100_192",
+  "audio_sha256": "2593c586e794afe509306cbc419a9769d3bd954d4e81470a3db17aea8603467f",
+  "response_bytes": 109130,
+  "seed": 3000894489
+}

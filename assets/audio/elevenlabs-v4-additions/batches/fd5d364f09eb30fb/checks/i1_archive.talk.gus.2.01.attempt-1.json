@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "i1_archive.talk.gus.2.01",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "12c2341fd1db9a57a784901425fc50604d260e786b74dfbcf7bb18f3c06bac0a",
+  "expected": "What do the people of your town do in the morning?",
+  "recognized": "What do the people of your town do in the morning?",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 3.12,
+  "sample_rate": 48000,
+  "peak": 0.646392822265625,
+  "rms": 0.14758336224367227,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

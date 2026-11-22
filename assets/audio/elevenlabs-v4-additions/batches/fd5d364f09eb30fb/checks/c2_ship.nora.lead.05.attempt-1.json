@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "audio_id": "c2_ship.nora.lead.05",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "bafa4bd3d131621827b57c4c94b2fde2f22927041fa5118eafbfc487346d1446",
+  "expected": "And there’s fog on the glass above her mouth. Three seconds, seven, then twelve.",
+  "recognized": "And there's fog on the glass above her mouth. Three seconds, seven, then 12.",
+  "local_recognized": "there's fog on the glass above her mouth. Three seconds, seven, then twelve.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 5.92,
+  "sample_rate": 48000,
+  "peak": 0.3350830078125,
+  "rms": 0.035818377137620164,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c2_ship.nora.lead.05.json",
+    "sha256": "5ea12592cc55a76e896d25260707e38a5ac5803f76d1e53afbcbfe8ba870fe45",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  },
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

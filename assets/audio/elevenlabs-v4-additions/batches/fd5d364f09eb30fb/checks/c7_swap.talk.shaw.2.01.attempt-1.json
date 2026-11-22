@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c7_swap.talk.shaw.2.01",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "c41d9ffb7798393853d9c000850328a1d8ebc657bd32ae604ca06fb4d12d5a87",
+  "expected": "Your father’s tape is in good shape. Who stored it?",
+  "recognized": "Your father's tape is in good shape. Who stored it?",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 3.44,
+  "sample_rate": 48000,
+  "peak": 0.34600830078125,
+  "rms": 0.036391419919786755,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

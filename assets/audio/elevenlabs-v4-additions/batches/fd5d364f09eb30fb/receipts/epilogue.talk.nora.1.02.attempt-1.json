@@ -1,0 +1,17 @@
+{
+  "operation": "text_to_speech",
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "audio_id": "epilogue.talk.nora.1.02",
+  "attempt": 1,
+  "voice_id": "vveagfomyMCJLZsOPRP2",
+  "model_id": "eleven_v4",
+  "text_sha256": "233bf0e3bec3e46d5cb36039e324871a51935993961c92f04d9dca231ccff439",
+  "synthesis_text_sha256": "233bf0e3bec3e46d5cb36039e324871a51935993961c92f04d9dca231ccff439",
+  "request_id": "D8V3JPB0gfnIp2Izvgdu",
+  "trace_id": "afcf82f35ea7e55a14a5f0acf57d519a",
+  "character_cost": 27,
+  "output_format": "mp3_44100_192",
+  "audio_sha256": "2369be428da371dcb1a3ab6f25c442d8034a480aa42afc7b040ed740e4f14baa",
+  "response_bytes": 89695,
+  "seed": 2695009133
+}

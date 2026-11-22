@@ -1,0 +1,235 @@
+{
+  "audio_id": "c10_station.route.lead.02",
+  "audio_sha256": "cf896b85ba024f8c0a3708b2abb9212a8fe176f217b5296f4c8b677051beb226",
+  "file": "assets/audio/elevenlabs-v4-additions/masters/c10_station.route.lead.02.attempt-1.wav",
+  "production_plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Birch was your fixed tester. Ash was the old rehearsal loop. Elm followed Shaw’s hand.",
+  "recognized": "Birch was your fixed tester. Ash was the old rehearsal loop. Elm followed Shaw's hand.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "3ea4d7754973d47e4929f4869c8170d2",
+  "character_cost": "2",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Birch was your fixed tester. Ash was the old rehearsal loop. Elm followed Shaw's hand.",
+    "words": [
+      {
+        "text": "Birch",
+        "start": 0.04,
+        "end": 0.32,
+        "type": "word",
+        "logprob": -0.0013478171533279238
+      },
+      {
+        "text": " ",
+        "start": 0.32,
+        "end": 0.44,
+        "type": "spacing",
+        "logprob": -5.245195097813848e-06
+      },
+      {
+        "text": "was",
+        "start": 0.44,
+        "end": 0.56,
+        "type": "word",
+        "logprob": -5.245195097813848e-06
+      },
+      {
+        "text": " ",
+        "start": 0.56,
+        "end": 0.6,
+        "type": "spacing",
+        "logprob": -3.3378546504536644e-06
+      },
+      {
+        "text": "your",
+        "start": 0.6,
+        "end": 0.68,
+        "type": "word",
+        "logprob": -3.3378546504536644e-06
+      },
+      {
+        "text": " ",
+        "start": 0.68,
+        "end": 0.84,
+        "type": "spacing",
+        "logprob": -0.07763923704624176
+      },
+      {
+        "text": "fixed",
+        "start": 0.84,
+        "end": 1.12,
+        "type": "word",
+        "logprob": -0.07763923704624176
+      },
+      {
+        "text": " ",
+        "start": 1.12,
+        "end": 1.16,
+        "type": "spacing",
+        "logprob": -0.001290918211452663
+      },
+      {
+        "text": "tester.",
+        "start": 1.16,
+        "end": 1.64,
+        "type": "word",
+        "logprob": -0.0024159561643110855
+      },
+      {
+        "text": " ",
+        "start": 1.64,
+        "end": 2.04,
+        "type": "spacing",
+        "logprob": -0.0017372767906636
+      },
+      {
+        "text": "Ash",
+        "start": 2.04,
+        "end": 2.32,
+        "type": "word",
+        "logprob": -0.0017372767906636
+      },
+      {
+        "text": " ",
+        "start": 2.32,
+        "end": 2.46,
+        "type": "spacing",
+        "logprob": -2.861018856492592e-06
+      },
+      {
+        "text": "was",
+        "start": 2.46,
+        "end": 2.58,
+        "type": "word",
+        "logprob": -2.861018856492592e-06
+      },
+      {
+        "text": " ",
+        "start": 2.58,
+        "end": 2.62,
+        "type": "spacing",
+        "logprob": 0.0
+      },
+      {
+        "text": "the",
+        "start": 2.62,
+        "end": 2.72,
+        "type": "word",
+        "logprob": 0.0
+      },
+      {
+        "text": " ",
+        "start": 2.72,
+        "end": 2.8,
+        "type": "spacing",
+        "logprob": -3.814624506048858e-05
+      },
+      {
+        "text": "old",
+        "start": 2.8,
+        "end": 2.96,
+        "type": "word",
+        "logprob": -3.814624506048858e-05
+      },
+      {
+        "text": " ",
+        "start": 2.96,
+        "end": 3.02,
+        "type": "spacing",
+        "logprob": -0.00025948495022021234
+      },
+      {
+        "text": "rehearsal",
+        "start": 3.02,
+        "end": 3.48,
+        "type": "word",
+        "logprob": -0.00025948495022021234
+      },
+      {
+        "text": " ",
+        "start": 3.48,
+        "end": 3.56,
+        "type": "spacing",
+        "logprob": -1.9550132492440753e-05
+      },
+      {
+        "text": "loop.",
+        "start": 3.56,
+        "end": 3.82,
+        "type": "word",
+        "logprob": -1.7881228086480405e-05
+      },
+      {
+        "text": " ",
+        "start": 3.82,
+        "end": 4.12,
+        "type": "spacing",
+        "logprob": -0.0002324311062693596
+      },
+      {
+        "text": "Elm",
+        "start": 4.12,
+        "end": 4.46,
+        "type": "word",
+        "logprob": -0.0002324311062693596
+      },
+      {
+        "text": " ",
+        "start": 4.46,
+        "end": 4.62,
+        "type": "spacing",
+        "logprob": -1.2993727978027891e-05
+      },
+      {
+        "text": "followed",
+        "start": 4.62,
+        "end": 4.94,
+        "type": "word",
+        "logprob": -1.2993727978027891e-05
+      },
+      {
+        "text": " ",
+        "start": 4.94,
+        "end": 5.0,
+        "type": "spacing",
+        "logprob": -0.011465373449027538
+      },
+      {
+        "text": "Shaw's",
+        "start": 5.0,
+        "end": 5.34,
+        "type": "word",
+        "logprob": -0.007659098672926727
+      },
+      {
+        "text": " ",
+        "start": 5.34,
+        "end": 5.4,
+        "type": "spacing",
+        "logprob": -0.00038675934774801135
+      },
+      {
+        "text": "hand.",
+        "start": 5.4,
+        "end": 5.82,
+        "type": "word",
+        "logprob": -0.00032497560605406763
+      }
+    ],
+    "transcription_id": "Pnj4rGekyiKJmE9iFuOY",
+    "audio_duration_secs": 6.0
+  },
+  "listening_reviewed": false
+}

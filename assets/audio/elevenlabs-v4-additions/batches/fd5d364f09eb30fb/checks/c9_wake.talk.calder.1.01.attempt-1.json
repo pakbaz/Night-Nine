@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c9_wake.talk.calder.1.01",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "7b323121d8a4f4ad67f5508012a46d1bbbde50257afab96c0fbfd29b84037aef",
+  "expected": "He asked about his pajamas before he asked about me.",
+  "recognized": "He asked about his pajamas before he asked about me.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 3.76,
+  "sample_rate": 48000,
+  "peak": 0.444854736328125,
+  "rms": 0.06377247699234606,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

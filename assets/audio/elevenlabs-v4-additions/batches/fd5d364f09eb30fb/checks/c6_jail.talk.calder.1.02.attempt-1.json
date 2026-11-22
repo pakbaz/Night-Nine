@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c6_jail.talk.calder.1.02",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "96ddc3868d63ab8a67997a1b0b75df24113ff7a7092bc77281537ae16b0c3683",
+  "expected": "You told the county the cells were fine.",
+  "recognized": "You told the county the cells were fine.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 2.64,
+  "sample_rate": 48000,
+  "peak": 0.3629150390625,
+  "rms": 0.041485122184758076,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

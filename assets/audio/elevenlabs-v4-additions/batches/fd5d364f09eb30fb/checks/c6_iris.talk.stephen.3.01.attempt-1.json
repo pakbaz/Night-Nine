@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c6_iris.talk.stephen.3.01",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "76ef2fe4a654e3d0c62dec6bc5092947a378cd78c3756a9429fe7c28890d2174",
+  "expected": "Everyone at the market is going to stare at me today.",
+  "recognized": "Everyone at the market is going to stare at me today.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 3.2,
+  "sample_rate": 48000,
+  "peak": 0.33660888671875,
+  "rms": 0.03512102312572359,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

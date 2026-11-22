@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "epilogue.talk.nora.3.03",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "39d5c530591cf5e0a49c76edfdc2911cfedf3bfd1566b84ac0ad870107bf6db6",
+  "expected": "It always went up, Steve. Somebody else was whistling it wrong.",
+  "recognized": "It always went up, Steve. Somebody else was whistling it wrong.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.4,
+  "sample_rate": 48000,
+  "peak": 0.4820556640625,
+  "rms": 0.05954103320321,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

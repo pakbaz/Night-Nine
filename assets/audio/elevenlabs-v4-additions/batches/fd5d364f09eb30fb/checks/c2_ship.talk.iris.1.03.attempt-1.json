@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c2_ship.talk.iris.1.03",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "f8e8bc8fb180cc5da87aca9d3fb28cb351a738c40a66e19e4cb98518cd5151ae",
+  "expected": "You walked me down that tunnel yourself.",
+  "recognized": "You walked me down that tunnel yourself.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 2.56,
+  "sample_rate": 48000,
+  "peak": 0.309478759765625,
+  "rms": 0.044453231034484085,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

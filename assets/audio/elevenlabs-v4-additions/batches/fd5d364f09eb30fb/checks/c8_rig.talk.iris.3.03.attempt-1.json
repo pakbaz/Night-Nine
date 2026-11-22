@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c8_rig.talk.iris.3.03",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "e4caaf076abd1847ed9327f236af57db1796b0631a80fe5c0819e60d04894155",
+  "expected": "It doesn’t hurt. It’s like a radio station drifting slowly out of range.",
+  "recognized": "It doesn't hurt. It's like a radio station drifting slowly out of range.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 5.12,
+  "sample_rate": 48000,
+  "peak": 0.339019775390625,
+  "rms": 0.048429756959806454,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

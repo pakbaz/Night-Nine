@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c10_station.relay.lead.02",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "15751334f1fa7bc664713cc3cb4ec8024558c289e24cbf3a84a2982eac2d12bf",
+  "expected": "The official channel just sent back three. That’s yesterday’s cue.",
+  "recognized": "The official channel just sent back three. That's yesterday's cue.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.16,
+  "sample_rate": 48000,
+  "peak": 0.369415283203125,
+  "rms": 0.04213122176073867,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c5_shack.rig.lead.03",
+  "attempt": 1,
+  "plan_sha256": "d2bdf5c4acbc89d16422f6915440fe295d460d09b3bf365d836f4c6f285a412b",
+  "wav_sha256": "0c46033c3537ea9a6d5b0637a6281c75a3b5b2244fc9539fb4b3bbb0b5322d69",
+  "expected": "Dad’s rule for packs. Same volts, same center pin, and at least as much current as the card asks for.",
+  "recognized": "Dad's rule for packs. Same volts, same center pin, and at least as much current as the card asks for.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 7.2,
+  "sample_rate": 48000,
+  "peak": 0.40948486328125,
+  "rms": 0.043639971228123735,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

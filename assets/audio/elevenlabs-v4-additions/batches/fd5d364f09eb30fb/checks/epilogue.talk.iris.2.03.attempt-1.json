@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "epilogue.talk.iris.2.03",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "0143446678c9161df1ecbd7b1439d0e0066eff74518ed38be3e8c99243903477",
+  "expected": "Then I’ll bring bread. Nora says bread is always safe.",
+  "recognized": "Then I'll bring bread. Nora says bread is always safe.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.0,
+  "sample_rate": 48000,
+  "peak": 0.46722412109375,
+  "rms": 0.07093947057766266,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

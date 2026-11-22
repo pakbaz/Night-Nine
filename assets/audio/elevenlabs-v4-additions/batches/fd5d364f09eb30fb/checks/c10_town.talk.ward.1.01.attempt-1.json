@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c10_town.talk.ward.1.01",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "7bd2cacaff4ae18199042e3e5991ae8021489836c6ad0b3f651016624eb7dfc3",
+  "expected": "My staff wanted a long speech. I told them to listen to local radio.",
+  "recognized": "My staff wanted a long speech. I told them to listen to local radio.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 5.28,
+  "sample_rate": 48000,
+  "peak": 0.60546875,
+  "rms": 0.03586849311676492,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

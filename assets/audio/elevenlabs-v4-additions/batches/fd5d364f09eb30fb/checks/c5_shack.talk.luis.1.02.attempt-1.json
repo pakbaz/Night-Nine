@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c5_shack.talk.luis.1.02",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "3dbe88896a0e253bbaf51c80688435fdb63dc8e0fd486956114e80306a992a4c",
+  "expected": "She cooks. When she is frightened, she cooks for forty people. The freezer is full of tamales.",
+  "recognized": "She cooks. When she is frightened, she cooks for 40 people. The freezer is full of tamales.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 6.88,
+  "sample_rate": 48000,
+  "peak": 0.86163330078125,
+  "rms": 0.07859068701688197,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

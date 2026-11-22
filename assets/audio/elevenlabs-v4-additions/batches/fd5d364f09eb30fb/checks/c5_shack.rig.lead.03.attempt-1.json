@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "audio_id": "c5_shack.rig.lead.03",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "32fb75e48cc75ed7bc1750bb433e7844d5efee44abc41f4da0dc66d3e4664dfd",
+  "expected": "Dad’s rule for packs. Same volts, same centre pin, and at least as much current as the card asks for.",
+  "recognized": "Dad's rule for packs: same volts, same center pin, and at least as much current as the card asks for.",
+  "local_recognized": "Dad's rule for packs. Same volts, same center pin, and at least as much current as the card asks for.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 7.12,
+  "sample_rate": 48000,
+  "peak": 0.44085693359375,
+  "rms": 0.04362578629400799,
+  "level_match_gain_db": 0.0,
+  "word_edits": 1,
+  "word_error_rate": 0.047619047619047616,
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c5_shack.rig.lead.03.json",
+    "sha256": "a9ea1cbebf3faa45645600ba988c436d9f98b591c9992bef3c5b8d4d07f4ab6b",
+    "model": "scribe_v3",
+    "word_edits": 1,
+    "listening_reviewed": false
+  },
+  "status": "retake_required",
+  "failure_reason": "asr_mismatch"
+}

@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "postcredits.talk.shaw.1.01",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "81ffca0bdac51f4b33329d5c9dc8da593ce439e6b872e48df61ce6dd132195f0",
+  "expected": "I run this listening station now. No fog machines. Real antennas.",
+  "recognized": "I run this listening station now. No fog machines. Real antennas.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 5.28,
+  "sample_rate": 48000,
+  "peak": 0.4102783203125,
+  "rms": 0.047113482687182316,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

@@ -1,0 +1,17 @@
+{
+  "operation": "text_to_speech",
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "audio_id": "one_year.talk.tomas.2.02",
+  "attempt": 1,
+  "voice_id": "vveagfomyMCJLZsOPRP2",
+  "model_id": "eleven_v4",
+  "text_sha256": "d881e411dd2e5bfbc56650572aa6569652afc695efd7232d3e2522e1ca135735",
+  "synthesis_text_sha256": "d881e411dd2e5bfbc56650572aa6569652afc695efd7232d3e2522e1ca135735",
+  "request_id": "zmv9ibv72VtaJGinX8zw",
+  "trace_id": "31b89f91c785229e1cec9775306bd5be",
+  "character_cost": 24,
+  "output_format": "mp3_44100_192",
+  "audio_sha256": "b06d83f7ab2280a71e37be9a825ea6528845432743eba51d8720d395c79617f9",
+  "response_bytes": 101607,
+  "seed": 1892522827
+}

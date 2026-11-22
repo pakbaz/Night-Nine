@@ -1,0 +1,109 @@
+{
+  "audio_id": "c7_gate.talk.pell.1.01",
+  "audio_sha256": "7a594bffa1287f98218b53ce515c3bb75036303086a66d8a0496b469988847ac",
+  "file": "assets/audio/elevenlabs-v4-additions/masters/c7_gate.talk.pell.1.01.attempt-1.wav",
+  "production_plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Who’s looking after Biscuit today, Pell?",
+  "recognized": "Who's looking after Biscuit today, Pel?",
+  "word_edits": 1,
+  "request_id": null,
+  "trace_id": "06cc8ea885e292bd0f44e273bd8a61b0",
+  "character_cost": "1",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Who's looking after Biscuit today, Pel?",
+    "words": [
+      {
+        "text": "Who's",
+        "start": 0.04,
+        "end": 0.24,
+        "type": "word",
+        "logprob": -9.967533060262213e-05
+      },
+      {
+        "text": " ",
+        "start": 0.24,
+        "end": 0.28,
+        "type": "spacing",
+        "logprob": -1.3947389561508317e-05
+      },
+      {
+        "text": "looking",
+        "start": 0.28,
+        "end": 0.52,
+        "type": "word",
+        "logprob": -1.3947389561508317e-05
+      },
+      {
+        "text": " ",
+        "start": 0.52,
+        "end": 0.6,
+        "type": "spacing",
+        "logprob": -3.290122185717337e-05
+      },
+      {
+        "text": "after",
+        "start": 0.6,
+        "end": 0.78,
+        "type": "word",
+        "logprob": -3.290122185717337e-05
+      },
+      {
+        "text": " ",
+        "start": 0.78,
+        "end": 0.88,
+        "type": "spacing",
+        "logprob": -0.04619457572698593
+      },
+      {
+        "text": "Biscuit",
+        "start": 0.88,
+        "end": 1.24,
+        "type": "word",
+        "logprob": -0.04619457572698593
+      },
+      {
+        "text": " ",
+        "start": 1.24,
+        "end": 1.28,
+        "type": "spacing",
+        "logprob": -2.5629668016335927e-05
+      },
+      {
+        "text": "today,",
+        "start": 1.28,
+        "end": 1.52,
+        "type": "word",
+        "logprob": -2.153687051986708e-05
+      },
+      {
+        "text": " ",
+        "start": 1.52,
+        "end": 1.66,
+        "type": "spacing",
+        "logprob": -0.12385346740484238
+      },
+      {
+        "text": "Pel?",
+        "start": 1.66,
+        "end": 1.88,
+        "type": "word",
+        "logprob": -0.09289975631963898
+      }
+    ],
+    "transcription_id": "lqW7wSg0qVSqyqYnfgMp",
+    "audio_duration_secs": 2.32
+  },
+  "listening_reviewed": false
+}

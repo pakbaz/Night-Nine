@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c7_gate.talk.ward.1.01",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "82339f0a8e6e2e2e37cc3ff4af11f22c135d694efa0cf06c8e8f5186f8a5c51b",
+  "expected": "Is it always this foggy up here?",
+  "recognized": "Is it always this foggy up here?",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 2.72,
+  "sample_rate": 48000,
+  "peak": 0.2174072265625,
+  "rms": 0.031151811598371857,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

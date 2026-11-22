@@ -267,8 +267,8 @@ func run() -> void:
 				decoy_count+=row.pieces.size()-row.slots.size()
 				merged.append_array(row.answer)
 			check(merged==p.solution,"Canonical finding for "+str(task.id))
-	check(case_count==23 and stage_count==30 and placement_count==92,"Campaign packages the revised board inventory")
-	check(decoy_count==29,"Campaign packages authored decoy pieces")
+	check(case_count==23 and stage_count==25 and placement_count==79,"Campaign packages the revised board inventory")
+	check(decoy_count==21,"Campaign packages authored decoy pieces")
 	await fresh_room("c1_pier.bait")
 	var id: String=game.case_board.task_id
 	var board: Control=game.case_board
@@ -369,17 +369,21 @@ func run() -> void:
 	legacy=game.campaign.data.duplicate(true)
 	legacy.erase("case_boards")
 	check(game.campaign.restore(legacy) and id in game.campaign.data.done,"Preserve historical findings without replaying a board")
-	await fresh_room("c7_swap.map")
-	var route_stage: Dictionary=game.case_board.stages[0]
-	for i: int in route_stage.answer.size():
-		await mouse(game.case_board.pieces[int(route_stage.answer[i])])
+	await fresh_room("c1_escape.order")
+	var first_stage: Dictionary=game.case_board.stages[0]
+	for i: int in first_stage.answer.size():
+		await mouse(game.case_board.pieces[int(first_stage.answer[i])])
 		await mouse(game.case_board.slots[i])
 	await mouse(game.case_board.confirm)
-	check(game.case_board.stage_index==1,"Advance to the authored route stage")
+	check(game.case_board.stage_index==1,"Advance to the second step of a two-step board")
+	check(game._load("autosave"),"Reload between two board steps")
+	game._inspect_on_arrival("c1_escape.order")
+	await frames(3)
+	check(is_instance_valid(game.case_board) and game.case_board.stage_index==1,"Resume on the second step")
 	for i: int in 2:
 		await mouse(game.case_board.pieces[int(game.case_board.stages[1].answer[i])])
 		await mouse(game.case_board.slots[i])
-	await record_view("route",game.case_board)
+	await record_view(str(game.case_board.stages[1].mode),game.case_board)
 	await review_layouts()
 	await settings_rows("c1_escape.power")
 	var out:=FileAccess.open(destination.path_join("case-boards.json"),FileAccess.WRITE)

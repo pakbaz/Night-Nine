@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c10_town.talk.nora.1.02",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "07e6b44361494094e454699d32df9f476060e4c5b970066de9f10dbd0424bdbc",
+  "expected": "Wait. People actually owe Carmen money?",
+  "recognized": "Wait, people actually owe Carmen money?",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 3.2,
+  "sample_rate": 48000,
+  "peak": 0.330780029296875,
+  "rms": 0.03943620212365833,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

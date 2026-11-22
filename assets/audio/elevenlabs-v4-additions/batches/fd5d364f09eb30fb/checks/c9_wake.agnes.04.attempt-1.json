@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c9_wake.agnes.04",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "5f053f7e00fb1e8d58af567fa5a5c8e1a5f10e5e1cba987aa5e852a90d0f352e",
+  "expected": "On Sundays? I never open on Sundays. Sunday is for church and the crossword.",
+  "recognized": "On Sundays? I never open on Sundays. Sunday is for church and the crossword.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 6.8,
+  "sample_rate": 48000,
+  "peak": 0.41748046875,
+  "rms": 0.041710081680446494,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "i1_archive.talk.gus.3.03",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "7236911563addaee588bb40bbba6b43d9aa72bdb495bb09829b74921745747d0",
+  "expected": "Absolutely. Children wave at it. Nobody waves at a plain van.",
+  "recognized": "Absolutely. Children wave at it. Nobody waves at a plain van.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 5.68,
+  "sample_rate": 48000,
+  "peak": 0.857330322265625,
+  "rms": 0.08853439237733098,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

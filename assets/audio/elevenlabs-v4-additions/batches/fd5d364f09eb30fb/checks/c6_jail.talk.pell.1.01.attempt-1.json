@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "audio_id": "c6_jail.talk.pell.1.01",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "b587d53bc7cea563f5db32a2510c0cf8fcf21573707979778c3aa877ad90ff77",
+  "expected": "How is Biscuit doing, Pell?",
+  "recognized": "How is Biscuit doing, Pel?",
+  "local_recognized": "How is Biscuit doing, pal?",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 1.92,
+  "sample_rate": 48000,
+  "peak": 0.3199462890625,
+  "rms": 0.038657200138597456,
+  "level_match_gain_db": 0.0,
+  "word_edits": 1,
+  "word_error_rate": 0.2,
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c6_jail.talk.pell.1.01.json",
+    "sha256": "807ab99c672b3dc527a6e29083debe327811dfdb9ea79db2f9f6c39c8d7b9f0c",
+    "model": "scribe_v3",
+    "word_edits": 1,
+    "listening_reviewed": false
+  },
+  "status": "retake_required",
+  "failure_reason": "asr_mismatch"
+}

@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c6_jail.distract.lead.02",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "4d890e47a04b5b75381ebc4533970d33aa754a29fde6010fcbfa370fee5726de",
+  "expected": "The clerk says a contested likeness sends the deputy down to the basement for the file.",
+  "recognized": "The clerk says a contested likeness sends the deputy down to the basement for the file.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 5.04,
+  "sample_rate": 48000,
+  "peak": 0.375640869140625,
+  "rms": 0.040504767428704555,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

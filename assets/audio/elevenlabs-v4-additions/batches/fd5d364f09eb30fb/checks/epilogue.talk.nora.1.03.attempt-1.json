@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "epilogue.talk.nora.1.03",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "72b6900340b3d860651223c088413592a8a58ee0e88898fad82ac4c265e3bc5d",
+  "expected": "Everybody argues with the vet. I just win.",
+  "recognized": "everybody argues with the vet, I just win.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 3.04,
+  "sample_rate": 48000,
+  "peak": 0.48187255859375,
+  "rms": 0.0626157048837045,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

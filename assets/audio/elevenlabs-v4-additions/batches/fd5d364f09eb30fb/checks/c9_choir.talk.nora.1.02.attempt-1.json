@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c9_choir.talk.nora.1.02",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "9cb8e92e28f196d0f4db1d2bf483d4c624339b1baa39d2b90c59edd071f77db9",
+  "expected": "And not one of them has shoes.",
+  "recognized": "and not one of them has shoes.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 2.4,
+  "sample_rate": 48000,
+  "peak": 0.28314208984375,
+  "rms": 0.044262581913942715,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

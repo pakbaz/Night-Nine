@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c8_rig.talk.iris.2.03",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "37917653c06fabe43f6f2a1369d2d5e13f39c2a22612127453258d0b49fe86b2",
+  "expected": "Nora and you. I’ll be happy just to help set the plates.",
+  "recognized": "Nora and you. I'll be happy just to help set the plates.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 3.92,
+  "sample_rate": 48000,
+  "peak": 0.44622802734375,
+  "rms": 0.06447498612718489,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

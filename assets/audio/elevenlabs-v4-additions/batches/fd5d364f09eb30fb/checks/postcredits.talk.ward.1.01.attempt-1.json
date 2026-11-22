@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "postcredits.talk.ward.1.01",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "50a36865b7a82c1c3494b3a1d6c8929403a5a2ea5fd4b2a09fc2759fc190de80",
+  "expected": "Do you know how many people I had to wake up to get here?",
+  "recognized": "Do you know how many people I had to wake up to get here?",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 3.52,
+  "sample_rate": 48000,
+  "peak": 0.297027587890625,
+  "rms": 0.039261483853346005,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

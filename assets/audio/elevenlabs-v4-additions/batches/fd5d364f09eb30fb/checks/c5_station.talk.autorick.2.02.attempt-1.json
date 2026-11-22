@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c5_station.talk.autorick.2.02",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "24ab81e0c098c65009e605eaa62d3e44e79799ab851cf8d46b5ffb3a70226716",
+  "expected": "Our request line is closed! Every song is chosen with love by Halcyon Media Holdings.",
+  "recognized": "Our request line is closed. Every song is chosen with love by Halcyon Media Holdings.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 7.04,
+  "sample_rate": 48000,
+  "peak": 0.575347900390625,
+  "rms": 0.058317389179468576,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c6_iris.talk.stephen.2.03",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "0add261077c46a7a42a85e810a52f9df69abd30e6ff5019c10dbc599c78aa04b",
+  "expected": "Third drawer down. I know. I remember that part.",
+  "recognized": "Third drawer down. I know, I remember that part.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 3.6,
+  "sample_rate": 48000,
+  "peak": 0.33685302734375,
+  "rms": 0.045974482040180356,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

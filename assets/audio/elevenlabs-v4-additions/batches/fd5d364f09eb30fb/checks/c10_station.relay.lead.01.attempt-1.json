@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "audio_id": "c10_station.relay.lead.01",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "d65d750354dc44b1d5e1343d205cf69f487ba12f646bb43a6c4de4a6af50c862",
+  "expected": "Yesterday I sent cue three. Today I’m sending cue four. Let’s see who keeps up.",
+  "recognized": "Yesterday, I sent Q3. Today, I'm sending Q4. Let's see who keeps up.",
+  "local_recognized": "Yesterday I sent Q3. Today I'm sending Q4. Let's see who keeps up.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 6.48,
+  "sample_rate": 48000,
+  "peak": 0.51507568359375,
+  "rms": 0.06405995081914871,
+  "level_match_gain_db": 0.0,
+  "word_edits": 2,
+  "word_error_rate": 0.11764705882352941,
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c10_station.relay.lead.01.json",
+    "sha256": "895166a9aa53b542591675edd521fd6b2f74a6f3a675e4839cb0bbdaf54eccb0",
+    "model": "scribe_v3",
+    "word_edits": 2,
+    "listening_reviewed": false
+  },
+  "status": "retake_required",
+  "failure_reason": "asr_mismatch"
+}

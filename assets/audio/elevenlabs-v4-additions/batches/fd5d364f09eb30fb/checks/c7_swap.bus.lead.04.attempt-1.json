@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c7_swap.bus.lead.04",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "b4befd7836bd69a9323560fea82fd2bde4f05e7fcd07b50e737a973d29b7b409",
+  "expected": "The press van feeds the national broadcast. Keep your tone off it, or every copy watching at home hears it too.",
+  "recognized": "The press van feeds the national broadcast. Keep your tone off it, or every copy watching at home hears it too.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 7.28,
+  "sample_rate": 48000,
+  "peak": 0.471893310546875,
+  "rms": 0.04229612437352756,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c9_gallery.talk.nora.1.03",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "10fb0ab19f7bef7934d9dc0c17dfabfe8d80181db680278022e47a40711d9a18",
+  "expected": "Good. I’m going to argue with her all week.",
+  "recognized": "Good. I'm going to argue with her all week.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 3.04,
+  "sample_rate": 48000,
+  "peak": 0.5531005859375,
+  "rms": 0.07724103893517455,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

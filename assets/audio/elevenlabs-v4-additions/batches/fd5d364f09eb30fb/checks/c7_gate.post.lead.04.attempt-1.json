@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c7_gate.post.lead.04",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "ed41fea4c556db50909c7f8d4b8714f4cf0c35de4a6dc78a9ad0eca0b5e25336",
+  "expected": "She signs the white sheet, and her pen presses through to the yellow carbon underneath. The white sheet stays with her.",
+  "recognized": "She signs the white sheet and her pen presses through to the yellow carbon underneath. The white sheet stays with her.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 8.0,
+  "sample_rate": 48000,
+  "peak": 0.85858154296875,
+  "rms": 0.0757468963038438,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

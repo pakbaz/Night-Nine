@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c3_archive.paper.lead.07",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "9b0ef74d8b8ff529130f5ec5137425f18ad4fc83aa182022eb74387d60633395",
+  "expected": "The permit reopens the aquarium’s old seawater intake. The same tunnel they walked you down.",
+  "recognized": "The permit reopens the aquarium's old seawater intake, the same tunnel they walked you down.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 6.08,
+  "sample_rate": 48000,
+  "peak": 0.506988525390625,
+  "rms": 0.06315421274578155,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

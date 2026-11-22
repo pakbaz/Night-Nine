@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "audio_id": "c9_wake.agnes.03",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "7bb597bc75304ac8fa6cd7459d3ba56a8911b2d0f48f01d31abd3862ad998d47",
+  "expected": "I thought you had, Mrs. Penhallow. Every Sunday on the pier.",
+  "recognized": "I thought you had, Mrs. Penhallow, every Sunday on the pier.",
+  "local_recognized": "I thought you had Mrs. Penhalo every Sunday on the pier.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.32,
+  "sample_rate": 48000,
+  "peak": 0.38592529296875,
+  "rms": 0.04157739929501516,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c9_wake.agnes.03.json",
+    "sha256": "7a7b0194455f2b5f8e028ec1c3bfc1e60eab2bb717cabd90923483b081668970",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  },
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

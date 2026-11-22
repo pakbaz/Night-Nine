@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c2_aquarium.guard.lead.03",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "dba93d1c44dfc1366b65d6bab45b0914527dd4aab0cbcd19af77584b0d7e366f",
+  "expected": "Six seconds at each door. Then I compare the two.",
+  "recognized": "six seconds at each door. Then I compare the two.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.08,
+  "sample_rate": 48000,
+  "peak": 0.308563232421875,
+  "rms": 0.03839836030211905,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

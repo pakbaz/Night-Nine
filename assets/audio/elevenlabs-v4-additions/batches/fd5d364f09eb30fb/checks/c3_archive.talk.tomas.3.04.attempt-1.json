@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "audio_id": "c3_archive.talk.tomas.3.04",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "29e3767cca95c7c172832554017125d8974724ef1b89a54a669e4a24c43942b2",
+  "expected": "You’d get along with Mrs. Penhallow.",
+  "recognized": "You'd get along with Mrs. Penhallow.",
+  "local_recognized": "you'd get along with Mrs. Penhalo.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 2.24,
+  "sample_rate": 48000,
+  "peak": 0.32293701171875,
+  "rms": 0.04478994882936129,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c3_archive.talk.tomas.3.04.json",
+    "sha256": "743e7c035674242db93e9dd75b51220b67da43448d7865dcdd5b36c1e55119ee",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  },
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

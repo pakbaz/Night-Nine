@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c8_rig.rig.lead.03",
+  "attempt": 1,
+  "plan_sha256": "d2bdf5c4acbc89d16422f6915440fe295d460d09b3bf365d836f4c6f285a412b",
+  "wav_sha256": "e0274feb7c0733b7d405084eda615bd8064e924d5a0ea0065323e4911d630507",
+  "expected": "We need a signal going out and nothing coming back. Otherwise the ship hears my theater.",
+  "recognized": "We need a signal going out and nothing coming back. Otherwise, the ship hears my theater.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 5.76,
+  "sample_rate": 48000,
+  "peak": 0.36090087890625,
+  "rms": 0.044081291453576345,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

@@ -1,0 +1,17 @@
+{
+  "operation": "text_to_speech",
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "audio_id": "c3_house.talk.carmen.3.04",
+  "attempt": 1,
+  "voice_id": "XjJZDs8qBsxY4vx0TGuV",
+  "model_id": "eleven_v4",
+  "text_sha256": "ea468dc55da42e6a0a1e9bbb7525dffc2551e566301b1160fcc9835da9b6bd74",
+  "synthesis_text_sha256": "ea468dc55da42e6a0a1e9bbb7525dffc2551e566301b1160fcc9835da9b6bd74",
+  "request_id": "AMmNLD4cVsc0UMeNNxG9",
+  "trace_id": "c1a8ac645b27c3616da319859c4b46d3",
+  "character_cost": 31,
+  "output_format": "mp3_44100_192",
+  "audio_sha256": "189997fed3688bf4382a4ac2ea44f8ac5dadcd3ad00e9d0e277b4e1b4cf910ad",
+  "response_bytes": 134208,
+  "seed": 4035282196
+}

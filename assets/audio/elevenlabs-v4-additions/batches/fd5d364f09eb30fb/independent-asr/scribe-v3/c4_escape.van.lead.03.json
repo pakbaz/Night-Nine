@@ -1,0 +1,207 @@
+{
+  "audio_id": "c4_escape.van.lead.03",
+  "audio_sha256": "15677e6b45ccfe2623b949e18b74e1c815a91533157ebeda1f51a00bc461b310",
+  "file": "assets/audio/elevenlabs-v4-additions/masters/c4_escape.van.lead.03.attempt-1.wav",
+  "production_plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "After the gravel comes the weighbridge. There, the escort opens the door himself.",
+  "recognized": "After the gravel comes the weighbridge. There, the escort opens the door himself.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "55b862c8f0662acc7deb2fb2c24e4fe5",
+  "character_cost": "2",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "After the gravel comes the weighbridge. There, the escort opens the door himself.",
+    "words": [
+      {
+        "text": "After",
+        "start": 0.1,
+        "end": 0.34,
+        "type": "word",
+        "logprob": -3.6954195820726454e-05
+      },
+      {
+        "text": " ",
+        "start": 0.34,
+        "end": 0.38,
+        "type": "spacing",
+        "logprob": -4.768370445162873e-07
+      },
+      {
+        "text": "the",
+        "start": 0.38,
+        "end": 0.48,
+        "type": "word",
+        "logprob": -4.768370445162873e-07
+      },
+      {
+        "text": " ",
+        "start": 0.48,
+        "end": 0.52,
+        "type": "spacing",
+        "logprob": -7.462222856702283e-05
+      },
+      {
+        "text": "gravel",
+        "start": 0.52,
+        "end": 0.94,
+        "type": "word",
+        "logprob": -7.462222856702283e-05
+      },
+      {
+        "text": " ",
+        "start": 0.94,
+        "end": 1.14,
+        "type": "spacing",
+        "logprob": -0.0006615119054913521
+      },
+      {
+        "text": "comes",
+        "start": 1.14,
+        "end": 1.4,
+        "type": "word",
+        "logprob": -0.0006615119054913521
+      },
+      {
+        "text": " ",
+        "start": 1.4,
+        "end": 1.44,
+        "type": "spacing",
+        "logprob": -2.861018856492592e-06
+      },
+      {
+        "text": "the",
+        "start": 1.44,
+        "end": 1.54,
+        "type": "word",
+        "logprob": -2.861018856492592e-06
+      },
+      {
+        "text": " ",
+        "start": 1.54,
+        "end": 1.58,
+        "type": "spacing",
+        "logprob": -0.6369149684906006
+      },
+      {
+        "text": "weighbridge.",
+        "start": 1.58,
+        "end": 2.2,
+        "type": "word",
+        "logprob": -0.30063532773237966
+      },
+      {
+        "text": " ",
+        "start": 2.2,
+        "end": 2.2,
+        "type": "spacing",
+        "logprob": -2.13382354559144e-05
+      },
+      {
+        "text": "There,",
+        "start": 2.64,
+        "end": 2.96,
+        "type": "word",
+        "logprob": -0.00013623379315201115
+      },
+      {
+        "text": " ",
+        "start": 2.96,
+        "end": 3.22,
+        "type": "spacing",
+        "logprob": -9.536738616588991e-07
+      },
+      {
+        "text": "the",
+        "start": 3.22,
+        "end": 3.3,
+        "type": "word",
+        "logprob": -9.536738616588991e-07
+      },
+      {
+        "text": " ",
+        "start": 3.3,
+        "end": 3.38,
+        "type": "spacing",
+        "logprob": -0.0025634069461375475
+      },
+      {
+        "text": "escort",
+        "start": 3.38,
+        "end": 3.8,
+        "type": "word",
+        "logprob": -0.0025634069461375475
+      },
+      {
+        "text": " ",
+        "start": 3.8,
+        "end": 3.88,
+        "type": "spacing",
+        "logprob": -8.940656698541716e-06
+      },
+      {
+        "text": "opens",
+        "start": 3.88,
+        "end": 4.2,
+        "type": "word",
+        "logprob": -8.940656698541716e-06
+      },
+      {
+        "text": " ",
+        "start": 4.2,
+        "end": 4.24,
+        "type": "spacing",
+        "logprob": -2.3841855067985307e-07
+      },
+      {
+        "text": "the",
+        "start": 4.24,
+        "end": 4.32,
+        "type": "word",
+        "logprob": -2.3841855067985307e-07
+      },
+      {
+        "text": " ",
+        "start": 4.32,
+        "end": 4.36,
+        "type": "spacing",
+        "logprob": -1.4066597032069694e-05
+      },
+      {
+        "text": "door",
+        "start": 4.36,
+        "end": 4.6,
+        "type": "word",
+        "logprob": -1.4066597032069694e-05
+      },
+      {
+        "text": " ",
+        "start": 4.6,
+        "end": 4.64,
+        "type": "spacing",
+        "logprob": -5.722029527532868e-06
+      },
+      {
+        "text": "himself.",
+        "start": 4.64,
+        "end": 5.3,
+        "type": "word",
+        "logprob": -1.0967098432956845e-05
+      }
+    ],
+    "transcription_id": "66mQILPCIdTg24R14vdf",
+    "audio_duration_secs": 5.6
+  },
+  "listening_reviewed": false
+}

@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "epilogue.talk.iris.1.03",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "16f9f53dc8fe0ba5994daad774673c0214fb705d9457a644518370abf60e6ba0",
+  "expected": "Nora says the nose is too serious. I think that means she likes it.",
+  "recognized": "Nora says the nose is too serious. I think that means she likes it.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 5.04,
+  "sample_rate": 48000,
+  "peak": 0.3221435546875,
+  "rms": 0.05104059393289894,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

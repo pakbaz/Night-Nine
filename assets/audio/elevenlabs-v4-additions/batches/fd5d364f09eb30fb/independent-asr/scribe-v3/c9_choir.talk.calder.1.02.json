@@ -1,0 +1,109 @@
+{
+  "audio_id": "c9_choir.talk.calder.1.02",
+  "audio_sha256": "ad4754ff3dc79c2e5b480e5e424db86f53faa8d0146ceffbce233c839d958c85",
+  "file": "assets/audio/elevenlabs-v4-additions/masters/c9_choir.talk.calder.1.02.attempt-1.wav",
+  "production_plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Is everybody all right down there?",
+  "recognized": "Is everybody all right down there?",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "364343b328ce1cb28765c301f4e9a53e",
+  "character_cost": "1",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Is everybody all right down there?",
+    "words": [
+      {
+        "text": "Is",
+        "start": 0.06,
+        "end": 0.14,
+        "type": "word",
+        "logprob": -0.00011205045302631333
+      },
+      {
+        "text": " ",
+        "start": 0.14,
+        "end": 0.2,
+        "type": "spacing",
+        "logprob": -1.6927575416048057e-05
+      },
+      {
+        "text": "everybody",
+        "start": 0.2,
+        "end": 0.58,
+        "type": "word",
+        "logprob": -1.6927575416048057e-05
+      },
+      {
+        "text": " ",
+        "start": 0.58,
+        "end": 0.64,
+        "type": "spacing",
+        "logprob": -0.0005814530304633081
+      },
+      {
+        "text": "all",
+        "start": 0.64,
+        "end": 0.78,
+        "type": "word",
+        "logprob": -0.0005814530304633081
+      },
+      {
+        "text": " ",
+        "start": 0.78,
+        "end": 0.82,
+        "type": "spacing",
+        "logprob": -3.433168603805825e-05
+      },
+      {
+        "text": "right",
+        "start": 0.82,
+        "end": 1.0,
+        "type": "word",
+        "logprob": -3.433168603805825e-05
+      },
+      {
+        "text": " ",
+        "start": 1.0,
+        "end": 1.04,
+        "type": "spacing",
+        "logprob": -2.264974000354414e-06
+      },
+      {
+        "text": "down",
+        "start": 1.04,
+        "end": 1.24,
+        "type": "word",
+        "logprob": -2.264974000354414e-06
+      },
+      {
+        "text": " ",
+        "start": 1.24,
+        "end": 1.28,
+        "type": "spacing",
+        "logprob": -4.768360213347478e-06
+      },
+      {
+        "text": "there?",
+        "start": 1.28,
+        "end": 1.46,
+        "type": "word",
+        "logprob": -5.52334699932544e-06
+      }
+    ],
+    "transcription_id": "BAJmPsApwnLD6nfcv3IR",
+    "audio_duration_secs": 1.76
+  },
+  "listening_reviewed": false
+}

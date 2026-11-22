@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c2_ship.talk.iris.3.02",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "7c9f064f3e05d562d6c1b5ecb35705980c1a8b18eece82c735296ea38ede7196",
+  "expected": "Carmen is happy. Everyone at that table is happy.",
+  "recognized": "Carmen is happy. Everyone at that table is happy.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 3.6,
+  "sample_rate": 48000,
+  "peak": 0.5040283203125,
+  "rms": 0.05860125643094581,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

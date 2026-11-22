@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c6_iris.hold.lead.02",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "943faaae75169e6c45363fe94ac368ef65c0a824048543efca3f58612d2183a8",
+  "expected": "At four minutes past midnight on the thirtieth, I phoned two Halcyon offices. I taped both calls.",
+  "recognized": "At four minutes past midnight on the 30th, I phoned two Halcyon offices. I taped both calls.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 6.96,
+  "sample_rate": 48000,
+  "peak": 0.72979736328125,
+  "rms": 0.05503286361351158,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c2_aquarium.intercom.lead.02",
+  "attempt": 1,
+  "plan_sha256": "adb0e19f786f6bd4d0ba7c2e0744b76aa8fba132dc31badd3d3109053359ba96",
+  "wav_sha256": "0d4538b5ec70289cec6ff0dd1d92bd597b34ef9a694fa6de35823613e5dcf7fd",
+  "expected": "The paper on the spool is dated in her handwriting. May 29th.",
+  "recognized": "The paper on the spool is dated in her handwriting, May 29th.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.96,
+  "sample_rate": 48000,
+  "peak": 0.283416748046875,
+  "rms": 0.03928592728106266,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

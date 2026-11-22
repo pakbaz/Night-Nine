@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "audio_id": "c10_station.talk.stephen.1.02",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "e6bd1b1601d2b56ba84f559d248e71e6ecbf57ea5ed0f5cad7d89373eb97dad6",
+  "expected": "You do. Black, too strong, two cups before six.",
+  "recognized": "You do. Black, too strong, two cups before 6:00.",
+  "local_recognized": "You do. Black. Two strong. Two cups before six.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.4,
+  "sample_rate": 48000,
+  "peak": 0.5509033203125,
+  "rms": 0.04438743567902904,
+  "level_match_gain_db": 0.0,
+  "word_edits": 1,
+  "word_error_rate": 0.1111111111111111,
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c10_station.talk.stephen.1.02.json",
+    "sha256": "327090ac74c819a3b4b1a6ac92820d8cfb7fd1ee7b4f0de00b1248cde682321b",
+    "model": "scribe_v3",
+    "word_edits": 1,
+    "listening_reviewed": false
+  },
+  "status": "retake_required",
+  "failure_reason": "asr_mismatch"
+}

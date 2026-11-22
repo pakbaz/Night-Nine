@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c9_gallery.talk.nora.3.01",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "a79f85b440ec13b30c6a80559916e752a9c224b02258d6ff519407d101cb001f",
+  "expected": "I know half this hall by name now. It’s like a very cold party.",
+  "recognized": "I know half this hall by name now. It's like a very cold party.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.64,
+  "sample_rate": 48000,
+  "peak": 0.45220947265625,
+  "rms": 0.05679117406476096,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

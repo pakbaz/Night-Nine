@@ -59,70 +59,58 @@
       ],
       "tasks": {
         "alibi": {
-          "difficulty": 3,
+          "difficulty": 2,
           "title": "Market corner",
           "requires": [],
           "goal": "Give the town a sighting of Steve’s face across town at exactly 8:10.",
-          "background": "At 8:10 Steve meets the texter on the pier. If someone in town checks Steve’s face somewhere else at that same minute, the search goes there instead. Stephen has three errands and three different clocks.",
+          "background": "At 8:10 Steve meets the texter on the pier. If someone in town sees Steve’s face somewhere else at that same minute, the search goes there instead. Stephen has three errands, and each one runs on a different clock.",
           "lead": [
-            "stephen|Three errands, three clocks. Nobody in this town agrees what time it is."
+            "stephen|Three errands, three clocks. Nobody in this town agrees what time it is.",
+            "stephen|Gus sets his oven clock four minutes fast. He says it keeps the bread honest.",
+            "stephen|The bus clock runs two minutes slow. The florist sets hers by the radio, like a sensible person.",
+            "stephen|And Gus has my poster in his window. He asks everyone to help him fix the smudge."
           ],
           "prompt": "Which errand puts Stephen’s face in front of a witness at exactly 8:10 by the radio?",
           "board": {
-            "instruction": "Put every slip on the radio’s clock, then decide which witness actually looks at a face.",
+            "instruction": "Put each slip on radio time, then pick the witness who will really see Stephen’s face.",
             "evidence": [
-              "Gus sets his oven clock four minutes fast. The bus clock runs two minutes slow. The florist sets hers by the radio.",
-              "Three slips: BREAD 08:14, BUS 08:05, FLOWERS 08:12.",
-              "The bus driver stamps a fare card through a slot without looking up. The florist takes orders by telephone. At the bread window, Gus has a smudged wanted poster taped to the glass, and he asks customers to help him fix it."
+              "Gus’s oven clock runs four minutes fast.",
+              "The bus clock runs two minutes slow, and the florist’s clock matches the radio.",
+              "The slips read BREAD 08:14, BUS 08:05 and FLOWERS 08:12.",
+              "The bus driver stamps fares without looking up, and the florist takes orders by phone.",
+              "Gus has a smudged wanted poster in his window, and he asks customers to help him fix it."
             ],
             "stages": [
               {
                 "mode": "match",
-                "prompt": "Correct each slip to radio time.",
+                "prompt": "Put one card on each question.",
                 "slots": [
-                  "Bread",
-                  "Bus",
-                  "Flowers"
+                  "Bread slip, by the radio",
+                  "Bus slip, by the radio",
+                  "Flowers slip, by the radio",
+                  "Who will look at Stephen’s face?"
                 ],
                 "pieces": [
                   "08:10",
                   "08:07",
                   "08:12",
-                  "08:14",
-                  "08:03"
-                ],
-                "answer": [
-                  0,
-                  1,
-                  2
-                ]
-              },
-              {
-                "mode": "match",
-                "prompt": "What can each witness swear to?",
-                "slots": [
-                  "The bus driver",
                   "Gus at the bread window",
-                  "The florist"
-                ],
-                "pieces": [
-                  "A fare card",
-                  "A face beside the poster",
-                  "A voice on the phone"
+                  "The bus driver"
                 ],
                 "answer": [
                   0,
                   1,
-                  2
+                  2,
+                  3
                 ]
               }
             ],
             "wrong_text": "Stephen checks his watch against the radio. Something doesn’t add up yet."
           },
           "hints": [
-            "Use the radio as the common clock.",
-            "Subtract four at the bakery and add two on the bus. Then ask which witness actually looks at a face.",
-            "Only one slip lands on 08:10 once the clocks are fixed, and only one witness looks a customer in the face."
+            "Use the radio as the one true clock.",
+            "Take four minutes off Gus’s slip, and add two minutes to the bus slip.",
+            "Only one slip lands on 08:10, and only one witness looks a customer in the face."
           ],
           "lines": [
             {
@@ -187,7 +175,8 @@
           "goal": "Find out how copies far from the bay stay in step.",
           "background": "Copies near the bay walk into the water on the ninth night. Rook was hundreds of miles away, and he was always on hold with ‘the Bureau’. On the thirtieth, after she turned back from the water, Iris phoned two different Halcyon offices at four minutes past midnight and taped both calls.",
           "lead": [
-            "iris|You saw the ones near the bay go below. The ones far away call."
+            "iris|You saw the ones near the bay go below. The ones far away call.",
+            "iris|At four minutes past midnight on the thirtieth, I phoned two Halcyon offices. I taped both calls."
           ],
           "prompt": "Neither call reached a person. Line up the two tapes. Which part matches exactly?",
           "options": [
@@ -236,7 +225,71 @@
           "text": "Iris. After the flowers on the balcony."
         }
       ],
-      "next": "The Sheriff’s office, at noon (c6_jail)."
+      "talk": {
+        "iris": [
+          {
+            "topic": "Admiral",
+            "after": "takes",
+            "lines": [
+              "steve|Have you seen Admiral since you went missing?",
+              "iris|Once, at dawn on Saturday, when the pier was empty. He still won’t come to my whistle.",
+              "iris|He stole my sandwich anyway. I think that means we’re friends now."
+            ]
+          },
+          {
+            "topic": "Breakfast",
+            "after": "takes",
+            "lines": [
+              "steve|Do you even like breakfast? You always said you’d eaten already.",
+              "iris|I don’t like it. Nora doesn’t either. It was on a list of healthy things.",
+              "iris|This morning I skipped it. It felt like breaking a very small law."
+            ]
+          },
+          {
+            "topic": "Sunday dinners",
+            "after": "takes",
+            "lines": [
+              "iris|I miss Sunday dinners. Carmen shouting at the stove. Tomás explaining the moon landing to the soup.",
+              "steve|They miss you too. They think you’re Nora.",
+              "iris|I know. That is the part I can’t fix."
+            ]
+          }
+        ],
+        "stephen": [
+          {
+            "topic": "Haircuts",
+            "lines": [
+              "steve|Do you still think I need a haircut?",
+              "stephen|We both need one. I just look better needing it."
+            ]
+          },
+          {
+            "topic": "Dad’s chair",
+            "lines": [
+              "stephen|I slept in Dad’s chair last night. It still smells of solder and peppermints.",
+              "steve|He kept the peppermints in the drawer with the fuses.",
+              "stephen|Third drawer down. I know. I remember that part."
+            ]
+          },
+          {
+            "topic": "Being famous",
+            "lines": [
+              "stephen|Everyone at the market is going to stare at me today.",
+              "steve|That’s the whole idea, Stephen.",
+              "stephen|I’ve never been the interesting one before. I could get used to it."
+            ]
+          }
+        ],
+        "autorick": [
+          {
+            "topic": "The morning news",
+            "lines": [
+              {"new": "autorick|Police are still looking for Steve Mercer. If you see him, tell him to smile!", "delivery": "broadcast"},
+              "stephen|He never smiles before ten. I can vouch for that personally."
+            ]
+          }
+        ]
+      }
     },
     "c6_jail": {
       "when": "Monday, November 5, noon to evening",
@@ -284,7 +337,7 @@
       "tasks": {
         "mail": {
           "type": "rows",
-          "difficulty": 2,
+          "difficulty": 1,
           "title": "Pell’s sorting case",
           "requires": [],
           "goal": "Find the cell key in Pell’s sorting case.",
@@ -292,10 +345,12 @@
           "lead": [
             "pell|The cell key was returned to the post this morning. I filed it.",
             "steve|Where?",
-            "pell|Correctly."
+            "pell|Correctly.",
+            "pell|I file by destination. The carbon says Jail, returned key. That is register entry eighteen.",
+            "pell|Each slot holds two entries. Slot one holds entries one and two, and so on."
           ],
           "prompt": "Which drawer, and which slot?",
-          "instruction": "Pell’s carbon, dated today: DESTINATION / ITEM reads ‘Jail / returned key’. The jail register’s last three entries are 14 (signed), 18 (returned) and 19 (signed). Pell files by destination. Each slot holds two register numbers: slot 1 holds 1 and 2, slot 2 holds 3 and 4, and so on.",
+          "instruction": "Find the drawer for where the key is going, then the slot that holds entry 18. Each slot holds two entries: slot 1 holds 1 and 2, slot 2 holds 3 and 4, and so on.",
           "rows": [
             {
               "label": "Drawer",
@@ -309,9 +364,8 @@
             {
               "label": "Slot",
               "options": [
-                "7",
-                "9",
                 "10",
+                "9",
                 "18"
               ],
               "answer": 1
@@ -319,29 +373,32 @@
           ],
           "hints": [
             "Pell files by where a thing is going, not by what happened to it.",
-            "Use the returned entry in the jail register. Two numbers share each slot.",
-            "The carbon says Jail. The returned key is entry 18. Slot 1 holds 1 and 2, so count up in pairs."
+            "The returned key is entry 18. Two entries share each slot.",
+            "Slot 1 holds 1 and 2, slot 2 holds 3 and 4. Keep counting in pairs until you reach 18."
           ],
           "lines": [
             "c6_jail.mail.01",
             {
               "new": "steve|June’s own crossword is in the jail pile. I’ll circle one square and post it through her slot."
-            }
+            },
+            "steve|Twenty-three across, where it crosses eight down. Only the real June will know that square."
           ],
           "finding": "steve|The key was in the Jail drawer, slot 9, where entries 17 and 18 share a slot. And on today’s crossword I circled the square where 23 Across crosses 8 Down, and posted it through June’s slot. Only she has it."
         },
         "distract": {
           "type": "rows",
-          "difficulty": 3,
+          "difficulty": 2,
           "title": "Sheriff’s front desk",
           "requires": [],
           "goal": "Keep the records deputy away from the cell corridor long enough for Steve to reach June.",
           "background": "When a wanted poster is contested, the records deputy has to fetch the original file from the basement, and the man in question has to stand at the likeness counter while the clerk compares his face with the poster.",
           "lead": [
-            "stephen|Three tickets at the counter. Leave the deputy to me."
+            "stephen|Three tickets at the counter. Leave the deputy to me.",
+            "stephen|The clerk says a contested likeness sends the deputy down to the basement for the file.",
+            "steve|She leaves at 11:59 and she’s back at 12:03. I need two clear minutes."
           ],
           "prompt": "Which ticket should Stephen take, and when should Steve go in and come out?",
-          "instruction": "Ticket 41: pay a fine in coins, at the cashier. Ticket 42: contest a likeness, at the counter, in person. Ticket 43: drop a signed form through the slot. For a contested likeness, the records deputy leaves the corridor door at 11:59 and is back at 12:03. Steve needs two full minutes in the corridor, starting after she leaves and finishing before she returns.",
+          "instruction": "Pick the ticket that keeps Stephen’s face at the counter, then fit Steve’s two minutes inside the time the deputy is away. Ticket 41: pay a fine at the cashier. Ticket 42: contest a likeness, in person, at the counter. Ticket 43: drop a form through the slot. The deputy leaves at 11:59 and is back at 12:03.",
           "rows": [
             {
               "label": "Stephen takes ticket",
@@ -383,7 +440,7 @@
         },
         "crossword": {
           "type": "rows",
-          "difficulty": 3,
+          "difficulty": 2,
           "title": "The two Junes",
           "requires": [
             "mail",
@@ -400,17 +457,18 @@
               "new": "calder|He’ll check my paperwork, Mercer. I taught him that.",
               "display": "June in cell two",
               "direction": "through the cell door"
-            }
+            },
+            "steve|I’ll ask them both which letter I circled this morning. Only one of them has seen it."
           ],
-          "prompt": "The guard listens to the radio, so each June will answer on a square of paper. What should Steve ask, and which answer should he accept?",
-          "instruction": "Steve’s pocket copy of today’s puzzle: 23 Across, ‘beyond imitation’ (10 letters): I _ I _ I _ A _ L _. The down clues crossing its first, second and last blanks are 3, 8 and 12.",
+          "prompt": "Each June answers on a slip of paper. What should Steve ask, and which answer should he accept?",
+          "instruction": "Ask about the square Steve circled, then accept the slip with the right letter. 23 Across, ‘beyond imitation’, is INIMITABLE, shown as I _ I _ I _ A _ L _. Its first, second and last blanks cross 3 Down, 8 Down and 12 Down.",
           "rows": [
             {
-              "label": "Ask which letter is circled at",
+              "label": "Ask about the square at",
               "options": [
-                "17 Across / 8 Down",
-                "23 Across / 3 Down",
-                "23 Across / 8 Down"
+                "17 Across and 8 Down",
+                "23 Across and 3 Down",
+                "23 Across and 8 Down"
               ],
               "answer": 2
             },
@@ -425,9 +483,9 @@
             }
           ],
           "hints": [
-            "Steve’s notebook says which square he circled. The public crossword alone proves nothing.",
-            "Solve 23 Across, then count along to its second blank.",
-            "23 Across is INIMITABLE. Steve’s notebook entry from Pell’s sorting case says which crossing he circled. Read the letter in that square."
+            "Steve said which square he circled when he found the key. His notebook has it too.",
+            "Write INIMITABLE under the blanks, one letter at a time.",
+            "Find the blank that crosses the down clue Steve chose, and read the letter there."
           ],
           "lines": [
             "steve|Desk June circled a T. Close. Wrong.",
@@ -451,7 +509,8 @@
           "lead": [
             "lyle_copy|Sheriff. Steve. I’m supposed to stop you.",
             "lyle_copy|Ben’s a tree in the school play tonight. He’s been practising being a tree for a month.",
-            "calder|Lyle. Your relief has signed."
+            "calder|Lyle. Your relief has signed.",
+            "calder|The school doors close at six forty. Let’s find you the fastest way there."
           ],
           "prompt": "Can Lyle still make it? Tell him the fastest way.",
           "instruction": "Lyle can leave the moment his relief signs, at 18:24. Walking to the school takes 18 minutes. Bus A leaves at 18:29 and takes 9 minutes. Bus B leaves at 18:26 and takes 15 minutes. The school doors close at 18:40.",
@@ -513,7 +572,85 @@
         "iris|A copy who stops going below starts to forget. Nora’s memories go first.",
         "c6_jail.out.03"
       ],
-      "next": "Interlude 2, inside the ship (i2_nora)."
+      "talk": {
+        "pell": [
+          {
+            "topic": "Biscuit",
+            "lines": [
+              "steve|How is Biscuit doing these days?",
+              "pell|She eats at seven and at five. She prefers the blue bowl. I am not yet sure she prefers me.",
+              "pell|I am working on it. I have learned to scratch behind her left ear."
+            ]
+          },
+          {
+            "topic": "The mail route",
+            "lines": [
+              "steve|Do you like the mail route?",
+              "pell|Dale’s route has two hundred and twelve stops. Dale liked eleven of them.",
+              "pell|I have started to like a twelfth. Carmen gives me a churro at La Marea. The real Dale never stopped there."
+            ]
+          },
+          {
+            "topic": "The real Dale",
+            "after": "mail",
+            "lines": [
+              "steve|What is Dale like? The real one.",
+              "pell|He complains about the rain, the dogs and the government. In that order.",
+              "pell|I have his memories, but not his complaints. I find I do not miss them."
+            ]
+          }
+        ],
+        "iris": [
+          {
+            "topic": "The otters",
+            "lines": [
+              "iris|Who is feeding the otters while I’m away from the aquarium?",
+              "steve|The volunteers. Including the one who got bitten.",
+              "iris|Good. She’s brave. The pups like brave people."
+            ]
+          }
+        ],
+        "stephen": [
+          {
+            "topic": "The likeness counter",
+            "after": "distract",
+            "lines": [
+              "stephen|The clerk said I looked nothing like my poster.",
+              "steve|It is my poster. It is literally my face.",
+              "stephen|I told her that. She said I was far too cheerful to be you."
+            ]
+          }
+        ],
+        "calder": [
+          {
+            "topic": "Her cell",
+            "after": "crossword",
+            "lines": [
+              "calder|I spent the morning in my own cell. That mattress is worse than I ever admitted.",
+              "steve|You told the county the cells were fine.",
+              "calder|I told the county a lot of things. I’m ordering new mattresses."
+            ]
+          },
+          {
+            "topic": "Biscuit",
+            "after": "crossword",
+            "lines": [
+              "calder|Pell has been feeding my dog? Twice a day?",
+              "steve|Blue bowl, seven and five. He’s learned the left ear.",
+              "calder|Then he can keep his job. Don’t you dare tell him I said that."
+            ]
+          },
+          {
+            "topic": "The other June",
+            "after": "crossword",
+            "lines": [
+              "calder|She does my paperwork better than I do. That’s what bothers me most.",
+              "steve|She guessed a T, June. She didn’t know you.",
+              "calder|No. She knew my files. That isn’t the same thing at all."
+            ]
+          }
+        ]
+      }
     },
     "i2_nora": {
       "when": "Monday night, inside the Long Patience",
@@ -533,7 +670,8 @@
       "notes": [
         "Nora wakes because Iris stopped re-syncing. Nora doesn’t know that; the player does.",
         "jobs keeps the case board with a single stage (the route and logging stages are cut).",
-        "The eye under the frost is narrated in the departure. Art (optional): an insert of Row Zero with one enormous eye open under cracked frost."
+        "The eye under the frost is narrated in the departure. Art (optional): an insert of Row Zero with one enormous eye open under cracked frost.",
+        "Nora plays this interlude, so her small talk is with Dale and Lyle, the two sleepers awake beside her."
       ],
       "context": [
         "nora|I woke up in amber light, in a bed I didn’t choose, in a hall that went on forever.",
@@ -559,10 +697,11 @@
           "goal": "Find a safe moment to cross the aisle.",
           "background": "A guard walks the Gallery in laps. Nora counts under her breath and scratches marks on her bed rail.",
           "lead": [
-            "nora|Boots. Then the pump. Then the far door. Again and again."
+            "nora|Boots. Then the pump. Then the far door. Again and again.",
+            "nora|Once that far door shuts, he can’t see the aisle. Crossing takes me four counts."
           ],
           "prompt": "When should Nora step out, and when will she reach cover?",
-          "instruction": "Lap one: boots at 02, pump hiss at 05, far door shuts at 08. The boots come round again at 14 and the lap repeats. The guard sees the aisle until the door shuts. Crossing takes four counts.",
+          "instruction": "Step out when the far door shuts, and reach cover before the boots come back. Lap one: boots at 2, pump at 5, far door shuts at 8. The boots come back at 14, and the lap repeats. Crossing takes four counts.",
           "rows": [
             {
               "label": "Step out at count",
@@ -602,24 +741,27 @@
           "goal": "Give each half-awake sleeper the job they’re already good at.",
           "background": "Three sleepers are awake enough to help: Nora, the real Lyle Boone and a grumpy mail carrier named Dale. Nora has watched each of them for hours.",
           "lead": [
-            "nora|Everybody’s good at something. Even Dale."
+            "nora|Everybody’s good at something. Even Dale.",
+            "lyle|That hatch sticks. I’ve wedged it open twice already tonight.",
+            "dale|Thirty years on a mail route. I could walk this one with my eyes shut."
           ],
           "prompt": "Who keeps the hatch, who guides at the fork, and who reads the gauges?",
           "board": {
-            "instruction": "Fit each person’s knowledge to the route.",
+            "instruction": "Give each person the job they have already practised.",
             "evidence": [
-              "Lyle has left two fresh wedge marks on a sticking hatch. Dale can recite the turns of the route with his eyes shut. Nora has drawn the water circuit in pencil.",
-              "Nora’s map: the striped aisle ends at the sticking hatch. Beyond it, a fork has lost its arrows. Each branch ends in a gauge cabinet.",
-              "Dale remembers that the nearer turn at the fork leads straight back to the beds."
+              "Lyle has wedged the sticking hatch open twice.",
+              "Dale can recite every turn of the route with his eyes shut.",
+              "Nora has drawn the whole water circuit in pencil, gauges and all.",
+              "The route runs through the sticking hatch, then a fork with no arrows, then the gauge cabinets."
             ],
             "stages": [
               {
                 "mode": "match",
-                "prompt": "Give out the jobs.",
+                "prompt": "Put one name on each job.",
                 "slots": [
-                  "Keep the sticking hatch open",
-                  "Guide everyone at the fork",
-                  "Read the gauges"
+                  "Who keeps the sticking hatch open?",
+                  "Who guides everyone at the fork?",
+                  "Who reads the gauges?"
                 ],
                 "pieces": [
                   "Lyle",
@@ -648,7 +790,7 @@
           "finding": "nora|Lyle keeps the hatch from catching. Dale remembers every turn. I take the pumps. Water is the one thing on this ship I understand."
         },
         "pump": {
-          "difficulty": 3,
+          "difficulty": 2,
           "title": "Gallery circulation",
           "requires": [
             "jobs"
@@ -656,10 +798,12 @@
           "goal": "Lower the pressure at the hatch without starving the beds.",
           "background": "Nora knows pumps from the aquarium. The Gallery runs on water too: one circuit feeds the beds, another returns it. Opening the hatch with the return pressure high would wake the whole hall.",
           "lead": [
-            "nora|Three service branches. Let’s see what each one does."
+            "nora|Three service branches. Let’s see what each one does.",
+            "nora|The top dial reads an empty wash line. Ignore it. Watch the return and the bed flow.",
+            "nora|Bed flow has to stay at three or more. The return has to drop below three."
           ],
           "prompt": "Which branch should Nora open, and which dial should she trust?",
-          "instruction": "Each trial lights two dials. Amber: upper 4, lower RETURN 7, bed flow 4. Blue: upper 1, lower RETURN 2, bed flow 4. White: upper 3, lower RETURN 2, bed flow 1. The upper dial belongs to an empty wash line. The limits apply to the RETURN dial and bed flow: bed flow at least 3, RETURN below 3.",
+          "instruction": "Pick the branch that keeps bed flow at 3 or more and drops RETURN below 3. Amber: upper 4, RETURN 7, bed flow 4. Blue: upper 1, RETURN 2, bed flow 4. White: upper 3, RETURN 2, bed flow 1.",
           "rows": [
             {
               "label": "Branch",
@@ -696,15 +840,15 @@
             "pump"
           ],
           "goal": "Leave a message for Steve, in case he ever comes.",
-          "background": "The Gallery intercom has three message slots. If Steve comes at all, he might come on any watch.",
+          "background": "The Gallery intercom has three message slots. If Steve comes at all, he might come on any watch. Only Steve should hear what Nora says.",
           "lead": [
             "nora|If he comes. When he comes. He’ll come."
           ],
-          "prompt": "Slot A plays in every bed right now. Slot B keeps one message by this bed until someone presses PLAY. Slot C clears itself when the watch changes. Where should Nora leave her words?",
+          "prompt": "Where should Nora leave her message for Steve?",
           "options": [
-            "Slot A",
-            "Slot B",
-            "Slot C"
+            "Slot A: plays in every bed now",
+            "Slot B: waits by this bed for PLAY",
+            "Slot C: clears when the watch changes"
           ],
           "answer": 1,
           "wrong": {
@@ -735,6 +879,55 @@
           "delivery": "narration"
         }
       ],
+      "talk": {
+        "dale": [
+          {
+            "topic": "The food",
+            "lines": [
+              "nora|How are you feeling, Dale?",
+              "dale|Cold, stiff and starving. If this is a hospital, the food is terrible.",
+              "nora|There isn’t any food here, Dale.",
+              "dale|That is exactly my point, Nora."
+            ]
+          },
+          {
+            "topic": "June’s beagle",
+            "lines": [
+              "dale|Who is feeding June Calder’s beagle? I carry biscuits in my bag for her every morning.",
+              "nora|I’m sure somebody is looking after Biscuit.",
+              "dale|Somebody had better be. She sulks at anyone who forgets."
+            ]
+          },
+          {
+            "topic": "The turns",
+            "after": "jobs",
+            "lines": [
+              "dale|Left at the pipes, right at the cold one, straight past the humming wall.",
+              "nora|You really did learn the whole route.",
+              "dale|Mail carriers never forget a route, Nora. We only forget birthdays."
+            ]
+          }
+        ],
+        "lyle": [
+          {
+            "topic": "His boys",
+            "lines": [
+              "lyle|My boys have a game on Saturday. I’ve missed most of their games this year.",
+              "nora|Then you’ll make the next one, Lyle.",
+              "lyle|Every single one, when I get out of here. I swear it."
+            ]
+          },
+          {
+            "topic": "His shifts",
+            "after": "patrol",
+            "lines": [
+              "lyle|I should be at work. Somebody must be covering my shifts.",
+              "nora|I think somebody probably is, Lyle.",
+              "lyle|Then I hope he’s nicer to Steve Mercer than I was."
+            ]
+          }
+        ]
+      },
       "next": "Chapter 7 (c7_gate)."
     }
   }

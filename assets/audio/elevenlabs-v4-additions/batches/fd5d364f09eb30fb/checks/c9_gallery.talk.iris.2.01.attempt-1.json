@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c9_gallery.talk.iris.2.01",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "b0241a442df27fd4f9904a8298c92d5fd20ededde17d655295ddbfcfea8caf05",
+  "expected": "I keep reaching for things she knows. Some of them are already gone.",
+  "recognized": "I keep reaching for things she knows. Some of them are already gone.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.72,
+  "sample_rate": 48000,
+  "peak": 0.372802734375,
+  "rms": 0.048478839361870245,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

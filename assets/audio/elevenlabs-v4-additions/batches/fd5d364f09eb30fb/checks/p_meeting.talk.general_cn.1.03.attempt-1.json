@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "p_meeting.talk.general_cn.1.03",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "a4fd9a42f8247806af5eeee837daf30342a542a12ceea0fd315106e49ac788ff",
+  "expected": "Then this meeting has already gone better than I expected.",
+  "recognized": "then this meeting has already gone better than I expected.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 3.68,
+  "sample_rate": 48000,
+  "peak": 0.411651611328125,
+  "rms": 0.06439653741588915,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

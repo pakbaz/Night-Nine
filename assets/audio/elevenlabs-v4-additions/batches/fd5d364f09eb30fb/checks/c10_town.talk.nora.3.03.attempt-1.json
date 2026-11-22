@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c10_town.talk.nora.3.03",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "342f945c6ddefd5be29d677d16bda1a84a502ac9d2a524574461598db41e5d8f",
+  "expected": "I want that phone back. And she rearranged all my apps.",
+  "recognized": "I want that phone back. And she rearranged all my apps.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.0,
+  "sample_rate": 48000,
+  "peak": 0.373016357421875,
+  "rms": 0.0568890056456504,
+  "level_match_gain_db": -3.1096256219569396,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

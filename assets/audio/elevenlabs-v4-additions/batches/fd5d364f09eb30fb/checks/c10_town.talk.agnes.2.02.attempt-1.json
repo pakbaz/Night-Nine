@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c10_town.talk.agnes.2.02",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "3ca5d1fe040de1e5459cffcd4485b3c1335a6f193f25a9829c02ab664ab855fa",
+  "expected": "Nobody buys bait, so nobody stays long. And I could watch the water all day.",
+  "recognized": "Nobody buys bait, so nobody stays long, and I could watch the water all day.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 6.16,
+  "sample_rate": 48000,
+  "peak": 0.525146484375,
+  "rms": 0.046559573576821604,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

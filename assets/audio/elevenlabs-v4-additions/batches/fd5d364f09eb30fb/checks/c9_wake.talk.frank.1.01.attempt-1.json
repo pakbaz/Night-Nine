@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c9_wake.talk.frank.1.01",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "f94d4480eba2613cc532d38c9927818abcf62b56dbecf01f7e7302f3f99a2c3e",
+  "expected": "How long were we under, kiddo?",
+  "recognized": "How long were we under, kiddo?",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 2.16,
+  "sample_rate": 48000,
+  "peak": 0.43756103515625,
+  "rms": 0.06755553649593896,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c7_gate.talk.shaw.2.01",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "06d06ae7f205428029103efd08598f33d5df94612097d825c6fbba1b54b64827",
+  "expected": "Before this, I built explosions for the movies. Six films, and never one real fire.",
+  "recognized": "Before this, I built explosions for the movies, six films, and never one real fire.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 6.48,
+  "sample_rate": 48000,
+  "peak": 0.34674072265625,
+  "rms": 0.04047474112464928,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

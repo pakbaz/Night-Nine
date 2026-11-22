@@ -1,0 +1,305 @@
+{
+  "audio_id": "c3_archive.cycle.lead.07",
+  "audio_sha256": "3264b008ce27313e8534d702f51e3159f9111436cb9db00fd99afeacc6b5710d",
+  "file": "assets/audio/elevenlabs-v4-additions/masters/c3_archive.cycle.lead.07.attempt-1.wav",
+  "production_plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "From the sea wall, the path is behind you. The pier is wide open. The boathouse window faces the path.",
+  "recognized": "From the sea wall, the path is behind you. The pier is wide open. The boathouse window faces the path.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "1a2778c9b6885bd53283822040214026",
+  "character_cost": "2",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "From the sea wall, the path is behind you. The pier is wide open. The boathouse window faces the path.",
+    "words": [
+      {
+        "text": "From",
+        "start": 0.06,
+        "end": 0.2,
+        "type": "word",
+        "logprob": -0.0003641180810518563
+      },
+      {
+        "text": " ",
+        "start": 0.2,
+        "end": 0.24,
+        "type": "spacing",
+        "logprob": -4.768370445162873e-07
+      },
+      {
+        "text": "the",
+        "start": 0.24,
+        "end": 0.36,
+        "type": "word",
+        "logprob": -4.768370445162873e-07
+      },
+      {
+        "text": " ",
+        "start": 0.36,
+        "end": 0.44,
+        "type": "spacing",
+        "logprob": -0.12808038294315338
+      },
+      {
+        "text": "sea",
+        "start": 0.44,
+        "end": 0.62,
+        "type": "word",
+        "logprob": -0.12808038294315338
+      },
+      {
+        "text": " ",
+        "start": 0.62,
+        "end": 0.68,
+        "type": "spacing",
+        "logprob": -0.0001209901092806831
+      },
+      {
+        "text": "wall,",
+        "start": 0.68,
+        "end": 0.92,
+        "type": "word",
+        "logprob": -0.00010556569905020296
+      },
+      {
+        "text": " ",
+        "start": 0.92,
+        "end": 1.18,
+        "type": "spacing",
+        "logprob": -9.536738616588991e-07
+      },
+      {
+        "text": "the",
+        "start": 1.18,
+        "end": 1.28,
+        "type": "word",
+        "logprob": -9.536738616588991e-07
+      },
+      {
+        "text": " ",
+        "start": 1.28,
+        "end": 1.34,
+        "type": "spacing",
+        "logprob": -1.2516897186287679e-05
+      },
+      {
+        "text": "path",
+        "start": 1.34,
+        "end": 1.56,
+        "type": "word",
+        "logprob": -1.2516897186287679e-05
+      },
+      {
+        "text": " ",
+        "start": 1.56,
+        "end": 1.62,
+        "type": "spacing",
+        "logprob": -3.576278118089249e-07
+      },
+      {
+        "text": "is",
+        "start": 1.62,
+        "end": 1.72,
+        "type": "word",
+        "logprob": -3.576278118089249e-07
+      },
+      {
+        "text": " ",
+        "start": 1.72,
+        "end": 1.76,
+        "type": "spacing",
+        "logprob": -3.4570634852570947e-06
+      },
+      {
+        "text": "behind",
+        "start": 1.76,
+        "end": 2.22,
+        "type": "word",
+        "logprob": -3.4570634852570947e-06
+      },
+      {
+        "text": " ",
+        "start": 2.22,
+        "end": 2.28,
+        "type": "spacing",
+        "logprob": -8.344646857949556e-07
+      },
+      {
+        "text": "you.",
+        "start": 2.28,
+        "end": 2.42,
+        "type": "word",
+        "logprob": -0.0007048157274027744
+      },
+      {
+        "text": " ",
+        "start": 2.42,
+        "end": 2.42,
+        "type": "spacing",
+        "logprob": -5.125986263010418e-06
+      },
+      {
+        "text": "The",
+        "start": 2.94,
+        "end": 3.04,
+        "type": "word",
+        "logprob": -5.125986263010418e-06
+      },
+      {
+        "text": " ",
+        "start": 3.04,
+        "end": 3.1,
+        "type": "spacing",
+        "logprob": -0.00018165845540352166
+      },
+      {
+        "text": "pier",
+        "start": 3.1,
+        "end": 3.42,
+        "type": "word",
+        "logprob": -0.00018165845540352166
+      },
+      {
+        "text": " ",
+        "start": 3.42,
+        "end": 3.48,
+        "type": "spacing",
+        "logprob": -1.311301275563892e-06
+      },
+      {
+        "text": "is",
+        "start": 3.48,
+        "end": 3.7,
+        "type": "word",
+        "logprob": -1.311301275563892e-06
+      },
+      {
+        "text": " ",
+        "start": 3.7,
+        "end": 3.78,
+        "type": "spacing",
+        "logprob": -4.386805812828243e-05
+      },
+      {
+        "text": "wide",
+        "start": 3.78,
+        "end": 4.019,
+        "type": "word",
+        "logprob": -4.386805812828243e-05
+      },
+      {
+        "text": " ",
+        "start": 4.019,
+        "end": 4.1,
+        "type": "spacing",
+        "logprob": -0.0001559135998832062
+      },
+      {
+        "text": "open.",
+        "start": 4.1,
+        "end": 4.46,
+        "type": "word",
+        "logprob": -0.0001301905907894252
+      },
+      {
+        "text": " ",
+        "start": 4.46,
+        "end": 4.46,
+        "type": "spacing",
+        "logprob": -5.602820692729438e-06
+      },
+      {
+        "text": "The",
+        "start": 5.04,
+        "end": 5.12,
+        "type": "word",
+        "logprob": -5.602820692729438e-06
+      },
+      {
+        "text": " ",
+        "start": 5.12,
+        "end": 5.16,
+        "type": "spacing",
+        "logprob": -0.007126389071345329
+      },
+      {
+        "text": "boathouse",
+        "start": 5.16,
+        "end": 5.6,
+        "type": "word",
+        "logprob": -0.002113876890184151
+      },
+      {
+        "text": " ",
+        "start": 5.6,
+        "end": 5.66,
+        "type": "spacing",
+        "logprob": -1.0013530300057027e-05
+      },
+      {
+        "text": "window",
+        "start": 5.66,
+        "end": 6.02,
+        "type": "word",
+        "logprob": -1.0013530300057027e-05
+      },
+      {
+        "text": " ",
+        "start": 6.02,
+        "end": 6.1,
+        "type": "spacing",
+        "logprob": -1.8358061424805783e-05
+      },
+      {
+        "text": "faces",
+        "start": 6.1,
+        "end": 6.48,
+        "type": "word",
+        "logprob": -1.8358061424805783e-05
+      },
+      {
+        "text": " ",
+        "start": 6.48,
+        "end": 6.52,
+        "type": "spacing",
+        "logprob": 0.0
+      },
+      {
+        "text": "the",
+        "start": 6.52,
+        "end": 6.62,
+        "type": "word",
+        "logprob": 0.0
+      },
+      {
+        "text": " ",
+        "start": 6.62,
+        "end": 6.68,
+        "type": "spacing",
+        "logprob": -7.748573807475623e-06
+      },
+      {
+        "text": "path.",
+        "start": 6.68,
+        "end": 7.04,
+        "type": "word",
+        "logprob": -2.8656627546297386e-05
+      }
+    ],
+    "transcription_id": "VBW2Pt8WV3XViFH1CMbZ",
+    "audio_duration_secs": 7.6
+  },
+  "listening_reviewed": false
+}

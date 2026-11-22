@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c9_choir.talk.frank.1.01",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "bd2d1052ca41f0a69fe6c964615e2ab1865ceca73ee5b840f55bcd47aace17ef",
+  "expected": "You kept a list, kiddo. Dates and everything.",
+  "recognized": "You kept a list, kiddo. Dates and everything.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 3.36,
+  "sample_rate": 48000,
+  "peak": 0.40771484375,
+  "rms": 0.06221506551663778,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

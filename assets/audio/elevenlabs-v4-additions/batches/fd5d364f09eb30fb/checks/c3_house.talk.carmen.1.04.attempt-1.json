@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c3_house.talk.carmen.1.04",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "f66ef9ee0e005905c4c645dda9119fddbd6bb79213aeb82c04621a40eb6230de",
+  "expected": "No, it isn’t. I miss them too.",
+  "recognized": "No, it isn't. I miss them too.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 3.04,
+  "sample_rate": 48000,
+  "peak": 0.24786376953125,
+  "rms": 0.038340069101416574,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

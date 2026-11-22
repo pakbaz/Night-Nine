@@ -1,0 +1,235 @@
+{
+  "audio_id": "epilogue.talk.helen.1.01",
+  "audio_sha256": "d0c1fc1d1314310f34c79a9f09399dacde934bd826419b099e86ebd471447d6a",
+  "file": "assets/audio/elevenlabs-v4-additions/masters/epilogue.talk.helen.1.01.attempt-1.wav",
+  "production_plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Your father leaves me a note every morning now. Today’s says the kettle is labeled.",
+  "recognized": "Your father leaves me a note every morning now. Today says the kettle is labeled.",
+  "word_edits": 1,
+  "request_id": null,
+  "trace_id": "f81bf54c4833fb3c6f497cdcd415beb7",
+  "character_cost": "2",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Your father leaves me a note every morning now. Today says the kettle is labeled.",
+    "words": [
+      {
+        "text": "Your",
+        "start": 0.1,
+        "end": 0.16,
+        "type": "word",
+        "logprob": -0.00017963226127903908
+      },
+      {
+        "text": " ",
+        "start": 0.16,
+        "end": 0.3,
+        "type": "spacing",
+        "logprob": -5.006777428206988e-06
+      },
+      {
+        "text": "father",
+        "start": 0.3,
+        "end": 0.64,
+        "type": "word",
+        "logprob": -5.006777428206988e-06
+      },
+      {
+        "text": " ",
+        "start": 0.64,
+        "end": 0.68,
+        "type": "spacing",
+        "logprob": -1.764281842042692e-05
+      },
+      {
+        "text": "leaves",
+        "start": 0.68,
+        "end": 0.94,
+        "type": "word",
+        "logprob": -1.764281842042692e-05
+      },
+      {
+        "text": " ",
+        "start": 0.94,
+        "end": 0.98,
+        "type": "spacing",
+        "logprob": -7.152555099310121e-07
+      },
+      {
+        "text": "me",
+        "start": 0.98,
+        "end": 1.06,
+        "type": "word",
+        "logprob": -7.152555099310121e-07
+      },
+      {
+        "text": " ",
+        "start": 1.06,
+        "end": 1.12,
+        "type": "spacing",
+        "logprob": 0.0
+      },
+      {
+        "text": "a",
+        "start": 1.12,
+        "end": 1.18,
+        "type": "word",
+        "logprob": 0.0
+      },
+      {
+        "text": " ",
+        "start": 1.18,
+        "end": 1.24,
+        "type": "spacing",
+        "logprob": -8.583032467868179e-06
+      },
+      {
+        "text": "note",
+        "start": 1.24,
+        "end": 1.54,
+        "type": "word",
+        "logprob": -8.583032467868179e-06
+      },
+      {
+        "text": " ",
+        "start": 1.54,
+        "end": 1.64,
+        "type": "spacing",
+        "logprob": -1.1205610462639015e-05
+      },
+      {
+        "text": "every",
+        "start": 1.64,
+        "end": 1.86,
+        "type": "word",
+        "logprob": -1.1205610462639015e-05
+      },
+      {
+        "text": " ",
+        "start": 1.86,
+        "end": 2.0,
+        "type": "spacing",
+        "logprob": -4.565611743601039e-05
+      },
+      {
+        "text": "morning",
+        "start": 2.0,
+        "end": 2.34,
+        "type": "word",
+        "logprob": -4.565611743601039e-05
+      },
+      {
+        "text": " ",
+        "start": 2.34,
+        "end": 2.4,
+        "type": "spacing",
+        "logprob": -2.002696055569686e-05
+      },
+      {
+        "text": "now.",
+        "start": 2.4,
+        "end": 2.68,
+        "type": "word",
+        "logprob": -1.960973577297409e-05
+      },
+      {
+        "text": " ",
+        "start": 2.68,
+        "end": 2.68,
+        "type": "spacing",
+        "logprob": -4.172238186583854e-05
+      },
+      {
+        "text": "Today",
+        "start": 3.28,
+        "end": 3.66,
+        "type": "word",
+        "logprob": -4.172238186583854e-05
+      },
+      {
+        "text": " ",
+        "start": 3.66,
+        "end": 3.74,
+        "type": "spacing",
+        "logprob": -0.004266802221536636
+      },
+      {
+        "text": "says",
+        "start": 3.74,
+        "end": 4.019,
+        "type": "word",
+        "logprob": -0.004266802221536636
+      },
+      {
+        "text": " ",
+        "start": 4.019,
+        "end": 4.08,
+        "type": "spacing",
+        "logprob": -0.062042236328125
+      },
+      {
+        "text": "the",
+        "start": 4.08,
+        "end": 4.18,
+        "type": "word",
+        "logprob": -0.062042236328125
+      },
+      {
+        "text": " ",
+        "start": 4.18,
+        "end": 4.26,
+        "type": "spacing",
+        "logprob": -6.294052582234144e-05
+      },
+      {
+        "text": "kettle",
+        "start": 4.26,
+        "end": 4.56,
+        "type": "word",
+        "logprob": -6.294052582234144e-05
+      },
+      {
+        "text": " ",
+        "start": 4.56,
+        "end": 4.62,
+        "type": "spacing",
+        "logprob": -1.1920922133867862e-06
+      },
+      {
+        "text": "is",
+        "start": 4.62,
+        "end": 4.78,
+        "type": "word",
+        "logprob": -1.1920922133867862e-06
+      },
+      {
+        "text": " ",
+        "start": 4.78,
+        "end": 4.84,
+        "type": "spacing",
+        "logprob": -0.0005277194431982934
+      },
+      {
+        "text": "labeled.",
+        "start": 4.84,
+        "end": 5.3,
+        "type": "word",
+        "logprob": -0.0004684896562139329
+      }
+    ],
+    "transcription_id": "fEK0Qbx5kz2VeId3m6zz",
+    "audio_duration_secs": 5.76
+  },
+  "listening_reviewed": false
+}

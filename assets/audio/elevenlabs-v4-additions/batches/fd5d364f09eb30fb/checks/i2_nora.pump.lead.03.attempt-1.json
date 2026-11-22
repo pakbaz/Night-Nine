@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "i2_nora.pump.lead.03",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "c9ebabc33207088c9d0176404c6fbb8175fa285dc5b393db54ac79ef3f78d993",
+  "expected": "Bed flow has to stay at three or more. The return has to drop below three.",
+  "recognized": "Bed flow has to stay at three or more. The return has to drop below three.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 5.68,
+  "sample_rate": 48000,
+  "peak": 0.436553955078125,
+  "rms": 0.05969164555548236,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

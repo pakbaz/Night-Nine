@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c8_lab.notebook.lead.04",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "59ee3370dbaf099ceececc1f4b1c6409fd4f6f433b5059883340e77afc03901a",
+  "expected": "Both tests went out over open radio. Anyone with a receiver could hear them.",
+  "recognized": "Both tests went out over open radio. Anyone with a receiver could hear them.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 5.6,
+  "sample_rate": 48000,
+  "peak": 0.725799560546875,
+  "rms": 0.08747332609133737,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

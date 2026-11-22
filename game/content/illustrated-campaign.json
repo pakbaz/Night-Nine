@@ -169,7 +169,8 @@
     "company": [
       "steve",
       "iris",
-      "saren"
+      "saren",
+      "lyle_copy"
     ],
     "off_camera_lines": [
       "c2_ship.escape.01"
@@ -190,7 +191,8 @@
     "company": [
       "calder",
       "steve",
-      "pell"
+      "pell",
+      "carmen"
     ],
     "resident": "calder",
     "appearances": {
@@ -211,7 +213,8 @@
     "company": [
       "steve",
       "tomas",
-      "calder"
+      "calder",
+      "agnes"
     ],
     "off_camera_lines": [
       "c3_archive.out.02"
@@ -415,7 +418,8 @@
       "ward",
       "steve",
       "shaw",
-      "wen"
+      "wen",
+      "rook_copy"
     ]
   },
   "c7_swap": {
@@ -523,7 +527,8 @@
       "steve",
       "nora",
       "iris",
-      "stephen"
+      "stephen",
+      "calder"
     ],
     "off_camera_lines": [
       "c9_gallery.in.01",
@@ -584,7 +589,8 @@
       "steve",
       "helen",
       "frank",
-      "calder"
+      "calder",
+      "nora"
     ],
     "creatures": [
       {
@@ -619,7 +625,9 @@
     ],
     "company": [
       "steve",
-      "frank"
+      "frank",
+      "stephen",
+      "wen"
     ],
     "appearances": {
       "steve": "steve_broadcast"
@@ -642,7 +650,8 @@
       "wen",
       "shaw",
       "steve",
-      "agnes"
+      "agnes",
+      "ward"
     ],
     "appearances": {
       "nora": "nora_reunion",
@@ -787,7 +796,8 @@
       "agnes",
       "rook",
       "rook_copy",
-      "lyle_copy"
+      "lyle_copy",
+      "helen"
     ],
     "creatures": [
       {
@@ -819,7 +829,8 @@
     "company": [
       "steve",
       "stephen",
-      "tomas"
+      "tomas",
+      "nora"
     ],
     "departure_painting": "MorningBroadcast"
   },
@@ -836,7 +847,8 @@
     ],
     "company": [
       "shaw",
-      "helen"
+      "helen",
+      "ward"
     ],
     "off_camera_lines": [
       "postcredits.out.01"

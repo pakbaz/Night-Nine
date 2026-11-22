@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c6_jail.talk.calder.3.01",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "809951346a0278db09b426264efe70998381cbdc45a1521aeae4448afcf6f74e",
+  "expected": "She does my paperwork better than I do. That’s what bothers me most.",
+  "recognized": "She does my paperwork better than I do. That's what bothers me most.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.64,
+  "sample_rate": 48000,
+  "peak": 0.382232666015625,
+  "rms": 0.053532383122920794,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

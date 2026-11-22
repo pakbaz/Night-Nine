@@ -1,0 +1,221 @@
+{
+  "audio_id": "c9_gallery.talk.nora.2.04",
+  "audio_sha256": "7a4538e9c6687e3c1fcd15af531ebd26778abdad2dcb617ac19fa23e06f073b7",
+  "file": "assets/audio/elevenlabs-v4-additions/masters/c9_gallery.talk.nora.2.04.attempt-1.wav",
+  "production_plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "He came to my whistle, Nor. Not hers. That’s when I started to wonder.",
+  "recognized": "He came to my whistle, Nor, not hers. That's when I started to wonder.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "dfcfd1eeade80e93ef3f97acbc8e639b",
+  "character_cost": "2",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "He came to my whistle, Nor, not hers. That's when I started to wonder.",
+    "words": [
+      {
+        "text": "He",
+        "start": 0.08,
+        "end": 0.18,
+        "type": "word",
+        "logprob": -0.0046554747968912125
+      },
+      {
+        "text": " ",
+        "start": 0.18,
+        "end": 0.24,
+        "type": "spacing",
+        "logprob": -2.3841830625315197e-06
+      },
+      {
+        "text": "came",
+        "start": 0.24,
+        "end": 0.44,
+        "type": "word",
+        "logprob": -2.3841830625315197e-06
+      },
+      {
+        "text": " ",
+        "start": 0.44,
+        "end": 0.5,
+        "type": "spacing",
+        "logprob": -1.1920928244535389e-07
+      },
+      {
+        "text": "to",
+        "start": 0.5,
+        "end": 0.58,
+        "type": "word",
+        "logprob": -1.1920928244535389e-07
+      },
+      {
+        "text": " ",
+        "start": 0.58,
+        "end": 0.74,
+        "type": "spacing",
+        "logprob": -1.1205610462639015e-05
+      },
+      {
+        "text": "my",
+        "start": 0.74,
+        "end": 1.0,
+        "type": "word",
+        "logprob": -1.1205610462639015e-05
+      },
+      {
+        "text": " ",
+        "start": 1.0,
+        "end": 1.06,
+        "type": "spacing",
+        "logprob": -0.00013886917440686375
+      },
+      {
+        "text": "whistle,",
+        "start": 1.06,
+        "end": 1.36,
+        "type": "word",
+        "logprob": -0.00015321617865993176
+      },
+      {
+        "text": " ",
+        "start": 1.36,
+        "end": 1.46,
+        "type": "spacing",
+        "logprob": -0.08920848369598389
+      },
+      {
+        "text": "Nor,",
+        "start": 1.46,
+        "end": 1.76,
+        "type": "word",
+        "logprob": -0.07290776073932648
+      },
+      {
+        "text": " ",
+        "start": 1.76,
+        "end": 2.12,
+        "type": "spacing",
+        "logprob": -7.390948667307384e-06
+      },
+      {
+        "text": "not",
+        "start": 2.12,
+        "end": 2.34,
+        "type": "word",
+        "logprob": -7.390948667307384e-06
+      },
+      {
+        "text": " ",
+        "start": 2.34,
+        "end": 2.4,
+        "type": "spacing",
+        "logprob": -4.9232225137529895e-05
+      },
+      {
+        "text": "hers.",
+        "start": 2.4,
+        "end": 2.88,
+        "type": "word",
+        "logprob": -6.904285110067576e-05
+      },
+      {
+        "text": " ",
+        "start": 2.88,
+        "end": 3.28,
+        "type": "spacing",
+        "logprob": -1.883488948806189e-05
+      },
+      {
+        "text": "That's",
+        "start": 3.28,
+        "end": 3.58,
+        "type": "word",
+        "logprob": -3.341692593987015e-05
+      },
+      {
+        "text": " ",
+        "start": 3.58,
+        "end": 3.62,
+        "type": "spacing",
+        "logprob": -7.033323527139146e-06
+      },
+      {
+        "text": "when",
+        "start": 3.62,
+        "end": 3.72,
+        "type": "word",
+        "logprob": -7.033323527139146e-06
+      },
+      {
+        "text": " ",
+        "start": 3.72,
+        "end": 3.8,
+        "type": "spacing",
+        "logprob": -7.152555099310121e-07
+      },
+      {
+        "text": "I",
+        "start": 3.8,
+        "end": 3.88,
+        "type": "word",
+        "logprob": -7.152555099310121e-07
+      },
+      {
+        "text": " ",
+        "start": 3.88,
+        "end": 3.96,
+        "type": "spacing",
+        "logprob": -8.34461570775602e-06
+      },
+      {
+        "text": "started",
+        "start": 3.96,
+        "end": 4.24,
+        "type": "word",
+        "logprob": -8.34461570775602e-06
+      },
+      {
+        "text": " ",
+        "start": 4.24,
+        "end": 4.3,
+        "type": "spacing",
+        "logprob": 0.0
+      },
+      {
+        "text": "to",
+        "start": 4.3,
+        "end": 4.44,
+        "type": "word",
+        "logprob": 0.0
+      },
+      {
+        "text": " ",
+        "start": 4.44,
+        "end": 4.48,
+        "type": "spacing",
+        "logprob": -2.062299427052494e-05
+      },
+      {
+        "text": "wonder.",
+        "start": 4.48,
+        "end": 4.9,
+        "type": "word",
+        "logprob": -0.00017375572237402333
+      }
+    ],
+    "transcription_id": "zwGupC59SjYWzvRW6KCI",
+    "audio_duration_secs": 5.2
+  },
+  "listening_reviewed": false
+}

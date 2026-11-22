@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c7_gate.talk.rook_copy.1.02",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "79e2aad599aa7febbc4bf1442bc6bed73a4e970ba839eb8764f083ab5c636e19",
+  "expected": "You don’t seem to mind it very much.",
+  "recognized": "You don't seem to mind it very much.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 2.24,
+  "sample_rate": 48000,
+  "peak": 0.279876708984375,
+  "rms": 0.03656719362838732,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

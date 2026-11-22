@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c10_station.talk.stephen.1.01",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "b8c010a6fc0815c883e5aaf8bbe6cabd3e8c2461015f2020fb56745d35f8277c",
+  "expected": "Is there coffee? I remember liking coffee.",
+  "recognized": "Is there coffee? I remember liking coffee.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 3.28,
+  "sample_rate": 48000,
+  "peak": 0.329986572265625,
+  "rms": 0.03630279007564205,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

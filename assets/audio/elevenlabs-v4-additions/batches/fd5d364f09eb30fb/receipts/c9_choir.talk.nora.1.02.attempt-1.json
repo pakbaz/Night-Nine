@@ -1,0 +1,17 @@
+{
+  "operation": "text_to_speech",
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "audio_id": "c9_choir.talk.nora.1.02",
+  "attempt": 1,
+  "voice_id": "vveagfomyMCJLZsOPRP2",
+  "model_id": "eleven_v4",
+  "text_sha256": "3dafca3527231f06b888b33013d54fad8101837316ce2b5f61f0225e2c63306a",
+  "synthesis_text_sha256": "3dafca3527231f06b888b33013d54fad8101837316ce2b5f61f0225e2c63306a",
+  "request_id": "6ji4rpvcBcm8hAiHPkzc",
+  "trace_id": "c5c05c0e516744f5dd39365f42c937ea",
+  "character_cost": 13,
+  "output_format": "mp3_44100_192",
+  "audio_sha256": "0328e93ef75d4cb02f331a3e518d07421f69780c895f468c7540c2cb2ac260e4",
+  "response_bytes": 58975,
+  "seed": 239118432
+}

@@ -1,0 +1,17 @@
+{
+  "operation": "text_to_speech",
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "audio_id": "c10_town.talk.carmen.1.02",
+  "attempt": 1,
+  "voice_id": "vveagfomyMCJLZsOPRP2",
+  "model_id": "eleven_v4",
+  "text_sha256": "09ccfb2bc04040410488c0e7a41f154f795bfcb792c5c23d9dc3d636923716a5",
+  "synthesis_text_sha256": "09ccfb2bc04040410488c0e7a41f154f795bfcb792c5c23d9dc3d636923716a5",
+  "request_id": "klzUAP6xY8fwxLW9A751",
+  "trace_id": "3518ce11e61d40441e039f18e516d915",
+  "character_cost": 13,
+  "output_format": "mp3_44100_192",
+  "audio_sha256": "ab7a9eba8a5014919fa9bfd3d7a4f71566ecb0e470f54a60ac977aa410c3cb17",
+  "response_bytes": 55213,
+  "seed": 4173936170
+}

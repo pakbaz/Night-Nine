@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c3_house.talk.calder.3.03",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "7885255f8c90c338f33675731633b67dfe56a32a418330cb6a381c38cdc2c06c",
+  "expected": "What’s wrong with the tuna one?",
+  "recognized": "What's wrong with the tuna one?",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 1.76,
+  "sample_rate": 48000,
+  "peak": 0.43817138671875,
+  "rms": 0.04131505814953732,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

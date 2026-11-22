@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c10_town.talk.nora.2.02",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "c95d80b40df2285e4ad52e6d207e629621e874424c2d00a68278eaf71e7cd184",
+  "expected": "You were always running the town, Nor.",
+  "recognized": "You were always running the town, Nor.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 2.48,
+  "sample_rate": 48000,
+  "peak": 0.25421142578125,
+  "rms": 0.04209940271917289,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

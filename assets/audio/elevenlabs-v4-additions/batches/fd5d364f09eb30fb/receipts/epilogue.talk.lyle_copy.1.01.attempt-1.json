@@ -1,0 +1,17 @@
+{
+  "operation": "text_to_speech",
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "audio_id": "epilogue.talk.lyle_copy.1.01",
+  "attempt": 1,
+  "voice_id": "CwhRBWXzGAHq8TQ4Fs17",
+  "model_id": "eleven_v4",
+  "text_sha256": "5a9110235257cca85da3c92122be2dc555b73fa072c2e7af7711238c2dd793a4",
+  "synthesis_text_sha256": "5a9110235257cca85da3c92122be2dc555b73fa072c2e7af7711238c2dd793a4",
+  "request_id": "qrXrTVBe3HXbqDlgWB8y",
+  "trace_id": "0e64b16e5ca2154bdde243c4803af23c",
+  "character_cost": 23,
+  "output_format": "mp3_44100_192",
+  "audio_sha256": "c7209d392fb24bb9cd8f8df0cb5d8a31e333ae25d53ef4b7b18dca279eea0bb2",
+  "response_bytes": 93456,
+  "seed": 3360637630
+}

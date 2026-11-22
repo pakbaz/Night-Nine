@@ -1,0 +1,17 @@
+{
+  "operation": "text_to_speech",
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "audio_id": "i1_archive.talk.gus.1.03",
+  "attempt": 1,
+  "voice_id": "bO5Ny9R2uMBrCDk66aEj",
+  "model_id": "eleven_v4",
+  "text_sha256": "e8af02335884a030e301c34a4a98a89cf4027cb1566764121ef9786d49ffeb9c",
+  "synthesis_text_sha256": "e8af02335884a030e301c34a4a98a89cf4027cb1566764121ef9786d49ffeb9c",
+  "request_id": "l677GzuWrXZc9IiC7c9N",
+  "trace_id": "f5b36eaf822727a2640b49372f2156dc",
+  "character_cost": 24,
+  "output_format": "mp3_44100_192",
+  "audio_sha256": "df13374ff5fba8427e2cfc3557824150bdfd758b2a017705132c9f54e2b31636",
+  "response_bytes": 91576,
+  "seed": 3362144717
+}

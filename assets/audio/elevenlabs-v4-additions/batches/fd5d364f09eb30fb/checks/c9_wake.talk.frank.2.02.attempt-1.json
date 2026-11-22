@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c9_wake.talk.frank.2.02",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "4cfc94b74add61327e8df447943517415e4ae78daf26508cb864741a1153b6d3",
+  "expected": "It drifted in the next morning. Your radio was still on.",
+  "recognized": "It drifted in the next morning. Your radio was still on.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 3.68,
+  "sample_rate": 48000,
+  "peak": 0.3121337890625,
+  "rms": 0.04326274567425724,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

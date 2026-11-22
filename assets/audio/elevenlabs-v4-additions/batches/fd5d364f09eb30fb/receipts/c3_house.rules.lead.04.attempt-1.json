@@ -1,0 +1,17 @@
+{
+  "operation": "text_to_speech",
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "audio_id": "c3_house.rules.lead.04",
+  "attempt": 1,
+  "voice_id": "wa4sQVgbDDzUDEzJwch3",
+  "model_id": "eleven_v4",
+  "text_sha256": "5c9cc433c298ddefb298b8021db66d8a6d7609e60f5ecffaf9b7c8162630c5dd",
+  "synthesis_text_sha256": "5c9cc433c298ddefb298b8021db66d8a6d7609e60f5ecffaf9b7c8162630c5dd",
+  "request_id": "CLnw95WMdoAb0MhuULxV",
+  "trace_id": "f46a8313a00999b7ff77b98ceafc7081",
+  "character_cost": 53,
+  "output_format": "mp3_44100_192",
+  "audio_sha256": "1db7f0662d79fbe02f545b53085c795276ab1ade7f7c25b462d3bab877d8d3b0",
+  "response_bytes": 191886,
+  "seed": 3565825318
+}

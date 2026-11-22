@@ -1,0 +1,277 @@
+{
+  "audio_id": "c4_safe.screens.02",
+  "audio_sha256": "04664ce1e09f8f6bf4d1217943dd6c35cc3319d0534579c58ed2828ada59a1df",
+  "file": "assets/audio/elevenlabs-v4-additions/masters/c4_safe.screens.02.attempt-1.wav",
+  "production_plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "And a list of placements in Washington and Beijing. The first name is Walt Prior, from June’s list.",
+  "recognized": "and a list of placements in Washington and Beijing. The first name is Walt Pryor from June's list.",
+  "word_edits": 1,
+  "request_id": null,
+  "trace_id": "09deaa54a388563eb31d79f060813eb9",
+  "character_cost": "2",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "and a list of placements in Washington and Beijing. The first name is Walt Pryor from June's list.",
+    "words": [
+      {
+        "text": "and",
+        "start": 0.04,
+        "end": 0.12,
+        "type": "word",
+        "logprob": -0.38726046681404114
+      },
+      {
+        "text": " ",
+        "start": 0.12,
+        "end": 0.18,
+        "type": "spacing",
+        "logprob": -4.768370445162873e-07
+      },
+      {
+        "text": "a",
+        "start": 0.18,
+        "end": 0.22,
+        "type": "word",
+        "logprob": -4.768370445162873e-07
+      },
+      {
+        "text": " ",
+        "start": 0.22,
+        "end": 0.28,
+        "type": "spacing",
+        "logprob": -6.198863957251888e-06
+      },
+      {
+        "text": "list",
+        "start": 0.28,
+        "end": 0.48,
+        "type": "word",
+        "logprob": -6.198863957251888e-06
+      },
+      {
+        "text": " ",
+        "start": 0.48,
+        "end": 0.52,
+        "type": "spacing",
+        "logprob": -3.576278118089249e-07
+      },
+      {
+        "text": "of",
+        "start": 0.52,
+        "end": 0.66,
+        "type": "word",
+        "logprob": -3.576278118089249e-07
+      },
+      {
+        "text": " ",
+        "start": 0.66,
+        "end": 0.72,
+        "type": "spacing",
+        "logprob": -5.2689116273541003e-05
+      },
+      {
+        "text": "placements",
+        "start": 0.72,
+        "end": 1.36,
+        "type": "word",
+        "logprob": -5.2689116273541003e-05
+      },
+      {
+        "text": " ",
+        "start": 1.36,
+        "end": 1.4,
+        "type": "spacing",
+        "logprob": -4.768370445162873e-07
+      },
+      {
+        "text": "in",
+        "start": 1.4,
+        "end": 1.54,
+        "type": "word",
+        "logprob": -4.768370445162873e-07
+      },
+      {
+        "text": " ",
+        "start": 1.54,
+        "end": 1.6,
+        "type": "spacing",
+        "logprob": -3.0517112463712692e-05
+      },
+      {
+        "text": "Washington",
+        "start": 1.6,
+        "end": 2.24,
+        "type": "word",
+        "logprob": -3.0517112463712692e-05
+      },
+      {
+        "text": " ",
+        "start": 2.24,
+        "end": 2.3,
+        "type": "spacing",
+        "logprob": -4.0531076592742465e-06
+      },
+      {
+        "text": "and",
+        "start": 2.3,
+        "end": 2.38,
+        "type": "word",
+        "logprob": -4.0531076592742465e-06
+      },
+      {
+        "text": " ",
+        "start": 2.38,
+        "end": 2.48,
+        "type": "spacing",
+        "logprob": -3.45700973412022e-05
+      },
+      {
+        "text": "Beijing.",
+        "start": 2.48,
+        "end": 3.06,
+        "type": "word",
+        "logprob": -3.4629699712240836e-05
+      },
+      {
+        "text": " ",
+        "start": 3.06,
+        "end": 3.34,
+        "type": "spacing",
+        "logprob": -2.0265558760002023e-06
+      },
+      {
+        "text": "The",
+        "start": 3.34,
+        "end": 3.44,
+        "type": "word",
+        "logprob": -2.0265558760002023e-06
+      },
+      {
+        "text": " ",
+        "start": 3.44,
+        "end": 3.48,
+        "type": "spacing",
+        "logprob": -8.106198947643861e-06
+      },
+      {
+        "text": "first",
+        "start": 3.48,
+        "end": 3.76,
+        "type": "word",
+        "logprob": -8.106198947643861e-06
+      },
+      {
+        "text": " ",
+        "start": 3.76,
+        "end": 3.8,
+        "type": "spacing",
+        "logprob": -5.483612312673358e-06
+      },
+      {
+        "text": "name",
+        "start": 3.8,
+        "end": 4.18,
+        "type": "word",
+        "logprob": -5.483612312673358e-06
+      },
+      {
+        "text": " ",
+        "start": 4.18,
+        "end": 4.24,
+        "type": "spacing",
+        "logprob": -5.960462772236497e-07
+      },
+      {
+        "text": "is",
+        "start": 4.24,
+        "end": 4.44,
+        "type": "word",
+        "logprob": -5.960462772236497e-07
+      },
+      {
+        "text": " ",
+        "start": 4.44,
+        "end": 4.48,
+        "type": "spacing",
+        "logprob": -9.345571743324399e-05
+      },
+      {
+        "text": "Walt",
+        "start": 4.48,
+        "end": 4.68,
+        "type": "word",
+        "logprob": -9.345571743324399e-05
+      },
+      {
+        "text": " ",
+        "start": 4.68,
+        "end": 4.84,
+        "type": "spacing",
+        "logprob": -0.09231551736593246
+      },
+      {
+        "text": "Pryor",
+        "start": 4.84,
+        "end": 5.34,
+        "type": "word",
+        "logprob": -0.09231551736593246
+      },
+      {
+        "text": " ",
+        "start": 5.34,
+        "end": 5.66,
+        "type": "spacing",
+        "logprob": -0.002481121802702546
+      },
+      {
+        "text": "from",
+        "start": 5.66,
+        "end": 5.84,
+        "type": "word",
+        "logprob": -0.002481121802702546
+      },
+      {
+        "text": " ",
+        "start": 5.84,
+        "end": 5.9,
+        "type": "spacing",
+        "logprob": -0.0005906267906539142
+      },
+      {
+        "text": "June's",
+        "start": 5.9,
+        "end": 6.2,
+        "type": "word",
+        "logprob": -0.000405234633907033
+      },
+      {
+        "text": " ",
+        "start": 6.2,
+        "end": 6.26,
+        "type": "spacing",
+        "logprob": -2.1219027985353023e-05
+      },
+      {
+        "text": "list.",
+        "start": 6.26,
+        "end": 6.6,
+        "type": "word",
+        "logprob": -4.370015813037753e-05
+      }
+    ],
+    "transcription_id": "xgFLAlazb1CBrYGWJOfb",
+    "audio_duration_secs": 6.96
+  },
+  "listening_reviewed": false
+}

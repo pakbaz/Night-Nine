@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c8_rig.source.lead.04",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "8db4c52e1be69aad87f1717195bb1d4bda44cec3b066edd17cdaad6f89549c47",
+  "expected": "Shaw cued beat four, then beat seven. Birch flashed on five both times. Ash flashed on four both times.",
+  "recognized": "Shaw cued beat 4, then beat 7. Birch flashed on 5 both times. Ash flashed on 4 both times.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 9.2,
+  "sample_rate": 48000,
+  "peak": 0.8348388671875,
+  "rms": 0.0749978250100808,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

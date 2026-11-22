@@ -1,0 +1,333 @@
+{
+  "audio_id": "c3_house.rules.lead.04",
+  "audio_sha256": "b6ecd258501ac15355526a23a6ac02c6cdc9b983d01c815d8da16ff69f63b362",
+  "file": "assets/audio/elevenlabs-v4-additions/masters/c3_house.rules.lead.04.attempt-1.wav",
+  "production_plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Walt Prior moved to Washington in April. His signature is on a permit here, dated a day he was testifying in Washington.",
+  "recognized": "Walt Pryor moved to Washington in April. His signature is on a permit here, dated a day he was testifying in Washington.",
+  "word_edits": 1,
+  "request_id": null,
+  "trace_id": "bf771c856fe0914997bcf55ec82076e7",
+  "character_cost": "2",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Walt Pryor moved to Washington in April. His signature is on a permit here, dated a day he was testifying in Washington.",
+    "words": [
+      {
+        "text": "Walt",
+        "start": 0.1,
+        "end": 0.28,
+        "type": "word",
+        "logprob": -0.010143044404685497
+      },
+      {
+        "text": " ",
+        "start": 0.28,
+        "end": 0.38,
+        "type": "spacing",
+        "logprob": -0.2596243619918823
+      },
+      {
+        "text": "Pryor",
+        "start": 0.38,
+        "end": 0.74,
+        "type": "word",
+        "logprob": -0.2596243619918823
+      },
+      {
+        "text": " ",
+        "start": 0.74,
+        "end": 0.86,
+        "type": "spacing",
+        "logprob": -1.8000440832111053e-05
+      },
+      {
+        "text": "moved",
+        "start": 0.86,
+        "end": 1.04,
+        "type": "word",
+        "logprob": -1.8000440832111053e-05
+      },
+      {
+        "text": " ",
+        "start": 1.04,
+        "end": 1.08,
+        "type": "spacing",
+        "logprob": 0.0
+      },
+      {
+        "text": "to",
+        "start": 1.08,
+        "end": 1.18,
+        "type": "word",
+        "logprob": 0.0
+      },
+      {
+        "text": " ",
+        "start": 1.18,
+        "end": 1.22,
+        "type": "spacing",
+        "logprob": -1.8715683836489916e-05
+      },
+      {
+        "text": "Washington",
+        "start": 1.22,
+        "end": 1.78,
+        "type": "word",
+        "logprob": -1.8715683836489916e-05
+      },
+      {
+        "text": " ",
+        "start": 1.78,
+        "end": 1.84,
+        "type": "spacing",
+        "logprob": -5.960462772236497e-07
+      },
+      {
+        "text": "in",
+        "start": 1.84,
+        "end": 1.96,
+        "type": "word",
+        "logprob": -5.960462772236497e-07
+      },
+      {
+        "text": " ",
+        "start": 1.96,
+        "end": 2.06,
+        "type": "spacing",
+        "logprob": -3.302042750874534e-05
+      },
+      {
+        "text": "April.",
+        "start": 2.06,
+        "end": 2.4,
+        "type": "word",
+        "logprob": -3.0298549669775337e-05
+      },
+      {
+        "text": " ",
+        "start": 2.4,
+        "end": 2.4,
+        "type": "spacing",
+        "logprob": -9.417489309271332e-06
+      },
+      {
+        "text": "His",
+        "start": 2.96,
+        "end": 3.1,
+        "type": "word",
+        "logprob": -9.417489309271332e-06
+      },
+      {
+        "text": " ",
+        "start": 3.1,
+        "end": 3.16,
+        "type": "spacing",
+        "logprob": -1.4305012882687151e-05
+      },
+      {
+        "text": "signature",
+        "start": 3.16,
+        "end": 3.64,
+        "type": "word",
+        "logprob": -1.4305012882687151e-05
+      },
+      {
+        "text": " ",
+        "start": 3.64,
+        "end": 3.68,
+        "type": "spacing",
+        "logprob": -5.960462772236497e-07
+      },
+      {
+        "text": "is",
+        "start": 3.68,
+        "end": 3.76,
+        "type": "word",
+        "logprob": -5.960462772236497e-07
+      },
+      {
+        "text": " ",
+        "start": 3.76,
+        "end": 3.8,
+        "type": "spacing",
+        "logprob": -7.152555099310121e-07
+      },
+      {
+        "text": "on",
+        "start": 3.8,
+        "end": 3.88,
+        "type": "word",
+        "logprob": -7.152555099310121e-07
+      },
+      {
+        "text": " ",
+        "start": 3.88,
+        "end": 3.92,
+        "type": "spacing",
+        "logprob": -1.1920928244535389e-07
+      },
+      {
+        "text": "a",
+        "start": 3.92,
+        "end": 3.98,
+        "type": "word",
+        "logprob": -1.1920928244535389e-07
+      },
+      {
+        "text": " ",
+        "start": 3.98,
+        "end": 4.04,
+        "type": "spacing",
+        "logprob": -1.8596476365928538e-05
+      },
+      {
+        "text": "permit",
+        "start": 4.04,
+        "end": 4.34,
+        "type": "word",
+        "logprob": -1.8596476365928538e-05
+      },
+      {
+        "text": " ",
+        "start": 4.34,
+        "end": 4.4,
+        "type": "spacing",
+        "logprob": -1.3947389561508317e-05
+      },
+      {
+        "text": "here,",
+        "start": 4.4,
+        "end": 4.62,
+        "type": "word",
+        "logprob": -0.00013933834052295424
+      },
+      {
+        "text": " ",
+        "start": 4.62,
+        "end": 4.98,
+        "type": "spacing",
+        "logprob": -8.427741704508662e-05
+      },
+      {
+        "text": "dated",
+        "start": 4.98,
+        "end": 5.22,
+        "type": "word",
+        "logprob": -8.427741704508662e-05
+      },
+      {
+        "text": " ",
+        "start": 5.22,
+        "end": 5.28,
+        "type": "spacing",
+        "logprob": -0.003074207343161106
+      },
+      {
+        "text": "a",
+        "start": 5.28,
+        "end": 5.34,
+        "type": "word",
+        "logprob": -0.003074207343161106
+      },
+      {
+        "text": " ",
+        "start": 5.34,
+        "end": 5.38,
+        "type": "spacing",
+        "logprob": -2.50339189733495e-06
+      },
+      {
+        "text": "day",
+        "start": 5.38,
+        "end": 5.6,
+        "type": "word",
+        "logprob": -2.50339189733495e-06
+      },
+      {
+        "text": " ",
+        "start": 5.6,
+        "end": 5.66,
+        "type": "spacing",
+        "logprob": -5.245195097813848e-06
+      },
+      {
+        "text": "he",
+        "start": 5.66,
+        "end": 5.74,
+        "type": "word",
+        "logprob": -5.245195097813848e-06
+      },
+      {
+        "text": " ",
+        "start": 5.74,
+        "end": 5.78,
+        "type": "spacing",
+        "logprob": -1.4305104514278355e-06
+      },
+      {
+        "text": "was",
+        "start": 5.78,
+        "end": 5.94,
+        "type": "word",
+        "logprob": -1.4305104514278355e-06
+      },
+      {
+        "text": " ",
+        "start": 5.94,
+        "end": 6.0,
+        "type": "spacing",
+        "logprob": -6.83045873302035e-05
+      },
+      {
+        "text": "testifying",
+        "start": 6.0,
+        "end": 6.66,
+        "type": "word",
+        "logprob": -6.83045873302035e-05
+      },
+      {
+        "text": " ",
+        "start": 6.66,
+        "end": 6.7,
+        "type": "spacing",
+        "logprob": -3.576278118089249e-07
+      },
+      {
+        "text": "in",
+        "start": 6.7,
+        "end": 6.8,
+        "type": "word",
+        "logprob": -3.576278118089249e-07
+      },
+      {
+        "text": " ",
+        "start": 6.8,
+        "end": 6.84,
+        "type": "spacing",
+        "logprob": -1.2278481335670222e-05
+      },
+      {
+        "text": "Washington.",
+        "start": 6.84,
+        "end": 7.44,
+        "type": "word",
+        "logprob": -1.5746279380189e-05
+      }
+    ],
+    "transcription_id": "gmql9xzCKO8zv4lNE10Y",
+    "audio_duration_secs": 7.92
+  },
+  "listening_reviewed": false
+}

@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c9_wake.talk.nora.2.02",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "79b94de0c059f76b7f770db8e4232b91d502d2d797eb62ed09d56ebac091ee02",
+  "expected": "That’s how she says I love you.",
+  "recognized": "That's how she says I love you.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 1.92,
+  "sample_rate": 48000,
+  "peak": 0.305084228515625,
+  "rms": 0.04296997249694521,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

@@ -1,0 +1,179 @@
+{
+  "audio_id": "c9_wake.agnes.03",
+  "audio_sha256": "7bb597bc75304ac8fa6cd7459d3ba56a8911b2d0f48f01d31abd3862ad998d47",
+  "file": "assets/audio/elevenlabs-v4-additions/masters/c9_wake.agnes.03.attempt-1.wav",
+  "production_plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "I thought you had, Mrs. Penhallow. Every Sunday on the pier.",
+  "recognized": "I thought you had, Mrs. Penhallow, every Sunday on the pier.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "55780cf9dcafe1a7efbbed6bf6edfbae",
+  "character_cost": "1",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "I thought you had, Mrs. Penhallow, every Sunday on the pier.",
+    "words": [
+      {
+        "text": "I",
+        "start": 0.08,
+        "end": 0.14,
+        "type": "word",
+        "logprob": -0.17977672815322876
+      },
+      {
+        "text": " ",
+        "start": 0.14,
+        "end": 0.16,
+        "type": "spacing",
+        "logprob": -3.814689989667386e-06
+      },
+      {
+        "text": "thought",
+        "start": 0.16,
+        "end": 0.48,
+        "type": "word",
+        "logprob": -3.814689989667386e-06
+      },
+      {
+        "text": " ",
+        "start": 0.48,
+        "end": 0.56,
+        "type": "spacing",
+        "logprob": -9.059865078597795e-06
+      },
+      {
+        "text": "you",
+        "start": 0.56,
+        "end": 0.74,
+        "type": "word",
+        "logprob": -9.059865078597795e-06
+      },
+      {
+        "text": " ",
+        "start": 0.74,
+        "end": 0.82,
+        "type": "spacing",
+        "logprob": -1.2397689715726301e-05
+      },
+      {
+        "text": "had,",
+        "start": 0.82,
+        "end": 1.08,
+        "type": "word",
+        "logprob": -3.3824376259872224e-05
+      },
+      {
+        "text": " ",
+        "start": 1.08,
+        "end": 1.16,
+        "type": "spacing",
+        "logprob": -0.00020752183627337217
+      },
+      {
+        "text": "Mrs.",
+        "start": 1.16,
+        "end": 1.42,
+        "type": "word",
+        "logprob": -0.00015790634347467858
+      },
+      {
+        "text": " ",
+        "start": 1.42,
+        "end": 1.5,
+        "type": "spacing",
+        "logprob": -0.1856289505958557
+      },
+      {
+        "text": "Penhallow,",
+        "start": 1.5,
+        "end": 2.04,
+        "type": "word",
+        "logprob": -0.08713672245503404
+      },
+      {
+        "text": " ",
+        "start": 2.04,
+        "end": 2.42,
+        "type": "spacing",
+        "logprob": -2.729855441430118e-05
+      },
+      {
+        "text": "every",
+        "start": 2.42,
+        "end": 2.64,
+        "type": "word",
+        "logprob": -2.729855441430118e-05
+      },
+      {
+        "text": " ",
+        "start": 2.64,
+        "end": 2.76,
+        "type": "spacing",
+        "logprob": -2.634490556374658e-05
+      },
+      {
+        "text": "Sunday",
+        "start": 2.76,
+        "end": 3.3,
+        "type": "word",
+        "logprob": -2.634490556374658e-05
+      },
+      {
+        "text": " ",
+        "start": 3.3,
+        "end": 3.38,
+        "type": "spacing",
+        "logprob": -0.005237666890025139
+      },
+      {
+        "text": "on",
+        "start": 3.38,
+        "end": 3.46,
+        "type": "word",
+        "logprob": -0.005237666890025139
+      },
+      {
+        "text": " ",
+        "start": 3.46,
+        "end": 3.5,
+        "type": "spacing",
+        "logprob": -3.576278118089249e-07
+      },
+      {
+        "text": "the",
+        "start": 3.5,
+        "end": 3.6,
+        "type": "word",
+        "logprob": -3.576278118089249e-07
+      },
+      {
+        "text": " ",
+        "start": 3.6,
+        "end": 3.66,
+        "type": "spacing",
+        "logprob": -0.0018637683242559433
+      },
+      {
+        "text": "pier.",
+        "start": 3.66,
+        "end": 4.0,
+        "type": "word",
+        "logprob": -0.001503268998931162
+      }
+    ],
+    "transcription_id": "qm9K2jdrFNAISDogUoER",
+    "audio_duration_secs": 4.32
+  },
+  "listening_reviewed": false
+}

@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "epilogue.talk.pell.1.03",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "a9c753eee990585c79e009e6887307b293f66ae4e377e4a31a6d6a92911870d3",
+  "expected": "Kick it low. I have written that down.",
+  "recognized": "Kick it low. I have written that down.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 3.12,
+  "sample_rate": 48000,
+  "peak": 0.754669189453125,
+  "rms": 0.07243375099135296,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

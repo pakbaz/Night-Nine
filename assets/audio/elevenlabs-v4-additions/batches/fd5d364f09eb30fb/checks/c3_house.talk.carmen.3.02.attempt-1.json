@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c3_house.talk.carmen.3.02",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "de0bbb0117819bbf4081d128f35018d2283ea8f4c81e142f9f6a4319018e69f9",
+  "expected": "Chicken tinga. Rafa made it, so it is too sweet. He is still in love.",
+  "recognized": "Chicken tinga. Rafa made it, so it is too sweet. He is still in love.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 6.4,
+  "sample_rate": 48000,
+  "peak": 0.30609130859375,
+  "rms": 0.035118165392462555,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

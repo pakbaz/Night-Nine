@@ -665,10 +665,9 @@
           },
           {
             "topic": "Her whistle",
-            "after": "whistle",
             "lines": [
-              "steve|He swam right past you, Nor. To me.",
-              "iris|Sea lions get moody. Maybe he’s tired.",
+              "steve|You still whistle for him every Sunday?",
+              "iris|Every Sunday. Two notes. He always comes.",
               "steve|You used to say he’d come to that whistle through a hurricane.",
               "iris|Then you should visit him more often, sleepyhead."
             ]
@@ -715,7 +714,6 @@
         "lyle_copy": [
           {
             "topic": "The boys’ game",
-            "after": "door",
             "lines": [
               "steve|Who’s pitching first today?",
               "lyle_copy|My oldest, then his brother. I’ll be in the stands for every inning.",
@@ -1010,12 +1008,11 @@
             ]
           },
           {
-            "topic": "The hum",
-            "after": "podcast",
+            "topic": "Episode forty",
             "lines": [
-              "tomas|You really heard it today? On the pier?",
-              "steve|It’s under Mom’s voicemail too. It has been for eighteen months.",
-              "tomas|Then I’m not crazy. Or we both are. Either way, I’m buying you a beer."
+              "tomas|Come on my show sometime, Steve. A real sound engineer would double my ratings.",
+              "steve|From twelve listeners to twenty-four?",
+              "tomas|Nora used to call in every week just to correct my tide tables. I miss that, honestly."
             ]
           }
         ],

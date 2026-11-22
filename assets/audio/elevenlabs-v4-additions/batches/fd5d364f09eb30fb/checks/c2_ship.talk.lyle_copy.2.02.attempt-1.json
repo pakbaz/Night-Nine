@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c2_ship.talk.lyle_copy.2.02",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "666e103d0c9ae97c8cf5021668d684fe7a409c8d7e8646fef20e6cf8934854ae",
+  "expected": "I did. I remember every word of it.",
+  "recognized": "I did. I remember every word of it.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 3.28,
+  "sample_rate": 48000,
+  "peak": 0.62127685546875,
+  "rms": 0.06449113925369473,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

@@ -1,0 +1,123 @@
+{
+  "audio_id": "p_meeting.talk.general_us.2.03",
+  "audio_sha256": "bb4873afa74cbe500cf39dc322d1a3a01b18b304fb7852eda899254c7ad4e189",
+  "file": "assets/audio/elevenlabs-v4-additions/masters/p_meeting.talk.general_us.2.03.attempt-1.wav",
+  "production_plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Then I hope he enjoyed the show.",
+  "recognized": "Then I hope you enjoyed the show.",
+  "word_edits": 1,
+  "request_id": null,
+  "trace_id": "ffef5c3b3021c3afd88d5a41e1295ac8",
+  "character_cost": "1",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Then I hope you enjoyed the show.",
+    "words": [
+      {
+        "text": "Then",
+        "start": 0.08,
+        "end": 0.18,
+        "type": "word",
+        "logprob": -0.00019262365822214633
+      },
+      {
+        "text": " ",
+        "start": 0.18,
+        "end": 0.28,
+        "type": "spacing",
+        "logprob": -0.00029797881143167615
+      },
+      {
+        "text": "I",
+        "start": 0.28,
+        "end": 0.32,
+        "type": "word",
+        "logprob": -0.00029797881143167615
+      },
+      {
+        "text": " ",
+        "start": 0.32,
+        "end": 0.36,
+        "type": "spacing",
+        "logprob": -6.198863957251888e-06
+      },
+      {
+        "text": "hope",
+        "start": 0.36,
+        "end": 0.56,
+        "type": "word",
+        "logprob": -6.198863957251888e-06
+      },
+      {
+        "text": " ",
+        "start": 0.56,
+        "end": 0.58,
+        "type": "spacing",
+        "logprob": -0.018171969801187515
+      },
+      {
+        "text": "you",
+        "start": 0.58,
+        "end": 0.64,
+        "type": "word",
+        "logprob": -0.018171969801187515
+      },
+      {
+        "text": " ",
+        "start": 0.64,
+        "end": 0.68,
+        "type": "spacing",
+        "logprob": -0.001073499326594174
+      },
+      {
+        "text": "enjoyed",
+        "start": 0.68,
+        "end": 1.04,
+        "type": "word",
+        "logprob": -0.001073499326594174
+      },
+      {
+        "text": " ",
+        "start": 1.04,
+        "end": 1.08,
+        "type": "spacing",
+        "logprob": -1.1920922133867862e-06
+      },
+      {
+        "text": "the",
+        "start": 1.08,
+        "end": 1.18,
+        "type": "word",
+        "logprob": -1.1920922133867862e-06
+      },
+      {
+        "text": " ",
+        "start": 1.18,
+        "end": 1.24,
+        "type": "spacing",
+        "logprob": -5.602820692729438e-06
+      },
+      {
+        "text": "show.",
+        "start": 1.24,
+        "end": 1.58,
+        "type": "word",
+        "logprob": -1.3828046576236375e-05
+      }
+    ],
+    "transcription_id": "b3K1fD6SUiUI8mAjN04W",
+    "audio_duration_secs": 2.08
+  },
+  "listening_reviewed": false
+}

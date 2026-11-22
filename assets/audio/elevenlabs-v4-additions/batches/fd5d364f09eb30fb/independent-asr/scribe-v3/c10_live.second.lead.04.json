@@ -1,0 +1,277 @@
+{
+  "audio_id": "c10_live.second.lead.04",
+  "audio_sha256": "d430c0e7111f82b7330cbd45a750524bb3980ba1380e6437af9c5e54591c6603",
+  "file": "assets/audio/elevenlabs-v4-additions/masters/c10_live.second.lead.04.attempt-1.wav",
+  "production_plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Cue four goes out on beat forty. Shaw goes when the coast answers. Wen needs the next two beats.",
+  "recognized": "Q4 goes out on beat 40. Shaw goes when the coast answers. Wen needs the next two beats.",
+  "word_edits": 1,
+  "request_id": null,
+  "trace_id": "881417ce8c00f82f645fa1754e7ae6f6",
+  "character_cost": "2",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Q4 goes out on beat 40. Shaw goes when the coast answers. Wen needs the next two beats.",
+    "words": [
+      {
+        "text": "Q4",
+        "start": 0.08,
+        "end": 0.64,
+        "type": "word",
+        "logprob": -0.07692400762243778
+      },
+      {
+        "text": " ",
+        "start": 0.64,
+        "end": 0.76,
+        "type": "spacing",
+        "logprob": -3.290122185717337e-05
+      },
+      {
+        "text": "goes",
+        "start": 0.76,
+        "end": 0.98,
+        "type": "word",
+        "logprob": -3.290122185717337e-05
+      },
+      {
+        "text": " ",
+        "start": 0.98,
+        "end": 1.06,
+        "type": "spacing",
+        "logprob": -8.344646857949556e-07
+      },
+      {
+        "text": "out",
+        "start": 1.06,
+        "end": 1.24,
+        "type": "word",
+        "logprob": -8.344646857949556e-07
+      },
+      {
+        "text": " ",
+        "start": 1.24,
+        "end": 1.28,
+        "type": "spacing",
+        "logprob": -3.576278118089249e-07
+      },
+      {
+        "text": "on",
+        "start": 1.28,
+        "end": 1.44,
+        "type": "word",
+        "logprob": -3.576278118089249e-07
+      },
+      {
+        "text": " ",
+        "start": 1.44,
+        "end": 1.48,
+        "type": "spacing",
+        "logprob": -0.0006227937992662191
+      },
+      {
+        "text": "beat",
+        "start": 1.48,
+        "end": 1.62,
+        "type": "word",
+        "logprob": -0.0006227937992662191
+      },
+      {
+        "text": " ",
+        "start": 1.62,
+        "end": 1.94,
+        "type": "spacing",
+        "logprob": -5.61460001335945e-05
+      },
+      {
+        "text": "40.",
+        "start": 1.94,
+        "end": 2.16,
+        "type": "word",
+        "logprob": -8.149139663752673e-05
+      },
+      {
+        "text": " ",
+        "start": 2.16,
+        "end": 2.16,
+        "type": "spacing",
+        "logprob": -0.13885842263698578
+      },
+      {
+        "text": "Shaw",
+        "start": 2.52,
+        "end": 2.72,
+        "type": "word",
+        "logprob": -0.13885842263698578
+      },
+      {
+        "text": " ",
+        "start": 2.72,
+        "end": 2.82,
+        "type": "spacing",
+        "logprob": -0.00040082051418721676
+      },
+      {
+        "text": "goes",
+        "start": 2.82,
+        "end": 3.16,
+        "type": "word",
+        "logprob": -0.00040082051418721676
+      },
+      {
+        "text": " ",
+        "start": 3.16,
+        "end": 3.2,
+        "type": "spacing",
+        "logprob": -1.9192511899746023e-05
+      },
+      {
+        "text": "when",
+        "start": 3.2,
+        "end": 3.3,
+        "type": "word",
+        "logprob": -1.9192511899746023e-05
+      },
+      {
+        "text": " ",
+        "start": 3.3,
+        "end": 3.34,
+        "type": "spacing",
+        "logprob": -0.0002324311062693596
+      },
+      {
+        "text": "the",
+        "start": 3.34,
+        "end": 3.42,
+        "type": "word",
+        "logprob": -0.0002324311062693596
+      },
+      {
+        "text": " ",
+        "start": 3.42,
+        "end": 3.48,
+        "type": "spacing",
+        "logprob": -0.038008708506822586
+      },
+      {
+        "text": "coast",
+        "start": 3.48,
+        "end": 3.78,
+        "type": "word",
+        "logprob": -0.038008708506822586
+      },
+      {
+        "text": " ",
+        "start": 3.78,
+        "end": 3.9,
+        "type": "spacing",
+        "logprob": -0.0001445904199499637
+      },
+      {
+        "text": "answers.",
+        "start": 3.9,
+        "end": 4.44,
+        "type": "word",
+        "logprob": -0.00012891568144368648
+      },
+      {
+        "text": " ",
+        "start": 4.44,
+        "end": 4.74,
+        "type": "spacing",
+        "logprob": -0.03821881487965584
+      },
+      {
+        "text": "Wen",
+        "start": 4.74,
+        "end": 4.98,
+        "type": "word",
+        "logprob": -0.03821881487965584
+      },
+      {
+        "text": " ",
+        "start": 4.98,
+        "end": 5.04,
+        "type": "spacing",
+        "logprob": -0.00010251473577227443
+      },
+      {
+        "text": "needs",
+        "start": 5.04,
+        "end": 5.28,
+        "type": "word",
+        "logprob": -0.00010251473577227443
+      },
+      {
+        "text": " ",
+        "start": 5.28,
+        "end": 5.32,
+        "type": "spacing",
+        "logprob": -2.3841855067985307e-07
+      },
+      {
+        "text": "the",
+        "start": 5.32,
+        "end": 5.42,
+        "type": "word",
+        "logprob": -2.3841855067985307e-07
+      },
+      {
+        "text": " ",
+        "start": 5.42,
+        "end": 5.48,
+        "type": "spacing",
+        "logprob": -2.861018856492592e-06
+      },
+      {
+        "text": "next",
+        "start": 5.48,
+        "end": 5.76,
+        "type": "word",
+        "logprob": -2.861018856492592e-06
+      },
+      {
+        "text": " ",
+        "start": 5.76,
+        "end": 5.8,
+        "type": "spacing",
+        "logprob": -0.0019401551689952612
+      },
+      {
+        "text": "two",
+        "start": 5.8,
+        "end": 5.92,
+        "type": "word",
+        "logprob": -0.0019401551689952612
+      },
+      {
+        "text": " ",
+        "start": 5.92,
+        "end": 6.02,
+        "type": "spacing",
+        "logprob": -7.915183232398704e-05
+      },
+      {
+        "text": "beats.",
+        "start": 6.02,
+        "end": 6.38,
+        "type": "word",
+        "logprob": -7.062882529377627e-05
+      }
+    ],
+    "transcription_id": "fgg28sAAZHISGWJ1ESyM",
+    "audio_duration_secs": 6.64
+  },
+  "listening_reviewed": false
+}

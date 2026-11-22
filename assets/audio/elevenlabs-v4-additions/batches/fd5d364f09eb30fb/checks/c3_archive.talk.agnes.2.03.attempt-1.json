@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c3_archive.talk.agnes.2.03",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "76a58088c6343b3c1192865afd23fa0e6cc29f573b6ad012200db2dd2d4490aa",
+  "expected": "I came to sell you a herring. Two dollars, please. Exact change.",
+  "recognized": "I came to sell you a herring. Two dollars, please. Exact change.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.96,
+  "sample_rate": 48000,
+  "peak": 0.381805419921875,
+  "rms": 0.044968674539495344,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

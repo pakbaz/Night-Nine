@@ -1,0 +1,137 @@
+{
+  "audio_id": "c9_gallery.talk.nora.2.03",
+  "audio_sha256": "0d791a9f75f48b276273cd4999be91cdd0e27ecfbaa79a56309a8e771552a01f",
+  "file": "assets/audio/elevenlabs-v4-additions/masters/c9_gallery.talk.nora.2.03.attempt-1.wav",
+  "production_plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "He hates rye. He was making a point.",
+  "recognized": "He hates rye. He was making a point.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "d266784b3ac0d7b41fd5f0d09857934b",
+  "character_cost": "1",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "He hates rye. He was making a point.",
+    "words": [
+      {
+        "text": "He",
+        "start": 0.08,
+        "end": 0.18,
+        "type": "word",
+        "logprob": -9.298280929215252e-06
+      },
+      {
+        "text": " ",
+        "start": 0.18,
+        "end": 0.4,
+        "type": "spacing",
+        "logprob": -4.255681051290594e-05
+      },
+      {
+        "text": "hates",
+        "start": 0.4,
+        "end": 0.74,
+        "type": "word",
+        "logprob": -4.255681051290594e-05
+      },
+      {
+        "text": " ",
+        "start": 0.74,
+        "end": 0.8,
+        "type": "spacing",
+        "logprob": -0.10196276754140854
+      },
+      {
+        "text": "rye.",
+        "start": 0.8,
+        "end": 1.08,
+        "type": "word",
+        "logprob": -0.07649698915702174
+      },
+      {
+        "text": " ",
+        "start": 1.08,
+        "end": 1.52,
+        "type": "spacing",
+        "logprob": -2.3841830625315197e-06
+      },
+      {
+        "text": "He",
+        "start": 1.52,
+        "end": 1.6,
+        "type": "word",
+        "logprob": -2.3841830625315197e-06
+      },
+      {
+        "text": " ",
+        "start": 1.6,
+        "end": 1.64,
+        "type": "spacing",
+        "logprob": -2.0265558760002023e-06
+      },
+      {
+        "text": "was",
+        "start": 1.64,
+        "end": 1.76,
+        "type": "word",
+        "logprob": -2.0265558760002023e-06
+      },
+      {
+        "text": " ",
+        "start": 1.76,
+        "end": 1.8,
+        "type": "spacing",
+        "logprob": -6.079655122448457e-06
+      },
+      {
+        "text": "making",
+        "start": 1.8,
+        "end": 2.04,
+        "type": "word",
+        "logprob": -6.079655122448457e-06
+      },
+      {
+        "text": " ",
+        "start": 2.04,
+        "end": 2.08,
+        "type": "spacing",
+        "logprob": 0.0
+      },
+      {
+        "text": "a",
+        "start": 2.08,
+        "end": 2.16,
+        "type": "word",
+        "logprob": 0.0
+      },
+      {
+        "text": " ",
+        "start": 2.16,
+        "end": 2.22,
+        "type": "spacing",
+        "logprob": -4.291525328881107e-06
+      },
+      {
+        "text": "point.",
+        "start": 2.22,
+        "end": 2.6,
+        "type": "word",
+        "logprob": -6.099515303503722e-06
+      }
+    ],
+    "transcription_id": "yXFwSvT6VyWi9hOijD9J",
+    "audio_duration_secs": 3.2
+  },
+  "listening_reviewed": false
+}

@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c9_gallery.talk.calder.2.03",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "5359b67e0bee614b117370e87651afb72f949919665eae14d2b456af4e60fc7e",
+  "expected": "Good. He still owes me a coffee from twenty years ago.",
+  "recognized": "Good. He still owes me a coffee from 20 years ago.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 3.76,
+  "sample_rate": 48000,
+  "peak": 0.5474853515625,
+  "rms": 0.06208768214155844,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c5_shack.talk.operator.2.01",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "b8ec2fd4a53dea3a30999de02f6bdef30682770f40e62fdff6cb214b83587eb5",
+  "expected": "Marsh has the tallest antenna in the county, out past Sentinel Point. Says the fog up there hums at night.",
+  "recognized": "Marsh has the tallest antenna in the county, out past Sentinel Point. Says the fog up there hums at night.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 7.52,
+  "sample_rate": 48000,
+  "peak": 0.347320556640625,
+  "rms": 0.031563569123928645,
+  "level_match_gain_db": 4.054351195660406,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

@@ -14,11 +14,11 @@ Cloudflare Pages is the only game host. GitHub hosts the source and runs the bui
 
 Play in a desktop browser with WebGL 2. There is no installer. The small button in the top-right corner switches to full screen; press Esc to leave it. To edit or test the source, open `game/project.godot` in Godot 4.7.2, wait for import, then press F5.
 
-Select **New game**. Click an object to investigate, or use **Objects** for a keyboard-accessible list. In rooms with a walkable floor, click a spot or use WASD to move. Open the notebook to review evidence, case theories and the transcript. After initial setup, you can play the full story offline.
+Select **New game**. Click an object to investigate, or use **Objects** for a keyboard-accessible list. Click a person, or their portrait beside **Objects**, for optional small talk. In rooms with a walkable floor, click a spot or use WASD to move. Open the notebook to review evidence, case theories and the transcript. After initial setup, you can play the full story offline.
 
-At a case board, read the case notes, choose an evidence piece, then choose its destination. You can also drag pieces or use Tab and Enter. Swap two pieces by choosing their occupied positions in turn. Your placements and confirmed stages are saved as you work. Use **Hint** for another clue.
+At a case board, read the case notes, pick a card, then pick the question or place where it belongs. You can also drag cards or use Tab and Enter. Press **Check**: right cards turn green and stay, and wrong ones are marked so you can move them. Settings puzzles mark each row the same way. Your placements and confirmed steps are saved as you work. Use **Hint** for another clue.
 
-We estimate **3.5 to 5 hours for a first playthrough**. We budgeted 2 to 2½ minutes for each of the 84 stages across 32 case boards, or 168 to 210 minutes. We allowed another 42 to 90 minutes for conversations, movement, other puzzles and films. We have yet to measure first-time players.
+The November 21 revision made every puzzle plainer: the 23 case boards now have 25 steps in total, and each puzzle introduces its people and facts before it asks about them. Small talk is optional and adds time only if you want it. We have yet to measure first-time players, so we no longer give a playing-time estimate.
 
 Resources are cached for repeat visits and offline play after the first complete load. Updates can require another download. Saves use IndexedDB on the same browser and site address; they do not sync between devices. **Menu → Browser storage** can request persistent storage and export/import checksummed save backups. Browsers can deny persistent storage, and clearing site data still removes saves and cached files. [Build or host the browser edition](PUBLISHING.md)
 

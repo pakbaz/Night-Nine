@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c9_gallery.talk.calder.1.02",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "1b395878e553b642bc990c2f8e93aff2d9c15d35391e5ba7bb493f9a8d613d22",
+  "expected": "Is that strictly legal, Sheriff Calder?",
+  "recognized": "Is that strictly legal, Sheriff Calder?",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 2.8,
+  "sample_rate": 48000,
+  "peak": 0.28363037109375,
+  "rms": 0.0434873115674098,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

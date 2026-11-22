@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "postcredits.talk.helen.1.03",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "3ad3b7a570408d6f1768f8b1a0eb7b87604e1469cc4c4c9544a7f29fd1c1466f",
+  "expected": "Not luck. An interpreter always keeps the last page.",
+  "recognized": "Not luck. An interpreter always keeps the last page.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.08,
+  "sample_rate": 48000,
+  "peak": 0.62957763671875,
+  "rms": 0.06657160291866533,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

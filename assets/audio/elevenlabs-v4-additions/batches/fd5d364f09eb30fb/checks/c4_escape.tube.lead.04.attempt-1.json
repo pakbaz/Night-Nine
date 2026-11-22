@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c4_escape.tube.lead.04",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "b78d400e08f7054e5c63d8d55b5f4849044c4c681fe2dfd846586fcf1428ecb5",
+  "expected": "Standard capsules stop at Rook’s desk for sorting. The blue maintenance ones go straight through.",
+  "recognized": "Standard capsules stop at Rook's desk for sorting. The blue maintenance ones go straight through.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 5.84,
+  "sample_rate": 48000,
+  "peak": 0.376129150390625,
+  "rms": 0.04205827482916204,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

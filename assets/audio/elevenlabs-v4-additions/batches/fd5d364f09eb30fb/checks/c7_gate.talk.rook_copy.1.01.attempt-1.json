@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c7_gate.talk.rook_copy.1.01",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "d08a0c9aaa6a1e8dbf4333d03a8469eb1a5bbe2e3cbe932aa069ac5fafc4668a",
+  "expected": "The coffee in the press tent is terrible. I’ve had four cups.",
+  "recognized": "The coffee in the press tent is terrible. I've had four cups.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.8,
+  "sample_rate": 48000,
+  "peak": 0.30767822265625,
+  "rms": 0.024909603428202438,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

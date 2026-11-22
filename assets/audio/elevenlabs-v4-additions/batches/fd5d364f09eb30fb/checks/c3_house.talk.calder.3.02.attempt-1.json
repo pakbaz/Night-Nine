@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c3_house.talk.calder.3.02",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "c5b7176f248e750b7be18fee7b11cfd9603e2563a84d6a2a732a0c52e80687e0",
+  "expected": "Eat Carmen’s tonight. The deputies get the rest, except the tuna one.",
+  "recognized": "Eat Carmen's tonight. The deputies get the rest, except the tuna one.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.8,
+  "sample_rate": 48000,
+  "peak": 0.48370361328125,
+  "rms": 0.0572232769923893,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

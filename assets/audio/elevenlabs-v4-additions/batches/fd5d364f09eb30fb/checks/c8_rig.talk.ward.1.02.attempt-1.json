@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c8_rig.talk.ward.1.02",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "edb29021424fbab4fc7c1b18286705827fc44c38030ffa158c5b1b995bd25a1e",
+  "expected": "Bandaged and famous. Half the country has seen it on television.",
+  "recognized": "Bandaged and famous. Half the country has seen it on television.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.96,
+  "sample_rate": 48000,
+  "peak": 0.358428955078125,
+  "rms": 0.035590236923576594,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

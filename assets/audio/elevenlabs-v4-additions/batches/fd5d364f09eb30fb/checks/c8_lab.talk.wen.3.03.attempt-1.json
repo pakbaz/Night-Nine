@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c8_lab.talk.wen.3.03",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "9c94b4afa9589e862a7b4bad15a36ebd5d8820f6f7035cc2989e0b957a82afdc",
+  "expected": "She still owes me a dinner. She lost a bet about the fog machine.",
+  "recognized": "She still owes me a dinner. She lost a bet about the fog machine.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.88,
+  "sample_rate": 48000,
+  "peak": 0.511688232421875,
+  "rms": 0.07994434630970824,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

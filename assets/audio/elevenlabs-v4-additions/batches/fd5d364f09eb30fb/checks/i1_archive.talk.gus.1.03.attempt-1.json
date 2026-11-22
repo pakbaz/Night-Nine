@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "i1_archive.talk.gus.1.03",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "4fc7a9fc2e4ab70ef1a04927cc1054484c40cc866242ffab87bda3c64a540195",
+  "expected": "People wait outside in the rain for her cinnamon knots.",
+  "recognized": "People wait outside in the rain for her cinnamon knots.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 3.76,
+  "sample_rate": 48000,
+  "peak": 0.744537353515625,
+  "rms": 0.09155403023883742,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c3_house.talk.carmen.3.03",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "298fe2433bb41856a182b39a8cc5704da69dc7d7889734f791c00b2052daab05",
+  "expected": "With the girl from the bakery counter?",
+  "recognized": "With the girl from the bakery counter?",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 2.16,
+  "sample_rate": 48000,
+  "peak": 0.387359619140625,
+  "rms": 0.04418929500592526,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

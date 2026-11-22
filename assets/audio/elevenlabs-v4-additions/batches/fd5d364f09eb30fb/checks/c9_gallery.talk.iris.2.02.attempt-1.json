@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c9_gallery.talk.iris.2.02",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "d956d8cfe646be81ca7b373cba6b0ed5c879397861e63f4ee98cb4fd5eca8e65",
+  "expected": "Do you want me to stop asking you things?",
+  "recognized": "Do you want me to stop asking you things?",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 2.64,
+  "sample_rate": 48000,
+  "peak": 0.28857421875,
+  "rms": 0.03726598947665397,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

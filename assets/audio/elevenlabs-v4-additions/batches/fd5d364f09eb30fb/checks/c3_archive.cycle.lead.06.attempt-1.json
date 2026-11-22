@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c3_archive.cycle.lead.06",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "5ec61a9722416b5c7790885eddcdd86c17f5a8e6a792117912ded2a1bc8c0bab",
+  "expected": "I want to see faces on that path before they reach the water. Without anyone seeing us.",
+  "recognized": "I want to see faces on that path before they reach the water, without anyone seeing us.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 5.52,
+  "sample_rate": 48000,
+  "peak": 0.494415283203125,
+  "rms": 0.06274968701598911,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

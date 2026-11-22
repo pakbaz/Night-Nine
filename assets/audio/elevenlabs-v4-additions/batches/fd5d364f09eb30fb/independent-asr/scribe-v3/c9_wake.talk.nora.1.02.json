@@ -1,0 +1,109 @@
+{
+  "audio_id": "c9_wake.talk.nora.1.02",
+  "audio_sha256": "cccbb02e29e7f8b1e704887f3aed171e703dca45646b47397992dd8207745b17",
+  "file": "assets/audio/elevenlabs-v4-additions/masters/c9_wake.talk.nora.1.02.attempt-1.wav",
+  "production_plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Your shouting? I can believe that.",
+  "recognized": "You're shouting? I can believe that.",
+  "word_edits": 2,
+  "request_id": null,
+  "trace_id": "48e262961cf080a92ad11732329a6bed",
+  "character_cost": "1",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "You're shouting? I can believe that.",
+    "words": [
+      {
+        "text": "You're",
+        "start": 0.12,
+        "end": 0.34,
+        "type": "word",
+        "logprob": -9.963152903461985e-05
+      },
+      {
+        "text": " ",
+        "start": 0.34,
+        "end": 0.38,
+        "type": "spacing",
+        "logprob": -0.0001392267586197704
+      },
+      {
+        "text": "shouting?",
+        "start": 0.38,
+        "end": 0.78,
+        "type": "word",
+        "logprob": -0.00023012035267634524
+      },
+      {
+        "text": " ",
+        "start": 0.78,
+        "end": 0.78,
+        "type": "spacing",
+        "logprob": -0.22544850409030914
+      },
+      {
+        "text": "I",
+        "start": 1.28,
+        "end": 1.32,
+        "type": "word",
+        "logprob": -0.22544850409030914
+      },
+      {
+        "text": " ",
+        "start": 1.32,
+        "end": 1.36,
+        "type": "spacing",
+        "logprob": -2.1576648578047752e-05
+      },
+      {
+        "text": "can",
+        "start": 1.36,
+        "end": 1.5,
+        "type": "word",
+        "logprob": -2.1576648578047752e-05
+      },
+      {
+        "text": " ",
+        "start": 1.5,
+        "end": 1.54,
+        "type": "spacing",
+        "logprob": -3.5523738915799186e-05
+      },
+      {
+        "text": "believe",
+        "start": 1.54,
+        "end": 1.86,
+        "type": "word",
+        "logprob": -3.5523738915799186e-05
+      },
+      {
+        "text": " ",
+        "start": 1.86,
+        "end": 1.92,
+        "type": "spacing",
+        "logprob": -1.0728830375228426e-06
+      },
+      {
+        "text": "that.",
+        "start": 1.92,
+        "end": 2.18,
+        "type": "word",
+        "logprob": -8.05841800683993e-06
+      }
+    ],
+    "transcription_id": "3rypMddlDBMAsOSTc8sa",
+    "audio_duration_secs": 2.48
+  },
+  "listening_reviewed": false
+}

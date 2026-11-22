@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "epilogue.talk.carmen.2.01",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "eaf354df675d0fe77284a6d4c61a6e033e22e39a51a1454ff0f5873ff84a179a",
+  "expected": "I kept your plate warm every Sunday. This Monday I am not throwing it out.",
+  "recognized": "I kept your plate warm every Sunday. This Monday, I am not throwing it out.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 5.28,
+  "sample_rate": 48000,
+  "peak": 0.419891357421875,
+  "rms": 0.042160306646580624,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

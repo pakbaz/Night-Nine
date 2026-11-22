@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "audio_id": "epilogue.talk.agnes.1.02",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "73ace6c8efba22346ba5a33dbf91c0a239cd6b33d2e759d25831f29e1942cf7d",
+  "expected": "Won’t you miss the wind on Veyr?",
+  "recognized": "Won't you miss the wind on Verre?",
+  "local_recognized": "Won't you miss the wind on Vare?",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 2.16,
+  "sample_rate": 48000,
+  "peak": 0.30413818359375,
+  "rms": 0.04568531161166233,
+  "level_match_gain_db": 0.0,
+  "word_edits": 1,
+  "word_error_rate": 0.125,
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/epilogue.talk.agnes.1.02.json",
+    "sha256": "3cb3c8656b65bed72d222ab1223f57f81b32b7b23e77bf05ff823b8fcce7db49",
+    "model": "scribe_v3",
+    "word_edits": 1,
+    "listening_reviewed": false
+  },
+  "status": "retake_required",
+  "failure_reason": "asr_mismatch"
+}

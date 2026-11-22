@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c6_jail.talk.pell.2.01",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "9e27e56073d657609b501f71c52ee764fb983bf37bf1fe7a68349c6d8326efb7",
+  "expected": "Do you like the mail route?",
+  "recognized": "Do you like the mail route?",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 1.6,
+  "sample_rate": 48000,
+  "peak": 0.291168212890625,
+  "rms": 0.044979171845339394,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

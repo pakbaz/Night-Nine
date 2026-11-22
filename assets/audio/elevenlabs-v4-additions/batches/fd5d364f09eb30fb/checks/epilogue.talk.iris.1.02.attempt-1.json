@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "epilogue.talk.iris.1.02",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "b28c6b24084b02312f3a61b1e088f2e58e5d9d624e0f43dbf3a4adc347cd971f",
+  "expected": "It suits you. It really does.",
+  "recognized": "It suits you. It really does.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 2.64,
+  "sample_rate": 48000,
+  "peak": 0.28131103515625,
+  "rms": 0.03579610254586842,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

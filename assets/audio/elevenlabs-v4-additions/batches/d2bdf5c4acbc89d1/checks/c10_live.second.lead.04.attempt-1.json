@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c10_live.second.lead.04",
+  "attempt": 1,
+  "plan_sha256": "d2bdf5c4acbc89d16422f6915440fe295d460d09b3bf365d836f4c6f285a412b",
+  "wav_sha256": "ca825c106e90f87bd6773c71f27b68bc09eecf9d9297a17d9a6456f4b4319df7",
+  "expected": "The fourth signal goes out on beat forty. Shaw goes when the coast answers. Wen needs the next two beats.",
+  "recognized": "The fourth signal goes out on beat 40. Shaw goes when the coast answers. Wen needs the next two beats.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 7.2,
+  "sample_rate": 48000,
+  "peak": 0.36529541015625,
+  "rms": 0.04128725051677759,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c10_station.playlist.lead.02",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "8eebc1210139f7c49db5f4b36a73579e0e88551f422e1d1da39e835d43f2f427",
+  "expected": "Three slips. My station ident, a traffic report and a news bulletin.",
+  "recognized": "Three slips, my station ident, a traffic report, and a news bulletin.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 5.36,
+  "sample_rate": 48000,
+  "peak": 0.356475830078125,
+  "rms": 0.03694896896964471,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c8_rig.talk.ward.1.03",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "184e47f33d9148b6b304f8af66dce3278e245abcd99868d159b76946171c97f0",
+  "expected": "My doctor wants to look at it. I said, not you, thank you.",
+  "recognized": "My doctor wants to look at it, I said. Not you, thank you.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.64,
+  "sample_rate": 48000,
+  "peak": 0.256195068359375,
+  "rms": 0.03134816341709918,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

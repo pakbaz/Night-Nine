@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c10_live.second.lead.02",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "8336c3f90f4e235362bb5a1656253a279b44c21c8ef9a59b2c03129670d73e4e",
+  "expected": "With the coast plugged in, Reed and Bell both answered two beats late. With the coast unplugged, Reed went quiet.",
+  "recognized": "With the coast plugged in, Reed and Bell both answered two beats late. With the coast unplugged, Reed went quiet.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 8.32,
+  "sample_rate": 48000,
+  "peak": 0.377410888671875,
+  "rms": 0.060521031062625776,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

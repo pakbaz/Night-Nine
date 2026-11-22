@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c9_gallery.antenna.lead.02",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "56175304d3a82dc2cbc65b24a5be50fc7e23bc58a4906ad243366a280b7cc17f",
+  "expected": "This visitor slip gets me onto the observation deck. It won’t open a single door.",
+  "recognized": "This visitor slip gets me onto the observation deck. It won't open a single door.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 5.6,
+  "sample_rate": 48000,
+  "peak": 0.47210693359375,
+  "rms": 0.0610859514504605,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

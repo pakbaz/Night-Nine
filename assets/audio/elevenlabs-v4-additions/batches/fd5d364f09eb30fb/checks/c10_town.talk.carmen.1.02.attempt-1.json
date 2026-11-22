@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c10_town.talk.carmen.1.02",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "5a4e7dd9e9a855b962b1efbda5d8c38e4a579140bdba1153589ff5bdbfb56dec",
+  "expected": "Thank you, Carmen. I mean it.",
+  "recognized": "Thank you, Carmen. I mean it.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 2.24,
+  "sample_rate": 48000,
+  "peak": 0.316741943359375,
+  "rms": 0.04368716030268662,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

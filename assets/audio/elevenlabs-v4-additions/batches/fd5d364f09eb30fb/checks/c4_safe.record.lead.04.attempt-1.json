@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c4_safe.record.lead.04",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "fd90f7dcb2027de08b59263d5e60d1112b79959d4d54b6b939fad517f1aa88dc",
+  "expected": "The lounge has the karaoke machine, and the generator roars right under June’s window.",
+  "recognized": "The lounge has the karaoke machine, and the generator roars right under June's window.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 5.6,
+  "sample_rate": 48000,
+  "peak": 0.365997314453125,
+  "rms": 0.042929266155278756,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

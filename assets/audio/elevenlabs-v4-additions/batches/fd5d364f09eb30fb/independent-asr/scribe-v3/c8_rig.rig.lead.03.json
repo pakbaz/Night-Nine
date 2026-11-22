@@ -1,0 +1,249 @@
+{
+  "audio_id": "c8_rig.rig.lead.03",
+  "audio_sha256": "d62f4066b3ca24ee5b8381b5da8d5f9d38f8b6e3e1398f35fd21a757d9dd3aa0",
+  "file": "assets/audio/elevenlabs-v4-additions/masters/c8_rig.rig.lead.03.attempt-1.wav",
+  "production_plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "We need a cue going out and nothing coming back. Otherwise the ship hears my theater.",
+  "recognized": "We need a queue going out and nothing coming back. Otherwise, the ship hears my theater.",
+  "word_edits": 1,
+  "request_id": null,
+  "trace_id": "92a8b092c00323f6dca212837d4ec635",
+  "character_cost": "2",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "We need a queue going out and nothing coming back. Otherwise, the ship hears my theater.",
+    "words": [
+      {
+        "text": "We",
+        "start": 0.06,
+        "end": 0.14,
+        "type": "word",
+        "logprob": -2.539125671319198e-05
+      },
+      {
+        "text": " ",
+        "start": 0.14,
+        "end": 0.18,
+        "type": "spacing",
+        "logprob": -3.933898824470816e-06
+      },
+      {
+        "text": "need",
+        "start": 0.18,
+        "end": 0.3,
+        "type": "word",
+        "logprob": -3.933898824470816e-06
+      },
+      {
+        "text": " ",
+        "start": 0.3,
+        "end": 0.36,
+        "type": "spacing",
+        "logprob": -6.079655122448457e-06
+      },
+      {
+        "text": "a",
+        "start": 0.36,
+        "end": 0.44,
+        "type": "word",
+        "logprob": -6.079655122448457e-06
+      },
+      {
+        "text": " ",
+        "start": 0.44,
+        "end": 0.52,
+        "type": "spacing",
+        "logprob": -0.28442955017089844
+      },
+      {
+        "text": "queue",
+        "start": 0.54,
+        "end": 0.74,
+        "type": "word",
+        "logprob": -0.28442955017089844
+      },
+      {
+        "text": " ",
+        "start": 0.74,
+        "end": 0.78,
+        "type": "spacing",
+        "logprob": -3.158996332786046e-05
+      },
+      {
+        "text": "going",
+        "start": 0.78,
+        "end": 1.1,
+        "type": "word",
+        "logprob": -3.158996332786046e-05
+      },
+      {
+        "text": " ",
+        "start": 1.1,
+        "end": 1.22,
+        "type": "spacing",
+        "logprob": -1.0728830375228426e-06
+      },
+      {
+        "text": "out",
+        "start": 1.22,
+        "end": 1.44,
+        "type": "word",
+        "logprob": -1.0728830375228426e-06
+      },
+      {
+        "text": " ",
+        "start": 1.44,
+        "end": 1.6,
+        "type": "spacing",
+        "logprob": -0.004079473204910755
+      },
+      {
+        "text": "and",
+        "start": 1.6,
+        "end": 1.76,
+        "type": "word",
+        "logprob": -0.004079473204910755
+      },
+      {
+        "text": " ",
+        "start": 1.76,
+        "end": 1.9,
+        "type": "spacing",
+        "logprob": -1.728519782773219e-05
+      },
+      {
+        "text": "nothing",
+        "start": 1.9,
+        "end": 2.24,
+        "type": "word",
+        "logprob": -1.728519782773219e-05
+      },
+      {
+        "text": " ",
+        "start": 2.24,
+        "end": 2.28,
+        "type": "spacing",
+        "logprob": -5.006777428206988e-06
+      },
+      {
+        "text": "coming",
+        "start": 2.28,
+        "end": 2.56,
+        "type": "word",
+        "logprob": -5.006777428206988e-06
+      },
+      {
+        "text": " ",
+        "start": 2.56,
+        "end": 2.58,
+        "type": "spacing",
+        "logprob": -1.5497195136049413e-06
+      },
+      {
+        "text": "back.",
+        "start": 2.58,
+        "end": 2.9,
+        "type": "word",
+        "logprob": -0.0002606139741146762
+      },
+      {
+        "text": " ",
+        "start": 2.9,
+        "end": 3.4,
+        "type": "spacing",
+        "logprob": -3.0397906812140718e-05
+      },
+      {
+        "text": "Otherwise,",
+        "start": 3.4,
+        "end": 3.84,
+        "type": "word",
+        "logprob": -3.0374065681826322e-05
+      },
+      {
+        "text": " ",
+        "start": 3.84,
+        "end": 3.92,
+        "type": "spacing",
+        "logprob": -0.03367147594690323
+      },
+      {
+        "text": "the",
+        "start": 3.92,
+        "end": 4.019,
+        "type": "word",
+        "logprob": -0.03367147594690323
+      },
+      {
+        "text": " ",
+        "start": 4.019,
+        "end": 4.08,
+        "type": "spacing",
+        "logprob": -0.0005977750988677144
+      },
+      {
+        "text": "ship",
+        "start": 4.08,
+        "end": 4.26,
+        "type": "word",
+        "logprob": -0.0005977750988677144
+      },
+      {
+        "text": " ",
+        "start": 4.26,
+        "end": 4.3,
+        "type": "spacing",
+        "logprob": -0.0011936451774090528
+      },
+      {
+        "text": "hears",
+        "start": 4.3,
+        "end": 4.54,
+        "type": "word",
+        "logprob": -0.0011936451774090528
+      },
+      {
+        "text": " ",
+        "start": 4.54,
+        "end": 4.56,
+        "type": "spacing",
+        "logprob": -3.93382906622719e-05
+      },
+      {
+        "text": "my",
+        "start": 4.56,
+        "end": 4.72,
+        "type": "word",
+        "logprob": -3.93382906622719e-05
+      },
+      {
+        "text": " ",
+        "start": 4.72,
+        "end": 4.78,
+        "type": "spacing",
+        "logprob": -0.003436970291659236
+      },
+      {
+        "text": "theater.",
+        "start": 4.78,
+        "end": 5.16,
+        "type": "word",
+        "logprob": -0.0030100460862740874
+      }
+    ],
+    "transcription_id": "M3DLnf9lHxyu6ZHvMYod",
+    "audio_duration_secs": 5.6
+  },
+  "listening_reviewed": false
+}

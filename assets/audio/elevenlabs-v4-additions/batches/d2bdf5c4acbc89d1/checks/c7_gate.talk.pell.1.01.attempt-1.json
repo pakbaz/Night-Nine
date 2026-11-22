@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c7_gate.talk.pell.1.01",
+  "attempt": 1,
+  "plan_sha256": "d2bdf5c4acbc89d16422f6915440fe295d460d09b3bf365d836f4c6f285a412b",
+  "wav_sha256": "1711ab75a368ce090898f3959d1cb075ae328e73a8ec48a50abb6eec0985929f",
+  "expected": "Who is looking after Biscuit today?",
+  "recognized": "Who is looking after Biscuit today?",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 2.24,
+  "sample_rate": 48000,
+  "peak": 0.337646484375,
+  "rms": 0.04016820086789638,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

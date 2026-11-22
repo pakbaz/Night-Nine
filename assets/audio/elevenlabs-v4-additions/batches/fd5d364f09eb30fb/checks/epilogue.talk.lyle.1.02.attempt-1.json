@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "audio_id": "epilogue.talk.lyle.1.02",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "012439f2e52447a79b42b94cf84e9474b64df8716c44513fca7ee03c1e21e8f5",
+  "expected": "Two Lyle Boones in one front row.",
+  "recognized": "Two Lyle Boones in one front row.",
+  "local_recognized": "Two Lyle Boons in one front row.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 2.88,
+  "sample_rate": 48000,
+  "peak": 0.309539794921875,
+  "rms": 0.05000771785091419,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/epilogue.talk.lyle.1.02.json",
+    "sha256": "dd27bb66999c13fd45c71463f2da7634836c31c7b70397decf7450db8014ce3f",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  },
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

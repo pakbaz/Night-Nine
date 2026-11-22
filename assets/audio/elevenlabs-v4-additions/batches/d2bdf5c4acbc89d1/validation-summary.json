@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "plan_sha256": "d2bdf5c4acbc89d16422f6915440fe295d460d09b3bf365d836f4c6f285a412b",
+  "passed": [
+    "c10_live.first.lead.01",
+    "c10_live.second.lead.04",
+    "c10_station.relay.lead.01",
+    "c10_station.talk.stephen.1.02",
+    "c10_town.talk.wen.1.03",
+    "c2_ship.escape.lead.03",
+    "c3_house.rules.lead.04",
+    "c4_safe.screens.02",
+    "c5_shack.notes.lead.02",
+    "c5_shack.rig.lead.03",
+    "c6_jail.distract.lead.03",
+    "c6_jail.talk.pell.1.01",
+    "c6_jail.talk.pell.2.03",
+    "c7_gate.talk.pell.1.01",
+    "c7_swap.tone.lead.02",
+    "c8_lab.talk.wen.3.01",
+    "c8_rig.path.lead.02",
+    "c8_rig.rig.lead.03",
+    "c9_wake.agnes.lead.03",
+    "c9_wake.talk.nora.1.02",
+    "epilogue.talk.agnes.1.02",
+    "epilogue.talk.helen.1.01",
+    "i1_archive.quiet.lead.03",
+    "p_meeting.talk.general_us.2.03"
+  ],
+  "retake_required": {
+    "c2_aquarium.intercom.lead.02": "asr_mismatch"
+  }
+}

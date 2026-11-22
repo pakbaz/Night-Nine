@@ -1,0 +1,17 @@
+{
+  "operation": "text_to_speech",
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "audio_id": "c5_station.talk.autorick.1.02",
+  "attempt": 1,
+  "voice_id": "KLoixBflzS2a9rg6nT8x",
+  "model_id": "eleven_v4",
+  "text_sha256": "4b31cffbe3308234b418dd5f92b05e53214c0dfba9a665ed6c90f717d0c0c13d",
+  "synthesis_text_sha256": "4b31cffbe3308234b418dd5f92b05e53214c0dfba9a665ed6c90f717d0c0c13d",
+  "request_id": "xZlcPQIqVFa54Yw0vn7D",
+  "trace_id": "47a6476a360630fe35414a9551314716",
+  "character_cost": 33,
+  "output_format": "mp3_44100_192",
+  "audio_sha256": "11057417cced8a68474c2e08cb8a74d843894b3e4cf74c7511c3b70691ca08cd",
+  "response_bytes": 122296,
+  "seed": 79375378
+}

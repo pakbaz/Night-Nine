@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "audio_id": "c8_lab.talk.wen.3.01",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "f7b552fc8312725f7b971ecca03aa30ac5c79e94439caed27113d11d7ded65df",
+  "expected": "How long have you and Shaw known each other?",
+  "recognized": "How long have you and Sean known each other?",
+  "local_recognized": "How long have you and Shawn known each other?",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 2.4,
+  "sample_rate": 48000,
+  "peak": 0.328857421875,
+  "rms": 0.041978228571168556,
+  "level_match_gain_db": 0.0,
+  "word_edits": 1,
+  "word_error_rate": 0.1111111111111111,
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c8_lab.talk.wen.3.01.json",
+    "sha256": "290db395c1e536d75dc6d2c34f0b35e89a7b813abb91fd0ecd92462eaad47936",
+    "model": "scribe_v3",
+    "word_edits": 1,
+    "listening_reviewed": false
+  },
+  "status": "retake_required",
+  "failure_reason": "asr_mismatch"
+}

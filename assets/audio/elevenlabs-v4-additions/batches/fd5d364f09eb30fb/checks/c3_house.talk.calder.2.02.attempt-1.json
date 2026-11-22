@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c3_house.talk.calder.2.02",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "0dd84d9b635231546cf7fe8f285c77b630fcfc10e49f6d6a2a6fa13241172237",
+  "expected": "Ruth started it. She said pencils are for people who expect to be wrong.",
+  "recognized": "Ruth started it. She said pencils are for people who expect to be wrong.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.88,
+  "sample_rate": 48000,
+  "peak": 0.477569580078125,
+  "rms": 0.05884520973627629,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

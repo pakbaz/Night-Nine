@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c9_wake.agnes.lead.02",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "dc357b83a546ffa1a149358f793c0717a8a25fd9a43f062307b659c9a7e09d1d",
+  "expected": "Her glasses case still has a price sticker from her bait shop. That one is hers.",
+  "recognized": "Her glasses case still has a price sticker from her bait shop. That one is hers.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 5.36,
+  "sample_rate": 48000,
+  "peak": 0.565460205078125,
+  "rms": 0.053003433603399014,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

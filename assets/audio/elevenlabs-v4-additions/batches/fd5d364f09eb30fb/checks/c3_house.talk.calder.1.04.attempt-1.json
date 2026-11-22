@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c3_house.talk.calder.1.04",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "6d33361544a72ad87f455c6036520acfaae5b63b9219163ca0b817e442d25723",
+  "expected": "Ruth picked her out. She said a sheriff needs one partner who never argues.",
+  "recognized": "Ruth picked her out. She said a sheriff needs one partner who never argues.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 5.04,
+  "sample_rate": 48000,
+  "peak": 0.474822998046875,
+  "rms": 0.060740858373598355,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

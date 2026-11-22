@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c2_ship.talk.lyle_copy.1.04",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "c203925d15fa56e7d62fdb7dd7aa89525811d5c66c7a246ab6fe15b6ce81727c",
+  "expected": "People change, Steve. Mostly for the better.",
+  "recognized": "People change, Steve. Mostly for the better.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 3.44,
+  "sample_rate": 48000,
+  "peak": 0.55987548828125,
+  "rms": 0.060367128557780855,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

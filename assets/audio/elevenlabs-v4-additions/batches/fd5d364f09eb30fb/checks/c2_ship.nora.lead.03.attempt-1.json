@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "audio_id": "c2_ship.nora.lead.03",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "c78fa71bce9563e4fd0f99d9649dd887d87c1ca0c365b71af9c7643c9b386497",
+  "expected": "The corridor light flashes at two, six and ten seconds. Every four seconds, like a clock.",
+  "recognized": "The corridor light flashes at two, six, and ten seconds, every four seconds, like a clock.",
+  "local_recognized": "The corridor light flashes at 2, 6, and 10 seconds. Every 4 seconds. Like a clock.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 7.52,
+  "sample_rate": 48000,
+  "peak": 0.36895751953125,
+  "rms": 0.03438048366262368,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c2_ship.nora.lead.03.json",
+    "sha256": "f286c6522407d9c20f12489de05303cd6d0d529237778d3acb14b09e34f0bfaa",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  },
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

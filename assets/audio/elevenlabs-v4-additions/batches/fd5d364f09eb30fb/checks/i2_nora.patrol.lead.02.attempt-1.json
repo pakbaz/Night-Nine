@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "i2_nora.patrol.lead.02",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "e2089b5e754d4aab2cac4ae64eb76ac0f7d4719042a696b779b22c7ffbbc9f97",
+  "expected": "Once that far door shuts, he can’t see the aisle. Crossing takes me four counts.",
+  "recognized": "Once that far door shuts, he can't see the aisle. Crossing takes me four counts.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 5.52,
+  "sample_rate": 48000,
+  "peak": 0.60784912109375,
+  "rms": 0.05307610481899055,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

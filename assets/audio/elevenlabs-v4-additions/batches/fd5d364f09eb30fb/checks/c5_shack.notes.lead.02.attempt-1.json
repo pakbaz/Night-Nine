@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "audio_id": "c5_shack.notes.lead.02",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "7b9bf05c9108941a1effd1f46a5d223e46e49b86e1bca7aeacbdc709fcbe966d",
+  "expected": "Coltrane was Dad’s favourite record. And weather carts are the little weather tapes we played on air at KBWR.",
+  "recognized": "Coltrane was Dad's favorite record, and weather carts are the little weather tapes we played on air at KBWR.",
+  "local_recognized": "Coltrane was Dad's favorite record, and Weather Carts are the little weather tapes we played on air at KBWR.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 7.04,
+  "sample_rate": 48000,
+  "peak": 0.3486328125,
+  "rms": 0.04598341510389365,
+  "level_match_gain_db": 0.0,
+  "word_edits": 1,
+  "word_error_rate": 0.05,
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c5_shack.notes.lead.02.json",
+    "sha256": "586cc2fc8fbb7d1ed12c8e382c3b1736f5aab4083a3b47f9f02cc7e7d6e2d04e",
+    "model": "scribe_v3",
+    "word_edits": 1,
+    "listening_reviewed": false
+  },
+  "status": "retake_required",
+  "failure_reason": "asr_mismatch"
+}

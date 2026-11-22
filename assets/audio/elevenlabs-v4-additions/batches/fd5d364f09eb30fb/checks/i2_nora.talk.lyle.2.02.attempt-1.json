@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "i2_nora.talk.lyle.2.02",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "ee10eebb077bf1de3b46860e1ef367d491a59f9bbda109befc0cc29591941190",
+  "expected": "I think somebody probably is, Lyle.",
+  "recognized": "I think somebody probably is, Lyle.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 2.56,
+  "sample_rate": 48000,
+  "peak": 0.32476806640625,
+  "rms": 0.048510714240877835,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

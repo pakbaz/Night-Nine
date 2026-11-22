@@ -1,0 +1,17 @@
+{
+  "operation": "text_to_speech",
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "audio_id": "c2_ship.talk.lyle_copy.1.02",
+  "attempt": 1,
+  "voice_id": "CwhRBWXzGAHq8TQ4Fs17",
+  "model_id": "eleven_v4",
+  "text_sha256": "c98442274765156b6a282cf131bac0cfd428c1ea2206db9b018139f3b54f87de",
+  "synthesis_text_sha256": "c98442274765156b6a282cf131bac0cfd428c1ea2206db9b018139f3b54f87de",
+  "request_id": "RnoAzysgrDR7lQbNRh0A",
+  "trace_id": "148fb928c963fade43b30d9812c474a9",
+  "character_cost": 29,
+  "output_format": "mp3_44100_192",
+  "audio_sha256": "d2628155ac28f2d3711cc98877176a4d52796fe101e2c8bcd93a8c12134da9c4",
+  "response_bytes": 109130,
+  "seed": 1344624422
+}

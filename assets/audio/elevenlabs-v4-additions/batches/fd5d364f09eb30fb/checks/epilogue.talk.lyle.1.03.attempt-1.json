@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "epilogue.talk.lyle.1.03",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "717c7527ff509564a93498ee2c90353f5f441cc66a4db76bc745b63a5185bb26",
+  "expected": "The other one learned the lines with him. I’m still learning mine.",
+  "recognized": "The other one learned the lines with him. I'm still learning mine.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.08,
+  "sample_rate": 48000,
+  "peak": 0.51202392578125,
+  "rms": 0.06804646356229241,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

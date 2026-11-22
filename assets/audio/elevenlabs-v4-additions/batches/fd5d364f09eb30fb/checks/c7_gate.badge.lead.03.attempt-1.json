@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c7_gate.badge.lead.03",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "4d31f8fc8956e42daea2eeb3c0291d3cb96211ea269e71bcb112fb5e72b9193a",
+  "expected": "The gate card has three windows. Red at 11:10 is for deliveries on foot. No vehicles at all.",
+  "recognized": "The gate card has three windows. Red at 1110 is for deliveries on foot. No vehicles at all.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 7.2,
+  "sample_rate": 48000,
+  "peak": 0.467864990234375,
+  "rms": 0.04987172435329573,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

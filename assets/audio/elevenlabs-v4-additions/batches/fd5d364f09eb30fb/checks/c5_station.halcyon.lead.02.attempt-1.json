@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c5_station.halcyon.lead.02",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "d54a0017753b217857b68fc3d740da0d590d09f1eb54c0d882ebae861fea6f66",
+  "expected": "Three early nights in September. Halcyon said they were saving on my overtime.",
+  "recognized": "three early nights in September, Halcyon said they were saving on my overtime.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 5.28,
+  "sample_rate": 48000,
+  "peak": 0.27655029296875,
+  "rms": 0.040909188976712946,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c2_ship.talk.iris.3.04",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "aa29e57704cddd51e94b4a1e5b39ec0284d7e715b4eb4732634b753f4b4dc3ac",
+  "expected": "It is the only one I am allowed to give you.",
+  "recognized": "It is the only one I am allowed to give you.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 2.8,
+  "sample_rate": 48000,
+  "peak": 0.378509521484375,
+  "rms": 0.06046194260133286,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

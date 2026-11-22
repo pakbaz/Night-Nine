@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "epilogue.talk.helen.2.01",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "356606cb353330fb43c6b8c5fcb838de37b6df4d6315d38d1658dacc9a4d236a",
+  "expected": "I keep hearing Wick’s phrase when I do the dishes.",
+  "recognized": "I keep hearing Wick's phrase when I do the dishes.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 3.52,
+  "sample_rate": 48000,
+  "peak": 0.35198974609375,
+  "rms": 0.05716384237717622,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

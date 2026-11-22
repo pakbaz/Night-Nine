@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c10_station.relay.lead.05",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "9ba3f80d2eeb27786ed92c7f4fd70ddaf7ba10cbbf18f6f4c46bcd8b5f9ebec7",
+  "expected": "Marsh says it’s dropping now. Cedar said the same words as last time, exactly.",
+  "recognized": "Marsh says it's dropping now. Cedar said the same words as last time, exactly.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 5.84,
+  "sample_rate": 48000,
+  "peak": 0.242279052734375,
+  "rms": 0.02329799500837724,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

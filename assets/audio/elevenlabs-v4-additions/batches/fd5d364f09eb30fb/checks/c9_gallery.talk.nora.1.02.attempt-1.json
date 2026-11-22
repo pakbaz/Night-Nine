@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c9_gallery.talk.nora.1.02",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "3a5d05d480e61b60af2e52884413faf17a207c9fb928c114cd64a7d48aa27327",
+  "expected": "She said you’d stopped arguing with her. That’s how she knew something was wrong.",
+  "recognized": "She said you'd stopped arguing with her. That's how she knew something was wrong.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.48,
+  "sample_rate": 48000,
+  "peak": 0.277618408203125,
+  "rms": 0.03406633881434462,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

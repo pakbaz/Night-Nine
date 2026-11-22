@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "audio_id": "epilogue.talk.iris.2.02",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "8c3080642667daad08ec48df3faba0974288d756fc914c8a43e0396aeae9f9d7",
+  "expected": "With Carmen, dinner and a trap can be the same thing.",
+  "recognized": "With Carmen, dinner and a trap can be the same thing.",
+  "local_recognized": "With Carmen, dinner in a trap can be the same thing.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 3.6,
+  "sample_rate": 48000,
+  "peak": 0.328887939453125,
+  "rms": 0.038976316233970944,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/epilogue.talk.iris.2.02.json",
+    "sha256": "57cb36549ce8b84e22fde33a26bd13aea8e60b3690f5b59d4ff99b1b78b67064",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  },
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

@@ -1,0 +1,17 @@
+{
+  "operation": "text_to_speech",
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "audio_id": "p_meeting.confess.lead.03",
+  "attempt": 1,
+  "voice_id": "RBUtdrDRjER5aScqHwAS",
+  "model_id": "eleven_v4",
+  "text_sha256": "66014b2a2f8928aee0cc97c6d81ce06c4911c2c185333c7ae756a082d6bb9f43",
+  "synthesis_text_sha256": "66014b2a2f8928aee0cc97c6d81ce06c4911c2c185333c7ae756a082d6bb9f43",
+  "request_id": "qeoZaEFvI82lYQo19tXY",
+  "trace_id": "9a3cade80aa5b3f701c2651aba210034",
+  "character_cost": 36,
+  "output_format": "mp3_44100_192",
+  "audio_sha256": "c8bbb7d2d78cb4815922b5ef5a1e4541759d6cb85d70e7d42ac878603a2f434a",
+  "response_bytes": 145492,
+  "seed": 3757289029
+}

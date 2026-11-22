@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c5_station.halcyon.lead.03",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "6feb03fca66f0b5ad51dbed03609c8d23b1da274c6f9b232503c9888146edc0b",
+  "expected": "And the tower log says the tower ran by itself on those same three nights.",
+  "recognized": "And the tower log says the tower ran by itself on those same three nights.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.72,
+  "sample_rate": 48000,
+  "peak": 0.402496337890625,
+  "rms": 0.04557731325122485,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

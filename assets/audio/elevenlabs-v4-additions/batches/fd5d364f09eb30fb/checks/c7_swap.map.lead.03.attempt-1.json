@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c7_swap.map.lead.03",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "9c2c3d6dcf51f73c0582b216fff33a516c43156d2d0816bce3e1bd6ba1071d46",
+  "expected": "And this morning she burned her left wrist on the folder. Pell wrote it down. Left wrist, bandaged.",
+  "recognized": "And this morning, she burned her left wrist on the folder. Pell wrote it down. Left wrist, bandaged.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 6.8,
+  "sample_rate": 48000,
+  "peak": 0.400604248046875,
+  "rms": 0.043719998941081584,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

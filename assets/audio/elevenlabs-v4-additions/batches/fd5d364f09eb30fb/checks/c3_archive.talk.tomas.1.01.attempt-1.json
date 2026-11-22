@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c3_archive.talk.tomas.1.01",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "c998628e58a58cd90fdb8782ca497791798eb54302c49e0a4f3bf15bd1d01a1d",
+  "expected": "How many listeners does the podcast have now?",
+  "recognized": "How many listeners does the podcast have now?",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 2.8,
+  "sample_rate": 48000,
+  "peak": 0.28192138671875,
+  "rms": 0.04102503443319133,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

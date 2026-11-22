@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c7_swap.talk.stephen.2.01",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "60961f6b9f483f8cb3a38f97c76c80bef7d6a8192c5b8ff6f7f5635e3ff3e038",
+  "expected": "My hands are shaking. Are yours shaking too?",
+  "recognized": "My hands are shaking. Are yours shaking too?",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 3.28,
+  "sample_rate": 48000,
+  "peak": 0.19378662109375,
+  "rms": 0.035270153548236836,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

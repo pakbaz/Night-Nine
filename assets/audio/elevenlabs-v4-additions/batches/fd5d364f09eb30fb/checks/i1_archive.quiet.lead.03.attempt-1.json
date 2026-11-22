@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "audio_id": "i1_archive.quiet.lead.03",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "0decfb553de42e5eec8cfc91bd16106470aa5e234bd41a0fedc67bbcbde11c58",
+  "expected": "Tirel went quiet three hundred years ago. The other six, five hundred years ago or more.",
+  "recognized": "Tyrell went quiet 300 years ago, the other six 500 years ago or more.",
+  "local_recognized": "Tyrell went quiet 300 years ago, the other six 500 years ago or more.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 7.12,
+  "sample_rate": 48000,
+  "peak": 0.899749755859375,
+  "rms": 0.14060559666540282,
+  "level_match_gain_db": 0.0,
+  "word_edits": 3,
+  "word_error_rate": 0.23076923076923078,
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/i1_archive.quiet.lead.03.json",
+    "sha256": "37a068b4073e4481ecd82435bf5e0c8479d1835c02e4596d34f71795041af9bb",
+    "model": "scribe_v3",
+    "word_edits": 3,
+    "listening_reviewed": false
+  },
+  "status": "retake_required",
+  "failure_reason": "asr_mismatch"
+}

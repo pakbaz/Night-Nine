@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c8_rig.talk.ward.1.01",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "025c5ee3fc496b61ed59ab43bc57d6d52ff2b99fff48040b74d178c1156fceb4",
+  "expected": "How’s your wrist, Madam President?",
+  "recognized": "How's your wrist, Madam President?",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 2.08,
+  "sample_rate": 48000,
+  "peak": 0.2803955078125,
+  "rms": 0.04352977082589077,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

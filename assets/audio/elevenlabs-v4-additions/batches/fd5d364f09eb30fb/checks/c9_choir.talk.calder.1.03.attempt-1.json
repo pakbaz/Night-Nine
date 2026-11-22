@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c9_choir.talk.calder.1.03",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "7134499724f0297c6f40f656e345a6447171f5e0b9e07baba4a9843e4fc0cba1",
+  "expected": "Dale Kittredge is asking for his mailbag. So yes, I think so.",
+  "recognized": "Dale Kittredge is asking for his mailbag. So yes, I think so.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.8,
+  "sample_rate": 48000,
+  "peak": 0.475616455078125,
+  "rms": 0.060617462436625795,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

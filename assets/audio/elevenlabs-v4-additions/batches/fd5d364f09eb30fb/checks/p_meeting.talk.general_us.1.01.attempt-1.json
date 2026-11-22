@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "p_meeting.talk.general_us.1.01",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "cf372f80fae05f2347ed5f2610262625c28af16111923c6ed43d8f8d11bbab6c",
+  "expected": "Coffee, General? It comes from the machine in the hall.",
+  "recognized": "coffee general? It comes from the machine in the hall.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 3.68,
+  "sample_rate": 48000,
+  "peak": 0.584197998046875,
+  "rms": 0.0688226237244559,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c5_shack.talk.luis.3.02",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "52a43c4894e26e5feebf4c1f46a2300444f8e0a4a5e336d74f4ff333f625ca50",
+  "expected": "Last month she let her mother win an argument about salt. Nora never lets anybody win anything.",
+  "recognized": "Last month, she let her mother win an argument about salt. Nora never lets anybody win anything.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 6.8,
+  "sample_rate": 48000,
+  "peak": 0.7811279296875,
+  "rms": 0.08918663033724701,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c9_gallery.antenna.lead.03",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "d6db1c61e34e2bf3efdde61b4e07722ebe6738f6e5c5fdf32b971e3fa4c322c9",
+  "expected": "The lamp for the inner door is round the bend. You can only see it from the deck.",
+  "recognized": "The lamp for the inner door is round the bend. You can only see it from the deck.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 5.12,
+  "sample_rate": 48000,
+  "peak": 0.28546142578125,
+  "rms": 0.0359559547029472,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

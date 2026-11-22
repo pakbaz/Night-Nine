@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c6_jail.distract.lead.03",
+  "attempt": 1,
+  "plan_sha256": "d2bdf5c4acbc89d16422f6915440fe295d460d09b3bf365d836f4c6f285a412b",
+  "wav_sha256": "a583ec1691e0ad81a51d3846cb6a00a5cabe73281a8099b46e348f800094319d",
+  "expected": "She leaves at 11:59 and she’s back at 12:03. I need two clear minutes.",
+  "recognized": "She leaves at 11.59, and she's back at 12.03. I need two clear minutes.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 6.8,
+  "sample_rate": 48000,
+  "peak": 0.39251708984375,
+  "rms": 0.04139483918710349,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

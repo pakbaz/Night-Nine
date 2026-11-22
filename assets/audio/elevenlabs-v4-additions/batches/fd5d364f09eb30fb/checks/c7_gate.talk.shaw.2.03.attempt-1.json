@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c7_gate.talk.shaw.2.03",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "0970440b8e824b4463e3b89fca3b5621b8e38c973ed6b4b93c7ddf4fa98d224d",
+  "expected": "The government pays worse. But the sandwiches are better.",
+  "recognized": "The government pays worse. But the sandwiches are better.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 3.76,
+  "sample_rate": 48000,
+  "peak": 0.484375,
+  "rms": 0.039601384624037575,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

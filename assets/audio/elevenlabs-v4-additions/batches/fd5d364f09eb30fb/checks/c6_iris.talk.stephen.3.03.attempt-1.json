@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c6_iris.talk.stephen.3.03",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "d255a2886d4d9350f1a1dd2131d3c7a144e6a7e2d8d339f71c8a49c18f8a8884",
+  "expected": "I’ve never been the interesting one before. I could get used to it.",
+  "recognized": "I've never been the interesting one before. I could get used to it.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.0,
+  "sample_rate": 48000,
+  "peak": 0.227935791015625,
+  "rms": 0.03649825575369676,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

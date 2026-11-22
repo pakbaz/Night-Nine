@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c3_house.rules.lead.04",
+  "attempt": 1,
+  "plan_sha256": "d2bdf5c4acbc89d16422f6915440fe295d460d09b3bf365d836f4c6f285a412b",
+  "wav_sha256": "2c033865f78a3ba5332edf1a1bbc71cd784a07324e7cf624bd9f6eb0f162e3db",
+  "expected": "Walt moved to Washington in April. His signature is on a permit here, dated a day he was testifying in Washington.",
+  "recognized": "Walt moved to Washington in April. His signature is on a permit here, dated a day he was testifying in Washington.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 7.12,
+  "sample_rate": 48000,
+  "peak": 0.45965576171875,
+  "rms": 0.06399463573954482,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

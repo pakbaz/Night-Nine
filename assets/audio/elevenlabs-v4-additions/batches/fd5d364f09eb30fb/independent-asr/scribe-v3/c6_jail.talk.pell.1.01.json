@@ -1,0 +1,95 @@
+{
+  "audio_id": "c6_jail.talk.pell.1.01",
+  "audio_sha256": "b587d53bc7cea563f5db32a2510c0cf8fcf21573707979778c3aa877ad90ff77",
+  "file": "assets/audio/elevenlabs-v4-additions/masters/c6_jail.talk.pell.1.01.attempt-1.wav",
+  "production_plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "How is Biscuit doing, Pell?",
+  "recognized": "How is Biscuit doing, Pel?",
+  "word_edits": 1,
+  "request_id": null,
+  "trace_id": "f281fe52db7e2cfd6a3c99295e4b48d7",
+  "character_cost": "1",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "How is Biscuit doing, Pel?",
+    "words": [
+      {
+        "text": "How",
+        "start": 0.08,
+        "end": 0.2,
+        "type": "word",
+        "logprob": -1.07287787614041e-05
+      },
+      {
+        "text": " ",
+        "start": 0.2,
+        "end": 0.24,
+        "type": "spacing",
+        "logprob": -0.00017724849749356508
+      },
+      {
+        "text": "is",
+        "start": 0.24,
+        "end": 0.42,
+        "type": "word",
+        "logprob": -0.00017724849749356508
+      },
+      {
+        "text": " ",
+        "start": 0.42,
+        "end": 0.46,
+        "type": "spacing",
+        "logprob": -0.07712563872337341
+      },
+      {
+        "text": "Biscuit",
+        "start": 0.46,
+        "end": 0.78,
+        "type": "word",
+        "logprob": -0.07712563872337341
+      },
+      {
+        "text": " ",
+        "start": 0.78,
+        "end": 0.86,
+        "type": "spacing",
+        "logprob": -3.2305197237292305e-05
+      },
+      {
+        "text": "doing,",
+        "start": 0.86,
+        "end": 1.14,
+        "type": "word",
+        "logprob": -2.7159416106314893e-05
+      },
+      {
+        "text": " ",
+        "start": 1.14,
+        "end": 1.28,
+        "type": "spacing",
+        "logprob": -0.0799810066819191
+      },
+      {
+        "text": "Pel?",
+        "start": 1.28,
+        "end": 1.48,
+        "type": "word",
+        "logprob": -0.05999779485955514
+      }
+    ],
+    "transcription_id": "SEgeuBwoRyOVSFtQZbEi",
+    "audio_duration_secs": 1.92
+  },
+  "listening_reviewed": false
+}

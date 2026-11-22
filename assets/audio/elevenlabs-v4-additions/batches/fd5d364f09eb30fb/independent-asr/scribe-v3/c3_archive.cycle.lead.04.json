@@ -1,0 +1,221 @@
+{
+  "audio_id": "c3_archive.cycle.lead.04",
+  "audio_sha256": "4513e406aa6af3bb291e9ccdb6bab6a8a66245f7139cc35752cc9cc74d3fc532",
+  "file": "assets/audio/elevenlabs-v4-additions/masters/c3_archive.cycle.lead.04.attempt-1.wav",
+  "production_plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "The pier lamp always dims first, at 23:42. Footsteps pass the boathouse at 23:53.",
+  "recognized": "The pier lamp always dims first at 23:42. Footsteps pass the boathouse at 23:53.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "ea1795f99d9f44d54dd4d7f830e0650f",
+  "character_cost": "3",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "The pier lamp always dims first at 23:42. Footsteps pass the boathouse at 23:53.",
+    "words": [
+      {
+        "text": "The",
+        "start": 0.12,
+        "end": 0.24,
+        "type": "word",
+        "logprob": -2.50339189733495e-06
+      },
+      {
+        "text": " ",
+        "start": 0.24,
+        "end": 0.28,
+        "type": "spacing",
+        "logprob": -0.004034832119941711
+      },
+      {
+        "text": "pier",
+        "start": 0.28,
+        "end": 0.48,
+        "type": "word",
+        "logprob": -0.004034832119941711
+      },
+      {
+        "text": " ",
+        "start": 0.48,
+        "end": 0.58,
+        "type": "spacing",
+        "logprob": -5.876845170860179e-05
+      },
+      {
+        "text": "lamp",
+        "start": 0.58,
+        "end": 0.8,
+        "type": "word",
+        "logprob": -5.876845170860179e-05
+      },
+      {
+        "text": " ",
+        "start": 0.8,
+        "end": 1.02,
+        "type": "spacing",
+        "logprob": -0.00010013079008786008
+      },
+      {
+        "text": "always",
+        "start": 1.02,
+        "end": 1.42,
+        "type": "word",
+        "logprob": -0.00010013079008786008
+      },
+      {
+        "text": " ",
+        "start": 1.42,
+        "end": 1.46,
+        "type": "spacing",
+        "logprob": -0.00041154498467221856
+      },
+      {
+        "text": "dims",
+        "start": 1.46,
+        "end": 1.8,
+        "type": "word",
+        "logprob": -0.00041154498467221856
+      },
+      {
+        "text": " ",
+        "start": 1.8,
+        "end": 1.86,
+        "type": "spacing",
+        "logprob": -3.135155202471651e-05
+      },
+      {
+        "text": "first",
+        "start": 1.86,
+        "end": 2.28,
+        "type": "word",
+        "logprob": -3.135155202471651e-05
+      },
+      {
+        "text": " ",
+        "start": 2.28,
+        "end": 2.28,
+        "type": "spacing",
+        "logprob": -0.001179595128633082
+      },
+      {
+        "text": "at",
+        "start": 2.66,
+        "end": 2.8,
+        "type": "word",
+        "logprob": -0.001179595128633082
+      },
+      {
+        "text": " ",
+        "start": 2.8,
+        "end": 2.98,
+        "type": "spacing",
+        "logprob": -2.7418097943154862e-06
+      },
+      {
+        "text": "23:42.",
+        "start": 2.98,
+        "end": 4.18,
+        "type": "word",
+        "logprob": -0.00012247018260798845
+      },
+      {
+        "text": " ",
+        "start": 4.18,
+        "end": 4.18,
+        "type": "spacing",
+        "logprob": -0.0006104036583565176
+      },
+      {
+        "text": "Footsteps",
+        "start": 4.92,
+        "end": 5.42,
+        "type": "word",
+        "logprob": -0.00036592138510766544
+      },
+      {
+        "text": " ",
+        "start": 5.42,
+        "end": 5.54,
+        "type": "spacing",
+        "logprob": -0.06256508827209473
+      },
+      {
+        "text": "pass",
+        "start": 5.54,
+        "end": 5.8,
+        "type": "word",
+        "logprob": -0.06256508827209473
+      },
+      {
+        "text": " ",
+        "start": 5.8,
+        "end": 5.84,
+        "type": "spacing",
+        "logprob": -1.9073468138230965e-06
+      },
+      {
+        "text": "the",
+        "start": 5.84,
+        "end": 5.96,
+        "type": "word",
+        "logprob": -1.9073468138230965e-06
+      },
+      {
+        "text": " ",
+        "start": 5.96,
+        "end": 6.0,
+        "type": "spacing",
+        "logprob": -0.008894585072994232
+      },
+      {
+        "text": "boathouse",
+        "start": 6.0,
+        "end": 6.62,
+        "type": "word",
+        "logprob": -0.002497813425078574
+      },
+      {
+        "text": " ",
+        "start": 6.62,
+        "end": 6.64,
+        "type": "spacing",
+        "logprob": -2.50339189733495e-06
+      },
+      {
+        "text": "at",
+        "start": 6.64,
+        "end": 6.78,
+        "type": "word",
+        "logprob": -2.50339189733495e-06
+      },
+      {
+        "text": " ",
+        "start": 6.78,
+        "end": 6.98,
+        "type": "spacing",
+        "logprob": -3.576278118089249e-07
+      },
+      {
+        "text": "23:53.",
+        "start": 6.98,
+        "end": 8.24,
+        "type": "word",
+        "logprob": -0.00031349533787761175
+      }
+    ],
+    "transcription_id": "HuExGa6kITdwJpKBFBzs",
+    "audio_duration_secs": 8.8
+  },
+  "listening_reviewed": false
+}

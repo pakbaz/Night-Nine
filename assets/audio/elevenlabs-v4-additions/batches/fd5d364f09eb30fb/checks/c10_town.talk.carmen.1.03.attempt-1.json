@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c10_town.talk.carmen.1.03",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "10af9bfb3be3c1a9ab5bca273f7b6e302fa77f9f87306cfa8322511c3e5e2c69",
+  "expected": "Thank me by eating something. You haven’t eaten since Thursday. I can tell.",
+  "recognized": "Thank me by eating something. You haven't eaten since Thursday. I can tell.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 5.6,
+  "sample_rate": 48000,
+  "peak": 0.38079833984375,
+  "rms": 0.033430475644278736,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

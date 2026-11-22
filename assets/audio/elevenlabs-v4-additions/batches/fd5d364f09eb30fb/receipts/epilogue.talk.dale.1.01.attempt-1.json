@@ -1,0 +1,17 @@
+{
+  "operation": "text_to_speech",
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "audio_id": "epilogue.talk.dale.1.01",
+  "attempt": 1,
+  "voice_id": "kSSJYNGo5Kev6qgwVloV",
+  "model_id": "eleven_v4",
+  "text_sha256": "515e75a226e2251c5566950f4b674a7023c6bea521566b6395e4f26bdb85b87a",
+  "synthesis_text_sha256": "515e75a226e2251c5566950f4b674a7023c6bea521566b6395e4f26bdb85b87a",
+  "request_id": "ygbivbiiOTTOxdKuwrds",
+  "trace_id": "47edf08f5e3040db7dfbecf581b4427f",
+  "character_cost": 29,
+  "output_format": "mp3_44100_192",
+  "audio_sha256": "444f52788fa705931b1b55c646d6660dc22db6497d0ab8ddf2c054e30c72a821",
+  "response_bytes": 147373,
+  "seed": 4194681088
+}

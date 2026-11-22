@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c10_town.talk.wen.1.03",
+  "attempt": 1,
+  "plan_sha256": "d2bdf5c4acbc89d16422f6915440fe295d460d09b3bf365d836f4c6f285a412b",
+  "wav_sha256": "80f4f52ebc870c435ba1c0af73927b0afc9338ad4ed706f6124209f584541c92",
+  "expected": "It did not. My test fooled two admirals as well.",
+  "recognized": "It did not. My test fooled two admirals as well.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.32,
+  "sample_rate": 48000,
+  "peak": 0.7408447265625,
+  "rms": 0.09224745822123702,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

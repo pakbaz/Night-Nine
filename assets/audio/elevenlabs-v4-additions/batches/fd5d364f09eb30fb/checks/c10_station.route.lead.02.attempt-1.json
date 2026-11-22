@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "audio_id": "c10_station.route.lead.02",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "cf896b85ba024f8c0a3708b2abb9212a8fe176f217b5296f4c8b677051beb226",
+  "expected": "Birch was your fixed tester. Ash was the old rehearsal loop. Elm followed Shaw’s hand.",
+  "recognized": "Birch was your fixed tester. Ash was the old rehearsal loop. Elm followed Shaw's hand.",
+  "local_recognized": "Birch was your fix tester. Ash was the old rehearsal loop. Elm followed Shaw's hand.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 6.0,
+  "sample_rate": 48000,
+  "peak": 0.437286376953125,
+  "rms": 0.0461824560984305,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c10_station.route.lead.02.json",
+    "sha256": "7c41e033587b1767239bbef41849db1628d1eb2e308ea0c2aa9ab8f0945b395f",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  },
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

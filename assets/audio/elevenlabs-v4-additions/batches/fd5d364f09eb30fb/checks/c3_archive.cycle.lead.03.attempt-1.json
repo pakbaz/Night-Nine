@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c3_archive.cycle.lead.03",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "1d393fcf20c29e8c40d7954b6371021965272f60cf03daf182c9377c3422b83b",
+  "expected": "Each box has two dates. The night I recorded, and the day the episode aired.",
+  "recognized": "Each box has two dates, the night I recorded and the day the episode aired.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 5.6,
+  "sample_rate": 48000,
+  "peak": 0.79083251953125,
+  "rms": 0.09943106449413,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

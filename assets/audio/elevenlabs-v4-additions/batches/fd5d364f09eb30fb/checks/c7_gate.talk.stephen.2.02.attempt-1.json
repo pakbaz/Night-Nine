@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c7_gate.talk.stephen.2.02",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "26a989a2e011cf416c334871e10567370f571a3218297041c7ac67627f926336",
+  "expected": "He thinks you’re me, Stephen. My face is on every poster.",
+  "recognized": "He thinks you're me, Steven. My face is on every poster.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.32,
+  "sample_rate": 48000,
+  "peak": 0.264678955078125,
+  "rms": 0.04168037804872748,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

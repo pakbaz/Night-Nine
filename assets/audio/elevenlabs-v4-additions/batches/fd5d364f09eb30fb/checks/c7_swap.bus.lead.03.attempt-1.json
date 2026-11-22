@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c7_swap.bus.lead.03",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "cb22e275ea7734af4c348c2df9d567f3a57e0e8de14c222177bf291719e026f8",
+  "expected": "Blue reaches the lectern, the back fence and the service steps.",
+  "recognized": "Blue reaches the lectern, the back fence, and the service steps.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.24,
+  "sample_rate": 48000,
+  "peak": 0.41851806640625,
+  "rms": 0.04280205118409155,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

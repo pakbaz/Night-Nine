@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c7_swap.map.lead.05",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "c86930e3e3a2f55f59ca66764fc3a3f89f3d4317e9307f15e2cafd56b1ea0f8e",
+  "expected": "Stair camera. The doctor is helping a patient down the east stair. Her left wrist is bandaged.",
+  "recognized": "Stair Camera. The doctor is helping a patient down the east stair. Her left wrist is bandaged.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 6.88,
+  "sample_rate": 48000,
+  "peak": 0.40802001953125,
+  "rms": 0.03723406162849206,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

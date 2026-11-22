@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "audio_id": "c10_town.talk.wen.1.03",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "5a5397d417dc24128d2cdd54b03949e58e756f40a386657b1bd18fb48bbf7b2e",
+  "expected": "It did not. Mine fooled two admirals as well.",
+  "recognized": "It did not. Mindful2Admirals as well.",
+  "local_recognized": "It did not mind fooled two admirals as well.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 3.92,
+  "sample_rate": 48000,
+  "peak": 0.701080322265625,
+  "rms": 0.09182703959316221,
+  "level_match_gain_db": 0.0,
+  "word_edits": 2,
+  "word_error_rate": 0.2222222222222222,
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c10_town.talk.wen.1.03.json",
+    "sha256": "12a13c58f5f85789cceca84fa01315fa40200d692a4e0cf3fa28c7e9da351c7f",
+    "model": "scribe_v3",
+    "word_edits": 2,
+    "listening_reviewed": false
+  },
+  "status": "retake_required",
+  "failure_reason": "asr_mismatch"
+}

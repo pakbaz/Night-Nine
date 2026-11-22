@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "audio_id": "c6_jail.talk.pell.2.03",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "4f4557b7d5f90446e3620c99c3e5ba95b53800d7388e73329496a6b7091aaff7",
+  "expected": "I have started to like a twelfth. Carmen gives me a churro at La Marea. Dale never stopped there.",
+  "recognized": "I have started to like a twelfth. Carmen gives me a churro at La Marea. They'll never stop there.",
+  "local_recognized": "I have started to like a twelfth. Carmen gives me a churro at La Marea. They'll never stop there.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 7.76,
+  "sample_rate": 48000,
+  "peak": 0.832489013671875,
+  "rms": 0.08086564224041973,
+  "level_match_gain_db": 0.0,
+  "word_edits": 3,
+  "word_error_rate": 0.15789473684210525,
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c6_jail.talk.pell.2.03.json",
+    "sha256": "dfa3e334d482c9d8a430617e5bc6df166c8c3f280b3176e935febd046c3ed6e4",
+    "model": "scribe_v3",
+    "word_edits": 3,
+    "listening_reviewed": false
+  },
+  "status": "retake_required",
+  "failure_reason": "asr_mismatch"
+}

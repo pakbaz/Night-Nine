@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c10_station.talk.stephen.1.02",
+  "attempt": 1,
+  "plan_sha256": "d2bdf5c4acbc89d16422f6915440fe295d460d09b3bf365d836f4c6f285a412b",
+  "wav_sha256": "66780c8d73dd6d2da6d9c145e689ced74c5871b7f7df143dce724f622380bf04",
+  "expected": "You do. Black and very strong, two cups before breakfast.",
+  "recognized": "You do. Black and very strong. Two cups before breakfast.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.56,
+  "sample_rate": 48000,
+  "peak": 0.561676025390625,
+  "rms": 0.04235768557860382,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

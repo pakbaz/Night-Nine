@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c9_gallery.talk.iris.2.03",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "ba9147ec188eb0afcd31aba32b83fd6597950d4508c5f9fdee5c16b827581cbf",
+  "expected": "No. Keep asking. I want to find out which answers are mine.",
+  "recognized": "No, keep asking. I want to find out which answers are mine.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.32,
+  "sample_rate": 48000,
+  "peak": 0.41461181640625,
+  "rms": 0.06299899529205884,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

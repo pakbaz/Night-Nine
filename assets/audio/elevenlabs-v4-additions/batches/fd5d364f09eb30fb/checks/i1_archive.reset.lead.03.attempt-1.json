@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "i1_archive.reset.lead.03",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "3eb245f1d0f5735ec08f4452579df90e082086e9a51b12b2115173792021c698",
+  "expected": "And whatever the echo loses, I must describe in the witness ledger. In words, not numbers.",
+  "recognized": "And whatever the echo loses, I must describe in the witness ledger, in words, not numbers.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 7.6,
+  "sample_rate": 48000,
+  "peak": 0.877899169921875,
+  "rms": 0.1512443951316594,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c9_wake.talk.frank.2.03",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "87fee69cf2d57001d4ae82b8dc54530b0e1dd1132d42cddaf3b3c872b7d01d29",
+  "expected": "Good radio. I told your mother it was a good radio.",
+  "recognized": "Good radio. I told your mother it was a good radio.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.16,
+  "sample_rate": 48000,
+  "peak": 0.538055419921875,
+  "rms": 0.06370528531043693,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

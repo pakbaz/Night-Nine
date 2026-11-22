@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c7_swap.bus.lead.05",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "7fbfeacdc1d9c9471f2b0c0e40176eee6e9c3082176993df27fc9f458ae7ae9d",
+  "expected": "For June’s reply, three returns. Copper goes to you, Stephen and the lectern speaker.",
+  "recognized": "For June's reply, three returns. Copper goes to you, Stephen, and the lectern speaker.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 6.48,
+  "sample_rate": 48000,
+  "peak": 0.47918701171875,
+  "rms": 0.038386878091558045,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c7_gate.talk.shaw.2.02",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "a0d0f32b0fddb6f9a1d9b1cb61d7b72337d16e4bc2f8427b9aca0472dec814a2",
+  "expected": "And now you run sound checks in the fog?",
+  "recognized": "And now you run sound checks in the fog?",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 2.56,
+  "sample_rate": 48000,
+  "peak": 0.21258544921875,
+  "rms": 0.04121474251428191,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

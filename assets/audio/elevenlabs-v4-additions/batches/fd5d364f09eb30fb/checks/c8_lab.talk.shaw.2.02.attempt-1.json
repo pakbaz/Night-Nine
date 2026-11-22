@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c8_lab.talk.shaw.2.02",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "7f9b2255c8c14b695750bba419d697a1a4bc88351c9bf742e7a6ddbc37a331bb",
+  "expected": "So can I. It makes the cinema very hard.",
+  "recognized": "So can I. It makes the cinema very hard.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 3.44,
+  "sample_rate": 48000,
+  "peak": 0.33966064453125,
+  "rms": 0.03657551802233784,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

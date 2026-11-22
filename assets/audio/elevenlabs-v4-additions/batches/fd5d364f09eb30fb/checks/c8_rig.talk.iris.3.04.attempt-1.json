@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c8_rig.talk.iris.3.04",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "9e449be0d5b8a99ee5ccd40efcad019ab26dda07af5346856ac59b7e91d1cdbf",
+  "expected": "I’m so sorry, Iris. Truly.",
+  "recognized": "I'm so sorry, Iris. Truly.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 2.8,
+  "sample_rate": 48000,
+  "peak": 0.224151611328125,
+  "rms": 0.030038046170884163,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

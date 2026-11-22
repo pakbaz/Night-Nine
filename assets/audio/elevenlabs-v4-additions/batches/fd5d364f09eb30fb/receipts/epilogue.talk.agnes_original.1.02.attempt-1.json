@@ -1,0 +1,17 @@
+{
+  "operation": "text_to_speech",
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "audio_id": "epilogue.talk.agnes_original.1.02",
+  "attempt": 1,
+  "voice_id": "jVMsZEw3hfmEAe9OUUtS",
+  "model_id": "eleven_v4",
+  "text_sha256": "9b31a3fa26eb1de4289b416b15d9e761d388a11c1d355aa97ec1bcd200f2e523",
+  "synthesis_text_sha256": "9b31a3fa26eb1de4289b416b15d9e761d388a11c1d355aa97ec1bcd200f2e523",
+  "request_id": "uhz736eluMgoNjx8PDfE",
+  "trace_id": "cb2e5421ddc9c51f3a45a501a29b27cc",
+  "character_cost": 23,
+  "output_format": "mp3_44100_192",
+  "audio_sha256": "f1c7bbf15eca7fcd977fa7439d1afaae6b9f6265f6c17ccd5d8034a4b4129792",
+  "response_bytes": 89695,
+  "seed": 155266303
+}

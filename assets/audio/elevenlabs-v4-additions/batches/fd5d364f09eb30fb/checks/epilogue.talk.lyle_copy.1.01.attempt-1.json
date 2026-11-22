@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "epilogue.talk.lyle_copy.1.01",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "f430f4fa973188000d7828e00dbb6dff394971c066543ca7ddf8ce6dcee23455",
+  "expected": "I still go to every game. Now we take turns driving.",
+  "recognized": "I still go to every game. Now we take turns driving.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 3.84,
+  "sample_rate": 48000,
+  "peak": 0.425445556640625,
+  "rms": 0.06200705402042221,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

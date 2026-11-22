@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "audio_id": "c9_choir.talk.calder.1.02",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "ad4754ff3dc79c2e5b480e5e424db86f53faa8d0146ceffbce233c839d958c85",
+  "expected": "Is everybody all right down there?",
+  "recognized": "Is everybody all right down there?",
+  "local_recognized": "Is everybody alright down there?",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 1.76,
+  "sample_rate": 48000,
+  "peak": 0.3331298828125,
+  "rms": 0.0519194210104036,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c9_choir.talk.calder.1.02.json",
+    "sha256": "fd5a9d045f549a829db3bfd5073333ad4e0060f88faa297c73165d4f50917b96",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  },
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

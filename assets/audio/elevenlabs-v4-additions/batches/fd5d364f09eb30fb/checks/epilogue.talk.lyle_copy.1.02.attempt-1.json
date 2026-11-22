@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "epilogue.talk.lyle_copy.1.02",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "52c6e54bd7cd2b9050ff2aaef0eaa8e65a2cbca0d76764498295866dbb64819e",
+  "expected": "He’s better at the snacks. I’m better at yelling at the umpire.",
+  "recognized": "He's better at the snacks. I'm better at yelling at the umpire.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.16,
+  "sample_rate": 48000,
+  "peak": 0.561920166015625,
+  "rms": 0.06356545188751278,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

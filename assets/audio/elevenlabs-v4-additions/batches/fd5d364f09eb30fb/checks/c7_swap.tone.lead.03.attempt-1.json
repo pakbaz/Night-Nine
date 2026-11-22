@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c7_swap.tone.lead.03",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "8051c23c7a19528ba689d377437f0fd6d1376026678a00f4390feb576cff0e65",
+  "expected": "The speakers switch to the anthem at eighteen seconds past. Your tone runs two seconds. It has to finish before then.",
+  "recognized": "The speakers switch to the anthem at 18 seconds past. Your tone runs two seconds. It has to finish before then.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 8.0,
+  "sample_rate": 48000,
+  "peak": 0.425140380859375,
+  "rms": 0.03803274436519471,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

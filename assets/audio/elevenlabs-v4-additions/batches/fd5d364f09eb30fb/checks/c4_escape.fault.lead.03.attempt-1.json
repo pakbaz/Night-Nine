@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c4_escape.fault.lead.03",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "3c4b047673de362932bf1d8a81062482bf2571e84db2e6aa72b14ce77530690b",
+  "expected": "The van escort signed tonight’s ticket, and he works my corridor. Four of us sleep on the west side.",
+  "recognized": "The van escort signed tonight's ticket, and he works my corridor. Four of us sleep on the west side.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 6.4,
+  "sample_rate": 48000,
+  "peak": 0.33746337890625,
+  "rms": 0.03858509130277754,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

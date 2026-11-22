@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "epilogue.talk.agnes.1.01",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "583e0ad08dbbc9a943d718f5ad947c0229d38bace09b63512df9ad90dc00548c",
+  "expected": "The ship left without me, Steven. I asked it to.",
+  "recognized": "The ship left without me, Stephen. I asked it to.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 3.76,
+  "sample_rate": 48000,
+  "peak": 0.354583740234375,
+  "rms": 0.042294866916711485,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

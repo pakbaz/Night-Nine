@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "audio_id": "p_meeting.talk.general_us.2.03",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "bb4873afa74cbe500cf39dc322d1a3a01b18b304fb7852eda899254c7ad4e189",
+  "expected": "Then I hope he enjoyed the show.",
+  "recognized": "Then I hope you enjoyed the show.",
+  "local_recognized": "Then I hope you enjoyed the show.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 2.08,
+  "sample_rate": 48000,
+  "peak": 0.75994873046875,
+  "rms": 0.08396545746989398,
+  "level_match_gain_db": 0.0,
+  "word_edits": 1,
+  "word_error_rate": 0.14285714285714285,
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/p_meeting.talk.general_us.2.03.json",
+    "sha256": "28ecd3ee3abc16af909d1b7a011b603ea873b6f5e3f4bedd367b59995ad4175e",
+    "model": "scribe_v3",
+    "word_edits": 1,
+    "listening_reviewed": false
+  },
+  "status": "retake_required",
+  "failure_reason": "asr_mismatch"
+}

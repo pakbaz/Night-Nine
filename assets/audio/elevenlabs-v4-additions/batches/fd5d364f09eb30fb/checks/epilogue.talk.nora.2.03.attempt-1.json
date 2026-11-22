@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "epilogue.talk.nora.2.03",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "1c728fbc8e60e646d9a3aa70516c6c2404fbacbff0fe6117e025cf04c94d6516",
+  "expected": "The forks are under F. I’m leaving them there. It makes me laugh every morning.",
+  "recognized": "The forks are under F. I'm leaving them there. It makes me laugh every morning.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 5.12,
+  "sample_rate": 48000,
+  "peak": 0.6295166015625,
+  "rms": 0.06537374284308438,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

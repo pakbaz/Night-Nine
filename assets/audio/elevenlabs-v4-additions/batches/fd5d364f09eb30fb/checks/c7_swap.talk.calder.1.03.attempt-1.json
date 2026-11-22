@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c7_swap.talk.calder.1.03",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "82c6bff844acd06058961f7d2e68e914501b2ba73140ce63bf5c8448a34b8edb",
+  "expected": "She says she’s fine. She says it the way you always do.",
+  "recognized": "She says she's fine. She says it the way you always do.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 3.92,
+  "sample_rate": 48000,
+  "peak": 0.492828369140625,
+  "rms": 0.05399929196357266,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

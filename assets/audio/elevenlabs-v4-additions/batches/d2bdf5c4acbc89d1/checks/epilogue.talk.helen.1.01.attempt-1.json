@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "epilogue.talk.helen.1.01",
+  "attempt": 1,
+  "plan_sha256": "d2bdf5c4acbc89d16422f6915440fe295d460d09b3bf365d836f4c6f285a412b",
+  "wav_sha256": "710ac48179b799402e7a3d45ba5af6191c0d9eca1c357c3b3648fd1d085e42ca",
+  "expected": "Your father leaves me a note every morning now. Today’s note says the kettle is labeled.",
+  "recognized": "Your father leaves me a note every morning now. Today's note says the kettle is labeled.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 6.08,
+  "sample_rate": 48000,
+  "peak": 0.55206298828125,
+  "rms": 0.06347089639153786,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c3_archive.cycle.lead.05",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "4d25e8694c58d5edfdef035b478be7e8beedf1a24f760ad8f6e8e7c73ed9f3e2",
+  "expected": "And at four minutes past midnight, the water starts to glow.",
+  "recognized": "And at four minutes past midnight, the water starts to glow.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.48,
+  "sample_rate": 48000,
+  "peak": 0.72894287109375,
+  "rms": 0.10973348092064897,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

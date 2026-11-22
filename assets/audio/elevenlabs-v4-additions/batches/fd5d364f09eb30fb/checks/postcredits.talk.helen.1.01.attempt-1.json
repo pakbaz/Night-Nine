@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "postcredits.talk.helen.1.01",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "bd1f1796f37a0e9ed5aca9c5271a14feb643b95bff94b25e1cb65e064dfa87f4",
+  "expected": "I kept page twelve by my bed for a year. Just in case.",
+  "recognized": "I kept page 12 by my bed for a year, just in case.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.8,
+  "sample_rate": 48000,
+  "peak": 0.75408935546875,
+  "rms": 0.05290416832729149,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

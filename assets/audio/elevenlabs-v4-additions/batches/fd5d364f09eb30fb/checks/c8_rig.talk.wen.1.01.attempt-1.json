@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c8_rig.talk.wen.1.01",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "92b4a48c2d27d824a776d76a67577bacd056504122c1fed6a8f599af6d0c861e",
+  "expected": "I called my daughter last night. She asked what I’m building this time.",
+  "recognized": "I called my daughter last night. She asked what I'm building this time.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.32,
+  "sample_rate": 48000,
+  "peak": 0.599395751953125,
+  "rms": 0.08288719219316014,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

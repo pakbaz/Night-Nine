@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "p_meeting.terms.lead.02",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "250e7f2d9a1648ab70f2ffd3b0b46afb025e0401535355a6e92396c5d4290076",
+  "expected": "My card had two words he might use. One meant a technical demonstration. The other meant a performance, as on a stage.",
+  "recognized": "My card had two words he might use. One meant a technical demonstration. The other meant a performance, as on a stage.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 9.44,
+  "sample_rate": 48000,
+  "peak": 0.5367431640625,
+  "rms": 0.05972324433825026,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

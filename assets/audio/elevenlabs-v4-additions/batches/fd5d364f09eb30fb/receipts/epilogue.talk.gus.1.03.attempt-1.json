@@ -1,0 +1,17 @@
+{
+  "operation": "text_to_speech",
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "audio_id": "epilogue.talk.gus.1.03",
+  "attempt": 1,
+  "voice_id": "bO5Ny9R2uMBrCDk66aEj",
+  "model_id": "eleven_v4",
+  "text_sha256": "6ba6a37ad601416c8be9979c9ab01c78b0e8ff2cca3d4390334edaf42b3936c8",
+  "synthesis_text_sha256": "6ba6a37ad601416c8be9979c9ab01c78b0e8ff2cca3d4390334edaf42b3936c8",
+  "request_id": "pA9UK4WYIoUw61YPbQYK",
+  "trace_id": "6ad16d3037caf62093fbfb036c586c58",
+  "character_cost": 24,
+  "output_format": "mp3_44100_192",
+  "audio_sha256": "c6dae556fba396845e80b324a3240b4f4e726fbbf442513b8c8979ff3f9f7a0d",
+  "response_bytes": 107249,
+  "seed": 450967815
+}

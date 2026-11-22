@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "epilogue.talk.rook_copy.1.03",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "53af51eeafe72e612fb61024aad5f03ae350c2191cf17a1a42326406427f89a4",
+  "expected": "Tell June I’m sorry about the voicemail.",
+  "recognized": "Tell June I'm sorry about the voicemail.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 2.8,
+  "sample_rate": 48000,
+  "peak": 0.249969482421875,
+  "rms": 0.029143014679980987,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

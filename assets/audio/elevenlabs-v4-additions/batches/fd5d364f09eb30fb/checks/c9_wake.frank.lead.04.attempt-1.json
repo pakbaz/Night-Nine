@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c9_wake.frank.lead.04",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "fcb9b95c7ca34e8d36028a1e5c824d3cb332af3b7daa81f09913708c3c975d1c",
+  "expected": "Dad’s call sign is on his old cassette, in Morse. But the tape is scratched. It always loses the very last letter.",
+  "recognized": "Dad's call sign is on his old cassette in Morse, but the tape is scratched. It always loses the very last letter.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 7.84,
+  "sample_rate": 48000,
+  "peak": 0.375213623046875,
+  "rms": 0.035949905034838484,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

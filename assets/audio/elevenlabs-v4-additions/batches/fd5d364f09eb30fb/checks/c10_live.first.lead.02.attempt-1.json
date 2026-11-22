@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c10_live.first.lead.02",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "ef8ceef8a9313990c60eafa07779289e998b12e88ed7206a3ca2b838e3c96162",
+  "expected": "Careful. Two Pier lamps are still on from the rehearsal. Don’t count those.",
+  "recognized": "Careful, two pier lamps are still on from the rehearsal. Don't count those.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 5.28,
+  "sample_rate": 48000,
+  "peak": 0.534149169921875,
+  "rms": 0.05722647981284738,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

@@ -54,7 +54,7 @@
       "tasks": {
         "crossword": {
           "type": "rows",
-          "difficulty": 3,
+          "difficulty": 2,
           "title": "June’s crossword",
           "requires": [],
           "goal": "Prove to June that you are the man she pulled out of the water.",
@@ -65,22 +65,24 @@
               "direction": "after Carmen has gone, closing the door"
             },
             "calder|I was at the station all morning, and Biscuit isn’t a witness. So you tell me. What could I ask you that the man at the market couldn’t answer?",
-            "calder|Don’t tell me something sweet. Copies can be sweet. Don’t act strange. Grieving people act strange."
+            "calder|Don’t tell me something sweet. Copies can be sweet. Don’t act strange. Grieving people act strange.",
+            "steve|I called 911 on Sunday night, when people walked into the water. That was before the chair.",
+            "calder|After midnight, the 911 line rings in my kitchen. My machine keeps every call. I haven’t played Sunday’s yet."
           ],
           "prompt": "June uncaps her pen over the crossword margin. What should she ask, and how will she know the answer is true?",
-          "instruction": "The chair copied Steve’s life from the oldest end and stopped at sixty-one percent, before dawn on Monday. After midnight, Bellwether’s 911 line rings in the sheriff’s kitchen, and her machine records every call.",
+          "instruction": "The chair copies the oldest memories first. It stopped at sixty-one percent, so the copy has nothing from Sunday night. After midnight, the 911 line rings in June’s kitchen, and her machine records every call.",
           "rows": [
             {
-              "label": "June asks about",
+              "label": "What should June ask about?",
               "options": [
-                "The lullaby Mom sang him to sleep",
-                "His first show on KBWR",
-                "His 911 call on Sunday night"
+                "Mom’s lullaby",
+                "His first radio show",
+                "His 911 call on Sunday"
               ],
               "answer": 2
             },
             {
-              "label": "Steve writes",
+              "label": "What does Steve write down?",
               "options": [
                 "“There’s a ship under the bay.”",
                 "“People are walking into the water, and they’re not coming back out.”",
@@ -89,19 +91,19 @@
               "answer": 1
             },
             {
-              "label": "June checks it against",
+              "label": "How does June check it?",
               "options": [
-                "Deputy Lyle’s night log",
-                "Her own call recording",
+                "Lyle’s night log",
+                "Her call recording",
                 "The morning news"
               ],
               "answer": 1
             }
           ],
           "hints": [
-            "The chair started with Steve’s childhood. What did it never reach?",
-            "Of the three, only one happened on Sunday night, before the chair. The line about the ship came later, on the beach.",
-            "The man at the market has Steve’s oldest memories, not Sunday night. And June’s kitchen machine kept every word of one call that night."
+            "The chair started with Steve’s childhood. What is too new for it to have?",
+            "Only one of the three questions is about Sunday night. Steve told June about the ship later, on the beach.",
+            "June’s kitchen machine recorded one call that night, word for word. Which question could that machine check?"
           ],
           "lines": [
             {
@@ -120,7 +122,7 @@
         },
         "rules": {
           "type": "rows",
-          "difficulty": 2,
+          "difficulty": 1,
           "title": "June’s list",
           "requires": [
             "crossword"
@@ -130,21 +132,16 @@
           "lead": [
             "c3_house.out.01",
             "calder|Lyle’s on it. My own deputy. Fourteen years, and this summer he started filing his reports on time.",
-            "c3_house.rules.01"
+            "c3_house.rules.01",
+            "calder|Gus Albano. Thirty years of his grandmother’s recipes, and on Monday a new pastry in his window.",
+            "calder|Mateo’s coaching book. Lyle missed every game last spring. From June eleventh, he signed in at every one.",
+            "calder|Walt moved to Washington in April. His signature is on a permit here, dated a day he was testifying in Washington."
           ],
-          "prompt": "June reads four entries aloud. Which ones would stand up in daylight?",
-          "instruction": "Lyle Boone remembered June’s birthday this year, for the first time in fourteen. Mateo Reyes’s coaching book shows Lyle absent from every Little League game last spring, then signed in at every game from June 11. Gus Albano put a new pastry in his window on Monday, after thirty years of his grandmother’s recipes. Walt Prior, the county planner who moved to Washington in April, has his signature on a Bellwether permit dated a day he was testifying in Washington.",
+          "prompt": "June reads three entries aloud. Which ones would stand up in daylight?",
+          "instruction": "June’s rule: a new habit proves nothing, because anyone can change. A dated record that puts someone where they could not have been is evidence.",
           "rows": [
             {
-              "label": "Lyle remembered her birthday",
-              "options": [
-                "Proves nothing",
-                "Evidence"
-              ],
-              "answer": 0
-            },
-            {
-              "label": "Mateo’s coaching book",
+              "label": "Mateo’s book signs Lyle in from June 11",
               "options": [
                 "Proves nothing",
                 "Evidence"
@@ -152,7 +149,7 @@
               "answer": 1
             },
             {
-              "label": "Gus’s new pastry",
+              "label": "Gus’s new pastry on Monday",
               "options": [
                 "Proves nothing",
                 "Evidence"
@@ -160,7 +157,7 @@
               "answer": 0
             },
             {
-              "label": "Walt Prior’s permit",
+              "label": "Walt Prior’s permit, dated while he was in Washington",
               "options": [
                 "Proves nothing",
                 "Evidence"
@@ -169,9 +166,9 @@
             }
           ],
           "hints": [
-            "Use June’s rules. What could any person do on a good day?",
-            "A birthday and a new recipe are behavior. A sign-in book and a signed permit have dates you can check.",
-            "Ask of each entry: is there a date June could check in a book or a file? Feelings and new habits don’t count."
+            "Use June’s rule. Could any person do this on a good day?",
+            "A new recipe is a new habit. A sign-in book and a signed permit have dates on paper.",
+            "Ask of each entry: is there a date June could check in a book or a file?"
           ],
           "lines": [
             "calder|Two I could take to a judge. And if I do, what do I tell Lyle’s boys? Mateo says they’ve never been happier.",
@@ -182,7 +179,7 @@
         },
         "mail": {
           "type": "choice",
-          "difficulty": 2,
+          "difficulty": 1,
           "title": "Dale’s delivery",
           "requires": [
             "crossword"
@@ -199,25 +196,26 @@
               "id": "c3_house.mail.02",
               "text": "She’s asleep, Dale. That is her schedule."
             },
-            "calder|On Monday the post office told me Dale had already brought your letters here. Before I’d called them. So I asked for the paperwork."
+            "calder|On Monday the post office told me Dale had already brought your letters here. Before I’d called them. So I asked for the paperwork.",
+            "calder|At ten past six on Monday, I radioed the station to say you were here. Lyle was starting his shift. He answered.",
+            "calder|Dale’s bag left the post office at four minutes past eight, with your letters already bundled for my house.",
+            "calder|I didn’t phone the post office until twelve past eight. And Carmen only heard from Nora at lunch."
           ],
           "prompt": "Somebody told Dale before his bag left at 08:04. Who could have?",
           "options": [
             "The post office",
             "Deputy Lyle Boone",
-            "Carmen Reyes",
-            "Biscuit"
+            "Carmen Reyes"
           ],
           "answer": 1,
           "wrong": {
             "0": "The post office heard from June at 08:12. Dale’s bag had left at 08:04.",
-            "2": "Carmen heard at lunchtime, from Nora. Dale had delivered hours before.",
-            "3": "Biscuit slept through Monday. She sleeps through everything."
+            "2": "Carmen heard at lunchtime, from Nora. Dale had delivered hours before."
           },
           "hints": [
             "Line up who knew Steve was here, and when each of them found out.",
-            "Dale’s bag left at 08:04. Besides June, only one person knew before then.",
-            "Read the 06:10 radio call again. Somebody on the other end of it was just starting his shift."
+            "Dale’s bag left at 08:04. Besides June, who knew before then?",
+            "Think about June’s radio call at 06:10. Who was on the other end?"
           ],
           "lines": [
             "steve|He had my mail sorted for your house before anyone told the post office I was here.",
@@ -236,7 +234,95 @@
         "calder|Town Hall closes at five. I have keys.",
         "c3_house.out.02"
       ],
-      "next": "Town Hall, after hours (c3_archive)."
+      "next": "Town Hall, after hours (c3_archive).",
+      "talk": {
+        "calder": [
+          {
+            "topic": "Biscuit",
+            "lines": [
+              "steve|Does Biscuit ever wake up, June?",
+              "calder|For cheese. And once for a thunderstorm, back in two thousand nineteen.",
+              "steve|Some guard dog you have there.",
+              "calder|Ruth picked her out. She said a sheriff needs one partner who never argues."
+            ]
+          },
+          {
+            "topic": "Ink, every morning",
+            "lines": [
+              "steve|You really do the crossword in ink, every single morning?",
+              "calder|Ruth started it. She said pencils are for people who expect to be wrong.",
+              "steve|And are you ever wrong?",
+              "calder|Every day, Mercer. I just commit to it."
+            ]
+          },
+          {
+            "topic": "Forty-eight casseroles",
+            "lines": [
+              "steve|What are we going to do with forty-eight casseroles?",
+              "calder|Eat Carmen’s tonight. The deputies get the rest, except the tuna one.",
+              "steve|What’s wrong with the tuna one?",
+              "calder|Potato chips on top. I have standards, even in a crisis."
+            ]
+          },
+          {
+            "topic": "Her list",
+            "after": "crossword",
+            "lines": [
+              "steve|How long have you kept that list, June?",
+              "calder|Since last fall. The town got nicer, and nobody could tell me why.",
+              "calder|In my job, when everybody suddenly behaves, you start counting."
+            ]
+          }
+        ],
+        "carmen": [
+          {
+            "topic": "Nora",
+            "lines": [
+              "steve|How is Nora doing, Carmen? Really?",
+              "carmen|Calm. So calm. She agrees with me about everything now.",
+              "carmen|I should be happy, mijo. But I miss the fights. Is that terrible?",
+              "steve|No, it isn’t. I miss them too."
+            ]
+          },
+          {
+            "topic": "The man at the market",
+            "lines": [
+              "steve|The man at the market, Carmen. What did he say to you?",
+              "carmen|That the tomatoes looked lovely. You never say lovely, Steve. Not once in four years.",
+              "carmen|I thought you were finally getting better."
+            ]
+          },
+          {
+            "topic": "The casserole",
+            "lines": [
+              "steve|What did you bring us, Carmen?",
+              "carmen|Chicken tinga. Rafa made it, so it is too sweet. He is still in love.",
+              "steve|With the girl from the bakery counter?",
+              "carmen|Now he brings home day-old bread every night. We are drowning in bread."
+            ]
+          }
+        ],
+        "pell": [
+          {
+            "topic": "The weather",
+            "lines": [
+              "steve|Cold out there this morning, Dale?",
+              "pell|Eleven degrees at eight o’clock. Wind from the west at nine knots.",
+              "steve|I only meant, is it cold.",
+              "pell|It is within the normal range for October."
+            ]
+          },
+          {
+            "topic": "Letters for my parents",
+            "lines": [
+              "steve|You still bring letters for my parents, Dale.",
+              "pell|Every item goes to its address. That is the procedure.",
+              "steve|They’ve been gone for eighteen months.",
+              "pell|The address has not changed, Mr. Mercer."
+            ]
+          }
+        ]
+      }
     },
     "c3_archive": {
       "departure_art": "res://assets/illustrated/campaign/inserts/c3_archive-boathouse-stakeout.webp",
@@ -284,56 +370,53 @@
       "tasks": {
         "paper": {
           "type": "rows",
-          "difficulty": 3,
+          "difficulty": 2,
           "title": "Walt Prior’s permit",
           "requires": [],
           "goal": "Find out where Walt Prior really was on May 3.",
           "background": "Walt Prior is on June’s list. He moved to Washington in April. On May 3 a permit was signed in his name at the Town Hall counter. Paper made at the time is hard to change. Copies of paper, and computers, are easy.",
           "lead": [
             "calder|Walt Prior. County planner. I went to his going-away party in April. He cried into the punch.",
-            "calder|The county computer says he signed this permit by fax from Washington. The clerk’s ledger says he signed it at her counter."
+            "calder|The county computer says he signed this permit by fax from Washington. The clerk’s ledger says he signed it at her counter.",
+            "calder|The ledger was signed in ink, right here at the counter. May third, ten past two, with the clerk’s stamp.",
+            "calder|The computer entry was typed in from the ledger the next day. Somebody has changed it since.",
+            "steve|This hearing transcript has Walt in Washington that afternoon, answering questions from half past one until four.",
+            "steve|And the newspaper column only says he looked tired.",
+            "calder|The permit reopens the aquarium’s old seawater intake. The same tunnel they walked you down."
           ],
-          "prompt": "Which records were made where they say, and what do they prove?",
-          "instruction": "Four records of May 3. The bound permit ledger: signed in ink at the Town Hall counter at 14:10, with the clerk’s stamp. The permit reopens the aquarium’s old seawater intake. The county computer entry: typed from that ledger the next day, but it now reads ‘signed by fax from Washington’. The hearing transcript: Walt Prior answering questions in Washington from 13:30 to 16:00, Bellwether time. A newspaper column: he ‘looked tired’.",
+          "prompt": "Which records were made on the spot, and what do they prove?",
+          "instruction": "A record made at the time, where it happened, is a witness. A record typed in later, or someone’s opinion, is not.",
           "rows": [
             {
-              "label": "Made on the spot, in Bellwether",
+              "label": "Which Bellwether record was made on the spot?",
               "options": [
-                "Bound ledger",
-                "Computer entry"
-              ],
-              "answer": 0
-            },
-            {
-              "label": "Made on the spot, in Washington",
-              "options": [
-                "Hearing transcript",
-                "Newspaper column"
-              ],
-              "answer": 0
-            },
-            {
-              "label": "What those two show",
-              "options": [
-                "Walt Prior lied about his trip",
-                "One name in two places the same afternoon",
-                "The clerk stamped the wrong day"
-              ],
-              "answer": 1
-            },
-            {
-              "label": "Changed after the fact",
-              "options": [
-                "The bound ledger",
+                "The ink ledger",
                 "The computer entry"
+              ],
+              "answer": 0
+            },
+            {
+              "label": "Which Washington record was made on the spot?",
+              "options": [
+                "The hearing transcript",
+                "The newspaper column"
+              ],
+              "answer": 0
+            },
+            {
+              "label": "What do those two records show?",
+              "options": [
+                "Walt lied about his trip",
+                "One name in two places at once",
+                "The clerk stamped the wrong day"
               ],
               "answer": 1
             }
           ],
           "hints": [
-            "A copy of a record isn’t a second witness. Find the two records made on the spot.",
-            "The ledger was signed in ink at the counter. The computer was typed later, and it disagrees with the ink.",
-            "Two records were made on the spot, one in each city, on the same afternoon. Ask what that means for one man’s name."
+            "A record typed in later is not a second witness. Look for the two made on the spot.",
+            "The ink at the counter was made on the spot. So was the transcript of the hearing.",
+            "Both records come from the same afternoon, in two different cities. What does that say about one man’s name?"
           ],
           "lines": [
             "c3_archive.paper.01",
@@ -342,7 +425,7 @@
           "finding": "steve|On May 3, Walt Prior was answering questions in Washington while someone signed his name at our counter to reopen the aquarium’s old seawater intake. Later, somebody changed the computer. Nobody changed the ink."
         },
         "power": {
-          "difficulty": 2,
+          "difficulty": 1,
           "title": "Sentinel Point’s meter",
           "requires": [],
           "goal": "Find out how much power Sentinel Point really uses.",
@@ -359,30 +442,31 @@
               "direction": "unwrapping the fish"
             },
             "calder|Sentinel Point. It was a radio array when I was a girl. Now it’s Meridian’s. Federal money, an armed gate, and on November seventh the President flies in to sign something there.",
-            "agnes|Electricity is very honest, Steven. It can’t be charming."
+            "agnes|Electricity is very honest, Steven. It can’t be charming.",
+            "calder|Here are last month’s meter rolls. Sentinel Point, and Pearl Laundry next door.",
+            "steve|They’re running totals, like the miles on a car. What counts is how far each one moved."
           ],
           "prompt": "Did Sentinel Point use more power than a laundromat last month?",
           "board": {
-            "instruction": "Work out what each site used last month.",
+            "instruction": "Work out how much power each site used last month.",
             "evidence": [
-              "Pearl Laundry: the roll read 1,118 on the first of the month and 2,000 on the last.",
-              "Sentinel Point: the roll read 3,460 on the first of the month and 4,100 on the last.",
-              "Both meters count forward, in the same units. The same meter reader signed both rolls."
+              "Pearl Laundry’s meter read 1,118 on the first of the month and 2,000 on the last.",
+              "Sentinel Point’s meter read 3,460 on the first of the month and 4,100 on the last.",
+              "Each meter keeps a running total, in the same units, like the miles on a car."
             ],
             "stages": [
               {
                 "mode": "match",
                 "prompt": "Fill in June’s file.",
                 "slots": [
-                  "Pearl Laundry used",
-                  "Sentinel Point used",
-                  "The laundromat used more by"
+                  "How much did Pearl Laundry use?",
+                  "How much did Sentinel Point use?",
+                  "How much more did the laundromat use?"
                 ],
                 "pieces": [
                   "882 units",
                   "640 units",
                   "242 units",
-                  "2,000 units",
                   "4,100 units"
                 ],
                 "answer": [
@@ -415,13 +499,18 @@
           "background": "On Sunday, Tomás’s reels showed the loud nights coming every nine nights. Each box has two dates: when he recorded and when the episode aired. His field notes say what he saw, and from where.",
           "lead": [
             "tomas|Every ninth night for three years, I was out there with a recorder. I wrote down everything, from wherever I was standing.",
-            "steve|Then help me pick a night, and a place to stand."
+            "steve|Then help me pick a night, and a place to stand.",
+            "tomas|Each box has two dates. The night I recorded, and the day the episode aired.",
+            "tomas|The pier lamp always dims first, at 23:42. Footsteps pass the boathouse at 23:53.",
+            "tomas|And at four minutes past midnight, the water starts to glow.",
+            "calder|I want to see faces on that path before they reach the water. Without anyone seeing us.",
+            "tomas|From the sea wall, the path is behind you. The pier is wide open. The boathouse window faces the path."
           ],
           "prompt": "When should June and Steve watch, from where, and from what time?",
-          "instruction": "Box labels: RECORDED 3 OCT / AIRED 4 OCT. RECORDED 12 OCT / AIRED 15 OCT. RECORDED 21 OCT / AIRED 23 OCT. Field notes: the pier lamp dims at 23:42. Footsteps pass the boathouse at 23:53. The water glows at 00:04. From the sea wall you see the water, but the path is behind you. The boathouse window faces the path and the beach beyond it. The end of the pier is out in the open.",
+          "instruction": "The bay sings on the nights Tomás recorded: October 3, 12 and 21. The shows aired later, on October 4, 15 and 23. The pier lamp dims at 23:42, footsteps pass at 23:53, and the water glows at 00:04.",
           "rows": [
             {
-              "label": "The next loud night",
+              "label": "When is the next loud night?",
               "options": [
                 "October 29",
                 "October 30",
@@ -430,7 +519,7 @@
               "answer": 1
             },
             {
-              "label": "Where to watch",
+              "label": "Where should they watch from?",
               "options": [
                 "The sea wall",
                 "The boathouse window",
@@ -439,7 +528,7 @@
               "answer": 1
             },
             {
-              "label": "In place by",
+              "label": "When should they be in place?",
               "options": [
                 "23:40",
                 "23:55",
@@ -449,9 +538,9 @@
             }
           ],
           "hints": [
-            "Count from the day Tomás recorded, not the day it aired.",
-            "June wants to see faces on the path before they reach the water, without being seen.",
-            "Use the RECORDED dates and keep the same step. Watch from the window that faces the path, and be there before the first thing in the field notes happens."
+            "Count from the nights Tomás recorded, not the days the shows aired.",
+            "June wants to see faces on the path without being seen. Which spot faces the path?",
+            "Add nine nights to the last recording date. Then be in place before the pier lamp dims."
           ],
           "lines": [
             {
@@ -500,7 +589,75 @@
           "direction": "reading the text aloud, slowly"
         }
       ],
-      "next": "Interlude 1 on the same ninth night, under the bay (i1_archive)."
+      "next": "Interlude 1 on the same ninth night, under the bay (i1_archive).",
+      "talk": {
+        "tomas": [
+          {
+            "topic": "The podcast",
+            "lines": [
+              "steve|How many listeners does the podcast have now?",
+              "tomas|Fourteen. Mamá found the app, and now she leaves comments.",
+              "tomas|Every episode, the same comment. Eat something, mijo.",
+              "steve|She’s not wrong, you know, Tomás."
+            ]
+          },
+          {
+            "topic": "Nora’s texts",
+            "lines": [
+              "steve|Has Nora texted you lately?",
+              "tomas|Last night. No capitals, no apostrophes, same as always.",
+              "tomas|She just wrote, eat something. She sounds like Mamá now. That’s new."
+            ]
+          },
+          {
+            "topic": "Counting boxes",
+            "lines": [
+              "tomas|Do you know how many boxes are down here?",
+              "steve|No, but I bet you counted them.",
+              "tomas|Four hundred and twelve. I counted while June looked for the light switch.",
+              "steve|You’d get along with Mrs. Penhallow."
+            ]
+          }
+        ],
+        "calder": [
+          {
+            "topic": "The archive keys",
+            "lines": [
+              "steve|Why does the sheriff have keys to the archive?",
+              "calder|The sheriff’s office has had a key since nineteen fifty. Nobody ever asked for it back.",
+              "calder|Ruth used to say I’d rather read old permits than novels. She was right."
+            ]
+          },
+          {
+            "topic": "The President’s visit",
+            "after": "power",
+            "lines": [
+              "steve|The President is coming here? To Bellwether?",
+              "calder|November seventh. The Rotary Club is already fighting about the bunting.",
+              "calder|I’ve been asked to close Harbor Road and smile. I can manage one of those."
+            ]
+          }
+        ],
+        "agnes": [
+          {
+            "topic": "The bus",
+            "lines": [
+              "steve|You came all the way here on the bus?",
+              "agnes|The number four. The driver and I have an arrangement.",
+              "steve|What kind of arrangement is that?",
+              "agnes|He drives, and I correct his grammar. We both arrive improved."
+            ]
+          },
+          {
+            "topic": "Old papers",
+            "lines": [
+              "agnes|I like archives, Steven. Somebody should keep what everyone else forgets.",
+              "steve|Is that why you came all this way?",
+              "agnes|I came to sell you a herring. Two dollars, please. Exact change."
+            ]
+          }
+        ]
+      }
     },
     "i1_archive": {
       "departure_art": "res://assets/illustrated/campaign/inserts/i1_archive-frosted-meeting-memory.webp",
@@ -539,31 +696,34 @@
       ],
       "tasks": {
         "reset": {
-          "difficulty": 2,
+          "difficulty": 1,
           "title": "Gus’s reconciliation",
           "requires": [],
           "goal": "Reconcile Gus’s echo, as the law requires.",
           "background": "The Archivist keeps the Choir, the ship’s memory of every person it has copied. A copy that drifts from its record is an echo, and the law resets it. The law is old and exact, and she follows it to the letter.",
           "lead": [
-            "archivist|One recipe of drift. The law does not measure how much. Only that it happened."
+            "archivist|One recipe of drift. The law does not measure how much. Only that it happened.",
+            "archivist|The law is simple. The source is never touched. The echo is restored from the source.",
+            "archivist|And whatever the echo loses, I must describe in the witness ledger. In words, not numbers."
           ],
           "prompt": "Which record does she read, which does she restore, and what does she write down?",
           "board": {
-            "instruction": "Lay out the records before giving the order.",
+            "instruction": "Follow the law, one step at a time.",
             "evidence": [
-              "Stone tab: Gus’s record from his scan. He bakes from his grandmother’s recipes and has never changed one. Sealed under the source mark.",
-              "Reed tab: the working Gus, as he is tonight. Eight days ago, on Monday, he folded kelp through the dough for the first time and set out his first tray at dawn.",
-              "The law: the source may never be changed. The echo is restored from the source. What the echo loses must be described, in a separate witness ledger.",
-              "Two entries are drafted for the witness ledger. One describes the procedure. One describes what Gus will lose."
+              "The sealed stone source is Gus as he was scanned, baking only his grandmother’s recipes.",
+              "Gus’s working echo is Gus tonight, who folded kelp into his dough eight days ago.",
+              "The law: the source is never changed, and the echo is restored from the source.",
+              "The law: what the echo loses must be described in the witness ledger.",
+              "One draft entry describes the procedure. The other describes what Gus will lose."
             ],
             "stages": [
               {
                 "mode": "match",
                 "prompt": "Carry out the reconciliation.",
                 "slots": [
-                  "Read from",
-                  "Restore into",
-                  "Write in the witness ledger"
+                  "Which record does she read from?",
+                  "Which record does she restore?",
+                  "What goes in the witness ledger?"
                 ],
                 "pieces": [
                   "Sealed stone source",
@@ -593,7 +753,7 @@
           "finding": "archivist|Gus Albano’s echo, reconciled. He will go back to town smiling, without the croissant. I have written down what it was."
         },
         "signals": {
-          "difficulty": 3,
+          "difficulty": 2,
           "title": "The Meridian reels",
           "requires": [
             "reset"
@@ -602,7 +762,8 @@
           "background": "Nine years ago two human stations recorded tests of the Meridian engine, a week apart, on opposite sides of their world. The Prefect keeps both reels in his file. Each reel holds the engine’s pulse and the station’s note of a lamp flare at the test site.",
           "lead": [
             "archivist|Two human tests of the Meridian engine. The Prefect keeps them in his file.",
-            "archivist|A year ago I noticed something about them. Every ninth night I listen again, to be sure."
+            "archivist|A year ago I noticed something about them. Every ninth night I listen again, to be sure.",
+            "archivist|Each pulse has one missing beat near the middle. And each station wrote down when its lamp flared."
           ],
           "prompt": "Listen to both reels and read the lamp notes. What should the Archivist file?",
           "options": [
@@ -634,7 +795,7 @@
         },
         "quiet": {
           "type": "board",
-          "difficulty": 3,
+          "difficulty": 2,
           "title": "The sealed surveys",
           "requires": [
             "signals"
@@ -648,32 +809,34 @@
               "delivery": "intercom"
             },
             "i1_archive.quiet.02",
-            "archivist|The fleet never takes a Prefect’s word for long. Sooner or later, it sends a Vigil to look."
+            "archivist|The fleet never takes a Prefect’s word for long. Sooner or later, it sends a Vigil to look.",
+            "archivist|Seven worlds with people on them. Every one went quiet soon after the fleet arrived.",
+            "archivist|The newest went quiet three hundred years ago. The other six went quiet at least five hundred years ago.",
+            "archivist|The sleeper in Row Zero came aboard three hundred years ago. It has never said a word."
           ],
           "prompt": "Which world did the Row Zero sleeper come from, what did the surveys find, and what should she do with the sealed entry?",
           "board": {
             "instruction": "File what is known, and only what is known.",
             "evidence": [
-              "Seven fleet records, each marked Quiet, each with the year its world went silent. Tirel went silent three hundred years ago. The other six went silent five hundred years ago or more.",
-              "Not one record lists a body, a ruin or a battle. The surveyors found the cities empty.",
-              "Row Zero: one sleeper, not human, brought aboard three hundred years ago. It has never spoken.",
-              "The ship’s own survey log: one entry from the scout’s route, sealed under the Prefect’s own mark. The Archivist has no key to it."
+              "Tirel went quiet three hundred years ago, and the six other quiet worlds five hundred years ago or more.",
+              "The Row Zero sleeper was brought aboard three hundred years ago.",
+              "No survey lists a body, a ruin or a battle, only empty cities.",
+              "One survey entry is sealed with the Prefect’s own mark, and the Archivist has no key to it."
             ],
             "stages": [
               {
                 "mode": "match",
                 "prompt": "File the records.",
                 "slots": [
-                  "Row Zero’s world",
-                  "What the surveys found",
-                  "The Prefect’s sealed entry"
+                  "Which world did the Row Zero sleeper come from?",
+                  "What did the surveys find?",
+                  "What should she do with the Prefect’s sealed entry?"
                 ],
                 "pieces": [
                   "Tirel",
                   "Empty cities, no bodies",
-                  "Unread. Kept separate.",
-                  "Destroyed in a war",
-                  "One of the seven Quiet worlds"
+                  "Leave it unread, filed apart",
+                  "Destroyed in a war"
                 ],
                 "answer": [
                   0,
@@ -685,9 +848,9 @@
             "wrong_text": "That is a guess. The record holds only what is known."
           },
           "hints": [
-            "Match the sleeper’s three hundred years against the year each world went silent.",
-            "No bodies, no ruins, no battle. File only what the surveyors saw. Don’t guess at a seal you cannot open.",
-            "Match the three hundred years to one silent year. File what the surveyors saw, not what you fear. A seal you cannot open stays a seal."
+            "Match the sleeper’s three hundred years against the year each world went quiet.",
+            "No bodies, no ruins, no battle. File only what the surveyors saw.",
+            "She has no key to the Prefect’s seal. File only what is known, and leave the rest alone."
           ],
           "lines": [
             {
@@ -721,7 +884,46 @@
           "delivery": "narration"
         }
       ],
-      "next": "The Archivist’s memory of Veyr (p_veyr)."
+      "next": "The Archivist’s memory of Veyr (p_veyr).",
+      "talk": {
+        "gus": [
+          {
+            "topic": "The bakery",
+            "lines": [
+              "archivist|Tell me about your bakery, Gus Albano.",
+              "gus|Ovens on at four. The radio on, low. My grandmother’s recipes, every one of them.",
+              "gus|People wait outside in the rain for her cinnamon knots.",
+              "archivist|Then they must be very good knots."
+            ]
+          },
+          {
+            "topic": "Bellwether mornings",
+            "lines": [
+              "archivist|What do the people of your town do in the morning?",
+              "gus|They buy bread and complain about the weather. Then most of them buy a second loaf.",
+              "archivist|Why would anyone need a second loaf?",
+              "gus|For a neighbor. Everybody there has somebody to bring bread to."
+            ]
+          },
+          {
+            "topic": "The van",
+            "lines": [
+              "gus|Have you seen my delivery van? It has a giant croissant on the roof.",
+              "archivist|I have not. Is the croissant necessary?",
+              "gus|Absolutely. Children wave at it. Nobody waves at a plain van."
+            ]
+          },
+          {
+            "topic": "The croissant",
+            "after": "reset",
+            "lines": [
+              "archivist|Do you remember the croissant, Gus?",
+              "gus|Croissant? I bake my grandmother’s recipes. I have never changed one.",
+              "archivist|No. Of course you have not. Go back to your ovens."
+            ]
+          }
+        ]
+      }
     },
     "p_veyr": {
       "present": [
@@ -743,24 +945,26 @@
         "shield": "DELETE",
         "levels": {
           "type": "rows",
-          "difficulty": 2,
+          "difficulty": 1,
           "title": "Recording levels",
           "requires": [],
           "goal": "Set the level so the departure doesn’t distort.",
           "background": "The Archivist has fitted a felt sleeve over the microphone against the wind. The meter turns red above 0 dB. When the ships rise, their engines will be far louder than the wind.",
           "lead": [
-            "p_veyr.shield.01"
+            "p_veyr.shield.01",
+            "archivist|The gusts so far touched minus nine, minus three and minus six on the meter.",
+            "archivist|The engines will be nine decibels louder than the loudest gust. Above zero, the meter turns red."
           ],
           "prompt": "How far should she turn the gain down?",
-          "instruction": "Three gusts so far peaked at −9, −3 and −6 dB. The departure engines will be 9 dB louder than the loudest gust. Choose the smallest cut that keeps the engines out of the red.",
+          "instruction": "The meter turns red above 0 dB. The gusts peaked at −9, −3 and −6 dB. The engines will be 9 dB louder than the loudest gust. Pick the smallest cut that keeps them out of the red.",
           "rows": [
             {
-              "label": "Gain adjustment",
+              "label": "Turn the gain down by",
               "options": [
-                "−3 dB",
-                "−6 dB",
-                "−9 dB",
-                "−12 dB"
+                "3 dB",
+                "6 dB",
+                "9 dB",
+                "12 dB"
               ],
               "answer": 1
             }

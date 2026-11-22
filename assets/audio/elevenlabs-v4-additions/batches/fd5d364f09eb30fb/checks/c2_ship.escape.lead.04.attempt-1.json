@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c2_ship.escape.lead.04",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "aa96823eb58c6eef3f12c4813154004336f91ac3dddc14642ae53ef451f6d08f",
+  "expected": "When my sleeve brushed the other grille, the chair’s lamp blinked.",
+  "recognized": "When my sleeve brushed the other grille, the chair's lamp blinked.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.4,
+  "sample_rate": 48000,
+  "peak": 0.34033203125,
+  "rms": 0.04311361487483851,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c5_station.stephen.lead.04",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "445e74a545668885841bb783434745eab9ff6ffc6c550581204e320f82e42a91",
+  "expected": "A tape that says Mom, last call? Mom never leaves voicemails. She calls back.",
+  "recognized": "A tape that says, Mom, last call? Mom never leaves voicemails. She calls back.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 6.4,
+  "sample_rate": 48000,
+  "peak": 0.407073974609375,
+  "rms": 0.037135859991313455,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

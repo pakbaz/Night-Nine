@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c7_gate.talk.stephen.2.03",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "0f90db6ae1c555148d0bfe4d07900dce09b04ffc93051bd5ad725b90b5231b14",
+  "expected": "He said the poster doesn’t do me justice. He’s right, you know.",
+  "recognized": "He said the poster doesn't do me justice. He's right, you know.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.16,
+  "sample_rate": 48000,
+  "peak": 0.2957763671875,
+  "rms": 0.03634173237637661,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c3_house.talk.carmen.3.04",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "72de561ed5dbe223ff28c38ab3b515ebe2ed1459729fdeec077bd8104a691545",
+  "expected": "Now he brings home day-old bread every night. We are drowning in bread.",
+  "recognized": "Now he brings home day-old bread every night. We are drowning in bread.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 5.52,
+  "sample_rate": 48000,
+  "peak": 0.340850830078125,
+  "rms": 0.04158794897064086,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

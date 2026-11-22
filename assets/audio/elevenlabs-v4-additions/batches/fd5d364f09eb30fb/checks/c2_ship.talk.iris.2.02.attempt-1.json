@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c2_ship.talk.iris.2.02",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "cd9ec0a86dad9944acb797546d254f3359ca2f73a0969179004cf813b3627251",
+  "expected": "At the aquarium. You fixed the underwater speakers. You had a coffee stain on your green shirt.",
+  "recognized": "At the aquarium, you fixed the underwater speakers. You had a coffee stain on your green shirt.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 6.0,
+  "sample_rate": 48000,
+  "peak": 0.39111328125,
+  "rms": 0.05229153528778202,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

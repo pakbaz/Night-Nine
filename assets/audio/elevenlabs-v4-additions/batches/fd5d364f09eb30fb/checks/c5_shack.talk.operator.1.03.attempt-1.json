@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c5_shack.talk.operator.1.03",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "f5e6c6f2d047b5b445f506e4828ce41b30b6154e6d873a3c32a3fb1adb0744f0",
+  "expected": "Cedar always said Frank’s soup reports were the best show on the band.",
+  "recognized": "Cedar always said Frank's Soup Reports were the best show on the band.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.4,
+  "sample_rate": 48000,
+  "peak": 0.210113525390625,
+  "rms": 0.02750465966323451,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

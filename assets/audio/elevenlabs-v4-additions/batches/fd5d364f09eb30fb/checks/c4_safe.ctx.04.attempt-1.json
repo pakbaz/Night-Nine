@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c4_safe.ctx.04",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "8822b003e661d8577141e309326f2b11fbf75853a85573ed04caacbc1705fb6b",
+  "expected": "On the drive, every station talked about President Ward. On November seventh she signs an accord with China at Sentinel Point.",
+  "recognized": "On the drive, every station talked about President Ward. On November 7th, she signs an accord with China at Sentinel Point.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 8.32,
+  "sample_rate": 48000,
+  "peak": 0.4046630859375,
+  "rms": 0.04374644145290946,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

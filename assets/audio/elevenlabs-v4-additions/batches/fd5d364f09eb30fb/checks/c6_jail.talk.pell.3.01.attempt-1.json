@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c6_jail.talk.pell.3.01",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "10917ffeb4a64f427edc239272e7b8d71a5ea913dbbe863856988ecebf486884",
+  "expected": "What is Dale like? The real one.",
+  "recognized": "What is Dale like? The real one.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 2.72,
+  "sample_rate": 48000,
+  "peak": 0.34857177734375,
+  "rms": 0.04399632030640051,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c9_gallery.talk.nora.1.01",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "ddfff189a95618e983c205e303712951da1f1499250638431ea520ccf71cf32e",
+  "expected": "Did my mother notice? That it wasn’t me at her table?",
+  "recognized": "Did my mother notice that it wasn't me at her table?",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 3.6,
+  "sample_rate": 48000,
+  "peak": 0.5352783203125,
+  "rms": 0.0557273167996438,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

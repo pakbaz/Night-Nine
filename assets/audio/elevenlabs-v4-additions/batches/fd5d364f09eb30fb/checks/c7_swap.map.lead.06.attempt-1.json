@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c7_swap.map.lead.06",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "416240a0bfbdc9c45f94dfac0e7305c025ef6df9c4dce1ff964e3d4cd9124176",
+  "expected": "The east stair only goes to one door, into the service tunnel. And the lift went down empty.",
+  "recognized": "The east stair only goes to one door into the service tunnel, and the lift went down empty.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 6.64,
+  "sample_rate": 48000,
+  "peak": 0.334075927734375,
+  "rms": 0.03902636132084686,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

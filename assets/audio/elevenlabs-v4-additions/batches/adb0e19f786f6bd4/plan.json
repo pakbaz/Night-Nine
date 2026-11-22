@@ -1,0 +1,54 @@
+{
+  "schema": 1,
+  "batch": "later-additions",
+  "model_id": "eleven_v4",
+  "output_format": "mp3_44100_192",
+  "inputs": {
+    "campaign": "691df7a8654c3d0a4c8b36d98523a01cca56840e28fdfa2ce1ac50636aa7992e",
+    "storybook": "111dd45f12d16c24dc9c1d253531eb719979f88ec9169f185b8e0f2d1e119c38",
+    "voice_manifest": "9388b097b132a3d3cb7be5c278432352c99abf871a31167f67aba56cec5e579c",
+    "casting": "cb91065c437c743d50eea2958d5149a6d0a35b9d20430a66cb8a548b921246db",
+    "existing_additions": "145721a0601f0ab23a10d867707509986b92c4c1a42ab0dfae8d309fd48f8614"
+  },
+  "ordered_audio_ids": [
+    "c2_aquarium.intercom.lead.02"
+  ],
+  "items": {
+    "c2_aquarium.intercom.lead.02": {
+      "audio_id": "c2_aquarium.intercom.lead.02",
+      "kind": "campaign",
+      "scene": "c2_aquarium",
+      "speaker": "steve",
+      "cast_role": "steve",
+      "voice_id": "vveagfomyMCJLZsOPRP2",
+      "text": "The paper on the spool is dated in her handwriting. May 29th.",
+      "text_sha256": "ecd67ab164fe8957d17526f04389a6de063a2f1dd7706c704e03a19b73b3445b",
+      "synthesis_text": "The paper on the spool is dated in her handwriting. May 29th.",
+      "synthesis_text_sha256": "ecd67ab164fe8957d17526f04389a6de063a2f1dd7706c704e03a19b73b3445b",
+      "delivery": "live",
+      "direction": "",
+      "v4_audio_tag": "",
+      "previous_text": "Two short notes. If Admiral can hear me, perhaps somebody else can.",
+      "next_text": "Her second note goes up. Like it always did, before this summer.",
+      "voice_settings": {
+        "stability": 0.46,
+        "similarity_boost": 0.78
+      },
+      "language_code": "en",
+      "model_id": "eleven_v4",
+      "output_format": "mp3_44100_192",
+      "estimated_credit_rate": 1.0,
+      "estimated_credits": 61,
+      "attempt_seeds": [
+        1288436356,
+        2223805606,
+        324380436
+      ]
+    }
+  },
+  "count": 1,
+  "characters": 61,
+  "request_characters": 61,
+  "estimated_credits": 61,
+  "plan_sha256": "adb0e19f786f6bd4d0ba7c2e0744b76aa8fba132dc31badd3d3109053359ba96"
+}

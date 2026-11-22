@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c6_iris.talk.stephen.2.02",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "c5e495686846fae782769ef4b0b4bf93ca3784f3e514e547a1a8eb99677d2ce4",
+  "expected": "He kept the peppermints in the drawer with the fuses.",
+  "recognized": "He kept the peppermints in the drawer with the fuses.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 3.04,
+  "sample_rate": 48000,
+  "peak": 0.396514892578125,
+  "rms": 0.03910534166775463,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

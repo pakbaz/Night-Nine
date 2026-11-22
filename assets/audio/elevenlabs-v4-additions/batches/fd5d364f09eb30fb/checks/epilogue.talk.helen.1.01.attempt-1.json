@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "audio_id": "epilogue.talk.helen.1.01",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "d0c1fc1d1314310f34c79a9f09399dacde934bd826419b099e86ebd471447d6a",
+  "expected": "Your father leaves me a note every morning now. Today’s says the kettle is labeled.",
+  "recognized": "Your father leaves me a note every morning now. Today says the kettle is labeled.",
+  "local_recognized": "Your father leaves me a note every morning now. Today says the kettle is labeled.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 5.76,
+  "sample_rate": 48000,
+  "peak": 0.539794921875,
+  "rms": 0.06676834839753848,
+  "level_match_gain_db": 0.0,
+  "word_edits": 1,
+  "word_error_rate": 0.0625,
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/epilogue.talk.helen.1.01.json",
+    "sha256": "de22e5c5e623aa0b5c055ab289d06c3062626a5459a5c980ea70c31536ee9fa5",
+    "model": "scribe_v3",
+    "word_edits": 1,
+    "listening_reviewed": false
+  },
+  "status": "retake_required",
+  "failure_reason": "asr_mismatch"
+}

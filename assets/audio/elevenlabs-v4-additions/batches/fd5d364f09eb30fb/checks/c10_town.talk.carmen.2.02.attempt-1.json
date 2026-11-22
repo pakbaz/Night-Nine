@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c10_town.talk.carmen.2.02",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "620adbf3c04bde1b9da2ef0856320f7d6e5efc62fb08e209cc6372ca43775f43",
+  "expected": "Is that a good thing?",
+  "recognized": "Is that a good thing?",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 1.44,
+  "sample_rate": 48000,
+  "peak": 0.260528564453125,
+  "rms": 0.03401201340584012,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c2_ship.intake.lead.01",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "3b7dc9b8b32eb003938043ec5cac15c6645bf7c56f861d602617c077c9f820fb",
+  "expected": "Admiral swims the whole bay at night. If he hears the right whistle, he’ll come.",
+  "recognized": "Admiral swims the whole bay at night. If he hears the right whistle, he'll come.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 5.04,
+  "sample_rate": 48000,
+  "peak": 0.411224365234375,
+  "rms": 0.04403730900477955,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

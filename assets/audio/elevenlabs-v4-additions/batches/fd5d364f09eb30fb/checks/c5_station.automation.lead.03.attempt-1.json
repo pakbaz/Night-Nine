@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c5_station.automation.lead.03",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "e92f5f74bebc933ad98784e2031f7b99b146d3fa1f06c75b3ae6c187dd18b82f",
+  "expected": "And the news cart is locked. It only plays on the hour, and it’s twenty past.",
+  "recognized": "And the news cart is locked. It only plays on the hour, and it's 20 past.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 5.6,
+  "sample_rate": 48000,
+  "peak": 0.272918701171875,
+  "rms": 0.03839477136156005,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

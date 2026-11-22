@@ -1,0 +1,17 @@
+{
+  "operation": "text_to_speech",
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "audio_id": "c9_choir.talk.calder.1.02",
+  "attempt": 1,
+  "voice_id": "vveagfomyMCJLZsOPRP2",
+  "model_id": "eleven_v4",
+  "text_sha256": "2936868b1a89e4152957af9ebc195a167e6c3f6d5e40d793cf4fbbc468d0e977",
+  "synthesis_text_sha256": "2936868b1a89e4152957af9ebc195a167e6c3f6d5e40d793cf4fbbc468d0e977",
+  "request_id": "lqeSxA9qAcVKOFG437FN",
+  "trace_id": "32be5d046d9b0e99a1dc22a6bfecf6f7",
+  "character_cost": 15,
+  "output_format": "mp3_44100_192",
+  "audio_sha256": "04155e783b70b735a8ada5611decd15f8fc7fe1315bf034533585445eb167328",
+  "response_bytes": 43928,
+  "seed": 2614386733
+}

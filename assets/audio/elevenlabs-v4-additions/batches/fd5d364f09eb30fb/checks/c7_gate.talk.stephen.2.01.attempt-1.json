@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c7_gate.talk.stephen.2.01",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "96672f0546af96bac341da7293236281f8c2175c0c4479019115667002c27043",
+  "expected": "I had two croissants from Gus this morning. He gave me a third one for free.",
+  "recognized": "I had two croissants from Gus this morning. He gave me a third one for free.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.72,
+  "sample_rate": 48000,
+  "peak": 0.497528076171875,
+  "rms": 0.042007708548827634,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

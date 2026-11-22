@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c7_gate.talk.stephen.1.04",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "41678d6374e91800edd618e6d38665fe7b98a7eb2698ea96ccd812648007f280",
+  "expected": "He said it on the boat, every summer. I remember that one. I think I do.",
+  "recognized": "He said it on the boat every summer. I remember that one. I think I do.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 5.12,
+  "sample_rate": 48000,
+  "peak": 0.3609619140625,
+  "rms": 0.03432744904536989,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

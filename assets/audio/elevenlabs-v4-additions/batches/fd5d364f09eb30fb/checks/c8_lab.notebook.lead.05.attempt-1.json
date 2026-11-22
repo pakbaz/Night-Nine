@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c8_lab.notebook.lead.05",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "ae460098132c97a2c4a523f9cf8a113d14b5583a9db79b534f0f25a78571ed24",
+  "expected": "And the minutes of the meeting at one table quote both tests. Your mother was in that room.",
+  "recognized": "And the minutes of the meeting at one table quote both tests. Your mother was in that room.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 6.32,
+  "sample_rate": 48000,
+  "peak": 0.583038330078125,
+  "rms": 0.08080459166814838,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

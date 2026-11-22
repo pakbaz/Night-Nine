@@ -1,0 +1,165 @@
+{
+  "audio_id": "c10_live.first.lead.01",
+  "audio_sha256": "824690c5b4fdd21af2550913b0fd090b2a8c18d9dd7d6d7d552dd947dcb5bc9f",
+  "file": "assets/audio/elevenlabs-v4-additions/masters/c10_live.first.lead.01.attempt-1.wav",
+  "production_plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Orchard is listening for you, Steve. Pier is watching Orchard.",
+  "recognized": "Orchard is listening for you, Steve. Pierre is watching Orchard.",
+  "word_edits": 1,
+  "request_id": null,
+  "trace_id": "eafd108b06e3699f8d7a3404f8011e7f",
+  "character_cost": "1",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Orchard is listening for you, Steve. Pierre is watching Orchard.",
+    "words": [
+      {
+        "text": "Orchard",
+        "start": 0.06,
+        "end": 0.38,
+        "type": "word",
+        "logprob": -0.0006926177136067833
+      },
+      {
+        "text": " ",
+        "start": 0.38,
+        "end": 0.42,
+        "type": "spacing",
+        "logprob": -4.6967357775429264e-05
+      },
+      {
+        "text": "is",
+        "start": 0.44,
+        "end": 0.56,
+        "type": "word",
+        "logprob": -4.6967357775429264e-05
+      },
+      {
+        "text": " ",
+        "start": 0.56,
+        "end": 0.66,
+        "type": "spacing",
+        "logprob": -1.680836794548668e-05
+      },
+      {
+        "text": "listening",
+        "start": 0.66,
+        "end": 1.06,
+        "type": "word",
+        "logprob": -1.680836794548668e-05
+      },
+      {
+        "text": " ",
+        "start": 1.06,
+        "end": 1.1,
+        "type": "spacing",
+        "logprob": -1.7881377516459906e-06
+      },
+      {
+        "text": "for",
+        "start": 1.1,
+        "end": 1.22,
+        "type": "word",
+        "logprob": -1.7881377516459906e-06
+      },
+      {
+        "text": " ",
+        "start": 1.22,
+        "end": 1.26,
+        "type": "spacing",
+        "logprob": -8.344646857949556e-07
+      },
+      {
+        "text": "you,",
+        "start": 1.26,
+        "end": 1.32,
+        "type": "word",
+        "logprob": -2.4735856811730628e-06
+      },
+      {
+        "text": " ",
+        "start": 1.32,
+        "end": 1.44,
+        "type": "spacing",
+        "logprob": -3.909988299710676e-05
+      },
+      {
+        "text": "Steve.",
+        "start": 1.44,
+        "end": 1.76,
+        "type": "word",
+        "logprob": -3.363624788714029e-05
+      },
+      {
+        "text": " ",
+        "start": 1.76,
+        "end": 1.76,
+        "type": "spacing",
+        "logprob": -0.04683692753314972
+      },
+      {
+        "text": "Pierre",
+        "start": 2.44,
+        "end": 2.78,
+        "type": "word",
+        "logprob": -0.04683692753314972
+      },
+      {
+        "text": " ",
+        "start": 2.78,
+        "end": 2.84,
+        "type": "spacing",
+        "logprob": -3.635817120084539e-05
+      },
+      {
+        "text": "is",
+        "start": 2.84,
+        "end": 3.0,
+        "type": "word",
+        "logprob": -3.635817120084539e-05
+      },
+      {
+        "text": " ",
+        "start": 3.0,
+        "end": 3.06,
+        "type": "spacing",
+        "logprob": -1.0847986231965479e-05
+      },
+      {
+        "text": "watching",
+        "start": 3.06,
+        "end": 3.38,
+        "type": "word",
+        "logprob": -1.0847986231965479e-05
+      },
+      {
+        "text": " ",
+        "start": 3.38,
+        "end": 3.5,
+        "type": "spacing",
+        "logprob": -0.0006581762572750449
+      },
+      {
+        "text": "Orchard.",
+        "start": 3.5,
+        "end": 3.88,
+        "type": "word",
+        "logprob": -0.00058146223454969
+      }
+    ],
+    "transcription_id": "ExpLhXTi5iGGIecjTTJg",
+    "audio_duration_secs": 4.32
+  },
+  "listening_reviewed": false
+}

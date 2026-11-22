@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c6_iris.talk.autorick.1.01",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "807d153146a6fa76d10a72f185ff7c50f6813fe2561726146ebb97438dd7d3cf",
+  "expected": "Police are still looking for Steve Mercer. If you see him, tell him to smile!",
+  "recognized": "Police are still looking for Steve Mercer. If you see him, tell him to smile.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 5.44,
+  "sample_rate": 48000,
+  "peak": 0.485870361328125,
+  "rms": 0.05401406972266976,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

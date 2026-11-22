@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c6_jail.talk.pell.3.03",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "ef87aeb4591f2fafb43839c8f47bfa955d18e1aae95b8e3064acf3610894bca6",
+  "expected": "I have his memories, but not his complaints. I find I do not miss them.",
+  "recognized": "I have his memories, but not his complaints. I find I do not miss them.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 5.92,
+  "sample_rate": 48000,
+  "peak": 0.716064453125,
+  "rms": 0.07032909202078193,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c8_rig.talk.stephen.2.03",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "6364afc352b650d47099508c190d502bb3c67300504ee465d8828fff649ddb18",
+  "expected": "Then we take it back together. You do the sound. I’ll do the talking.",
+  "recognized": "Then we take it back together. You do the sound, I'll do the talking.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.24,
+  "sample_rate": 48000,
+  "peak": 0.4273681640625,
+  "rms": 0.042708811156082695,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c3_archive.talk.calder.1.02",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "d8f27c266fd4222875bbabd7aac605b57d919c6eaf16a22bb4713ff427bb6590",
+  "expected": "The sheriff’s office has had a key since nineteen fifty. Nobody ever asked for it back.",
+  "recognized": "The sheriff's office has had a key since 1950. Nobody ever asked for it back.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 5.52,
+  "sample_rate": 48000,
+  "peak": 0.476776123046875,
+  "rms": 0.06071944120532634,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

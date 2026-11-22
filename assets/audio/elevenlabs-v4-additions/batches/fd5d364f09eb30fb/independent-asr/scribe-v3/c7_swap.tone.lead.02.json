@@ -1,0 +1,207 @@
+{
+  "audio_id": "c7_swap.tone.lead.02",
+  "audio_sha256": "ba0922c2fb4a93c9c47c3c3c2b0f6062d8a022b5ac3ad8eb7f12965e96c4c286",
+  "file": "assets/audio/elevenlabs-v4-additions/masters/c7_swap.tone.lead.02.attempt-1.wav",
+  "production_plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "We reach the patient at eleven fifty-eight and fourteen seconds. Not one second sooner.",
+  "recognized": "We reached the patient at 11:58 and 14 seconds, not one second sooner.",
+  "word_edits": 3,
+  "request_id": null,
+  "trace_id": "4cafcb3657f630481a1c232882c074ab",
+  "character_cost": "2",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "We reached the patient at 11:58 and 14 seconds, not one second sooner.",
+    "words": [
+      {
+        "text": "We",
+        "start": 0.1,
+        "end": 0.16,
+        "type": "word",
+        "logprob": -7.986990567587782e-06
+      },
+      {
+        "text": " ",
+        "start": 0.16,
+        "end": 0.24,
+        "type": "spacing",
+        "logprob": -0.07012329250574112
+      },
+      {
+        "text": "reached",
+        "start": 0.24,
+        "end": 0.46,
+        "type": "word",
+        "logprob": -0.07012329250574112
+      },
+      {
+        "text": " ",
+        "start": 0.46,
+        "end": 0.5,
+        "type": "spacing",
+        "logprob": 0.0
+      },
+      {
+        "text": "the",
+        "start": 0.5,
+        "end": 0.58,
+        "type": "word",
+        "logprob": 0.0
+      },
+      {
+        "text": " ",
+        "start": 0.58,
+        "end": 0.62,
+        "type": "spacing",
+        "logprob": -1.9907753085135482e-05
+      },
+      {
+        "text": "patient",
+        "start": 0.62,
+        "end": 1.02,
+        "type": "word",
+        "logprob": -1.9907753085135482e-05
+      },
+      {
+        "text": " ",
+        "start": 1.02,
+        "end": 1.06,
+        "type": "spacing",
+        "logprob": -1.7881377516459906e-06
+      },
+      {
+        "text": "at",
+        "start": 1.06,
+        "end": 1.14,
+        "type": "word",
+        "logprob": -1.7881377516459906e-06
+      },
+      {
+        "text": " ",
+        "start": 1.14,
+        "end": 1.18,
+        "type": "spacing",
+        "logprob": -5.6265202147187665e-05
+      },
+      {
+        "text": "11:58",
+        "start": 1.18,
+        "end": 2.14,
+        "type": "word",
+        "logprob": -4.1053675795410526e-05
+      },
+      {
+        "text": " ",
+        "start": 2.14,
+        "end": 2.24,
+        "type": "spacing",
+        "logprob": -0.0038823720533400774
+      },
+      {
+        "text": "and",
+        "start": 2.24,
+        "end": 2.34,
+        "type": "word",
+        "logprob": -0.0038823720533400774
+      },
+      {
+        "text": " ",
+        "start": 2.34,
+        "end": 2.48,
+        "type": "spacing",
+        "logprob": -4.172316494077677e-06
+      },
+      {
+        "text": "14",
+        "start": 2.48,
+        "end": 2.94,
+        "type": "word",
+        "logprob": -1.3053302609478123e-05
+      },
+      {
+        "text": " ",
+        "start": 2.94,
+        "end": 3.04,
+        "type": "spacing",
+        "logprob": -4.053033626405522e-05
+      },
+      {
+        "text": "seconds,",
+        "start": 3.04,
+        "end": 3.48,
+        "type": "word",
+        "logprob": -0.02007170322121965
+      },
+      {
+        "text": " ",
+        "start": 3.48,
+        "end": 3.48,
+        "type": "spacing",
+        "logprob": -5.364403477869928e-06
+      },
+      {
+        "text": "not",
+        "start": 3.92,
+        "end": 4.24,
+        "type": "word",
+        "logprob": -5.364403477869928e-06
+      },
+      {
+        "text": " ",
+        "start": 4.24,
+        "end": 4.32,
+        "type": "spacing",
+        "logprob": -0.0006388768670149148
+      },
+      {
+        "text": "one",
+        "start": 4.32,
+        "end": 4.5,
+        "type": "word",
+        "logprob": -0.0006388768670149148
+      },
+      {
+        "text": " ",
+        "start": 4.5,
+        "end": 4.66,
+        "type": "spacing",
+        "logprob": -2.109982233378105e-05
+      },
+      {
+        "text": "second",
+        "start": 4.66,
+        "end": 4.9,
+        "type": "word",
+        "logprob": -2.109982233378105e-05
+      },
+      {
+        "text": " ",
+        "start": 4.9,
+        "end": 5.04,
+        "type": "spacing",
+        "logprob": -1.5020257706055418e-05
+      },
+      {
+        "text": "sooner.",
+        "start": 5.04,
+        "end": 5.38,
+        "type": "word",
+        "logprob": -1.888593448841545e-05
+      }
+    ],
+    "transcription_id": "w4u1qkD03mFdGlPTXSF0",
+    "audio_duration_secs": 5.76
+  },
+  "listening_reviewed": false
+}

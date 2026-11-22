@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c7_swap.talk.shaw.1.03",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "de469f3e0ee1e044b96315d0b0468e91f15c4e2172c1296964f17854a44c18c8",
+  "expected": "Less. Breathe, Mercer. The tape won’t play any faster if you hold your breath.",
+  "recognized": "less breathe mercer the tape won't play any faster if you hold your breath",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 6.08,
+  "sample_rate": 48000,
+  "peak": 0.3291015625,
+  "rms": 0.03211078607327904,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

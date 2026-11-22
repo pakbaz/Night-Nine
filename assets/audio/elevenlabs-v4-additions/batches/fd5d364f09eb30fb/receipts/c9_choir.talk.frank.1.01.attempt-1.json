@@ -1,0 +1,17 @@
+{
+  "operation": "text_to_speech",
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "audio_id": "c9_choir.talk.frank.1.01",
+  "attempt": 1,
+  "voice_id": "pqHfZKP75CvOlQylNhV4",
+  "model_id": "eleven_v4",
+  "text_sha256": "ba83dfbf7ea953da8e5d6b55d035e4a80e34c80d4fbd4a659eda419bf910c9ee",
+  "synthesis_text_sha256": "ba83dfbf7ea953da8e5d6b55d035e4a80e34c80d4fbd4a659eda419bf910c9ee",
+  "request_id": "7PJC82gYGQj3vbzhk7yW",
+  "trace_id": "3697b5b96c6054ff3e232540bbfe0fb5",
+  "character_cost": 20,
+  "output_format": "mp3_44100_192",
+  "audio_sha256": "5bd670583c1c620b0acadc09271cf663e4b4f6cc092a9d468572d0001fcb75e6",
+  "response_bytes": 82172,
+  "seed": 3262409192
+}

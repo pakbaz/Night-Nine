@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "epilogue.talk.nora.1.02",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "12c5730768fb462f499505451341adff5a13d7ea6c5ce1001ad791e1a37b50d5",
+  "expected": "They’ll remember you. You’re the one who argues with the vet.",
+  "recognized": "They'll remember you. You're the one who argues with the vet.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 3.68,
+  "sample_rate": 48000,
+  "peak": 0.311004638671875,
+  "rms": 0.045455232150402085,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

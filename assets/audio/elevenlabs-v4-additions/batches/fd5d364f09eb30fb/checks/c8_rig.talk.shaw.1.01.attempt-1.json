@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c8_rig.talk.shaw.1.01",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "24900accbe35ca3a2c7124d6666b19befbfa33d43c35e07b3a10236239be9e02",
+  "expected": "I’ve used eleven rolls of gaffer tape today. That’s a personal record.",
+  "recognized": "I've used 11 rolls of gaffer tape today. That's a personal record.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.64,
+  "sample_rate": 48000,
+  "peak": 0.437957763671875,
+  "rms": 0.045459928161698,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

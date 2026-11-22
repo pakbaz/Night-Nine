@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c7_gate.talk.pell.1.02",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "57a5123b3c5d4dfc32f4c38306c2efd1dfae1e4cd04ef20da35ae69dfc96eadb",
+  "expected": "The Sheriff’s neighbor. I left written instructions. Four pages, with diagrams.",
+  "recognized": "The sheriff's neighbor. I left written instructions. Four pages with diagrams.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 6.0,
+  "sample_rate": 48000,
+  "peak": 0.88446044921875,
+  "rms": 0.07582888617090586,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

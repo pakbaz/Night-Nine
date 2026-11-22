@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c7_swap.map.lead.02",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "e8cb963f026f970a16492924d1b451db22b636796c4905cb005637902f457bf9",
+  "expected": "Iris said Ward’s own doctor scanned her weeks ago. A copy made back then can’t know about this morning.",
+  "recognized": "Iris said Ward's own doctor scanned her weeks ago. A copy made back then can't know about this morning.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 6.88,
+  "sample_rate": 48000,
+  "peak": 0.357147216796875,
+  "rms": 0.041352342381295225,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

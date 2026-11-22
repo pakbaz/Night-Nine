@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c3_archive.talk.calder.1.01",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "e16748a72bc5865a91829c43e86adbd2997b1ae8b380f41866fcd213027ba83d",
+  "expected": "Why does the sheriff have keys to the archive?",
+  "recognized": "Why does the sheriff have keys to the archive?",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 3.04,
+  "sample_rate": 48000,
+  "peak": 0.4412841796875,
+  "rms": 0.03764323693707882,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

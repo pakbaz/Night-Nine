@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c9_wake.agnes.02",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "80d4a047328cba12fb24b5a1c3eaca596a2b3c2901f0eebb02eddf449a29ed08",
+  "expected": "Who has been minding my bait stall, Steven?",
+  "recognized": "Who has been minding my bait stall, Stephen?",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 3.04,
+  "sample_rate": 48000,
+  "peak": 0.37384033203125,
+  "rms": 0.0464198462702103,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

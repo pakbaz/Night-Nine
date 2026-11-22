@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c7_swap.talk.stephen.1.02",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "bfde0a7b666d0e392f326d5dd4d5b7aa2a919a472d2630821da46922071c32d0",
+  "expected": "My favorite food. I said Sunday dinner at La Marea. Then I wasn’t sure whose memory that was.",
+  "recognized": "My favorite food. I said Sunday dinner at La Marea. Then I wasn't sure whose memory that was.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 6.88,
+  "sample_rate": 48000,
+  "peak": 0.29095458984375,
+  "rms": 0.036808682506494314,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

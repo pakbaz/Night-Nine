@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c7_swap.tone.lead.02",
+  "attempt": 1,
+  "plan_sha256": "d2bdf5c4acbc89d16422f6915440fe295d460d09b3bf365d836f4c6f285a412b",
+  "wav_sha256": "0f10b763ca5cff144f923f9bedffcf2ce9554d7ad757e4bb5da1e48469199f53",
+  "expected": "The team gets to the patient at 11:58 and fourteen seconds. Not one second sooner.",
+  "recognized": "The team gets to the patient at 11.58 and 14 seconds, not one second sooner.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 6.56,
+  "sample_rate": 48000,
+  "peak": 0.580413818359375,
+  "rms": 0.06084295068137774,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

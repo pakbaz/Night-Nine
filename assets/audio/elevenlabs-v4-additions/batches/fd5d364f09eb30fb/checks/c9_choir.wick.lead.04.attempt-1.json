@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c9_choir.wick.lead.04",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "11dde56fd336a27f9dd74c0084d7da113e51c1f8c41c3cbc179833536ecd4663",
+  "expected": "That’s the phrase from your father’s tapes. Two joined notes going up, a little gap, then one long low note.",
+  "recognized": "That's the phrase from your father's tapes. Two joined notes going up, a little gap, then one long low note.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 8.96,
+  "sample_rate": 48000,
+  "peak": 0.443634033203125,
+  "rms": 0.057436941125065824,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

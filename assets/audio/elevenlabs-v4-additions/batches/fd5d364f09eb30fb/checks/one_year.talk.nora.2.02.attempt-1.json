@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "one_year.talk.nora.2.02",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "3b5f2caeedac5ea200e62441a7e854c2281bd5247a854111b91f72ef25b1b704",
+  "expected": "It is a long story with a spaceship in it.",
+  "recognized": "It is a long story with a spaceship in it.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 2.96,
+  "sample_rate": 48000,
+  "peak": 0.413726806640625,
+  "rms": 0.0398161201237751,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

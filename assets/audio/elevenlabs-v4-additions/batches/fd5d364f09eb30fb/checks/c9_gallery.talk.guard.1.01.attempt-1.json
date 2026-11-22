@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c9_gallery.talk.guard.1.01",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "f0dd9325b291b7d6b8aff8f1e8b3b8fdcc818041dbe7e1555a1e75d7d57105c7",
+  "expected": "Would you like to be scanned while you wait?",
+  "recognized": "Would you like to be scanned while you wait?",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 2.88,
+  "sample_rate": 48000,
+  "peak": 0.907928466796875,
+  "rms": 0.14673781569544012,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "audio_id": "c4_escape.van.lead.03",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "15677e6b45ccfe2623b949e18b74e1c815a91533157ebeda1f51a00bc461b310",
+  "expected": "After the gravel comes the weighbridge. There, the escort opens the door himself.",
+  "recognized": "After the gravel comes the weighbridge. There, the escort opens the door himself.",
+  "local_recognized": "After the gravel comes the waybridge. There, the escort opens the door himself.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 5.6,
+  "sample_rate": 48000,
+  "peak": 0.44171142578125,
+  "rms": 0.04030605420847698,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c4_escape.van.lead.03.json",
+    "sha256": "e59df0d54616b901ddd1432d44f3f99f99a7743327cc9e393fc0388898be1e51",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  },
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

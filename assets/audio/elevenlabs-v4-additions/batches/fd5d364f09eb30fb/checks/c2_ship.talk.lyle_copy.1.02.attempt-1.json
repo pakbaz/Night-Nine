@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c2_ship.talk.lyle_copy.1.02",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "a97743cb48a70db94369d427ed99137e629f86a64d33dd8894d5703b1b26189c",
+  "expected": "They’re asleep. I’ll be at their game on Sunday. I always am now.",
+  "recognized": "They're asleep. I'll be at their game on Sunday. I always am now.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.48,
+  "sample_rate": 48000,
+  "peak": 0.48345947265625,
+  "rms": 0.06007575355251002,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

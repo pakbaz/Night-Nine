@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "audio_id": "c10_live.second.lead.04",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "d430c0e7111f82b7330cbd45a750524bb3980ba1380e6437af9c5e54591c6603",
+  "expected": "Cue four goes out on beat forty. Shaw goes when the coast answers. Wen needs the next two beats.",
+  "recognized": "Q4 goes out on beat 40. Shaw goes when the coast answers. Wen needs the next two beats.",
+  "local_recognized": "Q4 goes out on beat 40. Shaw goes when the coast answers. Wen needs the next two beats.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 6.64,
+  "sample_rate": 48000,
+  "peak": 0.3594970703125,
+  "rms": 0.0415907518982506,
+  "level_match_gain_db": 0.0,
+  "word_edits": 1,
+  "word_error_rate": 0.05263157894736842,
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c10_live.second.lead.04.json",
+    "sha256": "c98ba75e604f56bfd42c1652c7ea67e8b42ed0cc5a91bdd09c43da9f951fccf7",
+    "model": "scribe_v3",
+    "word_edits": 1,
+    "listening_reviewed": false
+  },
+  "status": "retake_required",
+  "failure_reason": "asr_mismatch"
+}

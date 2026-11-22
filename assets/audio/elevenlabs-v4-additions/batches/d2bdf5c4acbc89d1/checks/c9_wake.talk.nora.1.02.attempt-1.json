@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c9_wake.talk.nora.1.02",
+  "attempt": 1,
+  "plan_sha256": "d2bdf5c4acbc89d16422f6915440fe295d460d09b3bf365d836f4c6f285a412b",
+  "wav_sha256": "4614dc0dc38d09e0eefbfa2124e8564163d7593bcc4d50140aeedc2cc8a77d67",
+  "expected": "All that shouting? I can believe that.",
+  "recognized": "All that shouting? I can believe that.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 2.8,
+  "sample_rate": 48000,
+  "peak": 0.3057861328125,
+  "rms": 0.04100274328609188,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

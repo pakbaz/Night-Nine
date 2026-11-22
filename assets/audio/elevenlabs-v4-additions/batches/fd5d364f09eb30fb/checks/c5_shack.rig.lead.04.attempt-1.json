@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c5_shack.rig.lead.04",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "d42a34c5e345f7d34617980109f988b1f400280bc8ceda52cfb66e430cab772d",
+  "expected": "His log says the dial reads a little high. The same amount, every time.",
+  "recognized": "His log says the dial reads a little high, the same amount every time.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 5.2,
+  "sample_rate": 48000,
+  "peak": 0.3280029296875,
+  "rms": 0.04002290980997457,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

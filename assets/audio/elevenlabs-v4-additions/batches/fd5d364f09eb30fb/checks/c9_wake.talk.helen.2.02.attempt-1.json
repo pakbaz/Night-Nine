@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c9_wake.talk.helen.2.02",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "41af382f2ecb3f1930b9d9653c55bcc9d5162726e3f09863c470be15bed03124",
+  "expected": "She ran this whole hall while you were asleep, Mom.",
+  "recognized": "She ran this whole hall while you were asleep, Mom.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 3.28,
+  "sample_rate": 48000,
+  "peak": 0.2794189453125,
+  "rms": 0.0411787848599183,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

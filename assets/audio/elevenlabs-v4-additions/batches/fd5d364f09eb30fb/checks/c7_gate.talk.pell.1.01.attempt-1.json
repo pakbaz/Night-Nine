@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "audio_id": "c7_gate.talk.pell.1.01",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "7a594bffa1287f98218b53ce515c3bb75036303086a66d8a0496b469988847ac",
+  "expected": "Who’s looking after Biscuit today, Pell?",
+  "recognized": "Who's looking after Biscuit today, Pel?",
+  "local_recognized": "Who's looking after Biscuit today, pal?",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 2.32,
+  "sample_rate": 48000,
+  "peak": 0.305267333984375,
+  "rms": 0.043044080049842136,
+  "level_match_gain_db": 0.0,
+  "word_edits": 1,
+  "word_error_rate": 0.14285714285714285,
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c7_gate.talk.pell.1.01.json",
+    "sha256": "4489707f1dc3c84c38a9e8db719c7c9b556e8bae29e448c18f1b8f5f732a706c",
+    "model": "scribe_v3",
+    "word_edits": 1,
+    "listening_reviewed": false
+  },
+  "status": "retake_required",
+  "failure_reason": "asr_mismatch"
+}

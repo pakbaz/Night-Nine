@@ -1,0 +1,123 @@
+{
+  "audio_id": "epilogue.talk.agnes.1.02",
+  "audio_sha256": "73ace6c8efba22346ba5a33dbf91c0a239cd6b33d2e759d25831f29e1942cf7d",
+  "file": "assets/audio/elevenlabs-v4-additions/masters/epilogue.talk.agnes.1.02.attempt-1.wav",
+  "production_plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Won’t you miss the wind on Veyr?",
+  "recognized": "Won't you miss the wind on Verre?",
+  "word_edits": 1,
+  "request_id": null,
+  "trace_id": "c192bbef97bbfcc1e675498c3374ae26",
+  "character_cost": "1",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Won't you miss the wind on Verre?",
+    "words": [
+      {
+        "text": "Won't",
+        "start": 0.06,
+        "end": 0.24,
+        "type": "word",
+        "logprob": -0.0005812125521515554
+      },
+      {
+        "text": " ",
+        "start": 0.24,
+        "end": 0.3,
+        "type": "spacing",
+        "logprob": -1.0728830375228426e-06
+      },
+      {
+        "text": "you",
+        "start": 0.3,
+        "end": 0.4,
+        "type": "word",
+        "logprob": -1.0728830375228426e-06
+      },
+      {
+        "text": " ",
+        "start": 0.4,
+        "end": 0.44,
+        "type": "spacing",
+        "logprob": -1.3470558769768104e-05
+      },
+      {
+        "text": "miss",
+        "start": 0.44,
+        "end": 0.68,
+        "type": "word",
+        "logprob": -1.3470558769768104e-05
+      },
+      {
+        "text": " ",
+        "start": 0.68,
+        "end": 0.72,
+        "type": "spacing",
+        "logprob": -1.9311717551317997e-05
+      },
+      {
+        "text": "the",
+        "start": 0.72,
+        "end": 0.84,
+        "type": "word",
+        "logprob": -1.9311717551317997e-05
+      },
+      {
+        "text": " ",
+        "start": 0.84,
+        "end": 0.9,
+        "type": "spacing",
+        "logprob": -0.00026353701832704246
+      },
+      {
+        "text": "wind",
+        "start": 0.9,
+        "end": 1.22,
+        "type": "word",
+        "logprob": -0.00026353701832704246
+      },
+      {
+        "text": " ",
+        "start": 1.22,
+        "end": 1.28,
+        "type": "spacing",
+        "logprob": -0.00015436411194968969
+      },
+      {
+        "text": "on",
+        "start": 1.28,
+        "end": 1.44,
+        "type": "word",
+        "logprob": -0.00015436411194968969
+      },
+      {
+        "text": " ",
+        "start": 1.44,
+        "end": 1.5,
+        "type": "spacing",
+        "logprob": -0.17379696667194366
+      },
+      {
+        "text": "Verre?",
+        "start": 1.5,
+        "end": 1.8,
+        "type": "word",
+        "logprob": -0.2184789453808662
+      }
+    ],
+    "transcription_id": "BNQvzN8fT33lsCCOVGFH",
+    "audio_duration_secs": 2.16
+  },
+  "listening_reviewed": false
+}

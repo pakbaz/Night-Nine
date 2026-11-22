@@ -1,0 +1,151 @@
+{
+  "audio_id": "c8_lab.talk.wen.3.01",
+  "audio_sha256": "f7b552fc8312725f7b971ecca03aa30ac5c79e94439caed27113d11d7ded65df",
+  "file": "assets/audio/elevenlabs-v4-additions/masters/c8_lab.talk.wen.3.01.attempt-1.wav",
+  "production_plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "How long have you and Shaw known each other?",
+  "recognized": "How long have you and Sean known each other?",
+  "word_edits": 1,
+  "request_id": null,
+  "trace_id": "2cb4737c628cc258873ccdb156bff7df",
+  "character_cost": "1",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "How long have you and Sean known each other?",
+    "words": [
+      {
+        "text": "How",
+        "start": 0.06,
+        "end": 0.14,
+        "type": "word",
+        "logprob": -6.794906312279636e-06
+      },
+      {
+        "text": " ",
+        "start": 0.14,
+        "end": 0.22,
+        "type": "spacing",
+        "logprob": -1.7165990357170813e-05
+      },
+      {
+        "text": "long",
+        "start": 0.24,
+        "end": 0.42,
+        "type": "word",
+        "logprob": -1.7165990357170813e-05
+      },
+      {
+        "text": " ",
+        "start": 0.42,
+        "end": 0.44,
+        "type": "spacing",
+        "logprob": -5.8412379075889476e-06
+      },
+      {
+        "text": "have",
+        "start": 0.44,
+        "end": 0.6,
+        "type": "word",
+        "logprob": -5.8412379075889476e-06
+      },
+      {
+        "text": " ",
+        "start": 0.6,
+        "end": 0.66,
+        "type": "spacing",
+        "logprob": -5.960462772236497e-07
+      },
+      {
+        "text": "you",
+        "start": 0.66,
+        "end": 0.76,
+        "type": "word",
+        "logprob": -5.960462772236497e-07
+      },
+      {
+        "text": " ",
+        "start": 0.76,
+        "end": 0.78,
+        "type": "spacing",
+        "logprob": -5.960462772236497e-07
+      },
+      {
+        "text": "and",
+        "start": 0.78,
+        "end": 0.88,
+        "type": "word",
+        "logprob": -5.960462772236497e-07
+      },
+      {
+        "text": " ",
+        "start": 0.88,
+        "end": 1.0,
+        "type": "spacing",
+        "logprob": -0.05252200365066528
+      },
+      {
+        "text": "Sean",
+        "start": 1.0,
+        "end": 1.28,
+        "type": "word",
+        "logprob": -0.05252200365066528
+      },
+      {
+        "text": " ",
+        "start": 1.28,
+        "end": 1.32,
+        "type": "spacing",
+        "logprob": -6.174850568640977e-05
+      },
+      {
+        "text": "known",
+        "start": 1.32,
+        "end": 1.52,
+        "type": "word",
+        "logprob": -6.174850568640977e-05
+      },
+      {
+        "text": " ",
+        "start": 1.52,
+        "end": 1.56,
+        "type": "spacing",
+        "logprob": -2.3841830625315197e-06
+      },
+      {
+        "text": "each",
+        "start": 1.56,
+        "end": 1.7,
+        "type": "word",
+        "logprob": -2.3841830625315197e-06
+      },
+      {
+        "text": " ",
+        "start": 1.7,
+        "end": 1.78,
+        "type": "spacing",
+        "logprob": -2.312633478140924e-05
+      },
+      {
+        "text": "other?",
+        "start": 1.78,
+        "end": 2.04,
+        "type": "word",
+        "logprob": -1.966930949492962e-05
+      }
+    ],
+    "transcription_id": "nAC4VqASvoyrpuoCpQ3Y",
+    "audio_duration_secs": 2.4
+  },
+  "listening_reviewed": false
+}

@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c4_safe.talk.calder.2.02",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "71ed3bc8dea8d4a130a811f5d801077213e0541c8b325f2de9e46bfe6d4f203f",
+  "expected": "Then why did you keep coming?",
+  "recognized": "Then why did you keep coming?",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 1.84,
+  "sample_rate": 48000,
+  "peak": 0.217926025390625,
+  "rms": 0.03890485180852469,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "audio_id": "c8_rig.rig.lead.03",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "d62f4066b3ca24ee5b8381b5da8d5f9d38f8b6e3e1398f35fd21a757d9dd3aa0",
+  "expected": "We need a cue going out and nothing coming back. Otherwise the ship hears my theater.",
+  "recognized": "We need a queue going out and nothing coming back. Otherwise, the ship hears my theater.",
+  "local_recognized": "We need a queue going out and nothing coming back. Otherwise, the ship hears my theater.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 5.6,
+  "sample_rate": 48000,
+  "peak": 0.365478515625,
+  "rms": 0.04321594405597805,
+  "level_match_gain_db": 0.0,
+  "word_edits": 1,
+  "word_error_rate": 0.0625,
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c8_rig.rig.lead.03.json",
+    "sha256": "7bd8ad6d21f1a7253bbb6e8699cfffaf6aac9cd64afb3b6f0c020439029b1e94",
+    "model": "scribe_v3",
+    "word_edits": 1,
+    "listening_reviewed": false
+  },
+  "status": "retake_required",
+  "failure_reason": "asr_mismatch"
+}

@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "epilogue.talk.pell.1.01",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "be8ccd82da83f3c03196077cdd8f61385f382834f23213c3459db5cd48ce5eb6",
+  "expected": "Biscuit knows every porch on the route. I am still learning the gates.",
+  "recognized": "Biscuit knows every porch on the route. I am still learning the gates.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.96,
+  "sample_rate": 48000,
+  "peak": 0.874053955078125,
+  "rms": 0.07781449240273171,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

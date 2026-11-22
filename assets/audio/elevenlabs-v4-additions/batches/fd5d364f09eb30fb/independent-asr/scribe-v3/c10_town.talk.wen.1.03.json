@@ -1,0 +1,109 @@
+{
+  "audio_id": "c10_town.talk.wen.1.03",
+  "audio_sha256": "5a5397d417dc24128d2cdd54b03949e58e756f40a386657b1bd18fb48bbf7b2e",
+  "file": "assets/audio/elevenlabs-v4-additions/masters/c10_town.talk.wen.1.03.attempt-1.wav",
+  "production_plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "It did not. Mine fooled two admirals as well.",
+  "recognized": "It did not. Mindful2Admirals as well.",
+  "word_edits": 2,
+  "request_id": null,
+  "trace_id": "96e48fbfb2f489ffd8403f936882b0d6",
+  "character_cost": "1",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "It did not. Mindful2Admirals as well.",
+    "words": [
+      {
+        "text": "It",
+        "start": 0.06,
+        "end": 0.16,
+        "type": "word",
+        "logprob": -0.0007023728103376925
+      },
+      {
+        "text": " ",
+        "start": 0.16,
+        "end": 0.22,
+        "type": "spacing",
+        "logprob": -2.658331868587993e-05
+      },
+      {
+        "text": "did",
+        "start": 0.22,
+        "end": 0.4,
+        "type": "word",
+        "logprob": -2.658331868587993e-05
+      },
+      {
+        "text": " ",
+        "start": 0.4,
+        "end": 0.48,
+        "type": "spacing",
+        "logprob": -6.794906312279636e-06
+      },
+      {
+        "text": "not.",
+        "start": 0.48,
+        "end": 0.92,
+        "type": "word",
+        "logprob": -0.00810654273379896
+      },
+      {
+        "text": " ",
+        "start": 0.92,
+        "end": 1.4,
+        "type": "spacing",
+        "logprob": -0.08693141490221024
+      },
+      {
+        "text": "Mindful2Admirals",
+        "start": 1.4,
+        "end": 2.88,
+        "type": "word",
+        "logprob": -0.2522048078976695
+      },
+      {
+        "text": " ",
+        "start": 2.88,
+        "end": 2.94,
+        "type": "spacing",
+        "logprob": -0.0004820853646378964
+      },
+      {
+        "text": "as",
+        "start": 2.94,
+        "end": 3.06,
+        "type": "word",
+        "logprob": -0.0004820853646378964
+      },
+      {
+        "text": " ",
+        "start": 3.06,
+        "end": 3.12,
+        "type": "spacing",
+        "logprob": -1.9073468138230965e-06
+      },
+      {
+        "text": "well.",
+        "start": 3.12,
+        "end": 3.4,
+        "type": "word",
+        "logprob": -4.791675164597109e-05
+      }
+    ],
+    "transcription_id": "yfo3O72zV53ACyjoVb08",
+    "audio_duration_secs": 3.92
+  },
+  "listening_reviewed": false
+}

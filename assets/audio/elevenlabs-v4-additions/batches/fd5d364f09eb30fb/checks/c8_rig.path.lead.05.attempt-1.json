@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c8_rig.path.lead.05",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "374c0bdc940001c38bccc6a51da03e439a33d847e2767363a8f6ba7355e49dff",
+  "expected": "And the sleepers are in the Gallery. Mom and Dad are in row nine.",
+  "recognized": "and the sleepers are in the gallery. Mom and Dad are in row nine.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.4,
+  "sample_rate": 48000,
+  "peak": 0.29296875,
+  "rms": 0.04386729948925073,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

@@ -1,0 +1,403 @@
+{
+  "audio_id": "c9_wake.frank.find",
+  "audio_sha256": "9db71cb54f4d4326b33ed7c5e4d8721bddce5896b1c3c58ea85ab1886c9199d4",
+  "file": "assets/audio/elevenlabs-v4-additions/masters/c9_wake.frank.find.attempt-1.wav",
+  "production_plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Dad’s card is K7BLW. The scratched cassette lost the last letter, the W: dot, dash, dash. I sent it again, and Dad answered his own call sign.",
+  "recognized": "Dad's card is K7BLW. The scratched cassette lost the last letter, the W, dot, dash, dash. I sent it again, and Dad answered his own call sign.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "cf8d138e6ba296c19b61a99abd5630d8",
+  "character_cost": "4",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Dad's card is K7BLW. The scratched cassette lost the last letter, the W, dot, dash, dash. I sent it again, and Dad answered his own call sign.",
+    "words": [
+      {
+        "text": "Dad's",
+        "start": 0.04,
+        "end": 0.36,
+        "type": "word",
+        "logprob": -0.004364859931115461
+      },
+      {
+        "text": " ",
+        "start": 0.36,
+        "end": 0.42,
+        "type": "spacing",
+        "logprob": -9.893881360767409e-05
+      },
+      {
+        "text": "card",
+        "start": 0.42,
+        "end": 0.72,
+        "type": "word",
+        "logprob": -9.893881360767409e-05
+      },
+      {
+        "text": " ",
+        "start": 0.72,
+        "end": 0.84,
+        "type": "spacing",
+        "logprob": -1.5497195136049413e-06
+      },
+      {
+        "text": "is",
+        "start": 0.84,
+        "end": 1.04,
+        "type": "word",
+        "logprob": -1.5497195136049413e-06
+      },
+      {
+        "text": " ",
+        "start": 1.04,
+        "end": 1.12,
+        "type": "spacing",
+        "logprob": -5.61460001335945e-05
+      },
+      {
+        "text": "K7BLW.",
+        "start": 1.12,
+        "end": 3.96,
+        "type": "word",
+        "logprob": -0.0012731838761889473
+      },
+      {
+        "text": " ",
+        "start": 3.96,
+        "end": 3.96,
+        "type": "spacing",
+        "logprob": -8.4638240878121e-06
+      },
+      {
+        "text": "The",
+        "start": 4.3,
+        "end": 4.38,
+        "type": "word",
+        "logprob": -8.4638240878121e-06
+      },
+      {
+        "text": " ",
+        "start": 4.38,
+        "end": 4.42,
+        "type": "spacing",
+        "logprob": -0.00027891082572750747
+      },
+      {
+        "text": "scratched",
+        "start": 4.42,
+        "end": 4.84,
+        "type": "word",
+        "logprob": -0.00027891082572750747
+      },
+      {
+        "text": " ",
+        "start": 4.84,
+        "end": 4.88,
+        "type": "spacing",
+        "logprob": -0.0002762889489531517
+      },
+      {
+        "text": "cassette",
+        "start": 4.88,
+        "end": 5.34,
+        "type": "word",
+        "logprob": -0.0002762889489531517
+      },
+      {
+        "text": " ",
+        "start": 5.34,
+        "end": 5.4,
+        "type": "spacing",
+        "logprob": -1.7165990357170813e-05
+      },
+      {
+        "text": "lost",
+        "start": 5.4,
+        "end": 5.7,
+        "type": "word",
+        "logprob": -1.7165990357170813e-05
+      },
+      {
+        "text": " ",
+        "start": 5.7,
+        "end": 5.76,
+        "type": "spacing",
+        "logprob": -5.960462772236497e-07
+      },
+      {
+        "text": "the",
+        "start": 5.76,
+        "end": 5.82,
+        "type": "word",
+        "logprob": -5.960462772236497e-07
+      },
+      {
+        "text": " ",
+        "start": 5.82,
+        "end": 5.88,
+        "type": "spacing",
+        "logprob": -4.637133679352701e-05
+      },
+      {
+        "text": "last",
+        "start": 5.88,
+        "end": 6.14,
+        "type": "word",
+        "logprob": -4.637133679352701e-05
+      },
+      {
+        "text": " ",
+        "start": 6.14,
+        "end": 6.22,
+        "type": "spacing",
+        "logprob": -9.894321920000948e-06
+      },
+      {
+        "text": "letter,",
+        "start": 6.22,
+        "end": 6.52,
+        "type": "word",
+        "logprob": -1.5496993000851944e-05
+      },
+      {
+        "text": " ",
+        "start": 6.52,
+        "end": 6.52,
+        "type": "spacing",
+        "logprob": -3.576278118089249e-07
+      },
+      {
+        "text": "the",
+        "start": 6.88,
+        "end": 6.96,
+        "type": "word",
+        "logprob": -3.576278118089249e-07
+      },
+      {
+        "text": " ",
+        "start": 6.96,
+        "end": 7.14,
+        "type": "spacing",
+        "logprob": -5.590759246842936e-05
+      },
+      {
+        "text": "W,",
+        "start": 7.14,
+        "end": 7.22,
+        "type": "word",
+        "logprob": -0.057307603918161476
+      },
+      {
+        "text": " ",
+        "start": 7.22,
+        "end": 7.86,
+        "type": "spacing",
+        "logprob": -0.0005041282274760306
+      },
+      {
+        "text": "dot,",
+        "start": 7.86,
+        "end": 8.06,
+        "type": "word",
+        "logprob": -0.005679030597093515
+      },
+      {
+        "text": " ",
+        "start": 8.06,
+        "end": 8.38,
+        "type": "spacing",
+        "logprob": -0.00012957210128661245
+      },
+      {
+        "text": "dash,",
+        "start": 8.38,
+        "end": 8.7,
+        "type": "word",
+        "logprob": -0.00010413451764179626
+      },
+      {
+        "text": " ",
+        "start": 8.7,
+        "end": 8.9,
+        "type": "spacing",
+        "logprob": -0.00010013079008786008
+      },
+      {
+        "text": "dash.",
+        "start": 8.9,
+        "end": 9.3,
+        "type": "word",
+        "logprob": -8.313252510561142e-05
+      },
+      {
+        "text": " ",
+        "start": 9.3,
+        "end": 9.3,
+        "type": "spacing",
+        "logprob": -8.4638240878121e-06
+      },
+      {
+        "text": "I",
+        "start": 9.84,
+        "end": 9.9,
+        "type": "word",
+        "logprob": -8.4638240878121e-06
+      },
+      {
+        "text": " ",
+        "start": 9.9,
+        "end": 9.94,
+        "type": "spacing",
+        "logprob": -9.298280929215252e-06
+      },
+      {
+        "text": "sent",
+        "start": 9.94,
+        "end": 10.1,
+        "type": "word",
+        "logprob": -9.298280929215252e-06
+      },
+      {
+        "text": " ",
+        "start": 10.1,
+        "end": 10.14,
+        "type": "spacing",
+        "logprob": -3.576278118089249e-07
+      },
+      {
+        "text": "it",
+        "start": 10.14,
+        "end": 10.2,
+        "type": "word",
+        "logprob": -3.576278118089249e-07
+      },
+      {
+        "text": " ",
+        "start": 10.2,
+        "end": 10.26,
+        "type": "spacing",
+        "logprob": -2.3841830625315197e-06
+      },
+      {
+        "text": "again,",
+        "start": 10.26,
+        "end": 10.68,
+        "type": "word",
+        "logprob": -0.004386188149662
+      },
+      {
+        "text": " ",
+        "start": 10.68,
+        "end": 10.94,
+        "type": "spacing",
+        "logprob": -5.960462772236497e-07
+      },
+      {
+        "text": "and",
+        "start": 10.94,
+        "end": 11.18,
+        "type": "word",
+        "logprob": -5.960462772236497e-07
+      },
+      {
+        "text": " ",
+        "start": 11.18,
+        "end": 11.24,
+        "type": "spacing",
+        "logprob": -0.10039809346199036
+      },
+      {
+        "text": "Dad",
+        "start": 11.24,
+        "end": 11.44,
+        "type": "word",
+        "logprob": -0.10039809346199036
+      },
+      {
+        "text": " ",
+        "start": 11.44,
+        "end": 11.54,
+        "type": "spacing",
+        "logprob": -1.1205610462639015e-05
+      },
+      {
+        "text": "answered",
+        "start": 11.54,
+        "end": 11.84,
+        "type": "word",
+        "logprob": -1.1205610462639015e-05
+      },
+      {
+        "text": " ",
+        "start": 11.84,
+        "end": 11.86,
+        "type": "spacing",
+        "logprob": -3.2186455882765586e-06
+      },
+      {
+        "text": "his",
+        "start": 11.86,
+        "end": 11.98,
+        "type": "word",
+        "logprob": -3.2186455882765586e-06
+      },
+      {
+        "text": " ",
+        "start": 11.98,
+        "end": 12.02,
+        "type": "spacing",
+        "logprob": -2.264974000354414e-06
+      },
+      {
+        "text": "own",
+        "start": 12.02,
+        "end": 12.18,
+        "type": "word",
+        "logprob": -2.264974000354414e-06
+      },
+      {
+        "text": " ",
+        "start": 12.18,
+        "end": 12.24,
+        "type": "spacing",
+        "logprob": -0.00017105070583056659
+      },
+      {
+        "text": "call",
+        "start": 12.24,
+        "end": 12.4,
+        "type": "word",
+        "logprob": -0.00017105070583056659
+      },
+      {
+        "text": " ",
+        "start": 12.4,
+        "end": 12.52,
+        "type": "spacing",
+        "logprob": -0.0004040378553327173
+      },
+      {
+        "text": "sign.",
+        "start": 12.52,
+        "end": 12.8,
+        "type": "word",
+        "logprob": -0.0003358660702360794
+      }
+    ],
+    "transcription_id": "vXneOdxwh1CRADThLupy",
+    "audio_duration_secs": 13.12
+  },
+  "listening_reviewed": false
+}

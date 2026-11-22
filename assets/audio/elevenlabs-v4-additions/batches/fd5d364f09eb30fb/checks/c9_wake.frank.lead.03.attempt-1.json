@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c9_wake.frank.lead.03",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "0c9bd74205495b0fc532ad57304b07206075c6dceaf895f5ec3bfee42ee6115b",
+  "expected": "There are three call cards in his tray. They all look almost the same.",
+  "recognized": "There are three call cards in his tray. They all look almost the same.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.8,
+  "sample_rate": 48000,
+  "peak": 0.463775634765625,
+  "rms": 0.05329288675389493,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

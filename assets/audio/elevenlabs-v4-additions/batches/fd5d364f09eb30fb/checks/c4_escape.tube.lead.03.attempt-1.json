@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "audio_id": "c4_escape.tube.lead.03",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "4faf537fc9ebd9a7d3f57b56f8b98e2a954e7eb5747806dfbd249f2befa719fb",
+  "expected": "The night list says June moved out of OAK, into the room across from the linen cupboard.",
+  "recognized": "The night list says June moved out of OAK into the room across from the linen cupboard.",
+  "local_recognized": "The nightlist says June moved out of OAK, into the room across from the linen cupboard.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 5.6,
+  "sample_rate": 48000,
+  "peak": 0.468170166015625,
+  "rms": 0.049470230522000606,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c4_escape.tube.lead.03.json",
+    "sha256": "1c7c752adb0249b1a0536b36020c22db30bf0ac4e1c7cecd96f49a7911586558",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  },
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c9_gallery.talk.nora.2.01",
+  "attempt": 1,
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "wav_sha256": "2fe0115c7727bbf0998ef34b0efa29ec1e6fb5f18718fd6fa330935e59382c3a",
+  "expected": "Is anybody feeding Admiral properly? He gets sulky.",
+  "recognized": "Is anybody feeding Admiral properly? He gets sulky.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 3.76,
+  "sample_rate": 48000,
+  "peak": 0.33489990234375,
+  "rms": 0.056643833307661165,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

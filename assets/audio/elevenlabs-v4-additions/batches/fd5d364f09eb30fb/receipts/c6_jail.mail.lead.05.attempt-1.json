@@ -1,0 +1,17 @@
+{
+  "operation": "text_to_speech",
+  "plan_sha256": "fd5d364f09eb30fb5cc1241eae93a63c5a32a0e89886b36a270dee6a73eed06d",
+  "audio_id": "c6_jail.mail.lead.05",
+  "attempt": 1,
+  "voice_id": "kSSJYNGo5Kev6qgwVloV",
+  "model_id": "eleven_v4",
+  "text_sha256": "f9261192bd070e19d75e34fa042118550d41770da5a43fda11f72651e80e3643",
+  "synthesis_text_sha256": "f9261192bd070e19d75e34fa042118550d41770da5a43fda11f72651e80e3643",
+  "request_id": "ZivRsXeqRtlWh2IsW9M6",
+  "trace_id": "26ad6c229fb81d78e3d4ef501fe15c68",
+  "character_cost": 33,
+  "output_format": "mp3_44100_192",
+  "audio_sha256": "6c39310c2703f63e99bc180988597d85b8558361a49ea4f396134c2bd4b34eda",
+  "response_bytes": 159285,
+  "seed": 1798993054
+}
