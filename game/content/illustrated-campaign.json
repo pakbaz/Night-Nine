@@ -122,10 +122,10 @@
       "agnes"
     ],
     "window": [
-      0.51,
-      0.16,
-      0.42,
-      0.82
+      0.52,
+      0.0,
+      0.48,
+      0.47
     ],
     "chapter_insert": true,
     "stills": [
@@ -139,9 +139,28 @@
         ]
       }
     ],
+    "layers": [
+      {
+        "file": "res://assets/illustrated/campaign/layers/c1_escape-gate-open.webp",
+        "after": "c1_escape.power"
+      }
+    ],
+    "off_camera_lines": [
+      "c1_escape.in.01",
+      "c1_escape.out.02"
+    ],
+    "reveal_after": {
+      "iris": "c1_escape.power"
+    },
+    "inserts": {
+      "c1_escape.in.01": [
+        0.3,
+        0.36
+      ]
+    },
     "appearances": {
-      "steve": "steve_rain",
       "iris": "nora_rain",
+      "steve": "steve_rain",
       "agnes": "agnes_reflective"
     }
   },

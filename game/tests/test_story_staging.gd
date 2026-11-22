@@ -241,6 +241,21 @@ func run() -> void:
 		game._next_line()
 		await frames(1)
 
+	# The balcony is one place: walking and close-ups use the same painting, and Mr. Bell's
+	# gate is painted open (never a pasted picture) once Steve opens it.
+	await enter("c1_escape")
+	check(game.stage.floor_stage != null and game.stage.floor_stage.wide == null, "The balcony walks on the same painting it shows up close")
+	check(game.stage.floor_stage != null and game.stage.floor_stage.door_art.is_empty(), "No pasted door picture on the balcony")
+	check(not layer_shown("c1_escape-gate-open"), "Mr. Bell's gate starts closed")
+	await enter("c1_escape", ["c1_escape.order", "c1_escape.power"])
+	check(layer_shown("c1_escape-gate-open"), "Mr. Bell's gate is painted open after Steve opens it")
+	await enter("c1_escape")
+	check(not await portrait_during("c1_escape.in.01", "iris"), "Nora's phone call behind the bedroom door is heard, not shown")
+	await enter("c1_escape", ["c1_escape.order", "c1_escape.power"])
+	check(await portrait_during("c1_escape.cross.03", "iris"), "Nora comes out to Steve on the balcony")
+	var outro_shot: String = await shown_during("c1_escape.out.03")
+	check(outro_shot.ends_with("stills/c1_escape-beach-procession.webp"), "Steve watches the procession from the beach")
+
 	var receipt := FileAccess.open(output.path_join("story-staging.json"), FileAccess.WRITE)
 	receipt.store_string(JSON.stringify({"checks": checks, "failures": failures}, "\t") + "\n")
 	receipt.close()
