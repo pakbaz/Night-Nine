@@ -5,7 +5,6 @@ const FLOOR := preload("exploration_floor.gd")
 const SOCIAL := preload("social_direction.gd")
 const FLOOR_BOOK := "res://content/illustrated-floor.json"
 const ROOM_FOLDER := "res://assets/illustrated/campaign/rooms/"
-const MOTION_SHADER := "res://render/illustrated/keyframe_motion.gdshader"
 const CHAPTER_FILM := preload("chapter_film.gd")
 const FILM_CUES := "res://content/films.json"
 const INSERT_FOLDER := "res://assets/illustrated/campaign/inserts/"
@@ -27,7 +26,6 @@ var curtain: ColorRect
 var chapter_frames: Array[TextureRect]=[]
 var departure_art_layer: TextureRect
 var chapter_film: CHAPTER_FILM
-var motion_material: ShaderMaterial
 var incoming_frame: TextureRect
 var incoming_time:=0.0
 var incoming_duration:=.62
@@ -602,25 +600,11 @@ func begin_departure_cut() -> void:
 	frame.add_child(curtain)
 	curtain.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 
+## Two chapter paintings are never morphed into each other: the first holds, then a
+## short dissolve cuts to the second, as an editor would.
 func set_keyframe_quality() -> void:
 	var later:=chapter_frames[1]
-	if not high_detail:
-		later.material=null
-		later.show()
-		return
-	if not motion_material:
-		var field_path:=INSERT_FOLDER+room_id+"-flow.png"
-		if not ResourceLoader.exists(field_path) or not ResourceLoader.exists(MOTION_SHADER):
-			return
-		var field:=load(field_path) as Texture2D
-		var blend:=load(MOTION_SHADER) as Shader
-		if not field or not blend:
-			return
-		motion_material=ShaderMaterial.new()
-		motion_material.shader=blend
-		motion_material.set_shader_parameter("first_image",chapter_frames[0].texture)
-		motion_material.set_shader_parameter("motion_vectors",field)
-	later.material=motion_material
+	later.material=null
 	later.visible=cut_progress>=.14
 
 func departure_duration() -> float:
@@ -642,13 +626,8 @@ func set_departure_progress(value: float) -> void:
 		layer.scale=Vector2.ONE*push
 	chapter_frames[0].modulate.a=1.0 if is_instance_valid(departure_art_layer) else smoothstep(0.0,.14,drawing_time)
 	if chapter_frames.size()>1:
-		var morph:=smoothstep(.30,.78,drawing_time)
-		if chapter_frames[1].material:
-			motion_material.set_shader_parameter("progress",morph)
-			chapter_frames[1].visible=drawing_time>=.14
-			chapter_frames[1].modulate.a=1.0
-		else:
-			chapter_frames[1].modulate.a=morph
+		chapter_frames[1].visible=drawing_time>=.14
+		chapter_frames[1].modulate.a=smoothstep(.42,.50,drawing_time)
 	if is_instance_valid(chapter_film):
 		chapter_film.advance(cut_progress)
 	if drawing_time>=.14:

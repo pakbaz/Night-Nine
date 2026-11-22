@@ -227,12 +227,11 @@ func watch_chapter_insert(slot: String) -> void:
 	var paths: Array[String]=[]
 	for layer: TextureRect in layers:
 		paths.append(layer.texture.resource_path)
-	var flow: ShaderMaterial=layers[1].material if layers.size()==2 else null
-	chapter_inserts[slot]={"frames":paths,"motion_map":flow.get_shader_parameter("motion_vectors").resource_path if flow else ""}
+	chapter_inserts[slot]={"frames":paths}
 
 	if require_inserts:
 		check(layers.size()==2,"Two authored chapter keyframes for "+slot)
-		check(flow!=null and str(chapter_inserts[slot].motion_map).ends_with("/"+slot+"-flow.png"),"Use this chapter's packed motion field on High")
+		check(layers.all(func(layer: TextureRect): return layer.material==null),"Show the chapter paintings without morphing them in "+slot)
 	var has_film: bool = is_instance_valid(game.stage.chapter_film)
 	if require_inserts:
 		check(has_film and game.cut_duration>=11.0,"Play the third full-length animated shot in "+slot)
@@ -245,13 +244,6 @@ func watch_chapter_insert(slot: String) -> void:
 	if OS.get_environment("NIGHT_NINE_QA_CAPTURE_INSERT_FRAMES")=="1":
 		await snapshot(slot+"-chapter-first")
 	check(layers[0].modulate.a>.99 and not game.stage.cast_plane.visible and not game.stage.props.visible,"Painted chapter insert covers the prior room "+slot)
-	if slot=="c5_station" and flow:
-		game.stage.set_quality("performance")
-		await wait_frames(2)
-		check(layers[1].material==null and layers[0].scale.is_equal_approx(Vector2.ONE),"Performance mode uses a stationary, shader-free chapter transition")
-		game.stage.set_quality("high")
-		await wait_frames()
-		check(layers[1].material==flow,"Restore native vector interpolation on High")
 	if slot=="c1_escape":
 		var still: float=game.stage.cut_progress
 		await key(KEY_ESCAPE)
@@ -260,10 +252,7 @@ func watch_chapter_insert(slot: String) -> void:
 		await key(KEY_ESCAPE)
 	if layers.size()==2:
 		await wait_for_cut(slot,.26 if has_film else .54)
-		var blend: float=flow.get_shader_parameter("progress") if flow else layers[1].modulate.a
-		check(layers[1].texture!=layers[0].texture and blend>.18 and blend<.88,"Interpolate two distinct story drawings in "+slot)
-		if flow:
-			check(layers[1].modulate.a==1.0 and flow.get_shader_parameter("first_image")==layers[0].texture,"Use the matched frames and their measured motion field in "+slot)
+		check(layers[1].texture!=layers[0].texture and layers[1].material==null,"Dissolve between two distinct story paintings in "+slot)
 		await snapshot(slot+"-chapter-motion")
 		await wait_for_cut(slot,.84)
 		check(layers[1].modulate.a>.99,"Hold the second drawing in "+slot)

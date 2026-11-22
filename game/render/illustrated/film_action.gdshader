@@ -4,6 +4,8 @@ render_mode unshaded;
 uniform int shot : hint_range(1, 12) = 1;
 uniform float progress : hint_range(0.0, 1.0) = 0.0;
 uniform bool detail = true;
+// When false the plate is never displaced: only light, the slow push and whole moving cut-outs.
+uniform bool warp = false;
 uniform sampler2D subject_tex : source_color, filter_linear, repeat_disable;
 uniform float subject_aspect = 1.0;
 
@@ -114,6 +116,7 @@ void fragment() {
 	if (shot == 6 || shot == 9 || shot == 10 || shot == 11) { scale = mix(1.014, 1.038, t); }
 	vec2 p = (UV - aim) / scale + aim;
 	vec2 sample_uv = p;
+	vec2 still_uv = p;
 	float swell = 0.0;
 	float signal = 0.0;
 	if (shot == 1) {
@@ -143,6 +146,7 @@ void fragment() {
 		sample_uv.x += foreground * (0.0054 * sin(9.0 * p.x - t * 9.0) + 0.0027 * sin(31.0 * p.x - t * 13.0));
 		sample_uv.y += foreground * 0.0020 * cos(12.0 * p.x - t * 9.0);
 	}
+	if (!warp) { sample_uv = still_uv; }
 	vec4 src = texture(TEXTURE, clamp(sample_uv, vec2(0.001), vec2(0.999)));
 	vec3 paint = src.rgb;
 	if (shot == 1) {

@@ -19,6 +19,7 @@ func configure(cue: Dictionary, high: bool) -> void:
 	action.shader = ACTION
 	action.set_shader_parameter("shot", int(cue.shot))
 	action.set_shader_parameter("detail", high)
+	action.set_shader_parameter("warp", false)
 	if cue.has("subject"):
 		var subject := load(ART + "films/" + str(cue.subject) + ".webp") as Texture2D
 		if subject:
