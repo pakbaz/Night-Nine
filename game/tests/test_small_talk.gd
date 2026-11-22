@@ -98,6 +98,11 @@ func run() -> void:
 	game.campaign.reset()
 	reach_flat()
 	game.campaign.mark_seen(game.campaign.current().get("context", []) + game.campaign.current().intro)
+	check(game.campaign.available_talk("iris").is_empty(), "Nora is not up for a chat at three in the morning")
+	# Saturday morning: Nora is up, and her chat opens.
+	var saturday: Dictionary = game.campaign.task_index["c1_flat.saturday"]
+	game.campaign.choose(saturday.id, int(saturday.answer), saturday.get("puzzle", {}).get("solution", []))
+	game.campaign.mark_seen(saturday.get("lead", []) + saturday.lines + [saturday.finding])
 	var topic: Dictionary = game.campaign.available_talk("iris")[0]
 	game.started = true
 	game.menu.hide()

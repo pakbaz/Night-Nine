@@ -246,7 +246,7 @@
           "type": "rows",
           "difficulty": 2,
           "title": "Helen’s bed",
-          "requires": [],
+          "requires": ["frank"],
           "goal": "Wake Mom with the song she sang Steve every night until he was ten.",
           "background": "Helen sang Steve the same lullaby every night and never told him its words. Under the ship, the hum has been almost playing a tune Steve knew. Frank, awake now, draws the tune for him. The music box in the drawer numbers its notes: 1 is home, 3 is higher, 5 is highest.",
           "lead": [

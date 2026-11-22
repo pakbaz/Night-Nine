@@ -22,6 +22,9 @@
       "c1_flat.in.03": "c1_flat.control"
     },
     "bridge": "res://assets/illustrated/campaign/bridges/c1_flat-c1_pier.webp",
+    "reveal_after": {
+      "iris": "c1_flat.saturday"
+    },
     "appearances": {
       "steve": "steve_morning",
       "iris": "nora_warm"
@@ -54,7 +57,7 @@
       ]
     },
     "detail_shots": {
-      "c1_pier.whistle.01": {
+      "c1_pier.in.01": {
         "target": [
           0.18,
           0.805
@@ -72,7 +75,11 @@
         ],
         "width": 0.145,
         "lines": [
-          "c1_pier.whistle.02"
+          "c1_pier.in.01",
+          "c1_pier.in.03",
+          "c1_pier.whistle.02",
+          "c1_pier.whistle.03",
+          "c1_pier.whistle.04"
         ]
       }
     ],
@@ -100,6 +107,17 @@
     ],
     "resident": "carmen",
     "bridge": "res://assets/illustrated/campaign/bridges/c1_dinner-c1_escape.webp",
+    "stills": [
+      {
+        "file": "res://assets/illustrated/campaign/inserts/c1_pier.webp",
+        "lines": [
+          "c1_dinner.ctx.01",
+          "c1_dinner.ctx.02",
+          "c1_dinner.in.01",
+          "c1_dinner.in.02"
+        ]
+      }
+    ],
     "appearances": {
       "steve": "steve_morning",
       "iris": "nora_warm"
@@ -189,6 +207,15 @@
       "lyle_copy": "c2_aquarium.intercom"
     },
     "bridge": "res://assets/illustrated/campaign/bridges/c2_aquarium-c2_ship.webp",
+    "stills": [
+      {
+        "file": "res://assets/illustrated/campaign/stills/c1_escape-beach-procession.webp",
+        "lines": [
+          "c2_aquarium.in.01",
+          "c2_aquarium.in.02"
+        ]
+      }
+    ],
     "appearances": {
       "steve": "steve_rain",
       "iris": "nora_rain"
@@ -362,7 +389,8 @@
       "rook_copy"
     ],
     "off_camera_lines": [
-      "c4_safe.match.01"
+      "c4_safe.match.01",
+      "c4_safe.record.01"
     ],
     "stills": [
       {
@@ -373,7 +401,23 @@
         ]
       }
     ],
-    "bridge": "res://assets/illustrated/campaign/bridges/c4_safe-c4_escape.webp"
+    "bridge": "res://assets/illustrated/campaign/bridges/c4_safe-c4_escape.webp",
+    "inserts": {
+      "c4_safe.record.01": [
+        0.11,
+        0.42
+      ]
+    },
+    "detail_shots": {
+      "c4_safe.screens.01": {
+        "target": [
+          0.84,
+          0.32
+        ],
+        "zoom": 2.4,
+        "cut": true
+      }
+    }
   },
   "c4_escape": {
     "light": "e0ae74",
@@ -387,7 +431,6 @@
       0.36
     ],
     "company": [
-      "calder",
       "steve"
     ],
     "chapter_insert": true
@@ -404,7 +447,6 @@
       0.62
     ],
     "company": [
-      "steve",
       "luis"
     ],
     "inserts": {
@@ -417,7 +459,10 @@
       0.36,
       0.45
     ],
-    "bridge": "res://assets/illustrated/campaign/bridges/c5_shack-c5_station.webp"
+    "bridge": "res://assets/illustrated/campaign/bridges/c5_shack-c5_station.webp",
+    "off_camera_lines": [
+      "c5_shack.club.01"
+    ]
   },
   "c5_station": {
     "light": "e9be8a",
@@ -435,6 +480,25 @@
       "stephen"
     ],
     "chapter_insert": true,
+    "off_camera_lines": [
+      "c5_station.in.01"
+    ],
+    "inserts": {
+      "c5_station.in.01": [
+        0.41,
+        0.456
+      ]
+    },
+    "detail_shots": {
+      "c5_station.sleeve.01": {
+        "target": [
+          0.4,
+          0.49
+        ],
+        "zoom": 2.6,
+        "cut": true
+      }
+    },
     "appearances": {
       "steve": "steve_broadcast"
     }
@@ -484,10 +548,31 @@
           0.62,
           0.8
         ],
-        "width": 0.14
+        "width": 0.05
       }
     ],
     "chapter_insert": true,
+    "off_camera_lines": [
+      "c6_jail.crossword.lead.02",
+      "c6_jail.crossword.01"
+    ],
+    "inserts": {
+      "c6_jail.crossword.lead.02": [
+        0.71,
+        0.46
+      ],
+      "c6_jail.crossword.01": [
+        0.71,
+        0.46
+      ]
+    },
+    "layers": [
+      {
+        "file": "res://assets/illustrated/campaign/layers/c6_jail-june-in-cell.webp",
+        "wide_file": "res://assets/illustrated/campaign/layers/c6_jail-june-in-cell-wide.webp",
+        "until": "c6_jail.crossword"
+      }
+    ],
     "appearances": {
       "calder": "calder_casework"
     }
@@ -507,6 +592,24 @@
       "nora",
       "dale",
       "lyle"
+    ],
+    "stills": [
+      {
+        "file": "res://assets/illustrated/campaign/films/c5_station.webp",
+        "lines": [
+          "i2_nora.out.01",
+          "i2_nora.out.02"
+        ]
+      }
+    ],
+    "layers": [
+      {
+        "file": "res://assets/illustrated/campaign/layers/i2_nora-pods-open.webp",
+        "painted": [
+          "dale",
+          "lyle"
+        ]
+      }
     ]
   },
   "c7_gate": {
@@ -526,7 +629,6 @@
       "ward",
       "steve",
       "shaw",
-      "wen",
       "rook_copy"
     ],
     "stills": [
@@ -540,7 +642,13 @@
         ]
       }
     ],
-    "bridge": "res://assets/illustrated/campaign/inserts/c7_swap.webp"
+    "bridge": "res://assets/illustrated/campaign/inserts/c7_swap.webp",
+    "inserts": {
+      "c7_gate.out.06": [
+        0.62,
+        0.28
+      ]
+    }
   },
   "c7_swap": {
     "light": "d9cca2",
@@ -559,8 +667,9 @@
       "rook_copy",
       "ward",
       "shaw",
-      "calder",
-      "stephen"
+      "stephen",
+      "wen",
+      "calder"
     ],
     "chapter_insert": true,
     "off_camera_lines": [
@@ -597,7 +706,10 @@
           "c7_swap.out.03"
         ]
       }
-    ]
+    ],
+    "reveal_after": {
+      "wen": "c7_swap.tone"
+    }
   },
   "c8_lab": {
     "light": "dfb99a",
@@ -617,6 +729,16 @@
       "steve"
     ],
     "bridge": "res://assets/illustrated/campaign/bridges/c8_lab-c8_beach.webp",
+    "inserts": {
+      "c8_lab.out.02": [
+        0.04,
+        0.46
+      ],
+      "c8_lab.out.06": [
+        0.04,
+        0.46
+      ]
+    },
     "appearances": {
       "agnes": "agnes_reflective"
     }
@@ -659,6 +781,12 @@
       "ward"
     ],
     "chapter_insert": true,
+    "inserts": {
+      "c8_rig.path.03": [
+        0.82,
+        0.54
+      ]
+    },
     "appearances": {
       "steve": "steve_broadcast"
     }
@@ -683,7 +811,9 @@
     ],
     "off_camera_lines": [
       "c9_gallery.in.01",
-      "c9_gallery.out.03"
+      "c9_gallery.out.03",
+      "c9_gallery.talk.guard.1.01",
+      "c9_gallery.talk.guard.1.03"
     ],
     "reveal_after": {
       "nora": "c9_gallery.link"
@@ -692,7 +822,16 @@
       "c9_gallery.in.01": "c9_gallery.link",
       "c9_gallery.out.03": "c9_gallery.link"
     },
-    "bridge": "res://assets/illustrated/campaign/bridges/c9_gallery-c9_wake.webp"
+    "bridge": "res://assets/illustrated/campaign/bridges/c9_gallery-c9_wake.webp",
+    "layers": [
+      {
+        "file": "res://assets/illustrated/campaign/layers/c9_gallery-nora-held.webp",
+        "until": "c9_gallery.link",
+        "painted": [
+          "nora"
+        ]
+      }
+    ]
   },
   "c9_wake": {
     "light": "ffdcb5",
@@ -721,6 +860,24 @@
       "agnes_original": "c9_wake.agnes"
     },
     "bridge": "res://assets/illustrated/campaign/bridges/c9_wake-c9_choir.webp",
+    "layers": [
+      {
+        "file": "res://assets/illustrated/campaign/layers/c9_wake-frank-asleep.webp",
+        "until": "c9_wake.frank"
+      },
+      {
+        "file": "res://assets/illustrated/campaign/layers/c9_wake-helen-asleep.webp",
+        "until": "c9_wake.helen"
+      },
+      {
+        "file": "res://assets/illustrated/campaign/layers/c9_wake-rook-asleep.webp",
+        "until": "c9_wake.rook"
+      },
+      {
+        "file": "res://assets/illustrated/campaign/layers/c9_wake-agnes-asleep.webp",
+        "until": "c9_wake.agnes"
+      }
+    ],
     "appearances": {
       "nora": "nora_reunion",
       "helen": "helen_field"
@@ -749,18 +906,29 @@
       {
         "id": "wick",
         "foot": [
-          0.55,
-          0.63
+          0.57,
+          0.585
         ],
-        "width": 0.2,
-        "after": "c9_choir.wick",
+        "width": 0.075,
         "lines": [
+          "c9_choir.wick.lead.01",
+          "c9_choir.wick.lead.02",
+          "c9_choir.wick.lead.03",
+          "c9_choir.wick.lead.04",
+          "c9_choir.wick.lead.05",
           "c9_choir.wick.01",
           "c9_choir.wick.02"
         ]
       }
     ],
     "chapter_insert": true,
+    "inserts": {
+      "c9_choir.in.02": "c9_choir.truth",
+      "c9_choir.in.03": "c9_choir.truth",
+      "c9_choir.truth.01": "c9_choir.truth",
+      "c9_choir.wick.lead.02": "c9_choir.wick",
+      "c9_choir.out.05": "c9_choir.truth"
+    },
     "appearances": {
       "helen": "helen_field"
     }
@@ -783,6 +951,12 @@
       "wen"
     ],
     "bridge": "res://assets/illustrated/campaign/bridges/c10_station-c10_town.webp",
+    "inserts": {
+      "c10_station.in.01": "c10_station.playlist",
+      "c10_station.in.03": "c10_station.playlist",
+      "c10_station.playlist.01": "c10_station.playlist",
+      "c10_station.talk.autorick.1.02": "c10_station.playlist"
+    },
     "appearances": {
       "steve": "steve_broadcast"
     }
@@ -808,6 +982,19 @@
       "ward"
     ],
     "bridge": "res://assets/illustrated/campaign/bridges/c10_town-c10_live.webp",
+    "cutaway": {
+      "room": "c10_station",
+      "lines": [
+        "c10_town.in.04",
+        "c10_town.out.01",
+        "c10_town.in.05",
+        "c10_town.out.03",
+        "c10_town.in.06",
+        "c10_town.in.07",
+        "c10_town.in.08",
+        "c10_town.in.09"
+      ]
+    },
     "appearances": {
       "nora": "nora_reunion",
       "agnes": "agnes_reflective"
@@ -827,6 +1014,10 @@
     "company": [
       "steve",
       "stephen",
+      "frank",
+      "nora",
+      "shaw",
+      "wen",
       "mateo",
       "carmen",
       "pell"
@@ -835,30 +1026,6 @@
       "room": "c10_town",
       "group": "c10_live.out"
     },
-    "creatures": [
-      {
-        "id": "biscuit",
-        "foot": [
-          0.5,
-          0.94
-        ],
-        "width": 0.12,
-        "lines": [
-          "c10_live.out.03"
-        ]
-      },
-      {
-        "id": "admiral",
-        "foot": [
-          0.6,
-          0.92
-        ],
-        "width": 0.2,
-        "lines": [
-          "c10_live.out.04"
-        ]
-      }
-    ],
     "inserts": {
       "c10_live.out.01": [
         0.65,
@@ -875,7 +1042,8 @@
       "c10_live.out.04": [
         0.6,
         0.63
-      ]
+      ],
+      "c10_live.third.01": "c10_live.third"
     },
     "stills": [
       {
@@ -892,7 +1060,8 @@
       }
     ],
     "appearances": {
-      "steve": "steve_broadcast"
+      "steve": "steve_broadcast",
+      "nora": "nora_reunion"
     }
   },
   "c10_report": {
@@ -910,13 +1079,15 @@
       "archivist",
       "saren",
       "agnes",
-      "steve"
+      "steve",
+      "helen"
     ],
     "resident": "archivist",
     "cutaway": {
       "room": "c10_station",
       "lines": [
         "c10_report.in.03",
+        "c10_report.echo.lead.01",
         "c10_report.echo.01",
         "c10_report.survey.02",
         "c10_report.out.04"
@@ -926,10 +1097,6 @@
       "c10_report.report": "c10_report.report"
     },
     "chapter_insert": true,
-    "off_camera_lines": [
-      "c10_report.in.01",
-      "c10_report.report.02"
-    ],
     "appearances": {
       "archivist": "archivist_explaining",
       "helen": "helen_field"
@@ -972,10 +1139,10 @@
       {
         "id": "biscuit",
         "foot": [
-          0.61,
-          0.78
+          0.87,
+          0.8
         ],
-        "width": 0.16,
+        "width": 0.085,
         "lines": [
           "epilogue.neighbors.02",
           "epilogue.neighbors.03"
@@ -994,6 +1161,10 @@
           "epilogue.talk.iris"
         ]
       }
+    ],
+    "off_camera_lines": [
+      "epilogue.in.01",
+      "epilogue.coffee.01"
     ]
   },
   "one_year": {
@@ -1032,7 +1203,9 @@
       "ward"
     ],
     "off_camera_lines": [
-      "postcredits.out.01"
+      "postcredits.out.01",
+      "postcredits.answer.01",
+      "postcredits.in.02"
     ],
     "inserts": {
       "postcredits.out.01": "postcredits.answer",

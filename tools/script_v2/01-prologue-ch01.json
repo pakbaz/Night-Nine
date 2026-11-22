@@ -412,6 +412,7 @@
         "iris": [
           {
             "topic": "Breakfast",
+            "after": "saturday",
             "lines": [
               "steve|Want some toast before you go?",
               "iris|I ate already. There’s fruit in the blue bowl.",
@@ -421,6 +422,7 @@
           },
           {
             "topic": "The otters",
+            "after": "saturday",
             "lines": [
               "steve|How are the otter pups?",
               "iris|Growing. One of them bit a volunteer again. Only a little.",
@@ -430,6 +432,7 @@
           },
           {
             "topic": "AutoRick",
+            "after": "saturday",
             "lines": [
               "iris|I heard the new radio host this morning. He sounds cheerful.",
               "steve|He read yesterday’s weather again. Twelve years at that desk, and they replaced me with him.",

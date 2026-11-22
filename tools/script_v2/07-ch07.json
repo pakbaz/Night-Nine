@@ -233,6 +233,7 @@
     },
     "c7_swap": {
       "when": "Wednesday, November 7, 11:54 to noon",
+      "departure_art": "res://assets/illustrated/campaign/stills/c7_swap-locked-room.webp",
       "present": ["steve", "stephen", "calder", "rook_copy", "ward", "wen", "shaw"],
       "objective": "Find the real President, then make every copy on the site give itself away.",
       "changes": ["C15", "critic C15 (left wrist)", "C22", "U-relationships", "U-narration"],

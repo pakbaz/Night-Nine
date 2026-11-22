@@ -493,7 +493,9 @@ func show_cast(id: String) -> void:
 		if member not in visible_ids:
 			visible_ids.append(member)
 	var resident: String = directions.get("resident","")
-	if not resident.is_empty() and actor_visible(resident) and (id==resident or (id.is_empty() and not walking_view() and not in_cutaway())):
+	# The opening narration is an establishing shot of the place, without its people.
+	var establishing: bool = active_id in scene_record.get("context",[])
+	if not resident.is_empty() and actor_visible(resident) and (id==resident or (id.is_empty() and not walking_view() and not in_cutaway() and not establishing)):
 		if resident not in visible_ids:
 			visible_ids.append(resident)
 	if room_id=="c9_gallery" and "c9_gallery.link" in done and (id in ["steve","nora"] or (id.is_empty() and not walking_view())):

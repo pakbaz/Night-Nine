@@ -30,7 +30,11 @@ func enter(scene_id: String, done: Array = []) -> void:
 	campaign.mark_seen(campaign.current().get("context", []) + campaign.current().intro)
 	for id: String in done:
 		var task: Dictionary = campaign.task_index[id]
+		if not task.actor.is_empty():
+			campaign.switch_actor(task.actor)
 		campaign.choose(id, int(task.answer), task.get("puzzle", {}).get("solution", []))
+		check(id in campaign.data.done, "Test setup completes " + id)
+	campaign.switch_actor(campaign.current().actors[0])
 	game._load_stage(false)
 	await frames(3)
 	# Let any arrival dialogue finish, as a player reading on would.
@@ -231,6 +235,9 @@ func run() -> void:
 		await frames(1)
 	await arrive("c1_pier")
 	check(game.active_line == "c1_pier.ctx.01", "Sunday on the harbor opens with Steve's narration")
+	await frames(3)
+	var standing: Array = game.stage.actors.keys().filter(func(id: String): return game.stage.actors[id].visible)
+	check(standing.is_empty(), "The opening narration is an establishing shot, with no portraits (%s)" % ", ".join(standing))
 	while game.dialogue_panel.visible:
 		game._next_line()
 		await frames(1)
@@ -255,6 +262,26 @@ func run() -> void:
 	check(await portrait_during("c1_escape.cross.03", "iris"), "Nora comes out to Steve on the balcony")
 	var outro_shot: String = await shown_during("c1_escape.out.03")
 	check(outro_shot.ends_with("stills/c1_escape-beach-procession.webp"), "Steve watches the procession from the beach")
+
+	# Sleepers are seen asleep, and each wakes when Steve reaches them.
+	await enter("c9_wake")
+	for who: String in ["frank", "helen", "rook", "agnes"]:
+		check(layer_shown("c9_wake-%s-asleep" % who), "Row nine shows %s asleep in the pod" % who)
+	await enter("c9_wake", ["c9_wake.frank"])
+	check(not layer_shown("c9_wake-frank-asleep") and layer_shown("c9_wake-helen-asleep"), "Frank's pod opens once he wakes; Helen still sleeps")
+	await enter("c9_gallery")
+	check(layer_shown("c9_gallery-nora-held") and not await portrait_during("c9_gallery.in.01", "nora"), "Nora is held in her bed, not standing beside it")
+	await enter("c9_gallery", ["c9_gallery.link"])
+	check(not layer_shown("c9_gallery-nora-held"), "Once Iris breaks the link, Nora is up")
+	# June is behind the bars of cell two until Steve proves which June is real.
+	await enter("c6_jail")
+	check(layer_shown("c6_jail-june-in-cell"), "June sits in cell two")
+	check(not await portrait_during("c6_jail.crossword.lead.02", "calder"), "June in the cell speaks through the bars, not as a second standing Sheriff")
+	await enter("c6_jail", ["c6_jail.mail", "c6_jail.distract", "c6_jail.crossword"])
+	check(not layer_shown("c6_jail-june-in-cell"), "Cell two is empty once June is out")
+	# Nora wakes beside Dale and Lyle, whose pods stand open.
+	await enter("i2_nora")
+	check(layer_shown("i2_nora-pods-open") and game.stage.floor_stage.wide == null, "The Gallery shows the opened pods in the one painting Nora walks on")
 
 	var receipt := FileAccess.open(output.path_join("story-staging.json"), FileAccess.WRITE)
 	receipt.store_string(JSON.stringify({"checks": checks, "failures": failures}, "\t") + "\n")

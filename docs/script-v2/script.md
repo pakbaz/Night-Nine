@@ -143,19 +143,19 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - *Steve Mercer: Record it two mornings running. If it lasts twelve seconds both times, the machine runs true.* **NEW** `c1_flat.in.08`
 
 ### Small talk
-**Breakfast** · Nora Reyes
+**Breakfast** · Nora Reyes · after `c1_flat.saturday`
 - **Steve Mercer**: Want some toast before you go? **NEW** `c1_flat.talk.iris.1.01`
 - **Nora Reyes**: I ate already. There’s fruit in the blue bowl. **NEW** `c1_flat.talk.iris.1.02`
 - **Steve Mercer**: Since when do you eat breakfast? **NEW** `c1_flat.talk.iris.1.03`
 - **Nora Reyes**: For a while now. It’s good for you. **NEW** `c1_flat.talk.iris.1.04`
 
-**The otters** · Nora Reyes
+**The otters** · Nora Reyes · after `c1_flat.saturday`
 - **Steve Mercer**: How are the otter pups? **NEW** `c1_flat.talk.iris.2.01`
 - **Nora Reyes**: Growing. One of them bit a volunteer again. Only a little. **NEW** `c1_flat.talk.iris.2.02`
 - **Steve Mercer**: You used to say that was her best quality. **NEW** `c1_flat.talk.iris.2.03`
 - **Nora Reyes**: She’s a good otter. They’re all good otters. **NEW** `c1_flat.talk.iris.2.04`
 
-**AutoRick** · Nora Reyes
+**AutoRick** · Nora Reyes · after `c1_flat.saturday`
 - **Nora Reyes**: I heard the new radio host this morning. He sounds cheerful. **NEW** `c1_flat.talk.iris.3.01`
 - **Steve Mercer**: He read yesterday’s weather again. Twelve years at that desk, and they replaced me with him. **NEW** `c1_flat.talk.iris.3.02`
 - **Nora Reyes**: Then you have more time at home. That’s nice, isn’t it? **NEW** `c1_flat.talk.iris.3.03`
@@ -1381,13 +1381,13 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - **Sheriff June Calder**: November seventh. The Rotary Club is already fighting about the bunting. **NEW** `c3_archive.talk.calder.2.02`
 - **Sheriff June Calder**: I’ve been asked to close Harbor Road and smile. I can manage one of those. **NEW** `c3_archive.talk.calder.2.03`
 
-**The bus** · Agnes Penhallow
+**The bus** · Agnes Penhallow · after `c3_archive.power`
 - **Steve Mercer**: You came all the way here on the bus? **NEW** `c3_archive.talk.agnes.1.01`
 - **Agnes Penhallow**: The number four. The driver and I have an arrangement. **NEW** `c3_archive.talk.agnes.1.02`
 - **Steve Mercer**: What kind of arrangement is that? **NEW** `c3_archive.talk.agnes.1.03`
 - **Agnes Penhallow**: He drives, and I correct his grammar. We both arrive improved. **NEW** `c3_archive.talk.agnes.1.04`
 
-**Old papers** · Agnes Penhallow
+**Old papers** · Agnes Penhallow · after `c3_archive.power`
 - **Agnes Penhallow**: I like archives, Steven. Somebody should keep what everyone else forgets. **NEW** `c3_archive.talk.agnes.2.01`
 - **Steve Mercer**: Is that why you came all this way? **NEW** `c3_archive.talk.agnes.2.02`
 - **Agnes Penhallow**: I came to sell you a herring. Two dollars, please. Exact change. **NEW** `c3_archive.talk.agnes.2.03`
@@ -3728,7 +3728,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 ## Chapter 8: A show that happens once (`c8_rig`)
 
-**Where:** Sentinel Point workshop · **When:** Thursday, November 8, day · **Present:** Steve Mercer, Stephen, Dr. Evelyn Shaw, Iris, Dr. Lin Wen, President Elena Ward
+**Where:** Sentinel Point workshop · **When:** Thursday, November 8, night · **Present:** Steve Mercer, Stephen, Dr. Evelyn Shaw, Iris, Dr. Lin Wen, President Elena Ward
 
 **Objective:** Build a show the ship will measure for itself, and plan the way in.
 
@@ -4183,6 +4183,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - *Steve Mercer: Dad’s card is K7BLW. The scratched cassette lost the last letter, the W: dot, dash, dash. I sent it again, and Dad answered his own call sign.* **NEW** `c9_wake.frank.find`
 
 ### Lead 2: Helen’s bed (`c9_wake.helen`) · rows · difficulty 2
+*Unlocks after:* c9_wake.frank
 
 **When the lead opens:**
 - **Frank Mercer**: Your mother. Play her the song, kiddo. I’ll write it down for you. **NEW** `c9_wake.helen.lead.01`

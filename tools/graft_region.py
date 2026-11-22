@@ -43,7 +43,10 @@ def align(original, generated, regions):
     moved = cv2.perspectiveTransform(src[kept], matrix).reshape(-1, 2)
     residual = float(np.median(np.linalg.norm(moved - dst[kept].reshape(-1, 2), axis=1)))
     warped = cv2.warpPerspective(gen, matrix, (w, h), flags=cv2.INTER_LANCZOS4)
-    return warped, int(kept.sum()), len(good), residual
+    # Where the repaint does not reach (its edges after alignment), keep the original.
+    covered = cv2.warpPerspective(np.full(gen.shape[:2], 255, np.uint8), matrix, (w, h), flags=cv2.INTER_NEAREST)
+    covered = cv2.erode(covered, np.ones((7, 7), np.uint8))
+    return warped, covered.astype(np.float32) / 255.0, int(kept.sum()), len(good), residual
 
 
 def main():
@@ -58,12 +61,12 @@ def main():
     original = cv2.imread(args.original, cv2.IMREAD_COLOR)
     generated = cv2.imread(args.generated, cv2.IMREAD_COLOR)
     h, w = original.shape[:2]
-    warped, inliers, matches, residual = align(original, generated, args.region)
+    warped, covered, inliers, matches, residual = align(original, generated, args.region)
     mask = np.zeros((h, w), np.float32)
     for x0, y0, x1, y1 in args.region:
         mask[int(y0 * h):int(y1 * h), int(x0 * w):int(x1 * w)] = 1.0
     radius = max(3, int(args.feather * w))
-    mask = cv2.GaussianBlur(mask, (0, 0), radius / 2.0)
+    mask = cv2.GaussianBlur(mask * covered, (0, 0), radius / 2.0) * covered
     # Match the patch to the plate's colour where the two meet.
     ring = (mask > 0.05) & (mask < 0.6)
     if ring.any():

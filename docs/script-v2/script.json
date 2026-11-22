@@ -720,7 +720,7 @@
      "id": "c1_flat.talk.iris.1",
      "speaker": "iris",
      "topic": "Breakfast",
-     "after": "",
+     "after": "c1_flat.saturday",
      "lines": [
       "c1_flat.talk.iris.1.01",
       "c1_flat.talk.iris.1.02",
@@ -732,7 +732,7 @@
      "id": "c1_flat.talk.iris.2",
      "speaker": "iris",
      "topic": "The otters",
-     "after": "",
+     "after": "c1_flat.saturday",
      "lines": [
       "c1_flat.talk.iris.2.01",
       "c1_flat.talk.iris.2.02",
@@ -744,7 +744,7 @@
      "id": "c1_flat.talk.iris.3",
      "speaker": "iris",
      "topic": "AutoRick",
-     "after": "",
+     "after": "c1_flat.saturday",
      "lines": [
       "c1_flat.talk.iris.3.01",
       "c1_flat.talk.iris.3.02",
@@ -3528,7 +3528,7 @@
      "id": "c3_archive.talk.agnes.1",
      "speaker": "agnes",
      "topic": "The bus",
-     "after": "",
+     "after": "c3_archive.power",
      "lines": [
       "c3_archive.talk.agnes.1.01",
       "c3_archive.talk.agnes.1.02",
@@ -3540,7 +3540,7 @@
      "id": "c3_archive.talk.agnes.2",
      "speaker": "agnes",
      "topic": "Old papers",
-     "after": "",
+     "after": "c3_archive.power",
      "lines": [
       "c3_archive.talk.agnes.2.01",
       "c3_archive.talk.agnes.2.02",
@@ -7554,6 +7554,7 @@
     "shaw"
    ],
    "next": "Chapter 8: the flashback to Sentinel Point, nine years ago (p_meeting).",
+   "departure_art": "res://assets/illustrated/campaign/stills/c7_swap-locked-room.webp",
    "context": [
     "c7_swap.ctx.01",
     "c7_swap.ctx.02"
@@ -8748,7 +8749,7 @@
      "direction": "Move toward the active interaction."
     }
    ],
-   "when": "Thursday, November 8, day",
+   "when": "Thursday, November 8, night",
    "present": [
     "steve",
     "stephen",
@@ -9312,7 +9313,9 @@
       "c9_wake.helen.02"
      ],
      "note": "Cylinder 1-3-5-3-1-1: home, up, higher, back to the middle, then home, held. Mom’s lullaby, the one the ship’s hum kept almost playing. She woke up singing the last note.",
-     "requires": [],
+     "requires": [
+      "c9_wake.frank"
+     ],
      "actor": "",
      "kind": "playback",
      "sounds": [
