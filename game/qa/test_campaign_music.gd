@@ -180,6 +180,23 @@ func run() -> void:
 				var tape_scroll: ScrollContainer = game.tape_compare.get_child(0)
 				check(tape_scroll.get_child(0).size.y <= tape_scroll.size.y + 1.0, "Fit the whole tape comparison, with Record finding, on one screen")
 				game.tape_compare.close()
+			if task.id == "c2_aquarium.guard":
+				game.campaign.mark_seen(task.get("lead", []))
+				game._open_task(task.id)
+				await create_timer(.3).timeout
+				var first: Control = game.interaction.get_node_or_null("EvidenceTrace0")
+				var second: Control = game.interaction.get_node_or_null("EvidenceTrace1")
+				check(first != null and second != null and first.playhead < 0.0 and second.playhead < 0.0,
+					"Evidence waveforms rest without a playhead")
+				if first != null and second != null:
+					(game.interaction.get_node("EvidencePlay0") as Button).pressed.emit()
+					await create_timer(.6).timeout
+					check(first.playhead > 0.0 and first.playhead < 1.0 and second.playhead < 0.0,
+						"Move a playhead across the evidence waveform that is playing")
+					game.voice.stop()
+					await frames(2)
+					check(first.playhead < 0.0, "Hide the evidence playhead when the recording stops")
+				game.root.get_node("InteractionPanel").hide()
 			solve(task)
 		game._refresh()
 		var next_scene: Dictionary = game.campaign.content.scenes[int(game.campaign.data.scene)+1]

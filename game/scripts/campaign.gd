@@ -1455,6 +1455,7 @@ func _show_recording_evidence(task: Dictionary) -> void:
 			continue
 		var trace := preload("res://ui/evidence_trace.gd").new()
 		trace.name = "EvidenceTrace%d" % index
+		trace.add_to_group("evidence_traces")
 		interaction.add_child(trace)
 		trace.configure(clip, duration)
 		_label(interaction, "%.2f s" % clip.get_length(), 14)
@@ -1836,6 +1837,8 @@ func _pause_audio(on: bool) -> void:
 		stage.set_performance_paused(on)
 
 func _process(delta: float) -> void:
+	for strip: Node in get_tree().get_nodes_in_group("evidence_traces"):
+		strip.follow(voice)
 	if not is_instance_valid(stage):
 		return
 	_sync_score_mix()
