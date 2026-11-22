@@ -230,7 +230,7 @@ func _run() -> void:
 	# Ending.
 	jump_to("epilogue")
 	check(game.title_card.visible and game.title_card.kicker.text == "Epilogue", "The epilogue opens with its card")
-	check(game.score.current_file.ends_with("chapter-10-bgm.mp3"), "The epilogue continues the resolved Chapter 10 theme")
+	check(game.score.current_file.ends_with("epilogue-bgm.mp3"), "The epilogue opens on its original Epilogue BGM")
 	await wait(1.6)
 	await capture("13-epilogue-card")
 	game.title_card.finish_now()
