@@ -207,10 +207,19 @@ class Merge:
             puzzle['rows'] = [{'label': r['label'], 'options': r['options']} for r in edit['rows']]
             puzzle['solution'] = [r['answer'] for r in edit['rows']]
             keep = task.get('puzzle') or {}
-            for k in ('presentation', 'recording', 'lead_a', 'lead_b'):
-                if k in keep and ttype == 'tape':
-                    puzzle[k] = keep[k]
+            if ttype == 'tape':
+                puzzle['presentation'] = 'tape_alignment'
+                tape = edit.get('tape')
+                if tape:
+                    puzzle.update(tape)
+                else:
+                    for k in ('recording_a', 'recording_b', 'segments', 'recording', 'lead_a', 'lead_b'):
+                        if k in keep:
+                            puzzle[k] = keep[k]
             task['puzzle'] = puzzle
+        elif 'tape' in edit and ttype == 'tape':
+            task.setdefault('puzzle', {})['presentation'] = 'tape_alignment'
+            task['puzzle'].update(edit['tape'])
         elif 'instruction' in edit and task.get('puzzle') and ttype in ('rows', 'tape', 'dial'):
             task['puzzle']['instruction'] = edit['instruction']
         if 'board' in edit and edit['board'] != 'keep':

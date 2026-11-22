@@ -11,7 +11,11 @@ var recording := NightTapeRecording.new()
 var trace: NightTapeTrace
 var slider: HSlider
 var offset_label: Label
-var conclusion: OptionButton
+var offset_mark: Label
+var rows_box: VBoxContainer
+var row_choices: Array[OptionButton] = []
+var row_marks: Array[Label] = []
+var solution: Array = []
 var feedback: Label
 var goal: Label
 var background: Label
@@ -48,7 +52,7 @@ func _ready() -> void:
 	goal.modulate=Color("e9c276")
 	_label(box,"What Steve knows",16).name="KnowledgeHeading"
 	background=_label(box,"",16)
-	_label(box, "Move Sunday until the breath and first word line up. Compare the rest of the performance, then record your finding.", 18)
+	_label(box, "Move Sunday until the idents line up. Compare every voice, then record your finding.", 18)
 	trace = NightTapeTrace.new()
 	box.add_child(trace)
 	trace.offset_changed.connect(_set_offset)
@@ -67,7 +71,9 @@ func _ready() -> void:
 	slider.value_changed.connect(_set_offset)
 	_button(timing, "Later", func(): _set_offset(slider.value + 0.01))
 	offset_label = _label(timing, "Sunday: +0.000 s", 19)
-	offset_label.custom_minimum_size.x = 210
+	offset_label.custom_minimum_size.x = 185
+	offset_mark = _label(timing, "", 23)
+	offset_mark.custom_minimum_size.x = 24
 	var transport := HBoxContainer.new()
 	transport.add_theme_constant_override("separation", 12)
 	box.add_child(transport)
@@ -80,18 +86,14 @@ func _ready() -> void:
 	overlay.toggled.connect(func(on: bool): trace.overlay = on; trace.queue_redraw())
 	transport.add_child(overlay)
 	buttons.append(overlay)
-	var decision := HBoxContainer.new()
-	decision.add_theme_constant_override("separation", 12)
-	box.add_child(decision)
-	conclusion = OptionButton.new()
-	conclusion.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	conclusion.add_item("What did you learn?")
-	for text: String in ["Same words only", "Different performances", "Identical performance"]:
-		conclusion.add_item(text)
-	conclusion.tooltip_text = "Choose a conclusion. Left and Right cycle without opening the menu."
-	conclusion.gui_input.connect(_conclusion_key)
-	decision.add_child(conclusion)
-	_button(decision, "Record finding", _submit)
+	_label(box, "What matches?", 17).modulate = Color("e9c276")
+	rows_box = VBoxContainer.new()
+	rows_box.add_theme_constant_override("separation", 7)
+	box.add_child(rows_box)
+	var submit_row := HBoxContainer.new()
+	submit_row.alignment = BoxContainer.ALIGNMENT_END
+	box.add_child(submit_row)
+	_button(submit_row, "Record finding", _submit)
 	feedback = _label(box, "You can compare the waveforms with or without sound.", 18)
 	feedback.custom_minimum_size.y = 52
 	feedback.size_flags_vertical = Control.SIZE_EXPAND_FILL
@@ -121,9 +123,10 @@ func _button(parent: Node, text: String, action: Callable) -> Button:
 	buttons.append(button)
 	return button
 
-func open_task(id: String, master: AudioStreamWAV, player: AudioStreamPlayer, data: Dictionary,
+func open_task(id: String, saturday: AudioStreamWAV, sunday: AudioStreamWAV, metadata: Dictionary,
+		player: AudioStreamPlayer, data: Dictionary,
 		goal_text: String = "", background_text: String = "", perspective: String = "Steve") -> bool:
-	if not recording.configure(master, data.lead_a, data.lead_b):
+	if not recording.configure(saturday, sunday, metadata):
 		return false
 	voice = player
 	goal.text=goal_text
@@ -131,11 +134,16 @@ func open_task(id: String, master: AudioStreamWAV, player: AudioStreamPlayer, da
 	var heading:=find_child("KnowledgeHeading",true,false) as Label
 	heading.text="What %s knows" % perspective
 	trace.recording = recording
+	var previous: Array[int] = []
+	if task_id == id:
+		for choice: OptionButton in row_choices:
+			previous.append(choice.selected)
+	_configure_rows(data.get("rows", []), data.get("solution", []), previous)
 	if task_id != id:
 		task_id = id
 		_set_offset(0)
-		conclusion.select(0)
 	feedback.text = "You can compare the waveforms with or without sound."
+	offset_mark.text = ""
 	show()
 	set_paused(false)
 	trace.queue_redraw()
@@ -166,28 +174,62 @@ func _stop() -> void:
 	trace.playhead = -100
 	trace.queue_redraw()
 
-func _conclusion_key(event: InputEvent) -> void:
-	if event is InputEventKey and event.pressed and not event.echo and event.keycode in [KEY_LEFT,KEY_RIGHT]:
-		var step := 1 if event.keycode==KEY_RIGHT else -1
-		conclusion.select(posmod(conclusion.selected+step,conclusion.item_count))
-		conclusion.accept_event()
+func _configure_rows(rows: Array, answers: Array, previous: Array[int]) -> void:
+	for choice: OptionButton in row_choices:
+		buttons.erase(choice)
+	for child: Node in rows_box.get_children():
+		rows_box.remove_child(child)
+		child.queue_free()
+	row_choices.clear()
+	row_marks.clear()
+	solution = answers.duplicate()
+	for index: int in rows.size():
+		var data := rows[index] as Dictionary
+		var row := HBoxContainer.new()
+		row.add_theme_constant_override("separation", 10)
+		rows_box.add_child(row)
+		var label := _label(row, str(data.get("label", "")), 16)
+		label.custom_minimum_size.x = 280
+		var choice := OptionButton.new()
+		choice.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		choice.add_item("Choose one")
+		for text: String in data.get("options", []):
+			choice.add_item(text)
+		choice.tooltip_text = "Choose how the Saturday and Sunday recordings compare."
+		row.add_child(choice)
+		var mark := _label(row, "", 23)
+		mark.custom_minimum_size.x = 24
+		row_choices.append(choice)
+		row_marks.append(mark)
+		buttons.append(choice)
+		if index < previous.size():
+			choice.select(clampi(previous[index], 0, choice.item_count - 1))
 
 func _submit() -> void:
 	if paused:
 		return
-	if conclusion.selected == 0:
-		feedback.text = "Choose a finding after comparing both takes."
-		wrong_attempt.emit()
+	var values: Array = []
+	var right := 0
+	for index: int in row_choices.size():
+		var value := row_choices[index].selected - 1
+		values.append(value)
+		var correct := index < solution.size() and value == int(solution[index])
+		row_marks[index].text = "✓" if correct else "✗"
+		row_marks[index].modulate = Color("8ce6ad") if correct else Color("ff9b8f")
+		if correct:
+			right += 1
+	var offset_correct := recording.aligned(slider.value)
+	offset_mark.text = "✓" if offset_correct else "✗"
+	offset_mark.modulate = Color("8ce6ad") if offset_correct else Color("ff9b8f")
+	if offset_correct:
+		right += 1
+	var total := row_choices.size() + 1
+	if right == total:
+		feedback.text = "%d of %d right." % [right, total]
+		finding_requested.emit(values)
 		return
-	if not recording.aligned(slider.value):
-		feedback.text = "Adjust Sunday until the breath and first word are at the same time. Then compare the pauses."
-		wrong_attempt.emit()
-		return
-	if conclusion.selected != 3:
-		feedback.text = "Look past the words. Compare the small peaks and gaps along both recordings."
-		wrong_attempt.emit()
-		return
-	finding_requested.emit([1, 2])
+	feedback.text = "%d of %d right. Review the marked rows and offset." % [right, total]
+	wrong_attempt.emit()
 
 func set_paused(on: bool) -> void:
 	paused = on
@@ -196,7 +238,6 @@ func set_paused(on: bool) -> void:
 	for button: BaseButton in buttons:
 		button.disabled = on
 	slider.editable = not on
-	conclusion.disabled = on
 
 func close() -> void:
 	_stop()

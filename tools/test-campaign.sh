@@ -20,7 +20,7 @@ NIGHT_NINE_SAVE_DIR="$NIGHT_NINE_SAVE_DIR/walking-input" bash "$PROJECT_ROOT/too
 python3 "$PROJECT_ROOT/tools/check-log.py" "$NIGHT_NINE_SAVE_DIR/exploration-input.log"
 bash "$PROJECT_ROOT/tools/godot.sh" --headless --script res://tests/test_tape_recording.gd --log-file "$NIGHT_NINE_SAVE_DIR/tape-core.log" 2>&1 | tee "$NIGHT_NINE_SAVE_DIR/tape-core-console.log"
 python3 "$PROJECT_ROOT/tools/check-log.py" "$NIGHT_NINE_SAVE_DIR/tape-core.log" "$NIGHT_NINE_SAVE_DIR/tape-core-console.log"
-python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$PROJECT_ROOT/tmp/qa/tape-recording-results.json" 23
+python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$PROJECT_ROOT/tmp/qa/tape-recording-results.json" 45
 bash "$PROJECT_ROOT/tools/godot.sh" --headless --script res://tests/test_voice_assets.gd --log-file "$NIGHT_NINE_SAVE_DIR/voice-assets.log" 2>&1 | tee "$NIGHT_NINE_SAVE_DIR/voice-assets-console.log"
 python3 "$PROJECT_ROOT/tools/check-log.py" "$NIGHT_NINE_SAVE_DIR/voice-assets.log" "$NIGHT_NINE_SAVE_DIR/voice-assets-console.log"
 export NIGHT_NINE_QA_DIR="$PROJECT_ROOT/tmp/qa/extended-run-$$"
@@ -50,7 +50,7 @@ if [[ "${1:-}" == "--render" ]]; then
   python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$NIGHT_NINE_QA_DIR/story/story-flow.json" 90
   NIGHT_NINE_SAVE_DIR="$NIGHT_NINE_QA_DIR/tape-save" NIGHT_NINE_QA_DIR="$NIGHT_NINE_QA_DIR/tape" bash "$PROJECT_ROOT/tools/godot.sh" "${AUDIO_ARGUMENTS[@]}" --quit-after 1800 --log-file "$PROJECT_ROOT/tmp/qa/tape-render.log" -- --tape-qa 2>&1 | tee "$PROJECT_ROOT/tmp/qa/tape-render-console.log"
   python3 "$PROJECT_ROOT/tools/check-log.py" "$PROJECT_ROOT/tmp/qa/tape-render.log" "$PROJECT_ROOT/tmp/qa/tape-render-console.log"
-  python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$NIGHT_NINE_QA_DIR/tape/tape-results.json" 34
+  python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$NIGHT_NINE_QA_DIR/tape/tape-results.json" 39
   for SUITE in case_boards social_staging; do
     NIGHT_NINE_SAVE_DIR="$NIGHT_NINE_QA_DIR/$SUITE-save" bash "$PROJECT_ROOT/tools/godot.sh" "${AUDIO_ARGUMENTS[@]}" --script "res://tests/test_$SUITE.gd" --log-file "$NIGHT_NINE_QA_DIR/$SUITE.log"
     python3 "$PROJECT_ROOT/tools/check-log.py" "$NIGHT_NINE_QA_DIR/$SUITE.log"

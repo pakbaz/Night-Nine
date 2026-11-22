@@ -1063,9 +1063,15 @@ func _open_task(id: String) -> void:
 		return
 	if task.get("puzzle", {}).get("presentation", "") == "tape_alignment":
 		root.get_node("InteractionPanel").hide()
-		var take: Dictionary = _recording_for(task.puzzle.recording).take
-		var master := load(str(take.get("file", ""))) as AudioStreamWAV
-		if not tape_compare.open_task(id, master, voice, task.puzzle, task.goal, task.background, campaign.perspective_name(id)):
+		var saturday := load(str(task.puzzle.get("recording_a", ""))) as AudioStreamWAV
+		var sunday := load(str(task.puzzle.get("recording_b", ""))) as AudioStreamWAV
+		var segments_text := FileAccess.get_file_as_string(str(task.puzzle.get("segments", "")))
+		var segments: Variant = JSON.parse_string(segments_text)
+		if not segments is Dictionary:
+			_status("The cassette segment notes could not be read.")
+			return
+		if not tape_compare.open_task(id, saturday, sunday, segments, voice, task.puzzle,
+				task.goal, task.background, campaign.perspective_name(id)):
 			_status(tape_compare.recording.error)
 		return
 		tape_compare.set_hint_label(campaign.hint_label(id))

@@ -33,6 +33,13 @@ func click(control: Control) -> void:
 	if control == null:
 		check(false, "Expected visible input control")
 		return
+	var ancestor := control.get_parent()
+	while ancestor != null:
+		if ancestor is ScrollContainer:
+			(ancestor as ScrollContainer).ensure_control_visible(control)
+			await frames(3)
+			break
+		ancestor = ancestor.get_parent()
 	await frames(1)
 	var point := control.get_global_transform_with_canvas() * (control.size * 0.5)
 	var move := InputEventMouseMotion.new()
@@ -69,7 +76,7 @@ func _run() -> void:
 	Engine.max_fps = 60
 	folder = OS.get_environment("NIGHT_NINE_QA_DIR")
 	if folder.is_empty():
-		folder = ProjectSettings.globalize_path("res://../tmp/qa/tape-compare")
+		folder = ProjectSettings.globalize_path("res://../tmp/morning-tapes")
 	DirAccess.make_dir_recursive_absolute(folder)
 	game.campaign.reset()
 	while game.campaign.current().id != "c1_flat":
@@ -104,17 +111,16 @@ func _run() -> void:
 	await wait_for_approach()
 	var panel: NightTapeCompare = game.tape_compare
 	check(panel.visible and not game.root.get_node("InteractionPanel").visible, "Open the waveform workbench from the scene hotspot")
-	var active_take: Dictionary=game._recording_for("recording.greeting").take
-	var master:=load(str(active_take.file)) as AudioStreamWAV
-	check(master!=null and panel.recording.rate==master.mix_rate and panel.recording.pcm==master.data,"Use every PCM sample of the active greeting")
+	check(panel.recording.pcm_a != panel.recording.pcm_b, "Load distinct Saturday and Sunday recordings")
+	check(panel.recording.segments_a.size() == 4 and panel.recording.segments_b.size() == 4,
+		"Show all four labeled kitchen segments on both tapes")
+	check(panel.row_choices.size() == 4, "Show one conclusion row for every voice")
 	await click(button("Record finding", panel))
 	check("c1_flat.compare" not in game.campaign.data.done, "An empty finding does not solve the clue")
-	panel.conclusion.grab_focus()
-	for index: int in 3:
-		await key(KEY_RIGHT)
-	check(panel.conclusion.selected == 3, "Choose the conclusion by keyboard")
+	for index: int in panel.row_choices.size():
+		panel.row_choices[index].select(int([0, 2, 1, 0][index]) + 1)
 	await click(button("Record finding", panel))
-	check("c1_flat.compare" not in game.campaign.data.done, "The conclusion alone cannot bypass alignment")
+	check("c1_flat.compare" not in game.campaign.data.done, "The voice rows alone cannot bypass alignment")
 	await capture("unaligned")
 	var trace := panel.trace
 	var start := trace.get_global_transform_with_canvas() * Vector2(trace.size.x * 0.6, 210)
@@ -162,9 +168,17 @@ func _run() -> void:
 	await key(KEY_ESCAPE)
 	await click(button("Stop", panel))
 	check(not game.voice.playing, "Stop releases the evidence playback")
-	panel.conclusion.select(1)
+	panel.row_choices[1].select(1)
+	var misses_before := int(game.campaign.data.misses.get("c1_flat.compare", 0))
 	await click(button("Record finding", panel))
-	check("c1_flat.compare" not in game.campaign.data.done, "Aligned words alone are not the correct conclusion")
+	check("c1_flat.compare" not in game.campaign.data.done, "Wrong voice rows do not solve the clue")
+	check(int(game.campaign.data.misses.get("c1_flat.compare", 0)) == misses_before + 1,
+		"One wrong voice row attempt records a miss")
+	check(panel.row_marks[0].text == "✓" and panel.row_marks[1].text == "✗"
+		and panel.row_marks[2].text == "✓" and panel.row_marks[3].text == "✓",
+		"Mark every voice row right or wrong after an attempt")
+	check(panel.offset_mark.text == "✓", "Mark the correctly aligned offset")
+	check(panel.feedback.text.contains("4 of 5 right"), "Report how many rows and offset are right")
 	await click(button("Hint 1 of 3", panel))
 	check(not panel.feedback.text.contains("0.35"), "First hint guides observation without the answer")
 	await click(button("Hint 2 of 3", panel))
@@ -172,7 +186,7 @@ func _run() -> void:
 	await click(button("Hint 3 of 3", panel))
 	check(not panel.feedback.text.begins_with("Answer:"), "Final hint still guides without revealing the answer")
 	for miss: int in 2:
-		panel.conclusion.select(1)
+		panel.row_choices[1].select(1)
 		await click(button("Record finding",panel))
 	var show_answer:=button("Show answer",panel)
 	check(is_instance_valid(show_answer) and show_answer.visible,"Two misses after hint three offer the separate answer")
@@ -191,7 +205,11 @@ func _run() -> void:
 			overlay = control
 	await click(overlay)
 	check(panel.trace.overlay, "Overlay compares both visible traces")
-	await capture("aligned-overlay")
+	for index: int in panel.row_choices.size():
+		panel.row_choices[index].select(int([0, 2, 1, 0][index]) + 1)
+	(panel.get_child(0) as ScrollContainer).scroll_vertical = 0
+	await frames(5)
+	await capture("morning-tape-comparison")
 	get_window().size = Vector2i(960, 600)
 	await frames(8)
 	var room: Rect2 = game.root.get_global_rect()
@@ -200,7 +218,6 @@ func _run() -> void:
 	await frames(3)
 	check(room.encloses(back.get_global_rect()), "Keep the final controls within the 960 by 600 window")
 	await capture("small-window")
-	panel.conclusion.select(3)
 	await click(button("Record finding", panel))
 	check("c1_flat.compare" in game.campaign.data.done and not panel.visible, "Record the solved finding through the real campaign state")
 	check(game.dialogue_panel.visible and game.active_line == "c1_flat.compare.01", "Play Steve's recorded discovery")

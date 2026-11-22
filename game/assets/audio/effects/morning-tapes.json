@@ -1,0 +1,167 @@
+{
+  "format": "mono PCM16",
+  "ident_tail": {
+    "method": "Last 2.5 seconds ending one 20 ms window after the final 20 ms RMS window above max(-56.5 dBFS, 3% of peak RMS).",
+    "seconds": 2.5,
+    "source_end": 3.74,
+    "source_start": 1.24,
+    "threshold_rms": 0.003208607
+  },
+  "noise": "Seeded low-level kitchen room tone and tape hiss; different seed per day.",
+  "outputs": {
+    "saturday": {
+      "file": "res://assets/audio/effects/tape-saturday.wav",
+      "sha256": "c037f43390168415c8d0fe6cbbd625d8a6d7c35ba9106ed53bb93a1503bda28b"
+    },
+    "sunday": {
+      "file": "res://assets/audio/effects/tape-sunday.wav",
+      "sha256": "78773f61696eac9eeca963c9b46695dba0e0a55258abcc4ca414e9a0ef934b45"
+    }
+  },
+  "sample_rate": 48000,
+  "schema": 1,
+  "segment_gap_seconds": 0.12,
+  "segment_start_schedule_seconds": {
+    "AutoRick": 2.62,
+    "Ident": 0.0,
+    "Nora": 6.38,
+    "Steve": 7.86
+  },
+  "sources": {
+    "c1_flat.in.03": {
+      "file": "res://assets/audio/voices/elevenlabs-v4-script-v2/c1_flat.in.03.wav",
+      "sha256": "871e296fceba511436f90721fb6ce6b32e94b5645b51f3abb1691418d514905c"
+    },
+    "c1_flat.saturday.02": {
+      "file": "res://assets/audio/voices/elevenlabs-v4-script-v2/c1_flat.saturday.02.wav",
+      "sha256": "1308a096de17563a6f70d9fd1a0a611c182c74bb73f6111413aca7592b9c5e6c"
+    },
+    "c1_flat.sunday.02": {
+      "file": "res://assets/audio/voices/elevenlabs-v4-script-v2/c1_flat.sunday.02.wav",
+      "sha256": "25f3b6464721fe77c475b022ee2d43836c9e23129c96fc9cf5e5e9073e379661"
+    },
+    "c1_flat.sunday.03": {
+      "file": "res://assets/audio/voices/elevenlabs-v4-script-v2/c1_flat.sunday.03.wav",
+      "sha256": "4d590e5a2253b631f03ba11c1d28686348f585e518fa5007c41590b7eb526ce5"
+    },
+    "kbwr_ident": {
+      "file": "res://assets/audio/effects/kbwr_ident.wav",
+      "sha256": "a665128c698ff9cdddb56fa231577dd209134e6fdaa3caa58c5dc0466ccc7a3e"
+    },
+    "recording.greeting": {
+      "file": "res://assets/audio/voices/elevenlabs-v4-script-v2/recording.greeting.wav",
+      "sha256": "d7671c393c22c88536d23f2374bf810a2bb4517375029247a724ac203b7b0ed3"
+    }
+  },
+  "sunday_delay_seconds": 0.35,
+  "sunday_steve_cut": {
+    "method": "First >=160 ms quiet run after 0.6 s, measured in 20 ms RMS windows below max(-56.5 dBFS, 8% of peak RMS), followed by a 20 ms fade.",
+    "seconds": 0.86,
+    "source_end_frame": 41280,
+    "threshold_rms": 0.010147235
+  },
+  "tapes": {
+    "saturday": {
+      "file": "res://assets/audio/effects/tape-saturday.wav",
+      "noise_seed": 1109,
+      "seconds": 9.02,
+      "segments": [
+        {
+          "clean_sha256": "89a6b5e07f40fbc9e7227de94ec363dd32cde4dbdf52f313ee8678b140fb8087",
+          "end": 2.68,
+          "label": "Ident",
+          "source_audio_id": "kbwr_ident",
+          "source_end": 3.74,
+          "source_file": "res://assets/audio/effects/kbwr_ident.wav",
+          "source_sha256": "a665128c698ff9cdddb56fa231577dd209134e6fdaa3caa58c5dc0466ccc7a3e",
+          "source_start": 1.24,
+          "start": 0.18
+        },
+        {
+          "clean_sha256": "0a856b91dfe4dadbbff27d36bb2537e0efdbe3b1b0cc96d3260f90e81c25c515",
+          "end": 5.94,
+          "label": "AutoRick",
+          "source_audio_id": "c1_flat.in.03",
+          "source_end": 3.14,
+          "source_file": "res://assets/audio/voices/elevenlabs-v4-script-v2/c1_flat.in.03.wav",
+          "source_sha256": "871e296fceba511436f90721fb6ce6b32e94b5645b51f3abb1691418d514905c",
+          "source_start": 0.0,
+          "start": 2.8
+        },
+        {
+          "clean_sha256": "b3c270f99df9257e5cd59643614294b10e13829a0a35201511781a3c52308145",
+          "end": 7.92,
+          "label": "Nora",
+          "source_audio_id": "recording.greeting",
+          "source_end": 1.36,
+          "source_file": "res://assets/audio/voices/elevenlabs-v4-script-v2/recording.greeting.wav",
+          "source_sha256": "d7671c393c22c88536d23f2374bf810a2bb4517375029247a724ac203b7b0ed3",
+          "source_start": 0.0,
+          "start": 6.56
+        },
+        {
+          "clean_sha256": "0abd4172dc17300a979fc6dbed8f3b7955260a50c77d3aaf1af43e1f12cd5bab",
+          "end": 8.86,
+          "label": "Steve",
+          "source_audio_id": "c1_flat.saturday.02",
+          "source_end": 0.82,
+          "source_file": "res://assets/audio/voices/elevenlabs-v4-script-v2/c1_flat.saturday.02.wav",
+          "source_sha256": "1308a096de17563a6f70d9fd1a0a611c182c74bb73f6111413aca7592b9c5e6c",
+          "source_start": 0.0,
+          "start": 8.04
+        }
+      ]
+    },
+    "sunday": {
+      "file": "res://assets/audio/effects/tape-sunday.wav",
+      "noise_seed": 2109,
+      "seconds": 9.41,
+      "segments": [
+        {
+          "clean_sha256": "89a6b5e07f40fbc9e7227de94ec363dd32cde4dbdf52f313ee8678b140fb8087",
+          "end": 3.03,
+          "label": "Ident",
+          "source_audio_id": "kbwr_ident",
+          "source_end": 3.74,
+          "source_file": "res://assets/audio/effects/kbwr_ident.wav",
+          "source_sha256": "a665128c698ff9cdddb56fa231577dd209134e6fdaa3caa58c5dc0466ccc7a3e",
+          "source_start": 1.24,
+          "start": 0.53
+        },
+        {
+          "clean_sha256": "e66d6ab9aaeb6135f232bb5ced7f8ff911652e0d47b9769fc7ada79d6ece679e",
+          "end": 6.79,
+          "label": "AutoRick",
+          "source_audio_id": "c1_flat.sunday.03",
+          "source_end": 3.64,
+          "source_file": "res://assets/audio/voices/elevenlabs-v4-script-v2/c1_flat.sunday.03.wav",
+          "source_sha256": "4d590e5a2253b631f03ba11c1d28686348f585e518fa5007c41590b7eb526ce5",
+          "source_start": 0.0,
+          "start": 3.15
+        },
+        {
+          "clean_sha256": "b3c270f99df9257e5cd59643614294b10e13829a0a35201511781a3c52308145",
+          "end": 8.27,
+          "label": "Nora",
+          "source_audio_id": "recording.greeting",
+          "source_end": 1.36,
+          "source_file": "res://assets/audio/voices/elevenlabs-v4-script-v2/recording.greeting.wav",
+          "source_sha256": "d7671c393c22c88536d23f2374bf810a2bb4517375029247a724ac203b7b0ed3",
+          "source_start": 0.0,
+          "start": 6.91
+        },
+        {
+          "clean_sha256": "6ed97fe987abe02f1e4057cb798243ca7a92c79a4194dfa98d371f0918b9ec1b",
+          "end": 9.25,
+          "label": "Steve",
+          "source_audio_id": "c1_flat.sunday.02",
+          "source_end": 0.86,
+          "source_file": "res://assets/audio/voices/elevenlabs-v4-script-v2/c1_flat.sunday.02.wav",
+          "source_sha256": "25f3b6464721fe77c475b022ee2d43836c9e23129c96fc9cf5e5e9073e379661",
+          "source_start": 0.0,
+          "start": 8.39
+        }
+      ]
+    }
+  }
+}
