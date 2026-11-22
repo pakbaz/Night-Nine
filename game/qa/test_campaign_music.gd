@@ -117,6 +117,10 @@ func run() -> void:
 	game._new_game()
 	await frames(1)
 	check(game.storybook.visible and game.score.current_file.ends_with("prologue-theme.mp3"), "Open the backstory on the Three Nights theme")
+	var corner: Rect2 = game.fullscreen_button.get_global_rect()
+	var screen: Vector2 = game.get_viewport().get_visible_rect().size
+	check(game.fullscreen_button.is_visible_in_tree() and game.fullscreen_button.get_parent().layer > game.root.get_parent().layer
+		and corner.end.x > screen.x - 20 and corner.position.y < 20, "Keep the full screen button in the top-right corner, above the story")
 	recordings[game.score.current_file] = true
 	await clear_overlays()
 	for scene: Dictionary in game.campaign.content.scenes:

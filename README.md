@@ -12,7 +12,7 @@ A painted point-and-click mystery set in Bellwether. Steve Mercer hears the same
 
 Cloudflare Pages is the only game host. GitHub hosts the source and runs the build/deployment workflow; GitHub Pages is retired.
 
-Play in a desktop browser with WebGL 2. There is no installer. To edit or test the source, open `game/project.godot` in Godot 4.7.2, wait for import, then press F5.
+Play in a desktop browser with WebGL 2. There is no installer. The small button in the top-right corner switches to full screen; press Esc to leave it. To edit or test the source, open `game/project.godot` in Godot 4.7.2, wait for import, then press F5.
 
 Select **New game**. Click an object to investigate, or use **Objects** for a keyboard-accessible list. In rooms with a walkable floor, click a spot or use WASD to move. Open the notebook to review evidence, case theories and the transcript. After initial setup, you can play the full story offline.
 

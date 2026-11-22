@@ -104,6 +104,9 @@ var closing := false
 var tape_playback := false
 var tape_compare: NightTapeCompare
 const STORYBOOK := preload("res://ui/storybook.gd")
+const FULLSCREEN_BUTTON := preload("res://ui/fullscreen_button.gd")
+var fullscreen_button: FULLSCREEN_BUTTON
+var fullscreen_setting: CheckButton
 const TITLE_CARD := preload("res://ui/title_card.gd")
 ## The three painted "nights" use the illustrated prologue stage wherever they sit in the story.
 const PAINTED_NIGHTS := ["p_veyr", "p_meeting", "p_bay"]
@@ -241,6 +244,18 @@ func _build_ui() -> void:
 	root.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	root.theme = _theme()
 	layer.add_child(root)
+	# Its own layer, above every overlay, so full screen is always one click away.
+	var corner := CanvasLayer.new()
+	corner.name = "CornerControls"
+	corner.layer = 100
+	add_child(corner)
+	fullscreen_button = FULLSCREEN_BUTTON.new()
+	corner.add_child(fullscreen_button)
+	fullscreen_button.set_anchors_and_offsets_preset(Control.PRESET_TOP_RIGHT)
+	fullscreen_button.offset_left = -40
+	fullscreen_button.offset_right = -8
+	fullscreen_button.offset_top = 6
+	fullscreen_button.offset_bottom = 38
 	# A soft shade keeps the title and objective readable over bright skies.
 	var shade := TextureRect.new()
 	shade.name = "HeadingShade"
@@ -517,10 +532,15 @@ func _build_menu() -> void:
 		settings.set_value("graphics","profile",profile)
 		_save_settings())
 	menu_settings.add_child(quality)
-	var fullscreen := CheckButton.new()
-	fullscreen.text="Fullscreen"
-	fullscreen.toggled.connect(func(on: bool): DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN if on else DisplayServer.WINDOW_MODE_WINDOWED))
-	menu_settings.add_child(fullscreen)
+	fullscreen_setting = CheckButton.new()
+	fullscreen_setting.text="Fullscreen"
+	fullscreen_setting.button_pressed = FULLSCREEN_BUTTON.is_fullscreen()
+	fullscreen_setting.toggled.connect(func(on: bool):
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN if on else DisplayServer.WINDOW_MODE_WINDOWED)
+		fullscreen_button.refresh())
+	menu_settings.add_child(fullscreen_setting)
+	# Esc or the corner button can change the mode; keep the setting truthful.
+	get_viewport().size_changed.connect(func(): fullscreen_setting.set_pressed_no_signal(FULLSCREEN_BUTTON.is_fullscreen()))
 	_volume_control("Overall volume","master",1.0,func(value: float):
 		AudioServer.set_bus_volume_db(0,-6.0 + linear_to_db(maxf(.0001,value)))
 		AudioServer.set_bus_mute(0,value <= 0.0))
