@@ -486,7 +486,11 @@ func _portrait_icon(id: String) -> Texture2D:
 	if not FileAccess.file_exists(folder + "sprite.json"):
 		return null
 	var portrait: Dictionary = JSON.parse_string(FileAccess.get_file_as_string(folder + "sprite.json"))
-	var texture := load(folder + str(portrait.get("base", ""))) as Texture2D
+	# Painted-in people, such as the two delegates, have face patches but no portrait of their own.
+	var base_path: String = folder + str(portrait.get("base", ""))
+	if str(portrait.get("base", "")).is_empty() or not ResourceLoader.exists(base_path):
+		return null
+	var texture := load(base_path) as Texture2D
 	if not texture:
 		return null
 	var texture_size := texture.get_size()
