@@ -453,6 +453,82 @@ class PipelineTests(unittest.TestCase):
         self.assertIn("No listening review is pending.", page)
         self.assertNotIn("Review only these 0 held takes", page)
 
+    def additions_fixture(self):
+        root = SCRATCH / "additions-root"
+        casting_path = root / "docs/voice-casting-2026-11-20.json"
+        casting_path.parent.mkdir(parents=True)
+        casting_path.write_text(json.dumps({
+            "roles": {"steve": {"voice_id": "voice-steve"}, "nora": {"voice_id": "voice-nora"}}
+        }) + "\n")
+        voices = root / "game/assets/audio/voices"
+        voices.mkdir(parents=True)
+
+        def take(audio_id, text, speaker, identity, name, extra=None):
+            path = voices / name
+            path.write_bytes(text.encode())
+            entry = {
+                "id": audio_id, "text": text, "text_hash": hashlib.sha256(text.encode()).hexdigest()[:16],
+                "file": "res://assets/audio/voices/" + name, "sha256": pipeline.file_sha(path),
+                "seconds": 1.0, "status": "automated_qa_passed", "speaker": speaker,
+                "identity": identity, "voice_id": "voice-" + identity, "model": "eleven_v4",
+            }
+            entry.update(extra or {})
+            return entry
+
+        kept = take("kept.1", "Kept line.", "steve", "steve", "kept.wav", {"plan_sha256": "plan-one"})
+        edited = take("edited.1", "Old wording.", "steve", "steve", "edited-old.wav", {"plan_sha256": "plan-one"})
+        base = {
+            "schema": 1, "model": "eleven_v4", "quality_approved": True,
+            "plan_sha256": "plan-one", "casting_sha256": pipeline.file_sha(casting_path),
+            "campaign": {"takes": {"kept.1": kept, "edited.1": edited}},
+            "narration": {"takes": {}},
+            "lipsync": {"takes": {audio_id: {
+                "audio_sha256": entry["sha256"], "seconds": 1.0,
+                "cues": [{"start": 0.0, "end": 1.0, "value": "X"}],
+            } for audio_id, entry in (("kept.1", kept), ("edited.1", edited))}},
+            "review": {"hard_holds": {}},
+        }
+        campaign = {"lines": {
+            "kept.1": {"audio": "kept.1", "text": "Kept line.", "speaker": "steve"},
+            "edited.1": {"audio": "edited.1", "text": "New wording.", "speaker": "steve"},
+            "talk.1": {"audio": "talk.1", "text": "Coffee?", "speaker": "iris"},
+        }}
+        additions = {
+            "schema": 1, "model": "eleven_v4", "casting_sha256": pipeline.file_sha(casting_path),
+            "campaign": {"takes": {
+                "edited.1": take("edited.1", "New wording.", "steve", "steve", "edited-new.wav"),
+                "talk.1": take("talk.1", "Coffee?", "iris", "nora", "talk.wav"),
+            }},
+            "narration": {"takes": {}},
+        }
+        return root, campaign, base, additions
+
+    def test_new_and_edited_lines_stay_text_only_until_recorded(self):
+        root, campaign, base, _additions = self.additions_fixture()
+        voice, lipsync, _book, _narration = overlay.merge_overlay(
+            campaign, {"books": {}}, {"takes": {}}, {"takes": {}}, {}, base, root,
+        )
+        self.assertEqual(set(voice["takes"]), {"kept.1"})
+        self.assertEqual(voice["missing"], ["edited.1", "talk.1"])
+        self.assertEqual(set(lipsync["takes"]), {"kept.1"})
+
+    def test_additions_cover_new_and_edited_lines_without_mouth_cues(self):
+        root, campaign, base, additions = self.additions_fixture()
+        voice, _lipsync, _book, _narration = overlay.merge_overlay(
+            campaign, {"books": {}}, {"takes": {}}, {"takes": {}}, {}, base, root,
+            additions=additions,
+        )
+        self.assertTrue(voice["enabled"])
+        self.assertEqual(voice["missing"], [])
+        self.assertEqual(voice["takes"]["edited.1"]["file"], "res://assets/audio/voices/edited-new.wav")
+        self.assertEqual(voice["takes"]["talk.1"]["identity"], "nora")
+        additions["campaign"]["takes"]["talk.1"]["voice_id"] = "voice-steve"
+        with self.assertRaisesRegex(ValueError, "voice/model"):
+            overlay.merge_overlay(
+                campaign, {"books": {}}, {"takes": {}}, {"takes": {}}, {}, base, root,
+                additions=additions,
+            )
+
     def test_changed_cast_is_rejected_even_when_text_is_unchanged(self):
         root = SCRATCH / "cast-root"
         casting_path = root / "docs/voice-casting-2026-11-20.json"
