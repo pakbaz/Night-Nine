@@ -139,7 +139,8 @@ func watch_book(prefix: String, natural_panels: int) -> void:
 		else:
 			await wait(4.8)
 		await capture("%s-%02d" % [prefix, i + 1])
-	await until(func(): return not game.storybook.visible, 6.0)
+	# The last picture holds until Steve's final line ends, which can outlast the music.
+	await until(func(): return not game.storybook.visible, 14.0)
 	for entry: Dictionary in game.storybook.narration_log:
 		fates.append(entry.merged({"book": prefix}))
 

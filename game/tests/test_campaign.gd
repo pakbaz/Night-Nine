@@ -193,6 +193,47 @@ func _check_storybook_clock_hitch() -> void:
 	book.queue_free()
 	score.queue_free()
 
+## Two captions that appear while Steve is still speaking are both narrated, in order, and
+## the last picture holds until his final line ends instead of cutting it with the music.
+func _check_storybook_narrates_every_caption() -> void:
+	var fake := GDScript.new()
+	fake.source_code = "extends Node\nvar current_file := \"\"\nvar at := 0.0\nvar faded := false\n" \
+		+ "func play_story(file: String, _bar: float, _keep: bool) -> bool:\n\tcurrent_file = file\n\treturn true\n" \
+		+ "func track_for_file(file: String) -> Dictionary:\n\treturn {\"file\": file, \"bpm\": 75.0, \"beat\": 0.0}\n" \
+		+ "func bar_length(_track: Dictionary) -> float:\n\treturn 3.2\n" \
+		+ "func bar_time(_track: Dictionary, bar: float) -> float:\n\treturn bar * 3.2\n" \
+		+ "func position() -> float:\n\treturn at\n" \
+		+ "func seek(seconds: float) -> void:\n\tat = seconds\n" \
+		+ "func fade_out(_seconds: float) -> void:\n\tfaded = true\n\tcurrent_file = \"\"\n"
+	fake.reload()
+	var score: Node = fake.new()
+	root.add_child(score)
+	var book = load("res://ui/storybook.gd").new()
+	root.add_child(book)
+	book.set_process(false)
+	var narrated: Array[String] = []
+	var closed := [false]
+	book.narrate.connect(func(line: Dictionary): narrated.append(str(line.text)))
+	book.finished.connect(func(): closed[0] = true)
+	book.play({"title": "Aftermath", "music": {"file": "res://aftermath.mp3", "bar": 0}, "end_bar": 2,
+		"panels": [{"bar": 0, "image": "res://icon.png", "lines": [
+			{"bar": .1, "text": "A long first line.", "seconds": 4.0},
+			{"bar": .5, "text": "So now I am home.", "seconds": 1.5},
+			{"bar": .5, "text": "This is the story.", "seconds": 1.5}]}]}, score)
+	var held_past_music := false
+	var clock := 0.0
+	while not closed[0] and clock < 20.0:
+		clock += .05
+		if not score.faded:
+			score.at += .05
+		book._process(.05)
+		held_past_music = held_past_music or (clock > 6.6 and book.visible and book.closing < 0.0)
+	check(narrated == ["A long first line.", "So now I am home.", "This is the story."], "Narrate every caption on a page, in order")
+	check(held_past_music and score.faded, "Hold the last picture until the final line ends, and fade the music")
+	check(closed[0] and clock > 7.4, "Close the book after the final line")
+	book.queue_free()
+	score.queue_free()
+
 func _initialize() -> void:
 	var state := NightCampaign.new()
 	check(state.content.scenes.size()==34,"Every authored location is present")
@@ -215,6 +256,7 @@ func _initialize() -> void:
 	_check_script_v2_runtime()
 	_check_storybook_caption_cleanup()
 	_check_storybook_clock_hitch()
+	_check_storybook_narrates_every_caption()
 	check(not state.switch_actor("saren"),"Cannot switch to an unavailable actor")
 	var ids: Dictionary={}
 	for scene: Dictionary in state.content.scenes:

@@ -18,8 +18,10 @@ const NARRATION_GAP := .1
 const MAX_CLOCK_STEP := .1
 ## Book-clock time when the narration in progress ends. Voice and music pause together, so this survives pauses.
 var narration_until := -INF
-## The newest caption still waiting for the narrator.
-var waiting_line: Dictionary = {}
+## Captions on this page still waiting for the narrator, in the order they appeared.
+var waiting_lines: Array[Dictionary] = []
+## The music ended while Steve was still speaking; the last picture holds until he finishes.
+var holding := false
 ## What happened to each caption's narration in this book, for QA.
 var narration_log: Array[Dictionary] = []
 var book: Dictionary = {}
@@ -154,7 +156,8 @@ func play(story: Dictionary, music: Node) -> void:
 		picture.texture = null
 	_clear_captions()
 	narration_until = -INF
-	waiting_line = {}
+	waiting_lines.clear()
+	holding = false
 	narration_log.clear()
 	heading.text = str(book.get("title", ""))
 	var cue: Dictionary = book.get("music", {})
@@ -231,8 +234,14 @@ func _process(delta: float) -> void:
 		return
 	var t := now()
 	if t >= end_time:
-		_drop_waiting("book_closed")
-		closing = 0.0
+		if waiting_lines.is_empty() and t >= narration_until:
+			closing = 0.0
+			return
+		if not holding:
+			holding = true
+			if music_driven and score.has_method("fade_out"):
+				score.fade_out(CLOSE)
+		_update_captions(t, delta)
 		return
 	veil.color.a = maxf(0.0, veil.color.a - delta / .9)
 	var current := -1
@@ -318,22 +327,19 @@ func _update_captions(t: float, delta: float) -> void:
 			if caption.modulate.a == 0.0:
 				var line: Dictionary = caption.get_meta("line")
 				line_shown.emit(line)
-				# Newest wins: a caption still waiting when a newer one appears stays silent.
-				_drop_waiting("superseded")
-				waiting_line = line
+				waiting_lines.append(line)
 			caption.modulate.a = minf(1.0, caption.modulate.a + delta / CAPTION_IN + .0001)
-	# Never start a clip over one that is still playing; after a stall, the line starts a little late instead of cutting the last one.
-	if not waiting_line.is_empty() and t >= narration_until:
-		var due := waiting_line
-		waiting_line = {}
+	# Never start a clip over one that is still playing; a line that has to wait starts a little late.
+	if not waiting_lines.is_empty() and t >= narration_until:
+		var due: Dictionary = waiting_lines.pop_front()
 		narration_until = t + float(due.get("seconds", 0.0)) + NARRATION_GAP
 		narration_log.append({"text": str(due.text), "fate": "narrated", "late": snappedf(t - _time_of(float(due.bar)), .001)})
 		narrate.emit(due)
 
 func _drop_waiting(fate: String) -> void:
-	if not waiting_line.is_empty():
-		narration_log.append({"text": str(waiting_line.text), "fate": fate})
-		waiting_line = {}
+	for line: Dictionary in waiting_lines:
+		narration_log.append({"text": str(line.text), "fate": fate})
+	waiting_lines.clear()
 
 func _clear_captions() -> void:
 	for caption: Label in captions:
