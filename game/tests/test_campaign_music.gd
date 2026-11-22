@@ -177,6 +177,8 @@ func run() -> void:
 				game._inspect_on_arrival(task.id)
 				await create_timer(.5).timeout
 				check(game.tape_compare.visible and game.score.duck_db < -22.0, "Clear the soundtrack under the tape-alignment puzzle")
+				var tape_scroll: ScrollContainer = game.tape_compare.get_child(0)
+				check(tape_scroll.get_child(0).size.y <= tape_scroll.size.y + 1.0, "Fit the whole tape comparison, with Record finding, on one screen")
 				game.tape_compare.close()
 			solve(task)
 		game._refresh()

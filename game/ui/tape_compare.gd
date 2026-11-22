@@ -74,9 +74,8 @@ func _ready() -> void:
 	offset_label.custom_minimum_size.x = 185
 	offset_mark = _label(timing, "", 23)
 	offset_mark.custom_minimum_size.x = 24
-	var transport := HBoxContainer.new()
-	transport.add_theme_constant_override("separation", 12)
-	box.add_child(transport)
+	# The transport shares the slider's row so the whole comparison fits on one screen.
+	var transport := timing
 	_button(transport, "Play Saturday", func(): _play("a"))
 	_button(transport, "Play Sunday", func(): _play("b"))
 	_button(transport, "Play together", func(): _play("both"))
@@ -90,16 +89,26 @@ func _ready() -> void:
 	rows_box = VBoxContainer.new()
 	rows_box.add_theme_constant_override("separation", 7)
 	box.add_child(rows_box)
-	var submit_row := HBoxContainer.new()
-	submit_row.alignment = BoxContainer.ALIGNMENT_END
-	box.add_child(submit_row)
-	_button(submit_row, "Record finding", _submit)
 	feedback = _label(box, "You can compare the waveforms with or without sound.", 18)
-	feedback.custom_minimum_size.y = 52
-	feedback.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	feedback.custom_minimum_size.y = 26
 	var footer := HBoxContainer.new()
 	footer.add_theme_constant_override("separation", 12)
 	box.add_child(footer)
+	var record := _button(footer, "Record finding", _submit)
+	# The main action matches the gold Check button on case boards.
+	for state: String in ["normal", "hover", "pressed"]:
+		var gold := StyleBoxFlat.new()
+		gold.bg_color = {"normal": Color("e9c276"), "hover": Color("f4d394"), "pressed": Color("c9a55f")}[state]
+		gold.border_color = Color("fff0c8")
+		gold.set_border_width_all(2 if state == "hover" else 1)
+		gold.set_corner_radius_all(5)
+		gold.content_margin_left = 14
+		gold.content_margin_right = 14
+		gold.content_margin_top = 8
+		gold.content_margin_bottom = 8
+		record.add_theme_stylebox_override(state, gold)
+	for state: String in ["font_color", "font_hover_color", "font_pressed_color", "font_focus_color"]:
+		record.add_theme_color_override(state, Color("1c1a12"))
 	hint_button=_button(footer, "Hint 1 of 3", func(): hint_requested.emit())
 	answer_button=_button(footer, "Show answer", func(): answer_requested.emit())
 	answer_button.hide()
@@ -183,13 +192,15 @@ func _configure_rows(rows: Array, answers: Array, previous: Array[int]) -> void:
 	row_choices.clear()
 	row_marks.clear()
 	solution = answers.duplicate()
+	var row: HBoxContainer
 	for index: int in rows.size():
 		var data := rows[index] as Dictionary
-		var row := HBoxContainer.new()
-		row.add_theme_constant_override("separation", 10)
-		rows_box.add_child(row)
+		if index % 2 == 0:
+			row = HBoxContainer.new()
+			row.add_theme_constant_override("separation", 10)
+			rows_box.add_child(row)
 		var label := _label(row, str(data.get("label", "")), 16)
-		label.custom_minimum_size.x = 280
+		label.custom_minimum_size.x = 190
 		var choice := OptionButton.new()
 		choice.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 		choice.add_item("Choose one")
