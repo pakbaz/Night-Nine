@@ -49,6 +49,11 @@ var preceding_pair := PackedStringArray()
 var last_floor_actor := ""
 var floor_dialogue := false
 var working_actor := ""
+## A full-frame story painting shown in place of the room while particular lines play.
+var story_still: TextureRect
+## Transparent paintings over the room for one stretch of the story, such as Steve
+## strapped into the scan chair or a sleeper in a pod. Each covers the whole plate.
+var story_layers: Array[Dictionary] = []
 
 static var direction_book: Dictionary
 static var landmark_book: Dictionary
@@ -109,6 +114,8 @@ func build_art(scene: Dictionary) -> void:
 			make_object_layer(i)
 	if foreground:
 		props.move_child(foreground,-1)
+	if background:
+		build_story_layers()
 	for role: Dictionary in directions.get("creatures",[]):
 		var id: String=role.id
 		var folder:=CAST+id
@@ -155,7 +162,84 @@ func art_point(pair: Array) -> Vector2:
 	return Vector2(pair[0],pair[1])*ART
 
 func walking_view() -> bool:
-	return floor_stage != null and floor_stage.has_actor() and not cinematic and cut_progress < 0.0 and focus < 0
+	return floor_stage != null and floor_stage.has_actor() and not cinematic and cut_progress < 0.0 and focus < 0 \
+		and not active_layers().any(func(record: Dictionary): return not record.get("walking",true))
+
+func layer_active(record: Dictionary) -> bool:
+	var until: String = record.get("until","")
+	var after: String = record.get("after","")
+	return (until.is_empty() or until not in done) and (after.is_empty() or after in done)
+
+func active_layers() -> Array:
+	return story_layers.map(func(entry: Dictionary): return entry.record).filter(layer_active)
+
+## Paint each layer over the room, over every prop crop with the prop's own soft edge,
+## and over the walking floor's wide painting when the layer has one.
+func build_story_layers() -> void:
+	var plate_size: Vector2 = background.texture.get_size()
+	for record: Dictionary in directions.get("layers",[]):
+		var path: String = record.get("file","")
+		if not ResourceLoader.exists(path):
+			push_error("Missing story layer " + path)
+			continue
+		var texture := load(path) as Texture2D
+		var ratio: Vector2 = texture.get_size() / plate_size
+		var nodes: Array[Sprite2D] = []
+		var whole := Sprite2D.new()
+		whole.name = "Layer_" + path.get_file().get_basename()
+		whole.texture = texture
+		whole.centered = false
+		whole.scale = Vector2.ONE / ratio
+		background.add_child(whole)
+		nodes.append(whole)
+		for prop: Sprite2D in physical_art:
+			var piece := Sprite2D.new()
+			piece.texture = texture
+			piece.centered = false
+			piece.region_enabled = true
+			piece.region_rect = Rect2(prop.region_rect.position * ratio, prop.region_rect.size * ratio)
+			piece.scale = Vector2.ONE / ratio
+			piece.material = prop.material
+			prop.add_child(piece)
+			nodes.append(piece)
+		var wide_path: String = record.get("wide_file","")
+		if floor_stage and floor_stage.wide and ResourceLoader.exists(wide_path):
+			var wide_texture := load(wide_path) as Texture2D
+			var over := Sprite2D.new()
+			over.texture = wide_texture
+			over.centered = false
+			over.scale = floor_stage.wide.texture.get_size() / wide_texture.get_size()
+			floor_stage.wide.add_child(over)
+			nodes.append(over)
+		story_layers.append({"record": record, "nodes": nodes})
+
+func show_room_state() -> void:
+	for entry: Dictionary in story_layers:
+		var shown: bool = layer_active(entry.record)
+		for node: Sprite2D in entry.nodes:
+			node.visible = shown
+
+## A still covers a line by its id, or every line of a lead or group by that prefix.
+func still_for(line_id: String) -> String:
+	for still: Dictionary in directions.get("stills",[]):
+		for item: String in still.get("lines",[]):
+			if line_id == item or line_id.begins_with(item + "."):
+				return str(still.file)
+	return ""
+
+func show_still(line_id: String) -> void:
+	var path := still_for(line_id)
+	if path.is_empty() or not ResourceLoader.exists(path):
+		if is_instance_valid(story_still):
+			story_still.hide()
+		return
+	if not is_instance_valid(story_still):
+		story_still = image_layer(load(path) as Texture2D, "StoryStill")
+		# Above the room and the cast, below the caption shade.
+		frame.move_child(story_still, frame.get_child_count() - 2)
+	elif story_still.texture.resource_path != path:
+		story_still.texture = load(path) as Texture2D
+	story_still.show()
 
 func is_walking() -> bool:
 	return floor_stage != null and (not floor_stage.route.is_empty() or floor_stage.pose_time>0.0)
@@ -315,6 +399,9 @@ func set_quality(profile: String) -> void:
 		plane.texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR
 
 func actor_visible(id: String) -> bool:
+	# People painted into a story layer have no separate portrait while it shows.
+	if active_layers().any(func(record: Dictionary): return id in record.get("painted",[])):
+		return false
 	var requirement: String = directions.get("reveal_after",{}).get(id,"")
 	return id in directions.company and (requirement.is_empty() or requirement in done)
 
@@ -436,6 +523,7 @@ func in_cutaway() -> bool:
 	return task_in_view or (cutaway.has("after") and cutaway.after in done)
 
 func update_inserts() -> void:
+	show_room_state()
 	var away := in_cutaway()
 	var exploring := walking_view() or floor_dialogue
 	if floor_stage:
@@ -465,6 +553,7 @@ func begin_dialogue(line: Dictionary, voice: AudioStreamPlayer, _take: Dictionar
 	var id: String = line.speaker
 	active_id=line.id
 	update_inserts()
+	show_still(line.id)
 	var recorded: bool = line.get("delivery","live")!="live" or line.id in directions.get("off_camera_lines",[])
 	var detail: Dictionary=directions.get("detail_shots",{}).get(line.id,{})
 	var on_camera := not recorded and detail.is_empty() and actor_visible(id)
@@ -489,7 +578,9 @@ func begin_dialogue(line: Dictionary, voice: AudioStreamPlayer, _take: Dictionar
 	if actors.get(current_speaker)==null:
 		var inserts: Dictionary=directions.get("inserts",{})
 		var group: String=str(line.id).get_basename()
-		var mark: Variant=inserts.get(line.id,inserts.get(group))
+		var parts: PackedStringArray=str(line.id).split(".")
+		var lead: String=parts[0]+"."+parts[1] if parts.size()>2 else ""
+		var mark: Variant=inserts.get(line.id,inserts.get(group,inserts.get(lead)))
 		if mark is String and scene_props.has(mark):
 			camera_goal=scene_props[mark]
 		elif mark is Array:
@@ -531,6 +622,8 @@ func finish_floor_exchange() -> void:
 	update_inserts()
 
 func end_dialogue() -> void:
+	if is_instance_valid(story_still):
+		story_still.hide()
 	finish_floor_exchange()
 	if not social_pair.is_empty():
 		preceding_pair = social_pair.duplicate()

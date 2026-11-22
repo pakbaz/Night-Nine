@@ -166,12 +166,20 @@ func verify_campaign(campaign: NightCampaign, layouts: Dictionary) -> void:
 				var completed := before_scene.duplicate()
 				stage.sync_story(completed)
 				var floor_stage: Node2D=stage.floor_stage
-				check(stage.walking_view() and floor_stage.visible,scene.id+" visible walking floor for "+id)
 				var reached: Array = []
 				var actor_trace := {}
 				for i: int in scene.tasks.size():
 					var task: Dictionary=scene.tasks[i]
 					var label := str(task.id)+" via "+id
+					# While a story layer holds the lead in place (Steve strapped into the
+					# scan chair), objects open directly and nobody walks.
+					if not stage.walking_view() and stage.active_layers().any(func(layer: Dictionary): return not layer.get("walking",true)):
+						check(not stage.walk_task(task.id),label+" opens without walking while "+id+" is held in place")
+						reached.append(task.id)
+						completed.append(task.id)
+						stage.sync_story(completed)
+						continue
+					check(stage.walking_view() and floor_stage.visible,label+" visible walking floor for "+id)
 					check(stage.frame.get_global_rect().has_point(stage.project_target(i)),label+" target in camera")
 					last_arrival=""
 					var started := stage.walk_task(task.id)

@@ -968,6 +968,33 @@ def render(content, books, merge, casting, out_dir):
     return stats
 
 
+def validate_staging(staging, content, merge):
+    """Story paintings must exist and point at real lines; story layers at leads of their scene."""
+    line_ids = set(content['lines'])
+    scenes = {s['id']: s for s in content['scenes']}
+
+    def painting(where, path):
+        if not (str(path).startswith('res://') and (ROOT / 'game' / str(path)[6:]).is_file()):
+            merge.issue('error', where, f'missing painting {path}')
+
+    for scene_id, scene in staging.items():
+        if scene_id not in scenes:
+            continue
+        for still in scene.get('stills', []):
+            painting(scene_id, still.get('file', ''))
+            for item in still.get('lines', []):
+                if item not in line_ids and not any(line.startswith(item + '.') for line in line_ids):
+                    merge.issue('error', scene_id, f'still names unknown line or lead {item}')
+        leads = {t['id'] for t in scenes[scene_id]['tasks']}
+        for layer in scene.get('layers', []):
+            painting(scene_id, layer.get('file', ''))
+            if layer.get('wide_file'):
+                painting(scene_id, layer['wide_file'])
+            for key in ('until', 'after'):
+                if layer.get(key) and layer[key] not in leads:
+                    merge.issue('error', scene_id, f"layer {key} {layer[key]} is not a lead of {scene_id}")
+
+
 def write_walkthrough(content, path):
     """The answer to every lead, in play order, for players and reviewers who are stuck."""
     cast = content['cast']
@@ -1011,6 +1038,7 @@ def main():
     merge = Merge(base, edits)
     content = merge.run()
     validate(content, edits, merge)
+    validate_staging(json.loads((BASE_DIR / 'illustrated-campaign.json').read_text()), content, merge)
     casting = json.loads((ROOT / 'docs/voice-casting-2026-11-20.json').read_text())
     books = storybook_lines(json.loads(args.storybook.read_text()), edits)
     stats = render(content, books, merge, casting, args.out)

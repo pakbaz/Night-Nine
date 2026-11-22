@@ -131,11 +131,17 @@
       0.59
     ],
     "company": [
-      "steve"
+      "steve",
+      "iris",
+      "lyle_copy"
     ],
     "inserts": {
       "c2_aquarium.out.01": "c2_aquarium.intercom",
       "c2_aquarium.intercom": "c2_aquarium.intercom"
+    },
+    "reveal_after": {
+      "iris": "c2_aquarium.intercom",
+      "lyle_copy": "c2_aquarium.intercom"
     }
   },
   "c2_ship": {
@@ -157,7 +163,46 @@
     "off_camera_lines": [
       "c2_ship.escape.01"
     ],
-    "chapter_insert": true
+    "chapter_insert": true,
+    "stills": [
+      {
+        "file": "res://assets/illustrated/campaign/stills/c2_ship-nora-asleep.webp",
+        "lines": [
+          "c2_ship.nora"
+        ]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/stills/c2_ship-admiral-rescue.webp",
+        "lines": [
+          "c2_ship.intake.find"
+        ]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/stills/c2_ship-dawn-beach.webp",
+        "lines": [
+          "c2_ship.out.03",
+          "c2_ship.out.02"
+        ]
+      }
+    ],
+    "inserts": {
+      "c2_ship.in": "c2_ship.escape",
+      "c2_ship.command": "c2_ship.escape",
+      "c2_ship.escape": "c2_ship.escape"
+    },
+    "layers": [
+      {
+        "file": "res://assets/illustrated/campaign/layers/c2_ship-steve-strapped.webp",
+        "until": "c2_ship.escape",
+        "painted": [
+          "steve"
+        ],
+        "walking": false
+      },
+      {
+        "file": "res://assets/illustrated/campaign/layers/c2_ship-nora-asleep.webp"
+      }
+    ]
   },
   "c3_house": {
     "light": "eac397",
@@ -175,7 +220,15 @@
       "steve",
       "pell"
     ],
-    "resident": "calder"
+    "resident": "calder",
+    "stills": [
+      {
+        "file": "res://assets/illustrated/campaign/stills/c2_ship-dawn-beach.webp",
+        "lines": [
+          "c3_house.ctx.01"
+        ]
+      }
+    ]
   },
   "c3_archive": {
     "light": "e8d4b3",
@@ -217,7 +270,16 @@
       "gus",
       "saren"
     ],
-    "resident": "archivist"
+    "resident": "archivist",
+    "stills": [
+      {
+        "file": "res://assets/illustrated/campaign/stills/i1_archive-row-zero.webp",
+        "lines": [
+          "i1_archive.quiet.03",
+          "i1_archive.quiet.04"
+        ]
+      }
+    ]
   },
   "c4_safe": {
     "light": "95b4c6",
@@ -383,6 +445,17 @@
       "steve",
       "shaw",
       "wen"
+    ],
+    "stills": [
+      {
+        "file": "res://assets/illustrated/campaign/stills/c7_gate-ward-left-wrist.webp",
+        "lines": [
+          "c7_gate.post.01",
+          "c7_gate.post.02",
+          "c7_gate.post.03",
+          "c7_gate.post.04"
+        ]
+      }
     ]
   },
   "c7_swap": {
@@ -411,7 +484,36 @@
     ],
     "inserts": {
       "c7_swap.in.01": "c7_swap.bus"
-    }
+    },
+    "stills": [
+      {
+        "file": "res://assets/illustrated/campaign/stills/c7_swap-fourteen-turn.webp",
+        "lines": [
+          "c7_swap.tone.03",
+          "c7_swap.tone.01"
+        ]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/stills/c7_swap-tunnel-rescue.webp",
+        "lines": [
+          "c7_swap.tone.02",
+          "c7_swap.recap.01",
+          "c7_swap.recap.02"
+        ]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/stills/c7_swap-locked-room.webp",
+        "lines": [
+          "c7_swap.out.04",
+          "c7_swap.out.02",
+          "c7_gate.out.01",
+          "c7_gate.out.02",
+          "c7_gate.out.03",
+          "c7_swap.out.05",
+          "c7_swap.out.03"
+        ]
+      }
+    ]
   },
   "c8_lab": {
     "light": "dfb99a",
@@ -660,7 +762,21 @@
         0.6,
         0.63
       ]
-    }
+    },
+    "stills": [
+      {
+        "file": "res://assets/illustrated/campaign/stills/c10_live-pier.webp",
+        "lines": [
+          "c10_live.out.07",
+          "c10_live.out.02",
+          "c10_live.out.03",
+          "c10_live.out.08",
+          "c10_live.out.09",
+          "c10_live.out.04",
+          "c10_live.out.10"
+        ]
+      }
+    ]
   },
   "c10_report": {
     "light": "b4d5eb",
@@ -741,7 +857,19 @@
         ]
       }
     ],
-    "departure_painting": "NinthNightLanterns"
+    "departure_painting": "NinthNightLanterns",
+    "stills": [
+      {
+        "file": "res://assets/illustrated/campaign/stills/epilogue-new-face.webp",
+        "lines": [
+          "epilogue.in.01",
+          "epilogue.in.02",
+          "epilogue.in.03",
+          "epilogue.in.04",
+          "epilogue.talk.iris"
+        ]
+      }
+    ]
   },
   "one_year": {
     "light": "f4c78c",
