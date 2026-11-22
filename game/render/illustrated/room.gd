@@ -275,6 +275,12 @@ func sync_story(completed: Array) -> void:
 	if room_id == "p_bay" and "p_bay.message" in done:
 		night_light = true
 
+func talk_body_at_screen(screen: Vector2) -> String:
+	for id: String in actors:
+		if actors[id].hit(screen):
+			return id
+	return ""
+
 func set_frequency(khz: int) -> void:
 	if dial_material:
 		dial_material.set_shader_parameter("dial",clampf((khz-810)/10.0,0.0,1.0))

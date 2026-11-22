@@ -166,9 +166,17 @@ func walk_screen(screen: Vector2) -> bool:
 	return walking_view() and frame.get_global_rect().has_point(screen) and floor_stage.walk_to(distant.to_local(screen))
 
 func talk_body_at_screen(screen: Vector2) -> String:
-	if not walking_view() or not frame.get_global_rect().has_point(screen):
+	if not frame.get_global_rect().has_point(screen):
 		return ""
-	return floor_stage.body_at(distant.to_local(screen))
+	if walking_view():
+		var walker: String = floor_stage.body_at(distant.to_local(screen))
+		if not walker.is_empty():
+			return walker
+	# Painted portraits standing in the room, such as Carmen at La Marea.
+	for id: String in actors:
+		if actors[id].hit(screen):
+			return id
+	return ""
 
 func walk_task(id: String) -> bool:
 	return walking_view() and floor_stage.approach_task(id)

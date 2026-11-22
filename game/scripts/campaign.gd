@@ -603,7 +603,7 @@ func _after_talk(id: String) -> void:
 func _talk_speaker_for_body(body_id: String) -> String:
 	for topic: Dictionary in campaign.available_talk():
 		var speaker_id: String = topic.get("speaker", "")
-		if TALK_APPEARANCE.get(speaker_id, speaker_id) == body_id:
+		if speaker_id == body_id or TALK_APPEARANCE.get(speaker_id, speaker_id) == body_id:
 			return speaker_id
 	return ""
 
