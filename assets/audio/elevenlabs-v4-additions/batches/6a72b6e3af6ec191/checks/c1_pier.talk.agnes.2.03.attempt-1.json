@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c1_pier.talk.agnes.2.03",
+  "attempt": 1,
+  "plan_sha256": "6a72b6e3af6ec191b0f0a01bbe9902faea7a40c2664520abf2c6799dd216cdb2",
+  "wav_sha256": "79c0bdcac13f6a0ccc0a40ae316f8541450704cd4d98c31054ad44f8f80fb509",
+  "expected": "I put it back together.",
+  "recognized": "I put it back together.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 1.6,
+  "sample_rate": 48000,
+  "peak": 0.322296142578125,
+  "rms": 0.04200743335314218,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

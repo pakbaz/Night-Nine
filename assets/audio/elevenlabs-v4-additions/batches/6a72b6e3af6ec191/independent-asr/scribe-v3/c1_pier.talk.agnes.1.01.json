@@ -1,0 +1,81 @@
+{
+  "audio_id": "c1_pier.talk.agnes.1.01",
+  "audio_sha256": "367e6468ffe9179c188a1526905b03e98a0335b5354675ce5ebf2eb4728fbd01",
+  "file": "assets/audio/elevenlabs-v4-additions/masters/c1_pier.talk.agnes.1.01.attempt-1.wav",
+  "production_plan_sha256": "6a72b6e3af6ec191b0f0a01bbe9902faea7a40c2664520abf2c6799dd216cdb2",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "How’s business, Mrs. Penhallow?",
+  "recognized": "How's business, Mrs. Penhallow?",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "333fefbcd5ee60e6cac9a74b232db381",
+  "character_cost": "1",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "How's business, Mrs. Penhallow?",
+    "words": [
+      {
+        "text": "How's",
+        "start": 0.06,
+        "end": 0.34,
+        "type": "word",
+        "logprob": -0.012348540683569808
+      },
+      {
+        "text": " ",
+        "start": 0.34,
+        "end": 0.38,
+        "type": "spacing",
+        "logprob": -1.156323378381785e-05
+      },
+      {
+        "text": "business,",
+        "start": 0.38,
+        "end": 0.84,
+        "type": "word",
+        "logprob": -1.3907631202730247e-05
+      },
+      {
+        "text": " ",
+        "start": 0.84,
+        "end": 1.12,
+        "type": "spacing",
+        "logprob": -0.00022980909852776676
+      },
+      {
+        "text": "Mrs.",
+        "start": 1.12,
+        "end": 1.26,
+        "type": "word",
+        "logprob": -0.00017405555047389498
+      },
+      {
+        "text": " ",
+        "start": 1.26,
+        "end": 1.46,
+        "type": "spacing",
+        "logprob": -0.06656962633132935
+      },
+      {
+        "text": "Penhallow?",
+        "start": 1.46,
+        "end": 1.96,
+        "type": "word",
+        "logprob": -0.02688844107906334
+      }
+    ],
+    "transcription_id": "cCEFEqiHzC4ADYqotflu",
+    "audio_duration_secs": 2.32
+  },
+  "listening_reviewed": false
+}

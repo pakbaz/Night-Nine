@@ -1,0 +1,53 @@
+{
+  "audio_id": "c1_pier.talk.agnes.1.03",
+  "audio_sha256": "d9ce12def7d7c2a9337b404386b29716bf5b54e1b3f9a40a7eefc7df0a904352",
+  "file": "assets/audio/elevenlabs-v4-additions/masters/c1_pier.talk.agnes.1.03.attempt-1.wav",
+  "production_plan_sha256": "6a72b6e3af6ec191b0f0a01bbe9902faea7a40c2664520abf2c6799dd216cdb2",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "That’s splendid?",
+  "recognized": "That's splendid.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "f7260bc3a1dab35079e4920ccc09af99",
+  "character_cost": "0",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "That's splendid.",
+    "words": [
+      {
+        "text": "That's",
+        "start": 0.12,
+        "end": 0.42,
+        "type": "word",
+        "logprob": -0.015150247942680531
+      },
+      {
+        "text": " ",
+        "start": 0.42,
+        "end": 0.48,
+        "type": "spacing",
+        "logprob": -0.043586570769548416
+      },
+      {
+        "text": "splendid.",
+        "start": 0.58,
+        "end": 1.12,
+        "type": "word",
+        "logprob": -0.04133598299490081
+      }
+    ],
+    "transcription_id": "wswoHoCkHCysvxbPvU1u",
+    "audio_duration_secs": 1.44
+  },
+  "listening_reviewed": false
+}

@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "audio_id": "c1_flat.saturday.04",
+  "attempt": 1,
+  "plan_sha256": "6a72b6e3af6ec191b0f0a01bbe9902faea7a40c2664520abf2c6799dd216cdb2",
+  "wav_sha256": "92dad6d77a4200a5b600e33868e4f2f0f914501b3a532b2f66c60f1069604d50",
+  "expected": "You hate it strong.",
+  "recognized": "You hate it strong.",
+  "local_recognized": "You hate it strong.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 1.76,
+  "sample_rate": 48000,
+  "peak": 0.23065185546875,
+  "rms": 0.03572377769696102,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c1_flat.saturday.04.json",
+    "sha256": "e010a33f059104ed1bcbf012d7382517fe61f90b8840e350568ee842407f02c7",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  },
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

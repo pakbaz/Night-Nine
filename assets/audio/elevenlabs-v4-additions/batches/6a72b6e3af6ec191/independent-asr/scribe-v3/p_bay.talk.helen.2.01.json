@@ -1,0 +1,81 @@
+{
+  "audio_id": "p_bay.talk.helen.2.01",
+  "audio_sha256": "1952fab6aa98d2731d56d9005eefef2d2b0ae0a0588ccf80278dd9532a3cf658",
+  "file": "assets/audio/elevenlabs-v4-additions/masters/p_bay.talk.helen.2.01.attempt-1.wav",
+  "production_plan_sha256": "6a72b6e3af6ec191b0f0a01bbe9902faea7a40c2664520abf2c6799dd216cdb2",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "My hands are freezing.",
+  "recognized": "My hands are freezing.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "349cb6f15aa76ff7afb58365cae97146",
+  "character_cost": "1",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "My hands are freezing.",
+    "words": [
+      {
+        "text": "My",
+        "start": 0.08,
+        "end": 0.24,
+        "type": "word",
+        "logprob": -3.361645576660521e-05
+      },
+      {
+        "text": " ",
+        "start": 0.24,
+        "end": 0.34,
+        "type": "spacing",
+        "logprob": -1.4185804502631072e-05
+      },
+      {
+        "text": "hands",
+        "start": 0.34,
+        "end": 0.64,
+        "type": "word",
+        "logprob": -1.4185804502631072e-05
+      },
+      {
+        "text": " ",
+        "start": 0.64,
+        "end": 0.68,
+        "type": "spacing",
+        "logprob": -2.3841830625315197e-06
+      },
+      {
+        "text": "are",
+        "start": 0.68,
+        "end": 0.82,
+        "type": "word",
+        "logprob": -2.3841830625315197e-06
+      },
+      {
+        "text": " ",
+        "start": 0.82,
+        "end": 0.98,
+        "type": "spacing",
+        "logprob": -1.549708758830093e-05
+      },
+      {
+        "text": "freezing.",
+        "start": 0.98,
+        "end": 1.6,
+        "type": "word",
+        "logprob": -2.05964000391153e-05
+      }
+    ],
+    "transcription_id": "BXka9vauW5KQ3GYsFRl1",
+    "audio_duration_secs": 2.16
+  },
+  "listening_reviewed": false
+}

@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c1_dinner.talk.carmen.1.01",
+  "attempt": 1,
+  "plan_sha256": "6a72b6e3af6ec191b0f0a01bbe9902faea7a40c2664520abf2c6799dd216cdb2",
+  "wav_sha256": "c84ae4aba837eb98b3b443ec6bb6d984d2fc7923f55f41a8d458c1efe042424c",
+  "expected": "The mole is perfect, Carmen.",
+  "recognized": "The mole is perfect, Carmen.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 2.24,
+  "sample_rate": 48000,
+  "peak": 0.259063720703125,
+  "rms": 0.038851654560596936,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

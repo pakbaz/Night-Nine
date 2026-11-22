@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c1_dinner.talk.rafa.1.02",
+  "attempt": 1,
+  "plan_sha256": "6a72b6e3af6ec191b0f0a01bbe9902faea7a40c2664520abf2c6799dd216cdb2",
+  "wav_sha256": "1519a5bd8c1aeaba27d413e5f896a8534db1b598b0d13180e02edca93aca2ea0",
+  "expected": "Forty tables, one birthday, and Mamá tasting everything twice.",
+  "recognized": "40 tables, one birthday, and mama tasting everything twice.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.96,
+  "sample_rate": 48000,
+  "peak": 0.5118408203125,
+  "rms": 0.06289408243883315,
+  "level_match_gain_db": -3.1904566872030498,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

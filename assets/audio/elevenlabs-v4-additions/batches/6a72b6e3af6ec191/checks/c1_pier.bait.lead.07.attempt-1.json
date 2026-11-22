@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c1_pier.bait.lead.07",
+  "attempt": 1,
+  "plan_sha256": "6a72b6e3af6ec191b0f0a01bbe9902faea7a40c2664520abf2c6799dd216cdb2",
+  "wav_sha256": "dea10ebf456cb2c1927ed5c1a7b0ccff40ffdde0f85c74b86d3addd937229d40",
+  "expected": "Nobody can hear Agnes hum. She’s quieter than the fog.",
+  "recognized": "Nobody can hear Agnes hum. She's quieter than the fog.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.16,
+  "sample_rate": 48000,
+  "peak": 0.443695068359375,
+  "rms": 0.052113965799503024,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

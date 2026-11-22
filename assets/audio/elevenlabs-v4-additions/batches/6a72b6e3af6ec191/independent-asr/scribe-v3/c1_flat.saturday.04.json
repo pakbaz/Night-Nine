@@ -1,0 +1,81 @@
+{
+  "audio_id": "c1_flat.saturday.04",
+  "audio_sha256": "92dad6d77a4200a5b600e33868e4f2f0f914501b3a532b2f66c60f1069604d50",
+  "file": "assets/audio/elevenlabs-v4-additions/masters/c1_flat.saturday.04.attempt-1.wav",
+  "production_plan_sha256": "6a72b6e3af6ec191b0f0a01bbe9902faea7a40c2664520abf2c6799dd216cdb2",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "You hate it strong.",
+  "recognized": "You hate it strong.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "4dae7c9c16ef4074fde1207d9902e0a2",
+  "character_cost": "1",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "You hate it strong.",
+    "words": [
+      {
+        "text": "You",
+        "start": 0.1,
+        "end": 0.18,
+        "type": "word",
+        "logprob": -1.5735502529423684e-05
+      },
+      {
+        "text": " ",
+        "start": 0.18,
+        "end": 0.44,
+        "type": "spacing",
+        "logprob": -0.0007937379996292293
+      },
+      {
+        "text": "hate",
+        "start": 0.44,
+        "end": 0.64,
+        "type": "word",
+        "logprob": -0.0007937379996292293
+      },
+      {
+        "text": " ",
+        "start": 0.64,
+        "end": 0.7,
+        "type": "spacing",
+        "logprob": -3.111314072157256e-05
+      },
+      {
+        "text": "it",
+        "start": 0.7,
+        "end": 0.84,
+        "type": "word",
+        "logprob": -3.111314072157256e-05
+      },
+      {
+        "text": " ",
+        "start": 0.84,
+        "end": 0.94,
+        "type": "spacing",
+        "logprob": -0.0007313199457712471
+      },
+      {
+        "text": "strong.",
+        "start": 0.94,
+        "end": 1.4,
+        "type": "word",
+        "logprob": -0.000633895871682658
+      }
+    ],
+    "transcription_id": "kQfmdShMN5zO3nWCvnGq",
+    "audio_duration_secs": 1.76
+  },
+  "listening_reviewed": false
+}

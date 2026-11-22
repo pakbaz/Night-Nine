@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "audio_id": "c1_flat.saturday.find",
+  "attempt": 1,
+  "plan_sha256": "6a72b6e3af6ec191b0f0a01bbe9902faea7a40c2664520abf2c6799dd216cdb2",
+  "wav_sha256": "9109189a21ce5364234c85d0820083a018823be71d5160397786b48e786cf831",
+  "expected": "Red cassette, Saturday, 7:15. My ident, AutoRick, Nora saying good morning on her way out, and me.",
+  "recognized": "Red cassette, Saturday, 7:15. My ident, Auto Rick. Nora saying good morning on her way out, and me.",
+  "local_recognized": "Red Cassette, Saturday, 7.15. My ident, Autoric. Nora saying good morning on her way out, and me.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 8.32,
+  "sample_rate": 48000,
+  "peak": 0.38677978515625,
+  "rms": 0.042059433975970624,
+  "level_match_gain_db": 0.0,
+  "word_edits": 2,
+  "word_error_rate": 0.1111111111111111,
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c1_flat.saturday.find.json",
+    "sha256": "3b98d17beea973e4de3d7502fddec95dcb1f383d96b5388858cbd9fa2891f6f6",
+    "model": "scribe_v3",
+    "word_edits": 2,
+    "listening_reviewed": false
+  },
+  "status": "retake_required",
+  "failure_reason": "asr_mismatch"
+}

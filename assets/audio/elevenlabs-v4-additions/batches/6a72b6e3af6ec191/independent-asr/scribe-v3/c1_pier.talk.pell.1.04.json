@@ -1,0 +1,67 @@
+{
+  "audio_id": "c1_pier.talk.pell.1.04",
+  "audio_sha256": "5ee4a7c1ad6a361dc67cebe1cce467c8a9f918b2cb16156e3b13e689318adaf0",
+  "file": "assets/audio/elevenlabs-v4-additions/masters/c1_pier.talk.pell.1.04.attempt-1.wav",
+  "production_plan_sha256": "6a72b6e3af6ec191b0f0a01bbe9902faea7a40c2664520abf2c6799dd216cdb2",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "There is today.",
+  "recognized": "There is today.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "e24c6406d1157539368622a6d4a28070",
+  "character_cost": "0",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "There is today.",
+    "words": [
+      {
+        "text": "There",
+        "start": 0.1,
+        "end": 0.24,
+        "type": "word",
+        "logprob": -0.0003268184664193541
+      },
+      {
+        "text": " ",
+        "start": 0.24,
+        "end": 0.3,
+        "type": "spacing",
+        "logprob": -3.2186455882765586e-06
+      },
+      {
+        "text": "is",
+        "start": 0.3,
+        "end": 0.48,
+        "type": "word",
+        "logprob": -3.2186455882765586e-06
+      },
+      {
+        "text": " ",
+        "start": 0.48,
+        "end": 0.54,
+        "type": "spacing",
+        "logprob": -0.00019834458362311125
+      },
+      {
+        "text": "today.",
+        "start": 0.54,
+        "end": 0.94,
+        "type": "word",
+        "logprob": -0.00018412115605315194
+      }
+    ],
+    "transcription_id": "bZzuvTGRXppROEV2ckoQ",
+    "audio_duration_secs": 1.44
+  },
+  "listening_reviewed": false
+}

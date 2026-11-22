@@ -1,0 +1,17 @@
+{
+  "operation": "text_to_speech",
+  "plan_sha256": "6a72b6e3af6ec191b0f0a01bbe9902faea7a40c2664520abf2c6799dd216cdb2",
+  "audio_id": "c1_pier.talk.calder.2.03",
+  "attempt": 1,
+  "voice_id": "wa4sQVgbDDzUDEzJwch3",
+  "model_id": "eleven_v4",
+  "text_sha256": "76533fd80f7483659c68e290609418200c20fd5390b7322eb67e558451675748",
+  "synthesis_text_sha256": "76533fd80f7483659c68e290609418200c20fd5390b7322eb67e558451675748",
+  "request_id": "KybCtpiYarRS7rotKSc6",
+  "trace_id": "2a5a080b97dff1492f9218632071f846",
+  "character_cost": 40,
+  "output_format": "mp3_44100_192",
+  "audio_sha256": "043d0bdb0a0f7200e9a1a40c87aab9730e12d7ca2319b1c5d30f0e9766133f95",
+  "response_bytes": 153016,
+  "seed": 3074538305
+}

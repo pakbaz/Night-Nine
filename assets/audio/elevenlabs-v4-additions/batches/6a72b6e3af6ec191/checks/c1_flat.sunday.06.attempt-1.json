@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c1_flat.sunday.06",
+  "attempt": 1,
+  "plan_sha256": "6a72b6e3af6ec191b0f0a01bbe9902faea7a40c2664520abf2c6799dd216cdb2",
+  "wav_sha256": "9c0e665063932e9e1156019970031c9d2868a24e68ea41f836f9e6df614fd96d",
+  "expected": "The animals don’t know it’s Sunday, sleepyhead.",
+  "recognized": "The animals don't know it's Sunday, sleepyhead.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 2.56,
+  "sample_rate": 48000,
+  "peak": 0.37725830078125,
+  "rms": 0.06155746112737077,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

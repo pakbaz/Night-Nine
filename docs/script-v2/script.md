@@ -36,6 +36,23 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - **Frank Mercer**: Nine nights since the last one, Helen. Same interval. Louder out here. Whatever it is, it keeps better time than I do. **REV** `p_bay.in.01`
 - **Helen Mercer**: Steve would hear more in this than both of us put together. I’ll leave him a message. `p_bay.in.02`
 
+### Small talk
+**Steve** · Helen Mercer
+- **Frank Mercer**: Think the boy will come out with us next time? **NEW** `p_bay.talk.helen.1.01`
+- **Helen Mercer**: He’ll say he has a shift. Then he’ll call tomorrow and ask what we heard. **NEW** `p_bay.talk.helen.1.02`
+- **Frank Mercer**: He always asks. **NEW** `p_bay.talk.helen.1.03`
+- **Helen Mercer**: He’s your son, Frank. He can’t leave a sound alone. **NEW** `p_bay.talk.helen.1.04`
+
+**The cold** · Helen Mercer
+- **Helen Mercer**: My hands are freezing. **NEW** `p_bay.talk.helen.2.01`
+- **Frank Mercer**: Gloves are in the tackle box. Under the logbook. **NEW** `p_bay.talk.helen.2.02`
+- **Helen Mercer**: Of course they are. Everything in this boat is under the logbook. **NEW** `p_bay.talk.helen.2.03`
+
+**The hum** · Helen Mercer · after `p_bay.tune`
+- **Helen Mercer**: Listen. It goes up at the end, like a question. **NEW** `p_bay.talk.helen.3.01`
+- **Frank Mercer**: Then write it down. Time, place, what it does. **NEW** `p_bay.talk.helen.3.02`
+- **Helen Mercer**: Eleven-oh-five. Rowboat. It sounds like it’s waiting for someone. **NEW** `p_bay.talk.helen.3.03`
+
 ### Lead 1: Frank’s radio (`p_bay.tune`) · dial · difficulty 2
 
 **Goal:** Find the hum between the two stations.
@@ -109,7 +126,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 **Objective:** Test Dad’s old recorder before you move Mom’s voicemail to a fresh tape.
 
-**Coach tip:** Steve’s tools are Dad’s recorder and his notebook. Click the red cassette to begin. Press J to open the notebook.
+**Coach tip:** Click the red cassette to begin. Click Nora if you want to chat. Press J to open Steve’s notebook.
 
 **Revision notes:** C05, C09, U-stumble, U-relationships, U-narration
 
@@ -124,6 +141,31 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - *Steve Mercer: Dad’s recorder runs slow. Old belts. Everyone on it sounds a little sleepy.* **NEW** `c1_flat.in.06`
 - *Steve Mercer: There’s an easy test. KBWR still plays my old station ident at a quarter past seven every morning. I made that ident. It runs exactly twelve seconds.* **NEW** `c1_flat.in.07`
 - *Steve Mercer: Record it two mornings running. If it lasts twelve seconds both times, the machine runs true.* **NEW** `c1_flat.in.08`
+
+### Small talk
+**Breakfast** · Nora Reyes
+- **Steve Mercer**: Want some toast before you go? **NEW** `c1_flat.talk.iris.1.01`
+- **Nora Reyes**: I ate already. There’s fruit in the blue bowl. **NEW** `c1_flat.talk.iris.1.02`
+- **Steve Mercer**: Since when do you eat breakfast? **NEW** `c1_flat.talk.iris.1.03`
+- **Nora Reyes**: For a while now. It’s good for you. **NEW** `c1_flat.talk.iris.1.04`
+
+**The otters** · Nora Reyes
+- **Steve Mercer**: How are the otter pups? **NEW** `c1_flat.talk.iris.2.01`
+- **Nora Reyes**: Growing. One of them bit a volunteer again. Only a little. **NEW** `c1_flat.talk.iris.2.02`
+- **Steve Mercer**: You used to say that was her best quality. **NEW** `c1_flat.talk.iris.2.03`
+- **Nora Reyes**: She’s a good otter. They’re all good otters. **NEW** `c1_flat.talk.iris.2.04`
+
+**AutoRick** · Nora Reyes
+- **Nora Reyes**: I heard the new radio host this morning. He sounds cheerful. **NEW** `c1_flat.talk.iris.3.01`
+- **Steve Mercer**: He read yesterday’s weather again. Twelve years at that desk, and they replaced me with him. **NEW** `c1_flat.talk.iris.3.02`
+- **Nora Reyes**: Then you have more time at home. That’s nice, isn’t it? **NEW** `c1_flat.talk.iris.3.03`
+- **Steve Mercer**: Sure, Nor. Nice. **NEW** `c1_flat.talk.iris.3.04`
+
+**How she slept** · Nora Reyes · after `c1_flat.compare`
+- **Steve Mercer**: Nor? How did you sleep? **NEW** `c1_flat.talk.iris.4.01`
+- **Nora Reyes**: Fine. I always sleep fine. **NEW** `c1_flat.talk.iris.4.02`
+- **Steve Mercer**: You used to kick the blankets off every night. Every single night. **NEW** `c1_flat.talk.iris.4.03`
+- **Nora Reyes**: Did I? I don’t remember that. **NEW** `c1_flat.talk.iris.4.04`
 
 ### Lead 1: The red cassette (`c1_flat.saturday`) · choice · difficulty 1
 
@@ -147,9 +189,12 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - **Nora Reyes**: Good morning, sleepyhead. **MOV** `c1_flat.in.04`
 - **Steve Mercer**: Morning, Nor. **NEW** `c1_flat.saturday.02`
 - **Steve Mercer**: Saturday, kitchen, quarter past seven. Dad always said to put the date on everything. `c1_flat.saturday.01`
+- **Nora Reyes**: Coffee’s on the stove. I made it strong, the way you like it. **NEW** `c1_flat.saturday.03`
+- **Steve Mercer**: You hate it strong. **NEW** `c1_flat.saturday.04`
+- **Nora Reyes**: Strong is fine. Whatever you like. **NEW** `c1_flat.saturday.05`
 
 **Finding:**
-- *Steve Mercer: Red cassette, Saturday, 7:15. My ident, AutoRick, and Nora saying good morning on her way out the door.* **NEW** `c1_flat.saturday.find`
+- *Steve Mercer: Red cassette, Saturday, 7:15. My ident, AutoRick, Nora saying good morning on her way out, and me.* **NEW** `c1_flat.saturday.find`
 
 ### Lead 2: The blue cassette (`c1_flat.sunday`) · choice · difficulty 1
 *Unlocks after:* c1_flat.saturday
@@ -173,28 +218,32 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - **DJ AutoRick** (radio) *(sound: effect.kbwr_ident, then AutoRick)*: The voice of the coast, now with zero humans! **NEW** `c1_flat.sunday.03`
 - **Nora Reyes**: Good morning, sleepyhead. `c1_flat.sunday.01`
 - **Steve Mercer**: Morning, Nor. Blue tape, Sunday. Date on everything, Dad. **REV** `c1_flat.sunday.02`
+- **Nora Reyes**: I’m off to feed Admiral and the otters. Back by noon. **NEW** `c1_flat.sunday.04`
+- **Steve Mercer**: On a Sunday? You used to fight for every Sunday off. **NEW** `c1_flat.sunday.05`
+- **Nora Reyes**: The animals don’t know it’s Sunday, sleepyhead. **NEW** `c1_flat.sunday.06`
 
 **Finding:**
-- *Steve Mercer: Blue cassette, Sunday, 7:15. The ident again, and Nora again. Now I can time the machine.* **NEW** `c1_flat.sunday.find`
+- *Steve Mercer: Blue cassette, Sunday, 7:15. The ident, the radio, Nora and me, all over again. Now I can time the machine.* **NEW** `c1_flat.sunday.find`
 
 ### Lead 3: Two mornings, side by side (`c1_flat.compare`) · tape · difficulty 3
 *Unlocks after:* c1_flat.sunday
 
 **Goal:** Line the two cassettes up on the ident and time Dad’s recorder.
 
-**What Steve knows:** Steve puts the red cassette in one ear and the blue in the other. If the recorder runs true, the two idents will line up and both last twelve seconds. Whatever comes after the ident was recorded live in the kitchen.
+**What Steve knows:** Steve puts the red cassette in one ear and the blue in the other. If the recorder runs true, the two idents will line up. The tapes also caught the rest of the kitchen: AutoRick on the radio, Nora on her way out, and Steve himself.
 
-**Prompt:** Slide Sunday until the two idents line up. Then listen past the ident.
+**Prompt:** Slide Sunday until the two idents line up. Then play both tapes and compare every voice on them.
 
-**Instruction:** Line up the start of the ident on both tapes, then compare the voice that follows: the breath, the pauses, the small clicks.
-- Sunday offset: +0.35 s / ✓ -0.35 s / -0.20 s / 0.00 s
-- The ident: Longer on Sunday: the recorder runs slow / ✓ Twelve seconds on both: the recorder runs true / Different notes on each tape
-- Nora’s good morning: Same words, said a new way / ✓ Identical, breath for breath / Different words
+**Instruction:** First line up the ident. Then listen to each voice on both tapes and say how the two days compare.
+- The ident: ✓ Identical, every breath / Same words, said a new way / Different words
+- AutoRick: Identical, every breath / Same words, said a new way / ✓ Different words
+- Steve: Morning, Nor.: Identical, every breath / ✓ Same words, said a new way / Different words
+- Nora: Good morning, sleepyhead.: ✓ Identical, every breath / Same words, said a new way / Different words
 
 **Hints:**
-1. Line up the first note of the ident. Then let both tapes run.
-2. Sunday starts later. Move it left until the idents sit on top of each other, then keep watching after the ident ends.
-3. Sunday’s ident starts about a third of a second late. Once the two idents sit together, check the breath and the click before “morning.”
+1. Line up the end of the ident first. Then play both tapes together.
+2. AutoRick reads a new script every day. A person says the same words a little differently each time.
+3. Only a recording repeats every breath and click. Compare each voice with the ident.
 
 **On success:**
 - **Steve Mercer**: Twelve seconds, both days. Dad’s recorder runs true. **REV** `c1_flat.compare.01`
@@ -202,7 +251,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - **Steve Mercer**: Nobody says a sentence the same way twice. I spent twelve years listening for exactly that. **NEW** `c1_flat.compare.03`
 
 **Finding:**
-- *Steve Mercer: The ident matches, so the recorder is fine. Nora’s good morning matches just as perfectly. People don’t do that. Recordings do.* **NEW** `c1_flat.compare.find`
+- *Steve Mercer: The ident matches, so the recorder is fine. AutoRick and I change from day to day, like anyone would. Nora’s good morning matches perfectly. People don’t do that. Recordings do.* **NEW** `c1_flat.compare.find`
 
 ### Lead 4: Dad’s recorder (`c1_flat.control`) · choice · difficulty 2
 *Unlocks after:* c1_flat.compare
@@ -246,11 +295,11 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 ## Chapter 1: Sunday on the pier (`c1_pier`)
 
-**Where:** Bellwether harbor · **When:** Sunday the 21st, afternoon · **Present:** Steve Mercer, Nora Reyes, Agnes Penhallow, Lyle Boone, Dale Kittredge
+**Where:** Bellwether harbor · **When:** Sunday the 21st, afternoon · **Present:** Steve Mercer, Nora Reyes, Agnes Penhallow, Lyle Boone, Dale Kittredge, Sheriff June Calder
 
 **Objective:** Spend the afternoon on the pier with Nora.
 
-**Coach tip:** Some leads open a case board. Read the case notes, click a card, then click where it goes, or drag it. Press Check this step when every slot is filled.
+**Coach tip:** Click people to chat. Some leads open a case board: pick a card, then pick the question it answers, and press Check.
 
 **Revision notes:** C06, C09, U-relationships, U-narration
 
@@ -265,6 +314,58 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - *Steve Mercer: Sheriff June Calder was in that fish-shed line, the way she is every Sunday. Mrs. Penhallow sat at her bait stall, where nobody ever buys anything.* **NEW** `c1_pier.ctx.04`
 - **Steve Mercer**: Admiral! That was my lunch. You’re six hundred pounds of sea lion, and you don’t even like rye. **REV** `c1_pier.in.01`
 - **Nora Reyes**: He’s showing off for you. **NEW** `c1_pier.in.03`
+
+### Small talk
+**Admiral** · Nora Reyes
+- **Steve Mercer**: How old is he now? **NEW** `c1_pier.talk.iris.1.01`
+- **Nora Reyes**: Nine. He weighs more than your car. **NEW** `c1_pier.talk.iris.1.02`
+- **Steve Mercer**: You bottle-fed him in our bathtub. For three weeks. **NEW** `c1_pier.talk.iris.1.03`
+- **Nora Reyes**: I remember. It was a good bathtub. **NEW** `c1_pier.talk.iris.1.04`
+
+**The fish-shed line** · Nora Reyes
+- **Nora Reyes**: The line is long today. The crab boats came in early. **NEW** `c1_pier.talk.iris.2.01`
+- **Steve Mercer**: You used to talk your way to the front of that line. **NEW** `c1_pier.talk.iris.2.02`
+- **Nora Reyes**: Waiting is fine. Everyone gets a turn. **NEW** `c1_pier.talk.iris.2.03`
+
+**Her whistle** · Nora Reyes · after `c1_pier.whistle`
+- **Steve Mercer**: He swam right past you, Nor. To me. **NEW** `c1_pier.talk.iris.3.01`
+- **Nora Reyes**: Sea lions get moody. Maybe he’s tired. **NEW** `c1_pier.talk.iris.3.02`
+- **Steve Mercer**: You used to say he’d come to that whistle through a hurricane. **NEW** `c1_pier.talk.iris.3.03`
+- **Nora Reyes**: Then you should visit him more often, sleepyhead. **NEW** `c1_pier.talk.iris.3.04`
+
+**Business at the stall** · Agnes Penhallow
+- **Steve Mercer**: How’s business, Mrs. Penhallow? **NEW** `c1_pier.talk.agnes.1.01`
+- **Agnes Penhallow**: Splendid. Nobody has bought a thing since Tuesday. **NEW** `c1_pier.talk.agnes.1.02`
+- **Steve Mercer**: That’s splendid? **NEW** `c1_pier.talk.agnes.1.03`
+- **Agnes Penhallow**: It means the fish are safe, Steven. Somebody has to be on their side. **NEW** `c1_pier.talk.agnes.1.04`
+
+**Third grade** · Agnes Penhallow
+- **Steve Mercer**: You still remember me from third grade? **NEW** `c1_pier.talk.agnes.2.01`
+- **Agnes Penhallow**: You took my classroom clock apart to find the tick. **NEW** `c1_pier.talk.agnes.2.02`
+- **Steve Mercer**: I put it back together. **NEW** `c1_pier.talk.agnes.2.03`
+- **Agnes Penhallow**: With two pieces left over. It ran fast ever after. **NEW** `c1_pier.talk.agnes.2.04`
+
+**Sunday fish** · Sheriff June Calder
+- **Steve Mercer**: Halibut again, June? **NEW** `c1_pier.talk.calder.1.01`
+- **Sheriff June Calder**: Every Sunday for twenty years. My mother bought it in this same line. **NEW** `c1_pier.talk.calder.1.02`
+- **Sheriff June Calder**: Some things in this town don’t change. I like that about it. **NEW** `c1_pier.talk.calder.1.03`
+
+**Lyle** · Sheriff June Calder
+- **Steve Mercer**: Is that Lyle by the shed? In a clean shirt? **NEW** `c1_pier.talk.calder.2.01`
+- **Sheriff June Calder**: He asked for every Sunday off this summer. For his boys’ games. **NEW** `c1_pier.talk.calder.2.02`
+- **Sheriff June Calder**: Since early summer he’s been my best deputy. Never late once. I keep waiting for the catch. **NEW** `c1_pier.talk.calder.2.03`
+
+**The boys’ game** · Lyle Boone · after `c1_pier.door`
+- **Steve Mercer**: Who’s pitching first today? **NEW** `c1_pier.talk.lyle_copy.1.01`
+- **Lyle Boone**: My oldest, then his brother. I’ll be in the stands for every inning. **NEW** `c1_pier.talk.lyle_copy.1.02`
+- **Steve Mercer**: You sound sure. **NEW** `c1_pier.talk.lyle_copy.1.03`
+- **Lyle Boone**: I made them a promise. I keep my promises now. **NEW** `c1_pier.talk.lyle_copy.1.04`
+
+**Sunday mail** · Dale Kittredge
+- **Steve Mercer**: Mail on a Sunday, Dale? **NEW** `c1_pier.talk.pell.1.01`
+- **Dale Kittredge**: Every route runs on schedule, Mr. Mercer. **NEW** `c1_pier.talk.pell.1.02`
+- **Steve Mercer**: There’s no Sunday route. **NEW** `c1_pier.talk.pell.1.03`
+- **Dale Kittredge**: There is today. **NEW** `c1_pier.talk.pell.1.04`
 
 ### Lead 1: Admiral’s whistle (`c1_pier.whistle`) · choice · difficulty 2
 
@@ -325,36 +426,41 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 **Finding:**
 - *Steve Mercer: Lyle Boone has gone to every game since June. Before that he missed them all. And he apologized to me.* **NEW** `c1_pier.door.find`
 
-### Lead 3: Agnes’s bait stall (`c1_pier.bait`) · board · difficulty 2
+### Lead 3: Agnes’s bait stall (`c1_pier.bait`) · board · difficulty 1
 
 **When the lead opens:**
 - **Agnes Penhallow**: Fish don’t sing, Steven. Something under them does. **MOV** `c1_pier.in.02`
 - **Steve Mercer** [quiet, to himself]: That note. It’s under Mom’s voicemail. I always thought it was the phone line. **NEW** `c1_pier.bait.lead.01`
 - **Agnes Penhallow**: It’s loud today, Steven. It always is, on certain nights. **NEW** `c1_pier.bait.lead.02`
+- **Steve Mercer**: June! Did you hear that hum just now? **NEW** `c1_pier.bait.lead.03`
+- **Sheriff June Calder**: From the fish-shed line. It started before Agnes did. **NEW** `c1_pier.bait.lead.04`
+- **Sheriff June Calder**: It was loudest down by the water, under the floating dock. **NEW** `c1_pier.bait.lead.05`
+- **Steve Mercer**: Could you hear Agnes humming from there? **NEW** `c1_pier.bait.lead.06`
+- **Sheriff June Calder**: Nobody can hear Agnes hum. She’s quieter than the fog. **NEW** `c1_pier.bait.lead.07`
+- **Steve Mercer** [quiet, to himself]: And the winch stopped halfway through. The note just kept going. **NEW** `c1_pier.bait.lead.08`
 
 **Goal:** Work out where the low note is coming from.
 
-**What Steve knows:** Mrs. Agnes Penhallow taught Steve third grade. She is ninety-one, sells bait that nobody buys and still corrects everyone’s grammar. Today a low note is drifting in off the water, and she is humming along. Steve knows that note. It sits under Mom’s voicemail.
+**What Steve knows:** Mrs. Agnes Penhallow taught Steve in third grade. She is ninety-one and sells bait that nobody buys. Today a low note is drifting in off the water, and she is humming along. Steve knows that note. It is under Mom’s voicemail.
 
-**Prompt:** Agnes is humming along with something. Every sound has a source. Is it her, or something else?
+**Prompt:** Every sound has a source. Is the low note Agnes, or something else?
 
-**Instruction:** Agnes keeps a tide book in her bait tin, with pockets for the things she hears. Help her file who and what made the low note.
+**Instruction:** Agnes keeps a tide book in her bait tin. Help her answer four questions about the low note.
 
 **Case notes:**
-1. Sheriff June Calder was buying bait at the fish shed, upwind. She heard the low note before Agnes started humming, and she could never hear Agnes at all.
-2. With the winch stopped, June heard the note most clearly beside the water, under the floating dock.
-3. The winch operator says he shut his motor off halfway through the low note.
-4. The fog horn sounded twice before the low note began, then stayed quiet.
-5. Agnes’s tin has pockets for a source, an imitation, a noise that stopped too soon and an independent ear.
+1. June was in the fish-shed line. She heard the low note before Agnes started humming.
+2. June could not hear Agnes from the fish shed.
+3. June heard the note best by the water, under the floating dock.
+4. The winch stopped halfway through the note. The note kept going.
 
-**Stage 1 (match):** File each card in the pocket it belongs in.
-- Cards: Agnes’s humming, June at the fish shed, Sound from the water, The harbor winch, The fog horn
-- Answer: The source → Sound from the water; An imitation → Agnes’s humming; Stopped too soon → The harbor winch; An independent ear → June at the fish shed
+**Stage 1 (match):** Put one card on each question.
+- Cards: Something in the water, Agnes, The harbor winch, June Calder
+- Answer: Where does the low note come from? → Something in the water; Who is only humming along? → Agnes; What stopped before the note did? → The harbor winch; Who heard the note without Agnes? → June Calder
 
 **Hints:**
-1. Who heard the note without hearing Agnes?
-2. The winch stopped halfway, so it can’t be the source. The fog horn was over before the note began.
-3. June heard the note by the floating dock and never heard Agnes. That gives you the source and the independent ear. The other two follow.
+1. Start with June. What did she hear, and where was she?
+2. A sound that stops early can’t be making a note that keeps going.
+3. June never heard Agnes, but she heard the note by the water. Where does that put the note?
 
 **On success:**
 - **Agnes Penhallow**: Count the nights, Steven. And when you record them, leave room for the loud parts. **REV** `c1_pier.bait.01`
@@ -379,7 +485,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 **Objective:** Have dinner with Nora’s family, and listen to the people who know her best.
 
-**Coach tip:** Some leads ask for settings. Pick one choice on each row, then press Apply settings. You can try again as often as you like.
+**Coach tip:** Some leads ask for settings. Pick one choice on each row, then press Apply settings. Each row shows if it is right. Click people at the table to chat.
 
 **Revision notes:** C07, C03, U-relationships, U-narration
 
@@ -396,6 +502,45 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - **Nora Reyes**: Whatever you think is best, Mamá. **REV** `c1_dinner.family.01`
 - **Tomás Reyes**: She used to call it a crime against chilies. **NEW** `c1_dinner.in.04`
 - **Tomás Reyes**: She texts like a ransom note, too. No capitals. No apostrophes. **NEW** `c1_dinner.in.05`
+
+### Small talk
+**The mole** · Carmen Reyes
+- **Steve Mercer**: The mole is perfect, Carmen. **NEW** `c1_dinner.talk.carmen.1.01`
+- **Carmen Reyes**: It is too sweet. Rafa is in love, so everything he cooks is sweet now. **NEW** `c1_dinner.talk.carmen.1.02`
+- **Steve Mercer**: Rafa’s in love? **NEW** `c1_dinner.talk.carmen.1.03`
+- **Carmen Reyes**: With the girl from the bakery counter. He thinks I don’t know. Mothers know. **NEW** `c1_dinner.talk.carmen.1.04`
+
+**Dad’s chair** · Luis Reyes
+- **Steve Mercer**: You still keep Dad’s chair, Luis. **NEW** `c1_dinner.talk.luis.1.01`
+- **Luis Reyes**: Frank sat there every Friday for twenty years. Nobody else fits it. **NEW** `c1_dinner.talk.luis.1.02`
+- **Luis Reyes**: When he comes home, it will be waiting for him. **NEW** `c1_dinner.talk.luis.1.03`
+- **Steve Mercer**: Thanks, Luis. **NEW** `c1_dinner.talk.luis.1.04`
+
+**Little League** · Mateo Reyes
+- **Steve Mercer**: How’s the team, Mateo? **NEW** `c1_dinner.talk.mateo.1.01`
+- **Mateo Reyes**: Four wins, nine losses. But we lead the league in effort. **NEW** `c1_dinner.talk.mateo.1.02`
+- **Mateo Reyes**: And my outfield can finally catch. Mostly with their faces, but it counts. **NEW** `c1_dinner.talk.mateo.1.03`
+
+**The kitchen** · Rafa Reyes
+- **Steve Mercer**: Busy night, Rafa? **NEW** `c1_dinner.talk.rafa.1.01`
+- **Rafa Reyes**: Forty tables, one birthday, and Mamá tasting everything twice. **NEW** `c1_dinner.talk.rafa.1.02`
+- **Rafa Reyes**: Come to Sunday dinner for real, Steve. She sets your plate either way. **NEW** `c1_dinner.talk.rafa.1.03`
+
+**His podcast** · Tomás Reyes
+- **Steve Mercer**: How’s the podcast, Tomás? **NEW** `c1_dinner.talk.tomas.1.01`
+- **Tomás Reyes**: Eleven listeners. Twelve, if Mamá ever figures out the app. **NEW** `c1_dinner.talk.tomas.1.02`
+- **Tomás Reyes**: Laugh now. One day the bay is going to make me famous. **NEW** `c1_dinner.talk.tomas.1.03`
+
+**The hum** · Tomás Reyes · after `c1_dinner.podcast`
+- **Tomás Reyes**: You really heard it today? On the pier? **NEW** `c1_dinner.talk.tomas.2.01`
+- **Steve Mercer**: It’s under Mom’s voicemail too. It has been for eighteen months. **NEW** `c1_dinner.talk.tomas.2.02`
+- **Tomás Reyes**: Then I’m not crazy. Or we both are. Either way, I’m buying you a beer. **NEW** `c1_dinner.talk.tomas.2.03`
+
+**A quiet dinner** · Nora Reyes
+- **Steve Mercer**: You’re quiet tonight, Nor. **NEW** `c1_dinner.talk.iris.1.01`
+- **Nora Reyes**: I’m happy. Everyone is here. **NEW** `c1_dinner.talk.iris.1.02`
+- **Steve Mercer**: You used to argue with your mother about the chilies all night. **NEW** `c1_dinner.talk.iris.1.03`
+- **Nora Reyes**: Mamá knows best. **NEW** `c1_dinner.talk.iris.1.04`
 
 ### Lead 1: Carmen’s photo strip (`c1_dinner.birthday`) · choice · difficulty 2
 
@@ -441,7 +586,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 **Prompt:** Nora changed after her last argument and before the first time she simply agreed. Bracket it.
 
-**Instruction:** Pick the latest argument anyone remembers, then the earliest time she simply agreed.
+**Instruction:** Pick the last argument anyone remembers. Then pick the first time she just agreed.
 - Last argument anyone remembers: Tomás’s show, May 17 / ✓ Mateo’s driving fight, Memorial Day weekend / Carmen’s birthday, last month
 - First time she simply agreed: ✓ The first Sunday in June / Carmen’s birthday, last month / Tonight’s mole
 
@@ -470,25 +615,27 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 **Prompt:** Tomás will lend Steve his field reels if Steve can file them back by date. If the hum keeps a schedule, the dates will show it.
 
-**Instruction:** File each field reel against its date, then find the pattern in the dates.
+**Instruction:** Match each reel to its date. Then count the nights between dates to find the next loud night.
 
 **Case notes:**
-1. Tomás’s log: on September 24, low tide left the bell buoy ringing. On October 3 the buoy was ashore with a cracked clapper. On October 12 the repair crew tapped it twice before they relaunched it.
-2. Each reel starts with whatever was making noise when Tomás pressed record: one bell on Salt, a gull and no bell on Thread, two uneven knocks on Glass.
-3. Tomás only goes out on the nights the hum is loudest. September has thirty days.
+1. September 24: the bell buoy was in the water, ringing at low tide.
+2. October 3: the buoy was ashore for repair, with a cracked clapper. It could not ring.
+3. October 12: the repair crew tapped the buoy twice, then put it back in the water.
+4. Each reel starts with whatever was making noise when Tomás pressed record.
+5. Tomás only goes out on the nights the hum is loudest. September has thirty days.
 
-**Stage 1 (match):** Match each field date to the sound its reel starts with.
-- Cards: One bell (Salt), Two uneven knocks (Glass), A gull, no bell (Thread)
-- Answer: September 24 → One bell (Salt); October 3 → A gull, no bell (Thread); October 12 → Two uneven knocks (Glass)
+**Stage 1 (match):** Match each date to the first sound on its reel.
+- Cards: One bell, Two knocks, A gull, and no bell
+- Answer: September 24 → One bell; October 3 → A gull, and no bell; October 12 → Two knocks
 
-**Stage 2 (match):** Count the nights between field dates. When is the next loud night?
+**Stage 2 (match):** Count the nights between the dates. When is the next loud night?
 - Cards: Seven, Nine, Twelve, October 19, October 21, tonight, October 24
-- Answer: Nights between field dates → Nine; The next loud night → October 21, tonight
+- Answer: Nights between the dates → Nine; The next loud night → October 21, tonight
 
 **Hints:**
-1. Start with the night the buoy was ashore. It couldn’t ring.
-2. Count from one field date to the next. September has thirty days.
-3. No bell means the buoy was ashore. Two taps means the repair crew. Count from September 24 to October 3 across the end of the month, then keep the same step.
+1. Where was the buoy on October 3? Could it ring that night?
+2. Count the nights from one date to the next. September has thirty days.
+3. September 24 to October 3 is the same count as October 3 to October 12. Add that count once more.
 
 **On success:**
 - **Tomás Reyes**: You can borrow them. You could also have listened any time in the last three years. `c1_dinner.podcast.01`
@@ -526,41 +673,39 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - *Steve Mercer: Home. Nora took a phone call in the bedroom and closed the door. She never closes the door.* **NEW** `c1_escape.ctx.01`
 - *Steve Mercer: Her yellow raincoat lay over a chair, dripping. It had rained all the way home from dinner.* **NEW** `c1_escape.ctx.02`
 
-### Lead 1: The paper in the raincoat (`c1_escape.order`) · board · difficulty 3
+### Lead 1: The paper in the raincoat (`c1_escape.order`) · board · difficulty 2
 
 **When the lead opens:**
 - **Steve Mercer**: Something in the lining. Soaked. Aquarium letterhead... north wing? **NEW** `c1_escape.order.lead.01`
+- **Steve Mercer**: Signed at 20:30. Nora always said that north-wing clock runs fifteen minutes fast. **NEW** `c1_escape.order.lead.02`
+- **Steve Mercer**: And the aquarium is across the bay. Eighteen minutes each way, even with every light green. **NEW** `c1_escape.order.lead.03`
 
 **Goal:** Work out whether Nora could have signed this work order.
 
 **What Steve knows:** Something stiff fell out of the raincoat lining when Steve hung it up: an aquarium work order for the north wing, sealed for two years. Only the head aquarist signs for it, and that is Nora. It is signed in her name on Carmen’s birthday, at 20:30 by the aquarium wall clock.
 
-**Prompt:** Steve’s notebook from dinner puts Nora at La Marea that evening, across the bay. Could she have slipped away to sign this?
+**Prompt:** Steve’s notes from dinner put Nora at La Marea that evening. Could she have slipped away to sign this?
 
-**Instruction:** Put the two documents on the same clock, then test the shortest possible trip against Carmen’s photos.
+**Instruction:** First fix the time on the work order. Then check whether Nora had time for the trip.
 
 **Case notes:**
-1. The aquarium wall clock ran fifteen minutes fast all day. The La Marea kitchen clock agreed with harbor time.
-2. The north-wing sign-off reads 20:30. The kitchen birthday check in Nora’s hand reads 20:15.
-3. Mateo drove Nora in at noon. Rafa drove her home at midnight. Only the signed work order puts someone using Nora’s name in the north wing.
-4. The quickest crossing of the bay takes eighteen minutes each way. Steve’s notebook from dinner: Carmen’s photos of Nora at 20:04, 20:15 and 20:29.
+1. The work order says 20:30 by the aquarium clock.
+2. The aquarium clock runs fifteen minutes fast.
+3. Carmen’s photos show Nora at La Marea at 20:04, 20:15 and 20:29. At 20:15 she is holding the kitchen check.
+4. Crossing the bay takes eighteen minutes each way.
 
-**Stage 1 (match):** Correct both clocks to harbor time.
-- Cards: 20:15 across the bay, 20:15 at La Marea, 20:45 across the bay
-- Answer: North-wing wall clock → 20:15 across the bay; Kitchen check → 20:15 at La Marea
+**Stage 1 (match):** When was the order really signed, and where was Nora then?
+- Cards: 20:15, 20:30, 20:45, At La Marea, in Carmen’s photo, At the aquarium
+- Answer: Real time of the signature → 20:15; Where Nora was at that time → At La Marea, in Carmen’s photo
 
-**Stage 2 (match):** Attach a source to each part of the story. Keep a signature separate from a witness.
-- Cards: Signed work order, Mateo’s ride in, Rafa’s ride home, Carmen’s kitchen photo
-- Answer: Arrival witness → Mateo’s ride in; Inside the restaurant at 20:15 → Carmen’s kitchen photo; Someone using Nora’s name → Signed work order; Departure witness → Rafa’s ride home
-
-**Stage 3 (match):** Could Nora have made the round trip between photos?
-- Cards: 36 minutes, 14 minutes, 20:15 to 20:29, 11 minutes, 20:04 to 20:15, Nora could not have signed it, Nora slipped out between photos
-- Answer: Round trip to the aquarium → 36 minutes; Longest gap between photos → 14 minutes, 20:15 to 20:29; Verdict → Nora could not have signed it
+**Stage 2 (match):** Could she get there and back between two photos?
+- Cards: 36 minutes, 18 minutes, 14 minutes, Nora could not have signed it, Nora slipped out between photos
+- Answer: Trip there and back → 36 minutes; Longest gap between photos → 14 minutes; So → Nora could not have signed it
 
 **Hints:**
-1. Correct the aquarium clock first. It ran fast, so the real time was earlier.
-2. The sign-off and the kitchen check happened at the same real minute on opposite sides of the bay. Then compare the round trip with the longest gap between photos.
-3. Take fifteen minutes off the wall clock. Then ask whether any gap between Carmen’s photos is as long as eighteen minutes there and eighteen back.
+1. The aquarium clock runs fast. Take the extra minutes off.
+2. The real signing time matches one of Carmen’s photos.
+3. Add up the trip there and back. Is any gap between photos that long?
 
 **On success:**
 - **Steve Mercer**: Noon to midnight at La Marea. Mateo and Rafa both saw her. She couldn’t have been in the north wing. **REV** `c1_escape.order.01`
@@ -585,7 +730,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 **Prompt:** Open Mr. Bell’s gate without ever darkening the stair light. The service selector has three positions.
 
-**Instruction:** NORMAL powers the stair bulb and the gate motor. SERVICE powers the bulb only. OFF powers nothing. The gate pad remembers a press only while the motor is off, and forgets it the moment your thumb lifts. The motor checks the pad when it switches on.
+**Instruction:** NORMAL: stair light on, gate motor on. SERVICE: light on, motor off. OFF: everything off. The gate pad only holds a press while the motor is off and your thumb stays down. The motor checks the pad when it switches on.
 - Selector before touching the pad: NORMAL / OFF / ✓ SERVICE
 - At the thumb pad: Tap and let go / ✓ Press and keep pressure / Rest a hand beside it
 - While the pad is still pressed: ✓ Switch to NORMAL / Switch to OFF / Stay in SERVICE

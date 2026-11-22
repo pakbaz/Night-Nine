@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c1_pier.talk.iris.3.03",
+  "attempt": 1,
+  "plan_sha256": "6a72b6e3af6ec191b0f0a01bbe9902faea7a40c2664520abf2c6799dd216cdb2",
+  "wav_sha256": "274bbc45234008f3a9ff2e818e3674f4c4e848d2c054f9592ad5599760461868",
+  "expected": "You used to say he’d come to that whistle through a hurricane.",
+  "recognized": "You used to say he'd come to that whistle through a hurricane.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 3.44,
+  "sample_rate": 48000,
+  "peak": 0.292205810546875,
+  "rms": 0.043513142272767424,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

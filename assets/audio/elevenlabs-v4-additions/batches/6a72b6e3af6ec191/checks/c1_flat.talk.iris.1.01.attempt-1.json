@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c1_flat.talk.iris.1.01",
+  "attempt": 1,
+  "plan_sha256": "6a72b6e3af6ec191b0f0a01bbe9902faea7a40c2664520abf2c6799dd216cdb2",
+  "wav_sha256": "455a0d200026627d647308c4438b5bba7b7cfb5c4c197b3d6008d29f3c1300f9",
+  "expected": "Want some toast before you go?",
+  "recognized": "Want some toast before you go?",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 2.0,
+  "sample_rate": 48000,
+  "peak": 0.306549072265625,
+  "rms": 0.05074249713946836,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

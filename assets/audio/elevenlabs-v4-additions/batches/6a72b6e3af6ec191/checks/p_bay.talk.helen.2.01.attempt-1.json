@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "audio_id": "p_bay.talk.helen.2.01",
+  "attempt": 1,
+  "plan_sha256": "6a72b6e3af6ec191b0f0a01bbe9902faea7a40c2664520abf2c6799dd216cdb2",
+  "wav_sha256": "1952fab6aa98d2731d56d9005eefef2d2b0ae0a0588ccf80278dd9532a3cf658",
+  "expected": "My hands are freezing.",
+  "recognized": "My hands are freezing.",
+  "local_recognized": "My hands are freezing.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 2.16,
+  "sample_rate": 48000,
+  "peak": 0.354827880859375,
+  "rms": 0.05745306353124632,
+  "level_match_gain_db": 3.4271349653368075,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/p_bay.talk.helen.2.01.json",
+    "sha256": "7f8724781f722a8777564e484ad844ee747e27ca0a81dadb01008813002d0d1d",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  },
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

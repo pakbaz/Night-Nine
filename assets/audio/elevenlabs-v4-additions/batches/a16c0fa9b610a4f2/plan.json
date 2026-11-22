@@ -1,0 +1,86 @@
+{
+  "schema": 1,
+  "batch": "later-additions",
+  "model_id": "eleven_v4",
+  "output_format": "mp3_44100_192",
+  "inputs": {
+    "campaign": "9a3e091672586df1491b97be0ec34d0e26a3249e0e1e52faa7ac9c48527e18d7",
+    "storybook": "a513713cc2dfd7ce4bffa0b6fa4f9ceeb5be13fa52ea76acc314e769034573fe",
+    "voice_manifest": "e9b5513683591f7c45597d595682d4fa47e835885a3ff4ecfefe0f4595d0bb20",
+    "casting": "cb91065c437c743d50eea2958d5149a6d0a35b9d20430a66cb8a548b921246db",
+    "existing_additions": "308c84e66c451f62c6a181b796fff99dc159941b1f2fb8ba9acca98adf1b9d11"
+  },
+  "ordered_audio_ids": [
+    "c1_flat.sunday.find",
+    "c1_flat.talk.iris.3.01"
+  ],
+  "items": {
+    "c1_flat.sunday.find": {
+      "audio_id": "c1_flat.sunday.find",
+      "kind": "campaign",
+      "scene": "c1_flat",
+      "speaker": "steve",
+      "cast_role": "steve",
+      "voice_id": "vveagfomyMCJLZsOPRP2",
+      "text": "Blue cassette, Sunday, 7:15. The ident, the radio, Nora and me, all over again. Now I can time the machine.",
+      "text_sha256": "4aac8f3c794dd33fcdee2748d6ebeaeb213fc0467a0ec906455c8221c7b6b95e",
+      "synthesis_text": "Blue cassette, Sunday, 7:15. The ident, the radio, Nora and me, all over again. Now I can time the machine.",
+      "synthesis_text_sha256": "4aac8f3c794dd33fcdee2748d6ebeaeb213fc0467a0ec906455c8221c7b6b95e",
+      "delivery": "narration",
+      "direction": "",
+      "v4_audio_tag": "",
+      "previous_text": "The animals don’t know it’s Sunday, sleepyhead.",
+      "next_text": "Twelve seconds, both days. Dad’s recorder runs true.",
+      "voice_settings": {
+        "stability": 0.62,
+        "similarity_boost": 0.78
+      },
+      "language_code": "en",
+      "model_id": "eleven_v4",
+      "output_format": "mp3_44100_192",
+      "estimated_credit_rate": 1.0,
+      "estimated_credits": 107,
+      "attempt_seeds": [
+        1688259548,
+        863997167,
+        2536083297
+      ]
+    },
+    "c1_flat.talk.iris.3.01": {
+      "audio_id": "c1_flat.talk.iris.3.01",
+      "kind": "campaign",
+      "scene": "",
+      "speaker": "iris",
+      "cast_role": "nora",
+      "voice_id": "m8AHWg36LJTQWKmfeGVv",
+      "text": "I heard the new radio host this morning. He sounds cheerful.",
+      "text_sha256": "507a4ebd6d0e9a70ebc26e774ef0a6bd4de6bfaece971e66e5b56157e3c03043",
+      "synthesis_text": "I heard the new radio host this morning. He sounds cheerful.",
+      "synthesis_text_sha256": "507a4ebd6d0e9a70ebc26e774ef0a6bd4de6bfaece971e66e5b56157e3c03043",
+      "delivery": "live",
+      "direction": "",
+      "v4_audio_tag": "",
+      "previous_text": "She’s a good otter. They’re all good otters.",
+      "next_text": "He read yesterday’s weather again. Twelve years at that desk, and they replaced me with him.",
+      "voice_settings": {
+        "stability": 0.46,
+        "similarity_boost": 0.78
+      },
+      "language_code": "en",
+      "model_id": "eleven_v4",
+      "output_format": "mp3_44100_192",
+      "estimated_credit_rate": 1.0,
+      "estimated_credits": 60,
+      "attempt_seeds": [
+        4210907280,
+        667004468,
+        2862542252
+      ]
+    }
+  },
+  "count": 2,
+  "characters": 167,
+  "request_characters": 167,
+  "estimated_credits": 167,
+  "plan_sha256": "a16c0fa9b610a4f2355ed57bd08c8d168a0f9b47bf7d5d76e7e874586b58ce8e"
+}

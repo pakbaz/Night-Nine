@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "audio_id": "c1_pier.talk.iris.3.01",
+  "attempt": 1,
+  "plan_sha256": "6a72b6e3af6ec191b0f0a01bbe9902faea7a40c2664520abf2c6799dd216cdb2",
+  "wav_sha256": "395e953d8d37f8b44b6b31cfd95861b58efb33b645e656e07863937b3248c493",
+  "expected": "He swam right past you, Nor. To me.",
+  "recognized": "He swam right past you, Nor, to me.",
+  "local_recognized": "He swam right past you, Noor, to me.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 3.12,
+  "sample_rate": 48000,
+  "peak": 0.230682373046875,
+  "rms": 0.035594043843381606,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c1_pier.talk.iris.3.01.json",
+    "sha256": "8c919a1580908eadee47c3655b7136fd67c84924c67a126fb838a7e468a91f11",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  },
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

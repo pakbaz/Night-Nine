@@ -1,0 +1,67 @@
+{
+  "audio_id": "c1_dinner.talk.iris.1.04",
+  "audio_sha256": "1bd0e4d06d7d8bab871f5bee557e602990a5bc4c494e7d608bdff67577bedea9",
+  "file": "assets/audio/elevenlabs-v4-additions/masters/c1_dinner.talk.iris.1.04.attempt-1.wav",
+  "production_plan_sha256": "6a72b6e3af6ec191b0f0a01bbe9902faea7a40c2664520abf2c6799dd216cdb2",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Mamá knows best.",
+  "recognized": "Mama knows best.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "84abcd179e673b79a8351673767f669f",
+  "character_cost": "0",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Mama knows best.",
+    "words": [
+      {
+        "text": "Mama",
+        "start": 0.1,
+        "end": 0.4,
+        "type": "word",
+        "logprob": -0.005240631755441427
+      },
+      {
+        "text": " ",
+        "start": 0.4,
+        "end": 0.46,
+        "type": "spacing",
+        "logprob": -0.0006672301678918302
+      },
+      {
+        "text": "knows",
+        "start": 0.46,
+        "end": 0.68,
+        "type": "word",
+        "logprob": -0.0006672301678918302
+      },
+      {
+        "text": " ",
+        "start": 0.68,
+        "end": 0.8,
+        "type": "spacing",
+        "logprob": -1.9788545614574105e-05
+      },
+      {
+        "text": "best.",
+        "start": 0.8,
+        "end": 1.18,
+        "type": "word",
+        "logprob": -2.6130254263989626e-05
+      }
+    ],
+    "transcription_id": "huxDMZr1dBhJMcSshm3I",
+    "audio_duration_secs": 1.36
+  },
+  "listening_reviewed": false
+}

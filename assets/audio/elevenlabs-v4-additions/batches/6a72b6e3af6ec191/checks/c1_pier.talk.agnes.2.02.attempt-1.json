@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c1_pier.talk.agnes.2.02",
+  "attempt": 1,
+  "plan_sha256": "6a72b6e3af6ec191b0f0a01bbe9902faea7a40c2664520abf2c6799dd216cdb2",
+  "wav_sha256": "063b30ac14bd55cb97882881a8674ab7926faed34ab6756f11ead5a1f7127d7a",
+  "expected": "You took my classroom clock apart to find the tick.",
+  "recognized": "you took my classroom clock apart to find the tick",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 3.28,
+  "sample_rate": 48000,
+  "peak": 0.337860107421875,
+  "rms": 0.04778505298113487,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

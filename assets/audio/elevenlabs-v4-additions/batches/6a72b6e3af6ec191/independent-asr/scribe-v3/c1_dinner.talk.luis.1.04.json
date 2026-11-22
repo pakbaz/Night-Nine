@@ -1,0 +1,53 @@
+{
+  "audio_id": "c1_dinner.talk.luis.1.04",
+  "audio_sha256": "818dd8b7609885f710ea7b73cc07550ac3563e56b09a5997877b65a19206e0e2",
+  "file": "assets/audio/elevenlabs-v4-additions/masters/c1_dinner.talk.luis.1.04.attempt-1.wav",
+  "production_plan_sha256": "6a72b6e3af6ec191b0f0a01bbe9902faea7a40c2664520abf2c6799dd216cdb2",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Thanks, Luis.",
+  "recognized": "Thanks, Luis.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "29df4c595ac169175631fb7192573705",
+  "character_cost": "0",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Thanks, Luis.",
+    "words": [
+      {
+        "text": "Thanks,",
+        "start": 0.06,
+        "end": 0.3,
+        "type": "word",
+        "logprob": -2.608942570857055e-05
+      },
+      {
+        "text": " ",
+        "start": 0.3,
+        "end": 0.38,
+        "type": "spacing",
+        "logprob": -0.21030205488204956
+      },
+      {
+        "text": "Luis.",
+        "start": 0.38,
+        "end": 0.78,
+        "type": "word",
+        "logprob": -0.16824417112657103
+      }
+    ],
+    "transcription_id": "w5oSbryabXHcqY5N8qpY",
+    "audio_duration_secs": 1.04
+  },
+  "listening_reviewed": false
+}

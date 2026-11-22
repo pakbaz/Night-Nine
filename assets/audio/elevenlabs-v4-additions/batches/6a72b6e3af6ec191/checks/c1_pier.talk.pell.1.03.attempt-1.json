@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c1_pier.talk.pell.1.03",
+  "attempt": 1,
+  "plan_sha256": "6a72b6e3af6ec191b0f0a01bbe9902faea7a40c2664520abf2c6799dd216cdb2",
+  "wav_sha256": "ff1934624446c342368be35d6f137cd49f6a5cea35573941be1a327eaaff5720",
+  "expected": "There’s no Sunday route.",
+  "recognized": "there's no Sunday route.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 1.76,
+  "sample_rate": 48000,
+  "peak": 0.30072021484375,
+  "rms": 0.04023167459152352,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

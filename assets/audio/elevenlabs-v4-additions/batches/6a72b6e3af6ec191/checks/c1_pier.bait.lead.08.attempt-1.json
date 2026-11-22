@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c1_pier.bait.lead.08",
+  "attempt": 1,
+  "plan_sha256": "6a72b6e3af6ec191b0f0a01bbe9902faea7a40c2664520abf2c6799dd216cdb2",
+  "wav_sha256": "a9e1f2c7920d5f959e3bdde5f59ee2f934db6b97bd00f3168bd08997dfcf3084",
+  "expected": "And the winch stopped halfway through. The note just kept going.",
+  "recognized": "And the winch stopped halfway through. The note just kept going.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.56,
+  "sample_rate": 48000,
+  "peak": 0.304840087890625,
+  "rms": 0.03765464926704599,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

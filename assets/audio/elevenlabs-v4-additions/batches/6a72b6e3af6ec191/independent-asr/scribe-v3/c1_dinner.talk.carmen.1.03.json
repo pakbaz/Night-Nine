@@ -1,0 +1,67 @@
+{
+  "audio_id": "c1_dinner.talk.carmen.1.03",
+  "audio_sha256": "a80d6c9b063ec7d8319424f98099abee45a0c74e0c1f34d4516ae36a9b0b94a2",
+  "file": "assets/audio/elevenlabs-v4-additions/masters/c1_dinner.talk.carmen.1.03.attempt-1.wav",
+  "production_plan_sha256": "6a72b6e3af6ec191b0f0a01bbe9902faea7a40c2664520abf2c6799dd216cdb2",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Rafa’s in love?",
+  "recognized": "Rafa's in love?",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "4fac514c623736b2e16ea11ce7731ab2",
+  "character_cost": "0",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Rafa's in love?",
+    "words": [
+      {
+        "text": "Rafa's",
+        "start": 0.08,
+        "end": 0.48,
+        "type": "word",
+        "logprob": -0.011947079825858964
+      },
+      {
+        "text": " ",
+        "start": 0.48,
+        "end": 0.54,
+        "type": "spacing",
+        "logprob": -2.7418097943154862e-06
+      },
+      {
+        "text": "in",
+        "start": 0.54,
+        "end": 0.7,
+        "type": "word",
+        "logprob": -2.7418097943154862e-06
+      },
+      {
+        "text": " ",
+        "start": 0.7,
+        "end": 0.76,
+        "type": "spacing",
+        "logprob": -9.179073458653875e-06
+      },
+      {
+        "text": "love?",
+        "start": 0.76,
+        "end": 1.16,
+        "type": "word",
+        "logprob": -0.0001339511261903681
+      }
+    ],
+    "transcription_id": "Yg8hbUFDFcien2Y40QZt",
+    "audio_duration_secs": 1.52
+  },
+  "listening_reviewed": false
+}

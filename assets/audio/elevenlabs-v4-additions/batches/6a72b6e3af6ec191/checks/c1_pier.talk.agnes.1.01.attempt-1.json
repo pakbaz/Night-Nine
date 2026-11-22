@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "audio_id": "c1_pier.talk.agnes.1.01",
+  "attempt": 1,
+  "plan_sha256": "6a72b6e3af6ec191b0f0a01bbe9902faea7a40c2664520abf2c6799dd216cdb2",
+  "wav_sha256": "367e6468ffe9179c188a1526905b03e98a0335b5354675ce5ebf2eb4728fbd01",
+  "expected": "How’s business, Mrs. Penhallow?",
+  "recognized": "How's business, Mrs. Penhallow?",
+  "local_recognized": "How's business, Mrs. Penhalo?",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 2.32,
+  "sample_rate": 48000,
+  "peak": 0.319732666015625,
+  "rms": 0.04121223866321014,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c1_pier.talk.agnes.1.01.json",
+    "sha256": "1bde31191df51bf5bb097fefd357f47c0bf70323e88dc5a5cfcd2f8c55e4e628",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  },
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

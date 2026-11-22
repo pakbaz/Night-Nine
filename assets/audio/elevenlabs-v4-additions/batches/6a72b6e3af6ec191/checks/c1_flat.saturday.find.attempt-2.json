@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c1_flat.saturday.find",
+  "attempt": 2,
+  "plan_sha256": "6a72b6e3af6ec191b0f0a01bbe9902faea7a40c2664520abf2c6799dd216cdb2",
+  "wav_sha256": "6fe7232d25b09d0fa4ddde846da7ab772fdbaaf69aaef3e29ecde724881f059f",
+  "expected": "Red cassette, Saturday, 7:15. My ident, AutoRick, Nora saying good morning on her way out, and me.",
+  "recognized": "Red Cassette, Saturday, 7.15. My ident, Autorick. Nora saying good morning on her way out, and me.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 8.48,
+  "sample_rate": 48000,
+  "peak": 0.582183837890625,
+  "rms": 0.04202545404950469,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

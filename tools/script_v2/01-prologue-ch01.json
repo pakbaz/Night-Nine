@@ -126,7 +126,37 @@
         "p_bay.out.01",
         "p_bay.out.02"
       ],
-      "next": "Black. The storybook “Eighteen months” plays, then Chapter 1."
+      "next": "Black. The storybook “Eighteen months” plays, then Chapter 1.",
+      "talk": {
+        "helen": [
+          {
+            "topic": "Steve",
+            "lines": [
+              "frank|Think the boy will come out with us next time?",
+              "helen|He’ll say he has a shift. Then he’ll call tomorrow and ask what we heard.",
+              "frank|He always asks.",
+              "helen|He’s your son, Frank. He can’t leave a sound alone."
+            ]
+          },
+          {
+            "topic": "The cold",
+            "lines": [
+              "helen|My hands are freezing.",
+              "frank|Gloves are in the tackle box. Under the logbook.",
+              "helen|Of course they are. Everything in this boat is under the logbook."
+            ]
+          },
+          {
+            "topic": "The hum",
+            "after": "tune",
+            "lines": [
+              "helen|Listen. It goes up at the end, like a question.",
+              "frank|Then write it down. Time, place, what it does.",
+              "helen|Eleven-oh-five. Rowboat. It sounds like it’s waiting for someone."
+            ]
+          }
+        ]
+      }
     },
     "c1_flat": {
       "when": "Saturday the 20th, three in the morning, then Sunday morning",
@@ -143,7 +173,7 @@
         }
       },
       "objective": "Test Dad’s old recorder before you move Mom’s voicemail to a fresh tape.",
-      "coach": "Steve’s tools are Dad’s recorder and his notebook. Click the red cassette to begin. Press J to open the notebook.",
+      "coach": "Click the red cassette to begin. Click Nora if you want to chat. Press J to open Steve’s notebook.",
       "changes": [
         "C05",
         "C09",
@@ -212,9 +242,12 @@
             },
             "c1_flat.in.04",
             "steve|Morning, Nor.",
-            "c1_flat.saturday.01"
+            "c1_flat.saturday.01",
+            "iris|Coffee’s on the stove. I made it strong, the way you like it.",
+            "steve|You hate it strong.",
+            "iris|Strong is fine. Whatever you like."
           ],
-          "finding": "steve|Red cassette, Saturday, 7:15. My ident, AutoRick, and Nora saying good morning on her way out the door."
+          "finding": "steve|Red cassette, Saturday, 7:15. My ident, AutoRick, Nora saying good morning on her way out, and me."
         },
         "sunday": {
           "type": "choice",
@@ -251,9 +284,12 @@
             {
               "id": "c1_flat.sunday.02",
               "text": "Morning, Nor. Blue tape, Sunday. Date on everything, Dad."
-            }
+            },
+            "iris|I’m off to feed Admiral and the otters. Back by noon.",
+            "steve|On a Sunday? You used to fight for every Sunday off.",
+            "iris|The animals don’t know it’s Sunday, sleepyhead."
           ],
-          "finding": "steve|Blue cassette, Sunday, 7:15. The ident again, and Nora again. Now I can time the machine."
+          "finding": "steve|Blue cassette, Sunday, 7:15. The ident, the radio, Nora and me, all over again. Now I can time the machine."
         },
         "compare": {
           "difficulty": 3,
@@ -262,43 +298,56 @@
             "sunday"
           ],
           "goal": "Line the two cassettes up on the ident and time Dad’s recorder.",
-          "background": "Steve puts the red cassette in one ear and the blue in the other. If the recorder runs true, the two idents will line up and both last twelve seconds. Whatever comes after the ident was recorded live in the kitchen.",
-          "prompt": "Slide Sunday until the two idents line up. Then listen past the ident.",
-          "instruction": "Line up the start of the ident on both tapes, then compare the voice that follows: the breath, the pauses, the small clicks.",
+          "background": "Steve puts the red cassette in one ear and the blue in the other. If the recorder runs true, the two idents will line up. The tapes also caught the rest of the kitchen: AutoRick on the radio, Nora on her way out, and Steve himself.",
+          "prompt": "Slide Sunday until the two idents line up. Then play both tapes and compare every voice on them.",
+          "instruction": "First line up the ident. Then listen to each voice on both tapes and say how the two days compare.",
+          "tape": {
+            "recording_a": "res://assets/audio/effects/tape-saturday.wav",
+            "recording_b": "res://assets/audio/effects/tape-sunday.wav",
+            "segments": "res://assets/audio/effects/morning-tapes.json"
+          },
           "rows": [
-            {
-              "label": "Sunday offset",
-              "options": [
-                "+0.35 s",
-                "-0.35 s",
-                "-0.20 s",
-                "0.00 s"
-              ],
-              "answer": 1
-            },
             {
               "label": "The ident",
               "options": [
-                "Longer on Sunday: the recorder runs slow",
-                "Twelve seconds on both: the recorder runs true",
-                "Different notes on each tape"
+                "Identical, every breath",
+                "Same words, said a new way",
+                "Different words"
+              ],
+              "answer": 0
+            },
+            {
+              "label": "AutoRick",
+              "options": [
+                "Identical, every breath",
+                "Same words, said a new way",
+                "Different words"
+              ],
+              "answer": 2
+            },
+            {
+              "label": "Steve: Morning, Nor.",
+              "options": [
+                "Identical, every breath",
+                "Same words, said a new way",
+                "Different words"
               ],
               "answer": 1
             },
             {
-              "label": "Nora’s good morning",
+              "label": "Nora: Good morning, sleepyhead.",
               "options": [
+                "Identical, every breath",
                 "Same words, said a new way",
-                "Identical, breath for breath",
                 "Different words"
               ],
-              "answer": 1
+              "answer": 0
             }
           ],
           "hints": [
-            "Line up the first note of the ident. Then let both tapes run.",
-            "Sunday starts later. Move it left until the idents sit on top of each other, then keep watching after the ident ends.",
-            "Sunday’s ident starts about a third of a second late. Once the two idents sit together, check the breath and the click before “morning.”"
+            "Line up the end of the ident first. Then play both tapes together.",
+            "AutoRick reads a new script every day. A person says the same words a little differently each time.",
+            "Only a recording repeats every breath and click. Compare each voice with the ident."
           ],
           "lines": [
             {
@@ -308,7 +357,7 @@
             "steve|And Nora... lines up too. The breath. The little click before “morning.”",
             "steve|Nobody says a sentence the same way twice. I spent twelve years listening for exactly that."
           ],
-          "finding": "steve|The ident matches, so the recorder is fine. Nora’s good morning matches just as perfectly. People don’t do that. Recordings do."
+          "finding": "steve|The ident matches, so the recorder is fine. AutoRick and I change from day to day, like anyone would. Nora’s good morning matches perfectly. People don’t do that. Recordings do."
         },
         "control": {
           "type": "choice",
@@ -358,7 +407,48 @@
         "iris|Whatever you like, sleepyhead.",
         "iris|And Mamá kept your plate warm again. Dinner at six, if you want."
       ],
-      "next": "Sunday afternoon on the pier (c1_pier)."
+      "next": "Sunday afternoon on the pier (c1_pier).",
+      "talk": {
+        "iris": [
+          {
+            "topic": "Breakfast",
+            "lines": [
+              "steve|Want some toast before you go?",
+              "iris|I ate already. There’s fruit in the blue bowl.",
+              "steve|Since when do you eat breakfast?",
+              "iris|For a while now. It’s good for you."
+            ]
+          },
+          {
+            "topic": "The otters",
+            "lines": [
+              "steve|How are the otter pups?",
+              "iris|Growing. One of them bit a volunteer again. Only a little.",
+              "steve|You used to say that was her best quality.",
+              "iris|She’s a good otter. They’re all good otters."
+            ]
+          },
+          {
+            "topic": "AutoRick",
+            "lines": [
+              "iris|I heard the new radio host this morning. He sounds cheerful.",
+              "steve|He read yesterday’s weather again. Twelve years at that desk, and they replaced me with him.",
+              "iris|Then you have more time at home. That’s nice, isn’t it?",
+              "steve|Sure, Nor. Nice."
+            ]
+          },
+          {
+            "topic": "How she slept",
+            "after": "compare",
+            "lines": [
+              "steve|Nor? How did you sleep?",
+              "iris|Fine. I always sleep fine.",
+              "steve|You used to kick the blankets off every night. Every single night.",
+              "iris|Did I? I don’t remember that."
+            ]
+          }
+        ]
+      }
     },
     "c1_pier": {
       "when": "Sunday the 21st, afternoon",
@@ -367,10 +457,11 @@
         "iris",
         "agnes",
         "lyle_copy",
-        "pell"
+        "pell",
+        "calder"
       ],
       "objective": "Spend the afternoon on the pier with Nora.",
-      "coach": "Some leads open a case board. Read the case notes, click a card, then click where it goes, or drag it. Press Check this step when every slot is filled.",
+      "coach": "Click people to chat. Some leads open a case board: pick a card, then pick the question it answers, and press Check.",
       "changes": [
         "C06",
         "C09",
@@ -473,59 +564,66 @@
           "finding": "steve|Lyle Boone has gone to every game since June. Before that he missed them all. And he apologized to me."
         },
         "bait": {
-          "difficulty": 2,
+          "difficulty": 1,
           "title": "Agnes’s bait stall",
           "goal": "Work out where the low note is coming from.",
-          "background": "Mrs. Agnes Penhallow taught Steve third grade. She is ninety-one, sells bait that nobody buys and still corrects everyone’s grammar. Today a low note is drifting in off the water, and she is humming along. Steve knows that note. It sits under Mom’s voicemail.",
+          "background": "Mrs. Agnes Penhallow taught Steve in third grade. She is ninety-one and sells bait that nobody buys. Today a low note is drifting in off the water, and she is humming along. Steve knows that note. It is under Mom’s voicemail.",
           "lead": [
             "c1_pier.in.02",
             {
               "new": "steve|That note. It’s under Mom’s voicemail. I always thought it was the phone line.",
               "direction": "quiet, to himself"
             },
-            "agnes|It’s loud today, Steven. It always is, on certain nights."
+            "agnes|It’s loud today, Steven. It always is, on certain nights.",
+            "steve|June! Did you hear that hum just now?",
+            "calder|From the fish-shed line. It started before Agnes did.",
+            "calder|It was loudest down by the water, under the floating dock.",
+            "steve|Could you hear Agnes humming from there?",
+            "calder|Nobody can hear Agnes hum. She’s quieter than the fog.",
+            {
+              "new": "steve|And the winch stopped halfway through. The note just kept going.",
+              "direction": "quiet, to himself"
+            }
           ],
-          "prompt": "Agnes is humming along with something. Every sound has a source. Is it her, or something else?",
+          "prompt": "Every sound has a source. Is the low note Agnes, or something else?",
           "board": {
-            "instruction": "Agnes keeps a tide book in her bait tin, with pockets for the things she hears. Help her file who and what made the low note.",
+            "instruction": "Agnes keeps a tide book in her bait tin. Help her answer four questions about the low note.",
             "evidence": [
-              "Sheriff June Calder was buying bait at the fish shed, upwind. She heard the low note before Agnes started humming, and she could never hear Agnes at all.",
-              "With the winch stopped, June heard the note most clearly beside the water, under the floating dock.",
-              "The winch operator says he shut his motor off halfway through the low note.",
-              "The fog horn sounded twice before the low note began, then stayed quiet.",
-              "Agnes’s tin has pockets for a source, an imitation, a noise that stopped too soon and an independent ear."
+              "June was in the fish-shed line. She heard the low note before Agnes started humming.",
+              "June could not hear Agnes from the fish shed.",
+              "June heard the note best by the water, under the floating dock.",
+              "The winch stopped halfway through the note. The note kept going."
             ],
             "stages": [
               {
                 "mode": "match",
-                "prompt": "File each card in the pocket it belongs in.",
+                "prompt": "Put one card on each question.",
                 "slots": [
-                  "The source",
-                  "An imitation",
-                  "Stopped too soon",
-                  "An independent ear"
+                  "Where does the low note come from?",
+                  "Who is only humming along?",
+                  "What stopped before the note did?",
+                  "Who heard the note without Agnes?"
                 ],
                 "pieces": [
-                  "Agnes’s humming",
-                  "June at the fish shed",
-                  "Sound from the water",
+                  "Something in the water",
+                  "Agnes",
                   "The harbor winch",
-                  "The fog horn"
+                  "June Calder"
                 ],
                 "answer": [
-                  2,
                   0,
-                  3,
-                  1
+                  1,
+                  2,
+                  3
                 ]
               }
             ],
             "wrong_text": "Something here doesn’t match Agnes’s tide book yet."
           },
           "hints": [
-            "Who heard the note without hearing Agnes?",
-            "The winch stopped halfway, so it can’t be the source. The fog horn was over before the note began.",
-            "June heard the note by the floating dock and never heard Agnes. That gives you the source and the independent ear. The other two follow."
+            "Start with June. What did she hear, and where was she?",
+            "A sound that stops early can’t be making a note that keeps going.",
+            "June never heard Agnes, but she heard the note by the water. Where does that put the note?"
           ],
           "lines": [
             {
@@ -545,7 +643,99 @@
         "c1_pier.out.01",
         "c1_pier.out.02"
       ],
-      "next": "Sunday dinner at La Marea (c1_dinner)."
+      "next": "Sunday dinner at La Marea (c1_dinner).",
+      "talk": {
+        "iris": [
+          {
+            "topic": "Admiral",
+            "lines": [
+              "steve|How old is he now?",
+              "iris|Nine. He weighs more than your car.",
+              "steve|You bottle-fed him in our bathtub. For three weeks.",
+              "iris|I remember. It was a good bathtub."
+            ]
+          },
+          {
+            "topic": "The fish-shed line",
+            "lines": [
+              "iris|The line is long today. The crab boats came in early.",
+              "steve|You used to talk your way to the front of that line.",
+              "iris|Waiting is fine. Everyone gets a turn."
+            ]
+          },
+          {
+            "topic": "Her whistle",
+            "after": "whistle",
+            "lines": [
+              "steve|He swam right past you, Nor. To me.",
+              "iris|Sea lions get moody. Maybe he’s tired.",
+              "steve|You used to say he’d come to that whistle through a hurricane.",
+              "iris|Then you should visit him more often, sleepyhead."
+            ]
+          }
+        ],
+        "agnes": [
+          {
+            "topic": "Business at the stall",
+            "lines": [
+              "steve|How’s business, Mrs. Penhallow?",
+              "agnes|Splendid. Nobody has bought a thing since Tuesday.",
+              "steve|That’s splendid?",
+              "agnes|It means the fish are safe, Steven. Somebody has to be on their side."
+            ]
+          },
+          {
+            "topic": "Third grade",
+            "lines": [
+              "steve|You still remember me from third grade?",
+              "agnes|You took my classroom clock apart to find the tick.",
+              "steve|I put it back together.",
+              "agnes|With two pieces left over. It ran fast ever after."
+            ]
+          }
+        ],
+        "calder": [
+          {
+            "topic": "Sunday fish",
+            "lines": [
+              "steve|Halibut again, June?",
+              "calder|Every Sunday for twenty years. My mother bought it in this same line.",
+              "calder|Some things in this town don’t change. I like that about it."
+            ]
+          },
+          {
+            "topic": "Lyle",
+            "lines": [
+              "steve|Is that Lyle by the shed? In a clean shirt?",
+              "calder|He asked for every Sunday off this summer. For his boys’ games.",
+              "calder|Since early summer he’s been my best deputy. Never late once. I keep waiting for the catch."
+            ]
+          }
+        ],
+        "lyle_copy": [
+          {
+            "topic": "The boys’ game",
+            "after": "door",
+            "lines": [
+              "steve|Who’s pitching first today?",
+              "lyle_copy|My oldest, then his brother. I’ll be in the stands for every inning.",
+              "steve|You sound sure.",
+              "lyle_copy|I made them a promise. I keep my promises now."
+            ]
+          }
+        ],
+        "pell": [
+          {
+            "topic": "Sunday mail",
+            "lines": [
+              "steve|Mail on a Sunday, Dale?",
+              "pell|Every route runs on schedule, Mr. Mercer.",
+              "steve|There’s no Sunday route.",
+              "pell|There is today."
+            ]
+          }
+        ]
+      }
     },
     "c1_dinner": {
       "when": "Sunday the 21st, six in the evening",
@@ -558,7 +748,7 @@
         "rafa",
         "tomas"
       ],
-      "coach": "Some leads ask for settings. Pick one choice on each row, then press Apply settings. You can try again as often as you like.",
+      "coach": "Some leads ask for settings. Pick one choice on each row, then press Apply settings. Each row shows if it is right. Click people at the table to chat.",
       "objective": "Have dinner with Nora’s family, and listen to the people who know her best.",
       "changes": [
         "C07",
@@ -648,7 +838,7 @@
             "mateo|Funny. Lyle Boone hasn’t missed one of the Little League games I coach since June either."
           ],
           "prompt": "Nora changed after her last argument and before the first time she simply agreed. Bracket it.",
-          "instruction": "Pick the latest argument anyone remembers, then the earliest time she simply agreed.",
+          "instruction": "Pick the last argument anyone remembers. Then pick the first time she just agreed.",
           "rows": [
             {
               "label": "Last argument anyone remembers",
@@ -695,25 +885,27 @@
           ],
           "prompt": "Tomás will lend Steve his field reels if Steve can file them back by date. If the hum keeps a schedule, the dates will show it.",
           "board": {
-            "instruction": "File each field reel against its date, then find the pattern in the dates.",
+            "instruction": "Match each reel to its date. Then count the nights between dates to find the next loud night.",
             "evidence": [
-              "Tomás’s log: on September 24, low tide left the bell buoy ringing. On October 3 the buoy was ashore with a cracked clapper. On October 12 the repair crew tapped it twice before they relaunched it.",
-              "Each reel starts with whatever was making noise when Tomás pressed record: one bell on Salt, a gull and no bell on Thread, two uneven knocks on Glass.",
+              "September 24: the bell buoy was in the water, ringing at low tide.",
+              "October 3: the buoy was ashore for repair, with a cracked clapper. It could not ring.",
+              "October 12: the repair crew tapped the buoy twice, then put it back in the water.",
+              "Each reel starts with whatever was making noise when Tomás pressed record.",
               "Tomás only goes out on the nights the hum is loudest. September has thirty days."
             ],
             "stages": [
               {
                 "mode": "match",
-                "prompt": "Match each field date to the sound its reel starts with.",
+                "prompt": "Match each date to the first sound on its reel.",
                 "slots": [
                   "September 24",
                   "October 3",
                   "October 12"
                 ],
                 "pieces": [
-                  "One bell (Salt)",
-                  "Two uneven knocks (Glass)",
-                  "A gull, no bell (Thread)"
+                  "One bell",
+                  "Two knocks",
+                  "A gull, and no bell"
                 ],
                 "answer": [
                   0,
@@ -723,9 +915,9 @@
               },
               {
                 "mode": "match",
-                "prompt": "Count the nights between field dates. When is the next loud night?",
+                "prompt": "Count the nights between the dates. When is the next loud night?",
                 "slots": [
-                  "Nights between field dates",
+                  "Nights between the dates",
                   "The next loud night"
                 ],
                 "pieces": [
@@ -745,9 +937,9 @@
             "wrong_text": "Tomás squints at the crate. Something here doesn’t match his log."
           },
           "hints": [
-            "Start with the night the buoy was ashore. It couldn’t ring.",
-            "Count from one field date to the next. September has thirty days.",
-            "No bell means the buoy was ashore. Two taps means the repair crew. Count from September 24 to October 3 across the end of the month, then keep the same step."
+            "Where was the buoy on October 3? Could it ring that night?",
+            "Count the nights from one date to the next. September has thirty days.",
+            "September 24 to October 3 is the same count as October 3 to October 12. Add that count once more."
           ],
           "lines": [
             "c1_dinner.podcast.01",
@@ -764,7 +956,81 @@
         "iris|I’m tired. Let’s go home, sleepyhead.",
         "carmen|Next Sunday, Steve. The plate will be warm."
       ],
-      "next": "Home, late that night (c1_escape)."
+      "next": "Home, late that night (c1_escape).",
+      "talk": {
+        "carmen": [
+          {
+            "topic": "The mole",
+            "lines": [
+              "steve|The mole is perfect, Carmen.",
+              "carmen|It is too sweet. Rafa is in love, so everything he cooks is sweet now.",
+              "steve|Rafa’s in love?",
+              "carmen|With the girl from the bakery counter. He thinks I don’t know. Mothers know."
+            ]
+          }
+        ],
+        "luis": [
+          {
+            "topic": "Dad’s chair",
+            "lines": [
+              "steve|You still keep Dad’s chair, Luis.",
+              "luis|Frank sat there every Friday for twenty years. Nobody else fits it.",
+              "luis|When he comes home, it will be waiting for him.",
+              "steve|Thanks, Luis."
+            ]
+          }
+        ],
+        "mateo": [
+          {
+            "topic": "Little League",
+            "lines": [
+              "steve|How’s the team, Mateo?",
+              "mateo|Four wins, nine losses. But we lead the league in effort.",
+              "mateo|And my outfield can finally catch. Mostly with their faces, but it counts."
+            ]
+          }
+        ],
+        "rafa": [
+          {
+            "topic": "The kitchen",
+            "lines": [
+              "steve|Busy night, Rafa?",
+              "rafa|Forty tables, one birthday, and Mamá tasting everything twice.",
+              "rafa|Come to Sunday dinner for real, Steve. She sets your plate either way."
+            ]
+          }
+        ],
+        "tomas": [
+          {
+            "topic": "His podcast",
+            "lines": [
+              "steve|How’s the podcast, Tomás?",
+              "tomas|Eleven listeners. Twelve, if Mamá ever figures out the app.",
+              "tomas|Laugh now. One day the bay is going to make me famous."
+            ]
+          },
+          {
+            "topic": "The hum",
+            "after": "podcast",
+            "lines": [
+              "tomas|You really heard it today? On the pier?",
+              "steve|It’s under Mom’s voicemail too. It has been for eighteen months.",
+              "tomas|Then I’m not crazy. Or we both are. Either way, I’m buying you a beer."
+            ]
+          }
+        ],
+        "iris": [
+          {
+            "topic": "A quiet dinner",
+            "lines": [
+              "steve|You’re quiet tonight, Nor.",
+              "iris|I’m happy. Everyone is here.",
+              "steve|You used to argue with your mother about the chilies all night.",
+              "iris|Mamá knows best."
+            ]
+          }
+        ]
+      }
     },
     "c1_escape": {
       "title": "The ninth night",
@@ -800,91 +1066,73 @@
       ],
       "tasks": {
         "order": {
-          "difficulty": 3,
+          "difficulty": 2,
           "art": "res://assets/illustrated/campaign/inserts/c1_escape-north-wing-work-order.webp",
           "title": "The paper in the raincoat",
           "goal": "Work out whether Nora could have signed this work order.",
           "background": "Something stiff fell out of the raincoat lining when Steve hung it up: an aquarium work order for the north wing, sealed for two years. Only the head aquarist signs for it, and that is Nora. It is signed in her name on Carmen’s birthday, at 20:30 by the aquarium wall clock.",
           "lead": [
-            "steve|Something in the lining. Soaked. Aquarium letterhead... north wing?"
+            "steve|Something in the lining. Soaked. Aquarium letterhead... north wing?",
+            "steve|Signed at 20:30. Nora always said that north-wing clock runs fifteen minutes fast.",
+            "steve|And the aquarium is across the bay. Eighteen minutes each way, even with every light green."
           ],
-          "prompt": "Steve’s notebook from dinner puts Nora at La Marea that evening, across the bay. Could she have slipped away to sign this?",
+          "prompt": "Steve’s notes from dinner put Nora at La Marea that evening. Could she have slipped away to sign this?",
           "board": {
-            "instruction": "Put the two documents on the same clock, then test the shortest possible trip against Carmen’s photos.",
+            "instruction": "First fix the time on the work order. Then check whether Nora had time for the trip.",
             "evidence": [
-              "The aquarium wall clock ran fifteen minutes fast all day. The La Marea kitchen clock agreed with harbor time.",
-              "The north-wing sign-off reads 20:30. The kitchen birthday check in Nora’s hand reads 20:15.",
-              "Mateo drove Nora in at noon. Rafa drove her home at midnight. Only the signed work order puts someone using Nora’s name in the north wing.",
-              "The quickest crossing of the bay takes eighteen minutes each way. Steve’s notebook from dinner: Carmen’s photos of Nora at 20:04, 20:15 and 20:29."
+              "The work order says 20:30 by the aquarium clock.",
+              "The aquarium clock runs fifteen minutes fast.",
+              "Carmen’s photos show Nora at La Marea at 20:04, 20:15 and 20:29. At 20:15 she is holding the kitchen check.",
+              "Crossing the bay takes eighteen minutes each way."
             ],
             "stages": [
               {
                 "mode": "match",
-                "prompt": "Correct both clocks to harbor time.",
+                "prompt": "When was the order really signed, and where was Nora then?",
                 "slots": [
-                  "North-wing wall clock",
-                  "Kitchen check"
+                  "Real time of the signature",
+                  "Where Nora was at that time"
                 ],
                 "pieces": [
-                  "20:15 across the bay",
-                  "20:15 at La Marea",
-                  "20:45 across the bay"
+                  "20:15",
+                  "20:30",
+                  "20:45",
+                  "At La Marea, in Carmen’s photo",
+                  "At the aquarium"
                 ],
                 "answer": [
                   0,
-                  1
+                  3
                 ]
               },
               {
                 "mode": "match",
-                "prompt": "Attach a source to each part of the story. Keep a signature separate from a witness.",
+                "prompt": "Could she get there and back between two photos?",
                 "slots": [
-                  "Arrival witness",
-                  "Inside the restaurant at 20:15",
-                  "Someone using Nora’s name",
-                  "Departure witness"
-                ],
-                "pieces": [
-                  "Signed work order",
-                  "Mateo’s ride in",
-                  "Rafa’s ride home",
-                  "Carmen’s kitchen photo"
-                ],
-                "answer": [
-                  1,
-                  3,
-                  0,
-                  2
-                ]
-              },
-              {
-                "mode": "match",
-                "prompt": "Could Nora have made the round trip between photos?",
-                "slots": [
-                  "Round trip to the aquarium",
+                  "Trip there and back",
                   "Longest gap between photos",
-                  "Verdict"
+                  "So"
                 ],
                 "pieces": [
                   "36 minutes",
-                  "14 minutes, 20:15 to 20:29",
-                  "11 minutes, 20:04 to 20:15",
+                  "18 minutes",
+                  "14 minutes",
                   "Nora could not have signed it",
                   "Nora slipped out between photos"
                 ],
                 "answer": [
                   0,
-                  1,
+                  2,
                   3
                 ]
               }
             ],
-            "wrong_text": "Something here doesn’t fit the clocks or the photos yet."
+            "wrong_text": "Something here doesn’t fit the clock or the photos yet."
           },
           "hints": [
-            "Correct the aquarium clock first. It ran fast, so the real time was earlier.",
-            "The sign-off and the kitchen check happened at the same real minute on opposite sides of the bay. Then compare the round trip with the longest gap between photos.",
-            "Take fifteen minutes off the wall clock. Then ask whether any gap between Carmen’s photos is as long as eighteen minutes there and eighteen back."
+            "The aquarium clock runs fast. Take the extra minutes off.",
+            "The real signing time matches one of Carmen’s photos.",
+            "Add up the trip there and back. Is any gap between photos that long?"
           ],
           "lines": [
             {"id": "c1_escape.order.01", "text": "Noon to midnight at La Marea. Mateo and Rafa both saw her. She couldn’t have been in the north wing."},
@@ -908,7 +1156,7 @@
           "goal": "Open Mr. Bell’s balcony gate without turning off his stair light.",
           "background": "The only way out is along the shared balcony to Mr. Bell’s gate. Mr. Bell is eighty-four and halfway down the dark communal stairs with his groceries. Steve rewired this gate last winter and was paid in fruitcake.",
           "prompt": "Open Mr. Bell’s gate without ever darkening the stair light. The service selector has three positions.",
-          "instruction": "NORMAL powers the stair bulb and the gate motor. SERVICE powers the bulb only. OFF powers nothing. The gate pad remembers a press only while the motor is off, and forgets it the moment your thumb lifts. The motor checks the pad when it switches on.",
+          "instruction": "NORMAL: stair light on, gate motor on. SERVICE: light on, motor off. OFF: everything off. The gate pad only holds a press while the motor is off and your thumb stays down. The motor checks the pad when it switches on.",
           "rows": [
             {
               "label": "Selector before touching the pad",

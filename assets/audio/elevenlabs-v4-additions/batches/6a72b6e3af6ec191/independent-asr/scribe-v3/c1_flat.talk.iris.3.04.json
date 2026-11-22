@@ -1,0 +1,67 @@
+{
+  "audio_id": "c1_flat.talk.iris.3.04",
+  "audio_sha256": "4a38494b14e5a468b7118246abcdff9af32e3c9dc22c5b3a06b00a44dd43ffd1",
+  "file": "assets/audio/elevenlabs-v4-additions/masters/c1_flat.talk.iris.3.04.attempt-2.wav",
+  "production_plan_sha256": "6a72b6e3af6ec191b0f0a01bbe9902faea7a40c2664520abf2c6799dd216cdb2",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Sure, Nor. Nice.",
+  "recognized": "Sure, Nor. Nice.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "6e1da99ab9fdb2ed21fa7ebd0e9261c4",
+  "character_cost": "1",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Sure, Nor. Nice.",
+    "words": [
+      {
+        "text": "Sure,",
+        "start": 0.12,
+        "end": 0.38,
+        "type": "word",
+        "logprob": -0.00019800786394625903
+      },
+      {
+        "text": " ",
+        "start": 0.38,
+        "end": 0.5,
+        "type": "spacing",
+        "logprob": -0.2630634605884552
+      },
+      {
+        "text": "Nor.",
+        "start": 0.5,
+        "end": 0.76,
+        "type": "word",
+        "logprob": -0.2049342948012054
+      },
+      {
+        "text": " ",
+        "start": 0.76,
+        "end": 1.2,
+        "type": "spacing",
+        "logprob": -0.0005461869877763093
+      },
+      {
+        "text": "Nice.",
+        "start": 1.2,
+        "end": 1.6,
+        "type": "word",
+        "logprob": -0.00043930992014793444
+      }
+    ],
+    "transcription_id": "GKo4olWLzybOjFSmG8Qp",
+    "audio_duration_secs": 2.08
+  },
+  "listening_reviewed": false
+}

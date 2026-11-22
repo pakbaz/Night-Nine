@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "audio_id": "c1_dinner.talk.iris.1.01",
+  "attempt": 1,
+  "plan_sha256": "6a72b6e3af6ec191b0f0a01bbe9902faea7a40c2664520abf2c6799dd216cdb2",
+  "wav_sha256": "ea47c362257f0fa85d154af754d7b2e023cf9039f837d8fc7c5970c865cb3b5d",
+  "expected": "You’re quiet tonight, Nor.",
+  "recognized": "You're quiet tonight, Nor.",
+  "local_recognized": "You're quiet tonight, Noor.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 1.68,
+  "sample_rate": 48000,
+  "peak": 0.2303466796875,
+  "rms": 0.03497750117202262,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c1_dinner.talk.iris.1.01.json",
+    "sha256": "f823c17592980b4944074ae0aff43e8a7dc34d72e18e4ec6f2a711eae3b444fe",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  },
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

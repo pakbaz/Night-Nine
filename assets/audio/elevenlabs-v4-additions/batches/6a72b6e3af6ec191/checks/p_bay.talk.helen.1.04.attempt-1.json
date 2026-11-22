@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "p_bay.talk.helen.1.04",
+  "attempt": 1,
+  "plan_sha256": "6a72b6e3af6ec191b0f0a01bbe9902faea7a40c2664520abf2c6799dd216cdb2",
+  "wav_sha256": "99fb733264630698836af2cef4ecf6706e98611478ddac57059d2263f8849525",
+  "expected": "He’s your son, Frank. He can’t leave a sound alone.",
+  "recognized": "He's your son, Frank. He can't leave a sound alone.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.48,
+  "sample_rate": 48000,
+  "peak": 0.3446044921875,
+  "rms": 0.04899084380574276,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

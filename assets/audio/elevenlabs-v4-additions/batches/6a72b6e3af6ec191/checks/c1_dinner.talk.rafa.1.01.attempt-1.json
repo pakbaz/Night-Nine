@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "audio_id": "c1_dinner.talk.rafa.1.01",
+  "attempt": 1,
+  "plan_sha256": "6a72b6e3af6ec191b0f0a01bbe9902faea7a40c2664520abf2c6799dd216cdb2",
+  "wav_sha256": "5d38c36f0d67ae1c0af7d76914c523f216a3b89b6a4e67638d1f3128f98645d1",
+  "expected": "Busy night, Rafa?",
+  "recognized": "Busy night, Rafa?",
+  "local_recognized": "Busy night, Rafa?",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 1.28,
+  "sample_rate": 48000,
+  "peak": 0.275360107421875,
+  "rms": 0.05438315170702133,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c1_dinner.talk.rafa.1.01.json",
+    "sha256": "5527f6760fee342514a5888a73ad102db06091c0fe1ac5c7ac3d1024dd47051f",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  },
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c1_flat.talk.iris.1.04",
+  "attempt": 1,
+  "plan_sha256": "6a72b6e3af6ec191b0f0a01bbe9902faea7a40c2664520abf2c6799dd216cdb2",
+  "wav_sha256": "5f326dc0ca0b071ee4d324d88350a9242aab8c05e43f416d6444c9e75cb5aea6",
+  "expected": "For a while now. It’s good for you.",
+  "recognized": "For a while now, it's good for you.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 2.48,
+  "sample_rate": 48000,
+  "peak": 0.38897705078125,
+  "rms": 0.05612773100795415,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

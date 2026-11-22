@@ -1,0 +1,67 @@
+{
+  "audio_id": "c1_pier.talk.calder.1.01",
+  "audio_sha256": "8d172165d9849124cfcb03a983ddb0717e835301b7e02d2b2c57add65252e545",
+  "file": "assets/audio/elevenlabs-v4-additions/masters/c1_pier.talk.calder.1.01.attempt-1.wav",
+  "production_plan_sha256": "6a72b6e3af6ec191b0f0a01bbe9902faea7a40c2664520abf2c6799dd216cdb2",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Halibut again, June?",
+  "recognized": "Halibut again, June?",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "e87d2133bb9a0f8616f5d206abcb9ed1",
+  "character_cost": "1",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Halibut again, June?",
+    "words": [
+      {
+        "text": "Halibut",
+        "start": 0.08,
+        "end": 0.5,
+        "type": "word",
+        "logprob": -0.0007183218674202051
+      },
+      {
+        "text": " ",
+        "start": 0.5,
+        "end": 0.6,
+        "type": "spacing",
+        "logprob": -5.2689116273541003e-05
+      },
+      {
+        "text": "again,",
+        "start": 0.6,
+        "end": 0.98,
+        "type": "word",
+        "logprob": -4.472219173597599e-05
+      },
+      {
+        "text": " ",
+        "start": 0.98,
+        "end": 1.14,
+        "type": "spacing",
+        "logprob": -0.002134546637535095
+      },
+      {
+        "text": "June?",
+        "start": 1.14,
+        "end": 1.46,
+        "type": "word",
+        "logprob": -0.0017150758314528503
+      }
+    ],
+    "transcription_id": "M1LRqQKAxKKtXbTbIJCE",
+    "audio_duration_secs": 1.84
+  },
+  "listening_reviewed": false
+}

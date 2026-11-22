@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c1_dinner.talk.mateo.1.02",
+  "attempt": 1,
+  "plan_sha256": "6a72b6e3af6ec191b0f0a01bbe9902faea7a40c2664520abf2c6799dd216cdb2",
+  "wav_sha256": "5786602d29f1ff3ce850efbd115fb1ce38cc5725ff0f3e787a690c3f2a66115e",
+  "expected": "Four wins, nine losses. But we lead the league in effort.",
+  "recognized": "Four wins, nine losses, but we lead the league in effort.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.4,
+  "sample_rate": 48000,
+  "peak": 0.85723876953125,
+  "rms": 0.11232422380517856,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

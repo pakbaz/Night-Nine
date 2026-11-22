@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c1_dinner.talk.tomas.2.01",
+  "attempt": 1,
+  "plan_sha256": "6a72b6e3af6ec191b0f0a01bbe9902faea7a40c2664520abf2c6799dd216cdb2",
+  "wav_sha256": "205517ca98d3b6da6af6ed1734df01942c3de82f4dc04979f55f7cbf639a3e42",
+  "expected": "You really heard it today? On the pier?",
+  "recognized": "You really heard it today? On the pier?",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 2.72,
+  "sample_rate": 48000,
+  "peak": 0.8812255859375,
+  "rms": 0.12572658836303832,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c1_pier.talk.calder.1.03",
+  "attempt": 1,
+  "plan_sha256": "6a72b6e3af6ec191b0f0a01bbe9902faea7a40c2664520abf2c6799dd216cdb2",
+  "wav_sha256": "666d971f187e0557bc51e05a7fdb5f004f585d30679e62d5801fbd31831f7cec",
+  "expected": "Some things in this town don’t change. I like that about it.",
+  "recognized": "Some things in this town don't change. I like that about it.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 3.84,
+  "sample_rate": 48000,
+  "peak": 0.48486328125,
+  "rms": 0.06030317312370016,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

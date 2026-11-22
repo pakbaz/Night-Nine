@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "audio_id": "c1_pier.talk.pell.1.01",
+  "attempt": 1,
+  "plan_sha256": "6a72b6e3af6ec191b0f0a01bbe9902faea7a40c2664520abf2c6799dd216cdb2",
+  "wav_sha256": "1b7057b928df60f837721c75427f92b380acb67b4c0d7897c818a4f08b98a32b",
+  "expected": "Mail on a Sunday, Dale?",
+  "recognized": "Mail on a Sunday, Dale?",
+  "local_recognized": "Mail on a Sunday, do?",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 1.84,
+  "sample_rate": 48000,
+  "peak": 0.296966552734375,
+  "rms": 0.05489290926330302,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c1_pier.talk.pell.1.01.json",
+    "sha256": "25a165eaca6351114bd4cb02a089102d7c74d319d6a2811d5bf9588ec7f57ba3",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  },
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "p_bay.talk.helen.3.01",
+  "attempt": 1,
+  "plan_sha256": "6a72b6e3af6ec191b0f0a01bbe9902faea7a40c2664520abf2c6799dd216cdb2",
+  "wav_sha256": "8ef39685b41e11591c9e43fd62540699360b58acd58e8446dbcdc6f650afdb1b",
+  "expected": "Listen. It goes up at the end, like a question.",
+  "recognized": "Listen, it goes up at the end, like a question.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.0,
+  "sample_rate": 48000,
+  "peak": 0.518402099609375,
+  "rms": 0.05378943442533995,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

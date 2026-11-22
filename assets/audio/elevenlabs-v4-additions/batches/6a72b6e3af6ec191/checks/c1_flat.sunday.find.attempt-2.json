@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "audio_id": "c1_flat.sunday.find",
+  "attempt": 2,
+  "plan_sha256": "6a72b6e3af6ec191b0f0a01bbe9902faea7a40c2664520abf2c6799dd216cdb2",
+  "wav_sha256": "f444017a6403b0a64f66325cf9dc1e96eefcd71533adde0eb001a12cf61545ec",
+  "expected": "Blue cassette, Sunday, 7:15. The ident, AutoRick, Nora and me, all over again. Now I can time the machine.",
+  "recognized": "Blue cassette, Sunday, 7:15. The ident, Auto Rick, Nora and me, all over again. Now I can time the machine.",
+  "local_recognized": "Blue cassette, Sunday, 7.15. The ident, auto-rick, Nora and me, all over again. Now I can time the machine.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 9.44,
+  "sample_rate": 48000,
+  "peak": 0.41412353515625,
+  "rms": 0.037382831584770876,
+  "level_match_gain_db": 0.0,
+  "word_edits": 2,
+  "word_error_rate": 0.1,
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c1_flat.sunday.find.json",
+    "sha256": "fad658eed06ba7b930e1f4cc4cfc5aaced919702c5f469f6af50be312eb6a87c",
+    "model": "scribe_v3",
+    "word_edits": 2,
+    "listening_reviewed": false
+  },
+  "status": "retake_required",
+  "failure_reason": "asr_mismatch"
+}

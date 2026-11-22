@@ -1,0 +1,67 @@
+{
+  "audio_id": "c1_dinner.talk.rafa.1.01",
+  "audio_sha256": "5d38c36f0d67ae1c0af7d76914c523f216a3b89b6a4e67638d1f3128f98645d1",
+  "file": "assets/audio/elevenlabs-v4-additions/masters/c1_dinner.talk.rafa.1.01.attempt-1.wav",
+  "production_plan_sha256": "6a72b6e3af6ec191b0f0a01bbe9902faea7a40c2664520abf2c6799dd216cdb2",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Busy night, Rafa?",
+  "recognized": "Busy night, Rafa?",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "bbcd4b744c9007914042948ef40de3c0",
+  "character_cost": "0",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Busy night, Rafa?",
+    "words": [
+      {
+        "text": "Busy",
+        "start": 0.08,
+        "end": 0.28,
+        "type": "word",
+        "logprob": -0.00043704494601115584
+      },
+      {
+        "text": " ",
+        "start": 0.28,
+        "end": 0.38,
+        "type": "spacing",
+        "logprob": -1.1324817933200393e-05
+      },
+      {
+        "text": "night,",
+        "start": 0.38,
+        "end": 0.6,
+        "type": "word",
+        "logprob": -9.834712121422248e-06
+      },
+      {
+        "text": " ",
+        "start": 0.6,
+        "end": 0.72,
+        "type": "spacing",
+        "logprob": -0.049477774649858475
+      },
+      {
+        "text": "Rafa?",
+        "start": 0.72,
+        "end": 1.02,
+        "type": "word",
+        "logprob": -0.03959218536838307
+      }
+    ],
+    "transcription_id": "XOzjORXi4Mhkc2y3aQT0",
+    "audio_duration_secs": 1.28
+  },
+  "listening_reviewed": false
+}

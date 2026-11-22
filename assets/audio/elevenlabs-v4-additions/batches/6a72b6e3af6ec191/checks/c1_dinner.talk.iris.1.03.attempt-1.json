@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "audio_id": "c1_dinner.talk.iris.1.03",
+  "attempt": 1,
+  "plan_sha256": "6a72b6e3af6ec191b0f0a01bbe9902faea7a40c2664520abf2c6799dd216cdb2",
+  "wav_sha256": "4d17bbd79f0b85373f02c87b59269700e67f08deca430493c0166455d2a508ff",
+  "expected": "You used to argue with your mother about the chilies all night.",
+  "recognized": "You used to argue with your mother about the chilies all night.",
+  "local_recognized": "You used to argue with your mother about the Chili's all night.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 3.76,
+  "sample_rate": 48000,
+  "peak": 0.405242919921875,
+  "rms": 0.04362878094577854,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c1_dinner.talk.iris.1.03.json",
+    "sha256": "a179c850178a7696a5bb8e6daa5c77ae1d9028fa72e086a385997563bb44f28d",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  },
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

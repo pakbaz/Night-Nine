@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c1_flat.talk.iris.3.02",
+  "attempt": 1,
+  "plan_sha256": "6a72b6e3af6ec191b0f0a01bbe9902faea7a40c2664520abf2c6799dd216cdb2",
+  "wav_sha256": "119a57e72ea431b42c877dff9d6104682150ec0d71b864c65d78c626cb0c6221",
+  "expected": "He read yesterday’s weather again. Twelve years at that desk, and they replaced me with him.",
+  "recognized": "He read yesterday's weather again. Twelve years at that desk, and they replaced me with him.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 6.24,
+  "sample_rate": 48000,
+  "peak": 0.279754638671875,
+  "rms": 0.041411325214822145,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

@@ -1,0 +1,95 @@
+{
+  "audio_id": "c1_pier.talk.pell.1.01",
+  "audio_sha256": "1b7057b928df60f837721c75427f92b380acb67b4c0d7897c818a4f08b98a32b",
+  "file": "assets/audio/elevenlabs-v4-additions/masters/c1_pier.talk.pell.1.01.attempt-1.wav",
+  "production_plan_sha256": "6a72b6e3af6ec191b0f0a01bbe9902faea7a40c2664520abf2c6799dd216cdb2",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Mail on a Sunday, Dale?",
+  "recognized": "Mail on a Sunday, Dale?",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "c09e7037651bfc3e28240243e75f7c9f",
+  "character_cost": "1",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Mail on a Sunday, Dale?",
+    "words": [
+      {
+        "text": "Mail",
+        "start": 0.08,
+        "end": 0.3,
+        "type": "word",
+        "logprob": -0.00045753977610729635
+      },
+      {
+        "text": " ",
+        "start": 0.3,
+        "end": 0.34,
+        "type": "spacing",
+        "logprob": -2.3841830625315197e-06
+      },
+      {
+        "text": "on",
+        "start": 0.34,
+        "end": 0.42,
+        "type": "word",
+        "logprob": -2.3841830625315197e-06
+      },
+      {
+        "text": " ",
+        "start": 0.42,
+        "end": 0.48,
+        "type": "spacing",
+        "logprob": -1.6689286894688848e-06
+      },
+      {
+        "text": "a",
+        "start": 0.48,
+        "end": 0.5,
+        "type": "word",
+        "logprob": -1.6689286894688848e-06
+      },
+      {
+        "text": " ",
+        "start": 0.5,
+        "end": 0.68,
+        "type": "spacing",
+        "logprob": -3.540453326422721e-05
+      },
+      {
+        "text": "Sunday,",
+        "start": 0.68,
+        "end": 1.06,
+        "type": "word",
+        "logprob": -3.182833630229912e-05
+      },
+      {
+        "text": " ",
+        "start": 1.06,
+        "end": 1.18,
+        "type": "spacing",
+        "logprob": -0.0011598295532166958
+      },
+      {
+        "text": "Dale?",
+        "start": 1.18,
+        "end": 1.44,
+        "type": "word",
+        "logprob": -0.0009401418225024827
+      }
+    ],
+    "transcription_id": "llySBzscS6tTawvUxZ3j",
+    "audio_duration_secs": 1.84
+  },
+  "listening_reviewed": false
+}

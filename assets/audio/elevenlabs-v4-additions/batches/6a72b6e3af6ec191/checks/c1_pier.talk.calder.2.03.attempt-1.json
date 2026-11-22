@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c1_pier.talk.calder.2.03",
+  "attempt": 1,
+  "plan_sha256": "6a72b6e3af6ec191b0f0a01bbe9902faea7a40c2664520abf2c6799dd216cdb2",
+  "wav_sha256": "35ddb622f1017974d6095a1329f1ff3f9fd99905830efe16317a2785d807a5e4",
+  "expected": "Since early summer he’s been my best deputy. Never late once. I keep waiting for the catch.",
+  "recognized": "Since early summer, he's been my best deputy, never late once. I keep waiting for the catch.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 6.32,
+  "sample_rate": 48000,
+  "peak": 0.477630615234375,
+  "rms": 0.05892220049790508,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

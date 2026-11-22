@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c1_pier.talk.iris.2.02",
+  "attempt": 1,
+  "plan_sha256": "6a72b6e3af6ec191b0f0a01bbe9902faea7a40c2664520abf2c6799dd216cdb2",
+  "wav_sha256": "0873ab831bc33eb24958e9ab21b5667ba6bd5252805416f31fa536f7ed3796fa",
+  "expected": "You used to talk your way to the front of that line.",
+  "recognized": "You used to talk your way to the front of that line.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 2.88,
+  "sample_rate": 48000,
+  "peak": 0.464813232421875,
+  "rms": 0.03961669031254069,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

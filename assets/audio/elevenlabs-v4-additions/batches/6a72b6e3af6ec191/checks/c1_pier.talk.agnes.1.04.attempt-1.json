@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c1_pier.talk.agnes.1.04",
+  "attempt": 1,
+  "plan_sha256": "6a72b6e3af6ec191b0f0a01bbe9902faea7a40c2664520abf2c6799dd216cdb2",
+  "wav_sha256": "99a6a0c90802bc194e095b0e35293ecb7d7c5860bdcde7f1f31c6c76b68fb656",
+  "expected": "It means the fish are safe, Steven. Somebody has to be on their side.",
+  "recognized": "it means the fish are safe steven somebody has to be on their side",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.8,
+  "sample_rate": 48000,
+  "peak": 0.46453857421875,
+  "rms": 0.04095552632313019,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

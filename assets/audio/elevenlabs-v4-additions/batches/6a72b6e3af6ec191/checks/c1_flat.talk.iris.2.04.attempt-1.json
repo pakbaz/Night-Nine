@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c1_flat.talk.iris.2.04",
+  "attempt": 1,
+  "plan_sha256": "6a72b6e3af6ec191b0f0a01bbe9902faea7a40c2664520abf2c6799dd216cdb2",
+  "wav_sha256": "184d9696e2e190125113b5e327b378b7b4bf922caee17eb597db654057d5014a",
+  "expected": "She’s a good otter. They’re all good otters.",
+  "recognized": "She's a good otter. They're all good otters.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 3.44,
+  "sample_rate": 48000,
+  "peak": 0.434112548828125,
+  "rms": 0.0667875189833006,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

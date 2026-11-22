@@ -1,0 +1,81 @@
+{
+  "audio_id": "c1_dinner.talk.iris.1.01",
+  "audio_sha256": "ea47c362257f0fa85d154af754d7b2e023cf9039f837d8fc7c5970c865cb3b5d",
+  "file": "assets/audio/elevenlabs-v4-additions/masters/c1_dinner.talk.iris.1.01.attempt-1.wav",
+  "production_plan_sha256": "6a72b6e3af6ec191b0f0a01bbe9902faea7a40c2664520abf2c6799dd216cdb2",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "You’re quiet tonight, Nor.",
+  "recognized": "You're quiet tonight, Nor.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "635b8b4f727755bc2e60df4e1a9394a6",
+  "character_cost": "1",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "You're quiet tonight, Nor.",
+    "words": [
+      {
+        "text": "You're",
+        "start": 0.1,
+        "end": 0.26,
+        "type": "word",
+        "logprob": -9.993606605955089e-06
+      },
+      {
+        "text": " ",
+        "start": 0.26,
+        "end": 0.32,
+        "type": "spacing",
+        "logprob": -1.5258672647178173e-05
+      },
+      {
+        "text": "quiet",
+        "start": 0.32,
+        "end": 0.68,
+        "type": "word",
+        "logprob": -1.5258672647178173e-05
+      },
+      {
+        "text": " ",
+        "start": 0.68,
+        "end": 0.72,
+        "type": "spacing",
+        "logprob": -7.271740287251305e-06
+      },
+      {
+        "text": "tonight,",
+        "start": 0.72,
+        "end": 1.04,
+        "type": "word",
+        "logprob": -9.849595812738698e-06
+      },
+      {
+        "text": " ",
+        "start": 1.04,
+        "end": 1.14,
+        "type": "spacing",
+        "logprob": -0.018166350200772285
+      },
+      {
+        "text": "Nor.",
+        "start": 1.14,
+        "end": 1.4,
+        "type": "word",
+        "logprob": -0.01380038564093411
+      }
+    ],
+    "transcription_id": "AubSm9bPQ6ITzCuruSBT",
+    "audio_duration_secs": 1.68
+  },
+  "listening_reviewed": false
+}

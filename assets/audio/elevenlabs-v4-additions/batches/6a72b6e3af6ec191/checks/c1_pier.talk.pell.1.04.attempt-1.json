@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "audio_id": "c1_pier.talk.pell.1.04",
+  "attempt": 1,
+  "plan_sha256": "6a72b6e3af6ec191b0f0a01bbe9902faea7a40c2664520abf2c6799dd216cdb2",
+  "wav_sha256": "5ee4a7c1ad6a361dc67cebe1cce467c8a9f918b2cb16156e3b13e689318adaf0",
+  "expected": "There is today.",
+  "recognized": "There is today.",
+  "local_recognized": "there is today.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 1.44,
+  "sample_rate": 48000,
+  "peak": 0.52752685546875,
+  "rms": 0.09055200089427183,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c1_pier.talk.pell.1.04.json",
+    "sha256": "df1019eeb82d51a67756c14f7d29ef6ea534e99702405c5ae2554df98147cfed",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  },
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

@@ -1,0 +1,193 @@
+{
+  "audio_id": "c1_dinner.talk.iris.1.03",
+  "audio_sha256": "4d17bbd79f0b85373f02c87b59269700e67f08deca430493c0166455d2a508ff",
+  "file": "assets/audio/elevenlabs-v4-additions/masters/c1_dinner.talk.iris.1.03.attempt-1.wav",
+  "production_plan_sha256": "6a72b6e3af6ec191b0f0a01bbe9902faea7a40c2664520abf2c6799dd216cdb2",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "You used to argue with your mother about the chilies all night.",
+  "recognized": "You used to argue with your mother about the chilies all night.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "8f28a87d0e768cdb438726e846f39c5b",
+  "character_cost": "1",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "You used to argue with your mother about the chilies all night.",
+    "words": [
+      {
+        "text": "You",
+        "start": 0.08,
+        "end": 0.16,
+        "type": "word",
+        "logprob": -2.7417760065873154e-05
+      },
+      {
+        "text": " ",
+        "start": 0.16,
+        "end": 0.24,
+        "type": "spacing",
+        "logprob": -2.372236667724792e-05
+      },
+      {
+        "text": "used",
+        "start": 0.24,
+        "end": 0.42,
+        "type": "word",
+        "logprob": -2.372236667724792e-05
+      },
+      {
+        "text": " ",
+        "start": 0.42,
+        "end": 0.46,
+        "type": "spacing",
+        "logprob": 0.0
+      },
+      {
+        "text": "to",
+        "start": 0.46,
+        "end": 0.58,
+        "type": "word",
+        "logprob": 0.0
+      },
+      {
+        "text": " ",
+        "start": 0.58,
+        "end": 0.66,
+        "type": "spacing",
+        "logprob": -3.361645576660521e-05
+      },
+      {
+        "text": "argue",
+        "start": 0.66,
+        "end": 0.94,
+        "type": "word",
+        "logprob": -3.361645576660521e-05
+      },
+      {
+        "text": " ",
+        "start": 0.94,
+        "end": 0.98,
+        "type": "spacing",
+        "logprob": -1.9073468138230965e-06
+      },
+      {
+        "text": "with",
+        "start": 0.98,
+        "end": 1.1,
+        "type": "word",
+        "logprob": -1.9073468138230965e-06
+      },
+      {
+        "text": " ",
+        "start": 1.1,
+        "end": 1.14,
+        "type": "spacing",
+        "logprob": -3.6954811548639555e-06
+      },
+      {
+        "text": "your",
+        "start": 1.14,
+        "end": 1.24,
+        "type": "word",
+        "logprob": -3.6954811548639555e-06
+      },
+      {
+        "text": " ",
+        "start": 1.24,
+        "end": 1.34,
+        "type": "spacing",
+        "logprob": -1.8954096958623268e-05
+      },
+      {
+        "text": "mother",
+        "start": 1.34,
+        "end": 1.62,
+        "type": "word",
+        "logprob": -1.8954096958623268e-05
+      },
+      {
+        "text": " ",
+        "start": 1.62,
+        "end": 1.7,
+        "type": "spacing",
+        "logprob": -1.7881377516459906e-06
+      },
+      {
+        "text": "about",
+        "start": 1.7,
+        "end": 1.92,
+        "type": "word",
+        "logprob": -1.7881377516459906e-06
+      },
+      {
+        "text": " ",
+        "start": 1.92,
+        "end": 1.96,
+        "type": "spacing",
+        "logprob": -4.768370445162873e-07
+      },
+      {
+        "text": "the",
+        "start": 1.96,
+        "end": 2.06,
+        "type": "word",
+        "logprob": -4.768370445162873e-07
+      },
+      {
+        "text": " ",
+        "start": 2.06,
+        "end": 2.12,
+        "type": "spacing",
+        "logprob": -0.06277670711278915
+      },
+      {
+        "text": "chilies",
+        "start": 2.12,
+        "end": 2.62,
+        "type": "word",
+        "logprob": -0.03588257079302691
+      },
+      {
+        "text": " ",
+        "start": 2.62,
+        "end": 2.74,
+        "type": "spacing",
+        "logprob": -1.168244216387393e-05
+      },
+      {
+        "text": "all",
+        "start": 2.74,
+        "end": 2.98,
+        "type": "word",
+        "logprob": -1.168244216387393e-05
+      },
+      {
+        "text": " ",
+        "start": 2.98,
+        "end": 3.04,
+        "type": "spacing",
+        "logprob": -1.3947389561508317e-05
+      },
+      {
+        "text": "night.",
+        "start": 3.04,
+        "end": 3.4,
+        "type": "word",
+        "logprob": -3.0754816937890915e-05
+      }
+    ],
+    "transcription_id": "o1RbnuTSGa8N979fPJdr",
+    "audio_duration_secs": 3.76
+  },
+  "listening_reviewed": false
+}

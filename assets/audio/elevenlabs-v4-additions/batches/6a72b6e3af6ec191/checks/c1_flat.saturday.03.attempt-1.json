@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c1_flat.saturday.03",
+  "attempt": 1,
+  "plan_sha256": "6a72b6e3af6ec191b0f0a01bbe9902faea7a40c2664520abf2c6799dd216cdb2",
+  "wav_sha256": "0a0b84f6203651fcaa952e5b3683884a3357b176754a2e8c19ba6927103a21d2",
+  "expected": "Coffee’s on the stove. I made it strong, the way you like it.",
+  "recognized": "Coffee's on the stove. I made it strong, the way you like it.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 3.52,
+  "sample_rate": 48000,
+  "peak": 0.64898681640625,
+  "rms": 0.06519827241199438,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

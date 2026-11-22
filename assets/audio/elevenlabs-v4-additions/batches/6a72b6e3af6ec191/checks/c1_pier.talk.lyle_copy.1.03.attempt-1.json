@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "audio_id": "c1_pier.talk.lyle_copy.1.03",
+  "attempt": 1,
+  "plan_sha256": "6a72b6e3af6ec191b0f0a01bbe9902faea7a40c2664520abf2c6799dd216cdb2",
+  "wav_sha256": "4f4477f9ea748d0933ad731f1ce74eac645b2dda5ff52144925367666983eb14",
+  "expected": "You sound sure.",
+  "recognized": "You sound sure.",
+  "local_recognized": "You sound sure.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 1.44,
+  "sample_rate": 48000,
+  "peak": 0.254638671875,
+  "rms": 0.03874276812828045,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c1_pier.talk.lyle_copy.1.03.json",
+    "sha256": "9b4844dc5b100cbda7448162f681c2ee53efd19d0bf54480a060276de7e203de",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  },
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c1_dinner.talk.rafa.1.03",
+  "attempt": 1,
+  "plan_sha256": "6a72b6e3af6ec191b0f0a01bbe9902faea7a40c2664520abf2c6799dd216cdb2",
+  "wav_sha256": "de1d60798e16b8de5aa887273b7590e905bb47227be7fc05d5ce2fd3f26cf943",
+  "expected": "Come to Sunday dinner for real, Steve. She sets your plate either way.",
+  "recognized": "Come to Sunday dinner for real, Steve. She sets your plate either way.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.56,
+  "sample_rate": 48000,
+  "peak": 0.751129150390625,
+  "rms": 0.07157260950601796,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

@@ -1,0 +1,67 @@
+{
+  "audio_id": "p_bay.talk.helen.1.03",
+  "audio_sha256": "ebc7e3aba9733f34c2b0d3a09ba502d68811f28e1ead58dd0336a00e4c713034",
+  "file": "assets/audio/elevenlabs-v4-additions/masters/p_bay.talk.helen.1.03.attempt-1.wav",
+  "production_plan_sha256": "6a72b6e3af6ec191b0f0a01bbe9902faea7a40c2664520abf2c6799dd216cdb2",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "He always asks.",
+  "recognized": "He always asks.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "f979532ce2ad98578df95ad60b5a2e35",
+  "character_cost": "1",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "He always asks.",
+    "words": [
+      {
+        "text": "He",
+        "start": 0.1,
+        "end": 0.18,
+        "type": "word",
+        "logprob": -3.0040289857424796e-05
+      },
+      {
+        "text": " ",
+        "start": 0.18,
+        "end": 0.32,
+        "type": "spacing",
+        "logprob": -5.972207145532593e-05
+      },
+      {
+        "text": "always",
+        "start": 0.32,
+        "end": 0.82,
+        "type": "word",
+        "logprob": -5.972207145532593e-05
+      },
+      {
+        "text": " ",
+        "start": 0.82,
+        "end": 0.92,
+        "type": "spacing",
+        "logprob": -2.3007127310847864e-05
+      },
+      {
+        "text": "asks.",
+        "start": 0.92,
+        "end": 1.36,
+        "type": "word",
+        "logprob": -0.00011360742209944874
+      }
+    ],
+    "transcription_id": "3CmQAKJE1G9kveL2bgIq",
+    "audio_duration_secs": 1.84
+  },
+  "listening_reviewed": false
+}

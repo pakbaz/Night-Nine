@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c1_dinner.talk.tomas.1.03",
+  "attempt": 1,
+  "plan_sha256": "6a72b6e3af6ec191b0f0a01bbe9902faea7a40c2664520abf2c6799dd216cdb2",
+  "wav_sha256": "74dc442820a0bbfa2b61dc94210e26ae12a839954273ee534d84e16ab83a5661",
+  "expected": "Laugh now. One day the bay is going to make me famous.",
+  "recognized": "Laugh now, one day the bay is going to make me famous.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.16,
+  "sample_rate": 48000,
+  "peak": 0.874755859375,
+  "rms": 0.11944142730262271,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

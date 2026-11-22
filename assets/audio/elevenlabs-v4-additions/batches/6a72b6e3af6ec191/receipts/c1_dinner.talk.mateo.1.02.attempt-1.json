@@ -1,0 +1,17 @@
+{
+  "operation": "text_to_speech",
+  "plan_sha256": "6a72b6e3af6ec191b0f0a01bbe9902faea7a40c2664520abf2c6799dd216cdb2",
+  "audio_id": "c1_dinner.talk.mateo.1.02",
+  "attempt": 1,
+  "voice_id": "pHTIXPU0D9wgfJsumeMt",
+  "model_id": "eleven_v4",
+  "text_sha256": "a7c4a67232ce141f5bfe7ac5445b1ed30a0ca85fceeaf2a2807bd826d06c407c",
+  "synthesis_text_sha256": "a7c4a67232ce141f5bfe7ac5445b1ed30a0ca85fceeaf2a2807bd826d06c407c",
+  "request_id": "cTgJAlYuzbk3KwRasBC2",
+  "trace_id": "0ee6607cda0aa8366a927af195b3cc2c",
+  "character_cost": 25,
+  "output_format": "mp3_44100_192",
+  "audio_sha256": "1ad51478c15088875623aeb37bb7ca507adeb2515d9ddd67f0e03035fb981615",
+  "response_bytes": 107249,
+  "seed": 3264556305
+}

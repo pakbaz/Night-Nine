@@ -404,6 +404,42 @@
       ],
       "next": "Black. The storybook “Eighteen months” plays, then Chapter 1.",
       "context": [],
+      "talk": [
+        {
+          "id": "p_bay.talk.helen.1",
+          "speaker": "helen",
+          "topic": "Steve",
+          "after": "",
+          "lines": [
+            "p_bay.talk.helen.1.01",
+            "p_bay.talk.helen.1.02",
+            "p_bay.talk.helen.1.03",
+            "p_bay.talk.helen.1.04"
+          ]
+        },
+        {
+          "id": "p_bay.talk.helen.2",
+          "speaker": "helen",
+          "topic": "The cold",
+          "after": "",
+          "lines": [
+            "p_bay.talk.helen.2.01",
+            "p_bay.talk.helen.2.02",
+            "p_bay.talk.helen.2.03"
+          ]
+        },
+        {
+          "id": "p_bay.talk.helen.3",
+          "speaker": "helen",
+          "topic": "The hum",
+          "after": "p_bay.tune",
+          "lines": [
+            "p_bay.talk.helen.3.01",
+            "p_bay.talk.helen.3.02",
+            "p_bay.talk.helen.3.03"
+          ]
+        }
+      ],
       "recap": [
         "p_bay.recap.01"
       ]
@@ -433,9 +469,12 @@
             "c1_flat.in.03",
             "c1_flat.in.04",
             "c1_flat.saturday.02",
-            "c1_flat.saturday.01"
+            "c1_flat.saturday.01",
+            "c1_flat.saturday.03",
+            "c1_flat.saturday.04",
+            "c1_flat.saturday.05"
           ],
-          "note": "Red cassette, Saturday, 7:15. My ident, AutoRick, and Nora saying good morning on her way out the door.",
+          "note": "Red cassette, Saturday, 7:15. My ident, AutoRick, Nora saying good morning on her way out, and me.",
           "requires": [],
           "actor": "",
           "kind": "record",
@@ -471,9 +510,12 @@
           "lines": [
             "c1_flat.sunday.03",
             "c1_flat.sunday.01",
-            "c1_flat.sunday.02"
+            "c1_flat.sunday.02",
+            "c1_flat.sunday.04",
+            "c1_flat.sunday.05",
+            "c1_flat.sunday.06"
           ],
-          "note": "Blue cassette, Sunday, 7:15. The ident again, and Nora again. Now I can time the machine.",
+          "note": "Blue cassette, Sunday, 7:15. The ident, the radio, Nora and me, all over again. Now I can time the machine.",
           "requires": [
             "c1_flat.saturday"
           ],
@@ -501,7 +543,7 @@
         {
           "id": "c1_flat.compare",
           "title": "Two mornings, side by side",
-          "prompt": "Slide Sunday until the two idents line up. Then listen past the ident.",
+          "prompt": "Slide Sunday until the two idents line up. Then play both tapes and compare every voice on them.",
           "options": [
             "Different words",
             "An identical performance",
@@ -513,7 +555,7 @@
             "c1_flat.compare.02",
             "c1_flat.compare.03"
           ],
-          "note": "The ident matches, so the recorder is fine. Nora’s good morning matches just as perfectly. People don’t do that. Recordings do.",
+          "note": "The ident matches, so the recorder is fine. AutoRick and I change from day to day, like anyone would. Nora’s good morning matches perfectly. People don’t do that. Recordings do.",
           "requires": [
             "c1_flat.sunday"
           ],
@@ -524,57 +566,65 @@
             "recording.greeting"
           ],
           "puzzle": {
-            "instruction": "Line up the start of the ident on both tapes, then compare the voice that follows: the breath, the pauses, the small clicks.",
+            "instruction": "First line up the ident. Then listen to each voice on both tapes and say how the two days compare.",
             "rows": [
-              {
-                "label": "Sunday offset",
-                "options": [
-                  "+0.35 s",
-                  "-0.35 s",
-                  "-0.20 s",
-                  "0.00 s"
-                ]
-              },
               {
                 "label": "The ident",
                 "options": [
-                  "Longer on Sunday: the recorder runs slow",
-                  "Twelve seconds on both: the recorder runs true",
-                  "Different notes on each tape"
+                  "Identical, every breath",
+                  "Same words, said a new way",
+                  "Different words"
                 ]
               },
               {
-                "label": "Nora’s good morning",
+                "label": "AutoRick",
                 "options": [
+                  "Identical, every breath",
                   "Same words, said a new way",
-                  "Identical, breath for breath",
+                  "Different words"
+                ]
+              },
+              {
+                "label": "Steve: Morning, Nor.",
+                "options": [
+                  "Identical, every breath",
+                  "Same words, said a new way",
+                  "Different words"
+                ]
+              },
+              {
+                "label": "Nora: Good morning, sleepyhead.",
+                "options": [
+                  "Identical, every breath",
+                  "Same words, said a new way",
                   "Different words"
                 ]
               }
             ],
             "solution": [
+              0,
+              2,
               1,
-              1,
-              1
+              0
             ],
             "presentation": "tape_alignment",
-            "recording": "recording.greeting",
-            "lead_a": 0.2,
-            "lead_b": 0.55,
+            "recording_a": "res://assets/audio/effects/tape-saturday.wav",
+            "recording_b": "res://assets/audio/effects/tape-sunday.wav",
+            "segments": "res://assets/audio/effects/morning-tapes.json",
             "hints": [
-              "Line up the first note of the ident. Then let both tapes run.",
-              "Sunday starts later. Move it left until the idents sit on top of each other, then keep watching after the ident ends.",
-              "Sunday’s ident starts about a third of a second late. Once the two idents sit together, check the breath and the click before “morning.”"
+              "Line up the end of the ident first. Then play both tapes together.",
+              "AutoRick reads a new script every day. A person says the same words a little differently each time.",
+              "Only a recording repeats every breath and click. Compare each voice with the ident."
             ]
           },
           "goal": "Line the two cassettes up on the ident and time Dad’s recorder.",
-          "background": "Steve puts the red cassette in one ear and the blue in the other. If the recorder runs true, the two idents will line up and both last twelve seconds. Whatever comes after the ident was recorded live in the kitchen.",
+          "background": "Steve puts the red cassette in one ear and the blue in the other. If the recorder runs true, the two idents will line up. The tapes also caught the rest of the kitchen: AutoRick on the radio, Nora on her way out, and Steve himself.",
           "difficulty": 3,
           "type": "tape",
           "hints": [
-            "Line up the first note of the ident. Then let both tapes run.",
-            "Sunday starts later. Move it left until the idents sit on top of each other, then keep watching after the ident ends.",
-            "Sunday’s ident starts about a third of a second late. Once the two idents sit together, check the breath and the click before “morning.”"
+            "Line up the end of the ident first. Then play both tapes together.",
+            "AutoRick reads a new script every day. A person says the same words a little differently each time.",
+            "Only a recording repeats every breath and click. Compare each voice with the ident."
           ],
           "lead": [],
           "finding": "c1_flat.compare.find"
@@ -653,7 +703,7 @@
           "goal": "Steve wants to save his mother’s last voicemail before the tape wears out."
         }
       },
-      "coach": "Steve’s tools are Dad’s recorder and his notebook. Click the red cassette to begin. Press J to open the notebook.",
+      "coach": "Click the red cassette to begin. Click Nora if you want to chat. Press J to open Steve’s notebook.",
       "when": "Saturday the 20th, three in the morning, then Sunday morning",
       "present": [
         "steve",
@@ -661,6 +711,56 @@
       ],
       "next": "Sunday afternoon on the pier (c1_pier).",
       "context": [],
+      "talk": [
+        {
+          "id": "c1_flat.talk.iris.1",
+          "speaker": "iris",
+          "topic": "Breakfast",
+          "after": "",
+          "lines": [
+            "c1_flat.talk.iris.1.01",
+            "c1_flat.talk.iris.1.02",
+            "c1_flat.talk.iris.1.03",
+            "c1_flat.talk.iris.1.04"
+          ]
+        },
+        {
+          "id": "c1_flat.talk.iris.2",
+          "speaker": "iris",
+          "topic": "The otters",
+          "after": "",
+          "lines": [
+            "c1_flat.talk.iris.2.01",
+            "c1_flat.talk.iris.2.02",
+            "c1_flat.talk.iris.2.03",
+            "c1_flat.talk.iris.2.04"
+          ]
+        },
+        {
+          "id": "c1_flat.talk.iris.3",
+          "speaker": "iris",
+          "topic": "AutoRick",
+          "after": "",
+          "lines": [
+            "c1_flat.talk.iris.3.01",
+            "c1_flat.talk.iris.3.02",
+            "c1_flat.talk.iris.3.03",
+            "c1_flat.talk.iris.3.04"
+          ]
+        },
+        {
+          "id": "c1_flat.talk.iris.4",
+          "speaker": "iris",
+          "topic": "How she slept",
+          "after": "c1_flat.compare",
+          "lines": [
+            "c1_flat.talk.iris.4.01",
+            "c1_flat.talk.iris.4.02",
+            "c1_flat.talk.iris.4.03",
+            "c1_flat.talk.iris.4.04"
+          ]
+        }
+      ],
       "recap": [
         "c1_flat.recap.01",
         "c1_flat.recap.02"
@@ -761,7 +861,7 @@
         {
           "id": "c1_pier.bait",
           "title": "Agnes’s bait stall",
-          "prompt": "Agnes is humming along with something. Every sound has a source. Is it her, or something else?",
+          "prompt": "Every sound has a source. Is the low note Agnes, or something else?",
           "options": [
             "Ask which part of the bay she hears it from",
             "Ask when she learned the melody",
@@ -777,108 +877,108 @@
           "kind": "record",
           "sounds": [],
           "hints": [
-            "Who heard the note without hearing Agnes?",
-            "The winch stopped halfway, so it can’t be the source. The fog horn was over before the note began.",
-            "June heard the note by the floating dock and never heard Agnes. That gives you the source and the independent ear. The other two follow."
+            "Start with June. What did she hear, and where was she?",
+            "A sound that stops early can’t be making a note that keeps going.",
+            "June never heard Agnes, but she heard the note by the water. Where does that put the note?"
           ],
           "puzzle": {
             "presentation": "case_board",
-            "instruction": "Agnes keeps a tide book in her bait tin, with pockets for the things she hears. Help her file who and what made the low note.",
+            "instruction": "Agnes keeps a tide book in her bait tin. Help her answer four questions about the low note.",
             "evidence": [
-              "Sheriff June Calder was buying bait at the fish shed, upwind. She heard the low note before Agnes started humming, and she could never hear Agnes at all.",
-              "With the winch stopped, June heard the note most clearly beside the water, under the floating dock.",
-              "The winch operator says he shut his motor off halfway through the low note.",
-              "The fog horn sounded twice before the low note began, then stayed quiet.",
-              "Agnes’s tin has pockets for a source, an imitation, a noise that stopped too soon and an independent ear."
+              "June was in the fish-shed line. She heard the low note before Agnes started humming.",
+              "June could not hear Agnes from the fish shed.",
+              "June heard the note best by the water, under the floating dock.",
+              "The winch stopped halfway through the note. The note kept going."
             ],
             "stages": [
               {
                 "mode": "match",
-                "prompt": "File each card in the pocket it belongs in.",
+                "prompt": "Put one card on each question.",
                 "slots": [
-                  "The source",
-                  "An imitation",
-                  "Stopped too soon",
-                  "An independent ear"
+                  "Where does the low note come from?",
+                  "Who is only humming along?",
+                  "What stopped before the note did?",
+                  "Who heard the note without Agnes?"
                 ],
                 "pieces": [
-                  "Agnes’s humming",
-                  "June at the fish shed",
-                  "Sound from the water",
+                  "Something in the water",
+                  "Agnes",
                   "The harbor winch",
-                  "The fog horn"
+                  "June Calder"
                 ],
                 "answer": [
-                  2,
                   0,
-                  3,
-                  1
+                  1,
+                  2,
+                  3
                 ]
               }
             ],
             "solution": [
-              2,
               0,
-              3,
-              1
+              1,
+              2,
+              3
             ],
             "rows": [
               {
-                "label": "The source",
+                "label": "Where does the low note come from?",
                 "options": [
-                  "Agnes’s humming",
-                  "June at the fish shed",
-                  "Sound from the water",
+                  "Something in the water",
+                  "Agnes",
                   "The harbor winch",
-                  "The fog horn"
+                  "June Calder"
                 ]
               },
               {
-                "label": "An imitation",
+                "label": "Who is only humming along?",
                 "options": [
-                  "Agnes’s humming",
-                  "June at the fish shed",
-                  "Sound from the water",
+                  "Something in the water",
+                  "Agnes",
                   "The harbor winch",
-                  "The fog horn"
+                  "June Calder"
                 ]
               },
               {
-                "label": "Stopped too soon",
+                "label": "What stopped before the note did?",
                 "options": [
-                  "Agnes’s humming",
-                  "June at the fish shed",
-                  "Sound from the water",
+                  "Something in the water",
+                  "Agnes",
                   "The harbor winch",
-                  "The fog horn"
+                  "June Calder"
                 ]
               },
               {
-                "label": "An independent ear",
+                "label": "Who heard the note without Agnes?",
                 "options": [
-                  "Agnes’s humming",
-                  "June at the fish shed",
-                  "Sound from the water",
+                  "Something in the water",
+                  "Agnes",
                   "The harbor winch",
-                  "The fog horn"
+                  "June Calder"
                 ]
               }
             ],
             "wrong_text": "Something here doesn’t match Agnes’s tide book yet.",
             "hints": [
-              "Who heard the note without hearing Agnes?",
-              "The winch stopped halfway, so it can’t be the source. The fog horn was over before the note began.",
-              "June heard the note by the floating dock and never heard Agnes. That gives you the source and the independent ear. The other two follow."
+              "Start with June. What did she hear, and where was she?",
+              "A sound that stops early can’t be making a note that keeps going.",
+              "June never heard Agnes, but she heard the note by the water. Where does that put the note?"
             ]
           },
           "goal": "Work out where the low note is coming from.",
-          "background": "Mrs. Agnes Penhallow taught Steve third grade. She is ninety-one, sells bait that nobody buys and still corrects everyone’s grammar. Today a low note is drifting in off the water, and she is humming along. Steve knows that note. It sits under Mom’s voicemail.",
-          "difficulty": 2,
+          "background": "Mrs. Agnes Penhallow taught Steve in third grade. She is ninety-one and sells bait that nobody buys. Today a low note is drifting in off the water, and she is humming along. Steve knows that note. It is under Mom’s voicemail.",
+          "difficulty": 1,
           "type": "board",
           "lead": [
             "c1_pier.in.02",
             "c1_pier.bait.lead.01",
-            "c1_pier.bait.lead.02"
+            "c1_pier.bait.lead.02",
+            "c1_pier.bait.lead.03",
+            "c1_pier.bait.lead.04",
+            "c1_pier.bait.lead.05",
+            "c1_pier.bait.lead.06",
+            "c1_pier.bait.lead.07",
+            "c1_pier.bait.lead.08"
           ],
           "finding": "c1_pier.bait.find"
         }
@@ -903,14 +1003,15 @@
           "direction": "Move toward the active interaction."
         }
       ],
-      "coach": "Some leads open a case board. Read the case notes, click a card, then click where it goes, or drag it. Press Check this step when every slot is filled.",
+      "coach": "Click people to chat. Some leads open a case board: pick a card, then pick the question it answers, and press Check.",
       "when": "Sunday the 21st, afternoon",
       "present": [
         "steve",
         "iris",
         "agnes",
         "lyle_copy",
-        "pell"
+        "pell",
+        "calder"
       ],
       "next": "Sunday dinner at La Marea (c1_dinner).",
       "context": [
@@ -918,6 +1019,113 @@
         "c1_pier.ctx.02",
         "c1_pier.ctx.03",
         "c1_pier.ctx.04"
+      ],
+      "talk": [
+        {
+          "id": "c1_pier.talk.iris.1",
+          "speaker": "iris",
+          "topic": "Admiral",
+          "after": "",
+          "lines": [
+            "c1_pier.talk.iris.1.01",
+            "c1_pier.talk.iris.1.02",
+            "c1_pier.talk.iris.1.03",
+            "c1_pier.talk.iris.1.04"
+          ]
+        },
+        {
+          "id": "c1_pier.talk.iris.2",
+          "speaker": "iris",
+          "topic": "The fish-shed line",
+          "after": "",
+          "lines": [
+            "c1_pier.talk.iris.2.01",
+            "c1_pier.talk.iris.2.02",
+            "c1_pier.talk.iris.2.03"
+          ]
+        },
+        {
+          "id": "c1_pier.talk.iris.3",
+          "speaker": "iris",
+          "topic": "Her whistle",
+          "after": "c1_pier.whistle",
+          "lines": [
+            "c1_pier.talk.iris.3.01",
+            "c1_pier.talk.iris.3.02",
+            "c1_pier.talk.iris.3.03",
+            "c1_pier.talk.iris.3.04"
+          ]
+        },
+        {
+          "id": "c1_pier.talk.agnes.1",
+          "speaker": "agnes",
+          "topic": "Business at the stall",
+          "after": "",
+          "lines": [
+            "c1_pier.talk.agnes.1.01",
+            "c1_pier.talk.agnes.1.02",
+            "c1_pier.talk.agnes.1.03",
+            "c1_pier.talk.agnes.1.04"
+          ]
+        },
+        {
+          "id": "c1_pier.talk.agnes.2",
+          "speaker": "agnes",
+          "topic": "Third grade",
+          "after": "",
+          "lines": [
+            "c1_pier.talk.agnes.2.01",
+            "c1_pier.talk.agnes.2.02",
+            "c1_pier.talk.agnes.2.03",
+            "c1_pier.talk.agnes.2.04"
+          ]
+        },
+        {
+          "id": "c1_pier.talk.calder.1",
+          "speaker": "calder",
+          "topic": "Sunday fish",
+          "after": "",
+          "lines": [
+            "c1_pier.talk.calder.1.01",
+            "c1_pier.talk.calder.1.02",
+            "c1_pier.talk.calder.1.03"
+          ]
+        },
+        {
+          "id": "c1_pier.talk.calder.2",
+          "speaker": "calder",
+          "topic": "Lyle",
+          "after": "",
+          "lines": [
+            "c1_pier.talk.calder.2.01",
+            "c1_pier.talk.calder.2.02",
+            "c1_pier.talk.calder.2.03"
+          ]
+        },
+        {
+          "id": "c1_pier.talk.lyle_copy.1",
+          "speaker": "lyle_copy",
+          "topic": "The boys’ game",
+          "after": "c1_pier.door",
+          "lines": [
+            "c1_pier.talk.lyle_copy.1.01",
+            "c1_pier.talk.lyle_copy.1.02",
+            "c1_pier.talk.lyle_copy.1.03",
+            "c1_pier.talk.lyle_copy.1.04"
+          ]
+        },
+        {
+          "id": "c1_pier.talk.pell.1",
+          "speaker": "pell",
+          "topic": "Sunday mail",
+          "after": "",
+          "lines": [
+            "c1_pier.talk.pell.1.01",
+            "c1_pier.talk.pell.1.02",
+            "c1_pier.talk.pell.1.03",
+            "c1_pier.talk.pell.1.04"
+          ]
+        }
       ],
       "recap": [
         "c1_pier.recap.01",
@@ -1006,7 +1214,7 @@
           "difficulty": 2,
           "type": "rows",
           "puzzle": {
-            "instruction": "Pick the latest argument anyone remembers, then the earliest time she simply agreed.",
+            "instruction": "Pick the last argument anyone remembers. Then pick the first time she just agreed.",
             "rows": [
               {
                 "label": "Last argument anyone remembers",
@@ -1064,31 +1272,33 @@
           "kind": "record",
           "sounds": [],
           "hints": [
-            "Start with the night the buoy was ashore. It couldn’t ring.",
-            "Count from one field date to the next. September has thirty days.",
-            "No bell means the buoy was ashore. Two taps means the repair crew. Count from September 24 to October 3 across the end of the month, then keep the same step."
+            "Where was the buoy on October 3? Could it ring that night?",
+            "Count the nights from one date to the next. September has thirty days.",
+            "September 24 to October 3 is the same count as October 3 to October 12. Add that count once more."
           ],
           "puzzle": {
             "presentation": "case_board",
-            "instruction": "File each field reel against its date, then find the pattern in the dates.",
+            "instruction": "Match each reel to its date. Then count the nights between dates to find the next loud night.",
             "evidence": [
-              "Tomás’s log: on September 24, low tide left the bell buoy ringing. On October 3 the buoy was ashore with a cracked clapper. On October 12 the repair crew tapped it twice before they relaunched it.",
-              "Each reel starts with whatever was making noise when Tomás pressed record: one bell on Salt, a gull and no bell on Thread, two uneven knocks on Glass.",
+              "September 24: the bell buoy was in the water, ringing at low tide.",
+              "October 3: the buoy was ashore for repair, with a cracked clapper. It could not ring.",
+              "October 12: the repair crew tapped the buoy twice, then put it back in the water.",
+              "Each reel starts with whatever was making noise when Tomás pressed record.",
               "Tomás only goes out on the nights the hum is loudest. September has thirty days."
             ],
             "stages": [
               {
                 "mode": "match",
-                "prompt": "Match each field date to the sound its reel starts with.",
+                "prompt": "Match each date to the first sound on its reel.",
                 "slots": [
                   "September 24",
                   "October 3",
                   "October 12"
                 ],
                 "pieces": [
-                  "One bell (Salt)",
-                  "Two uneven knocks (Glass)",
-                  "A gull, no bell (Thread)"
+                  "One bell",
+                  "Two knocks",
+                  "A gull, and no bell"
                 ],
                 "answer": [
                   0,
@@ -1098,9 +1308,9 @@
               },
               {
                 "mode": "match",
-                "prompt": "Count the nights between field dates. When is the next loud night?",
+                "prompt": "Count the nights between the dates. When is the next loud night?",
                 "slots": [
-                  "Nights between field dates",
+                  "Nights between the dates",
                   "The next loud night"
                 ],
                 "pieces": [
@@ -1128,29 +1338,29 @@
               {
                 "label": "September 24",
                 "options": [
-                  "One bell (Salt)",
-                  "Two uneven knocks (Glass)",
-                  "A gull, no bell (Thread)"
+                  "One bell",
+                  "Two knocks",
+                  "A gull, and no bell"
                 ]
               },
               {
                 "label": "October 3",
                 "options": [
-                  "One bell (Salt)",
-                  "Two uneven knocks (Glass)",
-                  "A gull, no bell (Thread)"
+                  "One bell",
+                  "Two knocks",
+                  "A gull, and no bell"
                 ]
               },
               {
                 "label": "October 12",
                 "options": [
-                  "One bell (Salt)",
-                  "Two uneven knocks (Glass)",
-                  "A gull, no bell (Thread)"
+                  "One bell",
+                  "Two knocks",
+                  "A gull, and no bell"
                 ]
               },
               {
-                "label": "Nights between field dates",
+                "label": "Nights between the dates",
                 "options": [
                   "Seven",
                   "Nine",
@@ -1174,9 +1384,9 @@
             ],
             "wrong_text": "Tomás squints at the crate. Something here doesn’t match his log.",
             "hints": [
-              "Start with the night the buoy was ashore. It couldn’t ring.",
-              "Count from one field date to the next. September has thirty days.",
-              "No bell means the buoy was ashore. Two taps means the repair crew. Count from September 24 to October 3 across the end of the month, then keep the same step."
+              "Where was the buoy on October 3? Could it ring that night?",
+              "Count the nights from one date to the next. September has thirty days.",
+              "September 24 to October 3 is the same count as October 3 to October 12. Add that count once more."
             ]
           },
           "goal": "Find out whether the hum in the bay keeps a schedule.",
@@ -1216,7 +1426,7 @@
         }
       ],
       "when": "Sunday the 21st, six in the evening",
-      "coach": "Some leads ask for settings. Pick one choice on each row, then press Apply settings. You can try again as often as you like.",
+      "coach": "Some leads ask for settings. Pick one choice on each row, then press Apply settings. Each row shows if it is right. Click people at the table to chat.",
       "present": [
         "steve",
         "iris",
@@ -1230,6 +1440,88 @@
       "context": [
         "c1_dinner.ctx.01",
         "c1_dinner.ctx.02"
+      ],
+      "talk": [
+        {
+          "id": "c1_dinner.talk.carmen.1",
+          "speaker": "carmen",
+          "topic": "The mole",
+          "after": "",
+          "lines": [
+            "c1_dinner.talk.carmen.1.01",
+            "c1_dinner.talk.carmen.1.02",
+            "c1_dinner.talk.carmen.1.03",
+            "c1_dinner.talk.carmen.1.04"
+          ]
+        },
+        {
+          "id": "c1_dinner.talk.luis.1",
+          "speaker": "luis",
+          "topic": "Dad’s chair",
+          "after": "",
+          "lines": [
+            "c1_dinner.talk.luis.1.01",
+            "c1_dinner.talk.luis.1.02",
+            "c1_dinner.talk.luis.1.03",
+            "c1_dinner.talk.luis.1.04"
+          ]
+        },
+        {
+          "id": "c1_dinner.talk.mateo.1",
+          "speaker": "mateo",
+          "topic": "Little League",
+          "after": "",
+          "lines": [
+            "c1_dinner.talk.mateo.1.01",
+            "c1_dinner.talk.mateo.1.02",
+            "c1_dinner.talk.mateo.1.03"
+          ]
+        },
+        {
+          "id": "c1_dinner.talk.rafa.1",
+          "speaker": "rafa",
+          "topic": "The kitchen",
+          "after": "",
+          "lines": [
+            "c1_dinner.talk.rafa.1.01",
+            "c1_dinner.talk.rafa.1.02",
+            "c1_dinner.talk.rafa.1.03"
+          ]
+        },
+        {
+          "id": "c1_dinner.talk.tomas.1",
+          "speaker": "tomas",
+          "topic": "His podcast",
+          "after": "",
+          "lines": [
+            "c1_dinner.talk.tomas.1.01",
+            "c1_dinner.talk.tomas.1.02",
+            "c1_dinner.talk.tomas.1.03"
+          ]
+        },
+        {
+          "id": "c1_dinner.talk.tomas.2",
+          "speaker": "tomas",
+          "topic": "The hum",
+          "after": "c1_dinner.podcast",
+          "lines": [
+            "c1_dinner.talk.tomas.2.01",
+            "c1_dinner.talk.tomas.2.02",
+            "c1_dinner.talk.tomas.2.03"
+          ]
+        },
+        {
+          "id": "c1_dinner.talk.iris.1",
+          "speaker": "iris",
+          "topic": "A quiet dinner",
+          "after": "",
+          "lines": [
+            "c1_dinner.talk.iris.1.01",
+            "c1_dinner.talk.iris.1.02",
+            "c1_dinner.talk.iris.1.03",
+            "c1_dinner.talk.iris.1.04"
+          ]
+        }
       ],
       "recap": [
         "c1_dinner.recap.01",
@@ -1250,7 +1542,7 @@
         {
           "id": "c1_escape.order",
           "title": "The paper in the raincoat",
-          "prompt": "Steve’s notebook from dinner puts Nora at La Marea that evening, across the bay. Could she have slipped away to sign this?",
+          "prompt": "Steve’s notes from dinner put Nora at La Marea that evening. Could she have slipped away to sign this?",
           "options": [
             "The sign-off against the family’s witnessed interval",
             "The form’s print date against the reservation date",
@@ -1269,151 +1561,95 @@
           "kind": "choice",
           "sounds": [],
           "hints": [
-            "Correct the aquarium clock first. It ran fast, so the real time was earlier.",
-            "The sign-off and the kitchen check happened at the same real minute on opposite sides of the bay. Then compare the round trip with the longest gap between photos.",
-            "Take fifteen minutes off the wall clock. Then ask whether any gap between Carmen’s photos is as long as eighteen minutes there and eighteen back."
+            "The aquarium clock runs fast. Take the extra minutes off.",
+            "The real signing time matches one of Carmen’s photos.",
+            "Add up the trip there and back. Is any gap between photos that long?"
           ],
           "puzzle": {
             "presentation": "case_board",
-            "instruction": "Put the two documents on the same clock, then test the shortest possible trip against Carmen’s photos.",
+            "instruction": "First fix the time on the work order. Then check whether Nora had time for the trip.",
             "evidence": [
-              "The aquarium wall clock ran fifteen minutes fast all day. The La Marea kitchen clock agreed with harbor time.",
-              "The north-wing sign-off reads 20:30. The kitchen birthday check in Nora’s hand reads 20:15.",
-              "Mateo drove Nora in at noon. Rafa drove her home at midnight. Only the signed work order puts someone using Nora’s name in the north wing.",
-              "The quickest crossing of the bay takes eighteen minutes each way. Steve’s notebook from dinner: Carmen’s photos of Nora at 20:04, 20:15 and 20:29."
+              "The work order says 20:30 by the aquarium clock.",
+              "The aquarium clock runs fifteen minutes fast.",
+              "Carmen’s photos show Nora at La Marea at 20:04, 20:15 and 20:29. At 20:15 she is holding the kitchen check.",
+              "Crossing the bay takes eighteen minutes each way."
             ],
             "stages": [
               {
                 "mode": "match",
-                "prompt": "Correct both clocks to harbor time.",
+                "prompt": "When was the order really signed, and where was Nora then?",
                 "slots": [
-                  "North-wing wall clock",
-                  "Kitchen check"
+                  "Real time of the signature",
+                  "Where Nora was at that time"
                 ],
                 "pieces": [
-                  "20:15 across the bay",
-                  "20:15 at La Marea",
-                  "20:45 across the bay"
+                  "20:15",
+                  "20:30",
+                  "20:45",
+                  "At La Marea, in Carmen’s photo",
+                  "At the aquarium"
                 ],
                 "answer": [
                   0,
-                  1
+                  3
                 ]
               },
               {
                 "mode": "match",
-                "prompt": "Attach a source to each part of the story. Keep a signature separate from a witness.",
+                "prompt": "Could she get there and back between two photos?",
                 "slots": [
-                  "Arrival witness",
-                  "Inside the restaurant at 20:15",
-                  "Someone using Nora’s name",
-                  "Departure witness"
-                ],
-                "pieces": [
-                  "Signed work order",
-                  "Mateo’s ride in",
-                  "Rafa’s ride home",
-                  "Carmen’s kitchen photo"
-                ],
-                "answer": [
-                  1,
-                  3,
-                  0,
-                  2
-                ]
-              },
-              {
-                "mode": "match",
-                "prompt": "Could Nora have made the round trip between photos?",
-                "slots": [
-                  "Round trip to the aquarium",
+                  "Trip there and back",
                   "Longest gap between photos",
-                  "Verdict"
+                  "So"
                 ],
                 "pieces": [
                   "36 minutes",
-                  "14 minutes, 20:15 to 20:29",
-                  "11 minutes, 20:04 to 20:15",
+                  "18 minutes",
+                  "14 minutes",
                   "Nora could not have signed it",
                   "Nora slipped out between photos"
                 ],
                 "answer": [
                   0,
-                  1,
+                  2,
                   3
                 ]
               }
             ],
             "solution": [
               0,
-              1,
-              1,
               3,
               0,
               2,
-              0,
-              1,
               3
             ],
             "rows": [
               {
-                "label": "North-wing wall clock",
+                "label": "Real time of the signature",
                 "options": [
-                  "20:15 across the bay",
-                  "20:15 at La Marea",
-                  "20:45 across the bay"
+                  "20:15",
+                  "20:30",
+                  "20:45",
+                  "At La Marea, in Carmen’s photo",
+                  "At the aquarium"
                 ]
               },
               {
-                "label": "Kitchen check",
+                "label": "Where Nora was at that time",
                 "options": [
-                  "20:15 across the bay",
-                  "20:15 at La Marea",
-                  "20:45 across the bay"
+                  "20:15",
+                  "20:30",
+                  "20:45",
+                  "At La Marea, in Carmen’s photo",
+                  "At the aquarium"
                 ]
               },
               {
-                "label": "Arrival witness",
-                "options": [
-                  "Signed work order",
-                  "Mateo’s ride in",
-                  "Rafa’s ride home",
-                  "Carmen’s kitchen photo"
-                ]
-              },
-              {
-                "label": "Inside the restaurant at 20:15",
-                "options": [
-                  "Signed work order",
-                  "Mateo’s ride in",
-                  "Rafa’s ride home",
-                  "Carmen’s kitchen photo"
-                ]
-              },
-              {
-                "label": "Someone using Nora’s name",
-                "options": [
-                  "Signed work order",
-                  "Mateo’s ride in",
-                  "Rafa’s ride home",
-                  "Carmen’s kitchen photo"
-                ]
-              },
-              {
-                "label": "Departure witness",
-                "options": [
-                  "Signed work order",
-                  "Mateo’s ride in",
-                  "Rafa’s ride home",
-                  "Carmen’s kitchen photo"
-                ]
-              },
-              {
-                "label": "Round trip to the aquarium",
+                "label": "Trip there and back",
                 "options": [
                   "36 minutes",
-                  "14 minutes, 20:15 to 20:29",
-                  "11 minutes, 20:04 to 20:15",
+                  "18 minutes",
+                  "14 minutes",
                   "Nora could not have signed it",
                   "Nora slipped out between photos"
                 ]
@@ -1422,37 +1658,39 @@
                 "label": "Longest gap between photos",
                 "options": [
                   "36 minutes",
-                  "14 minutes, 20:15 to 20:29",
-                  "11 minutes, 20:04 to 20:15",
+                  "18 minutes",
+                  "14 minutes",
                   "Nora could not have signed it",
                   "Nora slipped out between photos"
                 ]
               },
               {
-                "label": "Verdict",
+                "label": "So",
                 "options": [
                   "36 minutes",
-                  "14 minutes, 20:15 to 20:29",
-                  "11 minutes, 20:04 to 20:15",
+                  "18 minutes",
+                  "14 minutes",
                   "Nora could not have signed it",
                   "Nora slipped out between photos"
                 ]
               }
             ],
-            "wrong_text": "Something here doesn’t fit the clocks or the photos yet.",
+            "wrong_text": "Something here doesn’t fit the clock or the photos yet.",
             "hints": [
-              "Correct the aquarium clock first. It ran fast, so the real time was earlier.",
-              "The sign-off and the kitchen check happened at the same real minute on opposite sides of the bay. Then compare the round trip with the longest gap between photos.",
-              "Take fifteen minutes off the wall clock. Then ask whether any gap between Carmen’s photos is as long as eighteen minutes there and eighteen back."
+              "The aquarium clock runs fast. Take the extra minutes off.",
+              "The real signing time matches one of Carmen’s photos.",
+              "Add up the trip there and back. Is any gap between photos that long?"
             ]
           },
           "goal": "Work out whether Nora could have signed this work order.",
           "background": "Something stiff fell out of the raincoat lining when Steve hung it up: an aquarium work order for the north wing, sealed for two years. Only the head aquarist signs for it, and that is Nora. It is signed in her name on Carmen’s birthday, at 20:30 by the aquarium wall clock.",
-          "difficulty": 3,
+          "difficulty": 2,
           "art": "res://assets/illustrated/campaign/inserts/c1_escape-north-wing-work-order.webp",
           "type": "board",
           "lead": [
-            "c1_escape.order.lead.01"
+            "c1_escape.order.lead.01",
+            "c1_escape.order.lead.02",
+            "c1_escape.order.lead.03"
           ],
           "finding": "c1_escape.order.find"
         },
@@ -1477,7 +1715,7 @@
           "kind": "choice",
           "sounds": [],
           "puzzle": {
-            "instruction": "NORMAL powers the stair bulb and the gate motor. SERVICE powers the bulb only. OFF powers nothing. The gate pad remembers a press only while the motor is off, and forgets it the moment your thumb lifts. The motor checks the pad when it switches on.",
+            "instruction": "NORMAL: stair light on, gate motor on. SERVICE: light on, motor off. OFF: everything off. The gate pad only holds a press while the motor is off and your thumb stays down. The motor checks the pad when it switches on.",
             "rows": [
               {
                 "label": "Selector before touching the pad",
@@ -1596,6 +1834,7 @@
         "c1_escape.ctx.01",
         "c1_escape.ctx.02"
       ],
+      "talk": [],
       "recap": [
         "c1_escape.recap.01",
         "c1_escape.recap.02",
@@ -1895,6 +2134,7 @@
       ],
       "next": "Through the old seawater intake tunnel, under the bay (c2_ship).",
       "context": [],
+      "talk": [],
       "recap": [
         "c2_aquarium.recap.01",
         "c2_aquarium.recap.02",
@@ -2352,6 +2592,7 @@
       ],
       "next": "Chapter 2 film: dawn on the beach, then a tank filling aboard the ship. Then Chapter 3.",
       "context": [],
+      "talk": [],
       "recap": [
         "c2_ship.recap.01",
         "c2_ship.recap.02",
@@ -2618,6 +2859,7 @@
         "c3_house.ctx.01",
         "c3_house.ctx.02"
       ],
+      "talk": [],
       "recap": [
         "c3_house.recap.01",
         "c3_house.recap.02",
@@ -2952,6 +3194,7 @@
         "c3_archive.ctx.01",
         "c3_archive.ctx.02"
       ],
+      "talk": [],
       "recap": [
         "c3_archive.recap.01",
         "c3_archive.recap.02"
@@ -3277,6 +3520,7 @@
         "i1_archive.ctx.01",
         "i1_archive.ctx.02"
       ],
+      "talk": [],
       "recap": [
         "i1_archive.recap.01",
         "i1_archive.recap.02"
@@ -3414,6 +3658,7 @@
       ],
       "next": "Chapter 4 (c4_safe).",
       "context": [],
+      "talk": [],
       "recap": [
         "p_veyr.recap.01",
         "p_veyr.recap.02"
@@ -3716,6 +3961,7 @@
         "c4_safe.ctx.02",
         "c4_safe.ctx.03"
       ],
+      "talk": [],
       "recap": [
         "c4_safe.recap.01",
         "c4_safe.recap.02"
@@ -3968,6 +4214,7 @@
         "c4_escape.ctx.01",
         "c4_escape.ctx.02"
       ],
+      "talk": [],
       "recap": [
         "c4_escape.recap.01",
         "c4_escape.recap.02"
@@ -4240,6 +4487,7 @@
         "c5_shack.ctx.01",
         "c5_shack.ctx.02"
       ],
+      "talk": [],
       "recap": [
         "c5_shack.recap.01",
         "c5_shack.recap.02",
@@ -4663,6 +4911,7 @@
         "c5_station.ctx.01",
         "c5_station.ctx.02"
       ],
+      "talk": [],
       "recap": [
         "c5_station.recap.01",
         "c5_station.recap.02"
@@ -4977,6 +5226,7 @@
         "c6_iris.ctx.01",
         "c6_iris.ctx.02"
       ],
+      "talk": [],
       "recap": [
         "c6_iris.recap.01",
         "c6_iris.recap.02",
@@ -5318,6 +5568,7 @@
       "context": [
         "c6_jail.ctx.01"
       ],
+      "talk": [],
       "recap": [
         "c6_jail.recap.01",
         "c6_jail.recap.02"
@@ -5644,6 +5895,7 @@
         "i2_nora.ctx.01",
         "i2_nora.ctx.02"
       ],
+      "talk": [],
       "recap": [
         "i2_nora.recap.01",
         "i2_nora.recap.02"
@@ -5886,6 +6138,7 @@
       "context": [
         "c7_gate.ctx.01"
       ],
+      "talk": [],
       "recap": [
         "c7_gate.recap.01",
         "c7_gate.recap.02"
@@ -6213,6 +6466,7 @@
         "c7_swap.ctx.01",
         "c7_swap.ctx.02"
       ],
+      "talk": [],
       "recap": [
         "c7_swap.recap.01",
         "c7_swap.recap.02",
@@ -6404,6 +6658,7 @@
       "context": [
         "p_meeting.ctx.01"
       ],
+      "talk": [],
       "recap": [
         "p_meeting.recap.01"
       ]
@@ -6718,6 +6973,7 @@
         "c8_lab.ctx.01",
         "c8_lab.ctx.02"
       ],
+      "talk": [],
       "recap": [
         "c8_lab.recap.01",
         "c8_lab.recap.02"
@@ -6841,6 +7097,7 @@
       "context": [
         "c8_beach.ctx.01"
       ],
+      "talk": [],
       "recap": [
         "c8_beach.recap.01",
         "c8_beach.recap.02"
@@ -7222,6 +7479,7 @@
       "context": [
         "c8_rig.ctx.01"
       ],
+      "talk": [],
       "recap": [
         "c8_rig.recap.01",
         "c8_rig.recap.02"
@@ -7425,6 +7683,7 @@
       "context": [
         "c9_gallery.ctx.01"
       ],
+      "talk": [],
       "recap": [
         "c9_gallery.recap.01",
         "c9_gallery.recap.02"
@@ -7732,6 +7991,7 @@
       "context": [
         "c9_wake.ctx.01"
       ],
+      "talk": [],
       "recap": [
         "c9_wake.recap.01",
         "c9_wake.recap.02"
@@ -7993,6 +8253,7 @@
       ],
       "next": "Chapter 10 (c10_station).",
       "context": [],
+      "talk": [],
       "recap": [
         "c9_choir.recap.01",
         "c9_choir.recap.02"
@@ -8321,6 +8582,7 @@
         "c10_station.ctx.01",
         "c10_station.ctx.02"
       ],
+      "talk": [],
       "recap": [
         "c10_station.recap.01",
         "c10_station.recap.02"
@@ -8508,6 +8770,7 @@
       ],
       "next": "Live, on every station (c10_live).",
       "context": [],
+      "talk": [],
       "recap": [
         "c10_town.recap.01",
         "c10_town.recap.02"
@@ -8738,6 +9001,7 @@
       ],
       "next": "The ship’s antenna room and the open channel (c10_report).",
       "context": [],
+      "talk": [],
       "recap": [
         "c10_live.recap.01",
         "c10_live.recap.02"
@@ -8993,6 +9257,7 @@
       "context": [
         "c10_report.ctx.01"
       ],
+      "talk": [],
       "recap": [
         "c10_report.recap.01",
         "c10_report.recap.02"
@@ -9148,6 +9413,7 @@
         "helen"
       ],
       "context": [],
+      "talk": [],
       "recap": [
         "epilogue.recap.01"
       ]
@@ -9226,6 +9492,7 @@
         "tomas"
       ],
       "context": [],
+      "talk": [],
       "recap": []
     },
     {
@@ -9307,6 +9574,7 @@
         "ward"
       ],
       "context": [],
+      "talk": [],
       "recap": []
     }
   ],
@@ -9360,6 +9628,86 @@
       "delivery": "narration",
       "display": "Frank Mercer",
       "display_speaker": "Frank Mercer"
+    },
+    "p_bay.talk.helen.1.01": {
+      "id": "p_bay.talk.helen.1.01",
+      "speaker": "frank",
+      "text": "Think the boy will come out with us next time?",
+      "audio": "p_bay.talk.helen.1.01",
+      "display": "Frank Mercer",
+      "display_speaker": "Frank Mercer"
+    },
+    "p_bay.talk.helen.1.02": {
+      "id": "p_bay.talk.helen.1.02",
+      "speaker": "helen",
+      "text": "He’ll say he has a shift. Then he’ll call tomorrow and ask what we heard.",
+      "audio": "p_bay.talk.helen.1.02",
+      "display": "Helen Mercer",
+      "display_speaker": "Helen Mercer"
+    },
+    "p_bay.talk.helen.1.03": {
+      "id": "p_bay.talk.helen.1.03",
+      "speaker": "frank",
+      "text": "He always asks.",
+      "audio": "p_bay.talk.helen.1.03",
+      "display": "Frank Mercer",
+      "display_speaker": "Frank Mercer"
+    },
+    "p_bay.talk.helen.1.04": {
+      "id": "p_bay.talk.helen.1.04",
+      "speaker": "helen",
+      "text": "He’s your son, Frank. He can’t leave a sound alone.",
+      "audio": "p_bay.talk.helen.1.04",
+      "display": "Helen Mercer",
+      "display_speaker": "Helen Mercer"
+    },
+    "p_bay.talk.helen.2.01": {
+      "id": "p_bay.talk.helen.2.01",
+      "speaker": "helen",
+      "text": "My hands are freezing.",
+      "audio": "p_bay.talk.helen.2.01",
+      "display": "Helen Mercer",
+      "display_speaker": "Helen Mercer"
+    },
+    "p_bay.talk.helen.2.02": {
+      "id": "p_bay.talk.helen.2.02",
+      "speaker": "frank",
+      "text": "Gloves are in the tackle box. Under the logbook.",
+      "audio": "p_bay.talk.helen.2.02",
+      "display": "Frank Mercer",
+      "display_speaker": "Frank Mercer"
+    },
+    "p_bay.talk.helen.2.03": {
+      "id": "p_bay.talk.helen.2.03",
+      "speaker": "helen",
+      "text": "Of course they are. Everything in this boat is under the logbook.",
+      "audio": "p_bay.talk.helen.2.03",
+      "display": "Helen Mercer",
+      "display_speaker": "Helen Mercer"
+    },
+    "p_bay.talk.helen.3.01": {
+      "id": "p_bay.talk.helen.3.01",
+      "speaker": "helen",
+      "text": "Listen. It goes up at the end, like a question.",
+      "audio": "p_bay.talk.helen.3.01",
+      "display": "Helen Mercer",
+      "display_speaker": "Helen Mercer"
+    },
+    "p_bay.talk.helen.3.02": {
+      "id": "p_bay.talk.helen.3.02",
+      "speaker": "frank",
+      "text": "Then write it down. Time, place, what it does.",
+      "audio": "p_bay.talk.helen.3.02",
+      "display": "Frank Mercer",
+      "display_speaker": "Frank Mercer"
+    },
+    "p_bay.talk.helen.3.03": {
+      "id": "p_bay.talk.helen.3.03",
+      "speaker": "helen",
+      "text": "Eleven-oh-five. Rowboat. It sounds like it’s waiting for someone.",
+      "audio": "p_bay.talk.helen.3.03",
+      "display": "Helen Mercer",
+      "display_speaker": "Helen Mercer"
     },
     "p_bay.recap.01": {
       "id": "p_bay.recap.01",
@@ -9473,10 +9821,34 @@
       "display": "Steve Mercer",
       "display_speaker": "Steve Mercer"
     },
+    "c1_flat.saturday.03": {
+      "id": "c1_flat.saturday.03",
+      "speaker": "iris",
+      "text": "Coffee’s on the stove. I made it strong, the way you like it.",
+      "audio": "c1_flat.saturday.03",
+      "display_speaker": "Nora Reyes",
+      "display": "Nora Reyes"
+    },
+    "c1_flat.saturday.04": {
+      "id": "c1_flat.saturday.04",
+      "speaker": "steve",
+      "text": "You hate it strong.",
+      "audio": "c1_flat.saturday.04",
+      "display": "Steve Mercer",
+      "display_speaker": "Steve Mercer"
+    },
+    "c1_flat.saturday.05": {
+      "id": "c1_flat.saturday.05",
+      "speaker": "iris",
+      "text": "Strong is fine. Whatever you like.",
+      "audio": "c1_flat.saturday.05",
+      "display_speaker": "Nora Reyes",
+      "display": "Nora Reyes"
+    },
     "c1_flat.saturday.find": {
       "id": "c1_flat.saturday.find",
       "speaker": "steve",
-      "text": "Red cassette, Saturday, 7:15. My ident, AutoRick, and Nora saying good morning on her way out the door.",
+      "text": "Red cassette, Saturday, 7:15. My ident, AutoRick, Nora saying good morning on her way out, and me.",
       "audio": "c1_flat.saturday.find",
       "delivery": "narration",
       "display": "Steve Mercer",
@@ -9508,10 +9880,34 @@
       "display": "Steve Mercer",
       "display_speaker": "Steve Mercer"
     },
+    "c1_flat.sunday.04": {
+      "id": "c1_flat.sunday.04",
+      "speaker": "iris",
+      "text": "I’m off to feed Admiral and the otters. Back by noon.",
+      "audio": "c1_flat.sunday.04",
+      "display_speaker": "Nora Reyes",
+      "display": "Nora Reyes"
+    },
+    "c1_flat.sunday.05": {
+      "id": "c1_flat.sunday.05",
+      "speaker": "steve",
+      "text": "On a Sunday? You used to fight for every Sunday off.",
+      "audio": "c1_flat.sunday.05",
+      "display": "Steve Mercer",
+      "display_speaker": "Steve Mercer"
+    },
+    "c1_flat.sunday.06": {
+      "id": "c1_flat.sunday.06",
+      "speaker": "iris",
+      "text": "The animals don’t know it’s Sunday, sleepyhead.",
+      "audio": "c1_flat.sunday.06",
+      "display_speaker": "Nora Reyes",
+      "display": "Nora Reyes"
+    },
     "c1_flat.sunday.find": {
       "id": "c1_flat.sunday.find",
       "speaker": "steve",
-      "text": "Blue cassette, Sunday, 7:15. The ident again, and Nora again. Now I can time the machine.",
+      "text": "Blue cassette, Sunday, 7:15. The ident, the radio, Nora and me, all over again. Now I can time the machine.",
       "audio": "c1_flat.sunday.find",
       "delivery": "narration",
       "display": "Steve Mercer",
@@ -9544,7 +9940,7 @@
     "c1_flat.compare.find": {
       "id": "c1_flat.compare.find",
       "speaker": "steve",
-      "text": "The ident matches, so the recorder is fine. Nora’s good morning matches just as perfectly. People don’t do that. Recordings do.",
+      "text": "The ident matches, so the recorder is fine. AutoRick and I change from day to day, like anyone would. Nora’s good morning matches perfectly. People don’t do that. Recordings do.",
       "audio": "c1_flat.compare.find",
       "delivery": "narration",
       "display": "Steve Mercer",
@@ -9590,6 +9986,134 @@
       "delivery": "narration",
       "display": "Steve Mercer",
       "display_speaker": "Steve Mercer"
+    },
+    "c1_flat.talk.iris.1.01": {
+      "id": "c1_flat.talk.iris.1.01",
+      "speaker": "steve",
+      "text": "Want some toast before you go?",
+      "audio": "c1_flat.talk.iris.1.01",
+      "display": "Steve Mercer",
+      "display_speaker": "Steve Mercer"
+    },
+    "c1_flat.talk.iris.1.02": {
+      "id": "c1_flat.talk.iris.1.02",
+      "speaker": "iris",
+      "text": "I ate already. There’s fruit in the blue bowl.",
+      "audio": "c1_flat.talk.iris.1.02",
+      "display_speaker": "Nora Reyes",
+      "display": "Nora Reyes"
+    },
+    "c1_flat.talk.iris.1.03": {
+      "id": "c1_flat.talk.iris.1.03",
+      "speaker": "steve",
+      "text": "Since when do you eat breakfast?",
+      "audio": "c1_flat.talk.iris.1.03",
+      "display": "Steve Mercer",
+      "display_speaker": "Steve Mercer"
+    },
+    "c1_flat.talk.iris.1.04": {
+      "id": "c1_flat.talk.iris.1.04",
+      "speaker": "iris",
+      "text": "For a while now. It’s good for you.",
+      "audio": "c1_flat.talk.iris.1.04",
+      "display_speaker": "Nora Reyes",
+      "display": "Nora Reyes"
+    },
+    "c1_flat.talk.iris.2.01": {
+      "id": "c1_flat.talk.iris.2.01",
+      "speaker": "steve",
+      "text": "How are the otter pups?",
+      "audio": "c1_flat.talk.iris.2.01",
+      "display": "Steve Mercer",
+      "display_speaker": "Steve Mercer"
+    },
+    "c1_flat.talk.iris.2.02": {
+      "id": "c1_flat.talk.iris.2.02",
+      "speaker": "iris",
+      "text": "Growing. One of them bit a volunteer again. Only a little.",
+      "audio": "c1_flat.talk.iris.2.02",
+      "display_speaker": "Nora Reyes",
+      "display": "Nora Reyes"
+    },
+    "c1_flat.talk.iris.2.03": {
+      "id": "c1_flat.talk.iris.2.03",
+      "speaker": "steve",
+      "text": "You used to say that was her best quality.",
+      "audio": "c1_flat.talk.iris.2.03",
+      "display": "Steve Mercer",
+      "display_speaker": "Steve Mercer"
+    },
+    "c1_flat.talk.iris.2.04": {
+      "id": "c1_flat.talk.iris.2.04",
+      "speaker": "iris",
+      "text": "She’s a good otter. They’re all good otters.",
+      "audio": "c1_flat.talk.iris.2.04",
+      "display_speaker": "Nora Reyes",
+      "display": "Nora Reyes"
+    },
+    "c1_flat.talk.iris.3.01": {
+      "id": "c1_flat.talk.iris.3.01",
+      "speaker": "iris",
+      "text": "I heard the new radio host this morning. He sounds cheerful.",
+      "audio": "c1_flat.talk.iris.3.01",
+      "display_speaker": "Nora Reyes",
+      "display": "Nora Reyes"
+    },
+    "c1_flat.talk.iris.3.02": {
+      "id": "c1_flat.talk.iris.3.02",
+      "speaker": "steve",
+      "text": "He read yesterday’s weather again. Twelve years at that desk, and they replaced me with him.",
+      "audio": "c1_flat.talk.iris.3.02",
+      "display": "Steve Mercer",
+      "display_speaker": "Steve Mercer"
+    },
+    "c1_flat.talk.iris.3.03": {
+      "id": "c1_flat.talk.iris.3.03",
+      "speaker": "iris",
+      "text": "Then you have more time at home. That’s nice, isn’t it?",
+      "audio": "c1_flat.talk.iris.3.03",
+      "display_speaker": "Nora Reyes",
+      "display": "Nora Reyes"
+    },
+    "c1_flat.talk.iris.3.04": {
+      "id": "c1_flat.talk.iris.3.04",
+      "speaker": "steve",
+      "text": "Sure, Nor. Nice.",
+      "audio": "c1_flat.talk.iris.3.04",
+      "display": "Steve Mercer",
+      "display_speaker": "Steve Mercer"
+    },
+    "c1_flat.talk.iris.4.01": {
+      "id": "c1_flat.talk.iris.4.01",
+      "speaker": "steve",
+      "text": "Nor? How did you sleep?",
+      "audio": "c1_flat.talk.iris.4.01",
+      "display": "Steve Mercer",
+      "display_speaker": "Steve Mercer"
+    },
+    "c1_flat.talk.iris.4.02": {
+      "id": "c1_flat.talk.iris.4.02",
+      "speaker": "iris",
+      "text": "Fine. I always sleep fine.",
+      "audio": "c1_flat.talk.iris.4.02",
+      "display_speaker": "Nora Reyes",
+      "display": "Nora Reyes"
+    },
+    "c1_flat.talk.iris.4.03": {
+      "id": "c1_flat.talk.iris.4.03",
+      "speaker": "steve",
+      "text": "You used to kick the blankets off every night. Every single night.",
+      "audio": "c1_flat.talk.iris.4.03",
+      "display": "Steve Mercer",
+      "display_speaker": "Steve Mercer"
+    },
+    "c1_flat.talk.iris.4.04": {
+      "id": "c1_flat.talk.iris.4.04",
+      "speaker": "iris",
+      "text": "Did I? I don’t remember that.",
+      "audio": "c1_flat.talk.iris.4.04",
+      "display_speaker": "Nora Reyes",
+      "display": "Nora Reyes"
     },
     "c1_flat.recap.01": {
       "id": "c1_flat.recap.01",
@@ -9819,6 +10343,55 @@
       "display_speaker": "Agnes Penhallow",
       "display": "Agnes Penhallow"
     },
+    "c1_pier.bait.lead.03": {
+      "id": "c1_pier.bait.lead.03",
+      "speaker": "steve",
+      "text": "June! Did you hear that hum just now?",
+      "audio": "c1_pier.bait.lead.03",
+      "display": "Steve Mercer",
+      "display_speaker": "Steve Mercer"
+    },
+    "c1_pier.bait.lead.04": {
+      "id": "c1_pier.bait.lead.04",
+      "speaker": "calder",
+      "text": "From the fish-shed line. It started before Agnes did.",
+      "audio": "c1_pier.bait.lead.04",
+      "display": "Sheriff June Calder",
+      "display_speaker": "Sheriff June Calder"
+    },
+    "c1_pier.bait.lead.05": {
+      "id": "c1_pier.bait.lead.05",
+      "speaker": "calder",
+      "text": "It was loudest down by the water, under the floating dock.",
+      "audio": "c1_pier.bait.lead.05",
+      "display": "Sheriff June Calder",
+      "display_speaker": "Sheriff June Calder"
+    },
+    "c1_pier.bait.lead.06": {
+      "id": "c1_pier.bait.lead.06",
+      "speaker": "steve",
+      "text": "Could you hear Agnes humming from there?",
+      "audio": "c1_pier.bait.lead.06",
+      "display": "Steve Mercer",
+      "display_speaker": "Steve Mercer"
+    },
+    "c1_pier.bait.lead.07": {
+      "id": "c1_pier.bait.lead.07",
+      "speaker": "calder",
+      "text": "Nobody can hear Agnes hum. She’s quieter than the fog.",
+      "audio": "c1_pier.bait.lead.07",
+      "display": "Sheriff June Calder",
+      "display_speaker": "Sheriff June Calder"
+    },
+    "c1_pier.bait.lead.08": {
+      "id": "c1_pier.bait.lead.08",
+      "speaker": "steve",
+      "text": "And the winch stopped halfway through. The note just kept going.",
+      "audio": "c1_pier.bait.lead.08",
+      "direction": "quiet, to himself",
+      "display": "Steve Mercer",
+      "display_speaker": "Steve Mercer"
+    },
     "c1_pier.bait.01": {
       "id": "c1_pier.bait.01",
       "speaker": "agnes",
@@ -9835,6 +10408,270 @@
       "delivery": "narration",
       "display": "Steve Mercer",
       "display_speaker": "Steve Mercer"
+    },
+    "c1_pier.talk.iris.1.01": {
+      "id": "c1_pier.talk.iris.1.01",
+      "speaker": "steve",
+      "text": "How old is he now?",
+      "audio": "c1_pier.talk.iris.1.01",
+      "display": "Steve Mercer",
+      "display_speaker": "Steve Mercer"
+    },
+    "c1_pier.talk.iris.1.02": {
+      "id": "c1_pier.talk.iris.1.02",
+      "speaker": "iris",
+      "text": "Nine. He weighs more than your car.",
+      "audio": "c1_pier.talk.iris.1.02",
+      "display_speaker": "Nora Reyes",
+      "display": "Nora Reyes"
+    },
+    "c1_pier.talk.iris.1.03": {
+      "id": "c1_pier.talk.iris.1.03",
+      "speaker": "steve",
+      "text": "You bottle-fed him in our bathtub. For three weeks.",
+      "audio": "c1_pier.talk.iris.1.03",
+      "display": "Steve Mercer",
+      "display_speaker": "Steve Mercer"
+    },
+    "c1_pier.talk.iris.1.04": {
+      "id": "c1_pier.talk.iris.1.04",
+      "speaker": "iris",
+      "text": "I remember. It was a good bathtub.",
+      "audio": "c1_pier.talk.iris.1.04",
+      "display_speaker": "Nora Reyes",
+      "display": "Nora Reyes"
+    },
+    "c1_pier.talk.iris.2.01": {
+      "id": "c1_pier.talk.iris.2.01",
+      "speaker": "iris",
+      "text": "The line is long today. The crab boats came in early.",
+      "audio": "c1_pier.talk.iris.2.01",
+      "display_speaker": "Nora Reyes",
+      "display": "Nora Reyes"
+    },
+    "c1_pier.talk.iris.2.02": {
+      "id": "c1_pier.talk.iris.2.02",
+      "speaker": "steve",
+      "text": "You used to talk your way to the front of that line.",
+      "audio": "c1_pier.talk.iris.2.02",
+      "display": "Steve Mercer",
+      "display_speaker": "Steve Mercer"
+    },
+    "c1_pier.talk.iris.2.03": {
+      "id": "c1_pier.talk.iris.2.03",
+      "speaker": "iris",
+      "text": "Waiting is fine. Everyone gets a turn.",
+      "audio": "c1_pier.talk.iris.2.03",
+      "display_speaker": "Nora Reyes",
+      "display": "Nora Reyes"
+    },
+    "c1_pier.talk.iris.3.01": {
+      "id": "c1_pier.talk.iris.3.01",
+      "speaker": "steve",
+      "text": "He swam right past you, Nor. To me.",
+      "audio": "c1_pier.talk.iris.3.01",
+      "display": "Steve Mercer",
+      "display_speaker": "Steve Mercer"
+    },
+    "c1_pier.talk.iris.3.02": {
+      "id": "c1_pier.talk.iris.3.02",
+      "speaker": "iris",
+      "text": "Sea lions get moody. Maybe he’s tired.",
+      "audio": "c1_pier.talk.iris.3.02",
+      "display_speaker": "Nora Reyes",
+      "display": "Nora Reyes"
+    },
+    "c1_pier.talk.iris.3.03": {
+      "id": "c1_pier.talk.iris.3.03",
+      "speaker": "steve",
+      "text": "You used to say he’d come to that whistle through a hurricane.",
+      "audio": "c1_pier.talk.iris.3.03",
+      "display": "Steve Mercer",
+      "display_speaker": "Steve Mercer"
+    },
+    "c1_pier.talk.iris.3.04": {
+      "id": "c1_pier.talk.iris.3.04",
+      "speaker": "iris",
+      "text": "Then you should visit him more often, sleepyhead.",
+      "audio": "c1_pier.talk.iris.3.04",
+      "display_speaker": "Nora Reyes",
+      "display": "Nora Reyes"
+    },
+    "c1_pier.talk.agnes.1.01": {
+      "id": "c1_pier.talk.agnes.1.01",
+      "speaker": "steve",
+      "text": "How’s business, Mrs. Penhallow?",
+      "audio": "c1_pier.talk.agnes.1.01",
+      "display": "Steve Mercer",
+      "display_speaker": "Steve Mercer"
+    },
+    "c1_pier.talk.agnes.1.02": {
+      "id": "c1_pier.talk.agnes.1.02",
+      "speaker": "agnes",
+      "text": "Splendid. Nobody has bought a thing since Tuesday.",
+      "audio": "c1_pier.talk.agnes.1.02",
+      "display_speaker": "Agnes Penhallow",
+      "display": "Agnes Penhallow"
+    },
+    "c1_pier.talk.agnes.1.03": {
+      "id": "c1_pier.talk.agnes.1.03",
+      "speaker": "steve",
+      "text": "That’s splendid?",
+      "audio": "c1_pier.talk.agnes.1.03",
+      "display": "Steve Mercer",
+      "display_speaker": "Steve Mercer"
+    },
+    "c1_pier.talk.agnes.1.04": {
+      "id": "c1_pier.talk.agnes.1.04",
+      "speaker": "agnes",
+      "text": "It means the fish are safe, Steven. Somebody has to be on their side.",
+      "audio": "c1_pier.talk.agnes.1.04",
+      "display_speaker": "Agnes Penhallow",
+      "display": "Agnes Penhallow"
+    },
+    "c1_pier.talk.agnes.2.01": {
+      "id": "c1_pier.talk.agnes.2.01",
+      "speaker": "steve",
+      "text": "You still remember me from third grade?",
+      "audio": "c1_pier.talk.agnes.2.01",
+      "display": "Steve Mercer",
+      "display_speaker": "Steve Mercer"
+    },
+    "c1_pier.talk.agnes.2.02": {
+      "id": "c1_pier.talk.agnes.2.02",
+      "speaker": "agnes",
+      "text": "You took my classroom clock apart to find the tick.",
+      "audio": "c1_pier.talk.agnes.2.02",
+      "display_speaker": "Agnes Penhallow",
+      "display": "Agnes Penhallow"
+    },
+    "c1_pier.talk.agnes.2.03": {
+      "id": "c1_pier.talk.agnes.2.03",
+      "speaker": "steve",
+      "text": "I put it back together.",
+      "audio": "c1_pier.talk.agnes.2.03",
+      "display": "Steve Mercer",
+      "display_speaker": "Steve Mercer"
+    },
+    "c1_pier.talk.agnes.2.04": {
+      "id": "c1_pier.talk.agnes.2.04",
+      "speaker": "agnes",
+      "text": "With two pieces left over. It ran fast ever after.",
+      "audio": "c1_pier.talk.agnes.2.04",
+      "display_speaker": "Agnes Penhallow",
+      "display": "Agnes Penhallow"
+    },
+    "c1_pier.talk.calder.1.01": {
+      "id": "c1_pier.talk.calder.1.01",
+      "speaker": "steve",
+      "text": "Halibut again, June?",
+      "audio": "c1_pier.talk.calder.1.01",
+      "display": "Steve Mercer",
+      "display_speaker": "Steve Mercer"
+    },
+    "c1_pier.talk.calder.1.02": {
+      "id": "c1_pier.talk.calder.1.02",
+      "speaker": "calder",
+      "text": "Every Sunday for twenty years. My mother bought it in this same line.",
+      "audio": "c1_pier.talk.calder.1.02",
+      "display": "Sheriff June Calder",
+      "display_speaker": "Sheriff June Calder"
+    },
+    "c1_pier.talk.calder.1.03": {
+      "id": "c1_pier.talk.calder.1.03",
+      "speaker": "calder",
+      "text": "Some things in this town don’t change. I like that about it.",
+      "audio": "c1_pier.talk.calder.1.03",
+      "display": "Sheriff June Calder",
+      "display_speaker": "Sheriff June Calder"
+    },
+    "c1_pier.talk.calder.2.01": {
+      "id": "c1_pier.talk.calder.2.01",
+      "speaker": "steve",
+      "text": "Is that Lyle by the shed? In a clean shirt?",
+      "audio": "c1_pier.talk.calder.2.01",
+      "display": "Steve Mercer",
+      "display_speaker": "Steve Mercer"
+    },
+    "c1_pier.talk.calder.2.02": {
+      "id": "c1_pier.talk.calder.2.02",
+      "speaker": "calder",
+      "text": "He asked for every Sunday off this summer. For his boys’ games.",
+      "audio": "c1_pier.talk.calder.2.02",
+      "display": "Sheriff June Calder",
+      "display_speaker": "Sheriff June Calder"
+    },
+    "c1_pier.talk.calder.2.03": {
+      "id": "c1_pier.talk.calder.2.03",
+      "speaker": "calder",
+      "text": "Since early summer he’s been my best deputy. Never late once. I keep waiting for the catch.",
+      "audio": "c1_pier.talk.calder.2.03",
+      "display": "Sheriff June Calder",
+      "display_speaker": "Sheriff June Calder"
+    },
+    "c1_pier.talk.lyle_copy.1.01": {
+      "id": "c1_pier.talk.lyle_copy.1.01",
+      "speaker": "steve",
+      "text": "Who’s pitching first today?",
+      "audio": "c1_pier.talk.lyle_copy.1.01",
+      "display": "Steve Mercer",
+      "display_speaker": "Steve Mercer"
+    },
+    "c1_pier.talk.lyle_copy.1.02": {
+      "id": "c1_pier.talk.lyle_copy.1.02",
+      "speaker": "lyle_copy",
+      "text": "My oldest, then his brother. I’ll be in the stands for every inning.",
+      "audio": "c1_pier.talk.lyle_copy.1.02",
+      "display_speaker": "Lyle Boone",
+      "display": "Lyle Boone"
+    },
+    "c1_pier.talk.lyle_copy.1.03": {
+      "id": "c1_pier.talk.lyle_copy.1.03",
+      "speaker": "steve",
+      "text": "You sound sure.",
+      "audio": "c1_pier.talk.lyle_copy.1.03",
+      "display": "Steve Mercer",
+      "display_speaker": "Steve Mercer"
+    },
+    "c1_pier.talk.lyle_copy.1.04": {
+      "id": "c1_pier.talk.lyle_copy.1.04",
+      "speaker": "lyle_copy",
+      "text": "I made them a promise. I keep my promises now.",
+      "audio": "c1_pier.talk.lyle_copy.1.04",
+      "display_speaker": "Lyle Boone",
+      "display": "Lyle Boone"
+    },
+    "c1_pier.talk.pell.1.01": {
+      "id": "c1_pier.talk.pell.1.01",
+      "speaker": "steve",
+      "text": "Mail on a Sunday, Dale?",
+      "audio": "c1_pier.talk.pell.1.01",
+      "display": "Steve Mercer",
+      "display_speaker": "Steve Mercer"
+    },
+    "c1_pier.talk.pell.1.02": {
+      "id": "c1_pier.talk.pell.1.02",
+      "speaker": "pell",
+      "text": "Every route runs on schedule, Mr. Mercer.",
+      "audio": "c1_pier.talk.pell.1.02",
+      "display_speaker": "Dale Kittredge",
+      "display": "Dale Kittredge"
+    },
+    "c1_pier.talk.pell.1.03": {
+      "id": "c1_pier.talk.pell.1.03",
+      "speaker": "steve",
+      "text": "There’s no Sunday route.",
+      "audio": "c1_pier.talk.pell.1.03",
+      "display": "Steve Mercer",
+      "display_speaker": "Steve Mercer"
+    },
+    "c1_pier.talk.pell.1.04": {
+      "id": "c1_pier.talk.pell.1.04",
+      "speaker": "pell",
+      "text": "There is today.",
+      "audio": "c1_pier.talk.pell.1.04",
+      "display_speaker": "Dale Kittredge",
+      "display": "Dale Kittredge"
     },
     "c1_pier.recap.01": {
       "id": "c1_pier.recap.01",
@@ -10100,6 +10937,198 @@
       "display": "Steve Mercer",
       "display_speaker": "Steve Mercer"
     },
+    "c1_dinner.talk.carmen.1.01": {
+      "id": "c1_dinner.talk.carmen.1.01",
+      "speaker": "steve",
+      "text": "The mole is perfect, Carmen.",
+      "audio": "c1_dinner.talk.carmen.1.01",
+      "display": "Steve Mercer",
+      "display_speaker": "Steve Mercer"
+    },
+    "c1_dinner.talk.carmen.1.02": {
+      "id": "c1_dinner.talk.carmen.1.02",
+      "speaker": "carmen",
+      "text": "It is too sweet. Rafa is in love, so everything he cooks is sweet now.",
+      "audio": "c1_dinner.talk.carmen.1.02",
+      "display": "Carmen Reyes",
+      "display_speaker": "Carmen Reyes"
+    },
+    "c1_dinner.talk.carmen.1.03": {
+      "id": "c1_dinner.talk.carmen.1.03",
+      "speaker": "steve",
+      "text": "Rafa’s in love?",
+      "audio": "c1_dinner.talk.carmen.1.03",
+      "display": "Steve Mercer",
+      "display_speaker": "Steve Mercer"
+    },
+    "c1_dinner.talk.carmen.1.04": {
+      "id": "c1_dinner.talk.carmen.1.04",
+      "speaker": "carmen",
+      "text": "With the girl from the bakery counter. He thinks I don’t know. Mothers know.",
+      "audio": "c1_dinner.talk.carmen.1.04",
+      "display": "Carmen Reyes",
+      "display_speaker": "Carmen Reyes"
+    },
+    "c1_dinner.talk.luis.1.01": {
+      "id": "c1_dinner.talk.luis.1.01",
+      "speaker": "steve",
+      "text": "You still keep Dad’s chair, Luis.",
+      "audio": "c1_dinner.talk.luis.1.01",
+      "display": "Steve Mercer",
+      "display_speaker": "Steve Mercer"
+    },
+    "c1_dinner.talk.luis.1.02": {
+      "id": "c1_dinner.talk.luis.1.02",
+      "speaker": "luis",
+      "text": "Frank sat there every Friday for twenty years. Nobody else fits it.",
+      "audio": "c1_dinner.talk.luis.1.02",
+      "display": "Luis Reyes",
+      "display_speaker": "Luis Reyes"
+    },
+    "c1_dinner.talk.luis.1.03": {
+      "id": "c1_dinner.talk.luis.1.03",
+      "speaker": "luis",
+      "text": "When he comes home, it will be waiting for him.",
+      "audio": "c1_dinner.talk.luis.1.03",
+      "display": "Luis Reyes",
+      "display_speaker": "Luis Reyes"
+    },
+    "c1_dinner.talk.luis.1.04": {
+      "id": "c1_dinner.talk.luis.1.04",
+      "speaker": "steve",
+      "text": "Thanks, Luis.",
+      "audio": "c1_dinner.talk.luis.1.04",
+      "display": "Steve Mercer",
+      "display_speaker": "Steve Mercer"
+    },
+    "c1_dinner.talk.mateo.1.01": {
+      "id": "c1_dinner.talk.mateo.1.01",
+      "speaker": "steve",
+      "text": "How’s the team, Mateo?",
+      "audio": "c1_dinner.talk.mateo.1.01",
+      "display": "Steve Mercer",
+      "display_speaker": "Steve Mercer"
+    },
+    "c1_dinner.talk.mateo.1.02": {
+      "id": "c1_dinner.talk.mateo.1.02",
+      "speaker": "mateo",
+      "text": "Four wins, nine losses. But we lead the league in effort.",
+      "audio": "c1_dinner.talk.mateo.1.02",
+      "display": "Mateo Reyes",
+      "display_speaker": "Mateo Reyes"
+    },
+    "c1_dinner.talk.mateo.1.03": {
+      "id": "c1_dinner.talk.mateo.1.03",
+      "speaker": "mateo",
+      "text": "And my outfield can finally catch. Mostly with their faces, but it counts.",
+      "audio": "c1_dinner.talk.mateo.1.03",
+      "display": "Mateo Reyes",
+      "display_speaker": "Mateo Reyes"
+    },
+    "c1_dinner.talk.rafa.1.01": {
+      "id": "c1_dinner.talk.rafa.1.01",
+      "speaker": "steve",
+      "text": "Busy night, Rafa?",
+      "audio": "c1_dinner.talk.rafa.1.01",
+      "display": "Steve Mercer",
+      "display_speaker": "Steve Mercer"
+    },
+    "c1_dinner.talk.rafa.1.02": {
+      "id": "c1_dinner.talk.rafa.1.02",
+      "speaker": "rafa",
+      "text": "Forty tables, one birthday, and Mamá tasting everything twice.",
+      "audio": "c1_dinner.talk.rafa.1.02",
+      "display": "Rafa Reyes",
+      "display_speaker": "Rafa Reyes"
+    },
+    "c1_dinner.talk.rafa.1.03": {
+      "id": "c1_dinner.talk.rafa.1.03",
+      "speaker": "rafa",
+      "text": "Come to Sunday dinner for real, Steve. She sets your plate either way.",
+      "audio": "c1_dinner.talk.rafa.1.03",
+      "display": "Rafa Reyes",
+      "display_speaker": "Rafa Reyes"
+    },
+    "c1_dinner.talk.tomas.1.01": {
+      "id": "c1_dinner.talk.tomas.1.01",
+      "speaker": "steve",
+      "text": "How’s the podcast, Tomás?",
+      "audio": "c1_dinner.talk.tomas.1.01",
+      "display": "Steve Mercer",
+      "display_speaker": "Steve Mercer"
+    },
+    "c1_dinner.talk.tomas.1.02": {
+      "id": "c1_dinner.talk.tomas.1.02",
+      "speaker": "tomas",
+      "text": "Eleven listeners. Twelve, if Mamá ever figures out the app.",
+      "audio": "c1_dinner.talk.tomas.1.02",
+      "display": "Tomás Reyes",
+      "display_speaker": "Tomás Reyes"
+    },
+    "c1_dinner.talk.tomas.1.03": {
+      "id": "c1_dinner.talk.tomas.1.03",
+      "speaker": "tomas",
+      "text": "Laugh now. One day the bay is going to make me famous.",
+      "audio": "c1_dinner.talk.tomas.1.03",
+      "display": "Tomás Reyes",
+      "display_speaker": "Tomás Reyes"
+    },
+    "c1_dinner.talk.tomas.2.01": {
+      "id": "c1_dinner.talk.tomas.2.01",
+      "speaker": "tomas",
+      "text": "You really heard it today? On the pier?",
+      "audio": "c1_dinner.talk.tomas.2.01",
+      "display": "Tomás Reyes",
+      "display_speaker": "Tomás Reyes"
+    },
+    "c1_dinner.talk.tomas.2.02": {
+      "id": "c1_dinner.talk.tomas.2.02",
+      "speaker": "steve",
+      "text": "It’s under Mom’s voicemail too. It has been for eighteen months.",
+      "audio": "c1_dinner.talk.tomas.2.02",
+      "display": "Steve Mercer",
+      "display_speaker": "Steve Mercer"
+    },
+    "c1_dinner.talk.tomas.2.03": {
+      "id": "c1_dinner.talk.tomas.2.03",
+      "speaker": "tomas",
+      "text": "Then I’m not crazy. Or we both are. Either way, I’m buying you a beer.",
+      "audio": "c1_dinner.talk.tomas.2.03",
+      "display": "Tomás Reyes",
+      "display_speaker": "Tomás Reyes"
+    },
+    "c1_dinner.talk.iris.1.01": {
+      "id": "c1_dinner.talk.iris.1.01",
+      "speaker": "steve",
+      "text": "You’re quiet tonight, Nor.",
+      "audio": "c1_dinner.talk.iris.1.01",
+      "display": "Steve Mercer",
+      "display_speaker": "Steve Mercer"
+    },
+    "c1_dinner.talk.iris.1.02": {
+      "id": "c1_dinner.talk.iris.1.02",
+      "speaker": "iris",
+      "text": "I’m happy. Everyone is here.",
+      "audio": "c1_dinner.talk.iris.1.02",
+      "display_speaker": "Nora Reyes",
+      "display": "Nora Reyes"
+    },
+    "c1_dinner.talk.iris.1.03": {
+      "id": "c1_dinner.talk.iris.1.03",
+      "speaker": "steve",
+      "text": "You used to argue with your mother about the chilies all night.",
+      "audio": "c1_dinner.talk.iris.1.03",
+      "display": "Steve Mercer",
+      "display_speaker": "Steve Mercer"
+    },
+    "c1_dinner.talk.iris.1.04": {
+      "id": "c1_dinner.talk.iris.1.04",
+      "speaker": "iris",
+      "text": "Mamá knows best.",
+      "audio": "c1_dinner.talk.iris.1.04",
+      "display_speaker": "Nora Reyes",
+      "display": "Nora Reyes"
+    },
     "c1_dinner.recap.01": {
       "id": "c1_dinner.recap.01",
       "speaker": "steve",
@@ -10157,6 +11186,22 @@
       "speaker": "steve",
       "text": "Something in the lining. Soaked. Aquarium letterhead... north wing?",
       "audio": "c1_escape.order.lead.01",
+      "display": "Steve Mercer",
+      "display_speaker": "Steve Mercer"
+    },
+    "c1_escape.order.lead.02": {
+      "id": "c1_escape.order.lead.02",
+      "speaker": "steve",
+      "text": "Signed at 20:30. Nora always said that north-wing clock runs fifteen minutes fast.",
+      "audio": "c1_escape.order.lead.02",
+      "display": "Steve Mercer",
+      "display_speaker": "Steve Mercer"
+    },
+    "c1_escape.order.lead.03": {
+      "id": "c1_escape.order.lead.03",
+      "speaker": "steve",
+      "text": "And the aquarium is across the bay. Eighteen minutes each way, even with every light green.",
+      "audio": "c1_escape.order.lead.03",
       "display": "Steve Mercer",
       "display_speaker": "Steve Mercer"
     },

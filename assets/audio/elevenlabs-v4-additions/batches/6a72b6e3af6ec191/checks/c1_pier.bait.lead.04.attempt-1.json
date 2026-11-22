@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c1_pier.bait.lead.04",
+  "attempt": 1,
+  "plan_sha256": "6a72b6e3af6ec191b0f0a01bbe9902faea7a40c2664520abf2c6799dd216cdb2",
+  "wav_sha256": "cb4bf4a69c6799b80009a17e3e0543d1b180af6e2710dc7bb31390673b4590e1",
+  "expected": "From the fish-shed line. It started before Agnes did.",
+  "recognized": "From the fish shed line. It started before Agnes did.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 3.68,
+  "sample_rate": 48000,
+  "peak": 0.53497314453125,
+  "rms": 0.061101268478659425,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c1_escape.order.lead.02",
+  "attempt": 1,
+  "plan_sha256": "6a72b6e3af6ec191b0f0a01bbe9902faea7a40c2664520abf2c6799dd216cdb2",
+  "wav_sha256": "09cca8e0ca2e69894bd1e4d671a2565ca1bdff6fe9a73a58db8db62c4e584cbe",
+  "expected": "Signed at 20:30. Nora always said that north-wing clock runs fifteen minutes fast.",
+  "recognized": "Signed at 20.30. Nora always said that North Wing Clock runs 15 minutes fast.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 6.24,
+  "sample_rate": 48000,
+  "peak": 0.25982666015625,
+  "rms": 0.036870707346001445,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

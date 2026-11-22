@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c1_pier.talk.agnes.2.04",
+  "attempt": 1,
+  "plan_sha256": "6a72b6e3af6ec191b0f0a01bbe9902faea7a40c2664520abf2c6799dd216cdb2",
+  "wav_sha256": "a5103a5b4a1467c3391b9b7eb1c58c11221483dea5ec1cfa6a4f260e564b5afe",
+  "expected": "With two pieces left over. It ran fast ever after.",
+  "recognized": "with two pieces left over it ran fast ever after",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.8,
+  "sample_rate": 48000,
+  "peak": 0.357025146484375,
+  "rms": 0.046269863194904726,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

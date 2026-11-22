@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "audio_id": "c1_flat.talk.iris.3.01",
+  "attempt": 1,
+  "plan_sha256": "6a72b6e3af6ec191b0f0a01bbe9902faea7a40c2664520abf2c6799dd216cdb2",
+  "wav_sha256": "d3fd5d0904ca2d23b49d3ec77a550fcde03f51e56945008e0c142ddb73ee09e6",
+  "expected": "I heard AutoRick this morning. He sounds cheerful.",
+  "recognized": "I heard Otto Rick this morning. He sounds cheerful.",
+  "local_recognized": "I heard Autoric this morning. He sounds cheerful.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 3.36,
+  "sample_rate": 48000,
+  "peak": 0.473175048828125,
+  "rms": 0.058973402535742354,
+  "level_match_gain_db": 0.0,
+  "word_edits": 2,
+  "word_error_rate": 0.25,
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c1_flat.talk.iris.3.01.json",
+    "sha256": "d11db6e108b66cef198d0003288aa4da5778cc024951f278ad0c933ffada33ee",
+    "model": "scribe_v3",
+    "word_edits": 2,
+    "listening_reviewed": false
+  },
+  "status": "retake_required",
+  "failure_reason": "asr_mismatch"
+}

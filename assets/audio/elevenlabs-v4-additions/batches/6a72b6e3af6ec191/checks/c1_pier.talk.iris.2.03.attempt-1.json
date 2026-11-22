@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c1_pier.talk.iris.2.03",
+  "attempt": 1,
+  "plan_sha256": "6a72b6e3af6ec191b0f0a01bbe9902faea7a40c2664520abf2c6799dd216cdb2",
+  "wav_sha256": "9b8f9412d4848e17efe491b5b91bb3f22324097839076493e4693d08b8f41202",
+  "expected": "Waiting is fine. Everyone gets a turn.",
+  "recognized": "Waiting is fine. Everyone gets a turn.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 3.12,
+  "sample_rate": 48000,
+  "peak": 0.393157958984375,
+  "rms": 0.05619209726039194,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

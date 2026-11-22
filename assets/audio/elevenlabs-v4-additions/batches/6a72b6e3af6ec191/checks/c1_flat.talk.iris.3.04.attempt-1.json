@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "audio_id": "c1_flat.talk.iris.3.04",
+  "attempt": 1,
+  "plan_sha256": "6a72b6e3af6ec191b0f0a01bbe9902faea7a40c2664520abf2c6799dd216cdb2",
+  "wav_sha256": "ed43d9378767e54635b5e7cdfc44ee335ddc0520e62151d07158ce09e7e1beb7",
+  "expected": "Sure, Nor. Nice.",
+  "recognized": "Sure, Nor. Nice.",
+  "local_recognized": "Sure, Noor. Nice.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 1.92,
+  "sample_rate": 48000,
+  "peak": 0.35235595703125,
+  "rms": 0.04026297193085427,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c1_flat.talk.iris.3.04.json",
+    "sha256": "f0f365ae9f10059c1e2e7a7519ecbca5bdb467a11f68284a902e40983ac73eb2",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  },
+  "status": "retake_required",
+  "failure_reason": "short_asr_ambiguity"
+}

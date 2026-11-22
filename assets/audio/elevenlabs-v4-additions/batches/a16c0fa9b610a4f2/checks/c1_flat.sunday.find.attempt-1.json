@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c1_flat.sunday.find",
+  "attempt": 1,
+  "plan_sha256": "a16c0fa9b610a4f2355ed57bd08c8d168a0f9b47bf7d5d76e7e874586b58ce8e",
+  "wav_sha256": "3c715c9e3f9de0f3184967f81619a8f27d481d89ebd04c88234c5e48eeb642fa",
+  "expected": "Blue cassette, Sunday, 7:15. The ident, the radio, Nora and me, all over again. Now I can time the machine.",
+  "recognized": "Blue cassette, Sunday, 7.15. The ident, the radio, Nora and me, all over again. Now I can time the machine.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 10.4,
+  "sample_rate": 48000,
+  "peak": 0.36187744140625,
+  "rms": 0.03619588982976913,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}
