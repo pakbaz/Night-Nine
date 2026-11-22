@@ -62,6 +62,14 @@ var next_button: Button
 var hotspots: Array[Button] = []
 var voice: AudioStreamPlayer
 var ambience: AudioStreamPlayer
+## The previous location's ambience, fading out under the new one.
+var ambience_out: AudioStreamPlayer
+var ambience_level := 1.0
+var ambience_out_level := 0.0
+var ambience_db := -12.0
+var ambience_out_db := -12.0
+const AMBIENCE_IN_SECONDS := 2.4
+const AMBIENCE_OUT_SECONDS := 2.0
 var effect: AudioStreamPlayer
 var score: SCORE
 var music_volume: HSlider
@@ -149,6 +157,8 @@ func _ready() -> void:
 	ambience = AudioStreamPlayer.new()
 	ambience.volume_db = -24
 	add_child(ambience)
+	ambience_out = AudioStreamPlayer.new()
+	add_child(ambience_out)
 	effect = AudioStreamPlayer.new()
 	effect.volume_db = -10
 	add_child(effect)
@@ -964,8 +974,12 @@ func _enter_with_story(play_intro: bool) -> void:
 	_pause_audio(false)
 	storybook.play(book, score)
 
+## How Steve got here, then what happens on arrival.
+func _opening_lines() -> Array:
+	return campaign.current().get("context", []) + campaign.current().intro
+
 func _untouched_scene() -> bool:
-	for id: String in campaign.current().intro:
+	for id: String in _opening_lines():
 		if id in campaign.data.seen:
 			return false
 	for task: Dictionary in campaign.current().tasks:
@@ -1063,30 +1077,19 @@ func _load_stage(play_intro: bool) -> void:
 	# Object markers stay above the heading shade.
 	root.move_child(heading_shade,0)
 	_refresh()
-	var audio_path: String = "res://assets/audio/ambience/"+campaign.current().style+".wav"
-	var atmosphere_folder := "ambience-prologue" if prologue else "ambience-campaign"
-	var authored := "res://assets/audio/"+atmosphere_folder+"/"+str(campaign.current().id)+".ogg"
-	if ResourceLoader.exists(authored):
-		audio_path=authored
-	ambience.volume_db = -12.0 if audio_path.ends_with(".ogg") else -24.0
+	var audio_path := _ambience_for(campaign.current())
 	if started and ResourceLoader.exists(audio_path):
 		if ambience.stream==null or ambience.stream.resource_path!=audio_path:
-			ambience.stop()
-			ambience.stream=load(audio_path)
-			if ambience.stream is AudioStreamOggVorbis:
-				ambience.stream.loop = true
-			elif ambience.stream is AudioStreamWAV:
-				ambience.stream.loop_mode=AudioStreamWAV.LOOP_FORWARD
-				ambience.stream.loop_end=int(ambience.stream.get_length()*ambience.stream.mix_rate)
-		if not ambience.playing:
+			_crossfade_ambience(audio_path)
+		elif not ambience.playing:
 			ambience.play()
 	else:
-		ambience.stop()
+		_crossfade_ambience("")
 	status.show()
 	if play_intro and not campaign.data.finished:
 		var card: Dictionary = campaign.current().get("card", {})
 		if card.is_empty():
-			_speak(campaign.current().intro,_coach)
+			_speak(_opening_lines(),_coach)
 		else:
 			transitioning = true
 			title.get_parent().hide()
@@ -1097,10 +1100,10 @@ func _load_stage(play_intro: bool) -> void:
 				transitioning = false
 				title.get_parent().show()
 				status.show()
-				_speak(campaign.current().intro,_coach), CONNECT_ONE_SHOT)
+				_speak(_opening_lines(),_coach), CONNECT_ONE_SHOT)
 			title_card.play(card, str(campaign.current().place), score, _scene_painting(campaign.current()))
 	elif play_intro:
-		_speak(campaign.current().intro,Callable())
+		_speak(_opening_lines(),Callable())
 	elif started and not campaign.data.finished:
 		_resume_dialogue()
 	end_card.visible=campaign.data.finished
@@ -1126,7 +1129,7 @@ func _coach() -> void:
 func _resume_dialogue() -> void:
 	# Resume unheard dialogue after a save during an arrival or completed interaction.
 	var pending: Array=[]
-	for id: String in campaign.current().intro:
+	for id: String in _opening_lines():
 		if id not in campaign.data.seen:
 			pending.append(id)
 	for task_id: String in campaign.data.done:
@@ -1682,7 +1685,7 @@ func _next_line() -> void:
 func _dialogue_layout(staged: bool) -> void:
 	var scene := campaign.current()
 	var morning := active_line == "postcredits.answer.01"
-	var show_dateline: bool = staged and (active_line in scene.intro or morning)
+	var show_dateline: bool = staged and (active_line in _opening_lines() or morning)
 	actor.visible=not staged and scene.actors.size()>1 and not campaign.data.finished
 	title.get_parent().visible = not staged or show_dateline
 	objective.visible = not staged
@@ -1776,6 +1779,15 @@ func _end_departure_dialogue() -> void:
 	var music_cut: float = score.play_departure(str(campaign.current().id), chapter_id, chapter_ending, cut_duration)
 	if music_cut > 0.0:
 		cut_duration = music_cut
+	if chapter_ending:
+		# A chapter film carries its own music; the place falls quiet under it.
+		_crossfade_ambience("")
+	elif stage.has_method("bridge_painting") and not stage.bridge_painting().is_empty():
+		var next_scene: Dictionary = campaign.content.scenes[next_index]
+		var next_sound := _ambience_for(next_scene)
+		_crossfade_ambience(next_sound if ResourceLoader.exists(next_sound) else "")
+		if music_cut <= 0.0:
+			score.play_scene(next_scene)
 	light_remaining=cut_duration
 	title.get_parent().hide()
 	actor.get_parent().hide()
@@ -1821,6 +1833,49 @@ func _open_journal() -> void:
 	journal.show()
 	_pause_audio(true)
 
+func _ambience_for(scene: Dictionary) -> String:
+	var folder := "ambience-prologue" if scene.id in PAINTED_NIGHTS else "ambience-campaign"
+	var authored := "res://assets/audio/" + folder + "/" + str(scene.id) + ".ogg"
+	if ResourceLoader.exists(authored):
+		return authored
+	return "res://assets/audio/ambience/" + str(scene.style) + ".wav"
+
+## The old location keeps sounding for a moment while the new one rises.
+func _crossfade_ambience(path: String) -> void:
+	if ambience.playing:
+		var outgoing := ambience
+		ambience = ambience_out
+		ambience_out = outgoing
+		ambience_out_level = ambience_level
+		ambience_out_db = ambience_db
+	ambience.stop()
+	ambience.stream = null
+	ambience_level = 0.0
+	if path.is_empty():
+		return
+	ambience_db = -12.0 if path.ends_with(".ogg") else -24.0
+	ambience.stream = load(path)
+	if ambience.stream is AudioStreamOggVorbis:
+		ambience.stream.loop = true
+	elif ambience.stream is AudioStreamWAV:
+		ambience.stream.loop_mode = AudioStreamWAV.LOOP_FORWARD
+		ambience.stream.loop_end = int(ambience.stream.get_length() * ambience.stream.mix_rate)
+	ambience.volume_db = ambience_db + linear_to_db(.0001)
+	ambience.play()
+
+func _ride_ambience(delta: float) -> void:
+	if ambience.stream_paused:
+		return
+	if ambience.playing:
+		ambience_level = move_toward(ambience_level, 1.0, delta / AMBIENCE_IN_SECONDS)
+		ambience.volume_db = ambience_db + linear_to_db(maxf(ambience_level, .0001))
+	if ambience_out.playing:
+		ambience_out_level = move_toward(ambience_out_level, 0.0, delta / AMBIENCE_OUT_SECONDS)
+		ambience_out.volume_db = ambience_out_db + linear_to_db(maxf(ambience_out_level, .0001))
+		if ambience_out_level <= 0.0:
+			ambience_out.stop()
+			ambience_out.stream = null
+
 func _pause_audio(on: bool) -> void:
 	var overlay := storybook.visible or title_card.visible
 	score.pause_film(on and (light_remaining >= 0 or overlay) and not credits_before_signal)
@@ -1830,6 +1885,7 @@ func _pause_audio(on: bool) -> void:
 		receiver.set_paused(on)
 	voice.stream_paused=on
 	ambience.stream_paused=on
+	ambience_out.stream_paused=on
 	effect.stream_paused=on
 	if is_instance_valid(tape_compare):
 		tape_compare.set_paused(on)
@@ -1837,6 +1893,7 @@ func _pause_audio(on: bool) -> void:
 		stage.set_performance_paused(on)
 
 func _process(delta: float) -> void:
+	_ride_ambience(delta)
 	for strip: Node in get_tree().get_nodes_in_group("evidence_traces"):
 		strip.follow(voice)
 	if not is_instance_valid(stage):
@@ -1984,7 +2041,7 @@ func _exit_tree() -> void:
 func shutdown_audio() -> void:
 	if is_instance_valid(score):
 		score.stop_all()
-	for player: AudioStreamPlayer in [voice,ambience,effect,ui_player]:
+	for player: AudioStreamPlayer in [voice,ambience,ambience_out,effect,ui_player]:
 		if is_instance_valid(player):
 			player.stream_paused=false
 			player.stop()

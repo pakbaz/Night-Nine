@@ -64,7 +64,7 @@ func jump_to(scene_id: String) -> void:
 	while game.campaign.current().id != scene_id:
 		# No stage is loaded while skipping ahead, so leave the HUD alone.
 		solve_all(false)
-		game.campaign.mark_seen(game.campaign.current().intro)
+		game.campaign.mark_seen(game.campaign.current().get("context", []) + game.campaign.current().intro)
 		game.campaign.mark_seen(game.campaign.current().outro)
 		game.campaign.advance()
 	game.started = true

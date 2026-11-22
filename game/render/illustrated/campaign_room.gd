@@ -51,6 +51,10 @@ var floor_dialogue := false
 var working_actor := ""
 ## A full-frame story painting shown in place of the room while particular lines play.
 var story_still: TextureRect
+var still_target := 0.0
+var still_clock := 0.0
+const STILL_IN_SECONDS := .55
+const STILL_OUT_SECONDS := .7
 ## Transparent paintings over the room for one stretch of the story, such as Steve
 ## strapped into the scan chair or a sleeper in a pod. Each covers the whole plate.
 var story_layers: Array[Dictionary] = []
@@ -227,19 +231,42 @@ func still_for(line_id: String) -> String:
 				return str(still.file)
 	return ""
 
+## Story paintings dissolve in and out and drift slowly closer while they hold.
 func show_still(line_id: String) -> void:
 	var path := still_for(line_id)
 	if path.is_empty() or not ResourceLoader.exists(path):
-		if is_instance_valid(story_still):
-			story_still.hide()
+		still_target = 0.0
 		return
 	if not is_instance_valid(story_still):
 		story_still = image_layer(load(path) as Texture2D, "StoryStill")
-		# Above the room and the cast, below the caption shade.
-		frame.move_child(story_still, frame.get_child_count() - 2)
+		story_still.modulate.a = 0.0
+		# Above the room and the cast, below the caption shade and the arrival fade.
+		frame.move_child(story_still, (arrival_shade.get_index() if is_instance_valid(arrival_shade) else frame.get_child_count()) - 1)
+		still_clock = 0.0
 	elif story_still.texture.resource_path != path:
 		story_still.texture = load(path) as Texture2D
+		story_still.modulate.a = minf(story_still.modulate.a, .35)
+		still_clock = 0.0
+	elif not story_still.visible or story_still.modulate.a <= 0.0:
+		still_clock = 0.0
 	story_still.show()
+	still_target = 1.0
+
+func shown_still() -> String:
+	if is_instance_valid(story_still) and story_still.visible and still_target > 0.0:
+		return story_still.texture.resource_path
+	return ""
+
+func dissolve_still(delta: float) -> void:
+	if not is_instance_valid(story_still) or not story_still.visible:
+		return
+	var seconds := STILL_IN_SECONDS if still_target > story_still.modulate.a else STILL_OUT_SECONDS
+	story_still.modulate.a = move_toward(story_still.modulate.a, still_target, delta / seconds)
+	still_clock += delta
+	story_still.pivot_offset = frame.size * .5
+	story_still.scale = Vector2.ONE * (1.0 + .035 * smoothstep(0.0, 14.0, still_clock))
+	if still_target <= 0.0 and story_still.modulate.a <= 0.0:
+		story_still.hide()
 
 func is_walking() -> bool:
 	return floor_stage != null and (not floor_stage.route.is_empty() or floor_stage.pose_time>0.0)
@@ -561,9 +588,11 @@ func begin_dialogue(line: Dictionary, voice: AudioStreamPlayer, _take: Dictionar
 	current_speaker=id if on_camera else ""
 	show_cast(current_speaker)
 	cast_plane.visible=detail.is_empty()
-	var shot_type := "arrival" if not scene_record.intro.is_empty() and line.id==scene_record.intro.front() else "speaker"
+	var opening_lines: Array = scene_record.get("context",[]) + scene_record.intro
+	var first_line: bool = not opening_lines.is_empty() and line.id == opening_lines.front()
+	var shot_type := "arrival" if first_line else "speaker"
 	if recorded or not actors.has(current_speaker):
-		shot_type = "arrival" if not scene_record.intro.is_empty() and line.id==scene_record.intro.front() else "insert"
+		shot_type = "arrival" if first_line else "insert"
 	if shot_type=="speaker" and line.id in scene_record.outro:
 		shot_type="farewell"
 	dialogue_shot={"speaker":id,"type":shot_type,"recorded":recorded}
@@ -622,8 +651,7 @@ func finish_floor_exchange() -> void:
 	update_inserts()
 
 func end_dialogue() -> void:
-	if is_instance_valid(story_still):
-		story_still.hide()
+	still_target = 0.0
 	finish_floor_exchange()
 	if not social_pair.is_empty():
 		preceding_pair = social_pair.duplicate()
@@ -676,6 +704,11 @@ func begin_departure_cut() -> void:
 			var layer := image_layer(painting, str(directions.departure_painting))
 			layer.modulate.a = 0.0
 			chapter_frames.append(layer)
+	elif not bridge_painting().is_empty():
+		# The way to the next place: it dissolves in, holds, and the next room dissolves out of it.
+		var layer := image_layer(load(bridge_painting()) as Texture2D, "Bridge")
+		layer.modulate.a = 0.0
+		chapter_frames.append(layer)
 	if not chapter_frames.is_empty():
 		if chapter_frames.size()==2:
 			set_keyframe_quality()
@@ -699,6 +732,10 @@ func set_keyframe_quality() -> void:
 	var later:=chapter_frames[1]
 	later.material=null
 	later.visible=cut_progress>=.14
+
+func bridge_painting() -> String:
+	var path: String = directions.get("bridge","")
+	return path if not path.is_empty() and ResourceLoader.exists(path) else ""
 
 func departure_duration() -> float:
 	if is_instance_valid(chapter_film):
@@ -740,6 +777,10 @@ func outgoing_frame() -> Dictionary:
 	return state
 
 func receive_frame(state: Dictionary) -> void:
+	# The departing film dissolves straight into this room; no dip to black.
+	if is_instance_valid(arrival_shade):
+		arrival_shade.queue_free()
+		arrival_shade = null
 	incoming_frame=image_layer(state.texture,"IncomingChapterDissolve")
 	incoming_frame.pivot_offset=frame.size*.5
 	incoming_frame.scale=state.scale
@@ -752,6 +793,8 @@ func receive_frame(state: Dictionary) -> void:
 func _process(delta: float) -> void:
 	if not art_ready or paused:
 		return
+	fade_arrival(delta)
+	dissolve_still(delta)
 	clock+=delta
 	shot_clock+=delta
 	if is_instance_valid(incoming_frame):

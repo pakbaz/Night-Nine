@@ -21,7 +21,7 @@ func reach(id: String) -> void:
 	var target: int = game.campaign.task_scene[id]
 	for i: int in range(target + 1):
 		var scene: Dictionary = game.campaign.current()
-		game.campaign.mark_seen(scene.intro)
+		game.campaign.mark_seen(scene.get("context", []) + scene.intro)
 		for task: Dictionary in scene.tasks:
 			if task.id == id:
 				break

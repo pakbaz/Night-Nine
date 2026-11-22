@@ -32,9 +32,9 @@ done
 python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$NIGHT_NINE_QA_DIR/animation-handoff.json" 10
 python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$NIGHT_NINE_QA_DIR/score-route.json" 403
 python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$NIGHT_NINE_QA_DIR/case-boards.json" 716
-python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$NIGHT_NINE_QA_DIR/social-staging.json" 151
+python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$NIGHT_NINE_QA_DIR/social-staging.json" 152
 python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$NIGHT_NINE_QA_DIR/small-talk.json" 20
-python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$NIGHT_NINE_QA_DIR/story-staging.json" 32
+python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$NIGHT_NINE_QA_DIR/story-staging.json" 52
 if [[ "${1:-}" == "--render" ]]; then
   export NIGHT_NINE_QA_DIR="$PROJECT_ROOT/tmp/qa/campaign-run-$$"
   mkdir -p "$NIGHT_NINE_QA_DIR"
@@ -58,7 +58,7 @@ if [[ "${1:-}" == "--render" ]]; then
     python3 "$PROJECT_ROOT/tools/check-log.py" "$NIGHT_NINE_QA_DIR/$SUITE.log"
   done
   python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$NIGHT_NINE_QA_DIR/case-boards.json" 716
-  python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$NIGHT_NINE_QA_DIR/social-staging.json" 151
+  python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$NIGHT_NINE_QA_DIR/social-staging.json" 152
   NIGHT_NINE_SAVE_DIR="$NIGHT_NINE_QA_DIR/staging-save" NIGHT_NINE_QA_DIR="$NIGHT_NINE_QA_DIR/staging" bash "$PROJECT_ROOT/tools/godot.sh" "${AUDIO_ARGUMENTS[@]}" --quit-after 3600 --log-file "$NIGHT_NINE_QA_DIR/staging.log" -- --staging-qa
   python3 "$PROJECT_ROOT/tools/check-log.py" "$NIGHT_NINE_QA_DIR/staging.log"
   python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$NIGHT_NINE_QA_DIR/staging/staging-results.json" 134

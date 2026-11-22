@@ -30,7 +30,7 @@ func click(point: Vector2) -> void:
 func reach_flat() -> void:
 	while game.campaign.current().id != "c1_flat":
 		var scene: Dictionary = game.campaign.current()
-		game.campaign.mark_seen(scene.intro)
+		game.campaign.mark_seen(scene.get("context", []) + scene.intro)
 		for task: Dictionary in scene.tasks:
 			if not task.actor.is_empty():
 				game.campaign.switch_actor(task.actor)
@@ -97,7 +97,7 @@ func run() -> void:
 	await open_painted("p_bay", "helen", "Helen Mercer")
 	game.campaign.reset()
 	reach_flat()
-	game.campaign.mark_seen(game.campaign.current().intro)
+	game.campaign.mark_seen(game.campaign.current().get("context", []) + game.campaign.current().intro)
 	var topic: Dictionary = game.campaign.available_talk("iris")[0]
 	game.started = true
 	game.menu.hide()

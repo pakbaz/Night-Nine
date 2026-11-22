@@ -454,7 +454,7 @@ func start_section(id: String) -> void:
 	# Isolated art review uses the same validated task journal as a player save.
 	while game.campaign.current().id!=id:
 		var scene: Dictionary=game.campaign.current()
-		game.campaign.mark_seen(scene.intro)
+		game.campaign.mark_seen(scene.get("context", []) + scene.intro)
 		for task: Dictionary in scene.tasks:
 			if not task.actor.is_empty():
 				game.campaign.switch_actor(task.actor)

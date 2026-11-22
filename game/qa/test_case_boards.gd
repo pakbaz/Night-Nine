@@ -83,7 +83,7 @@ func fresh_room(id: String) -> void:
 	var task_scene: int=game.campaign.task_scene[id]
 	for i: int in range(task_scene+1):
 		var scene: Dictionary=game.campaign.current()
-		game.campaign.mark_seen(scene.intro)
+		game.campaign.mark_seen(scene.get("context", []) + scene.intro)
 		for task: Dictionary in scene.tasks:
 			if task.id==id:
 				break

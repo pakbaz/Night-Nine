@@ -24,6 +24,20 @@ class ScriptV2StagingTests(unittest.TestCase):
     def test_current_staging_is_valid(self):
         self.assertEqual(self.errors(lambda staging: None), [])
 
+    def test_every_move_within_a_chapter_has_a_painted_bridge(self):
+        films = json.loads((script_v2.ROOT / 'game/content/films.json').read_text())
+        scenes = self.content['scenes']
+        bare = []
+        for here, after in zip(scenes, scenes[1:]):
+            staging = self.staging.get(here['id'], {})
+            if here['chapter'] != after['chapter'] or here['id'] in films:
+                continue
+            if staging.get('bridge') or staging.get('chapter_insert') or staging.get('departure_painting') \
+                    or here.get('departure_art') or here['id'] in ('p_bay', 'p_meeting', 'p_veyr', 'c10_live'):
+                continue
+            bare.append(f"{here['id']} -> {after['id']}")
+        self.assertEqual(bare, [])
+
     def test_missing_painting_is_rejected(self):
         def change(staging):
             staging['c2_ship']['stills'][0]['file'] = 'res://assets/illustrated/campaign/stills/missing.webp'

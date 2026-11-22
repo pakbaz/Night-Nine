@@ -985,6 +985,8 @@ def validate_staging(staging, content, merge):
             for item in still.get('lines', []):
                 if item not in line_ids and not any(line.startswith(item + '.') for line in line_ids):
                     merge.issue('error', scene_id, f'still names unknown line or lead {item}')
+        if scene.get('bridge'):
+            painting(scene_id, scene['bridge'])
         leads = {t['id'] for t in scenes[scene_id]['tasks']}
         for layer in scene.get('layers', []):
             painting(scene_id, layer.get('file', ''))

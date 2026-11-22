@@ -39,7 +39,7 @@ func test() -> void:
 	var campaign: NightCampaign = game.campaign
 	while campaign.current().id!="c1_pier":
 		var scene: Dictionary = campaign.current()
-		campaign.mark_seen(scene.intro)
+		campaign.mark_seen(scene.get("context", []) + scene.intro)
 		for task: Dictionary in scene.tasks:
 			if task.actor!="":
 				campaign.switch_actor(task.actor)
@@ -52,7 +52,7 @@ func test() -> void:
 			push_error("Cannot prepare the opening state.")
 			quit(2)
 			return
-	campaign.mark_seen(campaign.current().intro)
+	campaign.mark_seen(campaign.current().get("context", []) + campaign.current().intro)
 	game.started=true
 	game.menu.hide()
 	game._load_stage(false)
@@ -133,7 +133,7 @@ func solve_staff_door() -> void:
 	var campaign: NightCampaign=game.campaign
 	while campaign.current().id!="c2_aquarium":
 		var scene:=campaign.current()
-		campaign.mark_seen(scene.intro)
+		campaign.mark_seen(scene.get("context", []) + scene.intro)
 		for task: Dictionary in scene.tasks:
 			if task.actor!="":
 				campaign.switch_actor(task.actor)
@@ -146,7 +146,7 @@ func solve_staff_door() -> void:
 			check(false,"Prepare the aquarium via a legal campaign history")
 			return
 	var first: Dictionary = campaign.task_index["c2_aquarium.plan"]
-	campaign.mark_seen(campaign.current().intro)
+	campaign.mark_seen(campaign.current().get("context", []) + campaign.current().intro)
 	campaign.choose(first.id,int(first.answer),first.puzzle.solution)
 	campaign.mark_seen(first.lines)
 	if not str(first.get("finding","")).is_empty():

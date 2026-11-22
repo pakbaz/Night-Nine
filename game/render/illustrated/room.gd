@@ -22,6 +22,8 @@ var dialogue_shot := {}
 var cinematic := false
 var style := ""
 var frame := Control.new()
+var arrival_shade: ColorRect
+const ARRIVAL_SECONDS := .9
 var distant := Node2D.new()
 var hull := Node2D.new()
 var cast_plane := Node2D.new()
@@ -74,6 +76,13 @@ func build(scene: Dictionary, profile: String) -> void:
 	edge.material = grade
 	frame.add_child(edge)
 	edge.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	# Every room fades up from the dark the previous scene faded into.
+	arrival_shade = ColorRect.new()
+	arrival_shade.name = "ArrivalShade"
+	arrival_shade.color = Color(0.012, 0.018, 0.024, 1.0)
+	arrival_shade.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	frame.add_child(arrival_shade)
+	arrival_shade.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	art_ready = true
 	resized.connect(layout)
 	layout()
@@ -310,9 +319,17 @@ func set_performance_paused(on: bool) -> void:
 func set_recorder_running(on: bool) -> void:
 	playing_recorder = on
 
+func fade_arrival(delta: float) -> void:
+	if is_instance_valid(arrival_shade):
+		arrival_shade.color.a = maxf(0.0, arrival_shade.color.a - delta / ARRIVAL_SECONDS)
+		if arrival_shade.color.a <= 0.0:
+			arrival_shade.queue_free()
+			arrival_shade = null
+
 func _process(delta: float) -> void:
 	if not art_ready or paused:
 		return
+	fade_arrival(delta)
 	clock += delta
 	animate_seated_gaze(delta)
 	var target := HALF

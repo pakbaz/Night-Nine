@@ -81,7 +81,7 @@ func _run() -> void:
 	game.campaign.reset()
 	while game.campaign.current().id != "c1_flat":
 		var scene: Dictionary = game.campaign.current()
-		game.campaign.mark_seen(scene.intro)
+		game.campaign.mark_seen(scene.get("context", []) + scene.intro)
 		for task: Dictionary in scene.tasks:
 			game.campaign.choose(task.id, int(task.answer), task.get("puzzle", {}).get("solution", []))
 			game.campaign.mark_seen(task.lines)

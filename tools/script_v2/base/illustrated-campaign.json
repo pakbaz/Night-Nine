@@ -20,7 +20,8 @@
     "inserts": {
       "c1_flat.in.01": "c1_flat.control",
       "c1_flat.in.03": "c1_flat.control"
-    }
+    },
+    "bridge": "res://assets/illustrated/campaign/bridges/c1_flat-c1_pier.webp"
   },
   "c1_pier": {
     "light": "b8d4d8",
@@ -93,7 +94,8 @@
       "iris",
       "luis"
     ],
-    "resident": "carmen"
+    "resident": "carmen",
+    "bridge": "res://assets/illustrated/campaign/bridges/c1_dinner-c1_escape.webp"
   },
   "c1_escape": {
     "light": "91c8c9",
@@ -117,7 +119,18 @@
       0.42,
       0.82
     ],
-    "chapter_insert": true
+    "chapter_insert": true,
+    "stills": [
+      {
+        "file": "res://assets/illustrated/campaign/stills/c1_escape-beach-procession.webp",
+        "lines": [
+          "c1_escape.recap.03",
+          "c1_escape.out.03",
+          "c1_escape.out.02",
+          "c1_escape.out.04"
+        ]
+      }
+    ]
   },
   "c2_aquarium": {
     "light": "8ebfc1",
@@ -142,7 +155,8 @@
     "reveal_after": {
       "iris": "c2_aquarium.intercom",
       "lyle_copy": "c2_aquarium.intercom"
-    }
+    },
+    "bridge": "res://assets/illustrated/campaign/bridges/c2_aquarium-c2_ship.webp"
   },
   "c2_ship": {
     "light": "ffc887",
@@ -228,7 +242,8 @@
           "c3_house.ctx.01"
         ]
       }
-    ]
+    ],
+    "bridge": "res://assets/illustrated/campaign/bridges/c3_house-c3_archive.webp"
   },
   "c3_archive": {
     "light": "e8d4b3",
@@ -299,7 +314,17 @@
     ],
     "off_camera_lines": [
       "c4_safe.match.01"
-    ]
+    ],
+    "stills": [
+      {
+        "file": "res://assets/illustrated/campaign/stills/c4_safe-arrival.webp",
+        "lines": [
+          "c4_safe.ctx.01",
+          "c4_safe.ctx.02"
+        ]
+      }
+    ],
+    "bridge": "res://assets/illustrated/campaign/bridges/c4_safe-c4_escape.webp"
   },
   "c4_escape": {
     "light": "e0ae74",
@@ -342,7 +367,8 @@
       0.01,
       0.36,
       0.45
-    ]
+    ],
+    "bridge": "res://assets/illustrated/campaign/bridges/c5_shack-c5_station.webp"
   },
   "c5_station": {
     "light": "e9be8a",
@@ -376,7 +402,8 @@
       "iris",
       "steve",
       "stephen"
-    ]
+    ],
+    "bridge": "res://assets/illustrated/campaign/bridges/c6_iris-c6_jail.webp"
   },
   "c6_jail": {
     "light": "d0c8a6",
@@ -456,7 +483,8 @@
           "c7_gate.post.04"
         ]
       }
-    ]
+    ],
+    "bridge": "res://assets/illustrated/campaign/inserts/c7_swap.webp"
   },
   "c7_swap": {
     "light": "d9cca2",
@@ -531,7 +559,8 @@
       "shaw",
       "agnes",
       "steve"
-    ]
+    ],
+    "bridge": "res://assets/illustrated/campaign/bridges/c8_lab-c8_beach.webp"
   },
   "c8_beach": {
     "light": "ebcfae",
@@ -548,7 +577,8 @@
       "saren",
       "steve"
     ],
-    "resident": "saren"
+    "resident": "saren",
+    "bridge": "res://assets/illustrated/campaign/bridges/c8_beach-c8_rig.webp"
   },
   "c8_rig": {
     "light": "f3bd80",
@@ -598,7 +628,8 @@
     "inserts": {
       "c9_gallery.in.01": "c9_gallery.link",
       "c9_gallery.out.03": "c9_gallery.link"
-    }
+    },
+    "bridge": "res://assets/illustrated/campaign/bridges/c9_gallery-c9_wake.webp"
   },
   "c9_wake": {
     "light": "ffdcb5",
@@ -625,7 +656,8 @@
       "helen": "c9_wake.helen",
       "rook": "c9_wake.rook",
       "agnes_original": "c9_wake.agnes"
-    }
+    },
+    "bridge": "res://assets/illustrated/campaign/bridges/c9_wake-c9_choir.webp"
   },
   "c9_choir": {
     "light": "a6d2da",
@@ -677,7 +709,8 @@
     "company": [
       "steve",
       "frank"
-    ]
+    ],
+    "bridge": "res://assets/illustrated/campaign/bridges/c10_station-c10_town.webp"
   },
   "c10_town": {
     "light": "e4bf99",
@@ -697,7 +730,8 @@
       "shaw",
       "steve",
       "agnes"
-    ]
+    ],
+    "bridge": "res://assets/illustrated/campaign/bridges/c10_town-c10_live.webp"
   },
   "c10_live": {
     "light": "dbaa79",

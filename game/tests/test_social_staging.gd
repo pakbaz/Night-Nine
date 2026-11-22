@@ -44,7 +44,7 @@ func arrive(id: String, intro: bool = false, task_id: String = "") -> void:
 	game.campaign.reset()
 	while game.campaign.current().id != id:
 		var s: Dictionary = game.campaign.current()
-		game.campaign.mark_seen(s.intro)
+		game.campaign.mark_seen(s.get("context", []) + s.intro)
 		for task: Dictionary in s.tasks:
 			solve(task)
 		game.campaign.mark_seen(s.outro)
@@ -60,12 +60,18 @@ func arrive(id: String, intro: bool = false, task_id: String = "") -> void:
 				break
 			solve(lead)
 	if not intro:
-		game.campaign.mark_seen(game.campaign.current().intro)
+		game.campaign.mark_seen(game.campaign.current().get("context", []) + game.campaign.current().intro)
 	game._load_stage(intro)
 	# Chapter cards are timed in story_flow_qa.gd; this test starts at the first line.
 	if game.title_card.visible:
 		game.title_card.finish_now()
 	await process_frame
+	await process_frame
+	# Steve's narration of how he got here comes first; the scene's people start after it.
+	var narration: Array = game.campaign.current().get("context", [])
+	while intro and game.dialogue_panel.visible and game.active_line in narration:
+		game._next_line()
+		await process_frame
 	await process_frame
 
 func solve(task: Dictionary) -> void:

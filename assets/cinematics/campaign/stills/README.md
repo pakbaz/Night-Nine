@@ -7,3 +7,5 @@
 All of them were painted with GPT Image from the room plate and the character sheets in `assets/concepts/characters/`. A layer starts as a full repaint of the plate; `tools/graft_region.py` aligns it to the original (SIFT features and a homography fitted outside the changed region, typically under 1 px of error), colour-matches the seam and keeps only the changed region, so every object stays exactly where the room painting has it.
 
 `python3 tools/script_v2.py --apply` validates that every painting exists and every line or lead it names is real.
+
+**Bridges** (`assets/cinematics/campaign/bridges/<from>-<to>.png`, runtime `game/assets/illustrated/campaign/bridges/*.webp`) show the way from one place to the next. A scene's `bridge` entry dissolves the painting in when the scene ends, the next place's ambience and music rise under it, and the next room dissolves out of it. `tools/test_script_v2_staging.py` requires a bridge, film or departure painting for every scene change within a chapter.

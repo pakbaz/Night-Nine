@@ -30,7 +30,7 @@ func _arrive() -> void:
 	game.campaign.reset()
 	while game.campaign.current().id != "c9_gallery":
 		var scene: Dictionary = game.campaign.current()
-		game.campaign.mark_seen(scene.intro)
+		game.campaign.mark_seen(scene.get("context", []) + scene.intro)
 		for task: Dictionary in scene.tasks:
 			if not task.actor.is_empty():
 				game.campaign.switch_actor(task.actor)

@@ -121,7 +121,7 @@ func _run() -> void:
 			if not task.actor.is_empty():
 				game.campaign.switch_actor(task.actor)
 			game.campaign.choose(task.id, int(task.answer), task.get("puzzle", {}).get("solution", []))
-		game.campaign.mark_seen(game.campaign.current().intro)
+		game.campaign.mark_seen(game.campaign.current().get("context", []) + game.campaign.current().intro)
 		game.campaign.advance()
 	game._load_stage(true)
 	await key(KEY_SPACE)
