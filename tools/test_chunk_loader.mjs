@@ -238,6 +238,17 @@ const tests = {
 		await loading;
 		assert.equal(page.storage.size, 0, 'The first visit completes only when Godot opens');
 	},
+	async 'lets an active fade finish when Godot removes the loading screen'() {
+		const page = browser(() => good);
+		await page.fetch('https://night-nine.test/play.wasm');
+		const audio = page.created.find((element) => element.tagName === 'audio');
+		page.finish();
+		assert.equal(audio.paused, false, 'Do not cut the music while it fades');
+		assert.equal(page.storage.size, 1);
+		await new Promise((resolve) => setTimeout(resolve, 200));
+		assert.equal(audio.paused, true);
+		assert.equal(audio.volume, 0);
+	},
 	async 'a gesture after 95 percent does not start blocked music'() {
 		const page = browser(() => good, {play: async () => {
 			throw Object.assign(new Error('Gesture required'), {name: 'NotAllowedError'});

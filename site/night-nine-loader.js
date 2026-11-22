@@ -101,6 +101,12 @@
 		} catch (error) {
 			console.warn('Night Nine could not remember the completed first load.', error);
 		}
+		if (fadeTimer) {
+			// Godot can block the page near 100%; let the fade end smoothly instead of cutting it.
+			loadingActive = false;
+			loadingObserver?.disconnect();
+			return;
+		}
 		stopLoadingMusic();
 	}
 
