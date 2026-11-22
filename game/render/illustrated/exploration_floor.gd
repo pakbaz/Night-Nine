@@ -8,9 +8,7 @@ const CONTACT_SHADOW := preload("contact_shadow.gdshader")
 const IDLE_FRAME := 2
 const GROUND := preload("ground_navigation.gd")
 const SOCIAL := preload("social_direction.gd")
-const STORY_DOOR := preload("story_door.gd")
 var navigation := GROUND.new()
-var door_art := {}
 var blockers: Array = []
 var solids: Array = []
 var story: Array = []
@@ -60,11 +58,6 @@ func configure(room: Dictionary, roles: Array, plate: Texture2D, wide_file: Stri
 		wide.scale = ART / wide.texture.get_size()
 		add_child(wide)
 		plate = wide.texture
-	for record: Dictionary in room.get("doors",[]):
-		var door := STORY_DOOR.new()
-		add_child(door)
-		door.configure(record,plate,room_id,ART,record.opens_after in story)
-		door_art[record.blocker]=door
 	cast = Node2D.new()
 	cast.y_sort_enabled = true
 	marker = Node2D.new()
@@ -181,9 +174,8 @@ func configure_navigation(room: Dictionary) -> void:
 func update_solids(completed: Array) -> void:
 	solids.clear()
 	for item: Dictionary in blockers:
+		# A doorway the story has opened is painted open by a story layer and can be crossed.
 		var open: bool=item.has("opens_after") and item.opens_after in completed
-		if open and door_art.has(item.id):
-			open=door_art[item.id].is_cleared()
 		if not open:
 			solids.append(points(item.polygon))
 	navigation_key = -1
@@ -192,9 +184,6 @@ func set_story(completed: Array, reveal_after: Dictionary) -> void:
 	var changed := story!=completed
 	if changed:
 		story=completed.duplicate()
-		for item: Dictionary in blockers:
-			if door_art.has(item.id):
-				door_art[item.id].set_unlocked(item.opens_after in completed)
 		update_solids(story)
 	for id: String in bodies:
 		var show_person: bool = not reveal_after.has(id) or reveal_after[id] in completed
@@ -434,11 +423,6 @@ func draw_marker() -> void:
 	marker.draw_polyline(oval,Color(.93,.82,.58,.69),1.7,true)
 
 func step(delta: float, direction: Vector2) -> void:
-	for gate: Node2D in door_art.values():
-		var previously_clear: bool=gate.is_cleared()
-		gate.advance(delta,is_visible_in_tree())
-		if previously_clear!=gate.is_cleared():
-			update_solids(story)
 	if not has_actor():
 		return
 	var person: Dictionary = bodies[active_actor]
@@ -531,8 +515,5 @@ func snapshot() -> Dictionary:
 	return result
 
 func restore(saved: Dictionary) -> void:
-	for item: Dictionary in blockers:
-		if door_art.has(item.id):
-			door_art[item.id].snap_unlocked(item.opens_after in story)
 	update_solids(story)
 	repair_positions(saved)

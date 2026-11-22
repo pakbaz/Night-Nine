@@ -1831,31 +1831,6 @@
           ]
         ]
       }
-    ],
-    "doors": [
-      {
-        "blocker": "staff_door",
-        "opens_after": "c2_aquarium.guard",
-        "corners": [
-          [
-            0.7635,
-            0.482
-          ],
-          [
-            0.815,
-            0.482
-          ],
-          [
-            0.815,
-            0.602
-          ],
-          [
-            0.763,
-            0.602
-          ]
-        ],
-        "hinge": "double"
-      }
     ]
   },
   "c2_ship": {
@@ -3024,32 +2999,6 @@
         0.531
       ]
     },
-    "doors": [
-      {
-        "blocker": "cell_door",
-        "opens_after": "c6_jail.crossword",
-        "corners": [
-          [
-            0.679,
-            0.3
-          ],
-          [
-            0.762,
-            0.3
-          ],
-          [
-            0.762,
-            0.58
-          ],
-          [
-            0.679,
-            0.582
-          ]
-        ],
-        "hinge": "left",
-        "bars": 8
-      }
-    ],
     "animals": {
       "biscuit": {
         "foot": [

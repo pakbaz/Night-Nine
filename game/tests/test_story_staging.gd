@@ -63,6 +63,14 @@ func arrive(scene_id: String) -> void:
 func plate() -> String:
 	return game.stage.background.texture.resource_path
 
+## True when a story layer painting (room or walking view) with this name is visible.
+func painting_shown(name: String) -> bool:
+	for entry: Dictionary in game.stage.story_layers:
+		for node: Sprite2D in entry.nodes:
+			if node.texture.resource_path.get_file().get_basename() == name and node.visible:
+				return true
+	return false
+
 func layer_shown(name: String) -> bool:
 	for entry: Dictionary in game.stage.story_layers:
 		if str(entry.record.file).get_file().get_basename() == name:
@@ -252,7 +260,7 @@ func run() -> void:
 	# gate is painted open (never a pasted picture) once Steve opens it.
 	await enter("c1_escape")
 	check(game.stage.floor_stage != null and game.stage.floor_stage.wide == null, "The balcony walks on the same painting it shows up close")
-	check(game.stage.floor_stage != null and game.stage.floor_stage.door_art.is_empty(), "No pasted door picture on the balcony")
+	check(not ResourceLoader.exists("res://assets/illustrated/campaign/doors/c1_escape.webp"), "No pasted door picture on the balcony")
 	check(not layer_shown("c1_escape-gate-open"), "Mr. Bell's gate starts closed")
 	await enter("c1_escape", ["c1_escape.order", "c1_escape.power"])
 	check(layer_shown("c1_escape-gate-open"), "Mr. Bell's gate is painted open after Steve opens it")
@@ -282,6 +290,22 @@ func run() -> void:
 	# Nora wakes beside Dale and Lyle, whose pods stand open.
 	await enter("i2_nora")
 	check(layer_shown("i2_nora-pods-open") and game.stage.floor_stage.wide == null, "The Gallery shows the opened pods in the one painting Nora walks on")
+
+	# Doors that open in the story are painted open in place: no pasted pictures, no
+	# warped cut-out of the door, only the room as it looks with that door open.
+	for case: Array in [["c6_jail", "c6_jail-cell-open-wide", ["c6_jail.mail", "c6_jail.distract", "c6_jail.crossword"]],
+			["c2_aquarium", "c2_aquarium-staff-door-open", ["c2_aquarium.plan", "c2_aquarium.guard"]]]:
+		await enter(case[0])
+		check(not ResourceLoader.exists("res://assets/illustrated/campaign/doors/%s.webp" % case[0]), "No pasted door picture in " + case[0])
+		check(not painting_shown(case[1]), "The door in %s starts closed" % case[0])
+		await enter(case[0], case[2])
+		check(painting_shown(case[1]), "The door in %s is painted open once the story opens it" % case[0])
+		var passage: Dictionary = {}
+		for blocker: Dictionary in game.stage.floor_stage.blockers:
+			if blocker.has("opens_after"):
+				passage = blocker
+		check(not passage.is_empty() and not game.stage.floor_stage.solids.any(func(solid: PackedVector2Array): return solid == game.stage.floor_stage.points(passage.polygon)),
+			"The open doorway in %s can be walked through" % case[0])
 
 	var receipt := FileAccess.open(output.path_join("story-staging.json"), FileAccess.WRITE)
 	receipt.store_string(JSON.stringify({"checks": checks, "failures": failures}, "\t") + "\n")

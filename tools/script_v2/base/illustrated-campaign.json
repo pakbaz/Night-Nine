@@ -205,6 +205,12 @@
           "c2_aquarium.in.02"
         ]
       }
+    ],
+    "layers": [
+      {
+        "file": "res://assets/illustrated/campaign/layers/c2_aquarium-staff-door-open.webp",
+        "after": "c2_aquarium.guard"
+      }
     ]
   },
   "c2_ship": {
@@ -539,6 +545,11 @@
         "file": "res://assets/illustrated/campaign/layers/c6_jail-june-in-cell.webp",
         "wide_file": "res://assets/illustrated/campaign/layers/c6_jail-june-in-cell-wide.webp",
         "until": "c6_jail.crossword"
+      },
+      {
+        "file": "res://assets/illustrated/campaign/layers/blank.webp",
+        "wide_file": "res://assets/illustrated/campaign/layers/c6_jail-cell-open-wide.webp",
+        "after": "c6_jail.crossword"
       }
     ]
   },
@@ -833,7 +844,10 @@
         "file": "res://assets/illustrated/campaign/layers/c9_wake-agnes-asleep.webp",
         "until": "c9_wake.agnes"
       }
-    ]
+    ],
+    "appearances": {
+      "frank": "frank_standing"
+    }
   },
   "c9_choir": {
     "light": "a6d2da",
@@ -879,6 +893,9 @@
       "c9_choir.truth.01": "c9_choir.truth",
       "c9_choir.wick.lead.02": "c9_choir.wick",
       "c9_choir.out.05": "c9_choir.truth"
+    },
+    "appearances": {
+      "frank": "frank_standing"
     }
   },
   "c10_station": {
@@ -902,6 +919,9 @@
       "c10_station.in.03": "c10_station.playlist",
       "c10_station.playlist.01": "c10_station.playlist",
       "c10_station.talk.autorick.1.02": "c10_station.playlist"
+    },
+    "appearances": {
+      "frank": "frank_standing"
     }
   },
   "c10_town": {
@@ -999,7 +1019,8 @@
     ],
     "appearances": {
       "steve": "steve_broadcast",
-      "nora": "nora_reunion"
+      "nora": "nora_reunion",
+      "frank": "frank_standing"
     }
   },
   "c10_report": {
@@ -1102,12 +1123,12 @@
     "light": "f4c78c",
     "air": 0,
     "opening": [
-      0.24,
-      0.48
+      0.38,
+      0.45
     ],
     "closing": [
-      0.71,
-      0.48
+      0.56,
+      0.5
     ],
     "company": [
       "steve",

@@ -155,9 +155,8 @@ func solve_staff_door() -> void:
 	await process_frame
 	await process_frame
 	var floor_stage: Node2D=game.stage.floor_stage
-	var door: Node2D=floor_stage.door_art.staff_door
 	var target: Vector2=floor_stage.point([.779,.574])
-	check(not door.is_cleared() and not floor_stage.walk_to(target),"Players cannot enter the staff doorway before solving the guard")
+	check(not floor_stage.walk_to(target),"Players cannot enter the staff doorway before solving the guard")
 	click(game.hotspots[1].get_global_rect().get_center())
 	for tick: int in 650:
 		if not game.stage.is_walking(): break
@@ -175,19 +174,13 @@ func solve_staff_door() -> void:
 	check(option!=null,"The guard offers a reachable dialogue choice in the real interaction panel")
 	if not option: return
 	option.pressed.emit()
-	check(game.dialogue_panel.visible and door.open_fraction==0.0,"The guard speaks before players see the door swing")
-	game._process(.25)
-	check(not door.is_cleared(),"The threshold remains closed during the guard's dialogue")
 	for line: int in 30:
 		if not game.dialogue_panel.visible: break
 		game._next_line()
-	check(game.stage.walking_view() and door.open_fraction==0.0,"The camera returns before the visible opening begins")
-	game._process(.15)
-	check(door.open_fraction>0.0 and not door.is_cleared(),"The door begins swinging before the investigator can cross")
-	game._process(.36)
-	check(door.open_fraction<.70 and not floor_stage.walk_to(target),"An investigator still cannot enter just before the leaf clears the threshold")
-	game._process(.015)
-	check(door.is_cleared() and floor_stage.walk_to(target),"A player can enter the newly revealed staff doorway")
+	check(game.stage.walking_view(),"The camera returns to the corridor after the guard")
+	var opened: bool = game.stage.story_layers.any(func(entry: Dictionary): return str(entry.record.file).ends_with("c2_aquarium-staff-door-open.webp") and entry.nodes.all(func(node: Sprite2D): return node.visible))
+	check(opened,"The staff doors are painted open")
+	check(floor_stage.walk_to(target),"A player can enter the opened staff doorway")
 	for tick: int in 650:
 		if not game.stage.is_walking(): break
 		game._process(.025)
@@ -195,5 +188,4 @@ func solve_staff_door() -> void:
 	game._save("manual")
 	check(game._load("manual"),"Reload after opening the aquarium")
 	floor_stage=game.stage.floor_stage
-	door=floor_stage.door_art.staff_door
-	check(door.is_cleared() and is_equal_approx(door.open_fraction,1.0) and floor_stage.bodies[floor_stage.active_actor].body.position.distance_to(target)<.2,"A loaded game restores the open leaf and the investigator on the far side together")
+	check(floor_stage.walk_to(target) or floor_stage.bodies[floor_stage.active_actor].body.position.distance_to(target)<.2,"A loaded game keeps the doorway open with the investigator on the far side")

@@ -1,0 +1,118 @@
+{
+  "base": "frank_standing.webp",
+  "source": "assets/characters/campaign/masters/frank_standing.png",
+  "source_sha256": "0e25bff37fa0c5c2e951a61f55c093a32d17e4b986c41cd67c7380186104e86e",
+  "size": [
+    720,
+    1080
+  ],
+  "origin": "top_left",
+  "foot_anchor": [
+    360,
+    1080
+  ],
+  "frames": {
+    "blink_half": {
+      "atlas_region": [
+        0,
+        0,
+        101,
+        36
+      ],
+      "source_origin": [
+        329,
+        117
+      ]
+    },
+    "blink_closed": {
+      "atlas_region": [
+        0,
+        38,
+        101,
+        36
+      ],
+      "source_origin": [
+        329,
+        117
+      ]
+    },
+    "mouth_parted": {
+      "atlas_region": [
+        0,
+        76,
+        87,
+        57
+      ],
+      "source_origin": [
+        352,
+        168
+      ]
+    },
+    "mouth_open": {
+      "atlas_region": [
+        0,
+        135,
+        87,
+        57
+      ],
+      "source_origin": [
+        352,
+        168
+      ]
+    },
+    "mouth_round": {
+      "atlas_region": [
+        0,
+        194,
+        87,
+        57
+      ],
+      "source_origin": [
+        352,
+        168
+      ]
+    },
+    "mouth_wide": {
+      "atlas_region": [
+        0,
+        253,
+        87,
+        57
+      ],
+      "source_origin": [
+        352,
+        168
+      ]
+    }
+  },
+  "cue_frames": {
+    "X": null,
+    "A": null,
+    "B": "mouth_parted",
+    "C": "mouth_wide",
+    "D": "mouth_open",
+    "E": "mouth_round",
+    "F": "mouth_round",
+    "G": "mouth_parted",
+    "H": "mouth_parted"
+  },
+  "sha256": {
+    "frank_standing.webp": "943798f1a4a9c6b954d99bfa2b6d85b00ca4ed74996de134c84a2cf78c047724",
+    "frank_standing-face-atlas.png": "04be931e954b994f527e5fbefa761af5e71bd43c92c646383549913193bb3ce4"
+  },
+  "atlas": "frank_standing-face-atlas.png",
+  "eye_centers": [
+    [
+      350,
+      141
+    ],
+    [
+      410,
+      130
+    ]
+  ],
+  "mouth_center": [
+    399,
+    197
+  ]
+}
