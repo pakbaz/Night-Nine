@@ -138,6 +138,40 @@ func select_actor(id: String) -> void:
 func has_actor() -> bool:
 	return bodies.has(active_actor)
 
+func body_at(at: Vector2) -> String:
+	var ordered: Array = bodies.keys()
+	ordered.sort_custom(func(a: String, b: String):
+		return bodies[a].body.position.y > bodies[b].body.position.y)
+	for id: String in ordered:
+		var person: Dictionary = bodies[id]
+		if not person.body.visible:
+			continue
+		var sprite: Sprite2D = person.sprite
+		if _sprite_hit(sprite, at):
+			return id
+	return ""
+
+func _sprite_hit(sprite: Sprite2D, at: Vector2) -> bool:
+	if not sprite.texture:
+		return false
+	var local: Vector2 = sprite.to_local(at)
+	var rect: Rect2 = sprite.get_rect()
+	if not rect.has_point(local):
+		return false
+	var image: Image = sprite.texture.get_image()
+	if not image or image.is_empty():
+		return true
+	var cell := Vector2(image.get_width() / sprite.hframes, image.get_height() / sprite.vframes)
+	var uv: Vector2 = (local - rect.position) / rect.size
+	if sprite.flip_h:
+		uv.x = 1.0 - uv.x
+	var frame_x: int = sprite.frame % sprite.hframes
+	var frame_y: int = sprite.frame / sprite.hframes
+	var pixel := Vector2i(
+		clampi(int((frame_x + uv.x) * cell.x), 0, image.get_width() - 1),
+		clampi(int((frame_y + uv.y) * cell.y), 0, image.get_height() - 1))
+	return image.get_pixelv(pixel).a > .12
+
 func configure_navigation(room: Dictionary) -> void:
 	polygon = points(room.polygon)
 	depth = room.depth

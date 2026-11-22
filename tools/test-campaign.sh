@@ -25,7 +25,7 @@ bash "$PROJECT_ROOT/tools/godot.sh" --headless --script res://tests/test_voice_a
 python3 "$PROJECT_ROOT/tools/check-log.py" "$NIGHT_NINE_SAVE_DIR/voice-assets.log" "$NIGHT_NINE_SAVE_DIR/voice-assets-console.log"
 export NIGHT_NINE_QA_DIR="$PROJECT_ROOT/tmp/qa/extended-run-$$"
 mkdir -p "$NIGHT_NINE_QA_DIR"
-for SUITE in animation_handoff campaign_music case_boards social_staging; do
+for SUITE in animation_handoff campaign_music case_boards social_staging small_talk; do
   NIGHT_NINE_SAVE_DIR="$NIGHT_NINE_QA_DIR/$SUITE-save" bash "$PROJECT_ROOT/tools/godot.sh" --headless --audio-driver Dummy --script "res://tests/test_$SUITE.gd" --log-file "$NIGHT_NINE_QA_DIR/$SUITE.log"
   python3 "$PROJECT_ROOT/tools/check-log.py" "$NIGHT_NINE_QA_DIR/$SUITE.log"
 done
@@ -33,6 +33,7 @@ python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$NIGHT_NINE_QA_DIR/animation-h
 python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$NIGHT_NINE_QA_DIR/score-route.json" 351
 python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$NIGHT_NINE_QA_DIR/case-boards.json" 881
 python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$NIGHT_NINE_QA_DIR/social-staging.json" 151
+python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$NIGHT_NINE_QA_DIR/small-talk.json" 16
 if [[ "${1:-}" == "--render" ]]; then
   export NIGHT_NINE_QA_DIR="$PROJECT_ROOT/tmp/qa/campaign-run-$$"
   mkdir -p "$NIGHT_NINE_QA_DIR"

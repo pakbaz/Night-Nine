@@ -89,6 +89,25 @@ func _check_migration() -> void:
 
 func _check_script_v2_runtime() -> void:
 	var state := NightCampaign.new()
+	var flat_index := _scene_index(state, "c1_flat")
+	state.data.scene = flat_index
+	state.data.scene_id = "c1_flat"
+	var gated: Dictionary
+	for topic: Dictionary in state.current().get("talk", []):
+		if not str(topic.get("after", "")).is_empty():
+			gated = topic
+			break
+	check(not gated.is_empty(), "Chapter 1 includes task-gated small talk")
+	check(gated not in state.available_talk("iris"), "Small talk waits for its scene task")
+	state.data.done = [gated.after]
+	var topics: Array = state.available_talk("iris")
+	check(gated in topics, "Small talk unlocks after its scene task")
+	check(not state.talk_heard(gated), "A topic is unheard before its lines play")
+	state.mark_seen(gated.lines)
+	check(state.talk_heard(gated), "A topic is heard after all its lines play")
+	state.data.scene = 0
+	state.data.scene_id = state.content.scenes[0].id
+	state.data.done = []
 	var lead_id := "c1_flat.control"
 	var lead: Array = state.unseen_lead(lead_id)
 	check(not lead.is_empty(), "A new lead exposes its lead-in lines")

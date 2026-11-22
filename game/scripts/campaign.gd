@@ -40,6 +40,9 @@ var light_remaining := -1.0
 var cut_duration := LIGHT_BEAT
 var skipping_departure := false
 var object_list: Button
+var people_bar: HBoxContainer
+var people_buttons: Dictionary = {}
+const TALK_APPEARANCE := {"agnes_original":"agnes", "lyle_copy":"lyle", "rook_copy":"rook", "dale":"pell"}
 var end_card: PanelContainer
 const CLOSING_CREDITS := preload("res://ui/closing_credits.gd")
 var credit_reel: CLOSING_CREDITS
@@ -391,6 +394,16 @@ func _build_ui() -> void:
 	object_list.offset_top=-110
 	object_list.offset_bottom=-60
 	object_list.hide()
+	people_bar = HBoxContainer.new()
+	people_bar.name = "PeopleBar"
+	people_bar.set_anchors_and_offsets_preset(Control.PRESET_BOTTOM_LEFT)
+	people_bar.offset_left = 225
+	people_bar.offset_right = 760
+	people_bar.offset_top = -118
+	people_bar.offset_bottom = -52
+	people_bar.add_theme_constant_override("separation", 10)
+	root.add_child(people_bar)
+	people_bar.hide()
 	next_button = _button(root,"Leave this location",_depart)
 	next_button.set_anchors_and_offsets_preset(Control.PRESET_BOTTOM_RIGHT)
 	next_button.offset_left = -350
@@ -455,6 +468,145 @@ func _build_ui() -> void:
 	root.move_child(end_card,0)
 	_build_credits()
 
+func _speaker_name(id: String) -> String:
+	for topic: Dictionary in campaign.current().get("talk", []):
+		if topic.get("speaker", "") != id:
+			continue
+		for line_id: String in topic.get("lines", []):
+			var line: Dictionary = campaign.content.lines.get(line_id, {})
+			if line.get("speaker", "") == id:
+				return str(line.get("display", line.get("display_speaker", campaign.content.cast.get(id, id))))
+	return str(campaign.content.cast.get(id, id))
+
+func _portrait_icon(id: String) -> Texture2D:
+	var appearance: String = TALK_APPEARANCE.get(id, id)
+	if is_instance_valid(stage) and stage.get("directions") is Dictionary:
+		appearance = stage.directions.get("appearances", {}).get(id, appearance)
+	var folder := "res://assets/illustrated/cast/" + str(appearance) + "/"
+	if not FileAccess.file_exists(folder + "sprite.json"):
+		return null
+	var portrait: Dictionary = JSON.parse_string(FileAccess.get_file_as_string(folder + "sprite.json"))
+	var texture := load(folder + str(portrait.get("base", ""))) as Texture2D
+	if not texture:
+		return null
+	var texture_size := texture.get_size()
+	var crop: float = minf(texture_size.x, texture_size.y) * .38
+	var center: Vector2 = texture_size * .5
+	var eyes: Array = portrait.get("eye_centers", [])
+	if eyes.size() == 2:
+		center = (Vector2(eyes[0][0], eyes[0][1]) + Vector2(eyes[1][0], eyes[1][1])) * .5
+		center.y += crop * .18
+	var extent: Vector2 = Vector2.ONE * crop
+	var origin: Vector2 = (center - extent * .5).clamp(Vector2.ZERO, texture_size - extent)
+	var atlas := AtlasTexture.new()
+	atlas.atlas = texture
+	atlas.region = Rect2(origin, extent)
+	return atlas
+
+func _person_button(id: String) -> Button:
+	var button := Button.new()
+	button.name = "Person_" + id
+	button.custom_minimum_size = Vector2(62, 62)
+	button.tooltip_text = _speaker_name(id)
+	button.icon = _portrait_icon(id)
+	button.expand_icon = true
+	button.focus_mode = Control.FOCUS_ALL
+	for state: String in ["normal", "hover", "pressed", "focus"]:
+		var style := StyleBoxFlat.new()
+		style.bg_color = Color("16333d") if state == "normal" else Color("31545b")
+		style.border_color = Color("e9c276") if state == "focus" else Color("789294")
+		style.set_border_width_all(2)
+		style.set_corner_radius_all(31)
+		style.set_content_margin_all(3)
+		button.add_theme_stylebox_override(state, style)
+	if button.icon == null:
+		button.text = _speaker_name(id).left(1)
+	if campaign.available_talk(id).any(func(topic: Dictionary): return not campaign.talk_heard(topic)):
+		var marker := Label.new()
+		marker.name = "Unheard"
+		marker.text = "●"
+		marker.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		marker.add_theme_color_override("font_color", Color("e9c276"))
+		marker.add_theme_color_override("font_shadow_color", Color("07161b"))
+		marker.add_theme_constant_override("shadow_outline_size", 3)
+		marker.set_anchors_and_offsets_preset(Control.PRESET_TOP_RIGHT)
+		marker.offset_left = -19
+		marker.offset_right = -3
+		marker.offset_top = 1
+		marker.offset_bottom = 19
+		button.add_child(marker)
+	button.pressed.connect(_open_talk.bind(id))
+	return button
+
+func _refresh_people_bar() -> void:
+	for child: Node in people_bar.get_children():
+		people_bar.remove_child(child)
+		child.queue_free()
+	people_buttons.clear()
+	var speakers: Array[String] = []
+	for topic: Dictionary in campaign.available_talk():
+		var id: String = topic.get("speaker", "")
+		if not id.is_empty() and id not in speakers:
+			speakers.append(id)
+	for id: String in speakers:
+		var button := _person_button(id)
+		people_bar.add_child(button)
+		people_buttons[id] = button
+
+func _clear_interaction() -> void:
+	(interaction.get_parent() as ScrollContainer).scroll_vertical = 0
+	for child: Node in interaction.get_children():
+		interaction.remove_child(child)
+		child.queue_free()
+
+func _open_talk(id: String) -> void:
+	if not _can_explore() or campaign.available_talk(id).is_empty():
+		return
+	if stage.has_method("cancel_walk"):
+		stage.cancel_walk()
+	stage.set_focus(-1)
+	listening_inspection = false
+	_clear_interaction()
+	_investigation_size(false)
+	_label(interaction, _speaker_name(id), 25)
+	_label(interaction, "Talk about:", 18)
+	var first: Button
+	for topic: Dictionary in campaign.available_talk(id):
+		var heard: bool = campaign.talk_heard(topic)
+		var button := _button(interaction, ("✓ " if heard else "") + str(topic.topic),
+			_play_talk.bind(topic, id))
+		button.name = "Talk_" + str(topic.id).get_file()
+		button.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+		if heard:
+			button.modulate = Color("8aa498")
+		if not first:
+			first = button
+	_button(interaction, "Back", func():
+		root.get_node("InteractionPanel").hide()
+		stage.set_focus(-1)
+		if people_buttons.has(id):
+			people_buttons[id].grab_focus.call_deferred())
+	root.get_node("InteractionPanel").show()
+	if first:
+		first.grab_focus()
+
+func _play_talk(topic: Dictionary, id: String) -> void:
+	root.get_node("InteractionPanel").hide()
+	_speak(topic.get("lines", []), _after_talk.bind(id))
+
+func _after_talk(id: String) -> void:
+	if campaign.available_talk(id).any(func(topic: Dictionary): return not campaign.talk_heard(topic)):
+		_open_talk(id)
+	else:
+		stage.set_focus(-1)
+
+func _talk_speaker_for_body(body_id: String) -> String:
+	for topic: Dictionary in campaign.available_talk():
+		var speaker_id: String = topic.get("speaker", "")
+		if TALK_APPEARANCE.get(speaker_id, speaker_id) == body_id:
+			return speaker_id
+	return ""
+
 func _open_objects() -> void:
 	if not started or campaign.data.finished or dialogue_panel.visible or transitioning or menu.visible or journal.visible or tape_compare.visible:
 		return
@@ -462,10 +614,7 @@ func _open_objects() -> void:
 		stage.cancel_walk()
 	listening_inspection = false
 	stage.set_focus(-1)
-	(interaction.get_parent() as ScrollContainer).scroll_vertical=0
-	for child: Node in interaction.get_children():
-		interaction.remove_child(child)
-		child.queue_free()
+	_clear_interaction()
 	_investigation_size(false)
 	_label(interaction,"Objects at this location",25)
 	var first: Button
@@ -485,6 +634,17 @@ func _open_objects() -> void:
 		lead.tooltip_text = campaign.lock_reason(task.id) if locked else str(task.goal)
 		if not lead.disabled and not first:
 			first=lead
+	var speakers: Array[String] = []
+	for topic: Dictionary in campaign.available_talk():
+		var id: String = topic.get("speaker", "")
+		if not id.is_empty() and id not in speakers:
+			speakers.append(id)
+	if not speakers.is_empty():
+		_label(interaction, "People", 25)
+		for id: String in speakers:
+			var talk := _button(interaction, "Talk to " + _speaker_name(id), _open_talk.bind(id))
+			if not first:
+				first = talk
 	_button(interaction,"Return to the scene",func(): root.get_node("InteractionPanel").hide(); object_list.grab_focus.call_deferred())
 	root.get_node("InteractionPanel").show()
 	if first:
@@ -1007,6 +1167,7 @@ func _refresh() -> void:
 		hotspots[i].modulate=Color("8aa498") if complete else Color.WHITE
 		hotspots[i].disabled=false
 		hotspots[i].tooltip_text=campaign.lock_reason(task.id) if locked else str(task.goal)
+	_refresh_people_bar()
 	next_button.visible=false
 	next_button.text="Finish" if int(campaign.data.scene)==campaign.content.scenes.size()-1 else "Leave this location"
 
@@ -1710,6 +1871,7 @@ func _process(delta: float) -> void:
 		hotspots[i].position = stage.project_target(i)-hotspots[i].size*.5
 		hotspots[i].visible=started and not campaign.data.finished and not transitioning and not dialogue_panel.visible and not menu.visible and not journal.visible and not tape_compare.visible and not root.get_node("InteractionPanel").visible
 	object_list.visible = started and not campaign.data.finished and not dialogue_panel.visible and not transitioning and not menu.visible and not journal.visible and not tape_compare.visible and not root.get_node("InteractionPanel").visible
+	people_bar.visible = object_list.visible and not people_buttons.is_empty()
 	if dialogue_panel.visible and not menu.visible and not journal.visible and auto_dialogue:
 		line_remaining-=delta
 		if line_remaining<=0 and not voice.playing and not effect.playing:
@@ -1745,6 +1907,13 @@ func _can_walk() -> bool:
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.button_index==MOUSE_BUTTON_LEFT and event.pressed and _can_walk():
+		if stage.has_method("talk_body_at_screen"):
+			var body_id: String = stage.talk_body_at_screen(event.position)
+			var talk_speaker: String = _talk_speaker_for_body(body_id)
+			if not talk_speaker.is_empty():
+				_open_talk(talk_speaker)
+				get_viewport().set_input_as_handled()
+				return
 		if stage.has_method("walk_screen") and stage.walk_screen(event.position):
 			_status("")
 			get_viewport().set_input_as_handled()

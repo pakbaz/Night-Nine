@@ -20,6 +20,9 @@ func _init() -> void:
 		for line_group: String in ["context", "intro", "recap", "outro"]:
 			for line_id: String in scene.get(line_group, []):
 				line_scene[line_id] = i
+		for topic: Dictionary in scene.get("talk", []):
+			for line_id: String in topic.get("lines", []):
+				line_scene[line_id] = i
 		for task: Dictionary in scene.tasks:
 			task_index[task.id] = task
 			task_scene[task.id] = i
@@ -99,6 +102,25 @@ func unseen_lead(task_id: String) -> Array:
 		if id not in data.seen:
 			pending.append(id)
 	return pending
+
+func available_talk(speaker: String = "") -> Array:
+	var topics: Array = []
+	for topic: Dictionary in current().get("talk", []):
+		if not speaker.is_empty() and topic.get("speaker", "") != speaker:
+			continue
+		var after: String = topic.get("after", "")
+		if after.is_empty() or after in data.done:
+			topics.append(topic)
+	return topics
+
+func talk_heard(topic: Dictionary) -> bool:
+	var lines: Array = topic.get("lines", [])
+	if lines.is_empty():
+		return false
+	for id: String in lines:
+		if id not in data.seen:
+			return false
+	return true
 
 func perspective_name(task_id: String) -> String:
 	if not task_index.has(task_id):

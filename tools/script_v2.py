@@ -280,6 +280,20 @@ class Merge:
             tasks.append(self.build_task(sid, key, task_edits.get(key), base_tasks.get(key)))
         out['deleted_tasks'] = [f'{sid}.{k}' for k, v in task_edits.items() if v == 'DELETE']
         out['tasks'] = tasks
+        talk = []
+        for speaker, topics in edit.get('talk', {}).items():
+            for number, topic in enumerate(topics, 1):
+                topic_id = f'{sid}.talk.{speaker}.{number}'
+                after = str(topic.get('after', '')).strip()
+                talk.append({
+                    'id': topic_id,
+                    'speaker': speaker,
+                    'topic': str(topic.get('topic', '')).strip(),
+                    'after': f'{sid}.{after}' if after and '.' not in after else after,
+                    'lines': self.resolve_list(
+                        topic.get('lines', []), topic_id, topic_id, sid, topic_id),
+                })
+        out['talk'] = talk
         out['recap'] = self.resolve_list(edit.get('recap', []), f'{sid}.recap', sid + ' recap', sid, 'recap', True)
         out['outro'] = self.resolve_list(edit.get('outro', scene['outro']), f'{sid}.out', sid + ' outro', sid, 'outro')
         out['changes'] = edit.get('changes', [])
@@ -314,6 +328,7 @@ def apply_display(content, rules):
     order = {s['id']: i for i, s in enumerate(content['scenes'])}
     for i, scene in enumerate(content['scenes']):
         groups = [scene['context'], scene['intro'], scene['recap'], scene['outro']]
+        groups += [topic['lines'] for topic in scene.get('talk', [])]
         groups += [t.get('lead', []) + t['lines'] + ([t['finding']] if t.get('finding') else []) for t in scene['tasks']]
         for lid in (lid for g in groups for lid in g):
             line = content['lines'][lid]
@@ -338,6 +353,8 @@ def visible_text(scene, content):
         yield 'objective', step if isinstance(step, str) else step.get('text', '')
     yield 'coach', scene.get('coach', '')
     yield 'card', json.dumps(scene.get('card', {}), ensure_ascii=False)
+    for topic in scene.get('talk', []):
+        yield topic['id'] + '.topic', topic.get('topic', '')
     for t in scene['tasks']:
         for field in ('title', 'goal', 'background', 'prompt', 'note'):
             yield f"{t['id']}.{field}", t.get(field, '')
@@ -359,6 +376,11 @@ def visible_text(scene, content):
             yield f"{t['id']}.label", lab
     for g in ('context', 'intro', 'recap', 'outro'):
         for lid in scene[g]:
+            line = content['lines'][lid]
+            yield lid, line.get('display_text') or line['text']
+            yield lid + '.speaker', line.get('display_speaker') or content['cast'].get(line['speaker'], line['speaker'])
+    for topic in scene.get('talk', []):
+        for lid in topic['lines']:
             line = content['lines'][lid]
             yield lid, line.get('display_text') or line['text']
             yield lid + '.speaker', line.get('display_speaker') or content['cast'].get(line['speaker'], line['speaker'])
@@ -394,6 +416,22 @@ def validate(content, edits, merge):
         sid = scene['id']
         ids = {t['id'] for t in scene['tasks']}
         present = set(scene.get('present', [])) | set(g.get('always_present', []))
+        for topic in scene.get('talk', []):
+            where = topic['id']
+            label = str(topic.get('topic', ''))
+            speaker = str(topic.get('speaker', ''))
+            if not label:
+                merge.issue('error', where, 'talk topic is empty')
+            elif len(label) > 48:
+                merge.issue('error', where, 'talk topic is longer than 48 characters')
+            if len(topic.get('lines', [])) < 2:
+                merge.issue('error', where, 'talk topic needs at least two lines')
+            if topic.get('after') and topic['after'] not in ids:
+                merge.issue('error', where, f"talk after names unknown task {topic['after']}")
+            if speaker not in cast:
+                merge.issue('error', where, f'unknown talk speaker {speaker}')
+            elif speaker not in present:
+                merge.issue('error', where, f'talk speaker {speaker} is not present in {sid}')
         for where, art in [(sid, scene.get('departure_art'))] + [(t['id'], t.get('art')) for t in scene['tasks']]:
             if art and not (str(art).startswith('res://') and (ROOT / 'game' / str(art)[6:]).is_file()):
                 merge.issue('error', where, f'art file not found: {art}')
@@ -458,7 +496,9 @@ def validate(content, edits, merge):
                         if label in rule.get('allow', []):
                             continue
                         merge.issue('error', sid, f"spoiler '{rule['pattern']}' before {first or 'ever'} in {label}: {text[:90]}")
-        groups = scene['context'] + scene['intro'] + scene['recap'] + scene['outro'] + [lid for t in scene['tasks'] for lid in t.get('lead', []) + t['lines']]
+        groups = scene['context'] + scene['intro'] + scene['recap'] + scene['outro'] \
+            + [lid for topic in scene.get('talk', []) for lid in topic['lines']] \
+            + [lid for t in scene['tasks'] for lid in t.get('lead', []) + t['lines']]
         for lid in groups:
             line = content['lines'][lid]
             if line['speaker'] not in cast:
@@ -606,6 +646,8 @@ def valid_reference(value, scene_ids, task_ids, line_ids):
 
 def filter_illustrated_campaign(data, content, appearances=None):
     result = copy.deepcopy(data)
+    appearances = appearances or {}
+    portrait_aliases = {'agnes_original': 'agnes', 'lyle_copy': 'lyle', 'rook_copy': 'rook', 'dale': 'pell'}
     scene_ids = {s['id'] for s in content['scenes']}
     task_ids = {t['id'] for s in content['scenes'] for t in s['tasks']}
     line_ids = set(content['lines'])
@@ -617,6 +659,19 @@ def filter_illustrated_campaign(data, content, appearances=None):
         scene = result[scene_id]
         if appearances and scene_id in appearances:
             scene.setdefault('appearances', {}).update(appearances[scene_id])
+        merged_appearances = scene.get('appearances', {})
+        company = scene.setdefault('company', [])
+        content_scene = next(s for s in content['scenes'] if s['id'] == scene_id)
+        for topic in content_scene.get('talk', []):
+            speaker = topic['speaker']
+            profile = merged_appearances.get(speaker, portrait_aliases.get(speaker, speaker))
+            folder = ROOT / 'game/assets/illustrated/cast' / profile
+            metadata = folder / 'sprite.json'
+            if not metadata.is_file():
+                continue
+            portrait = json.loads(metadata.read_text())
+            if (folder / portrait.get('base', '')).is_file() and speaker not in company:
+                company.append(speaker)
         for field in ('off_camera_lines',):
             scene[field] = [replacements.get(x, x) for x in scene.get(field, [])
                             if replacements.get(x, x) in line_ids]
@@ -816,6 +871,13 @@ def render(content, books, merge, casting, out_dir):
             md.extend(say(lid) for lid in scene['context'])
             md.extend(say(lid) for lid in scene['intro'])
             md.append('')
+        if scene.get('talk'):
+            md.append('### Small talk')
+            for topic in scene['talk']:
+                after = f" · after `{topic['after']}`" if topic.get('after') else ''
+                md.append(f"**{topic['topic']}** · {shown(topic['speaker'])}{after}")
+                md.extend(say(lid) for lid in topic['lines'])
+                md.append('')
         for n, t in enumerate(scene['tasks'], 1):
             tag = {'new': ' **NEW LEAD**', 'revised': ''}.get(t.get('status'), '')
             diff = f" · difficulty {t['difficulty']}" if t.get('difficulty') else ''

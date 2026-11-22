@@ -165,6 +165,11 @@ func is_walking() -> bool:
 func walk_screen(screen: Vector2) -> bool:
 	return walking_view() and frame.get_global_rect().has_point(screen) and floor_stage.walk_to(distant.to_local(screen))
 
+func talk_body_at_screen(screen: Vector2) -> String:
+	if not walking_view() or not frame.get_global_rect().has_point(screen):
+		return ""
+	return floor_stage.body_at(distant.to_local(screen))
+
 func walk_task(id: String) -> bool:
 	return walking_view() and floor_stage.approach_task(id)
 
