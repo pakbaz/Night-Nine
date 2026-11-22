@@ -160,7 +160,7 @@ func _run() -> void:
 				await click(button("−3 dB",game.interaction))
 				await click(button("Apply settings",game.interaction))
 				check(not task.id in game.campaign.data.done, "Overloading the recorder can be retried")
-				await click(button("−6 dB",game.interaction))
+				await click(button("6 dB",game.interaction))
 				await capture(slot+"-puzzle")
 				await click(button("Apply settings",game.interaction))
 			elif task.get("puzzle",{}).get("presentation","")=="case_board":

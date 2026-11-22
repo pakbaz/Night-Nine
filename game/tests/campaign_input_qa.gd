@@ -151,7 +151,7 @@ func _run() -> void:
 	await click(button("Back",game.interaction))
 	await click(game.hotspots[0])
 	check(game.root.get_node("InteractionPanel").visible and not game.dialogue_panel.visible,"Reopening skips the seen lead-in")
-	var gain := button("−6 dB",game.interaction)
+	var gain := button("6 dB",game.interaction)
 	check(is_instance_valid(gain),"Recorder puzzle is available")
 	if gain:
 		gain.grab_focus()

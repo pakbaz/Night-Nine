@@ -54,9 +54,11 @@ func press_control(control: Button) -> void:
 	if not is_instance_valid(control):
 		check(false,"Expected an available gameplay control in "+str(game.campaign.current().id))
 		return
-	var scroll:=game.interaction.get_parent() as ScrollContainer
-	if scroll.is_ancestor_of(control):
-		scroll.ensure_control_visible(control)
+	var holder: Node=control.get_parent()
+	while holder and not holder is ScrollContainer:
+		holder=holder.get_parent()
+	if holder:
+		(holder as ScrollContainer).ensure_control_visible(control)
 		await wait_frames(2)
 	await click(control)
 
@@ -87,7 +89,8 @@ func watch_dialogue(location: String) -> void:
 		else:
 			var performance: Dictionary=game._recording_for(line.audio,line.text)
 			var take: Dictionary=performance.take
-			check(take.get("sha256","")==performance.timing.get("audio_sha256","") and not performance.timing.get("cues",[]).is_empty(),"Matching voiced mouth timing for "+id)
+			# Lip sync is retired: later takes carry no mouth cues, and older cues must still match their take.
+			check(not take.is_empty() and (performance.timing.is_empty() or take.get("sha256","")==performance.timing.get("audio_sha256","")),"Matching recording for "+id)
 			if require_v4:
 				check(str(take.file).begins_with("res://assets/audio/voices/elevenlabs-v4/"),"Active v4 recording for "+id)
 			check(game.voice.playing and game.voice.stream.resource_path==take.file,"Correct playing take "+id)
@@ -163,7 +166,7 @@ func operate(task: Dictionary) -> void:
 		if task.id == "c2_aquarium.guard":
 			await snapshot("c2_aquarium-corridor-evidence")
 	if task.id=="p_veyr.levels":
-		await press_control(button("−6 dB",game.interaction))
+		await press_control(button("6 dB",game.interaction))
 		await press_control(button("Apply settings",game.interaction))
 	elif task.id=="p_bay.tune":
 		game.receiver.dial.grab_focus()
@@ -177,10 +180,9 @@ func operate(task: Dictionary) -> void:
 		for step: int in 35:
 			await key(KEY_LEFT)
 		check(is_equal_approx(tape.slider.value,-.35),"Keyboard aligns Saturday and Sunday to the matching breath")
-		tape.conclusion.grab_focus()
-		for step: int in 3:
-			await key(KEY_RIGHT)
-		check(tape.conclusion.selected==3,"Select the identical performance finding")
+		check(tape.row_choices.size()==task.puzzle.rows.size(),"Show one comparison row for every voice on the tapes")
+		for index: int in tape.row_choices.size():
+			tape.row_choices[index].select(int(task.puzzle.solution[index])+1)
 		await press_control(button("Play together",tape))
 		check(game.voice.playing and game.voice.stream==tape.active_stream,"Play the actual aligned voices")
 		await snapshot("c1_flat-tape-comparison")
