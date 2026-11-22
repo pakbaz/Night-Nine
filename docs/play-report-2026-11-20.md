@@ -115,3 +115,27 @@ After explicit authorization for included-credit-only transcription, 122 Scribe 
 Both recognizers confirmed that the old Saren splice dropped "Tonight." A sample-retention regression failed before the fix. The splicer now uses the independently verified source boundaries, preserves the old waveform and receipt, and rejects stale or inconsistent alignment evidence. Independent transcription of the repaired clip returns the complete expected line.
 
 Six retakes passed both recognizers and now have matching runtime audio and new lip-sync revisions. Strict evidence-based staging passes 829 of 873 IDs, leaving 44 holds: 42 transcript differences and two short ambiguities. No listening approval was invented and both playback gates remain disabled. Twelve pipeline tests, twelve packaging tests and all 2,623 Godot voice-asset checks pass. These checks do not replace the still-pending voiced walkthrough or smoothness assessment.
+
+## November 21: easier puzzles, small talk and later voice batches
+
+This revision answers a first play-through. The story is unchanged.
+
+- The opening storybook no longer replays "Six thousand people…" after a stalled frame. Storybook captions now play in order, so the aftermath book narrates every line, and the last picture waits while Steve finishes.
+- A full screen button sits in the top-right corner of every screen. Painted mouths stay still while characters speak. The morning and pier scenes swapped music.
+- Case boards and settings rows mark each answer right or wrong, and right answers lock in. Board steps are spelled out, and case notes and backgrounds are fully visible. The Chapter 1 tape comparison now holds every voice in the kitchen and fits on one screen.
+- Every chapter's puzzles were rewritten in plain language. People and facts are introduced in dialogue before a puzzle needs them. The 23 case boards have 25 steps in total, all of them matching steps.
+- Small talk is optional. People open their topics from a portrait bar, their walking figures or their painted figures. Topics never wait for a scene's last lead.
+- 773 takes from later voice batches are in use. They were checked with the same strict transcript rules as the frozen production, plus independent Scribe transcripts. 26 lines that both recognizers kept mishearing were reworded rather than relaxing a rule. No take is marked as listening-reviewed.
+
+Verification on the final content:
+
+| Run | Result |
+| --- | --- |
+| Native campaign core, every lead order | 1,902 checks, 0 failures |
+| Voice assets | 10,394 checks, 1,607 takes, 0 failures |
+| Case boards / small talk / soundtrack / social staging | 716 / 20 / 400 / 152 checks, 0 failures |
+| Full rendered walkthrough (CoreAudio, Forward+) | 34 scenes, 7,623 checks, 994 voiced lines, 0 failures |
+| Rendered story flow | 100 checks, 0 failures |
+| Cloudflare deployments | Each milestone passed the CI suite and deployed to the review site |
+
+These are automated checks. They are not a listening review or a study of first-time players.
