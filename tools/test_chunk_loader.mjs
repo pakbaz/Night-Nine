@@ -16,7 +16,19 @@ const manifest = {
 		parts: [{name: partName, size: good.length, sha256: digest}]}],
 };
 
-function browser(serve, {storage = new Map(), play = async () => {}} = {}) {
+async function makeManifest(parts) {
+	const entries = parts.map(([name, bytes]) => ({
+		name, size: bytes.length, sha256: createHash('sha256').update(bytes).digest('hex'),
+	}));
+	return {
+		version: 1,
+		release: 'test-release',
+		files: [{name: 'play.wasm', size: entries.reduce((sum, part) => sum + part.size, 0),
+			sha256: '', parts: entries}],
+	};
+}
+
+function browser(serve, {storage = new Map(), play = async () => {}, chunks = manifest} = {}) {
 	const requests = [];
 	const stored = new Map();
 	const listeners = new Map();
@@ -27,7 +39,9 @@ function browser(serve, {storage = new Map(), play = async () => {}} = {}) {
 		const events = new Map();
 		const node = {
 			tagName, style: {}, textContent: '', children: [], isConnected: true,
-			paused: true, playCalls: 0, currentTime: 0,
+			paused: true, playCalls: 0, currentTime: 0, volumes: [],
+			get volume() { return this.volumes.at(-1); },
+			set volume(value) { this.volumes.push(value); },
 			async play() {
 				this.playCalls += 1;
 				await play();
@@ -91,14 +105,15 @@ function browser(serve, {storage = new Map(), play = async () => {}} = {}) {
 			const name = url.pathname.split('/').pop();
 			requests.push({name, cache: init.cache});
 			if (name === 'chunks.json') {
-				return new Response(JSON.stringify(manifest));
+				return new Response(JSON.stringify(chunks));
 			}
-			return new Response(serve(name, init.cache));
+			return new Response(await serve(name, init.cache));
 		},
 	};
 	const context = {
 		window, URL, Response, Request, Uint8Array, Map, Set, Array, Promise, Error, String,
 		setTimeout: (callback) => setTimeout(callback, 0),
+		clearTimeout: (timer) => clearTimeout(timer),
 		crypto: globalThis.crypto,
 		caches: {keys: async () => [], delete: async () => true, open: async () => cache},
 		location: {origin: 'https://night-nine.test', pathname: '/play.html', reload() {}},
@@ -170,7 +185,7 @@ const tests = {
 		assert.equal(revisit.label.textContent, '100%');
 		assert.ok(!revisit.created.some((element) => element.tagName === 'audio'));
 	},
-	async 'offers a user gesture when autoplay is blocked'() {
+	async 'starts blocked music on the first page gesture without showing a button'() {
 		let allowed = false;
 		const page = browser(() => good, {play: async () => {
 			if (!allowed) throw Object.assign(new Error('Gesture required'), {name: 'NotAllowedError'});
@@ -178,15 +193,61 @@ const tests = {
 		await settle();
 		const audio = page.created.find((element) => element.tagName === 'audio');
 		assert.equal(audio.paused, true);
-		const button = page.created.find((element) => element.tagName === 'button');
-		assert.ok(button, 'Give the waiting player an audio-unlock control');
+		assert.ok(!page.created.some((element) => element.tagName === 'button'));
 		allowed = true;
-		button.click();
+		page.gesture();
 		await settle();
 		assert.equal(audio.paused, false);
 		page.finish();
 		assert.equal(audio.paused, true);
-		assert.equal(button.isConnected, false);
+	},
+	async 'fades the music out gradually when loading reaches 95 percent'() {
+		const first = new Uint8Array(94).fill(1);
+		const second = new Uint8Array(1).fill(2);
+		const last = new Uint8Array(5).fill(3);
+		const chunks = await makeManifest([['a.wasm', first], ['b.wasm', second], ['c.wasm', last]]);
+		const gates = new Map(['b.wasm', 'c.wasm'].map((name) => {
+			let open;
+			const gate = new Promise((resolve) => { open = resolve; });
+			return [name, {gate, open}];
+		}));
+		const bytes = {'a.wasm': first, 'b.wasm': second, 'c.wasm': last};
+		const page = browser(async (name) => {
+			await gates.get(name)?.gate;
+			return bytes[name];
+		}, {chunks});
+		const loading = page.fetch('https://night-nine.test/play.wasm');
+		const audio = page.created.find((element) => element.tagName === 'audio');
+		await new Promise((resolve) => setTimeout(resolve, 20));
+		assert.equal(page.label.textContent, '94%');
+		assert.equal(audio.paused, false);
+		assert.equal(audio.volume, 0.35);
+		gates.get('b.wasm').open();
+		await new Promise((resolve) => setTimeout(resolve, 200));
+		assert.equal(page.label.textContent, '95%');
+		assert.equal(audio.paused, true);
+		const fade = audio.volumes.slice(audio.volumes.indexOf(0.35) + 1);
+		assert.ok(fade.length >= 10, 'Lower the volume in steps instead of cutting the music');
+		assert.ok(fade.every((volume, index) => volume < (fade[index - 1] ?? 0.35)));
+		assert.equal(fade.at(-1), 0);
+		page.gesture();
+		await settle();
+		assert.equal(audio.playCalls, 1);
+		assert.equal(audio.paused, true);
+		gates.get('c.wasm').open();
+		await loading;
+		assert.equal(page.storage.size, 0, 'The first visit completes only when Godot opens');
+	},
+	async 'a gesture after 95 percent does not start blocked music'() {
+		const page = browser(() => good, {play: async () => {
+			throw Object.assign(new Error('Gesture required'), {name: 'NotAllowedError'});
+		}});
+		await page.fetch('https://night-nine.test/play.wasm');
+		await settle();
+		const audio = page.created.find((element) => element.tagName === 'audio');
+		page.gesture();
+		await settle();
+		assert.equal(audio.playCalls, 1);
 	},
 	async 'a late autoplay rejection cannot restart music over the intro'() {
 		let reject;

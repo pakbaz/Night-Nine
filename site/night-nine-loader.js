@@ -13,8 +13,13 @@
 	let loadingActive = true;
 	let loadingMusic;
 	let musicPending = false;
-	let musicButton;
+	let musicClosed = false;
+	let fadeTimer;
 	let loadingObserver;
+	const musicVolume = 0.35;
+	const fadeStartPercent = 95;
+	const fadeSteps = 30;
+	const fadeStepMilliseconds = 100;
 
 	function ensureProgressLabel() {
 		let label = document.getElementById('status-progress-label');
@@ -37,18 +42,48 @@
 		const loaded = Array.from(progressByFile.values()).reduce((sum, value) => sum + value, 0);
 		const percent = progressTotal ? Math.min(100, Math.max(0, Math.floor(loaded / progressTotal * 100))) : 0;
 		label.textContent = `${percent}%`;
+		if (percent >= fadeStartPercent) {
+			fadeOutLoadingMusic();
+		}
 	}
 
 	function clearMusicRetry() {
 		window.removeEventListener('pointerdown', startLoadingMusic);
 		window.removeEventListener('keydown', startLoadingMusic);
-		musicButton?.remove();
-		musicButton = null;
+	}
+
+	function fadeOutLoadingMusic() {
+		if (musicClosed) {
+			return;
+		}
+		musicClosed = true;
+		clearMusicRetry();
+		if (!loadingMusic || loadingMusic.paused) {
+			loadingMusic?.pause();
+			return;
+		}
+		let step = 0;
+		const lowerVolume = () => {
+			step += 1;
+			const remaining = 1 - step / fadeSteps;
+			// A squared curve sounds even to the ear; a linear one drops off at the end.
+			loadingMusic.volume = musicVolume * remaining * remaining;
+			if (step < fadeSteps) {
+				fadeTimer = setTimeout(lowerVolume, fadeStepMilliseconds);
+			} else {
+				fadeTimer = null;
+				loadingMusic.pause();
+			}
+		};
+		fadeTimer = setTimeout(lowerVolume, fadeStepMilliseconds);
 	}
 
 	function stopLoadingMusic() {
 		loadingActive = false;
+		musicClosed = true;
 		clearMusicRetry();
+		clearTimeout(fadeTimer);
+		fadeTimer = null;
 		loadingObserver?.disconnect();
 		if (loadingMusic) {
 			loadingMusic.pause();
@@ -79,7 +114,7 @@
 	}
 
 	function startLoadingMusic() {
-		if (!loadingActive || musicPending) {
+		if (!loadingActive || musicClosed || musicPending) {
 			return;
 		}
 		if (!loadingMusic) {
@@ -87,20 +122,20 @@
 			loadingMusic.src = new URL('loading-screen-music.mp3', document.baseURI).href;
 			loadingMusic.loop = true;
 			loadingMusic.preload = 'auto';
-			loadingMusic.volume = 0.35;
+			loadingMusic.volume = musicVolume;
 			loadingMusic.setAttribute('aria-hidden', 'true');
 			document.body.append(loadingMusic);
 		}
 		musicPending = true;
 		loadingMusic.play().then(() => {
 			musicPending = false;
-			if (!loadingActive) {
+			if (!loadingActive || (musicClosed && !fadeTimer)) {
 				loadingMusic.pause();
 			}
 			clearMusicRetry();
 		}).catch((error) => {
 			musicPending = false;
-			if (!loadingActive) {
+			if (!loadingActive || musicClosed) {
 				return;
 			}
 			if (error.name !== 'NotAllowedError') {
@@ -108,15 +143,7 @@
 				clearMusicRetry();
 				return;
 			}
-			if (!musicButton) {
-				musicButton = document.createElement('button');
-				musicButton.type = 'button';
-				musicButton.textContent = 'Play loading music';
-				musicButton.style.cssText = 'position:absolute;bottom:3%;left:50%;transform:translateX(-50%);' +
-					'padding:.55rem 1rem;font:inherit;cursor:pointer;';
-				musicButton.addEventListener('click', startLoadingMusic);
-				document.getElementById('status')?.append(musicButton);
-			}
+			// Browsers can block sound until the first tap, click, or key press.
 			window.addEventListener('pointerdown', startLoadingMusic, {once: true});
 			window.addEventListener('keydown', startLoadingMusic, {once: true});
 		});

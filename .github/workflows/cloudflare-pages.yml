@@ -81,6 +81,7 @@ jobs:
 
       - name: Run browser loading and soundtrack routing tests
         run: |
+          node tools/test_chunk_loader.mjs
           python tools/test_release_packaging.py
           python tools/test-ending-reward.py
 
