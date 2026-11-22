@@ -101,14 +101,12 @@ func _run() -> void:
 	await shot("steve-reunion")
 	check(game.words.get_content_height() <= game.words.size.y + 1, "Fit Steve's entire subtitle inside the dialogue panel")
 	var person: Node=game.stage.actors.steve
-	var limit:=Time.get_ticks_msec()+2000
+	var limit:=Time.get_ticks_msec()+1000
 	while person.last_mouth.is_empty() and game.voice.playing and Time.get_ticks_msec()<limit:
 		await get_tree().process_frame
 	if game.voice_manifest.get("enabled",true):
-		check(person.voice==game.voice and not person.cues.is_empty() and not person.last_mouth.is_empty() and person.mouth.visible,
-			"Drive Steve's mouth with the approved recording timing")
-	else:
-		check(person.last_mouth.is_empty() and not person.mouth.visible,"Keep text-only Steve dialogue free of fake mouth timing")
+		check(person.voice==game.voice and game.voice.playing,"Bind Steve to his approved recording")
+	check(person.last_mouth.is_empty() and not person.mouth.visible,"Keep Steve's painted mouth still while he speaks")
 	game._pause_audio(true)
 	var camera_before: Vector2=game.stage.aim
 	var clock_before: float=game.stage.clock

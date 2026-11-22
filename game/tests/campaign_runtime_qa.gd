@@ -103,10 +103,8 @@ func watch_dialogue(location: String) -> void:
 					check(actor.body.texture.resource_path.ends_with("/iris_epilogue/iris_epilogue.webp"), "Iris speaks with her chosen face in the epilogue")
 				performers_seen[role]=true
 				if not expressions_seen.has(role) and is_instance_valid(actor.mouth):
-					var deadline:=Time.get_ticks_msec()+1350
-					while actor.last_mouth.is_empty() and game.voice.playing and Time.get_ticks_msec()<deadline:
-						await get_tree().process_frame
-					if not actor.last_mouth.is_empty() and actor.mouth.visible:
+					await get_tree().create_timer(.35).timeout
+					if not actor.last_mouth.is_empty() or actor.mouth.visible:
 						expressions_seen[role]={"line":id,"frame":actor.last_mouth,"seconds":game.voice.get_playback_position()}
 			if line.get("delivery","live")!="live":
 				for other: Node in game.stage.actors.values():
@@ -568,9 +566,8 @@ func _run() -> void:
 	if failures.is_empty() and (partial_stop.is_empty() or game.campaign.data.finished):
 		ending_complete=game.campaign.data.finished and game.end_card.visible
 		check(ending_complete,"The postcredits signal leads to the ending")
-		if game.voice_manifest.get("enabled",true):
-			for role: String in performers_seen:
-				check(expressions_seen.has(role),"Visible mouth patch for the speaking "+role)
+		for role: String in performers_seen:
+			check(not expressions_seen.has(role),"Keep the painted mouth still for the speaking "+role)
 		if partial_start.is_empty():
 			for creature: String in ["admiral","biscuit","wick"]:
 				check(creature_cues.has(creature),"Stage "+creature+" in a canonical scene")

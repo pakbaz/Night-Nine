@@ -155,16 +155,3 @@ func animate(seconds: float) -> void:
 	if eye_frame != last_eye:
 		display_patch(eyes,eye_frame)
 		last_eye = eye_frame
-	var mouth_frame := ""
-	if is_instance_valid(voice) and voice.playing:
-		var at := voice.get_playback_position() + AudioServer.get_time_since_last_mix() - AudioServer.get_output_latency()
-		for cue: Dictionary in cues:
-			if at < float(cue.start):
-				break
-			if at < float(cue.end):
-				var frame: Variant = manifest.get("cue_frames",{}).get(str(cue.value))
-				mouth_frame = str(frame) if frame != null else ""
-				break
-	if mouth_frame != last_mouth:
-		display_patch(mouth,mouth_frame)
-		last_mouth = mouth_frame

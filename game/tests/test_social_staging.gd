@@ -215,6 +215,13 @@ func run() -> void:
 	await frame("reunion-steve")
 	game._next_line()
 	check(nora.voice==game.voice and steve.voice==null,"Switch the original voice and mouth timing to Nora")
+	var watched := 0
+	var lips_moved := false
+	while watched < 45 and game.voice.playing:
+		await process_frame
+		lips_moved = lips_moved or nora.mouth.visible or not nora.last_mouth.is_empty()
+		watched += 1
+	check(watched > 0 and not lips_moved,"Keep Nora's painted mouth still while her recorded line plays")
 	await frame("reunion-nora")
 	game.stage.directions["appearances"]={"nora":"nora"}
 	var authored_nora: Node=game.stage.get_performer("nora")

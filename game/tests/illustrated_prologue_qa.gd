@@ -39,10 +39,9 @@ func check_speaking_face() -> void:
 	if not game.voice_manifest.get("enabled",true):
 		return
 	var actor: Node = game.stage.actors[actor_id]
-	var deadline := Time.get_ticks_msec()+2500
+	var deadline := Time.get_ticks_msec()+1000
 	while Time.get_ticks_msec()<deadline and game.voice.playing:
-		if is_instance_valid(actor.mouth) and actor.mouth.visible and not actor.last_mouth.is_empty():
-			check(actor.voice==game.voice and not actor.cues.is_empty(),"Voice clock controls "+actor_id)
+		if is_instance_valid(actor.mouth) and (actor.mouth.visible or not actor.last_mouth.is_empty()):
 			mouths[actor_id]={"line":game.active_line,"frame":actor.last_mouth,"voice_seconds":game.voice.get_playback_position()}
 			return
 		await get_tree().process_frame
@@ -213,10 +212,9 @@ func _run() -> void:
 	check(game.stage.room_id == "c8_lab" and game.stage is Control,"Chapter 8 continues in the illustrated campaign")
 	if game.voice_manifest.get("enabled",true):
 		check(not recordings.is_empty(),"Play the approved prologue recordings")
-		check(not mouths.is_empty(),"Use recorded timing for prologue mouth animation")
 	else:
 		check(recordings.is_empty(),"Text-only prologue plays no character recordings")
-		check(mouths.is_empty(),"Text-only prologue does not fake mouth timing")
+	check(mouths.is_empty(),"Keep painted mouths still during prologue dialogue")
 	var result := {"recordings":recordings,"verified_group_laugh":heard_reaction,"speaking_faces":mouths,"checks":checks,"failures":failures,"scenes":details,"captures":screenshots,"next_scene":game.campaign.current().id,"renderer":RenderingServer.get_current_rendering_method()}
 	var output := FileAccess.open(report_root.path_join("prologue-gameplay.json"),FileAccess.WRITE)
 	output.store_string(JSON.stringify(result,"  "))
