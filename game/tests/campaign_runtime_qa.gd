@@ -196,8 +196,7 @@ func operate(task: Dictionary) -> void:
 	elif task.has("puzzle"):
 		for i: int in task.puzzle.rows.size():
 			var row: Control=game.puzzle_controls[i]
-			for step: int in int(task.puzzle.solution[i])+1:
-				await press_control(row.following)
+			await press_control(row.choices[int(task.puzzle.solution[i])])
 			check(row.selected==int(task.puzzle.solution[i]),"Set "+str(task.puzzle.rows[i].label)+" for "+task.id)
 		await press_control(button("Apply settings",game.interaction))
 	else:

@@ -136,6 +136,17 @@ func _settings_match(values: Array, solution: Array) -> bool:
 			return false
 	return true
 
+## One entry per settings row: true where the chosen value matches the solution.
+func settings_marks(task_id: String, values: Array) -> Array[bool]:
+	var marks: Array[bool] = []
+	if not task_index.has(task_id):
+		return marks
+	var solution: Array = task_index[task_id].get("puzzle", {}).get("solution", [])
+	for i: int in solution.size():
+		var value: Variant = values[i] if i < values.size() else null
+		marks.append(typeof(value) in [TYPE_INT, TYPE_FLOAT] and is_finite(float(value)) and float(value) == float(int(solution[i])))
+	return marks
+
 func switch_actor(actor: String) -> bool:
 	if actor not in current().actors:
 		return false

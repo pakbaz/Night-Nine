@@ -1086,13 +1086,10 @@ func _open_task(id: String) -> void:
 	goal.name="Goal"
 	goal.modulate=Color("e9c276")
 	goal.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART
-	var context_scroll:=ScrollContainer.new()
-	context_scroll.custom_minimum_size.y=95
-	context_scroll.horizontal_scroll_mode=ScrollContainer.SCROLL_MODE_DISABLED
-	interaction.add_child(context_scroll)
+	# The whole panel scrolls, so the background is shown in full.
 	var context:=VBoxContainer.new()
 	context.size_flags_horizontal=Control.SIZE_EXPAND_FILL
-	context_scroll.add_child(context)
+	interaction.add_child(context)
 	var knowledge:=_label(context,"What %s knows" % campaign.perspective_name(id),16)
 	knowledge.modulate=Color("72bdb4")
 	var background:=_label(context,task.background,16)
@@ -1122,16 +1119,23 @@ func _open_task(id: String) -> void:
 		if id == "p_veyr.levels":
 			_recorder_gain(id, task)
 		else:
-			for row: Dictionary in task.puzzle.rows:
-				_label(interaction,row.label,17)
+			for row_index: int in task.puzzle.rows.size():
+				var row: Dictionary=task.puzzle.rows[row_index]
 				var selector:=SETTING_ROW.new()
-				selector.configure(row.label,row.options)
 				interaction.add_child(selector)
+				selector.configure(row.label,row.options,row_index+1)
 				puzzle_controls.append(selector)
+			# Feedback sits next to the rows it describes.
+			interaction.move_child(puzzle_response,-1)
 			_button(interaction,"Apply settings",func():
 				var values: Array=[]
 				for selector: SETTING_ROW in puzzle_controls:
 					values.append(selector.selected)
+				var missing:=values.find(-1)
+				if missing>=0:
+					puzzle_response.text="Pick a choice on row %d first." % (missing+1)
+					puzzle_controls[missing].choices[0].grab_focus()
+					return
 				_choose(id,int(task.answer),values))
 	for index: int in range(task.options.size()):
 		if task.has("puzzle") or id == "p_bay.tune":
@@ -1367,12 +1371,18 @@ func _choose(id: String, answer: int, puzzle_input: Array = []) -> void:
 		_ui("wrong")
 		if option_buttons.has(answer):
 			option_buttons[answer].disabled=true
+		var reason: String=result.reason
+		if result.has("offer_hint") and selected_task==id and not puzzle_controls.is_empty() and is_instance_valid(puzzle_controls[0]) and puzzle_input.size()==puzzle_controls.size():
+			var marks: Array[bool]=campaign.settings_marks(id,puzzle_input)
+			for row_index: int in marks.size():
+				puzzle_controls[row_index].set_mark(marks[row_index])
+			reason="%d of %d rows are right. Change the rows marked with a cross." % [marks.count(true),marks.size()]
 		if is_instance_valid(case_board) and case_board.visible and case_board.task_id==id:
 			case_board.response.text=result.reason
 		elif tape_compare.visible and tape_compare.task_id==id:
 			tape_compare.feedback.text=result.reason
 		elif is_instance_valid(puzzle_response):
-			puzzle_response.text=result.reason
+			puzzle_response.text=reason
 		else:
 			_status(result.reason)
 		_update_help_controls(id)

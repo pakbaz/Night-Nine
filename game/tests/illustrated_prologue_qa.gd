@@ -168,10 +168,10 @@ func _run() -> void:
 			elif task.has("puzzle"):
 				for row_index: int in task.puzzle.rows.size():
 					var row: Control = game.puzzle_controls[row_index]
-					for step: int in int(task.puzzle.solution[row_index]) + 1:
-						(game.interaction.get_parent() as ScrollContainer).ensure_control_visible(row.following)
-						await get_tree().process_frame
-						await click(row.following)
+					var choice: Control = row.choices[int(task.puzzle.solution[row_index])]
+					(game.interaction.get_parent() as ScrollContainer).ensure_control_visible(choice)
+					await get_tree().process_frame
+					await click(choice)
 				var apply := button("Apply settings",game.interaction)
 				(game.interaction.get_parent() as ScrollContainer).ensure_control_visible(apply)
 				await get_tree().process_frame
