@@ -13,6 +13,9 @@ const CAPTION_IN := .7
 const CLOSE := 1.4
 ## A short breath between two narrated captions.
 const NARRATION_GAP := .1
+## While the music drives the book, a frame without a music position advances the clock by
+## at most this much, so a stalled frame cannot leap ahead of the music and then fall back.
+const MAX_CLOCK_STEP := .1
 ## Book-clock time when the narration in progress ends. Voice and music pause together, so this survives pauses.
 var narration_until := -INF
 ## The newest caption still waiting for the narrator.
@@ -172,6 +175,7 @@ func now() -> float:
 	if music_driven and score.current_file == str(book.get("music", {}).get("file", "")):
 		var at: float = score.position()
 		if at >= 0.0:
+			fallback_clock = at
 			return at
 	return fallback_clock
 
@@ -217,7 +221,7 @@ func _gui_input(event: InputEvent) -> void:
 func _process(delta: float) -> void:
 	if not visible or paused:
 		return
-	fallback_clock += delta
+	fallback_clock += minf(delta, MAX_CLOCK_STEP) if music_driven else delta
 	if closing >= 0.0:
 		closing += delta
 		veil.color.a = clampf(closing / CLOSE, 0.0, 1.0)
@@ -237,7 +241,8 @@ func _process(delta: float) -> void:
 			current = i
 	if current < 0:
 		current = 0
-	if current != index:
+	# Pages only turn forward, so a clock that briefly runs backward cannot replay a page.
+	if current > index:
 		_enter(current)
 	for slot: int in 2:
 		# The outgoing picture stays whole underneath until the new one is opaque.

@@ -131,6 +131,49 @@ func _check_storybook_caption_cleanup() -> void:
 		"Story opening removes old caption nodes immediately")
 	book.queue_free()
 
+## A stalled frame can hide the music clock and then return it behind the free-running
+## fallback. The book must not jump ahead, fall back, and narrate a caption a second time.
+func _check_storybook_clock_hitch() -> void:
+	var fake := GDScript.new()
+	fake.source_code = "extends Node\nvar current_file := \"\"\nvar at := 0.0\n" \
+		+ "func play_story(file: String, _bar: float, _keep: bool) -> bool:\n\tcurrent_file = file\n\treturn true\n" \
+		+ "func track_for_file(file: String) -> Dictionary:\n\treturn {\"file\": file, \"bpm\": 75.0, \"beat\": 0.0}\n" \
+		+ "func bar_length(_track: Dictionary) -> float:\n\treturn 3.2\n" \
+		+ "func bar_time(_track: Dictionary, bar: float) -> float:\n\treturn bar * 3.2\n" \
+		+ "func position() -> float:\n\treturn at\n" \
+		+ "func seek(seconds: float) -> void:\n\tat = seconds\n"
+	fake.reload()
+	var score: Node = fake.new()
+	root.add_child(score)
+	var STORYBOOK := load("res://ui/storybook.gd")
+	var book = STORYBOOK.new()
+	root.add_child(book)
+	book.set_process(false)
+	var narrated: Array[String] = []
+	book.narrate.connect(func(line: Dictionary): narrated.append(str(line.text)))
+	book.play({"title": "Opening", "music": {"file": "res://opening.mp3", "bar": 0}, "end_bar": 8,
+		"panels": [
+			{"bar": 0, "image": "res://icon.png", "lines": [
+				{"bar": .25, "text": "Bellwether.", "seconds": 1.0},
+				{"bar": 1.5, "text": "Six thousand people.", "seconds": 1.0}]},
+			{"bar": 3.5, "image": "res://icon.png", "lines": [
+				{"bar": 3.75, "text": "I'm Steve Mercer.", "seconds": 1.0}]}]}, score)
+	while score.at < 5.5:
+		score.at += .05
+		book._process(.05)
+	check(narrated == ["Bellwether.", "Six thousand people."], "The opening narrates its first page in order")
+	# The music clock is unavailable for one long, stalled frame, then resumes where it was.
+	score.at = -1.0
+	book._process(6.0)
+	score.at = 5.6
+	for i: int in 20:
+		score.at += .05
+		book._process(.05)
+	check(narrated.count("Six thousand people.") == 1, "A stalled frame never narrates an opening line twice")
+	check(book.index == 0, "A stalled frame does not turn the page before the music reaches it")
+	book.queue_free()
+	score.queue_free()
+
 func _initialize() -> void:
 	var state := NightCampaign.new()
 	check(state.content.scenes.size()==34,"Every authored location is present")
@@ -152,6 +195,7 @@ func _initialize() -> void:
 	_check_migration()
 	_check_script_v2_runtime()
 	_check_storybook_caption_cleanup()
+	_check_storybook_clock_hitch()
 	check(not state.switch_actor("saren"),"Cannot switch to an unavailable actor")
 	var ids: Dictionary={}
 	for scene: Dictionary in state.content.scenes:
