@@ -23,6 +23,8 @@ The credit sequence has four pages: S3PehR, Godot Engine for Browsers, AI credit
 
 The November 20 artwork additions include ten scene-specific character portraits with matching facial animation and three happy-ending paintings reserved for the completion film. The film uses the existing **Epilogue (BGM)** recording exclusively; no new music was generated. Portrait source records are in `assets/characters/campaign/variations.json`, and original ending paintings are in `assets/cinematics/campaign/masters/reward-*.png`.
 
+The November 22 revision adds story paintings, scene bridges and story layers made with GPT Image from the room paintings and the character sheets: stills of key moments (`assets/cinematics/campaign/stills/`), one painting for each move between places (`assets/cinematics/campaign/bridges/`), people, sleepers and open doors painted into rooms for parts of the story (`assets/environments/campaign/layers/`), a standing portrait of Frank Mercer, and repainted plates for the one-year studio and two chapter films. No new music or voices were generated; scene transitions crossfade the existing ambience and music.
+
 The five new evidence paintings also retain their original PNGs in `assets/cinematics/campaign/masters/`, using the same descriptive basenames as the optimized WebP inserts in `game/assets/illustrated/campaign/inserts/`.
 
 Third-party authors retain their licenses and rights. The project grant covers the rights the Night Nine contributors can grant in the distributed game. Providers and performers retain any separate rights in their underlying models, services, names and voice identities. See the Godot and dependency notices in the in-game Credits screen or in `game/LICENSES.txt` in the source release.

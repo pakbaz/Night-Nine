@@ -4,9 +4,9 @@ This directory contains the editable production sources. Godot loads the optimiz
 
 | Directory | Contents |
 | --- | --- |
-| `environments/campaign/` | Location paintings, foreground layers and doors |
+| `environments/campaign/` | Location paintings, foreground layers and story layers (`layers/`: people and doors painted into a room for part of the story) |
 | `characters/campaign/` | Portrait masters, animation sheets and facial landmarks |
-| `cinematics/campaign/` | Chapter-film artwork, moving subjects and shot directions |
+| `cinematics/campaign/` | Chapter-film artwork, moving subjects, shot directions, story stills and scene bridges (see `cinematics/campaign/stills/README.md`) |
 | `audio/elevenlabs-v4/recordings/` | Existing approved dialogue recordings |
 | `audio/lipsync-elevenlabs-v4/` | Timing data for the existing dialogue |
 | `audio/elevenlabs-v4-script-v2/` | Frozen ElevenLabs v4 production plan, receipts, masters, checks and approved overlay |
