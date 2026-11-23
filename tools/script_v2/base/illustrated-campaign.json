@@ -757,12 +757,16 @@
       {
         "file": "res://assets/illustrated/campaign/stills/c6_jail-back-door.webp",
         "lines": [
-          "c6_jail.crossword.06"
+          "c6_jail.crossword.06",
+          "c6_jail.crossword.find",
+          "c6_jail.recap.01"
         ]
       },
       {
         "file": "res://assets/illustrated/campaign/stills/c6_jail-bakery.webp",
         "lines": [
+          "c6_jail.recap.02",
+          "c6_jail.recap.03",
           "c6_jail.out.02",
           "c6_jail.out.04",
           "c6_jail.out.01",

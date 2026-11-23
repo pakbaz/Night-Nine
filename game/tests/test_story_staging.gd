@@ -456,6 +456,11 @@ func run() -> void:
 	# Cell two, the back door and the bakery van are shown where they happen.
 	await enter("c6_jail", ["c6_jail.mail", "c6_jail.crossword"])
 	check("c6_jail-back-door" in await shown_during("c6_jail.crossword.06"), "Pell holds the back door while June's copy pulls up out front")
+	# Once they are out of the back door, the closing lines do not cut back to the jail.
+	for line_id: String in ["c6_jail.crossword.find", "c6_jail.recap.01"]:
+		check("c6_jail-back-door" in await shown_during(line_id), "June goes out the back with the crossword in her hand: " + line_id)
+	for line_id: String in ["c6_jail.recap.02", "c6_jail.recap.03"]:
+		check("c6_jail-bakery" in await shown_during(line_id), "Five fugitives and a beagle meet behind the bakery: " + line_id)
 	check("c6_jail-bakery" in await shown_during("c6_jail.out.02"), "Gus hands over the van behind his bakery")
 	check("c6_jail-posters" in await shown_during("c6_jail.out.06"), "The new posters go up at dusk")
 	# Nora wakes beside Dale and Lyle, whose pods stand open.
