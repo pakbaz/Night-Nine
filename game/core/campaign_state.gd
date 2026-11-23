@@ -109,7 +109,8 @@ func available_talk(speaker: String = "") -> Array:
 		if not speaker.is_empty() and topic.get("speaker", "") != speaker:
 			continue
 		var after: String = topic.get("after", "")
-		if after.is_empty() or after in data.done:
+		var until: String = topic.get("until", "")
+		if (after.is_empty() or after in data.done) and (until.is_empty() or until not in data.done):
 			topics.append(topic)
 	return topics
 

@@ -186,14 +186,18 @@ static func revealed(requirement: Variant, completed: Array) -> bool:
 		return requirement.all(func(lead: Variant): return lead in completed)
 	return str(requirement).is_empty() or str(requirement) in completed
 
-## Reveals may also wait for a line, so they read `reached`; doors only open on finished leads.
-func set_story(completed: Array, reveal_after: Dictionary, reached: Array = []) -> void:
+## A person who leaves mid-scene is gone once that lead or line is reached.
+static func departed(requirement: Variant, reached: Array) -> bool:
+	return not str(requirement).is_empty() and revealed(requirement, reached)
+
+## Arrivals and departures may also wait for a line, so they read `reached`; doors only open on finished leads.
+func set_story(completed: Array, reveal_after: Dictionary, reached: Array = [], leave_after: Dictionary = {}) -> void:
 	var changed := story!=completed
 	if changed:
 		story=completed.duplicate()
 		update_solids(story)
 	for id: String in bodies:
-		var show_person: bool = revealed(reveal_after.get(id,""),completed + reached)
+		var show_person: bool = revealed(reveal_after.get(id,""),completed + reached) and not departed(leave_after.get(id,""),completed + reached)
 		if bodies[id].body.visible!=show_person:
 			bodies[id].body.visible = show_person
 			changed=true

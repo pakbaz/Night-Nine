@@ -439,7 +439,8 @@ func actor_visible(id: String) -> bool:
 	# People painted into a story layer have no separate portrait while it shows.
 	if active_layers().any(func(record: Dictionary): return id in record.get("painted",[])):
 		return false
-	return id in directions.company and FLOOR.revealed(directions.get("reveal_after",{}).get(id,""),marks)
+	return id in directions.company and FLOOR.revealed(directions.get("reveal_after",{}).get(id,""),marks) \
+		and not FLOOR.departed(directions.get("leave_after",{}).get(id,""),marks)
 
 func get_performer(id: String) -> Node2D:
 	var authored_appearances: Dictionary=directions.get("appearances",{})
@@ -586,7 +587,7 @@ func update_inserts() -> void:
 	var exploring := walking_view() or floor_dialogue
 	if floor_stage:
 		floor_stage.visible = exploring
-		floor_stage.set_story(done,directions.get("reveal_after",{}),marks)
+		floor_stage.set_story(done,directions.get("reveal_after",{}),marks,directions.get("leave_after",{}))
 	if is_instance_valid(illustration_insert):
 		illustration_insert.visible=away
 	for layer: Sprite2D in physical_art:

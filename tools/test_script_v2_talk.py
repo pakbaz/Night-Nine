@@ -74,6 +74,18 @@ class ScriptV2TalkTests(unittest.TestCase):
             'lines': ['iris|One.', 'steve|Two.'],
         }]}))
 
+    def test_until_ends_a_topic_once_its_lead_is_done(self):
+        _, scene, _ = self.build({'iris': [{
+            'topic': 'Before the call', 'until': 'saturday',
+            'lines': ['iris|One.', 'steve|Two.'],
+        }]})
+        self.assertEqual(scene['talk'][0]['until'], 'c1_flat.saturday')
+        errors = self.errors({'iris': [{
+            'topic': 'Before the call', 'until': 'missing',
+            'lines': ['iris|One.', 'steve|Two.'],
+        }]})
+        self.assertTrue(any('until names unknown task' in error for error in errors))
+
     def test_long_topic_is_rejected(self):
         errors = self.errors({'iris': [{
             'topic': 'x' * 49,

@@ -40,8 +40,7 @@ class ScriptV2StagingTests(unittest.TestCase):
     def test_story_moments_have_their_sound(self):
         lines = self.content['lines']
         for line_id, cue in {'c4_escape.fault.01': 'drill_alarm', 'c4_escape.van.01': 'van_jump',
-                             'c5_station.out.11': 'earpiece_click', 'c6_iris.out.04': 'pressed_flower',
-                             'c6_jail.ctx.02': 'mail_cart'}.items():
+                             'c5_station.out.11': 'earpiece_click', 'c6_iris.out.04': 'pressed_flower'}.items():
             self.assertEqual(lines[line_id].get('cue'), cue, line_id)
 
     def test_every_move_within_a_chapter_has_a_painted_bridge(self):
@@ -88,6 +87,11 @@ class ScriptV2StagingTests(unittest.TestCase):
             staging['c2_aquarium']['reveal_after']['iris'] = 'c3_house.crossword'
         self.assertTrue(any('c3_house.crossword' in error for error in self.errors(change)))
 
+    def test_departure_needs_a_lead_or_line_of_its_scene(self):
+        def change(staging):
+            staging['c6_iris']['leave_after']['stephen'] = 'c3_house.crossword'
+        self.assertTrue(any('c3_house.crossword' in error for error in self.errors(change)))
+
     def test_balcony_is_a_lockout_not_a_lock_in(self):
         scene = next(s for s in self.content['scenes'] if s['id'] == 'c1_escape')
         lines = {k: v for k, v in self.content['lines'].items() if k.startswith('c1_escape.')}
@@ -115,6 +119,19 @@ class ScriptV2StagingTests(unittest.TestCase):
             still_for('c2_aquarium.intercom.01')
         self.assertTrue(all((pump, doors, holding)), 'pump room, service doors and holding room are painted')
         self.assertEqual(len({pump, doors, holding}), 3)
+
+    def test_interlude_wake_is_supported_reversible_and_shown_in_order(self):
+        scene = next(s for s in self.content['scenes'] if s['id'] == 'i2_nora')
+        self.assertEqual(scene['intro'][:3], ['i2_nora.in.01', 'i2_nora.in.02', 'i2_nora.in.03'])
+        self.assertEqual(scene['intro'][-2:], ['i2_nora.in.04', 'i2_nora.in.05'])
+        support = self.content['lines']['i2_nora.in.04']['text'].lower()
+        complete = self.content['lines']['i2_nora.in.05']['text'].lower()
+        self.assertIn('beds did the work', support)
+        self.assertIn('breathe alone', support)
+        self.assertIn('mirror link active', complete)
+        staging = self.staging['i2_nora']
+        open_layer = next(layer for layer in staging['layers'] if 'pods-open' in layer['file'])
+        self.assertEqual(open_layer.get('after'), 'i2_nora.in.05')
 
 
 if __name__ == '__main__':

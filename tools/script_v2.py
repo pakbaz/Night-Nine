@@ -285,14 +285,18 @@ class Merge:
             for number, topic in enumerate(topics, 1):
                 topic_id = f'{sid}.talk.{speaker}.{number}'
                 after = str(topic.get('after', '')).strip()
-                talk.append({
+                until = str(topic.get('until', '')).strip()
+                entry = {
                     'id': topic_id,
                     'speaker': speaker,
                     'topic': str(topic.get('topic', '')).strip(),
                     'after': f'{sid}.{after}' if after and '.' not in after else after,
                     'lines': self.resolve_list(
                         topic.get('lines', []), topic_id, topic_id, sid, topic_id),
-                })
+                }
+                if until:
+                    entry['until'] = f'{sid}.{until}' if '.' not in until else until
+                talk.append(entry)
         out['talk'] = talk
         out['recap'] = self.resolve_list(edit.get('recap', []), f'{sid}.recap', sid + ' recap', sid, 'recap', True)
         out['outro'] = self.resolve_list(edit.get('outro', scene['outro']), f'{sid}.out', sid + ' outro', sid, 'outro')
@@ -440,6 +444,8 @@ def validate(content, edits, merge):
                 merge.issue('error', where, f"talk after names unknown task {topic['after']}")
             elif topic.get('after') and topic['after'] not in required:
                 merge.issue('error', where, f"talk after {topic['after']} could be the last lead, so the topic might never be heard")
+            if topic.get('until') and topic['until'] not in ids:
+                merge.issue('error', where, f"talk until names unknown task {topic['until']}")
             if speaker not in cast:
                 merge.issue('error', where, f'unknown talk speaker {speaker}')
             elif speaker not in present:
@@ -1008,6 +1014,9 @@ def validate_staging(staging, content, merge):
             for item in (wait if isinstance(wait, list) else [wait]):
                 if item not in marks:
                     merge.issue('error', scene_id, f"reveal of {who} waits for {item}, which is not a lead or line of {scene_id}")
+        for who, wait in scene.get('leave_after', {}).items():
+            if wait not in marks:
+                merge.issue('error', scene_id, f"departure of {who} waits for {wait}, which is not a lead or line of {scene_id}")
 
 
 def write_walkthrough(content, path):
