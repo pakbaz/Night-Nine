@@ -109,6 +109,7 @@ func run() -> void:
 			check_door(isolated,layout,solid,id)
 		isolated.free()
 	floor_stage.free()
+	verify_props(rooms)
 	verify_campaign(campaign,rooms)
 	var result := {"rooms":coverage,"movement_trace":movement_trace,"registered_blockers":n_solids,
 		"story_gates":n_doors,"checks":checks,"failures":failures}
@@ -120,6 +121,43 @@ func run() -> void:
 		output.close()
 	print("Physical navigation: ",checks," checks, ",n_solids," registered blockers, ",n_doors," story doors, ",failures.size()," failures.")
 	quit(0 if failures.is_empty() else 1)
+
+## Painted furniture is solid where it meets the floor, and nobody stands in front of a
+## prop at a depth where the occluder would still paint the prop over them.
+const PROP_SOLID := {
+	"c2_ship":[[.50,.74],[.46,.745],[.545,.74]],
+	"c4_safe":[[.19,.89]],
+	"c7_gate":[[.615,.66],[.60,.635]],
+	"c10_report":[[.83,.79]],
+	"epilogue":[[.705,.80],[.695,.86]],
+	"c8_lab":[[.07,.92],[.935,.90]],
+}
+const PROP_CLEAR := {
+	"c2_ship":[[.56,.79],[.62,.76]],
+	"c4_safe":[[.20,.915]],
+	"c7_gate":[[.66,.67]],
+	"c10_report":[[.82,.855]],
+	"epilogue":[[.665,.735]],
+	"c8_lab":[[.12,.90],[.90,.90]],
+}
+
+func verify_props(rooms: Dictionary) -> void:
+	for id: String in rooms:
+		var layout: Dictionary=rooms[id]
+		var isolated := FLOOR.new()
+		isolated.configure_navigation(layout)
+		isolated.sync_navigation()
+		for spot: Array in PROP_SOLID.get(id,[]):
+			check(not isolated.on_floor(isolated.point(spot)),id+" keeps feet off the painted prop at "+str(spot))
+		for spot: Array in PROP_CLEAR.get(id,[]):
+			check(isolated.on_floor(isolated.point(spot)),id+" leaves open floor at "+str(spot))
+		var marks: Dictionary=layout.spawn.duplicate()
+		marks.merge(layout.get("residents",{}))
+		marks.merge(layout.get("approach",{}))
+		for mark: String in marks:
+			var at: Vector2=isolated.point(marks[mark])
+			check(isolated.navigation.closest(at).distance_to(at)<14.0,id+" authors "+mark+" on open floor, not inside a prop")
+		isolated.free()
 
 func check_door(floor_stage: Node2D, layout: Dictionary, door: Dictionary, room: String) -> void:
 	var outline: PackedVector2Array=floor_stage.points(door.polygon)
