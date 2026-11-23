@@ -969,7 +969,7 @@ def render(content, books, merge, casting, out_dir):
 
 
 def validate_staging(staging, content, merge):
-    """Story paintings must exist and point at real lines; story layers at leads of their scene."""
+    """Story paintings must exist and point at real lines; layers and reveals wait for a lead or line of their scene."""
     line_ids = set(content['lines'])
     scenes = {s['id']: s for s in content['scenes']}
 
@@ -987,14 +987,18 @@ def validate_staging(staging, content, merge):
                     merge.issue('error', scene_id, f'still names unknown line or lead {item}')
         if scene.get('bridge'):
             painting(scene_id, scene['bridge'])
-        leads = {t['id'] for t in scenes[scene_id]['tasks']}
+        marks = {t['id'] for t in scenes[scene_id]['tasks']} | {i for i in line_ids if i.startswith(scene_id + '.')}
         for layer in scene.get('layers', []):
             painting(scene_id, layer.get('file', ''))
             if layer.get('wide_file'):
                 painting(scene_id, layer['wide_file'])
             for key in ('until', 'after'):
-                if layer.get(key) and layer[key] not in leads:
-                    merge.issue('error', scene_id, f"layer {key} {layer[key]} is not a lead of {scene_id}")
+                if layer.get(key) and layer[key] not in marks:
+                    merge.issue('error', scene_id, f"layer {key} {layer[key]} is not a lead or line of {scene_id}")
+        for who, wait in scene.get('reveal_after', {}).items():
+            for item in (wait if isinstance(wait, list) else [wait]):
+                if item not in marks:
+                    merge.issue('error', scene_id, f"reveal of {who} waits for {item}, which is not a lead or line of {scene_id}")
 
 
 def write_walkthrough(content, path):

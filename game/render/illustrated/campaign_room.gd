@@ -58,6 +58,9 @@ const STILL_OUT_SECONDS := .7
 ## Transparent paintings over the room for one stretch of the story, such as Steve
 ## strapped into the scan chair or a sleeper in a pod. Each covers the whole plate.
 var story_layers: Array[Dictionary] = []
+## Lines of this scene already heard, and every lead or line a story state can wait for.
+var heard: Array = []
+var marks: Array = []
 
 static var direction_book: Dictionary
 static var landmark_book: Dictionary
@@ -172,7 +175,7 @@ func walking_view() -> bool:
 func layer_active(record: Dictionary) -> bool:
 	var until: String = record.get("until","")
 	var after: String = record.get("after","")
-	return (until.is_empty() or until not in done) and (after.is_empty() or after in done)
+	return (until.is_empty() or until not in marks) and (after.is_empty() or after in marks)
 
 func active_layers() -> Array:
 	return story_layers.map(func(entry: Dictionary): return entry.record).filter(layer_active)
@@ -429,7 +432,7 @@ func actor_visible(id: String) -> bool:
 	# People painted into a story layer have no separate portrait while it shows.
 	if active_layers().any(func(record: Dictionary): return id in record.get("painted",[])):
 		return false
-	return id in directions.company and FLOOR.revealed(directions.get("reveal_after",{}).get(id,""),done)
+	return id in directions.company and FLOOR.revealed(directions.get("reveal_after",{}).get(id,""),marks)
 
 func get_performer(id: String) -> Node2D:
 	var authored_appearances: Dictionary=directions.get("appearances",{})
@@ -556,7 +559,7 @@ func update_inserts() -> void:
 	var exploring := walking_view() or floor_dialogue
 	if floor_stage:
 		floor_stage.visible = exploring
-		floor_stage.set_story(done,directions.get("reveal_after",{}))
+		floor_stage.set_story(done,directions.get("reveal_after",{}),marks)
 	if is_instance_valid(illustration_insert):
 		illustration_insert.visible=away
 	for layer: Sprite2D in physical_art:
@@ -571,8 +574,22 @@ func update_inserts() -> void:
 			if floor_creatures.has(role.id):
 				floor_creatures[role.id].visible=visible_now and exploring
 
-func sync_story(completed: Array) -> void:
+## A layer or a person can wait for a lead to be done or for one line to be heard.
+## Every line of a finished lead counts as heard.
+func refresh_marks() -> void:
+	marks = done + heard
+	for task: Dictionary in scene_record.get("tasks",[]):
+		if task.id in done:
+			marks += task.get("lead",[]) + task.get("lines",[])
+			if not str(task.get("finding","")).is_empty():
+				marks.append(task.finding)
+
+func sync_story(completed: Array, seen: Array = []) -> void:
 	done=completed
+	for id: String in seen:
+		if id.begins_with(room_id + ".") and id not in heard:
+			heard.append(id)
+	refresh_marks()
 	update_inserts()
 	if dialogue_shot.is_empty():
 		show_cast("")
@@ -580,6 +597,9 @@ func sync_story(completed: Array) -> void:
 func begin_dialogue(line: Dictionary, voice: AudioStreamPlayer, _take: Dictionary, timing: Dictionary) -> void:
 	var id: String = line.speaker
 	active_id=line.id
+	if line.id not in heard:
+		heard.append(line.id)
+		refresh_marks()
 	update_inserts()
 	show_still(line.id)
 	var recorded: bool = line.get("delivery","live")!="live" or line.id in directions.get("off_camera_lines",[])

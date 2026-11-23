@@ -186,13 +186,14 @@ static func revealed(requirement: Variant, completed: Array) -> bool:
 		return requirement.all(func(lead: Variant): return lead in completed)
 	return str(requirement).is_empty() or str(requirement) in completed
 
-func set_story(completed: Array, reveal_after: Dictionary) -> void:
+## Reveals may also wait for a line, so they read `reached`; doors only open on finished leads.
+func set_story(completed: Array, reveal_after: Dictionary, reached: Array = []) -> void:
 	var changed := story!=completed
 	if changed:
 		story=completed.duplicate()
 		update_solids(story)
 	for id: String in bodies:
-		var show_person: bool = revealed(reveal_after.get(id,""),completed)
+		var show_person: bool = revealed(reveal_after.get(id,""),completed + reached)
 		if bodies[id].body.visible!=show_person:
 			bodies[id].body.visible = show_person
 			changed=true

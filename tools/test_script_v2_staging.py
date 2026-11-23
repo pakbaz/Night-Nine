@@ -78,6 +78,44 @@ class ScriptV2StagingTests(unittest.TestCase):
             staging['c2_ship']['layers'][1]['file'] = 'res://assets/illustrated/campaign/layers/missing.webp'
         self.assertTrue(any('missing.webp' in error for error in self.errors(change)))
 
+    def test_layer_can_wait_for_a_line_of_its_scene(self):
+        def change(staging):
+            staging['c2_ship']['layers'][0]['until'] = 'c2_ship.in.01'
+        self.assertEqual(self.errors(change), [])
+
+    def test_reveal_needs_a_lead_or_line_of_its_scene(self):
+        def change(staging):
+            staging['c2_aquarium']['reveal_after']['iris'] = 'c3_house.crossword'
+        self.assertTrue(any('c3_house.crossword' in error for error in self.errors(change)))
+
+    def test_balcony_is_a_lockout_not_a_lock_in(self):
+        scene = next(s for s in self.content['scenes'] if s['id'] == 'c1_escape')
+        lines = {k: v for k, v in self.content['lines'].items() if k.startswith('c1_escape.')}
+        text = ' '.join(line['text'].lower() for line in lines.values())
+        for phrase in ('deadbolt', 'locked me in', 'apartment'):
+            self.assertNotIn(phrase, text)
+        self.assertFalse(any(line['speaker'] == 'iris' and 'go.' in line['text'].lower() for line in lines.values()),
+                         'Nora locked Steve out; she does not tell him to go')
+        self.assertFalse(any('apartment' in step.lower() for step in scene['objective_steps']))
+        self.assertIn('balcony door', lines['c1_escape.in.02']['text'].lower())
+
+    def test_nora_does_not_wear_the_raincoat_steve_hung_up(self):
+        appearances = script_v2.load_edits()['global']['scene_appearances']
+        self.assertNotEqual(appearances['c1_escape']['iris'], 'nora_rain')
+
+    def test_aquarium_walk_paints_each_room_it_passes(self):
+        stills = self.staging['c2_aquarium'].get('stills', [])
+
+        def still_for(line_id):
+            for still in stills:
+                if any(line_id == item or line_id.startswith(item + '.') for item in still['lines']):
+                    return still['file']
+            return ''
+        pump, doors, holding = still_for('c2_aquarium.plan.02'), still_for('c2_aquarium.guard.01'), \
+            still_for('c2_aquarium.intercom.01')
+        self.assertTrue(all((pump, doors, holding)), 'pump room, service doors and holding room are painted')
+        self.assertEqual(len({pump, doors, holding}), 3)
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -2,7 +2,9 @@ extends SceneTree
 ## Review captures: render scenes as the player sees them, for visual and perspective review.
 ## NIGHT_NINE_CAPTURE_PLAN is a JSON list of shots:
 ##   {"name": "c1_escape-gate-open", "scene": "c1_escape", "done": ["c1_escape.power"],
-##    "walk": [0.5, 0.8], "line": "c1_escape.in.01", "focus": "c1_escape.power"}
+##    "walk": [0.5, 0.8], "line": "c1_escape.in.01", "focus": "c1_escape.power", "wait": 30}
+## "wait" is how many frames to let a line's camera move or dissolve finish before the shot.
+## "solve" completes one more lead after entering, without starting the scene's exit.
 ## Run windowed (not headless) with NIGHT_NINE_QA_DIR and NIGHT_NINE_SAVE_DIR set.
 var game: Node
 
@@ -59,6 +61,12 @@ func run() -> void:
 	game.menu.hide()
 	for shot: Dictionary in plan:
 		await enter(str(shot.scene), shot.get("done", []))
+		if shot.has("solve"):
+			# Solve one lead in place, as play does, without starting the scene's exit.
+			var solved: Dictionary = game.campaign.task_index[str(shot.solve)]
+			game.campaign.choose(str(shot.solve), int(solved.answer), solved.get("puzzle", {}).get("solution", []))
+			game._refresh()
+			await frames(2)
 		var stage = game.stage
 		if shot.has("walk") and stage.get("floor_stage") and stage.floor_stage.has_actor():
 			var body: Node2D = stage.floor_stage.bodies[stage.floor_stage.active_actor].body
@@ -68,7 +76,7 @@ func run() -> void:
 			stage.set_focus(game.campaign.current().tasks.find(game.campaign.task_index[str(shot.focus)]))
 		if shot.has("line"):
 			game._speak([str(shot.line)], Callable())
-			await frames(30)
+			await frames(int(shot.get("wait", 30)))
 		await save(folder, str(shot.name))
 		if shot.has("line"):
 			while game.dialogue_panel.visible:

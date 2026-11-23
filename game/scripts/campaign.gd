@@ -1057,7 +1057,7 @@ func _load_stage(play_intro: bool) -> void:
 	if stage.has_signal("approach_finished"):
 		stage.approach_finished.connect(_inspect_on_arrival)
 		if stage.floor_stage:
-			stage.sync_story(campaign.data.done)
+			stage.sync_story(campaign.data.done, campaign.data.seen)
 			stage.floor_stage.restore(campaign.data.get("walk_positions",{}))
 	if started:
 		_status("Click the ground or use WASD to walk. Select an object to investigate." if stage.has_method("walking_view") and stage.walking_view() else "Click a marked object to investigate.")
@@ -1159,7 +1159,7 @@ func _refresh() -> void:
 	if is_instance_valid(stage):
 		if stage.has_method("select_walker"):
 			stage.select_walker(campaign.data.actor)
-		stage.sync_story(campaign.data.done)
+		stage.sync_story(campaign.data.done, campaign.data.seen)
 	var s := campaign.current()
 	title.text=s.chapter.to_upper()+"  /  "+s.title
 	objective.text=s.objective

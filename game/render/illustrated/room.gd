@@ -278,7 +278,7 @@ func set_focus(index: int) -> void:
 	if dialogue_shot.is_empty():
 		direct_attention()
 
-func sync_story(completed: Array) -> void:
+func sync_story(completed: Array, _seen: Array = []) -> void:
 	done = completed
 	if room_id == "p_bay" and "p_bay.tune" in done:
 		set_frequency(815)
