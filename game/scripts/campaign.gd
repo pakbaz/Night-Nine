@@ -633,6 +633,8 @@ func _open_objects() -> void:
 	_label(interaction,"Objects at this location",25)
 	var first: Button
 	for task: Dictionary in campaign.current().tasks:
+		if stage.has_method("hotspot_in_view") and not stage.hotspot_in_view(campaign.current().tasks.find(task)):
+			continue
 		var lead:=_button(interaction,task.title,func():
 			if task.id not in campaign.data.done and not campaign.available(task.id):
 				_status(campaign.lock_reason(task.id))
@@ -1934,6 +1936,8 @@ func _process(delta: float) -> void:
 		hotspots[i].size = stage.hotspot_size(i)
 		hotspots[i].position = stage.project_target(i)-hotspots[i].size*.5
 		hotspots[i].visible=started and not campaign.data.finished and not transitioning and not dialogue_panel.visible and not menu.visible and not journal.visible and not tape_compare.visible and not root.get_node("InteractionPanel").visible
+		if hotspots[i].visible and stage.has_method("hotspot_in_view"):
+			hotspots[i].visible = stage.hotspot_in_view(i)
 	object_list.visible = started and not campaign.data.finished and not dialogue_panel.visible and not transitioning and not menu.visible and not journal.visible and not tape_compare.visible and not root.get_node("InteractionPanel").visible
 	people_bar.visible = object_list.visible and not people_buttons.is_empty()
 	if dialogue_panel.visible and not menu.visible and not journal.visible and auto_dialogue:

@@ -987,6 +987,15 @@ def validate_staging(staging, content, merge):
                     merge.issue('error', scene_id, f'still names unknown line or lead {item}')
         if scene.get('bridge'):
             painting(scene_id, scene['bridge'])
+        for path in scene.get('chapter_frames', []):
+            painting(scene_id, path)
+        cutaway = scene.get('cutaway', {})
+        if 'path' in cutaway:
+            painting(scene_id, cutaway['path'])
+        if 'onboard_task' in cutaway:
+            tasks = {t['id'] for t in scenes[scene_id]['tasks']}
+            if cutaway.get('after') not in tasks or cutaway['onboard_task'] not in tasks:
+                merge.issue('error', scene_id, 'transport cutaway must name its boarding and onboard tasks')
         marks = {t['id'] for t in scenes[scene_id]['tasks']} | {i for i in line_ids if i.startswith(scene_id + '.')}
         for layer in scene.get('layers', []):
             painting(scene_id, layer.get('file', ''))

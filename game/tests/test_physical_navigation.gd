@@ -171,6 +171,14 @@ func verify_campaign(campaign: NightCampaign, layouts: Dictionary) -> void:
 				for i: int in scene.tasks.size():
 					var task: Dictionary=scene.tasks[i]
 					var label := str(task.id)+" via "+id
+					if stage.in_transit():
+						check(stage.hotspot_in_view(i) and stage.frame.get_global_rect().has_point(stage.project_target(i)),
+							label+" can be selected aboard the moving vehicle")
+						check(not stage.walk_task(task.id) and not floor_stage.visible,label+" cannot walk back into the bay")
+						reached.append(task.id)
+						completed.append(task.id)
+						stage.sync_story(completed)
+						continue
 					# While a story layer holds the lead in place (Steve strapped into the
 					# scan chair), objects open directly and nobody walks.
 					if not stage.walking_view() and stage.active_layers().any(func(layer: Dictionary): return not layer.get("walking",true)):
@@ -233,7 +241,10 @@ func verify_campaign(campaign: NightCampaign, layouts: Dictionary) -> void:
 					completed.append(task.id)
 					stage.sync_story(completed)
 					stage.set_focus(-1)
-					check(floor_stage.visible,label+" returns to exploration")
+					if stage.in_transit():
+						check(stage.illustration_insert.is_visible_in_tree() and not floor_stage.visible,label+" boards the vehicle")
+					else:
+						check(floor_stage.visible,label+" returns to exploration")
 				room_results[id]=reached
 				room_trace[id]=actor_trace
 			stage.free()

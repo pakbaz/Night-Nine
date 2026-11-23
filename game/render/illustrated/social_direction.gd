@@ -12,8 +12,9 @@ const PARTNERS := {
 	"c3_house": {"in":"calder steve", "crossword":"calder steve", "rules":"calder steve", "mail":"calder pell", "out":"calder steve"},
 	"c3_archive": {"in":"tomas steve"},
 	"i1_archive": {"in":"gus archivist","reset":"gus archivist"},
-	"c4_safe": {"in":"rook_copy calder"},
-	"c4_escape": {"in":"calder steve","tube":"calder steve"},
+	"c4_safe": {"in":"calder steve", "record":"calder steve", "match":"calder steve",
+		"screens":"calder steve", "out.02":"calder rook_copy", "out.03":"steve rook_copy",
+		"out.04":"steve rook_copy"},
 	"c5_shack": {"in":"luis steve"},
 	"c5_station": {"stephen":"steve stephen","out":"steve stephen"},
 	"c6_iris": {"in":"steve iris","takes":"steve iris","hold":"steve iris","out":"steve iris"},
@@ -52,7 +53,7 @@ const CONVERSATIONS := {"c1_pier.door":"lyle_copy","c1_pier.bait":"agnes",
 	"c8_beach.first":"saren","c8_beach.second":"saren","c8_beach.refuse":"saren",
 	"c9_gallery.talk":"nora","epilogue.neighbors":"pell"}
 const OBSERVE := ["c1_pier.whistle","c2_ship.nora","c8_lab.props","i2_nora.patrol","c4_escape.van","c6_iris.alibi"]
-const WIDE_LINES := ["c1_flat.in.04","c1_pier.bait.01","c3_house.in.01","c4_escape.in.01",
+const WIDE_LINES := ["c1_flat.in.04","c1_pier.bait.01","c3_house.in.01",
 	"c5_station.stephen.01","c6_iris.in.02","c7_gate.in.01","c8_rig.out.01","c9_wake.in.01","epilogue.out.01"]
 
 static func action_for(room: String, task: String, legacy_listen: Array) -> String:
@@ -82,6 +83,8 @@ static func task_partner(room: String, task: String, active: String) -> String:
 static func dialogue_pair(room: String, line_id: String, speaker: String) -> PackedStringArray:
 	var exchanges: Dictionary = PARTNERS.get(room,{})
 	var pair := str(exchanges.get(line_id.trim_prefix(room+"."),exchanges.get(line_id.get_slice(".",1),"")))
+	if room == "c4_safe" and line_id.begins_with("c4_safe.talk."):
+		pair = "calder steve" if line_id.get_slice(".",2) == "calder" else "steve rook_copy"
 	if pair.is_empty():
 		return PackedStringArray()
 	var names := pair.split(" ")

@@ -58,6 +58,7 @@ const STILL_OUT_SECONDS := .7
 ## Transparent paintings over the room for one stretch of the story, such as Steve
 ## strapped into the scan chair or a sleeper in a pod. Each covers the whole plate.
 var story_layers: Array[Dictionary] = []
+var chair_scan: ColorRect
 ## Lines of this scene already heard, and every lead or line a story state can wait for.
 var heard: Array = []
 var marks: Array = []
@@ -82,7 +83,8 @@ func build_art(scene: Dictionary) -> void:
 	else:
 		push_error("Missing room illustration " + file)
 	if directions.has("cutaway"):
-		var insert_path:=ROOM_FOLDER+str(directions.cutaway.get("file",directions.cutaway.room))+".webp"
+		var cutaway: Dictionary = directions.cutaway
+		var insert_path: String = cutaway.get("path",ROOM_FOLDER+str(cutaway.get("file",cutaway.get("room","")))+".webp")
 		if ResourceLoader.exists(insert_path):
 			illustration_insert=picture(distant,insert_path,Vector2.ZERO,ART)
 			illustration_insert.hide()
@@ -123,6 +125,10 @@ func build_art(scene: Dictionary) -> void:
 		props.move_child(foreground,-1)
 	if background:
 		build_story_layers()
+	if room_id == "c2_ship":
+		# On the same art plane as the chair's evidence crop, behind its two escorts.
+		chair_scan = patch_rect(hull, Vector2.ZERO, ART, preload("chair_scan.gdshader"))
+		chair_scan.name = "ChairScan"
 	for role: Dictionary in directions.get("creatures",[]):
 		var id: String=role.id
 		var folder:=CAST+id
@@ -170,6 +176,7 @@ func art_point(pair: Array) -> Vector2:
 
 func walking_view() -> bool:
 	return floor_stage != null and floor_stage.has_actor() and not cinematic and cut_progress < 0.0 and focus < 0 \
+		and not in_transit() \
 		and not active_layers().any(func(record: Dictionary): return not record.get("walking",true))
 
 func layer_active(record: Dictionary) -> bool:
@@ -484,6 +491,9 @@ func show_cast(id: String) -> void:
 	if not id.is_empty() and actor_visible(id):
 		visible_ids.append(id)
 	social_pair = SOCIAL.dialogue_pair(room_id,active_id,id)
+	var scanning := is_instance_valid(chair_scan) and chair_scan.visible
+	if scanning:
+		social_pair = PackedStringArray(["iris","lyle_copy"])
 	if active_id == "c9_gallery.out.03" and "c9_gallery.link" in done:
 		social_pair = PackedStringArray(["steve","nora"])
 	if social_pair.size() == 2:
@@ -518,6 +528,9 @@ func show_cast(id: String) -> void:
 			if member in social_pair:
 				var left := member == social_pair[0]
 				var mark := Vector2(ART.x * (.305 if left else .70), float(person.get_meta("solo_eyes").y))
+				if scanning:
+					# Keep the right side of the shot open for Steve and the scan lamp.
+					mark = ART * (Vector2(.24,.44) if left else Vector2(.49,.40))
 				cast_marks[member] = mark
 				person.take_mark(mark,1.0 if left else -1.0,"speaker" if member == id else "listener",clock)
 			else:
@@ -548,13 +561,27 @@ func set_focus(index: int) -> void:
 
 func in_cutaway() -> bool:
 	var cutaway: Dictionary=directions.get("cutaway",{})
+	if in_transit():
+		# choose() commits the task before its result lines play. Stay in the bay
+		# while the alarm sounds and the escort is still boarding the witness.
+		return not active_id.begins_with(str(cutaway.after) + ".")
 	if not active_id.is_empty():
 		return active_id in cutaway.get("lines",[]) or (cutaway.has("group") and active_id.begins_with(str(cutaway.group)+"."))
 	var task_in_view: bool = focus >= 0 and focus < scene_record.tasks.size() and scene_record.tasks[focus].id == cutaway.get("inspect","")
 	return task_in_view or (cutaway.has("after") and cutaway.after in done)
 
+## A transport cutaway replaces the walkable room, including its old hotspots.
+func in_transit() -> bool:
+	var cutaway: Dictionary = directions.get("cutaway",{})
+	return cutaway.has("onboard_task") and cutaway.after in done
+
+func hotspot_in_view(index: int) -> bool:
+	return not in_transit() or scene_record.tasks[index].id == directions.cutaway.onboard_task
+
 func update_inserts() -> void:
 	show_room_state()
+	if is_instance_valid(chair_scan):
+		chair_scan.visible = "c2_ship.escape" not in done
 	var away := in_cutaway()
 	var exploring := walking_view() or floor_dialogue
 	if floor_stage:
@@ -711,8 +738,8 @@ func begin_departure_cut() -> void:
 	if not authored_departure.is_empty():
 		show_departure_art(authored_departure)
 	elif directions.get("chapter_insert",false):
-		for suffix: String in ["","-motion"]:
-			var path:=INSERT_FOLDER+room_id+suffix+".webp"
+		var paths: Array = directions.get("chapter_frames",[INSERT_FOLDER+room_id+".webp",INSERT_FOLDER+room_id+"-motion.webp"])
+		for path: String in paths:
 			if ResourceLoader.exists(path):
 				var painting:=load(path) as Texture2D
 				if painting:
@@ -731,6 +758,8 @@ func begin_departure_cut() -> void:
 		layer.modulate.a = 0.0
 		chapter_frames.append(layer)
 	if not chapter_frames.is_empty():
+		if is_instance_valid(story_still) and story_still.texture == chapter_frames[0].texture:
+			still_target = 1.0
 		if chapter_frames.size()==2:
 			set_keyframe_quality()
 		if film_book.is_empty():
@@ -817,6 +846,8 @@ func _process(delta: float) -> void:
 	fade_arrival(delta)
 	dissolve_still(delta)
 	clock+=delta
+	if is_instance_valid(chair_scan) and chair_scan.visible:
+		chair_scan.material.set_shader_parameter("phase", fmod(clock / 3.8, 1.0))
 	shot_clock+=delta
 	if is_instance_valid(incoming_frame):
 		incoming_time+=delta
@@ -852,6 +883,9 @@ func _process(delta: float) -> void:
 	elif focus>=0 and focus<targets.size():
 		target=HALF.lerp(targets[focus],.31)
 		magnitude=1.16
+	if is_instance_valid(chair_scan) and chair_scan.visible:
+		target = HALF
+		magnitude = 1.045
 	for id: String in creatures:
 		if creatures[id].visible:
 			creatures[id].animate(clock)
@@ -868,6 +902,8 @@ func _process(delta: float) -> void:
 		atmosphere.material.set_shader_parameter("seconds",clock)
 
 func project_target(index: int) -> Vector2:
+	if in_transit() and hotspot_in_view(index):
+		return distant.to_global(art_point(directions.cutaway.onboard_mark))
 	if walking_view() and floor_stage.wide:
 		var mark: Array = floor_directions.landmarks[scene_record.tasks[index].id.get_slice(".",1)]
 		return distant.to_global(art_point(mark))

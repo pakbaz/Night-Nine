@@ -262,8 +262,10 @@
     "company": [
       "steve",
       "iris",
-      "saren"
+      "saren",
+      "lyle_copy"
     ],
+    "appearances": {"iris": "nora_rain"},
     "off_camera_lines": [
       "c2_ship.escape.01"
     ],
@@ -411,8 +413,18 @@
         "file": "res://assets/illustrated/campaign/stills/c4_safe-arrival.webp",
         "lines": [
           "c4_safe.ctx.01",
-          "c4_safe.ctx.02"
+          "c4_safe.ctx.02",
+          "c4_safe.ctx.03",
+          "c4_safe.ctx.04"
         ]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/bridges/c4_safe-c4_escape.webp",
+        "lines": ["c4_safe.record.lead.05", "c4_safe.record.01", "c4_safe.record.find", "c4_safe.recap.02"]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/stills/c4_safe-feed-3.webp",
+        "lines": ["c4_safe.screens.01", "c4_safe.screens.find", "c4_safe.recap.01"]
       }
     ],
     "bridge": "res://assets/illustrated/campaign/bridges/c4_safe-c4_escape.webp",
@@ -423,14 +435,10 @@
       ]
     },
     "detail_shots": {
-      "c4_safe.screens.01": {
-        "target": [
-          0.84,
-          0.32
-        ],
-        "zoom": 2.4,
-        "cut": true
-      }
+      "c4_safe.match.01": {"target": [0.51, 0.72], "zoom": 2.4, "cut": true},
+      "c4_safe.screens.lead.04": {"target": [0.12, 0.47], "zoom": 1.85, "cut": true},
+      "c4_safe.screens.lead.05": {"target": [0.84, 0.32], "zoom": 2.4, "cut": true},
+      "c4_safe.screens.02": {"target": [0.84, 0.32], "zoom": 2.4, "cut": true}
     }
   },
   "c4_escape": {
@@ -448,19 +456,51 @@
       "steve"
     ],
     "chapter_insert": true,
+    "chapter_frames": [
+      "res://assets/illustrated/campaign/stills/c4_escape-creek.webp",
+      "res://assets/illustrated/campaign/films/c4_escape.webp"
+    ],
+    "cutaway": {
+      "path": "res://assets/illustrated/campaign/inserts/c4_escape.webp",
+      "after": "c4_escape.fault",
+      "onboard_task": "c4_escape.van",
+      "onboard_mark": [0.37, 0.60]
+    },
+    "detail_shots": {
+      "c4_escape.fault.01": {"target": [0.47, 0.45], "zoom": 2.0, "cut": true}
+    },
     "stills": [
       {
+        "file": "res://assets/illustrated/campaign/bridges/c4_safe-c4_escape.webp",
+        "lines": ["c4_escape.ctx.01", "c4_escape.ctx.02"]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/stills/c4_escape-parked.webp",
+        "lines": ["c4_escape.ctx.03"]
+      },
+      {
         "file": "res://assets/illustrated/campaign/stills/c4_escape-drill.webp",
-        "lines": [
-          "c4_escape.fault.01",
-          "c4_escape.fault.02",
-          "c4_escape.fault.find"
-        ]
+        "lines": ["c4_escape.fault.02", "c4_escape.fault.find"]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/inserts/c4_escape.webp",
+        "lines": ["c4_escape.van.lead.01"]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/inserts/c4_escape-motion.webp",
+        "lines": ["c4_escape.van.lead.02", "c4_escape.van.lead.03", "c4_escape.van.lead.04"]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/stills/c4_escape-creek.webp",
+        "lines": ["c4_escape.out.04"]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/stills/c4_escape-rear-door.webp",
+        "lines": ["c4_escape.van.01"]
       },
       {
         "file": "res://assets/illustrated/campaign/stills/c4_escape-jump.webp",
         "lines": [
-          "c4_escape.van.01",
           "c4_escape.van.02",
           "c4_escape.van.find",
           "c4_escape.recap",

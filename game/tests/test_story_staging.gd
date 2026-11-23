@@ -154,7 +154,21 @@ func run() -> void:
 	var chair: Vector2 = game.stage.scene_props["c2_ship.escape"]
 	check((await aim_during("c2_ship.command.lead.01")).distance_to(chair) < 1.0, "The attendant's lines keep the camera on Steve in the chair")
 	check((await aim_during("c2_ship.command.02")).distance_to(chair) < 1.0, "Steve's strapped-in lines keep the camera on the chair")
+	game._speak(["c2_ship.escape.lead.01"], Callable())
+	await frames(3)
+	var scanner: ColorRect = game.stage.hull.get_node_or_null("ChairScan")
+	check(is_instance_valid(scanner) and scanner.is_visible_in_tree(), "The copying light is on Steve during the scan")
+	for escort: String in ["iris", "lyle_copy"]:
+		var watcher: Node2D = game.stage.actors.get(escort)
+		check(is_instance_valid(watcher) and watcher.is_visible_in_tree(), "%s stays in the scan shot" % escort)
+	if is_instance_valid(scanner):
+		var phase: float = scanner.material.get_shader_parameter("phase")
+		await frames(5)
+		check(scanner.material.get_shader_parameter("phase") != phase, "The scan sweeps across the chair while the line holds")
+	game._next_line()
 	await enter("c2_ship", ["c2_ship.command", "c2_ship.escape"])
+	scanner = game.stage.hull.get_node_or_null("ChairScan")
+	check(not is_instance_valid(scanner) or not scanner.is_visible_in_tree(), "The scan stops on release")
 	check(not layer_shown("c2_ship-steve-strapped"), "Show the empty chair once Steve is free")
 	check(layer_shown("c2_ship-nora-asleep"), "Nora stays asleep in her capsule after Steve is free")
 	check(game.stage.walking_view(), "Steve can walk once he is out of the chair")
@@ -278,6 +292,27 @@ func run() -> void:
 	while game.dialogue_panel.visible:
 		game._next_line()
 		await frames(1)
+	check(await portrait_during("c4_safe.match.lead.02", "calder"), "June stays with Steve while they compare the audio")
+	check(not await portrait_during("c4_safe.in.02", "rook_copy"), "Talking about Adrian does not summon his portrait")
+	check(not await portrait_during("c4_safe.record.01", "rook_copy"), "Steve hears Rook through the office door")
+	check((await shown_during("c4_safe.screens.01")).ends_with("c4_safe-feed-3.webp"), "The feed reveals the sleeping Rook, not his standing double")
+	check(await portrait_during("c4_safe.out.02", "calder") and await portrait_during("c4_safe.out.02", "rook_copy"),
+		"June and Rook share the shot when he assigns her to the east wing")
+	check(not await portrait_during("c4_safe.out.03", "calder"), "June has left when Rook turns back to Steve")
+
+	await enter("c4_escape", ["c4_escape.tube"])
+	check(not game.stage.in_cutaway(), "The transfer bay and its parked van are available before the drill")
+	await solve("c4_escape.fault")
+	check((await shown_during("c4_escape.fault.02")).ends_with("c4_escape-drill.webp"), "The escort boards Steve as the bells ring")
+	check(game.stage.in_cutaway() and not game.stage.walking_view(), "Between boarding and the jump the player cannot walk back around the parked van")
+	check((await shown_during("c4_escape.van.lead.01")).ends_with("inserts/c4_escape.webp"), "Show the van leaving before the player chooses the jump")
+	check((await shown_during("c4_escape.van.01")).ends_with("c4_escape-rear-door.webp"), "Steve jumps from the open rear door")
+	check((await shown_during("c4_escape.van.02")).ends_with("c4_escape-jump.webp"), "Steve lands in the ditch with the radio")
+	var woods := await shown_during("c4_escape.out.04")
+	check(woods.ends_with("c4_escape-creek.webp"), "Steve follows the creek on his last line")
+	game.stage.begin_departure_cut()
+	check(not game.stage.chapter_frames.is_empty() and game.stage.chapter_frames[0].texture.resource_path == woods,
+		"The chapter cut continues from the woods without replaying the van departure")
 
 	# The balcony is one place: walking and close-ups use the same painting, and Mr. Bell's
 	# gate is painted open (never a pasted picture) once Steve opens it.

@@ -111,7 +111,7 @@ Steve's 911 call about the procession breaks up. The one place with Nora's name 
 On the spool the real Nora says: "My name is Nora Reyes, and somebody just walked out of here wearing my face." She whistles two rising notes. Steve did not notice for five months. Nora's copy and Lyle find him: "Where is she? Where's Nora?"
 
 ### Sixty-one percent (`c2_ship`), before dawn
-They walk Steve down the old intake tunnel to a ship under the bay. Nora's copy says the crew want to know where his mother put her notebook. An attendant offers hold music and a self-help quote, and explains that the scan reads the oldest memories first.
+They walk Steve down the old intake tunnel to a ship under the bay. Nora's copy and Deputy Lyle watch while the chair's light scans Steve. Nora's copy says the crew want to know where his mother put her notebook. An attendant offers hold music and a self-help quote, and explains that the scan reads the oldest memories first.
 
 | Lead | Type | Solution | Why it works |
 | --- | --- | --- | --- |
@@ -195,6 +195,8 @@ Rook arrives, calm and kind, and moves Steve and June to a Bureau safe house in 
 Rook sings three karaoke songs beautifully. June: "Adrian hates karaoke... Odd behavior proves nothing. My own rule." The PLACEMENTS file lists copies in Washington and Beijing, starting with Walt Prior. A bed is ready for President Ward on signing day. Rook puts June in the east wing and Steve in the west, and books Steve a 5 a.m. van down to Bellwether "for processing".
 
 ### Only honest (`c4_escape`), Thursday night
+
+The transfer van is empty when Steve first sees it. The drill brings his escort to the bay. Once Steve boards, the van is the only object he can inspect. The chapter ends at the creek, after the jump.
 
 | Lead | Type | Solution | Why it works |
 | --- | --- | --- | --- |
