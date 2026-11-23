@@ -13,7 +13,7 @@
         "Helen’s note is voiced in her own voice as a memory, as Steve reads it."
       ],
       "context": [
-        "steve|My face was on every wanted poster in the county. I walked all night and hid in the one place nobody had opened in eighteen months: Dad’s radio shack, on the bluff above the bay.",
+        "steve|By sunrise my face was on every wanted poster in the county. I came down out of the trees to Dad’s radio shack, on the bluff above the bay.",
         "steve|Their boxes were still stacked where I’d left them. I’d never been able to open them."
       ],
       "intro": [
@@ -318,7 +318,7 @@
             {"id": "c5_station.in.02", "display": "Steve Mercer?"},
             "steve|...That’s my face.",
             {"new": "stephen|It’s a good face. You’re not doing it any favors.", "display": "Steve Mercer?"},
-            {"new": "stephen|Last thing I remember is breakfast in Dad’s shack. Mom’s jam jar, with the chip in the blue lid.", "display": "Steve Mercer?"},
+            {"new": "stephen|The last thing I remember of home is breakfast in Dad’s shack. Mom’s jam jar, with the chip in the blue lid.", "display": "Steve Mercer?"},
             {"new": "stephen|A tape that says Mom, last call? Mom never leaves voicemails. She calls back.", "display": "Steve Mercer?"},
             "steve|Then turn this poster over, and read it."
           ],
@@ -349,7 +349,7 @@
             "stephen|Call me Stephen. One of us should sound like a grown-up.",
             "c5_station.stephen.02"
           ],
-          "finding": "steve|He remembers Mom’s chipped jam jar, and nothing after that breakfast. He doesn’t know about the boat. He doesn’t know they’re gone."
+          "finding": "steve|He remembers Mom’s chipped jam jar, and nothing of home after that breakfast. He doesn’t know about the boat. He doesn’t know they’re gone."
         }
       },
       "recap": [
@@ -360,7 +360,18 @@
         "c5_station.out.01",
         {"id": "c5_station.out.02", "text": "No. I had breakfast with them. It never got as far as the boat."},
         {"new": "steve|I watched my own face learn it. Eighteen months, all at once.", "delivery": "narration"},
-        "c5_station.out.03"
+        "c5_station.out.03",
+        "steve|You woke up on the ship.",
+        "stephen|In a glass tank, last Friday. Cold, wet and sixty-one percent. A very tall man gave me a crew pass, an earpiece and a job.",
+        "stephen|Find the man with my face. Find Mom’s notebook. Report in every single night.",
+        "steve|Carmen saw you at the market.",
+        "stephen|She hugged me and said I looked well. I didn’t know why that made me want to cry. After that I watched June’s house all week. Today I followed you up the path to Dad’s shack. Twice.",
+        "stephen|Then I heard you through the shack window. The good stuff, the station library. So I came here first, and waited for you in the dark.",
+        {"new": "steve|Then the earpiece in his hand clicked. I knew that voice. It was the one on the ship’s intercom, the one that opened my chair.", "delivery": "narration", "cue": "earpiece_click"},
+        {"new": "saren|Hunter. You missed your report. Where is the original?", "delivery": "radio", "direction": "small and clear, from the earpiece in Stephen’s hand"},
+        {"new": "steve|Stephen looked at me for a long time. Then he lifted the earpiece to his ear.", "delivery": "narration"},
+        {"new": "stephen|Not at the station. He’s gone north, toward the border. I’m following him.", "direction": "into the earpiece, steady"},
+        "stephen|There. I’ve just lied to a spaceship for you. I think that makes us brothers."
       ],
       "talk": {
         "autorick": [

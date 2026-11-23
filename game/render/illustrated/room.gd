@@ -177,6 +177,7 @@ func build_bay() -> void:
 	dial_material = ShaderMaterial.new()
 	dial_material.shader = HULL
 	foreground.material = dial_material
+	build_needle()
 	targets.assign([Vector2(595,658),Vector2(1060,654)])
 	hit_sizes.assign([Vector2(190,115),Vector2(210,106)])
 	seat("frank",false)
@@ -290,17 +291,113 @@ func talk_body_at_screen(screen: Vector2) -> String:
 			return id
 	return ""
 
+## Frank's radio needle, measured on the 1672 x 941 bay plate: where it pivots, how long it
+## is, how far it swings, the glass it sits behind and the glowing scale line it crosses.
+const PLATE := Vector2(1672,941)
+const NEEDLE_PIVOT := Vector2(524.0,618.5)
+const NEEDLE_LENGTH := 64.0
+const NEEDLE_SWING := Vector2(-46.0,42.0)
+const SCALE_CENTRE_X := 521.0
+const DIAL_GLASS := Rect2(Vector2(434,546),Vector2(176,74))
+const SCALE_ARC := Vector3(0.002321,-2.5116,1252.20)
 ## Where the radio's needle points: 0 at 810 kHz, 1 at 820 kHz.
 var needle_value := 0.0
+var needle_shown := 0.0
+var needle: Sprite2D
+var needle_shadow: Sprite2D
+var dial_light: Sprite2D
+var dial_core: Sprite2D
 
 func set_frequency(khz: int) -> void:
 	needle_value = clampf((khz-810)/10.0,0.0,1.0)
-	if dial_material:
-		dial_material.set_shader_parameter("dial",needle_value)
 
-## The needle's angle from vertical, in radians, as the shader draws it.
+## The needle's target angle from vertical, in radians.
 func needle_angle() -> float:
-	return deg_to_rad(lerpf(-58.0, 40.0, needle_value))
+	return needle_angle_at(needle_value)
+
+func needle_angle_at(value: float) -> float:
+	return deg_to_rad(lerpf(NEEDLE_SWING.x, NEEDLE_SWING.y, value))
+
+func needle_pivot_plate() -> Vector2:
+	return NEEDLE_PIVOT
+
+func needle_tip_plate(value: float) -> Vector2:
+	return NEEDLE_PIVOT+Vector2.UP.rotated(needle_angle_at(value))*NEEDLE_LENGTH
+
+func scale_arc_y(x: float) -> float:
+	return SCALE_ARC.x*x*x+SCALE_ARC.y*x+SCALE_ARC.z
+
+## Where the needle crosses the bright upper scale line: the green light sits there.
+func dial_light_plate(value: float) -> Vector2:
+	var toward := Vector2.UP.rotated(needle_angle_at(value))
+	var reach := 20.0
+	while reach < NEEDLE_LENGTH:
+		var point := NEEDLE_PIVOT+toward*reach
+		if point.y <= scale_arc_y(point.x):
+			return point
+		reach += .25
+	return NEEDLE_PIVOT+toward*NEEDLE_LENGTH
+
+func plate_point(point: Vector2) -> Vector2:
+	return point*ART/PLATE
+
+## The needle is cut from the painting's own needle (tools/build-bay-needle.py): two
+## texture pixels per plate pixel, pivot at the bottom centre. A soft green light rides the
+## phosphor scale where the needle crosses it.
+func build_needle() -> void:
+	var texture_scale := ART/PLATE/2.0
+	var additive := CanvasItemMaterial.new()
+	additive.blend_mode = CanvasItemMaterial.BLEND_MODE_ADD
+	# A soft halo along the scale and a bright core where the needle crosses it.
+	dial_light = Sprite2D.new()
+	dial_light.texture = load(ROOMS+"bay-dial-glow.png")
+	dial_light.material = additive
+	dial_light.modulate = Color(.34,1.0,.30,.95)
+	dial_light.scale = ART/PLATE*Vector2(34.0/72.0,13.0/48.0)
+	props.add_child(dial_light)
+	dial_core = Sprite2D.new()
+	dial_core.texture = dial_light.texture
+	dial_core.material = additive
+	dial_core.modulate = Color(.78,1.0,.66,1.0)
+	dial_core.scale = ART/PLATE*Vector2(9.0/72.0,5.0/48.0)
+	props.add_child(dial_core)
+	var needle_texture: Texture2D = load(ROOMS+"bay-needle.png")
+	var pivot := Vector2(needle_texture.get_width()*.5,needle_texture.get_height()-1)
+	for shadow: bool in [true,false]:
+		var sprite := Sprite2D.new()
+		sprite.texture = needle_texture
+		sprite.centered = false
+		sprite.offset = -pivot
+		sprite.scale = texture_scale
+		sprite.position = plate_point(NEEDLE_PIVOT+(Vector2(1.2,1.0) if shadow else Vector2.ZERO))
+		if shadow:
+			sprite.modulate = Color(0,0,0,.3)
+			needle_shadow = sprite
+		else:
+			needle = sprite
+		props.add_child(sprite)
+	var cap := Sprite2D.new()
+	cap.texture = load(ROOMS+"bay-needle-cap.png")
+	cap.scale = texture_scale
+	cap.position = plate_point(NEEDLE_PIVOT)
+	props.add_child(cap)
+	needle_shown = needle_value
+	place_needle()
+
+func place_needle() -> void:
+	if not needle:
+		return
+	needle.rotation = needle_angle_at(needle_shown)
+	needle_shadow.rotation = needle.rotation
+	var light := dial_light_plate(needle_shown)
+	dial_light.position = plate_point(light)
+	dial_light.rotation = atan(2.0*SCALE_ARC.x*light.x+SCALE_ARC.y)
+	dial_core.position = dial_light.position
+	dial_core.rotation = dial_light.rotation
+	# A slow phosphor shimmer, never a flash.
+	var shimmer := .92+.08*sin(clock*2.3)
+	dial_light.modulate.a = .95*shimmer
+	dial_core.modulate.a = shimmer
 
 ## The painted plate carries no needle of its own; only the drawn one shows.
 func painted_needle_hidden() -> bool:
@@ -366,6 +463,9 @@ func _process(delta: float) -> void:
 	if recorder:
 		recorder.set_shader_parameter("signal",.45+.48*sin(clock*10.8) if playing_recorder or "p_veyr.levels" in done else .12)
 	if room_id == "p_bay":
+		# The needle swings to the dial like a real meter: quick, then easing in.
+		needle_shown = lerpf(needle_shown,needle_value,1.0-exp(-delta*7.0))
+		place_needle()
 		tide = lerpf(tide, .9 if night_light else .05,1.0-exp(-delta*.8))
 		water.set_shader_parameter("seconds",clock)
 		water.set_shader_parameter("shimmer",tide)

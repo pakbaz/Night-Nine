@@ -287,6 +287,27 @@ func run() -> void:
 	check(not await portrait_during("c6_jail.crossword.lead.02", "calder"), "June in the cell speaks through the bars, not as a second standing Sheriff")
 	await enter("c6_jail", ["c6_jail.mail", "c6_jail.distract", "c6_jail.crossword"])
 	check(not layer_shown("c6_jail-june-in-cell"), "Cell two is empty once June is out")
+	# Only people who are really there stand in the Sheriff's office. June's copy is out on
+	# the harbor, heard on the radio; Gus waits at his bakery; Iris never comes inside.
+	await enter("c6_jail")
+	check(not game.stage.actor_visible("calder"), "No standing Sheriff in the office while June is locked in cell two and her copy is out on the harbor")
+	check(not game.stage.actor_visible("gus"), "Gus is at his bakery, not standing in the Sheriff's office")
+	check(not game.stage.actor_visible("iris") and not game.stage.floor_stage.bodies.has("iris"), "Iris waits outside; Nora's face would be recognised in the Sheriff's office")
+	await enter("c6_jail", ["c6_jail.mail", "c6_jail.distract", "c6_jail.crossword"])
+	check(game.stage.actor_visible("calder"), "Once she is out of the cell, June stands with Steve")
+	# The man with Steve's face hides in the record library until he steps out.
+	await enter("c5_station")
+	check(not game.stage.actor_visible("stephen"), "Nobody else is visible at KBWR when Steve only hears breathing")
+	await enter("c5_station", ["c5_station.automation", "c5_station.sleeve"])
+	check(not game.stage.actor_visible("stephen"), "The other man stays hidden while Steve is still searching")
+	await enter("c5_station", ["c5_station.automation", "c5_station.sleeve", "c5_station.halcyon"])
+	check(game.stage.actor_visible("stephen"), "The man with Steve's face steps out once Steve has the notebook and Halcyon's paperwork")
+	# The President is not waiting at the gate; she comes to the delegation hatch for her letter.
+	await enter("c7_gate")
+	check(not game.stage.actor_visible("ward"), "The President is not standing at the gate when Steve arrives")
+	check(game.campaign.available_talk("ward").is_empty(), "Nobody chats with the President before they have met her")
+	await enter("c7_gate", ["c7_gate.post"])
+	check(game.stage.actor_visible("ward"), "The President is at the delegation hatch after Pell's letter")
 	# Nora wakes beside Dale and Lyle, whose pods stand open.
 	await enter("i2_nora")
 	check(layer_shown("i2_nora-pods-open") and game.stage.floor_stage.wide == null, "The Gallery shows the opened pods in the one painting Nora walks on")

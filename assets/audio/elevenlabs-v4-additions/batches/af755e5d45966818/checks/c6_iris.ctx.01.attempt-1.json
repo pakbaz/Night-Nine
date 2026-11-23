@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c6_iris.ctx.01",
+  "attempt": 1,
+  "plan_sha256": "af755e5d45966818753918d9cc050aee0c7414aa9cdd1b5691722b4e70f3ee12",
+  "wav_sha256": "8ddc00536cc31dd6fb4ea6bba81108362b03c0b019ef258d8e45deb4d3599d44",
+  "expected": "Stephen and I spent the weekend in Dad’s shack, arguing about haircuts. Every night at nine, he told the earpiece I’d gone north.",
+  "recognized": "Steven and I spent the weekend in Dad's shack, arguing about haircuts. Every night at nine, he told the earpiece I'd gone north.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 8.32,
+  "sample_rate": 48000,
+  "peak": 0.29559326171875,
+  "rms": 0.04011062931461859,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

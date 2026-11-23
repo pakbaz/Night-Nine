@@ -1,0 +1,17 @@
+{
+  "operation": "text_to_speech",
+  "plan_sha256": "af755e5d45966818753918d9cc050aee0c7414aa9cdd1b5691722b4e70f3ee12",
+  "audio_id": "c6_jail.crossword.find",
+  "attempt": 1,
+  "voice_id": "vveagfomyMCJLZsOPRP2",
+  "model_id": "eleven_v4",
+  "text_sha256": "25e4795e4c2feb7d3ad63b169128d2605e4010c1a2f6fd59c1338b8f75b5f3f9",
+  "synthesis_text_sha256": "25e4795e4c2feb7d3ad63b169128d2605e4010c1a2f6fd59c1338b8f75b5f3f9",
+  "request_id": "vrUDkQzVutZIivosX7eQ",
+  "trace_id": "8b6dfced4658e8e96fbd9f19bab3ead8",
+  "character_cost": 123,
+  "output_format": "mp3_44100_192",
+  "audio_sha256": "5269287e86f2741603e9447041999f912e3cdab9249c4cf4be7d4aefb8b3da75",
+  "response_bytes": 458335,
+  "seed": 3012683053
+}

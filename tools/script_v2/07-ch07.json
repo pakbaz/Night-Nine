@@ -15,7 +15,13 @@
       "context": [
         "steve|Sentinel Point. An old antenna field in the fog north of town, flags on every mast, and the President of the United States due at noon."
       ],
-      "intro": [],
+      "intro": [
+        {"new": "steve|We spent Tuesday in the back room of Gus’s bakery, planning on flour sacks.", "delivery": "narration"},
+        {"new": "steve|We couldn’t call anyone. The FBI’s man at the signing was Rook’s copy, and Rook’s list had names in Washington.", "delivery": "narration"},
+        {"new": "steve|So we used what we had. Halcyon runs the sound for the signing, Stephen still has their crew pass, and Dad’s tape has the tone.", "delivery": "narration"},
+        {"new": "steve|June wrote to the President in her own hand. Pell would deliver it the way he delivers everything: into the right hand, on time.", "delivery": "narration"},
+        {"new": "steve|Gus had two catering passes for the press tent. June and Iris would use them at the red window, at ten past eleven, on foot, in his aprons and hairnets, carrying croissants.", "delivery": "narration"}
+      ],
       "delete": [],
       "task_order": ["badge", "post", "truck"],
       "tasks": {
@@ -62,7 +68,7 @@
           "title": "Accord mail",
           "requires": [],
           "goal": "Get the letter into the President’s own hand, and a receipt back.",
-          "background": "Pell carries a registered letter for President Ward. Registered mail must go into her own hand, and Pell always brings back a receipt with her signature on it.",
+          "background": "Pell carries a registered letter for President Ward, written by June in her own hand. Registered mail must go into the President’s own hand, and Pell always brings back a receipt with her signature on it.",
           "lead": [
             "c7_gate.in.02",
             "pell|Registered mail goes into the addressee’s own hand. Nobody else may sign for her.",
@@ -124,7 +130,8 @@
       },
       "recap": [
         "steve|We were in. Stephen as a loyal asset, Pell as the mail, and me at the sound desk with Dad’s tape of the ninth-night tone.",
-        "steve|Ward signed for Pell’s letter at 11:54, with a fresh bandage on her left wrist. The public ceremony starts at 11:58."
+        "steve|Ward signed for Pell’s letter at 11:54, with a fresh bandage on her left wrist. The public ceremony starts at 11:58.",
+        "steve|June and Iris were already inside, in hairnets, somewhere near the service tunnel. Iris knew the crew’s routes. She used to walk them."
       ],
       "outro": [
         "steve|If they swap her, it happens between the hatch and the podium.",
@@ -201,16 +208,6 @@
             ]
           }
         ],
-        "ward": [
-          {
-            "topic": "The weather",
-            "lines": [
-              "ward|Is it always this foggy up here?",
-              "pell|Most mornings, Madam President. The fishermen say the fog keeps the town quiet.",
-              "ward|I grew up in Kansas. I could get used to quiet."
-            ]
-          }
-        ],
         "shaw": [
           {
             "topic": "The old truck",
@@ -244,7 +241,8 @@
       ],
       "context": [
         "steve|Every ninth night, when the bay sounds that tone, every copy near Bellwether walks to the water. Dad taped it.",
-        "steve|If it played on every speaker at once, every copy on the site would answer it at once. In front of everybody."
+        "steve|If it played on every speaker at once, every copy on the site would answer it at once. In front of everybody.",
+        "steve|At ten to twelve, the earpiece in Stephen’s hand stopped asking him for reports. It asked for me, by name."
       ],
       "intro": [
         {"id": "c7_swap.in.01", "delivery": "radio", "direction": "through Stephen’s earpiece, which Stephen holds out to Steve"},
@@ -354,7 +352,8 @@
           "lines": [
             {"new": "steve|Fourteen people stopped in the fog and turned toward the sea.", "delivery": "narration", "sfx": "effect.ninth_tone on every site speaker"},
             "c7_swap.tone.01",
-            {"id": "c7_swap.tone.02", "delivery": "radio"}
+            {"id": "c7_swap.tone.02", "delivery": "radio"},
+            {"new": "calder|She has my letter. She read it by flashlight in the tunnel, and she believes us. She wants to meet the man at the sound desk.", "delivery": "radio"}
           ],
           "finding": "steve|At 11:58:15 Dad’s tone went out on every site speaker. Fourteen people stopped and turned toward the sea, the woman at the microphone among them. June and Iris had the real President."
         }

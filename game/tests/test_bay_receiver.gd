@@ -87,6 +87,23 @@ func run() -> void:
 	check(tips[0] < tips[1] and tips[1] < tips[2], "The needle sweeps one way across the scale as the dial turns (%s)" % str(tips))
 	check(absf(tips[2] - tips[0]) > deg_to_rad(40.0), "The needle crosses most of the scale, not a sliver of it")
 	check(stage.painted_needle_hidden(), "The painting's own needle is painted out, so only one needle shows")
+	# The needle is the painting's own needle: its texture, its size, centred under the scale.
+	check(stage.needle != null and stage.needle.texture.resource_path.ends_with("bay-needle.png"),
+		"The swinging needle is cut from the painting's own needle")
+	check(absf(stage.needle_pivot_plate().x - stage.SCALE_CENTRE_X) < 8.0, "The needle pivots under the middle of the scale")
+	for value: float in [0.0, 0.5, 1.0]:
+		var tip: Vector2 = stage.needle_tip_plate(value)
+		check(stage.DIAL_GLASS.has_point(tip), "At %.1f the needle's tip stays behind the dial glass (%s)" % [value, str(tip)])
+	check(absf(rad_to_deg(stage.needle_angle_at(0.5))) < 4.0, "At 815 kHz the needle stands upright in the middle of the scale")
+	# The green light rides the scale with the needle.
+	var lights: Array[Vector2] = []
+	for value: float in [0.0, 0.5, 1.0]:
+		lights.append(stage.dial_light_plate(value))
+	check(lights[0].x < lights[1].x and lights[1].x < lights[2].x, "The green light moves along the scale with the dial")
+	check(lights.all(func(point: Vector2): return absf(point.y - stage.scale_arc_y(point.x)) < 2.0), "The green light sits on the glowing scale line")
+	receiver.dial.value = 815
+	await frames(90)
+	check(absf(stage.needle.rotation - stage.needle_angle()) < deg_to_rad(1.0), "The needle settles where the dial points")
 	var receipt := FileAccess.open(output.path_join("bay-receiver.json"), FileAccess.WRITE)
 	receipt.store_string(JSON.stringify({"checks": checks, "failures": failures}, "\t") + "\n")
 	receipt.close()

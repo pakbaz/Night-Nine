@@ -1,0 +1,86 @@
+{
+  "schema": 1,
+  "batch": "later-additions",
+  "model_id": "eleven_v4",
+  "output_format": "mp3_44100_192",
+  "inputs": {
+    "campaign": "e928011d7eba8a433965e03f1a5e8e5fa273ebee8cd5c76e0f70f54fd2c2e4ba",
+    "storybook": "111dd45f12d16c24dc9c1d253531eb719979f88ec9169f185b8e0f2d1e119c38",
+    "voice_manifest": "9d4ef57fab932141e0c250479a741220f9d56445140d64528fee71bbb87330ad",
+    "casting": "cb91065c437c743d50eea2958d5149a6d0a35b9d20430a66cb8a548b921246db",
+    "existing_additions": "4eccc72f5951ffb70f08a5aaa6743d49ecdac6d8e7b03e288545ef66b42b2746"
+  },
+  "ordered_audio_ids": [
+    "c5_station.out.07",
+    "c6_jail.exit.lead.02"
+  ],
+  "items": {
+    "c5_station.out.07": {
+      "audio_id": "c5_station.out.07",
+      "kind": "campaign",
+      "scene": "c5_station",
+      "speaker": "stephen",
+      "cast_role": "steve",
+      "voice_id": "vveagfomyMCJLZsOPRP2",
+      "text": "Find the man with my face. Find Mom’s notebook. Report in every single night.",
+      "text_sha256": "1e9d948339846f1734b068c2c1beeb4ac68be3d3382df75ba089a1984783dd8e",
+      "synthesis_text": "Find the man with my face. Find Mom’s notebook. Report in every single night.",
+      "synthesis_text_sha256": "1e9d948339846f1734b068c2c1beeb4ac68be3d3382df75ba089a1984783dd8e",
+      "delivery": "live",
+      "direction": "",
+      "v4_audio_tag": "",
+      "previous_text": "In a glass tank, last Friday. Cold, wet and sixty-one percent. A very tall man gave me a crew pass, an earpiece and a job.",
+      "next_text": "Carmen saw you at the market.",
+      "voice_settings": {
+        "stability": 0.46,
+        "similarity_boost": 0.78
+      },
+      "language_code": "en",
+      "model_id": "eleven_v4",
+      "output_format": "mp3_44100_192",
+      "estimated_credit_rate": 1.0,
+      "estimated_credits": 77,
+      "attempt_seeds": [
+        2635386367,
+        3380572201,
+        3866659407
+      ]
+    },
+    "c6_jail.exit.lead.02": {
+      "audio_id": "c6_jail.exit.lead.02",
+      "kind": "campaign",
+      "scene": "c6_jail",
+      "speaker": "lyle_copy",
+      "cast_role": "lyle",
+      "voice_id": "CwhRBWXzGAHq8TQ4Fs17",
+      "text": "Ben’s a tree in the school play this afternoon. He’s been practicing being a tree for a month.",
+      "text_sha256": "eecbb8eff42bab33a5feccda5cdf354256368ad2ecccab7783bf7f3c990ed7dd",
+      "synthesis_text": "Ben’s a tree in the school play this afternoon. He’s been practicing being a tree for a month.",
+      "synthesis_text_sha256": "eecbb8eff42bab33a5feccda5cdf354256368ad2ecccab7783bf7f3c990ed7dd",
+      "delivery": "live",
+      "direction": "",
+      "v4_audio_tag": "",
+      "previous_text": "Sheriff. Steve. I’m supposed to stop you.",
+      "next_text": "Lyle. Your relief has signed.",
+      "voice_settings": {
+        "stability": 0.46,
+        "similarity_boost": 0.78
+      },
+      "language_code": "en",
+      "model_id": "eleven_v4",
+      "output_format": "mp3_44100_192",
+      "estimated_credit_rate": 1.0,
+      "estimated_credits": 94,
+      "attempt_seeds": [
+        1465473878,
+        2085180565,
+        3838971413
+      ]
+    }
+  },
+  "count": 2,
+  "characters": 171,
+  "request_characters": 171,
+  "estimated_credits": 171,
+  "plan_sha256": "13ef7394fb0924ffe4ef95be69622315ada9bdb98ec5b79026fa580435ef8ef9"
+}

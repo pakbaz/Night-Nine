@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c6_jail.crossword.03",
+  "attempt": 1,
+  "plan_sha256": "af755e5d45966818753918d9cc050aee0c7414aa9cdd1b5691722b4e70f3ee12",
+  "wav_sha256": "f13d062101c4ec09e39f20ff0e1375e5484b4c7fca05a1b925299ecc3d9899d2",
+  "expected": "Radio June said T. Close. Wrong.",
+  "recognized": "Radio June said T. Close. Wrong.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 3.84,
+  "sample_rate": 48000,
+  "peak": 0.672393798828125,
+  "rms": 0.044746000376704974,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

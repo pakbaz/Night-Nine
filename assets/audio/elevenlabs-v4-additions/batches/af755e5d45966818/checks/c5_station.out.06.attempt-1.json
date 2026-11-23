@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c5_station.out.06",
+  "attempt": 1,
+  "plan_sha256": "af755e5d45966818753918d9cc050aee0c7414aa9cdd1b5691722b4e70f3ee12",
+  "wav_sha256": "65556f2e61537314e62fd6207551733e927b3a11ae1869d86564500e8d05a79f",
+  "expected": "In a glass tank, last Friday. Cold, wet and sixty-one percent. A very tall man gave me a crew pass, an earpiece and a job.",
+  "recognized": "In a glass tank last Friday, cold, wet, and 61%, a very tall man gave me a crew pass, an earpiece, and a job.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 10.48,
+  "sample_rate": 48000,
+  "peak": 0.4241943359375,
+  "rms": 0.03770316200249359,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c6_jail.exit.lead.04",
+  "attempt": 1,
+  "plan_sha256": "af755e5d45966818753918d9cc050aee0c7414aa9cdd1b5691722b4e70f3ee12",
+  "wav_sha256": "f8083d0a4612268e28a11d6be385326c97599b5bcb29846f91a8c78ee50be020",
+  "expected": "The school doors close at four forty. Let’s find you the fastest way there.",
+  "recognized": "The school doors close at 440. Let's find you the fastest way there.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.8,
+  "sample_rate": 48000,
+  "peak": 0.50848388671875,
+  "rms": 0.0657974865417037,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

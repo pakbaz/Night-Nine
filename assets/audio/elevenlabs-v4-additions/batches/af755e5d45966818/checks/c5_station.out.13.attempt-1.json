@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c5_station.out.13",
+  "attempt": 1,
+  "plan_sha256": "af755e5d45966818753918d9cc050aee0c7414aa9cdd1b5691722b4e70f3ee12",
+  "wav_sha256": "08964ab2e901ec928c1d9afa17e6223536f39cce578008b7648d0377fc143734",
+  "expected": "Stephen looked at me for a long time. Then he lifted the earpiece to his ear.",
+  "recognized": "Stephen looked at me for a long time. Then he lifted the earpiece to his ear.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 5.36,
+  "sample_rate": 48000,
+  "peak": 0.38531494140625,
+  "rms": 0.037654699728330646,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

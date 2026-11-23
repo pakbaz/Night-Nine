@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c4_escape.recap.02",
+  "attempt": 1,
+  "plan_sha256": "af755e5d45966818753918d9cc050aee0c7414aa9cdd1b5691722b4e70f3ee12",
+  "wav_sha256": "61bd185468010a087952d8bbdb7d0288e9df6f051cf2bb0e46c31592b0917927",
+  "expected": "Now I was in a ditch in the hills above the bay with Dad’s recorder, a stolen radio and no plan. And the radio was still talking.",
+  "recognized": "Now I was in a ditch in the hills above the bay with dad's recorder, a stolen radio, and no plan. And the radio was still talking.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 9.6,
+  "sample_rate": 48000,
+  "peak": 0.311676025390625,
+  "rms": 0.039744270159241715,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

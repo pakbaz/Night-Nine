@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c4_escape.van.02",
+  "attempt": 1,
+  "plan_sha256": "af755e5d45966818753918d9cc050aee0c7414aa9cdd1b5691722b4e70f3ee12",
+  "wav_sha256": "13ec9879a607abffbe9e30a9c2e88dc92eca3d0da2102cd66061d51f694e95cc",
+  "expected": "The escort grabbed for me and got a handful of cardigan. His radio came away in my hand. Then I was rolling through ferns in the dark, and the van’s brake lights were already a long way down the hill.",
+  "recognized": "The escort grabbed for me and got a handful of cardigan. His radio came away in my hand. Then I was rolling through ferns in the dark, and the van's brake lights were already a long way down the hill.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 12.0,
+  "sample_rate": 48000,
+  "peak": 0.42596435546875,
+  "rms": 0.045289736024614065,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

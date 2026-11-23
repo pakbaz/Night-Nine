@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c6_jail.crossword.06",
+  "attempt": 1,
+  "plan_sha256": "af755e5d45966818753918d9cc050aee0c7414aa9cdd1b5691722b4e70f3ee12",
+  "wav_sha256": "8bd0e8d2e4d3a9a0b2617434754a424dc57237e19f07e0244f87174fcc4d5b4b",
+  "expected": "Twice in one week, Stephen had lied to his own side for me.",
+  "recognized": "Twice in one week, Steven had lied to his own side for me.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.56,
+  "sample_rate": 48000,
+  "peak": 0.28814697265625,
+  "rms": 0.0380343394162666,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

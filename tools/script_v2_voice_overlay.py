@@ -199,8 +199,10 @@ def merge_overlay(
         else:
             missing.append(audio_id)
             continue
-        fallback = voice.get("takes", {}).get(audio_id, {}).get("fallback")
-        if fallback and "fallback" not in campaign_takes[audio_id]:
+        # A local fallback was recorded for the base wording; a reworded line must not inherit it.
+        base_take = voice.get("takes", {}).get(audio_id, {})
+        fallback = base_take.get("fallback")
+        if fallback and base_take.get("text") == expected["text"] and "fallback" not in campaign_takes[audio_id]:
             campaign_takes[audio_id]["fallback"] = fallback
     # Keep the frozen order so regenerated manifests stay diff-friendly.
     order = list(frozen_takes) + [key for key in campaign_takes if key not in frozen_takes]

@@ -14,7 +14,7 @@
       ],
       "context": [
         "steve|Adrian Rook arrived the next afternoon with four agents and two black SUVs. He was everything June had promised. Calm. Kind. Thorough.",
-        "steve|He drove us to a safe house in the Coast Range, three hours from anywhere.",
+        "steve|He drove us to a Bureau safe house in the hills above the bay. An hour from town, with nobody else for miles.",
         "steve|I kept thinking about that text. If someone wanted to cut me off from the one man who could help, that’s exactly what they’d send.",
         "steve|On the drive, every station talked about President Ward. On November seventh she signs an accord with China at Sentinel Point."
       ],
@@ -137,7 +137,9 @@
       ],
       "outro": [
         {"new": "rook_copy|June will sit with my team in the east wing tonight. You’ll be more comfortable in the west.", "direction": "kindly, at the office door"},
-        "rook_copy|And Steve. The notebook. Anything at all you remember."
+        "rook_copy|And Steve. The notebook. Anything at all you remember.",
+        "rook_copy|At five o’clock a van takes you down to Bellwether. You’ll be processed at the Sheriff’s office. It’s only paperwork.",
+        {"new": "steve|Bellwether. Where the ship is. I had a feeling I would never get as far as the paperwork.", "delivery": "narration"}
       ],
       "talk": {
         "calder": [
@@ -201,7 +203,8 @@
       ],
       "context": [
         "steve|Rook put June in the east wing and me in the west, with an agent at each end of the hall. Kindly. Firmly.",
-        "steve|The house was older than the FBI. In the service corridor, there were brass tubes in the wall."
+        "steve|The house was older than the FBI. In the service corridor, there were brass tubes in the wall.",
+        {"new": "steve|The van for my transfer was already parked in the transport bay, keys in it, waiting for five o’clock.", "delivery": "narration"}
       ],
       "intro": [],
       "delete": [],
@@ -244,11 +247,12 @@
           "title": "Safety test panel",
           "requires": ["tube"],
           "goal": "Get the west corridor moved out of the house, while June keeps Rook in the east wing.",
-          "background": "The safe house has a fire-drill console run from coloured cards. The drill ticket is signed by the van escort, who works in the west corridor. The west corridor holds Steve and three agents. Rook and June are in the front office, in the east wing.",
+          "background": "The safe house has a fire-drill console run from coloured cards. House rules say that in any alarm a protected witness leaves at once in his assigned vehicle with his assigned escort, and Steve’s transfer van is already in the transport bay. The drill ticket is signed by the van escort, who works in the west corridor. The west corridor holds Steve and three agents. Rook and June are in the front office, in the east wing.",
           "lead": [
             "steve|A drill console. If a drill says the west wing has to go, they’ll have to move me. In a van.",
             "steve|Yesterday’s log says what each card does. SILVER moves the signer. BLUE moves his whole corridor. WHITE moves everyone else.",
-            "steve|The van escort signed tonight’s ticket, and he works my corridor. Four of us sleep on the west side."
+            "steve|The van escort signed tonight’s ticket, and he works my corridor. Four of us sleep on the west side.",
+            "steve|The house rules are pinned above it. In any alarm, a protected witness leaves in his assigned vehicle, with his assigned escort. Mine is the five o’clock van."
           ],
           "prompt": "Which card, which mode, and where should the west team meet?",
           "instruction": "Move the whole west corridor for real, to a place with four seats away from Rook. A dry run only prints the route. A floor rehearsal moves people. The covered court seats three, the transport bay seats four, and Rook is using the front office.",
@@ -262,8 +266,11 @@
             "Only one card moves the signer’s whole corridor. Only one mode moves anyone at all.",
             "Count the west team. Then find a place with enough seats where Rook isn’t."
           ],
-          "lines": ["c4_escape.fault.01"],
-          "finding": "steve|A BLUE drill, for real, on the escort’s own ticket. The whole west corridor, me included, goes to the transport bay. Rook stays in the east wing with June."
+          "lines": [
+            {"id": "c4_escape.fault.01", "cue": "drill_alarm"},
+            {"new": "steve|The bells went off in every room. Agents in socks. Somebody holding a toothbrush. And by the rules, the witness and his escort went first, in the five o’clock van, six hours early.", "delivery": "narration"}
+          ],
+          "finding": "steve|A BLUE drill, for real, on the escort’s own ticket. The whole west corridor, me included, goes to the transport bay, and the rules put me straight into my own transfer van. Rook stays in the east wing with June."
         },
         "van": {
           "type": "rows",
@@ -275,7 +282,8 @@
           "lead": [
             "steve|One escort. One rear door. And a catch that only comes off for gravel.",
             "steve|The driver radios before he slows. First a brick bridge over the canal, then a gravel bend.",
-            "steve|After the gravel comes the weighbridge. There, the escort opens the door himself."
+            "steve|After the gravel comes the weighbridge. There, the escort opens the door himself.",
+            "steve|We were on the old logging road down toward Bellwether. Rook would hear about the drill within minutes. I had less than that."
           ],
           "prompt": "When should Steve pull the handle, and which way should he jump?",
           "instruction": "Pull the handle while the catch is off, and jump toward the softer side. On the gravel bend, the right side drops into a soft ditch, and the left side is a rock face.",
@@ -288,17 +296,22 @@
             "The catch only comes off for gravel. Check which side is soft.",
             "The brick bridge has no gravel, and at the weighbridge the escort opens the door himself. A ditch is softer than rock."
           ],
-          "lines": ["c4_escape.van.01"],
+          "lines": [
+            {"id": "c4_escape.van.01", "cue": "van_jump"},
+            {"new": "steve|The escort grabbed for me and got a handful of cardigan. His radio came away in my hand. Then I was rolling through ferns in the dark, and the van’s brake lights were already a long way down the hill.", "delivery": "narration"}
+          ],
           "finding": "steve|On the gravel bend, with the catch off, I pulled the handle and jumped for the soft side. Mostly I fell. But I fell out of the van, with the escort’s radio in my hand."
         }
       },
       "recap": [
         "steve|June has the proof, and she chose to stay with Rook so I could run.",
-        "steve|Now I was in a ditch in the Coast Range with Dad’s recorder, a stolen radio and no plan. And the radio was still talking."
+        "steve|Now I was in a ditch in the hills above the bay with Dad’s recorder, a stolen radio and no plan. And the radio was still talking."
       ],
       "outro": [
         {"id": "c4_escape.out.01", "text": "All units. Steve Mercer, wanted for the abduction of Nora Reyes. And scan Calder tonight. The signing is in six days.", "delivery": "radio"},
-        {"id": "c4_escape.out.02", "text": "Kidnapping Nora. They took her, and I’m the one on the poster. I have to keep moving."}
+        {"id": "c4_escape.out.02", "text": "Kidnapping Nora. They took her, and I’m the one on the poster. I have to keep moving."},
+        {"new": "rook_copy|Roadblocks on the coast road and both bridges. Dogs at first light. He’ll head for town.", "delivery": "radio"},
+        {"new": "steve|So I didn’t. I turned the radio off, went down the creek bed instead of the road, and walked all night toward the one place nobody had opened in eighteen months.", "delivery": "narration"}
       ],
       "next": "Chapter 5 (c5_shack)."
     }

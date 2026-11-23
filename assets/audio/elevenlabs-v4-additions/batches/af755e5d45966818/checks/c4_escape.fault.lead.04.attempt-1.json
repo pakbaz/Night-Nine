@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c4_escape.fault.lead.04",
+  "attempt": 1,
+  "plan_sha256": "af755e5d45966818753918d9cc050aee0c7414aa9cdd1b5691722b4e70f3ee12",
+  "wav_sha256": "0bed6c95f0c3c4206eeeba1108504ab8858cffcd2486debfad2d329d17cb6086",
+  "expected": "The house rules are pinned above it. In any alarm, a protected witness leaves in his assigned vehicle, with his assigned escort. Mine is the five o’clock van.",
+  "recognized": "The house rules are pinned above it. In any alarm, a protected witness leaves in his assigned vehicle, with his assigned escort. Mine is the 5 o'clock van.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 10.48,
+  "sample_rate": 48000,
+  "peak": 0.46563720703125,
+  "rms": 0.038909063751699065,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

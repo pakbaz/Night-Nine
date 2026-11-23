@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c6_jail.exit.lead.02",
+  "attempt": 1,
+  "plan_sha256": "13ef7394fb0924ffe4ef95be69622315ada9bdb98ec5b79026fa580435ef8ef9",
+  "wav_sha256": "b9b812e7693d73a4f9245778a689e88548ad7d47839f799416b9a2d71f8dee62",
+  "expected": "Ben’s a tree in the school play this afternoon. He’s been practicing being a tree for a month.",
+  "recognized": "Ben's a tree in the school play this afternoon. He's been practicing being a tree for a month.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 6.4,
+  "sample_rate": 48000,
+  "peak": 0.67449951171875,
+  "rms": 0.06446674988122629,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

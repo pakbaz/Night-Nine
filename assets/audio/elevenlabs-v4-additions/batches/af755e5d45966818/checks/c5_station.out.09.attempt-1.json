@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c5_station.out.09",
+  "attempt": 1,
+  "plan_sha256": "af755e5d45966818753918d9cc050aee0c7414aa9cdd1b5691722b4e70f3ee12",
+  "wav_sha256": "1ac48aac467d7378958b62e87cbf3db8c6209dc2d4782531b32f32af9a395ed6",
+  "expected": "She hugged me and said I looked well. I didn’t know why that made me want to cry. After that I watched June’s house all week. Today I followed you up the path to Dad’s shack. Twice.",
+  "recognized": "She hugged me and said I looked well. I didn't know why that made me want to cry. After that, I watched June's house all week. Today, I followed you up the path to Dad's shack. Twice.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 12.4,
+  "sample_rate": 48000,
+  "peak": 0.40167236328125,
+  "rms": 0.037173749769908754,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

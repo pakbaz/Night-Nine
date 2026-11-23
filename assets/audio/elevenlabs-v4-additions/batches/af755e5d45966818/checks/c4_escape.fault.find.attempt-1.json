@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c4_escape.fault.find",
+  "attempt": 1,
+  "plan_sha256": "af755e5d45966818753918d9cc050aee0c7414aa9cdd1b5691722b4e70f3ee12",
+  "wav_sha256": "45ca354f3d7d86e74100df08f5358e6cc179711c07313ad68e52eb472f058ec1",
+  "expected": "A BLUE drill, for real, on the escort’s own ticket. The whole west corridor, me included, goes to the transport bay, and the rules put me straight into my own transfer van. Rook stays in the east wing with June.",
+  "recognized": "A blue drill, for real, on the escort's own ticket. The whole west corridor, me included, goes to the transport bay, and the rules put me straight into my own transfer van. Rook stays in the east wing with June.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 14.08,
+  "sample_rate": 48000,
+  "peak": 0.48394775390625,
+  "rms": 0.04471209875080416,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

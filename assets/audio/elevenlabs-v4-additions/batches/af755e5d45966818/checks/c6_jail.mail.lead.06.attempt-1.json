@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c6_jail.mail.lead.06",
+  "attempt": 1,
+  "plan_sha256": "af755e5d45966818753918d9cc050aee0c7414aa9cdd1b5691722b4e70f3ee12",
+  "wav_sha256": "4d757365876bc835f2d55db3289911d13d1b64c4b893eb36e018218c2ca0de04",
+  "expected": "County rule. When a cell is used, the spare key goes back to the clerk by registered post. The Sheriff wrote that rule. Her copy follows it exactly.",
+  "recognized": "County Rule. When a cell is used, the spare key goes back to the clerk by registered post. The sheriff wrote that rule. Her copy follows it exactly.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 12.16,
+  "sample_rate": 48000,
+  "peak": 0.866546630859375,
+  "rms": 0.07652480824430685,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

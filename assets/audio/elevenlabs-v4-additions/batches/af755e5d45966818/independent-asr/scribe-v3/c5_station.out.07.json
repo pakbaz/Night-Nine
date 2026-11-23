@@ -1,0 +1,221 @@
+{
+  "audio_id": "c5_station.out.07",
+  "audio_sha256": "df0ea47b19c0e16624b7accadae8467e1bb2fcbd4b4f333dc04432aa106bc5ac",
+  "file": "assets/audio/elevenlabs-v4-additions/masters/c5_station.out.07.attempt-1.wav",
+  "production_plan_sha256": "af755e5d45966818753918d9cc050aee0c7414aa9cdd1b5691722b4e70f3ee12",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Find the man with my face. Find Mom’s notebook. Report every night at nine.",
+  "recognized": "Find the man with my face. Find Mom's notebook. Report every night at 9:00.",
+  "word_edits": 1,
+  "request_id": null,
+  "trace_id": "78dd2d3d49f070843d5b736481960c9e",
+  "character_cost": "2",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Find the man with my face. Find Mom's notebook. Report every night at 9:00.",
+    "words": [
+      {
+        "text": "Find",
+        "start": 0.08,
+        "end": 0.3,
+        "type": "word",
+        "logprob": -0.0022394596599042416
+      },
+      {
+        "text": " ",
+        "start": 0.3,
+        "end": 0.34,
+        "type": "spacing",
+        "logprob": -4.768360213347478e-06
+      },
+      {
+        "text": "the",
+        "start": 0.34,
+        "end": 0.42,
+        "type": "word",
+        "logprob": -4.768360213347478e-06
+      },
+      {
+        "text": " ",
+        "start": 0.42,
+        "end": 0.5,
+        "type": "spacing",
+        "logprob": -8.868777513271198e-05
+      },
+      {
+        "text": "man",
+        "start": 0.5,
+        "end": 0.8,
+        "type": "word",
+        "logprob": -8.868777513271198e-05
+      },
+      {
+        "text": " ",
+        "start": 0.8,
+        "end": 0.86,
+        "type": "spacing",
+        "logprob": -2.145764938177308e-06
+      },
+      {
+        "text": "with",
+        "start": 0.86,
+        "end": 1.02,
+        "type": "word",
+        "logprob": -2.145764938177308e-06
+      },
+      {
+        "text": " ",
+        "start": 1.02,
+        "end": 1.06,
+        "type": "spacing",
+        "logprob": -4.529942543740617e-06
+      },
+      {
+        "text": "my",
+        "start": 1.06,
+        "end": 1.28,
+        "type": "word",
+        "logprob": -4.529942543740617e-06
+      },
+      {
+        "text": " ",
+        "start": 1.28,
+        "end": 1.34,
+        "type": "spacing",
+        "logprob": -9.65590606938349e-06
+      },
+      {
+        "text": "face.",
+        "start": 1.34,
+        "end": 1.76,
+        "type": "word",
+        "logprob": -0.001353304796066368
+      },
+      {
+        "text": " ",
+        "start": 1.76,
+        "end": 2.14,
+        "type": "spacing",
+        "logprob": -4.6132929128361866e-05
+      },
+      {
+        "text": "Find",
+        "start": 2.14,
+        "end": 2.36,
+        "type": "word",
+        "logprob": -4.6132929128361866e-05
+      },
+      {
+        "text": " ",
+        "start": 2.36,
+        "end": 2.44,
+        "type": "spacing",
+        "logprob": -0.576360821723938
+      },
+      {
+        "text": "Mom's",
+        "start": 2.44,
+        "end": 2.78,
+        "type": "word",
+        "logprob": -0.3458580928037918
+      },
+      {
+        "text": " ",
+        "start": 2.78,
+        "end": 2.82,
+        "type": "spacing",
+        "logprob": -0.00016616393986623734
+      },
+      {
+        "text": "notebook.",
+        "start": 2.82,
+        "end": 3.34,
+        "type": "word",
+        "logprob": -0.00014980729065428022
+      },
+      {
+        "text": " ",
+        "start": 3.34,
+        "end": 3.68,
+        "type": "spacing",
+        "logprob": -5.7338023907504976e-05
+      },
+      {
+        "text": "Report",
+        "start": 3.68,
+        "end": 4.14,
+        "type": "word",
+        "logprob": -5.7338023907504976e-05
+      },
+      {
+        "text": " ",
+        "start": 4.14,
+        "end": 4.22,
+        "type": "spacing",
+        "logprob": -9.417489309271332e-06
+      },
+      {
+        "text": "every",
+        "start": 4.22,
+        "end": 4.46,
+        "type": "word",
+        "logprob": -9.417489309271332e-06
+      },
+      {
+        "text": " ",
+        "start": 4.46,
+        "end": 4.52,
+        "type": "spacing",
+        "logprob": -1.3828182090946939e-05
+      },
+      {
+        "text": "night",
+        "start": 4.52,
+        "end": 4.86,
+        "type": "word",
+        "logprob": -1.3828182090946939e-05
+      },
+      {
+        "text": " ",
+        "start": 4.86,
+        "end": 4.92,
+        "type": "spacing",
+        "logprob": -1.5139465176616795e-05
+      },
+      {
+        "text": "at",
+        "start": 4.92,
+        "end": 5.08,
+        "type": "word",
+        "logprob": -1.5139465176616795e-05
+      },
+      {
+        "text": " ",
+        "start": 5.08,
+        "end": 5.12,
+        "type": "spacing",
+        "logprob": -0.008626813068985939
+      },
+      {
+        "text": "9:00.",
+        "start": 5.48,
+        "end": 5.52,
+        "type": "word",
+        "logprob": -0.004523397128923534
+      }
+    ],
+    "transcription_id": "G6FlSipOCZrWGyWqcoEu",
+    "audio_duration_secs": 5.84
+  },
+  "listening_reviewed": false
+}

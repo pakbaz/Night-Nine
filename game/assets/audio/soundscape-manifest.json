@@ -256,5 +256,35 @@
     "sha256": "3bb0ba5f56c7f175bd5570389ee106a4ba8f35faeac49fd289607211c024ca6c",
     "seconds": 5.245,
     "provenance": "assets/audio/bay-hum/bay-hum.json"
+  },
+  "drill_alarm": {
+    "file": "res://assets/audio/effects/drill_alarm.wav",
+    "sha256": "a3bdfc20d917125e1f325982d6cefa8dc2b48d30b07db50eb93e5bbc73e8aea6",
+    "seconds": 3.3966,
+    "provenance": "assets/audio/story-effects/story-effects.json"
+  },
+  "van_jump": {
+    "file": "res://assets/audio/effects/van_jump.wav",
+    "sha256": "b1cfadb99118a8f69ea4726075fdfdccf9b4c23bc790b428b0332a85a53e9369",
+    "seconds": 2.3937,
+    "provenance": "assets/audio/story-effects/story-effects.json"
+  },
+  "earpiece_click": {
+    "file": "res://assets/audio/effects/earpiece_click.wav",
+    "sha256": "6c5cbff77526376d9232e49744122400e4004a2e03d542bbe0a85ba04a09171c",
+    "seconds": 0.6903,
+    "provenance": "assets/audio/story-effects/story-effects.json"
+  },
+  "pressed_flower": {
+    "file": "res://assets/audio/effects/pressed_flower.wav",
+    "sha256": "61a8fd5666a32e0111b3fbdcab259a94cd0a92c5edced6cd9f58a65a6a24a235",
+    "seconds": 2.4228,
+    "provenance": "assets/audio/story-effects/story-effects.json"
+  },
+  "mail_cart": {
+    "file": "res://assets/audio/effects/mail_cart.wav",
+    "sha256": "7eadbd2e719239d9b181d878d5b62149a59671103c646503da6ea29792e0574e",
+    "seconds": 3.0,
+    "provenance": "assets/audio/story-effects/story-effects.json"
   }
 }

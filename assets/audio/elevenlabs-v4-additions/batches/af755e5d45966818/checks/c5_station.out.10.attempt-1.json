@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c5_station.out.10",
+  "attempt": 1,
+  "plan_sha256": "af755e5d45966818753918d9cc050aee0c7414aa9cdd1b5691722b4e70f3ee12",
+  "wav_sha256": "469a20c40edfaa7ac0743dbbf1321d50238fc4980d488387abcdb5ac18ee0f10",
+  "expected": "Then I heard you through the shack window. The good stuff, the station library. So I came here first, and waited for you in the dark.",
+  "recognized": "Then I heard you through the shack window. The good stuff. The station library. So I came here first and waited for you in the dark.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 8.8,
+  "sample_rate": 48000,
+  "peak": 0.30401611328125,
+  "rms": 0.034931305504745234,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

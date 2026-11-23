@@ -425,6 +425,18 @@ class VoiceAdditionsTests(unittest.TestCase):
         self.assertEqual(merged[0]["missing"], [])
         self.assertEqual(merged[0]["takes"]["scene.new"]["sha256"], take["sha256"])
 
+        # A reworded line keeps no fallback recorded for its old wording, but an unchanged
+        # line keeps its fallback.
+        fallback = {"file": "res://assets/audio/voices/scene.new.wav", "sha256": "old",
+                    "timing": {"audio_sha256": "old", "cues": []}}
+        for base_text, keeps in (("An old clue arrived last night.", False), (campaign["lines"]["scene.new"]["text"], True)):
+            voice = {"takes": {"scene.new": {"text": base_text, "fallback": fallback}}}
+            merged = voice_overlay.merge_overlay(
+                campaign, {"books": {}}, voice, {"takes": {}}, {},
+                frozen, self.root, casting_path=casting_path, additions=staged,
+            )
+            self.assertEqual("fallback" in merged[0]["takes"]["scene.new"], keeps, base_text)
+
 
 if __name__ == "__main__":
     unittest.main()

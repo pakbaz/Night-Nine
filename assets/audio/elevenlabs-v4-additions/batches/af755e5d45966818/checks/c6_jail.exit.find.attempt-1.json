@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c6_jail.exit.find",
+  "attempt": 1,
+  "plan_sha256": "af755e5d45966818753918d9cc050aee0c7414aa9cdd1b5691722b4e70f3ee12",
+  "wav_sha256": "a734b0f429aacac06573e2ef5cd4b200982e8594081ae644653ef94196391feb",
+  "expected": "Lyle’s copy could still make Ben’s play: Bus A at 4:29, at the school by 4:38. He chose the front row over his orders, and let us go.",
+  "recognized": "Lyle's copy could still make Ben's play. Bus A at 429, at the school by 438. He chose the front row over his orders and let us go.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 11.04,
+  "sample_rate": 48000,
+  "peak": 0.679840087890625,
+  "rms": 0.041389104930400954,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

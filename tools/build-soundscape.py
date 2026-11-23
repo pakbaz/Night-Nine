@@ -157,11 +157,13 @@ def main():
     manifest['halcyon_hold_seattle']=write('halcyon_hold_seattle',tone(440,.12,.08)+silence(.25)+hold)
     manifest['halcyon_hold_denver']=write('halcyon_hold_denver',tone(523.251,.12,.08)+silence(.55)+hold)
     manifest.update(evidence_sounds())
-    # The ninth-night hum is a recorded choir, built by tools/build-bay-hum.py; keep its entries.
+    # Generated recordings are built by their own tools; keep their entries.
+    # tools/build-bay-hum.py: the ninth-night choir. tools/build-story-effects.py: story moments.
     previous=OUT/'soundscape-manifest.json'
+    kept={'assets/audio/bay-hum/bay-hum.json','assets/audio/story-effects/story-effects.json'}
     if previous.exists():
         manifest.update({name:entry for name,entry in json.loads(previous.read_text()).items()
-                         if entry.get('provenance')=='assets/audio/bay-hum/bay-hum.json'})
+                         if entry.get('provenance') in kept})
     (OUT/'soundscape-manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
     print(json.dumps({'original_cues':len(manifest),'ambient_styles':len(styles)}))
 

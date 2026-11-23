@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c5_station.out.05",
+  "attempt": 1,
+  "plan_sha256": "af755e5d45966818753918d9cc050aee0c7414aa9cdd1b5691722b4e70f3ee12",
+  "wav_sha256": "844d78456e5da92ca50127d2334777357a2a09a2b92a1511eb8a66b7c5bea1f1",
+  "expected": "You woke up on the ship.",
+  "recognized": "You woke up on the ship.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 1.76,
+  "sample_rate": 48000,
+  "peak": 0.30511474609375,
+  "rms": 0.04374126569695687,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

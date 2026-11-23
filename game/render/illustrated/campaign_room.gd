@@ -429,8 +429,7 @@ func actor_visible(id: String) -> bool:
 	# People painted into a story layer have no separate portrait while it shows.
 	if active_layers().any(func(record: Dictionary): return id in record.get("painted",[])):
 		return false
-	var requirement: String = directions.get("reveal_after",{}).get(id,"")
-	return id in directions.company and (requirement.is_empty() or requirement in done)
+	return id in directions.company and FLOOR.revealed(directions.get("reveal_after",{}).get(id,""),done)
 
 func get_performer(id: String) -> Node2D:
 	var authored_appearances: Dictionary=directions.get("appearances",{})

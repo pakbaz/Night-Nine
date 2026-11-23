@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c7_gate.in.05",
+  "attempt": 1,
+  "plan_sha256": "af755e5d45966818753918d9cc050aee0c7414aa9cdd1b5691722b4e70f3ee12",
+  "wav_sha256": "4e7190690748f74bf0998798d74cc01f15c44aa1d966ec00283fdf42b33852ff",
+  "expected": "So we used what we had. Halcyon runs the sound for the signing, Stephen still has their crew pass, and Dad’s tape has the tone.",
+  "recognized": "So we used what we had. Halcyon runs the sound for the signing, Stephen still has their crew pass, and Dad's tape has the tone.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 7.92,
+  "sample_rate": 48000,
+  "peak": 0.384552001953125,
+  "rms": 0.04324244703014516,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

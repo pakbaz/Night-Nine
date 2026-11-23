@@ -1,0 +1,43 @@
+{
+  "purpose": "Sound for story moments added in the Chapter 4 to 7 revision: the safe-house drill, the jump from the van, Saren's voice in Stephen's earpiece, Iris's pressed flower and Steve hidden in Pell's mail cart.",
+  "generator": "ElevenLabs Sound Effects (text_to_sound_effects), 24 kHz stereo PCM",
+  "created": "2026-11-22",
+  "build": "python3 tools/build-story-effects.py: trims leading silence, mixes to mono, fades the ends and sets each to its loudness target. Runtime files: game/assets/audio/effects/<name>.wav.",
+  "effects": {
+    "drill_alarm": {
+      "line": "c4_escape.fault.01",
+      "lufs": -17.0,
+      "prompt": "Old building fire alarm bells suddenly start ringing loudly in a concrete corridor, a door bangs open, several people hurry past in socks and shoes, muffled voices",
+      "sha256": "678493380a2d8c244224f355bd52ae9cf376ed5ebc2f3e9ac019e0428ccff6b6",
+      "chosen_because": "Sustained bell partials with door and footstep bursts from 1.3 s."
+    },
+    "van_jump": {
+      "line": "c4_escape.van.01",
+      "lufs": -18.0,
+      "prompt": "Metal van door handle yanked and the door flung open with a bang, a loud whoosh of wind and rain, immediately followed by a heavy body impact on gravel and a roll into wet bushes",
+      "sha256": "7b9e9cc75f571157ff88b377044831b5b2613bb4ee96423c00558921ef825878",
+      "chosen_because": "A rush of wind for 0.65 s, then impacts at 1.0, 1.5 and 2.2 s. Two other takes had no clear landing or no door."
+    },
+    "earpiece_click": {
+      "line": "c5_station.out.10",
+      "lufs": -18.0,
+      "prompt": "A tiny radio earpiece clicks on, a short soft electronic chirp followed by faint hiss, very small and close",
+      "sha256": "ba4e528bf39d34751663e540fb05463e97f5f4ce0955830594c39b044d872092",
+      "chosen_because": "One click with a 4 to 6 kHz chirp and a short hiss."
+    },
+    "pressed_flower": {
+      "line": "c6_iris.out.04",
+      "lufs": -24.0,
+      "prompt": "A small paper envelope is gently opened outdoors, delicate paper rustle, soft sea breeze and distant gulls on a quiet wooden pier",
+      "sha256": "bb96d86ff1e3e2a37b4901f7341b6f93862b0dd1dc6a2a82f413ff64364e8b55",
+      "chosen_because": "Soft paper crackles over a quiet harbor bed; raised to a soft, close level."
+    },
+    "mail_cart": {
+      "line": "c6_jail.ctx.02",
+      "lufs": -19.0,
+      "prompt": "A heavy canvas mail cart rolls across a tiled office floor, one wheel squeaking, parcels shifting inside, a small dog's claws clicking alongside and a curious sniff",
+      "sha256": "03fd8506f3a4eac36fd4bce30ae1b491e9827738ce910d6a7a59d69fd00873c5",
+      "chosen_because": "Rolling wheels with a harmonic squeak at 0.9 s and claw clicks."
+    }
+  }
+}

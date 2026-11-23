@@ -285,3 +285,17 @@ From the scene notes in `script.json`. Match the painted style of the existing r
 | Hotspot only | c2_ship | A hotspot and approach point on the flooded intake grille in the existing painting. No new picture. | c2_ship.intake |
 
 New sound assets are listed in the scene notes too: effect.kbwr_ident (c1_flat), effect.harbor_winch, effect.nora_whistle_flat, effect.steve_whistle (c1_pier), effect.hum_first_reel and effect.hum_last_reel (c5_shack), effect.halcyon_hold_seattle and effect.halcyon_hold_denver (c6_iris), effect.wick_high_ending (c8_lab), recording.saren_splice (c8_beach), and the faint hum mixed under recording.voicemail (p_bay).
+
+## (i) November 22 revision: Chapters 4 to 7
+
+A playthrough to Chapter 7 found gaps a player would notice. Each fix changes the script edit files and staging only; puzzle answers are unchanged except where a time moved.
+
+| What a player asked | What the story now says | Where |
+| --- | --- | --- |
+| How did Steve get into a van, and away from the agents? | The safe house is in the hills above the bay. Rook books Steve a 5 a.m. van to Bellwether "for processing". House rules send a protected witness out in his own van in any alarm, so the BLUE drill puts him in it six hours early. He jumps on the gravel bend, keeps the escort's radio, hears the roadblocks and dogs, and walks down the creek bed to Dad's shack. | `c4_safe` outro, `c4_escape` (context, drill, van, recap, outro), `c5_shack` context |
+| How did the two Steves meet, and why is Stephen on his side? | Stephen woke in a tank on Friday the 26th with a crew pass, an earpiece and orders from Saren. He was the man at the market, watched June's house, followed Steve to the shack twice and overheard "the station library". At KBWR he stays hidden until Steve has the notebook. When Saren calls the earpiece, Stephen lies for Steve. He keeps reporting "north" every night. | `c5_station` (lead, outro), `c6_iris` context, staging `reveal_after` |
+| Iris becoming Iris | After naming herself she shows the pressed iris from the balcony, the first thing she kept for herself, says she has hidden in the otter house since Tuesday, and says her name again, differently. | `c6_iris` outro |
+| The Sheriff's office made no sense | The scene is at four in the afternoon, matching the painting's light. June's copy is out on the harbor and is heard only on the front-desk radio. Steve comes in under the parcels in Pell's mail cart, on Iris's tip. The circled crossword square proves who is in cell two. Stephen sends June's copy to the north jetty. Gus and Iris stay outside. All jail times are 12-hour afternoon times. | `c6_iris` recap, `c6_jail` (context, leads, recap), staging |
+| How did they reach the President? | They plan on Tuesday in Gus's bakery: nobody official can be called, because the FBI's man is Rook's copy. June writes to the President and Pell delivers it into her hand. June and Iris walk in with Gus's catering passes. In the tunnel Ward reads June's letter and asks to meet Steve. | `c7_gate` intro and recap, `c7_swap` context and `tone` |
+
+New story paintings show the drill, the jump, the watcher on the path, the two Steves face to face, the earpiece lie, the pressed iris, the mail cart, the bakery plan and the bakers at the gate. The shack-to-station bridge now shows Steve alone, with Stephen waiting by the station. New sounds (cue): `drill_alarm`, `van_jump`, `earpiece_click`, `pressed_flower`, `mail_cart`; masters and prompts in `assets/audio/story-effects/`.

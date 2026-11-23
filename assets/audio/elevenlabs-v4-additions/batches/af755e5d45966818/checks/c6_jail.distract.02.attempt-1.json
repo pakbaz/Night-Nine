@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c6_jail.distract.02",
+  "attempt": 1,
+  "plan_sha256": "af755e5d45966818753918d9cc050aee0c7414aa9cdd1b5691722b4e70f3ee12",
+  "wav_sha256": "974008b2bc1cc1ef8a0a9dcfc173f129a69fa762982115430c63cdf1cd4c9647",
+  "expected": "The clerk radioed the Sheriff about the cheerful man at her likeness counter. Out on the harbor, June’s copy started asking questions.",
+  "recognized": "The clerk radioed the sheriff about the cheerful man at her likeness counter. Out on the harbor, June's copy started asking questions.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 8.4,
+  "sample_rate": 48000,
+  "peak": 0.559906005859375,
+  "rms": 0.04370863350077312,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

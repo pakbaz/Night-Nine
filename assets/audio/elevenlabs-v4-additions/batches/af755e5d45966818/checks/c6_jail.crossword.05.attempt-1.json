@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c6_jail.crossword.05",
+  "attempt": 1,
+  "plan_sha256": "af755e5d45966818753918d9cc050aee0c7414aa9cdd1b5691722b4e70f3ee12",
+  "wav_sha256": "fcdd9eeaf948dba78b44205b07da127e0c7f965baa7ba321bc05e998f69dd026",
+  "expected": "North jetty. On my way.",
+  "recognized": "North Jetty, on my way.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 2.4,
+  "sample_rate": 48000,
+  "peak": 0.577850341796875,
+  "rms": 0.07319845830456242,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

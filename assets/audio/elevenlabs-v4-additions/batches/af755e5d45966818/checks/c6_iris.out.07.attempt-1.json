@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "audio_id": "c6_iris.out.07",
+  "attempt": 1,
+  "plan_sha256": "af755e5d45966818753918d9cc050aee0c7414aa9cdd1b5691722b4e70f3ee12",
+  "wav_sha256": "8d6aacbe20171029cd2daf40da7f264bfbb279bc9433663f13f76e241172119c",
+  "expected": "Iris.",
+  "recognized": "Iris.",
+  "local_recognized": "Iris.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 1.12,
+  "sample_rate": 48000,
+  "peak": 0.496002197265625,
+  "rms": 0.053557331429612984,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c6_iris.out.07.json",
+    "sha256": "0829ca238b13868cd7c393987a88cee9f5b6e6baf2257e1d23ce27e6bf035207",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  },
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

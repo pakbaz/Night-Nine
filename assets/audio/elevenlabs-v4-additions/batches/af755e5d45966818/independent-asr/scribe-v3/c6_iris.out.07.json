@@ -1,0 +1,39 @@
+{
+  "audio_id": "c6_iris.out.07",
+  "audio_sha256": "8d6aacbe20171029cd2daf40da7f264bfbb279bc9433663f13f76e241172119c",
+  "file": "assets/audio/elevenlabs-v4-additions/masters/c6_iris.out.07.attempt-1.wav",
+  "production_plan_sha256": "af755e5d45966818753918d9cc050aee0c7414aa9cdd1b5691722b4e70f3ee12",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Iris.",
+  "recognized": "Iris.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "2517eb05a44e2991375f56582dec8ddc",
+  "character_cost": "0",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Iris.",
+    "words": [
+      {
+        "text": "Iris.",
+        "start": 0.1,
+        "end": 0.56,
+        "type": "word",
+        "logprob": -0.25260570037571595
+      }
+    ],
+    "transcription_id": "qGTnWQ84oBoxKQ71nHSm",
+    "audio_duration_secs": 1.12
+  },
+  "listening_reviewed": false
+}

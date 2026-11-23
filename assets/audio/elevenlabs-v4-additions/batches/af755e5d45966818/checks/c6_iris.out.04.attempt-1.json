@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c6_iris.out.04",
+  "attempt": 1,
+  "plan_sha256": "af755e5d45966818753918d9cc050aee0c7414aa9cdd1b5691722b4e70f3ee12",
+  "wav_sha256": "79db5cce137e30ef56b9ee720595355517e8d56591d1cf1eb09037c07ac7f8c4",
+  "expected": "She took a flat paper envelope out of her coat. Inside was one of the irises I knocked off the balcony on the ninth night, pressed flat.",
+  "recognized": "She took a flat paper envelope out of her coat. Inside was one of the irises I knocked off the balcony on the ninth night, pressed flat.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 8.8,
+  "sample_rate": 48000,
+  "peak": 0.39251708984375,
+  "rms": 0.033996549598538185,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

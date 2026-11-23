@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c6_jail.ctx.01",
+  "attempt": 1,
+  "plan_sha256": "af755e5d45966818753918d9cc050aee0c7414aa9cdd1b5691722b4e70f3ee12",
+  "wav_sha256": "6bec222787a82dc17829c77b0cd82d23d0656e0a9970b9866f169dde69f5928e",
+  "expected": "The Sheriff’s office, just before four. June’s copy was out on the harbor, running the search for me. The real June was in cell two.",
+  "recognized": "The Sheriff's Office, just before 4. June's copy was out on the harbor, running the search for me. The real June was in cell 2.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 8.48,
+  "sample_rate": 48000,
+  "peak": 0.419219970703125,
+  "rms": 0.04389302999885745,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

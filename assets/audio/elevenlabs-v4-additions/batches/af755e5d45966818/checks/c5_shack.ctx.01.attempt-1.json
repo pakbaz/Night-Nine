@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c5_shack.ctx.01",
+  "attempt": 1,
+  "plan_sha256": "af755e5d45966818753918d9cc050aee0c7414aa9cdd1b5691722b4e70f3ee12",
+  "wav_sha256": "52b9897a0461ed7d81394b07a08f9b3f506657ed3d63853fc292dc2c89a2aa4f",
+  "expected": "By sunrise my face was on every wanted poster in the county. I came down out of the trees to Dad’s radio shack, on the bluff above the bay.",
+  "recognized": "By sunrise, my face was on every wanted poster in the county. I came down out of the trees to Dad's radio shack, on the bluff above the bay.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 8.8,
+  "sample_rate": 48000,
+  "peak": 0.4215087890625,
+  "rms": 0.044489731789975985,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

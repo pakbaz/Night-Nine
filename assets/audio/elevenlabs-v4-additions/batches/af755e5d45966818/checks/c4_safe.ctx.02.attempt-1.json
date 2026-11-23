@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c4_safe.ctx.02",
+  "attempt": 1,
+  "plan_sha256": "af755e5d45966818753918d9cc050aee0c7414aa9cdd1b5691722b4e70f3ee12",
+  "wav_sha256": "82bf1cc078f8d6da3178705fcde7f30333b8cdf73ea1d7ad6c8be899ec10fa1e",
+  "expected": "He drove us to a Bureau safe house in the hills above the bay. An hour from town, with nobody else for miles.",
+  "recognized": "He drove us to a bureau safe house in the hills above the bay, an hour from town with nobody else for miles.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 7.28,
+  "sample_rate": 48000,
+  "peak": 0.290435791015625,
+  "rms": 0.03978209399115814,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

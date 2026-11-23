@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c5_station.out.14",
+  "attempt": 1,
+  "plan_sha256": "af755e5d45966818753918d9cc050aee0c7414aa9cdd1b5691722b4e70f3ee12",
+  "wav_sha256": "6e10da5170e2dc03fa4e5d815eda955dfadf3082b1baea8d365c8a9b9f3293f9",
+  "expected": "Not at the station. He’s gone north, toward the border. I’m following him.",
+  "recognized": "Not at the station. He's gone north, toward the border. I'm following him.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.64,
+  "sample_rate": 48000,
+  "peak": 0.60821533203125,
+  "rms": 0.04486769150296611,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

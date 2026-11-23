@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c7_swap.tone.04",
+  "attempt": 1,
+  "plan_sha256": "af755e5d45966818753918d9cc050aee0c7414aa9cdd1b5691722b4e70f3ee12",
+  "wav_sha256": "41cb8c8c160ea6467a87b1fe66cfde5138c6c460238757d182684b1b011d8c89",
+  "expected": "She has my letter. She read it by flashlight in the tunnel, and she believes us. She wants to meet the man at the sound desk.",
+  "recognized": "She has my letter. She read it by flashlight in the tunnel, and she believes us. She wants to meet the man at the sound desk.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 7.76,
+  "sample_rate": 48000,
+  "peak": 0.47314453125,
+  "rms": 0.06541450634836399,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

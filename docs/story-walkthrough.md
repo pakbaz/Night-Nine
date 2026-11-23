@@ -6,6 +6,8 @@ Written 2026-11-20 from the applied script (`game/content/campaign.json`, versio
 
 > **November 21 revision.** The story is unchanged, but the puzzle wording, board steps and some answer layouts were simplified, every scene gained optional small talk, and Chapter 1's morning tapes now hold every voice. Where the puzzle tables below disagree with the game, trust the generated [campaign walkthrough](campaign-walkthrough.md), which lists the current answer to every lead.
 
+> **November 22 revision.** Chapters 4 to 7 now explain how Steve gets into the van and away, where Stephen came from and why he sides with Steve, how Iris chooses her name, how the Sheriff's office rescue works and how they reach the President. See [changes.md, section (i)](script-v2/changes.md).
+
 ## How to read this
 
 - Scenes appear in play order. Each scene has a short account of what happens, then one row per lead (the game's word for a puzzle or story step).
@@ -182,7 +184,7 @@ Her memory of the last evening on her homeworld. Forty thousand names on the dep
 ## Chapter 4: Federal Hospitality
 
 ### The safe house (`c4_safe`), Thursday, November 1
-Rook arrives, calm and kind, and moves Steve and June to a Coast Range safe house. He takes Steve's tapes as evidence but lets him keep the recorder. Steve does not offer Mom's voicemail cassette; it stays in his cardigan pocket (`c4_safe.in.07`). He keeps asking where Helen kept her notebook.
+Rook arrives, calm and kind, and moves Steve and June to a Bureau safe house in the hills above the bay, an hour from town. He takes Steve's tapes as evidence but lets him keep the recorder. Steve does not offer Mom's voicemail cassette; it stays in his cardigan pocket (`c4_safe.in.07`). He keeps asking where Helen kept her notebook.
 
 | Lead | Type | Solution | Why it works |
 | --- | --- | --- | --- |
@@ -190,7 +192,7 @@ Rook arrives, calm and kind, and moves Steve and June to a Coast Range safe hous
 | Two takes (`c4_safe.match`) | Deduction (compare) | The same recorded performance. | Breath, pause and the click on the S all land in the same place, like Nora's greeting. (Both lines use the fixed recording `recording.rook`.) |
 | Rook's monitor wall (`c4_safe.screens`) | Deduction (board) | Live feed: Feed 3. Bed 41B: Adrian Rook. Bed 42B is waiting for: E. Ward. | Feeds 1, 2 and 4 loop an attendant every forty seconds, like the aquarium corridor. Feed 3 shows the frost crack. The roster and the unsigned third transfer sheet name the beds. |
 
-Rook sings three karaoke songs beautifully. June: "Adrian hates karaoke... Odd behavior proves nothing. My own rule." The PLACEMENTS file lists copies in Washington and Beijing, starting with Walt Prior. A bed is ready for President Ward on signing day. Rook puts June in the east wing and Steve in the west.
+Rook sings three karaoke songs beautifully. June: "Adrian hates karaoke... Odd behavior proves nothing. My own rule." The PLACEMENTS file lists copies in Washington and Beijing, starting with Walt Prior. A bed is ready for President Ward on signing day. Rook puts June in the east wing and Steve in the west, and books Steve a 5 a.m. van down to Bellwether "for processing".
 
 ### Only honest (`c4_escape`), Thursday night
 
@@ -200,7 +202,7 @@ Rook sings three karaoke songs beautifully. June: "Adrian hates karaoke... Odd b
 | Safety test panel (`c4_escape.fault`) | Deduction (rows) | BLUE card; floor rehearsal; transport bay. | The escort signed the ticket and works in the west corridor. BLUE moves the signer's corridor. Four people need four seats, away from Rook's office. |
 | Transport van (`c4_escape.van`) | Deduction (rows) | Pull the handle on the gravel bend; jump right, toward the ditch. | The catch comes off only for gravel; the canal bridge is brick; at the weighbridge the escort opens the door himself. The ditch is soft. |
 
-June's recorded reply comes back on Dad's tape: "I'll keep his attention. You get out... I don't need you to be brave, Steve. I need you to be honest." Steve falls out of the van with the escort's radio. Rook's copy on the radio: Steve is wanted for the abduction of Nora Reyes; scan Calder tonight; the signing is in six days.
+June's recorded reply comes back on Dad's tape: "I'll keep his attention. You get out... I don't need you to be brave, Steve. I need you to be honest." House rules send a protected witness out in his own van, with his escort, in any alarm, so the drill puts Steve in the transfer van six hours early, with Rook still in the east wing. On the logging road down to Bellwether he jumps on the gravel bend and lands in the ditch with the escort's radio. Rook's copy on the radio: Steve is wanted for the abduction of Nora Reyes; scan Calder tonight; the signing is in six days; roadblocks on the coast road and both bridges, dogs at first light. Steve turns the radio off and walks down the creek bed all night to Dad's shack.
 
 **Reveals:** Rook is a copy; the real Rook sleeps in bed 41B; copies sit in both governments; Ward is the target.
 
@@ -209,7 +211,7 @@ June's recorded reply comes back on Dad's tape: "I'll keep his attention. You ge
 ## Chapter 5: Wanted: Steve Mercer
 
 ### Frank's radio shack (`c5_shack`), Friday, November 2
-Steve walks all night to his father's shack on the bluff and finally opens his parents' boxes. Luis Reyes brings food and does not call the Sheriff. Nora (the copy) has been gone since Tuesday night. Luis has heard the bay sing since he was a boy; Frank was the only one who asked what it sounded like.
+Steve comes down out of the trees at sunrise to his father's shack on the bluff and finally opens his parents' boxes. Luis Reyes brings food and does not call the Sheriff. Nora (the copy) has been gone since Tuesday night. Luis has heard the bay sing since he was a boy; Frank was the only one who asked what it sounded like.
 
 | Lead | Type | Solution | Why it works |
 | --- | --- | --- | --- |
@@ -230,16 +232,16 @@ KBWR after midnight. AutoRick announces "a fella in our record library". Steve h
 | Halcyon's paperwork (`c5_station.halcyon`) | Deduction (rows) | Every ninth night; only once the building is empty; next: November 8. | Sept 6, 15 and 24 are nine days apart, and the tower transmitted alone only after Steve was sent home. |
 | The man with my face (`c5_station.stephen`) | Deduction (board) | Last thing he remembers on his own: the chipped blue lid. First thing he can't place: Mom's last call. Learned tonight: the wanted poster. | He described the jam jar before he saw anything; he shrugged at the voicemail; he read the poster only after Steve turned it over. |
 
-Steve knocks a shelf over and the blue sleeve lands in his lap: Helen's notebook, in her own Mandarin shorthand, with a last page in a script nobody knows. The man following him all week is his own 61 percent copy, who calls himself Stephen. Steve tells him about the boat. "I had breakfast with them. It never got as far as the boat." Steve watches his own face learn his grief. Stephen: "Mom and Dad are on that ship, Steve. Row nine. They're asleep. They're alive."
+Steve knocks a shelf over and the blue sleeve lands in his lap: Helen's notebook, in her own Mandarin shorthand, with a last page in a script nobody knows. The man following him all week is his own 61 percent copy, who calls himself Stephen. He stays hidden in the library until Steve has the notebook and Halcyon's paperwork. Steve tells him about the boat. "I had breakfast with them. It never got as far as the boat." Steve watches his own face learn his grief. Stephen: "Mom and Dad are on that ship, Steve. Row nine. They're asleep. They're alive." He woke in a tank on Friday the 26th; a very tall man gave him a crew pass, an earpiece and a job: find Steve, find the notebook, report every night at nine. He was the man Carmen hugged at the market, watched June's house all week, followed Steve up to the shack twice and heard him say "the station library" through the window. Saren calls the earpiece ("Hunter. You missed your report."), and Stephen lies: Steve has gone north. "I've just lied to a spaceship for you. I think that makes us brothers."
 
-**Reveals:** Halcyon fired Steve to free the tower; Steve's copy exists and has no memories of the last 18 months; Steve's parents are alive aboard.
+**Reveals:** Halcyon fired Steve to free the tower; Steve's copy exists, has no memories of home after the breakfast before the boat, and was sent by Saren to hunt him; he chooses Steve; Steve's parents are alive aboard.
 
 ---
 
 ## Chapter 6: Iris
 
 ### The market and the pier (`c6_iris`), Monday, November 5
-AutoRick broadcasts the manhunt ("last seen wearing a cardigan"). A text: "pier. 8:10. come alone. please." No capitals, like the warning about Rook.
+Every night at nine Stephen tells the earpiece Steve has gone north. AutoRick broadcasts the manhunt ("last seen wearing a cardigan"). A text: "pier. 8:10. come alone. please." No capitals, like the warning about Rook.
 
 | Lead | Type | Solution | Why it works |
 | --- | --- | --- | --- |
@@ -247,19 +249,19 @@ AutoRick broadcasts the manhunt ("last seen wearing a cardigan"). A text: "pier.
 | Iris's recorder test (`c6_iris.takes`) | Deduction (compare) | She chose how to say it each time. | Her second take pauses in a new place; a replayed take would not. |
 | Halcyon lines (`c6_iris.hold`) | Deduction (compare) | Eight bars of hold music, ending on the same note. | Two offices, two clerks, different rings. The music is the shared part, taped at 00:04 on the 30th, when the water lit up. |
 
-The stranger is Nora's copy. She sent the warning about Rook, "no capitals, the way Nora texts". She missed going below on the 21st by accident, chasing Steve, and on the 30th by choice. "Before I was Nora, I was a junior crew member with a duty and a record. We call ourselves Veyri." Copies near the bay go below; far away they wait on hold. Saren believes Helen wrote down how the engine works; a records officer told him so. On Wednesday, at the signing, he means to put a copy of the President in her chair; her own physician scanned her weeks ago. June was scanned at the safe house; her copy took the Sheriff's desk this morning; the real June is in her own cell. "Those Sunday dinners happened to me." She chooses a name: Iris, after the flowers on the balcony.
+The stranger is Nora's copy. She sent the warning about Rook, "no capitals, the way Nora texts". She missed going below on the 21st by accident, chasing Steve, and on the 30th by choice. "Before I was Nora, I was a junior crew member with a duty and a record. We call ourselves Veyri." Copies near the bay go below; far away they wait on hold. Saren believes Helen wrote down how the engine works; a records officer told him so. On Wednesday, at the signing, he means to put a copy of the President in her chair; her own physician scanned her weeks ago. June was scanned at the safe house; her copy took the Sheriff's desk this morning; the real June is in her own cell. "Those Sunday dinners happened to me." She chooses a name: Iris, after the flowers on the balcony. She shows Steve one of those irises, pressed flat in an envelope: the first thing she ever kept that nobody told her to keep. She has hidden in the otter house since Tuesday; if the crew finds her, they will reset her. She says her name again, and it comes out a little different. She also tells Steve how to get into the Sheriff's office: the mail carrier, who takes the mail in the back way at four, "isn't Dale, but he loves June's dog".
 
-### Two Sheriffs (`c6_jail`), Monday noon to evening
-Dale the mail carrier reports Steve's location to Biscuit, and names himself: Pell. He has worn Dale's face for a year and fed Biscuit twice a day; a reported Pell would be reset and forget her.
+### Two Sheriffs (`c6_jail`), Monday afternoon
+Just before four. June's copy is out on the harbor running the search, and is heard only on the front-desk radio. Stephen walks in the front wearing Steve's face; Steve comes in the back under the parcels in the mail cart. Dale the mail carrier reports Steve's location to Biscuit, and names himself: Pell. He has worn Dale's face for a year and fed Biscuit twice a day; a reported Pell would be reset and forget her. Gus and Iris wait outside at the bakery.
 
 | Lead | Type | Solution | Why it works |
 | --- | --- | --- | --- |
 | Pell's sorting case (`c6_jail.mail`) | Deduction (rows) | Jail drawer, slot 9. | Pell files by destination; the returned key is entry 18; slot 9 holds 17 and 18. |
-| Sheriff's front desk (`c6_jail.distract`, played as Stephen) | Deduction (rows) | Ticket 42; in at 12:00; out by 12:02. | A contested likeness keeps Stephen's face at the counter; the deputy is gone from 11:59 to 12:03. |
-| The two Junes (`c6_jail.crossword`) | Deduction (rows) | Ask about 23 Across / 8 Down; accept the M. | Steve circled that square on June's own crossword and posted it to cell two. INIMITABLE's second blank is M. The desk June guesses T. |
-| Deputy's checkpoint (`c6_jail.exit`) | Deduction (rows) | Walking arrives 18:42; Bus A arrives 18:38; tell Lyle to take Bus A. | The school doors close at 18:40. |
+| Sheriff's front desk (`c6_jail.distract`, played as Stephen) | Deduction (rows) | Ticket 42; in at 4:00; out by 4:02. | A contested likeness keeps Stephen's face at the counter; the deputy is gone from 3:59 to 4:03. |
+| The two Junes (`c6_jail.crossword`) | Deduction (rows) | Ask about 23 Across / 8 Down; accept the M. | Steve circled that square on June's own crossword and posted it into cell two and nowhere else. INIMITABLE's second blank is M. The June on the radio guesses T, so she has never been near the cell: Iris's account holds. |
+| Deputy's checkpoint (`c6_jail.exit`) | Deduction (rows) | Walking arrives 4:42; Bus A arrives 4:38; tell Lyle to take Bus A. | The school doors close at 4:40. |
 
-The real June: "Twenty-three across. Inimitable." Lyle's copy, on duty, wants to see his son Ben play a tree in the school play; he takes Bus A and lets them go. Gus lends his bakery van with the giant croissant ("I don't know why, but I trust you."). Steve asks Iris about the ring in his sock drawer. "Nora found the ring a year ago. It is not mine to answer." A copy who stops going below starts to forget. She and Stephen have days.
+The real June: "Twenty-three across. Inimitable." Stephen, as the hunter, radios June's copy that Mercer ran for the north jetty. Lyle's copy, on duty, wants to see his son Ben play a tree in the school play; he takes Bus A and lets them go. Gus lends his bakery van with the giant croissant ("I don't know why, but I trust you."). Steve asks Iris about the ring in his sock drawer. "Nora found the ring a year ago. It is not mine to answer." A copy who stops going below starts to forget. She and Stephen have days.
 
 **Reveals:** Iris sent the warning; copies are changing and can choose; distant copies sync on hold music; Pell and Lyle's copy defect; June has been replaced at work.
 
@@ -286,7 +288,7 @@ She records a private message for Steve (the player does not hear it yet). She s
 ## Chapter 7: The President's Other Appointment
 
 ### Sentinel Point gate (`c7_gate`), Wednesday, November 7
-The antenna field in fog. Frank's tape of the ninth-night tone is in Steve's pocket.
+The antenna field in fog. Frank's tape of the ninth-night tone is in Steve's pocket. On Tuesday they planned in the back room of Gus's bakery. Nobody official could be called: the FBI's man at the signing is Rook's copy, and Rook's list has names in Washington. Halcyon runs the sound and Stephen still has its crew pass. June wrote to the President in her own hand, for Pell to deliver into her hand. June and Iris walk in at the red foot-delivery window with Gus's catering passes, in aprons and hairnets, carrying croissants.
 
 | Lead | Type | Solution | Why it works |
 | --- | --- | --- | --- |
@@ -305,7 +307,7 @@ Steve reasons that every copy answers the ninth-night tone, so playing it on eve
 | Sound desk routing (`c7_swap.bus`) | Deduction (rows) | Tone on Blue; June's return on Slate. | Blue reaches lectern, fence and steps but not the press van (which feeds every copy watching at home). Slate is Steve and Stephen only. |
 | Ceremony cue (`c7_swap.tone`) | Deduction | 11:58:15. | June and Iris reach Ward at :14; the two-second tone must end before the anthem at :18. |
 
-Fourteen people stop and turn toward the sea, among them Rook's copy, the physician and the woman at the microphone. June and Iris have the President. Iris later tells Steve the tone pulled at her too; she held June's sleeve and counted Sunday dinners. Rook's copy slips away, asking: "Is he awake? The other one?" In a locked room Ward thanks Steve: the Prefect wants their space-fold engine by the ninth night. Dr. Lin Wen, the other side's engineer nine years ago, sees Helen's handwriting. Then Shaw: "There is no engine. There never was."
+At ten to twelve, Saren stops asking Stephen's earpiece for reports and asks for Steve by name. Fourteen people stop and turn toward the sea, among them Rook's copy, the physician and the woman at the microphone. June and Iris have the President, who reads June's letter by flashlight in the tunnel and asks to meet the man at the sound desk. Iris later tells Steve the tone pulled at her too; she held June's sleeve and counted Sunday dinners. Rook's copy slips away, asking: "Is he awake? The other one?" In a locked room Ward thanks Steve: the Prefect wants their space-fold engine by the ninth night. Dr. Lin Wen, the other side's engineer nine years ago, sees Helen's handwriting. Then Shaw: "There is no engine. There never was."
 
 **Reveals:** the President's swap is foiled; Saren has done this before somewhere called Tirel; Meridian is a bluff.
 

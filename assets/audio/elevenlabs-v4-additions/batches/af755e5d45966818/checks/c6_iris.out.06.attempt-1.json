@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c6_iris.out.06",
+  "attempt": 1,
+  "plan_sha256": "af755e5d45966818753918d9cc050aee0c7414aa9cdd1b5691722b4e70f3ee12",
+  "wav_sha256": "233af01e1e3d62ef1488bef5fb09443853d1103a7fc751356e5b8826913a08bd",
+  "expected": "I’ve slept in the otter house since Tuesday. If the crew finds me, they will reset me, and I won’t remember any of this. Not even that I chose a name.",
+  "recognized": "I've slept in the Otter House since Tuesday. If the crew finds me, they will reset me, and I won't remember any of this. Not even that I chose a name.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 9.6,
+  "sample_rate": 48000,
+  "peak": 0.49505615234375,
+  "rms": 0.055504734705723126,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

@@ -24,6 +24,26 @@ class ScriptV2StagingTests(unittest.TestCase):
     def test_current_staging_is_valid(self):
         self.assertEqual(self.errors(lambda staging: None), [])
 
+    def test_every_line_cue_is_a_sound_the_game_has(self):
+        sounds = json.loads((script_v2.ROOT / 'game/assets/audio/soundscape-manifest.json').read_text())
+        missing = []
+        for line_id, line in self.content['lines'].items():
+            cue = line.get('cue')
+            if not cue:
+                continue
+            entry = sounds.get(cue, {})
+            path = script_v2.ROOT / 'game' / str(entry.get('file', '')).removeprefix('res://')
+            if not entry or not path.is_file():
+                missing.append(f'{line_id}: {cue}')
+        self.assertEqual(missing, [])
+
+    def test_story_moments_have_their_sound(self):
+        lines = self.content['lines']
+        for line_id, cue in {'c4_escape.fault.01': 'drill_alarm', 'c4_escape.van.01': 'van_jump',
+                             'c5_station.out.11': 'earpiece_click', 'c6_iris.out.04': 'pressed_flower',
+                             'c6_jail.ctx.02': 'mail_cart'}.items():
+            self.assertEqual(lines[line_id].get('cue'), cue, line_id)
+
     def test_every_move_within_a_chapter_has_a_painted_bridge(self):
         films = json.loads((script_v2.ROOT / 'game/content/films.json').read_text())
         scenes = self.content['scenes']

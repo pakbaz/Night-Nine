@@ -180,13 +180,19 @@ func update_solids(completed: Array) -> void:
 			solids.append(points(item.polygon))
 	navigation_key = -1
 
+## A person appears once a lead is done, or once every lead in a list is done.
+static func revealed(requirement: Variant, completed: Array) -> bool:
+	if requirement is Array:
+		return requirement.all(func(lead: Variant): return lead in completed)
+	return str(requirement).is_empty() or str(requirement) in completed
+
 func set_story(completed: Array, reveal_after: Dictionary) -> void:
 	var changed := story!=completed
 	if changed:
 		story=completed.duplicate()
 		update_solids(story)
 	for id: String in bodies:
-		var show_person: bool = not reveal_after.has(id) or reveal_after[id] in completed
+		var show_person: bool = revealed(reveal_after.get(id,""),completed)
 		if bodies[id].body.visible!=show_person:
 			bodies[id].body.visible = show_person
 			changed=true

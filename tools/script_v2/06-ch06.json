@@ -34,7 +34,7 @@
         "Iris is shown as “Nora’s copy” until out.03, where she names herself. From c6_jail on she is “Iris”."
       ],
       "context": [
-        "steve|Stephen and I spent the weekend in Dad’s shack, arguing about haircuts. He won every argument.",
+        "steve|Stephen and I spent the weekend in Dad’s shack, arguing about haircuts. Every night at nine, he told the earpiece I’d gone north.",
         "steve|On Monday morning my flip phone buzzed."
       ],
       "intro": [
@@ -173,7 +173,7 @@
             "takes"
           ],
           "goal": "Find out how copies far from the bay stay in step.",
-          "background": "Copies near the bay walk into the water on the ninth night. Rook was hundreds of miles away, and he was always on hold with ‘the Bureau’. On the thirtieth, after she turned back from the water, Iris phoned two different Halcyon offices at four minutes past midnight and taped both calls.",
+          "background": "Copies near the bay walk into the water on the ninth night. Rook’s copy lives and works far from the bay, and even at the safe house he was always on hold with ‘the Bureau’. On the thirtieth, after she turned back from the water, Iris phoned two different Halcyon offices at four minutes past midnight and taped both calls.",
           "lead": [
             "iris|You saw the ones near the bay go below. The ones far away call.",
             "iris|At four minutes past midnight on the thirtieth, I phoned two Halcyon offices. I taped both calls."
@@ -215,7 +215,8 @@
       "recap": [
         "steve|Nora’s copy sent the warning about Rook. She stopped going into the water, and she doesn’t replay any more. She chooses.",
         "steve|Copies far from the bay stay in step on hold. Saren wants Mom’s notebook, and on Wednesday he wants the President.",
-        "steve|And she told me about June. They scanned her at the safe house. Her copy took the Sheriff’s desk this morning, and the real June is in her own cell until the ninth night."
+        "steve|And she told me about June. They scanned her at the safe house. Her copy took the Sheriff’s desk this morning, and the real June is in her own cell until the ninth night.",
+        "steve|She also told me who could get us inside: the mail carrier. Every day at four he takes the Sheriff’s mail in the back way. “He isn’t Dale,” she said. “But he loves June’s dog.”"
       ],
       "outro": [
         "c6_iris.out.01",
@@ -223,7 +224,12 @@
         {
           "id": "c6_iris.out.03",
           "text": "Iris. After the flowers on the balcony."
-        }
+        },
+        {"new": "steve|She took a flat paper envelope out of her coat. Inside was one of the irises I knocked off the balcony on the ninth night, pressed flat.", "delivery": "narration", "cue": "pressed_flower"},
+        "iris|I picked it up after you ran. It is the first thing I ever kept that nobody told me to keep.",
+        "iris|I’ve slept in the otter house since Tuesday. If the crew finds me, they will reset me, and I won’t remember any of this. Not even that I chose a name.",
+        {"new": "iris|Iris.", "direction": "quietly, to herself, trying the name on; a different reading from the first time"},
+        {"new": "steve|It came out a little different the second time. Nothing a recording would ever do.", "delivery": "narration"}
       ],
       "talk": {
         "iris": [
@@ -292,7 +298,7 @@
       }
     },
     "c6_jail": {
-      "when": "Monday, November 5, noon to evening",
+      "when": "Monday, November 5, afternoon",
       "present": [
         "steve",
         "stephen",
@@ -311,16 +317,17 @@
         "U-narration"
       ],
       "notes": [
-        "Both Junes use the calder voice. Line-level display tells them apart: “June at the desk” and “June in cell two”.",
+        "Both Junes use the calder voice. Line-level display tells them apart: “June on the radio” (her copy, out on the harbor search, heard through the front-desk radio) and “June in cell two”.",
         "Pell names himself in the intro, so the display rule switches from “Dale Kittredge” to “Pell” in this scene.",
         "distract and exit become rows puzzles (drop the case boards). The crossword test pays off Chapter 3: a fresh private fact, checked on paper.",
         "Art (optional): Gus’s bakery van with a giant croissant on its roof, at the loading door, for the departure."
       ],
       "context": [
-        "steve|The Sheriff’s office, at noon. June’s copy was at June’s desk, hunting me. June was in cell two."
+        "steve|The Sheriff’s office, just before four. June’s copy was out on the harbor, running the search for me. The real June was in cell two.",
+        {"new": "steve|Stephen walked in the front door wearing my face, to contest his own poster. I came in the back, under the parcels in the mail cart.", "delivery": "narration", "cue": "mail_cart"}
       ],
       "intro": [
-        "stephen|The Sheriff is at her desk. The Sheriff is also in cell two. One of those is a staffing problem.",
+        "stephen|The Sheriff is out on the harbor, hunting you. The Sheriff is also in cell two. One of those is a staffing problem.",
         "c6_jail.in.01",
         "c6_jail.in.02",
         "c6_jail.in.03",
@@ -347,7 +354,8 @@
             "steve|Where?",
             "pell|Correctly.",
             "pell|I file by destination. The carbon says Jail, returned key. That is register entry eighteen.",
-            "pell|Each slot holds two entries. Slot one holds entries one and two, and so on."
+            "pell|Each slot holds two entries. Slot one holds entries one and two, and so on.",
+            "pell|County rule. When a cell is used, the spare key goes back to the clerk by registered post. The Sheriff wrote that rule. Her copy follows it exactly."
           ],
           "prompt": "Which drawer, and which slot?",
           "instruction": "Find the drawer for where the key is going, then the slot that holds entry 18. Each slot holds two entries: slot 1 holds 1 and 2, slot 2 holds 3 and 4, and so on.",
@@ -381,9 +389,9 @@
             {
               "new": "steve|June’s own crossword is in the jail pile. I’ll circle one square and post it through her slot."
             },
-            "steve|Twenty-three across, where it crosses eight down. Only the real June will know that square."
+            "steve|Twenty-three across, where it crosses eight down. Only the woman in cell two will see that square."
           ],
-          "finding": "steve|The key was in the Jail drawer, slot 9, where entries 17 and 18 share a slot. And on today’s crossword I circled the square where 23 Across crosses 8 Down, and posted it through June’s slot. Only she has it."
+          "finding": "steve|The key was in the Jail drawer, slot 9, where entries 17 and 18 share a slot. And on June’s crossword I circled the square where 23 Across crosses 8 Down. Only the woman in cell two will see it."
         },
         "distract": {
           "type": "rows",
@@ -395,10 +403,10 @@
           "lead": [
             "stephen|Three tickets at the counter. Leave the deputy to me.",
             "stephen|The clerk says a contested likeness sends the deputy down to the basement for the file.",
-            "steve|She leaves at 11:59 and she’s back at 12:03. I need two clear minutes."
+            "steve|She leaves at 3:59 and she’s back at 4:03. I need two clear minutes."
           ],
           "prompt": "Which ticket should Stephen take, and when should Steve go in and come out?",
-          "instruction": "Pick the ticket that keeps Stephen’s face at the counter, then fit Steve’s two minutes inside the time the deputy is away. Ticket 41: pay a fine at the cashier. Ticket 42: contest a likeness, in person, at the counter. Ticket 43: drop a form through the slot. The deputy leaves at 11:59 and is back at 12:03.",
+          "instruction": "Pick the ticket that keeps Stephen’s face at the counter, then fit Steve’s two minutes inside the time the deputy is away. Ticket 41: pay a fine at the cashier. Ticket 42: contest a likeness, in person, at the counter. Ticket 43: drop a form through the slot. The deputy leaves at 3:59 and is back at 4:03.",
           "rows": [
             {
               "label": "Stephen takes ticket",
@@ -412,31 +420,32 @@
             {
               "label": "Steve goes in at",
               "options": [
-                "11:59",
-                "12:00",
-                "12:01"
+                "3:59",
+                "4:00",
+                "4:01"
               ],
               "answer": 1
             },
             {
               "label": "Steve is out by",
               "options": [
-                "12:02",
-                "12:03",
-                "12:04"
+                "4:02",
+                "4:03",
+                "4:04"
               ],
               "answer": 0
             }
           ],
           "hints": [
             "Which ticket needs Stephen’s face, in person, for the whole appointment?",
-            "The deputy leaves at 11:59 and is back at 12:03. Steve’s two minutes have to fit strictly inside that.",
-            "Only one ticket needs Stephen’s face at the counter for the whole appointment. Steve’s two minutes must start after 11:59 and end before 12:03."
+            "The deputy leaves at 3:59 and is back at 4:03. Steve’s two minutes have to fit strictly inside that.",
+            "Only one ticket needs Stephen’s face at the counter for the whole appointment. Steve’s two minutes must start after 3:59 and end before 4:03."
           ],
           "lines": [
-            "c6_jail.distract.01"
+            "c6_jail.distract.01",
+            {"new": "steve|The clerk radioed the Sheriff about the cheerful man at her likeness counter. Out on the harbor, June’s copy started asking questions.", "delivery": "narration"}
           ],
-          "finding": "steve|Stephen contested his own wanted poster at the likeness counter. The deputy went down to the basement at 11:59. I was in the corridor from 12:00 to 12:02, and out before she came back."
+          "finding": "steve|Stephen contested his own wanted poster at the likeness counter. The deputy went down to the basement at 3:59. At 4:00 I was in the cell corridor with the key and June’s crossword. I had until 4:02 to check her answer and get us both out."
         },
         "crossword": {
           "type": "rows",
@@ -446,22 +455,24 @@
             "mail",
             "distract"
           ],
-          "goal": "Find out which June is the real one.",
-          "background": "Last week June told Steve that memories can’t prove who she is: “You check my paperwork, same as everyone else.” A copy made at the safe house would remember everything up to Thursday, and nothing that happened in that cell.",
+          "goal": "Check Iris’s story: which June is locked in cell two, and which one is out hunting you?",
+          "background": "June’s rule: memories can’t prove who you are, so you check the paperwork. Iris says the crew scanned June at the safe house. Her copy runs the office and the search, and the real June has been locked in cell two since Friday. Steve posted June’s crossword, with one square circled, into cell two and nowhere else. Whoever is in that cell has seen it. Anyone else has to guess.",
           "lead": [
             {
               "new": "calder|Mercer. That woman in cell two is a copy. Don’t you dare let her out.",
-              "display": "June at the desk"
+              "display": "June on the radio",
+              "delivery": "radio",
+              "direction": "over the front-desk radio, from the harbor"
             },
             {
               "new": "calder|He’ll check my paperwork, Mercer. I taught him that.",
               "display": "June in cell two",
               "direction": "through the cell door"
             },
-            "steve|I’ll ask them both which letter I circled this morning. Only one of them has seen it."
+            "steve|I’ll ask them both which letter I circled today. Only one of them has seen it."
           ],
-          "prompt": "Each June answers on a slip of paper. What should Steve ask, and which answer should he accept?",
-          "instruction": "Ask about the square Steve circled, then accept the slip with the right letter. 23 Across, ‘beyond imitation’, is INIMITABLE, shown as I _ I _ I _ A _ L _. Its first, second and last blanks cross 3 Down, 8 Down and 12 Down.",
+          "prompt": "The June in cell two answers on a slip of paper. The June on the radio answers out loud. What should Steve ask, and whose answer should he accept?",
+          "instruction": "Ask about the square Steve circled, then accept the June who gives the right letter. 23 Across, ‘beyond imitation’, is INIMITABLE, shown as I _ I _ I _ A _ L _. Its first, second and last blanks cross 3 Down, 8 Down and 12 Down.",
           "rows": [
             {
               "label": "Ask about the square at",
@@ -473,11 +484,11 @@
               "answer": 2
             },
             {
-              "label": "Accept the slip with",
+              "label": "Accept the June who says",
               "options": [
-                "An M circled",
-                "A T circled",
-                "An A circled"
+                "M",
+                "T",
+                "A"
               ],
               "answer": 0
             }
@@ -488,14 +499,18 @@
             "Find the blank that crosses the down clue Steve chose, and read the letter there."
           ],
           "lines": [
-            "steve|Desk June circled a T. Close. Wrong.",
+            "steve|Radio June said T. Close. Wrong.",
             {
               "id": "c6_jail.crossword.01",
+              "text": "Twenty-three across. Inimitable. Unlike my colleague on the radio.",
               "display": "June in cell two"
             },
-            "c6_jail.crossword.02"
+            "c6_jail.crossword.02",
+            {"new": "stephen|Sheriff, this is the hunter. Mercer just ran out the front, toward the north jetty. I’m right behind him.", "direction": "into the front-desk radio"},
+            {"new": "calder|North jetty. On my way.", "display": "June on the radio", "delivery": "radio"},
+            {"new": "steve|Twice in one week, Stephen had lied to his own side for me.", "delivery": "narration"}
           ],
-          "finding": "steve|Only the June in cell two knew which square I circled: the M where 23 Across crosses 8 Down. The June at the desk guessed a T. We have the real one."
+          "finding": "steve|The June in cell two had my crossword in her hand: the M where 23 Across crosses 8 Down. The June on the radio guessed a T, so she has never been near that cell. Iris was right. By 4:02 June was out, and we were in the records room, waiting for the shift change at the back door."
         },
         "exit": {
           "type": "rows",
@@ -505,31 +520,31 @@
             "crossword"
           ],
           "goal": "Get past Lyle’s copy at the checkpoint without a fight.",
-          "background": "Lyle’s copy is on duty at the back checkpoint. His relief signed in at 18:24. Tonight his son Ben is in the school play, and the school doors close at 18:40.",
+          "background": "Lyle’s copy is on duty at the back checkpoint. His relief signed in at 4:24. This afternoon his son Ben is in the school play, and the school doors close at 4:40.",
           "lead": [
             "lyle_copy|Sheriff. Steve. I’m supposed to stop you.",
-            "lyle_copy|Ben’s a tree in the school play tonight. He’s been practising being a tree for a month.",
+            "lyle_copy|Ben’s a tree in the school play this afternoon. He’s been practicing being a tree for a month.",
             "calder|Lyle. Your relief has signed.",
-            "calder|The school doors close at six forty. Let’s find you the fastest way there."
+            "calder|The school doors close at four forty. Let’s find you the fastest way there."
           ],
           "prompt": "Can Lyle still make it? Tell him the fastest way.",
-          "instruction": "Lyle can leave the moment his relief signs, at 18:24. Walking to the school takes 18 minutes. Bus A leaves at 18:29 and takes 9 minutes. Bus B leaves at 18:26 and takes 15 minutes. The school doors close at 18:40.",
+          "instruction": "Lyle can leave the moment his relief signs, at 4:24. Walking to the school takes 18 minutes. Bus A leaves at 4:29 and takes 9 minutes. Bus B leaves at 4:26 and takes 15 minutes. The school doors close at 4:40.",
           "rows": [
             {
               "label": "Walking arrives at",
               "options": [
-                "18:40",
-                "18:42",
-                "18:44"
+                "4:40",
+                "4:42",
+                "4:44"
               ],
               "answer": 1
             },
             {
               "label": "Bus A arrives at",
               "options": [
-                "18:35",
-                "18:38",
-                "18:41"
+                "4:35",
+                "4:38",
+                "4:41"
               ],
               "answer": 1
             },
@@ -545,8 +560,8 @@
           ],
           "hints": [
             "Add each trip to the time Lyle can start it.",
-            "Walking: 18:24 plus 18 minutes. Bus A: 18:29 plus 9. Bus B: 18:26 plus 15.",
-            "Walking gets Lyle there at 18:42, two minutes late. Work out both buses the same way."
+            "Walking: 4:24 plus 18 minutes. Bus A: 4:29 plus 9. Bus B: 4:26 plus 15.",
+            "Walking gets Lyle there at 4:42, two minutes late. Work out both buses the same way."
           ],
           "lines": [
             {
@@ -555,12 +570,13 @@
             },
             "c6_jail.exit.02"
           ],
-          "finding": "steve|Lyle’s copy could still make Ben’s play: Bus A at 18:29, at the school by 18:38. He chose the front row over his orders, and let us go."
+          "finding": "steve|Lyle’s copy could still make Ben’s play: Bus A at 4:29, at the school by 4:38. He chose the front row over his orders, and let us go."
         }
       },
       "recap": [
-        "steve|June is out of her cell, and her copy is still at her desk, hunting me. Pell chose a beagle over his orders. Lyle’s copy chose a school play.",
-        "steve|Five fugitives and a beagle. We needed a car nobody would look for."
+        "steve|June is out of her cell, and her copy is out at the north jetty, looking for me. Pell chose a beagle over his orders. Lyle’s copy chose a school play.",
+        "steve|Five fugitives and a beagle. We needed a car nobody would look for.",
+        "steve|Iris was waiting behind Gus’s bakery next door, where nobody would see Nora’s face."
       ],
       "outro": [
         {
@@ -597,16 +613,6 @@
               "steve|What is Dale like? The real one.",
               "pell|He complains about the rain, the dogs and the government. In that order.",
               "pell|I have his memories, but not his complaints. I find I do not miss them."
-            ]
-          }
-        ],
-        "iris": [
-          {
-            "topic": "The otters",
-            "lines": [
-              "iris|Who is feeding the otters while I’m away from the aquarium?",
-              "steve|The volunteers. Including the one who got bitten.",
-              "iris|Good. She’s brave. The pups like brave people."
             ]
           }
         ],

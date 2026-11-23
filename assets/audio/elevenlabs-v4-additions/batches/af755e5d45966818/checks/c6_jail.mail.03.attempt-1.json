@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c6_jail.mail.03",
+  "attempt": 1,
+  "plan_sha256": "af755e5d45966818753918d9cc050aee0c7414aa9cdd1b5691722b4e70f3ee12",
+  "wav_sha256": "9a927d283b54e9469f73cfeb3507c1c034624922c713b980e9ecd7d34e059c54",
+  "expected": "Twenty-three across, where it crosses eight down. Only the woman in cell two will see that square.",
+  "recognized": "23 across, where it crosses 8 down. Only the woman in cell 2 will see that square.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 6.56,
+  "sample_rate": 48000,
+  "peak": 0.432159423828125,
+  "rms": 0.040713740552434284,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

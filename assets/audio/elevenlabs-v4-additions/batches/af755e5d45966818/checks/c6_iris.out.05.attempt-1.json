@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c6_iris.out.05",
+  "attempt": 1,
+  "plan_sha256": "af755e5d45966818753918d9cc050aee0c7414aa9cdd1b5691722b4e70f3ee12",
+  "wav_sha256": "db646e5b0756f4205aecbc473af470f9976e58e5788a5663338c6b379ea7a471",
+  "expected": "I picked it up after you ran. It is the first thing I ever kept that nobody told me to keep.",
+  "recognized": "I picked it up after you ran. It is the first thing I ever kept that nobody told me to keep.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 6.16,
+  "sample_rate": 48000,
+  "peak": 0.48797607421875,
+  "rms": 0.04947350760033479,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c4_escape.ctx.03",
+  "attempt": 1,
+  "plan_sha256": "af755e5d45966818753918d9cc050aee0c7414aa9cdd1b5691722b4e70f3ee12",
+  "wav_sha256": "a437bb060a588995ea3497b87ad55f2df32c2e4fd13bfc83310aed226865477d",
+  "expected": "The van for my transfer was already parked in the transport bay, keys in it, waiting for five o’clock.",
+  "recognized": "The van for my transfer was already parked in the transport bay, keys in it, waiting for 5 o'clock.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 6.4,
+  "sample_rate": 48000,
+  "peak": 0.4415283203125,
+  "rms": 0.03988824654055481,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

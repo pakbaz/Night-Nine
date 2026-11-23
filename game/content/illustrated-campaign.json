@@ -439,7 +439,27 @@
     "company": [
       "steve"
     ],
-    "chapter_insert": true
+    "chapter_insert": true,
+    "stills": [
+      {
+        "file": "res://assets/illustrated/campaign/stills/c4_escape-drill.webp",
+        "lines": [
+          "c4_escape.fault.01",
+          "c4_escape.fault.02",
+          "c4_escape.fault.find"
+        ]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/stills/c4_escape-jump.webp",
+        "lines": [
+          "c4_escape.van.01",
+          "c4_escape.van.02",
+          "c4_escape.van.find",
+          "c4_escape.recap",
+          "c4_escape.out"
+        ]
+      }
+    ]
   },
   "c5_shack": {
     "light": "e0b385",
@@ -468,6 +488,14 @@
     "bridge": "res://assets/illustrated/campaign/bridges/c5_shack-c5_station.webp",
     "off_camera_lines": [
       "c5_shack.club.01"
+    ],
+    "stills": [
+      {
+        "file": "res://assets/illustrated/campaign/stills/c5_shack-watcher.webp",
+        "lines": [
+          "c5_shack.recap.03"
+        ]
+      }
     ]
   },
   "c5_station": {
@@ -505,6 +533,46 @@
         "cut": true
       }
     },
+    "reveal_after": {
+      "stephen": [
+        "c5_station.sleeve",
+        "c5_station.halcyon"
+      ]
+    },
+    "stills": [
+      {
+        "file": "res://assets/illustrated/campaign/stills/c5_station-two-of-him.webp",
+        "lines": [
+          "c5_station.in.02",
+          "c5_station.stephen.lead",
+          "c5_station.stephen.01",
+          "c5_station.stephen.02",
+          "c5_station.stephen.03",
+          "c5_station.stephen.find",
+          "c5_station.recap",
+          "c5_station.out.01",
+          "c5_station.out.02",
+          "c5_station.out.03",
+          "c5_station.out.04",
+          "c5_station.out.05",
+          "c5_station.out.06",
+          "c5_station.out.07",
+          "c5_station.out.08",
+          "c5_station.out.09",
+          "c5_station.out.10"
+        ]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/stills/c5_station-earpiece.webp",
+        "lines": [
+          "c5_station.out.11",
+          "c5_station.out.12",
+          "c5_station.out.13",
+          "c5_station.out.14",
+          "c5_station.out.15"
+        ]
+      }
+    ],
     "appearances": {
       "steve": "steve_broadcast"
     }
@@ -525,7 +593,20 @@
       "steve",
       "stephen"
     ],
-    "bridge": "res://assets/illustrated/campaign/bridges/c6_iris-c6_jail.webp"
+    "bridge": "res://assets/illustrated/campaign/bridges/c6_iris-c6_jail.webp",
+    "stills": [
+      {
+        "file": "res://assets/illustrated/campaign/stills/c6_iris-pressed-flower.webp",
+        "lines": [
+          "c6_iris.out.03",
+          "c6_iris.out.04",
+          "c6_iris.out.05",
+          "c6_iris.out.06",
+          "c6_iris.out.07",
+          "c6_iris.out.08"
+        ]
+      }
+    ]
   },
   "c6_jail": {
     "light": "d0c8a6",
@@ -543,9 +624,7 @@
       "stephen",
       "calder",
       "steve",
-      "lyle_copy",
-      "iris",
-      "gus"
+      "lyle_copy"
     ],
     "creatures": [
       {
@@ -582,6 +661,20 @@
         "file": "res://assets/illustrated/campaign/layers/blank.webp",
         "wide_file": "res://assets/illustrated/campaign/layers/c6_jail-cell-open-wide.webp",
         "after": "c6_jail.crossword"
+      }
+    ],
+    "reveal_after": {
+      "calder": "c6_jail.crossword"
+    },
+    "stills": [
+      {
+        "file": "res://assets/illustrated/campaign/stills/c6_jail-mail-cart.webp",
+        "lines": [
+          "c6_jail.ctx.02",
+          "c6_jail.in.04",
+          "c6_jail.in.01",
+          "c6_jail.in.02"
+        ]
       }
     ],
     "appearances": {
@@ -651,6 +744,22 @@
           "c7_gate.post.03",
           "c7_gate.post.04"
         ]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/stills/c7_gate-planning.webp",
+        "lines": [
+          "c7_gate.in.03",
+          "c7_gate.in.04",
+          "c7_gate.in.05",
+          "c7_gate.in.06"
+        ]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/stills/c7_gate-bakers.webp",
+        "lines": [
+          "c7_gate.in.07",
+          "c7_gate.recap.03"
+        ]
       }
     ],
     "bridge": "res://assets/illustrated/campaign/inserts/c7_swap.webp",
@@ -659,6 +768,9 @@
         0.62,
         0.28
       ]
+    },
+    "reveal_after": {
+      "ward": "c7_gate.post"
     }
   },
   "c7_swap": {
@@ -701,6 +813,7 @@
         "file": "res://assets/illustrated/campaign/stills/c7_swap-tunnel-rescue.webp",
         "lines": [
           "c7_swap.tone.02",
+          "c7_swap.tone.04",
           "c7_swap.recap.01",
           "c7_swap.recap.02"
         ]

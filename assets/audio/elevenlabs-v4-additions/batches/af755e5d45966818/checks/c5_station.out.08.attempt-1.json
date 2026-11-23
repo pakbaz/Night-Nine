@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c5_station.out.08",
+  "attempt": 1,
+  "plan_sha256": "af755e5d45966818753918d9cc050aee0c7414aa9cdd1b5691722b4e70f3ee12",
+  "wav_sha256": "46adc4d778e37991de940f54d500421cb24af8c3723f933050af720fff319393",
+  "expected": "Carmen saw you at the market.",
+  "recognized": "Carmen saw you at the market.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 1.92,
+  "sample_rate": 48000,
+  "peak": 0.366455078125,
+  "rms": 0.042233656469978655,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}
