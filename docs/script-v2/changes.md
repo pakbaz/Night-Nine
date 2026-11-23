@@ -315,3 +315,32 @@ A second playthrough found plot holes in the middle of the story. The fixes chan
 | How did Nora get out of her pod? | On Sunday night the crew took Iris below to be reset and left her on a laundry cart in the Gallery. She set a slow, reversible wake on Nora, Lyle Boone and Dale, timed to finish Monday night, then rode out with the wash. In the interlude the glass stays shut until all three breathe alone; the panel reads MIRROR LINK ACTIVE. | `c6_iris` outro, `i2_nora` |
 
 31 new or reworded lines are recorded (ElevenLabs v4, checked by local transcripts). No new paintings: the existing pressed-flower, Gallery, pod and market stills now play with the lines that describe them.
+
+## (k) November 23 revision: action scenes, held characters and a whole-story pass
+
+A third playthrough asked for three things. Action scenes should be shown, not only told. A person who is strapped down, hidden or guarded should not walk around freely. Nobody should walk through walls, pillars or props. A review of the whole script then found small mismatches between chapters. The fixes change the script edit files, staging, the floor maps and four small engine hooks:
+
+- A person named in `reveal_after` is not in the scene until that task or line. The name menu greys them out, Q skips them, and a saved game that had them selected opens with someone who is present.
+- A floor blocker can wait for a story event (`after`). A person painted in by a story layer takes up floor only once the story puts them there.
+- A story layer also paints over the floor's cut-outs, so a person painted beside a prop stays whole when walkers pass in front of it.
+- A talk topic's `after` can name a line as well as a task, so small talk opens once two people have met.
+
+| What a player asked | What the story now says | Where |
+| --- | --- | --- |
+| People walk through walls, pillars and props. | Every walking floor was checked against its painting. The ship's column base, the archive lamp stand, the lab crates and the epilogue planter now block walkers. The floor is trimmed in front of the safe-house door leaf and behind the gate cage. Approach points and Pell's mark that sat inside props have moved, and the safe-house recorder is reached from open floor. | `illustrated-floor.json` (24 rooms) |
+| How does Steve get out of the scan chair with someone watching? | Nora's copy and Lyle go back up to town, and the attendant stays at the chair. Steve plays the Prefect's recorded order into the grille at the notch marked sixty-one, and the buckle opens. The attendant never asked for a release, so they turn to argue with the speaker column. Steve creeps out along the front of the room, because the attendant at the column blocks the way behind it. Saren says "Look at the chair", and the attendant finds it empty and raises the alarm. Steve opens the intake valve in the floor, the sea floods the tunnel, and Admiral surges up in front of the attendant wading after him. | `c2_ship` (staging, floor blocker `ship_attendant`, three layers, seven stills, repainted room) |
+| Steve stands in front of the gate guard, but his face is on every poster. | Steve rides through under the sound desk while Stephen drives. He is off the floor and can't be picked until the badge check is done. Inside the fence he climbs out. Only then can he chat with Pell, and with Shaw once she has introduced herself. | `c7_gate` (staging `reveal_after`, talk `after`, still `c7_gate-under-desk`) |
+| Nora walks straight past the guard. | A Veyri guard walks his lap through the Gallery. The aisle to the pumps and the intercom is in his sight, so Nora stays on the pod side until she has timed him. Once he is through the far door, the aisle opens and he is gone from the room. | `i2_nora` (floor `guarded_aisle`, layer `i2_nora-guard`, two stills) |
+| The jailbreak is only told. | Pell holds the back door while June's copy pulls up out front. Gus hands over the van behind his bakery. The new posters go up at dusk. | `c6_jail` (three stills) |
+| How do June, Helen, Frank and Nora get into the Choir chamber? | When the Choir says "Stop", the straps open, the crew let go of Stephen and Saren steps back. June: "We followed you down from row nine. Nobody stopped us. The whole crew had stopped to listen." | `c9_choir.in.06`, `c9_choir.in.07`, three stills |
+| How did Saren get Mom's voicemail to splice it? | Rook took every tape at the safe house, even the voicemail, and handed that one back an hour later: "Not evidence." On the beach Steve works it out: "Rook kept this tape for an hour at the safe house. Long enough to copy it." | `c4_safe.in.07`, `c8_beach.second.03` |
+| June asked Steve to play the recording again, with Rook's agents in the hall. | Now she stops him: "Not here, Mercer. Not with Adrian's agents in the hall." | `c4_safe.match.02` |
+| Why doesn't Steve go back for June after the jump? | "They'll scan June tonight, because she stayed behind for me. I can't get back up that hill alone." | `c4_escape.out.02` |
+| How does Shaw know about the copies before the locked room? | She doesn't. The press-van warning is now Stephen's line. Shaw learns everything in the locked room. | `c7_swap.bus.lead.04` |
+| The tone pulls at copies, so why doesn't Stephen walk to the sea? | "Beside me, Stephen gripped the desk with both hands and did not turn." | `c7_swap.recap.02` |
+| Why does Stephen's crew pass still open the antenna passage? | "Cancelling it would put Saren's mistake on the record." | `c8_rig.path.lead.04` |
+| Who sent signal three while Frank was asleep? | "The club sent signal three yesterday, without me." | `c10_station.relay.lead.01` |
+| Rook's copy is "going with the ship", but the ship has gone. | He is "leaving town today". The bait-shop finding says the same. | `epilogue.talk.rook_copy.1.01`, `epilogue.bait.find` |
+| When was June's case with Rook? | Twenty years ago, in Chapters 3, 4 and 9. | `c3_archive.out.11` |
+
+28 new or reworded lines are recorded (ElevenLabs v4, checked by local transcripts). The transcript checker now treats "cancelling" and "canceling" as the same word. `c8_beach.second.find` keeps its first wording and its human-approved take; the new fact is a separate line, `c8_beach.second.03`. 21 pictures are new or repainted: the ship room, three ship layers and seven ship stills, the Gallery guard layer and two Gallery stills, and stills for the jail (three), the gate (one) and the Choir (three).
