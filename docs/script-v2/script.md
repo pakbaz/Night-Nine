@@ -928,7 +928,9 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 **Revision notes:** C11, critic C11, U-narration, U-relationships
 
-> Implementation: New lead c2_ship.intake needs a hotspot in the painting (the flooded intake grille) and an approach point.
+> Implementation: Lead c2_ship.intake is the brass intake hatch in the foreground floor. Steve walks to it past the attendant, who stands at the speaker column after the release.
+
+> Implementation: Nora's copy and Lyle are dismissed at the end of the command lead and leave when the command lead is done. Only the attendant is there for the escape.
 
 > Implementation: Saren is heard only over the intercom here. His release command is the fixed recording recording.release.
 
@@ -983,6 +985,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - **Steve Mercer** [a whisper]: Dad’s recorder was running in my pocket the whole time. **NEW** `c2_ship.command.lead.03`
 - **Steve Mercer** [a whisper]: The chair’s little lamp stayed dark when the attendant asked. It lit up for the voice on the intercom. **NEW** `c2_ship.command.lead.04`
 - **Steve Mercer** [a whisper]: Dad’s counter ticks once a second. The lamp lit at tick three. The buckle clicked at tick seven. **NEW** `c2_ship.command.lead.05`
+- **Ship attendant** [to Nora’s copy and the deputy, sending them back up the tunnel]: Thank you, escorts. It is nearly dawn, and the town will expect you at breakfast. **NEW** `c2_ship.command.lead.06`
 
 **Goal:** Get the exact command that opens the chair onto Dad’s tape.
 
@@ -1025,7 +1028,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 **Goal:** Open the chair with the Prefect’s own voice.
 
-**What Steve knows:** The scan has started again. Dad’s recorder holds three voices from tonight: Nora’s spool, the attendant, and the Prefect’s four-second command. Steve can reach two microphone grilles. The attendant tested the hall speakers on the cracked grille. When Steve’s sleeve brushed the whole grille, the chair’s lamp blinked. The chair only listens while its lamp is lit.
+**What Steve knows:** Nora’s copy and Lyle have gone back up the tunnel to town, and the scan has started again. The attendant stands by the chair with a slate. Dad’s recorder holds three voices from tonight: Nora’s spool, the attendant, and the Prefect’s four-second command. Steve can reach two microphone grilles. The attendant tested the hall speakers on the cracked grille. When Steve’s sleeve brushed the whole grille, the chair’s lamp blinked. The chair only listens while its lamp is lit.
 
 **Prompt:** Pick the recording, the grille and the moment.
 
@@ -1041,7 +1044,10 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 **On success:**
 - **The Prefect** (recorded_playback) [Dad’s recorder, held to the grille]: Release the restraint. Maintenance authorization. `c2_ship.escape.01`
+- **Ship attendant** [startled, turning away from the chair to the speaker column]: Prefect? I did not ask for a release. The scan is not finished. **NEW** `c2_ship.escape.03`
+- **Ship attendant** [at the speaker column, back to the chair]: Prefect, please repeat your instruction. The chair says you released it. **NEW** `c2_ship.escape.04`
 - **Steve Mercer**: It worked. Sixty-one percent of me, and all of me is getting out of this chair. **REV** `c2_ship.escape.02`
+- **Steve Mercer** [a whisper]: The attendant is busy arguing with the column. Quietly, now. **NEW** `c2_ship.escape.05`
 
 **Finding:**
 - *Steve Mercer: The Prefect’s own voice opened the chair, at the notch marked sixty-one. The scan stopped at sixty-one percent.* **NEW** `c2_ship.escape.find`
@@ -1087,17 +1093,22 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 **Finding:**
 - *Steve Mercer: Nora is alive. Her breath keeps its own time, a little behind the ship’s. She’s asleep, not gone.* **NEW** `c2_ship.nora.find`
 
-### Lead 4: The flooded intake (`c2_ship.intake`) · choice · difficulty 1 **NEW LEAD**
+### Lead 4: The intake hatch (`c2_ship.intake`) · choice · difficulty 1 **NEW LEAD**
 *Unlocks after:* c2_ship.nora
 
 **When the lead opens:**
+- **The Prefect** (intercom): I gave no release. Look at the chair. **NEW** `c2_ship.intake.lead.01`
+- **Ship attendant** [whirling round from the speaker column]: The chair is empty! Prefect, the human is gone! **NEW** `c2_ship.intake.lead.02`
+- **Steve Mercer** [a whisper, hauling the valve wheel]: The brass hatch in the floor. That’s the intake valve. Flood the tunnel, and they’ll have to swim after me. **NEW** `c2_ship.intake.lead.03`
+- **Ship attendant** [shouting over the rushing water]: Water in the intake! The human is in the tunnel! **NEW** `c2_ship.intake.lead.04`
 - **Steve Mercer**: The tunnel’s flooding. The underwater speakers still work... I fixed them, the day I met her. **REV** `c2_ship.out.01`
-- **Steve Mercer**: Admiral swims the whole bay at night. If he hears the right whistle, he’ll come. **NEW** `c2_ship.intake.lead.01`
-- **Steve Mercer**: Nora’s spool, the loose copy, or the Prefect. One chance. **NEW** `c2_ship.intake.lead.02`
+- **Steve Mercer**: Admiral swims the whole bay at night. If he hears the right whistle, he’ll come. **NEW** `c2_ship.intake.lead.05`
+- **Ship attendant** [wading into the tunnel after him]: Please stop! You are not finished! **NEW** `c2_ship.intake.lead.06`
+- **Steve Mercer**: Nora’s spool, the loose copy, or the Prefect. One chance. **NEW** `c2_ship.intake.lead.07`
 
-**Goal:** Call Admiral through the old aquarium speakers.
+**Goal:** Slip down the intake hatch and call Admiral through the old aquarium speakers.
 
-**What Steve knows:** Steve opened the seawater valve to cover his escape. Now the intake tunnel is flooding, and the water is at his chest. The tunnel runs back to the aquarium, past the underwater speakers Steve repaired the day he met Nora. Admiral swims those waters every night. Steve has Nora’s intercom spool, the loose copy of her whistle from the drawer, and the Prefect’s command on Dad’s cassette.
+**What Steve knows:** Steve creeps to the brass intake hatch while the attendant waits at the speaker column. Then the Prefect answers: he gave no release. The attendant turns and sees the empty chair. Steve hauls the valve wheel and drops into the intake tunnel, and the sea floods in behind him. The attendant wades in after him. The water is at Steve’s chest. The tunnel runs back to the aquarium, past the underwater speakers Steve repaired the day he met Nora. Admiral swims those waters every night. Steve has Nora’s intercom spool, the loose copy of her whistle from the drawer, and the Prefect’s command on Dad’s cassette.
 
 **Prompt:** Which recording will bring Admiral?
 
@@ -1112,6 +1123,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 **On success:**
 - **Steve Mercer** *(sound: effect.nora_whistle through the underwater speakers)*: Come on, Admiral. You never missed this one. **NEW** `c2_ship.intake.01`
+- **Ship attendant** [recoiling in the flooded tunnel]: Something is in the water! Something big! **NEW** `c2_ship.intake.02`
 
 **Finding:**
 - *Steve Mercer: Nora’s real whistle, through the speakers I fixed the day we met. Admiral came down through the dark and dragged me to the surface.* **NEW** `c2_ship.intake.find`
@@ -1119,7 +1131,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 ### Scene complete
 - *Steve Mercer: There is a ship under the bay. Nora is asleep on it, alive, with hundreds of others. At the far end of the hall, one bed lay under frost, and something too tall to be human slept in it. The guards never looked at it.* **NEW** `c2_ship.recap.01`
 - *Steve Mercer: They tried to make another me. They got sixty-one percent.* **NEW** `c2_ship.recap.02`
-- *Steve Mercer: And the woman with Nora’s face, who let me go on the balcony, had walked me to that chair herself.* **NEW** `c2_ship.recap.03`
+- *Steve Mercer: And the woman with Nora’s face, who locked me out on the balcony and then let me go, had walked me to that chair herself.* **NEW** `c2_ship.recap.03`
 
 ### Departure
 - **Steve Mercer** [coughing up seawater on the beach at dawn]: Sheriff... there’s a ship. Under the bay. **NEW** `c2_ship.out.03`
@@ -1515,7 +1527,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - **Sheriff June Calder**: Two hundred and seventy-four. My list had thirty-one. `c3_archive.out.01`
 - **Steve Mercer**: Mrs. Penhallow was on the boathouse steps, watching. She isn’t on your list. **NEW** `c3_archive.out.09`
 - **Sheriff June Calder**: She isn’t on anyone’s. Ninety-one years old, on a boathouse step at midnight. Counting. **NEW** `c3_archive.out.10`
-- **Sheriff June Calder**: I’m calling Adrian Rook. FBI. He owes me a favor from a kidnapping case fifteen years ago. **NEW** `c3_archive.out.11`
+- **Sheriff June Calder**: I’m calling Adrian Rook. FBI. He owes me a favor from a kidnapping case twenty years ago. **NEW** `c3_archive.out.11`
 - **Adrian Rook** (voicemail): Sit tight, June. `c3_archive.out.02`
 - *Steve Mercer: An hour later my flip phone buzzed. A text, from a number I didn’t know.* **NEW** `c3_archive.out.12`
 - **Steve Mercer** [reading the text aloud, slowly]: “he remembers june. that doesnt mean hes adrian.” No capitals. No apostrophes. *(spoken: “He remembers June. That doesn’t mean he’s Adrian.” No capitals. No apostrophes.)* **REV** `c3_archive.out.03`
@@ -1803,7 +1815,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - **Adrian Rook**: One more thing, Steve. Your mother kept a notebook. Any idea where? **NEW** `c4_safe.in.04`
 - **Steve Mercer**: Mom kept a lot of notebooks. **NEW** `c4_safe.in.05`
 - **Adrian Rook**: Of course. Take your time. **NEW** `c4_safe.in.06`
-- *Steve Mercer: He had already taken every tape I’d brought. Not Mom’s voicemail. That cassette lives in my cardigan pocket, and I didn’t offer it.* **NEW** `c4_safe.in.07`
+- *Steve Mercer: He took every tape I’d brought, even Mom’s voicemail. An hour later he handed that one back. Not evidence, he said.* **NEW** `c4_safe.in.07`
 
 ### Small talk
 **Biscuit** · Sheriff June Calder
@@ -1892,7 +1904,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 **On success:**
 - **Steve Mercer**: Different rooms. Same breath, same pause, same little click on the S. That isn’t a man repeating himself. That’s a recording wearing a man. **REV** `c4_safe.match.01`
-- **Sheriff June Calder**: Play it again. **NEW** `c4_safe.match.02`
+- **Sheriff June Calder**: Not here, Mercer. Not with Adrian’s agents in the hall. **NEW** `c4_safe.match.02`
 
 **Finding:**
 - *Steve Mercer: June’s voicemail and Rook’s voice through the door are one recording, breath for breath, like Nora’s good morning. The man running this house isn’t Adrian Rook.* **NEW** `c4_safe.match.find`
@@ -2069,7 +2081,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 ### Departure
 - **Rook’s copy** (radio): All units. Steve Mercer, wanted for the abduction of Nora Reyes. And scan Calder tonight. The signing is in six days. **REV** `c4_escape.out.01`
-- **Steve Mercer**: Kidnapping Nora. They took her, and I’m the one on the poster. I have to keep moving. **REV** `c4_escape.out.02`
+- **Steve Mercer**: Kidnapping Nora. And they’ll scan June tonight, because she stayed behind for me. I can’t get back up that hill alone. I have to keep moving. **REV** `c4_escape.out.02`
 - **Rook’s copy** (radio): Roadblocks on the coast road and both bridges. Dogs at first light. He’ll head for town. **NEW** `c4_escape.out.03`
 - *Steve Mercer: So I didn’t. I turned the radio off, went down the creek bed instead of the road, and walked all night toward the one place nobody had opened in eighteen months.* **NEW** `c4_escape.out.04`
 
@@ -2986,7 +2998,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 **Objective:** Get two Steves and a mail carrier into the signing. Watch the President.
 
-**Coach tip:** Three of you today: Steve, Stephen and Pell. Each lead shows who should handle it. Press Q or use the name menu at the top right to switch.
+**Coach tip:** Three of you today: Stephen, Pell and Steve. Steve’s face is on every wanted poster, so he stays out of sight until you are through the gate. Each lead shows who should handle it. Press Q or use the name menu at the top right to switch.
 
 **Revision notes:** C14, critic C14 (left wrist), C22, U-relationships, U-narration, U-cast (no new gate_guard voice: Rook’s copy works the gate)
 
@@ -3005,7 +3017,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - *Steve Mercer: Gus had two catering passes for the press tent. June and Iris would use them at the red window, at ten past eleven, on foot, in his aprons and hairnets, carrying croissants.* **NEW** `c7_gate.in.07`
 
 ### Small talk
-**The fog** · Stephen
+**The fog** · Stephen · after `c7_gate.badge`
 - **Steve Mercer**: Can you see the trucks from here? I can barely see my own feet. **NEW** `c7_gate.talk.stephen.1.01`
 - **Stephen**: Good. Fog is very flattering. Nobody looks like a wanted poster in fog. **NEW** `c7_gate.talk.stephen.1.02`
 - **Steve Mercer**: Dad used to say fog makes every sound feel closer. **NEW** `c7_gate.talk.stephen.1.03`
@@ -3018,17 +3030,17 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 **Saren’s hunter** · Stephen · after `c7_gate.badge`
 - **Steve Mercer**: Rook’s copy wished you luck finding me. **NEW** `c7_gate.talk.stephen.3.01`
-- **Stephen**: I told him the truth. You’re very close. You’re under the sound desk. **NEW** `c7_gate.talk.stephen.3.02`
+- **Stephen**: I only told him the truth. You were very close. You were right under the sound desk. **NEW** `c7_gate.talk.stephen.3.02`
 - **Steve Mercer**: Please stop enjoying this so much. **NEW** `c7_gate.talk.stephen.3.03`
 - **Stephen**: I can’t. This is the most fun I’ve had in my whole short life. **NEW** `c7_gate.talk.stephen.3.04`
 
-**Biscuit** · Pell
+**Biscuit** · Pell · after `c7_gate.badge`
 - **Steve Mercer**: Who is looking after Biscuit today? **NEW** `c7_gate.talk.pell.1.01`
 - **Pell**: The Sheriff’s neighbor. I left written instructions. Four pages, with diagrams. **NEW** `c7_gate.talk.pell.1.02`
 - **Steve Mercer**: Four pages, for one beagle? **NEW** `c7_gate.talk.pell.1.03`
 - **Pell**: She is a very important beagle. She has a schedule. **NEW** `c7_gate.talk.pell.1.04`
 
-**The mail route** · Pell
+**The mail route** · Pell · after `c7_gate.badge`
 - **Pell**: Dale’s route has two hundred and twelve mailboxes. I know every one of them. **NEW** `c7_gate.talk.pell.2.01`
 - **Steve Mercer**: Do you actually like the work? **NEW** `c7_gate.talk.pell.2.02`
 - **Pell**: I like the dogs, and the people who say thank you. Mostly the dogs. **NEW** `c7_gate.talk.pell.2.03`
@@ -3043,12 +3055,12 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - **Stephen**: Every single day. He snores, apparently. **NEW** `c7_gate.talk.rook_copy.2.02`
 - **Rook’s copy**: I wonder if mine dreams. Down there, in the cold. **NEW** `c7_gate.talk.rook_copy.2.03`
 
-**The old truck** · Dr. Evelyn Shaw
+**The old truck** · Dr. Evelyn Shaw · after `c7_gate.truck.02`
 - **Dr. Evelyn Shaw**: This truck is older than you are. I rewired half of it myself. **NEW** `c7_gate.talk.shaw.1.01`
 - **Steve Mercer**: It still sounds good, though. **NEW** `c7_gate.talk.shaw.1.02`
 - **Dr. Evelyn Shaw**: Of course it does. I have good ears too. Mine are just older. **NEW** `c7_gate.talk.shaw.1.03`
 
-**Before this job** · Dr. Evelyn Shaw
+**Before this job** · Dr. Evelyn Shaw · after `c7_gate.truck.02`
 - **Dr. Evelyn Shaw**: Before this, I built explosions for the movies. Six films, and never one real fire. **NEW** `c7_gate.talk.shaw.2.01`
 - **Steve Mercer**: And now you run sound checks in the fog? **NEW** `c7_gate.talk.shaw.2.02`
 - **Dr. Evelyn Shaw**: The government pays worse. But the sandwiches are better. **NEW** `c7_gate.talk.shaw.2.03`
@@ -3127,7 +3139,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 *Unlocks after:* c7_gate.badge
 
 **When the lead opens:**
-- *Steve Mercer: I climbed out from under the sound desk, tripped over a cable and fell straight into the shot of a live television camera.* **NEW** `c7_gate.truck.lead.01`
+- *Steve Mercer: Inside the fence, I climbed out from under the sound desk, tripped over a cable and landed at the feet of the woman running the sound check.* **NEW** `c7_gate.truck.lead.01`
 - **Steve Mercer**: Sound check. I’m supposed to be under the desk. `c7_gate.truck.01`
 - **Dr. Evelyn Shaw**: Evelyn Shaw. I ran the sound stage for Meridian, back when it had a budget. Stay off the cables. **REV** `c7_gate.truck.02`
 - **Dr. Evelyn Shaw**: The back fence failed the check. Sound crosses three hundred and forty meters in a second, and the fence is a hundred and seventy meters out. Tell me what it actually heard. **NEW** `c7_gate.truck.lead.02`
@@ -3264,7 +3276,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - **Steve Mercer**: Dad’s tape. Cued, and ready. **NEW** `c7_swap.bus.lead.01`
 - **Dr. Evelyn Shaw**: Three sends. Amber reaches the lectern and the press van. Green reaches the back fence and the service steps. **NEW** `c7_swap.bus.lead.02`
 - **Dr. Evelyn Shaw**: Blue reaches the lectern, the back fence and the service steps. **NEW** `c7_swap.bus.lead.03`
-- **Dr. Evelyn Shaw**: The press van feeds the national broadcast. Keep your tone off it, or every copy watching at home hears it too. **NEW** `c7_swap.bus.lead.04`
+- **Stephen**: The press van feeds the national broadcast. Keep the tone off it, or every copy watching at home hears it too. **NEW** `c7_swap.bus.lead.04`
 - **Dr. Evelyn Shaw**: For June’s reply, three returns. Copper goes to you, Stephen and the lectern speaker. **NEW** `c7_swap.bus.lead.05`
 - **Dr. Evelyn Shaw**: Slate goes to you and Stephen. Pearl goes to you alone. **NEW** `c7_swap.bus.lead.06`
 - **Steve Mercer**: June’s reply is for Stephen and me. Nobody else. **NEW** `c7_swap.bus.lead.07`
@@ -3324,7 +3336,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 ### Scene complete
 - *Steve Mercer: Fourteen copies turned toward the sea at once, in front of everyone who mattered. The real President was in a service tunnel, with a bandaged wrist and June Calder.* **NEW** `c7_swap.recap.01`
-- *Steve Mercer: Iris told me later that the tone pulled at her too. She held on to June’s sleeve and counted Sunday dinners until it passed.* **NEW** `c7_swap.recap.02`
+- *Steve Mercer: Iris told me later that the tone pulled at her too. She held on to June’s sleeve and counted Sunday dinners until it passed. Beside me, Stephen gripped the desk with both hands and did not turn.* **NEW** `c7_swap.recap.02`
 - *Steve Mercer: Rook’s copy slipped away into the fog. Before he went, he asked me one thing.* **NEW** `c7_swap.recap.03`
 
 ### Departure
@@ -3645,7 +3657,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 **Goal:** Find out whether Mom really sent that message.
 
-**What Steve knows:** Mom’s voicemail from the night of the boat is on the cassette in Steve’s cardigan pocket, the one Rook never took, and Dad’s recorder can play it. He has played it at three in the morning for eighteen months. He knows every breath in it.
+**What Steve knows:** Mom’s voicemail from the night of the boat is on the cassette in Steve’s cardigan pocket, and Dad’s recorder can play it. Rook took that cassette at the safe house and handed it back an hour later. Steve has played it at three in the morning for eighteen months. He knows every breath in it.
 
 **Prompt:** Saren’s tape says: “Come out with us, kiddo. Tonight.” Play it next to Mom’s voicemail from the night of the boat. What is Saren’s tape?
 
@@ -3662,6 +3674,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 **On success:**
 - **Steve Mercer**: Same breath before ‘kiddo’. And a hole where four words used to be. **NEW** `c8_beach.second.02`
+- **Steve Mercer** [quietly, putting it together]: Rook kept this tape for an hour at the safe house. Long enough to copy it. **NEW** `c8_beach.second.03`
 
 **Finding:**
 - *Steve Mercer: Saren’s message is Mom’s voicemail, cut and stitched: the same breath before ‘kiddo’, and a gap where ‘The bay is singing’ used to be. He has no message from her. He has my tape.* **NEW** `c8_beach.second.find`
@@ -3819,7 +3832,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - **Dr. Lin Wen**: I ran a paper trial. Three receipts. Only one of them would convince me, if I were them. **NEW** `c8_rig.path.lead.01`
 - **Dr. Lin Wen**: The dock receipt says a camera saw the lamps. The mast receipt says the ship measured them. The shore receipt says the ship got our crew’s numbers. **NEW** `c8_rig.path.lead.02`
 - **Dr. Lin Wen**: The fleet trusts nothing that its own ship did not measure. **NEW** `c8_rig.path.lead.03`
-- **Stephen**: My crew pass still opens the antenna passage. I checked. Twice. **NEW** `c8_rig.path.lead.04`
+- **Stephen**: My crew pass still opens the antenna passage. I checked. Twice. Cancelling it would put Saren’s mistake on the record. **NEW** `c8_rig.path.lead.04`
 - **Steve Mercer**: And the sleepers are in the Gallery. Mom and Dad are in row nine. **NEW** `c8_rig.path.lead.05`
 
 **Goal:** Get the show into the ship’s own measurements, and get the sleepers out.
@@ -4282,6 +4295,8 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - **Prefect Saren**: We will finish your scan. This time there will be no interruption. `c9_choir.in.01`
 - **Steve Mercer** [strapped into the scan chair, frightened]: The chair pulled at everything I knew. My dad’s name. It was... it’s on Stephen’s hand. Why is it on his hand? **NEW** `c9_choir.in.05`
 - **The Choir**: Stop. `c9_choir.in.02`
+- *Steve Mercer: The straps opened. The crew let go of Stephen. Even Saren stepped back from the console.* **NEW** `c9_choir.in.06`
+- **Sheriff June Calder** [arriving with Helen, Frank and Nora, out of breath]: We followed you down from row nine. Nobody stopped us. The whole crew had stopped to listen. **NEW** `c9_choir.in.07`
 - **The Choir**: Four thousand years of unchanged records. Three hundred and twelve human lives. Show us one record that changed, and we will choose. **REV** `c9_choir.in.03`
 
 ### Small talk
@@ -4539,7 +4554,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 **When the lead opens:**
 - **Frank Mercer**: K7BLW calling the Thursday club. We’re going to need a few more operators. **MOV** `c10_station.out.01`
-- **Frank Mercer**: Yesterday I sent signal three. Today I’m sending signal four. Let’s see who keeps up. **NEW** `c10_station.relay.lead.01`
+- **Frank Mercer**: The club sent signal three yesterday, without me. Today I’m sending signal four. Let’s see who keeps up. **NEW** `c10_station.relay.lead.01`
 - **Steve Mercer**: The official channel just sent back three. That’s yesterday’s cue. **NEW** `c10_station.relay.lead.02`
 - **Thursday club operator** (radio): Gull here. Cedar and Marsh both say four. Marsh says the wind just turned west out at the Point. **NEW** `c10_station.relay.lead.03`
 - **Frank Mercer**: Ask them both about the wind again, Gull. **NEW** `c10_station.relay.lead.04`
@@ -5104,7 +5119,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - **Adrian Rook**: That’s what June said. Word for word. **NEW** `epilogue.talk.rook.1.03`
 
 **Leaving** · Rook’s copy
-- **Rook’s copy**: I’m going with the ship. I want to find out who I am when nobody is watching. **NEW** `epilogue.talk.rook_copy.1.01`
+- **Rook’s copy**: I’m leaving town today. I want to find out who I am when nobody is watching. **NEW** `epilogue.talk.rook_copy.1.01`
 - **Steve Mercer**: Good luck out there. I mean it. **NEW** `epilogue.talk.rook_copy.1.02`
 - **Rook’s copy**: Tell June I’m sorry about the voicemail. **NEW** `epilogue.talk.rook_copy.1.03`
 
@@ -5164,7 +5179,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - **Rook’s copy**: I’ll have to find out who that is. `epilogue.bait.04`
 
 **Finding:**
-- *Steve Mercer: Two Mrs. Penhallows, one counter, and people are finally buying bait. One Adrian Rook stays. The other one leaves with the ship, to find out who he is.* **NEW** `epilogue.bait.find`
+- *Steve Mercer: Two Mrs. Penhallows, one counter, and people are finally buying bait. One Adrian Rook stays. The other one is leaving town, to find out who he is.* **NEW** `epilogue.bait.find`
 
 ### Lead 3: A new morning (`epilogue.coffee`) · beat
 *Unlocks after:* epilogue.neighbors, epilogue.bait

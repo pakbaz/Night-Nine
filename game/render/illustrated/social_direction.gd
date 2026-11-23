@@ -42,7 +42,7 @@ const READ := ["c2_aquarium.plan","c3_house.crossword","c3_house.rules","c3_hous
 	"c3_archive.paper","c3_archive.power","i1_archive.quiet","c4_safe.screens","c5_shack.notes",
 	"c5_station.sleeve","c5_station.halcyon","c6_jail.mail","c7_gate.badge","c7_swap.map",
 	"c8_lab.notebook","c8_lab.lastpage","c9_choir.note","c10_report.survey"]
-const KNEEL := ["c1_escape.cross","c6_iris.takes","c10_town.wind"]
+const KNEEL := ["c1_escape.cross","c2_ship.intake","c6_iris.takes","c10_town.wind"]
 const OPERATE := ["c1_flat.control","c1_escape.power","i1_archive.reset","c4_escape.fault",
 	"c5_shack.rig","c7_gate.truck","c5_station.automation","c6_iris.hold","i2_nora.pump","c7_swap.bus","c7_swap.tone",
 	"c8_rig.rig","c9_gallery.antenna","c9_gallery.link","c10_station.route","c10_station.relay",

@@ -162,7 +162,7 @@
           "background": "Saren’s crew have jammed every official channel. Frank, in wet pajamas and his old cardigan, is at the station’s emergency set. His Thursday club is on the air: Gull on the coast, Marsh out past Sentinel Point, and Cedar. Frank sent cue three yesterday and cue four today.",
           "lead": [
             "c10_station.out.01",
-            "frank|Yesterday I sent signal three. Today I’m sending signal four. Let’s see who keeps up.",
+            "frank|The club sent signal three yesterday, without me. Today I’m sending signal four. Let’s see who keeps up.",
             "steve|The official channel just sent back three. That’s yesterday’s cue.",
             {"new": "operator|Gull here. Cedar and Marsh both say four. Marsh says the wind just turned west out at the Point.", "delivery": "radio"},
             "frank|Ask them both about the wind again, Gull.",
@@ -983,7 +983,7 @@
         "bait": {
           "goal": "Visit the bait shop and the ferry.",
           "background": "Two Mrs. Penhallows now share one counter. At the ferry, Adrian Rook is saying goodbye to the man who wore his face.",
-          "finding": "steve|Two Mrs. Penhallows, one counter, and people are finally buying bait. One Adrian Rook stays. The other one leaves with the ship, to find out who he is."
+          "finding": "steve|Two Mrs. Penhallows, one counter, and people are finally buying bait. One Adrian Rook stays. The other one is leaving town, to find out who he is."
         },
         "coffee": {
           "goal": "Go home.",
@@ -1141,7 +1141,7 @@
           {
             "topic": "Leaving",
             "lines": [
-              "rook_copy|I’m going with the ship. I want to find out who I am when nobody is watching.",
+              "rook_copy|I’m leaving town today. I want to find out who I am when nobody is watching.",
               "steve|Good luck out there. I mean it.",
               "rook_copy|Tell June I’m sorry about the voicemail."
             ]

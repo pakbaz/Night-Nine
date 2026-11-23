@@ -3,8 +3,9 @@
     "c7_gate": {
       "when": "Wednesday, November 7, morning",
       "present": ["steve", "stephen", "pell", "rook_copy", "ward", "shaw"],
+      "actors": ["stephen", "pell", "steve"],
       "card": {"chapter": {"kicker": "Chapter 7", "title": "The President’s Other Appointment", "when": "The day of the signing", "goal": "Steve wants to stop the swap of the President."}},
-      "coach": "Three of you today: Steve, Stephen and Pell. Each lead shows who should handle it. Press Q or use the name menu at the top right to switch.",
+      "coach": "Three of you today: Stephen, Pell and Steve. Steve’s face is on every wanted poster, so he stays out of sight until you are through the gate. Each lead shows who should handle it. Press Q or use the name menu at the top right to switch.",
       "objective": "Get two Steves and a mail carrier into the signing. Watch the President.",
       "changes": ["C14", "critic C14 (left wrist)", "C22", "U-relationships", "U-narration", "U-cast (no new gate_guard voice: Rook’s copy works the gate)"],
       "notes": [
@@ -102,7 +103,7 @@
           "goal": "Prove the back-fence speakers are working.",
           "background": "Halcyon’s truck runs every speaker on the site, and Steve needs every one of them. The back fence failed its sound check. The fence is 170 meters from the desk, and sound travels 340 meters in one second.",
           "lead": [
-            {"new": "steve|I climbed out from under the sound desk, tripped over a cable and fell straight into the shot of a live television camera.", "delivery": "narration"},
+            {"new": "steve|Inside the fence, I climbed out from under the sound desk, tripped over a cable and landed at the feet of the woman running the sound check.", "delivery": "narration"},
             "c7_gate.truck.01",
             {"id": "c7_gate.truck.02", "text": "Evelyn Shaw. I ran the sound stage for Meridian, back when it had a budget. Stay off the cables."},
             "shaw|The back fence failed the check. Sound crosses three hundred and forty meters in a second, and the fence is a hundred and seventy meters out. Tell me what it actually heard.",
@@ -143,6 +144,7 @@
         "stephen": [
           {
             "topic": "The fog",
+            "after": "badge",
             "lines": [
               "steve|Can you see the trucks from here? I can barely see my own feet.",
               "stephen|Good. Fog is very flattering. Nobody looks like a wanted poster in fog.",
@@ -163,7 +165,7 @@
             "after": "badge",
             "lines": [
               "steve|Rook’s copy wished you luck finding me.",
-              "stephen|I told him the truth. You’re very close. You’re under the sound desk.",
+              "stephen|I only told him the truth. You were very close. You were right under the sound desk.",
               "steve|Please stop enjoying this so much.",
               "stephen|I can’t. This is the most fun I’ve had in my whole short life."
             ]
@@ -172,6 +174,7 @@
         "pell": [
           {
             "topic": "Biscuit",
+            "after": "badge",
             "lines": [
               "steve|Who is looking after Biscuit today?",
               "pell|The Sheriff’s neighbor. I left written instructions. Four pages, with diagrams.",
@@ -181,6 +184,7 @@
           },
           {
             "topic": "The mail route",
+            "after": "badge",
             "lines": [
               "pell|Dale’s route has two hundred and twelve mailboxes. I know every one of them.",
               "steve|Do you actually like the work?",
@@ -211,6 +215,7 @@
         "shaw": [
           {
             "topic": "The old truck",
+            "after": "c7_gate.truck.02",
             "lines": [
               "shaw|This truck is older than you are. I rewired half of it myself.",
               "steve|It still sounds good, though.",
@@ -219,6 +224,7 @@
           },
           {
             "topic": "Before this job",
+            "after": "c7_gate.truck.02",
             "lines": [
               "shaw|Before this, I built explosions for the movies. Six films, and never one real fire.",
               "steve|And now you run sound checks in the fog?",
@@ -307,7 +313,7 @@
             "steve|Dad’s tape. Cued, and ready.",
             "shaw|Three sends. Amber reaches the lectern and the press van. Green reaches the back fence and the service steps.",
             "shaw|Blue reaches the lectern, the back fence and the service steps.",
-            "shaw|The press van feeds the national broadcast. Keep your tone off it, or every copy watching at home hears it too.",
+            "stephen|The press van feeds the national broadcast. Keep the tone off it, or every copy watching at home hears it too.",
             "shaw|For June’s reply, three returns. Copper goes to you, Stephen and the lectern speaker.",
             "shaw|Slate goes to you and Stephen. Pearl goes to you alone.",
             "steve|June’s reply is for Stephen and me. Nobody else."
@@ -360,7 +366,7 @@
       },
       "recap": [
         "steve|Fourteen copies turned toward the sea at once, in front of everyone who mattered. The real President was in a service tunnel, with a bandaged wrist and June Calder.",
-        "steve|Iris told me later that the tone pulled at her too. She held on to June’s sleeve and counted Sunday dinners until it passed.",
+        "steve|Iris told me later that the tone pulled at her too. She held on to June’s sleeve and counted Sunday dinners until it passed. Beside me, Stephen gripped the desk with both hands and did not turn.",
         "steve|Rook’s copy slipped away into the fog. Before he went, he asked me one thing."
       ],
       "outro": [

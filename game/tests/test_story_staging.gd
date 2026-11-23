@@ -1,5 +1,6 @@
 extends SceneTree
 ## Story staging: the room shows what the story says is happening at each moment.
+const SOCIAL := preload("res://render/illustrated/social_direction.gd")
 var game: Node
 var failures: Array[String] = []
 var checks := 0
@@ -76,6 +77,12 @@ func layer_shown(name: String) -> bool:
 		if str(entry.record.file).get_file().get_basename() == name:
 			return entry.nodes.all(func(node: Sprite2D): return node.visible)
 	return false
+
+## True when every cut-out the walking floor paints in front of walkers shows this story layer too.
+func occluders_show(name: String) -> bool:
+	var occluders: Array = game.stage.floor_stage.cast.get_children().filter(func(node: Node): return node is Polygon2D)
+	return not occluders.is_empty() and occluders.all(func(occluder: Polygon2D): return occluder.get_children().any(
+		func(node: Node): return node is Polygon2D and node.visible and node.texture.resource_path.get_file().get_basename() == name))
 
 ## Play one line through the real dialogue path and report what fills the frame.
 func shown_during(line_id: String) -> String:
@@ -154,35 +161,67 @@ func run() -> void:
 	var chair: Vector2 = game.stage.scene_props["c2_ship.escape"]
 	check((await aim_during("c2_ship.command.lead.01")).distance_to(chair) < 1.0, "The attendant's lines keep the camera on Steve in the chair")
 	check((await aim_during("c2_ship.command.02")).distance_to(chair) < 1.0, "Steve's strapped-in lines keep the camera on the chair")
-	game._speak(["c2_ship.escape.lead.01"], Callable())
+	check(layer_shown("c2_ship-attendant-chair"), "The attendant stands at the scan chair with a slate")
+	check(not layer_shown("c2_ship-attendant-column") and not layer_shown("c2_ship-hatch-flooding"), "The attendant is painted in one place at a time")
+	check(not occluders_show("c2_ship-attendant-column"), "The speaker column shows no attendant while they are at the chair")
+	game._speak(["c2_ship.command.lead.06"], Callable())
 	await frames(3)
 	var scanner: ColorRect = game.stage.hull.get_node_or_null("ChairScan")
 	check(is_instance_valid(scanner) and scanner.is_visible_in_tree(), "The copying light is on Steve during the scan")
 	for escort: String in ["iris", "lyle_copy"]:
 		var watcher: Node2D = game.stage.actors.get(escort)
-		check(is_instance_valid(watcher) and watcher.is_visible_in_tree(), "%s stays in the scan shot" % escort)
+		check(is_instance_valid(watcher) and watcher.is_visible_in_tree(), "%s watches the scan until the attendant sends the escorts back" % escort)
 	if is_instance_valid(scanner):
 		var phase: float = scanner.material.get_shader_parameter("phase")
 		await frames(5)
 		check(scanner.material.get_shader_parameter("phase") != phase, "The scan sweeps across the chair while the line holds")
 	game._next_line()
+	await frames(2)
+	await solve("c2_ship.command")
+	var leaving: String = await shown_during("c2_ship.command.02")
+	check(leaving.ends_with("stills/c2_ship-escorts-leave.webp"), "Show Nora's copy and Lyle going back up to town")
+	for escort: String in ["iris", "lyle_copy"]:
+		check(not game.stage.actor_visible(escort), "%s is gone before the escape" % escort)
+	check(not await portrait_during("c2_ship.escape.lead.01", "iris"), "Only the attendant watches the rest of the scan")
+	scanner = game.stage.hull.get_node_or_null("ChairScan")
+	check(is_instance_valid(scanner) and scanner.is_visible_in_tree(), "The scan starts again after the escorts leave")
+	check(layer_shown("c2_ship-attendant-chair"), "The attendant stays at the chair until the release")
+	var release: String = await shown_during("c2_ship.escape.03")
+	check(release.ends_with("stills/c2_ship-chair-release.webp"), "Show the buckle springing open as the attendant turns to the column")
+	var intercom: String = await shown_during("c2_ship.escape.04")
+	check(intercom.ends_with("stills/c2_ship-attendant-intercom.webp"), "Show the attendant arguing with the column while Steve slips out")
 	await enter("c2_ship", ["c2_ship.command", "c2_ship.escape"])
 	scanner = game.stage.hull.get_node_or_null("ChairScan")
 	check(not is_instance_valid(scanner) or not scanner.is_visible_in_tree(), "The scan stops on release")
 	check(not layer_shown("c2_ship-steve-strapped"), "Show the empty chair once Steve is free")
 	check(layer_shown("c2_ship-nora-asleep"), "Nora stays asleep in her capsule after Steve is free")
+	check(layer_shown("c2_ship-attendant-column") and not layer_shown("c2_ship-attendant-chair"), "After the release the attendant argues at the speaker column")
+	check(occluders_show("c2_ship-attendant-column"), "The speaker column cut-out in front of walkers keeps the attendant's hand and robe")
+	check(not game.stage.actor_visible("iris") and not game.stage.actor_visible("lyle_copy"), "The escorts are not in the room for the escape")
 	check(game.stage.walking_view(), "Steve can walk once he is out of the chair")
 	check(await portrait_during("c2_ship.escape.02", "steve"), "Steve appears standing once he is out of the chair")
 	# Nora sleeps in the amber capsule; the room shows her when Steve reaches it.
 	var nora_lead: String = await shown_during("c2_ship.nora.lead.01")
 	check(nora_lead.ends_with("stills/c2_ship-nora-asleep.webp"), "Show Nora asleep in the amber capsule when Steve finds her")
-	# The rescue and the dawn beach are shown, not only told.
+	# The alarm, the flooded tunnel, the rescue and the dawn beach are shown, not only told.
 	await enter("c2_ship", ["c2_ship.command", "c2_ship.escape", "c2_ship.nora"])
+	check(SOCIAL.action_for("c2_ship", "c2_ship.intake", []) == "kneel", "Steve kneels at the intake hatch in the floor")
+	check(layer_shown("c2_ship-attendant-column") and not layer_shown("c2_ship-hatch-flooding"), "The hatch stays shut until Steve opens the valve")
+	var denial: String = await shown_during("c2_ship.intake.lead.01")
+	check(denial.ends_with("stills/c2_ship-attendant-turns.webp"), "Show the attendant turning to the empty chair when the Prefect denies the release")
+	var valve: String = await shown_during("c2_ship.intake.lead.03")
+	check(valve.ends_with("stills/c2_ship-valve-alarm.webp"), "Show Steve hauling the valve wheel as the sea bursts in")
+	check(layer_shown("c2_ship-hatch-flooding") and not layer_shown("c2_ship-attendant-column"), "Once the valve opens, the attendant wades after Steve at the flooding hatch")
+	check(not game.stage.walking_view(), "Steve is down the hatch and cannot walk the room")
+	var tunnel: String = await shown_during("c2_ship.out.01")
+	check(tunnel.ends_with("stills/c2_ship-flooded-tunnel.webp"), "Show the tunnel flooding when Steve says it is")
+	var burst: String = await shown_during("c2_ship.intake.02")
+	check(burst.ends_with("stills/c2_ship-admiral-burst.webp"), "Show Admiral surging up in front of the attendant")
 	var rescue: String = await shown_during("c2_ship.intake.find")
 	check(rescue.ends_with("stills/c2_ship-admiral-rescue.webp"), "Show Admiral dragging Steve to the surface")
 	var dawn: String = await shown_during("c2_ship.out.02")
 	check(dawn.ends_with("stills/c2_ship-dawn-beach.webp"), "Show June finding Steve on the beach at dawn")
-	var other: String = await shown_during("c2_ship.out.01")
+	var other: String = await shown_during("c2_ship.escape.02")
 	check(other == plate(), "Lines without a story painting keep the room in view")
 	# The aquarium: Nora's copy and Lyle catch Steve at the end, and are seen doing it.
 	await enter("c2_aquarium", ["c2_aquarium.plan", "c2_aquarium.guard"])
@@ -226,7 +265,7 @@ func run() -> void:
 	while game.dialogue_panel.visible:
 		game._next_line()
 		await frames(1)
-	game._speak(["c2_ship.intake.find", "c2_ship.out.01"], Callable())
+	game._speak(["c2_ship.intake.find", "c2_ship.escape.02"], Callable())
 	await frames(2)
 	var still: TextureRect = game.stage.story_still
 	check(still.visible and still.modulate.a < .5, "A story painting dissolves in rather than cutting")
@@ -389,6 +428,36 @@ func run() -> void:
 	check(game.campaign.available_talk("ward").is_empty(), "Nobody chats with the President before they have met her")
 	await enter("c7_gate", ["c7_gate.post"])
 	check(game.stage.actor_visible("ward"), "The President is at the delegation hatch after Pell's letter")
+	# Steve's face is on every poster, so he stays out of sight in the truck until it is through the gate.
+	await enter("c7_gate")
+	var investigators: Array = game.campaign.current().actors
+	check(game.campaign.data.actor == "stephen", "Chapter 7 opens with Stephen, who may be seen at the gate")
+	check(not game.stage.floor_stage.bodies.steve.body.visible and not game.stage.actor_visible("steve"), "Steve does not stand in front of the gate guard")
+	check(game.actor.is_item_disabled(investigators.find("steve")), "Steve cannot be picked from the name menu while he hides")
+	game.campaign.switch_actor("pell")
+	game._refresh()
+	check(game._next_actor() == "stephen", "Q skips Steve while he hides")
+	game.campaign.switch_actor("steve")
+	game._refresh()
+	await frames(2)
+	check(game.campaign.data.actor != "steve" and game.stage.floor_stage.active_actor == game.campaign.data.actor, "A saved game with Steve chosen at the gate opens with someone who can walk")
+	check(game.campaign.available_talk("pell").is_empty() and game.campaign.available_talk("shaw").is_empty(), "Steve chats with nobody while he hides in the truck")
+	check("c7_gate-under-desk" in await shown_during("c7_gate.badge.02"), "The gate check is shown from inside the truck, with Steve under the sound desk")
+	await enter("c7_gate", ["c7_gate.badge"])
+	check(game.stage.floor_stage.bodies.steve.body.visible and not game.actor.is_item_disabled(investigators.find("steve")), "Steve climbs out once the truck is through the gate")
+	check(not game.campaign.available_talk("pell").is_empty(), "Steve and Pell can chat inside the fence")
+	check(game.campaign.available_talk("shaw").is_empty(), "Steve has not met Shaw yet")
+	game.campaign.mark_seen(["c7_gate.truck.02"])
+	check(not game.campaign.available_talk("shaw").is_empty(), "Steve can chat with Shaw once she has introduced herself")
+	# The Choir stops the scan; June brings Helen, Frank and Nora down from row nine.
+	await enter("c9_choir")
+	check("c9_choir-scan" in await shown_during("c9_choir.in.01"), "Saren's scan shows Steve strapped in the chair")
+	check("c9_choir-stop" in await shown_during("c9_choir.in.07"), "The Choir's stop shows the straps open and June arriving with Steve's family")
+	# Cell two, the back door and the bakery van are shown where they happen.
+	await enter("c6_jail", ["c6_jail.mail", "c6_jail.crossword"])
+	check("c6_jail-back-door" in await shown_during("c6_jail.crossword.06"), "Pell holds the back door while June's copy pulls up out front")
+	check("c6_jail-bakery" in await shown_during("c6_jail.out.02"), "Gus hands over the van behind his bakery")
+	check("c6_jail-posters" in await shown_during("c6_jail.out.06"), "The new posters go up at dusk")
 	# Nora wakes beside Dale and Lyle, whose pods stand open.
 	await arrive("i2_nora")
 	check(not layer_shown("i2_nora-pods-open"), "Nora's neighbors are still under glass at the start of the wake cycle")
@@ -398,6 +467,11 @@ func run() -> void:
 	check(layer_shown("i2_nora-pods-open"), "The pods open only after the slow wake Iris set completes")
 	await enter("i2_nora")
 	check(layer_shown("i2_nora-pods-open") and game.stage.floor_stage.wide == null, "The Gallery shows the opened pods in the one painting Nora walks on")
+	check(layer_shown("i2_nora-guard"), "A Veyri guard walks his lap while Nora times it")
+	check("i2_nora-guard-passes" in await shown_during("i2_nora.patrol.lead.01"), "Nora watches the guard pass before she counts his lap")
+	check("i2_nora-crossing" in await shown_during("i2_nora.patrol.01"), "Nora, Dale and Lyle cross while the far door is shut")
+	await enter("i2_nora", ["i2_nora.patrol"])
+	check(not layer_shown("i2_nora-guard"), "The guard is behind the far door once they have crossed")
 
 	# Doors that open in the story are painted open in place: no pasted pictures, no
 	# warped cut-out of the door, only the room as it looks with that door open.

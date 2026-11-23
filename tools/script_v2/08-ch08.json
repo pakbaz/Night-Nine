@@ -334,7 +334,7 @@
           "title": "Mom’s voice",
           "requires": [],
           "goal": "Find out whether Mom really sent that message.",
-          "background": "Mom’s voicemail from the night of the boat is on the cassette in Steve’s cardigan pocket, the one Rook never took, and Dad’s recorder can play it. He has played it at three in the morning for eighteen months. He knows every breath in it.",
+          "background": "Mom’s voicemail from the night of the boat is on the cassette in Steve’s cardigan pocket, and Dad’s recorder can play it. Rook took that cassette at the safe house and handed it back an hour later. Steve has played it at three in the morning for eighteen months. He knows every breath in it.",
           "lead": [
             {"new": "helen|Come out with us, kiddo. Tonight.", "audio": "recording.saren_splice", "delivery": "recorded_playback", "direction": "from a small device in Saren’s hand; a splice, made by editing recording.voicemail"},
             {"new": "steve|I know every breath of her voicemail. Let me play it right next to this.", "direction": "taking Dad’s recorder out of his cardigan pocket"}
@@ -353,7 +353,10 @@
             "Listen to the breath before “kiddo”, and to the gap after it.",
             "A new message would have a new breath. This one has the voicemail’s breath, and a hole where some words used to be."
           ],
-          "lines": ["steve|Same breath before ‘kiddo’. And a hole where four words used to be."],
+          "lines": [
+            "steve|Same breath before ‘kiddo’. And a hole where four words used to be.",
+            {"new": "steve|Rook kept this tape for an hour at the safe house. Long enough to copy it.", "direction": "quietly, putting it together"}
+          ],
           "finding": "steve|Saren’s message is Mom’s voicemail, cut and stitched: the same breath before ‘kiddo’, and a gap where ‘The bay is singing’ used to be. He has no message from her. He has my tape."
         },
         "refuse": {
@@ -458,7 +461,7 @@
             "wen|I ran a paper trial. Three receipts. Only one of them would convince me, if I were them.",
             "wen|The dock receipt says a camera saw the lamps. The mast receipt says the ship measured them. The shore receipt says the ship got our crew’s numbers.",
             "wen|The fleet trusts nothing that its own ship did not measure.",
-            "stephen|My crew pass still opens the antenna passage. I checked. Twice.",
+            "stephen|My crew pass still opens the antenna passage. I checked. Twice. Cancelling it would put Saren’s mistake on the record.",
             "steve|And the sleepers are in the Gallery. Mom and Dad are in row nine."
           ],
           "prompt": "Which receipt will the fleet accept, and who does what?",

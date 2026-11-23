@@ -200,7 +200,8 @@
         "U-relationships"
       ],
       "notes": [
-        "New lead c2_ship.intake needs a hotspot in the painting (the flooded intake grille) and an approach point.",
+        "Lead c2_ship.intake is the brass intake hatch in the foreground floor. Steve walks to it past the attendant, who stands at the speaker column after the release.",
+        "Nora's copy and Lyle are dismissed at the end of the command lead and leave when the command lead is done. Only the attendant is there for the escape.",
         "Saren is heard only over the intercom here. His release command is the fixed recording recording.release.",
         "Film after the departure: a tank fills around a shape grown from the 61 percent scan. Steve never sees it."
       ],
@@ -250,6 +251,10 @@
             {
               "new": "steve|Dad’s counter ticks once a second. The lamp lit at tick three. The buckle clicked at tick seven.",
               "direction": "a whisper"
+            },
+            {
+              "new": "guard|Thank you, escorts. It is nearly dawn, and the town will expect you at breakfast.",
+              "direction": "to Nora’s copy and the deputy, sending them back up the tunnel"
             }
           ],
           "prompt": "Steve has the moment on tape. Which voice opens the chair, and how long is the command?",
@@ -309,7 +314,7 @@
             "command"
           ],
           "goal": "Open the chair with the Prefect’s own voice.",
-          "background": "The scan has started again. Dad’s recorder holds three voices from tonight: Nora’s spool, the attendant, and the Prefect’s four-second command. Steve can reach two microphone grilles. The attendant tested the hall speakers on the cracked grille. When Steve’s sleeve brushed the whole grille, the chair’s lamp blinked. The chair only listens while its lamp is lit.",
+          "background": "Nora’s copy and Lyle have gone back up the tunnel to town, and the scan has started again. The attendant stands by the chair with a slate. Dad’s recorder holds three voices from tonight: Nora’s spool, the attendant, and the Prefect’s four-second command. Steve can reach two microphone grilles. The attendant tested the hall speakers on the cracked grille. When Steve’s sleeve brushed the whole grille, the chair’s lamp blinked. The chair only listens while its lamp is lit.",
           "lead": [
             "guard|Fifty-eight percent. Fifty-nine. You are doing very well.",
             "steve|Dad’s recorder caught three voices tonight. Nora’s spool, the attendant, and the Prefect.",
@@ -333,8 +338,20 @@
           "lines": [
             {"id": "c2_ship.escape.01", "delivery": "recorded_playback", "direction": "Dad’s recorder, held to the grille"},
             {
+              "new": "guard|Prefect? I did not ask for a release. The scan is not finished.",
+              "direction": "startled, turning away from the chair to the speaker column"
+            },
+            {
+              "new": "guard|Prefect, please repeat your instruction. The chair says you released it.",
+              "direction": "at the speaker column, back to the chair"
+            },
+            {
               "id": "c2_ship.escape.02",
               "text": "It worked. Sixty-one percent of me, and all of me is getting out of this chair."
+            },
+            {
+              "new": "steve|The attendant is busy arguing with the column. Quietly, now.",
+              "direction": "a whisper"
             }
           ],
           "finding": "steve|The Prefect’s own voice opened the chair, at the notch marked sixty-one. The scan stopped at sixty-one percent."
@@ -405,18 +422,39 @@
           "type": "choice",
           "kind": "playback",
           "difficulty": 1,
-          "title": "The flooded intake",
+          "title": "The intake hatch",
+          "art": "res://assets/illustrated/campaign/stills/c2_ship-flooded-tunnel.webp",
           "requires": [
             "nora"
           ],
-          "goal": "Call Admiral through the old aquarium speakers.",
-          "background": "Steve opened the seawater valve to cover his escape. Now the intake tunnel is flooding, and the water is at his chest. The tunnel runs back to the aquarium, past the underwater speakers Steve repaired the day he met Nora. Admiral swims those waters every night. Steve has Nora’s intercom spool, the loose copy of her whistle from the drawer, and the Prefect’s command on Dad’s cassette.",
+          "goal": "Slip down the intake hatch and call Admiral through the old aquarium speakers.",
+          "background": "Steve creeps to the brass intake hatch while the attendant waits at the speaker column. Then the Prefect answers: he gave no release. The attendant turns and sees the empty chair. Steve hauls the valve wheel and drops into the intake tunnel, and the sea floods in behind him. The attendant wades in after him. The water is at Steve’s chest. The tunnel runs back to the aquarium, past the underwater speakers Steve repaired the day he met Nora. Admiral swims those waters every night. Steve has Nora’s intercom spool, the loose copy of her whistle from the drawer, and the Prefect’s command on Dad’s cassette.",
           "lead": [
+            {
+              "new": "saren|I gave no release. Look at the chair.",
+              "delivery": "intercom"
+            },
+            {
+              "new": "guard|The chair is empty! Prefect, the human is gone!",
+              "direction": "whirling round from the speaker column"
+            },
+            {
+              "new": "steve|The brass hatch in the floor. That’s the intake valve. Flood the tunnel, and they’ll have to swim after me.",
+              "direction": "a whisper, hauling the valve wheel"
+            },
+            {
+              "new": "guard|Water in the intake! The human is in the tunnel!",
+              "direction": "shouting over the rushing water"
+            },
             {
               "id": "c2_ship.out.01",
               "text": "The tunnel’s flooding. The underwater speakers still work... I fixed them, the day I met her."
             },
             "steve|Admiral swims the whole bay at night. If he hears the right whistle, he’ll come.",
+            {
+              "new": "guard|Please stop! You are not finished!",
+              "direction": "wading into the tunnel after him"
+            },
             "steve|Nora’s spool, the loose copy, or the Prefect. One chance."
           ],
           "prompt": "Which recording will bring Admiral?",
@@ -449,6 +487,10 @@
             {
               "new": "steve|Come on, Admiral. You never missed this one.",
               "sfx": "effect.nora_whistle through the underwater speakers"
+            },
+            {
+              "new": "guard|Something is in the water! Something big!",
+              "direction": "recoiling in the flooded tunnel"
             }
           ],
           "finding": "steve|Nora’s real whistle, through the speakers I fixed the day we met. Admiral came down through the dark and dragged me to the surface."
@@ -458,7 +500,7 @@
       "recap": [
         "steve|There is a ship under the bay. Nora is asleep on it, alive, with hundreds of others. At the far end of the hall, one bed lay under frost, and something too tall to be human slept in it. The guards never looked at it.",
         "steve|They tried to make another me. They got sixty-one percent.",
-        "steve|And the woman with Nora’s face, who let me go on the balcony, had walked me to that chair herself."
+        "steve|And the woman with Nora’s face, who locked me out on the balcony and then let me go, had walked me to that chair herself."
       ],
       "outro": [
         {
@@ -472,6 +514,7 @@
         "iris": [
           {
             "topic": "This place",
+            "until": "command",
             "lines": [
               "steve|Where are we, Nor? What is this place?",
               "iris|Somewhere safe, under the bay. Please don’t be frightened.",
@@ -481,6 +524,7 @@
           },
           {
             "topic": "The day we met",
+            "until": "command",
             "lines": [
               "steve|Do you remember the day we met?",
               "iris|At the aquarium. You fixed the underwater speakers. You had a coffee stain on your green shirt.",
@@ -490,6 +534,7 @@
           },
           {
             "topic": "Her family",
+            "until": "command",
             "lines": [
               "steve|Carmen keeps my plate warm every Sunday. Does she know her daughter is down here?",
               "iris|Carmen is happy. Everyone at that table is happy.",
@@ -501,6 +546,7 @@
         "lyle_copy": [
           {
             "topic": "The boys",
+            "until": "command",
             "lines": [
               "steve|Lyle, do your boys know where you are tonight?",
               "lyle_copy|They’re asleep. I’ll be at their game on Sunday. I always am now.",
@@ -510,6 +556,7 @@
           },
           {
             "topic": "His badge",
+            "until": "command",
             "lines": [
               "steve|You’re a deputy, Lyle. You swore an oath to this town.",
               "lyle_copy|I did. I remember every word of it.",

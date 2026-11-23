@@ -282,6 +282,10 @@
     "appearances": {
       "iris": "nora_rain"
     },
+    "leave_after": {
+      "iris": "c2_ship.command",
+      "lyle_copy": "c2_ship.command"
+    },
     "off_camera_lines": [
       "c2_ship.escape.01"
     ],
@@ -291,6 +295,55 @@
         "file": "res://assets/illustrated/campaign/stills/c2_ship-nora-asleep.webp",
         "lines": [
           "c2_ship.nora"
+        ]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/stills/c2_ship-escorts-leave.webp",
+        "lines": [
+          "c2_ship.command.02"
+        ]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/stills/c2_ship-chair-release.webp",
+        "lines": [
+          "c2_ship.escape.01",
+          "c2_ship.escape.03"
+        ]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/stills/c2_ship-attendant-intercom.webp",
+        "lines": [
+          "c2_ship.escape.04"
+        ]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/stills/c2_ship-attendant-turns.webp",
+        "lines": [
+          "c2_ship.intake.lead.01",
+          "c2_ship.intake.lead.02"
+        ]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/stills/c2_ship-valve-alarm.webp",
+        "lines": [
+          "c2_ship.intake.lead.03",
+          "c2_ship.intake.lead.04"
+        ]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/stills/c2_ship-flooded-tunnel.webp",
+        "lines": [
+          "c2_ship.out.01",
+          "c2_ship.intake.lead.05",
+          "c2_ship.intake.lead.06",
+          "c2_ship.intake.lead.07",
+          "c2_ship.intake.01"
+        ]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/stills/c2_ship-admiral-burst.webp",
+        "lines": [
+          "c2_ship.intake.02"
         ]
       },
       {
@@ -323,6 +376,23 @@
       },
       {
         "file": "res://assets/illustrated/campaign/layers/c2_ship-nora-asleep.webp"
+      },
+      {
+        "file": "res://assets/illustrated/campaign/layers/c2_ship-attendant-chair.webp",
+        "until": "c2_ship.escape"
+      },
+      {
+        "file": "res://assets/illustrated/campaign/layers/c2_ship-attendant-column.webp",
+        "after": "c2_ship.escape",
+        "until": "c2_ship.intake.lead.03"
+      },
+      {
+        "file": "res://assets/illustrated/campaign/layers/c2_ship-hatch-flooding.webp",
+        "after": "c2_ship.intake.lead.03",
+        "painted": [
+          "steve"
+        ],
+        "walking": false
       }
     ]
   },
@@ -784,6 +854,30 @@
       "calder",
       "steve"
     ],
+    "stills": [
+      {
+        "file": "res://assets/illustrated/campaign/stills/c6_jail-back-door.webp",
+        "lines": [
+          "c6_jail.crossword.06"
+        ]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/stills/c6_jail-bakery.webp",
+        "lines": [
+          "c6_jail.out.02",
+          "c6_jail.out.04",
+          "c6_jail.out.01",
+          "c6_jail.out.05",
+          "c6_jail.out.03"
+        ]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/stills/c6_jail-posters.webp",
+        "lines": [
+          "c6_jail.out.06"
+        ]
+      }
+    ],
     "creatures": [
       {
         "id": "biscuit",
@@ -851,6 +945,20 @@
           "i2_nora.out.01",
           "i2_nora.out.02"
         ]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/stills/i2_nora-guard-passes.webp",
+        "lines": [
+          "i2_nora.patrol.lead.01",
+          "i2_nora.patrol.lead.02"
+        ]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/stills/i2_nora-crossing.webp",
+        "lines": [
+          "i2_nora.patrol.01",
+          "i2_nora.patrol.find"
+        ]
       }
     ],
     "layers": [
@@ -861,6 +969,10 @@
           "dale",
           "lyle"
         ]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/layers/i2_nora-guard.webp",
+        "until": "i2_nora.patrol"
       }
     ]
   },
@@ -908,6 +1020,17 @@
           "c7_gate.in.07",
           "c7_gate.recap.03"
         ]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/stills/c7_gate-under-desk.webp",
+        "lines": [
+          "c7_gate.badge.02",
+          "c7_gate.badge.03",
+          "c7_gate.badge.04",
+          "c7_gate.badge.05",
+          "c7_gate.badge.01",
+          "c7_gate.badge.find"
+        ]
       }
     ],
     "bridge": "res://assets/illustrated/campaign/inserts/c7_swap.webp",
@@ -918,7 +1041,8 @@
       ]
     },
     "reveal_after": {
-      "ward": "c7_gate.post"
+      "ward": "c7_gate.post",
+      "steve": "c7_gate.badge"
     }
   },
   "c7_swap": {
@@ -1175,6 +1299,29 @@
       "calder",
       "nora"
     ],
+    "stills": [
+      {
+        "file": "res://assets/illustrated/campaign/stills/c9_choir-rig-broken.webp",
+        "lines": [
+          "c9_choir.in.04"
+        ]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/stills/c9_choir-scan.webp",
+        "lines": [
+          "c9_choir.in.01",
+          "c9_choir.in.05"
+        ]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/stills/c9_choir-stop.webp",
+        "lines": [
+          "c9_choir.in.02",
+          "c9_choir.in.06",
+          "c9_choir.in.07"
+        ]
+      }
+    ],
     "creatures": [
       {
         "id": "wick",
@@ -1196,7 +1343,6 @@
     ],
     "chapter_insert": true,
     "inserts": {
-      "c9_choir.in.02": "c9_choir.truth",
       "c9_choir.in.03": "c9_choir.truth",
       "c9_choir.truth.01": "c9_choir.truth",
       "c9_choir.wick.lead.02": "c9_choir.wick",

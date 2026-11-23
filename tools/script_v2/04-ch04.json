@@ -25,7 +25,7 @@
         "rook_copy|One more thing, Steve. Your mother kept a notebook. Any idea where?",
         "steve|Mom kept a lot of notebooks.",
         "rook_copy|Of course. Take your time.",
-        {"new": "steve|He had already taken every tape I’d brought. Not Mom’s voicemail. That cassette lives in my cardigan pocket, and I didn’t offer it.", "delivery": "narration"}
+        {"new": "steve|He took every tape I’d brought, even Mom’s voicemail. An hour later he handed that one back. Not evidence, he said.", "delivery": "narration"}
       ],
       "delete": ["c4_safe.out.01"],
       "task_order": ["record", "match", "screens"],
@@ -84,7 +84,7 @@
           ],
           "lines": [
             {"id": "c4_safe.match.01", "text": "Different rooms. Same breath, same pause, same little click on the S. That isn’t a man repeating himself. That’s a recording wearing a man."},
-            "calder|Play it again."
+            "calder|Not here, Mercer. Not with Adrian’s agents in the hall."
           ],
           "finding": "steve|June’s voicemail and Rook’s voice through the door are one recording, breath for breath, like Nora’s good morning. The man running this house isn’t Adrian Rook."
         },
@@ -309,7 +309,7 @@
       ],
       "outro": [
         {"id": "c4_escape.out.01", "text": "All units. Steve Mercer, wanted for the abduction of Nora Reyes. And scan Calder tonight. The signing is in six days.", "delivery": "radio"},
-        {"id": "c4_escape.out.02", "text": "Kidnapping Nora. They took her, and I’m the one on the poster. I have to keep moving."},
+        {"id": "c4_escape.out.02", "text": "Kidnapping Nora. And they’ll scan June tonight, because she stayed behind for me. I can’t get back up that hill alone. I have to keep moving."},
         {"new": "rook_copy|Roadblocks on the coast road and both bridges. Dogs at first light. He’ll head for town.", "delivery": "radio"},
         {"new": "steve|So I didn’t. I turned the radio off, went down the creek bed instead of the road, and walked all night toward the one place nobody had opened in eighteen months.", "delivery": "narration"}
       ],

@@ -102,6 +102,8 @@ func run() -> void:
 		isolated.configure_navigation(layout)
 		for solid: Dictionary in layout.get("blockers",[]):
 			n_solids+=1
+			if solid.has("after"):
+				check(campaign.task_index.has(solid.after),"Registered story event exists for "+str(solid.id))
 			if not solid.has("opens_after"):
 				continue
 			n_doors+=1
@@ -110,6 +112,8 @@ func run() -> void:
 		isolated.free()
 	floor_stage.free()
 	verify_props(rooms)
+	verify_ship_attendant(rooms.c2_ship)
+	verify_gallery_aisle(rooms.i2_nora)
 	verify_campaign(campaign,rooms)
 	var result := {"rooms":coverage,"movement_trace":movement_trace,"registered_blockers":n_solids,
 		"story_gates":n_doors,"checks":checks,"failures":failures}
@@ -158,6 +162,46 @@ func verify_props(rooms: Dictionary) -> void:
 			var at: Vector2=isolated.point(marks[mark])
 			check(isolated.navigation.closest(at).distance_to(at)<14.0,id+" authors "+mark+" on open floor, not inside a prop")
 		isolated.free()
+
+## Once Steve is out of the chair the attendant argues at the speaker column, so Steve
+## creeps along the front of the room instead of walking through or behind them.
+func verify_ship_attendant(layout: Dictionary) -> void:
+	var isolated := FLOOR.new()
+	isolated.configure_navigation(layout)
+	var spot: Vector2 = isolated.point([.51,.79])
+	isolated.update_solids(["c2_ship.command"])
+	isolated.sync_navigation()
+	check(isolated.on_floor(spot),"c2_ship leaves the floor by the column open while the attendant is at the chair")
+	isolated.update_solids(["c2_ship.command","c2_ship.escape"])
+	isolated.sync_navigation()
+	check(not isolated.on_floor(spot),"c2_ship keeps Steve out of the attendant arguing at the column")
+	check(not isolated.on_floor(isolated.point([.51,.775])),"c2_ship leaves no gap between the attendant and the column")
+	var chair: Vector2 = isolated.point(layout.approach.escape)
+	for mark: String in ["nora","intake"]:
+		check(not isolated.navigation.path(chair,isolated.point(layout.approach[mark])).is_empty(),
+			"c2_ship lets Steve creep from the chair to the "+mark+" past the attendant")
+	var hatch: Array = layout.approach.intake
+	check(hatch[0] < .40 and hatch[1] > .88,"c2_ship puts the intake hatch in the floor in front of Nora's capsule")
+	isolated.free()
+
+## Until Nora has timed the guard, the open aisle past the pods is in his sight, so
+## she stays on the pod side; once he is through the far door the pump side opens.
+func verify_gallery_aisle(layout: Dictionary) -> void:
+	var isolated := FLOOR.new()
+	isolated.configure_navigation(layout)
+	var pods: Vector2 = isolated.point(layout.spawn.nora)
+	isolated.update_solids([])
+	isolated.sync_navigation()
+	check(not isolated.navigation.path(pods,isolated.point(layout.approach.patrol)).is_empty(),"i2_nora lets Nora reach the corridor to time the guard")
+	for mark: String in ["pump","message"]:
+		check(isolated.navigation.path(pods,isolated.point(layout.approach[mark])).is_empty(),
+			"i2_nora keeps Nora on the pod side of the aisle before she has timed the guard ("+mark+")")
+	isolated.update_solids(["i2_nora.patrol"])
+	isolated.sync_navigation()
+	for mark: String in ["pump","message"]:
+		check(not isolated.navigation.path(pods,isolated.point(layout.approach[mark])).is_empty(),
+			"i2_nora opens the aisle once the guard is through the far door ("+mark+")")
+	isolated.free()
 
 func check_door(floor_stage: Node2D, layout: Dictionary, door: Dictionary, room: String) -> void:
 	var outline: PackedVector2Array=floor_stage.points(door.polygon)
@@ -213,6 +257,14 @@ func verify_campaign(campaign: NightCampaign, layouts: Dictionary) -> void:
 						check(stage.hotspot_in_view(i) and stage.frame.get_global_rect().has_point(stage.project_target(i)),
 							label+" can be selected aboard the moving vehicle")
 						check(not stage.walk_task(task.id) and not floor_stage.visible,label+" cannot walk back into the bay")
+						reached.append(task.id)
+						completed.append(task.id)
+						stage.sync_story(completed)
+						continue
+					# A walker the story keeps out of sight (Steve under the sound desk at the
+					# gate) cannot walk until the story brings them out.
+					if not floor_stage.bodies[id].body.visible:
+						check(not stage.walk_task(task.id),label+" cannot walk while "+id+" is out of sight")
 						reached.append(task.id)
 						completed.append(task.id)
 						stage.sync_story(completed)
@@ -281,6 +333,8 @@ func verify_campaign(campaign: NightCampaign, layouts: Dictionary) -> void:
 					stage.set_focus(-1)
 					if stage.in_transit():
 						check(stage.illustration_insert.is_visible_in_tree() and not floor_stage.visible,label+" boards the vehicle")
+					elif stage.active_layers().any(func(layer: Dictionary): return not layer.get("walking",true)):
+						check(not stage.walking_view() and not floor_stage.visible,label+" leaves the room with "+id+" held by the story")
 					else:
 						check(floor_stage.visible,label+" returns to exploration")
 				room_results[id]=reached

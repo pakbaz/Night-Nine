@@ -744,7 +744,7 @@ def filter_hotspots(landmarks, floors, content):
     floors = copy.deepcopy(floors)
     for scene_id in list(landmarks):
         landmarks[scene_id] = {k: v for k, v in landmarks[scene_id].items() if k in task_ids}
-    landmarks.setdefault('c2_ship', {})['c2_ship.intake'] = [0.55, 0.31, 0.18, 0.25]
+    landmarks.setdefault('c2_ship', {})['c2_ship.intake'] = [0.305, 0.915, 0.22, 0.11]
     for scene_id, floor in floors.items():
         keys = scene_tasks.get(scene_id, set())
         for field in ('approach', 'landmarks', 'contact'):
@@ -753,9 +753,9 @@ def filter_hotspots(landmarks, floors, content):
         if 'listen' in floor:
             floor['listen'] = [k for k in floor['listen'] if k in keys]
     ship = floors['c2_ship']
-    ship['approach']['intake'] = [0.62, 0.76]
+    ship['approach']['intake'] = [0.395, 0.925]
     ship.pop('landmarks', None)
-    ship.setdefault('contact', {})['intake'] = [0.62, 0.45]
+    ship.setdefault('contact', {})['intake'] = [0.31, 0.895]
     return landmarks, floors
 
 

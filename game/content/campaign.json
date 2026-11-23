@@ -2276,7 +2276,8 @@
             "c2_ship.command.lead.02",
             "c2_ship.command.lead.03",
             "c2_ship.command.lead.04",
-            "c2_ship.command.lead.05"
+            "c2_ship.command.lead.05",
+            "c2_ship.command.lead.06"
           ],
           "finding": "c2_ship.command.find"
         },
@@ -2292,7 +2293,10 @@
           "answer": 1,
           "lines": [
             "c2_ship.escape.01",
-            "c2_ship.escape.02"
+            "c2_ship.escape.03",
+            "c2_ship.escape.04",
+            "c2_ship.escape.02",
+            "c2_ship.escape.05"
           ],
           "note": "The Prefect’s own voice opened the chair, at the notch marked sixty-one. The scan stopped at sixty-one percent.",
           "requires": [
@@ -2354,7 +2358,7 @@
             "The Prefect’s command"
           ],
           "goal": "Open the chair with the Prefect’s own voice.",
-          "background": "The scan has started again. Dad’s recorder holds three voices from tonight: Nora’s spool, the attendant, and the Prefect’s four-second command. Steve can reach two microphone grilles. The attendant tested the hall speakers on the cracked grille. When Steve’s sleeve brushed the whole grille, the chair’s lamp blinked. The chair only listens while its lamp is lit.",
+          "background": "Nora’s copy and Lyle have gone back up the tunnel to town, and the scan has started again. The attendant stands by the chair with a slate. Dad’s recorder holds three voices from tonight: Nora’s spool, the attendant, and the Prefect’s four-second command. Steve can reach two microphone grilles. The attendant tested the hall speakers on the cracked grille. When Steve’s sleeve brushed the whole grille, the chair’s lamp blinked. The chair only listens while its lamp is lit.",
           "difficulty": 3,
           "type": "rows",
           "lead": [
@@ -2476,7 +2480,7 @@
         },
         {
           "id": "c2_ship.intake",
-          "title": "The flooded intake",
+          "title": "The intake hatch",
           "prompt": "Which recording will bring Admiral?",
           "options": [
             "Spool A: Nora’s intercom spool",
@@ -2485,7 +2489,8 @@
           ],
           "answer": 0,
           "lines": [
-            "c2_ship.intake.01"
+            "c2_ship.intake.01",
+            "c2_ship.intake.02"
           ],
           "note": "Nora’s real whistle, through the speakers I fixed the day we met. Admiral came down through the dark and dragged me to the surface.",
           "requires": [
@@ -2503,23 +2508,29 @@
             "Think back to the pier. Which whistle did Admiral turn away from?",
             "Admiral answers the whistle whose second note rises. Which spool is that?"
           ],
-          "goal": "Call Admiral through the old aquarium speakers.",
-          "background": "Steve opened the seawater valve to cover his escape. Now the intake tunnel is flooding, and the water is at his chest. The tunnel runs back to the aquarium, past the underwater speakers Steve repaired the day he met Nora. Admiral swims those waters every night. Steve has Nora’s intercom spool, the loose copy of her whistle from the drawer, and the Prefect’s command on Dad’s cassette.",
+          "goal": "Slip down the intake hatch and call Admiral through the old aquarium speakers.",
+          "background": "Steve creeps to the brass intake hatch while the attendant waits at the speaker column. Then the Prefect answers: he gave no release. The attendant turns and sees the empty chair. Steve hauls the valve wheel and drops into the intake tunnel, and the sea floods in behind him. The attendant wades in after him. The water is at Steve’s chest. The tunnel runs back to the aquarium, past the underwater speakers Steve repaired the day he met Nora. Admiral swims those waters every night. Steve has Nora’s intercom spool, the loose copy of her whistle from the drawer, and the Prefect’s command on Dad’s cassette.",
           "difficulty": 1,
           "audition_labels": [
             "Spool A: Nora’s intercom spool",
             "Spool B: the loose copy from the drawer",
             "Dad’s cassette: the Prefect’s command"
           ],
+          "art": "res://assets/illustrated/campaign/stills/c2_ship-flooded-tunnel.webp",
           "type": "choice",
           "wrong": {
             "1": "That’s the whistle Admiral turned away from on the pier.",
             "2": "His voice opens chairs. It won’t bring a sea lion."
           },
           "lead": [
-            "c2_ship.out.01",
             "c2_ship.intake.lead.01",
-            "c2_ship.intake.lead.02"
+            "c2_ship.intake.lead.02",
+            "c2_ship.intake.lead.03",
+            "c2_ship.intake.lead.04",
+            "c2_ship.out.01",
+            "c2_ship.intake.lead.05",
+            "c2_ship.intake.lead.06",
+            "c2_ship.intake.lead.07"
           ],
           "finding": "c2_ship.intake.find"
         }
@@ -2571,7 +2582,8 @@
             "c2_ship.talk.iris.1.02",
             "c2_ship.talk.iris.1.03",
             "c2_ship.talk.iris.1.04"
-          ]
+          ],
+          "until": "c2_ship.command"
         },
         {
           "id": "c2_ship.talk.iris.2",
@@ -2583,7 +2595,8 @@
             "c2_ship.talk.iris.2.02",
             "c2_ship.talk.iris.2.03",
             "c2_ship.talk.iris.2.04"
-          ]
+          ],
+          "until": "c2_ship.command"
         },
         {
           "id": "c2_ship.talk.iris.3",
@@ -2595,7 +2608,8 @@
             "c2_ship.talk.iris.3.02",
             "c2_ship.talk.iris.3.03",
             "c2_ship.talk.iris.3.04"
-          ]
+          ],
+          "until": "c2_ship.command"
         },
         {
           "id": "c2_ship.talk.lyle_copy.1",
@@ -2607,7 +2621,8 @@
             "c2_ship.talk.lyle_copy.1.02",
             "c2_ship.talk.lyle_copy.1.03",
             "c2_ship.talk.lyle_copy.1.04"
-          ]
+          ],
+          "until": "c2_ship.command"
         },
         {
           "id": "c2_ship.talk.lyle_copy.2",
@@ -2619,7 +2634,8 @@
             "c2_ship.talk.lyle_copy.2.02",
             "c2_ship.talk.lyle_copy.2.03",
             "c2_ship.talk.lyle_copy.2.04"
-          ]
+          ],
+          "until": "c2_ship.command"
         }
       ],
       "recap": [
@@ -6374,9 +6390,9 @@
       "place": "Sentinel Point gate",
       "style": "array",
       "actors": [
-        "steve",
         "stephen",
-        "pell"
+        "pell",
+        "steve"
       ],
       "objective": "Get two Steves and a mail carrier into the signing. Watch the President.",
       "tasks": [
@@ -6607,7 +6623,7 @@
         }
       },
       "when": "Wednesday, November 7, morning",
-      "coach": "Three of you today: Steve, Stephen and Pell. Each lead shows who should handle it. Press Q or use the name menu at the top right to switch.",
+      "coach": "Three of you today: Stephen, Pell and Steve. Steve’s face is on every wanted poster, so he stays out of sight until you are through the gate. Each lead shows who should handle it. Press Q or use the name menu at the top right to switch.",
       "present": [
         "steve",
         "stephen",
@@ -6625,7 +6641,7 @@
           "id": "c7_gate.talk.stephen.1",
           "speaker": "stephen",
           "topic": "The fog",
-          "after": "",
+          "after": "c7_gate.badge",
           "lines": [
             "c7_gate.talk.stephen.1.01",
             "c7_gate.talk.stephen.1.02",
@@ -6660,7 +6676,7 @@
           "id": "c7_gate.talk.pell.1",
           "speaker": "pell",
           "topic": "Biscuit",
-          "after": "",
+          "after": "c7_gate.badge",
           "lines": [
             "c7_gate.talk.pell.1.01",
             "c7_gate.talk.pell.1.02",
@@ -6672,7 +6688,7 @@
           "id": "c7_gate.talk.pell.2",
           "speaker": "pell",
           "topic": "The mail route",
-          "after": "",
+          "after": "c7_gate.badge",
           "lines": [
             "c7_gate.talk.pell.2.01",
             "c7_gate.talk.pell.2.02",
@@ -6705,7 +6721,7 @@
           "id": "c7_gate.talk.shaw.1",
           "speaker": "shaw",
           "topic": "The old truck",
-          "after": "",
+          "after": "c7_gate.truck.02",
           "lines": [
             "c7_gate.talk.shaw.1.01",
             "c7_gate.talk.shaw.1.02",
@@ -6716,7 +6732,7 @@
           "id": "c7_gate.talk.shaw.2",
           "speaker": "shaw",
           "topic": "Before this job",
-          "after": "",
+          "after": "c7_gate.truck.02",
           "lines": [
             "c7_gate.talk.shaw.2.01",
             "c7_gate.talk.shaw.2.02",
@@ -7708,7 +7724,8 @@
           ],
           "answer": 1,
           "lines": [
-            "c8_beach.second.02"
+            "c8_beach.second.02",
+            "c8_beach.second.03"
           ],
           "note": "Saren’s message is Mom’s voicemail, cut and stitched: the same breath before ‘kiddo’, and a gap where ‘The bay is singing’ used to be. He has no message from her. He has my tape.",
           "requires": [],
@@ -7728,7 +7745,7 @@
             "A new message would have a new breath. This one has the voicemail’s breath, and a hole where some words used to be."
           ],
           "goal": "Find out whether Mom really sent that message.",
-          "background": "Mom’s voicemail from the night of the boat is on the cassette in Steve’s cardigan pocket, the one Rook never took, and Dad’s recorder can play it. He has played it at three in the morning for eighteen months. He knows every breath in it.",
+          "background": "Mom’s voicemail from the night of the boat is on the cassette in Steve’s cardigan pocket, and Dad’s recorder can play it. Rook took that cassette at the safe house and handed it back an hour later. Steve has played it at three in the morning for eighteen months. He knows every breath in it.",
           "difficulty": 2,
           "type": "compare",
           "wrong": {
@@ -9209,6 +9226,8 @@
         "c9_choir.in.01",
         "c9_choir.in.05",
         "c9_choir.in.02",
+        "c9_choir.in.06",
+        "c9_choir.in.07",
         "c9_choir.in.03"
       ],
       "outro": [
@@ -10559,7 +10578,7 @@
             "epilogue.bait.03",
             "epilogue.bait.04"
           ],
-          "note": "Two Mrs. Penhallows, one counter, and people are finally buying bait. One Adrian Rook stays. The other one leaves with the ship, to find out who he is.",
+          "note": "Two Mrs. Penhallows, one counter, and people are finally buying bait. One Adrian Rook stays. The other one is leaving town, to find out who he is.",
           "requires": [],
           "actor": "",
           "kind": "choice",
@@ -13273,6 +13292,15 @@
       "display": "Steve Mercer",
       "display_speaker": "Steve Mercer"
     },
+    "c2_ship.command.lead.06": {
+      "id": "c2_ship.command.lead.06",
+      "speaker": "guard",
+      "text": "Thank you, escorts. It is nearly dawn, and the town will expect you at breakfast.",
+      "audio": "c2_ship.command.lead.06",
+      "direction": "to Nora’s copy and the deputy, sending them back up the tunnel",
+      "display_speaker": "Ship attendant",
+      "display": "Ship attendant"
+    },
     "c2_ship.command.02": {
       "id": "c2_ship.command.02",
       "speaker": "steve",
@@ -13341,11 +13369,38 @@
       "display_speaker": "The Prefect",
       "display": "The Prefect"
     },
+    "c2_ship.escape.03": {
+      "id": "c2_ship.escape.03",
+      "speaker": "guard",
+      "text": "Prefect? I did not ask for a release. The scan is not finished.",
+      "audio": "c2_ship.escape.03",
+      "direction": "startled, turning away from the chair to the speaker column",
+      "display_speaker": "Ship attendant",
+      "display": "Ship attendant"
+    },
+    "c2_ship.escape.04": {
+      "id": "c2_ship.escape.04",
+      "speaker": "guard",
+      "text": "Prefect, please repeat your instruction. The chair says you released it.",
+      "audio": "c2_ship.escape.04",
+      "direction": "at the speaker column, back to the chair",
+      "display_speaker": "Ship attendant",
+      "display": "Ship attendant"
+    },
     "c2_ship.escape.02": {
       "id": "c2_ship.escape.02",
       "speaker": "steve",
       "text": "It worked. Sixty-one percent of me, and all of me is getting out of this chair.",
       "audio": "c2_ship.escape.02",
+      "display": "Steve Mercer",
+      "display_speaker": "Steve Mercer"
+    },
+    "c2_ship.escape.05": {
+      "id": "c2_ship.escape.05",
+      "speaker": "steve",
+      "text": "The attendant is busy arguing with the column. Quietly, now.",
+      "audio": "c2_ship.escape.05",
+      "direction": "a whisper",
       "display": "Steve Mercer",
       "display_speaker": "Steve Mercer"
     },
@@ -13433,6 +13488,42 @@
       "display": "Steve Mercer",
       "display_speaker": "Steve Mercer"
     },
+    "c2_ship.intake.lead.01": {
+      "id": "c2_ship.intake.lead.01",
+      "speaker": "saren",
+      "text": "I gave no release. Look at the chair.",
+      "audio": "c2_ship.intake.lead.01",
+      "delivery": "intercom",
+      "display_speaker": "The Prefect",
+      "display": "The Prefect"
+    },
+    "c2_ship.intake.lead.02": {
+      "id": "c2_ship.intake.lead.02",
+      "speaker": "guard",
+      "text": "The chair is empty! Prefect, the human is gone!",
+      "audio": "c2_ship.intake.lead.02",
+      "direction": "whirling round from the speaker column",
+      "display_speaker": "Ship attendant",
+      "display": "Ship attendant"
+    },
+    "c2_ship.intake.lead.03": {
+      "id": "c2_ship.intake.lead.03",
+      "speaker": "steve",
+      "text": "The brass hatch in the floor. That’s the intake valve. Flood the tunnel, and they’ll have to swim after me.",
+      "audio": "c2_ship.intake.lead.03",
+      "direction": "a whisper, hauling the valve wheel",
+      "display": "Steve Mercer",
+      "display_speaker": "Steve Mercer"
+    },
+    "c2_ship.intake.lead.04": {
+      "id": "c2_ship.intake.lead.04",
+      "speaker": "guard",
+      "text": "Water in the intake! The human is in the tunnel!",
+      "audio": "c2_ship.intake.lead.04",
+      "direction": "shouting over the rushing water",
+      "display_speaker": "Ship attendant",
+      "display": "Ship attendant"
+    },
     "c2_ship.out.01": {
       "id": "c2_ship.out.01",
       "speaker": "steve",
@@ -13441,19 +13532,28 @@
       "display": "Steve Mercer",
       "display_speaker": "Steve Mercer"
     },
-    "c2_ship.intake.lead.01": {
-      "id": "c2_ship.intake.lead.01",
+    "c2_ship.intake.lead.05": {
+      "id": "c2_ship.intake.lead.05",
       "speaker": "steve",
       "text": "Admiral swims the whole bay at night. If he hears the right whistle, he’ll come.",
-      "audio": "c2_ship.intake.lead.01",
+      "audio": "c2_ship.intake.lead.05",
       "display": "Steve Mercer",
       "display_speaker": "Steve Mercer"
     },
-    "c2_ship.intake.lead.02": {
-      "id": "c2_ship.intake.lead.02",
+    "c2_ship.intake.lead.06": {
+      "id": "c2_ship.intake.lead.06",
+      "speaker": "guard",
+      "text": "Please stop! You are not finished!",
+      "audio": "c2_ship.intake.lead.06",
+      "direction": "wading into the tunnel after him",
+      "display_speaker": "Ship attendant",
+      "display": "Ship attendant"
+    },
+    "c2_ship.intake.lead.07": {
+      "id": "c2_ship.intake.lead.07",
       "speaker": "steve",
       "text": "Nora’s spool, the loose copy, or the Prefect. One chance.",
-      "audio": "c2_ship.intake.lead.02",
+      "audio": "c2_ship.intake.lead.07",
       "display": "Steve Mercer",
       "display_speaker": "Steve Mercer"
     },
@@ -13465,6 +13565,15 @@
       "sfx": "effect.nora_whistle through the underwater speakers",
       "display": "Steve Mercer",
       "display_speaker": "Steve Mercer"
+    },
+    "c2_ship.intake.02": {
+      "id": "c2_ship.intake.02",
+      "speaker": "guard",
+      "text": "Something is in the water! Something big!",
+      "audio": "c2_ship.intake.02",
+      "direction": "recoiling in the flooded tunnel",
+      "display_speaker": "Ship attendant",
+      "display": "Ship attendant"
     },
     "c2_ship.intake.find": {
       "id": "c2_ship.intake.find",
@@ -13656,7 +13765,7 @@
     "c2_ship.recap.03": {
       "id": "c2_ship.recap.03",
       "speaker": "steve",
-      "text": "And the woman with Nora’s face, who let me go on the balcony, had walked me to that chair herself.",
+      "text": "And the woman with Nora’s face, who locked me out on the balcony and then let me go, had walked me to that chair herself.",
       "audio": "c2_ship.recap.03",
       "delivery": "narration",
       "display": "Steve Mercer",
@@ -14930,7 +15039,7 @@
     "c3_archive.out.11": {
       "id": "c3_archive.out.11",
       "speaker": "calder",
-      "text": "I’m calling Adrian Rook. FBI. He owes me a favor from a kidnapping case fifteen years ago.",
+      "text": "I’m calling Adrian Rook. FBI. He owes me a favor from a kidnapping case twenty years ago.",
       "audio": "c3_archive.out.11",
       "display": "Sheriff June Calder",
       "display_speaker": "Sheriff June Calder"
@@ -15554,7 +15663,7 @@
     "c4_safe.in.07": {
       "id": "c4_safe.in.07",
       "speaker": "steve",
-      "text": "He had already taken every tape I’d brought. Not Mom’s voicemail. That cassette lives in my cardigan pocket, and I didn’t offer it.",
+      "text": "He took every tape I’d brought, even Mom’s voicemail. An hour later he handed that one back. Not evidence, he said.",
       "audio": "c4_safe.in.07",
       "delivery": "narration",
       "display": "Steve Mercer",
@@ -15661,7 +15770,7 @@
     "c4_safe.match.02": {
       "id": "c4_safe.match.02",
       "speaker": "calder",
-      "text": "Play it again.",
+      "text": "Not here, Mercer. Not with Adrian’s agents in the hall.",
       "audio": "c4_safe.match.02",
       "display": "Sheriff June Calder",
       "display_speaker": "Sheriff June Calder"
@@ -16182,7 +16291,7 @@
     "c4_escape.out.02": {
       "id": "c4_escape.out.02",
       "speaker": "steve",
-      "text": "Kidnapping Nora. They took her, and I’m the one on the poster. I have to keep moving.",
+      "text": "Kidnapping Nora. And they’ll scan June tonight, because she stayed behind for me. I can’t get back up that hill alone. I have to keep moving.",
       "audio": "c4_escape.out.02",
       "display": "Steve Mercer",
       "display_speaker": "Steve Mercer"
@@ -18731,7 +18840,7 @@
     "c7_gate.truck.lead.01": {
       "id": "c7_gate.truck.lead.01",
       "speaker": "steve",
-      "text": "I climbed out from under the sound desk, tripped over a cable and fell straight into the shot of a live television camera.",
+      "text": "Inside the fence, I climbed out from under the sound desk, tripped over a cable and landed at the feet of the woman running the sound check.",
       "audio": "c7_gate.truck.lead.01",
       "delivery": "narration",
       "display": "Steve Mercer",
@@ -18869,7 +18978,7 @@
     "c7_gate.talk.stephen.3.02": {
       "id": "c7_gate.talk.stephen.3.02",
       "speaker": "stephen",
-      "text": "I told him the truth. You’re very close. You’re under the sound desk.",
+      "text": "I only told him the truth. You were very close. You were right under the sound desk.",
       "audio": "c7_gate.talk.stephen.3.02",
       "display": "Stephen",
       "display_speaker": "Stephen"
@@ -19258,11 +19367,11 @@
     },
     "c7_swap.bus.lead.04": {
       "id": "c7_swap.bus.lead.04",
-      "speaker": "shaw",
-      "text": "The press van feeds the national broadcast. Keep your tone off it, or every copy watching at home hears it too.",
+      "speaker": "stephen",
+      "text": "The press van feeds the national broadcast. Keep the tone off it, or every copy watching at home hears it too.",
       "audio": "c7_swap.bus.lead.04",
-      "display": "Dr. Evelyn Shaw",
-      "display_speaker": "Dr. Evelyn Shaw"
+      "display": "Stephen",
+      "display_speaker": "Stephen"
     },
     "c7_swap.bus.lead.05": {
       "id": "c7_swap.bus.lead.05",
@@ -19510,7 +19619,7 @@
     "c7_swap.recap.02": {
       "id": "c7_swap.recap.02",
       "speaker": "steve",
-      "text": "Iris told me later that the tone pulled at her too. She held on to June’s sleeve and counted Sunday dinners until it passed.",
+      "text": "Iris told me later that the tone pulled at her too. She held on to June’s sleeve and counted Sunday dinners until it passed. Beside me, Stephen gripped the desk with both hands and did not turn.",
       "audio": "c7_swap.recap.02",
       "delivery": "narration",
       "display": "Steve Mercer",
@@ -20361,6 +20470,15 @@
       "display": "Steve Mercer",
       "display_speaker": "Steve Mercer"
     },
+    "c8_beach.second.03": {
+      "id": "c8_beach.second.03",
+      "speaker": "steve",
+      "text": "Rook kept this tape for an hour at the safe house. Long enough to copy it.",
+      "audio": "c8_beach.second.03",
+      "direction": "quietly, putting it together",
+      "display": "Steve Mercer",
+      "display_speaker": "Steve Mercer"
+    },
     "c8_beach.second.find": {
       "id": "c8_beach.second.find",
       "speaker": "steve",
@@ -20587,7 +20705,7 @@
     "c8_rig.path.lead.04": {
       "id": "c8_rig.path.lead.04",
       "speaker": "stephen",
-      "text": "My crew pass still opens the antenna passage. I checked. Twice.",
+      "text": "My crew pass still opens the antenna passage. I checked. Twice. Cancelling it would put Saren’s mistake on the record.",
       "audio": "c8_rig.path.lead.04",
       "display": "Stephen",
       "display_speaker": "Stephen"
@@ -21968,6 +22086,24 @@
       "display": "The Choir",
       "display_speaker": "The Choir"
     },
+    "c9_choir.in.06": {
+      "id": "c9_choir.in.06",
+      "speaker": "steve",
+      "text": "The straps opened. The crew let go of Stephen. Even Saren stepped back from the console.",
+      "audio": "c9_choir.in.06",
+      "delivery": "narration",
+      "display": "Steve Mercer",
+      "display_speaker": "Steve Mercer"
+    },
+    "c9_choir.in.07": {
+      "id": "c9_choir.in.07",
+      "speaker": "calder",
+      "text": "We followed you down from row nine. Nobody stopped us. The whole crew had stopped to listen.",
+      "audio": "c9_choir.in.07",
+      "direction": "arriving with Helen, Frank and Nora, out of breath",
+      "display": "Sheriff June Calder",
+      "display_speaker": "Sheriff June Calder"
+    },
     "c9_choir.in.03": {
       "id": "c9_choir.in.03",
       "speaker": "choir",
@@ -22447,7 +22583,7 @@
     "c10_station.relay.lead.01": {
       "id": "c10_station.relay.lead.01",
       "speaker": "frank",
-      "text": "Yesterday I sent signal three. Today I’m sending signal four. Let’s see who keeps up.",
+      "text": "The club sent signal three yesterday, without me. Today I’m sending signal four. Let’s see who keeps up.",
       "audio": "c10_station.relay.lead.01",
       "display": "Frank Mercer",
       "display_speaker": "Frank Mercer"
@@ -23800,7 +23936,7 @@
     "epilogue.bait.find": {
       "id": "epilogue.bait.find",
       "speaker": "steve",
-      "text": "Two Mrs. Penhallows, one counter, and people are finally buying bait. One Adrian Rook stays. The other one leaves with the ship, to find out who he is.",
+      "text": "Two Mrs. Penhallows, one counter, and people are finally buying bait. One Adrian Rook stays. The other one is leaving town, to find out who he is.",
       "audio": "epilogue.bait.find",
       "delivery": "narration",
       "display": "Steve Mercer",
@@ -24194,7 +24330,7 @@
     "epilogue.talk.rook_copy.1.01": {
       "id": "epilogue.talk.rook_copy.1.01",
       "speaker": "rook_copy",
-      "text": "I’m going with the ship. I want to find out who I am when nobody is watching.",
+      "text": "I’m leaving town today. I want to find out who I am when nobody is watching.",
       "audio": "epilogue.talk.rook_copy.1.01",
       "display": "Rook’s copy",
       "display_speaker": "Rook’s copy"
