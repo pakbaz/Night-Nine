@@ -27,8 +27,10 @@ def words(text):
     normalized=EnglishTextNormalizer({})(text)
     # Spoken equivalents. The raw recognition remains available for review.
     # Steve's copy Stephen and the formal name Steven use the same pronunciation.
+    # British and American spellings of one spoken word are the same word.
     for pattern,replacement in [(r'\bstephen\b','steven'),(r'\banytime\b','any time'),
-                                (r'\beveryone\b','every one'),(r'\bre syncs\b','resyncs')]:
+                                (r'\beveryone\b','every one'),(r'\bre syncs\b','resyncs'),
+                                (r'\bcancell(ing|ed)\b',r'cancel\1')]:
         normalized=re.sub(pattern,replacement,normalized)
     return normalized.split()
 

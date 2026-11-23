@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c7_swap.recap.02",
+  "attempt": 1,
+  "plan_sha256": "a17c728fbe9739843d890b930358f1745365ed67afad7090b2b890c829cd2643",
+  "wav_sha256": "5dc130ae8f527acfc1586da7f6195c576780cd02a6ab2a2826e4afb21b371720",
+  "expected": "Iris told me later that the tone pulled at her too. She held on to June’s sleeve and counted Sunday dinners until it passed. Beside me, Stephen gripped the desk with both hands and did not turn.",
+  "recognized": "Iris told me later that the tone pulled at her too. She held on to June's sleeve and counted Sunday dinners until it passed. Beside me, Stephen gripped the desk with both hands and did not turn.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 13.52,
+  "sample_rate": 48000,
+  "peak": 0.331268310546875,
+  "rms": 0.037217981348465975,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

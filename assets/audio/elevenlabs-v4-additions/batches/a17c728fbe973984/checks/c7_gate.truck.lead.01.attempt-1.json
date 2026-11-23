@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c7_gate.truck.lead.01",
+  "attempt": 1,
+  "plan_sha256": "a17c728fbe9739843d890b930358f1745365ed67afad7090b2b890c829cd2643",
+  "wav_sha256": "fbe9ab60f8d1b09ea133f2e26e4ef1991750047f566e3781ec9343d72bc136ca",
+  "expected": "Inside the fence, I climbed out from under the sound desk, tripped over a cable and landed at the feet of the woman running the sound check.",
+  "recognized": "Inside the fence, I climbed out from under the sound desk, tripped over a cable, and landed at the feet of the woman running the sound check.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 8.64,
+  "sample_rate": 48000,
+  "peak": 0.517547607421875,
+  "rms": 0.037721548867863205,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

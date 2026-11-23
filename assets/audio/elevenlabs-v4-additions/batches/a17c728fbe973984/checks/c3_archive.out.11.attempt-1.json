@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c3_archive.out.11",
+  "attempt": 1,
+  "plan_sha256": "a17c728fbe9739843d890b930358f1745365ed67afad7090b2b890c829cd2643",
+  "wav_sha256": "bb4cf13b5fde455363fbf6a47620347c40d23aebc11d3060093e64d748b55e29",
+  "expected": "I’m calling Adrian Rook. FBI. He owes me a favor from a kidnapping case twenty years ago.",
+  "recognized": "I'm calling Adrian Rook, FBI. He owes me a favor from a kidnapping case 20 years ago.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 6.8,
+  "sample_rate": 48000,
+  "peak": 0.558563232421875,
+  "rms": 0.057337854702063276,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

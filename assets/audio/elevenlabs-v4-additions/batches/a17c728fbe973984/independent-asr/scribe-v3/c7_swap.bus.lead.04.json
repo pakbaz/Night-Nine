@@ -1,0 +1,319 @@
+{
+  "audio_id": "c7_swap.bus.lead.04",
+  "audio_sha256": "b8e51348e214a0272bb35e5930131cd1a8361120db919eb508146921bd5abc4a",
+  "file": "assets/audio/elevenlabs-v4-additions/masters/c7_swap.bus.lead.04.attempt-2.wav",
+  "production_plan_sha256": "a17c728fbe9739843d890b930358f1745365ed67afad7090b2b890c829cd2643",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "The press van feeds the national broadcast. Keep the tone off it, or every copy watching at home hears it too.",
+  "recognized": "The press van feeds the national broadcast. Keep the tone off it, or every copy watching at home hears it too.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "d5be6d6e5e3a0f1a5a6def00ddfe9d01",
+  "character_cost": "2",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "The press van feeds the national broadcast. Keep the tone off it, or every copy watching at home hears it too.",
+    "words": [
+      {
+        "text": "The",
+        "start": 0.04,
+        "end": 0.14,
+        "type": "word",
+        "logprob": -3.4570634852570947e-06
+      },
+      {
+        "text": " ",
+        "start": 0.14,
+        "end": 0.18,
+        "type": "spacing",
+        "logprob": -0.0011803095694631338
+      },
+      {
+        "text": "press",
+        "start": 0.18,
+        "end": 0.46,
+        "type": "word",
+        "logprob": -0.0011803095694631338
+      },
+      {
+        "text": " ",
+        "start": 0.46,
+        "end": 0.5,
+        "type": "spacing",
+        "logprob": -0.0035867663100361824
+      },
+      {
+        "text": "van",
+        "start": 0.5,
+        "end": 0.7,
+        "type": "word",
+        "logprob": -0.0035867663100361824
+      },
+      {
+        "text": " ",
+        "start": 0.7,
+        "end": 0.9,
+        "type": "spacing",
+        "logprob": -0.0001699779968475923
+      },
+      {
+        "text": "feeds",
+        "start": 0.9,
+        "end": 1.22,
+        "type": "word",
+        "logprob": -0.0001699779968475923
+      },
+      {
+        "text": " ",
+        "start": 1.22,
+        "end": 1.26,
+        "type": "spacing",
+        "logprob": -2.3841855067985307e-07
+      },
+      {
+        "text": "the",
+        "start": 1.26,
+        "end": 1.34,
+        "type": "word",
+        "logprob": -2.3841855067985307e-07
+      },
+      {
+        "text": " ",
+        "start": 1.34,
+        "end": 1.38,
+        "type": "spacing",
+        "logprob": -0.0006825978052802384
+      },
+      {
+        "text": "national",
+        "start": 1.38,
+        "end": 1.76,
+        "type": "word",
+        "logprob": -0.0006825978052802384
+      },
+      {
+        "text": " ",
+        "start": 1.76,
+        "end": 1.86,
+        "type": "spacing",
+        "logprob": -8.77341881277971e-05
+      },
+      {
+        "text": "broadcast.",
+        "start": 1.86,
+        "end": 2.6,
+        "type": "word",
+        "logprob": -8.073697190411622e-05
+      },
+      {
+        "text": " ",
+        "start": 2.6,
+        "end": 2.94,
+        "type": "spacing",
+        "logprob": -3.4689302992774174e-05
+      },
+      {
+        "text": "Keep",
+        "start": 2.94,
+        "end": 3.1,
+        "type": "word",
+        "logprob": -3.4689302992774174e-05
+      },
+      {
+        "text": " ",
+        "start": 3.1,
+        "end": 3.14,
+        "type": "spacing",
+        "logprob": 0.0
+      },
+      {
+        "text": "the",
+        "start": 3.14,
+        "end": 3.24,
+        "type": "word",
+        "logprob": 0.0
+      },
+      {
+        "text": " ",
+        "start": 3.24,
+        "end": 3.3,
+        "type": "spacing",
+        "logprob": -5.578839045483619e-05
+      },
+      {
+        "text": "tone",
+        "start": 3.3,
+        "end": 3.54,
+        "type": "word",
+        "logprob": -5.578839045483619e-05
+      },
+      {
+        "text": " ",
+        "start": 3.54,
+        "end": 3.62,
+        "type": "spacing",
+        "logprob": -6.341733387671411e-05
+      },
+      {
+        "text": "off",
+        "start": 3.62,
+        "end": 3.78,
+        "type": "word",
+        "logprob": -6.341733387671411e-05
+      },
+      {
+        "text": " ",
+        "start": 3.78,
+        "end": 3.84,
+        "type": "spacing",
+        "logprob": -2.50339189733495e-06
+      },
+      {
+        "text": "it,",
+        "start": 3.84,
+        "end": 3.94,
+        "type": "word",
+        "logprob": -0.02630280454741296
+      },
+      {
+        "text": " ",
+        "start": 3.94,
+        "end": 4.16,
+        "type": "spacing",
+        "logprob": -2.145764938177308e-06
+      },
+      {
+        "text": "or",
+        "start": 4.16,
+        "end": 4.34,
+        "type": "word",
+        "logprob": -2.145764938177308e-06
+      },
+      {
+        "text": " ",
+        "start": 4.34,
+        "end": 4.42,
+        "type": "spacing",
+        "logprob": -3.814689989667386e-06
+      },
+      {
+        "text": "every",
+        "start": 4.42,
+        "end": 4.66,
+        "type": "word",
+        "logprob": -3.814689989667386e-06
+      },
+      {
+        "text": " ",
+        "start": 4.66,
+        "end": 4.7,
+        "type": "spacing",
+        "logprob": -0.6392886638641357
+      },
+      {
+        "text": "copy",
+        "start": 4.7,
+        "end": 5.02,
+        "type": "word",
+        "logprob": -0.6392886638641357
+      },
+      {
+        "text": " ",
+        "start": 5.02,
+        "end": 5.06,
+        "type": "spacing",
+        "logprob": -0.0012384133879095316
+      },
+      {
+        "text": "watching",
+        "start": 5.06,
+        "end": 5.36,
+        "type": "word",
+        "logprob": -0.0012384133879095316
+      },
+      {
+        "text": " ",
+        "start": 5.36,
+        "end": 5.4,
+        "type": "spacing",
+        "logprob": -1.311301275563892e-06
+      },
+      {
+        "text": "at",
+        "start": 5.4,
+        "end": 5.5,
+        "type": "word",
+        "logprob": -1.311301275563892e-06
+      },
+      {
+        "text": " ",
+        "start": 5.5,
+        "end": 5.58,
+        "type": "spacing",
+        "logprob": -1.07287787614041e-05
+      },
+      {
+        "text": "home",
+        "start": 5.58,
+        "end": 5.94,
+        "type": "word",
+        "logprob": -1.07287787614041e-05
+      },
+      {
+        "text": " ",
+        "start": 5.94,
+        "end": 6.0,
+        "type": "spacing",
+        "logprob": -7.438383181579411e-05
+      },
+      {
+        "text": "hears",
+        "start": 6.0,
+        "end": 6.22,
+        "type": "word",
+        "logprob": -7.438383181579411e-05
+      },
+      {
+        "text": " ",
+        "start": 6.22,
+        "end": 6.26,
+        "type": "spacing",
+        "logprob": -3.576278118089249e-07
+      },
+      {
+        "text": "it",
+        "start": 6.26,
+        "end": 6.38,
+        "type": "word",
+        "logprob": -3.576278118089249e-07
+      },
+      {
+        "text": " ",
+        "start": 6.38,
+        "end": 6.46,
+        "type": "spacing",
+        "logprob": -0.014196592383086681
+      },
+      {
+        "text": "too.",
+        "start": 6.46,
+        "end": 6.76,
+        "type": "word",
+        "logprob": -0.010650633115574237
+      }
+    ],
+    "transcription_id": "euHExIBtDjxJl0wXmaIG",
+    "audio_duration_secs": 7.2
+  },
+  "listening_reviewed": false
+}

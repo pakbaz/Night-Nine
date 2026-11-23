@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c7_gate.talk.stephen.3.02",
+  "attempt": 1,
+  "plan_sha256": "a17c728fbe9739843d890b930358f1745365ed67afad7090b2b890c829cd2643",
+  "wav_sha256": "de9f9e7e7eb258233bca37aa502f66a5a92a8b9b11ff847cc3caf982116f45e7",
+  "expected": "I only told him the truth. You were very close. You were right under the sound desk.",
+  "recognized": "I only told him the truth. You were very close. You were right under the sound desk.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 5.76,
+  "sample_rate": 48000,
+  "peak": 0.297943115234375,
+  "rms": 0.03890643447406811,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

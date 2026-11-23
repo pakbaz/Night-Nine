@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c2_ship.intake.lead.06",
+  "attempt": 1,
+  "plan_sha256": "a17c728fbe9739843d890b930358f1745365ed67afad7090b2b890c829cd2643",
+  "wav_sha256": "17c8f8c559576877aeee162f004104eccb17c736bcc394ccdf37d34936f309a2",
+  "expected": "Please stop! You are not finished!",
+  "recognized": "Please stop! You are not finished!",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 3.2,
+  "sample_rate": 48000,
+  "peak": 0.911285400390625,
+  "rms": 0.1520186336605489,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c4_safe.match.02",
+  "attempt": 1,
+  "plan_sha256": "a17c728fbe9739843d890b930358f1745365ed67afad7090b2b890c829cd2643",
+  "wav_sha256": "3a16407911abfcd62acf714f00178c511bef06bc4e70780e8d70eca11dc1d2b9",
+  "expected": "Not here, Mercer. Not with Adrian’s agents in the hall.",
+  "recognized": "Not here, Mercer. Not with Adrian's agents in the hall.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.08,
+  "sample_rate": 48000,
+  "peak": 0.47015380859375,
+  "rms": 0.05905356601892624,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

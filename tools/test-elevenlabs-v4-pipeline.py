@@ -176,6 +176,18 @@ class PipelineTests(unittest.TestCase):
                 (expected, recognized),
             )
 
+    @unittest.skipUnless(importlib.util.find_spec("transformers"), "needs the media Python")
+    def test_real_checker_hears_one_word_in_both_spellings_of_cancelling(self):
+        import runpy
+        checker = runpy.run_path(str(ROOT / "tools/check-voice-candidates.py"))
+        same = "Cancelling it would put Saren’s mistake on the record."
+        self.assertEqual(pipeline.comparison_distance(
+            same, "Canceling it would put Saren's mistake on the record.", checker), 0)
+        self.assertEqual(pipeline.comparison_distance(
+            "They cancelled the flight.", "They canceled the flight.", checker), 0)
+        self.assertNotEqual(pipeline.comparison_distance(
+            same, "Canceling it would put Seren's mistake on the record.", checker), 0)
+
     def test_manifest_integrity_checks_audio_text_and_timing(self):
         root = SCRATCH / "root"
         casting_path = root / "docs/voice-casting-2026-11-20.json"

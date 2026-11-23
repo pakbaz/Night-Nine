@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c2_ship.escape.05",
+  "attempt": 1,
+  "plan_sha256": "a17c728fbe9739843d890b930358f1745365ed67afad7090b2b890c829cd2643",
+  "wav_sha256": "ffe3f7338efb81646977840361e83f49689222519765384aa5d7ea32e4bad50b",
+  "expected": "The attendant is busy arguing with the column. Quietly, now.",
+  "recognized": "The attendant is busy arguing with the column. Quietly now.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.0,
+  "sample_rate": 48000,
+  "peak": 0.622406005859375,
+  "rms": 0.039617480221850444,
+  "level_match_gain_db": 5.73878975506325,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

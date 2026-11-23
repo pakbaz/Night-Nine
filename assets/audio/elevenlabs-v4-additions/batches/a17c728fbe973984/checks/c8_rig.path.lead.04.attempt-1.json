@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "audio_id": "c8_rig.path.lead.04",
+  "attempt": 1,
+  "plan_sha256": "a17c728fbe9739843d890b930358f1745365ed67afad7090b2b890c829cd2643",
+  "wav_sha256": "7767e993312c286cb92f51d49caf82a8c2efc01fff6100f6f2ed1e61f8d3c3e5",
+  "expected": "My crew pass still opens the antenna passage. I checked. Twice. Cancelling it would put Saren’s mistake on the record.",
+  "recognized": "My crew pass still opens the antenna passage. I checked twice. Canceling it would put Saren's mistake on the record.",
+  "local_recognized": "My crew pass still opens the antenna passage. I checked. Twice. Canceling it would put Saren's mistake on the record.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 8.56,
+  "sample_rate": 48000,
+  "peak": 0.435089111328125,
+  "rms": 0.03779485519035802,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c8_rig.path.lead.04.json",
+    "sha256": "0e986819cd53b173393825ef1b41bbe6889f0eaac12f60f498c6db0a7d3d5252",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  },
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

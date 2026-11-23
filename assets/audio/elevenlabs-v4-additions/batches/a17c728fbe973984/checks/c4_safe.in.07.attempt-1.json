@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c4_safe.in.07",
+  "attempt": 1,
+  "plan_sha256": "a17c728fbe9739843d890b930358f1745365ed67afad7090b2b890c829cd2643",
+  "wav_sha256": "7a6383503ace48d57fa0553143569a288b8e0940a18eb260dc7b2a45863f0147",
+  "expected": "He took every tape I’d brought, even Mom’s voicemail. An hour later he handed that one back. Not evidence, he said.",
+  "recognized": "He took every tape I'd brought, even Mom's voicemail. An hour later, he handed that one back. Not evidence, he said.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 8.24,
+  "sample_rate": 48000,
+  "peak": 0.433349609375,
+  "rms": 0.0401956505537821,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

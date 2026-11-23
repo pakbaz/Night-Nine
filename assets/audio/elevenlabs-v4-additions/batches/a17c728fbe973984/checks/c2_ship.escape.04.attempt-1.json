@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c2_ship.escape.04",
+  "attempt": 1,
+  "plan_sha256": "a17c728fbe9739843d890b930358f1745365ed67afad7090b2b890c829cd2643",
+  "wav_sha256": "ac6eb017b9e75f801d56a8a94b6a22fe53288282f09a73a274815b05da02c775",
+  "expected": "Prefect, please repeat your instruction. The chair says you released it.",
+  "recognized": "Prefect, please repeat your instruction. The chair says you released it.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 5.52,
+  "sample_rate": 48000,
+  "peak": 0.903411865234375,
+  "rms": 0.14450239357951322,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

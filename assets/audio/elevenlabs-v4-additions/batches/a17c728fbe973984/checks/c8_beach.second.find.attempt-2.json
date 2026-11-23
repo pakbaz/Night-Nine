@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "audio_id": "c8_beach.second.find",
+  "attempt": 2,
+  "plan_sha256": "a17c728fbe9739843d890b930358f1745365ed67afad7090b2b890c829cd2643",
+  "wav_sha256": "1542ba4a6feda2ae4caab47d850a1b9ae6b6d6632eac8448d3d4fdd77c288b66",
+  "expected": "Saren’s message is Mom’s voicemail, cut and stitched: the same breath before ‘kiddo’, and a gap where ‘The bay is singing’ used to be. He has no message from her. He has my tape. Rook kept it for an hour at the safe house.",
+  "recognized": "Seren's message is Mom's voicemail, cut and stitched, the same breath before kiddo, and a gap where the bay is singing used to be. He has no message from her. He has my tape. Rook kept it for an hour at the safe house.",
+  "local_recognized": "Saren's message is Mom's voicemail, cut and stitched. The same breath before kiddo, and a gap where the bae is singing used to be. He has no message from her. He has my tape. Rook kept it for an hour at the safe house.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 16.24,
+  "sample_rate": 48000,
+  "peak": 0.361968994140625,
+  "rms": 0.03746164794161223,
+  "level_match_gain_db": 0.0,
+  "word_edits": 1,
+  "word_error_rate": 0.021739130434782608,
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c8_beach.second.find.json",
+    "sha256": "8db4f553570f56cd4746d68302228d05ae0bd9d56e5162ba0bb96e175c188618",
+    "model": "scribe_v3",
+    "word_edits": 1,
+    "listening_reviewed": false
+  },
+  "status": "retake_required",
+  "failure_reason": "asr_mismatch"
+}

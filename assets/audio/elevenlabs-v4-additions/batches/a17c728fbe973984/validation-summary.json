@@ -1,0 +1,36 @@
+{
+  "schema": 1,
+  "plan_sha256": "a17c728fbe9739843d890b930358f1745365ed67afad7090b2b890c829cd2643",
+  "passed": [
+    "c10_station.relay.lead.01",
+    "c2_ship.command.lead.06",
+    "c2_ship.escape.03",
+    "c2_ship.escape.04",
+    "c2_ship.escape.05",
+    "c2_ship.intake.02",
+    "c2_ship.intake.lead.01",
+    "c2_ship.intake.lead.02",
+    "c2_ship.intake.lead.03",
+    "c2_ship.intake.lead.04",
+    "c2_ship.intake.lead.05",
+    "c2_ship.intake.lead.06",
+    "c2_ship.intake.lead.07",
+    "c2_ship.recap.03",
+    "c3_archive.out.11",
+    "c4_escape.out.02",
+    "c4_safe.in.07",
+    "c4_safe.match.02",
+    "c7_gate.talk.stephen.3.02",
+    "c7_gate.truck.lead.01",
+    "c7_swap.bus.lead.04",
+    "c7_swap.recap.02",
+    "c8_rig.path.lead.04",
+    "c9_choir.in.06",
+    "c9_choir.in.07",
+    "epilogue.bait.find",
+    "epilogue.talk.rook_copy.1.01"
+  ],
+  "retake_required": {
+    "c8_beach.second.find": "asr_mismatch"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "audio_id": "c7_swap.bus.lead.04",
+  "attempt": 1,
+  "plan_sha256": "a17c728fbe9739843d890b930358f1745365ed67afad7090b2b890c829cd2643",
+  "wav_sha256": "576056072dea256f2c9707f6ab28766877e7e218bc9a949d64ba1e9da1f4f35c",
+  "expected": "The press van feeds the national broadcast. Keep the tone off it, or every copy watching at home hears it too.",
+  "recognized": "The press van feeds the national broadcast. Keep the tone off it, or every cop watching at home hears it too.",
+  "local_recognized": "The press fan feeds the national broadcast. Keep the tone off it, or every copy watching at home hears it too.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 7.12,
+  "sample_rate": 48000,
+  "peak": 0.371368408203125,
+  "rms": 0.03890324170108706,
+  "level_match_gain_db": 0.0,
+  "word_edits": 1,
+  "word_error_rate": 0.047619047619047616,
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c7_swap.bus.lead.04.json",
+    "sha256": "0940bc03ce0a7909cf1b2076067b52da674609619a81f6b1f508ea79721b714a",
+    "model": "scribe_v3",
+    "word_edits": 1,
+    "listening_reviewed": false
+  },
+  "status": "retake_required",
+  "failure_reason": "asr_mismatch"
+}

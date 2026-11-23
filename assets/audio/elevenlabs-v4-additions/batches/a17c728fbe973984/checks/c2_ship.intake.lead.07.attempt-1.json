@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c2_ship.intake.lead.07",
+  "attempt": 1,
+  "plan_sha256": "a17c728fbe9739843d890b930358f1745365ed67afad7090b2b890c829cd2643",
+  "wav_sha256": "cbffc88d2a25dc1ef486a912b4d54b02045979447339d4fa1e7bb8febd8b49f7",
+  "expected": "Nora’s spool, the loose copy, or the Prefect. One chance.",
+  "recognized": "Nora's spool, the loose copy, or the prefect? One chance.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 5.04,
+  "sample_rate": 48000,
+  "peak": 0.42071533203125,
+  "rms": 0.045034786846576705,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

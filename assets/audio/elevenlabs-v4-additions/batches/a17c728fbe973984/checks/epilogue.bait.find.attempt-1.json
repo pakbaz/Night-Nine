@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "audio_id": "epilogue.bait.find",
+  "attempt": 1,
+  "plan_sha256": "a17c728fbe9739843d890b930358f1745365ed67afad7090b2b890c829cd2643",
+  "wav_sha256": "9c9151c2f437735597a7f616f0dadc35a9622f7a6a296ec7232fd71070d3efdb",
+  "expected": "Two Mrs. Penhallows, one counter, and people are finally buying bait. One Adrian Rook stays. The other one is leaving town, to find out who he is.",
+  "recognized": "Two Mrs. Penhallows, one counter, and people are finally buying bait. One Adrian Rook stays. The other one is leaving town to find out who he is.",
+  "local_recognized": "Two misses Penhallows, one counter, and people are finally buying bait. One Adrian Rook stays. The other one is leaving town to find out who he is.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 11.2,
+  "sample_rate": 48000,
+  "peak": 0.368621826171875,
+  "rms": 0.03821942289869213,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/epilogue.bait.find.json",
+    "sha256": "2de3165e47333f35122975bbaf6e6e2f843886a41c632817d2282fe68e84d2b0",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  },
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

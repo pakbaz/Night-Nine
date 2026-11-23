@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c10_station.relay.lead.01",
+  "attempt": 1,
+  "plan_sha256": "a17c728fbe9739843d890b930358f1745365ed67afad7090b2b890c829cd2643",
+  "wav_sha256": "4a3369b16bcb91d7f05063d692324aa59a3c93c73b2093c2daf74d0950beb27b",
+  "expected": "The club sent signal three yesterday, without me. Today I’m sending signal four. Let’s see who keeps up.",
+  "recognized": "The club sent signal three yesterday, without me. Today, I'm sending signal four. Let's see who keeps up.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 8.4,
+  "sample_rate": 48000,
+  "peak": 0.425994873046875,
+  "rms": 0.059824560818106665,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

@@ -1,0 +1,54 @@
+{
+  "schema": 1,
+  "batch": "later-additions",
+  "model_id": "eleven_v4",
+  "output_format": "mp3_44100_192",
+  "inputs": {
+    "campaign": "15958e1a15195b17aee3d34773d8b8f4ce0be6e5b30efa92bff3c5515b3cb8fd",
+    "storybook": "111dd45f12d16c24dc9c1d253531eb719979f88ec9169f185b8e0f2d1e119c38",
+    "voice_manifest": "2a3c74f11e9608acbcb72bc0db43b7943c3f09060c0c02fe8ba1f184fe184c24",
+    "casting": "cb91065c437c743d50eea2958d5149a6d0a35b9d20430a66cb8a548b921246db",
+    "existing_additions": "c313ad41fcc5f9db01fc18e9fbe8b2bf82cd60f18f525d3e036a1fd60efb88a2"
+  },
+  "ordered_audio_ids": [
+    "c8_beach.second.03"
+  ],
+  "items": {
+    "c8_beach.second.03": {
+      "audio_id": "c8_beach.second.03",
+      "kind": "campaign",
+      "scene": "c8_beach",
+      "speaker": "steve",
+      "cast_role": "steve",
+      "voice_id": "vveagfomyMCJLZsOPRP2",
+      "text": "Rook kept this tape for an hour at the safe house. Long enough to copy it.",
+      "text_sha256": "3f32a6f9fe80348c0504ac9189d103eb796c65ba3424db6bfcf1fd8096c8991b",
+      "synthesis_text": "Rook kept this tape for an hour at the safe house. Long enough to copy it.",
+      "synthesis_text_sha256": "3f32a6f9fe80348c0504ac9189d103eb796c65ba3424db6bfcf1fd8096c8991b",
+      "delivery": "live",
+      "direction": "quietly, putting it together",
+      "v4_audio_tag": "",
+      "previous_text": "Same breath before ‘kiddo’. And a hole where four words used to be.",
+      "next_text": "Saren’s message is Mom’s voicemail, cut and stitched: the same breath before ‘kiddo’, and a gap where ‘The bay is singing’ used to be. He has no message from her. He has my tape.",
+      "voice_settings": {
+        "stability": 0.46,
+        "similarity_boost": 0.78
+      },
+      "language_code": "en",
+      "model_id": "eleven_v4",
+      "output_format": "mp3_44100_192",
+      "estimated_credit_rate": 1.0,
+      "estimated_credits": 74,
+      "attempt_seeds": [
+        309196577,
+        1292313303,
+        3844943861
+      ]
+    }
+  },
+  "count": 1,
+  "characters": 74,
+  "request_characters": 74,
+  "estimated_credits": 74,
+  "plan_sha256": "f6874be3c0044b61cee3365673d19cd8e01966bc1ac71b32c5431e1cf6024aca"
+}

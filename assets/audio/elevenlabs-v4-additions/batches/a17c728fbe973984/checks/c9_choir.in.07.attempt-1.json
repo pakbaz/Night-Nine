@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c9_choir.in.07",
+  "attempt": 1,
+  "plan_sha256": "a17c728fbe9739843d890b930358f1745365ed67afad7090b2b890c829cd2643",
+  "wav_sha256": "c71e53c94bf41bdc57f4747229714c7aed15f842b6afae0e76b267e0181e1f67",
+  "expected": "We followed you down from row nine. Nobody stopped us. The whole crew had stopped to listen.",
+  "recognized": "We followed you down from row nine. Nobody stopped us. The whole crew had stopped to listen.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 6.4,
+  "sample_rate": 48000,
+  "peak": 0.462493896484375,
+  "rms": 0.06176478399446721,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}
