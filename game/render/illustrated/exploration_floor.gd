@@ -35,6 +35,7 @@ var marker: Node2D
 var marker_alpha := 0.0
 var keyboard_walking := false
 var wide: Sprite2D
+var occluders: Array[Polygon2D] = []
 var steps: AudioStreamPlayer2D
 var footfalls: Array[AudioStream] = []
 
@@ -110,8 +111,25 @@ func configure(room: Dictionary, roles: Array, plate: Texture2D, wide_file: Stri
 		occluder.uv = uv
 		occluder.texture = plate
 		cast.add_child(occluder)
+		occluders.append(occluder)
 
 	repair_positions({})
+
+## Paint a story layer over every occluder so a person painted into the room stays whole
+## where the prop is drawn again in front of walkers.
+func cover_occluders(texture: Texture2D) -> Array[Polygon2D]:
+	var covers: Array[Polygon2D] = []
+	for occluder: Polygon2D in occluders:
+		var cover := Polygon2D.new()
+		cover.polygon = occluder.polygon
+		var uv := PackedVector2Array()
+		for corner: Vector2 in occluder.polygon:
+			uv.append((corner + occluder.position) / ART * texture.get_size())
+		cover.uv = uv
+		cover.texture = texture
+		occluder.add_child(cover)
+		covers.append(cover)
+	return covers
 
 func point(pair: Array) -> Vector2:
 	return Vector2(pair[0],pair[1])*ART
@@ -176,7 +194,9 @@ func update_solids(completed: Array) -> void:
 	for item: Dictionary in blockers:
 		# A doorway the story has opened is painted open by a story layer and can be crossed.
 		var open: bool=item.has("opens_after") and item.opens_after in completed
-		if not open:
+		# A person a story layer paints in only takes up floor once the story puts them there.
+		var absent: bool=item.has("after") and item.after not in completed
+		if not open and not absent:
 			solids.append(points(item.polygon))
 	navigation_key = -1
 

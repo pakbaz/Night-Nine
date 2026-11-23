@@ -3,7 +3,7 @@ extends SceneTree
 ## NIGHT_NINE_CAPTURE_PLAN is a JSON list of shots:
 ##   {"name": "c1_escape-gate-open", "scene": "c1_escape", "done": ["c1_escape.power"],
 ##    "walk": [0.5, 0.8], "line": "c1_escape.in.01", "focus": "c1_escape.power", "wait": 30}
-## "wait" is how many frames to let a line's camera move or dissolve finish before the shot.
+## "wait" is how many frames to let a camera move or a still's dissolve finish before the shot.
 ## "solve" completes one more lead after entering, without starting the scene's exit.
 ## Run windowed (not headless) with NIGHT_NINE_QA_DIR and NIGHT_NINE_SAVE_DIR set.
 var game: Node
@@ -77,6 +77,8 @@ func run() -> void:
 		if shot.has("line"):
 			game._speak([str(shot.line)], Callable())
 			await frames(int(shot.get("wait", 30)))
+		elif shot.has("wait"):
+			await frames(int(shot.wait))
 		await save(folder, str(shot.name))
 		if shot.has("line"):
 			while game.dialogue_panel.visible:

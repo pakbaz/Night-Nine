@@ -74,6 +74,24 @@ class ScriptV2TalkTests(unittest.TestCase):
             'lines': ['iris|One.', 'steve|Two.'],
         }]}))
 
+    def test_after_may_name_a_lead_line_so_a_topic_opens_once_two_people_have_met(self):
+        # A lead line is heard while its lead is still open, so even the last lead can open a topic.
+        _, scene, _ = self.build({'iris': [{
+            'topic': 'After the call starts', 'after': 'c1_flat.control.lead.01',
+            'lines': ['iris|One.', 'steve|Two.'],
+        }]})
+        self.assertEqual(scene['talk'][0]['after'], 'c1_flat.control.lead.01')
+        self.assertFalse(self.errors({'iris': [{
+            'topic': 'After the call starts', 'after': 'c1_flat.control.lead.01',
+            'lines': ['iris|One.', 'steve|Two.'],
+        }]}))
+        for line_id in ('c1_flat.control.lead.99', 'c1_flat.in.01'):
+            errors = self.errors({'iris': [{
+                'topic': 'Not a lead line', 'after': line_id,
+                'lines': ['iris|One.', 'steve|Two.'],
+            }]})
+            self.assertTrue(any('after names unknown task' in error for error in errors), line_id)
+
     def test_until_ends_a_topic_once_its_lead_is_done(self):
         _, scene, _ = self.build({'iris': [{
             'topic': 'Before the call', 'until': 'saturday',

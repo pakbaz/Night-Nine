@@ -430,6 +430,9 @@ def validate(content, edits, merge):
             if task_id not in required:
                 required.add(task_id)
                 frontier.extend(needs.get(task_id, ()))
+        # A topic may also wait for a lead-in line, so it opens once two people have met.
+        # That lead is still open when the line plays, so the topic can always be heard.
+        lead_lines = {line for t in scene['tasks'] for line in t.get('lead', [])}
         for topic in scene.get('talk', []):
             where = topic['id']
             label = str(topic.get('topic', ''))
@@ -440,9 +443,9 @@ def validate(content, edits, merge):
                 merge.issue('error', where, 'talk topic is longer than 48 characters')
             if len(topic.get('lines', [])) < 2:
                 merge.issue('error', where, 'talk topic needs at least two lines')
-            if topic.get('after') and topic['after'] not in ids:
+            if topic.get('after') and topic['after'] not in ids and topic['after'] not in lead_lines:
                 merge.issue('error', where, f"talk after names unknown task {topic['after']}")
-            elif topic.get('after') and topic['after'] not in required:
+            elif topic.get('after') in ids and topic['after'] not in required:
                 merge.issue('error', where, f"talk after {topic['after']} could be the last lead, so the topic might never be heard")
             if topic.get('until') and topic['until'] not in ids:
                 merge.issue('error', where, f"talk until names unknown task {topic['until']}")

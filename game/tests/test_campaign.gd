@@ -105,6 +105,15 @@ func _check_script_v2_runtime() -> void:
 	check(not state.talk_heard(gated), "A topic is unheard before its lines play")
 	state.mark_seen(gated.lines)
 	check(state.talk_heard(gated), "A topic is heard after all its lines play")
+	# A topic may instead wait for a line, so it opens once two people have met.
+	var met: Dictionary = gated.duplicate(true)
+	met.after = "c1_flat.control.lead.01"
+	state.current().talk.append(met)
+	state.data.done = []
+	check(met not in state.available_talk(str(met.speaker)), "Small talk waits for the line where two people meet")
+	state.mark_seen([met.after])
+	check(met in state.available_talk(str(met.speaker)), "Small talk opens once the meeting line has played")
+	state.current().talk.erase(met)
 	state.data.scene = 0
 	state.data.scene_id = state.content.scenes[0].id
 	state.data.done = []

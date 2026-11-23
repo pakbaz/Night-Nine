@@ -225,13 +225,20 @@ func build_story_layers() -> void:
 			over.scale = floor_stage.wide.texture.get_size() / wide_texture.get_size()
 			floor_stage.wide.add_child(over)
 			nodes.append(over)
-		story_layers.append({"record": record, "nodes": nodes})
+		var covers: Array[Polygon2D] = []
+		if floor_stage and not floor_stage.wide:
+			covers = floor_stage.cover_occluders(texture)
+		elif floor_stage and ResourceLoader.exists(wide_path):
+			covers = floor_stage.cover_occluders(load(wide_path))
+		story_layers.append({"record": record, "nodes": nodes, "covers": covers})
 
 func show_room_state() -> void:
 	for entry: Dictionary in story_layers:
 		var shown: bool = layer_active(entry.record)
 		for node: Sprite2D in entry.nodes:
 			node.visible = shown
+		for cover: Polygon2D in entry.get("covers", []):
+			cover.visible = shown
 
 ## A still covers a line by its id, or every line of a lead or group by that prefix.
 func still_for(line_id: String) -> String:
@@ -439,7 +446,11 @@ func actor_visible(id: String) -> bool:
 	# People painted into a story layer have no separate portrait while it shows.
 	if active_layers().any(func(record: Dictionary): return id in record.get("painted",[])):
 		return false
-	return id in directions.company and FLOOR.revealed(directions.get("reveal_after",{}).get(id,""),marks) \
+	return id in directions.company and actor_present(id)
+
+## A person the story still hides, or who has left, is not in the scene at all.
+func actor_present(id: String) -> bool:
+	return FLOOR.revealed(directions.get("reveal_after",{}).get(id,""),marks) \
 		and not FLOOR.departed(directions.get("leave_after",{}).get(id,""),marks)
 
 func get_performer(id: String) -> Node2D:

@@ -1157,17 +1157,44 @@ func _resume_dialogue() -> void:
 	elif not pending.is_empty():
 		_speak(pending,Callable())
 
+## The investigators the story lets the player walk as right now. Someone the story still
+## hides (Steve under the sound desk at the gate) cannot be chosen until they step out.
+func _present_actors() -> Array:
+	var investigators: Array = campaign.current().actors
+	if not is_instance_valid(stage) or not stage.has_method("actor_present"):
+		return investigators
+	var present: Array = investigators.filter(func(id: String): return stage.actor_present(id))
+	return present if not present.is_empty() else investigators
+
+func _next_actor() -> String:
+	var investigators: Array = campaign.current().actors
+	var present := _present_actors()
+	var at: int = investigators.find(campaign.data.actor)
+	for step: int in range(1, investigators.size() + 1):
+		var id: String = investigators[(at + step) % investigators.size()]
+		if id in present:
+			return id
+	return campaign.data.actor
+
 func _refresh() -> void:
 	if is_instance_valid(stage):
 		if stage.has_method("select_walker"):
 			stage.select_walker(campaign.data.actor)
 		stage.sync_story(campaign.data.done, campaign.data.seen)
+		var present := _present_actors()
+		if campaign.data.actor not in present:
+			campaign.switch_actor(present[0])
+			if stage.has_method("select_walker"):
+				stage.select_walker(campaign.data.actor)
 	var s := campaign.current()
 	title.text=s.chapter.to_upper()+"  /  "+s.title
 	objective.text=s.objective
 	actor.select(s.actors.find(campaign.data.actor))
 	actor.disabled=s.actors.size()==1
 	actor.visible=s.actors.size()>1
+	var choosable := _present_actors()
+	for i: int in range(mini(s.actors.size(), actor.item_count)):
+		actor.set_item_disabled(i, s.actors[i] not in choosable)
 	for i: int in range(hotspots.size()):
 		var task: Dictionary=s.tasks[i]
 		var complete: bool=task.id in campaign.data.done
@@ -2020,10 +2047,8 @@ func _unhandled_key_input(event: InputEvent) -> void:
 		elif event.keycode in [KEY_SPACE,KEY_ENTER,KEY_KP_ENTER] and dialogue_panel.visible and not menu.visible and not journal.visible:
 			_next_line()
 			get_viewport().set_input_as_handled()
-		elif event.keycode==KEY_Q and object_list.visible and campaign.current().actors.size()>1:
-			var investigators: Array=campaign.current().actors
-			var next: int=(investigators.find(campaign.data.actor)+1)%investigators.size()
-			campaign.switch_actor(investigators[next])
+		elif event.keycode==KEY_Q and object_list.visible and _present_actors().size()>1:
+			campaign.switch_actor(_next_actor())
 			_refresh()
 			get_viewport().set_input_as_handled()
 		elif event.keycode==KEY_I and object_list.visible:

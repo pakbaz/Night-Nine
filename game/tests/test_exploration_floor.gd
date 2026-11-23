@@ -10,6 +10,22 @@ func check(ok: bool, description: String) -> void:
 		errors.append(description)
 		push_error(description)
 
+## Every lead that must be finished before this one can start.
+func requires_closure(scene: Dictionary, task: Dictionary) -> Array:
+	var by_id := {}
+	for item: Dictionary in scene.tasks:
+		by_id[item.id] = item
+	var done: Array = []
+	var waiting: Array = task.get("requires",[]).duplicate()
+	while not waiting.is_empty():
+		var id: String = waiting.pop_back()
+		if id in done:
+			continue
+		done.append(id)
+		if by_id.has(id):
+			waiting.append_array(by_id[id].get("requires",[]))
+	return done
+
 func _initialize() -> void:
 	var state := NightCampaign.new()
 	var rooms: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://content/illustrated-floor.json"))
@@ -44,9 +60,11 @@ func _initialize() -> void:
 		for role: String in layout.spawn:
 			check(role in scene.actors,id+" registered investigator "+role)
 			var start := stage.point(layout.spawn[role])
-			check(stage.on_floor(start),id+" safe spawn for "+role)
 			for task: Dictionary in scene.tasks:
 				var key: String = str(task.id).get_slice(".",1)
+				# Each lead is walked with the doors and people the story has set by then.
+				stage.update_solids(requires_closure(scene,task))
+				check(stage.on_floor(start),id+" safe spawn for "+role+" before "+key)
 				check(layout.approach.has(key),task.id+" staged approach")
 				if not layout.approach.has(key):
 					continue
