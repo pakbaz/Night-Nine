@@ -67,11 +67,11 @@ func retune() -> void:
 	lock_ready=narrow.button_pressed and hum_gain>=.74
 	record.disabled=not lock_ready
 	if lock_ready:
-		description.text="A steady low hum. Both stations have dropped away."
+		description.text="Many voices, holding one note. Both stations have dropped away."
 	elif time_gain>.4 and music_gain>.4:
-		description.text="Time pips and chimes overlap. There is a hum beneath them."
-	elif hum_gain>maxf(time_gain,music_gain):
-		description.text="A low hum comes through, still faint."
+		description.text="Time pips and chimes overlap. Under them, something like voices."
+	elif hum_gain>.2:
+		description.text="Faint voices come through, singing one note under the static."
 	else:
 		description.text="Regular time pips over static." if time_gain>music_gain else "Two chimes over static."
 	dial_moved.emit(khz)

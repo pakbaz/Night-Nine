@@ -68,6 +68,15 @@ func run() -> void:
 		bell += v * sin(TAU * 523.25 * 2.756 * t)
 		voice_like += v * sin(TAU * 523.25 * 2.0 * t)
 	check(absf(bell) > absf(voice_like) * 3.0, "The chime station rings like a bell, so the singing is only at 815 kHz")
+	# What the panel says matches what plays: voices, not a tone.
+	receiver.dial.value = 815
+	receiver.narrow.button_pressed = true
+	await frames(2)
+	check(receiver.lock_ready and "voices" in receiver.description.text, "Locked on, the radio describes voices holding one note (%s)" % receiver.description.text)
+	receiver.narrow.button_pressed = false
+	receiver.dial.value = 813
+	await frames(2)
+	check("voices" in receiver.description.text or "sing" in receiver.description.text, "Near the hum, the radio hints at voices (%s)" % receiver.description.text)
 	# One needle: the painted needle is gone and a drawn one moves with the dial.
 	var tips: Array[float] = []
 	for khz: int in [810, 815, 820]:
