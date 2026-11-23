@@ -299,3 +299,19 @@ A playthrough to Chapter 7 found gaps a player would notice. Each fix changes th
 | How did they reach the President? | They plan on Tuesday in Gus's bakery: nobody official can be called, because the FBI's man is Rook's copy. June writes to the President and Pell delivers it into her hand. June and Iris walk in with Gus's catering passes. In the tunnel Ward reads June's letter and asks to meet Steve. | `c7_gate` intro and recap, `c7_swap` context and `tone` |
 
 New story paintings show the drill, the jump, the watcher on the path, the two Steves face to face, the earpiece lie, the pressed iris, the mail cart, the bakery plan and the bakers at the gate. The shack-to-station bridge now shows Steve alone, with Stephen waiting by the station. New sounds (cue): `drill_alarm`, `van_jump`, `earpiece_click`, `pressed_flower`, `mail_cart`; masters and prompts in `assets/audio/story-effects/`.
+
+## (j) November 23 revision: Chapters 5 and 6, Interlude 2
+
+A second playthrough found plot holes in the middle of the story. The fixes change the script edit files, staging and two small engine hooks: a body can leave after a set line (`leave_after`), and a talk topic can close once a task is done (`until`).
+
+| What a player asked | What the story now says | Where |
+| --- | --- | --- |
+| How does Steve know about his copy so early? | Carmen's sighting of a cheerful Steve at the market (Chapter 3) is the only hint. At KBWR Steve recognizes Stephen as that man before Stephen says a word. | `c5_station` (`stephen` lead, recap) |
+| Why are there no copies of Helen and Frank? | Helen's scan was damaged, so her copy would not know where the notebook is, and the town had already buried them when the empty boat came back. They are kept asleep so the notebook still has an owner the crew can ask. | `c5_station` outro |
+| How did two Steves run into Iris? | They don't. Stephen is the decoy at Gus's bread window at 8:10 and leaves by the alley. Steve meets Iris alone at the pier. The market task cannot start until the alibi is solved. | `c6_iris` (staging, `takes` requires `alibi`) |
+| Isn't Stephen hunted too? | Stephen is the hunter in the crew's eyes, and the posters hunt Steve's face, so Stephen shows his face only on purpose, as the decoy. | `c6_iris`, `c7_gate` |
+| June's copy never appears, so how does she leave? | Once Iris says "Steve didn't take me" at the market, the search ends. June's copy and Lyle's copy are on the harbor calling the boats in, heard only on the desk radio. Steve walks in alone. By dark the posters say "fled federal custody" and June's copy knows who opened cell two. | `c6_jail` (rewritten) |
+| Why doesn't the deputy report Steve? | Lyle's copy never sees him. The school-play choice and the front-desk and checkpoint leads are removed. | `c6_jail` |
+| How did Nora get out of her pod? | On Sunday night the crew took Iris below to be reset and left her on a laundry cart in the Gallery. She set a slow, reversible wake on Nora, Lyle Boone and Dale, timed to finish Monday night, then rode out with the wash. In the interlude the glass stays shut until all three breathe alone; the panel reads MIRROR LINK ACTIVE. | `c6_iris` outro, `i2_nora` |
+
+31 new or reworded lines are recorded (ElevenLabs v4, checked by local transcripts). No new paintings: the existing pressed-flower, Gallery, pod and market stills now play with the lines that describe them.
