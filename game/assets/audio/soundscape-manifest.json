@@ -179,12 +179,6 @@
     "seconds": 5.38,
     "provenance": "Original deterministic synthesis in tools/build-soundscape.py"
   },
-  "ninth_night": {
-    "file": "res://assets/audio/effects/ninth_night.wav",
-    "sha256": "258c3a590e1fe234408b7d3755425158ade99bb5324e3ef9a3106946eee65de8",
-    "seconds": 2.0,
-    "provenance": "Original deterministic synthesis in tools/build-soundscape.py"
-  },
   "veyr_wind": {
     "file": "res://assets/audio/effects/veyr_wind.wav",
     "sha256": "3fa22497241a72a989f2b971b6ae2763bee06155ce69b173136c1d2b05e1b443",
@@ -207,18 +201,6 @@
     "file": "res://assets/audio/effects/wick_high_ending.wav",
     "sha256": "8701744044d254292211a2cb606e0344687d04d2667be051d05e62a6f999ec2a",
     "seconds": 4.4,
-    "provenance": "Original deterministic synthesis in tools/build-soundscape.py"
-  },
-  "hum_first_reel": {
-    "file": "res://assets/audio/effects/hum_first_reel.wav",
-    "sha256": "c583552ed0f65671bc508c1782fe1ac76feaa2feda4e36e3905c47215c017be3",
-    "seconds": 4.0,
-    "provenance": "Original deterministic synthesis in tools/build-soundscape.py"
-  },
-  "hum_last_reel": {
-    "file": "res://assets/audio/effects/hum_last_reel.wav",
-    "sha256": "97415dd0b55c14e09e792a9e6d4ad9d33394f006fd806679ed3bba63772dd0a7",
-    "seconds": 4.0,
     "provenance": "Original deterministic synthesis in tools/build-soundscape.py"
   },
   "halcyon_hold_seattle": {
@@ -250,5 +232,29 @@
     "sha256": "9104907acf9a0738e7fbc711851b25e8ec46b8f935e3d5c4609bbc7a1082649d",
     "seconds": 2.72,
     "provenance": "Original deterministic synthesis in tools/build-soundscape.py"
+  },
+  "ninth_night": {
+    "file": "res://assets/audio/effects/ninth_night.wav",
+    "sha256": "0cf6c18ced1872da81c1c5fea6b38a057fd159b50d80c466ccaeb7f40797ff12",
+    "seconds": 5.0,
+    "provenance": "assets/audio/bay-hum/bay-hum.json"
+  },
+  "hum_first_reel": {
+    "file": "res://assets/audio/effects/hum_first_reel.wav",
+    "sha256": "f96ab07301d7818de6867eb22fe5fad3487b059c7715ab1d9011754bd35724f6",
+    "seconds": 4.0,
+    "provenance": "assets/audio/bay-hum/bay-hum.json"
+  },
+  "hum_last_reel": {
+    "file": "res://assets/audio/effects/hum_last_reel.wav",
+    "sha256": "6116a922e282646f6c4981470aa473ff0fcf6b7df3c20a4df34f32a7bafbf3ba",
+    "seconds": 4.0,
+    "provenance": "assets/audio/bay-hum/bay-hum.json"
+  },
+  "ninth_night_loop": {
+    "file": "res://assets/audio/effects/ninth_night_loop.wav",
+    "sha256": "3bb0ba5f56c7f175bd5570389ee106a4ba8f35faeac49fd289607211c024ca6c",
+    "seconds": 5.245,
+    "provenance": "assets/audio/bay-hum/bay-hum.json"
   }
 }

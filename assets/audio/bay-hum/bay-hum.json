@@ -1,0 +1,21 @@
+{
+  "purpose": "The ninth-night hum: many voices holding one note under the bay (the Choir), and the single voice on Frank's first reel.",
+  "generator": "ElevenLabs Sound Effects (text_to_sound_effects), 24 kHz PCM, 5 s loops",
+  "created": "2026-11-22",
+  "masters": {
+    "choir-master.wav": {
+      "prompt": "Ghostly chorus of many voices singing a single held note together underwater, sustained unison \"aah\" drone, constant pitch, no tune, no words, layered human voices with a soft shimmer, mysterious and beautiful, no instruments, no percussion",
+      "sha256": "877ba930ec595a8de6accb52d581cac9786ecffaf68c9bea1200b7d10727f6cb",
+      "measured_pitch_hz": 274.8,
+      "chosen_because": "Holds one note for the whole clip (YIN pitch within 60 cents 100% of the time), with most of its energy between 300 Hz and 3.4 kHz, so it stays audible through a small radio speaker."
+    },
+    "voice-master.wav": {
+      "prompt": "One single person humming one long steady low note with closed lips, \"mmm\", the same pitch the whole time, no melody, no words, soft and calm, only one voice, dry close recording, no music",
+      "sha256": "0373cabbb9ecb6e08129191ea0bcb898202a39f0d444ca047b20adc2856872b1",
+      "measured_pitch_hz": 109.8,
+      "chosen_because": "One steady voice (fundamental-band beating 0.14 against the choir's 0.51) on A2, the same note as the choir's A3."
+    }
+  },
+  "rejected": "Five more choir takes (unstable pitch, a gap, or most energy below 300 Hz) and three more solo takes (pitch breaks, drift or a second voice).",
+  "build": "python3 tools/build-bay-hum.py: pitches the choir to A3 (220 Hz), loops it with an equal-power crossfade, band-limits the radio copy and adds seeded tape hiss to Frank's reels."
+}

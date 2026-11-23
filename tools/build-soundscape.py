@@ -147,24 +147,21 @@ def main():
     for frequency,duration in [(220,.65),(261.626,.65),(293.665,1.0),(261.626,.65),(196,.65),(220,1.3)]:
         motif+=tone(frequency,duration,.13)+silence(.08)
     manifest['lullaby']=write('lullaby',motif)
-    manifest['ninth_night']=write('ninth_night',tone(220,2.0,.18))
     manifest['veyr_wind']=write('veyr_wind',ambient('veyr',900),'effects')
     manifest['new_wind']=write('new_wind',ambient('veyr',901),'effects')
     manifest['wick']=write('wick',tone(220,.8)+tone(330,1.1)+silence(.5)+tone(165,2.0))
     manifest['wick_high_ending']=write('wick_high_ending',tone(220,.8)+tone(330,1.1)+silence(.5)+tone(440,2.0))
-    static_rng=random.Random(511)
-    static=[.035*static_rng.uniform(-1,1) for _ in range(RATE*4)]
-    first=[static[i]+.11*math.sin(2*math.pi*165*i/RATE) for i in range(len(static))]
-    last=[static[i]+.055*sum(math.sin(2*math.pi*f*i/RATE) for f in (163.5,165,166.8))
-          for i in range(len(static))]
-    manifest['hum_first_reel']=write('hum_first_reel',first)
-    manifest['hum_last_reel']=write('hum_last_reel',last)
     hold=[]
     for frequency in (261.626,329.628,392,329.628,293.665,349.228,440,392):
         hold+=tone(frequency,.34,.1)+silence(.06)
     manifest['halcyon_hold_seattle']=write('halcyon_hold_seattle',tone(440,.12,.08)+silence(.25)+hold)
     manifest['halcyon_hold_denver']=write('halcyon_hold_denver',tone(523.251,.12,.08)+silence(.55)+hold)
     manifest.update(evidence_sounds())
+    # The ninth-night hum is a recorded choir, built by tools/build-bay-hum.py; keep its entries.
+    previous=OUT/'soundscape-manifest.json'
+    if previous.exists():
+        manifest.update({name:entry for name,entry in json.loads(previous.read_text()).items()
+                         if entry.get('provenance')=='assets/audio/bay-hum/bay-hum.json'})
     (OUT/'soundscape-manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
     print(json.dumps({'original_cues':len(manifest),'ambient_styles':len(styles)}))
 

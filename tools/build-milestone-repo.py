@@ -312,7 +312,8 @@ def make_snapshot(stage, strict):
     files["game/content/films.json"] = serialized({room: film for room, film in films.items() if room in scene_ids})
     used_lines = set()
     signals = set()
-    fx = {"ninth_night"}
+    # Frank's receiver plays the choir's loop between the stations.
+    fx = {"ninth_night", "ninth_night_loop"}
     cast = set(PROLOGUE_CAST)
     for scene in scenes:
         used_lines.update(scene["intro"] + scene["outro"] + scene.get("recap", []))

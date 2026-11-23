@@ -10,7 +10,8 @@ var record := Button.new()
 var players: Array[AudioStreamPlayer] = []
 var lock_ready := false
 var paused := false
-const HUM := preload("res://assets/audio/effects/ninth_night.wav")
+## Many voices holding one note: the choir under the bay, through the radio's bandwidth.
+const HUM := preload("res://assets/audio/effects/ninth_night_loop.wav")
 
 func _ready() -> void:
 	add_theme_constant_override("separation",8)
@@ -85,8 +86,15 @@ static func station(chimes: bool) -> AudioStreamWAV:
 		var time := float(sample)/RATE
 		var phase := fmod(time,1.0 if chimes else .5)
 		var hz := (523.25 if time<1.0 else 659.25) if chimes else 885.0
-		var envelope := exp(-phase*8.0) if chimes else (sin(PI*phase/.16) if phase<.16 else 0.0)
-		var amplitude := sin(TAU*time*hz)*.27*envelope+random.randf_range(-.022,.022)
+		var amplitude := random.randf_range(-.022,.022)
+		if chimes:
+			# A struck bell: a sharp strike and inharmonic partials that die away at
+			# different rates, so the chimes never sound like a voice holding a note.
+			var strike := minf(phase/.004,1.0)
+			amplitude += .34*strike*(.62*sin(TAU*time*hz)*exp(-phase*6.0)
+				+.26*sin(TAU*time*hz*2.756)*exp(-phase*11.0)+.12*sin(TAU*time*hz*5.404)*exp(-phase*19.0))
+		else:
+			amplitude += sin(TAU*time*hz)*.27*(sin(PI*phase/.16) if phase<.16 else 0.0)
 		bytes.encode_s16(sample*2,roundi(32767.0*amplitude*clampf(minf(time,2.0-time)*90.0,0.0,1.0)))
 	var wave := AudioStreamWAV.new()
 	wave.mix_rate=RATE

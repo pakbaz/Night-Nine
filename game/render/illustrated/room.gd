@@ -290,9 +290,28 @@ func talk_body_at_screen(screen: Vector2) -> String:
 			return id
 	return ""
 
+## Where the radio's needle points: 0 at 810 kHz, 1 at 820 kHz.
+var needle_value := 0.0
+
 func set_frequency(khz: int) -> void:
+	needle_value = clampf((khz-810)/10.0,0.0,1.0)
 	if dial_material:
-		dial_material.set_shader_parameter("dial",clampf((khz-810)/10.0,0.0,1.0))
+		dial_material.set_shader_parameter("dial",needle_value)
+
+## The needle's angle from vertical, in radians, as the shader draws it.
+func needle_angle() -> float:
+	return deg_to_rad(lerpf(-58.0, 40.0, needle_value))
+
+## The painted plate carries no needle of its own; only the drawn one shows.
+func painted_needle_hidden() -> bool:
+	var plate: Image = (load(ROOMS + "bay-foreground.png") as Texture2D).get_image()
+	var orange := 0
+	for y: int in range(527, 612):
+		for x: int in range(520, 600):
+			var c := plate.get_pixel(x, y)
+			if c.r > .59 and c.r > c.g * 1.3 and c.b < .47 and c.g > .2:
+				orange += 1
+	return orange < 12
 
 func begin_dialogue(line: Dictionary, voice: AudioStreamPlayer, _take: Dictionary, timing: Dictionary) -> void:
 	var actor_id: String = line.speaker
