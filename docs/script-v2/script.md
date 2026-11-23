@@ -659,7 +659,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 **Where:** Apartment balcony and beach · **When:** Sunday the 21st, half past eleven at night · **Present:** Steve Mercer, Nora Reyes, Agnes Penhallow
 
 **Objective:** Hang up Nora’s dripping raincoat.
-- then: Get out of the locked apartment.
+- then: Get off the balcony.
 
 **Coach tip:** Steve’s notebook keeps every clue you have found. Press J to look things up when a case board needs an earlier fact.
 
@@ -671,7 +671,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 ### Opening
 - *Steve Mercer: Home. Nora took a phone call in the bedroom and closed the door. She never closes the door.* **NEW** `c1_escape.ctx.01`
-- *Steve Mercer: Her yellow raincoat lay over a chair, dripping. It had rained all the way home from dinner.* **NEW** `c1_escape.ctx.02`
+- *Steve Mercer: Her raincoat was dripping on the floor. I carried it out to hang on the balcony hooks.* **NEW** `c1_escape.ctx.02`
 
 ### Lead 1: The paper in the raincoat (`c1_escape.order`) · board · difficulty 2
 
@@ -682,7 +682,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 **Goal:** Work out whether Nora could have signed this work order.
 
-**What Steve knows:** Something stiff fell out of the raincoat lining when Steve hung it up: an aquarium work order for the north wing, sealed for two years. Only the head aquarist signs for it, and that is Nora. It is signed in her name on Carmen’s birthday, at 20:30 by the aquarium wall clock.
+**What Steve knows:** Something stiff fell out of the raincoat lining when Steve hung it on the balcony hook: an aquarium work order for the north wing, sealed for two years. Only the head aquarist signs for it, and that is Nora. It is signed in her name on Carmen’s birthday, at 20:30 by the aquarium wall clock.
 
 **Prompt:** Steve’s notes from dinner put Nora at La Marea that evening. Could she have slipped away to sign this?
 
@@ -709,24 +709,24 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 **On success:**
 - **Steve Mercer**: Noon to midnight at La Marea. Mateo and Rafa both saw her. She couldn’t have been in the north wing. **REV** `c1_escape.order.01`
-- **Nora Reyes** [flat, behind the bedroom door]: No. He does not know where the notebook is. Tonight? Understood. **MOV** `c1_escape.in.01`
+- **Nora Reyes** [flat, through the bedroom window]: No. He does not know where the notebook is. Tonight? Understood. **MOV** `c1_escape.in.01`
 - **Steve Mercer**: What notebook? **NEW** `c1_escape.order.02`
-- **Steve Mercer**: Nora? The deadbolt’s locked, and the key’s gone. **REV** `c1_escape.in.02`
+- **Steve Mercer**: Nora? The balcony door’s locked. From inside. **REV** `c1_escape.in.02`
 
 **Finding:**
-- *Steve Mercer: Someone signed Nora’s name in the north wing while she was at her mother’s birthday, across the bay. And now Nora has locked me in.* **NEW** `c1_escape.order.find`
+- *Steve Mercer: Someone signed Nora’s name in the north wing while she was at her mother’s birthday, across the bay. And now Nora has locked me out on the balcony.* **NEW** `c1_escape.order.find`
 
-**Notebook:** Someone used Nora’s name in the north wing while she was at dinner. The front door is locked, and the key is gone.
+**Notebook:** Someone used Nora’s name in the north wing while she was at dinner. Nora locked Steve out on the balcony.
 
 ### Lead 2: Mr. Bell’s gate (`c1_escape.power`) · rows · difficulty 3
 *Unlocks after:* c1_escape.order
 
 **When the lead opens:**
-- **Steve Mercer**: The balcony. Mr. Bell’s gate is the only other way down. **NEW** `c1_escape.power.lead.01`
+- **Steve Mercer**: Mr. Bell’s gate. It’s the only way down from here. **NEW** `c1_escape.power.lead.01`
 
 **Goal:** Open Mr. Bell’s balcony gate without turning off his stair light.
 
-**What Steve knows:** The only way out is along the shared balcony to Mr. Bell’s gate. Mr. Bell is eighty-four and halfway down the dark communal stairs with his groceries. Steve rewired this gate last winter and was paid in fruitcake.
+**What Steve knows:** The only way off the balcony is along the shared rail to Mr. Bell’s gate. Mr. Bell is eighty-four and halfway down the dark communal stairs with his groceries. Steve rewired this gate last winter and was paid in fruitcake.
 
 **Prompt:** Open Mr. Bell’s gate without ever darkening the stair light. The service selector has three positions.
 
@@ -751,7 +751,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 **Goal:** Get to the communal stair.
 
-**What Steve knows:** The shared rail runs past Nora’s pots of irises to Mr. Bell’s open gate and the lit stair. Nora is standing in the bedroom doorway.
+**What Steve knows:** The shared rail runs past Nora’s pots of irises to Mr. Bell’s open gate and the lit stair. The crash brings Nora to the balcony door.
 
 **Prompt:** There is one way out.
 
@@ -766,12 +766,11 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - **Steve Mercer**: Sorry. Sorry. Those were your irises. `c1_escape.cross.01`
 - **Nora Reyes**: Steve. **NEW** `c1_escape.cross.03`
 - **Steve Mercer**: Don’t. Please. I don’t know who you are tonight. **NEW** `c1_escape.cross.04`
-- **Nora Reyes**: Steve... go. `c1_escape.cross.02`
 
 **Finding:**
-- *Steve Mercer: She was close enough to stop me. She didn’t. She told me to go.* **NEW** `c1_escape.cross.find`
+- *Steve Mercer: She was close enough to stop me. She didn’t move.* **NEW** `c1_escape.cross.find`
 
-**Notebook:** Nora let Steve go.
+**Notebook:** Nora watched Steve go and did nothing to stop him.
 
 ### Scene complete
 - *Steve Mercer: My list: one good morning, played twice. A whistle Admiral won’t answer. A signature Nora couldn’t have made. A phone call about a notebook. A locked door.* **NEW** `c1_escape.recap.01`

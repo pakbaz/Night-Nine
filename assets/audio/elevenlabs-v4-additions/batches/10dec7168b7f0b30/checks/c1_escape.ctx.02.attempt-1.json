@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c1_escape.ctx.02",
+  "attempt": 1,
+  "plan_sha256": "10dec7168b7f0b30ae130f645307b4b22f53d83553489ea292db731a4573d6ad",
+  "wav_sha256": "761f81089a6f1805ed3535f36e777d161220e4f3494bcd54c4d8552627f2611a",
+  "expected": "Her raincoat was dripping on the floor. I carried it out to hang on the balcony hooks.",
+  "recognized": "Her raincoat was dripping on the floor. I carried it out to hang on the balcony hooks.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 5.52,
+  "sample_rate": 48000,
+  "peak": 0.264862060546875,
+  "rms": 0.03764339851386896,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

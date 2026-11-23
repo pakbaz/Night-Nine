@@ -1607,7 +1607,7 @@
       "c1_escape.order.02",
       "c1_escape.in.02"
      ],
-     "note": "Someone used Nora’s name in the north wing while she was at dinner. The front door is locked, and the key is gone.",
+     "note": "Someone used Nora’s name in the north wing while she was at dinner. Nora locked Steve out on the balcony.",
      "requires": [],
      "actor": "",
      "kind": "choice",
@@ -1736,7 +1736,7 @@
      },
      "status": "revised",
      "goal": "Work out whether Nora could have signed this work order.",
-     "background": "Something stiff fell out of the raincoat lining when Steve hung it up: an aquarium work order for the north wing, sealed for two years. Only the head aquarist signs for it, and that is Nora. It is signed in her name on Carmen’s birthday, at 20:30 by the aquarium wall clock.",
+     "background": "Something stiff fell out of the raincoat lining when Steve hung it on the balcony hook: an aquarium work order for the north wing, sealed for two years. Only the head aquarist signs for it, and that is Nora. It is signed in her name on Carmen’s birthday, at 20:30 by the aquarium wall clock.",
      "difficulty": 2,
      "art": "res://assets/illustrated/campaign/inserts/c1_escape-north-wing-work-order.webp",
      "type": "board",
@@ -1814,7 +1814,7 @@
      ],
      "status": "revised",
      "goal": "Open Mr. Bell’s balcony gate without turning off his stair light.",
-     "background": "The only way out is along the shared balcony to Mr. Bell’s gate. Mr. Bell is eighty-four and halfway down the dark communal stairs with his groceries. Steve rewired this gate last winter and was paid in fruitcake.",
+     "background": "The only way off the balcony is along the shared rail to Mr. Bell’s gate. Mr. Bell is eighty-four and halfway down the dark communal stairs with his groceries. Steve rewired this gate last winter and was paid in fruitcake.",
      "difficulty": 3,
      "type": "rows",
      "lead": [
@@ -1834,10 +1834,9 @@
      "lines": [
       "c1_escape.cross.01",
       "c1_escape.cross.03",
-      "c1_escape.cross.04",
-      "c1_escape.cross.02"
+      "c1_escape.cross.04"
      ],
-     "note": "Nora let Steve go.",
+     "note": "Nora watched Steve go and did nothing to stop him.",
      "requires": [
       "c1_escape.power"
      ],
@@ -1851,7 +1850,7 @@
      ],
      "status": "revised",
      "goal": "Get to the communal stair.",
-     "background": "The shared rail runs past Nora’s pots of irises to Mr. Bell’s open gate and the lit stair. Nora is standing in the bedroom doorway.",
+     "background": "The shared rail runs past Nora’s pots of irises to Mr. Bell’s open gate and the lit stair. The crash brings Nora to the balcony door.",
      "difficulty": 1,
      "type": "beat",
      "lead": [],
@@ -1879,7 +1878,7 @@
    ],
    "when": "Sunday the 21st, half past eleven at night",
    "objective_steps": [
-    "Get out of the locked apartment."
+    "Get off the balcony."
    ],
    "coach": "Steve’s notebook keeps every clue you have found. Press J to look things up when a case board needs an earlier fact.",
    "present": [
@@ -13950,7 +13949,7 @@
   "c1_escape.ctx.02": {
    "id": "c1_escape.ctx.02",
    "speaker": "steve",
-   "text": "Her yellow raincoat lay over a chair, dripping. It had rained all the way home from dinner.",
+   "text": "Her raincoat was dripping on the floor. I carried it out to hang on the balcony hooks.",
    "audio": "c1_escape.ctx.02",
    "status": "new",
    "delivery": "narration",
@@ -14003,7 +14002,7 @@
    "speaker": "iris",
    "text": "No. He does not know where the notebook is. Tonight? Understood.",
    "audio": "c1_escape.in.01",
-   "direction": "flat, behind the bedroom door",
+   "direction": "flat, through the bedroom window",
    "status": "moved",
    "from": "c1_escape/intro",
    "scene": "c1_escape",
@@ -14023,7 +14022,7 @@
   "c1_escape.in.02": {
    "id": "c1_escape.in.02",
    "speaker": "steve",
-   "text": "Nora? The deadbolt’s locked, and the key’s gone.",
+   "text": "Nora? The balcony door’s locked. From inside.",
    "audio": "c1_escape.in.02",
    "status": "revised",
    "from": "c1_escape/intro",
@@ -14034,7 +14033,7 @@
   "c1_escape.order.find": {
    "id": "c1_escape.order.find",
    "speaker": "steve",
-   "text": "Someone signed Nora’s name in the north wing while she was at her mother’s birthday, across the bay. And now Nora has locked me in.",
+   "text": "Someone signed Nora’s name in the north wing while she was at her mother’s birthday, across the bay. And now Nora has locked me out on the balcony.",
    "audio": "c1_escape.order.find",
    "status": "new",
    "delivery": "narration",
@@ -14045,7 +14044,7 @@
   "c1_escape.power.lead.01": {
    "id": "c1_escape.power.lead.01",
    "speaker": "steve",
-   "text": "The balcony. Mr. Bell’s gate is the only other way down.",
+   "text": "Mr. Bell’s gate. It’s the only way down from here.",
    "audio": "c1_escape.power.lead.01",
    "status": "new",
    "scene": "c1_escape",
@@ -14103,20 +14102,10 @@
    "display": "Steve Mercer",
    "display_speaker": "Steve Mercer"
   },
-  "c1_escape.cross.02": {
-   "id": "c1_escape.cross.02",
-   "speaker": "iris",
-   "text": "Steve... go.",
-   "audio": "c1_escape.cross.02",
-   "status": "kept",
-   "scene": "c1_escape",
-   "display_speaker": "Nora Reyes",
-   "display": "Nora Reyes"
-  },
   "c1_escape.cross.find": {
    "id": "c1_escape.cross.find",
    "speaker": "steve",
-   "text": "She was close enough to stop me. She didn’t. She told me to go.",
+   "text": "She was close enough to stop me. She didn’t move.",
    "audio": "c1_escape.cross.find",
    "status": "new",
    "delivery": "narration",

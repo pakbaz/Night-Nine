@@ -83,7 +83,7 @@ La Marea. Luis keeps Frank's chair at the bar. Carmen tells Steve to apologize w
 Carmen: "She stopped arguing with me. My daughter has argued with me since she could talk." Steve sums up: Nora changed between the end of May and early June; so did Lyle; tonight is the ninth night.
 
 ### The ninth night (`c1_escape`), 11:30 p.m.
-Nora takes a call behind a closed door. Steve hangs up her dripping raincoat, and a work order falls out of the lining.
+Nora takes a call behind a closed door. Steve carries her dripping raincoat out to the balcony hooks, and a work order falls out of the lining.
 
 | Lead | Type | Solution | Why it works |
 | --- | --- | --- | --- |
@@ -91,7 +91,7 @@ Nora takes a call behind a closed door. Steve hangs up her dripping raincoat, an
 | Mr. Bell's gate (`c1_escape.power`) | Deduction (rows) | SERVICE, then press and hold the pad, then switch to NORMAL. | SERVICE keeps the stair bulb lit with the motor off, so the pad remembers the press; the motor checks the pad as it switches on. Mr. Bell, 84, is on the stairs. |
 | Nora's irises (`c1_escape.cross`) | Beat | Climb along the rail. | |
 
-After the board, Steve hears Nora through the door in a flat voice: "No. He does not know where the notebook is. Tonight? Understood." The deadbolt is locked. On the balcony he knocks over her irises. She is close enough to stop him, says "Steve... go", and lets him leave. At midnight on the beach the town walks calmly into the water: Lyle in his church shoes, Gus from the bakery. Mrs. Penhallow is suddenly beside him: "Ninth night, Steven. Count them." Then she is gone.
+After the board, Steve hears Nora through the bedroom window in a flat voice: "No. He does not know where the notebook is. Tonight? Understood." She has bolted the balcony door from inside, so Mr. Bell's gate is the only way down. On his way along the rail he knocks over her irises. Nora comes to the glass and says "Steve." She is close enough to stop him and does not move. At midnight on the beach the town walks calmly into the water: Lyle in his church shoes, Gus from the bakery. Mrs. Penhallow is suddenly beside him: "Ninth night, Steven. Count them." Then she is gone.
 
 **Reveals in Chapter 1:** Nora's greeting is a recording. Someone uses Nora's name. People walk into the bay every ninth night.
 

@@ -100,6 +100,23 @@ func portrait_during(line_id: String, who: String) -> bool:
 	await frames(2)
 	return shown
 
+## Solve one lead in place, without replaying the scene's dialogue.
+func solve(id: String) -> void:
+	var task: Dictionary = game.campaign.task_index[id]
+	game.campaign.choose(id, int(task.answer), task.get("puzzle", {}).get("solution", []))
+	game._refresh()
+	await frames(2)
+
+## The kind of shot a line is played in.
+func shot_during(line_id: String) -> Dictionary:
+	game._speak([line_id], Callable())
+	await frames(3)
+	var shot := {"type": str(game.stage.dialogue_shot.get("type", "")), "goal": game.stage.camera_goal}
+	while game.dialogue_panel.visible:
+		game._next_line()
+	await frames(2)
+	return shot
+
 ## Where the camera aims while a line plays, in art space.
 func aim_during(line_id: String) -> Vector2:
 	game._speak([line_id], Callable())
@@ -154,6 +171,12 @@ func run() -> void:
 	var other: String = await shown_during("c2_ship.out.01")
 	check(other == plate(), "Lines without a story painting keep the room in view")
 	# The aquarium: Nora's copy and Lyle catch Steve at the end, and are seen doing it.
+	await enter("c2_aquarium", ["c2_aquarium.plan", "c2_aquarium.guard"])
+	await solve("c2_aquarium.intercom")
+	check(not game.stage.actor_visible("iris") and not game.stage.actor_visible("lyle_copy"), "Nobody catches Steve while he is still listening to the tape")
+	check(not await portrait_during("c2_aquarium.recap.01", "iris"), "Nora's copy is not there while Steve sums up the north wing")
+	check(await portrait_during("c2_aquarium.out.03", "iris"), "Nora's copy appears when she finds Steve in the aquarium")
+	check(game.stage.actor_visible("iris") and game.stage.actor_visible("lyle_copy"), "Once they find Steve, they stay")
 	await enter("c2_aquarium", ["c2_aquarium.plan", "c2_aquarium.guard", "c2_aquarium.intercom"])
 	check(await portrait_during("c2_aquarium.out.03", "iris"), "Nora's copy is on screen when she finds Steve in the aquarium")
 	check(await portrait_during("c2_aquarium.out.04", "lyle_copy"), "Lyle is on screen when he finds Steve in the aquarium")
@@ -262,11 +285,23 @@ func run() -> void:
 	check(game.stage.floor_stage != null and game.stage.floor_stage.wide == null, "The balcony walks on the same painting it shows up close")
 	check(not ResourceLoader.exists("res://assets/illustrated/campaign/doors/c1_escape.webp"), "No pasted door picture on the balcony")
 	check(not layer_shown("c1_escape-gate-open"), "Mr. Bell's gate starts closed")
+	check(ResourceLoader.exists("res://assets/illustrated/campaign/layers/c1_escape-coat-hung.webp") and not layer_shown("c1_escape-coat-hung"),
+		"Nora's raincoat is not on the balcony hook before Steve hangs it up")
+	await shown_during("c1_escape.order.lead.01")
+	check(layer_shown("c1_escape-coat-hung"), "The raincoat is on the hook once Steve hangs it up and finds the paper")
+	await enter("c1_escape", ["c1_escape.order"])
+	check(layer_shown("c1_escape-coat-hung"), "The raincoat stays on its hook")
+	var locked_out: Dictionary = await shot_during("c1_escape.in.02")
+	check(locked_out.type == "detail" and locked_out.goal.x < game.stage.ART.x * .4,
+		"Steve's 'the balcony door's locked' line shows the locked balcony door")
 	await enter("c1_escape", ["c1_escape.order", "c1_escape.power"])
 	check(layer_shown("c1_escape-gate-open"), "Mr. Bell's gate is painted open after Steve opens it")
+	check(not game.stage.actor_visible("iris"), "Nora stays inside until the crash brings her to the door")
 	await enter("c1_escape")
-	check(not await portrait_during("c1_escape.in.01", "iris"), "Nora's phone call behind the bedroom door is heard, not shown")
+	check(not await portrait_during("c1_escape.in.01", "iris"), "Nora's phone call behind the bedroom window is heard, not shown")
 	await enter("c1_escape", ["c1_escape.order", "c1_escape.power"])
+	await solve("c1_escape.cross")
+	check(game.stage.actor_visible("iris"), "The crash of the irises brings Nora to the balcony door")
 	check(await portrait_during("c1_escape.cross.03", "iris"), "Nora comes out to Steve on the balcony")
 	var outro_shot: String = await shown_during("c1_escape.out.03")
 	check(outro_shot.ends_with("stills/c1_escape-beach-procession.webp"), "Steve watches the procession from the beach")

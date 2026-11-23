@@ -1,0 +1,182 @@
+{
+  "schema": 1,
+  "batch": "later-additions",
+  "model_id": "eleven_v4",
+  "output_format": "mp3_44100_192",
+  "inputs": {
+    "campaign": "702b36215eda720553771edc99a39bf936ebe4a13d40ad87939d32e7a66d2dcc",
+    "storybook": "111dd45f12d16c24dc9c1d253531eb719979f88ec9169f185b8e0f2d1e119c38",
+    "voice_manifest": "4f1139e367bcbd8c269a61be496accd68481b7c6d6f737fbde08f2cc5be3f473",
+    "casting": "cb91065c437c743d50eea2958d5149a6d0a35b9d20430a66cb8a548b921246db",
+    "existing_additions": "229ed7d779b447e5aa43de2b252f88287bc19756a6cfd9fc41a499c2823700bd"
+  },
+  "ordered_audio_ids": [
+    "c1_escape.cross.find",
+    "c1_escape.ctx.02",
+    "c1_escape.in.02",
+    "c1_escape.order.find",
+    "c1_escape.power.lead.01"
+  ],
+  "items": {
+    "c1_escape.cross.find": {
+      "audio_id": "c1_escape.cross.find",
+      "kind": "campaign",
+      "scene": "c1_escape",
+      "speaker": "steve",
+      "cast_role": "steve",
+      "voice_id": "vveagfomyMCJLZsOPRP2",
+      "text": "She was close enough to stop me. She didn’t move.",
+      "text_sha256": "810f7b706f1d71f203fff954f037bc1f21d3f6a6267fcc9d81d1bae08f26b5e8",
+      "synthesis_text": "She was close enough to stop me. She didn’t move.",
+      "synthesis_text_sha256": "810f7b706f1d71f203fff954f037bc1f21d3f6a6267fcc9d81d1bae08f26b5e8",
+      "delivery": "narration",
+      "direction": "",
+      "v4_audio_tag": "",
+      "previous_text": "Don’t. Please. I don’t know who you are tonight.",
+      "next_text": "My list: one good morning, played twice. A whistle Admiral won’t answer. A signature Nora couldn’t have made. A phone call about a notebook. A locked door.",
+      "voice_settings": {
+        "stability": 0.62,
+        "similarity_boost": 0.78
+      },
+      "language_code": "en",
+      "model_id": "eleven_v4",
+      "output_format": "mp3_44100_192",
+      "estimated_credit_rate": 1.0,
+      "estimated_credits": 49,
+      "attempt_seeds": [
+        1045463833,
+        3579025394,
+        3351301273
+      ]
+    },
+    "c1_escape.ctx.02": {
+      "audio_id": "c1_escape.ctx.02",
+      "kind": "campaign",
+      "scene": "c1_escape",
+      "speaker": "steve",
+      "cast_role": "steve",
+      "voice_id": "vveagfomyMCJLZsOPRP2",
+      "text": "Her raincoat was dripping on the floor. I carried it out to hang on the balcony hooks.",
+      "text_sha256": "41a8fbf099b9c7fe4b854d8468676c9e7b64519daa5dc4b4975dc7290a5c7d97",
+      "synthesis_text": "Her raincoat was dripping on the floor. I carried it out to hang on the balcony hooks.",
+      "synthesis_text_sha256": "41a8fbf099b9c7fe4b854d8468676c9e7b64519daa5dc4b4975dc7290a5c7d97",
+      "delivery": "narration",
+      "direction": "",
+      "v4_audio_tag": "",
+      "previous_text": "Home. Nora took a phone call in the bedroom and closed the door. She never closes the door.",
+      "next_text": "Something in the lining. Soaked. Aquarium letterhead... north wing?",
+      "voice_settings": {
+        "stability": 0.62,
+        "similarity_boost": 0.78
+      },
+      "language_code": "en",
+      "model_id": "eleven_v4",
+      "output_format": "mp3_44100_192",
+      "estimated_credit_rate": 1.0,
+      "estimated_credits": 86,
+      "attempt_seeds": [
+        2410823932,
+        2777209420,
+        4242017465
+      ]
+    },
+    "c1_escape.in.02": {
+      "audio_id": "c1_escape.in.02",
+      "kind": "campaign",
+      "scene": "c1_escape",
+      "speaker": "steve",
+      "cast_role": "steve",
+      "voice_id": "vveagfomyMCJLZsOPRP2",
+      "text": "Nora? The balcony door’s locked. From inside.",
+      "text_sha256": "024f842762e55c771ecfe65d331ff6144fcb14fc69df339a3eb092f050087e87",
+      "synthesis_text": "Nora? The balcony door’s locked. From inside.",
+      "synthesis_text_sha256": "024f842762e55c771ecfe65d331ff6144fcb14fc69df339a3eb092f050087e87",
+      "delivery": "live",
+      "direction": "",
+      "v4_audio_tag": "",
+      "previous_text": "What notebook?",
+      "next_text": "Someone signed Nora’s name in the north wing while she was at her mother’s birthday, across the bay. And now Nora has locked me out on the balcony.",
+      "voice_settings": {
+        "stability": 0.46,
+        "similarity_boost": 0.78
+      },
+      "language_code": "en",
+      "model_id": "eleven_v4",
+      "output_format": "mp3_44100_192",
+      "estimated_credit_rate": 1.0,
+      "estimated_credits": 45,
+      "attempt_seeds": [
+        2293359860,
+        1767075761,
+        1513929781
+      ]
+    },
+    "c1_escape.order.find": {
+      "audio_id": "c1_escape.order.find",
+      "kind": "campaign",
+      "scene": "c1_escape",
+      "speaker": "steve",
+      "cast_role": "steve",
+      "voice_id": "vveagfomyMCJLZsOPRP2",
+      "text": "Someone signed Nora’s name in the north wing while she was at her mother’s birthday, across the bay. And now Nora has locked me out on the balcony.",
+      "text_sha256": "7034165f1fa01bed1d3016f823956ba263cacc2b7e7c4f54967b03cdd19f25aa",
+      "synthesis_text": "Someone signed Nora’s name in the north wing while she was at her mother’s birthday, across the bay. And now Nora has locked me out on the balcony.",
+      "synthesis_text_sha256": "7034165f1fa01bed1d3016f823956ba263cacc2b7e7c4f54967b03cdd19f25aa",
+      "delivery": "narration",
+      "direction": "",
+      "v4_audio_tag": "",
+      "previous_text": "Nora? The balcony door’s locked. From inside.",
+      "next_text": "Mr. Bell’s gate. It’s the only way down from here.",
+      "voice_settings": {
+        "stability": 0.62,
+        "similarity_boost": 0.78
+      },
+      "language_code": "en",
+      "model_id": "eleven_v4",
+      "output_format": "mp3_44100_192",
+      "estimated_credit_rate": 1.0,
+      "estimated_credits": 147,
+      "attempt_seeds": [
+        1309126703,
+        2428404245,
+        1560305103
+      ]
+    },
+    "c1_escape.power.lead.01": {
+      "audio_id": "c1_escape.power.lead.01",
+      "kind": "campaign",
+      "scene": "c1_escape",
+      "speaker": "steve",
+      "cast_role": "steve",
+      "voice_id": "vveagfomyMCJLZsOPRP2",
+      "text": "Mr. Bell’s gate. It’s the only way down from here.",
+      "text_sha256": "db711a0e59f2bbf6b2a878d514639c212ccd2b5eb97707f983cc51aba439f09f",
+      "synthesis_text": "Mr. Bell’s gate. It’s the only way down from here.",
+      "synthesis_text_sha256": "db711a0e59f2bbf6b2a878d514639c212ccd2b5eb97707f983cc51aba439f09f",
+      "delivery": "live",
+      "direction": "",
+      "v4_audio_tag": "",
+      "previous_text": "Someone signed Nora’s name in the north wing while she was at her mother’s birthday, across the bay. And now Nora has locked me out on the balcony.",
+      "next_text": "I fixed this latch for Mr. Bell last winter. He paid me in fruitcake. Tonight it’s worth every slice.",
+      "voice_settings": {
+        "stability": 0.46,
+        "similarity_boost": 0.78
+      },
+      "language_code": "en",
+      "model_id": "eleven_v4",
+      "output_format": "mp3_44100_192",
+      "estimated_credit_rate": 1.0,
+      "estimated_credits": 50,
+      "attempt_seeds": [
+        314519398,
+        2640402103,
+        832348369
+      ]
+    }
+  },
+  "count": 5,
+  "characters": 377,
+  "request_characters": 377,
+  "estimated_credits": 377,
+  "plan_sha256": "10dec7168b7f0b30ae130f645307b4b22f53d83553489ea292db731a4573d6ad"
+}

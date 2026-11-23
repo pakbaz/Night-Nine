@@ -159,6 +159,10 @@
     ],
     "layers": [
       {
+        "file": "res://assets/illustrated/campaign/layers/c1_escape-coat-hung.webp",
+        "after": "c1_escape.order.lead.01"
+      },
+      {
         "file": "res://assets/illustrated/campaign/layers/c1_escape-gate-open.webp",
         "after": "c1_escape.power"
       }
@@ -168,16 +172,25 @@
       "c1_escape.out.02"
     ],
     "reveal_after": {
-      "iris": "c1_escape.power"
+      "iris": "c1_escape.cross"
     },
     "inserts": {
       "c1_escape.in.01": [
-        0.3,
-        0.36
+        0.37,
+        0.34
       ]
     },
+    "detail_shots": {
+      "c1_escape.in.02": {
+        "target": [
+          0.25,
+          0.42
+        ],
+        "zoom": 2.5
+      }
+    },
     "appearances": {
-      "iris": "nora_rain",
+      "iris": "nora_warm",
       "steve": "steve_rain",
       "agnes": "agnes_reflective"
     }
@@ -203,8 +216,8 @@
       "c2_aquarium.intercom": "c2_aquarium.intercom"
     },
     "reveal_after": {
-      "iris": "c2_aquarium.intercom",
-      "lyle_copy": "c2_aquarium.intercom"
+      "iris": "c2_aquarium.out.03",
+      "lyle_copy": "c2_aquarium.out.03"
     },
     "bridge": "res://assets/illustrated/campaign/bridges/c2_aquarium-c2_ship.webp",
     "stills": [
@@ -213,6 +226,28 @@
         "lines": [
           "c2_aquarium.in.01",
           "c2_aquarium.in.02"
+        ]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/stills/c2_aquarium-pump-room.webp",
+        "lines": [
+          "c2_aquarium.plan.02",
+          "c2_aquarium.plan.find"
+        ]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/stills/c2_aquarium-service-doors.webp",
+        "lines": [
+          "c2_aquarium.guard"
+        ]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/stills/c2_aquarium-holding-room.webp",
+        "lines": [
+          "c2_aquarium.intercom",
+          "c2_aquarium.out.01",
+          "c2_aquarium.out.02",
+          "c2_aquarium.recap"
         ]
       }
     ],
