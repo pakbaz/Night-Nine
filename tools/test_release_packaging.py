@@ -72,6 +72,12 @@ def write_offline_worker(site):
 
 
 class ReleasePackagingTests(unittest.TestCase):
+    def test_cutaway_without_room_is_valid(self):
+        files, _ = milestones.make_snapshot(10, False)
+        directions = json.loads(read_entry(files, "game/content/illustrated-campaign.json"))
+        self.assertIn("c4_escape", directions)
+        self.assertNotIn("room", directions["c4_escape"]["cutaway"])
+
     def test_play_button_uses_the_cloudflare_route_without_a_redirect(self):
         landing = (ROOT / "site/index.html").read_text()
         link = re.search(r'<a class="play" href="([^"]+)">', landing)

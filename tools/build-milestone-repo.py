@@ -426,7 +426,8 @@ def make_snapshot(stage, strict):
         cast.update(p["id"] for p in d.get("creatures", []))
         if d.get("resident"):
             cast.add(d["resident"])
-        if d.get("cutaway") and d["cutaway"]["room"] not in scene_ids:
+        cutaway_room = d.get("cutaway", {}).get("room")
+        if cutaway_room is not None and cutaway_room not in scene_ids:
             raise ValueError(d["cutaway"])
     if "c9_gallery" in scene_ids:
         cast.update({"steve_toward_nora", "nora_toward_steve"})
