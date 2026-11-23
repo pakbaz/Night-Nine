@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c6_iris.alibi.02",
+  "attempt": 1,
+  "plan_sha256": "3eb378c85c1a076861f32428907275f9a5665b5ded7e6bbaa2530efc60f60f8c",
+  "wav_sha256": "27144d13208dbce70c4a264015bc9736c311b47adf32ebf707b40bb9b1c61d19",
+  "expected": "By the time an officer reached the bread window, Stephen was out through the alley.",
+  "recognized": "By the time an officer reached the bread window, Steven was out through the alley.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.88,
+  "sample_rate": 48000,
+  "peak": 0.378204345703125,
+  "rms": 0.0409150742831116,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

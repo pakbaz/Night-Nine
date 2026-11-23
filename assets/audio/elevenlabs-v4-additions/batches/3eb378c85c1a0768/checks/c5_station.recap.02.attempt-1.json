@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c5_station.recap.02",
+  "attempt": 1,
+  "plan_sha256": "3eb378c85c1a076861f32428907275f9a5665b5ded7e6bbaa2530efc60f60f8c",
+  "wav_sha256": "6dcc7957ca5ad6c8b8679f96affe77759ddacbff25c084fd78f0e6361b0a802f",
+  "expected": "And the man with my face, the one Carmen saw at the market, was following me all week. Sixty-one percent of me, with nothing after the breakfast before the boat.",
+  "recognized": "And the man with my face, the one Carmen saw at the market, was following me all week. 61% of me, with nothing after the breakfast before the boat.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 10.64,
+  "sample_rate": 48000,
+  "peak": 0.311737060546875,
+  "rms": 0.03814823045686197,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

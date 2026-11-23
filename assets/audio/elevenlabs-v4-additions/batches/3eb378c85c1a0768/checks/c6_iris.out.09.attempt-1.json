@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c6_iris.out.09",
+  "attempt": 1,
+  "plan_sha256": "3eb378c85c1a076861f32428907275f9a5665b5ded7e6bbaa2530efc60f60f8c",
+  "wav_sha256": "6d1dafa4bcccd6617e11bc1190996f2a316f2f7ce13a83b88816e6097ca7fd0f",
+  "expected": "Last night the crew found me. They took me below to be reset, and left me on a laundry cart in the Gallery while the shift bell rang.",
+  "recognized": "Last night, the crew found me. They took me below to be reset and left me on a laundry cart in the gallery while the shift bell rang.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 8.4,
+  "sample_rate": 48000,
+  "peak": 0.532928466796875,
+  "rms": 0.055508968914032265,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

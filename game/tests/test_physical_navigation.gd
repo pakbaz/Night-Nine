@@ -256,11 +256,9 @@ func verify_campaign(campaign: NightCampaign, layouts: Dictionary) -> void:
 func verify_jail_staging(stage: STAGE) -> void:
 	var floor_stage: Node2D=stage.floor_stage
 	var cell: Vector2=floor_stage.point(floor_stage.approach.crossword)
-	var stephen: Vector2=floor_stage.bodies.stephen.body.position
 	check(floor_stage.point(floor_stage.object_marks.crossword).x-cell.x>floor_stage.height_at(cell)*.15,
 		"Steve can look into the cell from beside the door and leave the central bars visible")
-	check(stephen.y<cell.y or absf(stephen.x-cell.x)>.22*floor_stage.height_at(stephen),
-		"The foreground investigator leaves Steve visible when he speaks through the cell door")
+	check(not floor_stage.bodies.has("stephen"),"Steve visits the Sheriff's office alone")
 	var dog: Node2D=stage.floor_creatures.biscuit
 	var sprite: Sprite2D=dog.get_child(0)
 	var animal_height := sprite.scale.y*sprite.texture.get_height()

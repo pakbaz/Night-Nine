@@ -4,7 +4,7 @@
       "when": "Wednesday, November 7, morning",
       "present": ["steve", "stephen", "pell", "rook_copy", "ward", "shaw"],
       "card": {"chapter": {"kicker": "Chapter 7", "title": "The President’s Other Appointment", "when": "The day of the signing", "goal": "Steve wants to stop the swap of the President."}},
-      "coach": "Three of you today: Steve, Stephen and Pell. Press Q to switch between them.",
+      "coach": "Three of you today: Steve, Stephen and Pell. Each lead shows who should handle it. Press Q or use the name menu at the top right to switch.",
       "objective": "Get two Steves and a mail carrier into the signing. Watch the President.",
       "changes": ["C14", "critic C14 (left wrist)", "C22", "U-relationships", "U-narration", "U-cast (no new gate_guard voice: Rook’s copy works the gate)"],
       "notes": [
@@ -154,7 +154,7 @@
             "topic": "Breakfast",
             "lines": [
               "stephen|I had two croissants from Gus this morning. He gave me a third one for free.",
-              "steve|He thinks you’re me, Stephen. My face is on every poster.",
+              "steve|He knows you’re not me, Stephen. He just likes you better.",
               "stephen|He said the poster doesn’t do me justice. He’s right, you know."
             ]
           },

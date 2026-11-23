@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c6_iris.recap.03",
+  "attempt": 1,
+  "plan_sha256": "3eb378c85c1a076861f32428907275f9a5665b5ded7e6bbaa2530efc60f60f8c",
+  "wav_sha256": "d773c52747a1f51b5d196fce10d81fc4cf62427ae8d7fd966fd273175edf3531",
+  "expected": "And she told me about June. They scanned her at the safe house. Her copy has run the Sheriff’s office since Friday, and the real June is locked in her own cell until the ninth night.",
+  "recognized": "And she told me about June. They scanned her at the safe house. Her copy has run the sheriff's office since Friday, and the real June is locked in her own cell until the ninth night.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 10.96,
+  "sample_rate": 48000,
+  "peak": 0.409210205078125,
+  "rms": 0.03976170064967289,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

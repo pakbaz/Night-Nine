@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c6_jail.crossword.05",
+  "attempt": 1,
+  "plan_sha256": "3eb378c85c1a076861f32428907275f9a5665b5ded7e6bbaa2530efc60f60f8c",
+  "wav_sha256": "5e39572ada4d76ce21a322cbb7aa93023ea09b6d27443dad8cc3e53f914e598e",
+  "expected": "She knows my files. She doesn’t know me. Back door, Mercer.",
+  "recognized": "She knows my files. She doesn't know me. Back door, Mercer.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.64,
+  "sample_rate": 48000,
+  "peak": 0.484283447265625,
+  "rms": 0.06245476909962775,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

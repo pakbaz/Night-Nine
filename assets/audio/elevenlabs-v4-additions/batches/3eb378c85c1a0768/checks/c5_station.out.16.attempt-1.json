@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c5_station.out.16",
+  "attempt": 1,
+  "plan_sha256": "3eb378c85c1a076861f32428907275f9a5665b5ded7e6bbaa2530efc60f60f8c",
+  "wav_sha256": "4abdf1044ae41167e4d2323f226fc737d0e426f96e3f74426e3cd0d542244ad1",
+  "expected": "Then tell me one thing, brother. Why didn’t they send copies of Mom and Dad home, the way they sent Nora’s?",
+  "recognized": "Then tell me one thing, brother. Why didn't they send copies of Mom and Dad home the way they sent Nora's?",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 6.72,
+  "sample_rate": 48000,
+  "peak": 0.336822509765625,
+  "rms": 0.037315807209636835,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c6_jail.ctx.02",
+  "attempt": 1,
+  "plan_sha256": "3eb378c85c1a076861f32428907275f9a5665b5ded7e6bbaa2530efc60f60f8c",
+  "wav_sha256": "880dcd996f1afcbe53e4881a3bf86bb129ec8b9840ae711259468fb3e4c19812",
+  "expected": "Stephen and Iris waited behind Gus’s bakery next door. I walked in the front door. Pell was sorting the afternoon mail.",
+  "recognized": "Steven and Iris waited behind Gus's bakery next door. I walked in the front door. Pell was sorting the afternoon mail.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 7.68,
+  "sample_rate": 48000,
+  "peak": 0.37786865234375,
+  "rms": 0.04332664815162721,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

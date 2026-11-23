@@ -18,7 +18,7 @@ const PARTNERS := {
 	"c5_shack": {"in":"luis steve"},
 	"c5_station": {"stephen":"steve stephen","out":"steve stephen"},
 	"c6_iris": {"in":"steve iris","takes":"steve iris","hold":"steve iris","out":"steve iris"},
-	"c6_jail": {"in":"pell stephen","crossword":"calder steve","exit":"calder lyle_copy"},
+	"c6_jail": {"in":"pell steve","crossword":"calder steve"},
 	"i2_nora": {"in":"nora dale","jobs":"nora lyle"},
 	"c7_gate": {"in":"stephen pell","post":"pell ward","truck":"steve shaw","out":"steve wen"},
 	"c7_swap": {"map":"calder stephen","tone":"calder steve"},
@@ -49,7 +49,7 @@ const OPERATE := ["c1_flat.control","c1_escape.power","i1_archive.reset","c4_esc
 	"c10_town.console","c10_report.report"]
 const CONVERSATIONS := {"c1_pier.door":"lyle_copy","c1_pier.bait":"agnes",
 	"c1_dinner.birthday":"mateo","c1_dinner.family":"iris","c5_station.stephen":"stephen",
-	"c6_jail.crossword":"calder","c6_jail.exit":"lyle_copy","i2_nora.jobs":"lyle",
+	"c6_jail.crossword":"calder","i2_nora.jobs":"lyle",
 	"c8_beach.first":"saren","c8_beach.second":"saren","c8_beach.refuse":"saren",
 	"c9_gallery.talk":"nora","epilogue.neighbors":"pell"}
 const OBSERVE := ["c1_pier.whistle","c2_ship.nora","c8_lab.props","i2_nora.patrol","c4_escape.van","c6_iris.alibi"]

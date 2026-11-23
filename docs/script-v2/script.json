@@ -167,7 +167,7 @@
     "c3_archive.cycle",
     "c6_iris.takes",
     "c6_iris.hold",
-    "c6_jail.exit",
+    "c6_jail.crossword",
     "c9_gallery.link"
    ],
    "theories": [
@@ -5551,7 +5551,10 @@
     "c5_station.out.12",
     "c5_station.out.13",
     "c5_station.out.14",
-    "c5_station.out.15"
+    "c5_station.out.15",
+    "c5_station.out.16",
+    "c5_station.out.17",
+    "c5_station.out.18"
    ],
    "shots": [
     {
@@ -5639,8 +5642,7 @@
    "place": "Bellwether, the market and the pier",
    "style": "street",
    "actors": [
-    "steve",
-    "stephen"
+    "steve"
    ],
    "objective": "Meet the stranger who warned you about Rook. Keep the town looking somewhere else.",
    "tasks": [
@@ -5655,11 +5657,12 @@
      ],
      "answer": 1,
      "lines": [
-      "c6_iris.alibi.01"
+      "c6_iris.alibi.01",
+      "c6_iris.alibi.02"
      ],
-     "note": "At 8:10 by the radio, Stephen stood beside his own wanted poster at Gus’s bread window while Gus fixed the smudge. Half the town is searching the market.",
+     "note": "At 8:10 by the radio, Stephen stood beside his own wanted poster at Gus’s bread window while Gus fixed the smudge. Half the town ran to the bakery, and nobody was watching the pier.",
      "requires": [],
-     "actor": "stephen",
+     "actor": "steve",
      "kind": "choice",
      "sounds": [],
      "hints": [
@@ -5786,7 +5789,9 @@
       "c6_iris.takes.04"
      ],
      "note": "Two takes, two different rhythms. Copies replay. She chose her words each time. The tell has turned around.",
-     "requires": [],
+     "requires": [
+      "c6_iris.alibi"
+     ],
      "actor": "steve",
      "kind": "compare",
      "sounds": [
@@ -5890,7 +5895,12 @@
     "c6_iris.out.05",
     "c6_iris.out.06",
     "c6_iris.out.07",
-    "c6_iris.out.08"
+    "c6_iris.out.08",
+    "c6_iris.out.09",
+    "c6_iris.out.10",
+    "c6_iris.out.11",
+    "c6_iris.out.12",
+    "c6_iris.out.13"
    ],
    "shots": [
     {
@@ -5913,7 +5923,7 @@
     }
    },
    "when": "Monday, November 5, morning",
-   "coach": "Two investigators now. Each lead shows who should handle it. Press Q or use the name menu at the top right to switch.",
+   "coach": "Line the clocks up by the radio first. The meeting on the pier waits for Stephen’s sighting at the market.",
    "present": [
     "steve",
     "stephen",
@@ -5967,7 +5977,8 @@
      "lines": [
       "c6_iris.talk.stephen.1.01",
       "c6_iris.talk.stephen.1.02"
-     ]
+     ],
+     "until": "c6_iris.alibi"
     },
     {
      "id": "c6_iris.talk.stephen.2",
@@ -5978,7 +5989,8 @@
       "c6_iris.talk.stephen.2.01",
       "c6_iris.talk.stephen.2.02",
       "c6_iris.talk.stephen.2.03"
-     ]
+     ],
+     "until": "c6_iris.alibi"
     },
     {
      "id": "c6_iris.talk.stephen.3",
@@ -5989,7 +6001,8 @@
       "c6_iris.talk.stephen.3.01",
       "c6_iris.talk.stephen.3.02",
       "c6_iris.talk.stephen.3.03"
-     ]
+     ],
+     "until": "c6_iris.alibi"
     },
     {
      "id": "c6_iris.talk.autorick.1",
@@ -5999,7 +6012,8 @@
      "lines": [
       "c6_iris.talk.autorick.1.01",
       "c6_iris.talk.autorick.1.02"
-     ]
+     ],
+     "until": "c6_iris.alibi"
     }
    ],
    "recap": [
@@ -6020,7 +6034,10 @@
     "Iris’s turn at the waterline on the 30th (Chapter 3 stakeout) was her second missed re-sync, on purpose. The first, on the 21st, was an accident. She says so in the takes lead.",
     "New sound assets for hold: effect.halcyon_hold_seattle and effect.halcyon_hold_denver. Different clerks, different ring counts, the same eight bars of hold music ending on the same note.",
     "The text message line uses display_text to show the message as typed.",
-    "Iris is shown as “Nora’s copy” until out.03, where she names herself. From c6_jail on she is “Iris”."
+    "Iris is shown as “Nora’s copy” until out.03, where she names herself. From c6_jail on she is “Iris”.",
+    "Only Steve plays this scene. Stephen helps plan the alibi, then leaves for Gus’s bread window, so Steve meets Iris alone on the pier. Iris is not on the pier until the alibi is done.",
+    "The outro is Iris’s account of Sunday night: the crew retook her from the otter house for a reset, left her on a laundry cart in the Gallery, and she set a slow, reversible wake on Nora’s, Lyle Boone’s and Dale’s beds before riding out with the wash. This is how Nora wakes in Interlude 2.",
+    "Iris then clears Steve of Nora’s abduction in front of the market. The search for Nora ends, but Steve is still wanted for fleeing federal custody."
    ],
    "edited": true
   },
@@ -6031,8 +6048,7 @@
    "place": "Sheriff’s office and jail",
    "style": "jail",
    "actors": [
-    "steve",
-    "stephen"
+    "steve"
    ],
    "objective": "Find the cell key, then work out which June is the real one.",
    "tasks": [
@@ -6049,7 +6065,8 @@
      "lines": [
       "c6_jail.mail.01",
       "c6_jail.mail.02",
-      "c6_jail.mail.03"
+      "c6_jail.mail.03",
+      "c6_jail.mail.04"
      ],
      "note": "The key was in the Jail drawer, slot 9, where entries 17 and 18 share a slot. And on June’s crossword I circled the square where 23 Across crosses 8 Down. Only the woman in cell two will see it.",
      "requires": [],
@@ -6108,82 +6125,6 @@
      "changes": []
     },
     {
-     "id": "c6_jail.distract",
-     "title": "Sheriff’s front desk",
-     "prompt": "Which ticket should Stephen take, and when should Steve go in and come out?",
-     "options": [
-      "Lost property, to identify a coat over the intercom",
-      "Records, for a new likeness on a contested poster",
-      "Mail, to sign a collection slip at the side hatch"
-     ],
-     "answer": 1,
-     "lines": [
-      "c6_jail.distract.01",
-      "c6_jail.distract.02"
-     ],
-     "note": "Stephen contested his own wanted poster at the likeness counter. The deputy went down to the basement at 3:59. At 4:00 I was in the cell corridor with the key and June’s crossword. I had until 4:02 to check her answer and get us both out.",
-     "requires": [],
-     "actor": "stephen",
-     "kind": "choice",
-     "sounds": [],
-     "hints": [
-      "Which ticket needs Stephen’s face, in person, for the whole appointment?",
-      "The deputy leaves at 3:59 and is back at 4:03. Steve’s two minutes have to fit strictly inside that.",
-      "Only one ticket needs Stephen’s face at the counter for the whole appointment. Steve’s two minutes must start after 3:59 and end before 4:03."
-     ],
-     "puzzle": {
-      "instruction": "Pick the ticket that keeps Stephen’s face at the counter, then fit Steve’s two minutes inside the time the deputy is away. Ticket 41: pay a fine at the cashier. Ticket 42: contest a likeness, in person, at the counter. Ticket 43: drop a form through the slot. The deputy leaves at 3:59 and is back at 4:03.",
-      "rows": [
-       {
-        "label": "Stephen takes ticket",
-        "options": [
-         "41",
-         "42",
-         "43"
-        ]
-       },
-       {
-        "label": "Steve goes in at",
-        "options": [
-         "3:59",
-         "4:00",
-         "4:01"
-        ]
-       },
-       {
-        "label": "Steve is out by",
-        "options": [
-         "4:02",
-         "4:03",
-         "4:04"
-        ]
-       }
-      ],
-      "solution": [
-       1,
-       1,
-       0
-      ],
-      "hints": [
-       "Which ticket needs Stephen’s face, in person, for the whole appointment?",
-       "The deputy leaves at 3:59 and is back at 4:03. Steve’s two minutes have to fit strictly inside that.",
-       "Only one ticket needs Stephen’s face at the counter for the whole appointment. Steve’s two minutes must start after 3:59 and end before 4:03."
-      ]
-     },
-     "status": "revised",
-     "goal": "Keep the records deputy away from the cell corridor long enough for Steve to reach June.",
-     "background": "When a wanted poster is contested, the records deputy has to fetch the original file from the basement, and the man in question has to stand at the likeness counter while the clerk compares his face with the poster.",
-     "difficulty": 2,
-     "type": "rows",
-     "lead": [
-      "c6_jail.distract.lead.01",
-      "c6_jail.distract.lead.02",
-      "c6_jail.distract.lead.03"
-     ],
-     "finding": "c6_jail.distract.find",
-     "changes": []
-    },
-    {
      "id": "c6_jail.crossword",
      "title": "The two Junes",
      "prompt": "The June in cell two answers on a slip of paper. The June on the radio answers out loud. What should Steve ask, and whose answer should he accept?",
@@ -6201,10 +6142,9 @@
       "c6_jail.crossword.05",
       "c6_jail.crossword.06"
      ],
-     "note": "The June in cell two had my crossword in her hand: the M where 23 Across crosses 8 Down. The June on the radio guessed a T, so she has never been near that cell. Iris was right. By 4:02 June was out, and we were in the records room, waiting for the shift change at the back door.",
+     "note": "The June in cell two had my crossword in her hand: the M where 23 Across crosses 8 Down. The June on the radio guessed a T, so she has never been near that cell. Iris was right. I unlocked cell two, and we left by the back before her copy reached the front.",
      "requires": [
-      "c6_jail.mail",
-      "c6_jail.distract"
+      "c6_jail.mail"
      ],
      "actor": "steve",
      "kind": "choice",
@@ -6245,8 +6185,8 @@
       ]
      },
      "status": "revised",
-     "goal": "Check Iris’s story: which June is locked in cell two, and which one is out hunting you?",
-     "background": "June’s rule: memories can’t prove who you are, so you check the paperwork. Iris says the crew scanned June at the safe house. Her copy runs the office and the search, and the real June has been locked in cell two since Friday. Steve posted June’s crossword, with one square circled, into cell two and nowhere else. Whoever is in that cell has seen it. Anyone else has to guess.",
+     "goal": "Check Iris’s story: which June is locked in cell two, and which one is out on the harbor?",
+     "background": "June’s rule: memories can’t prove who you are, so you check the paperwork. Iris says the crew scanned June at the safe house. Her copy runs the office, and the real June has been locked in cell two since Friday. Steve posted June’s crossword, with one square circled, into cell two and nowhere else. Whoever is in that cell has seen it. Anyone else has to guess.",
      "difficulty": 2,
      "type": "rows",
      "lead": [
@@ -6255,85 +6195,6 @@
       "c6_jail.crossword.lead.03"
      ],
      "finding": "c6_jail.crossword.find",
-     "changes": []
-    },
-    {
-     "id": "c6_jail.exit",
-     "title": "Deputy’s checkpoint",
-     "prompt": "Can Lyle still make it? Tell him the fastest way.",
-     "options": [
-      "Offer to keep the ticket safe until the morning",
-      "Tell him his relief has signed and let him decide where to go",
-      "Ask if June can take his seat and tell him how the boys did"
-     ],
-     "answer": 1,
-     "lines": [
-      "c6_jail.exit.01",
-      "c6_jail.exit.02"
-     ],
-     "note": "Lyle’s copy could still make Ben’s play: Bus A at 4:29, at the school by 4:38. He chose the front row over his orders, and let us go.",
-     "requires": [
-      "c6_jail.crossword"
-     ],
-     "actor": "",
-     "kind": "choice",
-     "sounds": [],
-     "hints": [
-      "Add each trip to the time Lyle can start it.",
-      "Walking: 4:24 plus 18 minutes. Bus A: 4:29 plus 9. Bus B: 4:26 plus 15.",
-      "Walking gets Lyle there at 4:42, two minutes late. Work out both buses the same way."
-     ],
-     "puzzle": {
-      "instruction": "Lyle can leave the moment his relief signs, at 4:24. Walking to the school takes 18 minutes. Bus A leaves at 4:29 and takes 9 minutes. Bus B leaves at 4:26 and takes 15 minutes. The school doors close at 4:40.",
-      "rows": [
-       {
-        "label": "Walking arrives at",
-        "options": [
-         "4:40",
-         "4:42",
-         "4:44"
-        ]
-       },
-       {
-        "label": "Bus A arrives at",
-        "options": [
-         "4:35",
-         "4:38",
-         "4:41"
-        ]
-       },
-       {
-        "label": "Tell Lyle to take",
-        "options": [
-         "Walk",
-         "Bus A",
-         "Bus B"
-        ]
-       }
-      ],
-      "solution": [
-       1,
-       1,
-       1
-      ],
-      "hints": [
-       "Add each trip to the time Lyle can start it.",
-       "Walking: 4:24 plus 18 minutes. Bus A: 4:29 plus 9. Bus B: 4:26 plus 15.",
-       "Walking gets Lyle there at 4:42, two minutes late. Work out both buses the same way."
-      ]
-     },
-     "status": "revised",
-     "goal": "Get past Lyle’s copy at the checkpoint without a fight.",
-     "background": "Lyle’s copy is on duty at the back checkpoint. His relief signed in at 4:24. This afternoon his son Ben is in the school play, and the school doors close at 4:40.",
-     "difficulty": 2,
-     "type": "rows",
-     "lead": [
-      "c6_jail.exit.lead.01",
-      "c6_jail.exit.lead.02",
-      "c6_jail.exit.lead.03",
-      "c6_jail.exit.lead.04"
-     ],
-     "finding": "c6_jail.exit.find",
      "changes": []
     }
    ],
@@ -6350,7 +6211,8 @@
     "c6_jail.out.04",
     "c6_jail.out.01",
     "c6_jail.out.05",
-    "c6_jail.out.03"
+    "c6_jail.out.03",
+    "c6_jail.out.06"
    ],
    "shots": [
     {
@@ -6370,7 +6232,6 @@
     "stephen",
     "pell",
     "calder",
-    "lyle_copy",
     "iris",
     "gus"
    ],
@@ -6378,7 +6239,10 @@
     "c6_jail.ctx.01",
     "c6_jail.ctx.02"
    ],
-   "deleted_tasks": [],
+   "deleted_tasks": [
+    "c6_jail.distract",
+    "c6_jail.exit"
+   ],
    "talk": [
     {
      "id": "c6_jail.talk.pell.1",
@@ -6412,50 +6276,6 @@
       "c6_jail.talk.pell.3.02",
       "c6_jail.talk.pell.3.03"
      ]
-    },
-    {
-     "id": "c6_jail.talk.stephen.1",
-     "speaker": "stephen",
-     "topic": "The likeness counter",
-     "after": "c6_jail.distract",
-     "lines": [
-      "c6_jail.talk.stephen.1.01",
-      "c6_jail.talk.stephen.1.02",
-      "c6_jail.talk.stephen.1.03"
-     ]
-    },
-    {
-     "id": "c6_jail.talk.calder.1",
-     "speaker": "calder",
-     "topic": "Her cell",
-     "after": "c6_jail.crossword",
-     "lines": [
-      "c6_jail.talk.calder.1.01",
-      "c6_jail.talk.calder.1.02",
-      "c6_jail.talk.calder.1.03"
-     ]
-    },
-    {
-     "id": "c6_jail.talk.calder.2",
-     "speaker": "calder",
-     "topic": "Biscuit",
-     "after": "c6_jail.crossword",
-     "lines": [
-      "c6_jail.talk.calder.2.01",
-      "c6_jail.talk.calder.2.02",
-      "c6_jail.talk.calder.2.03"
-     ]
-    },
-    {
-     "id": "c6_jail.talk.calder.3",
-     "speaker": "calder",
-     "topic": "The other June",
-     "after": "c6_jail.crossword",
-     "lines": [
-      "c6_jail.talk.calder.3.01",
-      "c6_jail.talk.calder.3.02",
-      "c6_jail.talk.calder.3.03"
-     ]
     }
    ],
    "recap": [
@@ -6471,9 +6291,10 @@
     "U-narration"
    ],
    "notes": [
-    "Both Junes use the calder voice. Line-level display tells them apart: “June on the radio” (her copy, out on the harbor search, heard through the front-desk radio) and “June in cell two”.",
+    "Both Junes use the calder voice. Line-level display tells them apart: “June on the radio” (her copy, out on the harbor, heard through the front-desk radio) and “June in cell two”.",
     "Pell names himself in the intro, so the display rule switches from “Dale Kittredge” to “Pell” in this scene.",
-    "distract and exit become rows puzzles (drop the case boards). The crossword test pays off Chapter 3: a fresh private fact, checked on paper.",
+    "Steve visits alone. Stephen and Iris wait behind Gus’s bakery. Lyle’s copy is out on the harbor with June’s copy, so the deputy never sees Steve and has nothing to report.",
+    "The crossword test pays off Chapter 3: a fresh private fact, checked on paper.",
     "Art (optional): Gus’s bakery van with a giant croissant on its roof, at the loading door, for the departure."
    ],
    "edited": true
@@ -6487,7 +6308,7 @@
    "actors": [
     "nora"
    ],
-   "objective": "Wake the others, learn their names and find a way through the Gallery.",
+   "objective": "Steady the others, learn their names and find a way through the Gallery.",
    "tasks": [
     {
      "id": "i2_nora.patrol",
@@ -6773,7 +6594,9 @@
    "intro": [
     "i2_nora.in.01",
     "i2_nora.in.02",
-    "i2_nora.in.03"
+    "i2_nora.in.03",
+    "i2_nora.in.04",
+    "i2_nora.in.05"
    ],
    "outro": [
     "i2_nora.out.01",
@@ -6883,7 +6706,9 @@
     "U-narration"
    ],
    "notes": [
-    "Nora wakes because Iris stopped re-syncing. Nora doesn’t know that; the player does.",
+    "In the Iris chapter, Iris tells Steve how she set this wake: on Sunday night the crew retook her for a reset and left her on a laundry cart in the Gallery, and she set a slow wake on three beds before riding out with the wash. This interlude begins when the slow cycle finishes Monday night.",
+    "The lids remain shut while the beds support Nora, Lyle and Dale. They open only after all three breathe independently.",
+    "This wake is reversible and leaves the mirror links active. The crew can put Nora back under; Iris’s permanent link-break remains a Chapter 9 choice.",
     "jobs keeps the case board with a single stage (the route and logging stages are cut).",
     "The eye under the frost is narrated in the departure. Art (optional): an insert of Row Zero with one enormous eye open under cracked frost.",
     "Nora plays this interlude, so her small talk is with Dale and Lyle, the two sleepers awake beside her."
@@ -7136,7 +6961,7 @@
     }
    },
    "when": "Wednesday, November 7, morning",
-   "coach": "Three of you today: Steve, Stephen and Pell. Press Q to switch between them.",
+   "coach": "Three of you today: Steve, Stephen and Pell. Each lead shows who should handle it. Press Q or use the name menu at the top right to switch.",
    "present": [
     "steve",
     "stephen",
@@ -19044,7 +18869,7 @@
   "c5_station.stephen.lead.01": {
    "id": "c5_station.stephen.lead.01",
    "speaker": "steve",
-   "text": "...That’s my face.",
+   "text": "...The man Carmen saw at the market. My face.",
    "audio": "c5_station.stephen.lead.01",
    "status": "new",
    "scene": "c5_station",
@@ -19239,7 +19064,7 @@
   "c5_station.recap.02": {
    "id": "c5_station.recap.02",
    "speaker": "steve",
-   "text": "And the man following me all week was me. Sixty-one percent of me, with nothing after the breakfast before the boat.",
+   "text": "And the man with my face, the one Carmen saw at the market, was following me all week. Sixty-one percent of me, with nothing after the breakfast before the boat.",
    "audio": "c5_station.recap.02",
    "status": "new",
    "delivery": "narration",
@@ -19404,6 +19229,36 @@
    "display": "Stephen",
    "display_speaker": "Stephen"
   },
+  "c5_station.out.16": {
+   "id": "c5_station.out.16",
+   "speaker": "steve",
+   "text": "Then tell me one thing, brother. Why didn’t they send copies of Mom and Dad home, the way they sent Nora’s?",
+   "audio": "c5_station.out.16",
+   "status": "new",
+   "scene": "c5_station",
+   "display": "Steve Mercer",
+   "display_speaker": "Steve Mercer"
+  },
+  "c5_station.out.17": {
+   "id": "c5_station.out.17",
+   "speaker": "stephen",
+   "text": "The tall man said Mom’s scan was damaged. A copy of her wouldn’t know where the notebook is. And the town had already buried them. The empty boat came back.",
+   "audio": "c5_station.out.17",
+   "status": "new",
+   "scene": "c5_station",
+   "display": "Stephen",
+   "display_speaker": "Stephen"
+  },
+  "c5_station.out.18": {
+   "id": "c5_station.out.18",
+   "speaker": "stephen",
+   "text": "So they keep them asleep. As long as Mom sleeps, the notebook has an owner they can ask.",
+   "audio": "c5_station.out.18",
+   "status": "new",
+   "scene": "c5_station",
+   "display": "Stephen",
+   "display_speaker": "Stephen"
+  },
   "c6_iris.ctx.01": {
    "id": "c6_iris.ctx.01",
    "speaker": "steve",
@@ -19529,10 +19384,21 @@
    "display": "Stephen",
    "display_speaker": "Stephen"
   },
+  "c6_iris.alibi.02": {
+   "id": "c6_iris.alibi.02",
+   "speaker": "steve",
+   "text": "By the time an officer reached the bread window, Stephen was out through the alley.",
+   "audio": "c6_iris.alibi.02",
+   "status": "new",
+   "delivery": "narration",
+   "scene": "c6_iris",
+   "display": "Steve Mercer",
+   "display_speaker": "Steve Mercer"
+  },
   "c6_iris.alibi.find": {
    "id": "c6_iris.alibi.find",
    "speaker": "steve",
-   "text": "At 8:10 by the radio, Stephen stood beside his own wanted poster at Gus’s bread window while Gus fixed the smudge. Half the town is searching the market.",
+   "text": "At 8:10 by the radio, Stephen stood beside his own wanted poster at Gus’s bread window while Gus fixed the smudge. Half the town ran to the bakery, and nobody was watching the pier.",
    "audio": "c6_iris.alibi.find",
    "status": "new",
    "delivery": "narration",
@@ -19931,7 +19797,7 @@
   "c6_iris.recap.03": {
    "id": "c6_iris.recap.03",
    "speaker": "steve",
-   "text": "And she told me about June. They scanned her at the safe house. Her copy took the Sheriff’s desk this morning, and the real June is in her own cell until the ninth night.",
+   "text": "And she told me about June. They scanned her at the safe house. Her copy has run the Sheriff’s office since Friday, and the real June is locked in her own cell until the ninth night.",
    "audio": "c6_iris.recap.03",
    "status": "new",
    "delivery": "narration",
@@ -19942,7 +19808,7 @@
   "c6_iris.recap.04": {
    "id": "c6_iris.recap.04",
    "speaker": "steve",
-   "text": "She also told me who could get us inside: the mail carrier. Every day at four he takes the Sheriff’s mail in the back way. “He isn’t Dale,” she said. “But he loves June’s dog.”",
+   "text": "She also told me who could get us inside: the mail carrier. The spare key to June’s cell went back through the post. “He isn’t Dale,” she said. “But he loves June’s dog.”",
    "audio": "c6_iris.recap.04",
    "status": "new",
    "delivery": "narration",
@@ -20005,7 +19871,7 @@
   "c6_iris.out.06": {
    "id": "c6_iris.out.06",
    "speaker": "iris",
-   "text": "I’ve slept in the otter house since Tuesday. If the crew finds me, they will reset me, and I won’t remember any of this. Not even that I chose a name.",
+   "text": "I hid in the otter house from Tuesday until last night. If they catch me again, they will reset me, and I won’t remember any of this. Not even that I chose a name.",
    "audio": "c6_iris.out.06",
    "status": "new",
    "scene": "c6_iris",
@@ -20034,10 +19900,61 @@
    "display": "Steve Mercer",
    "display_speaker": "Steve Mercer"
   },
+  "c6_iris.out.09": {
+   "id": "c6_iris.out.09",
+   "speaker": "iris",
+   "text": "Last night the crew found me. They took me below to be reset, and left me on a laundry cart in the Gallery while the shift bell rang.",
+   "audio": "c6_iris.out.09",
+   "status": "new",
+   "scene": "c6_iris",
+   "display_speaker": "Nora’s copy",
+   "display": "Nora’s copy"
+  },
+  "c6_iris.out.10": {
+   "id": "c6_iris.out.10",
+   "speaker": "iris",
+   "text": "Nora was in the third bed. Lyle Boone and Dale were beside her. I set their beds to a slow wake. It is gentle, and it can be undone.",
+   "audio": "c6_iris.out.10",
+   "status": "new",
+   "scene": "c6_iris",
+   "display_speaker": "Nora’s copy",
+   "display": "Nora’s copy"
+  },
+  "c6_iris.out.11": {
+   "id": "c6_iris.out.11",
+   "speaker": "iris",
+   "text": "It finishes tonight, so someone inside will be awake when you come. Then I rode out with the wash.",
+   "audio": "c6_iris.out.11",
+   "status": "new",
+   "scene": "c6_iris",
+   "display_speaker": "Nora’s copy",
+   "display": "Nora’s copy"
+  },
+  "c6_iris.out.12": {
+   "id": "c6_iris.out.12",
+   "speaker": "iris",
+   "text": "Steve didn’t take me. I’ll say it where the whole market can hear.",
+   "audio": "c6_iris.out.12",
+   "status": "new",
+   "scene": "c6_iris",
+   "display_speaker": "Nora’s copy",
+   "display": "Nora’s copy"
+  },
+  "c6_iris.out.13": {
+   "id": "c6_iris.out.13",
+   "speaker": "steve",
+   "text": "She said it at the fish stalls, in Nora’s coat, loud enough for half the market. An officer heard it too. By the time he reached for his radio, she was gone.",
+   "audio": "c6_iris.out.13",
+   "status": "new",
+   "delivery": "narration",
+   "scene": "c6_iris",
+   "display": "Steve Mercer",
+   "display_speaker": "Steve Mercer"
+  },
   "c6_jail.ctx.01": {
    "id": "c6_jail.ctx.01",
    "speaker": "steve",
-   "text": "The Sheriff’s office, just before four. June’s copy was out on the harbor, running the search for me. The real June was in cell two.",
+   "text": "The Sheriff’s office, just before four. Since Iris spoke up at the market, the search for Nora was over. June’s copy and Lyle’s copy were out on the harbor, calling the boats in.",
    "audio": "c6_jail.ctx.01",
    "status": "new",
    "delivery": "narration",
@@ -20048,24 +19965,25 @@
   "c6_jail.ctx.02": {
    "id": "c6_jail.ctx.02",
    "speaker": "steve",
-   "text": "Stephen walked in the front door wearing my face, to contest his own poster. I came in the back, under the parcels in the mail cart.",
+   "text": "Stephen and Iris waited behind Gus’s bakery next door. I walked in the front door. Pell was sorting the afternoon mail.",
    "audio": "c6_jail.ctx.02",
    "status": "new",
    "delivery": "narration",
-   "cue": "mail_cart",
    "scene": "c6_jail",
    "display": "Steve Mercer",
    "display_speaker": "Steve Mercer"
   },
   "c6_jail.in.04": {
    "id": "c6_jail.in.04",
-   "speaker": "stephen",
-   "text": "The Sheriff is out on the harbor, hunting you. The Sheriff is also in cell two. One of those is a staffing problem.",
+   "speaker": "calder",
+   "text": "All boats, stand down. Nora Reyes is safe. The search is closed.",
    "audio": "c6_jail.in.04",
    "status": "new",
+   "delivery": "radio",
+   "direction": "over the front-desk radio, from the harbor",
+   "display": "June on the radio",
    "scene": "c6_jail",
-   "display": "Stephen",
-   "display_speaker": "Stephen"
+   "display_speaker": "June on the radio"
   },
   "c6_jail.in.01": {
    "id": "c6_jail.in.01",
@@ -20089,13 +20007,13 @@
   },
   "c6_jail.in.03": {
    "id": "c6_jail.in.03",
-   "speaker": "stephen",
-   "text": "We should put the dog in charge.",
+   "speaker": "steve",
+   "text": "Maybe we should put the dog in charge.",
    "audio": "c6_jail.in.03",
-   "status": "kept",
+   "status": "revised",
    "scene": "c6_jail",
-   "display": "Stephen",
-   "display_speaker": "Stephen"
+   "display": "Steve Mercer",
+   "display_speaker": "Steve Mercer"
   },
   "c6_jail.in.05": {
    "id": "c6_jail.in.05",
@@ -20207,73 +20125,21 @@
    "display": "Steve Mercer",
    "display_speaker": "Steve Mercer"
   },
+  "c6_jail.mail.04": {
+   "id": "c6_jail.mail.04",
+   "speaker": "steve",
+   "text": "Then I’ll call the Sheriff on the desk radio. Both Junes get the same question.",
+   "audio": "c6_jail.mail.04",
+   "status": "new",
+   "scene": "c6_jail",
+   "display": "Steve Mercer",
+   "display_speaker": "Steve Mercer"
+  },
   "c6_jail.mail.find": {
    "id": "c6_jail.mail.find",
    "speaker": "steve",
    "text": "The key was in the Jail drawer, slot 9, where entries 17 and 18 share a slot. And on June’s crossword I circled the square where 23 Across crosses 8 Down. Only the woman in cell two will see it.",
    "audio": "c6_jail.mail.find",
-   "status": "new",
-   "delivery": "narration",
-   "scene": "c6_jail",
-   "display": "Steve Mercer",
-   "display_speaker": "Steve Mercer"
-  },
-  "c6_jail.distract.lead.01": {
-   "id": "c6_jail.distract.lead.01",
-   "speaker": "stephen",
-   "text": "Three tickets at the counter. Leave the deputy to me.",
-   "audio": "c6_jail.distract.lead.01",
-   "status": "new",
-   "scene": "c6_jail",
-   "display": "Stephen",
-   "display_speaker": "Stephen"
-  },
-  "c6_jail.distract.lead.02": {
-   "id": "c6_jail.distract.lead.02",
-   "speaker": "stephen",
-   "text": "The clerk says a contested likeness sends the deputy down to the basement for the file.",
-   "audio": "c6_jail.distract.lead.02",
-   "status": "new",
-   "scene": "c6_jail",
-   "display": "Stephen",
-   "display_speaker": "Stephen"
-  },
-  "c6_jail.distract.lead.03": {
-   "id": "c6_jail.distract.lead.03",
-   "speaker": "steve",
-   "text": "She leaves at 3:59 and she’s back at 4:03. I need two clear minutes.",
-   "audio": "c6_jail.distract.lead.03",
-   "status": "new",
-   "scene": "c6_jail",
-   "display": "Steve Mercer",
-   "display_speaker": "Steve Mercer"
-  },
-  "c6_jail.distract.01": {
-   "id": "c6_jail.distract.01",
-   "speaker": "stephen",
-   "text": "I would like a better photograph. My family will be seeing these.",
-   "audio": "c6_jail.distract.01",
-   "status": "kept",
-   "scene": "c6_jail",
-   "display": "Stephen",
-   "display_speaker": "Stephen"
-  },
-  "c6_jail.distract.02": {
-   "id": "c6_jail.distract.02",
-   "speaker": "steve",
-   "text": "The clerk radioed the Sheriff about the cheerful man at her likeness counter. Out on the harbor, June’s copy started asking questions.",
-   "audio": "c6_jail.distract.02",
-   "status": "new",
-   "delivery": "narration",
-   "scene": "c6_jail",
-   "display": "Steve Mercer",
-   "display_speaker": "Steve Mercer"
-  },
-  "c6_jail.distract.find": {
-   "id": "c6_jail.distract.find",
-   "speaker": "steve",
-   "text": "Stephen contested his own wanted poster at the likeness counter. The deputy went down to the basement at 3:59. At 4:00 I was in the cell corridor with the key and June’s crossword. I had until 4:02 to check her answer and get us both out.",
-   "audio": "c6_jail.distract.find",
    "status": "new",
    "delivery": "narration",
    "scene": "c6_jail",
@@ -20295,7 +20161,7 @@
   "c6_jail.crossword.lead.02": {
    "id": "c6_jail.crossword.lead.02",
    "speaker": "calder",
-   "text": "He’ll check my paperwork, Mercer. I taught him that.",
+   "text": "Check my paperwork, Mercer. I taught you that.",
    "audio": "c6_jail.crossword.lead.02",
    "status": "new",
    "direction": "through the cell door",
@@ -20345,30 +20211,29 @@
   },
   "c6_jail.crossword.04": {
    "id": "c6_jail.crossword.04",
-   "speaker": "stephen",
-   "text": "Sheriff, this is the hunter. Mercer just ran out the front, toward the north jetty. I’m right behind him.",
-   "audio": "c6_jail.crossword.04",
-   "status": "new",
-   "direction": "into the front-desk radio",
-   "scene": "c6_jail",
-   "display": "Stephen",
-   "display_speaker": "Stephen"
-  },
-  "c6_jail.crossword.05": {
-   "id": "c6_jail.crossword.05",
    "speaker": "calder",
-   "text": "North jetty. On my way.",
-   "audio": "c6_jail.crossword.05",
+   "text": "Stay right there, Mercer. I’m on my way in.",
+   "audio": "c6_jail.crossword.04",
    "status": "new",
    "delivery": "radio",
    "display": "June on the radio",
    "scene": "c6_jail",
    "display_speaker": "June on the radio"
   },
+  "c6_jail.crossword.05": {
+   "id": "c6_jail.crossword.05",
+   "speaker": "calder",
+   "text": "She knows my files. She doesn’t know me. Back door, Mercer.",
+   "audio": "c6_jail.crossword.05",
+   "status": "new",
+   "display": "June in cell two",
+   "scene": "c6_jail",
+   "display_speaker": "June in cell two"
+  },
   "c6_jail.crossword.06": {
    "id": "c6_jail.crossword.06",
    "speaker": "steve",
-   "text": "Twice in one week, Stephen had lied to his own side for me.",
+   "text": "Pell held the back door. When her patrol car pulled up out front, we were already behind Gus’s bakery.",
    "audio": "c6_jail.crossword.06",
    "status": "new",
    "delivery": "narration",
@@ -20379,79 +20244,8 @@
   "c6_jail.crossword.find": {
    "id": "c6_jail.crossword.find",
    "speaker": "steve",
-   "text": "The June in cell two had my crossword in her hand: the M where 23 Across crosses 8 Down. The June on the radio guessed a T, so she has never been near that cell. Iris was right. By 4:02 June was out, and we were in the records room, waiting for the shift change at the back door.",
+   "text": "The June in cell two had my crossword in her hand: the M where 23 Across crosses 8 Down. The June on the radio guessed a T, so she has never been near that cell. Iris was right. I unlocked cell two, and we left by the back before her copy reached the front.",
    "audio": "c6_jail.crossword.find",
-   "status": "new",
-   "delivery": "narration",
-   "scene": "c6_jail",
-   "display": "Steve Mercer",
-   "display_speaker": "Steve Mercer"
-  },
-  "c6_jail.exit.lead.01": {
-   "id": "c6_jail.exit.lead.01",
-   "speaker": "lyle_copy",
-   "text": "Sheriff. Steve. I’m supposed to stop you.",
-   "audio": "c6_jail.exit.lead.01",
-   "status": "new",
-   "scene": "c6_jail",
-   "display": "Lyle’s copy",
-   "display_speaker": "Lyle’s copy"
-  },
-  "c6_jail.exit.lead.02": {
-   "id": "c6_jail.exit.lead.02",
-   "speaker": "lyle_copy",
-   "text": "Ben’s a tree in the school play this afternoon. He’s been practicing being a tree for a month.",
-   "audio": "c6_jail.exit.lead.02",
-   "status": "new",
-   "scene": "c6_jail",
-   "display": "Lyle’s copy",
-   "display_speaker": "Lyle’s copy"
-  },
-  "c6_jail.exit.lead.03": {
-   "id": "c6_jail.exit.lead.03",
-   "speaker": "calder",
-   "text": "Lyle. Your relief has signed.",
-   "audio": "c6_jail.exit.lead.03",
-   "status": "new",
-   "scene": "c6_jail",
-   "display": "Sheriff June Calder",
-   "display_speaker": "Sheriff June Calder"
-  },
-  "c6_jail.exit.lead.04": {
-   "id": "c6_jail.exit.lead.04",
-   "speaker": "calder",
-   "text": "The school doors close at four forty. Let’s find you the fastest way there.",
-   "audio": "c6_jail.exit.lead.04",
-   "status": "new",
-   "scene": "c6_jail",
-   "display": "Sheriff June Calder",
-   "display_speaker": "Sheriff June Calder"
-  },
-  "c6_jail.exit.01": {
-   "id": "c6_jail.exit.01",
-   "speaker": "lyle_copy",
-   "text": "Bus A. Twenty-nine past. They gave me a seat in the front row.",
-   "audio": "c6_jail.exit.01",
-   "status": "revised",
-   "scene": "c6_jail",
-   "display": "Lyle’s copy",
-   "display_speaker": "Lyle’s copy"
-  },
-  "c6_jail.exit.02": {
-   "id": "c6_jail.exit.02",
-   "speaker": "calder",
-   "text": "Then you’d better get there. We can talk tomorrow.",
-   "audio": "c6_jail.exit.02",
-   "status": "kept",
-   "scene": "c6_jail",
-   "display": "Sheriff June Calder",
-   "display_speaker": "Sheriff June Calder"
-  },
-  "c6_jail.exit.find": {
-   "id": "c6_jail.exit.find",
-   "speaker": "steve",
-   "text": "Lyle’s copy could still make Ben’s play: Bus A at 4:29, at the school by 4:38. He chose the front row over his orders, and let us go.",
-   "audio": "c6_jail.exit.find",
    "status": "new",
    "delivery": "narration",
    "scene": "c6_jail",
@@ -20548,130 +20342,10 @@
    "display": "Pell",
    "display_speaker": "Pell"
   },
-  "c6_jail.talk.stephen.1.01": {
-   "id": "c6_jail.talk.stephen.1.01",
-   "speaker": "stephen",
-   "text": "The clerk said I looked nothing like my poster.",
-   "audio": "c6_jail.talk.stephen.1.01",
-   "status": "new",
-   "scene": "c6_jail",
-   "display": "Stephen",
-   "display_speaker": "Stephen"
-  },
-  "c6_jail.talk.stephen.1.02": {
-   "id": "c6_jail.talk.stephen.1.02",
-   "speaker": "steve",
-   "text": "It is my poster. It is literally my face.",
-   "audio": "c6_jail.talk.stephen.1.02",
-   "status": "new",
-   "scene": "c6_jail",
-   "display": "Steve Mercer",
-   "display_speaker": "Steve Mercer"
-  },
-  "c6_jail.talk.stephen.1.03": {
-   "id": "c6_jail.talk.stephen.1.03",
-   "speaker": "stephen",
-   "text": "I told her that. She said I was far too cheerful to be you.",
-   "audio": "c6_jail.talk.stephen.1.03",
-   "status": "new",
-   "scene": "c6_jail",
-   "display": "Stephen",
-   "display_speaker": "Stephen"
-  },
-  "c6_jail.talk.calder.1.01": {
-   "id": "c6_jail.talk.calder.1.01",
-   "speaker": "calder",
-   "text": "I spent the morning in my own cell. That mattress is worse than I ever admitted.",
-   "audio": "c6_jail.talk.calder.1.01",
-   "status": "new",
-   "scene": "c6_jail",
-   "display": "Sheriff June Calder",
-   "display_speaker": "Sheriff June Calder"
-  },
-  "c6_jail.talk.calder.1.02": {
-   "id": "c6_jail.talk.calder.1.02",
-   "speaker": "steve",
-   "text": "You told the county the cells were fine.",
-   "audio": "c6_jail.talk.calder.1.02",
-   "status": "new",
-   "scene": "c6_jail",
-   "display": "Steve Mercer",
-   "display_speaker": "Steve Mercer"
-  },
-  "c6_jail.talk.calder.1.03": {
-   "id": "c6_jail.talk.calder.1.03",
-   "speaker": "calder",
-   "text": "I told the county a lot of things. I’m ordering new mattresses.",
-   "audio": "c6_jail.talk.calder.1.03",
-   "status": "new",
-   "scene": "c6_jail",
-   "display": "Sheriff June Calder",
-   "display_speaker": "Sheriff June Calder"
-  },
-  "c6_jail.talk.calder.2.01": {
-   "id": "c6_jail.talk.calder.2.01",
-   "speaker": "calder",
-   "text": "Pell has been feeding my dog? Twice a day?",
-   "audio": "c6_jail.talk.calder.2.01",
-   "status": "new",
-   "scene": "c6_jail",
-   "display": "Sheriff June Calder",
-   "display_speaker": "Sheriff June Calder"
-  },
-  "c6_jail.talk.calder.2.02": {
-   "id": "c6_jail.talk.calder.2.02",
-   "speaker": "steve",
-   "text": "Blue bowl, seven and five. He’s learned the left ear.",
-   "audio": "c6_jail.talk.calder.2.02",
-   "status": "new",
-   "scene": "c6_jail",
-   "display": "Steve Mercer",
-   "display_speaker": "Steve Mercer"
-  },
-  "c6_jail.talk.calder.2.03": {
-   "id": "c6_jail.talk.calder.2.03",
-   "speaker": "calder",
-   "text": "Then he can keep his job. Don’t you dare tell him I said that.",
-   "audio": "c6_jail.talk.calder.2.03",
-   "status": "new",
-   "scene": "c6_jail",
-   "display": "Sheriff June Calder",
-   "display_speaker": "Sheriff June Calder"
-  },
-  "c6_jail.talk.calder.3.01": {
-   "id": "c6_jail.talk.calder.3.01",
-   "speaker": "calder",
-   "text": "She does my paperwork better than I do. That’s what bothers me most.",
-   "audio": "c6_jail.talk.calder.3.01",
-   "status": "new",
-   "scene": "c6_jail",
-   "display": "Sheriff June Calder",
-   "display_speaker": "Sheriff June Calder"
-  },
-  "c6_jail.talk.calder.3.02": {
-   "id": "c6_jail.talk.calder.3.02",
-   "speaker": "steve",
-   "text": "She guessed a T, June. She didn’t know you.",
-   "audio": "c6_jail.talk.calder.3.02",
-   "status": "new",
-   "scene": "c6_jail",
-   "display": "Steve Mercer",
-   "display_speaker": "Steve Mercer"
-  },
-  "c6_jail.talk.calder.3.03": {
-   "id": "c6_jail.talk.calder.3.03",
-   "speaker": "calder",
-   "text": "No. She knew my files. That isn’t the same thing at all.",
-   "audio": "c6_jail.talk.calder.3.03",
-   "status": "new",
-   "scene": "c6_jail",
-   "display": "Sheriff June Calder",
-   "display_speaker": "Sheriff June Calder"
-  },
   "c6_jail.recap.01": {
    "id": "c6_jail.recap.01",
    "speaker": "steve",
-   "text": "June is out of her cell, and her copy is out at the north jetty, looking for me. Pell chose a beagle over his orders. Lyle’s copy chose a school play.",
+   "text": "June is out of her cell. Her copy knows I was there, and that I let June out. Pell chose a beagle over his orders.",
    "audio": "c6_jail.recap.01",
    "status": "new",
    "delivery": "narration",
@@ -20693,7 +20367,7 @@
   "c6_jail.recap.03": {
    "id": "c6_jail.recap.03",
    "speaker": "steve",
-   "text": "Iris was waiting behind Gus’s bakery next door, where nobody would see Nora’s face.",
+   "text": "Stephen and Iris were waiting behind Gus’s bakery next door, where nobody would see our faces.",
    "audio": "c6_jail.recap.03",
    "status": "new",
    "delivery": "narration",
@@ -20752,6 +20426,17 @@
    "display": "Iris",
    "display_speaker": "Iris"
   },
+  "c6_jail.out.06": {
+   "id": "c6_jail.out.06",
+   "speaker": "steve",
+   "text": "By dark the posters were back up, with a new charge from Rook’s copy: Steve Mercer, fled federal custody. June’s copy knew who had opened cell two.",
+   "audio": "c6_jail.out.06",
+   "status": "new",
+   "delivery": "narration",
+   "scene": "c6_jail",
+   "display": "Steve Mercer",
+   "display_speaker": "Steve Mercer"
+  },
   "i2_nora.ctx.01": {
    "id": "i2_nora.ctx.01",
    "speaker": "nora",
@@ -20800,6 +20485,28 @@
    "text": "Names first. Complaints after we have a plan.",
    "audio": "i2_nora.in.03",
    "status": "kept",
+   "scene": "i2_nora",
+   "display": "Nora Reyes",
+   "display_speaker": "Nora Reyes"
+  },
+  "i2_nora.in.04": {
+   "id": "i2_nora.in.04",
+   "speaker": "nora",
+   "text": "The glass stayed shut while three blue strips counted our breaths. The beds did the work until each of us could breathe alone.",
+   "audio": "i2_nora.in.04",
+   "status": "new",
+   "delivery": "narration",
+   "scene": "i2_nora",
+   "display": "Nora Reyes",
+   "display_speaker": "Nora Reyes"
+  },
+  "i2_nora.in.05": {
+   "id": "i2_nora.in.05",
+   "speaker": "nora",
+   "text": "Only then did the latches release. WAKE COMPLETE, the panel said. MIRROR LINK ACTIVE.",
+   "audio": "i2_nora.in.05",
+   "status": "new",
+   "delivery": "narration",
    "scene": "i2_nora",
    "display": "Nora Reyes",
    "display_speaker": "Nora Reyes"
@@ -21671,7 +21378,7 @@
   "c7_gate.talk.stephen.2.02": {
    "id": "c7_gate.talk.stephen.2.02",
    "speaker": "steve",
-   "text": "He thinks you’re me, Stephen. My face is on every poster.",
+   "text": "He knows you’re not me, Stephen. He just likes you better.",
    "audio": "c7_gate.talk.stephen.2.02",
    "status": "new",
    "scene": "c7_gate",

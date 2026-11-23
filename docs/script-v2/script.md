@@ -2396,7 +2396,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 **When the lead opens:**
 - **Steve Mercer?**: That cardigan. Is this what happens when I stop trying? **MOV** `c5_station.in.02`
-- **Steve Mercer**: ...That’s my face. **NEW** `c5_station.stephen.lead.01`
+- **Steve Mercer**: ...The man Carmen saw at the market. My face. **NEW** `c5_station.stephen.lead.01`
 - **Steve Mercer?**: It’s a good face. You’re not doing it any favors. **NEW** `c5_station.stephen.lead.02`
 - **Steve Mercer?**: The last thing I remember of home is breakfast in Dad’s shack. Mom’s jam jar, with the chip in the blue lid. **NEW** `c5_station.stephen.lead.03`
 - **Steve Mercer?**: A tape that says Mom, last call? Mom never leaves voicemails. She calls back. **NEW** `c5_station.stephen.lead.04`
@@ -2435,7 +2435,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 ### Scene complete
 - *Steve Mercer: Mom’s notebook was in the blue sleeve, in a shorthand I can’t read. Halcyon cleared the building every ninth night so the tower could talk to the ship.* **NEW** `c5_station.recap.01`
-- *Steve Mercer: And the man following me all week was me. Sixty-one percent of me, with nothing after the breakfast before the boat.* **NEW** `c5_station.recap.02`
+- *Steve Mercer: And the man with my face, the one Carmen saw at the market, was following me all week. Sixty-one percent of me, with nothing after the breakfast before the boat.* **NEW** `c5_station.recap.02`
 
 ### Departure
 - **Steve Mercer**: They disappeared eighteen months ago. I said no to the boat trip. `c5_station.out.01`
@@ -2453,6 +2453,9 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - *Steve Mercer: Stephen looked at me for a long time. Then he lifted the earpiece to his ear.* **NEW** `c5_station.out.13`
 - **Stephen** [into the earpiece, steady]: Not at the station. He’s gone north, toward the border. I’m following him. **NEW** `c5_station.out.14`
 - **Stephen**: There. I’ve just lied to a spaceship for you. I think that makes us brothers. **NEW** `c5_station.out.15`
+- **Steve Mercer**: Then tell me one thing, brother. Why didn’t they send copies of Mom and Dad home, the way they sent Nora’s? **NEW** `c5_station.out.16`
+- **Stephen**: The tall man said Mom’s scan was damaged. A copy of her wouldn’t know where the notebook is. And the town had already buried them. The empty boat came back. **NEW** `c5_station.out.17`
+- **Stephen**: So they keep them asleep. As long as Mom sleeps, the notebook has an owner they can ask. **NEW** `c5_station.out.18`
 
 **Next:** Chapter 6 (c6_iris).
 
@@ -2464,7 +2467,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 **Objective:** Meet the stranger who warned you about Rook. Keep the town looking somewhere else.
 
-**Coach tip:** Two investigators now. Each lead shows who should handle it. Press Q or use the name menu at the top right to switch.
+**Coach tip:** Line the clocks up by the radio first. The meeting on the pier waits for Stephen’s sighting at the market.
 
 **Revision notes:** C28, C29, C36, C22, U-relationships, U-narration
 
@@ -2475,6 +2478,12 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 > Implementation: The text message line uses display_text to show the message as typed.
 
 > Implementation: Iris is shown as “Nora’s copy” until out.03, where she names herself. From c6_jail on she is “Iris”.
+
+> Implementation: Only Steve plays this scene. Stephen helps plan the alibi, then leaves for Gus’s bread window, so Steve meets Iris alone on the pier. Iris is not on the pier until the alibi is done.
+
+> Implementation: The outro is Iris’s account of Sunday night: the crew retook her from the otter house for a reset, left her on a laundry cart in the Gallery, and she set a slow, reversible wake on Nora’s, Lyle Boone’s and Dale’s beds before riding out with the wash. This is how Nora wakes in Interlude 2.
+
+> Implementation: Iris then clears Steve of Nora’s abduction in front of the market. The search for Nora ends, but Steve is still wanted for fleeing federal custody.
 
 ### Opening
 - *Steve Mercer: Stephen and I spent the weekend in Dad’s shack, arguing about haircuts. Every night at nine, he told the earpiece I’d gone north.* **NEW** `c6_iris.ctx.01`
@@ -2519,7 +2528,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - **DJ AutoRick** (broadcast): Police are still looking for Steve Mercer. If you see him, tell him to smile! **NEW** `c6_iris.talk.autorick.1.01`
 - **Stephen**: He never smiles before ten. I can vouch for that personally. **NEW** `c6_iris.talk.autorick.1.02`
 
-### Lead 1: Market corner (`c6_iris.alibi`) · board · difficulty 2 · played as Stephen
+### Lead 1: Market corner (`c6_iris.alibi`) · board · difficulty 2 · played as Steve Mercer
 
 **When the lead opens:**
 - **Stephen**: Three errands, three clocks. Nobody in this town agrees what time it is. **NEW** `c6_iris.alibi.lead.01`
@@ -2553,11 +2562,13 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 **On success:**
 - **Stephen**: Good morning. Yes, that’s my face on the poster. Terrible photograph. **REV** `c6_iris.alibi.01`
+- *Steve Mercer: By the time an officer reached the bread window, Stephen was out through the alley.* **NEW** `c6_iris.alibi.02`
 
 **Finding:**
-- *Steve Mercer: At 8:10 by the radio, Stephen stood beside his own wanted poster at Gus’s bread window while Gus fixed the smudge. Half the town is searching the market.* **NEW** `c6_iris.alibi.find`
+- *Steve Mercer: At 8:10 by the radio, Stephen stood beside his own wanted poster at Gus’s bread window while Gus fixed the smudge. Half the town ran to the bakery, and nobody was watching the pier.* **NEW** `c6_iris.alibi.find`
 
 ### Lead 2: Iris’s recorder test (`c6_iris.takes`) · compare · difficulty 2 · played as Steve Mercer
+*Unlocks after:* c6_iris.alibi
 
 **When the lead opens:**
 - **Nora’s copy**: I sent the message about Rook. No capitals, the way Nora texts. Please listen before you decide what I am. **REV** `c6_iris.in.02`
@@ -2628,8 +2639,8 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 ### Scene complete
 - *Steve Mercer: Nora’s copy sent the warning about Rook. She stopped going into the water, and she doesn’t replay any more. She chooses.* **NEW** `c6_iris.recap.01`
 - *Steve Mercer: Copies far from the bay stay in step on hold. Saren wants Mom’s notebook, and on Wednesday he wants the President.* **NEW** `c6_iris.recap.02`
-- *Steve Mercer: And she told me about June. They scanned her at the safe house. Her copy took the Sheriff’s desk this morning, and the real June is in her own cell until the ninth night.* **NEW** `c6_iris.recap.03`
-- *Steve Mercer: She also told me who could get us inside: the mail carrier. Every day at four he takes the Sheriff’s mail in the back way. “He isn’t Dale,” she said. “But he loves June’s dog.”* **NEW** `c6_iris.recap.04`
+- *Steve Mercer: And she told me about June. They scanned her at the safe house. Her copy has run the Sheriff’s office since Friday, and the real June is locked in her own cell until the ninth night.* **NEW** `c6_iris.recap.03`
+- *Steve Mercer: She also told me who could get us inside: the mail carrier. The spare key to June’s cell went back through the post. “He isn’t Dale,” she said. “But he loves June’s dog.”* **NEW** `c6_iris.recap.04`
 
 ### Departure
 - **Nora’s copy**: Those Sunday dinners happened to me. I won’t let them take them away. `c6_iris.out.01`
@@ -2637,33 +2648,40 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - **Nora’s copy**: Iris. After the flowers on the balcony. **REV** `c6_iris.out.03`
 - *Steve Mercer: She took a flat paper envelope out of her coat. Inside was one of the irises I knocked off the balcony on the ninth night, pressed flat.* **NEW** `c6_iris.out.04`
 - **Nora’s copy**: I picked it up after you ran. It is the first thing I ever kept that nobody told me to keep. **NEW** `c6_iris.out.05`
-- **Nora’s copy**: I’ve slept in the otter house since Tuesday. If the crew finds me, they will reset me, and I won’t remember any of this. Not even that I chose a name. **NEW** `c6_iris.out.06`
+- **Nora’s copy**: I hid in the otter house from Tuesday until last night. If they catch me again, they will reset me, and I won’t remember any of this. Not even that I chose a name. **NEW** `c6_iris.out.06`
 - **Nora’s copy** [quietly, to herself, trying the name on; a different reading from the first time]: Iris. **NEW** `c6_iris.out.07`
 - *Steve Mercer: It came out a little different the second time. Nothing a recording would ever do.* **NEW** `c6_iris.out.08`
+- **Nora’s copy**: Last night the crew found me. They took me below to be reset, and left me on a laundry cart in the Gallery while the shift bell rang. **NEW** `c6_iris.out.09`
+- **Nora’s copy**: Nora was in the third bed. Lyle Boone and Dale were beside her. I set their beds to a slow wake. It is gentle, and it can be undone. **NEW** `c6_iris.out.10`
+- **Nora’s copy**: It finishes tonight, so someone inside will be awake when you come. Then I rode out with the wash. **NEW** `c6_iris.out.11`
+- **Nora’s copy**: Steve didn’t take me. I’ll say it where the whole market can hear. **NEW** `c6_iris.out.12`
+- *Steve Mercer: She said it at the fish stalls, in Nora’s coat, loud enough for half the market. An officer heard it too. By the time he reached for his radio, she was gone.* **NEW** `c6_iris.out.13`
 
 ## Chapter 6: Two Sheriffs (`c6_jail`)
 
-**Where:** Sheriff’s office and jail · **When:** Monday, November 5, afternoon · **Present:** Steve Mercer, Stephen, Pell, Sheriff June Calder, Lyle’s copy, Iris, Gus Albano
+**Where:** Sheriff’s office and jail · **When:** Monday, November 5, afternoon · **Present:** Steve Mercer, Stephen, Pell, Sheriff June Calder, Iris, Gus Albano
 
 **Objective:** Find the cell key, then work out which June is the real one.
 
 **Revision notes:** C28, critic C28, C22, U-relationships, U-narration
 
-> Implementation: Both Junes use the calder voice. Line-level display tells them apart: “June on the radio” (her copy, out on the harbor search, heard through the front-desk radio) and “June in cell two”.
+> Implementation: Both Junes use the calder voice. Line-level display tells them apart: “June on the radio” (her copy, out on the harbor, heard through the front-desk radio) and “June in cell two”.
 
 > Implementation: Pell names himself in the intro, so the display rule switches from “Dale Kittredge” to “Pell” in this scene.
 
-> Implementation: distract and exit become rows puzzles (drop the case boards). The crossword test pays off Chapter 3: a fresh private fact, checked on paper.
+> Implementation: Steve visits alone. Stephen and Iris wait behind Gus’s bakery. Lyle’s copy is out on the harbor with June’s copy, so the deputy never sees Steve and has nothing to report.
+
+> Implementation: The crossword test pays off Chapter 3: a fresh private fact, checked on paper.
 
 > Implementation: Art (optional): Gus’s bakery van with a giant croissant on its roof, at the loading door, for the departure.
 
 ### Opening
-- *Steve Mercer: The Sheriff’s office, just before four. June’s copy was out on the harbor, running the search for me. The real June was in cell two.* **NEW** `c6_jail.ctx.01`
-- *Steve Mercer: Stephen walked in the front door wearing my face, to contest his own poster. I came in the back, under the parcels in the mail cart.* **NEW** `c6_jail.ctx.02`
-- **Stephen**: The Sheriff is out on the harbor, hunting you. The Sheriff is also in cell two. One of those is a staffing problem. **NEW** `c6_jail.in.04`
+- *Steve Mercer: The Sheriff’s office, just before four. Since Iris spoke up at the market, the search for Nora was over. June’s copy and Lyle’s copy were out on the harbor, calling the boats in.* **NEW** `c6_jail.ctx.01`
+- *Steve Mercer: Stephen and Iris waited behind Gus’s bakery next door. I walked in the front door. Pell was sorting the afternoon mail.* **NEW** `c6_jail.ctx.02`
+- **June on the radio** (radio) [over the front-desk radio, from the harbor]: All boats, stand down. Nora Reyes is safe. The search is closed. **NEW** `c6_jail.in.04`
 - **Pell**: I am required to report your location. `c6_jail.in.01`
 - **Pell**: Biscuit, Steve Mercer is here. My duty is complete. `c6_jail.in.02`
-- **Stephen**: We should put the dog in charge. `c6_jail.in.03`
+- **Steve Mercer**: Maybe we should put the dog in charge. **REV** `c6_jail.in.03`
 - **Pell**: My name is Pell. Dale is asleep on the ship. I have worn his face for a year. **NEW** `c6_jail.in.05`
 - **Pell**: I have fed Biscuit twice a day since the Sheriff went away. If I report you properly, they will reset me, and I will not remember her. **NEW** `c6_jail.in.06`
 
@@ -2682,26 +2700,6 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - **Steve Mercer**: What is Dale like? The real one. **NEW** `c6_jail.talk.pell.3.01`
 - **Pell**: He complains about the rain, the dogs and the government. In that order. **NEW** `c6_jail.talk.pell.3.02`
 - **Pell**: I have his memories, but not his complaints. I find I do not miss them. **NEW** `c6_jail.talk.pell.3.03`
-
-**The likeness counter** · Stephen · after `c6_jail.distract`
-- **Stephen**: The clerk said I looked nothing like my poster. **NEW** `c6_jail.talk.stephen.1.01`
-- **Steve Mercer**: It is my poster. It is literally my face. **NEW** `c6_jail.talk.stephen.1.02`
-- **Stephen**: I told her that. She said I was far too cheerful to be you. **NEW** `c6_jail.talk.stephen.1.03`
-
-**Her cell** · Sheriff June Calder · after `c6_jail.crossword`
-- **Sheriff June Calder**: I spent the morning in my own cell. That mattress is worse than I ever admitted. **NEW** `c6_jail.talk.calder.1.01`
-- **Steve Mercer**: You told the county the cells were fine. **NEW** `c6_jail.talk.calder.1.02`
-- **Sheriff June Calder**: I told the county a lot of things. I’m ordering new mattresses. **NEW** `c6_jail.talk.calder.1.03`
-
-**Biscuit** · Sheriff June Calder · after `c6_jail.crossword`
-- **Sheriff June Calder**: Pell has been feeding my dog? Twice a day? **NEW** `c6_jail.talk.calder.2.01`
-- **Steve Mercer**: Blue bowl, seven and five. He’s learned the left ear. **NEW** `c6_jail.talk.calder.2.02`
-- **Sheriff June Calder**: Then he can keep his job. Don’t you dare tell him I said that. **NEW** `c6_jail.talk.calder.2.03`
-
-**The other June** · Sheriff June Calder · after `c6_jail.crossword`
-- **Sheriff June Calder**: She does my paperwork better than I do. That’s what bothers me most. **NEW** `c6_jail.talk.calder.3.01`
-- **Steve Mercer**: She guessed a T, June. She didn’t know you. **NEW** `c6_jail.talk.calder.3.02`
-- **Sheriff June Calder**: No. She knew my files. That isn’t the same thing at all. **NEW** `c6_jail.talk.calder.3.03`
 
 ### Lead 1: Pell’s sorting case (`c6_jail.mail`) · rows · difficulty 1 · played as Steve Mercer
 
@@ -2732,51 +2730,22 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - **Pell**: Correctly delivered. Biscuit may inspect the chain of custody. `c6_jail.mail.01`
 - **Steve Mercer**: June’s own crossword is in the jail pile. I’ll circle one square and post it through her slot. **NEW** `c6_jail.mail.02`
 - **Steve Mercer**: Twenty-three across, where it crosses eight down. Only the woman in cell two will see that square. **NEW** `c6_jail.mail.03`
+- **Steve Mercer**: Then I’ll call the Sheriff on the desk radio. Both Junes get the same question. **NEW** `c6_jail.mail.04`
 
 **Finding:**
 - *Steve Mercer: The key was in the Jail drawer, slot 9, where entries 17 and 18 share a slot. And on June’s crossword I circled the square where 23 Across crosses 8 Down. Only the woman in cell two will see it.* **NEW** `c6_jail.mail.find`
 
-### Lead 2: Sheriff’s front desk (`c6_jail.distract`) · rows · difficulty 2 · played as Stephen
-
-**When the lead opens:**
-- **Stephen**: Three tickets at the counter. Leave the deputy to me. **NEW** `c6_jail.distract.lead.01`
-- **Stephen**: The clerk says a contested likeness sends the deputy down to the basement for the file. **NEW** `c6_jail.distract.lead.02`
-- **Steve Mercer**: She leaves at 3:59 and she’s back at 4:03. I need two clear minutes. **NEW** `c6_jail.distract.lead.03`
-
-**Goal:** Keep the records deputy away from the cell corridor long enough for Steve to reach June.
-
-**What Steve knows:** When a wanted poster is contested, the records deputy has to fetch the original file from the basement, and the man in question has to stand at the likeness counter while the clerk compares his face with the poster.
-
-**Prompt:** Which ticket should Stephen take, and when should Steve go in and come out?
-
-**Instruction:** Pick the ticket that keeps Stephen’s face at the counter, then fit Steve’s two minutes inside the time the deputy is away. Ticket 41: pay a fine at the cashier. Ticket 42: contest a likeness, in person, at the counter. Ticket 43: drop a form through the slot. The deputy leaves at 3:59 and is back at 4:03.
-- Stephen takes ticket: 41 / ✓ 42 / 43
-- Steve goes in at: 3:59 / ✓ 4:00 / 4:01
-- Steve is out by: ✓ 4:02 / 4:03 / 4:04
-
-**Hints:**
-1. Which ticket needs Stephen’s face, in person, for the whole appointment?
-2. The deputy leaves at 3:59 and is back at 4:03. Steve’s two minutes have to fit strictly inside that.
-3. Only one ticket needs Stephen’s face at the counter for the whole appointment. Steve’s two minutes must start after 3:59 and end before 4:03.
-
-**On success:**
-- **Stephen**: I would like a better photograph. My family will be seeing these. `c6_jail.distract.01`
-- *Steve Mercer: The clerk radioed the Sheriff about the cheerful man at her likeness counter. Out on the harbor, June’s copy started asking questions.* **NEW** `c6_jail.distract.02`
-
-**Finding:**
-- *Steve Mercer: Stephen contested his own wanted poster at the likeness counter. The deputy went down to the basement at 3:59. At 4:00 I was in the cell corridor with the key and June’s crossword. I had until 4:02 to check her answer and get us both out.* **NEW** `c6_jail.distract.find`
-
-### Lead 3: The two Junes (`c6_jail.crossword`) · rows · difficulty 2 · played as Steve Mercer
-*Unlocks after:* c6_jail.mail, c6_jail.distract
+### Lead 2: The two Junes (`c6_jail.crossword`) · rows · difficulty 2 · played as Steve Mercer
+*Unlocks after:* c6_jail.mail
 
 **When the lead opens:**
 - **June on the radio** (radio) [over the front-desk radio, from the harbor]: Mercer. That woman in cell two is a copy. Don’t you dare let her out. **NEW** `c6_jail.crossword.lead.01`
-- **June in cell two** [through the cell door]: He’ll check my paperwork, Mercer. I taught him that. **NEW** `c6_jail.crossword.lead.02`
+- **June in cell two** [through the cell door]: Check my paperwork, Mercer. I taught you that. **NEW** `c6_jail.crossword.lead.02`
 - **Steve Mercer**: I’ll ask them both which letter I circled today. Only one of them has seen it. **NEW** `c6_jail.crossword.lead.03`
 
-**Goal:** Check Iris’s story: which June is locked in cell two, and which one is out hunting you?
+**Goal:** Check Iris’s story: which June is locked in cell two, and which one is out on the harbor?
 
-**What Steve knows:** June’s rule: memories can’t prove who you are, so you check the paperwork. Iris says the crew scanned June at the safe house. Her copy runs the office and the search, and the real June has been locked in cell two since Friday. Steve posted June’s crossword, with one square circled, into cell two and nowhere else. Whoever is in that cell has seen it. Anyone else has to guess.
+**What Steve knows:** June’s rule: memories can’t prove who you are, so you check the paperwork. Iris says the crew scanned June at the safe house. Her copy runs the office, and the real June has been locked in cell two since Friday. Steve posted June’s crossword, with one square circled, into cell two and nowhere else. Whoever is in that cell has seen it. Anyone else has to guess.
 
 **Prompt:** The June in cell two answers on a slip of paper. The June on the radio answers out loud. What should Steve ask, and whose answer should he accept?
 
@@ -2793,49 +2762,19 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - **Steve Mercer**: Radio June said T. Close. Wrong. **NEW** `c6_jail.crossword.03`
 - **June in cell two**: Twenty-three across. Inimitable. Unlike my colleague on the radio. **REV** `c6_jail.crossword.01`
 - **Steve Mercer**: June. We’re getting you out. `c6_jail.crossword.02`
-- **Stephen** [into the front-desk radio]: Sheriff, this is the hunter. Mercer just ran out the front, toward the north jetty. I’m right behind him. **NEW** `c6_jail.crossword.04`
-- **June on the radio** (radio): North jetty. On my way. **NEW** `c6_jail.crossword.05`
-- *Steve Mercer: Twice in one week, Stephen had lied to his own side for me.* **NEW** `c6_jail.crossword.06`
+- **June on the radio** (radio): Stay right there, Mercer. I’m on my way in. **NEW** `c6_jail.crossword.04`
+- **June in cell two**: She knows my files. She doesn’t know me. Back door, Mercer. **NEW** `c6_jail.crossword.05`
+- *Steve Mercer: Pell held the back door. When her patrol car pulled up out front, we were already behind Gus’s bakery.* **NEW** `c6_jail.crossword.06`
 
 **Finding:**
-- *Steve Mercer: The June in cell two had my crossword in her hand: the M where 23 Across crosses 8 Down. The June on the radio guessed a T, so she has never been near that cell. Iris was right. By 4:02 June was out, and we were in the records room, waiting for the shift change at the back door.* **NEW** `c6_jail.crossword.find`
+- *Steve Mercer: The June in cell two had my crossword in her hand: the M where 23 Across crosses 8 Down. The June on the radio guessed a T, so she has never been near that cell. Iris was right. I unlocked cell two, and we left by the back before her copy reached the front.* **NEW** `c6_jail.crossword.find`
 
-### Lead 4: Deputy’s checkpoint (`c6_jail.exit`) · rows · difficulty 2
-*Unlocks after:* c6_jail.crossword
-
-**When the lead opens:**
-- **Lyle’s copy**: Sheriff. Steve. I’m supposed to stop you. **NEW** `c6_jail.exit.lead.01`
-- **Lyle’s copy**: Ben’s a tree in the school play this afternoon. He’s been practicing being a tree for a month. **NEW** `c6_jail.exit.lead.02`
-- **Sheriff June Calder**: Lyle. Your relief has signed. **NEW** `c6_jail.exit.lead.03`
-- **Sheriff June Calder**: The school doors close at four forty. Let’s find you the fastest way there. **NEW** `c6_jail.exit.lead.04`
-
-**Goal:** Get past Lyle’s copy at the checkpoint without a fight.
-
-**What Steve knows:** Lyle’s copy is on duty at the back checkpoint. His relief signed in at 4:24. This afternoon his son Ben is in the school play, and the school doors close at 4:40.
-
-**Prompt:** Can Lyle still make it? Tell him the fastest way.
-
-**Instruction:** Lyle can leave the moment his relief signs, at 4:24. Walking to the school takes 18 minutes. Bus A leaves at 4:29 and takes 9 minutes. Bus B leaves at 4:26 and takes 15 minutes. The school doors close at 4:40.
-- Walking arrives at: 4:40 / ✓ 4:42 / 4:44
-- Bus A arrives at: 4:35 / ✓ 4:38 / 4:41
-- Tell Lyle to take: Walk / ✓ Bus A / Bus B
-
-**Hints:**
-1. Add each trip to the time Lyle can start it.
-2. Walking: 4:24 plus 18 minutes. Bus A: 4:29 plus 9. Bus B: 4:26 plus 15.
-3. Walking gets Lyle there at 4:42, two minutes late. Work out both buses the same way.
-
-**On success:**
-- **Lyle’s copy**: Bus A. Twenty-nine past. They gave me a seat in the front row. **REV** `c6_jail.exit.01`
-- **Sheriff June Calder**: Then you’d better get there. We can talk tomorrow. `c6_jail.exit.02`
-
-**Finding:**
-- *Steve Mercer: Lyle’s copy could still make Ben’s play: Bus A at 4:29, at the school by 4:38. He chose the front row over his orders, and let us go.* **NEW** `c6_jail.exit.find`
+*Removed leads:* c6_jail.distract, c6_jail.exit
 
 ### Scene complete
-- *Steve Mercer: June is out of her cell, and her copy is out at the north jetty, looking for me. Pell chose a beagle over his orders. Lyle’s copy chose a school play.* **NEW** `c6_jail.recap.01`
+- *Steve Mercer: June is out of her cell. Her copy knows I was there, and that I let June out. Pell chose a beagle over his orders.* **NEW** `c6_jail.recap.01`
 - *Steve Mercer: Five fugitives and a beagle. We needed a car nobody would look for.* **NEW** `c6_jail.recap.02`
-- *Steve Mercer: Iris was waiting behind Gus’s bakery next door, where nobody would see Nora’s face.* **NEW** `c6_jail.recap.03`
+- *Steve Mercer: Stephen and Iris were waiting behind Gus’s bakery next door, where nobody would see our faces.* **NEW** `c6_jail.recap.03`
 
 ### Departure
 - **Gus Albano** [at the bakery loading door, holding out the keys to a van with a giant croissant on its roof]: Take the van. I don’t know why, but I trust you. `c6_jail.out.02`
@@ -2843,6 +2782,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - **Iris**: Nora found the ring a year ago. It is not mine to answer. `c6_jail.out.01`
 - **Iris**: A copy who stops going below starts to forget. Nora’s memories go first. **NEW** `c6_jail.out.05`
 - **Iris**: We’re starting to forget. Stephen and I have days. `c6_jail.out.03`
+- *Steve Mercer: By dark the posters were back up, with a new charge from Rook’s copy: Steve Mercer, fled federal custody. June’s copy knew who had opened cell two.* **NEW** `c6_jail.out.06`
 
 ## Interlude 2: Nobody is coming to fix this (`i2_nora`)
 
@@ -2850,13 +2790,17 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 **Chapter card:** Interlude, *Nora* · Inside the Long Patience · Nora wakes up on the ship. Nobody is coming to fix this.
 
-**Objective:** Wake the others, learn their names and find a way through the Gallery.
+**Objective:** Steady the others, learn their names and find a way through the Gallery.
 
 **Coach tip:** You are Nora, awake on the ship. The guard walks a regular lap. Count it before you move.
 
 **Revision notes:** C37, C22, U-relationships, U-narration
 
-> Implementation: Nora wakes because Iris stopped re-syncing. Nora doesn’t know that; the player does.
+> Implementation: In the Iris chapter, Iris tells Steve how she set this wake: on Sunday night the crew retook her for a reset and left her on a laundry cart in the Gallery, and she set a slow wake on three beds before riding out with the wash. This interlude begins when the slow cycle finishes Monday night.
+
+> Implementation: The lids remain shut while the beds support Nora, Lyle and Dale. They open only after all three breathe independently.
+
+> Implementation: This wake is reversible and leaves the mirror links active. The crew can put Nora back under; Iris’s permanent link-break remains a Chapter 9 choice.
 
 > Implementation: jobs keeps the case board with a single stage (the route and logging stages are cut).
 
@@ -2870,6 +2814,8 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - **Nora Reyes**: I can move my hand. That’s a start. `i2_nora.in.01`
 - **Dale Kittredge**: If this is a hospital, I’m changing hospitals. `i2_nora.in.02`
 - **Nora Reyes**: Names first. Complaints after we have a plan. `i2_nora.in.03`
+- *Nora Reyes: The glass stayed shut while three blue strips counted our breaths. The beds did the work until each of us could breathe alone.* **NEW** `i2_nora.in.04`
+- *Nora Reyes: Only then did the latches release. WAKE COMPLETE, the panel said. MIRROR LINK ACTIVE.* **NEW** `i2_nora.in.05`
 
 ### Small talk
 **The food** · Dale Kittredge
@@ -3040,7 +2986,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 **Objective:** Get two Steves and a mail carrier into the signing. Watch the President.
 
-**Coach tip:** Three of you today: Steve, Stephen and Pell. Press Q to switch between them.
+**Coach tip:** Three of you today: Steve, Stephen and Pell. Each lead shows who should handle it. Press Q or use the name menu at the top right to switch.
 
 **Revision notes:** C14, critic C14 (left wrist), C22, U-relationships, U-narration, U-cast (no new gate_guard voice: Rook’s copy works the gate)
 
@@ -3067,7 +3013,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 **Breakfast** · Stephen
 - **Stephen**: I had two croissants from Gus this morning. He gave me a third one for free. **NEW** `c7_gate.talk.stephen.2.01`
-- **Steve Mercer**: He thinks you’re me, Stephen. My face is on every poster. **NEW** `c7_gate.talk.stephen.2.02`
+- **Steve Mercer**: He knows you’re not me, Stephen. He just likes you better. **NEW** `c7_gate.talk.stephen.2.02`
 - **Stephen**: He said the poster doesn’t do me justice. He’s right, you know. **NEW** `c7_gate.talk.stephen.2.03`
 
 **Saren’s hunter** · Stephen · after `c7_gate.badge`

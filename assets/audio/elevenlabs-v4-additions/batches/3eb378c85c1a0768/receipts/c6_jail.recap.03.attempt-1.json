@@ -1,0 +1,17 @@
+{
+  "operation": "text_to_speech",
+  "plan_sha256": "3eb378c85c1a076861f32428907275f9a5665b5ded7e6bbaa2530efc60f60f8c",
+  "audio_id": "c6_jail.recap.03",
+  "attempt": 1,
+  "voice_id": "vveagfomyMCJLZsOPRP2",
+  "model_id": "eleven_v4",
+  "text_sha256": "b3188744e9eb63f928c390fff3e8c41209b64e0e9ff5ad511450839b292ac686",
+  "synthesis_text_sha256": "b3188744e9eb63f928c390fff3e8c41209b64e0e9ff5ad511450839b292ac686",
+  "request_id": "0xaSq5crnJS4DgL2DSkR",
+  "trace_id": "fcf4d59413c89350d51f2c40a2a59910",
+  "character_cost": 41,
+  "output_format": "mp3_44100_192",
+  "audio_sha256": "b9c57fba7f8291f05b30e240682b1e65c4ffa2b1ee3070db9db4e1f1a0099ad3",
+  "response_bytes": 147373,
+  "seed": 1971309805
+}

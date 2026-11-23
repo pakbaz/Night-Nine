@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c6_jail.crossword.find",
+  "attempt": 1,
+  "plan_sha256": "3eb378c85c1a076861f32428907275f9a5665b5ded7e6bbaa2530efc60f60f8c",
+  "wav_sha256": "2e0119a88810882e89da8d10b834633b7551eaaa164710fc5f66f0efe36602ce",
+  "expected": "The June in cell two had my crossword in her hand: the M where 23 Across crosses 8 Down. The June on the radio guessed a T, so she has never been near that cell. Iris was right. I unlocked cell two, and we left by the back before her copy reached the front.",
+  "recognized": "The June in cell 2 had my crossword in her hand. The M, where 23 across, crosses 8 down. The June on the radio guessed a T, so she has never been near that cell. Iris was right. I unlocked cell 2, and we left by the back before her copy reached the front.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 17.92,
+  "sample_rate": 48000,
+  "peak": 0.41143798828125,
+  "rms": 0.03859153463787958,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

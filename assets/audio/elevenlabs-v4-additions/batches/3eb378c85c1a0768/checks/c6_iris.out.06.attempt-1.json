@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c6_iris.out.06",
+  "attempt": 1,
+  "plan_sha256": "3eb378c85c1a076861f32428907275f9a5665b5ded7e6bbaa2530efc60f60f8c",
+  "wav_sha256": "421fd090bd6ec7f68f5f15068583f6a67ce5ec4b504f1dcca6feb2f0f053e493",
+  "expected": "I hid in the otter house from Tuesday until last night. If they catch me again, they will reset me, and I won’t remember any of this. Not even that I chose a name.",
+  "recognized": "I hid in the Otter House from Tuesday until last night. If they catch me again, they will reset me, and I won't remember any of this, not even that I chose a name.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 10.24,
+  "sample_rate": 48000,
+  "peak": 0.493865966796875,
+  "rms": 0.061014148827996606,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

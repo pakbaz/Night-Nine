@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c6_jail.recap.03",
+  "attempt": 1,
+  "plan_sha256": "3eb378c85c1a076861f32428907275f9a5665b5ded7e6bbaa2530efc60f60f8c",
+  "wav_sha256": "14dcb84e6af1dcf8c4bc2efaaa1e3d01b39dd6b79dcb932162aab722725604e4",
+  "expected": "Stephen and Iris were waiting behind Gus’s bakery next door, where nobody would see our faces.",
+  "recognized": "Steven and Iris were waiting behind Gus's bakery next door, where nobody would see our faces.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 6.08,
+  "sample_rate": 48000,
+  "peak": 0.372222900390625,
+  "rms": 0.041069458509413195,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

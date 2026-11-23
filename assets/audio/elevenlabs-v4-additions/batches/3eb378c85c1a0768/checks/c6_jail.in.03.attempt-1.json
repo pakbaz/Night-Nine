@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c6_jail.in.03",
+  "attempt": 1,
+  "plan_sha256": "3eb378c85c1a076861f32428907275f9a5665b5ded7e6bbaa2530efc60f60f8c",
+  "wav_sha256": "109135273b2062f01470ec331cab00000b06a5fd3ca9889fa6194e30eaef2a26",
+  "expected": "Maybe we should put the dog in charge.",
+  "recognized": "Maybe we should put the dog in charge.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 2.24,
+  "sample_rate": 48000,
+  "peak": 0.372772216796875,
+  "rms": 0.03572685638473356,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

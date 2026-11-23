@@ -188,7 +188,7 @@ func operate(task: Dictionary) -> void:
 		await snapshot("c1_flat-tape-comparison")
 		await press_control(button("Record finding",tape))
 	elif task.get("puzzle",{}).get("presentation","")=="case_board":
-		if case_boards_played.is_empty() or task.id in ["c6_jail.exit","c8_beach.first"]:
+		if case_boards_played.is_empty() or task.id=="c8_beach.first":
 			await snapshot(str(task.id)+"-case-board")
 		await solve_case_board(task)
 		var modes: Array=[]

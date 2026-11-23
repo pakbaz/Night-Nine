@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c6_jail.out.06",
+  "attempt": 1,
+  "plan_sha256": "3eb378c85c1a076861f32428907275f9a5665b5ded7e6bbaa2530efc60f60f8c",
+  "wav_sha256": "040575e05e9b82b7dcdbfb45b8fdda31b4f4901a190a0304db879d5cdd03afc4",
+  "expected": "By dark the posters were back up, with a new charge from Rook’s copy: Steve Mercer, fled federal custody. June’s copy knew who had opened cell two.",
+  "recognized": "By dark, the posters were back up, with a new charge from Rook's copy. Steve Mercer fled federal custody. June's copy knew who had opened cell 2.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 10.4,
+  "sample_rate": 48000,
+  "peak": 0.344207763671875,
+  "rms": 0.03954348541136956,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c6_iris.out.12",
+  "attempt": 1,
+  "plan_sha256": "3eb378c85c1a076861f32428907275f9a5665b5ded7e6bbaa2530efc60f60f8c",
+  "wav_sha256": "d24c3191db72c2442425c80fb28808ac0fdd156eb7222e463200a9675a6c83d7",
+  "expected": "Steve didn’t take me. I’ll say it where the whole market can hear.",
+  "recognized": "Steve didn't take me. I'll say it where the whole market can hear.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.16,
+  "sample_rate": 48000,
+  "peak": 0.703521728515625,
+  "rms": 0.07127977621099349,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

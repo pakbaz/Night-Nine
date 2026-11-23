@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c5_station.out.18",
+  "attempt": 1,
+  "plan_sha256": "3eb378c85c1a076861f32428907275f9a5665b5ded7e6bbaa2530efc60f60f8c",
+  "wav_sha256": "897cc2ce180c5aaf665f75239638256a51764350f6bcd36a7a6b4ebca265e000",
+  "expected": "So they keep them asleep. As long as Mom sleeps, the notebook has an owner they can ask.",
+  "recognized": "so they keep them asleep. As long as mom sleeps, the notebook has an owner they can ask.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 5.84,
+  "sample_rate": 48000,
+  "peak": 0.2784423828125,
+  "rms": 0.04105744430761694,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

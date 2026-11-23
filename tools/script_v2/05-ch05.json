@@ -316,7 +316,7 @@
           "background": "The man with Steve’s face remembers breakfast with Mom and Dad. He seems to know nothing about the wanted posters. Steve lays three things on the table and lets him talk first, the way June would.",
           "lead": [
             {"id": "c5_station.in.02", "display": "Steve Mercer?"},
-            "steve|...That’s my face.",
+            "steve|...The man Carmen saw at the market. My face.",
             {"new": "stephen|It’s a good face. You’re not doing it any favors.", "display": "Steve Mercer?"},
             {"new": "stephen|The last thing I remember of home is breakfast in Dad’s shack. Mom’s jam jar, with the chip in the blue lid.", "display": "Steve Mercer?"},
             {"new": "stephen|A tape that says Mom, last call? Mom never leaves voicemails. She calls back.", "display": "Steve Mercer?"},
@@ -354,7 +354,7 @@
       },
       "recap": [
         "steve|Mom’s notebook was in the blue sleeve, in a shorthand I can’t read. Halcyon cleared the building every ninth night so the tower could talk to the ship.",
-        "steve|And the man following me all week was me. Sixty-one percent of me, with nothing after the breakfast before the boat."
+        "steve|And the man with my face, the one Carmen saw at the market, was following me all week. Sixty-one percent of me, with nothing after the breakfast before the boat."
       ],
       "outro": [
         "c5_station.out.01",
@@ -371,7 +371,10 @@
         {"new": "saren|Hunter. You missed your report. Where is the original?", "delivery": "radio", "direction": "small and clear, from the earpiece in Stephen’s hand"},
         {"new": "steve|Stephen looked at me for a long time. Then he lifted the earpiece to his ear.", "delivery": "narration"},
         {"new": "stephen|Not at the station. He’s gone north, toward the border. I’m following him.", "direction": "into the earpiece, steady"},
-        "stephen|There. I’ve just lied to a spaceship for you. I think that makes us brothers."
+        "stephen|There. I’ve just lied to a spaceship for you. I think that makes us brothers.",
+        "steve|Then tell me one thing, brother. Why didn’t they send copies of Mom and Dad home, the way they sent Nora’s?",
+        "stephen|The tall man said Mom’s scan was damaged. A copy of her wouldn’t know where the notebook is. And the town had already buried them. The empty boat came back.",
+        "stephen|So they keep them asleep. As long as Mom sleeps, the notebook has an owner they can ask."
       ],
       "talk": {
         "autorick": [

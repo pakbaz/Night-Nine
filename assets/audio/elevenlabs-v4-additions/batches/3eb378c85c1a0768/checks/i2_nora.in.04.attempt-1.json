@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "i2_nora.in.04",
+  "attempt": 1,
+  "plan_sha256": "3eb378c85c1a076861f32428907275f9a5665b5ded7e6bbaa2530efc60f60f8c",
+  "wav_sha256": "d68621c7af526def84667696a1fb0ce64e4b13f2a82997ba7e5c022ea4a7cb0f",
+  "expected": "The glass stayed shut while three blue strips counted our breaths. The beds did the work until each of us could breathe alone.",
+  "recognized": "The glass stayed shut while three blue strips counted our breaths. The beds did the work until each of us could breathe alone.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 8.48,
+  "sample_rate": 48000,
+  "peak": 0.502899169921875,
+  "rms": 0.051706366825850295,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

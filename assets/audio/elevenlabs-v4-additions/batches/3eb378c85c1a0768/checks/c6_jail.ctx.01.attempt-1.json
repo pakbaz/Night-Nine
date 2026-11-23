@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c6_jail.ctx.01",
+  "attempt": 1,
+  "plan_sha256": "3eb378c85c1a076861f32428907275f9a5665b5ded7e6bbaa2530efc60f60f8c",
+  "wav_sha256": "9833c88286350e6bb0a73ae9887a47e6185c23828187779ac76770360cc50085",
+  "expected": "The Sheriff’s office, just before four. Since Iris spoke up at the market, the search for Nora was over. June’s copy and Lyle’s copy were out on the harbor, calling the boats in.",
+  "recognized": "The Sheriff's Office, just before 4. Since Iris spoke up at the market, the search for Nora was over. June's copy and Lyle's copy were out on the harbor, calling the boats in.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 11.36,
+  "sample_rate": 48000,
+  "peak": 0.41119384765625,
+  "rms": 0.04325191541982326,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

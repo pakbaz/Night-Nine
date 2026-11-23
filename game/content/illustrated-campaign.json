@@ -735,6 +735,12 @@
       "stephen"
     ],
     "bridge": "res://assets/illustrated/campaign/bridges/c6_iris-c6_jail.webp",
+    "reveal_after": {
+      "iris": "c6_iris.alibi"
+    },
+    "leave_after": {
+      "stephen": "c6_iris.alibi"
+    },
     "stills": [
       {
         "file": "res://assets/illustrated/campaign/stills/c6_iris-pressed-flower.webp",
@@ -745,6 +751,19 @@
           "c6_iris.out.06",
           "c6_iris.out.07",
           "c6_iris.out.08"
+        ]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/rooms/i2_nora.webp",
+        "lines": [
+          "c6_iris.out.09"
+        ]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/stills/c2_ship-nora-asleep.webp",
+        "lines": [
+          "c6_iris.out.10",
+          "c6_iris.out.11"
         ]
       }
     ]
@@ -762,10 +781,8 @@
     ],
     "company": [
       "pell",
-      "stephen",
       "calder",
-      "steve",
-      "lyle_copy"
+      "steve"
     ],
     "creatures": [
       {
@@ -807,17 +824,6 @@
     "reveal_after": {
       "calder": "c6_jail.crossword"
     },
-    "stills": [
-      {
-        "file": "res://assets/illustrated/campaign/stills/c6_jail-mail-cart.webp",
-        "lines": [
-          "c6_jail.ctx.02",
-          "c6_jail.in.04",
-          "c6_jail.in.01",
-          "c6_jail.in.02"
-        ]
-      }
-    ],
     "appearances": {
       "calder": "calder_casework"
     }
@@ -850,6 +856,7 @@
     "layers": [
       {
         "file": "res://assets/illustrated/campaign/layers/i2_nora-pods-open.webp",
+        "after": "i2_nora.in.05",
         "painted": [
           "dale",
           "lyle"

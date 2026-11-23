@@ -30,11 +30,11 @@ for SUITE in animation_handoff campaign_music case_boards social_staging small_t
   python3 "$PROJECT_ROOT/tools/check-log.py" "$NIGHT_NINE_QA_DIR/$SUITE.log"
 done
 python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$NIGHT_NINE_QA_DIR/animation-handoff.json" 10
-python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$NIGHT_NINE_QA_DIR/score-route.json" 403
+python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$NIGHT_NINE_QA_DIR/score-route.json" 401
 python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$NIGHT_NINE_QA_DIR/case-boards.json" 716
 python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$NIGHT_NINE_QA_DIR/social-staging.json" 152
 python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$NIGHT_NINE_QA_DIR/small-talk.json" 21
-python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$NIGHT_NINE_QA_DIR/story-staging.json" 160
+python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$NIGHT_NINE_QA_DIR/story-staging.json" 169
 python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$NIGHT_NINE_QA_DIR/bay-receiver.json" 20
 if [[ "${1:-}" == "--render" ]]; then
   export NIGHT_NINE_QA_DIR="$PROJECT_ROOT/tmp/qa/campaign-run-$$"

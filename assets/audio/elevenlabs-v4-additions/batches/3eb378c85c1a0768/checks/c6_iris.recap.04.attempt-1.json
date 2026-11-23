@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c6_iris.recap.04",
+  "attempt": 1,
+  "plan_sha256": "3eb378c85c1a076861f32428907275f9a5665b5ded7e6bbaa2530efc60f60f8c",
+  "wav_sha256": "06ba21178a9e83b9e83647bf4744f22582ab1804bfd25131dc96ae8f8d50f295",
+  "expected": "She also told me who could get us inside: the mail carrier. The spare key to June’s cell went back through the post. “He isn’t Dale,” she said. “But he loves June’s dog.”",
+  "recognized": "She also told me who could get us inside, the mail carrier. The spare key to June's cell went back through the post. He isn't Dale, she said, but he loves June's dog.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 10.96,
+  "sample_rate": 48000,
+  "peak": 0.32806396484375,
+  "rms": 0.038339093125333505,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

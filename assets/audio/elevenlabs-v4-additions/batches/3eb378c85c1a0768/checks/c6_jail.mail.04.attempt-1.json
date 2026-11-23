@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c6_jail.mail.04",
+  "attempt": 1,
+  "plan_sha256": "3eb378c85c1a076861f32428907275f9a5665b5ded7e6bbaa2530efc60f60f8c",
+  "wav_sha256": "b99d91e82327b5608864d26adc802a343573952de2d982a2b9480dcd922115d0",
+  "expected": "Then I’ll call the Sheriff on the desk radio. Both Junes get the same question.",
+  "recognized": "Then I'll call the sheriff on the desk radio. Both Junes get the same question.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 5.12,
+  "sample_rate": 48000,
+  "peak": 0.50189208984375,
+  "rms": 0.04487922399090334,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

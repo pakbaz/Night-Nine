@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c6_jail.recap.01",
+  "attempt": 1,
+  "plan_sha256": "3eb378c85c1a076861f32428907275f9a5665b5ded7e6bbaa2530efc60f60f8c",
+  "wav_sha256": "909f01cb4e55c71870b8ef47662c26615489eb029129e7db7118812691beaf1c",
+  "expected": "June is out of her cell. Her copy knows I was there, and that I let June out. Pell chose a beagle over his orders.",
+  "recognized": "June is out of her cell. Her copy knows I was there, and that I let June out. Pell chose a beagle over his orders.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 8.08,
+  "sample_rate": 48000,
+  "peak": 0.250640869140625,
+  "rms": 0.03781948538827302,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

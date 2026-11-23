@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c5_station.out.17",
+  "attempt": 1,
+  "plan_sha256": "3eb378c85c1a076861f32428907275f9a5665b5ded7e6bbaa2530efc60f60f8c",
+  "wav_sha256": "f254634a5bfbd720c427c86e0b3fddd33ad72c1e3c3a07a81b4a3100559b9c0f",
+  "expected": "The tall man said Mom’s scan was damaged. A copy of her wouldn’t know where the notebook is. And the town had already buried them. The empty boat came back.",
+  "recognized": "The tall man said mom's scan was damaged. A copy of her wouldn't know where the notebook is. And the town had already buried them. The empty boat came back.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 9.84,
+  "sample_rate": 48000,
+  "peak": 0.306243896484375,
+  "rms": 0.04085100628479469,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}
