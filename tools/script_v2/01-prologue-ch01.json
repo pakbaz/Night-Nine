@@ -203,7 +203,8 @@
         }
       ],
       "delete": [
-        "c1_flat.out.01"
+        "c1_flat.out.01",
+        "c1_flat.sunday.01"
       ],
       "task_order": [
         "saturday",
@@ -280,7 +281,6 @@
               "delivery": "radio",
               "sfx": "effect.kbwr_ident, then AutoRick"
             },
-            "c1_flat.sunday.01",
             {
               "id": "c1_flat.sunday.02",
               "text": "Morning, Nor. Blue tape, Sunday. Date on everything, Dad."

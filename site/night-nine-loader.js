@@ -119,9 +119,28 @@
 		}
 	}
 
+	// The landing page starts the music inside its Play click, where browsers allow
+	// sound, and opens this page in place. Take that music over instead of a new copy.
+	function launchMusic() {
+		try {
+			const host = window.parent;
+			if (!host || host === window) {
+				return null;
+			}
+			const music = host.nightNineLaunchMusic;
+			host.nightNineLaunchMusic = null;
+			return music && typeof music.play === 'function' ? music : null;
+		} catch (error) {
+			return null;
+		}
+	}
+
 	function startLoadingMusic() {
 		if (!loadingActive || musicClosed || musicPending) {
 			return;
+		}
+		if (!loadingMusic) {
+			loadingMusic = launchMusic();
 		}
 		if (!loadingMusic) {
 			loadingMusic = document.createElement('audio');

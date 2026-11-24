@@ -26,6 +26,29 @@ var menu_resume: Button
 var menu_save: Button
 var menu_load: Button
 var menu_heading: Label
+var menu_box: VBoxContainer
+var menu_chapters: Button
+var menu_replay_exit: Button
+## Play Chapters replaces the menu column inside the same panel, over the chapter's painting.
+var chapter_panel: VBoxContainer
+var chapter_scroll: ScrollContainer
+var chapter_list: VBoxContainer
+var chapter_return: Button
+var chapter_buttons: Array[Button] = []
+var chapters_open := false
+var chapter_backdrop: Control
+var chapter_art: TextureRect
+var chapter_art_back: TextureRect
+var chapter_art_tween: Tween
+var chapter_kicker: Label
+var chapter_title: Label
+var chapter_when: Label
+var chapter_goal: Label
+var chapter_preview := -1
+var chapter_preview_timer: Timer
+const CHAPTER_PICTURES := "res://assets/illustrated/chapters/"
+const MARK_ICON := preload("res://ui/mark_icon.gd")
+const CHAPTER_THUMB := Vector2(154, 87)
 var browser_storage: RefCounted
 var browser_storage_dialog: AcceptDialog
 var browser_storage_status: Label
@@ -76,6 +99,7 @@ var music_volume: HSlider
 var listening_inspection := false
 var sound_manifest: Dictionary = {}
 var new_game_confirmation: ConfirmationDialog
+var replaying_chapter := false
 var queue: Array = []
 var queue_done: Callable
 var voice_manifest: Dictionary = {}
@@ -172,7 +196,15 @@ func _ready() -> void:
 	_load_stage(false)
 	menu.show()
 	var previous := saves.read_slot("autosave")
-	_status("Continue your saved game, or start a new game from the beginning." if previous.get("ok",false) else "Choose New game to begin. The story starts with a short illustrated prologue.")
+	var unlock_issue := ""
+	if previous.get("ok", false):
+		if not _record_reached_chapters(previous.state):
+			unlock_issue = status.text
+	var manual := saves.read_slot("manual")
+	if manual.get("ok", false):
+		if not _record_reached_chapters(manual.state) and unlock_issue.is_empty():
+			unlock_issue = status.text
+	_status(unlock_issue if not unlock_issue.is_empty() else ("Continue your saved game, or start a new game from the beginning." if previous.get("ok",false) else "Choose New game to begin. The story starts with a short illustrated prologue."))
 	if "--campaign-qa" in OS.get_cmdline_user_args():
 		var runner: Node = load("res://tests/campaign_runtime_qa.gd").new()
 		runner.set("game", self)
@@ -675,15 +707,19 @@ func _build_menu() -> void:
 	title_art.mouse_filter = Control.MOUSE_FILTER_STOP
 	root.add_child(title_art)
 	title_art.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	_build_chapter_backdrop()
 	menu = _panel(root)
 	menu.position = Vector2(62,126)
 	menu.size = Vector2(470,720)
 	var box := VBoxContainer.new()
 	box.add_theme_constant_override("separation",12)
 	menu.add_child(box)
+	menu_box = box
 	menu_heading = _label(box, "Paused", 30)
 	menu_resume = _button(box,"Continue",_continue)
 	_button(box,"New game",_request_new_game)
+	menu_chapters = _button(box, "Play Chapters", _open_chapters)
+	menu_replay_exit = _button(box, "Return to saved game", _return_from_chapter_replay)
 	new_game_confirmation = ConfirmationDialog.new()
 	new_game_confirmation.title = "Begin a new game?"
 	new_game_confirmation.dialog_text = "Replace your autosave and begin again? Your manual save will remain available."
@@ -740,10 +776,328 @@ func _build_menu() -> void:
 	_button(box,"Credits",_open_credits)
 	if not OS.has_feature("web"):
 		_button(box,"Quit",_quit)
+	_build_chapter_menu()
 	menu.visibility_changed.connect(func():
+		if not menu.visible:
+			get_viewport().gui_release_focus()
+			_close_chapter_view()
 		settings_open = false
 		_layout_menu())
 	_layout_menu()
+
+## The chapter's opening painting fills the screen behind the menu panel, shaded on the
+## panel's side, with the chapter card's words over the painting.
+func _build_chapter_backdrop() -> void:
+	chapter_backdrop = Control.new()
+	chapter_backdrop.name = "ChapterBackdrop"
+	chapter_backdrop.mouse_filter = Control.MOUSE_FILTER_STOP
+	root.add_child(chapter_backdrop)
+	chapter_backdrop.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	var base := ColorRect.new()
+	base.color = Color(0.008, 0.018, 0.024)
+	base.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	chapter_backdrop.add_child(base)
+	base.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	for layer: int in 2:
+		var art := TextureRect.new()
+		art.name = "ChapterArt" if layer == 1 else "ChapterArtBehind"
+		art.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+		art.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED
+		art.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		chapter_backdrop.add_child(art)
+		art.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+		if layer == 0:
+			chapter_art_back = art
+		else:
+			chapter_art = art
+	for direction: Vector2 in [Vector2(1, 0), Vector2(0, 1)]:
+		var ink := Color(0.008, 0.02, 0.026)
+		var fade := Gradient.new()
+		if direction.x > 0.0:
+			fade.offsets = PackedFloat32Array([0.0, .38, .62, 1.0])
+			fade.colors = PackedColorArray([Color(ink, .93), Color(ink, .72), Color(ink, .2), Color(ink, .08)])
+		else:
+			fade.offsets = PackedFloat32Array([0.0, .58, 1.0])
+			fade.colors = PackedColorArray([Color(ink, 0.0), Color(ink, 0.0), Color(ink, .88)])
+		var fill := GradientTexture2D.new()
+		fill.gradient = fade
+		fill.fill_to = direction
+		var shade := TextureRect.new()
+		shade.texture = fill
+		shade.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+		shade.stretch_mode = TextureRect.STRETCH_SCALE
+		shade.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		chapter_backdrop.add_child(shade)
+		shade.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	var caption := VBoxContainer.new()
+	caption.name = "ChapterCaption"
+	caption.alignment = BoxContainer.ALIGNMENT_END
+	caption.add_theme_constant_override("separation", 10)
+	caption.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	chapter_backdrop.add_child(caption)
+	caption.set_anchors_and_offsets_preset(Control.PRESET_BOTTOM_RIGHT)
+	caption.offset_left = -760
+	caption.offset_top = -420
+	caption.offset_right = -72
+	caption.offset_bottom = -68
+	chapter_kicker = _caption_line(caption, 19, Color("e7b781"))
+	chapter_kicker.uppercase = true
+	chapter_title = _caption_line(caption, 46, Color("f1ead8"))
+	var rule_row := HBoxContainer.new()
+	rule_row.alignment = BoxContainer.ALIGNMENT_END
+	rule_row.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	caption.add_child(rule_row)
+	var rule := ColorRect.new()
+	rule.color = Color("e7b781")
+	rule.custom_minimum_size = Vector2(120, 2)
+	rule.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	rule_row.add_child(rule)
+	chapter_when = _caption_line(caption, 20, Color("9fb3ad"))
+	chapter_goal = _caption_line(caption, 23, Color("dcd6c6"))
+	chapter_preview_timer = Timer.new()
+	chapter_preview_timer.one_shot = true
+	chapter_preview_timer.timeout.connect(_load_chapter_painting)
+	add_child(chapter_preview_timer)
+	chapter_backdrop.hide()
+
+func _caption_line(parent: Node, font_size: int, color: Color) -> Label:
+	var line := Label.new()
+	line.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
+	line.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	line.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	line.add_theme_font_size_override("font_size", font_size)
+	line.add_theme_color_override("font_color", color)
+	line.add_theme_color_override("font_shadow_color", Color(0, 0, 0, .85))
+	line.add_theme_constant_override("shadow_outline_size", 6)
+	line.add_theme_constant_override("shadow_offset_y", 1)
+	parent.add_child(line)
+	return line
+
+func _build_chapter_menu() -> void:
+	chapter_panel = VBoxContainer.new()
+	chapter_panel.name = "ChapterMenu"
+	chapter_panel.add_theme_constant_override("separation", 12)
+	menu.add_child(chapter_panel)
+	_label(chapter_panel, "Play Chapters", 30)
+	var help := _label(chapter_panel, "Replay any chapter you have reached. Your saved game keeps its place.", 17)
+	help.text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS
+	help.modulate = Color("9fb3ad")
+	chapter_scroll = ScrollContainer.new()
+	chapter_scroll.name = "ChapterScroll"
+	chapter_scroll.follow_focus = true
+	chapter_scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
+	chapter_scroll.vertical_scroll_mode = ScrollContainer.SCROLL_MODE_SHOW_ALWAYS
+	chapter_scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	chapter_panel.add_child(chapter_scroll)
+	var bar := chapter_scroll.get_v_scroll_bar()
+	var track := StyleBoxFlat.new()
+	track.bg_color = Color(0.35, 0.47, 0.49, .16)
+	track.set_corner_radius_all(4)
+	track.content_margin_left = 4
+	track.content_margin_right = 4
+	bar.add_theme_stylebox_override("scroll", track)
+	bar.add_theme_stylebox_override("scroll_focus", track)
+	for state: String in ["grabber", "grabber_highlight", "grabber_pressed"]:
+		var grab := StyleBoxFlat.new()
+		grab.bg_color = {"grabber": Color("59787c"), "grabber_highlight": Color("72bdb4"), "grabber_pressed": Color("e9c276")}[state]
+		grab.set_corner_radius_all(4)
+		bar.add_theme_stylebox_override(state, grab)
+	var gutter := MarginContainer.new()
+	gutter.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	gutter.add_theme_constant_override("margin_right", 14)
+	chapter_scroll.add_child(gutter)
+	chapter_list = VBoxContainer.new()
+	chapter_list.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	chapter_list.add_theme_constant_override("separation", 8)
+	gutter.add_child(chapter_list)
+	chapter_return = _button(chapter_panel, "Return", _close_chapters)
+	chapter_panel.hide()
+
+func _open_chapters() -> void:
+	if started:
+		_record_reached_chapters(campaign.data)
+	chapters_open = true
+	settings_open = false
+	chapter_preview = -1
+	# Dialogue comes to the front when it starts; keep it under the chapter art.
+	if dialogue_panel.get_index() > chapter_backdrop.get_index():
+		root.move_child(dialogue_panel, chapter_backdrop.get_index())
+	_refresh_chapters()
+	_layout_menu()
+	chapter_scroll.scroll_vertical = 0
+	var latest: Button
+	for button: Button in chapter_buttons:
+		if not button.disabled:
+			latest = button
+	if latest:
+		# After the new rows are laid out, so the list can scroll to the selection.
+		_select_chapter_row.call_deferred(latest)
+	else:
+		chapter_return.grab_focus()
+		_show_chapter_art(title_art.texture)
+		chapter_kicker.text = "Play Chapters"
+		chapter_title.text = "Nothing to replay yet"
+		chapter_when.hide()
+		chapter_goal.text = "Each chapter unlocks when you reach it."
+		chapter_goal.show()
+
+func _select_chapter_row(row: Button) -> void:
+	if not chapters_open or not is_instance_valid(row):
+		return
+	row.grab_focus()
+	chapter_scroll.ensure_control_visible(row)
+	_load_chapter_painting()
+
+func _refresh_chapters() -> void:
+	chapter_buttons.clear()
+	for child: Node in chapter_list.get_children():
+		chapter_list.remove_child(child)
+		child.queue_free()
+	for entry: Dictionary in campaign.chapter_list():
+		var unlocked: bool = bool(saves.read_slot(_chapter_slot(int(entry.scene))).get("ok", false))
+		var row := _chapter_row(entry, unlocked)
+		chapter_list.add_child(row)
+		chapter_buttons.append(row)
+
+## One chapter: its opening painting, then the chapter, its title and where it opens.
+## Locked chapters keep their title and painting hidden.
+func _chapter_row(entry: Dictionary, unlocked: bool) -> Button:
+	var index: int = int(entry.scene)
+	var scene: Dictionary = campaign.content.scenes[index]
+	var row := Button.new()
+	row.name = "Chapter_%02d" % index
+	row.custom_minimum_size.y = CHAPTER_THUMB.y + 22
+	row.disabled = not unlocked
+	row.focus_mode = Control.FOCUS_ALL if unlocked else Control.FOCUS_NONE
+	row.accessibility_name = str(entry.chapter) + (", " + str(entry.title) if unlocked else ", locked")
+	row.tooltip_text = "Play " + str(entry.chapter) if unlocked else "Reach this chapter to unlock it"
+	for state: String in ["normal", "hover", "pressed", "focus", "disabled"]:
+		var style := StyleBoxFlat.new()
+		style.bg_color = {"normal": Color("16333d"), "hover": Color("1f444d"), "pressed": Color("31545b"),
+			"focus": Color("31545b"), "disabled": Color(0.05, 0.11, 0.13, .9)}[state]
+		style.border_color = {"normal": Color("59787c"), "hover": Color("72bdb4"), "pressed": Color("e9c276"),
+			"focus": Color("e9c276"), "disabled": Color("2b464c")}[state]
+		style.set_border_width_all(2 if state in ["pressed", "focus"] else 1)
+		style.set_corner_radius_all(6)
+		row.add_theme_stylebox_override(state, style)
+	row.pressed.connect(_play_chapter.bind(index))
+	if unlocked:
+		row.focus_entered.connect(_preview_chapter.bind(index))
+		row.mouse_entered.connect(_preview_chapter.bind(index))
+	var margin := MarginContainer.new()
+	margin.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	for side: String in ["left", "top", "right", "bottom"]:
+		margin.add_theme_constant_override("margin_" + side, 10)
+	row.add_child(margin)
+	margin.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	var line := HBoxContainer.new()
+	line.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	line.add_theme_constant_override("separation", 16)
+	margin.add_child(line)
+	var frame := PanelContainer.new()
+	frame.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	frame.size_flags_vertical = Control.SIZE_SHRINK_CENTER
+	var border := StyleBoxFlat.new()
+	border.bg_color = Color("0b1518")
+	border.border_color = Color("b7976e") if unlocked else Color("2b464c")
+	border.set_border_width_all(1)
+	border.set_corner_radius_all(4)
+	border.set_content_margin_all(2)
+	frame.add_theme_stylebox_override("panel", border)
+	line.add_child(frame)
+	if unlocked:
+		var picture := TextureRect.new()
+		picture.name = "Picture"
+		picture.texture = _chapter_picture(scene)
+		picture.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+		picture.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED
+		picture.custom_minimum_size = CHAPTER_THUMB
+		picture.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		frame.add_child(picture)
+	else:
+		var plate := CenterContainer.new()
+		plate.custom_minimum_size = CHAPTER_THUMB
+		plate.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		frame.add_child(plate)
+		var lock := MARK_ICON.new()
+		lock.name = "Lock"
+		lock.custom_minimum_size = Vector2(30, 30)
+		lock.show_kind("locked")
+		plate.add_child(lock)
+	var words := VBoxContainer.new()
+	words.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	words.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	words.alignment = BoxContainer.ALIGNMENT_CENTER
+	words.add_theme_constant_override("separation", 3)
+	line.add_child(words)
+	_row_line(words, str(entry.chapter).to_upper(), 15, Color("e7b781") if unlocked else Color("6f8784"))
+	_row_line(words, str(entry.title) if unlocked else "Locked", 22, Color("f1ead8") if unlocked else Color("8fa3a0")).name = "Title"
+	_row_line(words, str(scene.get("place", "")) if unlocked else "Reach this chapter to unlock it.", 15,
+		Color("9fb3ad") if unlocked else Color("6f8784"))
+	return row
+
+func _row_line(parent: Node, text: String, font_size: int, color: Color) -> Label:
+	var line := Label.new()
+	line.text = text
+	line.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	line.text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS
+	line.add_theme_font_size_override("font_size", font_size)
+	line.add_theme_color_override("font_color", color)
+	parent.add_child(line)
+	return line
+
+func _chapter_picture(scene: Dictionary) -> Texture2D:
+	var path := CHAPTER_PICTURES + str(scene.id) + ".webp"
+	if not ResourceLoader.exists(path):
+		path = _scene_painting(scene)
+	return load(path) as Texture2D if ResourceLoader.exists(path) else null
+
+## The caption follows at once; the full painting waits until the choice settles.
+func _preview_chapter(scene_index: int) -> void:
+	if not chapters_open or scene_index == chapter_preview:
+		return
+	chapter_preview = scene_index
+	var scene: Dictionary = campaign.content.scenes[scene_index]
+	var card: Dictionary = scene.get("card", {}).get("chapter", {})
+	chapter_kicker.text = str(scene.chapter)
+	chapter_title.text = str(card.get("title", scene.title))
+	var when := str(card.get("when", ""))
+	chapter_when.text = (when + "  ·  " if not when.is_empty() else "") + str(scene.get("place", ""))
+	chapter_when.visible = not chapter_when.text.is_empty()
+	chapter_goal.text = str(card.get("goal", ""))
+	chapter_goal.visible = not chapter_goal.text.is_empty()
+	chapter_preview_timer.start(.16)
+
+func _load_chapter_painting() -> void:
+	if not chapters_open or chapter_preview < 0:
+		return
+	var path := _scene_painting(campaign.content.scenes[chapter_preview])
+	_show_chapter_art(load(path) as Texture2D if ResourceLoader.exists(path) else null)
+
+func _show_chapter_art(texture: Texture2D) -> void:
+	if texture == chapter_art.texture:
+		return
+	chapter_art_back.texture = chapter_art.texture
+	chapter_art.texture = texture
+	chapter_art.modulate.a = 0.0
+	if chapter_art_tween:
+		chapter_art_tween.kill()
+	chapter_art_tween = create_tween()
+	chapter_art_tween.tween_property(chapter_art, "modulate:a", 1.0, .35)
+
+func _close_chapter_view() -> void:
+	chapters_open = false
+	chapter_preview = -1
+	if is_instance_valid(chapter_preview_timer):
+		chapter_preview_timer.stop()
+	if is_instance_valid(chapter_art):
+		chapter_art.texture = null
+		chapter_art_back.texture = null
+
+func _close_chapters() -> void:
+	_close_chapter_view()
+	_layout_menu()
+	menu_chapters.grab_focus()
 
 func _build_browser_storage() -> void:
 	browser_storage = preload("res://ui/browser_storage.gd").new()
@@ -767,7 +1121,9 @@ func _build_browser_storage() -> void:
 	browser_storage_status.custom_minimum_size = Vector2(540, 72)
 
 func _open_browser_storage() -> void:
-	browser_export.disabled = not started and not saves.read_slot("autosave").get("ok", false) and not saves.read_slot("manual").get("ok", false)
+	browser_export.disabled = (not started or replaying_chapter) \
+		and not saves.read_slot("autosave").get("ok", false) \
+		and not saves.read_slot("manual").get("ok", false)
 	browser_storage_dialog.popup_centered(Vector2i(610, 380))
 
 func _browser_storage_message(message: String) -> void:
@@ -775,8 +1131,8 @@ func _browser_storage_message(message: String) -> void:
 	_status(message)
 
 func _export_browser_backup() -> void:
-	var slot := "export" if started else ("autosave" if saves.read_slot("autosave").get("ok", false) else "manual")
-	if started:
+	var slot := "export" if started and not replaying_chapter else ("autosave" if saves.read_slot("autosave").get("ok", false) else "manual")
+	if started and not replaying_chapter:
 		_save(slot)
 		if not saves.last_error.is_empty():
 			_browser_storage_message("Could not export: " + saves.last_error)
@@ -823,12 +1179,21 @@ func _volume_control(label: String, key: String, initial: float, change: Callabl
 	return slider
 
 func _layout_menu() -> void:
-	title_art.visible = not started and menu.visible
+	title_art.visible = not started and menu.visible and not chapters_open
+	menu_box.visible = not chapters_open
+	chapter_panel.visible = chapters_open
+	chapter_backdrop.visible = chapters_open and menu.visible
 	menu_settings.visible = settings_open
 	menu_heading.visible = started
-	menu_save.visible = started
+	menu_save.visible = started and not replaying_chapter
 	menu_resume.visible = started or saves.read_slot("autosave").get("ok", false)
 	menu_load.visible = started or saves.read_slot("manual").get("ok", false)
+	menu_replay_exit.visible = replaying_chapter
+	if chapters_open:
+		# The same panel and left edge as the menu, tall enough to scroll the chapters.
+		menu.position = Vector2(78 if started else 100, 64)
+		menu.size = Vector2(660, maxf(420.0, get_viewport().get_visible_rect().size.y - 128.0))
+		return
 	menu.position = Vector2(78, 103) if started or settings_open else Vector2(100, 473)
 	menu.size = Vector2(430 if settings_open else 357, 0)
 
@@ -926,6 +1291,75 @@ func _close_credits() -> void:
 	if is_instance_valid(credits_prior_focus) and credits_prior_focus.is_visible_in_tree():
 		credits_prior_focus.grab_focus()
 
+func _chapter_slot(scene_index: int) -> String:
+	return "chapter-%02d" % scene_index
+
+func _record_reached_chapters(source: Dictionary) -> bool:
+	var normalized: Variant = campaign.migrate(source)
+	if not normalized is Dictionary:
+		_status("Could not update chapter replays: invalid campaign save.")
+		return false
+	var issue: String = campaign.validate(normalized)
+	if not issue.is_empty():
+		_status("Could not update chapter replays: " + issue)
+		return false
+	for entry: Dictionary in campaign.chapter_list():
+		var scene_index: int = int(entry.scene)
+		if scene_index > int(normalized.scene):
+			continue
+		var slot := _chapter_slot(scene_index)
+		if saves.read_slot(slot).get("ok", false):
+			continue
+		var checkpoint: Dictionary = campaign.chapter_checkpoint(scene_index, normalized)
+		if checkpoint.is_empty():
+			_status("Could not create the replay checkpoint for " + str(entry.chapter) + ".")
+			return false
+		if saves.write_slot(slot, checkpoint):
+			continue
+		_status("Could not unlock chapter replay: " + saves.last_error)
+		return false
+	return true
+
+func _play_chapter(scene_index: int) -> void:
+	var result := saves.read_slot(_chapter_slot(scene_index))
+	if not result.get("ok", false):
+		_status(result.get("error", "Chapter replay is unavailable."))
+		return
+	if started and not replaying_chapter:
+		_save("autosave")
+		if not saves.last_error.is_empty():
+			_status("Could not preserve your saved game: " + saves.last_error)
+			return
+	if not campaign.restore(result.state):
+		_status("The chapter replay checkpoint failed validation.")
+		return
+	replaying_chapter = true
+	started = true
+	_close_chapter_view()
+	menu.hide()
+	_enter_with_story(true)
+
+func _finish_chapter_replay(message: String) -> void:
+	var result := saves.read_slot("autosave")
+	var restored := false
+	replaying_chapter = false
+	_close_chapter_view()
+	if result.get("ok", false) and campaign.restore(result.state):
+		restored = true
+		started = true
+		_load_stage(false)
+	else:
+		started = false
+		campaign.reset()
+		_load_stage(false)
+	menu.show()
+	_pause_audio(true)
+	_layout_menu()
+	_status(message if restored else "No valid saved game was available. Returned to the title menu.")
+
+func _return_from_chapter_replay() -> void:
+	_finish_chapter_replay("Returned to your saved game.")
+
 func _continue() -> void:
 	if started:
 		menu.hide()
@@ -942,9 +1376,11 @@ func _request_new_game() -> void:
 
 func _new_game() -> void:
 	# New Game deliberately preserves the manual slot.
+	replaying_chapter = false
 	campaign.reset()
 	started=true
 	menu.hide()
+	_record_reached_chapters(campaign.data)
 	_save("autosave")
 	_enter_with_story(true)
 
@@ -997,6 +1433,7 @@ func _load(slot: String) -> bool:
 	if not campaign.restore(result.state):
 		_status("The save failed validation.")
 		return false
+	replaying_chapter = false
 	started=true
 	menu.hide()
 	if _untouched_scene() and not _book_before(str(campaign.current().id)).is_empty():
@@ -1007,6 +1444,8 @@ func _load(slot: String) -> bool:
 	return true
 
 func _save(slot: String) -> void:
+	if replaying_chapter:
+		return
 	if started and is_instance_valid(stage) and stage.room_id==campaign.current().id and stage.has_method("walk_task") and stage.floor_stage:
 		campaign.data.walk_positions = stage.floor_stage.snapshot()
 	if started and not saves.write_slot(slot,campaign.data):
@@ -1017,6 +1456,8 @@ func _save_settings() -> void:
 	settings.save(save_root.path_join("settings.cfg"))
 
 func _load_stage(play_intro: bool) -> void:
+	if started:
+		_record_reached_chapters(campaign.data)
 	if is_instance_valid(title_card) and title_card.visible:
 		title_card.cancel()
 	if is_instance_valid(storybook) and storybook.visible:
@@ -1256,7 +1697,9 @@ func _open_task(id: String) -> void:
 	if id in campaign.data.done:
 		root.get_node("InteractionPanel").hide()
 		_status(task.note)
-		_speak(task.lines,Callable())
+		# The conversation happened once. Looking again recalls what Steve found.
+		var finding: String = task.get("finding", "")
+		_speak([finding] if not finding.is_empty() else task.lines,Callable())
 		return
 	if task.get("puzzle", {}).get("presentation", "") == "tape_alignment":
 		root.get_node("InteractionPanel").hide()
@@ -1835,10 +2278,17 @@ func _advance_scene(dissolve: bool=false) -> void:
 	_enter_next_scene(dissolve)
 
 func _enter_next_scene(dissolve: bool=false) -> void:
+	if replaying_chapter:
+		var next_index := int(campaign.data.scene) + 1
+		if next_index >= campaign.content.scenes.size() \
+				or str(campaign.content.scenes[next_index].chapter) != str(campaign.current().chapter):
+			_finish_chapter_replay("Chapter replay complete. Continue resumes your saved game.")
+			return
 	var last_frame: Dictionary={}
 	if dissolve and stage.has_method("outgoing_frame"):
 		last_frame=stage.outgoing_frame()
 	if campaign.advance():
+		_record_reached_chapters(campaign.data)
 		_save("autosave")
 		if not campaign.data.finished and not _book_before(str(campaign.current().id)).is_empty():
 			_enter_with_story(true)
@@ -2034,6 +2484,8 @@ func _unhandled_key_input(event: InputEvent) -> void:
 			if journal.visible:
 				journal.hide()
 				_pause_audio(false)
+			elif menu.visible and chapters_open:
+				_close_chapters()
 			elif menu.visible and settings_open:
 				settings_open = false
 				_layout_menu()

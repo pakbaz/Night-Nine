@@ -46,6 +46,74 @@ func reset() -> void:
 func current() -> Dictionary:
 	return content.scenes[int(data.scene)]
 
+func chapter_list() -> Array[Dictionary]:
+	var chapters: Array[Dictionary] = []
+	var previous := ""
+	for scene_index: int in range(content.scenes.size()):
+		var scene: Dictionary = content.scenes[scene_index]
+		var chapter: String = str(scene.chapter)
+		if chapter == previous:
+			continue
+		var card: Dictionary = scene.get("card", {})
+		var chapter_card: Dictionary = card.get("chapter", {})
+		chapters.append({
+			"chapter": chapter,
+			"title": str(chapter_card.get("title", scene.title)),
+			"scene": scene_index,
+			"scene_id": str(scene.id)
+		})
+		previous = chapter
+	return chapters
+
+func chapter_checkpoint(scene_index: int, source: Variant = null) -> Dictionary:
+	var candidate: Variant = migrate(data if source == null else source)
+	if not candidate is Dictionary or not validate(candidate).is_empty():
+		return {}
+	var reached: int = int(candidate.scene)
+	if scene_index < 0 or scene_index > reached or scene_index >= content.scenes.size():
+		return {}
+	if scene_index > 0 and content.scenes[scene_index].chapter == content.scenes[scene_index - 1].chapter:
+		return {}
+	var scene: Dictionary = content.scenes[scene_index]
+	var completed: Dictionary = {}
+	var done: Array = []
+	for id: Variant in candidate.get("done", []):
+		if id is String and task_index.has(id) and int(task_scene[id]) < scene_index:
+			done.append(id)
+			completed[id] = true
+	var seen: Array = []
+	for id: Variant in candidate.get("seen", []):
+		if id is String and line_scene.has(id) and int(line_scene[id]) < scene_index:
+			seen.append(id)
+	var hints: Dictionary = {}
+	for id: Variant in candidate.get("hints", {}):
+		var level: Variant = candidate.hints[id]
+		if id is String and task_index.has(id) and int(task_scene[id]) < scene_index:
+			hints[id] = int(level)
+	var revealed: Array = []
+	for id: Variant in candidate.get("revealed", []):
+		if id is String and task_index.has(id) and int(task_scene[id]) < scene_index:
+			revealed.append(id)
+	var marks: Dictionary = {}
+	var notes: Dictionary = {}
+	var notebook: Dictionary = candidate.get("notebook", {})
+	for case_id: String in content.get("notebook_cases", {}):
+		var theories: Array = available_theories(case_id, completed)
+		if not theories.is_empty() and notebook.get("notes", {}).has(case_id):
+			notes[case_id] = notebook.notes[case_id]
+		for theory: Dictionary in theories:
+			if notebook.get("marks", {}).has(theory.id):
+				marks[theory.id] = notebook.marks[theory.id]
+	var checkpoint: Dictionary = {
+		"schema": 2, "game": "night-nine", "content": content.version,
+		"scene": scene_index, "scene_id": str(scene.id), "chapter": str(scene.chapter),
+		"actor": str(scene.actors[0]), "done": done, "seen": seen,
+		"finished": false, "hints": hints, "walk_positions": {},
+		"notebook": {"marks": marks, "notes": notes}, "case_boards": {},
+		"misses": {}, "post_hint_misses": {}, "missed_options": {}, "revealed": revealed
+	}
+	return checkpoint if validate(checkpoint).is_empty() else {}
+
 func available(task_id: String) -> bool:
 	if not task_index.has(task_id) or task_scene[task_id] != int(data.scene):
 		return false
@@ -273,7 +341,7 @@ func migrate(candidate: Variant) -> Variant:
 		return candidate
 	var source_version: String = str(candidate.get("content", ""))
 	if source_version == str(content.version):
-		return candidate
+		return _forget_cut_lines(candidate)
 	if source_version not in ["campaign-1", "campaign-2"]:
 		return candidate
 	var order: Array = []
@@ -376,6 +444,18 @@ func migrate(candidate: Variant) -> Variant:
 					marks[theory.id] = candidate.notebook.marks[theory.id]
 		moved.notebook = {"marks": marks, "notes": notes}
 	return moved
+
+## A line cut from the script stays in the transcript of saves that heard it. The
+## transcript is only a record, so forget the line rather than reject the save.
+func _forget_cut_lines(candidate: Dictionary) -> Dictionary:
+	if not candidate.get("seen") is Array:
+		return candidate
+	var kept: Array = candidate.seen.filter(func(id: Variant): return not id is String or content.lines.has(id))
+	if kept.size() == candidate.seen.size():
+		return candidate
+	var trimmed: Dictionary = candidate.duplicate(true)
+	trimmed.seen = kept
+	return trimmed
 
 func restore(candidate: Variant) -> bool:
 	candidate = migrate(candidate)

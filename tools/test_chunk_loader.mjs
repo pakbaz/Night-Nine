@@ -1,4 +1,5 @@
-// Runs site/night-nine-loader.js against fake browser APIs. Usage: node tools/test_chunk_loader.mjs
+// Runs site/night-nine-loader.js and the landing page's Play script against fake browser APIs.
+// Usage: node tools/test_chunk_loader.mjs
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {readFileSync} from 'node:fs';
@@ -28,7 +29,7 @@ async function makeManifest(parts) {
 	};
 }
 
-function browser(serve, {storage = new Map(), play = async () => {}, chunks = manifest} = {}) {
+function browser(serve, {storage = new Map(), play = async () => {}, chunks = manifest, host} = {}) {
 	const requests = [];
 	const stored = new Map();
 	const listeners = new Map();
@@ -91,6 +92,7 @@ function browser(serve, {storage = new Map(), play = async () => {}, chunks = ma
 		delete: async (url) => stored.delete(String(url)),
 	};
 	const window = {
+		parent: host,
 		localStorage: {
 			getItem: (key) => storage.get(key) ?? null,
 			setItem: (key, value) => storage.set(key, value),
@@ -146,6 +148,63 @@ async function load(serve) {
 	const page = browser(serve);
 	const response = await page.fetch('https://night-nine.test/play.wasm');
 	return {bytes: new Uint8Array(await response.arrayBuffer()), requests: page.requests};
+}
+
+const landingSource = readFileSync(new URL('../site/index.html', import.meta.url), 'utf8')
+	.match(/<script>([\s\S]*?)<\/script>/)[1];
+
+function landing({storage = new Map()} = {}) {
+	const audio = [];
+	const frames = [];
+	let onClick;
+	const link = {
+		href: 'https://night-nine.test/play',
+		addEventListener(name, callback) {
+			if (name === 'click') onClick = callback;
+		},
+	};
+	class Audio {
+		constructor(src) {
+			Object.assign(this, {src, paused: true, playCalls: 0, loop: false, volume: 1});
+			audio.push(this);
+		}
+		play() {
+			this.playCalls += 1;
+			this.paused = false;
+			return Promise.resolve();
+		}
+		pause() { this.paused = true; }
+	}
+	const window = {
+		localStorage: {getItem: (key) => storage.get(key) ?? null, setItem: (key, value) => storage.set(key, value)},
+	};
+	const document = {
+		baseURI: 'https://night-nine.test/',
+		documentElement: {style: {}},
+		body: {append(frame) { frames.push(frame); }},
+		querySelector: (selector) => (selector === 'a.play' ? link : null),
+		getElementById: (id) => frames.find((frame) => frame.id === id) || null,
+		createElement() {
+			const listeners = {};
+			return {
+				style: {}, focusCalls: 0,
+				contentWindow: {focused: false, focus() { this.focused = true; }},
+				addEventListener(name, callback) { listeners[name] = callback; },
+				focus() { this.focusCalls += 1; },
+				fire(name) { listeners[name]?.(); },
+			};
+		},
+	};
+	vm.runInNewContext(landingSource, {window, document, URL, Audio, console});
+	return {
+		audio, frames, window,
+		click(options = {}) {
+			const event = {button: 0, defaultPrevented: false, prevented: false, ...options,
+				preventDefault() { this.prevented = true; }};
+			onClick(event);
+			return event;
+		},
+	};
 }
 
 const tests = {
@@ -279,6 +338,63 @@ const tests = {
 		const audio = page.created.find((element) => element.tagName === 'audio');
 		assert.equal(audio.paused, true);
 		assert.equal(page.storage.size, 0);
+	},
+	async 'the landing Play click starts the loading music before the game loads'() {
+		const page = landing();
+		const event = page.click();
+		assert.equal(event.prevented, true);
+		assert.equal(page.audio.length, 1);
+		const [music] = page.audio;
+		assert.equal(music.src, 'https://night-nine.test/loading-screen-music.mp3');
+		assert.equal(music.playCalls, 1, 'Start the music inside the click, where browsers allow sound');
+		assert.equal(music.loop, true);
+		assert.equal(music.volume, 0.35);
+		assert.equal(page.window.nightNineLaunchMusic, music);
+		assert.equal(page.frames.length, 1);
+		const [frame] = page.frames;
+		assert.equal(frame.src, 'https://night-nine.test/play');
+		assert.ok(frame.allow.includes('autoplay') && frame.allow.includes('fullscreen'));
+		assert.equal(frame.focusCalls, 1);
+		page.click();
+		assert.equal(page.frames.length, 1, 'A second click does not open another game');
+		assert.equal(page.audio.length, 1);
+	},
+	async 'the landing page stops music that the game page did not take over'() {
+		const page = landing();
+		page.click();
+		const [music] = page.audio;
+		page.frames[0].fire('load');
+		assert.equal(music.paused, true);
+		assert.equal(page.window.nightNineLaunchMusic, null);
+		assert.equal(page.frames[0].contentWindow.focused, true);
+	},
+	async 'later visits and modified clicks keep the landing page silent'() {
+		const revisit = landing({storage: new Map([['night-nine:loaded:/', '1']])});
+		revisit.click();
+		assert.equal(revisit.audio.length, 0);
+		assert.equal(revisit.frames.length, 1);
+		const newTab = landing();
+		const event = newTab.click({metaKey: true});
+		assert.equal(event.prevented, false);
+		assert.equal(newTab.audio.length + newTab.frames.length, 0);
+	},
+	async 'the game takes over the music the landing page started'() {
+		const launched = {
+			paused: false, playCalls: 0, currentTime: 12, volumes: [0.35],
+			get volume() { return this.volumes.at(-1); },
+			set volume(value) { this.volumes.push(value); },
+			async play() { this.playCalls += 1; this.paused = false; },
+			pause() { this.paused = true; },
+			remove() {},
+		};
+		const host = {nightNineLaunchMusic: launched};
+		const page = browser(() => good, {host});
+		await settle();
+		assert.ok(!page.created.some((element) => element.tagName === 'audio'), 'Do not start a second copy');
+		assert.equal(host.nightNineLaunchMusic, null);
+		assert.equal(launched.paused, false);
+		page.finish();
+		assert.equal(launched.paused, true);
 	},
 };
 

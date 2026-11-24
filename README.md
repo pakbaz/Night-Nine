@@ -14,7 +14,7 @@ Cloudflare Pages is the only game host. GitHub hosts the source and runs the bui
 
 Play in a desktop browser with WebGL 2. There is no installer. The small button in the top-right corner switches to full screen; press Esc to leave it. To edit or test the source, open `game/project.godot` in Godot 4.7.2, wait for import, then press F5.
 
-Select **New game**. Click an object to investigate, or use **Objects** for a keyboard-accessible list. Click a person, or their portrait beside **Objects**, for optional small talk. In rooms with a walkable floor, click a spot or use WASD to move. Open the notebook to review evidence, case theories and the transcript. After initial setup, you can play the full story offline.
+Select **New game**. **Play Chapters** unlocks each chapter when you reach it, and replays do not replace the **Continue** position or your current autosave. Click an object to investigate, or use **Objects** for a keyboard-accessible list. Click a person, or their portrait beside **Objects**, for optional small talk. In rooms with a walkable floor, click a spot or use WASD to move. Open the notebook to review evidence, case theories and the transcript. After initial setup, you can play the full story offline.
 
 At a case board, read the case notes, pick a card, then pick the question or place where it belongs. You can also drag cards or use Tab and Enter. Press **Check**: right cards turn green and stay, and wrong ones are marked so you can move them. Settings puzzles mark each row the same way. Your placements and confirmed steps are saved as you work. Use **Hint** for another clue.
 

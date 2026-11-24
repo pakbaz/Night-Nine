@@ -143,6 +143,17 @@ func run() -> void:
 	click(game.stage.distant.to_global(iris_body.position))
 	check(game.root.get_node("InteractionPanel").visible and game.interaction.get_child(0).text == "Nora Reyes",
 		"Clicking Nora's walking figure opens the same talk panel")
+	game.root.get_node("InteractionPanel").hide()
+	# Nora talks over each cassette once. Clicking a solved cassette again only recalls Steve's finding.
+	var sunday: Dictionary = game.campaign.task_index["c1_flat.sunday"]
+	game.campaign.choose(sunday.id, int(sunday.answer), sunday.get("puzzle", {}).get("solution", []))
+	game.campaign.mark_seen(sunday.lines + [sunday.finding])
+	for task: Dictionary in [saturday, sunday]:
+		game._open_task(task.id)
+		check(game.dialogue_panel.visible and game.active_line == task.finding and game.queue.is_empty(),
+			"Clicking the solved " + str(task.title).to_lower() + " again only recalls Steve's finding")
+		while game.dialogue_panel.visible:
+			game._next_line()
 	await enter("c1_dinner")
 	await open_painted("c1_dinner", "carmen", "Carmen Reyes")
 	var receipt := FileAccess.open(output.path_join("small-talk.json"), FileAccess.WRITE)

@@ -53,5 +53,58 @@
       Deployment, verification, testing and game debugging by GitHub Copilot Fusion.
       Game hosted on Cloudflare Pages.</small>
   </main>
+  <script>
+    (function () {
+      'use strict';
+      const link = document.querySelector('a.play');
+      if (!link) {
+        return;
+      }
+      const firstLoadKey = `night-nine:loaded:${new URL('.', document.baseURI).pathname}`;
+      function isFirstLoad() {
+        try {
+          return window.localStorage.getItem(firstLoadKey) !== '1';
+        } catch (error) {
+          return false;
+        }
+      }
+      // Browsers allow sound only after a click, so the Play click itself starts the
+      // loading music and the game loads in place; night-nine-loader.js takes it over.
+      link.addEventListener('click', (event) => {
+        if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey
+            || event.shiftKey || event.altKey) {
+          return;
+        }
+        event.preventDefault();
+        if (document.getElementById('night-nine-game')) {
+          return;
+        }
+        if (isFirstLoad()) {
+          const music = new Audio(new URL('loading-screen-music.mp3', document.baseURI).href);
+          music.loop = true;
+          music.preload = 'auto';
+          music.volume = 0.35;
+          music.play().catch(() => {});
+          window.nightNineLaunchMusic = music;
+        }
+        const frame = document.createElement('iframe');
+        frame.id = 'night-nine-game';
+        frame.title = 'Night Nine';
+        frame.src = link.href;
+        frame.allow = 'autoplay; fullscreen; gamepad';
+        frame.allowFullscreen = true;
+        frame.style.cssText = 'position:fixed;inset:0;width:100%;height:100%;border:0;background:#000;z-index:10';
+        frame.addEventListener('load', () => {
+          // A game page that did not take the music over must not leave it playing.
+          window.nightNineLaunchMusic?.pause();
+          window.nightNineLaunchMusic = null;
+          frame.contentWindow?.focus();
+        });
+        document.documentElement.style.overflow = 'hidden';
+        document.body.append(frame);
+        frame.focus();
+      });
+    }());
+  </script>
 </body>
 </html>

@@ -12,6 +12,11 @@ bash "$PROJECT_ROOT/tools/godot.sh" --headless --editor --import --quit --log-fi
 python3 "$PROJECT_ROOT/tools/check-log.py" "$NIGHT_NINE_SAVE_DIR/campaign-import.log"
 bash "$PROJECT_ROOT/tools/godot.sh" --headless --script res://tests/test_campaign.gd --log-file "$NIGHT_NINE_SAVE_DIR/campaign-core.log"
 python3 "$PROJECT_ROOT/tools/check-log.py" "$NIGHT_NINE_SAVE_DIR/campaign-core.log"
+CHAPTER_QA="$NIGHT_NINE_SAVE_DIR/chapter-replay-$$"
+mkdir -p "$CHAPTER_QA"
+NIGHT_NINE_SAVE_DIR="$CHAPTER_QA/save" NIGHT_NINE_QA_DIR="$CHAPTER_QA" bash "$PROJECT_ROOT/tools/godot.sh" --headless --audio-driver Dummy --script res://tests/test_chapter_replay.gd --log-file "$CHAPTER_QA/chapter-replay.log"
+python3 "$PROJECT_ROOT/tools/check-log.py" "$CHAPTER_QA/chapter-replay.log"
+python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$CHAPTER_QA/chapter-replay-results.json" 20
 bash "$PROJECT_ROOT/tools/godot.sh" --headless --script res://tests/test_exploration_floor.gd --log-file "$NIGHT_NINE_SAVE_DIR/exploration-floor.log"
 python3 "$PROJECT_ROOT/tools/check-log.py" "$NIGHT_NINE_SAVE_DIR/exploration-floor.log"
 bash "$PROJECT_ROOT/tools/godot.sh" --headless --audio-driver Dummy --script res://tests/test_physical_navigation.gd --log-file "$NIGHT_NINE_SAVE_DIR/physical-navigation.log"
@@ -30,10 +35,10 @@ for SUITE in animation_handoff campaign_music case_boards social_staging small_t
   python3 "$PROJECT_ROOT/tools/check-log.py" "$NIGHT_NINE_QA_DIR/$SUITE.log"
 done
 python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$NIGHT_NINE_QA_DIR/animation-handoff.json" 10
-python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$NIGHT_NINE_QA_DIR/score-route.json" 401
+python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$NIGHT_NINE_QA_DIR/score-route.json" 399
 python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$NIGHT_NINE_QA_DIR/case-boards.json" 716
 python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$NIGHT_NINE_QA_DIR/social-staging.json" 152
-python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$NIGHT_NINE_QA_DIR/small-talk.json" 21
+python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$NIGHT_NINE_QA_DIR/small-talk.json" 23
 python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$NIGHT_NINE_QA_DIR/story-staging.json" 169
 python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$NIGHT_NINE_QA_DIR/bay-receiver.json" 20
 if [[ "${1:-}" == "--render" ]]; then

@@ -56,7 +56,54 @@ func _check_story_shape(state: NightCampaign) -> void:
 		if scene.id != "postcredits":
 			var plan: Dictionary = music.scene_music.get(scene.id, {})
 			check(ResourceLoader.exists(str(plan.get("file", ""))), "Planned music for " + str(scene.id))
-	check(music.scene_music.c1_flat.file == music.chapters["Chapter 1"].theme.file and music.scene_music.c1_pier.file.ends_with("tape-anomaly.mp3") and music.scene_music.c10_live.file == music.title.file, "The Chapter 1 theme for the morning, Tape Anomaly on the pier; the main title for the finale")
+	check(music.scene_music.c1_flat.file == music.chapters["Chapter 1"].bgm.file and music.scene_music.c1_pier.file == music.chapters["Chapter 1"].theme.file
+		and music.scene_music.c1_escape.file.ends_with("tape-anomaly.mp3") and music.scene_music.c10_live.file == music.title.file,
+		"The Chapter 1 BGM for the morning, its theme at the harbor, Tape Anomaly for the ninth night; the main title for the finale")
+	# The tapes catch two mornings, but in the apartment Nora greets Steve once and leaves once.
+	var greetings := 0
+	var departures := 0
+	for task: Dictionary in scenes[_scene_index(state, "c1_flat")].tasks:
+		for id: String in task.get("lead", []) + task.lines:
+			var line: Dictionary = state.content.lines[id]
+			if line.speaker == "iris" and str(line.get("delivery", "live")) == "live":
+				greetings += int(str(line.text).begins_with("Good morning"))
+				departures += int(str(line.text).contains("feed Admiral and the otters"))
+	check(greetings == 1 and departures == 1, "In the apartment Nora says good morning once and leaves for the otters once")
+
+func _check_chapter_replay() -> void:
+	var state := NightCampaign.new()
+	var chapters: Array = state.chapter_list()
+	check(chapters.size() == 15, "Every campaign chapter can be listed")
+	check(chapters[0].chapter == "Prologue" and chapters[0].scene == 0 and chapters[1].chapter == "Chapter 1",
+		"Chapter list follows campaign order")
+	var target := _scene_index(state, "c4_safe")
+	while int(state.data.scene) < target:
+		var moved := false
+		while not state.can_leave():
+			for task: Dictionary in state.current().tasks:
+				if not state.available(task.id):
+					continue
+				if not task.actor.is_empty():
+					state.switch_actor(task.actor)
+				var solution: Array = task.get("puzzle", {}).get("solution", []).duplicate()
+				for i: int in solution.size():
+					solution[i] = int(solution[i])
+				check(state.choose(task.id, int(task.answer), solution).ok, "Reach the Chapter 4 checkpoint")
+				moved = true
+		check(moved, "Chapter checkpoint route always has a next task")
+		state.mark_seen(state.current().get("context", []) + state.current().intro)
+		state.advance()
+	var checkpoint: Dictionary = state.chapter_checkpoint(target)
+	check(not checkpoint.is_empty() and state.validate(checkpoint).is_empty(), "Chapter replay starts from a valid checkpoint")
+	check(int(checkpoint.scene) == target and checkpoint.scene_id == "c4_safe" and checkpoint.chapter == "Chapter 4",
+		"Chapter replay opens on its first scene")
+	check(checkpoint.done.all(func(id: String): return int(state.task_scene[id]) < target),
+		"Chapter replay excludes current and future tasks")
+	check(checkpoint.finished == false and checkpoint.case_boards.is_empty() and checkpoint.walk_positions.is_empty(),
+		"Chapter replay starts without a future or in-scene draft")
+	check(state.restore(checkpoint) and state.current().id == "c4_safe", "Chapter checkpoint restores without changing the source")
+	var fresh := NightCampaign.new()
+	check(fresh.chapter_checkpoint(target).is_empty(), "Future chapters stay locked until reached")
 
 func _check_migration() -> void:
 	var old_order: Array = NightCampaign.ORDER_V1
@@ -86,6 +133,13 @@ func _check_migration() -> void:
 	var v093: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://tests/fixtures/v0.9.3-save.json"))
 	check(probe.restore(v093), "Load a v0.9.3 save fixture")
 	check(probe.current().id == "p_bay" and probe.data.done.is_empty() and probe.data.seen.is_empty(), "Drop removed ids and fall back to the chapter start")
+	# A line cut from the script leaves the transcript of a current save, not the save itself.
+	var heard: Dictionary = NightCampaign.new().data.duplicate(true)
+	var first_line: String = probe.content.scenes[0].intro[0]
+	heard.seen = ["c1_flat.sunday.01", first_line]
+	check(probe.restore(heard) and probe.data.seen == [first_line], "Forget transcript lines that were cut from the script")
+	heard.seen = [42]
+	check(not probe.validate(heard).is_empty(), "Still reject a malformed transcript")
 
 func _check_script_v2_runtime() -> void:
 	var state := NightCampaign.new()
@@ -261,6 +315,7 @@ func _initialize() -> void:
 	check("nora" in state.content.scenes[wake_index].actors and state.task_index["c9_wake.rook"].actor == "nora" and state.task_index["c9_wake.agnes"].actor == "nora", "Nora can direct the Chapter 9 sleeper rescues after Iris releases her")
 	check(not state.advance(),"Cannot skip an unresolved opening")
 	_check_story_shape(state)
+	_check_chapter_replay()
 	_check_migration()
 	_check_script_v2_runtime()
 	_check_storybook_caption_cleanup()

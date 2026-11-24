@@ -216,7 +216,6 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 **On success:**
 - **DJ AutoRick** (radio) *(sound: effect.kbwr_ident, then AutoRick)*: The voice of the coast, now with zero humans! **NEW** `c1_flat.sunday.03`
-- **Nora Reyes**: Good morning, sleepyhead. `c1_flat.sunday.01`
 - **Steve Mercer**: Morning, Nor. Blue tape, Sunday. Date on everything, Dad. **REV** `c1_flat.sunday.02`
 - **Nora Reyes**: I’m off to feed Admiral and the otters. Back by noon. **NEW** `c1_flat.sunday.04`
 - **Steve Mercer**: On a Sunday? You used to fight for every Sunday off. **NEW** `c1_flat.sunday.05`

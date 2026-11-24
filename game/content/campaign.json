@@ -509,7 +509,6 @@
           "answer": 0,
           "lines": [
             "c1_flat.sunday.03",
-            "c1_flat.sunday.01",
             "c1_flat.sunday.02",
             "c1_flat.sunday.04",
             "c1_flat.sunday.05",
@@ -11435,14 +11434,6 @@
       "sfx": "effect.kbwr_ident, then AutoRick",
       "display": "DJ AutoRick",
       "display_speaker": "DJ AutoRick"
-    },
-    "c1_flat.sunday.01": {
-      "id": "c1_flat.sunday.01",
-      "speaker": "iris",
-      "text": "Good morning, sleepyhead.",
-      "audio": "recording.greeting",
-      "display_speaker": "Nora Reyes",
-      "display": "Nora Reyes"
     },
     "c1_flat.sunday.02": {
       "id": "c1_flat.sunday.02",

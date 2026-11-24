@@ -19,4 +19,6 @@ This directory contains the editable production sources. Godot loads the optimiz
 
 Keep the current recordings until replacement voices have been selected and reviewed. Re-recordings must also update the runtime WAVs, voice manifest, mouth timing and any sound-comparison evidence that uses the replaced recordings.
 
+The Play Chapters pictures in `game/assets/illustrated/chapters/` have no masters of their own: `tools/build-chapter-art.gd` cuts them from the runtime painting of each chapter's first location. Run it again after repainting one of those locations.
+
 Engine imports, temporary QA exports, obsolete build copies, credentials, billing records and raw provider responses do not belong in this asset library.

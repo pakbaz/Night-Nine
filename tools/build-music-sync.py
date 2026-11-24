@@ -7,13 +7,16 @@ with --measure to recompute them from the MP3s (ffmpeg required). Tempos above
 to three and a half seconds in every recording. Storybooks, chapter cards and
 chapter-ending films are timed in these bars.
 
-Music plan (November 18, 2026):
-- The first location of each chapter plays that chapter's main theme. Later
-  locations play its background music (BGM). A chapter with one regular
-  location plays its BGM there. The closing film returns to the theme at its
-  loudest section, so every recording is heard.
+Music plan (November 23, 2026):
+- By default the first location of each chapter plays that chapter's main
+  theme and later locations play its background music (BGM). A chapter with
+  one regular location plays its BGM there. The closing film returns to the
+  theme at its loudest section, so every recording is heard.
+- SCENE_TRACKS chooses by mood where the default does not fit: the quieter
+  BGMs score sneaking, suspicion and quiet work, and the driving or melodic
+  themes score escapes and emotional peaks.
 - The three flashback "nights" keep the Three Nights BGM wherever they sit.
-- Bellwether Bay (Tape Anomaly) scores the tape investigation in Chapter 1.
+- Bellwether Bay (Tape Anomaly) scores the ninth night that ends Chapter 1.
 - The main title scores the live broadcast, the ship rising and the last
   departure. Mysterious Take 2 is reserved for the completion credit film.
   The original Epilogue BGM plays in the epilogue.
@@ -46,8 +49,21 @@ SCENE_TRACKS = {
     'p_bay': ('Prologue/bgm', None),
     'p_veyr': ('Prologue/bgm', None),
     'p_meeting': ('Prologue/bgm', None),
-    'c1_flat': ('Chapter 1/theme', None),
-    'c1_pier': ('tape_anomaly', None),
+    # The morning tape test at home, the busy Sunday harbor on the theme, the uneasy ninth night.
+    'c1_flat': ('Chapter 1/bgm', None),
+    'c1_pier': ('Chapter 1/theme', None),
+    'c1_escape': ('tape_anomaly', None),
+    # Sparse, low BGMs for sneaking and suspicion; the driving themes for the escapes.
+    'c2_aquarium': ('Chapter 2/bgm', None),
+    'c2_ship': ('Chapter 2/theme', None),
+    'c4_safe': ('Chapter 4/bgm', None),
+    'c4_escape': ('Chapter 4/theme', None),
+    # The theme carries from the lab to Saren's offer at dawn; the busy BGM scores the workshop.
+    'c8_beach': ('Chapter 8/theme', None),
+    # The patient BGM through the Gallery and the waking; the luminous theme for the Choir.
+    'c9_gallery': ('Chapter 9/bgm', None),
+    'c9_wake': ('Chapter 9/bgm', None),
+    'c9_choir': ('Chapter 9/theme', None),
     'c10_live': ('title', 4),
     'c10_report': ('title', 4),
     'epilogue': ('Epilogue/bgm', None),
