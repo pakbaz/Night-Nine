@@ -503,7 +503,7 @@ func verify_room(scene: Dictionary) -> void:
 func inspect_credits(parent: Node, save_picture: bool) -> void:
 	await press_control(button("Credits",parent))
 	check(game.credits_panel.visible,"Open the original game credits")
-	for credit: String in ["[b]Original story (written 25 years ago):[/b]\nS3PehR","[b]Built using[/b]\nGodot Engine for Browsers","Google Lyria 3.5","[b]Creative narration, game script refinements and gameplay design[/b]\nClaude Opus 5.5","[b]Game engine core design and stages setup[/b]\nGPT Astra 6.2","GPT Image 2.6","ElevenLabs 4","Cloudflare Pages","[b]Deployment, verification, testing and game debugging[/b]\nGitHub Copilot Fusion","[b]Code hosting[/b]\nGitHub\n"]:
+	for credit: String in ["[b]Original story (written 25 years ago):[/b]\nS3PehR","[b]Built using[/b]\nGodot Game Engine","[b]Original Writing, Creative Decisions and Music Composition:[/b]\nSepehr Pakbaz","[b]Script Writing, Narration and Game Programming:[/b]\nClaude Opus 5.5\nGemini 4 Neon\nGitHub Copilot Fusion","[b]Artworks, Characters:[/b]\nGPT Image 2.6","[b]Music Generation:[/b]\nGoogle Lyria 3.5","[b]Voices:[/b]\nElevenLabs 4","[b]Code Deployment, Testing and hosting:[/b]\nGitHub","[b]Game hosting[/b]\nCloudflare Pages"]:
 		check(game.credits_body.text.contains(credit),"Show the approved credit for " + credit)
 	if save_picture:
 		await get_tree().create_timer(.83).timeout
