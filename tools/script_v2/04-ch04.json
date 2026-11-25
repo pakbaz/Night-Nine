@@ -301,22 +301,22 @@
           "difficulty": 1,
           "title": "Transport van",
           "requires": ["fault"],
-          "goal": "Get out of the moving van at the one moment the door will open.",
-          "background": "Steve is in the back of the van with one escort. The rear handle only works while the travel catch is off. At the drill briefing the escort explained the rule: the catch comes off when the driver radios ‘slowing for gravel’, and goes back on at the next stop.",
+          "goal": "Get out of the moving van unseen at the one moment the rear catch releases.",
+          "background": "As a protected witness, Steve rides unrestrained in the back of the van while the driver and escort sit up front behind the mesh partition. The rear handle only works while the travel catch is off. At the drill briefing the escort explained the rule: he releases the catch from the cab when the driver radios ‘slowing for gravel’, and sets it again at the next stop.",
           "lead": [
-            "steve|One escort. One rear door. And a catch that only comes off for gravel.",
+            "steve|Both agents up front behind the mesh. No cuffs, just a witness in the back, and a rear catch that comes off for gravel.",
             "steve|The driver radios before he slows. First a brick bridge over the canal, then a gravel bend.",
             "steve|After the gravel comes the weighbridge. There, the escort opens the door himself.",
             "steve|We were on the old logging road down toward Bellwether. Rook would hear about the drill within minutes. I had less than that."
           ],
-          "prompt": "When should Steve pull the handle, and which way should he jump?",
+          "prompt": "When should Steve pull the handle, and which way should he drop?",
           "board": {
-            "instruction": "Build the route Steve can see from the van, then place the catch actions. Which bend should he wait for before he pulls the handle?",
+            "instruction": "Build the route Steve can see from the van, then place the catch actions. Which blind bend should he wait for so he can slip out unseen?",
             "evidence": [
-              "The escort releases the travel catch when the driver radios ‘slowing for gravel’, and sets it again at the next stop.",
+              "From the front cab, the escort releases the travel catch when the driver radios ‘slowing for gravel’, and sets it again at the next stop.",
               "Driver’s route card: depot, water tower, rail underpass, gravel bend (slow), weighbridge (stop), highway.",
               "Through the window Steve sees a white tank on legs, then a dark steel ceiling, then the driver reaches for the radio.",
-              "At the gravel bend the right side drops into a soft ditch; the left side is rock."
+              "At the blind gravel bend both agents watch the road ahead; the right side drops into a soft fern ditch, while the left side is rock."
             ],
             "stages": [
               {
@@ -343,9 +343,9 @@
           ],
           "lines": [
             {"id": "c4_escape.van.01", "cue": "van_jump"},
-            {"new": "steve|The escort grabbed for me and got a handful of cardigan. His radio came away in my hand. Then I was rolling through ferns in the dark, and the van’s brake lights were already a long way down the hill.", "delivery": "narration"}
+            {"new": "steve|I unclipped the spare radio from the bulkhead, eased the rear door on the blind turn, and dropped into the ferns in the rain. Neither of them saw a thing. The taillights kept right on down the hill.", "delivery": "narration"}
           ],
-          "finding": "steve|On the gravel bend, with the catch off, I pulled the handle and jumped for the soft side. Mostly I fell. But I fell out of the van, with the escort’s radio in my hand."
+          "finding": "steve|On the gravel bend, with both agents watching the road ahead and the catch off, I slipped out the rear door unseen with the spare radio and rolled into the soft ditch."
         }
       },
       "recap": [

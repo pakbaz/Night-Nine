@@ -70,13 +70,14 @@ func click_person(id: String) -> bool:
 	elif stage.painted_people.has(id):
 		# Actual head/torso coordinates read from the paintings, not from hit polygons.
 		var marks := {
-			"general_us":Vector2(.12,.43),"general_cn":Vector2(.887,.433),
-			"lyle":Vector2(.477,.416),"dale":Vector2(.379,.43),
-			"mateo":Vector2(.09,.42),"luis":Vector2(.21,.38),
-			"iris":Vector2(.48,.38),"carmen":Vector2(.67,.30),
-			"rafa":Vector2(.83,.21),"tomas":Vector2(.89,.40),
+			"p_meeting:general_us":Vector2(.12,.43),"p_meeting:general_cn":Vector2(.887,.433),
+			"i2_nora:lyle":Vector2(.477,.416),"i2_nora:dale":Vector2(.379,.43),
+			"c1_dinner:mateo":Vector2(.09,.42),"c1_dinner:luis":Vector2(.21,.38),
+			"c1_dinner:iris":Vector2(.48,.38),"c1_dinner:carmen":Vector2(.67,.30),
+			"c1_dinner:rafa":Vector2(.83,.21),"c1_dinner:tomas":Vector2(.89,.40),
+			"c5_shack:luis":Vector2(.74,.28),
 		}
-		var mark: Vector2 = marks[id]
+		var mark: Vector2 = marks[game.campaign.current().id + ":" + id]
 		samples.append(stage.distant.to_global(mark*stage.ART))
 	elif stage.actors.has(id):
 		sprite = stage.actors[id].body

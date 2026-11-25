@@ -1,0 +1,118 @@
+{
+  "schema": 1,
+  "batch": "later-additions",
+  "model_id": "eleven_v4",
+  "output_format": "mp3_44100_192",
+  "inputs": {
+    "campaign": "c68818712b6d17704dc41d8821dfafef9fd576ecc71c4f9b0e0dbb952c1a37f9",
+    "storybook": "7bd0d4ec4839602c067cf0a29bfd5f88425229c73903aaf38c1be69313a17866",
+    "voice_manifest": "15eed23485b886d6442ae672fbabf6709c215bbd17c4a5f7945381338d6c245e",
+    "casting": "cb91065c437c743d50eea2958d5149a6d0a35b9d20430a66cb8a548b921246db",
+    "existing_additions": "01995ddce94cca621dbfec91036d63c22c6df35f686ec0b655d6fe44e2b217eb"
+  },
+  "ordered_audio_ids": [
+    "c4_escape.van.02",
+    "c4_escape.van.find",
+    "c4_escape.van.lead.01"
+  ],
+  "items": {
+    "c4_escape.van.02": {
+      "audio_id": "c4_escape.van.02",
+      "kind": "campaign",
+      "scene": "c4_escape",
+      "speaker": "steve",
+      "cast_role": "steve",
+      "voice_id": "vveagfomyMCJLZsOPRP2",
+      "text": "I unclipped the spare radio from the bulkhead, eased the rear door on the blind turn, and dropped into the ferns in the rain. Neither of them saw a thing. The taillights kept right on down the hill.",
+      "text_sha256": "2d468430c2c4dcb7b3f4e6396f48bb3805404f80ede8fb4493c8f4f1893bd49c",
+      "synthesis_text": "I unclipped the spare radio from the bulkhead, eased the rear door on the blind turn, and dropped into the ferns in the rain. Neither of them saw a thing. The taillights kept right on down the hill.",
+      "synthesis_text_sha256": "2d468430c2c4dcb7b3f4e6396f48bb3805404f80ede8fb4493c8f4f1893bd49c",
+      "delivery": "narration",
+      "direction": "",
+      "v4_audio_tag": "",
+      "previous_text": "I meant to land on my feet. The ditch had other plans.",
+      "next_text": "On the gravel bend, with both agents watching the road ahead and the catch off, I slipped out the rear door unseen with the spare radio and rolled into the soft ditch.",
+      "voice_settings": {
+        "stability": 0.62,
+        "similarity_boost": 0.78
+      },
+      "language_code": "en",
+      "model_id": "eleven_v4",
+      "output_format": "mp3_44100_192",
+      "estimated_credit_rate": 1.0,
+      "estimated_credits": 198,
+      "attempt_seeds": [
+        937084785,
+        3286646858,
+        2395769515
+      ]
+    },
+    "c4_escape.van.find": {
+      "audio_id": "c4_escape.van.find",
+      "kind": "campaign",
+      "scene": "c4_escape",
+      "speaker": "steve",
+      "cast_role": "steve",
+      "voice_id": "vveagfomyMCJLZsOPRP2",
+      "text": "On the gravel bend, with both agents watching the road ahead and the catch off, I slipped out the rear door unseen with the spare radio and rolled into the soft ditch.",
+      "text_sha256": "35e7eb1e358c46f98ea22a2472edbdd6c27d828c0e00d1c147bd761f237d135d",
+      "synthesis_text": "On the gravel bend, with both agents watching the road ahead and the catch off, I slipped out the rear door unseen with the spare radio and rolled into the soft ditch.",
+      "synthesis_text_sha256": "35e7eb1e358c46f98ea22a2472edbdd6c27d828c0e00d1c147bd761f237d135d",
+      "delivery": "narration",
+      "direction": "",
+      "v4_audio_tag": "",
+      "previous_text": "I unclipped the spare radio from the bulkhead, eased the rear door on the blind turn, and dropped into the ferns in the rain. Neither of them saw a thing. The taillights kept right on down the hill.",
+      "next_text": "Now I was in a ditch in the hills above the bay with Dad’s recorder, a stolen radio and no plan. And the radio was still talking.",
+      "voice_settings": {
+        "stability": 0.62,
+        "similarity_boost": 0.78
+      },
+      "language_code": "en",
+      "model_id": "eleven_v4",
+      "output_format": "mp3_44100_192",
+      "estimated_credit_rate": 1.0,
+      "estimated_credits": 167,
+      "attempt_seeds": [
+        2433678396,
+        482250672,
+        2079350770
+      ]
+    },
+    "c4_escape.van.lead.01": {
+      "audio_id": "c4_escape.van.lead.01",
+      "kind": "campaign",
+      "scene": "c4_escape",
+      "speaker": "steve",
+      "cast_role": "steve",
+      "voice_id": "vveagfomyMCJLZsOPRP2",
+      "text": "Both agents up front behind the mesh. No cuffs, just a witness in the back, and a rear catch that comes off for gravel.",
+      "text_sha256": "1baeb6f07239300b3e7d1819cf492f5cfb58563e8c61f1d41100572f3ac67582",
+      "synthesis_text": "Both agents up front behind the mesh. No cuffs, just a witness in the back, and a rear catch that comes off for gravel.",
+      "synthesis_text_sha256": "1baeb6f07239300b3e7d1819cf492f5cfb58563e8c61f1d41100572f3ac67582",
+      "delivery": "live",
+      "direction": "",
+      "v4_audio_tag": "",
+      "previous_text": "A BLUE drill, for real, on the escort’s own ticket. The whole west corridor, me included, goes to the transport bay, and the rules put me straight into my own transfer van. Rook stays in the east wing with June.",
+      "next_text": "The driver radios before he slows. First a brick bridge over the canal, then a gravel bend.",
+      "voice_settings": {
+        "stability": 0.46,
+        "similarity_boost": 0.78
+      },
+      "language_code": "en",
+      "model_id": "eleven_v4",
+      "output_format": "mp3_44100_192",
+      "estimated_credit_rate": 1.0,
+      "estimated_credits": 119,
+      "attempt_seeds": [
+        615092261,
+        2449141359,
+        3699486144
+      ]
+    }
+  },
+  "count": 3,
+  "characters": 484,
+  "request_characters": 484,
+  "estimated_credits": 484,
+  "plan_sha256": "ba3acf58c0a4a3b95f9e9bd0180b6b32184e6a97b5cf30ca764870ae3eb16078"
+}

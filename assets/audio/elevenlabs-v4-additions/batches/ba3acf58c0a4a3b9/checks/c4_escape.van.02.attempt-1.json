@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c4_escape.van.02",
+  "attempt": 1,
+  "plan_sha256": "ba3acf58c0a4a3b95f9e9bd0180b6b32184e6a97b5cf30ca764870ae3eb16078",
+  "wav_sha256": "e5c61a868cb892ba958b5839bb9d7bef4b2704e2628651589297ca2c594a48f3",
+  "expected": "I unclipped the spare radio from the bulkhead, eased the rear door on the blind turn, and dropped into the ferns in the rain. Neither of them saw a thing. The taillights kept right on down the hill.",
+  "recognized": "I unclipped the spare radio from the bulkhead, eased the rear door on the blind turn, and dropped into the ferns in the rain. Neither of them saw a thing. The taillights kept right on down the hill.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 11.76,
+  "sample_rate": 48000,
+  "peak": 0.505340576171875,
+  "rms": 0.04173575789045438,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

@@ -4662,7 +4662,7 @@
         {
           "id": "c4_escape.van",
           "title": "Transport van",
-          "prompt": "When should Steve pull the handle, and which way should he jump?",
+          "prompt": "When should Steve pull the handle, and which way should he drop?",
           "options": [
             "Wait for the released catch and the gravel bend",
             "Use the released catch on the straight road",
@@ -4673,7 +4673,7 @@
             "c4_escape.van.01",
             "c4_escape.van.02"
           ],
-          "note": "On the gravel bend, with the catch off, I pulled the handle and jumped for the soft side. Mostly I fell. But I fell out of the van, with the escort’s radio in my hand.",
+          "note": "On the gravel bend, with both agents watching the road ahead and the catch off, I slipped out the rear door unseen with the spare radio and rolled into the soft ditch.",
           "requires": [
             "c4_escape.fault"
           ],
@@ -4687,12 +4687,12 @@
           ],
           "puzzle": {
             "presentation": "case_board",
-            "instruction": "Build the route Steve can see from the van, then place the catch actions. Which bend should he wait for before he pulls the handle?",
+            "instruction": "Build the route Steve can see from the van, then place the catch actions. Which blind bend should he wait for so he can slip out unseen?",
             "evidence": [
-              "The escort releases the travel catch when the driver radios ‘slowing for gravel’, and sets it again at the next stop.",
+              "From the front cab, the escort releases the travel catch when the driver radios ‘slowing for gravel’, and sets it again at the next stop.",
               "Driver’s route card: depot, water tower, rail underpass, gravel bend (slow), weighbridge (stop), highway.",
               "Through the window Steve sees a white tank on legs, then a dark steel ceiling, then the driver reaches for the radio.",
-              "At the gravel bend the right side drops into a soft ditch; the left side is rock."
+              "At the blind gravel bend both agents watch the road ahead; the right side drops into a soft fern ditch, while the left side is rock."
             ],
             "stages": [
               {
@@ -4819,8 +4819,8 @@
               "The brick bridge has no gravel, and at the weighbridge the escort opens the door himself. A ditch is softer than rock."
             ]
           },
-          "goal": "Get out of the moving van at the one moment the door will open.",
-          "background": "Steve is in the back of the van with one escort. The rear handle only works while the travel catch is off. At the drill briefing the escort explained the rule: the catch comes off when the driver radios ‘slowing for gravel’, and goes back on at the next stop.",
+          "goal": "Get out of the moving van unseen at the one moment the rear catch releases.",
+          "background": "As a protected witness, Steve rides unrestrained in the back of the van while the driver and escort sit up front behind the mesh partition. The rear handle only works while the travel catch is off. At the drill briefing the escort explained the rule: he releases the catch from the cab when the driver radios ‘slowing for gravel’, and sets it again at the next stop.",
           "difficulty": 1,
           "type": "board",
           "lead": [
@@ -16783,7 +16783,7 @@
     "c4_escape.van.lead.01": {
       "id": "c4_escape.van.lead.01",
       "speaker": "steve",
-      "text": "One escort. One rear door. And a catch that only comes off for gravel.",
+      "text": "Both agents up front behind the mesh. No cuffs, just a witness in the back, and a rear catch that comes off for gravel.",
       "audio": "c4_escape.van.lead.01",
       "display": "Steve Mercer",
       "display_speaker": "Steve Mercer"
@@ -16824,7 +16824,7 @@
     "c4_escape.van.02": {
       "id": "c4_escape.van.02",
       "speaker": "steve",
-      "text": "The escort grabbed for me and got a handful of cardigan. His radio came away in my hand. Then I was rolling through ferns in the dark, and the van’s brake lights were already a long way down the hill.",
+      "text": "I unclipped the spare radio from the bulkhead, eased the rear door on the blind turn, and dropped into the ferns in the rain. Neither of them saw a thing. The taillights kept right on down the hill.",
       "audio": "c4_escape.van.02",
       "delivery": "narration",
       "display": "Steve Mercer",
@@ -16833,7 +16833,7 @@
     "c4_escape.van.find": {
       "id": "c4_escape.van.find",
       "speaker": "steve",
-      "text": "On the gravel bend, with the catch off, I pulled the handle and jumped for the soft side. Mostly I fell. But I fell out of the van, with the escort’s radio in my hand.",
+      "text": "On the gravel bend, with both agents watching the road ahead and the catch off, I slipped out the rear door unseen with the spare radio and rolled into the soft ditch.",
       "audio": "c4_escape.van.find",
       "delivery": "narration",
       "display": "Steve Mercer",

@@ -2062,24 +2062,24 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 *Unlocks after:* c4_escape.fault
 
 **When the lead opens:**
-- **Steve Mercer**: One escort. One rear door. And a catch that only comes off for gravel. **NEW** `c4_escape.van.lead.01`
+- **Steve Mercer**: Both agents up front behind the mesh. No cuffs, just a witness in the back, and a rear catch that comes off for gravel. **NEW** `c4_escape.van.lead.01`
 - **Steve Mercer**: The driver radios before he slows. First a brick bridge over the canal, then a gravel bend. **NEW** `c4_escape.van.lead.02`
 - **Steve Mercer**: After the gravel comes the weighbridge. There, the escort opens the door himself. **NEW** `c4_escape.van.lead.03`
 - **Steve Mercer**: We were on the old logging road down toward Bellwether. Rook would hear about the drill within minutes. I had less than that. **NEW** `c4_escape.van.lead.04`
 
-**Goal:** Get out of the moving van at the one moment the door will open.
+**Goal:** Get out of the moving van unseen at the one moment the rear catch releases.
 
-**What Steve knows:** Steve is in the back of the van with one escort. The rear handle only works while the travel catch is off. At the drill briefing the escort explained the rule: the catch comes off when the driver radios ‘slowing for gravel’, and goes back on at the next stop.
+**What Steve knows:** As a protected witness, Steve rides unrestrained in the back of the van while the driver and escort sit up front behind the mesh partition. The rear handle only works while the travel catch is off. At the drill briefing the escort explained the rule: he releases the catch from the cab when the driver radios ‘slowing for gravel’, and sets it again at the next stop.
 
-**Prompt:** When should Steve pull the handle, and which way should he jump?
+**Prompt:** When should Steve pull the handle, and which way should he drop?
 
-**Instruction:** Build the route Steve can see from the van, then place the catch actions. Which bend should he wait for before he pulls the handle?
+**Instruction:** Build the route Steve can see from the van, then place the catch actions. Which blind bend should he wait for so he can slip out unseen?
 
 **Case notes:**
-1. The escort releases the travel catch when the driver radios ‘slowing for gravel’, and sets it again at the next stop.
+1. From the front cab, the escort releases the travel catch when the driver radios ‘slowing for gravel’, and sets it again at the next stop.
 2. Driver’s route card: depot, water tower, rail underpass, gravel bend (slow), weighbridge (stop), highway.
 3. Through the window Steve sees a white tank on legs, then a dark steel ceiling, then the driver reaches for the radio.
-4. At the gravel bend the right side drops into a soft ditch; the left side is rock.
+4. At the blind gravel bend both agents watch the road ahead; the right side drops into a soft fern ditch, while the left side is rock.
 
 **Stage 1 (route):** Trace the van’s route.
 - Cards: Gravel bend, Water tower, Railway underpass, Weighbridge
@@ -2096,10 +2096,10 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 **On success:**
 - **Steve Mercer** *(sound: van_jump)*: I meant to land on my feet. The ditch had other plans. `c4_escape.van.01`
-- *Steve Mercer: The escort grabbed for me and got a handful of cardigan. His radio came away in my hand. Then I was rolling through ferns in the dark, and the van’s brake lights were already a long way down the hill.* **NEW** `c4_escape.van.02`
+- *Steve Mercer: I unclipped the spare radio from the bulkhead, eased the rear door on the blind turn, and dropped into the ferns in the rain. Neither of them saw a thing. The taillights kept right on down the hill.* **NEW** `c4_escape.van.02`
 
 **Finding:**
-- *Steve Mercer: On the gravel bend, with the catch off, I pulled the handle and jumped for the soft side. Mostly I fell. But I fell out of the van, with the escort’s radio in my hand.* **NEW** `c4_escape.van.find`
+- *Steve Mercer: On the gravel bend, with both agents watching the road ahead and the catch off, I slipped out the rear door unseen with the spare radio and rolled into the soft ditch.* **NEW** `c4_escape.van.find`
 
 ### Scene complete
 - *Steve Mercer: Now I was in a ditch in the hills above the bay with Dad’s recorder, a stolen radio and no plan. And the radio was still talking.* **NEW** `c4_escape.recap.01`
