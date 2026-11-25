@@ -661,7 +661,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 **Where:** Apartment balcony and beach · **When:** Sunday the 21st, half past eleven at night · **Present:** Steve Mercer, Nora Reyes, Agnes Penhallow
 
-**Objective:** Hang up Nora’s dripping raincoat.
+**Objective:** Check Nora’s dripping raincoat on the hooks.
 - then: Get off the balcony.
 
 **Coach tip:** Steve’s notebook keeps every clue you have found. Press J to look things up when a case board needs an earlier fact.

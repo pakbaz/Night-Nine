@@ -380,14 +380,35 @@ func verify_room(scene: Dictionary) -> void:
 			check(game.campaign.data.actor==task.actor,"Switch to required investigator "+task.actor)
 		var pin: Button=game.hotspots[index]
 		var point: Vector2=game.stage.project_target(index)
-		check(pin.is_visible_in_tree() and not pin.disabled and pin.get_global_rect().has_point(point),"Hitbox on painted object "+task.id)
-		details.hits[task.id]=[snappedf(point.x,.1),snappedf(point.y,.1)]
-		if task.id=="c3_house.crossword":
-			await key(KEY_I)
-			check(game.root.get_node("InteractionPanel").visible,"Open keyboard evidence list")
-			await key(KEY_SPACE)
+		var owner_id: String = game._person_for_task(task.id)
+		if not owner_id.is_empty() and game.stage.talk_body_visible(owner_id):
+			check(not pin.visible, "Person-linked lead hides separate floating marker " + task.id)
+			details.hits[task.id]=[snappedf(point.x,.1),snappedf(point.y,.1)]
+			var figure: Sprite2D = game.stage.talk_figures[owner_id]
+			var click_at := figure.to_global(figure.get_rect().get_center())
+			var motion := InputEventMouseMotion.new()
+			motion.position = click_at
+			get_viewport().push_input(motion, true)
+			await wait_frames(1)
+			for down: bool in [true, false]:
+				var press := InputEventMouseButton.new()
+				press.position = click_at
+				press.button_index = MOUSE_BUTTON_LEFT
+				press.button_mask = MOUSE_BUTTON_MASK_LEFT if down else 0
+				press.pressed = down
+				get_viewport().push_input(press, true)
+			await wait_frames(2)
+			check(game.root.get_node("InteractionPanel").visible, "Clicking " + owner_id + " opens their conversation menu")
+			await press_control(button(task.title, game.interaction))
 		else:
-			await click(pin)
+			check(pin.is_visible_in_tree() and not pin.disabled and pin.get_global_rect().has_point(point),"Hitbox on painted object "+task.id)
+			details.hits[task.id]=[snappedf(point.x,.1),snappedf(point.y,.1)]
+			if task.id=="c3_house.crossword":
+				await key(KEY_I)
+				check(game.root.get_node("InteractionPanel").visible,"Open keyboard evidence list")
+				await key(KEY_SPACE)
+			else:
+				await click(pin)
 		if game.stage.has_method("is_walking") and game.stage.is_walking():
 			var deadline := Time.get_ticks_msec()+20000
 			while game.stage.is_walking() and Time.get_ticks_msec()<deadline:

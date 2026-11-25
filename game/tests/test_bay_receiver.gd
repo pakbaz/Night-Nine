@@ -57,6 +57,24 @@ func run() -> void:
 		quit(1)
 		return
 	check(receiver.players[2].stream.resource_path.ends_with("ninth_night_loop.wav"), "Between the stations the radio plays the choir's hum")
+	var hum_stream: AudioStreamWAV = receiver.players[2].stream
+	check(hum_stream.loop_mode == AudioStreamWAV.LOOP_FORWARD and hum_stream.loop_end > 0,
+		"The choir hum loops continuously instead of ending after one pass")
+	# Fast tuning back and forth past the 5.25s clip length must never silence the hum.
+	for step: int in 36:
+		receiver.dial.value = 810 + (step % 11)
+		receiver.narrow.button_pressed = (step % 4) >= 2
+		await frames(1)
+	receiver.dial.value = 815
+	receiver.narrow.button_pressed = true
+	await create_timer(5.6).timeout
+	check(receiver.players[0].playing and receiver.players[1].playing and receiver.players[2].playing,
+		"All three receiver audio layers keep playing after rapid tuning past one loop cycle")
+	check(receiver.players[2].volume_db > -25.0,
+		"The choir hum stays audible at 815 kHz after rapid tuning")
+	receiver.narrow.button_pressed = false
+	receiver.dial.value = 810
+	await frames(2)
 	# The chime station is struck bells (inharmonic partials), not a voice-like held tone.
 	var chimes: AudioStreamWAV = receiver.station(true)
 	var bell := 0.0
@@ -90,11 +108,15 @@ func run() -> void:
 	# The needle is the painting's own needle: its texture, its size, centred under the scale.
 	check(stage.needle != null and stage.needle.texture.resource_path.ends_with("bay-needle.png"),
 		"The swinging needle is cut from the painting's own needle")
-	check(absf(stage.needle_pivot_plate().x - stage.SCALE_CENTRE_X) < 8.0, "The needle pivots under the middle of the scale")
+	check(absf(stage.needle_pivot_plate().x - stage.SCALE_CENTRE_X) < 2.0, "The needle pivots dead-centre under the painted scale axis")
+	check(stage.dial_aperture != null and stage.dial_aperture.clip_children == CanvasItem.CLIP_CHILDREN_ONLY
+		and stage.dial_glass_overlay != null and stage.dial_glass_overlay.texture.resource_path.ends_with("bay-dial-glass.png"),
+		"The needle sits recessed behind the dial bezel and glass overlay")
 	for value: float in [0.0, 0.5, 1.0]:
 		var tip: Vector2 = stage.needle_tip_plate(value)
 		check(stage.DIAL_GLASS.has_point(tip), "At %.1f the needle's tip stays behind the dial glass (%s)" % [value, str(tip)])
-	check(absf(rad_to_deg(stage.needle_angle_at(0.5))) < 4.0, "At 815 kHz the needle stands upright in the middle of the scale")
+	check(absf(rad_to_deg(stage.needle_angle_at(0.5)) - stage.SCALE_CENTRE_TILT_DEG) < 0.6,
+		"At 815 kHz the needle lies cleanly along the painted centre tick")
 	# The green light rides the scale with the needle.
 	var lights: Array[Vector2] = []
 	for value: float in [0.0, 0.5, 1.0]:

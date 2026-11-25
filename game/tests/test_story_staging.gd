@@ -359,10 +359,10 @@ func run() -> void:
 	check(game.stage.floor_stage != null and game.stage.floor_stage.wide == null, "The balcony walks on the same painting it shows up close")
 	check(not ResourceLoader.exists("res://assets/illustrated/campaign/doors/c1_escape.webp"), "No pasted door picture on the balcony")
 	check(not layer_shown("c1_escape-gate-open"), "Mr. Bell's gate starts closed")
-	check(ResourceLoader.exists("res://assets/illustrated/campaign/layers/c1_escape-coat-hung.webp") and not layer_shown("c1_escape-coat-hung"),
-		"Nora's raincoat is not on the balcony hook before Steve hangs it up")
-	await shown_during("c1_escape.order.lead.01")
-	check(layer_shown("c1_escape-coat-hung"), "The raincoat is on the hook once Steve hangs it up and finds the paper")
+	check(ResourceLoader.exists("res://assets/illustrated/campaign/layers/c1_escape-coat-hung.webp") and layer_shown("c1_escape-coat-hung"),
+		"Nora's raincoat is already hanging on the balcony hook when exploration begins")
+	await arrive("c1_escape")
+	check(layer_shown("c1_escape-coat-hung"), "The raincoat is visible on the balcony hook as the scene opens")
 	await enter("c1_escape", ["c1_escape.order"])
 	check(layer_shown("c1_escape-coat-hung"), "The raincoat stays on its hook")
 	var locked_out: Dictionary = await shot_during("c1_escape.in.02")

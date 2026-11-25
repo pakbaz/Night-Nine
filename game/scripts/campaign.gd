@@ -525,6 +525,20 @@ func _speaker_name(id: String) -> String:
 				return str(line.get("display", line.get("display_speaker", campaign.content.cast.get(id, id))))
 	return str(campaign.content.cast.get(id, id))
 
+func _linked_task(person_id: String) -> String:
+	if not is_instance_valid(stage):
+		return ""
+	return str(stage.people.get("task_links", {}).get(person_id, ""))
+
+func _person_for_task(task_id: String) -> String:
+	if not is_instance_valid(stage):
+		return ""
+	var links: Dictionary = stage.people.get("task_links", {})
+	for person_id: String in links:
+		if str(links[person_id]) == task_id:
+			return person_id
+	return ""
+
 func _person_at(screen: Vector2) -> String:
 	if not is_instance_valid(stage) or not _can_walk():
 		return ""
@@ -534,7 +548,7 @@ func _person_at(screen: Vector2) -> String:
 		if prop.visible and prop.get_global_rect().get_center().distance_squared_to(screen) <= 100:
 			return ""
 	var id: String = stage.talk_body_at_screen(screen)
-	if id.is_empty() or not stage.talk_body_visible(id) or campaign.available_talk(id).is_empty():
+	if id.is_empty() or not stage.talk_body_visible(id) or (campaign.available_talk(id).is_empty() and _linked_task(id).is_empty()):
 		return ""
 	return id
 
@@ -545,7 +559,8 @@ func _clear_interaction() -> void:
 		child.queue_free()
 
 func _open_talk(id: String, from_list: bool = false) -> void:
-	if not _can_explore() or campaign.available_talk(id).is_empty() or not (stage.talk_body_visible(id) or stage.people.get("remote",{}).has(id)):
+	var linked := _linked_task(id)
+	if not _can_explore() or (campaign.available_talk(id).is_empty() and linked.is_empty()) or not (stage.talk_body_visible(id) or stage.people.get("remote",{}).has(id)):
 		return
 	if stage.has_method("cancel_walk"):
 		stage.cancel_walk()
@@ -556,6 +571,25 @@ func _open_talk(id: String, from_list: bool = false) -> void:
 	_label(interaction, _speaker_name(id), 25)
 	_label(interaction, "Talk about:", 18)
 	var first: Button
+	if not linked.is_empty() and campaign.task_index.has(linked):
+		var task: Dictionary = campaign.task_index[linked]
+		var complete: bool = linked in campaign.data.done
+		var locked: bool = not complete and not campaign.available(linked)
+		var lead := _button(interaction, ("✓ " if complete else ("🔒 " if locked else "")) + str(task.title), func():
+			root.get_node("InteractionPanel").hide()
+			if from_list and stage.has_method("walking_view") and stage.walking_view():
+				if not stage.floor_stage.finish_now(linked):
+					_status("The way to that spot is blocked.")
+					return
+				_inspect_on_arrival(linked)
+			else:
+				_inspect(linked))
+		lead.name = "Lead_" + linked.get_slice(".", 1)
+		lead.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+		lead.tooltip_text = campaign.lock_reason(linked) if locked else str(task.goal)
+		if complete:
+			lead.modulate = Color("8aa498")
+		first = lead
 	for topic: Dictionary in campaign.available_talk(id):
 		var heard: bool = campaign.talk_heard(topic)
 		var button := _button(interaction, ("✓ " if heard else "") + str(topic.topic),
@@ -600,6 +634,9 @@ func _open_objects() -> void:
 	for task: Dictionary in campaign.current().tasks:
 		if stage.has_method("hotspot_in_view") and not stage.hotspot_in_view(campaign.current().tasks.find(task)):
 			continue
+		var owner_id := _person_for_task(task.id)
+		if not owner_id.is_empty() and stage.talk_body_visible(owner_id):
+			continue
 		var lead:=_button(interaction,task.title,func():
 			if task.id not in campaign.data.done and not campaign.available(task.id) and not task.has("optional_playback"):
 				_status(campaign.lock_reason(task.id))
@@ -622,6 +659,9 @@ func _open_objects() -> void:
 		if not lead.disabled and not first:
 			first=lead
 	var speakers: Array[String] = []
+	for person_id: String in stage.people.get("task_links", {}).keys():
+		if person_id not in speakers:
+			speakers.append(person_id)
 	for topic: Dictionary in campaign.available_talk():
 		var id: String = topic.get("speaker", "")
 		if not id.is_empty() and id not in speakers:
@@ -2508,6 +2548,10 @@ func _process(delta: float) -> void:
 		hotspots[i].visible=started and not campaign.data.finished and not transitioning and not dialogue_panel.visible and not menu.visible and not journal.visible and not tape_compare.visible and not root.get_node("InteractionPanel").visible
 		if hotspots[i].visible and stage.has_method("hotspot_in_view"):
 			hotspots[i].visible = stage.hotspot_in_view(i)
+		if hotspots[i].visible:
+			var owner_id := _person_for_task(campaign.current().tasks[i].id)
+			if not owner_id.is_empty() and stage.talk_body_visible(owner_id):
+				hotspots[i].visible = false
 	object_list.visible = started and not campaign.data.finished and not dialogue_panel.visible and not transitioning and not menu.visible and not journal.visible and not tape_compare.visible and not root.get_node("InteractionPanel").visible
 	person_target.visible = object_list.visible
 	if dialogue_panel.visible and not menu.visible and not journal.visible and auto_dialogue:

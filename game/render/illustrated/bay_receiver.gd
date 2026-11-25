@@ -38,9 +38,17 @@ func _ready() -> void:
 	add_child(description)
 	record.text="Record the signal"
 	add_child(record)
-	for stream: AudioStream in [station(false),station(true),HUM]:
+	var hum_stream: AudioStreamWAV = HUM
+	if hum_stream.loop_mode != AudioStreamWAV.LOOP_FORWARD or hum_stream.loop_end <= 0:
+		hum_stream.loop_mode = AudioStreamWAV.LOOP_FORWARD
+		hum_stream.loop_begin = 0
+		hum_stream.loop_end = int(round(hum_stream.get_length() * hum_stream.mix_rate))
+	for stream: AudioStream in [station(false),station(true),hum_stream]:
 		var player := AudioStreamPlayer.new()
 		player.stream=stream
+		player.finished.connect(func():
+			if is_visible_in_tree() and not paused:
+				player.play())
 		add_child(player)
 		players.append(player)
 	dial.value_changed.connect(func(_value: float): retune())
@@ -127,7 +135,8 @@ func retune() -> void:
 	var hum_gain := (.94 if narrow.button_pressed else .65)*exp(-.5*pow((khz-815)/1.55,2.0))
 	var gains := [time_gain,music_gain,hum_gain]
 	for i: int in players.size():
-		players[i].volume_db=linear_to_db(maxf(.0001,float(gains[i])))-10.0
+		players[i].volume_db=linear_to_db(maxf(.0005,float(gains[i])))-10.0
+	set_preview()
 	frequency.text="%d kHz" % khz
 	lock_ready=narrow.button_pressed and hum_gain>=.74
 	record.disabled=not lock_ready
@@ -149,7 +158,8 @@ func _retune_authored() -> void:
 	var left_gain := .72 * exp(-.5 * pow((value - dial.min_value) / maxf(width * 1.4, .0001), 2.0))
 	var right_gain := .72 * exp(-.5 * pow((value - dial.max_value) / maxf(width * 1.4, .0001), 2.0))
 	for i: int in players.size():
-		players[i].volume_db = linear_to_db(maxf(.0001, [left_gain, right_gain, signal_gain][i])) - 10.0
+		players[i].volume_db = linear_to_db(maxf(.0005, [left_gain, right_gain, signal_gain][i])) - 10.0
+	set_preview()
 	var unit := str(receiver_data.get("unit", ""))
 	var decimals := int(receiver_data.get("decimals", 0))
 	frequency.text = (String.num(value, decimals) + " " + unit).strip_edges()

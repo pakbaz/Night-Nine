@@ -68,9 +68,15 @@ func click_person(id: String) -> bool:
 	elif stage.get("floor_stage") and stage.floor_stage.visible and stage.floor_stage.bodies.has(id):
 		sprite = stage.floor_stage.bodies[id].sprite
 	elif stage.painted_people.has(id):
-		# Actual head/torso coordinates read from the two paintings, not from hit polygons.
-		var mark: Vector2 = {"general_us":Vector2(.12,.43),"general_cn":Vector2(.887,.433),
-			"lyle":Vector2(.477,.416),"dale":Vector2(.379,.43)}[id]
+		# Actual head/torso coordinates read from the paintings, not from hit polygons.
+		var marks := {
+			"general_us":Vector2(.12,.43),"general_cn":Vector2(.887,.433),
+			"lyle":Vector2(.477,.416),"dale":Vector2(.379,.43),
+			"mateo":Vector2(.09,.42),"luis":Vector2(.21,.38),
+			"iris":Vector2(.48,.38),"carmen":Vector2(.67,.30),
+			"rafa":Vector2(.83,.21),"tomas":Vector2(.89,.40),
+		}
+		var mark: Vector2 = marks[id]
 		samples.append(stage.distant.to_global(mark*stage.ART))
 	elif stage.actors.has(id):
 		sprite = stage.actors[id].body
@@ -173,6 +179,8 @@ func run() -> void:
 	game.root.get_node("InteractionPanel").hide()
 	check(not game.root.has_node("PeopleBar"), "No fixed portrait strip covers the scene")
 	await enter("c1_pier")
+	game._process(.001)
+	check(not game.hotspots[1].visible, "Deputy Lyle has no separate floating object dot on the pier")
 	for id: String in ["pell","lyle_copy"]:
 		game._process(.001)
 		var name_in_scene: String = game._speaker_name(id)
@@ -181,11 +189,36 @@ func run() -> void:
 		await process_frame
 		check(game.root.get_node("InteractionPanel").visible and game.interaction.get_child(0).text == name_in_scene,
 			"The Chapter 1 pier has a clickable " + name_in_scene)
+		if id == "lyle_copy":
+			var lyle_lead := button_with_text("Deputy Lyle")
+			var lyle_talk := button_with_text("The boys’ game")
+			check(lyle_lead != null and lyle_talk != null,
+				"Clicking Lyle Boone merges his Deputy Lyle lead with his small talk")
+			# Opening the Deputy Lyle lead shows Lyle (not Agnes) alongside the dialogue prompt.
+			game._inspect_on_arrival("c1_pier.door")
+			await process_frame
+			while game.dialogue_panel.visible:
+				check(not (game.stage.actors.has("agnes") and game.stage.actors.agnes.visible),
+					"Agnes does not appear during Lyle Boone's spoken lines")
+				game._next_line()
+				await process_frame
+			check(game.selected_task == "c1_pier.door" and game.root.get_node("InteractionPanel").visible,
+				"Deputy Lyle's lead opens its prompt directly after his lines")
+			check(not (game.stage.actors.has("agnes") and game.stage.actors.agnes.visible),
+				"Agnes does not appear on the left during Deputy Lyle's dialogue prompt")
+			check(game.stage.actors.has("lyle_copy") and game.stage.actors.lyle_copy.visible,
+				"Lyle Boone stays on screen during his own dialogue prompt")
+			game.stage.set_focus(-1)
 		game.root.get_node("InteractionPanel").hide()
 	game._process(.001)
 	var pier_object: Button = game.hotspots[0]
 	click(pier_object.get_global_rect().get_center())
 	check(game.stage.floor_stage.pending == "c1_pier.whistle", "Pier object still starts its investigation from the marker")
+	await enter("c1_dinner")
+	game._process(.001)
+	check(game.stage.talk_figures.is_empty(), "Dinner at La Marea uses the painted family instead of pasted sprites")
+	check(not (game.stage.actors.has("carmen") and game.stage.actors.carmen.visible),
+		"Carmen's portrait does not float over the painted family dinner")
 	game.campaign.reset()
 	await enter("c1_flat")
 	check(not game.campaign.available_talk("iris").is_empty(), "Nora can talk after the Saturday morning opening")

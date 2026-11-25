@@ -86,6 +86,8 @@ static func dialogue_pair(room: String, line_id: String, speaker: String) -> Pac
 	var pair := str(exchanges.get(line_id.trim_prefix(room+"."),exchanges.get(line_id.get_slice(".",1),"")))
 	if room == "c4_safe" and line_id.begins_with("c4_safe.talk."):
 		pair = "calder steve" if line_id.get_slice(".",2) == "calder" else "steve rook_copy"
+	elif room == "c1_pier" and line_id.begins_with("c1_pier.talk.lyle_copy."):
+		pair = "steve lyle_copy"
 	if pair.is_empty():
 		return PackedStringArray()
 	var names := pair.split(" ")
