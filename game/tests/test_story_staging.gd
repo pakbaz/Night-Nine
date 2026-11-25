@@ -381,6 +381,10 @@ func run() -> void:
 	check(not game.stage.actor_visible("iris"), "Nora stays inside until the crash brings her to the door")
 	await enter("c1_escape")
 	check(not await portrait_during("c1_escape.in.01", "iris"), "Nora's phone call behind the bedroom window is heard, not shown")
+	# June's cell overlay in the Sheriff's Office must stay solid all the way down to the threshold.
+	var cell_layer: Image = (load("res://assets/illustrated/campaign/layers/c6_jail-june-in-cell.webp") as Texture2D).get_image()
+	var lower_bar_alpha := cell_layer.get_pixel(int(cell_layer.get_width() * 0.705), int(cell_layer.get_height() * 0.635)).a
+	check(lower_bar_alpha > 0.95, "June's cell overlay covers her boots and lower bars down to the floor threshold (alpha=%.2f)" % lower_bar_alpha)
 	await enter("c1_escape", ["c1_escape.order", "c1_escape.power"])
 	await solve("c1_escape.cross")
 	check(game.stage.actor_visible("iris"), "The crash of the irises brings Nora to the balcony door")
