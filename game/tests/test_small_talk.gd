@@ -250,6 +250,29 @@ func run() -> void:
 			var shin := Vector2(fig.position.x, game.stage.ART.y * 0.58)
 			check(Geometry2D.is_point_in_polygon(shin, game.stage.furniture.polygon),
 				"%s's lower legs are masked behind the archive table and equipment" % who)
+	await enter("c4_safe")
+	game._process(.001)
+	var calder_h: float = game.stage.floor_stage.height_at(game.stage.floor_stage.bodies.calder.body.position) / game.stage.ART.y
+	var rook_fig: Sprite2D = game.stage.talk_figures.get("rook_copy")
+	check(calder_h >= 0.34, "Steve and June match the safe-house doors and furniture scale (%.3f)" % calder_h)
+	if rook_fig != null:
+		var rook_h: float = rook_fig.texture.get_height() * rook_fig.scale.y / game.stage.ART.y
+		var ratio := rook_h / calder_h
+		check(ratio >= 0.88 and ratio <= 1.12, "Rook matches June's perspective scale at the same floor depth (ratio=%.2f)" % ratio)
+	# Every standing talk figure in a walkable room stays proportional to that room's depth curve.
+	var people_all: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://content/scene-people.json"))
+	var floors_all: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://content/illustrated-floor.json"))
+	for sid: String in people_all:
+		if not floors_all.has(sid) or not people_all[sid].has("figures"):
+			continue
+		var d: Array = floors_all[sid].depth
+		for pid: String in people_all[sid].figures:
+			var mark: Array = people_all[sid].figures[pid]
+			var t := clampf((float(mark[2]) - float(d[0])) / (float(d[2]) - float(d[0])), 0.0, 1.0)
+			var expected := lerpf(float(d[1]), float(d[3]), t)
+			var ratio := float(mark[3]) / expected
+			check(ratio >= 0.85 and ratio <= 1.15,
+				"%s:%s height matches room depth perspective (%.3f vs %.3f, ratio=%.2f)" % [sid, pid, float(mark[3]), expected, ratio])
 	game.campaign.reset()
 	await enter("c1_flat")
 	check(not game.campaign.available_talk("iris").is_empty(), "Nora can talk after the Saturday morning opening")
