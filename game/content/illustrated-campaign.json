@@ -826,6 +826,14 @@
     },
     "stills": [
       {
+        "file": "res://assets/illustrated/campaign/stills/c6_iris-bakery-alibi.webp",
+        "lines": [
+          "c6_iris.alibi.01",
+          "c6_iris.alibi.02",
+          "c6_iris.alibi.find"
+        ]
+      },
+      {
         "file": "res://assets/illustrated/campaign/stills/c6_iris-pressed-flower.webp",
         "lines": [
           "c6_iris.out.03",
@@ -837,16 +845,18 @@
         ]
       },
       {
-        "file": "res://assets/illustrated/campaign/rooms/i2_nora.webp",
+        "file": "res://assets/illustrated/campaign/stills/c6_iris-laundry-wake.webp",
         "lines": [
-          "c6_iris.out.09"
+          "c6_iris.out.09",
+          "c6_iris.out.10",
+          "c6_iris.out.11"
         ]
       },
       {
-        "file": "res://assets/illustrated/campaign/stills/c2_ship-nora-asleep.webp",
+        "file": "res://assets/illustrated/campaign/stills/c6_iris-market-clear.webp",
         "lines": [
-          "c6_iris.out.10",
-          "c6_iris.out.11"
+          "c6_iris.out.12",
+          "c6_iris.out.13"
         ]
       }
     ]
@@ -957,13 +967,6 @@
     ],
     "stills": [
       {
-        "file": "res://assets/illustrated/campaign/films/c5_station.webp",
-        "lines": [
-          "i2_nora.out.01",
-          "i2_nora.out.02"
-        ]
-      },
-      {
         "file": "res://assets/illustrated/campaign/stills/i2_nora-guard-passes.webp",
         "lines": [
           "i2_nora.patrol.lead.01",
@@ -975,6 +978,27 @@
         "lines": [
           "i2_nora.patrol.01",
           "i2_nora.patrol.find"
+        ]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/stills/i2_nora-hatch-open.webp",
+        "lines": [
+          "i2_nora.pump.01",
+          "i2_nora.pump.find"
+        ]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/stills/i2_nora-rows.webp",
+        "lines": [
+          "i2_nora.out.01",
+          "i2_nora.out.02"
+        ]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/stills/i2_nora-row-zero.webp",
+        "lines": [
+          "i2_nora.out.03",
+          "i2_nora.out.04"
         ]
       }
     ],
@@ -1048,9 +1072,24 @@
           "c7_gate.badge.01",
           "c7_gate.badge.find"
         ]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/stills/c7_gate-shaw-truck.webp",
+        "lines": [
+          "c7_gate.truck.lead.01",
+          "c7_gate.truck.01",
+          "c7_gate.truck.02",
+          "c7_gate.truck.find"
+        ]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/stills/c7_gate-agnes-fog.webp",
+        "lines": [
+          "c7_gate.out.06"
+        ]
       }
     ],
-    "bridge": "res://assets/illustrated/campaign/inserts/c7_swap.webp",
+    "bridge": "res://assets/illustrated/campaign/bridges/c7_gate-c7_swap.webp",
     "inserts": {
       "c7_gate.out.06": [
         0.62,
@@ -1090,6 +1129,15 @@
       "c7_swap.in.01": "c7_swap.bus"
     },
     "stills": [
+      {
+        "file": "res://assets/illustrated/campaign/stills/c7_swap-monitors.webp",
+        "lines": [
+          "c7_swap.map.lead.04",
+          "c7_swap.map.lead.05",
+          "c7_swap.map.lead.06",
+          "c7_swap.map.01"
+        ]
+      },
       {
         "file": "res://assets/illustrated/campaign/stills/c7_swap-fourteen-turn.webp",
         "lines": [

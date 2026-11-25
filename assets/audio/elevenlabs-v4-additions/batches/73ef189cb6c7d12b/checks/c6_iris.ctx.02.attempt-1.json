@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c6_iris.ctx.02",
+  "attempt": 1,
+  "plan_sha256": "73ef189cb6c7d12bf81b58ca6aed4193645734b70910e5f694c6283bbbd2e000",
+  "wav_sha256": "635cf171cc18686d390266b64fb3faba3f20054e6f3ed02c9e6b351537e92735",
+  "expected": "On Monday morning my flip phone buzzed, so we slipped down to the waterfront corner between Gus’s bakery and the pier.",
+  "recognized": "On Monday morning, my flip phone buzzed, so we slipped down to the waterfront corner between Gus's Bakery and the pier.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 7.36,
+  "sample_rate": 48000,
+  "peak": 0.35125732421875,
+  "rms": 0.04134049249297128,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

@@ -195,7 +195,7 @@
         "rook_copy": [
           {
             "topic": "Gate coffee",
-            "after": "badge",
+            "until": "badge",
             "lines": [
               "rook_copy|The coffee in the press tent is terrible. I’ve had four cups.",
               "stephen|You don’t seem to mind it very much.",
@@ -204,7 +204,7 @@
           },
           {
             "topic": "The one he was made from",
-            "after": "badge",
+            "until": "badge",
             "lines": [
               "rook_copy|Do you ever think about him? The one you were made from?",
               "stephen|Every single day. He snores, apparently.",

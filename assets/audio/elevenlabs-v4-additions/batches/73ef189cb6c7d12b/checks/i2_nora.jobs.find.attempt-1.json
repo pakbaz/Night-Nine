@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "i2_nora.jobs.find",
+  "attempt": 1,
+  "plan_sha256": "73ef189cb6c7d12bf81b58ca6aed4193645734b70910e5f694c6283bbbd2e000",
+  "wav_sha256": "46cd715d8bbbaa198a4e283d175dff4c36449c0e34031a3e6f2d7453e7c95ea0",
+  "expected": "Lyle trips the north wash chute to draw the guard off. Dale keeps lookout and maps the rows. I take the pumps. Water is the one thing on this ship I understand.",
+  "recognized": "Lyle trips the North Wash chute to draw the guard off. Dale keeps lookout and maps the rows. I take the pumps. Water is the one thing on this ship I understand.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 10.16,
+  "sample_rate": 48000,
+  "peak": 0.78070068359375,
+  "rms": 0.06462039928942687,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

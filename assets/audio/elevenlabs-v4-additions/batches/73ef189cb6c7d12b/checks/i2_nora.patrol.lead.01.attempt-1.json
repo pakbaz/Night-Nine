@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "i2_nora.patrol.lead.01",
+  "attempt": 1,
+  "plan_sha256": "73ef189cb6c7d12bf81b58ca6aed4193645734b70910e5f694c6283bbbd2e000",
+  "wav_sha256": "2762b4f6f65eb73b01a928b27251a647e71555311793625a911ccbff3441cc43",
+  "expected": "He never leaves the aisle for a shift bell, and a pod warning brings him straight to us.",
+  "recognized": "He never leaves the aisle for a shift bell, and a pod warning brings him straight to us.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 5.2,
+  "sample_rate": 48000,
+  "peak": 0.480438232421875,
+  "rms": 0.05531725594767827,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

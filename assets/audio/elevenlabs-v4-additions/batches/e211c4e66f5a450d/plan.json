@@ -1,0 +1,54 @@
+{
+  "schema": 1,
+  "batch": "later-additions",
+  "model_id": "eleven_v4",
+  "output_format": "mp3_44100_192",
+  "inputs": {
+    "campaign": "1a90c4142288f15444432b5d5dc4a0ee1ef6a954a2ef686d67fc91233be53d73",
+    "storybook": "7bd0d4ec4839602c067cf0a29bfd5f88425229c73903aaf38c1be69313a17866",
+    "voice_manifest": "0978c68a8779f26ef72a7f6c16aeddde3173477be16e113d7cd2b41d85f7a7c6",
+    "casting": "cb91065c437c743d50eea2958d5149a6d0a35b9d20430a66cb8a548b921246db",
+    "existing_additions": "34eaa22b620f4e1baef0584d1cb1f0cbde1994c9fea6cdd89faa8bf820a27791"
+  },
+  "ordered_audio_ids": [
+    "i2_nora.patrol.01"
+  ],
+  "items": {
+    "i2_nora.patrol.01": {
+      "audio_id": "i2_nora.patrol.01",
+      "kind": "campaign",
+      "scene": "i2_nora",
+      "speaker": "nora",
+      "cast_role": "nora",
+      "voice_id": "m8AHWg36LJTQWKmfeGVv",
+      "text": "There goes the chute alarm. He’s through the archway, and the bulkhead locked behind him. The aisle is ours.",
+      "text_sha256": "a3e496f5c55ea697ac8d878298e003db8dbc609028ddb4ab8a94a4a01d0059d1",
+      "synthesis_text": "There goes the chute alarm. He’s through the archway, and the bulkhead locked behind him. The aisle is ours.",
+      "synthesis_text_sha256": "a3e496f5c55ea697ac8d878298e003db8dbc609028ddb4ab8a94a4a01d0059d1",
+      "delivery": "live",
+      "direction": "",
+      "v4_audio_tag": "",
+      "previous_text": "Only a north wash-chute jam pulls him through that archway, and the bulkhead locks behind him for a six-minute wash clear.",
+      "next_text": "The jammed wash chute pulled the guard into the north shaft and locked the bulkhead behind him for six minutes. Lyle and Dale are watching the pods, and the Gallery aisle is clear.",
+      "voice_settings": {
+        "stability": 0.46,
+        "similarity_boost": 0.78
+      },
+      "language_code": "en",
+      "model_id": "eleven_v4",
+      "output_format": "mp3_44100_192",
+      "estimated_credit_rate": 1.0,
+      "estimated_credits": 108,
+      "attempt_seeds": [
+        4285327040,
+        3249907688,
+        277392984
+      ]
+    }
+  },
+  "count": 1,
+  "characters": 108,
+  "request_characters": 108,
+  "estimated_credits": 108,
+  "plan_sha256": "e211c4e66f5a450d37df6f225a2b668fdfbb8c84868f62e99345e7c8f3c318db"
+}

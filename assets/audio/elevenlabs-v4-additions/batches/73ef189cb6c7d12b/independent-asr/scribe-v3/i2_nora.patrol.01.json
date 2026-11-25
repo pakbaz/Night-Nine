@@ -1,0 +1,291 @@
+{
+  "audio_id": "i2_nora.patrol.01",
+  "audio_sha256": "c125afda73f09021520181b98b22233374cee006406f7907d40980449be2dd09",
+  "file": "assets/audio/elevenlabs-v4-additions/masters/i2_nora.patrol.01.attempt-2.wav",
+  "production_plan_sha256": "73ef189cb6c7d12bf81b58ca6aed4193645734b70910e5f694c6283bbbd2e000",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "There goes the chute alarm. He’s through the archway, and the bulkhead sealed behind him. The aisle is ours.",
+  "recognized": "There goes the chute alarm. He's through the archway and the bulkhead's sealed behind him. The aisle is ours.",
+  "word_edits": 1,
+  "request_id": null,
+  "trace_id": "51efe526ed474f551602acae748614fb",
+  "character_cost": "2",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "There goes the chute alarm. He's through the archway and the bulkhead's sealed behind him. The aisle is ours.",
+    "words": [
+      {
+        "text": "There",
+        "start": 0.1,
+        "end": 0.26,
+        "type": "word",
+        "logprob": -5.411955135059543e-05
+      },
+      {
+        "text": " ",
+        "start": 0.26,
+        "end": 0.3,
+        "type": "spacing",
+        "logprob": -7.867782187531702e-06
+      },
+      {
+        "text": "goes",
+        "start": 0.3,
+        "end": 0.5,
+        "type": "word",
+        "logprob": -7.867782187531702e-06
+      },
+      {
+        "text": " ",
+        "start": 0.5,
+        "end": 0.54,
+        "type": "spacing",
+        "logprob": -4.768370445162873e-07
+      },
+      {
+        "text": "the",
+        "start": 0.54,
+        "end": 0.62,
+        "type": "word",
+        "logprob": -4.768370445162873e-07
+      },
+      {
+        "text": " ",
+        "start": 0.62,
+        "end": 0.68,
+        "type": "spacing",
+        "logprob": -0.1067727655172348
+      },
+      {
+        "text": "chute",
+        "start": 0.68,
+        "end": 0.86,
+        "type": "word",
+        "logprob": -0.1067727655172348
+      },
+      {
+        "text": " ",
+        "start": 0.86,
+        "end": 0.92,
+        "type": "spacing",
+        "logprob": -2.992108420585282e-05
+      },
+      {
+        "text": "alarm.",
+        "start": 0.92,
+        "end": 1.26,
+        "type": "word",
+        "logprob": -3.711300754124144e-05
+      },
+      {
+        "text": " ",
+        "start": 1.26,
+        "end": 1.74,
+        "type": "spacing",
+        "logprob": -2.7418097943154862e-06
+      },
+      {
+        "text": "He's",
+        "start": 1.74,
+        "end": 1.94,
+        "type": "word",
+        "logprob": -4.827953915764738e-06
+      },
+      {
+        "text": " ",
+        "start": 1.94,
+        "end": 1.98,
+        "type": "spacing",
+        "logprob": -1.07287787614041e-05
+      },
+      {
+        "text": "through",
+        "start": 1.98,
+        "end": 2.18,
+        "type": "word",
+        "logprob": -1.07287787614041e-05
+      },
+      {
+        "text": " ",
+        "start": 2.18,
+        "end": 2.24,
+        "type": "spacing",
+        "logprob": -1.0728830375228426e-06
+      },
+      {
+        "text": "the",
+        "start": 2.24,
+        "end": 2.32,
+        "type": "word",
+        "logprob": -1.0728830375228426e-06
+      },
+      {
+        "text": " ",
+        "start": 2.32,
+        "end": 2.4,
+        "type": "spacing",
+        "logprob": -0.0011720937909558415
+      },
+      {
+        "text": "archway",
+        "start": 2.4,
+        "end": 2.84,
+        "type": "word",
+        "logprob": -0.0006834086125309113
+      },
+      {
+        "text": " ",
+        "start": 2.84,
+        "end": 3.0,
+        "type": "spacing",
+        "logprob": -0.6326082348823547
+      },
+      {
+        "text": "and",
+        "start": 3.0,
+        "end": 3.08,
+        "type": "word",
+        "logprob": -0.6326082348823547
+      },
+      {
+        "text": " ",
+        "start": 3.08,
+        "end": 3.1,
+        "type": "spacing",
+        "logprob": 0.0
+      },
+      {
+        "text": "the",
+        "start": 3.1,
+        "end": 3.18,
+        "type": "word",
+        "logprob": 0.0
+      },
+      {
+        "text": " ",
+        "start": 3.18,
+        "end": 3.26,
+        "type": "spacing",
+        "logprob": -0.18042397499084473
+      },
+      {
+        "text": "bulkhead's",
+        "start": 3.28,
+        "end": 3.78,
+        "type": "word",
+        "logprob": -0.16958103775962172
+      },
+      {
+        "text": " ",
+        "start": 3.78,
+        "end": 3.86,
+        "type": "spacing",
+        "logprob": -4.124556289752945e-05
+      },
+      {
+        "text": "sealed",
+        "start": 3.86,
+        "end": 4.12,
+        "type": "word",
+        "logprob": -4.124556289752945e-05
+      },
+      {
+        "text": " ",
+        "start": 4.12,
+        "end": 4.16,
+        "type": "spacing",
+        "logprob": -2.50339189733495e-06
+      },
+      {
+        "text": "behind",
+        "start": 4.16,
+        "end": 4.52,
+        "type": "word",
+        "logprob": -2.50339189733495e-06
+      },
+      {
+        "text": " ",
+        "start": 4.52,
+        "end": 4.56,
+        "type": "spacing",
+        "logprob": -2.50339189733495e-06
+      },
+      {
+        "text": "him.",
+        "start": 4.56,
+        "end": 4.72,
+        "type": "word",
+        "logprob": -3.5762705010711215e-06
+      },
+      {
+        "text": " ",
+        "start": 4.72,
+        "end": 5.12,
+        "type": "spacing",
+        "logprob": -2.861018856492592e-06
+      },
+      {
+        "text": "The",
+        "start": 5.12,
+        "end": 5.26,
+        "type": "word",
+        "logprob": -2.861018856492592e-06
+      },
+      {
+        "text": " ",
+        "start": 5.26,
+        "end": 5.38,
+        "type": "spacing",
+        "logprob": -0.010641613975167274
+      },
+      {
+        "text": "aisle",
+        "start": 5.38,
+        "end": 5.7,
+        "type": "word",
+        "logprob": -0.010641613975167274
+      },
+      {
+        "text": " ",
+        "start": 5.7,
+        "end": 5.78,
+        "type": "spacing",
+        "logprob": -1.0728830375228426e-06
+      },
+      {
+        "text": "is",
+        "start": 5.78,
+        "end": 5.94,
+        "type": "word",
+        "logprob": -1.0728830375228426e-06
+      },
+      {
+        "text": " ",
+        "start": 5.94,
+        "end": 6.06,
+        "type": "spacing",
+        "logprob": -5.94836674281396e-05
+      },
+      {
+        "text": "ours.",
+        "start": 6.06,
+        "end": 6.46,
+        "type": "word",
+        "logprob": -5.187842216400895e-05
+      }
+    ],
+    "transcription_id": "fm1aLhIN7zbWNsNvswNQ",
+    "audio_duration_secs": 6.72
+  },
+  "listening_reviewed": false
+}

@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "i2_nora.patrol.lead.02",
+  "attempt": 1,
+  "plan_sha256": "73ef189cb6c7d12bf81b58ca6aed4193645734b70910e5f694c6283bbbd2e000",
+  "wav_sha256": "3e729cb2c67df1a1faaa9724fa87d4a1d87293bd1def6677e8891dcca0201279",
+  "expected": "Only a north wash-chute jam pulls him through that archway, and the bulkhead locks behind him for a six-minute wash clear.",
+  "recognized": "Only a north wash chute jam pulls him through that archway, and the bulkhead locks behind him for a six-minute wash clear.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 7.44,
+  "sample_rate": 48000,
+  "peak": 0.54193115234375,
+  "rms": 0.06461560252306571,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

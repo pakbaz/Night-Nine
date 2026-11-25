@@ -274,6 +274,35 @@ func run() -> void:
 			var ratio := float(mark[3]) / expected
 			check(ratio >= 0.85 and ratio <= 1.15,
 				"%s:%s height matches room depth perspective (%.3f vs %.3f, ratio=%.2f)" % [sid, pid, float(mark[3]), expected, ratio])
+	# Standing cast sprites keep complete unclipped heads (never sliced flat at the top edge).
+	for who: String in ["shaw", "ward", "rook", "lyle"]:
+		var head_img: Image = (load("res://assets/illustrated/campaign/walk/%s-idle.webp" % who) as Texture2D).get_image()
+		var top_y := -1
+		for y: int in head_img.get_height():
+			for x: int in head_img.get_width():
+				if head_img.get_pixel(x, y).a > 0.25:
+					top_y = y
+					break
+			if top_y >= 0:
+				break
+		var top_span := 0
+		if top_y >= 0:
+			for x: int in head_img.get_width():
+				if head_img.get_pixel(x, top_y).a > 0.25:
+					top_span += 1
+		check(top_y >= 0 and top_span <= 24, "%s-idle.webp keeps an unclipped crown of hair (top_span=%d)" % [who, top_span])
+	# In c8_rig, Ward and Shaw stand on the open reflective floor clear of both side desks.
+	var rig_blockers: Array = floors_all["c8_rig"].blockers
+	for who: String in ["shaw", "ward"]:
+		var mark: Array = people_all["c8_rig"].figures[who]
+		for dx: float in [-0.025, 0.0, 0.025]:
+			var pt := Vector2(float(mark[1]) + dx, float(mark[2]))
+			for blk: Dictionary in rig_blockers:
+				var poly := PackedVector2Array()
+				for pair: Array in blk.polygon:
+					poly.append(Vector2(float(pair[0]), float(pair[1])))
+				check(not Geometry2D.is_point_in_polygon(pt, poly),
+					"c8_rig:%s stays clear of %s (%.3f, %.3f)" % [who, str(blk.id), pt.x, pt.y])
 	game.campaign.reset()
 	await enter("c1_flat")
 	check(not game.campaign.available_talk("iris").is_empty(), "Nora can talk after the Saturday morning opening")

@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "i2_nora.patrol.01",
+  "attempt": 1,
+  "plan_sha256": "73ef189cb6c7d12bf81b58ca6aed4193645734b70910e5f694c6283bbbd2e000",
+  "wav_sha256": "5b940b2f849053fe627e86d6dd8293e92e7022552203e52e11d8a82bcd3c9297",
+  "expected": "There goes the chute alarm. He’s through the archway, and the bulkhead sealed behind him. The aisle is ours.",
+  "recognized": "There goes the shoot alarm. He's through the archway and the bulkhead's sealed behind him. The aisle is ours.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 6.96,
+  "sample_rate": 48000,
+  "peak": 0.68817138671875,
+  "rms": 0.06897734684545784,
+  "level_match_gain_db": 0.0,
+  "word_edits": 2,
+  "word_error_rate": 0.1,
+  "status": "retake_required",
+  "failure_reason": "asr_mismatch"
+}

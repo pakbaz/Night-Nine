@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "i2_nora.patrol.find",
+  "attempt": 1,
+  "plan_sha256": "73ef189cb6c7d12bf81b58ca6aed4193645734b70910e5f694c6283bbbd2e000",
+  "wav_sha256": "a9063fdd6cc96728228162f0db988249ecd4a8bbf3a30610da6c3495f0c4877f",
+  "expected": "The jammed wash chute pulled the guard into the north shaft and locked the bulkhead behind him for six minutes. Lyle and Dale are watching the pods, and the Gallery aisle is clear.",
+  "recognized": "The jammed wash chute pulled the guard into the north shaft and locked the bulkhead behind him for six minutes. Lyle and Dale are watching the pods and the gallery aisle is clear.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 10.56,
+  "sample_rate": 48000,
+  "peak": 0.559783935546875,
+  "rms": 0.06745448385748254,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

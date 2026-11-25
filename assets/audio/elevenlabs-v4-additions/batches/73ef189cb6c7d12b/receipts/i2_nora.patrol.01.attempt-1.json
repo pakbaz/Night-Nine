@@ -1,0 +1,17 @@
+{
+  "operation": "text_to_speech",
+  "plan_sha256": "73ef189cb6c7d12bf81b58ca6aed4193645734b70910e5f694c6283bbbd2e000",
+  "audio_id": "i2_nora.patrol.01",
+  "attempt": 1,
+  "voice_id": "m8AHWg36LJTQWKmfeGVv",
+  "model_id": "eleven_v4",
+  "text_sha256": "e797f41c32500e795cd5cf35219ac3422b97ba72e3d7a9969070c154fa17e239",
+  "synthesis_text_sha256": "e797f41c32500e795cd5cf35219ac3422b97ba72e3d7a9969070c154fa17e239",
+  "request_id": "g0TI3FaQvhB3kQKxuvD3",
+  "trace_id": "f1bd1cc2a96fd3988cfd568b251fdfe9",
+  "character_cost": 48,
+  "output_format": "mp3_44100_192",
+  "audio_sha256": "8c1b957b916c20bdb0857e972747b5fbfd0ef5fd1c7a6ed0ae1b7b8c31580f57",
+  "response_bytes": 168689,
+  "seed": 3502540420
+}

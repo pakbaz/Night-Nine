@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "i2_nora.jobs.lead.03",
+  "attempt": 1,
+  "plan_sha256": "73ef189cb6c7d12bf81b58ca6aed4193645734b70910e5f694c6283bbbd2e000",
+  "wav_sha256": "384d32df01326ae1f7b3681c414dc1e781fc3817f1a6aae76668daec7684d76f",
+  "expected": "Thirty years on a mail route. Put me on lookout and I’ll log every row and pod number in this place.",
+  "recognized": "30 years on a mail route. Put me on lookout and I'll log every row and pod number in this place.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 6.96,
+  "sample_rate": 48000,
+  "peak": 0.75732421875,
+  "rms": 0.09014341310100543,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

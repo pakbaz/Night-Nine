@@ -6004,7 +6004,7 @@
    "id": "c6_iris",
    "chapter": "Chapter 6",
    "title": "Iris",
-   "place": "Bellwether, the market and the pier",
+   "place": "Bellwether, Gus’s bakery corner and the pier",
    "style": "street",
    "actors": [
     "steve",
@@ -6014,7 +6014,7 @@
    "tasks": [
     {
      "id": "c6_iris.alibi",
-     "title": "Market corner",
+     "title": "Gus’s bread window",
      "prompt": "Which errand puts Stephen’s face in front of a witness at exactly 8:10 by the radio?",
      "options": [
       "Buy flowers from the unattended stall at 8:10",
@@ -6026,7 +6026,7 @@
       "c6_iris.alibi.01",
       "c6_iris.alibi.02"
      ],
-     "note": "At 8:10 by the radio, Stephen stood beside his own wanted poster at Gus’s bread window while Gus fixed the smudge. Half the town ran to the bakery, and nobody was watching the pier.",
+     "note": "At 8:10 by the radio, Stephen stood beside his own wanted poster at Gus’s bread window while Gus fixed the smudge. The crowd and the cops ran up the lane to the bakery, leaving the pier quiet for my meeting.",
      "requires": [],
      "actor": "stephen",
      "kind": "choice",
@@ -6753,79 +6753,12 @@
    "actors": [
     "nora"
    ],
-   "objective": "Steady the others, learn their names and find a way through the Gallery.",
+   "objective": "Organize the pods, draw the guard off the aisle, open the deeper rows and leave Steve a message.",
    "tasks": [
     {
-     "id": "i2_nora.patrol",
-     "title": "Guard circuit",
-     "prompt": "When should Nora step out, and when will she reach cover?",
-     "options": [
-      "Move when the far door closes",
-      "Move on the guard’s first footstep",
-      "Shout for everyone to wake"
-     ],
-     "answer": 0,
-     "lines": [
-      "i2_nora.patrol.01"
-     ],
-     "note": "The guard’s lap is twelve counts. On the next lap the far door shuts at 20 and the boots come back at 26. Four counts to cross. We can move.",
-     "requires": [],
-     "actor": "",
-     "kind": "choice",
-     "sounds": [],
-     "hints": [
-      "Find the length of one whole lap from the boots.",
-      "The door shuts six counts after the boots. Add four counts for the crossing.",
-      "The lap is twelve counts long. Find the next time the door shuts after 14, then add four."
-     ],
-     "puzzle": {
-      "instruction": "Step out when the far door shuts, and reach cover before the boots come back. Lap one: boots at 2, pump at 5, far door shuts at 8. The boots come back at 14, and the lap repeats. Crossing takes four counts.",
-      "rows": [
-       {
-        "label": "Step out at count",
-        "options": [
-         "17",
-         "20",
-         "23"
-        ],
-        "feedback": "I heard boots at 2 and again at 14. Where does the far door shut on that second lap?"
-       },
-       {
-        "label": "Reach cover at count",
-        "options": [
-         "21",
-         "24",
-         "27"
-        ],
-        "feedback": "I need four counts in the aisle after the door shuts, and I need to be clear before the boots return."
-       }
-      ],
-      "solution": [
-       1,
-       1
-      ],
-      "hints": [
-       "Find the length of one whole lap from the boots.",
-       "The door shuts six counts after the boots. Add four counts for the crossing.",
-       "The lap is twelve counts long. Find the next time the door shuts after 14, then add four."
-      ]
-     },
-     "status": "revised",
-     "goal": "Find a safe moment to cross the aisle.",
-     "background": "A guard walks the Gallery in laps. Nora counts under her breath and scratches marks on her bed rail.",
-     "difficulty": 2,
-     "type": "rows",
-     "lead": [
-      "i2_nora.patrol.lead.01",
-      "i2_nora.patrol.lead.02"
-     ],
-     "finding": "i2_nora.patrol.find",
-     "changes": []
-    },
-    {
      "id": "i2_nora.jobs",
-     "title": "Sleeper skills",
-     "prompt": "Who keeps the hatch, who guides at the fork, and who reads the gauges?",
+     "title": "Plan at the pods",
+     "prompt": "Who trips the north wash chute, who keeps lookout and logs the rows, and who handles the water pumps?",
      "options": [
       "Dale at the latch, Nora on directions, Lyle at the gauge",
       "Nora at the latch, Lyle on directions, Dale at the gauge",
@@ -6837,35 +6770,33 @@
       "i2_nora.jobs.02",
       "i2_nora.jobs.03"
      ],
-     "note": "Lyle keeps the hatch from catching. Dale remembers every turn. I take the pumps. Water is the one thing on this ship I understand.",
-     "requires": [
-      "i2_nora.patrol"
-     ],
+     "note": "Lyle trips the north wash chute to draw the guard off. Dale keeps lookout and maps the rows. I take the pumps. Water is the one thing on this ship I understand.",
+     "requires": [],
      "actor": "",
      "kind": "choice",
      "sounds": [],
      "hints": [
-      "Each skill is something Nora watched them do.",
-      "Wedge marks on the hatch. Turns recited with eyes shut. A pencil map of the water.",
-      "Match each mark Nora saw to a place on the route: a wedged hatch, a fork with no arrows, a gauge cabinet."
+      "Each skill matches what each person just offered at the pods.",
+      "Lyle handles the mechanical chute latch; Dale tracks routes and numbers; Nora knows pumps.",
+      "Lyle trips the north wash chute, Dale keeps lookout and maps the rows, and Nora takes the circulation pump."
      ],
      "puzzle": {
       "presentation": "case_board",
-      "instruction": "Give each person the job they have already practised.",
+      "instruction": "Give each person the role that fits what they already know how to do.",
       "evidence": [
-       "Lyle has wedged the sticking hatch open twice.",
-       "Dale can recite every turn of the route with his eyes shut.",
-       "Nora has drawn the whole water circuit in pencil, gauges and all.",
-       "The route runs through the sticking hatch, then a fork with no arrows, then the gauge cabinets."
+       "Lyle knows how to trip the sticking north wash-chute latch beside the archway.",
+       "Dale has spent thirty years memorizing routes and addresses and can log every row on lookout.",
+       "Nora is an aquarium engineer who can read the Gallery water circulation gauges.",
+       "To reach the pump and intercom across the hall, someone has to jam the north wash chute while another keeps lookout by the pods."
       ],
       "stages": [
        {
         "mode": "match",
-        "prompt": "Put one name on each job.",
+        "prompt": "Put one name on each role.",
         "slots": [
-         "Who keeps the sticking hatch open?",
-         "Who guides everyone at the fork?",
-         "Who reads the gauges?"
+         "Who trips the north wash chute to draw the guard off?",
+         "Who keeps lookout and logs every row number?",
+         "Who works the Gallery circulation pump?"
         ],
         "pieces": [
          "Lyle",
@@ -6886,7 +6817,7 @@
       ],
       "rows": [
        {
-        "label": "Who keeps the sticking hatch open?",
+        "label": "Who trips the north wash chute to draw the guard off?",
         "options": [
          "Lyle",
          "Dale",
@@ -6894,7 +6825,7 @@
         ]
        },
        {
-        "label": "Who guides everyone at the fork?",
+        "label": "Who keeps lookout and logs every row number?",
         "options": [
          "Lyle",
          "Dale",
@@ -6902,7 +6833,7 @@
         ]
        },
        {
-        "label": "Who reads the gauges?",
+        "label": "Who works the Gallery circulation pump?",
         "options": [
          "Lyle",
          "Dale",
@@ -6910,16 +6841,16 @@
         ]
        }
       ],
-      "wrong_text": "Nora shakes her head. Give people the job they’ve already practised.",
+      "wrong_text": "Nora shakes her head. Match each person to the skill they just offered.",
       "hints": [
-       "Each skill is something Nora watched them do.",
-       "Wedge marks on the hatch. Turns recited with eyes shut. A pencil map of the water.",
-       "Match each mark Nora saw to a place on the route: a wedged hatch, a fork with no arrows, a gauge cabinet."
+       "Each skill matches what each person just offered at the pods.",
+       "Lyle handles the mechanical chute latch; Dale tracks routes and numbers; Nora knows pumps.",
+       "Lyle trips the north wash chute, Dale keeps lookout and maps the rows, and Nora takes the circulation pump."
       ]
      },
      "status": "revised",
-     "goal": "Give each half-awake sleeper the job they’re already good at.",
-     "background": "Three sleepers are awake enough to help: Nora, the real Lyle Boone and a grumpy mail carrier named Dale. Nora has watched each of them for hours.",
+     "goal": "Assign each awake sleeper to the role they know before moving on the guard.",
+     "background": "Three sleepers are awake behind the open pods while a guard watches the Gallery aisle: Nora, the real Lyle Boone and a grumpy mail carrier named Dale.",
      "difficulty": 1,
      "type": "board",
      "lead": [
@@ -6928,6 +6859,75 @@
       "i2_nora.jobs.lead.03"
      ],
      "finding": "i2_nora.jobs.find",
+     "changes": []
+    },
+    {
+     "id": "i2_nora.patrol",
+     "title": "North wash chute",
+     "prompt": "Which alert draws the guard out of the Gallery, and what keeps the aisle clear while Nora works?",
+     "options": [
+      "Move when the far door closes",
+      "Move on the guard’s first footstep",
+      "Shout for everyone to wake"
+     ],
+     "answer": 0,
+     "lines": [
+      "i2_nora.patrol.01"
+     ],
+     "note": "The jammed wash chute pulled the guard into the north shaft and locked the bulkhead behind him for six minutes. Lyle and Dale are watching the pods, and the Gallery aisle is clear.",
+     "requires": [
+      "i2_nora.jobs"
+     ],
+     "actor": "",
+     "kind": "choice",
+     "sounds": [],
+     "hints": [
+      "Rule out any alert that leaves the guard in the Gallery or brings him to the pods.",
+      "Read what happens to the north archway door once the guard enters the laundry shaft.",
+      "Trip the north wash-chute jam so the guard steps into the shaft and the bulkhead locks behind him for six minutes."
+     ],
+     "puzzle": {
+      "instruction": "Check the Gallery service slate. A shift bell makes the guard check the hall without leaving his post. A pod-lid warning brings him directly to Row Nine’s open beds. A north wash-chute jam pulls him through the archway into the laundry shaft, where the brass bulkhead seals automatically for a six-minute wash clear.",
+      "rows": [
+       {
+        "label": "Trigger to pull the guard off post",
+        "options": [
+         "Shift bell chime",
+         "Pod-lid warning",
+         "North wash-chute jam"
+        ],
+        "feedback": "A shift bell keeps him in the hall, and a pod warning sends him right to our open beds. Which alert pulls him into the north shaft?"
+       },
+       {
+        "label": "What keeps the aisle clear while Nora works",
+        "options": [
+         "Sprinting past him down the aisle",
+         "The north bulkhead locking behind him for the wash clear",
+         "Closing our pod lids again"
+        ],
+        "feedback": "Outrunning him across an open glass hall won't keep him away while I work the pump. What seals him out of the Gallery?"
+       }
+      ],
+      "solution": [
+       2,
+       1
+      ],
+      "hints": [
+       "Rule out any alert that leaves the guard in the Gallery or brings him to the pods.",
+       "Read what happens to the north archway door once the guard enters the laundry shaft.",
+       "Trip the north wash-chute jam so the guard steps into the shaft and the bulkhead locks behind him for six minutes."
+      ]
+     },
+     "status": "revised",
+     "goal": "Lure the guard off the Gallery aisle so the north bulkhead seals behind him.",
+     "background": "A Veyri guard stands watch at the north archway, blocking the aisle to the circulation pump and intercom. Beside the arch is the service wash chute that leads into the north laundry shaft.",
+     "difficulty": 2,
+     "type": "rows",
+     "lead": [
+      "i2_nora.patrol.lead.01",
+      "i2_nora.patrol.lead.02"
+     ],
+     "finding": "i2_nora.patrol.find",
      "changes": []
     },
     {
@@ -6945,7 +6945,7 @@
      ],
      "note": "The Blue branch keeps the beds at 4 and drops the RETURN to 2. The hatch can open, and nobody’s breathing changes.",
      "requires": [
-      "i2_nora.jobs"
+      "i2_nora.patrol"
      ],
      "actor": "",
      "kind": "choice",
@@ -6987,8 +6987,8 @@
       "Ignore the upper dial. You need bed flow of 3 or more and a RETURN below 3. Only one trial does both."
      ],
      "status": "revised",
-     "goal": "Lower the pressure at the hatch without starving the beds.",
-     "background": "Nora knows pumps from the aquarium. The Gallery runs on water too: one circuit feeds the beds, another returns it. Opening the hatch with the return pressure high would wake the whole hall.",
+     "goal": "Lower the pressure at the deeper Gallery hatch without starving the beds.",
+     "background": "Nora knows pumps from the aquarium. The Gallery runs on water too: one circuit feeds the beds, another returns it. Opening the deeper Gallery hatch with return pressure high would trip the hall alarm.",
      "difficulty": 2,
      "type": "rows",
      "lead": [
@@ -7002,17 +7002,17 @@
     {
      "id": "i2_nora.message",
      "title": "Gallery intercom",
-     "prompt": "Where should Nora leave her message for Steve?",
+     "prompt": "Where should Nora store her message for Steve?",
      "options": [
-      "Slot A: plays in every bed now",
-      "Slot B: waits by this bed for PLAY",
+      "Slot A: broadcasts to every bed now",
+      "Slot B: queued on Bed Three’s terminal for PLAY",
       "Slot C: clears when the watch changes"
      ],
      "answer": 1,
      "lines": [
       "i2_nora.message.01"
      ],
-     "note": "My message for Steve is in Slot B, by my bed. It will wait for him.",
+     "note": "My message for Steve is queued in Slot B on Bed Three’s terminal. It will wait for him.",
      "requires": [
       "i2_nora.pump"
      ],
@@ -7025,7 +7025,7 @@
       "Rule out the slot every guard would hear and the slot that clears at the change of watch."
      ],
      "status": "revised",
-     "goal": "Leave a message for Steve, in case he ever comes.",
+     "goal": "Leave a private message for Steve before scouting the deeper rows.",
      "background": "The Gallery intercom has three message slots. If Steve comes at all, he might come on any watch. Only Steve should hear what Nora says.",
      "difficulty": 2,
      "type": "choice",
@@ -7074,7 +7074,7 @@
     }
    },
    "when": "Monday night, inside the Long Patience",
-   "coach": "You are Nora, awake on the ship. The guard walks a regular lap. Count it before you move.",
+   "coach": "You are Nora, awake on the ship. Organize the others at the pods first, then lure the guard into the north wash shaft to clear the aisle.",
    "present": [
     "nora",
     "dale",
@@ -7159,8 +7159,8 @@
     "In the Iris chapter, Iris tells Steve how she set this wake: on Sunday night the crew retook her for a reset and left her on a laundry cart in the Gallery, and she set a slow wake on three beds before riding out with the wash. This interlude begins when the slow cycle finishes Monday night.",
     "The lids remain shut while the beds support Nora, Lyle and Dale. They open only after all three breathe independently.",
     "This wake is reversible and leaves the mirror links active. The crew can put Nora back under; Iris’s permanent link-break remains a Chapter 9 choice.",
-    "jobs keeps the case board with a single stage (the route and logging stages are cut).",
-    "The eye under the frost is narrated in the departure. Art (optional): an insert of Row Zero with one enormous eye open under cracked frost.",
+    "Organize the three sleepers at the pods FIRST (jobs), then use Lyle’s wash-chute jam to lure the guard through the north archway where the bulkhead seals behind him (patrol), then cross the genuinely empty aisle to the pump and intercom.",
+    "Row Zero’s enormous eye under the frost is painted in stills/i2_nora-row-zero.webp.",
     "Nora plays this interlude, so her small talk is with Dale and Lyle, the two sleepers awake beside her."
    ],
    "edited": true
@@ -7493,23 +7493,25 @@
      "id": "c7_gate.talk.rook_copy.1",
      "speaker": "rook_copy",
      "topic": "Gate coffee",
-     "after": "c7_gate.badge",
+     "after": "",
      "lines": [
       "c7_gate.talk.rook_copy.1.01",
       "c7_gate.talk.rook_copy.1.02",
       "c7_gate.talk.rook_copy.1.03"
-     ]
+     ],
+     "until": "c7_gate.badge"
     },
     {
      "id": "c7_gate.talk.rook_copy.2",
      "speaker": "rook_copy",
      "topic": "The one he was made from",
-     "after": "c7_gate.badge",
+     "after": "",
      "lines": [
       "c7_gate.talk.rook_copy.2.01",
       "c7_gate.talk.rook_copy.2.02",
       "c7_gate.talk.rook_copy.2.03"
-     ]
+     ],
+     "until": "c7_gate.badge"
     },
     {
      "id": "c7_gate.talk.shaw.1",
@@ -19983,7 +19985,7 @@
   "c6_iris.ctx.02": {
    "id": "c6_iris.ctx.02",
    "speaker": "steve",
-   "text": "On Monday morning my flip phone buzzed.",
+   "text": "On Monday morning my flip phone buzzed, so we slipped down to the waterfront corner between Gus’s bakery and the pier.",
    "audio": "c6_iris.ctx.02",
    "status": "new",
    "delivery": "narration",
@@ -20108,7 +20110,7 @@
   "c6_iris.alibi.find": {
    "id": "c6_iris.alibi.find",
    "speaker": "steve",
-   "text": "At 8:10 by the radio, Stephen stood beside his own wanted poster at Gus’s bread window while Gus fixed the smudge. Half the town ran to the bakery, and nobody was watching the pier.",
+   "text": "At 8:10 by the radio, Stephen stood beside his own wanted poster at Gus’s bread window while Gus fixed the smudge. The crowd and the cops ran up the lane to the bakery, leaving the pier quiet for my meeting.",
    "audio": "c6_iris.alibi.find",
    "status": "new",
    "delivery": "narration",
@@ -20223,7 +20225,7 @@
   "c6_iris.hold.lead.02": {
    "id": "c6_iris.hold.lead.02",
    "speaker": "iris",
-   "text": "At four minutes past midnight on the thirtieth, I phoned two Halcyon offices. I taped both calls.",
+   "text": "At four minutes past midnight on the thirtieth, I phoned two Halcyon offices from these payphones and taped both calls.",
    "audio": "c6_iris.hold.lead.02",
    "status": "new",
    "scene": "c6_iris",
@@ -21232,47 +21234,6 @@
    "display": "Nora Reyes",
    "display_speaker": "Nora Reyes"
   },
-  "i2_nora.patrol.lead.01": {
-   "id": "i2_nora.patrol.lead.01",
-   "speaker": "nora",
-   "text": "Boots. Then the pump. Then the far door. Again and again.",
-   "audio": "i2_nora.patrol.lead.01",
-   "status": "new",
-   "scene": "i2_nora",
-   "display": "Nora Reyes",
-   "display_speaker": "Nora Reyes"
-  },
-  "i2_nora.patrol.lead.02": {
-   "id": "i2_nora.patrol.lead.02",
-   "speaker": "nora",
-   "text": "Once that far door shuts, he can’t see the aisle. Crossing takes me four counts.",
-   "audio": "i2_nora.patrol.lead.02",
-   "status": "new",
-   "scene": "i2_nora",
-   "display": "Nora Reyes",
-   "display_speaker": "Nora Reyes"
-  },
-  "i2_nora.patrol.01": {
-   "id": "i2_nora.patrol.01",
-   "speaker": "nora",
-   "text": "Wait. Now. Keep low. We can argue about my tone after we’re out.",
-   "audio": "i2_nora.patrol.01",
-   "status": "kept",
-   "scene": "i2_nora",
-   "display": "Nora Reyes",
-   "display_speaker": "Nora Reyes"
-  },
-  "i2_nora.patrol.find": {
-   "id": "i2_nora.patrol.find",
-   "speaker": "nora",
-   "text": "The guard’s lap is twelve counts. On the next lap the far door shuts at 20 and the boots come back at 26. Four counts to cross. We can move.",
-   "audio": "i2_nora.patrol.find",
-   "status": "new",
-   "delivery": "narration",
-   "scene": "i2_nora",
-   "display": "Nora Reyes",
-   "display_speaker": "Nora Reyes"
-  },
   "i2_nora.jobs.lead.01": {
    "id": "i2_nora.jobs.lead.01",
    "speaker": "nora",
@@ -21286,7 +21247,7 @@
   "i2_nora.jobs.lead.02": {
    "id": "i2_nora.jobs.lead.02",
    "speaker": "lyle",
-   "text": "That hatch sticks. I’ve wedged it open twice already tonight.",
+   "text": "That north wash chute by the arch jams if you trip the return latch. I can pull it when you say go.",
    "audio": "i2_nora.jobs.lead.02",
    "status": "new",
    "scene": "i2_nora",
@@ -21296,7 +21257,7 @@
   "i2_nora.jobs.lead.03": {
    "id": "i2_nora.jobs.lead.03",
    "speaker": "dale",
-   "text": "Thirty years on a mail route. I could walk this one with my eyes shut.",
+   "text": "Thirty years on a mail route. Put me on lookout and I’ll log every row and pod number in this place.",
    "audio": "i2_nora.jobs.lead.03",
    "status": "new",
    "scene": "i2_nora",
@@ -21306,9 +21267,9 @@
   "i2_nora.jobs.01": {
    "id": "i2_nora.jobs.01",
    "speaker": "lyle",
-   "text": "I can keep that latch from catching.",
+   "text": "I’ll trip the wash chute and hold the pods while you cross.",
    "audio": "i2_nora.jobs.01",
-   "status": "kept",
+   "status": "revised",
    "scene": "i2_nora",
    "display": "Lyle Boone",
    "display_speaker": "Lyle Boone"
@@ -21336,8 +21297,49 @@
   "i2_nora.jobs.find": {
    "id": "i2_nora.jobs.find",
    "speaker": "nora",
-   "text": "Lyle keeps the hatch from catching. Dale remembers every turn. I take the pumps. Water is the one thing on this ship I understand.",
+   "text": "Lyle trips the north wash chute to draw the guard off. Dale keeps lookout and maps the rows. I take the pumps. Water is the one thing on this ship I understand.",
    "audio": "i2_nora.jobs.find",
+   "status": "new",
+   "delivery": "narration",
+   "scene": "i2_nora",
+   "display": "Nora Reyes",
+   "display_speaker": "Nora Reyes"
+  },
+  "i2_nora.patrol.lead.01": {
+   "id": "i2_nora.patrol.lead.01",
+   "speaker": "nora",
+   "text": "He never leaves the aisle for a shift bell, and a pod warning brings him straight to us.",
+   "audio": "i2_nora.patrol.lead.01",
+   "status": "new",
+   "scene": "i2_nora",
+   "display": "Nora Reyes",
+   "display_speaker": "Nora Reyes"
+  },
+  "i2_nora.patrol.lead.02": {
+   "id": "i2_nora.patrol.lead.02",
+   "speaker": "nora",
+   "text": "Only a north wash-chute jam pulls him through that archway, and the bulkhead locks behind him for a six-minute wash clear.",
+   "audio": "i2_nora.patrol.lead.02",
+   "status": "new",
+   "scene": "i2_nora",
+   "display": "Nora Reyes",
+   "display_speaker": "Nora Reyes"
+  },
+  "i2_nora.patrol.01": {
+   "id": "i2_nora.patrol.01",
+   "speaker": "nora",
+   "text": "There goes the chute alarm. He’s through the archway, and the bulkhead locked behind him. The aisle is ours.",
+   "audio": "i2_nora.patrol.01",
+   "status": "revised",
+   "scene": "i2_nora",
+   "display": "Nora Reyes",
+   "display_speaker": "Nora Reyes"
+  },
+  "i2_nora.patrol.find": {
+   "id": "i2_nora.patrol.find",
+   "speaker": "nora",
+   "text": "The jammed wash chute pulled the guard into the north shaft and locked the bulkhead behind him for six minutes. Lyle and Dale are watching the pods, and the Gallery aisle is clear.",
+   "audio": "i2_nora.patrol.find",
    "status": "new",
    "delivery": "narration",
    "scene": "i2_nora",
@@ -21420,7 +21422,7 @@
   "i2_nora.message.find": {
    "id": "i2_nora.message.find",
    "speaker": "nora",
-   "text": "My message for Steve is in Slot B, by my bed. It will wait for him.",
+   "text": "My message for Steve is queued in Slot B on Bed Three’s terminal. It will wait for him.",
    "audio": "i2_nora.message.find",
    "status": "new",
    "delivery": "narration",

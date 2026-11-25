@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "i2_nora.jobs.01",
+  "attempt": 1,
+  "plan_sha256": "73ef189cb6c7d12bf81b58ca6aed4193645734b70910e5f694c6283bbbd2e000",
+  "wav_sha256": "0deadcf6d673ea3b12ed2ed3e36d257aa528aafe4ae7ab96f810a41119fa8943",
+  "expected": "I’ll trip the wash chute and hold the pods while you cross.",
+  "recognized": "I'll trip the wash chute and hold the pods while you cross.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 3.52,
+  "sample_rate": 48000,
+  "peak": 0.53765869140625,
+  "rms": 0.06681015733208297,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

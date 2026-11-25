@@ -58,6 +58,7 @@ var journal: PanelContainer
 const CASEBOOK := preload("res://ui/hypothesis_notebook.gd")
 var casebook: CASEBOOK
 var actor: OptionButton
+var actor_bar: HBoxContainer
 const LIGHT_BEAT := 2.15
 var light_remaining := -1.0
 var cut_duration := LIGHT_BEAT
@@ -348,7 +349,13 @@ func _build_ui() -> void:
 	actor.custom_minimum_size.x = 210
 	actor.tooltip_text = "Switch investigator [Q]"
 	actor.item_selected.connect(func(i: int): campaign.switch_actor(campaign.current().actors[i]); _refresh())
+	actor.hide()
 	toolbar.add_child(actor)
+	actor_bar = HBoxContainer.new()
+	actor_bar.name = "ActorBar"
+	actor_bar.add_theme_constant_override("separation", 6)
+	actor_bar.hide()
+	toolbar.add_child(actor_bar)
 	_button(toolbar,"Notebook",_open_journal)
 	_button(toolbar,"Menu",func(): menu.show(); _pause_audio(true))
 	status = _label(root,"",18)
@@ -446,7 +453,7 @@ func _build_ui() -> void:
 	person_target.name = "ScenePeople"
 	person_target.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
 	person_target.pick = _person_at
-	person_target.caption = func(id: String): return "Talk to " + _speaker_name(id) if not id.is_empty() else ""
+	person_target.caption = _person_tooltip
 	person_target.person_pressed.connect(_open_talk)
 	root.add_child(person_target)
 	root.move_child(person_target,0)
@@ -539,6 +546,36 @@ func _person_for_task(task_id: String) -> String:
 			return person_id
 	return ""
 
+func _actor_short_name(id: String) -> String:
+	var full := str(campaign.content.cast.get(id, id))
+	return full.get_slice(" ", 0)
+
+func _can_switch_to(id: String) -> bool:
+	return id in _present_actors() and id != campaign.data.actor
+
+func _ensure_task_actor(id: String) -> bool:
+	if not campaign.task_index.has(id):
+		return true
+	var needed: String = str(campaign.task_index[id].get("actor", ""))
+	if needed.is_empty() or needed == campaign.data.actor:
+		return true
+	if needed not in _present_actors():
+		return false
+	if campaign.switch_actor(needed):
+		_refresh()
+		_status("Handing off to " + _actor_short_name(needed) + " for " + str(campaign.task_index[id].title) + ".")
+		return true
+	return false
+
+func _person_tooltip(id: String) -> String:
+	if id.is_empty():
+		return ""
+	if not campaign.available_talk(id).is_empty() or not _linked_task(id).is_empty():
+		return "Talk to " + _speaker_name(id)
+	if _can_switch_to(id):
+		return "Play as " + _speaker_name(id)
+	return ""
+
 func _person_at(screen: Vector2) -> String:
 	if not is_instance_valid(stage) or not _can_walk():
 		return ""
@@ -548,7 +585,9 @@ func _person_at(screen: Vector2) -> String:
 		if prop.visible and prop.get_global_rect().get_center().distance_squared_to(screen) <= 100:
 			return ""
 	var id: String = stage.talk_body_at_screen(screen)
-	if id.is_empty() or not stage.talk_body_visible(id) or (campaign.available_talk(id).is_empty() and _linked_task(id).is_empty()):
+	if id.is_empty() or not stage.talk_body_visible(id):
+		return ""
+	if campaign.available_talk(id).is_empty() and _linked_task(id).is_empty() and not _can_switch_to(id):
 		return ""
 	return id
 
@@ -560,7 +599,16 @@ func _clear_interaction() -> void:
 
 func _open_talk(id: String, from_list: bool = false) -> void:
 	var linked := _linked_task(id)
-	if not _can_explore() or (campaign.available_talk(id).is_empty() and linked.is_empty()) or not (stage.talk_body_visible(id) or stage.people.get("remote",{}).has(id)):
+	var switchable := _can_switch_to(id)
+	var topics := campaign.available_talk(id)
+	if not _can_explore() or (topics.is_empty() and linked.is_empty() and not switchable) or not (stage.talk_body_visible(id) or stage.people.get("remote",{}).has(id)):
+		return
+	if switchable and topics.is_empty() and linked.is_empty():
+		if stage.has_method("cancel_walk"):
+			stage.cancel_walk()
+		campaign.switch_actor(id)
+		_refresh()
+		_status("Now playing as " + _speaker_name(id) + ".")
 		return
 	if stage.has_method("cancel_walk"):
 		stage.cancel_walk()
@@ -569,8 +617,17 @@ func _open_talk(id: String, from_list: bool = false) -> void:
 	_clear_interaction()
 	_investigation_size(false)
 	_label(interaction, _speaker_name(id), 25)
-	_label(interaction, "Talk about:", 18)
 	var first: Button
+	if switchable:
+		var play_btn := _button(interaction, "Play as " + _speaker_name(id), func():
+			root.get_node("InteractionPanel").hide()
+			campaign.switch_actor(id)
+			_refresh()
+			_status("Now playing as " + _speaker_name(id) + "."))
+		play_btn.name = "PlayAs_" + id
+		play_btn.modulate = Color("f1d598")
+		first = play_btn
+	_label(interaction, "Talk about:", 18)
 	if not linked.is_empty() and campaign.task_index.has(linked):
 		var task: Dictionary = campaign.task_index[linked]
 		var complete: bool = linked in campaign.data.done
@@ -641,6 +698,8 @@ func _open_objects() -> void:
 			if task.id not in campaign.data.done and not campaign.available(task.id) and not task.has("optional_playback"):
 				_status(campaign.lock_reason(task.id))
 				return
+			if task.id not in campaign.data.done and campaign.available(task.id):
+				_ensure_task_actor(task.id)
 			if stage.has_method("walking_view") and stage.walking_view():
 				if not stage.floor_stage.finish_now(task.id):
 					_status("The way to that spot is blocked.")
@@ -1626,18 +1685,33 @@ func _refresh() -> void:
 	objective.text=_objective_text(s)
 	actor.select(s.actors.find(campaign.data.actor))
 	actor.disabled=s.actors.size()==1
-	actor.visible=s.actors.size()>1
+	actor.visible=false
 	var choosable := _present_actors()
 	for i: int in range(mini(s.actors.size(), actor.item_count)):
 		actor.set_item_disabled(i, s.actors[i] not in choosable)
+	for child: Node in actor_bar.get_children():
+		actor_bar.remove_child(child)
+		child.queue_free()
+	actor_bar.visible = s.actors.size() > 1 and choosable.size() > 1
+	if actor_bar.visible:
+		for id: String in choosable:
+			var active_now: bool = id == campaign.data.actor
+			var pill := _button(actor_bar, ("● " if active_now else "") + _actor_short_name(id), func():
+				campaign.switch_actor(id)
+				_refresh()
+				_status("Now playing as " + _actor_short_name(id) + "."))
+			pill.name = "ActorPill_" + id
+			pill.tooltip_text = ("Currently playing as " if active_now else "Switch to ") + str(campaign.content.cast.get(id, id)) + " [Q]"
+			pill.modulate = Color("f1d598") if active_now else Color("c4d0cc")
 	for i: int in range(hotspots.size()):
 		var task: Dictionary=s.tasks[i]
 		var complete: bool=task.id in campaign.data.done
 		var locked: bool=not complete and not campaign.available(task.id)
-		hotspots[i].text=("✓ " if complete else ("🔒 " if locked else ""))+task.title
+		var owner_tag := (" · " + _actor_short_name(task.actor)) if s.actors.size() > 1 and not complete and not task.actor.is_empty() else ""
+		hotspots[i].text=("✓ " if complete else ("🔒 " if locked else ""))+task.title+owner_tag
 		hotspots[i].modulate=Color("8aa498") if complete else Color.WHITE
 		hotspots[i].disabled=false
-		hotspots[i].tooltip_text=campaign.lock_reason(task.id) if locked else str(task.goal)
+		hotspots[i].tooltip_text=campaign.lock_reason(task.id) if locked else (((_actor_short_name(task.actor) + ": ") if s.actors.size() > 1 and not task.actor.is_empty() else "") + str(task.goal))
 		if locked and task.has("optional_playback"):
 			hotspots[i].text = task.optional_playback.title
 			hotspots[i].tooltip_text = task.title
@@ -1663,6 +1737,8 @@ func _inspect(id: String) -> void:
 	if id not in campaign.data.done and not campaign.available(id) and not campaign.task_index[id].has("optional_playback"):
 		_status(campaign.lock_reason(id))
 		return
+	if id not in campaign.data.done and campaign.available(id):
+		_ensure_task_actor(id)
 	if stage.has_method("walking_view") and stage.walking_view():
 		root.get_node("InteractionPanel").hide()
 		if stage.floor_stage.pending==id:

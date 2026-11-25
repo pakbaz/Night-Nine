@@ -228,6 +228,21 @@ class ScriptV2StagingTests(unittest.TestCase):
         self.assertNotIn('under-desk', still_for(self.staging['c7_gate']['stills'], 'c7_gate.badge.lead.01'),
                          'the hiding place is the answer to the checkpoint puzzle, so it is not shown before')
         talk = {topic['id']: topic for topic in scene['talk']}
+        self.assert_stills('c7_gate', {
+            'c7_gate.truck.lead.01': 'shaw-truck', 'c7_gate.truck.01': 'shaw-truck',
+            'c7_gate.truck.02': 'shaw-truck', 'c7_gate.truck.find': 'shaw-truck',
+            'c7_gate.out.06': 'agnes-fog',
+        })
+        self.assertEqual(self.staging['c7_gate'].get('bridge'),
+                         'res://assets/illustrated/campaign/bridges/c7_gate-c7_swap.webp',
+                         'Chapter 7 walks from the truck to the sound tent with a dedicated bridge painting')
+        self.assert_stills('c7_swap', {
+            'c7_swap.map.lead.04': 'monitors', 'c7_swap.map.lead.05': 'monitors',
+            'c7_swap.map.lead.06': 'monitors', 'c7_swap.map.01': 'monitors',
+        })
+        for topic_id in ('c7_gate.talk.rook_copy.1', 'c7_gate.talk.rook_copy.2'):
+            self.assertEqual(talk[topic_id].get('until'), 'c7_gate.badge',
+                             'Stephen chats with Rook at the outer gate before driving past him')
         for topic_id in ('c7_gate.talk.pell.1', 'c7_gate.talk.pell.2', 'c7_gate.talk.stephen.1'):
             self.assertEqual(talk[topic_id].get('after'), 'c7_gate.badge', 'Steve chats in the fog once he is out')
         for topic_id in ('c7_gate.talk.shaw.1', 'c7_gate.talk.shaw.2'):
@@ -247,7 +262,17 @@ class ScriptV2StagingTests(unittest.TestCase):
         guard = next(layer for layer in self.staging['i2_nora']['layers'] if 'guard' in layer['file'])
         self.assertEqual(guard.get('until'), 'i2_nora.patrol', 'the guard keeps his lap until Nora has timed it')
         self.assert_stills('i2_nora', {'i2_nora.patrol.lead.01': 'guard-passes', 'i2_nora.patrol.lead.02': 'guard-passes',
-                                       'i2_nora.patrol.01': 'crossing', 'i2_nora.patrol.find': 'crossing'})
+                                       'i2_nora.patrol.01': 'crossing', 'i2_nora.patrol.find': 'crossing',
+                                       'i2_nora.pump.01': 'hatch-open', 'i2_nora.pump.find': 'hatch-open',
+                                       'i2_nora.out.01': 'rows', 'i2_nora.out.02': 'rows',
+                                       'i2_nora.out.03': 'row-zero', 'i2_nora.out.04': 'row-zero'})
+        scene = next(s for s in self.content['scenes'] if s['id'] == 'i2_nora')
+        self.assertEqual([t['id'] for t in scene['tasks']],
+                         ['i2_nora.jobs', 'i2_nora.patrol', 'i2_nora.pump', 'i2_nora.message'],
+                         'Nora organizes the pods first, lures the guard into the locked wash shaft, then crosses to the pump and intercom')
+        self.assert_stills('c6_iris', {'c6_iris.alibi.01': 'bakery-alibi', 'c6_iris.alibi.02': 'bakery-alibi',
+                                       'c6_iris.out.09': 'laundry-wake', 'c6_iris.out.10': 'laundry-wake',
+                                       'c6_iris.out.12': 'market-clear', 'c6_iris.out.13': 'market-clear'})
 
     def test_jail_break_and_bakery_goodbye_are_shown_where_they_happen(self):
         self.assert_stills('c6_jail', {'c6_jail.crossword.06': 'back-door', 'c6_jail.out.02': 'bakery',

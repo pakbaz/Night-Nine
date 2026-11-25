@@ -48,10 +48,10 @@ def cutout(name, bounds):
         hull = Image.new("1", im.size)
         ImageDraw.Draw(hull).polygon([(x*im.width, y*im.height) for x,y in chef[name]], fill=1)
         mask |= np.asarray(hull)
-    # Fill small holes in clothing; preserve daylight between arms and legs.
+    # Fill tiny interior paint specks without filling daylight between arms and waist.
     holes, _ = ndimage.label(~mask)
     sizes = np.bincount(holes.ravel())
-    mask |= (holes > 0) & (sizes[holes] < im.width*im.height*.01)
+    mask |= (holes > 0) & (sizes[holes] < im.width*im.height*.0015)
     # Strip the painted pale-grey paper cast shadow around the shoes in the foot band.
     ys_nonzero = np.where(mask.any(axis=1))[0]
     foot_top = int(ys_nonzero.max() - (ys_nonzero.max() - ys_nonzero.min()) * 0.085)
@@ -77,7 +77,7 @@ def register(im, name):
 
 
 def standing_portrait(name, reference, hips, width):
-    """Extend the approved three-quarter portrait with trousers from the wardrobe studies."""
+    """Join the approved full-head portrait onto the standing trousers from the reference sheet."""
     upper = Image.open(CAST/"masters"/(name+".png")).convert("RGBA")
     upper = upper.crop(upper.getbbox())
     upper.thumbnail((380, 330), Image.Resampling.LANCZOS)
@@ -93,8 +93,20 @@ def standing_portrait(name, reference, hips, width):
 
 
 if __name__ == "__main__":
+    # Four reference sheets clip the top of the character's hair at y=0; splice their
+    # unclipped approved master portrait onto their standing legs from the same sheet.
+    UNCLIPPED = {
+        "shaw": ("shaw", .46, .95),
+        "ward": ("ward", .52, .96),
+        "rook": ("rook", .52, .97),
+        "lyle": ("lyle", .48, .96),
+    }
     for who, box in CROPS.items():
-        register(cutout(who, box), who)
+        if who in UNCLIPPED:
+            ref, fraction, width = UNCLIPPED[who]
+            register(standing_portrait(who, cutout(ref, CROPS[ref]), fraction, width), who)
+        else:
+            register(cutout(who, box), who)
     for name, ref, fraction, width in [("frank_standing","luis",.62,.94),
                                        ("helen_field","wen",.56,.78), ("iris_epilogue","shaw",.57,.96)]:
         register(standing_portrait(name, cutout(ref, CROPS[ref]), fraction, width), name)

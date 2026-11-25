@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "audio_id": "i2_nora.patrol.01",
+  "attempt": 1,
+  "plan_sha256": "e211c4e66f5a450d37df6f225a2b668fdfbb8c84868f62e99345e7c8f3c318db",
+  "wav_sha256": "f3e666d014ac427120f52d95f329f79bd4020f9b4dcb5112907dc7712a28852b",
+  "expected": "There goes the chute alarm. He’s through the archway, and the bulkhead locked behind him. The aisle is ours.",
+  "recognized": "There goes the chute alarm. He's through the archway and the bulkhead locked behind him. The aisle is ours.",
+  "local_recognized": "There goes the shoot alarm. He's through the archway and the bulkhead locked behind him. The aisle is ours.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 6.88,
+  "sample_rate": 48000,
+  "peak": 0.5623779296875,
+  "rms": 0.0694401031736766,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/i2_nora.patrol.01.json",
+    "sha256": "b4b6204867641443dea0b61c2d095b42b530f03cc0258c86e75aac788634283e",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  },
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

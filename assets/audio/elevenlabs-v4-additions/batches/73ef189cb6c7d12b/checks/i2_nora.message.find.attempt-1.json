@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "i2_nora.message.find",
+  "attempt": 1,
+  "plan_sha256": "73ef189cb6c7d12bf81b58ca6aed4193645734b70910e5f694c6283bbbd2e000",
+  "wav_sha256": "be941a7d4803ee8edef3698cbf12c898c0025755d409dbc09ababd9d561fad46",
+  "expected": "My message for Steve is queued in Slot B on Bed Three’s terminal. It will wait for him.",
+  "recognized": "My message for Steve is queued in slot B on bed three's terminal. It will wait for him.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 6.0,
+  "sample_rate": 48000,
+  "peak": 0.63226318359375,
+  "rms": 0.055289780131554375,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

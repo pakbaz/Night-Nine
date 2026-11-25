@@ -2,7 +2,7 @@
 
 ## Totals
 
-{"lines_to_record": 1682, "characters_to_record": 118486, "new": 1328, "revised": 74, "moved": 20, "kept": 263, "uncast": []}
+{"lines_to_record": 1682, "characters_to_record": 118911, "new": 1328, "revised": 76, "moved": 20, "kept": 261, "uncast": []}
 
 ## Errors
 

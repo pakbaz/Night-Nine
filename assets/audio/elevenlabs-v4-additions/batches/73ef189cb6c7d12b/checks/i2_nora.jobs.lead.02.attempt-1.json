@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "i2_nora.jobs.lead.02",
+  "attempt": 1,
+  "plan_sha256": "73ef189cb6c7d12bf81b58ca6aed4193645734b70910e5f694c6283bbbd2e000",
+  "wav_sha256": "7d46b3408b7fb11ec06a203f0302c09c2cdb9d7e14ad2b8514bf492fcd807e7a",
+  "expected": "That north wash chute by the arch jams if you trip the return latch. I can pull it when you say go.",
+  "recognized": "That north wash chute by the arch jams if you trip the return latch. I can pull it when you say go.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 6.64,
+  "sample_rate": 48000,
+  "peak": 0.7906494140625,
+  "rms": 0.06606277002351814,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

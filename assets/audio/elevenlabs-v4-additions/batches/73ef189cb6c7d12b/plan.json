@@ -1,0 +1,406 @@
+{
+  "schema": 1,
+  "batch": "later-additions",
+  "model_id": "eleven_v4",
+  "output_format": "mp3_44100_192",
+  "inputs": {
+    "campaign": "6b910ffb002e5ab5caef5bf6485b2fb69762cf76ceaf53e3b0c09c2b6fd306af",
+    "storybook": "7bd0d4ec4839602c067cf0a29bfd5f88425229c73903aaf38c1be69313a17866",
+    "voice_manifest": "abf741990baed19888a813997638a93d49b2dc288c9f8ef2cab46ea4dd356375",
+    "casting": "cb91065c437c743d50eea2958d5149a6d0a35b9d20430a66cb8a548b921246db",
+    "existing_additions": "6cdca85f8a1228b391fcc1035bdda0cd4f3fac18eff8ff544c9132c356c9b8c8"
+  },
+  "ordered_audio_ids": [
+    "c6_iris.alibi.find",
+    "c6_iris.ctx.02",
+    "c6_iris.hold.lead.02",
+    "i2_nora.jobs.01",
+    "i2_nora.jobs.find",
+    "i2_nora.jobs.lead.02",
+    "i2_nora.jobs.lead.03",
+    "i2_nora.message.find",
+    "i2_nora.patrol.01",
+    "i2_nora.patrol.find",
+    "i2_nora.patrol.lead.01",
+    "i2_nora.patrol.lead.02"
+  ],
+  "items": {
+    "c6_iris.alibi.find": {
+      "audio_id": "c6_iris.alibi.find",
+      "kind": "campaign",
+      "scene": "c6_iris",
+      "speaker": "steve",
+      "cast_role": "steve",
+      "voice_id": "vveagfomyMCJLZsOPRP2",
+      "text": "At 8:10 by the radio, Stephen stood beside his own wanted poster at Gus’s bread window while Gus fixed the smudge. The crowd and the cops ran up the lane to the bakery, leaving the pier quiet for my meeting.",
+      "text_sha256": "fc4a42c7ed3f9dc11f95d8fa7f7eaa2ea8928bc70f61e398de033fe550d6e6f3",
+      "synthesis_text": "At 8:10 by the radio, Stephen stood beside his own wanted poster at Gus’s bread window while Gus fixed the smudge. The crowd and the cops ran up the lane to the bakery, leaving the pier quiet for my meeting.",
+      "synthesis_text_sha256": "fc4a42c7ed3f9dc11f95d8fa7f7eaa2ea8928bc70f61e398de033fe550d6e6f3",
+      "delivery": "narration",
+      "direction": "",
+      "v4_audio_tag": "",
+      "previous_text": "By the time an officer reached the bread window, Stephen was out through the alley.",
+      "next_text": "I sent the message about Rook. No capitals, the way Nora texts. Please listen before you decide what I am.",
+      "voice_settings": {
+        "stability": 0.62,
+        "similarity_boost": 0.78
+      },
+      "language_code": "en",
+      "model_id": "eleven_v4",
+      "output_format": "mp3_44100_192",
+      "estimated_credit_rate": 1.0,
+      "estimated_credits": 207,
+      "attempt_seeds": [
+        1321312473,
+        2048916516,
+        592054118
+      ]
+    },
+    "c6_iris.ctx.02": {
+      "audio_id": "c6_iris.ctx.02",
+      "kind": "campaign",
+      "scene": "c6_iris",
+      "speaker": "steve",
+      "cast_role": "steve",
+      "voice_id": "vveagfomyMCJLZsOPRP2",
+      "text": "On Monday morning my flip phone buzzed, so we slipped down to the waterfront corner between Gus’s bakery and the pier.",
+      "text_sha256": "de73d4d12aa8017fe18e0a9747e9c5eb390126433741d6734f8af588f22c0ca8",
+      "synthesis_text": "On Monday morning my flip phone buzzed, so we slipped down to the waterfront corner between Gus’s bakery and the pier.",
+      "synthesis_text_sha256": "de73d4d12aa8017fe18e0a9747e9c5eb390126433741d6734f8af588f22c0ca8",
+      "delivery": "narration",
+      "direction": "",
+      "v4_audio_tag": "",
+      "previous_text": "Stephen and I spent the weekend in Dad’s shack, arguing about haircuts. Every night at nine, he told the earpiece I’d gone north.",
+      "next_text": "Police are seeking Steve Mercer, last seen wearing a cardigan. Yesterday he was sunny.",
+      "voice_settings": {
+        "stability": 0.62,
+        "similarity_boost": 0.78
+      },
+      "language_code": "en",
+      "model_id": "eleven_v4",
+      "output_format": "mp3_44100_192",
+      "estimated_credit_rate": 1.0,
+      "estimated_credits": 118,
+      "attempt_seeds": [
+        1437457048,
+        2814787826,
+        1348519584
+      ]
+    },
+    "c6_iris.hold.lead.02": {
+      "audio_id": "c6_iris.hold.lead.02",
+      "kind": "campaign",
+      "scene": "c6_iris",
+      "speaker": "iris",
+      "cast_role": "nora",
+      "voice_id": "m8AHWg36LJTQWKmfeGVv",
+      "text": "At four minutes past midnight on the thirtieth, I phoned two Halcyon offices from these payphones and taped both calls.",
+      "text_sha256": "10e9fc94bb80420483b47603f6a9aa9658fc7d0a56673fef6a4faa9a17a88d83",
+      "synthesis_text": "At four minutes past midnight on the thirtieth, I phoned two Halcyon offices from these payphones and taped both calls.",
+      "synthesis_text_sha256": "10e9fc94bb80420483b47603f6a9aa9658fc7d0a56673fef6a4faa9a17a88d83",
+      "delivery": "live",
+      "direction": "",
+      "v4_audio_tag": "",
+      "previous_text": "You saw the ones near the bay go below. The ones far away call.",
+      "next_text": "The signal is inside the music. Near the bay we go below. Far away, we call.",
+      "voice_settings": {
+        "stability": 0.46,
+        "similarity_boost": 0.78
+      },
+      "language_code": "en",
+      "model_id": "eleven_v4",
+      "output_format": "mp3_44100_192",
+      "estimated_credit_rate": 1.0,
+      "estimated_credits": 119,
+      "attempt_seeds": [
+        1114139534,
+        1919848451,
+        953641657
+      ]
+    },
+    "i2_nora.jobs.01": {
+      "audio_id": "i2_nora.jobs.01",
+      "kind": "campaign",
+      "scene": "i2_nora",
+      "speaker": "lyle",
+      "cast_role": "lyle",
+      "voice_id": "CwhRBWXzGAHq8TQ4Fs17",
+      "text": "I’ll trip the wash chute and hold the pods while you cross.",
+      "text_sha256": "a6e8c29945e178958081334b5edc6493cb77d95ce0e7668a3c68fbe23938a77d",
+      "synthesis_text": "I’ll trip the wash chute and hold the pods while you cross.",
+      "synthesis_text_sha256": "a6e8c29945e178958081334b5edc6493cb77d95ce0e7668a3c68fbe23938a77d",
+      "delivery": "live",
+      "direction": "",
+      "v4_audio_tag": "",
+      "previous_text": "Thirty years on a mail route. Put me on lookout and I’ll log every row and pod number in this place.",
+      "next_text": "I’ll remember the turns.",
+      "voice_settings": {
+        "stability": 0.46,
+        "similarity_boost": 0.78
+      },
+      "language_code": "en",
+      "model_id": "eleven_v4",
+      "output_format": "mp3_44100_192",
+      "estimated_credit_rate": 1.0,
+      "estimated_credits": 59,
+      "attempt_seeds": [
+        3188040758,
+        2966792965,
+        2744845011
+      ]
+    },
+    "i2_nora.jobs.find": {
+      "audio_id": "i2_nora.jobs.find",
+      "kind": "campaign",
+      "scene": "i2_nora",
+      "speaker": "nora",
+      "cast_role": "nora",
+      "voice_id": "m8AHWg36LJTQWKmfeGVv",
+      "text": "Lyle trips the north wash chute to draw the guard off. Dale keeps lookout and maps the rows. I take the pumps. Water is the one thing on this ship I understand.",
+      "text_sha256": "35e448690afdb619bfefa009082d56b92553f85009ba76c8fbbc37d9812c0d64",
+      "synthesis_text": "Lyle trips the north wash chute to draw the guard off. Dale keeps lookout and maps the rows. I take the pumps. Water is the one thing on this ship I understand.",
+      "synthesis_text_sha256": "35e448690afdb619bfefa009082d56b92553f85009ba76c8fbbc37d9812c0d64",
+      "delivery": "narration",
+      "direction": "",
+      "v4_audio_tag": "",
+      "previous_text": "Good. I’ll handle the pump.",
+      "next_text": "He never leaves the aisle for a shift bell, and a pod warning brings him straight to us.",
+      "voice_settings": {
+        "stability": 0.62,
+        "similarity_boost": 0.78
+      },
+      "language_code": "en",
+      "model_id": "eleven_v4",
+      "output_format": "mp3_44100_192",
+      "estimated_credit_rate": 1.0,
+      "estimated_credits": 160,
+      "attempt_seeds": [
+        2111265990,
+        988257824,
+        3819814227
+      ]
+    },
+    "i2_nora.jobs.lead.02": {
+      "audio_id": "i2_nora.jobs.lead.02",
+      "kind": "campaign",
+      "scene": "i2_nora",
+      "speaker": "lyle",
+      "cast_role": "lyle",
+      "voice_id": "CwhRBWXzGAHq8TQ4Fs17",
+      "text": "That north wash chute by the arch jams if you trip the return latch. I can pull it when you say go.",
+      "text_sha256": "152e0fdf8652f568ee77f6db4393fa9a51f52f8f9437b5ff831a3f612c46121c",
+      "synthesis_text": "That north wash chute by the arch jams if you trip the return latch. I can pull it when you say go.",
+      "synthesis_text_sha256": "152e0fdf8652f568ee77f6db4393fa9a51f52f8f9437b5ff831a3f612c46121c",
+      "delivery": "live",
+      "direction": "",
+      "v4_audio_tag": "",
+      "previous_text": "Everybody’s good at something. Even Dale.",
+      "next_text": "Thirty years on a mail route. Put me on lookout and I’ll log every row and pod number in this place.",
+      "voice_settings": {
+        "stability": 0.46,
+        "similarity_boost": 0.78
+      },
+      "language_code": "en",
+      "model_id": "eleven_v4",
+      "output_format": "mp3_44100_192",
+      "estimated_credit_rate": 1.0,
+      "estimated_credits": 99,
+      "attempt_seeds": [
+        4168781946,
+        3214600413,
+        3279167119
+      ]
+    },
+    "i2_nora.jobs.lead.03": {
+      "audio_id": "i2_nora.jobs.lead.03",
+      "kind": "campaign",
+      "scene": "i2_nora",
+      "speaker": "dale",
+      "cast_role": "dale",
+      "voice_id": "kSSJYNGo5Kev6qgwVloV",
+      "text": "Thirty years on a mail route. Put me on lookout and I’ll log every row and pod number in this place.",
+      "text_sha256": "3970f9858ef9e41ecfd29b59b9168819fa1fbad64c3eac1548b5bfeb80d5909c",
+      "synthesis_text": "Thirty years on a mail route. Put me on lookout and I’ll log every row and pod number in this place.",
+      "synthesis_text_sha256": "3970f9858ef9e41ecfd29b59b9168819fa1fbad64c3eac1548b5bfeb80d5909c",
+      "delivery": "live",
+      "direction": "",
+      "v4_audio_tag": "",
+      "previous_text": "That north wash chute by the arch jams if you trip the return latch. I can pull it when you say go.",
+      "next_text": "I’ll trip the wash chute and hold the pods while you cross.",
+      "voice_settings": {
+        "stability": 0.46,
+        "similarity_boost": 0.78
+      },
+      "language_code": "en",
+      "model_id": "eleven_v4",
+      "output_format": "mp3_44100_192",
+      "estimated_credit_rate": 1.0,
+      "estimated_credits": 100,
+      "attempt_seeds": [
+        2097877679,
+        3258874658,
+        3932416233
+      ]
+    },
+    "i2_nora.message.find": {
+      "audio_id": "i2_nora.message.find",
+      "kind": "campaign",
+      "scene": "i2_nora",
+      "speaker": "nora",
+      "cast_role": "nora",
+      "voice_id": "m8AHWg36LJTQWKmfeGVv",
+      "text": "My message for Steve is queued in Slot B on Bed Three’s terminal. It will wait for him.",
+      "text_sha256": "af65e144349358cc3db3ce12d7994ad6aa713fe912b84355b8a230e27297fcec",
+      "synthesis_text": "My message for Steve is queued in Slot B on Bed Three’s terminal. It will wait for him.",
+      "synthesis_text_sha256": "af65e144349358cc3db3ce12d7994ad6aa713fe912b84355b8a230e27297fcec",
+      "delivery": "narration",
+      "direction": "",
+      "v4_audio_tag": "",
+      "previous_text": "Steve, if you ever hear this message: I am furious with you. I love you. Please stop making me do both alone.",
+      "next_text": "I know every name in my row now. I have a route, a crew and a pump that behaves.",
+      "voice_settings": {
+        "stability": 0.62,
+        "similarity_boost": 0.78
+      },
+      "language_code": "en",
+      "model_id": "eleven_v4",
+      "output_format": "mp3_44100_192",
+      "estimated_credit_rate": 1.0,
+      "estimated_credits": 87,
+      "attempt_seeds": [
+        2710098378,
+        1995425944,
+        252975675
+      ]
+    },
+    "i2_nora.patrol.01": {
+      "audio_id": "i2_nora.patrol.01",
+      "kind": "campaign",
+      "scene": "i2_nora",
+      "speaker": "nora",
+      "cast_role": "nora",
+      "voice_id": "m8AHWg36LJTQWKmfeGVv",
+      "text": "There goes the chute alarm. He’s through the archway, and the bulkhead sealed behind him. The aisle is ours.",
+      "text_sha256": "e797f41c32500e795cd5cf35219ac3422b97ba72e3d7a9969070c154fa17e239",
+      "synthesis_text": "There goes the chute alarm. He’s through the archway, and the bulkhead sealed behind him. The aisle is ours.",
+      "synthesis_text_sha256": "e797f41c32500e795cd5cf35219ac3422b97ba72e3d7a9969070c154fa17e239",
+      "delivery": "live",
+      "direction": "",
+      "v4_audio_tag": "",
+      "previous_text": "Only a north wash-chute jam pulls him through that archway, and the bulkhead locks behind him for a six-minute wash clear.",
+      "next_text": "The jammed wash chute pulled the guard into the north shaft and locked the bulkhead behind him for six minutes. Lyle and Dale are watching the pods, and the Gallery aisle is clear.",
+      "voice_settings": {
+        "stability": 0.46,
+        "similarity_boost": 0.78
+      },
+      "language_code": "en",
+      "model_id": "eleven_v4",
+      "output_format": "mp3_44100_192",
+      "estimated_credit_rate": 1.0,
+      "estimated_credits": 108,
+      "attempt_seeds": [
+        3502540420,
+        2316523641,
+        3891387257
+      ]
+    },
+    "i2_nora.patrol.find": {
+      "audio_id": "i2_nora.patrol.find",
+      "kind": "campaign",
+      "scene": "i2_nora",
+      "speaker": "nora",
+      "cast_role": "nora",
+      "voice_id": "m8AHWg36LJTQWKmfeGVv",
+      "text": "The jammed wash chute pulled the guard into the north shaft and locked the bulkhead behind him for six minutes. Lyle and Dale are watching the pods, and the Gallery aisle is clear.",
+      "text_sha256": "fd0cb39ef84620022e83081d52b950f4633f3b5e76b0a0c81c165fe398323bb1",
+      "synthesis_text": "The jammed wash chute pulled the guard into the north shaft and locked the bulkhead behind him for six minutes. Lyle and Dale are watching the pods, and the Gallery aisle is clear.",
+      "synthesis_text_sha256": "fd0cb39ef84620022e83081d52b950f4633f3b5e76b0a0c81c165fe398323bb1",
+      "delivery": "narration",
+      "direction": "",
+      "v4_audio_tag": "",
+      "previous_text": "There goes the chute alarm. He’s through the archway, and the bulkhead sealed behind him. The aisle is ours.",
+      "next_text": "Three service branches. Let’s see what each one does.",
+      "voice_settings": {
+        "stability": 0.62,
+        "similarity_boost": 0.78
+      },
+      "language_code": "en",
+      "model_id": "eleven_v4",
+      "output_format": "mp3_44100_192",
+      "estimated_credit_rate": 1.0,
+      "estimated_credits": 180,
+      "attempt_seeds": [
+        3654918122,
+        3111879431,
+        59729685
+      ]
+    },
+    "i2_nora.patrol.lead.01": {
+      "audio_id": "i2_nora.patrol.lead.01",
+      "kind": "campaign",
+      "scene": "i2_nora",
+      "speaker": "nora",
+      "cast_role": "nora",
+      "voice_id": "m8AHWg36LJTQWKmfeGVv",
+      "text": "He never leaves the aisle for a shift bell, and a pod warning brings him straight to us.",
+      "text_sha256": "ed3bed29d39458065ca42b39813fb8a1ab4a702062552bfa4de15bf874b8adef",
+      "synthesis_text": "He never leaves the aisle for a shift bell, and a pod warning brings him straight to us.",
+      "synthesis_text_sha256": "ed3bed29d39458065ca42b39813fb8a1ab4a702062552bfa4de15bf874b8adef",
+      "delivery": "live",
+      "direction": "",
+      "v4_audio_tag": "",
+      "previous_text": "Lyle trips the north wash chute to draw the guard off. Dale keeps lookout and maps the rows. I take the pumps. Water is the one thing on this ship I understand.",
+      "next_text": "Only a north wash-chute jam pulls him through that archway, and the bulkhead locks behind him for a six-minute wash clear.",
+      "voice_settings": {
+        "stability": 0.46,
+        "similarity_boost": 0.78
+      },
+      "language_code": "en",
+      "model_id": "eleven_v4",
+      "output_format": "mp3_44100_192",
+      "estimated_credit_rate": 1.0,
+      "estimated_credits": 88,
+      "attempt_seeds": [
+        3415264291,
+        4050168415,
+        1407369660
+      ]
+    },
+    "i2_nora.patrol.lead.02": {
+      "audio_id": "i2_nora.patrol.lead.02",
+      "kind": "campaign",
+      "scene": "i2_nora",
+      "speaker": "nora",
+      "cast_role": "nora",
+      "voice_id": "m8AHWg36LJTQWKmfeGVv",
+      "text": "Only a north wash-chute jam pulls him through that archway, and the bulkhead locks behind him for a six-minute wash clear.",
+      "text_sha256": "496c16694588e1c1b3819a69df24c08f9440f01448814ca454ddc8775ec6b9ea",
+      "synthesis_text": "Only a north wash-chute jam pulls him through that archway, and the bulkhead locks behind him for a six-minute wash clear.",
+      "synthesis_text_sha256": "496c16694588e1c1b3819a69df24c08f9440f01448814ca454ddc8775ec6b9ea",
+      "delivery": "live",
+      "direction": "",
+      "v4_audio_tag": "",
+      "previous_text": "He never leaves the aisle for a shift bell, and a pod warning brings him straight to us.",
+      "next_text": "There goes the chute alarm. He’s through the archway, and the bulkhead sealed behind him. The aisle is ours.",
+      "voice_settings": {
+        "stability": 0.46,
+        "similarity_boost": 0.78
+      },
+      "language_code": "en",
+      "model_id": "eleven_v4",
+      "output_format": "mp3_44100_192",
+      "estimated_credit_rate": 1.0,
+      "estimated_credits": 122,
+      "attempt_seeds": [
+        3533695572,
+        44787922,
+        2728076964
+      ]
+    }
+  },
+  "count": 12,
+  "characters": 1447,
+  "request_characters": 1447,
+  "estimated_credits": 1447,
+  "plan_sha256": "73ef189cb6c7d12bf81b58ca6aed4193645734b70910e5f694c6283bbbd2e000"
+}

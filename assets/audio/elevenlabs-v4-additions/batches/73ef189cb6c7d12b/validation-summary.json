@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "plan_sha256": "73ef189cb6c7d12bf81b58ca6aed4193645734b70910e5f694c6283bbbd2e000",
+  "passed": [
+    "c6_iris.alibi.find",
+    "c6_iris.ctx.02",
+    "c6_iris.hold.lead.02",
+    "i2_nora.jobs.01",
+    "i2_nora.jobs.find",
+    "i2_nora.jobs.lead.02",
+    "i2_nora.jobs.lead.03",
+    "i2_nora.message.find",
+    "i2_nora.patrol.find",
+    "i2_nora.patrol.lead.01",
+    "i2_nora.patrol.lead.02"
+  ],
+  "retake_required": {
+    "i2_nora.patrol.01": "asr_mismatch"
+  }
+}

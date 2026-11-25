@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c6_iris.alibi.find",
+  "attempt": 1,
+  "plan_sha256": "73ef189cb6c7d12bf81b58ca6aed4193645734b70910e5f694c6283bbbd2e000",
+  "wav_sha256": "b546c9fad73fb639353d039dc92ac56e3032035389b1496c07e6c796a631047a",
+  "expected": "At 8:10 by the radio, Stephen stood beside his own wanted poster at Gus’s bread window while Gus fixed the smudge. The crowd and the cops ran up the lane to the bakery, leaving the pier quiet for my meeting.",
+  "recognized": "At 8.10 by the radio, Stephen stood beside his own wanted poster at Gus's bread window while Gus fixed the smudge. The crowd and the cops ran up the lane to the bakery, leaving the pier quiet for my meeting.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 13.52,
+  "sample_rate": 48000,
+  "peak": 0.413604736328125,
+  "rms": 0.0413593459273693,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

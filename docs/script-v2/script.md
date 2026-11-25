@@ -2499,7 +2499,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 ## Chapter 6: Iris (`c6_iris`)
 
-**Where:** Bellwether, the market and the pier · **When:** Monday, November 5, morning · **Present:** Steve Mercer, Stephen, Nora’s copy, DJ AutoRick
+**Where:** Bellwether, Gus’s bakery corner and the pier · **When:** Monday, November 5, morning · **Present:** Steve Mercer, Stephen, Nora’s copy, DJ AutoRick
 
 **Chapter card:** Chapter 6, *Iris* · Monday morning · Steve wants to free Calder and learn what the Veyri want.
 
@@ -2525,7 +2525,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 ### Opening
 - *Steve Mercer: Stephen and I spent the weekend in Dad’s shack, arguing about haircuts. Every night at nine, he told the earpiece I’d gone north.* **NEW** `c6_iris.ctx.01`
-- *Steve Mercer: On Monday morning my flip phone buzzed.* **NEW** `c6_iris.ctx.02`
+- *Steve Mercer: On Monday morning my flip phone buzzed, so we slipped down to the waterfront corner between Gus’s bakery and the pier.* **NEW** `c6_iris.ctx.02`
 - **DJ AutoRick** (broadcast): Police are seeking Steve Mercer, last seen wearing a cardigan. Yesterday he was sunny. **NEW** `c6_iris.in.03`
 - **Stephen**: I’m wearing the cardigan. **NEW** `c6_iris.in.04`
 - **Steve Mercer**: Take it off. **NEW** `c6_iris.in.05`
@@ -2566,7 +2566,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - **DJ AutoRick** (broadcast): Police are still looking for Steve Mercer. If you see him, tell him to smile! **NEW** `c6_iris.talk.autorick.1.01`
 - **Stephen**: He never smiles before ten. I can vouch for that personally. **NEW** `c6_iris.talk.autorick.1.02`
 
-### Lead 1: Market corner (`c6_iris.alibi`) · board · difficulty 2 · played as Stephen
+### Lead 1: Gus’s bread window (`c6_iris.alibi`) · board · difficulty 2 · played as Stephen
 
 **When the lead opens:**
 - **Stephen**: Three errands, three clocks. Nobody in this town agrees what time it is. **NEW** `c6_iris.alibi.lead.01`
@@ -2603,7 +2603,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - *Steve Mercer: By the time an officer reached the bread window, Stephen was out through the alley.* **NEW** `c6_iris.alibi.02`
 
 **Finding:**
-- *Steve Mercer: At 8:10 by the radio, Stephen stood beside his own wanted poster at Gus’s bread window while Gus fixed the smudge. Half the town ran to the bakery, and nobody was watching the pier.* **NEW** `c6_iris.alibi.find`
+- *Steve Mercer: At 8:10 by the radio, Stephen stood beside his own wanted poster at Gus’s bread window while Gus fixed the smudge. The crowd and the cops ran up the lane to the bakery, leaving the pier quiet for my meeting.* **NEW** `c6_iris.alibi.find`
 
 ### Lead 2: Iris’s recorder test (`c6_iris.takes`) · tape · difficulty 2 · played as Steve Mercer
 *Unlocks after:* c6_iris.alibi
@@ -2642,7 +2642,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 **When the lead opens:**
 - **Nora’s copy**: You saw the ones near the bay go below. The ones far away call. **NEW** `c6_iris.hold.lead.01`
-- **Nora’s copy**: At four minutes past midnight on the thirtieth, I phoned two Halcyon offices. I taped both calls. **NEW** `c6_iris.hold.lead.02`
+- **Nora’s copy**: At four minutes past midnight on the thirtieth, I phoned two Halcyon offices from these payphones and taped both calls. **NEW** `c6_iris.hold.lead.02`
 
 **Goal:** Find out how copies far from the bay stay in step.
 
@@ -2832,9 +2832,9 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 **Chapter card:** Interlude, *Nora* · Inside the Long Patience · Nora wakes up on the ship. Nobody is coming to fix this.
 
-**Objective:** Steady the others, learn their names and find a way through the Gallery.
+**Objective:** Organize the pods, draw the guard off the aisle, open the deeper rows and leave Steve a message.
 
-**Coach tip:** You are Nora, awake on the ship. The guard walks a regular lap. Count it before you move.
+**Coach tip:** You are Nora, awake on the ship. Organize the others at the pods first, then lure the guard into the north wash shaft to clear the aisle.
 
 **Revision notes:** C37, C22, U-relationships, U-narration
 
@@ -2844,9 +2844,9 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 > Implementation: This wake is reversible and leaves the mirror links active. The crew can put Nora back under; Iris’s permanent link-break remains a Chapter 9 choice.
 
-> Implementation: jobs keeps the case board with a single stage (the route and logging stages are cut).
+> Implementation: Organize the three sleepers at the pods FIRST (jobs), then use Lyle’s wash-chute jam to lure the guard through the north archway where the bulkhead seals behind him (patrol), then cross the genuinely empty aisle to the pump and intercom.
 
-> Implementation: The eye under the frost is narrated in the departure. Art (optional): an insert of Row Zero with one enormous eye open under cracked frost.
+> Implementation: Row Zero’s enormous eye under the frost is painted in stills/i2_nora-row-zero.webp.
 
 > Implementation: Nora plays this interlude, so her small talk is with Dale and Lyle, the two sleepers awake beside her.
 
@@ -2887,83 +2887,83 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - **Nora Reyes**: I think somebody probably is, Lyle. **NEW** `i2_nora.talk.lyle.2.02`
 - **Lyle Boone**: Then I hope he’s nicer to Steve Mercer than I was. **NEW** `i2_nora.talk.lyle.2.03`
 
-### Lead 1: Guard circuit (`i2_nora.patrol`) · rows · difficulty 2
-
-**When the lead opens:**
-- **Nora Reyes**: Boots. Then the pump. Then the far door. Again and again. **NEW** `i2_nora.patrol.lead.01`
-- **Nora Reyes**: Once that far door shuts, he can’t see the aisle. Crossing takes me four counts. **NEW** `i2_nora.patrol.lead.02`
-
-**Goal:** Find a safe moment to cross the aisle.
-
-**What Steve knows:** A guard walks the Gallery in laps. Nora counts under her breath and scratches marks on her bed rail.
-
-**Prompt:** When should Nora step out, and when will she reach cover?
-
-**Instruction:** Step out when the far door shuts, and reach cover before the boots come back. Lap one: boots at 2, pump at 5, far door shuts at 8. The boots come back at 14, and the lap repeats. Crossing takes four counts.
-- Step out at count: 17 / ✓ 20 / 23
-- Reach cover at count: 21 / ✓ 24 / 27
-
-**Hints:**
-1. Find the length of one whole lap from the boots.
-2. The door shuts six counts after the boots. Add four counts for the crossing.
-3. The lap is twelve counts long. Find the next time the door shuts after 14, then add four.
-
-**On success:**
-- **Nora Reyes**: Wait. Now. Keep low. We can argue about my tone after we’re out. `i2_nora.patrol.01`
-
-**Finding:**
-- *Nora Reyes: The guard’s lap is twelve counts. On the next lap the far door shuts at 20 and the boots come back at 26. Four counts to cross. We can move.* **NEW** `i2_nora.patrol.find`
-
-### Lead 2: Sleeper skills (`i2_nora.jobs`) · board · difficulty 1
-*Unlocks after:* i2_nora.patrol
+### Lead 1: Plan at the pods (`i2_nora.jobs`) · board · difficulty 1
 
 **When the lead opens:**
 - **Nora Reyes**: Everybody’s good at something. Even Dale. **NEW** `i2_nora.jobs.lead.01`
-- **Lyle Boone**: That hatch sticks. I’ve wedged it open twice already tonight. **NEW** `i2_nora.jobs.lead.02`
-- **Dale Kittredge**: Thirty years on a mail route. I could walk this one with my eyes shut. **NEW** `i2_nora.jobs.lead.03`
+- **Lyle Boone**: That north wash chute by the arch jams if you trip the return latch. I can pull it when you say go. **NEW** `i2_nora.jobs.lead.02`
+- **Dale Kittredge**: Thirty years on a mail route. Put me on lookout and I’ll log every row and pod number in this place. **NEW** `i2_nora.jobs.lead.03`
 
-**Goal:** Give each half-awake sleeper the job they’re already good at.
+**Goal:** Assign each awake sleeper to the role they know before moving on the guard.
 
-**What Steve knows:** Three sleepers are awake enough to help: Nora, the real Lyle Boone and a grumpy mail carrier named Dale. Nora has watched each of them for hours.
+**What Steve knows:** Three sleepers are awake behind the open pods while a guard watches the Gallery aisle: Nora, the real Lyle Boone and a grumpy mail carrier named Dale.
 
-**Prompt:** Who keeps the hatch, who guides at the fork, and who reads the gauges?
+**Prompt:** Who trips the north wash chute, who keeps lookout and logs the rows, and who handles the water pumps?
 
-**Instruction:** Give each person the job they have already practised.
+**Instruction:** Give each person the role that fits what they already know how to do.
 
 **Case notes:**
-1. Lyle has wedged the sticking hatch open twice.
-2. Dale can recite every turn of the route with his eyes shut.
-3. Nora has drawn the whole water circuit in pencil, gauges and all.
-4. The route runs through the sticking hatch, then a fork with no arrows, then the gauge cabinets.
+1. Lyle knows how to trip the sticking north wash-chute latch beside the archway.
+2. Dale has spent thirty years memorizing routes and addresses and can log every row on lookout.
+3. Nora is an aquarium engineer who can read the Gallery water circulation gauges.
+4. To reach the pump and intercom across the hall, someone has to jam the north wash chute while another keeps lookout by the pods.
 
-**Stage 1 (match):** Put one name on each job.
+**Stage 1 (match):** Put one name on each role.
 - Cards: Lyle, Dale, Nora
-- Answer: Who keeps the sticking hatch open? → Lyle; Who guides everyone at the fork? → Dale; Who reads the gauges? → Nora
+- Answer: Who trips the north wash chute to draw the guard off? → Lyle; Who keeps lookout and logs every row number? → Dale; Who works the Gallery circulation pump? → Nora
 
 **Hints:**
-1. Each skill is something Nora watched them do.
-2. Wedge marks on the hatch. Turns recited with eyes shut. A pencil map of the water.
-3. Match each mark Nora saw to a place on the route: a wedged hatch, a fork with no arrows, a gauge cabinet.
+1. Each skill matches what each person just offered at the pods.
+2. Lyle handles the mechanical chute latch; Dale tracks routes and numbers; Nora knows pumps.
+3. Lyle trips the north wash chute, Dale keeps lookout and maps the rows, and Nora takes the circulation pump.
 
 **On success:**
-- **Lyle Boone**: I can keep that latch from catching. `i2_nora.jobs.01`
+- **Lyle Boone**: I’ll trip the wash chute and hold the pods while you cross. **REV** `i2_nora.jobs.01`
 - **Dale Kittredge**: I’ll remember the turns. `i2_nora.jobs.02`
 - **Nora Reyes**: Good. I’ll handle the pump. `i2_nora.jobs.03`
 
 **Finding:**
-- *Nora Reyes: Lyle keeps the hatch from catching. Dale remembers every turn. I take the pumps. Water is the one thing on this ship I understand.* **NEW** `i2_nora.jobs.find`
+- *Nora Reyes: Lyle trips the north wash chute to draw the guard off. Dale keeps lookout and maps the rows. I take the pumps. Water is the one thing on this ship I understand.* **NEW** `i2_nora.jobs.find`
+
+### Lead 2: North wash chute (`i2_nora.patrol`) · rows · difficulty 2
+*Unlocks after:* i2_nora.jobs
+
+**When the lead opens:**
+- **Nora Reyes**: He never leaves the aisle for a shift bell, and a pod warning brings him straight to us. **NEW** `i2_nora.patrol.lead.01`
+- **Nora Reyes**: Only a north wash-chute jam pulls him through that archway, and the bulkhead locks behind him for a six-minute wash clear. **NEW** `i2_nora.patrol.lead.02`
+
+**Goal:** Lure the guard off the Gallery aisle so the north bulkhead seals behind him.
+
+**What Steve knows:** A Veyri guard stands watch at the north archway, blocking the aisle to the circulation pump and intercom. Beside the arch is the service wash chute that leads into the north laundry shaft.
+
+**Prompt:** Which alert draws the guard out of the Gallery, and what keeps the aisle clear while Nora works?
+
+**Instruction:** Check the Gallery service slate. A shift bell makes the guard check the hall without leaving his post. A pod-lid warning brings him directly to Row Nine’s open beds. A north wash-chute jam pulls him through the archway into the laundry shaft, where the brass bulkhead seals automatically for a six-minute wash clear.
+- Trigger to pull the guard off post: Shift bell chime / Pod-lid warning / ✓ North wash-chute jam
+- What keeps the aisle clear while Nora works: Sprinting past him down the aisle / ✓ The north bulkhead locking behind him for the wash clear / Closing our pod lids again
+
+**Hints:**
+1. Rule out any alert that leaves the guard in the Gallery or brings him to the pods.
+2. Read what happens to the north archway door once the guard enters the laundry shaft.
+3. Trip the north wash-chute jam so the guard steps into the shaft and the bulkhead locks behind him for six minutes.
+
+**On success:**
+- **Nora Reyes**: There goes the chute alarm. He’s through the archway, and the bulkhead locked behind him. The aisle is ours. **REV** `i2_nora.patrol.01`
+
+**Finding:**
+- *Nora Reyes: The jammed wash chute pulled the guard into the north shaft and locked the bulkhead behind him for six minutes. Lyle and Dale are watching the pods, and the Gallery aisle is clear.* **NEW** `i2_nora.patrol.find`
 
 ### Lead 3: Gallery circulation (`i2_nora.pump`) · rows · difficulty 2
-*Unlocks after:* i2_nora.jobs
+*Unlocks after:* i2_nora.patrol
 
 **When the lead opens:**
 - **Nora Reyes**: Three service branches. Let’s see what each one does. **NEW** `i2_nora.pump.lead.01`
 - **Nora Reyes**: The top dial reads an empty wash line. Ignore it. Watch the return and the bed flow. **NEW** `i2_nora.pump.lead.02`
 - **Nora Reyes**: Bed flow has to stay at three or more. The return has to drop below three. **NEW** `i2_nora.pump.lead.03`
 
-**Goal:** Lower the pressure at the hatch without starving the beds.
+**Goal:** Lower the pressure at the deeper Gallery hatch without starving the beds.
 
-**What Steve knows:** Nora knows pumps from the aquarium. The Gallery runs on water too: one circuit feeds the beds, another returns it. Opening the hatch with the return pressure high would wake the whole hall.
+**What Steve knows:** Nora knows pumps from the aquarium. The Gallery runs on water too: one circuit feeds the beds, another returns it. Opening the deeper Gallery hatch with return pressure high would trip the hall alarm.
 
 **Prompt:** Which branch should Nora open, and which dial should she trust?
 
@@ -2988,14 +2988,14 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 **When the lead opens:**
 - **Nora Reyes**: If he comes. When he comes. He’ll come. **NEW** `i2_nora.message.lead.01`
 
-**Goal:** Leave a message for Steve, in case he ever comes.
+**Goal:** Leave a private message for Steve before scouting the deeper rows.
 
 **What Steve knows:** The Gallery intercom has three message slots. If Steve comes at all, he might come on any watch. Only Steve should hear what Nora says.
 
-**Prompt:** Where should Nora leave her message for Steve?
+**Prompt:** Where should Nora store her message for Steve?
 
-- Slot A: plays in every bed now. *Wrong:* Every sleeper, and every guard, would hear it right now.
-- ✓ Slot B: waits by this bed for PLAY
+- Slot A: broadcasts to every bed now. *Wrong:* Every sleeper, and every guard, would hear it right now.
+- ✓ Slot B: queued on Bed Three’s terminal for PLAY
 - Slot C: clears when the watch changes. *Wrong:* It would be gone by the next watch, and Steve could come on any watch.
 
 **Hints:**
@@ -3007,7 +3007,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - **Nora Reyes** (private_recording): Nora records a private message for Steve. *(spoken: Steve, if you ever hear this message: I am furious with you. I love you. Please stop making me do both alone.)* `i2_nora.message.01`
 
 **Finding:**
-- *Nora Reyes: My message for Steve is in Slot B, by my bed. It will wait for him.* **NEW** `i2_nora.message.find`
+- *Nora Reyes: My message for Steve is queued in Slot B on Bed Three’s terminal. It will wait for him.* **NEW** `i2_nora.message.find`
 
 ### Scene complete
 - *Nora Reyes: I know every name in my row now. I have a route, a crew and a pump that behaves.* **NEW** `i2_nora.recap.01`
@@ -3076,12 +3076,12 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - **Steve Mercer**: Do you actually like the work? **NEW** `c7_gate.talk.pell.2.02`
 - **Pell**: I like the dogs, and the people who say thank you. Mostly the dogs. **NEW** `c7_gate.talk.pell.2.03`
 
-**Gate coffee** · Rook’s copy · after `c7_gate.badge`
+**Gate coffee** · Rook’s copy
 - **Rook’s copy**: The coffee in the press tent is terrible. I’ve had four cups. **NEW** `c7_gate.talk.rook_copy.1.01`
 - **Stephen**: You don’t seem to mind it very much. **NEW** `c7_gate.talk.rook_copy.1.02`
 - **Rook’s copy**: Rook takes his coffee black. I keep putting sugar in mine. I don’t know why. **NEW** `c7_gate.talk.rook_copy.1.03`
 
-**The one he was made from** · Rook’s copy · after `c7_gate.badge`
+**The one he was made from** · Rook’s copy
 - **Rook’s copy**: Do you ever think about him? The one you were made from? **NEW** `c7_gate.talk.rook_copy.2.01`
 - **Stephen**: Every single day. He snores, apparently. **NEW** `c7_gate.talk.rook_copy.2.02`
 - **Rook’s copy**: I wonder if mine dreams. Down there, in the cold. **NEW** `c7_gate.talk.rook_copy.2.03`
