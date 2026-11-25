@@ -219,6 +219,37 @@ func run() -> void:
 	check(game.stage.talk_figures.is_empty(), "Dinner at La Marea uses the painted family instead of pasted sprites")
 	check(not (game.stage.actors.has("carmen") and game.stage.actors.carmen.visible),
 		"Carmen's portrait does not float over the painted family dinner")
+	await enter("c3_house")
+	game._process(.001)
+	var carmen_sprite: Sprite2D = game.stage.talk_figures.get("carmen")
+	check(carmen_sprite != null, "Carmen stands in June Calder's house")
+	if carmen_sprite != null:
+		var foot_x: float = carmen_sprite.position.x / game.stage.ART.x
+		var foot_y: float = carmen_sprite.position.y / game.stage.ART.y
+		# The writing desk and its front-right leg extend to x=0.36; keep Carmen's shoes well clear on open floor.
+		check(foot_x >= 0.43 and foot_y <= 0.69, "Carmen stands on open floor clear of the writing desk leg (%.3f, %.3f)" % [foot_x, foot_y])
+		var img: Image = carmen_sprite.texture.get_image()
+		var puddle := 0
+		for y: int in range(img.get_height() - 32, img.get_height()):
+			for x: int in img.get_width():
+				var c := img.get_pixel(x, y)
+				var lum := 0.299 * c.r + 0.587 * c.g + 0.114 * c.b
+				var sat := maxf(c.r, maxf(c.g, c.b)) - minf(c.r, minf(c.g, c.b))
+				if c.a > 0.25 and lum > 0.58 and sat < 0.14:
+					puddle += 1
+		check(puddle < 25, "Carmen's shoes carry no light studio-floor puddle (%d pixels)" % puddle)
+	await enter("c3_archive")
+	game._process(.001)
+	check(game.stage.furniture != null and game.stage.furniture.visible,
+		"The archive foreground table and reel winder occlude characters standing behind them")
+	for who: String in ["calder", "tomas", "agnes"]:
+		var fig: Sprite2D = game.stage.talk_figures.get(who)
+		check(fig != null and fig.position.y / game.stage.ART.y >= 0.64,
+			"%s stands behind the archive foreground table rather than on top of it" % who)
+		if fig != null and game.stage.furniture != null:
+			var shin := Vector2(fig.position.x, game.stage.ART.y * 0.58)
+			check(Geometry2D.is_point_in_polygon(shin, game.stage.furniture.polygon),
+				"%s's lower legs are masked behind the archive table and equipment" % who)
 	game.campaign.reset()
 	await enter("c1_flat")
 	check(not game.campaign.available_talk("iris").is_empty(), "Nora can talk after the Saturday morning opening")

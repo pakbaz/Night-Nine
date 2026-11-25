@@ -52,6 +52,18 @@ def cutout(name, bounds):
     holes, _ = ndimage.label(~mask)
     sizes = np.bincount(holes.ravel())
     mask |= (holes > 0) & (sizes[holes] < im.width*im.height*.01)
+    # Strip the painted pale-grey paper cast shadow around the shoes in the foot band.
+    ys_nonzero = np.where(mask.any(axis=1))[0]
+    foot_top = int(ys_nonzero.max() - (ys_nonzero.max() - ys_nonzero.min()) * 0.085)
+    lum = 0.299 * rgb[..., 0] + 0.587 * rgb[..., 1] + 0.114 * rgb[..., 2]
+    sat = rgb.max(axis=2) - rgb.min(axis=2)
+    foot_zone = np.zeros_like(mask)
+    foot_zone[foot_top:, :] = True
+    puddle = foot_zone & (lum > 135) & (sat < 36)
+    mask &= ~puddle
+    labels, _ = ndimage.label(mask)
+    largest = np.bincount(labels.ravel())[1:].argmax() + 1
+    mask = labels == largest
     alpha = Image.fromarray((mask*255).astype(np.uint8)).filter(ImageFilter.GaussianBlur(.65))
     im.putalpha(alpha)
     return im.crop(alpha.getbbox())

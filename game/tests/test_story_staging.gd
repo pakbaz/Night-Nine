@@ -171,6 +171,11 @@ func run() -> void:
 	for escort: String in ["iris", "lyle_copy"]:
 		var watcher: Node2D = game.stage.actors.get(escort)
 		check(is_instance_valid(watcher) and watcher.is_visible_in_tree(), "%s watches the scan until the attendant sends the escorts back" % escort)
+	# The escorts stand to the left of the speaker column so Lyle never covers the intercom.
+	var intercom_index: int = game.campaign.current().tasks.find(game.campaign.task_index["c2_ship.command"])
+	var intercom_point: Vector2 = game.stage.project_target(intercom_index)
+	check(not game.stage.actors.lyle_copy.hit(intercom_point) and not game.stage.actors.iris.hit(intercom_point),
+		"Neither escort covers the intercom hotspot during the scan")
 	if is_instance_valid(scanner):
 		var phase: float = scanner.material.get_shader_parameter("phase")
 		await frames(5)

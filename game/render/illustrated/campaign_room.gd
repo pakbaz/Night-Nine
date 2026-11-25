@@ -629,8 +629,8 @@ func show_cast(id: String) -> void:
 				var left := member == social_pair[0]
 				var mark := Vector2(ART.x * (.305 if left else .70), float(person.get_meta("solo_eyes").y))
 				if scanning:
-					# Keep the right side of the shot open for Steve and the scan lamp.
-					mark = ART * (Vector2(.24,.44) if left else Vector2(.49,.40))
+					# Keep the intercom column (x=0.51) and scan chair completely clear.
+					mark = ART * (Vector2(.15,.48) if left else Vector2(.33,.45))
 				cast_marks[member] = mark
 				person.take_mark(mark,1.0 if left else -1.0,"speaker" if member == id else "listener",clock)
 			else:
