@@ -23,12 +23,37 @@
     },
     "bridge": "res://assets/illustrated/campaign/bridges/c1_flat-c1_pier.webp",
     "arrival_walk": [
-      {"actor": "steve", "from": [0.75, 0.565], "seconds": 1.35},
-      {"actor": "iris", "from": [0.75, 0.565], "seconds": 1.0}
+      {
+        "actor": "steve",
+        "from": [
+          0.75,
+          0.565
+        ],
+        "seconds": 1.35
+      },
+      {
+        "actor": "iris",
+        "from": [
+          0.75,
+          0.565
+        ],
+        "seconds": 1.0
+      }
     ],
     "reveal_after": {
       "iris": "c1_flat.in.04"
-    }
+    },
+    "stills": [
+      {
+        "file": "res://assets/illustrated/campaign/stills/c1_flat-same-waveform.webp",
+        "lines": [
+          "c1_flat.compare.01",
+          "c1_flat.compare.02",
+          "c1_flat.compare.03",
+          "c1_flat.compare.find"
+        ]
+      }
+    ]
   },
   "c1_pier": {
     "light": "b8d4d8",
@@ -269,8 +294,13 @@
       "saren",
       "lyle_copy"
     ],
-    "appearances": {"iris": "nora_rain"},
-    "leave_after": {"iris": "c2_ship.command", "lyle_copy": "c2_ship.command"},
+    "appearances": {
+      "iris": "nora_rain"
+    },
+    "leave_after": {
+      "iris": "c2_ship.command",
+      "lyle_copy": "c2_ship.command"
+    },
     "off_camera_lines": [
       "c2_ship.escape.01"
     ],
@@ -430,7 +460,21 @@
     "inserts": {
       "c3_archive.out.02": "c3_archive.cycle"
     },
-    "chapter_insert": true
+    "chapter_insert": true,
+    "stills": [
+      {
+        "file": "res://assets/illustrated/campaign/stills/c3_archive-reel-eleven.webp",
+        "lines": [
+          "c3_archive.cycle.01",
+          "c3_archive.cycle.02",
+          "c3_archive.cycle.03",
+          "c3_archive.cycle.04",
+          "c3_archive.cycle.find",
+          "c3_archive.recap.01",
+          "c3_archive.recap.02"
+        ]
+      }
+    ]
   },
   "i1_archive": {
     "light": "89d2df",
@@ -491,11 +535,20 @@
       },
       {
         "file": "res://assets/illustrated/campaign/bridges/c4_safe-c4_escape.webp",
-        "lines": ["c4_safe.record.lead.05", "c4_safe.record.01", "c4_safe.record.find", "c4_safe.recap.02"]
+        "lines": [
+          "c4_safe.record.lead.05",
+          "c4_safe.record.01",
+          "c4_safe.record.find",
+          "c4_safe.recap.02"
+        ]
       },
       {
         "file": "res://assets/illustrated/campaign/stills/c4_safe-feed-3.webp",
-        "lines": ["c4_safe.screens.01", "c4_safe.screens.find", "c4_safe.recap.01"]
+        "lines": [
+          "c4_safe.screens.01",
+          "c4_safe.screens.find",
+          "c4_safe.recap.01"
+        ]
       }
     ],
     "bridge": "res://assets/illustrated/campaign/bridges/c4_safe-c4_escape.webp",
@@ -506,10 +559,38 @@
       ]
     },
     "detail_shots": {
-      "c4_safe.match.01": {"target": [0.51, 0.72], "zoom": 2.4, "cut": true},
-      "c4_safe.screens.lead.04": {"target": [0.12, 0.47], "zoom": 1.85, "cut": true},
-      "c4_safe.screens.lead.05": {"target": [0.84, 0.32], "zoom": 2.4, "cut": true},
-      "c4_safe.screens.02": {"target": [0.84, 0.32], "zoom": 2.4, "cut": true}
+      "c4_safe.match.01": {
+        "target": [
+          0.51,
+          0.72
+        ],
+        "zoom": 2.4,
+        "cut": true
+      },
+      "c4_safe.screens.lead.04": {
+        "target": [
+          0.12,
+          0.47
+        ],
+        "zoom": 1.85,
+        "cut": true
+      },
+      "c4_safe.screens.lead.05": {
+        "target": [
+          0.84,
+          0.32
+        ],
+        "zoom": 2.4,
+        "cut": true
+      },
+      "c4_safe.screens.02": {
+        "target": [
+          0.84,
+          0.32
+        ],
+        "zoom": 2.4,
+        "cut": true
+      }
     }
   },
   "c4_escape": {
@@ -535,35 +616,62 @@
       "path": "res://assets/illustrated/campaign/inserts/c4_escape.webp",
       "after": "c4_escape.fault",
       "onboard_task": "c4_escape.van",
-      "onboard_mark": [0.37, 0.60]
+      "onboard_mark": [
+        0.37,
+        0.6
+      ]
     },
     "detail_shots": {
-      "c4_escape.fault.01": {"target": [0.47, 0.45], "zoom": 2.0, "cut": true}
+      "c4_escape.fault.01": {
+        "target": [
+          0.47,
+          0.45
+        ],
+        "zoom": 2.0,
+        "cut": true
+      }
     },
     "stills": [
       {
         "file": "res://assets/illustrated/campaign/bridges/c4_safe-c4_escape.webp",
-        "lines": ["c4_escape.ctx.01", "c4_escape.ctx.02"]
+        "lines": [
+          "c4_escape.ctx.01",
+          "c4_escape.ctx.02"
+        ]
       },
       {
         "file": "res://assets/illustrated/campaign/stills/c4_escape-parked.webp",
-        "lines": ["c4_escape.ctx.03"]
+        "lines": [
+          "c4_escape.ctx.03"
+        ]
       },
       {
         "file": "res://assets/illustrated/campaign/stills/c4_escape-drill.webp",
-        "lines": ["c4_escape.fault.02", "c4_escape.fault.find"]
+        "lines": [
+          "c4_escape.fault.02",
+          "c4_escape.fault.find"
+        ]
       },
       {
         "file": "res://assets/illustrated/campaign/inserts/c4_escape-motion.webp",
-        "lines": ["c4_escape.van.lead.01", "c4_escape.van.lead.02", "c4_escape.van.lead.03", "c4_escape.van.lead.04"]
+        "lines": [
+          "c4_escape.van.lead.01",
+          "c4_escape.van.lead.02",
+          "c4_escape.van.lead.03",
+          "c4_escape.van.lead.04"
+        ]
       },
       {
         "file": "res://assets/illustrated/campaign/stills/c4_escape-creek.webp",
-        "lines": ["c4_escape.out.04"]
+        "lines": [
+          "c4_escape.out.04"
+        ]
       },
       {
         "file": "res://assets/illustrated/campaign/stills/c4_escape-rear-door.webp",
-        "lines": ["c4_escape.van.01"]
+        "lines": [
+          "c4_escape.van.01"
+        ]
       },
       {
         "file": "res://assets/illustrated/campaign/stills/c4_escape-jump.webp",
@@ -1080,7 +1188,29 @@
         0.04,
         0.46
       ]
-    }
+    },
+    "stills": [
+      {
+        "file": "res://assets/illustrated/campaign/stills/p_meeting-sentinel.webp",
+        "lines": [
+          "c8_lab.in.01",
+          "c8_lab.notebook.01",
+          "c8_lab.notebook.02",
+          "c8_lab.notebook.find"
+        ]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/stills/c8_lab-spliced-voice.webp",
+        "lines": [
+          "c8_lab.out.03",
+          "c8_lab.out.01",
+          "c8_lab.out.04",
+          "c8_lab.out.05",
+          "c8_lab.out.02",
+          "c8_lab.out.06"
+        ]
+      }
+    ]
   },
   "c8_beach": {
     "light": "ebcfae",
@@ -1098,7 +1228,24 @@
       "steve"
     ],
     "resident": "saren",
-    "bridge": "res://assets/illustrated/campaign/bridges/c8_beach-c8_rig.webp"
+    "bridge": "res://assets/illustrated/campaign/bridges/c8_beach-c8_rig.webp",
+    "stills": [
+      {
+        "file": "res://assets/illustrated/campaign/stills/c8_beach-standoff.webp",
+        "lines": [
+          "c8_beach.in.01",
+          "c8_beach.in.03",
+          "c8_beach.in.02",
+          "c8_beach.in.04",
+          "c8_beach.refuse.01",
+          "c8_beach.refuse.find",
+          "c8_beach.out.01",
+          "c8_beach.out.04",
+          "c8_beach.out.02",
+          "c8_beach.out.03"
+        ]
+      }
+    ]
   },
   "c8_rig": {
     "light": "f3bd80",
@@ -1125,7 +1272,23 @@
         0.82,
         0.54
       ]
-    }
+    },
+    "stills": [
+      {
+        "file": "res://assets/illustrated/campaign/stills/c8_rig-theatrical-reactor.webp",
+        "lines": [
+          "c8_rig.rig.01",
+          "c8_rig.rig.02",
+          "c8_rig.rig.find",
+          "c8_rig.recap.01",
+          "c8_rig.recap.02",
+          "c8_rig.out.01",
+          "c8_rig.out.02",
+          "c8_rig.out.03",
+          "c8_rig.out.04"
+        ]
+      }
+    ]
   },
   "c9_gallery": {
     "light": "ffd09c",
@@ -1146,6 +1309,7 @@
     ],
     "off_camera_lines": [
       "c9_gallery.in.01",
+      "c9_gallery.in.04",
       "c9_gallery.out.03",
       "c9_gallery.talk.guard.1.01",
       "c9_gallery.talk.guard.1.03"
@@ -1164,6 +1328,20 @@
         "until": "c9_gallery.link.02",
         "painted": [
           "nora"
+        ]
+      }
+    ],
+    "appearances": {
+      "iris": "iris_gallery"
+    },
+    "stills": [
+      {
+        "file": "res://assets/illustrated/campaign/stills/c9_gallery-link-break.webp",
+        "lines": [
+          "c9_gallery.link.03",
+          "c9_gallery.link.01",
+          "c9_gallery.link.02",
+          "c9_gallery.link.find"
         ]
       }
     ]
@@ -1213,8 +1391,52 @@
         "until": "c9_wake.agnes"
       }
     ],
+    "stills": [
+      {
+        "file": "res://assets/illustrated/campaign/stills/c9_wake-frank-wakes.webp",
+        "lines": [
+          "c9_wake.frank.01",
+          "c9_wake.frank.02",
+          "c9_wake.frank.find"
+        ]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/stills/c9_wake-helen-wakes.webp",
+        "lines": [
+          "c9_wake.helen.01",
+          "c9_wake.helen.02",
+          "c9_wake.helen.find"
+        ]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/stills/c9_wake-rook-wakes.webp",
+        "lines": [
+          "c9_wake.rook.01",
+          "c9_wake.rook.02",
+          "c9_wake.rook.03",
+          "c9_wake.rook.find"
+        ]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/stills/c9_wake-agnes-wakes.webp",
+        "lines": [
+          "c9_wake.agnes.01",
+          "c9_wake.agnes.02",
+          "c9_wake.agnes.03",
+          "c9_wake.agnes.04",
+          "c9_wake.agnes.find"
+        ]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/stills/c9_wake-cardigan.webp",
+        "lines": [
+          "c9_wake.recap.01"
+        ]
+      }
+    ],
     "appearances": {
-      "frank": "frank_standing"
+      "frank": "frank_standing",
+      "rook": "rook_pajamas"
     }
   },
   "c9_choir": {
@@ -1233,7 +1455,8 @@
       "steve",
       "helen",
       "frank",
-      "calder"
+      "calder",
+      "nora"
     ],
     "stills": [
       {
@@ -1254,7 +1477,54 @@
         "lines": [
           "c9_choir.in.02",
           "c9_choir.in.06",
-          "c9_choir.in.07"
+          "c9_choir.in.07",
+          "c9_choir.in.08",
+          "c9_choir.in.09"
+        ]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/stills/c9_choir-awakening.webp",
+        "lines": [
+          "c9_choir.truth.01",
+          "c9_choir.truth.find",
+          "c9_choir.recap.01"
+        ]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/stills/c9_choir-wick-rises.webp",
+        "lines": [
+          "c9_choir.wick.lead.01",
+          "c9_choir.wick.lead.02",
+          "c9_choir.wick.lead.03",
+          "c9_choir.wick.lead.04",
+          "c9_choir.wick.lead.05",
+          "c9_choir.wick.01"
+        ]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/stills/c9_choir-seven-worlds.webp",
+        "lines": [
+          "c9_choir.wick.02",
+          "c9_choir.wick.03",
+          "c9_choir.wick.04",
+          "c9_choir.wick.find",
+          "c9_choir.recap.02"
+        ]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/stills/c9_choir-boat-note.webp",
+        "lines": [
+          "c9_choir.note.01",
+          "c9_choir.note.02",
+          "c9_choir.note.find"
+        ]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/stills/c9_choir-vigil.webp",
+        "lines": [
+          "c9_choir.out.04",
+          "c9_choir.out.05",
+          "c9_choir.out.06"
         ]
       }
     ],
@@ -1263,9 +1533,9 @@
         "id": "wick",
         "foot": [
           0.57,
-          0.585
+          0.62
         ],
-        "width": 0.075,
+        "width": 0.09,
         "lines": [
           "c9_choir.wick.lead.01",
           "c9_choir.wick.lead.02",
@@ -1273,7 +1543,9 @@
           "c9_choir.wick.lead.04",
           "c9_choir.wick.lead.05",
           "c9_choir.wick.01",
-          "c9_choir.wick.02"
+          "c9_choir.wick.02",
+          "c9_choir.wick.03",
+          "c9_choir.wick.04"
         ]
       }
     ],
@@ -1345,7 +1617,31 @@
         "c10_town.in.08",
         "c10_town.in.09"
       ]
-    }
+    },
+    "stills": [
+      {
+        "file": "res://assets/illustrated/campaign/stills/c10_town-wind-bucket.webp",
+        "lines": [
+          "c10_town.in.04",
+          "c10_town.out.01",
+          "c10_town.in.05",
+          "c10_town.in.06",
+          "c10_town.out.03",
+          "c10_town.in.07",
+          "c10_town.in.08",
+          "c10_town.in.09",
+          "c10_town.wind.01",
+          "c10_town.wind.find",
+          "c10_town.recap.01"
+        ]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/stills/p_veyr-dying-star.webp",
+        "lines": [
+          "c10_town.in.10"
+        ]
+      }
+    ]
   },
   "c10_live": {
     "light": "dbaa79",
@@ -1393,6 +1689,27 @@
       "c10_live.third.01": "c10_live.third"
     },
     "stills": [
+      {
+        "file": "res://assets/illustrated/campaign/stills/c10_live-harbor-lights.webp",
+        "lines": [
+          "c10_live.first.01",
+          "c10_live.first.02",
+          "c10_live.first.find",
+          "c10_live.third.01",
+          "c10_live.third.02",
+          "c10_live.third.03",
+          "c10_live.third.find",
+          "c10_live.recap.01",
+          "c10_live.recap.02"
+        ]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/stills/p_veyr-dying-star.webp",
+        "lines": [
+          "c10_live.third.lead.01",
+          "c10_live.third.lead.02"
+        ]
+      },
       {
         "file": "res://assets/illustrated/campaign/stills/c10_live-pier.webp",
         "lines": [
@@ -1445,7 +1762,33 @@
       "c10_report.report": "c10_report.report"
     },
     "chapter_insert": true,
-    "off_camera_lines": []
+    "off_camera_lines": [],
+    "stills": [
+      {
+        "file": "res://assets/illustrated/campaign/stills/c10_report-on-air.webp",
+        "lines": [
+          "c10_report.echo.01",
+          "c10_report.echo.02",
+          "c10_report.echo.find",
+          "c10_report.report.01",
+          "c10_report.report.02",
+          "c10_report.report.03",
+          "c10_report.report.find",
+          "c10_report.recap.01"
+        ]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/stills/c10_report-departure.webp",
+        "lines": [
+          "c10_report.out.01",
+          "c10_report.out.02",
+          "c10_report.out.03",
+          "c10_report.out.04",
+          "c10_report.out.05",
+          "c10_report.out.06"
+        ]
+      }
+    ]
   },
   "epilogue": {
     "appearances": {

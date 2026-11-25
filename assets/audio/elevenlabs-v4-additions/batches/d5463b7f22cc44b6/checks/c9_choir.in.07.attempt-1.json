@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c9_choir.in.07",
+  "attempt": 1,
+  "plan_sha256": "d5463b7f22cc44b6124e00663543928deec2800a647d84f1f65da9b8bbf060b4",
+  "wav_sha256": "9f4d5614650d3b65403413a4535351c07ed594760f95f19ec332bf6705f799f3",
+  "expected": "The Prefect commands the crew. The Choir holds the law above the Prefect. When a record contradicts the mission, your seal is suspended, Saren. Every mind in this hall is witness.",
+  "recognized": "The Prefect commands the crew. The choir holds the law above the Prefect. When a record contradicts the mission, your seal is suspended, Saren. Every mind in this hall is witness.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 13.92,
+  "sample_rate": 48000,
+  "peak": 0.848480224609375,
+  "rms": 0.14076269445591824,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

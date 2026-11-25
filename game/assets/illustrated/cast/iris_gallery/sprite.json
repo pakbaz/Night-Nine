@@ -1,0 +1,43 @@
+{
+  "base": "iris_gallery.webp",
+  "source": "assets/characters/campaign/masters/iris_gallery.png",
+  "source_sha256": "b5dd22f273f8514740dee99b724fad9b74299318b3274a807b1a700526740fab",
+  "size": [
+    810,
+    1080
+  ],
+  "origin": "top_left",
+  "foot_anchor": [
+    405,
+    1080
+  ],
+  "frames": {},
+  "cue_frames": {
+    "X": null,
+    "A": null,
+    "B": null,
+    "C": null,
+    "D": null,
+    "E": null,
+    "F": null,
+    "G": null,
+    "H": null
+  },
+  "sha256": {
+    "iris_gallery.webp": "e70eaa0ca6a1224604faffc7451c60fb089c0147f00b16aa512d16c4532286c6"
+  },
+  "eye_centers": [
+    [
+      378,
+      225
+    ],
+    [
+      467,
+      218
+    ]
+  ],
+  "mouth_center": [
+    434,
+    316
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c9_gallery.talk.iris.1.03",
+  "attempt": 1,
+  "plan_sha256": "48fb2d6b33e357f14a725688d35988e4c5c277b317e41072eb6099d97823dd4b",
+  "wav_sha256": "358036b91695ef47f40bf3c5d5f355c7879b5cb14ebff51013658b1394293f2d",
+  "expected": "And what name is that?",
+  "recognized": "And what name is that?",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 1.68,
+  "sample_rate": 48000,
+  "peak": 0.591796875,
+  "rms": 0.06458202889449027,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

@@ -1,0 +1,28 @@
+{
+  "schema": 1,
+  "audio_id": "c9_gallery.in.03",
+  "attempt": 1,
+  "plan_sha256": "48fb2d6b33e357f14a725688d35988e4c5c277b317e41072eb6099d97823dd4b",
+  "wav_sha256": "5be10cc4583491b0521424c4336e8ed6bc305f3e4e2e78648e8c3e1ed7d9ddad",
+  "expected": "I know you have every right to hate me, Nora. It was never personal. I am Veyri. They built me from your record without asking either of us, and I can break the link right now so you get your life back.",
+  "recognized": "I know you have every right to hate me, Nora. It was never personal. I am Very. They built me from your record without asking either of us, and I can break the link right now so you get your life back.",
+  "local_recognized": "I know you have every right to hate me, Nora. It was never personal. I am very. They built me from your record without asking either of us. And I can break the link right now so you get your life back.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 13.12,
+  "sample_rate": 48000,
+  "peak": 0.55950927734375,
+  "rms": 0.06584618431527793,
+  "level_match_gain_db": 0.0,
+  "word_edits": 1,
+  "word_error_rate": 0.023809523809523808,
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c9_gallery.in.03.json",
+    "sha256": "4fcb5fa7383533eef5eb4a3cd0f5e7cb5f347b4762c3f48850c34a208cb7b833",
+    "model": "scribe_v3",
+    "word_edits": 1,
+    "listening_reviewed": false
+  },
+  "status": "manual_review_passed",
+  "failure_reason": null,
+  "manual_review_note": "Both local Whisper and independent Scribe v3 matched every word verbatim except the invented species proper noun Veyri (spelled Very/Vari), matching frozen takes c6_iris.takes.04 and c9_choir.recap.02."
+}

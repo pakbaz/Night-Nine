@@ -1,0 +1,310 @@
+{
+  "schema": 1,
+  "batch": "later-additions",
+  "model_id": "eleven_v4",
+  "output_format": "mp3_44100_192",
+  "inputs": {
+    "campaign": "9037e0f4a38759b3dd8d0ac18dddad46725cf9c735dd691c70bcde37617cbf17",
+    "storybook": "7bd0d4ec4839602c067cf0a29bfd5f88425229c73903aaf38c1be69313a17866",
+    "voice_manifest": "506fa285b88382be5f1277b6e713782cdd396bee1433c226b9890672a03e0211",
+    "casting": "cb91065c437c743d50eea2958d5149a6d0a35b9d20430a66cb8a548b921246db",
+    "existing_additions": "b32d2cdec24c4dc38273f9e2b6485b0e677132fb164a8b4214119fb53b011a0b"
+  },
+  "ordered_audio_ids": [
+    "c9_choir.in.06",
+    "c9_choir.in.07",
+    "c9_choir.in.08",
+    "c9_choir.in.09",
+    "c9_choir.wick.03",
+    "c9_choir.wick.04",
+    "c9_choir.wick.lead.01",
+    "c9_choir.wick.lead.02",
+    "c9_choir.wick.lead.04"
+  ],
+  "items": {
+    "c9_choir.in.06": {
+      "audio_id": "c9_choir.in.06",
+      "kind": "campaign",
+      "scene": "c9_choir",
+      "speaker": "saren",
+      "cast_role": "saren",
+      "voice_id": "zWuETeFKPJFmK8TgAMRf",
+      "text": "You do not override a Prefect’s scan. The command seal is mine!",
+      "text_sha256": "7bfe9df039ddecd76bfd3c0b90a12750b7e84910d1f5c83f1b9baf93f751d7ef",
+      "synthesis_text": "You do not override a Prefect’s scan. The command seal is mine!",
+      "synthesis_text_sha256": "7bfe9df039ddecd76bfd3c0b90a12750b7e84910d1f5c83f1b9baf93f751d7ef",
+      "delivery": "live",
+      "direction": "shocked and furious at the console",
+      "v4_audio_tag": "",
+      "previous_text": "Stop.",
+      "next_text": "The Prefect commands the crew. The Choir holds the law above the Prefect. When a record contradicts the mission, your seal is suspended, Saren. Every mind in this hall is witness.",
+      "voice_settings": {
+        "stability": 0.46,
+        "similarity_boost": 0.78
+      },
+      "language_code": "en",
+      "model_id": "eleven_v4",
+      "output_format": "mp3_44100_192",
+      "estimated_credit_rate": 1.0,
+      "estimated_credits": 63,
+      "attempt_seeds": [
+        3497950599,
+        59923146,
+        3135492006
+      ]
+    },
+    "c9_choir.in.07": {
+      "audio_id": "c9_choir.in.07",
+      "kind": "campaign",
+      "scene": "c9_choir",
+      "speaker": "choir",
+      "cast_role": "choir",
+      "voice_id": "ksryVoNAGZT8GxWCTiVm",
+      "text": "The Prefect commands the crew. The Choir holds the law above the Prefect. When a record contradicts the mission, your seal is suspended, Saren. Every mind in this hall is witness.",
+      "text_sha256": "6dde3ea716d23a2e5823d3c145704f0016513eb47cc4e43bf982d572e469b4f7",
+      "synthesis_text": "The Prefect commands the crew. The Choir holds the law above the Prefect. When a record contradicts the mission, your seal is suspended, Saren. Every mind in this hall is witness.",
+      "synthesis_text_sha256": "6dde3ea716d23a2e5823d3c145704f0016513eb47cc4e43bf982d572e469b4f7",
+      "delivery": "live",
+      "direction": "resonant, absolute authority",
+      "v4_audio_tag": "",
+      "previous_text": "You do not override a Prefect’s scan. The command seal is mine!",
+      "next_text": "The crystal column flared molten gold from floor to vault. The scan straps snapped open, the armed crew froze at their stations, and even Prefect Saren staggered back from the locked console.",
+      "voice_settings": {
+        "stability": 0.46,
+        "similarity_boost": 0.78
+      },
+      "language_code": "en",
+      "model_id": "eleven_v4",
+      "output_format": "mp3_44100_192",
+      "estimated_credit_rate": 1.0,
+      "estimated_credits": 179,
+      "attempt_seeds": [
+        50124340,
+        1711291281,
+        268480065
+      ]
+    },
+    "c9_choir.in.08": {
+      "audio_id": "c9_choir.in.08",
+      "kind": "campaign",
+      "scene": "c9_choir",
+      "speaker": "steve",
+      "cast_role": "steve",
+      "voice_id": "vveagfomyMCJLZsOPRP2",
+      "text": "The crystal column flared molten gold from floor to vault. The scan straps snapped open, the armed crew froze at their stations, and even Prefect Saren staggered back from the locked console.",
+      "text_sha256": "9f4b4ed9487bfcb9a205e952189c58f8dab6023751cbc03ad5b8929a5fd96a5a",
+      "synthesis_text": "The crystal column flared molten gold from floor to vault. The scan straps snapped open, the armed crew froze at their stations, and even Prefect Saren staggered back from the locked console.",
+      "synthesis_text_sha256": "9f4b4ed9487bfcb9a205e952189c58f8dab6023751cbc03ad5b8929a5fd96a5a",
+      "delivery": "narration",
+      "direction": "",
+      "v4_audio_tag": "",
+      "previous_text": "The Prefect commands the crew. The Choir holds the law above the Prefect. When a record contradicts the mission, your seal is suspended, Saren. Every mind in this hall is witness.",
+      "next_text": "We followed you down from row nine. Every security bulkhead just unlocked. Nobody even tried to stop us.",
+      "voice_settings": {
+        "stability": 0.62,
+        "similarity_boost": 0.78
+      },
+      "language_code": "en",
+      "model_id": "eleven_v4",
+      "output_format": "mp3_44100_192",
+      "estimated_credit_rate": 1.0,
+      "estimated_credits": 191,
+      "attempt_seeds": [
+        3868608145,
+        44646157,
+        2896679878
+      ]
+    },
+    "c9_choir.in.09": {
+      "audio_id": "c9_choir.in.09",
+      "kind": "campaign",
+      "scene": "c9_choir",
+      "speaker": "calder",
+      "cast_role": "calder",
+      "voice_id": "wa4sQVgbDDzUDEzJwch3",
+      "text": "We followed you down from row nine. Every security bulkhead just unlocked. Nobody even tried to stop us.",
+      "text_sha256": "edbe8ddfad28eddf201c6b917fda74526ee4f6837e5c075fcd791efba5e88b7b",
+      "synthesis_text": "We followed you down from row nine. Every security bulkhead just unlocked. Nobody even tried to stop us.",
+      "synthesis_text_sha256": "edbe8ddfad28eddf201c6b917fda74526ee4f6837e5c075fcd791efba5e88b7b",
+      "delivery": "live",
+      "direction": "arriving with Helen, Frank and Nora, out of breath",
+      "v4_audio_tag": "",
+      "previous_text": "The crystal column flared molten gold from floor to vault. The scan straps snapped open, the armed crew froze at their stations, and even Prefect Saren staggered back from the locked console.",
+      "next_text": "Four thousand years of unchanged records. Three hundred and twelve human lives. Show us one record that changed, and we will choose.",
+      "voice_settings": {
+        "stability": 0.46,
+        "similarity_boost": 0.78
+      },
+      "language_code": "en",
+      "model_id": "eleven_v4",
+      "output_format": "mp3_44100_192",
+      "estimated_credit_rate": 1.0,
+      "estimated_credits": 104,
+      "attempt_seeds": [
+        2756187898,
+        576715398,
+        3869820549
+      ]
+    },
+    "c9_choir.wick.03": {
+      "audio_id": "c9_choir.wick.03",
+      "kind": "campaign",
+      "scene": "c9_choir",
+      "speaker": "choir",
+      "cast_role": "choir",
+      "voice_id": "ksryVoNAGZT8GxWCTiVm",
+      "text": "Three hundred years ago we thought Tirel fell silent out of malice. Wick says they shut down their beacons after watching our copies replace their own crews.",
+      "text_sha256": "9bf9858ac21414e2a931044e75c19a3c0e5cc2817334e1969ce381811949c0c3",
+      "synthesis_text": "Three hundred years ago we thought Tirel fell silent out of malice. Wick says they shut down their beacons after watching our copies replace their own crews.",
+      "synthesis_text_sha256": "9bf9858ac21414e2a931044e75c19a3c0e5cc2817334e1969ce381811949c0c3",
+      "delivery": "live",
+      "direction": "",
+      "v4_audio_tag": "",
+      "previous_text": "Tirel hid. All seven worlds hid. They watched you erase yourselves and were afraid you would erase them.",
+      "next_text": "Nine hundred years of two sides terrified of the dark, and all it took was somebody finally listening.",
+      "voice_settings": {
+        "stability": 0.46,
+        "similarity_boost": 0.78
+      },
+      "language_code": "en",
+      "model_id": "eleven_v4",
+      "output_format": "mp3_44100_192",
+      "estimated_credit_rate": 1.0,
+      "estimated_credits": 157,
+      "attempt_seeds": [
+        1845826758,
+        2810074284,
+        4247759606
+      ]
+    },
+    "c9_choir.wick.04": {
+      "audio_id": "c9_choir.wick.04",
+      "kind": "campaign",
+      "scene": "c9_choir",
+      "speaker": "frank",
+      "cast_role": "frank",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "Nine hundred years of two sides terrified of the dark, and all it took was somebody finally listening.",
+      "text_sha256": "b22aba0209323f5c74a6639fffcb6cd9a27832fe1b165be7c2f8b99522b1a5b3",
+      "synthesis_text": "Nine hundred years of two sides terrified of the dark, and all it took was somebody finally listening.",
+      "synthesis_text_sha256": "b22aba0209323f5c74a6639fffcb6cd9a27832fe1b165be7c2f8b99522b1a5b3",
+      "delivery": "live",
+      "direction": "",
+      "v4_audio_tag": "",
+      "previous_text": "Three hundred years ago we thought Tirel fell silent out of malice. Wick says they shut down their beacons after watching our copies replace their own crews.",
+      "next_text": "Page 12: two joined strokes rising, a gap, one long low stroke, and then it starts again. Mom followed Wick from phrase to phrase. Tirel was never destroyed. It hid. They all hid.",
+      "voice_settings": {
+        "stability": 0.46,
+        "similarity_boost": 0.78
+      },
+      "language_code": "en",
+      "model_id": "eleven_v4",
+      "output_format": "mp3_44100_192",
+      "estimated_credit_rate": 1.0,
+      "estimated_credits": 102,
+      "attempt_seeds": [
+        3422908616,
+        361889853,
+        3254288368
+      ]
+    },
+    "c9_choir.wick.lead.01": {
+      "audio_id": "c9_choir.wick.lead.01",
+      "kind": "campaign",
+      "scene": "c9_choir",
+      "speaker": "steve",
+      "cast_role": "steve",
+      "voice_id": "vveagfomyMCJLZsOPRP2",
+      "text": "The frost on Row Zero shattered in a cloud of silver mist. Something tall and luminous stepped out for the first time in three hundred years. It looked straight at Mom, and it bowed.",
+      "text_sha256": "b0f1bc9c6ff3361e35d210476f66564e5195016edd92f8abeac271056e313566",
+      "synthesis_text": "The frost on Row Zero shattered in a cloud of silver mist. Something tall and luminous stepped out for the first time in three hundred years. It looked straight at Mom, and it bowed.",
+      "synthesis_text_sha256": "b0f1bc9c6ff3361e35d210476f66564e5195016edd92f8abeac271056e313566",
+      "delivery": "narration",
+      "direction": "",
+      "v4_audio_tag": "",
+      "previous_text": "Nora’s good morning and Rook’s line were recordings, played back. Iris chose her words twice, differently. The same voice that once replayed Nora now speaks for itself. The Choir heard a record change, and chose.",
+      "next_text": "Row Zero holds the last emissary of Tirel, taken three hundred years ago when our fleet searched their sky. We call it Wick. It never stopped dreaming, and its song bled into our hull hum.",
+      "voice_settings": {
+        "stability": 0.62,
+        "similarity_boost": 0.78
+      },
+      "language_code": "en",
+      "model_id": "eleven_v4",
+      "output_format": "mp3_44100_192",
+      "estimated_credit_rate": 1.0,
+      "estimated_credits": 182,
+      "attempt_seeds": [
+        2418440308,
+        2082711207,
+        3865746335
+      ]
+    },
+    "c9_choir.wick.lead.02": {
+      "audio_id": "c9_choir.wick.lead.02",
+      "kind": "campaign",
+      "scene": "c9_choir",
+      "speaker": "choir",
+      "cast_role": "choir",
+      "voice_id": "ksryVoNAGZT8GxWCTiVm",
+      "text": "Row Zero holds the last emissary of Tirel, taken three hundred years ago when our fleet searched their sky. We call it Wick. It never stopped dreaming, and its song bled into our hull hum.",
+      "text_sha256": "a53e5ebd83c2ef929434ad556c3172a248e9cffbccab84df7741a2c943f4fe26",
+      "synthesis_text": "Row Zero holds the last emissary of Tirel, taken three hundred years ago when our fleet searched their sky. We call it Wick. It never stopped dreaming, and its song bled into our hull hum.",
+      "synthesis_text_sha256": "a53e5ebd83c2ef929434ad556c3172a248e9cffbccab84df7741a2c943f4fe26",
+      "delivery": "live",
+      "direction": "",
+      "v4_audio_tag": "",
+      "previous_text": "The frost on Row Zero shattered in a cloud of silver mist. Something tall and luminous stepped out for the first time in three hundred years. It looked straight at Mom, and it bowed.",
+      "next_text": "That’s the one under the frost. It hums when you talk to it.",
+      "voice_settings": {
+        "stability": 0.46,
+        "similarity_boost": 0.78
+      },
+      "language_code": "en",
+      "model_id": "eleven_v4",
+      "output_format": "mp3_44100_192",
+      "estimated_credit_rate": 1.0,
+      "estimated_credits": 188,
+      "attempt_seeds": [
+        2556668894,
+        378064364,
+        4276875042
+      ]
+    },
+    "c9_choir.wick.lead.04": {
+      "audio_id": "c9_choir.wick.lead.04",
+      "kind": "campaign",
+      "scene": "c9_choir",
+      "speaker": "helen",
+      "cast_role": "helen",
+      "voice_id": "5u41aNhyCU6hXOcjPPv0",
+      "text": "That’s the exact phrase on your father’s Reel Eleven, Steven. Two joined notes going up, a brief silence, then one long low note.",
+      "text_sha256": "7f4dd57e405b850d60bdd8d0d6eba2477bb4fcae67701364fdd549ca63dff2ee",
+      "synthesis_text": "That’s the exact phrase on your father’s Reel Eleven, Steven. Two joined notes going up, a brief silence, then one long low note.",
+      "synthesis_text_sha256": "7f4dd57e405b850d60bdd8d0d6eba2477bb4fcae67701364fdd549ca63dff2ee",
+      "delivery": "live",
+      "direction": "",
+      "v4_audio_tag": "",
+      "previous_text": "That’s the one under the frost. It hums when you talk to it.",
+      "next_text": "I wrote it in my margin, Steven. After the low note, it starts all over again.",
+      "voice_settings": {
+        "stability": 0.46,
+        "similarity_boost": 0.78
+      },
+      "language_code": "en",
+      "model_id": "eleven_v4",
+      "output_format": "mp3_44100_192",
+      "estimated_credit_rate": 1.0,
+      "estimated_credits": 129,
+      "attempt_seeds": [
+        1194977706,
+        1177049628,
+        3090364953
+      ]
+    }
+  },
+  "count": 9,
+  "characters": 1295,
+  "request_characters": 1295,
+  "estimated_credits": 1295,
+  "plan_sha256": "d5463b7f22cc44b6124e00663543928deec2800a647d84f1f65da9b8bbf060b4"
+}

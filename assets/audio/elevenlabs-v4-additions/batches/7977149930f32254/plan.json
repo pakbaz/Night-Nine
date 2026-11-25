@@ -1,0 +1,54 @@
+{
+  "schema": 1,
+  "batch": "later-additions",
+  "model_id": "eleven_v4",
+  "output_format": "mp3_44100_192",
+  "inputs": {
+    "campaign": "4092da7ac79bc41865ec7a4775fb754d6f608b8bb93c141df8feacc9dea47e41",
+    "storybook": "7bd0d4ec4839602c067cf0a29bfd5f88425229c73903aaf38c1be69313a17866",
+    "voice_manifest": "629950f3a1c47be27af5fc5a4ce4da74c8f3c469dbe7d005fb49bb16783aba81",
+    "casting": "cb91065c437c743d50eea2958d5149a6d0a35b9d20430a66cb8a548b921246db",
+    "existing_additions": "1138eac09e1a8c4a6b5ad4f1f5cb2e24ec4fb3b55c8361b26860e93d80acb177"
+  },
+  "ordered_audio_ids": [
+    "c9_gallery.in.02"
+  ],
+  "items": {
+    "c9_gallery.in.02": {
+      "audio_id": "c9_gallery.in.02",
+      "kind": "campaign",
+      "scene": "c9_gallery",
+      "speaker": "steve",
+      "cast_role": "steve",
+      "voice_id": "vveagfomyMCJLZsOPRP2",
+      "text": "Nora, breathe. I’m here, and I’m so glad to hear you angry. Just give her ten seconds.",
+      "text_sha256": "122e113113f5b5d54638c084bef69ff3951d075dfdd7321715b2c057802ab8cf",
+      "synthesis_text": "Nora, breathe. I’m here, and I’m so glad to hear you angry. Just give her ten seconds.",
+      "synthesis_text_sha256": "122e113113f5b5d54638c084bef69ff3951d075dfdd7321715b2c057802ab8cf",
+      "delivery": "live",
+      "direction": "",
+      "v4_audio_tag": "",
+      "previous_text": "Steve? Wait—who is that? Why does she have my face?! Five months I’ve been locked in this box, and thirteen months before that when you barely said a word.",
+      "next_text": "I know you have every right to hate me, Nora. It was never personal. I am Veyri. They built me from your record without asking either of us, and I can break the link right now so you get your life back.",
+      "voice_settings": {
+        "stability": 0.46,
+        "similarity_boost": 0.78
+      },
+      "language_code": "en",
+      "model_id": "eleven_v4",
+      "output_format": "mp3_44100_192",
+      "estimated_credit_rate": 1.0,
+      "estimated_credits": 86,
+      "attempt_seeds": [
+        387093062,
+        4058278906,
+        2588212409
+      ]
+    }
+  },
+  "count": 1,
+  "characters": 86,
+  "request_characters": 86,
+  "estimated_credits": 86,
+  "plan_sha256": "7977149930f3225446b283f6adad04224158790111bea14cb0f4838e1729e5e9"
+}

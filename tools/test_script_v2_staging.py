@@ -200,18 +200,70 @@ class ScriptV2StagingTests(unittest.TestCase):
             self.assertIn(f'{sid}-{name}.webp', still_for(stills, line_id), line_id)
 
     def test_choir_lets_steve_go_before_he_walks_and_says_who_followed(self):
-        scene, _, lines = self.scene('c9_choir')
-        self.assertEqual(scene['intro'], ['c9_choir.in.04', 'c9_choir.in.01', 'c9_choir.in.05', 'c9_choir.in.02',
-                                          'c9_choir.in.06', 'c9_choir.in.07', 'c9_choir.in.03'])
-        release, arrival = lines['c9_choir.in.06'], lines['c9_choir.in.07']
+        scene, tasks, lines = self.scene('c9_choir')
+        self.assertEqual(scene['intro'], [
+            'c9_choir.in.04', 'c9_choir.in.01', 'c9_choir.in.05', 'c9_choir.in.02',
+            'c9_choir.in.06', 'c9_choir.in.07', 'c9_choir.in.08', 'c9_choir.in.09', 'c9_choir.in.03',
+        ])
+        protest, override, release, arrival = (
+            lines['c9_choir.in.06'], lines['c9_choir.in.07'], lines['c9_choir.in.08'], lines['c9_choir.in.09']
+        )
+        self.assertEqual(protest['speaker'], 'saren')
+        self.assertEqual(override['speaker'], 'choir')
+        self.assertIn('above the prefect', override['text'].lower(), 'chain of command between Prefect and Choir is explicit')
         self.assertEqual(release['speaker'], 'steve')
         self.assertIn('straps', release['text'].lower(), 'Steve is strapped in the chair until the Choir stops the scan')
         self.assertEqual(arrival['speaker'], 'calder')
         self.assertIn('row nine', arrival['text'].lower(), 'June says how she, Helen, Frank and Nora got down here')
-        self.assert_stills('c9_choir', {'c9_choir.in.04': 'rig-broken', 'c9_choir.in.01': 'scan',
-                                        'c9_choir.in.05': 'scan', 'c9_choir.in.02': 'stop',
-                                        'c9_choir.in.06': 'stop', 'c9_choir.in.07': 'stop'})
+        self.assertIn('emissary of tirel', lines[tasks['c9_choir.wick']['lead'][1]]['text'].lower())
+        self.assertIn('shut down their beacons', lines['c9_choir.wick.03']['text'].lower())
+        self.assert_stills('c9_choir', {
+            'c9_choir.in.04': 'rig-broken', 'c9_choir.in.01': 'scan', 'c9_choir.in.05': 'scan',
+            'c9_choir.in.02': 'stop', 'c9_choir.in.06': 'stop', 'c9_choir.in.07': 'stop',
+            'c9_choir.in.08': 'stop', 'c9_choir.in.09': 'stop',
+            'c9_choir.truth.01': 'awakening', 'c9_choir.wick.lead.01': 'wick-rises',
+            'c9_choir.wick.02': 'seven-worlds', 'c9_choir.note.01': 'boat-note',
+            'c9_choir.out.04': 'vigil',
+        })
         self.assertNotIn('c9_choir.in.02', self.staging['c9_choir'].get('inserts', {}))
+
+    def test_chapter_9_and_10_outfits_reunion_and_key_moment_stills(self):
+        gallery, _, g_lines = self.scene('c9_gallery')
+        self.assertIn('ballast', g_lines[gallery['context'][0]]['text'].lower())
+        self.assertIn('why does she have my face', g_lines['c9_gallery.in.01']['text'].lower())
+        self.assertIn('never personal', g_lines['c9_gallery.in.03']['text'].lower())
+        self.assertEqual(self.staging['c9_gallery'].get('appearances', {}).get('iris'), 'iris_gallery')
+        self.assert_stills('c9_gallery', {'c9_gallery.link.01': 'link-break', 'c9_gallery.link.find': 'link-break'})
+
+        self.assertEqual(self.staging['c9_wake'].get('appearances', {}).get('rook'), 'rook_pajamas')
+        self.assert_stills('c9_wake', {
+            'c9_wake.frank.01': 'frank-wakes', 'c9_wake.helen.01': 'helen-wakes',
+            'c9_wake.rook.01': 'rook-wakes', 'c9_wake.agnes.01': 'agnes-wakes',
+            'c9_wake.recap.01': 'cardigan',
+        })
+        people = json.loads((script_v2.ROOT / 'game/content/scene-people.json').read_text())
+        self.assertEqual(people['c9_wake']['figures']['rook'][0], 'rook_pajamas')
+        self.assertNotIn('figures', people['c10_station'], 'c10_station cast are painted into the booth, not floating sprites')
+        self.assertEqual(set(people['c10_station']['painted']), {'wen', 'stephen', 'frank'})
+        self.assertNotIn('figures', people['one_year'], 'one_year cast are painted naturally into the morning studio')
+        self.assertEqual(set(people['one_year']['painted']), {'nora', 'stephen', 'tomas'})
+        self.assertEqual(set(people['epilogue']['figures']), {'iris'})
+        self.assertTrue({'lyle', 'carmen', 'dale', 'helen', 'rook', 'gus'}.issubset(people['epilogue']['painted']))
+
+        for sid, line_id, expected_file in (
+            ('c1_flat', 'c1_flat.compare.01', 'c1_flat-same-waveform.webp'),
+            ('c3_archive', 'c3_archive.cycle.01', 'c3_archive-reel-eleven.webp'),
+            ('c8_lab', 'c8_lab.in.01', 'p_meeting-sentinel.webp'),
+            ('c8_lab', 'c8_lab.out.01', 'c8_lab-spliced-voice.webp'),
+            ('c8_beach', 'c8_beach.in.01', 'c8_beach-standoff.webp'),
+            ('c8_rig', 'c8_rig.rig.01', 'c8_rig-theatrical-reactor.webp'),
+            ('c10_town', 'c10_town.in.04', 'c10_town-wind-bucket.webp'),
+            ('c10_town', 'c10_town.in.10', 'p_veyr-dying-star.webp'),
+            ('c10_live', 'c10_live.first.01', 'c10_live-harbor-lights.webp'),
+            ('c10_report', 'c10_report.echo.01', 'c10_report-on-air.webp'),
+            ('c10_report', 'c10_report.out.04', 'c10_report-departure.webp'),
+        ):
+            self.assertIn(expected_file, still_for(self.staging[sid].get('stills', []), line_id), line_id)
 
     def test_gate_keeps_the_wanted_man_out_of_sight_until_the_truck_is_through(self):
         scene, tasks, lines = self.scene('c7_gate')

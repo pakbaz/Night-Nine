@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c9_choir.in.08",
+  "attempt": 1,
+  "plan_sha256": "d5463b7f22cc44b6124e00663543928deec2800a647d84f1f65da9b8bbf060b4",
+  "wav_sha256": "b2a5eae2ff5270aed2f444daf8d45f15d1c4e7276f9e832ea35c43d620d820b0",
+  "expected": "The crystal column flared molten gold from floor to vault. The scan straps snapped open, the armed crew froze at their stations, and even Prefect Saren staggered back from the locked console.",
+  "recognized": "The crystal column flared molten gold from floor to vault. The scan straps snapped open, the armed crew froze at their stations, and even Prefect Saren staggered back from the locked console.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 13.44,
+  "sample_rate": 48000,
+  "peak": 0.372711181640625,
+  "rms": 0.04028247494857452,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

@@ -1,0 +1,501 @@
+{
+  "audio_id": "c9_choir.wick.lead.02",
+  "audio_sha256": "584905b81934abcae9045ba0b7bc45d365ff9e1ca5cdc7c6780423d8f49ab469",
+  "file": "assets/audio/elevenlabs-v4-additions/masters/c9_choir.wick.lead.02.attempt-1.wav",
+  "production_plan_sha256": "d5463b7f22cc44b6124e00663543928deec2800a647d84f1f65da9b8bbf060b4",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Row Zero holds the last emissary of Tirel, taken three hundred years ago when our fleet searched their sky. We call it Wick. It never stopped dreaming, and its song bled into our hull hum.",
+  "recognized": "Row zero holds the last emissary of Tyrell, taken 300 years ago when our fleet searched their sky. We call it Wick. It never stopped dreaming, and its song bled into our hull hum.",
+  "word_edits": 1,
+  "request_id": null,
+  "trace_id": "fd156a01aee9d4acdde1103dc8b1734e",
+  "character_cost": "4",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Row zero holds the last emissary of Tyrell, taken 300 years ago when our fleet searched their sky. We call it Wick. It never stopped dreaming, and its song bled into our hull hum.",
+    "words": [
+      {
+        "text": "Row",
+        "start": 0.1,
+        "end": 0.32,
+        "type": "word",
+        "logprob": -0.01284527312964201
+      },
+      {
+        "text": " ",
+        "start": 0.32,
+        "end": 0.44,
+        "type": "spacing",
+        "logprob": -0.044210754334926605
+      },
+      {
+        "text": "zero",
+        "start": 0.44,
+        "end": 0.84,
+        "type": "word",
+        "logprob": -0.044210754334926605
+      },
+      {
+        "text": " ",
+        "start": 0.84,
+        "end": 0.96,
+        "type": "spacing",
+        "logprob": -1.7165990357170813e-05
+      },
+      {
+        "text": "holds",
+        "start": 0.96,
+        "end": 1.28,
+        "type": "word",
+        "logprob": -1.7165990357170813e-05
+      },
+      {
+        "text": " ",
+        "start": 1.28,
+        "end": 1.32,
+        "type": "spacing",
+        "logprob": -1.7881377516459906e-06
+      },
+      {
+        "text": "the",
+        "start": 1.32,
+        "end": 1.42,
+        "type": "word",
+        "logprob": -1.7881377516459906e-06
+      },
+      {
+        "text": " ",
+        "start": 1.42,
+        "end": 1.54,
+        "type": "spacing",
+        "logprob": -1.4185804502631072e-05
+      },
+      {
+        "text": "last",
+        "start": 1.54,
+        "end": 1.9,
+        "type": "word",
+        "logprob": -1.4185804502631072e-05
+      },
+      {
+        "text": " ",
+        "start": 1.9,
+        "end": 2.0,
+        "type": "spacing",
+        "logprob": -0.02648749016225338
+      },
+      {
+        "text": "emissary",
+        "start": 2.0,
+        "end": 2.48,
+        "type": "word",
+        "logprob": -0.016579222761720303
+      },
+      {
+        "text": " ",
+        "start": 2.48,
+        "end": 2.54,
+        "type": "spacing",
+        "logprob": 0.0
+      },
+      {
+        "text": "of",
+        "start": 2.54,
+        "end": 2.64,
+        "type": "word",
+        "logprob": 0.0
+      },
+      {
+        "text": " ",
+        "start": 2.64,
+        "end": 2.68,
+        "type": "spacing",
+        "logprob": -1.0531960725784302
+      },
+      {
+        "text": "Tyrell,",
+        "start": 2.7,
+        "end": 3.2,
+        "type": "word",
+        "logprob": -0.3040207408776041
+      },
+      {
+        "text": " ",
+        "start": 3.2,
+        "end": 3.6,
+        "type": "spacing",
+        "logprob": -6.9141146923357155e-06
+      },
+      {
+        "text": "taken",
+        "start": 3.6,
+        "end": 3.96,
+        "type": "word",
+        "logprob": -6.9141146923357155e-06
+      },
+      {
+        "text": " ",
+        "start": 3.96,
+        "end": 4.04,
+        "type": "spacing",
+        "logprob": -1.537788011773955e-05
+      },
+      {
+        "text": "300",
+        "start": 4.04,
+        "end": 4.76,
+        "type": "word",
+        "logprob": -1.947081860483498e-06
+      },
+      {
+        "text": " ",
+        "start": 4.76,
+        "end": 4.82,
+        "type": "spacing",
+        "logprob": -7.510157047363464e-06
+      },
+      {
+        "text": "years",
+        "start": 4.82,
+        "end": 5.06,
+        "type": "word",
+        "logprob": -7.510157047363464e-06
+      },
+      {
+        "text": " ",
+        "start": 5.06,
+        "end": 5.12,
+        "type": "spacing",
+        "logprob": -2.50339189733495e-06
+      },
+      {
+        "text": "ago",
+        "start": 5.12,
+        "end": 5.46,
+        "type": "word",
+        "logprob": -2.50339189733495e-06
+      },
+      {
+        "text": " ",
+        "start": 5.46,
+        "end": 5.58,
+        "type": "spacing",
+        "logprob": -0.00014149141497910023
+      },
+      {
+        "text": "when",
+        "start": 5.58,
+        "end": 5.7,
+        "type": "word",
+        "logprob": -0.00014149141497910023
+      },
+      {
+        "text": " ",
+        "start": 5.7,
+        "end": 5.76,
+        "type": "spacing",
+        "logprob": -2.3841830625315197e-06
+      },
+      {
+        "text": "our",
+        "start": 5.76,
+        "end": 5.9,
+        "type": "word",
+        "logprob": -2.3841830625315197e-06
+      },
+      {
+        "text": " ",
+        "start": 5.9,
+        "end": 5.98,
+        "type": "spacing",
+        "logprob": -0.003409408265724778
+      },
+      {
+        "text": "fleet",
+        "start": 5.98,
+        "end": 6.32,
+        "type": "word",
+        "logprob": -0.003409408265724778
+      },
+      {
+        "text": " ",
+        "start": 6.32,
+        "end": 6.42,
+        "type": "spacing",
+        "logprob": -0.0003488647344056517
+      },
+      {
+        "text": "searched",
+        "start": 6.42,
+        "end": 6.74,
+        "type": "word",
+        "logprob": -0.0003488647344056517
+      },
+      {
+        "text": " ",
+        "start": 6.74,
+        "end": 6.8,
+        "type": "spacing",
+        "logprob": -1.4424220353248529e-05
+      },
+      {
+        "text": "their",
+        "start": 6.8,
+        "end": 6.96,
+        "type": "word",
+        "logprob": -1.4424220353248529e-05
+      },
+      {
+        "text": " ",
+        "start": 6.96,
+        "end": 7.06,
+        "type": "spacing",
+        "logprob": -5.304672595229931e-05
+      },
+      {
+        "text": "sky.",
+        "start": 7.06,
+        "end": 7.48,
+        "type": "word",
+        "logprob": -4.097713451756135e-05
+      },
+      {
+        "text": " ",
+        "start": 7.48,
+        "end": 7.48,
+        "type": "spacing",
+        "logprob": -3.4570634852570947e-06
+      },
+      {
+        "text": "We",
+        "start": 8.039,
+        "end": 8.16,
+        "type": "word",
+        "logprob": -3.4570634852570947e-06
+      },
+      {
+        "text": " ",
+        "start": 8.16,
+        "end": 8.26,
+        "type": "spacing",
+        "logprob": -7.390948667307384e-06
+      },
+      {
+        "text": "call",
+        "start": 8.26,
+        "end": 8.46,
+        "type": "word",
+        "logprob": -7.390948667307384e-06
+      },
+      {
+        "text": " ",
+        "start": 8.46,
+        "end": 8.52,
+        "type": "spacing",
+        "logprob": -4.768370445162873e-07
+      },
+      {
+        "text": "it",
+        "start": 8.52,
+        "end": 8.66,
+        "type": "word",
+        "logprob": -4.768370445162873e-07
+      },
+      {
+        "text": " ",
+        "start": 8.66,
+        "end": 9.06,
+        "type": "spacing",
+        "logprob": -0.13499943912029266
+      },
+      {
+        "text": "Wick.",
+        "start": 9.06,
+        "end": 9.38,
+        "type": "word",
+        "logprob": -0.10800060033525369
+      },
+      {
+        "text": " ",
+        "start": 9.38,
+        "end": 9.84,
+        "type": "spacing",
+        "logprob": -3.6954811548639555e-06
+      },
+      {
+        "text": "It",
+        "start": 9.84,
+        "end": 9.98,
+        "type": "word",
+        "logprob": -3.6954811548639555e-06
+      },
+      {
+        "text": " ",
+        "start": 9.98,
+        "end": 10.1,
+        "type": "spacing",
+        "logprob": -1.4662635294371285e-05
+      },
+      {
+        "text": "never",
+        "start": 10.1,
+        "end": 10.38,
+        "type": "word",
+        "logprob": -1.4662635294371285e-05
+      },
+      {
+        "text": " ",
+        "start": 10.38,
+        "end": 10.48,
+        "type": "spacing",
+        "logprob": -1.6212332411669195e-05
+      },
+      {
+        "text": "stopped",
+        "start": 10.48,
+        "end": 10.82,
+        "type": "word",
+        "logprob": -1.6212332411669195e-05
+      },
+      {
+        "text": " ",
+        "start": 10.82,
+        "end": 10.9,
+        "type": "spacing",
+        "logprob": -5.769562994828448e-05
+      },
+      {
+        "text": "dreaming,",
+        "start": 10.9,
+        "end": 11.4,
+        "type": "word",
+        "logprob": -0.00020059361769300367
+      },
+      {
+        "text": " ",
+        "start": 11.4,
+        "end": 11.76,
+        "type": "spacing",
+        "logprob": -4.768370445162873e-07
+      },
+      {
+        "text": "and",
+        "start": 11.76,
+        "end": 11.86,
+        "type": "word",
+        "logprob": -4.768370445162873e-07
+      },
+      {
+        "text": " ",
+        "start": 11.86,
+        "end": 11.92,
+        "type": "spacing",
+        "logprob": -8.34461570775602e-06
+      },
+      {
+        "text": "its",
+        "start": 11.92,
+        "end": 12.08,
+        "type": "word",
+        "logprob": -8.34461570775602e-06
+      },
+      {
+        "text": " ",
+        "start": 12.08,
+        "end": 12.18,
+        "type": "spacing",
+        "logprob": -1.7046782886609435e-05
+      },
+      {
+        "text": "song",
+        "start": 12.18,
+        "end": 12.56,
+        "type": "word",
+        "logprob": -1.7046782886609435e-05
+      },
+      {
+        "text": " ",
+        "start": 12.56,
+        "end": 12.62,
+        "type": "spacing",
+        "logprob": -0.00024053541710600257
+      },
+      {
+        "text": "bled",
+        "start": 12.62,
+        "end": 12.98,
+        "type": "word",
+        "logprob": -0.00024053541710600257
+      },
+      {
+        "text": " ",
+        "start": 12.98,
+        "end": 13.04,
+        "type": "spacing",
+        "logprob": -1.0728830375228426e-06
+      },
+      {
+        "text": "into",
+        "start": 13.04,
+        "end": 13.28,
+        "type": "word",
+        "logprob": -1.0728830375228426e-06
+      },
+      {
+        "text": " ",
+        "start": 13.28,
+        "end": 13.32,
+        "type": "spacing",
+        "logprob": -2.7418097943154862e-06
+      },
+      {
+        "text": "our",
+        "start": 13.32,
+        "end": 13.5,
+        "type": "word",
+        "logprob": -2.7418097943154862e-06
+      },
+      {
+        "text": " ",
+        "start": 13.5,
+        "end": 13.56,
+        "type": "spacing",
+        "logprob": -0.0013450870756059885
+      },
+      {
+        "text": "hull",
+        "start": 13.56,
+        "end": 13.78,
+        "type": "word",
+        "logprob": -0.0013450870756059885
+      },
+      {
+        "text": " ",
+        "start": 13.78,
+        "end": 13.86,
+        "type": "spacing",
+        "logprob": -0.05706062540411949
+      },
+      {
+        "text": "hum.",
+        "start": 13.86,
+        "end": 14.14,
+        "type": "word",
+        "logprob": -0.04283921503520105
+      }
+    ],
+    "transcription_id": "au9AQIPGjopLB0felROe",
+    "audio_duration_secs": 14.48
+  },
+  "listening_reviewed": false
+}

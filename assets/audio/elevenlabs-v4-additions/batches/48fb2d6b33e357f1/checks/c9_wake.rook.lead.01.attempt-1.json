@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c9_wake.rook.lead.01",
+  "attempt": 1,
+  "plan_sha256": "48fb2d6b33e357f14a725688d35988e4c5c277b317e41072eb6099d97823dd4b",
+  "wav_sha256": "e9d56ebc1460d34df17b1aa505a159ead2ff98ce9592e7e5e901a76939dfacad",
+  "expected": "That’s Adrian in pod three. They took him straight out of bed. His copy walked off in his suit and badge.",
+  "recognized": "That's Adrian in pod three. They took him straight out of bed. His copy walked off in his suit and badge.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 7.28,
+  "sample_rate": 48000,
+  "peak": 0.48590087890625,
+  "rms": 0.06072326303794806,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

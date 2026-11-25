@@ -420,6 +420,9 @@ def make_snapshot(stage, strict):
     if "c1_flat" in included_floors:
         # Iris uses Nora's walking sheet for the kitchen entrance.
         copy_sources(files, "assets/illustrated/campaign/walk/nora.webp")
+    if "c9_gallery" in included_floors:
+        # Iris wears her own jacket in the Gallery so she is distinct from Nora.
+        copy_sources(files, "assets/illustrated/campaign/walk/iris_gallery-idle.webp")
     resident_roles = {role for layout in included_floors.values() for role in layout.get("residents", {})}
     sprites = GAME / "assets/illustrated/campaign/walk"
     for role in sorted(walking_roles | resident_roles):
@@ -437,6 +440,12 @@ def make_snapshot(stage, strict):
         cast.update(p["id"] for p in d.get("creatures", []))
         if d.get("resident"):
             cast.add(d["resident"])
+        for still in d.get("stills", []):
+            asset(files, still["file"])
+        for layer in d.get("layers", []):
+            asset(files, layer["file"])
+        if d.get("bridge"):
+            asset(files, d["bridge"])
         cutaway_room = d.get("cutaway", {}).get("room")
         if cutaway_room is not None and cutaway_room not in scene_ids:
             raise ValueError(d["cutaway"])

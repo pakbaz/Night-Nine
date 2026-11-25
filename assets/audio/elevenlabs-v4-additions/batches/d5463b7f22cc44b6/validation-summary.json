@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "plan_sha256": "d5463b7f22cc44b6124e00663543928deec2800a647d84f1f65da9b8bbf060b4",
+  "passed": [
+    "c9_choir.in.06",
+    "c9_choir.in.07",
+    "c9_choir.in.08",
+    "c9_choir.in.09",
+    "c9_choir.wick.04",
+    "c9_choir.wick.lead.01",
+    "c9_choir.wick.lead.04"
+  ],
+  "retake_required": {
+    "c9_choir.wick.03": "asr_mismatch",
+    "c9_choir.wick.lead.02": "asr_mismatch"
+  }
+}

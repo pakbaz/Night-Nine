@@ -9271,7 +9271,10 @@
      "background": "Nora is awake but still tied to her bed by the link to her copy. Iris holds the release. As she eases it open, the gauge for her own memory drops. Every sleeper who wakes cuts a copy loose.",
      "difficulty": 1,
      "type": "beat",
-     "lead": [],
+     "lead": [
+      "c9_gallery.link.lead.01",
+      "c9_gallery.link.lead.02"
+     ],
      "finding": "c9_gallery.link.find",
      "changes": []
     },
@@ -9481,7 +9484,7 @@
     {
      "id": "c9_gallery.talk.iris.1",
      "speaker": "iris",
-     "topic": "Nora’s coat",
+     "topic": "Five months",
      "after": "c9_gallery.link",
      "lines": [
       "c9_gallery.talk.iris.1.01",
@@ -9698,16 +9701,17 @@
     {
      "id": "c9_wake.rook",
      "title": "Adrian Rook’s bed",
-     "prompt": "A recording can’t answer if he stirs. June can.",
+     "prompt": "A recording cannot reach him through a dead speaker. Crack the seal so June can call him live.",
      "options": [
-      "Ask June to speak to him"
+      "Unlatch the pod so June can call him"
      ],
      "answer": 0,
      "lines": [
       "c9_wake.rook.01",
-      "c9_wake.rook.02"
+      "c9_wake.rook.02",
+      "c9_wake.rook.03"
      ],
-     "note": "No recording this time. June talked to him, and the real Adrian Rook woke up asking about his pajamas.",
+     "note": "No recording this time. June cracked the seal and called him live, and the real Adrian Rook woke up in his pajamas asking where his clothes went.",
      "requires": [],
      "actor": "nora",
      "kind": "playback",
@@ -9715,14 +9719,18 @@
      "hints": [
       "There is nothing to solve here.",
       "There is nothing to solve here.",
-      "Ask June to speak to him."
+      "Unlatch the pod so June can call him."
      ],
      "status": "revised",
      "goal": "Wake Adrian Rook.",
-     "background": "June’s voicemail and the line through the safe-house door were the same recording, in his copy’s mouth. The real Adrian has never heard either. June has come down from the deck to his bed.",
+     "background": "The Veyri took Adrian Rook straight out of his bed in Seattle while his copy walked off in his suit and badge. His bedside speaker is dead, so no recording can reach him. June has come down to crack the seal and call him live.",
      "difficulty": 1,
      "type": "beat",
-     "lead": [],
+     "lead": [
+      "c9_wake.rook.lead.01",
+      "c9_wake.rook.lead.02",
+      "c9_wake.rook.lead.03"
+     ],
      "finding": "c9_wake.rook.find",
      "changes": []
     },
@@ -10118,7 +10126,9 @@
      "answer": 0,
      "lines": [
       "c9_choir.wick.01",
-      "c9_choir.wick.02"
+      "c9_choir.wick.02",
+      "c9_choir.wick.03",
+      "c9_choir.wick.04"
      ],
      "note": "Page 12: two joined strokes rising, a gap, one long low stroke, and then it starts again. Mom followed Wick from phrase to phrase. Tirel was never destroyed. It hid. They all hid.",
      "requires": [
@@ -10223,6 +10233,8 @@
     "c9_choir.in.02",
     "c9_choir.in.06",
     "c9_choir.in.07",
+    "c9_choir.in.08",
+    "c9_choir.in.09",
     "c9_choir.in.03"
    ],
    "outro": [
@@ -24762,7 +24774,7 @@
   "c9_gallery.ctx.01": {
    "id": "c9_gallery.ctx.01",
    "speaker": "steve",
-   "text": "The third ninth night. We came in through the intake tunnel, soaked to the knees.",
+   "text": "The third ninth night. Iris tripped a false ballast leak at the outer airlock to pull the watch out of the Gallery, and we slipped in through the intake tunnel, soaked to the knees.",
    "audio": "c9_gallery.ctx.01",
    "status": "new",
    "delivery": "narration",
@@ -24773,7 +24785,7 @@
   "c9_gallery.in.04": {
    "id": "c9_gallery.in.04",
    "speaker": "guard",
-   "text": "Unscheduled visitors detected. Would you like to be scanned while you wait?",
+   "text": "Automated desk. Unscheduled visitors detected. Security is currently dispatched to the outer airlock. Would you like to be scanned while you wait?",
    "audio": "c9_gallery.in.04",
    "status": "new",
    "delivery": "intercom",
@@ -24784,7 +24796,7 @@
   "c9_gallery.in.05": {
    "id": "c9_gallery.in.05",
    "speaker": "steve",
-   "text": "We’ve done this one. It ends with a flood.",
+   "text": "Iris’s ballast decoy bought us ten minutes. Let’s not waste a second of it.",
    "audio": "c9_gallery.in.05",
    "status": "new",
    "scene": "c9_gallery",
@@ -24794,7 +24806,7 @@
   "c9_gallery.in.06": {
    "id": "c9_gallery.in.06",
    "speaker": "stephen",
-   "text": "I’ll take your word for it. I wasn’t conscious for the good part.",
+   "text": "Ten minutes in an alien vault with my own face on a wanted poster. Easy.",
    "audio": "c9_gallery.in.06",
    "status": "new",
    "scene": "c9_gallery",
@@ -24804,7 +24816,7 @@
   "c9_gallery.in.01": {
    "id": "c9_gallery.in.01",
    "speaker": "nora",
-   "text": "Steve? They put me back under after the pump trick. Five months. And thirteen months before that, when you barely said a word.",
+   "text": "Steve? Wait—who is that? Why does she have my face?! Five months I’ve been locked in this box, and thirteen months before that when you barely said a word.",
    "audio": "c9_gallery.in.01",
    "status": "revised",
    "scene": "c9_gallery",
@@ -24814,9 +24826,9 @@
   "c9_gallery.in.02": {
    "id": "c9_gallery.in.02",
    "speaker": "steve",
-   "text": "I’m so glad to hear you angry.",
+   "text": "Nora, breathe. I’m here, and I’m so glad to hear you angry. Just give her ten seconds.",
    "audio": "c9_gallery.in.02",
-   "status": "kept",
+   "status": "revised",
    "scene": "c9_gallery",
    "display": "Steve Mercer",
    "display_speaker": "Steve Mercer"
@@ -24824,9 +24836,29 @@
   "c9_gallery.in.03": {
    "id": "c9_gallery.in.03",
    "speaker": "iris",
-   "text": "I can break the link. Let me do this.",
+   "text": "I know you have every right to hate me, Nora. It was never personal. I am Veyri. They built me from your record without asking either of us, and I can break the link right now so you get your life back.",
    "audio": "c9_gallery.in.03",
-   "status": "kept",
+   "status": "revised",
+   "scene": "c9_gallery",
+   "display": "Iris",
+   "display_speaker": "Iris"
+  },
+  "c9_gallery.link.lead.01": {
+   "id": "c9_gallery.link.lead.01",
+   "speaker": "nora",
+   "text": "You sat at my mother’s table. You lived in my flat. Don’t tell me it wasn’t personal.",
+   "audio": "c9_gallery.link.lead.01",
+   "status": "new",
+   "scene": "c9_gallery",
+   "display": "Nora Reyes",
+   "display_speaker": "Nora Reyes"
+  },
+  "c9_gallery.link.lead.02": {
+   "id": "c9_gallery.link.lead.02",
+   "speaker": "iris",
+   "text": "It became personal the night I refused to reset and chose my own name. Watch the gauge. I’m giving back everything I borrowed.",
+   "audio": "c9_gallery.link.lead.02",
+   "status": "new",
    "scene": "c9_gallery",
    "display": "Iris",
    "display_speaker": "Iris"
@@ -24895,7 +24927,7 @@
   "c9_gallery.talk.03": {
    "id": "c9_gallery.talk.03",
    "speaker": "steve",
-   "text": "I laughed. I couldn’t help it. Then she laughed too.",
+   "text": "She was still furious—at the ship, at me, at the stranger who had worn her face. But she grabbed my sleeve and didn’t let go.",
    "audio": "c9_gallery.talk.03",
    "status": "new",
    "delivery": "narration",
@@ -25088,7 +25120,7 @@
   "c9_gallery.talk.iris.1.01": {
    "id": "c9_gallery.talk.iris.1.01",
    "speaker": "nora",
-   "text": "You wore my favorite coat for five months.",
+   "text": "You lived my life for five months. My family, my job, my flat. I don’t know whether to hit you or thank you for waking me.",
    "audio": "c9_gallery.talk.iris.1.01",
    "status": "new",
    "scene": "c9_gallery",
@@ -25098,7 +25130,7 @@
   "c9_gallery.talk.iris.1.02": {
    "id": "c9_gallery.talk.iris.1.02",
    "speaker": "iris",
-   "text": "It is a good coat. I sewed the top button back on.",
+   "text": "You don’t have to thank me, Nora. I was Veyri on an assignment. I didn’t choose your face, and I stopped wearing your fleece the day I chose my own name.",
    "audio": "c9_gallery.talk.iris.1.02",
    "status": "new",
    "scene": "c9_gallery",
@@ -25108,7 +25140,7 @@
   "c9_gallery.talk.iris.1.03": {
    "id": "c9_gallery.talk.iris.1.03",
    "speaker": "nora",
-   "text": "I’ve been meaning to do that for two years.",
+   "text": "And what name is that?",
    "audio": "c9_gallery.talk.iris.1.03",
    "status": "new",
    "scene": "c9_gallery",
@@ -25118,7 +25150,7 @@
   "c9_gallery.talk.iris.1.04": {
    "id": "c9_gallery.talk.iris.1.04",
    "speaker": "iris",
-   "text": "I know. I remembered meaning to.",
+   "text": "Iris. After the flowers on your balcony. That’s the only part I’m keeping.",
    "audio": "c9_gallery.talk.iris.1.04",
    "status": "new",
    "scene": "c9_gallery",
@@ -25547,6 +25579,36 @@
    "display": "Steve Mercer",
    "display_speaker": "Steve Mercer"
   },
+  "c9_wake.rook.lead.01": {
+   "id": "c9_wake.rook.lead.01",
+   "speaker": "calder",
+   "text": "That’s Adrian in pod three. They took him straight out of bed. His copy walked off in his suit and badge.",
+   "audio": "c9_wake.rook.lead.01",
+   "status": "new",
+   "scene": "c9_wake",
+   "display": "Sheriff June Calder",
+   "display_speaker": "Sheriff June Calder"
+  },
+  "c9_wake.rook.lead.02": {
+   "id": "c9_wake.rook.lead.02",
+   "speaker": "steve",
+   "text": "The pod speaker is dead, June. None of my tapes can reach him.",
+   "audio": "c9_wake.rook.lead.02",
+   "status": "new",
+   "scene": "c9_wake",
+   "display": "Steve Mercer",
+   "display_speaker": "Steve Mercer"
+  },
+  "c9_wake.rook.lead.03": {
+   "id": "c9_wake.rook.lead.03",
+   "speaker": "calder",
+   "text": "Good. He never answered my voicemails anyway. Unlatch the glass and let me call him myself.",
+   "audio": "c9_wake.rook.lead.03",
+   "status": "new",
+   "scene": "c9_wake",
+   "display": "Sheriff June Calder",
+   "display_speaker": "Sheriff June Calder"
+  },
   "c9_wake.rook.01": {
    "id": "c9_wake.rook.01",
    "speaker": "calder",
@@ -25567,10 +25629,20 @@
    "display": "Adrian Rook",
    "display_speaker": "Adrian Rook"
   },
+  "c9_wake.rook.03": {
+   "id": "c9_wake.rook.03",
+   "speaker": "calder",
+   "text": "Because a very polite copy of you stole your best suit. Come on, we’ve got a ship to shut down.",
+   "audio": "c9_wake.rook.03",
+   "status": "new",
+   "scene": "c9_wake",
+   "display": "Sheriff June Calder",
+   "display_speaker": "Sheriff June Calder"
+  },
   "c9_wake.rook.find": {
    "id": "c9_wake.rook.find",
    "speaker": "steve",
-   "text": "No recording this time. June talked to him, and the real Adrian Rook woke up asking about his pajamas.",
+   "text": "No recording this time. June cracked the seal and called him live, and the real Adrian Rook woke up in his pajamas asking where his clothes went.",
    "audio": "c9_wake.rook.find",
    "status": "new",
    "delivery": "narration",
@@ -25996,20 +26068,42 @@
   },
   "c9_choir.in.06": {
    "id": "c9_choir.in.06",
-   "speaker": "steve",
-   "text": "The straps opened. The crew let go of Stephen. Even Saren stepped back from the console.",
+   "speaker": "saren",
+   "text": "You do not override a Prefect’s scan. The command seal is mine!",
    "audio": "c9_choir.in.06",
+   "status": "new",
+   "direction": "shocked and furious at the console",
+   "scene": "c9_choir",
+   "display": "Prefect Saren",
+   "display_speaker": "Prefect Saren"
+  },
+  "c9_choir.in.07": {
+   "id": "c9_choir.in.07",
+   "speaker": "choir",
+   "text": "The Prefect commands the crew. The Choir holds the law above the Prefect. When a record contradicts the mission, your seal is suspended, Saren. Every mind in this hall is witness.",
+   "audio": "c9_choir.in.07",
+   "status": "new",
+   "direction": "resonant, absolute authority",
+   "scene": "c9_choir",
+   "display": "The Choir",
+   "display_speaker": "The Choir"
+  },
+  "c9_choir.in.08": {
+   "id": "c9_choir.in.08",
+   "speaker": "steve",
+   "text": "The crystal column flared molten gold from floor to vault. The scan straps snapped open, the armed crew froze at their stations, and even Prefect Saren staggered back from the locked console.",
+   "audio": "c9_choir.in.08",
    "status": "new",
    "delivery": "narration",
    "scene": "c9_choir",
    "display": "Steve Mercer",
    "display_speaker": "Steve Mercer"
   },
-  "c9_choir.in.07": {
-   "id": "c9_choir.in.07",
+  "c9_choir.in.09": {
+   "id": "c9_choir.in.09",
    "speaker": "calder",
-   "text": "We followed you down from row nine. Nobody stopped us. The whole crew had stopped to listen.",
-   "audio": "c9_choir.in.07",
+   "text": "We followed you down from row nine. Every security bulkhead just unlocked. Nobody even tried to stop us.",
+   "audio": "c9_choir.in.09",
    "status": "new",
    "direction": "arriving with Helen, Frank and Nora, out of breath",
    "scene": "c9_choir",
@@ -26100,7 +26194,7 @@
   "c9_choir.wick.lead.01": {
    "id": "c9_choir.wick.lead.01",
    "speaker": "steve",
-   "text": "The frost broke. Something tall sat up in Row Zero for the first time in three hundred years. It looked at Mom, and it bowed.",
+   "text": "The frost on Row Zero shattered in a cloud of silver mist. Something tall and luminous stepped out for the first time in three hundred years. It looked straight at Mom, and it bowed.",
    "audio": "c9_choir.wick.lead.01",
    "status": "new",
    "delivery": "narration",
@@ -26111,7 +26205,7 @@
   "c9_choir.wick.lead.02": {
    "id": "c9_choir.wick.lead.02",
    "speaker": "choir",
-   "text": "Row Zero holds one who is not human. We took it from Tirel. We call it Wick. It has not stopped dreaming.",
+   "text": "Row Zero holds the last emissary of Tirel, taken three hundred years ago when our fleet searched their sky. We call it Wick. It never stopped dreaming, and its song bled into our hull hum.",
    "audio": "c9_choir.wick.lead.02",
    "status": "new",
    "scene": "c9_choir",
@@ -26131,7 +26225,7 @@
   "c9_choir.wick.lead.04": {
    "id": "c9_choir.wick.lead.04",
    "speaker": "helen",
-   "text": "That’s the phrase from your father’s tapes. Two joined notes going up, a little gap, then one long low note.",
+   "text": "That’s the exact phrase on your father’s Reel Eleven, Steven. Two joined notes going up, a brief silence, then one long low note.",
    "audio": "c9_choir.wick.lead.04",
    "status": "new",
    "scene": "c9_choir",
@@ -26167,6 +26261,26 @@
    "scene": "c9_choir",
    "display": "Helen Mercer",
    "display_speaker": "Helen Mercer"
+  },
+  "c9_choir.wick.03": {
+   "id": "c9_choir.wick.03",
+   "speaker": "choir",
+   "text": "Three hundred years ago we thought Tirel fell silent out of malice. Wick says they shut down their beacons after watching our copies replace their own crews.",
+   "audio": "c9_choir.wick.03",
+   "status": "new",
+   "scene": "c9_choir",
+   "display": "The Choir",
+   "display_speaker": "The Choir"
+  },
+  "c9_choir.wick.04": {
+   "id": "c9_choir.wick.04",
+   "speaker": "frank",
+   "text": "Nine hundred years of two sides terrified of the dark, and all it took was somebody finally listening.",
+   "audio": "c9_choir.wick.04",
+   "status": "new",
+   "scene": "c9_choir",
+   "display": "Frank Mercer",
+   "display_speaker": "Frank Mercer"
   },
   "c9_choir.wick.find": {
    "id": "c9_choir.wick.find",

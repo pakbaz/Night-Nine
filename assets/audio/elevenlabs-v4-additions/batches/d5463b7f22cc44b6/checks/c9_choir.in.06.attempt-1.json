@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c9_choir.in.06",
+  "attempt": 1,
+  "plan_sha256": "d5463b7f22cc44b6124e00663543928deec2800a647d84f1f65da9b8bbf060b4",
+  "wav_sha256": "e879c5aed2a34e9418c868444bbf8d5d127bdd94467cdfecac5aab725240ff64",
+  "expected": "You do not override a Prefect’s scan. The command seal is mine!",
+  "recognized": "You do not override a prefect's scan. The command seal is mine.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 5.04,
+  "sample_rate": 48000,
+  "peak": 0.32513427734375,
+  "rms": 0.03084031024491916,
+  "level_match_gain_db": -4.631330769668533,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

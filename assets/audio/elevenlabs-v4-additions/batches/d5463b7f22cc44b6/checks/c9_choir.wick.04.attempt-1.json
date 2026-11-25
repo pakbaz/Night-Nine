@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c9_choir.wick.04",
+  "attempt": 1,
+  "plan_sha256": "d5463b7f22cc44b6124e00663543928deec2800a647d84f1f65da9b8bbf060b4",
+  "wav_sha256": "89ebc523aa53c89b067c0ab0dc4c3e6eb385d88174fc9d5851723bf3a74b0fbe",
+  "expected": "Nine hundred years of two sides terrified of the dark, and all it took was somebody finally listening.",
+  "recognized": "900 years of two sides terrified of the dark, and all it took was somebody finally listening.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 8.16,
+  "sample_rate": 48000,
+  "peak": 0.441131591796875,
+  "rms": 0.06004404491707873,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

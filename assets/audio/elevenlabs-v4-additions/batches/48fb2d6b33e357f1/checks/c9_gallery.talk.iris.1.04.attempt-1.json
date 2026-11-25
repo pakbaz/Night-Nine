@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c9_gallery.talk.iris.1.04",
+  "attempt": 1,
+  "plan_sha256": "48fb2d6b33e357f14a725688d35988e4c5c277b317e41072eb6099d97823dd4b",
+  "wav_sha256": "7bc0d7059b39954d291a8e7c80e9738907136b089e048c330f716b342d8cf372",
+  "expected": "Iris. After the flowers on your balcony. That’s the only part I’m keeping.",
+  "recognized": "Iris, after the flowers on your balcony. That's the only part I'm keeping.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 5.52,
+  "sample_rate": 48000,
+  "peak": 0.642852783203125,
+  "rms": 0.054422892305137124,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

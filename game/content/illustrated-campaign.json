@@ -43,6 +43,17 @@
     "reveal_after": {
       "iris": "c1_flat.in.04"
     },
+    "stills": [
+      {
+        "file": "res://assets/illustrated/campaign/stills/c1_flat-same-waveform.webp",
+        "lines": [
+          "c1_flat.compare.01",
+          "c1_flat.compare.02",
+          "c1_flat.compare.03",
+          "c1_flat.compare.find"
+        ]
+      }
+    ],
     "appearances": {
       "steve": "steve_morning",
       "iris": "nora_warm"
@@ -469,6 +480,20 @@
       "c3_archive.out.02": "c3_archive.cycle"
     },
     "chapter_insert": true,
+    "stills": [
+      {
+        "file": "res://assets/illustrated/campaign/stills/c3_archive-reel-eleven.webp",
+        "lines": [
+          "c3_archive.cycle.01",
+          "c3_archive.cycle.02",
+          "c3_archive.cycle.03",
+          "c3_archive.cycle.04",
+          "c3_archive.cycle.find",
+          "c3_archive.recap.01",
+          "c3_archive.recap.02"
+        ]
+      }
+    ],
     "appearances": {
       "calder": "calder_casework",
       "agnes": "agnes_reflective"
@@ -1199,6 +1224,28 @@
         0.46
       ]
     },
+    "stills": [
+      {
+        "file": "res://assets/illustrated/campaign/stills/p_meeting-sentinel.webp",
+        "lines": [
+          "c8_lab.in.01",
+          "c8_lab.notebook.01",
+          "c8_lab.notebook.02",
+          "c8_lab.notebook.find"
+        ]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/stills/c8_lab-spliced-voice.webp",
+        "lines": [
+          "c8_lab.out.03",
+          "c8_lab.out.01",
+          "c8_lab.out.04",
+          "c8_lab.out.05",
+          "c8_lab.out.02",
+          "c8_lab.out.06"
+        ]
+      }
+    ],
     "appearances": {
       "agnes": "agnes_reflective"
     }
@@ -1219,7 +1266,24 @@
       "steve"
     ],
     "resident": "saren",
-    "bridge": "res://assets/illustrated/campaign/bridges/c8_beach-c8_rig.webp"
+    "bridge": "res://assets/illustrated/campaign/bridges/c8_beach-c8_rig.webp",
+    "stills": [
+      {
+        "file": "res://assets/illustrated/campaign/stills/c8_beach-standoff.webp",
+        "lines": [
+          "c8_beach.in.01",
+          "c8_beach.in.03",
+          "c8_beach.in.02",
+          "c8_beach.in.04",
+          "c8_beach.refuse.01",
+          "c8_beach.refuse.find",
+          "c8_beach.out.01",
+          "c8_beach.out.04",
+          "c8_beach.out.02",
+          "c8_beach.out.03"
+        ]
+      }
+    ]
   },
   "c8_rig": {
     "light": "f3bd80",
@@ -1247,6 +1311,22 @@
         0.54
       ]
     },
+    "stills": [
+      {
+        "file": "res://assets/illustrated/campaign/stills/c8_rig-theatrical-reactor.webp",
+        "lines": [
+          "c8_rig.rig.01",
+          "c8_rig.rig.02",
+          "c8_rig.rig.find",
+          "c8_rig.recap.01",
+          "c8_rig.recap.02",
+          "c8_rig.out.01",
+          "c8_rig.out.02",
+          "c8_rig.out.03",
+          "c8_rig.out.04"
+        ]
+      }
+    ],
     "appearances": {
       "steve": "steve_broadcast"
     }
@@ -1271,6 +1351,7 @@
     ],
     "off_camera_lines": [
       "c9_gallery.in.01",
+      "c9_gallery.in.04",
       "c9_gallery.out.03",
       "c9_gallery.talk.guard.1.01",
       "c9_gallery.talk.guard.1.03"
@@ -1289,6 +1370,20 @@
         "until": "c9_gallery.link.02",
         "painted": [
           "nora"
+        ]
+      }
+    ],
+    "appearances": {
+      "iris": "iris_gallery"
+    },
+    "stills": [
+      {
+        "file": "res://assets/illustrated/campaign/stills/c9_gallery-link-break.webp",
+        "lines": [
+          "c9_gallery.link.03",
+          "c9_gallery.link.01",
+          "c9_gallery.link.02",
+          "c9_gallery.link.find"
         ]
       }
     ]
@@ -1338,8 +1433,52 @@
         "until": "c9_wake.agnes"
       }
     ],
+    "stills": [
+      {
+        "file": "res://assets/illustrated/campaign/stills/c9_wake-frank-wakes.webp",
+        "lines": [
+          "c9_wake.frank.01",
+          "c9_wake.frank.02",
+          "c9_wake.frank.find"
+        ]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/stills/c9_wake-helen-wakes.webp",
+        "lines": [
+          "c9_wake.helen.01",
+          "c9_wake.helen.02",
+          "c9_wake.helen.find"
+        ]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/stills/c9_wake-rook-wakes.webp",
+        "lines": [
+          "c9_wake.rook.01",
+          "c9_wake.rook.02",
+          "c9_wake.rook.03",
+          "c9_wake.rook.find"
+        ]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/stills/c9_wake-agnes-wakes.webp",
+        "lines": [
+          "c9_wake.agnes.01",
+          "c9_wake.agnes.02",
+          "c9_wake.agnes.03",
+          "c9_wake.agnes.04",
+          "c9_wake.agnes.find"
+        ]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/stills/c9_wake-cardigan.webp",
+        "lines": [
+          "c9_wake.recap.01"
+        ]
+      }
+    ],
     "appearances": {
       "frank": "frank_standing",
+      "rook": "rook_pajamas",
       "nora": "nora_reunion",
       "helen": "helen_field"
     }
@@ -1382,7 +1521,54 @@
         "lines": [
           "c9_choir.in.02",
           "c9_choir.in.06",
-          "c9_choir.in.07"
+          "c9_choir.in.07",
+          "c9_choir.in.08",
+          "c9_choir.in.09"
+        ]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/stills/c9_choir-awakening.webp",
+        "lines": [
+          "c9_choir.truth.01",
+          "c9_choir.truth.find",
+          "c9_choir.recap.01"
+        ]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/stills/c9_choir-wick-rises.webp",
+        "lines": [
+          "c9_choir.wick.lead.01",
+          "c9_choir.wick.lead.02",
+          "c9_choir.wick.lead.03",
+          "c9_choir.wick.lead.04",
+          "c9_choir.wick.lead.05",
+          "c9_choir.wick.01"
+        ]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/stills/c9_choir-seven-worlds.webp",
+        "lines": [
+          "c9_choir.wick.02",
+          "c9_choir.wick.03",
+          "c9_choir.wick.04",
+          "c9_choir.wick.find",
+          "c9_choir.recap.02"
+        ]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/stills/c9_choir-boat-note.webp",
+        "lines": [
+          "c9_choir.note.01",
+          "c9_choir.note.02",
+          "c9_choir.note.find"
+        ]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/stills/c9_choir-vigil.webp",
+        "lines": [
+          "c9_choir.out.04",
+          "c9_choir.out.05",
+          "c9_choir.out.06"
         ]
       }
     ],
@@ -1391,9 +1577,9 @@
         "id": "wick",
         "foot": [
           0.57,
-          0.585
+          0.62
         ],
-        "width": 0.075,
+        "width": 0.09,
         "lines": [
           "c9_choir.wick.lead.01",
           "c9_choir.wick.lead.02",
@@ -1401,7 +1587,9 @@
           "c9_choir.wick.lead.04",
           "c9_choir.wick.lead.05",
           "c9_choir.wick.01",
-          "c9_choir.wick.02"
+          "c9_choir.wick.02",
+          "c9_choir.wick.03",
+          "c9_choir.wick.04"
         ]
       }
     ],
@@ -1479,6 +1667,30 @@
         "c10_town.in.09"
       ]
     },
+    "stills": [
+      {
+        "file": "res://assets/illustrated/campaign/stills/c10_town-wind-bucket.webp",
+        "lines": [
+          "c10_town.in.04",
+          "c10_town.out.01",
+          "c10_town.in.05",
+          "c10_town.in.06",
+          "c10_town.out.03",
+          "c10_town.in.07",
+          "c10_town.in.08",
+          "c10_town.in.09",
+          "c10_town.wind.01",
+          "c10_town.wind.find",
+          "c10_town.recap.01"
+        ]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/stills/p_veyr-dying-star.webp",
+        "lines": [
+          "c10_town.in.10"
+        ]
+      }
+    ],
     "appearances": {
       "nora": "nora_reunion",
       "agnes": "agnes_reflective"
@@ -1531,6 +1743,27 @@
     },
     "stills": [
       {
+        "file": "res://assets/illustrated/campaign/stills/c10_live-harbor-lights.webp",
+        "lines": [
+          "c10_live.first.01",
+          "c10_live.first.02",
+          "c10_live.first.find",
+          "c10_live.third.01",
+          "c10_live.third.02",
+          "c10_live.third.03",
+          "c10_live.third.find",
+          "c10_live.recap.01",
+          "c10_live.recap.02"
+        ]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/stills/p_veyr-dying-star.webp",
+        "lines": [
+          "c10_live.third.lead.01",
+          "c10_live.third.lead.02"
+        ]
+      },
+      {
         "file": "res://assets/illustrated/campaign/stills/c10_live-pier.webp",
         "lines": [
           "c10_live.out.07",
@@ -1582,6 +1815,32 @@
       "c10_report.report": "c10_report.report"
     },
     "chapter_insert": true,
+    "stills": [
+      {
+        "file": "res://assets/illustrated/campaign/stills/c10_report-on-air.webp",
+        "lines": [
+          "c10_report.echo.01",
+          "c10_report.echo.02",
+          "c10_report.echo.find",
+          "c10_report.report.01",
+          "c10_report.report.02",
+          "c10_report.report.03",
+          "c10_report.report.find",
+          "c10_report.recap.01"
+        ]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/stills/c10_report-departure.webp",
+        "lines": [
+          "c10_report.out.01",
+          "c10_report.out.02",
+          "c10_report.out.03",
+          "c10_report.out.04",
+          "c10_report.out.05",
+          "c10_report.out.06"
+        ]
+      }
+    ],
     "appearances": {
       "archivist": "archivist_explaining",
       "helen": "helen_field"

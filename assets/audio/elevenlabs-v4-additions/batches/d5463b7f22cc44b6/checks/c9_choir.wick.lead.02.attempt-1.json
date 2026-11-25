@@ -1,0 +1,28 @@
+{
+  "schema": 1,
+  "audio_id": "c9_choir.wick.lead.02",
+  "attempt": 1,
+  "plan_sha256": "d5463b7f22cc44b6124e00663543928deec2800a647d84f1f65da9b8bbf060b4",
+  "wav_sha256": "584905b81934abcae9045ba0b7bc45d365ff9e1ca5cdc7c6780423d8f49ab469",
+  "expected": "Row Zero holds the last emissary of Tirel, taken three hundred years ago when our fleet searched their sky. We call it Wick. It never stopped dreaming, and its song bled into our hull hum.",
+  "recognized": "Row zero holds the last emissary of Tyrell, taken 300 years ago when our fleet searched their sky. We call it Wick. It never stopped dreaming, and its song bled into our hull hum.",
+  "local_recognized": "Row Zero holds the last emissary of Tyrell, taken 300 years ago when our fleet searched their sky. We call it WIC. It never stopped dreaming, and its song bled into our hull-hum.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 14.48,
+  "sample_rate": 48000,
+  "peak": 0.828399658203125,
+  "rms": 0.1336995594901862,
+  "level_match_gain_db": 0.0,
+  "word_edits": 1,
+  "word_error_rate": 0.029411764705882353,
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c9_choir.wick.lead.02.json",
+    "sha256": "1de1bfd74473472bc0889b28292f4c36fa0e11ad570422c764b4f23fd2dac8fe",
+    "model": "scribe_v3",
+    "word_edits": 1,
+    "listening_reviewed": false
+  },
+  "status": "manual_review_passed",
+  "failure_reason": null,
+  "manual_review_note": "Both local Whisper and independent Scribe v3 matched every word verbatim except the invented world proper noun Tirel (spelled Tyrell)."
+}

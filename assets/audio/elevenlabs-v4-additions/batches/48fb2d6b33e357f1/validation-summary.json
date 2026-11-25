@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "plan_sha256": "48fb2d6b33e357f14a725688d35988e4c5c277b317e41072eb6099d97823dd4b",
+  "passed": [
+    "c9_gallery.ctx.01",
+    "c9_gallery.in.01",
+    "c9_gallery.in.04",
+    "c9_gallery.in.05",
+    "c9_gallery.in.06",
+    "c9_gallery.link.lead.01",
+    "c9_gallery.link.lead.02",
+    "c9_gallery.talk.03",
+    "c9_gallery.talk.iris.1.01",
+    "c9_gallery.talk.iris.1.03",
+    "c9_gallery.talk.iris.1.04",
+    "c9_wake.rook.03",
+    "c9_wake.rook.find",
+    "c9_wake.rook.lead.01",
+    "c9_wake.rook.lead.02",
+    "c9_wake.rook.lead.03"
+  ],
+  "retake_required": {
+    "c9_gallery.in.02": "asr_mismatch",
+    "c9_gallery.in.03": "asr_mismatch",
+    "c9_gallery.talk.iris.1.02": "asr_mismatch"
+  }
+}

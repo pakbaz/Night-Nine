@@ -1,0 +1,459 @@
+{
+  "audio_id": "c9_gallery.talk.iris.1.02",
+  "audio_sha256": "231fac41ff0dd9ee4d6d9c2ba1d6615c5ea5e0ca0422a7f07940b32be3c0b16f",
+  "file": "assets/audio/elevenlabs-v4-additions/masters/c9_gallery.talk.iris.1.02.attempt-1.wav",
+  "production_plan_sha256": "48fb2d6b33e357f14a725688d35988e4c5c277b317e41072eb6099d97823dd4b",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "You don’t have to thank me, Nora. I was Veyri on an assignment. I didn’t choose your face, and I stopped wearing your fleece the day I chose my own name.",
+  "recognized": "You don't have to thank me, Nora. I was Vari on an assignment. I didn't choose your face, and I stopped wearing your fleece the day I chose my own name.",
+  "word_edits": 1,
+  "request_id": null,
+  "trace_id": "106f7cff8ca1c9c22fce892d9726e862",
+  "character_cost": "3",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "You don't have to thank me, Nora. I was Vari on an assignment. I didn't choose your face, and I stopped wearing your fleece the day I chose my own name.",
+    "words": [
+      {
+        "text": "You",
+        "start": 0.1,
+        "end": 0.14,
+        "type": "word",
+        "logprob": -3.933898824470816e-06
+      },
+      {
+        "text": " ",
+        "start": 0.14,
+        "end": 0.16,
+        "type": "spacing",
+        "logprob": -2.264974000354414e-06
+      },
+      {
+        "text": "don't",
+        "start": 0.16,
+        "end": 0.32,
+        "type": "word",
+        "logprob": -3.0348642985700282e-05
+      },
+      {
+        "text": " ",
+        "start": 0.32,
+        "end": 0.38,
+        "type": "spacing",
+        "logprob": -3.2186455882765586e-06
+      },
+      {
+        "text": "have",
+        "start": 0.38,
+        "end": 0.5,
+        "type": "word",
+        "logprob": -3.2186455882765586e-06
+      },
+      {
+        "text": " ",
+        "start": 0.5,
+        "end": 0.54,
+        "type": "spacing",
+        "logprob": 0.0
+      },
+      {
+        "text": "to",
+        "start": 0.54,
+        "end": 0.68,
+        "type": "word",
+        "logprob": 0.0
+      },
+      {
+        "text": " ",
+        "start": 0.68,
+        "end": 0.74,
+        "type": "spacing",
+        "logprob": -2.0503786799963564e-05
+      },
+      {
+        "text": "thank",
+        "start": 0.74,
+        "end": 1.0,
+        "type": "word",
+        "logprob": -2.0503786799963564e-05
+      },
+      {
+        "text": " ",
+        "start": 1.0,
+        "end": 1.04,
+        "type": "spacing",
+        "logprob": -1.311301275563892e-06
+      },
+      {
+        "text": "me,",
+        "start": 1.04,
+        "end": 1.14,
+        "type": "word",
+        "logprob": -5.682274301458771e-06
+      },
+      {
+        "text": " ",
+        "start": 1.14,
+        "end": 1.22,
+        "type": "spacing",
+        "logprob": -0.000806602300144732
+      },
+      {
+        "text": "Nora.",
+        "start": 1.22,
+        "end": 1.52,
+        "type": "word",
+        "logprob": -0.0006505508212285349
+      },
+      {
+        "text": " ",
+        "start": 1.52,
+        "end": 2.02,
+        "type": "spacing",
+        "logprob": -9.536738616588991e-07
+      },
+      {
+        "text": "I",
+        "start": 2.02,
+        "end": 2.06,
+        "type": "word",
+        "logprob": -9.536738616588991e-07
+      },
+      {
+        "text": " ",
+        "start": 2.06,
+        "end": 2.12,
+        "type": "spacing",
+        "logprob": -6.437280717364047e-06
+      },
+      {
+        "text": "was",
+        "start": 2.12,
+        "end": 2.26,
+        "type": "word",
+        "logprob": -6.437280717364047e-06
+      },
+      {
+        "text": " ",
+        "start": 2.26,
+        "end": 2.34,
+        "type": "spacing",
+        "logprob": -1.357610821723938
+      },
+      {
+        "text": "Vari",
+        "start": 2.34,
+        "end": 2.7,
+        "type": "word",
+        "logprob": -1.357610821723938
+      },
+      {
+        "text": " ",
+        "start": 2.7,
+        "end": 2.82,
+        "type": "spacing",
+        "logprob": -0.0006728292210027575
+      },
+      {
+        "text": "on",
+        "start": 2.82,
+        "end": 2.88,
+        "type": "word",
+        "logprob": -0.0006728292210027575
+      },
+      {
+        "text": " ",
+        "start": 2.88,
+        "end": 2.92,
+        "type": "spacing",
+        "logprob": -1.823885577323381e-05
+      },
+      {
+        "text": "an",
+        "start": 2.92,
+        "end": 3.0,
+        "type": "word",
+        "logprob": -1.823885577323381e-05
+      },
+      {
+        "text": " ",
+        "start": 3.0,
+        "end": 3.04,
+        "type": "spacing",
+        "logprob": -5.98412734689191e-05
+      },
+      {
+        "text": "assignment.",
+        "start": 3.04,
+        "end": 3.62,
+        "type": "word",
+        "logprob": -5.855171382956376e-05
+      },
+      {
+        "text": " ",
+        "start": 3.62,
+        "end": 4.14,
+        "type": "spacing",
+        "logprob": -1.0728830375228426e-06
+      },
+      {
+        "text": "I",
+        "start": 4.14,
+        "end": 4.18,
+        "type": "word",
+        "logprob": -1.0728830375228426e-06
+      },
+      {
+        "text": " ",
+        "start": 4.18,
+        "end": 4.2,
+        "type": "spacing",
+        "logprob": -1.9073468138230965e-06
+      },
+      {
+        "text": "didn't",
+        "start": 4.2,
+        "end": 4.46,
+        "type": "word",
+        "logprob": -4.490187961891934e-06
+      },
+      {
+        "text": " ",
+        "start": 4.46,
+        "end": 4.54,
+        "type": "spacing",
+        "logprob": -6.437280717364047e-06
+      },
+      {
+        "text": "choose",
+        "start": 4.54,
+        "end": 4.82,
+        "type": "word",
+        "logprob": -6.437280717364047e-06
+      },
+      {
+        "text": " ",
+        "start": 4.82,
+        "end": 4.86,
+        "type": "spacing",
+        "logprob": -2.7418097943154862e-06
+      },
+      {
+        "text": "your",
+        "start": 4.86,
+        "end": 4.98,
+        "type": "word",
+        "logprob": -2.7418097943154862e-06
+      },
+      {
+        "text": " ",
+        "start": 4.98,
+        "end": 5.08,
+        "type": "spacing",
+        "logprob": -7.033323527139146e-06
+      },
+      {
+        "text": "face,",
+        "start": 5.08,
+        "end": 5.44,
+        "type": "word",
+        "logprob": -0.0025523664233332967
+      },
+      {
+        "text": " ",
+        "start": 5.44,
+        "end": 5.72,
+        "type": "spacing",
+        "logprob": -9.536738616588991e-07
+      },
+      {
+        "text": "and",
+        "start": 5.72,
+        "end": 5.78,
+        "type": "word",
+        "logprob": -9.536738616588991e-07
+      },
+      {
+        "text": " ",
+        "start": 5.78,
+        "end": 5.84,
+        "type": "spacing",
+        "logprob": -2.3841855067985307e-07
+      },
+      {
+        "text": "I",
+        "start": 5.84,
+        "end": 5.9,
+        "type": "word",
+        "logprob": -2.3841855067985307e-07
+      },
+      {
+        "text": " ",
+        "start": 5.9,
+        "end": 6.0,
+        "type": "spacing",
+        "logprob": -2.4199192921514623e-05
+      },
+      {
+        "text": "stopped",
+        "start": 6.0,
+        "end": 6.28,
+        "type": "word",
+        "logprob": -2.4199192921514623e-05
+      },
+      {
+        "text": " ",
+        "start": 6.28,
+        "end": 6.32,
+        "type": "spacing",
+        "logprob": -1.2397689715726301e-05
+      },
+      {
+        "text": "wearing",
+        "start": 6.32,
+        "end": 6.54,
+        "type": "word",
+        "logprob": -1.2397689715726301e-05
+      },
+      {
+        "text": " ",
+        "start": 6.54,
+        "end": 6.58,
+        "type": "spacing",
+        "logprob": -2.0265558760002023e-06
+      },
+      {
+        "text": "your",
+        "start": 6.58,
+        "end": 6.7,
+        "type": "word",
+        "logprob": -2.0265558760002023e-06
+      },
+      {
+        "text": " ",
+        "start": 6.7,
+        "end": 6.78,
+        "type": "spacing",
+        "logprob": -5.6265202147187665e-05
+      },
+      {
+        "text": "fleece",
+        "start": 6.78,
+        "end": 7.14,
+        "type": "word",
+        "logprob": -5.6265202147187665e-05
+      },
+      {
+        "text": " ",
+        "start": 7.14,
+        "end": 7.2,
+        "type": "spacing",
+        "logprob": -2.622600959512056e-06
+      },
+      {
+        "text": "the",
+        "start": 7.2,
+        "end": 7.28,
+        "type": "word",
+        "logprob": -2.622600959512056e-06
+      },
+      {
+        "text": " ",
+        "start": 7.28,
+        "end": 7.4,
+        "type": "spacing",
+        "logprob": -6.556489552167477e-06
+      },
+      {
+        "text": "day",
+        "start": 7.42,
+        "end": 7.6,
+        "type": "word",
+        "logprob": -6.556489552167477e-06
+      },
+      {
+        "text": " ",
+        "start": 7.6,
+        "end": 7.74,
+        "type": "spacing",
+        "logprob": -3.099436753473128e-06
+      },
+      {
+        "text": "I",
+        "start": 7.74,
+        "end": 7.8,
+        "type": "word",
+        "logprob": -3.099436753473128e-06
+      },
+      {
+        "text": " ",
+        "start": 7.8,
+        "end": 7.86,
+        "type": "spacing",
+        "logprob": -7.152531907195225e-06
+      },
+      {
+        "text": "chose",
+        "start": 7.86,
+        "end": 8.1,
+        "type": "word",
+        "logprob": -7.152531907195225e-06
+      },
+      {
+        "text": " ",
+        "start": 8.1,
+        "end": 8.14,
+        "type": "spacing",
+        "logprob": -2.50339189733495e-06
+      },
+      {
+        "text": "my",
+        "start": 8.14,
+        "end": 8.3,
+        "type": "word",
+        "logprob": -2.50339189733495e-06
+      },
+      {
+        "text": " ",
+        "start": 8.3,
+        "end": 8.38,
+        "type": "spacing",
+        "logprob": -2.145764938177308e-06
+      },
+      {
+        "text": "own",
+        "start": 8.38,
+        "end": 8.54,
+        "type": "word",
+        "logprob": -2.145764938177308e-06
+      },
+      {
+        "text": " ",
+        "start": 8.54,
+        "end": 8.6,
+        "type": "spacing",
+        "logprob": -4.887569048150908e-06
+      },
+      {
+        "text": "name.",
+        "start": 8.6,
+        "end": 8.88,
+        "type": "word",
+        "logprob": -7.986971468199044e-06
+      }
+    ],
+    "transcription_id": "FLCnVJHvkYAVjLnEHDTA",
+    "audio_duration_secs": 9.44
+  },
+  "listening_reviewed": false
+}

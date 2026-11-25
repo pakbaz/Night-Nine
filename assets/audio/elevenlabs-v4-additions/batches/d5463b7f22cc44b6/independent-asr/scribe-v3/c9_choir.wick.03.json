@@ -1,0 +1,389 @@
+{
+  "audio_id": "c9_choir.wick.03",
+  "audio_sha256": "0796171ecba9dbcb20ada4aec5d29d6de40040c74829c0ec387a3beaa4cea648",
+  "file": "assets/audio/elevenlabs-v4-additions/masters/c9_choir.wick.03.attempt-1.wav",
+  "production_plan_sha256": "d5463b7f22cc44b6124e00663543928deec2800a647d84f1f65da9b8bbf060b4",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Three hundred years ago we thought Tirel fell silent out of malice. Wick says they shut down their beacons after watching our copies replace their own crews.",
+  "recognized": "300 years ago, we thought Tyrell fell silent out of malice. Wick says they shut down their beacons after watching our copies replace their own crews.",
+  "word_edits": 1,
+  "request_id": null,
+  "trace_id": "81c2bc704a96c1d54dc321912080d7b2",
+  "character_cost": "3",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "300 years ago, we thought Tyrell fell silent out of malice. Wick says they shut down their beacons after watching our copies replace their own crews.",
+    "words": [
+      {
+        "text": "300",
+        "start": 0.08,
+        "end": 0.76,
+        "type": "word",
+        "logprob": -0.0843556026608591
+      },
+      {
+        "text": " ",
+        "start": 0.76,
+        "end": 0.84,
+        "type": "spacing",
+        "logprob": -3.194758028257638e-05
+      },
+      {
+        "text": "years",
+        "start": 0.84,
+        "end": 1.08,
+        "type": "word",
+        "logprob": -3.194758028257638e-05
+      },
+      {
+        "text": " ",
+        "start": 1.08,
+        "end": 1.14,
+        "type": "spacing",
+        "logprob": -2.622600959512056e-06
+      },
+      {
+        "text": "ago,",
+        "start": 1.14,
+        "end": 1.48,
+        "type": "word",
+        "logprob": -8.433971004251362e-06
+      },
+      {
+        "text": " ",
+        "start": 1.48,
+        "end": 1.86,
+        "type": "spacing",
+        "logprob": -4.768360213347478e-06
+      },
+      {
+        "text": "we",
+        "start": 1.88,
+        "end": 2.02,
+        "type": "word",
+        "logprob": -4.768360213347478e-06
+      },
+      {
+        "text": " ",
+        "start": 2.02,
+        "end": 2.08,
+        "type": "spacing",
+        "logprob": -2.9802276912960224e-06
+      },
+      {
+        "text": "thought",
+        "start": 2.08,
+        "end": 2.32,
+        "type": "word",
+        "logprob": -2.9802276912960224e-06
+      },
+      {
+        "text": " ",
+        "start": 2.32,
+        "end": 2.38,
+        "type": "spacing",
+        "logprob": -0.04620015248656273
+      },
+      {
+        "text": "Tyrell",
+        "start": 2.4,
+        "end": 2.84,
+        "type": "word",
+        "logprob": -0.03606921806931496
+      },
+      {
+        "text": " ",
+        "start": 2.84,
+        "end": 2.92,
+        "type": "spacing",
+        "logprob": -9.107174992095679e-05
+      },
+      {
+        "text": "fell",
+        "start": 2.92,
+        "end": 3.14,
+        "type": "word",
+        "logprob": -9.107174992095679e-05
+      },
+      {
+        "text": " ",
+        "start": 3.14,
+        "end": 3.26,
+        "type": "spacing",
+        "logprob": -3.0040289857424796e-05
+      },
+      {
+        "text": "silent",
+        "start": 3.26,
+        "end": 3.72,
+        "type": "word",
+        "logprob": -3.0040289857424796e-05
+      },
+      {
+        "text": " ",
+        "start": 3.72,
+        "end": 3.8,
+        "type": "spacing",
+        "logprob": -1.7881377516459906e-06
+      },
+      {
+        "text": "out",
+        "start": 3.8,
+        "end": 3.92,
+        "type": "word",
+        "logprob": -1.7881377516459906e-06
+      },
+      {
+        "text": " ",
+        "start": 3.92,
+        "end": 3.98,
+        "type": "spacing",
+        "logprob": -5.960462772236497e-07
+      },
+      {
+        "text": "of",
+        "start": 3.98,
+        "end": 4.08,
+        "type": "word",
+        "logprob": -5.960462772236497e-07
+      },
+      {
+        "text": " ",
+        "start": 4.08,
+        "end": 4.18,
+        "type": "spacing",
+        "logprob": -5.829164365422912e-05
+      },
+      {
+        "text": "malice.",
+        "start": 4.18,
+        "end": 4.68,
+        "type": "word",
+        "logprob": -5.037298296883819e-05
+      },
+      {
+        "text": " ",
+        "start": 4.68,
+        "end": 4.68,
+        "type": "spacing",
+        "logprob": -0.040821269154548645
+      },
+      {
+        "text": "Wick",
+        "start": 5.3,
+        "end": 5.52,
+        "type": "word",
+        "logprob": -0.040821269154548645
+      },
+      {
+        "text": " ",
+        "start": 5.52,
+        "end": 5.6,
+        "type": "spacing",
+        "logprob": -0.0005502378917299211
+      },
+      {
+        "text": "says",
+        "start": 5.6,
+        "end": 5.92,
+        "type": "word",
+        "logprob": -0.0005502378917299211
+      },
+      {
+        "text": " ",
+        "start": 5.92,
+        "end": 5.96,
+        "type": "spacing",
+        "logprob": -3.135155202471651e-05
+      },
+      {
+        "text": "they",
+        "start": 5.96,
+        "end": 6.12,
+        "type": "word",
+        "logprob": -3.135155202471651e-05
+      },
+      {
+        "text": " ",
+        "start": 6.12,
+        "end": 6.18,
+        "type": "spacing",
+        "logprob": -7.950943836476654e-05
+      },
+      {
+        "text": "shut",
+        "start": 6.2,
+        "end": 6.42,
+        "type": "word",
+        "logprob": -7.950943836476654e-05
+      },
+      {
+        "text": " ",
+        "start": 6.42,
+        "end": 6.5,
+        "type": "spacing",
+        "logprob": -1.9073468138230965e-06
+      },
+      {
+        "text": "down",
+        "start": 6.5,
+        "end": 6.68,
+        "type": "word",
+        "logprob": -1.9073468138230965e-06
+      },
+      {
+        "text": " ",
+        "start": 6.68,
+        "end": 6.72,
+        "type": "spacing",
+        "logprob": -2.9802276912960224e-06
+      },
+      {
+        "text": "their",
+        "start": 6.72,
+        "end": 6.9,
+        "type": "word",
+        "logprob": -2.9802276912960224e-06
+      },
+      {
+        "text": " ",
+        "start": 6.9,
+        "end": 6.96,
+        "type": "spacing",
+        "logprob": -7.486063259420916e-05
+      },
+      {
+        "text": "beacons",
+        "start": 6.96,
+        "end": 7.58,
+        "type": "word",
+        "logprob": -7.486063259420916e-05
+      },
+      {
+        "text": " ",
+        "start": 7.58,
+        "end": 7.68,
+        "type": "spacing",
+        "logprob": -1.1086402082582936e-05
+      },
+      {
+        "text": "after",
+        "start": 7.68,
+        "end": 7.9,
+        "type": "word",
+        "logprob": -1.1086402082582936e-05
+      },
+      {
+        "text": " ",
+        "start": 7.9,
+        "end": 7.96,
+        "type": "spacing",
+        "logprob": -7.390948667307384e-06
+      },
+      {
+        "text": "watching",
+        "start": 7.96,
+        "end": 8.36,
+        "type": "word",
+        "logprob": -7.390948667307384e-06
+      },
+      {
+        "text": " ",
+        "start": 8.36,
+        "end": 8.46,
+        "type": "spacing",
+        "logprob": -5.602820692729438e-06
+      },
+      {
+        "text": "our",
+        "start": 8.46,
+        "end": 8.66,
+        "type": "word",
+        "logprob": -5.602820692729438e-06
+      },
+      {
+        "text": " ",
+        "start": 8.66,
+        "end": 8.72,
+        "type": "spacing",
+        "logprob": -0.0006984416977502406
+      },
+      {
+        "text": "copies",
+        "start": 8.72,
+        "end": 9.2,
+        "type": "word",
+        "logprob": -0.0006984416977502406
+      },
+      {
+        "text": " ",
+        "start": 9.2,
+        "end": 9.26,
+        "type": "spacing",
+        "logprob": -2.9205850296420977e-05
+      },
+      {
+        "text": "replace",
+        "start": 9.26,
+        "end": 9.76,
+        "type": "word",
+        "logprob": -2.9205850296420977e-05
+      },
+      {
+        "text": " ",
+        "start": 9.76,
+        "end": 9.82,
+        "type": "spacing",
+        "logprob": -3.2186455882765586e-06
+      },
+      {
+        "text": "their",
+        "start": 9.82,
+        "end": 10.0,
+        "type": "word",
+        "logprob": -3.2186455882765586e-06
+      },
+      {
+        "text": " ",
+        "start": 10.0,
+        "end": 10.08,
+        "type": "spacing",
+        "logprob": -3.4570634852570947e-06
+      },
+      {
+        "text": "own",
+        "start": 10.08,
+        "end": 10.3,
+        "type": "word",
+        "logprob": -3.4570634852570947e-06
+      },
+      {
+        "text": " ",
+        "start": 10.3,
+        "end": 10.38,
+        "type": "spacing",
+        "logprob": -0.00016378014697693288
+      },
+      {
+        "text": "crews.",
+        "start": 10.38,
+        "end": 10.92,
+        "type": "word",
+        "logprob": -0.0001466556714149192
+      }
+    ],
+    "transcription_id": "4rh7IxhShR65l4ydMV8e",
+    "audio_duration_secs": 11.36
+  },
+  "listening_reviewed": false
+}

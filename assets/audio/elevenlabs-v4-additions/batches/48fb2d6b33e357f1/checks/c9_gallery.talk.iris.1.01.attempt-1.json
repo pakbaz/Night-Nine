@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c9_gallery.talk.iris.1.01",
+  "attempt": 1,
+  "plan_sha256": "48fb2d6b33e357f14a725688d35988e4c5c277b317e41072eb6099d97823dd4b",
+  "wav_sha256": "6b218686880fab2d1dea0823bc9ac053631fb9b2b09e703c5f552dfb5ee29c6b",
+  "expected": "You lived my life for five months. My family, my job, my flat. I don’t know whether to hit you or thank you for waking me.",
+  "recognized": "You lived my life for five months. My family, my job, my flat. I don't know whether to hit you or thank you for waking me.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 8.96,
+  "sample_rate": 48000,
+  "peak": 0.565582275390625,
+  "rms": 0.06213061176170862,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

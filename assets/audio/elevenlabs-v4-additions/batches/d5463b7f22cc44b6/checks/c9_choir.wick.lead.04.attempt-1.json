@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c9_choir.wick.lead.04",
+  "attempt": 1,
+  "plan_sha256": "d5463b7f22cc44b6124e00663543928deec2800a647d84f1f65da9b8bbf060b4",
+  "wav_sha256": "0b4b59653bc0e837065bbfd26d85f76ad6ea1f06b1cc060907afccd00b50d55a",
+  "expected": "That’s the exact phrase on your father’s Reel Eleven, Steven. Two joined notes going up, a brief silence, then one long low note.",
+  "recognized": "That's the exact phrase on your father's reel 11, Stephen. Two joined notes going up, a brief silence, then one long low note.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 9.92,
+  "sample_rate": 48000,
+  "peak": 0.435302734375,
+  "rms": 0.06108208328501669,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

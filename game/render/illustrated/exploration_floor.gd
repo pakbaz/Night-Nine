@@ -75,7 +75,14 @@ func configure(room: Dictionary, roles: Array, plate: Texture2D, wide_file: Stri
 		if room_id == "c1_flat" and id == "iris":
 			path = WALK + "nora.webp"
 		var idle_file := WALK + id + "-idle.webp"
-		if not ResourceLoader.exists(path) and not ResourceLoader.exists(idle_file):
+		var pose_prefix := id
+		# In the Gallery Iris has dropped Nora's navy fleece for her own olive-russet jacket.
+		if room_id == "c9_gallery" and id == "iris":
+			path = ""
+			idle_file = WALK + "iris_gallery-idle.webp"
+			pose_prefix = "iris_gallery"
+		var has_sheet := not path.is_empty() and ResourceLoader.exists(path)
+		if not has_sheet and not ResourceLoader.exists(idle_file):
 			continue
 		var body := Node2D.new()
 		body.name = id
@@ -90,13 +97,13 @@ func configure(room: Dictionary, roles: Array, plate: Texture2D, wide_file: Stri
 		shadow.material = shade
 		body.add_child(shadow)
 		var sprite := Sprite2D.new()
-		var sheet: Texture2D = load(path) if ResourceLoader.exists(path) else null
+		var sheet: Texture2D = load(path) if has_sheet else null
 		var idle: Texture2D = load(idle_file) if ResourceLoader.exists(idle_file) else null
 		sprite.modulate = Color.WHITE.lerp(tint,.11)
 		body.add_child(sprite)
 		var poses := {}
 		for kind: String in ["reach","listen","read","kneel","operate","greet","talk","toward","away"]:
-			var pose_file := WALK + id + "-" + kind + ".webp"
+			var pose_file := WALK + pose_prefix + "-" + kind + ".webp"
 			if ResourceLoader.exists(pose_file):
 				poses[kind] = load(pose_file)
 		bodies[id] = {"body":body,"sprite":sprite,"shadow":shadow,"sheet":sheet,"idle":idle,"poses":poses,"left":false,"facing":"side"}

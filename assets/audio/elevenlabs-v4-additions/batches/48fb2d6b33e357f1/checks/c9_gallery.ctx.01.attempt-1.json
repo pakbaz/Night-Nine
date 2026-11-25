@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c9_gallery.ctx.01",
+  "attempt": 1,
+  "plan_sha256": "48fb2d6b33e357f14a725688d35988e4c5c277b317e41072eb6099d97823dd4b",
+  "wav_sha256": "7f534604f21593c6e8479899566d13c7085a719e04bdb9b232aac9c7b1226835",
+  "expected": "The third ninth night. Iris tripped a false ballast leak at the outer airlock to pull the watch out of the Gallery, and we slipped in through the intake tunnel, soaked to the knees.",
+  "recognized": "The third, ninth night. Iris tripped a false ballast leak at the outer airlock to pull the watch out of the gallery, and we slipped in through the intake tunnel, soaked to the knees.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 10.72,
+  "sample_rate": 48000,
+  "peak": 0.61993408203125,
+  "rms": 0.03836630894883786,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

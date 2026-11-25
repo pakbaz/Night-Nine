@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c9_gallery.in.02",
+  "attempt": 1,
+  "plan_sha256": "7977149930f3225446b283f6adad04224158790111bea14cb0f4838e1729e5e9",
+  "wav_sha256": "f10a991d32400bbee285e897a743b3efd178acbc458d5757a18c6bccc07c08eb",
+  "expected": "Nora, breathe. I’m here, and I’m so glad to hear you angry. Just give her ten seconds.",
+  "recognized": "Nora, breathe. I'm here and I'm so glad to hear you angry. Just give her 10 seconds.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 6.64,
+  "sample_rate": 48000,
+  "peak": 0.34344482421875,
+  "rms": 0.037520462065251683,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

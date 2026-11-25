@@ -302,6 +302,16 @@ for (const path of ['play.html', 'play']) {
                     self.assertTrue("game/" + resource[6:] in files, resource)
         for scene in ("p_bay", "p_veyr", "p_meeting"):
             self.assertIn(f"game/assets/audio/ambience-prologue/{scene}.ogg", files)
+        for asset in (
+            "game/assets/illustrated/campaign/walk/iris_gallery-idle.webp",
+            "game/assets/illustrated/cast/iris_gallery/iris_gallery.webp",
+            "game/assets/illustrated/campaign/walk/rook_pajamas-idle.webp",
+            "game/assets/illustrated/cast/rook_pajamas/rook_pajamas.webp",
+            "game/assets/illustrated/campaign/stills/c9_wake-rook-wakes.webp",
+            "game/assets/illustrated/campaign/stills/c9_choir-wick-rises.webp",
+            "game/assets/illustrated/campaign/stills/c10_report-departure.webp",
+        ):
+            self.assertIn(asset, files, asset)
         for name in files:
             if name.startswith("game/") and Path(name).suffix in milestones.MEDIA_EXT:
                 self.assertTrue(name + ".import" in files, name)

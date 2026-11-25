@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c9_gallery.in.05",
+  "attempt": 1,
+  "plan_sha256": "48fb2d6b33e357f14a725688d35988e4c5c277b317e41072eb6099d97823dd4b",
+  "wav_sha256": "f5dbd247cf902dfb36cba5e82338814162f0ab520e333b7c221c74620157c23f",
+  "expected": "Iris’s ballast decoy bought us ten minutes. Let’s not waste a second of it.",
+  "recognized": "Iris's ballast decoy bought us 10 minutes. Let's not waste a second of it.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.8,
+  "sample_rate": 48000,
+  "peak": 0.438568115234375,
+  "rms": 0.04101297091117817,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

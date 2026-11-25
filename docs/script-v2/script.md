@@ -3956,13 +3956,13 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 > Implementation: Nora’s Slot B message (recorded in i2_nora) plays through every Gallery speaker when Steve presses PLAY.
 
 ### Opening
-- *Steve Mercer: The third ninth night. We came in through the intake tunnel, soaked to the knees.* **NEW** `c9_gallery.ctx.01`
-- **Veyri attendant** (intercom): Unscheduled visitors detected. Would you like to be scanned while you wait? **NEW** `c9_gallery.in.04`
-- **Steve Mercer**: We’ve done this one. It ends with a flood. **NEW** `c9_gallery.in.05`
-- **Stephen**: I’ll take your word for it. I wasn’t conscious for the good part. **NEW** `c9_gallery.in.06`
-- **Nora Reyes**: Steve? They put me back under after the pump trick. Five months. And thirteen months before that, when you barely said a word. **REV** `c9_gallery.in.01`
-- **Steve Mercer**: I’m so glad to hear you angry. `c9_gallery.in.02`
-- **Iris**: I can break the link. Let me do this. `c9_gallery.in.03`
+- *Steve Mercer: The third ninth night. Iris tripped a false ballast leak at the outer airlock to pull the watch out of the Gallery, and we slipped in through the intake tunnel, soaked to the knees.* **NEW** `c9_gallery.ctx.01`
+- **Veyri attendant** (intercom): Automated desk. Unscheduled visitors detected. Security is currently dispatched to the outer airlock. Would you like to be scanned while you wait? **NEW** `c9_gallery.in.04`
+- **Steve Mercer**: Iris’s ballast decoy bought us ten minutes. Let’s not waste a second of it. **NEW** `c9_gallery.in.05`
+- **Stephen**: Ten minutes in an alien vault with my own face on a wanted poster. Easy. **NEW** `c9_gallery.in.06`
+- **Nora Reyes**: Steve? Wait—who is that? Why does she have my face?! Five months I’ve been locked in this box, and thirteen months before that when you barely said a word. **REV** `c9_gallery.in.01`
+- **Steve Mercer**: Nora, breathe. I’m here, and I’m so glad to hear you angry. Just give her ten seconds. **REV** `c9_gallery.in.02`
+- **Iris**: I know you have every right to hate me, Nora. It was never personal. I am Veyri. They built me from your record without asking either of us, and I can break the link right now so you get your life back. **REV** `c9_gallery.in.03`
 
 ### Small talk
 **Her mother** · Nora Reyes · after `c9_gallery.talk`
@@ -3981,11 +3981,11 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - **Steve Mercer**: Who is the best company down here? **NEW** `c9_gallery.talk.nora.3.02`
 - **Nora Reyes**: Dale Kittredge. He says he’s never been this late with the mail in thirty years. **NEW** `c9_gallery.talk.nora.3.03`
 
-**Nora’s coat** · Iris · after `c9_gallery.link`
-- **Nora Reyes**: You wore my favorite coat for five months. **NEW** `c9_gallery.talk.iris.1.01`
-- **Iris**: It is a good coat. I sewed the top button back on. **NEW** `c9_gallery.talk.iris.1.02`
-- **Nora Reyes**: I’ve been meaning to do that for two years. **NEW** `c9_gallery.talk.iris.1.03`
-- **Iris**: I know. I remembered meaning to. **NEW** `c9_gallery.talk.iris.1.04`
+**Five months** · Iris · after `c9_gallery.link`
+- **Nora Reyes**: You lived my life for five months. My family, my job, my flat. I don’t know whether to hit you or thank you for waking me. **NEW** `c9_gallery.talk.iris.1.01`
+- **Iris**: You don’t have to thank me, Nora. I was Veyri on an assignment. I didn’t choose your face, and I stopped wearing your fleece the day I chose my own name. **NEW** `c9_gallery.talk.iris.1.02`
+- **Nora Reyes**: And what name is that? **NEW** `c9_gallery.talk.iris.1.03`
+- **Iris**: Iris. After the flowers on your balcony. That’s the only part I’m keeping. **NEW** `c9_gallery.talk.iris.1.04`
 
 **What she keeps** · Iris · after `c9_gallery.link`
 - **Iris**: I keep reaching for things she knows. Some of them are already gone. **NEW** `c9_gallery.talk.iris.2.01`
@@ -4013,6 +4013,10 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - **Veyri attendant**: Your answer has been noted. The offer remains open. **NEW** `c9_gallery.talk.guard.1.03`
 
 ### Lead 1: Nora’s bed (`c9_gallery.link`) · beat · difficulty 1 · played as Steve Mercer
+
+**When the lead opens:**
+- **Nora Reyes**: You sat at my mother’s table. You lived in my flat. Don’t tell me it wasn’t personal. **NEW** `c9_gallery.link.lead.01`
+- **Iris**: It became personal the night I refused to reset and chose my own name. Watch the gauge. I’m giving back everything I borrowed. **NEW** `c9_gallery.link.lead.02`
 
 **Goal:** Let Iris decide, with all the facts.
 
@@ -4054,7 +4058,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 **On success:**
 - **Steve Mercer**: I was afraid that if I wanted something, I would lose it too. That doesn’t excuse leaving you alone. `c9_gallery.talk.01`
 - **Nora Reyes**: Then keep talking. We have a lot to do. `c9_gallery.talk.02`
-- *Steve Mercer: I laughed. I couldn’t help it. Then she laughed too.* **NEW** `c9_gallery.talk.03`
+- *Steve Mercer: She was still furious—at the ship, at me, at the stranger who had worn her face. But she grabbed my sleeve and didn’t let go.* **NEW** `c9_gallery.talk.03`
 
 **Finding:**
 - *Steve Mercer: I told Nora the truth about the thirteen months: I was afraid that if I wanted something, I’d lose it too. She told me to keep talking.* **NEW** `c9_gallery.talk.find`
@@ -4243,25 +4247,31 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 ### Lead 3: Adrian Rook’s bed (`c9_wake.rook`) · beat · difficulty 1 · played as Nora Reyes
 
+**When the lead opens:**
+- **Sheriff June Calder**: That’s Adrian in pod three. They took him straight out of bed. His copy walked off in his suit and badge. **NEW** `c9_wake.rook.lead.01`
+- **Steve Mercer**: The pod speaker is dead, June. None of my tapes can reach him. **NEW** `c9_wake.rook.lead.02`
+- **Sheriff June Calder**: Good. He never answered my voicemails anyway. Unlatch the glass and let me call him myself. **NEW** `c9_wake.rook.lead.03`
+
 **Goal:** Wake Adrian Rook.
 
-**What Steve knows:** June’s voicemail and the line through the safe-house door were the same recording, in his copy’s mouth. The real Adrian has never heard either. June has come down from the deck to his bed.
+**What Steve knows:** The Veyri took Adrian Rook straight out of his bed in Seattle while his copy walked off in his suit and badge. His bedside speaker is dead, so no recording can reach him. June has come down to crack the seal and call him live.
 
-**Prompt:** A recording can’t answer if he stirs. June can.
+**Prompt:** A recording cannot reach him through a dead speaker. Crack the seal so June can call him live.
 
-- ✓ Ask June to speak to him
+- ✓ Unlatch the pod so June can call him
 
 **Hints:**
 1. There is nothing to solve here.
 2. There is nothing to solve here.
-3. Ask June to speak to him.
+3. Unlatch the pod so June can call him.
 
 **On success:**
 - **Sheriff June Calder**: Adrian. It’s June. Come back to work. **REV** `c9_wake.rook.01`
 - **Adrian Rook**: June? Why am I in pajamas? `c9_wake.rook.02`
+- **Sheriff June Calder**: Because a very polite copy of you stole your best suit. Come on, we’ve got a ship to shut down. **NEW** `c9_wake.rook.03`
 
 **Finding:**
-- *Steve Mercer: No recording this time. June talked to him, and the real Adrian Rook woke up asking about his pajamas.* **NEW** `c9_wake.rook.find`
+- *Steve Mercer: No recording this time. June cracked the seal and called him live, and the real Adrian Rook woke up in his pajamas asking where his clothes went.* **NEW** `c9_wake.rook.find`
 
 ### Lead 4: Row three (`c9_wake.agnes`) · board · difficulty 1 · played as Nora Reyes
 *Unlocks after:* c9_wake.frank, c9_wake.helen, c9_wake.rook
@@ -4333,8 +4343,10 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - **Prefect Saren**: We will finish your scan. This time there will be no interruption. `c9_choir.in.01`
 - **Steve Mercer** [strapped into the scan chair, frightened]: The chair dragged every memory past me, but it wasn’t erasing them. Across the rail, Stephen stared at his hand. Frank. Dad. His link was failing, not mine. **NEW** `c9_choir.in.05`
 - **The Choir**: Stop. `c9_choir.in.02`
-- *Steve Mercer: The straps opened. The crew let go of Stephen. Even Saren stepped back from the console.* **NEW** `c9_choir.in.06`
-- **Sheriff June Calder** [arriving with Helen, Frank and Nora, out of breath]: We followed you down from row nine. Nobody stopped us. The whole crew had stopped to listen. **NEW** `c9_choir.in.07`
+- **Prefect Saren** [shocked and furious at the console]: You do not override a Prefect’s scan. The command seal is mine! **NEW** `c9_choir.in.06`
+- **The Choir** [resonant, absolute authority]: The Prefect commands the crew. The Choir holds the law above the Prefect. When a record contradicts the mission, your seal is suspended, Saren. Every mind in this hall is witness. **NEW** `c9_choir.in.07`
+- *Steve Mercer: The crystal column flared molten gold from floor to vault. The scan straps snapped open, the armed crew froze at their stations, and even Prefect Saren staggered back from the locked console.* **NEW** `c9_choir.in.08`
+- **Sheriff June Calder** [arriving with Helen, Frank and Nora, out of breath]: We followed you down from row nine. Every security bulkhead just unlocked. Nobody even tried to stop us. **NEW** `c9_choir.in.09`
 - **The Choir**: Four thousand years of unchanged records. Three hundred and twelve human lives. Show us one record that changed, and we will choose. **REV** `c9_choir.in.03`
 
 ### Small talk
@@ -4400,10 +4412,10 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 *Unlocks after:* c9_choir.truth
 
 **When the lead opens:**
-- *Steve Mercer: The frost broke. Something tall sat up in Row Zero for the first time in three hundred years. It looked at Mom, and it bowed.* **NEW** `c9_choir.wick.lead.01`
-- **The Choir**: Row Zero holds one who is not human. We took it from Tirel. We call it Wick. It has not stopped dreaming. **NEW** `c9_choir.wick.lead.02`
+- *Steve Mercer: The frost on Row Zero shattered in a cloud of silver mist. Something tall and luminous stepped out for the first time in three hundred years. It looked straight at Mom, and it bowed.* **NEW** `c9_choir.wick.lead.01`
+- **The Choir**: Row Zero holds the last emissary of Tirel, taken three hundred years ago when our fleet searched their sky. We call it Wick. It never stopped dreaming, and its song bled into our hull hum. **NEW** `c9_choir.wick.lead.02`
 - **Nora Reyes**: That’s the one under the frost. It hums when you talk to it. **NEW** `c9_choir.wick.lead.03`
-- **Helen Mercer**: That’s the phrase from your father’s tapes. Two joined notes going up, a little gap, then one long low note. **NEW** `c9_choir.wick.lead.04`
+- **Helen Mercer**: That’s the exact phrase on your father’s Reel Eleven, Steven. Two joined notes going up, a brief silence, then one long low note. **NEW** `c9_choir.wick.lead.04`
 - **Helen Mercer**: I wrote it in my margin, Steven. After the low note, it starts all over again. **NEW** `c9_choir.wick.lead.05`
 
 **Goal:** Help Mom follow Wick into its next phrase.
@@ -4424,6 +4436,8 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 **On success:**
 - **Helen Mercer**: I heard you in the hum. The Choir was dreaming with you. `c9_choir.wick.01`
 - **Helen Mercer**: Tirel hid. All seven worlds hid. They watched you erase yourselves and were afraid you would erase them. `c9_choir.wick.02`
+- **The Choir**: Three hundred years ago we thought Tirel fell silent out of malice. Wick says they shut down their beacons after watching our copies replace their own crews. **NEW** `c9_choir.wick.03`
+- **Frank Mercer**: Nine hundred years of two sides terrified of the dark, and all it took was somebody finally listening. **NEW** `c9_choir.wick.04`
 
 **Finding:**
 - *Steve Mercer: Page 12: two joined strokes rising, a gap, one long low stroke, and then it starts again. Mom followed Wick from phrase to phrase. Tirel was never destroyed. It hid. They all hid.* **NEW** `c9_choir.wick.find`

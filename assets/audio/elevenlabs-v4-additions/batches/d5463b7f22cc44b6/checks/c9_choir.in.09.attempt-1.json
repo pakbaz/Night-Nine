@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c9_choir.in.09",
+  "attempt": 1,
+  "plan_sha256": "d5463b7f22cc44b6124e00663543928deec2800a647d84f1f65da9b8bbf060b4",
+  "wav_sha256": "13b6c1cd647c345a6f1b5eec87765ef738058e9052f46d14912c22e49665de46",
+  "expected": "We followed you down from row nine. Every security bulkhead just unlocked. Nobody even tried to stop us.",
+  "recognized": "We followed you down from row nine. Every security bulkhead just unlocked. Nobody even tried to stop us.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 7.68,
+  "sample_rate": 48000,
+  "peak": 0.51861572265625,
+  "rms": 0.0699729615762581,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

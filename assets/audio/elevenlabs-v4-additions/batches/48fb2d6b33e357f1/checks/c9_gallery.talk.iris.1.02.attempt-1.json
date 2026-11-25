@@ -1,0 +1,28 @@
+{
+  "schema": 1,
+  "audio_id": "c9_gallery.talk.iris.1.02",
+  "attempt": 1,
+  "plan_sha256": "48fb2d6b33e357f14a725688d35988e4c5c277b317e41072eb6099d97823dd4b",
+  "wav_sha256": "231fac41ff0dd9ee4d6d9c2ba1d6615c5ea5e0ca0422a7f07940b32be3c0b16f",
+  "expected": "You don’t have to thank me, Nora. I was Veyri on an assignment. I didn’t choose your face, and I stopped wearing your fleece the day I chose my own name.",
+  "recognized": "You don't have to thank me, Nora. I was Vari on an assignment. I didn't choose your face, and I stopped wearing your fleece the day I chose my own name.",
+  "local_recognized": "You don't have to thank me, Nora. I was very on an assignment. I didn't choose your face, and I stopped wearing your fleece the day I chose my own name.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 9.44,
+  "sample_rate": 48000,
+  "peak": 0.489471435546875,
+  "rms": 0.05631642597120454,
+  "level_match_gain_db": 0.0,
+  "word_edits": 1,
+  "word_error_rate": 0.030303030303030304,
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c9_gallery.talk.iris.1.02.json",
+    "sha256": "a910d54fcbea3e1475edf810dac7b80b5f329d46aac6ce3da49bc7cd2c5c4917",
+    "model": "scribe_v3",
+    "word_edits": 1,
+    "listening_reviewed": false
+  },
+  "status": "manual_review_passed",
+  "failure_reason": null,
+  "manual_review_note": "Both local Whisper and independent Scribe v3 matched every word verbatim except the invented species proper noun Veyri (spelled Very/Vari), matching frozen takes c6_iris.takes.04 and c9_choir.recap.02."
+}

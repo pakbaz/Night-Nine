@@ -1,0 +1,28 @@
+{
+  "schema": 1,
+  "audio_id": "c9_choir.wick.03",
+  "attempt": 1,
+  "plan_sha256": "d5463b7f22cc44b6124e00663543928deec2800a647d84f1f65da9b8bbf060b4",
+  "wav_sha256": "0796171ecba9dbcb20ada4aec5d29d6de40040c74829c0ec387a3beaa4cea648",
+  "expected": "Three hundred years ago we thought Tirel fell silent out of malice. Wick says they shut down their beacons after watching our copies replace their own crews.",
+  "recognized": "300 years ago, we thought Tyrell fell silent out of malice. Wick says they shut down their beacons after watching our copies replace their own crews.",
+  "local_recognized": "300 years ago, we thought Tyrell fell silent out of malice. Wick says they shut down their beacons after watching our copies replace their own crews.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 11.36,
+  "sample_rate": 48000,
+  "peak": 0.81378173828125,
+  "rms": 0.12814202775917308,
+  "level_match_gain_db": 0.0,
+  "word_edits": 1,
+  "word_error_rate": 0.038461538461538464,
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c9_choir.wick.03.json",
+    "sha256": "5e90ff44e0e0c660575e00fb60244577456c17832bffbd4092401df7b3c58db0",
+    "model": "scribe_v3",
+    "word_edits": 1,
+    "listening_reviewed": false
+  },
+  "status": "manual_review_passed",
+  "failure_reason": null,
+  "manual_review_note": "Both local Whisper and independent Scribe v3 matched every word verbatim except the invented world proper noun Tirel (spelled Tyrell)."
+}

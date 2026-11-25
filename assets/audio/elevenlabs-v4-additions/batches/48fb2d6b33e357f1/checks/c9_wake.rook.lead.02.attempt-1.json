@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c9_wake.rook.lead.02",
+  "attempt": 1,
+  "plan_sha256": "48fb2d6b33e357f14a725688d35988e4c5c277b317e41072eb6099d97823dd4b",
+  "wav_sha256": "78421fd8a1837e5bf5e71970633bb96cb552bb750422c725b118654f66838666",
+  "expected": "The pod speaker is dead, June. None of my tapes can reach him.",
+  "recognized": "The pod speaker is dead, June. None of my tapes can reach him.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.16,
+  "sample_rate": 48000,
+  "peak": 0.320037841796875,
+  "rms": 0.0365366846004933,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

@@ -1,0 +1,17 @@
+{
+  "operation": "text_to_speech",
+  "plan_sha256": "48fb2d6b33e357f14a725688d35988e4c5c277b317e41072eb6099d97823dd4b",
+  "audio_id": "c9_wake.rook.lead.03",
+  "attempt": 1,
+  "voice_id": "wa4sQVgbDDzUDEzJwch3",
+  "model_id": "eleven_v4",
+  "text_sha256": "30ec5cb4d960ddd39f781a335e3db1be61a3e25a88f7c524a911d4624bfeaf0b",
+  "synthesis_text_sha256": "30ec5cb4d960ddd39f781a335e3db1be61a3e25a88f7c524a911d4624bfeaf0b",
+  "request_id": "Fnhc3jMlwy7j3TzEPH9o",
+  "trace_id": "788e7f7ce6c5a2ac7bb32c1973eb8f64",
+  "character_cost": 40,
+  "output_format": "mp3_44100_192",
+  "audio_sha256": "bcd313818e477c5881d7d8ee4d6dc613c26308717db2cf118918b41dcde7f5d6",
+  "response_bytes": 147373,
+  "seed": 3019601928
+}

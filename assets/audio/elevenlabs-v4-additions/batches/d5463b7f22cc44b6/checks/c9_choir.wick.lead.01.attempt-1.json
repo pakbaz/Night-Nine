@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c9_choir.wick.lead.01",
+  "attempt": 1,
+  "plan_sha256": "d5463b7f22cc44b6124e00663543928deec2800a647d84f1f65da9b8bbf060b4",
+  "wav_sha256": "68b922d2e7f68f562142dc9dd9c1f7fd144e7fc20b9a21ef543b0bd70a0cd4e8",
+  "expected": "The frost on Row Zero shattered in a cloud of silver mist. Something tall and luminous stepped out for the first time in three hundred years. It looked straight at Mom, and it bowed.",
+  "recognized": "The frost on row zero shattered in a cloud of silver mist. Something tall and luminous stepped out for the first time in 300 years. It looked straight at mom, and it bowed.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 13.6,
+  "sample_rate": 48000,
+  "peak": 0.360595703125,
+  "rms": 0.03468587585098131,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}
