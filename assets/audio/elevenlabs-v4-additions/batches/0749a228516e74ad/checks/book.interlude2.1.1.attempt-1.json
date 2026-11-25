@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "book.interlude2.1.1",
+  "attempt": 1,
+  "plan_sha256": "0749a228516e74ad545702479ab3f92f62eef905045249bd271ab389f5b3f501",
+  "wav_sha256": "58fab8f8ec42563172f62ea407e2b429d2af548b21ba41cbcc09867023e8f3ba",
+  "expected": "That night five fugitives and a beagle slept in Gus’s bakery van. It smelled of cinnamon and wet dog.",
+  "recognized": "That night, five fugitives and a beagle slept in Gus's bakery van. It smelled of cinnamon and wet dog.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 7.36,
+  "sample_rate": 48000,
+  "peak": 0.616851806640625,
+  "rms": 0.04321063881511184,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

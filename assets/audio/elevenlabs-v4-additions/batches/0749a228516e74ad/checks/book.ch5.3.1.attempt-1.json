@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "book.ch5.3.1",
+  "attempt": 1,
+  "plan_sha256": "0749a228516e74ad545702479ab3f92f62eef905045249bd271ab389f5b3f501",
+  "wav_sha256": "9bf65636478bf9607cd1c60eec5e8065fab7ac3821cf194c91d6665021f5301d",
+  "expected": "At first light I could see the bay again. And on the bluff above it, a roof I knew.",
+  "recognized": "At first light, I could see the bay again, and on the bluff above it, a roof I knew.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 5.52,
+  "sample_rate": 48000,
+  "peak": 0.326934814453125,
+  "rms": 0.03995335804528739,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

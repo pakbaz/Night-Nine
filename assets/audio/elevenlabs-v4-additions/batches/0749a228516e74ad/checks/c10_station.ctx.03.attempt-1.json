@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c10_station.ctx.03",
+  "attempt": 1,
+  "plan_sha256": "0749a228516e74ad545702479ab3f92f62eef905045249bd271ab389f5b3f501",
+  "wav_sha256": "1a6f32e165a98c1c4ead2c0e64412ccb227152a24497217858b180f5d422aa6e",
+  "expected": "Six weeks after Halcyon fired me, I sat at my old desk and stopped waiting for somebody else to take the microphone.",
+  "recognized": "Six weeks after Halcyon fired me, I sat at my old desk and stopped waiting for somebody else to take the microphone.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 7.44,
+  "sample_rate": 48000,
+  "peak": 0.3826904296875,
+  "rms": 0.03509702788349478,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

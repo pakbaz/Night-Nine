@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
 import json
+from pathlib import Path
 import unittest
 
 import script_v2
+
+CAST = Path(__file__).resolve().parents[1] / 'game/assets/illustrated/cast'
 
 
 class StoryRuntimeSourceTests(unittest.TestCase):
@@ -58,6 +61,19 @@ class StoryRuntimeSourceTests(unittest.TestCase):
         self.assertEqual(gallery['reveal_after']['nora'], 'c9_gallery.link.02')
         held = next(layer for layer in gallery['layers'] if 'nora-held' in layer['file'])
         self.assertEqual(held['until'], 'c9_gallery.link.02')
+
+    def test_authored_appearances_are_standing_portraits_the_room_can_place(self):
+        appearances = {name for scene in self.staging.values() if isinstance(scene, dict)
+                       for name in scene.get('appearances', {}).values()}
+        self.assertTrue(appearances)
+        for name in sorted(appearances):
+            with self.subTest(appearance=name):
+                manifest = json.loads((CAST / name / 'sprite.json').read_text())
+                self.assertTrue((CAST / name / manifest['base']).is_file())
+                width, height = manifest['size']
+                foot_x, foot_y = manifest['foot_anchor']
+                self.assertTrue(0 < foot_x < width and 0 < foot_y <= height)
+                self.assertEqual(len(manifest.get('eye_centers', [])), 2)
 
     def test_detail_shots_reference_current_live_lines(self):
         for scene_id, scene in self.staging.items():

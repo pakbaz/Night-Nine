@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "book.interlude2.2.2",
+  "attempt": 1,
+  "plan_sha256": "0749a228516e74ad545702479ab3f92f62eef905045249bd271ab389f5b3f501",
+  "wav_sha256": "2dc5cbe99742116fbc421fae5e0656f0bf390359a5991f349cf1810b02fcc5ab",
+  "expected": "Nora told me this part herself, much later. She still tells it better than I do.",
+  "recognized": "Nora told me this part herself, much later. She still tells it better than I do.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 5.44,
+  "sample_rate": 48000,
+  "peak": 0.29986572265625,
+  "rms": 0.038775087996952104,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

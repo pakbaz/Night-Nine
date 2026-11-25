@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "book.ch2.1.1",
+  "attempt": 1,
+  "plan_sha256": "0749a228516e74ad545702479ab3f92f62eef905045249bd271ab389f5b3f501",
+  "wav_sha256": "87f1d09cb3b4258220302fd600bdf96e08069ea46958b81a4e90001b088470e1",
+  "expected": "Nobody swam. Nobody called for help. They walked into the bay in their good shoes, and the water closed over them.",
+  "recognized": "Nobody swam. Nobody called for help. They walked into the bay in their good shoes, and the water closed over them.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 7.76,
+  "sample_rate": 48000,
+  "peak": 0.350616455078125,
+  "rms": 0.03484213999743809,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

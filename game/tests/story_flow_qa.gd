@@ -228,9 +228,20 @@ func _run() -> void:
 	await capture("12-sentinel-page")
 	game.title_card.finish_now()
 	await finish_dialogue()
-	# Ending.
-	jump_to("epilogue")
-	check(game.title_card.visible and game.title_card.kicker.text == "Epilogue", "The epilogue opens with its card")
+	# Ending: the Chapter 10 film hands over to the homecoming storybook, then the epilogue card.
+	jump_to("c10_report")
+	game.title_card.finish_now()
+	await finish_dialogue()
+	solve_scene()
+	game._depart()
+	await finish_departure()
+	check(await until(func(): return game.storybook.visible, 30.0) and str(game.storybook.book.get("before", "")) == "epilogue",
+		"The homecoming storybook follows the Chapter 10 film")
+	check(game.score.current_file.ends_with("epilogue-bgm.mp3"), "The homecoming storybook plays over the Epilogue BGM")
+	await watch_book("13-home", 2)
+	check(await until(func(): return game.title_card.visible, 3.0) and game.campaign.current().id == "epilogue",
+		"The epilogue card follows the homecoming storybook")
+	check(game.title_card.kicker.text == "Epilogue", "The epilogue opens with its card")
 	check(game.score.current_file.ends_with("epilogue-bgm.mp3"), "The epilogue opens on its original Epilogue BGM")
 	await wait(1.6)
 	await capture("13-epilogue-card")

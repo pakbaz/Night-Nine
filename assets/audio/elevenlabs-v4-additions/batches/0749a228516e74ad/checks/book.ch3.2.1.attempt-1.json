@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "audio_id": "book.ch3.2.1",
+  "attempt": 1,
+  "plan_sha256": "0749a228516e74ad545702479ab3f92f62eef905045249bd271ab389f5b3f501",
+  "wav_sha256": "9059b6022ec58aea8bfb4de6b510865eb73aceef36c16941eb637dc84c636a84",
+  "expected": "Admiral left me in the shallows at first light, then swam back out into the dark water without me.",
+  "recognized": "Admiral left me in the shallows at first light, then swam back out into the dark water without me.",
+  "local_recognized": "The Admiral left me in the shallows at first light, then swam back out into the dark water without me.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 6.4,
+  "sample_rate": 48000,
+  "peak": 0.379547119140625,
+  "rms": 0.03621711168198971,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/book.ch3.2.1.json",
+    "sha256": "0fbdebc6efbb036e376fcc77fd11962f60897f45891d4360d9a5883360d11a59",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  },
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

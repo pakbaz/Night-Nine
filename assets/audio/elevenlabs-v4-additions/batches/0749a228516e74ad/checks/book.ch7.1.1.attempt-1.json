@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "book.ch7.1.1",
+  "attempt": 1,
+  "plan_sha256": "0749a228516e74ad545702479ab3f92f62eef905045249bd271ab389f5b3f501",
+  "wav_sha256": "4ec7ea975fbb831f35811c9013d283530abdea7009896b8c6c36a7d43bf400f2",
+  "expected": "On Wednesday morning, every television in Bellwether showed the same field of old antennas.",
+  "recognized": "On Wednesday morning, every television in Bellwether showed the same field of old antennas.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 5.92,
+  "sample_rate": 48000,
+  "peak": 0.3056640625,
+  "rms": 0.046519745795349815,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

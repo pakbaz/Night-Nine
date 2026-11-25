@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "book.ch4.1.1",
+  "attempt": 1,
+  "plan_sha256": "0749a228516e74ad545702479ab3f92f62eef905045249bd271ab389f5b3f501",
+  "wav_sha256": "9bcf104c50f56dec222e6d99639803a3dab5750173dbdb8750745bb3e4df7c46",
+  "expected": "For two days June called in favors from people she trusted, and I copied every tape I owned. Twice.",
+  "recognized": "For two days, June called in favors from people she trusted, and I copied every tape I owned. Twice.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 7.12,
+  "sample_rate": 48000,
+  "peak": 0.41510009765625,
+  "rms": 0.039214196511016645,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

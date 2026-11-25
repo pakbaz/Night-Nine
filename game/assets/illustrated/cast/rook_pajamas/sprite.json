@@ -1,12 +1,118 @@
 {
   "base": "rook_pajamas.webp",
+  "source": "assets/characters/campaign/masters/rook_pajamas.png",
+  "source_sha256": "aeac431e8a3a2724d0f08ae251378047ab8f4567b1f32afd74880da8fe3f764f",
   "size": [
     843,
     1080
   ],
-  "foot": [
+  "origin": "top_left",
+  "foot_anchor": [
     421,
-    1020
+    1080
   ],
-  "frames": {}
+  "frames": {
+    "blink_half": {
+      "atlas_region": [
+        0,
+        0,
+        114,
+        39
+      ],
+      "source_origin": [
+        350,
+        134
+      ]
+    },
+    "blink_closed": {
+      "atlas_region": [
+        0,
+        41,
+        114,
+        39
+      ],
+      "source_origin": [
+        350,
+        134
+      ]
+    },
+    "mouth_parted": {
+      "atlas_region": [
+        0,
+        82,
+        87,
+        60
+      ],
+      "source_origin": [
+        378,
+        206
+      ]
+    },
+    "mouth_open": {
+      "atlas_region": [
+        0,
+        144,
+        87,
+        60
+      ],
+      "source_origin": [
+        378,
+        206
+      ]
+    },
+    "mouth_round": {
+      "atlas_region": [
+        0,
+        206,
+        87,
+        60
+      ],
+      "source_origin": [
+        378,
+        206
+      ]
+    },
+    "mouth_wide": {
+      "atlas_region": [
+        0,
+        268,
+        87,
+        60
+      ],
+      "source_origin": [
+        378,
+        206
+      ]
+    }
+  },
+  "cue_frames": {
+    "X": null,
+    "A": null,
+    "B": "mouth_parted",
+    "C": "mouth_wide",
+    "D": "mouth_open",
+    "E": "mouth_round",
+    "F": "mouth_round",
+    "G": "mouth_parted",
+    "H": "mouth_parted"
+  },
+  "sha256": {
+    "rook_pajamas.webp": "af19e101e76ece00d77c3b2c708a2a4870fe9f3cb873489677381abb0fe6e1eb",
+    "rook_pajamas-face-atlas.png": "0f56388c5aaeca8faf2ac68e48341059a965d75594a5b11f34cccf06dde68a24"
+  },
+  "atlas": "rook_pajamas-face-atlas.png",
+  "eye_centers": [
+    [
+      373,
+      160
+    ],
+    [
+      441,
+      148
+    ]
+  ],
+  "mouth_center": [
+    422,
+    235
+  ]
 }

@@ -14,6 +14,16 @@ func _scene_index(state: NightCampaign, id: String) -> int:
 			return i
 	return -1
 
+## How many measured bars a recording in music.json has, or 0 when it is not measured.
+func _track_bars(music: Dictionary, file: String) -> int:
+	var tracks: Array = [music.get("title", {})]
+	for group: Dictionary in music.chapters.values():
+		tracks.append_array(group.values())
+	for track: Dictionary in tracks:
+		if str(track.get("file", "")) == file:
+			return track.get("bar_loudness", []).size()
+	return 0
+
 func _check_story_shape(state: NightCampaign) -> void:
 	var scenes: Array = state.content.scenes
 	check(scenes[0].id == "p_bay" and scenes[1].id == "c1_flat", "Open on the bay with Steve's parents, then Chapter 1")
@@ -32,17 +42,32 @@ func _check_story_shape(state: NightCampaign) -> void:
 	var music: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://content/music.json"))
 	var narration_enabled: bool = bool(narration.get("enabled",true))
 	check(narration_enabled == bool(voice.get("enabled",true)), "Storybook and dialogue voice activation match")
-	for key: String in ["opening", "aftermath", "after"]:
+	var book_before := {}
+	for key: String in books:
+		book_before[str(books[key].before)] = key
+	for scene: Dictionary in scenes:
+		if not scene.get("card", {}).has("chapter") or scene.id == "postcredits":
+			continue
+		check(book_before.has(str(scene.id)), "A narrated cutscene eases into " + str(scene.chapter) + " before " + str(scene.id))
+		if book_before.has(str(scene.id)) and not scene.id in ["p_bay", "c1_flat"]:
+			var own: Array = music.chapters.get(scene.chapter, {}).values().map(func(track: Dictionary): return str(track.file))
+			check(str(books[book_before[scene.id]].music.file) in own, "The " + str(scene.chapter) + " cutscene plays that chapter's own music")
+	for key: String in books:
 		var book: Dictionary = books[key]
 		check(_scene_index(state, str(book.before)) >= 0, "Storybook " + key + " leads into a real scene")
 		check(ResourceLoader.exists(str(book.music.file)), "Storybook " + key + " has its music")
+		var bars := _track_bars(music, str(book.music.file))
+		check(bars == 0 or float(book.end_bar) <= bars, "Storybook " + key + " ends before its music runs out")
+		check(book.panels.size() >= 2, "Storybook " + key + " has at least two pictures")
 		var last := -1.0
-		for panel: Dictionary in book.panels:
+		for panel_index: int in book.panels.size():
+			var panel: Dictionary = book.panels[panel_index]
 			check(ResourceLoader.exists(str(panel.image)), "Storybook picture " + str(panel.image))
 			check(float(panel.bar) > last and float(panel.bar) < float(book.end_bar), "Storybook panels run in bar order in " + key)
 			last = float(panel.bar)
+			var next_bar: float = float(book.panels[panel_index + 1].bar) if panel_index + 1 < book.panels.size() else float(book.end_bar)
 			for line: Dictionary in panel.lines:
-				check(float(line.bar) >= float(panel.bar) and not str(line.text).contains("—"), "Caption sits inside its panel in " + key)
+				check(float(line.bar) >= float(panel.bar) and float(line.bar) < next_bar and not str(line.text).contains("—"), "Caption sits inside its panel in " + key)
 				check(str(line.get("narration","")).is_empty() != narration_enabled, "Narration follows the approved voice gate: " + str(line.text))
 				check(not str(line.text).is_empty() and (str(line.get("narration","")).is_empty()
 					or ResourceLoader.exists(str(line.narration))),"Caption does not depend on recorded narration: "+str(line.text))

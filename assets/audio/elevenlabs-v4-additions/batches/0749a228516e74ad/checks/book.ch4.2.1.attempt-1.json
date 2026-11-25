@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "book.ch4.2.1",
+  "attempt": 1,
+  "plan_sha256": "0749a228516e74ad545702479ab3f92f62eef905045249bd271ab389f5b3f501",
+  "wav_sha256": "e73f7b0a1d7c7577aab4d4fec300afc059aad630a1b2d310c3d9347f3f8dbe5b",
+  "expected": "She trusted Adrian Rook with her life. Twenty years ago, he had helped her bring a kidnapped child home.",
+  "recognized": "She trusted Adrian Rook with her life. 20 years ago, he had helped her bring a kidnapped child home.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 7.12,
+  "sample_rate": 48000,
+  "peak": 0.3150634765625,
+  "rms": 0.036724055033582365,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

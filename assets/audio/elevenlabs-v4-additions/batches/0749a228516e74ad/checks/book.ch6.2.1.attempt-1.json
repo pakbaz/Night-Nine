@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "book.ch6.2.1",
+  "attempt": 1,
+  "plan_sha256": "0749a228516e74ad545702479ab3f92f62eef905045249bd271ab389f5b3f501",
+  "wav_sha256": "cd7026f2508d58dd25002b7e6d01f5dd20a9ded1d6dfbe6997ad913b393bc95a",
+  "expected": "Mom’s notebook sat on Dad’s workbench between us. Neither of us could read a word of it.",
+  "recognized": "Mom's notebook sat on Dad's workbench between us. Neither of us could read a word of it.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 5.76,
+  "sample_rate": 48000,
+  "peak": 0.294219970703125,
+  "rms": 0.035621860292080525,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

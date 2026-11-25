@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "book.ch3.3.1",
+  "attempt": 1,
+  "plan_sha256": "0749a228516e74ad545702479ab3f92f62eef905045249bd271ab389f5b3f501",
+  "wav_sha256": "1f581b64a5a711c8e59f0d962faa43b84f38468b29b52e84a653375f1598f5a9",
+  "expected": "Getting off the ship was the easy part. The hard part was finding one person who would believe me.",
+  "recognized": "Getting off the ship was the easy part. The hard part was finding one person who would believe me.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 6.32,
+  "sample_rate": 48000,
+  "peak": 0.363800048828125,
+  "rms": 0.03597517708171294,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

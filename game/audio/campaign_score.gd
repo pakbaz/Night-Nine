@@ -33,6 +33,9 @@ var ride_bar := -1
 var powers := PackedFloat32Array([0.0,0.0])
 var starting_power := PackedFloat32Array([0.0,0.0])
 var trim := PackedFloat32Array([0.0,0.0])
+## A recording that carries on under a new cue glides to that cue's level instead of jumping.
+var trim_target := PackedFloat32Array([0.0,0.0])
+var trim_rate := 0.0
 var elapsed := 0.0
 var duration := 0.0
 var film_paused := false
@@ -165,6 +168,13 @@ func select_track(track: Dictionary, kind: String, chapter_id: String, start: fl
 		silence()
 		return false
 	if current_file == path and active_index >= 0 and not fresh:
+		if kind != cue:
+			# A storybook's recording carries on under its scene: keep playing, settle to the scene's level.
+			current_track = track
+			chapter = chapter_id
+			cue = kind
+			trim_target[active_index] = _trim_for(track, kind)
+			trim_rate = absf(trim_target[active_index] - trim[active_index]) / float(FADE_SECONDS[kind])
 		return true
 	# If the player reverses a transition, bring the still-playing deck back
 	# without restarting it. Otherwise replace the quieter deck.
@@ -204,9 +214,13 @@ func select_track(track: Dictionary, kind: String, chapter_id: String, start: fl
 		ride_target_db = 0.0
 		ride_bar = -1
 	active_index = next
-	trim[next] = clampf(float(TARGET_LUFS[kind]) - float(track.get("lufs",-16.0)),-24.0,6.0)
+	trim[next] = _trim_for(track, kind)
+	trim_target[next] = trim[next]
 	begin_fade(float(FADE_SECONDS[kind]))
 	return true
+
+func _trim_for(track: Dictionary, kind: String) -> float:
+	return clampf(float(TARGET_LUFS[kind]) - float(track.get("lufs",-16.0)),-24.0,6.0)
 
 func silence() -> void:
 	if active_index < 0:
@@ -295,6 +309,9 @@ func _process(delta: float) -> void:
 	if not is_equal_approx(duck_db,duck_target_db):
 		var rate := 120.0 if duck_target_db < duck_db else 52.0
 		duck_db = move_toward(duck_db,duck_target_db,rate*delta)
+		changed = true
+	if active_index >= 0 and trim[active_index] != trim_target[active_index]:
+		trim[active_index] = move_toward(trim[active_index],trim_target[active_index],trim_rate*delta)
 		changed = true
 	var ride_target := _ride_target()
 	if not is_equal_approx(ride_db,ride_target):

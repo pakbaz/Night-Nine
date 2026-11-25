@@ -1,0 +1,54 @@
+{
+  "schema": 1,
+  "batch": "later-additions",
+  "model_id": "eleven_v4",
+  "output_format": "mp3_44100_192",
+  "inputs": {
+    "campaign": "3c67a0d7e13d2ff0696b2a140e0c60971698498635229a291b0a6ca9cc3bc5b4",
+    "storybook": "b1aa69bf5a3d22db075165eeda8b979488afe1ad9fbff491ab7160df62e05e13",
+    "voice_manifest": "aad34a6801dc761341d4af9ecac53dc51658d64dcea335c6296c728b50748939",
+    "casting": "cb91065c437c743d50eea2958d5149a6d0a35b9d20430a66cb8a548b921246db",
+    "existing_additions": "7e8d877924bd4522451878eaef7fcd7a5466cd18e038d0aff36b27f0c276999a"
+  },
+  "ordered_audio_ids": [
+    "book.home.1.1"
+  ],
+  "items": {
+    "book.home.1.1": {
+      "audio_id": "book.home.1.1",
+      "kind": "narration",
+      "scene": "storybook:home",
+      "speaker": "steve",
+      "cast_role": "steve",
+      "voice_id": "vveagfomyMCJLZsOPRP2",
+      "text": "For a while it just hung there over the water, as if it wanted one more look at us. Then it was gone.",
+      "text_sha256": "b0e6d9f06e56c0d7085c28da769e66eb60507103280c03798e98ac781736610d",
+      "synthesis_text": "For a while it just hung there over the water, as if it wanted one more look at us. Then it was gone.",
+      "synthesis_text_sha256": "b0e6d9f06e56c0d7085c28da769e66eb60507103280c03798e98ac781736610d",
+      "delivery": "narration",
+      "direction": "",
+      "v4_audio_tag": "",
+      "previous_text": null,
+      "next_text": "Three hundred and twelve people came home that morning. Most of them were still in pajamas.",
+      "voice_settings": {
+        "stability": 0.62,
+        "similarity_boost": 0.78
+      },
+      "language_code": "en",
+      "model_id": "eleven_v4",
+      "output_format": "mp3_44100_192",
+      "estimated_credit_rate": 1.0,
+      "estimated_credits": 101,
+      "attempt_seeds": [
+        3309392954,
+        3383611813,
+        3576486229
+      ]
+    }
+  },
+  "count": 1,
+  "characters": 101,
+  "request_characters": 101,
+  "estimated_credits": 101,
+  "plan_sha256": "7b8ec50a450323340244dc362496e6aedd15402dcb0e8520170e13a74619f919"
+}

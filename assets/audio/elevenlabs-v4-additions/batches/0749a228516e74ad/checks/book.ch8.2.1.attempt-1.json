@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "book.ch8.2.1",
+  "attempt": 1,
+  "plan_sha256": "0749a228516e74ad545702479ab3f92f62eef905045249bd271ab389f5b3f501",
+  "wav_sha256": "13d511fd93440c5287fefc3d5b3bfda4b3bc305fa58a5e281599fcfeb4e79284",
+  "expected": "Then Dr. Wen opened Mom’s notebook and began to read.",
+  "recognized": "Then Dr. Wen opened Mom's notebook and began to read.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.0,
+  "sample_rate": 48000,
+  "peak": 0.310699462890625,
+  "rms": 0.04126490541327549,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

@@ -787,6 +787,13 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 **Next:** Chapter 1 film: the procession into the glowing surf. Then Chapter 2.
 
+## Storybook: Into the water
+
+- *Steve: Nobody swam. Nobody called for help. They walked into the bay in their good shoes, and the water closed over them.* `book.ch2.1.1`
+- *Steve: Lyle Boone. Gus from the bakery. People I’d waved at my whole life.* `book.ch2.1.2`
+- *Steve: Then the light went out of the water. Mrs. Penhallow’s step was empty. Only the footprints were left.* `book.ch2.2.1`
+- *Steve: I dug out my flip phone. My hands shook so badly that I misdialed twice.* `book.ch2.3.1`
+
 ## Chapter 2: The Aquarium Is Closed (`c2_aquarium`)
 
 **Where:** Aquarium north wing · **When:** Just after midnight, Monday the 22nd · **Present:** Steve Mercer, Nora’s copy, Lyle Boone
@@ -1142,6 +1149,12 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - **Sheriff June Calder**: Mercer. Breathe first. Explain afterward. `c2_ship.out.02`
 
 **Next:** Chapter 2 film: dawn on the beach, then a tank filling aboard the ship. Then Chapter 3.
+
+## Storybook: Protective custody
+
+- *Steve: I had seen her. Nora, asleep in amber light, breathing a little behind the ship’s own rhythm.* `book.ch3.1.1`
+- *Steve: Admiral left me in the shallows at first light, then swam back out into the dark water without me.* `book.ch3.2.1`
+- *Steve: Getting off the ship was the easy part. The hard part was finding one person who would believe me.* `book.ch3.3.1`
 
 ## Chapter 3: Please Prove You Exist (`c3_house`)
 
@@ -1551,6 +1564,13 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 **Next:** Interlude 1 on the same ninth night, under the bay (i1_archive).
 
+## Storybook: Meanwhile, under the bay
+
+- *Steve: I didn’t learn the rest of that night until much later.* `book.interlude1.1.1`
+- *Steve: While June and I watched from the boathouse, two hundred and seventy-four people walked along the floor of the bay, toward a light.* `book.interlude1.1.2`
+- *Steve: Under the bay, in a hall of glass records, someone was waiting for them.* `book.interlude1.2.1`
+- *Steve: She had been keeping records for nine hundred years.* `book.interlude1.2.2`
+
 ## Interlude 1: The Archivist (`i1_archive`)
 
 **Where:** The Choir’s record chamber · **Present:** The Archivist, Gus Albano
@@ -1802,6 +1822,12 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - **The Archivist**: I will remember where we lived. `p_veyr.out.02`
 
 **Next:** Chapter 4 (c4_safe).
+
+## Storybook: Help is coming
+
+- *Steve: For two days June called in favors from people she trusted, and I copied every tape I owned. Twice.* `book.ch4.1.1`
+- *Steve: She trusted Adrian Rook with her life. Twenty years ago, he had helped her bring a kidnapped child home.* `book.ch4.2.1`
+- *Steve: Help is coming, she said. I wanted to believe that more than anything.* `book.ch4.3.1`
 
 ## Chapter 4: Federal Hospitality (`c4_safe`)
 
@@ -2111,6 +2137,12 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - *Steve Mercer: So I didn’t. I turned the radio off, went down the creek bed instead of the road, and walked all night toward the one place nobody had opened in eighteen months.* **NEW** `c4_escape.out.04`
 
 **Next:** Chapter 5 (c5_shack).
+
+## Storybook: The long walk
+
+- *Steve: The creek was colder than the bay. I followed it down through the dark, one stone at a time.* `book.ch5.1.1`
+- *Steve: Twice a searchlight crossed the trees above me. Twice I held my breath and counted, the way Dad taught me to count after lightning.* `book.ch5.2.1`
+- *Steve: At first light I could see the bay again. And on the bluff above it, a roof I knew.* `book.ch5.3.1`
 
 ## Chapter 5: Wanted: Steve Mercer (`c5_shack`)
 
@@ -2497,6 +2529,12 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 **Next:** Chapter 6 (c6_iris).
 
+## Storybook: Two of us
+
+- *Steve: I walked home that night with a man who had my face, my voice, and a year and a half of my life missing.* `book.ch6.1.1`
+- *Steve: Mom’s notebook sat on Dad’s workbench between us. Neither of us could read a word of it.* `book.ch6.2.1`
+- *Steve: But he knew how I take my coffee, and which stair creaks at Mom’s house. It was like meeting a brother I already was.* `book.ch6.3.1`
+
 ## Chapter 6: Iris (`c6_iris`)
 
 **Where:** Bellwether, Gus’s bakery corner and the pier · **When:** Monday, November 5, morning · **Present:** Steve Mercer, Stephen, Nora’s copy, DJ AutoRick
@@ -2826,6 +2864,12 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - **Iris**: We’re starting to forget. Stephen and I have days. `c6_jail.out.03`
 - *Steve Mercer: By dark the posters were back up, with a new charge from Rook’s copy: Steve Mercer, fled federal custody. June’s copy knew who had opened cell two.* **NEW** `c6_jail.out.06`
 
+## Storybook: Meanwhile, Nora
+
+- *Steve: That night five fugitives and a beagle slept in Gus’s bakery van. It smelled of cinnamon and wet dog.* `book.interlude2.1.1`
+- *Steve: Under the bay, the slow wake Iris had started was finishing.* `book.interlude2.2.1`
+- *Steve: Nora told me this part herself, much later. She still tells it better than I do.* `book.interlude2.2.2`
+
 ## Interlude 2: Nobody is coming to fix this (`i2_nora`)
 
 **Where:** The Gallery · **When:** Monday night, inside the Long Patience · **Present:** Nora Reyes, Dale Kittredge, Lyle Boone
@@ -3020,6 +3064,12 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - *Nora Reyes: Under the frost, something opened one enormous eye. It looked at me. Then it closed again.* **NEW** `i2_nora.out.04`
 
 **Next:** Chapter 7 (c7_gate).
+
+## Storybook: Wednesday
+
+- *Steve: On Wednesday morning, every television in Bellwether showed the same field of old antennas.* `book.ch7.1.1`
+- *Steve: The President was driving up the coast to sign a peace accord. Under the bay, a bed was already made up for her.* `book.ch7.2.1`
+- *Steve: Nobody would believe us if we told them. So we decided to show them.* `book.ch7.3.1`
 
 ## Chapter 7: The President’s Other Appointment (`c7_gate`)
 
@@ -3380,6 +3430,12 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - **Dr. Evelyn Shaw**: There is no engine. There never was. `c7_swap.out.03`
 
 **Next:** Chapter 8: the flashback to Sentinel Point, nine years ago (p_meeting).
+
+## Storybook: No engine
+
+- *Steve: There is no engine. For a long moment, nobody in that locked room said anything at all.* `book.ch8.1.1`
+- *Steve: Two countries had faked a miracle, and a fleet had crossed the dark to steal it.* `book.ch8.1.2`
+- *Steve: Then Dr. Wen opened Mom’s notebook and began to read.* `book.ch8.2.1`
 
 ## Chapter 8: A careful translation (`p_meeting`)
 
@@ -3939,6 +3995,12 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 **Next:** Chapter 9, the third ninth night (c9_gallery).
 
+## Storybook: Back under the bay
+
+- *Steve: We went in through Nora’s aquarium, past the sleeping otters and the dark tanks, the way I had gone in alone.* `book.ch9.1.1`
+- *Steve: Stephen carried the rig. June carried the plan. Pell carried Biscuit, who refused to get her paws wet.* `book.ch9.2.1`
+- *Steve: At the end of the tunnel the amber light was waiting. Somewhere inside it, if Iris was right, Nora was awake.* `book.ch9.3.1`
+
 ## Chapter 9: The Long Patience (`c9_gallery`)
 
 **Where:** The Gallery, third ninth night · **When:** Thursday, November 8, night: the third ninth night · **Present:** Steve Mercer, Stephen, Nora Reyes, Iris, Sheriff June Calder, Veyri attendant
@@ -4479,6 +4541,12 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 **Next:** Chapter 10 (c10_station).
 
+## Storybook: One hour
+
+- *Steve: The Vigil hung over the bay like a second moon. Nobody in Bellwether went back to bed.* `book.ch10.1.1`
+- *Steve: Three hundred people stood on the pier in wet pajamas, looking up at the thing that had come to check on them.* `book.ch10.2.1`
+- *Steve: Stephen kept checking the name he had written on his hand. Frank. Dad. Every few seconds.* `book.ch10.3.1`
+
 ## Chapter 10: Good Morning, Bellwether (`c10_station`)
 
 **Where:** KBWR live booth · **When:** Friday, November 9, an hour before sunrise · **Present:** Steve Mercer, Stephen, DJ AutoRick, Frank Mercer, Thursday club operator, Dr. Lin Wen
@@ -4498,7 +4566,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 ### Opening
 - *Steve Mercer: One hour. The rig was in pieces, and all over town the copies were forgetting.* **NEW** `c10_station.ctx.01`
 - *Steve Mercer: Then I remembered Halcyon’s tower. Every ninth night for a year it had talked to the ship, alone.* **NEW** `c10_station.ctx.02`
-- *Steve Mercer: Five weeks after Halcyon fired me, I sat at my old desk and stopped waiting for somebody else to take the microphone.* **NEW** `c10_station.ctx.03`
+- *Steve Mercer: Six weeks after Halcyon fired me, I sat at my old desk and stopped waiting for somebody else to take the microphone.* **NEW** `c10_station.ctx.03`
 - **Stephen**: The rig is in pieces. We need another way onto their antenna. **NEW** `c10_station.in.04`
 - **Steve Mercer**: We don’t need the rig. KBWR’s tower already talks to the ship. **NEW** `c10_station.in.05`
 - **DJ AutoRick**: Good morning! Up next, another hour of uninterrupted favorites. `c10_station.in.01`
@@ -5068,6 +5136,12 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - *Steve Mercer: The Vigil turned, and the fleet turned with it. At sunrise the Long Patience rose out of the bay, with Wick aboard. The whole coast watched it go. Somebody on the pier started to clap.* **NEW** `c10_report.out.06`
 
 **Next:** Epilogue (epilogue).
+
+## Storybook: Home
+
+- *Steve: For a while it just hung there over the water, as if it wanted one more look at us. Then it was gone.* `book.home.1.1`
+- *Steve: Three hundred and twelve people came home that morning. Most of them were still in pajamas.* `book.home.2.1`
+- *Steve: And down on the pier, Carmen started setting up tables.* `book.home.3.1`
 
 ## Epilogue: A place to live (`epilogue`)
 

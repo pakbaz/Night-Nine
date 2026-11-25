@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "book.ch4.3.1",
+  "attempt": 1,
+  "plan_sha256": "0749a228516e74ad545702479ab3f92f62eef905045249bd271ab389f5b3f501",
+  "wav_sha256": "647f88bfb4db35fbd9c79e495a40f253007d19c1e8308f610bc8b0742acd335e",
+  "expected": "Help is coming, she said. I wanted to believe that more than anything.",
+  "recognized": "Help is coming, she said. I wanted to believe that more than anything.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 5.28,
+  "sample_rate": 48000,
+  "peak": 0.35333251953125,
+  "rms": 0.03230742647178595,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

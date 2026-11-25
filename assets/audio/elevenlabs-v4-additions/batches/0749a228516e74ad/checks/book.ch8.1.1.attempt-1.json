@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "book.ch8.1.1",
+  "attempt": 1,
+  "plan_sha256": "0749a228516e74ad545702479ab3f92f62eef905045249bd271ab389f5b3f501",
+  "wav_sha256": "edbb6538308464405f3bfbf09d0afb3a72893eafdc5c7d8d864654ccef08ab61",
+  "expected": "There is no engine. For a long moment, nobody in that locked room said anything at all.",
+  "recognized": "There is no engine. For a long moment, nobody in that locked room said anything at all.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 6.64,
+  "sample_rate": 48000,
+  "peak": 0.253631591796875,
+  "rms": 0.03864115538548231,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "audio_id": "book.ch2.3.1",
+  "attempt": 1,
+  "plan_sha256": "0749a228516e74ad545702479ab3f92f62eef905045249bd271ab389f5b3f501",
+  "wav_sha256": "d0cb80eaf86c67cca24fc4e228b53f56db0e445a2587c63c42d2c8558a3be00e",
+  "expected": "I dug out my flip phone. My hands shook so badly that I misdialed twice.",
+  "recognized": "I dug out my flip phone. My hands shook so badly that I misdialed twice.",
+  "local_recognized": "I dug out my flip phone. My hands shook so badly that I mis-dialed twice.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 5.44,
+  "sample_rate": 48000,
+  "peak": 0.442626953125,
+  "rms": 0.04364144775139787,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/book.ch2.3.1.json",
+    "sha256": "6aa07cadec28a8cea27558e3aabe468b047b012b928c58897868f330bde0a7f2",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  },
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

@@ -1,0 +1,291 @@
+{
+  "audio_id": "book.ch3.2.1",
+  "audio_sha256": "9059b6022ec58aea8bfb4de6b510865eb73aceef36c16941eb637dc84c636a84",
+  "file": "assets/audio/elevenlabs-v4-additions/masters/book.ch3.2.1.attempt-1.wav",
+  "production_plan_sha256": "0749a228516e74ad545702479ab3f92f62eef905045249bd271ab389f5b3f501",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Admiral left me in the shallows at first light, then swam back out into the dark water without me.",
+  "recognized": "Admiral left me in the shallows at first light, then swam back out into the dark water without me.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "5a70b53e93c9ed7f69ca77a18ce9e5bc",
+  "character_cost": "2",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Admiral left me in the shallows at first light, then swam back out into the dark water without me.",
+    "words": [
+      {
+        "text": "Admiral",
+        "start": 0.1,
+        "end": 0.46,
+        "type": "word",
+        "logprob": -0.0006621075444854796
+      },
+      {
+        "text": " ",
+        "start": 0.46,
+        "end": 0.54,
+        "type": "spacing",
+        "logprob": -1.5735502529423684e-05
+      },
+      {
+        "text": "left",
+        "start": 0.54,
+        "end": 0.76,
+        "type": "word",
+        "logprob": -1.5735502529423684e-05
+      },
+      {
+        "text": " ",
+        "start": 0.76,
+        "end": 0.82,
+        "type": "spacing",
+        "logprob": -1.4305104514278355e-06
+      },
+      {
+        "text": "me",
+        "start": 0.82,
+        "end": 0.9,
+        "type": "word",
+        "logprob": -1.4305104514278355e-06
+      },
+      {
+        "text": " ",
+        "start": 0.9,
+        "end": 0.94,
+        "type": "spacing",
+        "logprob": -1.1920928244535389e-07
+      },
+      {
+        "text": "in",
+        "start": 0.94,
+        "end": 1.0,
+        "type": "word",
+        "logprob": -1.1920928244535389e-07
+      },
+      {
+        "text": " ",
+        "start": 1.0,
+        "end": 1.04,
+        "type": "spacing",
+        "logprob": -1.0728830375228426e-06
+      },
+      {
+        "text": "the",
+        "start": 1.04,
+        "end": 1.14,
+        "type": "word",
+        "logprob": -1.0728830375228426e-06
+      },
+      {
+        "text": " ",
+        "start": 1.14,
+        "end": 1.18,
+        "type": "spacing",
+        "logprob": -0.0007814691052772105
+      },
+      {
+        "text": "shallows",
+        "start": 1.2,
+        "end": 1.72,
+        "type": "word",
+        "logprob": -0.0005060309499640425
+      },
+      {
+        "text": " ",
+        "start": 1.72,
+        "end": 1.76,
+        "type": "spacing",
+        "logprob": -2.7418097943154862e-06
+      },
+      {
+        "text": "at",
+        "start": 1.76,
+        "end": 1.88,
+        "type": "word",
+        "logprob": -2.7418097943154862e-06
+      },
+      {
+        "text": " ",
+        "start": 1.88,
+        "end": 1.96,
+        "type": "spacing",
+        "logprob": -1.9192511899746023e-05
+      },
+      {
+        "text": "first",
+        "start": 1.96,
+        "end": 2.26,
+        "type": "word",
+        "logprob": -1.9192511899746023e-05
+      },
+      {
+        "text": " ",
+        "start": 2.26,
+        "end": 2.34,
+        "type": "spacing",
+        "logprob": -3.7788631743751466e-05
+      },
+      {
+        "text": "light,",
+        "start": 2.34,
+        "end": 2.62,
+        "type": "word",
+        "logprob": -7.966398698044941e-05
+      },
+      {
+        "text": " ",
+        "start": 2.62,
+        "end": 2.94,
+        "type": "spacing",
+        "logprob": -1.4543427823809907e-05
+      },
+      {
+        "text": "then",
+        "start": 2.94,
+        "end": 3.12,
+        "type": "word",
+        "logprob": -1.4543427823809907e-05
+      },
+      {
+        "text": " ",
+        "start": 3.12,
+        "end": 3.22,
+        "type": "spacing",
+        "logprob": -8.606540359323844e-05
+      },
+      {
+        "text": "swam",
+        "start": 3.24,
+        "end": 3.54,
+        "type": "word",
+        "logprob": -8.606540359323844e-05
+      },
+      {
+        "text": " ",
+        "start": 3.54,
+        "end": 3.6,
+        "type": "spacing",
+        "logprob": -1.1920922133867862e-06
+      },
+      {
+        "text": "back",
+        "start": 3.6,
+        "end": 3.82,
+        "type": "word",
+        "logprob": -1.1920922133867862e-06
+      },
+      {
+        "text": " ",
+        "start": 3.82,
+        "end": 3.92,
+        "type": "spacing",
+        "logprob": -2.3841855067985307e-07
+      },
+      {
+        "text": "out",
+        "start": 3.92,
+        "end": 4.1,
+        "type": "word",
+        "logprob": -2.3841855067985307e-07
+      },
+      {
+        "text": " ",
+        "start": 4.1,
+        "end": 4.16,
+        "type": "spacing",
+        "logprob": -9.536738616588991e-07
+      },
+      {
+        "text": "into",
+        "start": 4.16,
+        "end": 4.34,
+        "type": "word",
+        "logprob": -9.536738616588991e-07
+      },
+      {
+        "text": " ",
+        "start": 4.34,
+        "end": 4.4,
+        "type": "spacing",
+        "logprob": -1.1920928244535389e-07
+      },
+      {
+        "text": "the",
+        "start": 4.4,
+        "end": 4.52,
+        "type": "word",
+        "logprob": -1.1920928244535389e-07
+      },
+      {
+        "text": " ",
+        "start": 4.52,
+        "end": 4.58,
+        "type": "spacing",
+        "logprob": -2.825220326485578e-05
+      },
+      {
+        "text": "dark",
+        "start": 4.58,
+        "end": 4.88,
+        "type": "word",
+        "logprob": -2.825220326485578e-05
+      },
+      {
+        "text": " ",
+        "start": 4.88,
+        "end": 4.96,
+        "type": "spacing",
+        "logprob": -1.0609570381348021e-05
+      },
+      {
+        "text": "water",
+        "start": 4.96,
+        "end": 5.3,
+        "type": "word",
+        "logprob": -1.0609570381348021e-05
+      },
+      {
+        "text": " ",
+        "start": 5.3,
+        "end": 5.36,
+        "type": "spacing",
+        "logprob": -1.2636104656849056e-05
+      },
+      {
+        "text": "without",
+        "start": 5.36,
+        "end": 5.74,
+        "type": "word",
+        "logprob": -1.2636104656849056e-05
+      },
+      {
+        "text": " ",
+        "start": 5.74,
+        "end": 5.8,
+        "type": "spacing",
+        "logprob": -1.1920922133867862e-06
+      },
+      {
+        "text": "me.",
+        "start": 5.8,
+        "end": 6.0,
+        "type": "word",
+        "logprob": -6.59619657502238e-06
+      }
+    ],
+    "transcription_id": "dhNJvcjV90SS4JTUgBuU",
+    "audio_duration_secs": 6.4
+  },
+  "listening_reviewed": false
+}

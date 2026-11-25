@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "book.ch7.3.1",
+  "attempt": 1,
+  "plan_sha256": "0749a228516e74ad545702479ab3f92f62eef905045249bd271ab389f5b3f501",
+  "wav_sha256": "42b3e89cb3849bfb323197817cbfe258dd327eb0525f16089ab62a5226f39981",
+  "expected": "Nobody would believe us if we told them. So we decided to show them.",
+  "recognized": "Nobody would believe us if we told them, so we decided to show them.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.96,
+  "sample_rate": 48000,
+  "peak": 0.298919677734375,
+  "rms": 0.04355909767922352,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

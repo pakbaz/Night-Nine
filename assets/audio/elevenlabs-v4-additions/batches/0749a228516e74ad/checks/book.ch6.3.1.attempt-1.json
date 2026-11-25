@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "book.ch6.3.1",
+  "attempt": 1,
+  "plan_sha256": "0749a228516e74ad545702479ab3f92f62eef905045249bd271ab389f5b3f501",
+  "wav_sha256": "d4975c5f06434ecdaaa3abb1717708d3b052a6eafd3a4fc21596d9bfcf8aecd8",
+  "expected": "But he knew how I take my coffee, and which stair creaks at Mom’s house. It was like meeting a brother I already was.",
+  "recognized": "But he knew how I take my coffee, and which stair creaks at mom's house. It was like meeting a brother I already was.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 7.84,
+  "sample_rate": 48000,
+  "peak": 0.40142822265625,
+  "rms": 0.041646658461638356,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

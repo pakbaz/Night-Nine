@@ -483,6 +483,894 @@
           ]
         }
       ]
+    },
+    "ch2": {
+      "title": "Into the water",
+      "before": "c2_aquarium",
+      "music": {
+        "file": "res://assets/audio/music/chapter-02-theme.mp3",
+        "bar": 0
+      },
+      "end_bar": 12,
+      "panels": [
+        {
+          "bar": 0.0,
+          "image": "res://assets/illustrated/campaign/stills/book-ch2-walkers.webp",
+          "from": [
+            0.5,
+            0.55,
+            1.0
+          ],
+          "to": [
+            0.5,
+            0.5,
+            1.1
+          ],
+          "lines": [
+            {
+              "bar": 0.25,
+              "text": "Nobody swam. Nobody called for help. They walked into the bay in their good shoes, and the water closed over them.",
+              "narration": "",
+              "seconds": 7.76
+            },
+            {
+              "bar": 2.749,
+              "text": "Lyle Boone. Gus from the bakery. People I’d waved at my whole life.",
+              "narration": "",
+              "seconds": 5.68
+            }
+          ]
+        },
+        {
+          "bar": 5,
+          "image": "res://assets/illustrated/campaign/stills/book-ch2-footprints.webp",
+          "from": [
+            0.42,
+            0.52,
+            1.08
+          ],
+          "to": [
+            0.56,
+            0.5,
+            1.0
+          ],
+          "lines": [
+            {
+              "bar": 5.25,
+              "text": "Then the light went out of the water. Mrs. Penhallow’s step was empty. Only the footprints were left.",
+              "narration": "",
+              "seconds": 6.72
+            }
+          ]
+        },
+        {
+          "bar": 8,
+          "image": "res://assets/illustrated/campaign/stills/book-ch2-call.webp",
+          "from": [
+            0.58,
+            0.5,
+            1.0
+          ],
+          "to": [
+            0.44,
+            0.52,
+            1.1
+          ],
+          "lines": [
+            {
+              "bar": 8.25,
+              "text": "I dug out my flip phone. My hands shook so badly that I misdialed twice.",
+              "narration": "",
+              "seconds": 5.44
+            }
+          ]
+        }
+      ]
+    },
+    "ch3": {
+      "title": "Protective custody",
+      "before": "c3_house",
+      "music": {
+        "file": "res://assets/audio/music/chapter-03-theme.mp3",
+        "bar": 1
+      },
+      "end_bar": 11,
+      "panels": [
+        {
+          "bar": 1.0,
+          "image": "res://assets/illustrated/campaign/stills/book-ch3-amber.webp",
+          "from": [
+            0.5,
+            0.55,
+            1.0
+          ],
+          "to": [
+            0.5,
+            0.5,
+            1.1
+          ],
+          "lines": [
+            {
+              "bar": 1.25,
+              "text": "I had seen her. Nora, asleep in amber light, breathing a little behind the ship’s own rhythm.",
+              "narration": "",
+              "seconds": 6.96
+            }
+          ]
+        },
+        {
+          "bar": 4,
+          "image": "res://assets/illustrated/campaign/stills/book-ch3-shallows.webp",
+          "from": [
+            0.42,
+            0.52,
+            1.08
+          ],
+          "to": [
+            0.56,
+            0.5,
+            1.0
+          ],
+          "lines": [
+            {
+              "bar": 4.25,
+              "text": "Admiral left me in the shallows at first light, then swam back out into the dark water without me.",
+              "narration": "",
+              "seconds": 6.4
+            }
+          ]
+        },
+        {
+          "bar": 7,
+          "image": "res://assets/illustrated/campaign/stills/book-ch3-alone.webp",
+          "from": [
+            0.5,
+            0.6,
+            1.1
+          ],
+          "to": [
+            0.5,
+            0.42,
+            1.02
+          ],
+          "lines": [
+            {
+              "bar": 7.25,
+              "text": "Getting off the ship was the easy part. The hard part was finding one person who would believe me.",
+              "narration": "",
+              "seconds": 6.32
+            }
+          ]
+        }
+      ]
+    },
+    "interlude1": {
+      "title": "Meanwhile, under the bay",
+      "before": "i1_archive",
+      "music": {
+        "file": "res://assets/audio/music/interlude-archivist-theme.mp3",
+        "bar": 0
+      },
+      "end_bar": 10,
+      "panels": [
+        {
+          "bar": 0.0,
+          "image": "res://assets/illustrated/campaign/stills/book-i1-seabed.webp",
+          "from": [
+            0.5,
+            0.55,
+            1.0
+          ],
+          "to": [
+            0.5,
+            0.5,
+            1.1
+          ],
+          "lines": [
+            {
+              "bar": 0.25,
+              "text": "I didn’t learn the rest of that night until much later.",
+              "narration": "",
+              "seconds": 3.2
+            },
+            {
+              "bar": 1.422,
+              "text": "While June and I watched from the boathouse, two hundred and seventy-four people walked along the floor of the bay, toward a light.",
+              "narration": "",
+              "seconds": 7.92
+            }
+          ]
+        },
+        {
+          "bar": 5,
+          "image": "res://assets/illustrated/campaign/stills/book-i1-archivist.webp",
+          "from": [
+            0.58,
+            0.5,
+            1.0
+          ],
+          "to": [
+            0.44,
+            0.52,
+            1.1
+          ],
+          "lines": [
+            {
+              "bar": 5.25,
+              "text": "Under the bay, in a hall of glass records, someone was waiting for them.",
+              "narration": "",
+              "seconds": 5.12
+            },
+            {
+              "bar": 7.014,
+              "text": "She had been keeping records for nine hundred years.",
+              "narration": "",
+              "seconds": 3.6
+            }
+          ]
+        }
+      ]
+    },
+    "ch4": {
+      "title": "Help is coming",
+      "before": "c4_safe",
+      "music": {
+        "file": "res://assets/audio/music/chapter-04-theme.mp3",
+        "bar": 2
+      },
+      "end_bar": 12,
+      "panels": [
+        {
+          "bar": 2.0,
+          "image": "res://assets/illustrated/campaign/stills/book-ch4-calls.webp",
+          "from": [
+            0.5,
+            0.55,
+            1.0
+          ],
+          "to": [
+            0.5,
+            0.5,
+            1.1
+          ],
+          "lines": [
+            {
+              "bar": 2.25,
+              "text": "For two days June called in favors from people she trusted, and I copied every tape I owned. Twice.",
+              "narration": "",
+              "seconds": 7.12
+            }
+          ]
+        },
+        {
+          "bar": 5,
+          "image": "res://assets/illustrated/campaign/stills/book-ch4-photo.webp",
+          "from": [
+            0.42,
+            0.52,
+            1.08
+          ],
+          "to": [
+            0.56,
+            0.5,
+            1.0
+          ],
+          "lines": [
+            {
+              "bar": 5.25,
+              "text": "She trusted Adrian Rook with her life. Twenty years ago, he had helped her bring a kidnapped child home.",
+              "narration": "",
+              "seconds": 7.12
+            }
+          ]
+        },
+        {
+          "bar": 8,
+          "image": "res://assets/illustrated/campaign/stills/book-ch4-hills.webp",
+          "from": [
+            0.5,
+            0.6,
+            1.1
+          ],
+          "to": [
+            0.5,
+            0.42,
+            1.02
+          ],
+          "lines": [
+            {
+              "bar": 8.25,
+              "text": "Help is coming, she said. I wanted to believe that more than anything.",
+              "narration": "",
+              "seconds": 5.28
+            }
+          ]
+        }
+      ]
+    },
+    "ch5": {
+      "title": "The long walk",
+      "before": "c5_shack",
+      "music": {
+        "file": "res://assets/audio/music/chapter-05-theme.mp3",
+        "bar": 0
+      },
+      "end_bar": 11,
+      "panels": [
+        {
+          "bar": 0.0,
+          "image": "res://assets/illustrated/campaign/stills/book-ch5-creek.webp",
+          "from": [
+            0.5,
+            0.55,
+            1.0
+          ],
+          "to": [
+            0.5,
+            0.5,
+            1.1
+          ],
+          "lines": [
+            {
+              "bar": 0.25,
+              "text": "The creek was colder than the bay. I followed it down through the dark, one stone at a time.",
+              "narration": "",
+              "seconds": 6.32
+            }
+          ]
+        },
+        {
+          "bar": 3,
+          "image": "res://assets/illustrated/campaign/stills/book-ch5-searchlight.webp",
+          "from": [
+            0.58,
+            0.5,
+            1.0
+          ],
+          "to": [
+            0.44,
+            0.52,
+            1.1
+          ],
+          "lines": [
+            {
+              "bar": 3.25,
+              "text": "Twice a searchlight crossed the trees above me. Twice I held my breath and counted, the way Dad taught me to count after lightning.",
+              "narration": "",
+              "seconds": 8.8
+            }
+          ]
+        },
+        {
+          "bar": 7,
+          "image": "res://assets/illustrated/campaign/stills/book-ch5-firstlight.webp",
+          "from": [
+            0.5,
+            0.6,
+            1.1
+          ],
+          "to": [
+            0.5,
+            0.42,
+            1.02
+          ],
+          "lines": [
+            {
+              "bar": 7.25,
+              "text": "At first light I could see the bay again. And on the bluff above it, a roof I knew.",
+              "narration": "",
+              "seconds": 5.52
+            }
+          ]
+        }
+      ]
+    },
+    "ch6": {
+      "title": "Two of us",
+      "before": "c6_iris",
+      "music": {
+        "file": "res://assets/audio/music/chapter-06-theme.mp3",
+        "bar": 1
+      },
+      "end_bar": 11,
+      "panels": [
+        {
+          "bar": 1.0,
+          "image": "res://assets/illustrated/campaign/stills/book-ch6-path.webp",
+          "from": [
+            0.5,
+            0.55,
+            1.0
+          ],
+          "to": [
+            0.5,
+            0.5,
+            1.1
+          ],
+          "lines": [
+            {
+              "bar": 1.25,
+              "text": "I walked home that night with a man who had my face, my voice, and a year and a half of my life missing.",
+              "narration": "",
+              "seconds": 6.96
+            }
+          ]
+        },
+        {
+          "bar": 4,
+          "image": "res://assets/illustrated/campaign/stills/book-ch6-notebook.webp",
+          "from": [
+            0.42,
+            0.52,
+            1.08
+          ],
+          "to": [
+            0.56,
+            0.5,
+            1.0
+          ],
+          "lines": [
+            {
+              "bar": 4.25,
+              "text": "Mom’s notebook sat on Dad’s workbench between us. Neither of us could read a word of it.",
+              "narration": "",
+              "seconds": 5.76
+            }
+          ]
+        },
+        {
+          "bar": 7,
+          "image": "res://assets/illustrated/campaign/stills/book-ch6-mirror.webp",
+          "from": [
+            0.58,
+            0.5,
+            1.0
+          ],
+          "to": [
+            0.44,
+            0.52,
+            1.1
+          ],
+          "lines": [
+            {
+              "bar": 7.25,
+              "text": "But he knew how I take my coffee, and which stair creaks at Mom’s house. It was like meeting a brother I already was.",
+              "narration": "",
+              "seconds": 7.84
+            }
+          ]
+        }
+      ]
+    },
+    "interlude2": {
+      "title": "Meanwhile, Nora",
+      "before": "i2_nora",
+      "music": {
+        "file": "res://assets/audio/music/interlude-nora-theme.mp3",
+        "bar": 0
+      },
+      "end_bar": 8,
+      "panels": [
+        {
+          "bar": 0.0,
+          "image": "res://assets/illustrated/campaign/stills/book-i2-van.webp",
+          "from": [
+            0.5,
+            0.55,
+            1.0
+          ],
+          "to": [
+            0.5,
+            0.5,
+            1.1
+          ],
+          "lines": [
+            {
+              "bar": 0.25,
+              "text": "That night five fugitives and a beagle slept in Gus’s bakery van. It smelled of cinnamon and wet dog.",
+              "narration": "",
+              "seconds": 7.36
+            }
+          ]
+        },
+        {
+          "bar": 3,
+          "image": "res://assets/illustrated/campaign/stills/book-i2-ship.webp",
+          "from": [
+            0.5,
+            0.6,
+            1.1
+          ],
+          "to": [
+            0.5,
+            0.42,
+            1.02
+          ],
+          "lines": [
+            {
+              "bar": 3.25,
+              "text": "Under the bay, the slow wake Iris had started was finishing.",
+              "narration": "",
+              "seconds": 4.4
+            },
+            {
+              "bar": 4.792,
+              "text": "Nora told me this part herself, much later. She still tells it better than I do.",
+              "narration": "",
+              "seconds": 5.44
+            }
+          ]
+        }
+      ]
+    },
+    "ch7": {
+      "title": "Wednesday",
+      "before": "c7_gate",
+      "music": {
+        "file": "res://assets/audio/music/chapter-07-theme.mp3",
+        "bar": 0
+      },
+      "end_bar": 10,
+      "panels": [
+        {
+          "bar": 0.0,
+          "image": "res://assets/illustrated/campaign/stills/book-ch7-tv.webp",
+          "from": [
+            0.5,
+            0.55,
+            1.0
+          ],
+          "to": [
+            0.5,
+            0.5,
+            1.1
+          ],
+          "lines": [
+            {
+              "bar": 0.25,
+              "text": "On Wednesday morning, every television in Bellwether showed the same field of old antennas.",
+              "narration": "",
+              "seconds": 5.92
+            }
+          ]
+        },
+        {
+          "bar": 3,
+          "image": "res://assets/illustrated/campaign/stills/book-ch7-motorcade.webp",
+          "from": [
+            0.42,
+            0.52,
+            1.08
+          ],
+          "to": [
+            0.56,
+            0.5,
+            1.0
+          ],
+          "lines": [
+            {
+              "bar": 3.25,
+              "text": "The President was driving up the coast to sign a peace accord. Under the bay, a bed was already made up for her.",
+              "narration": "",
+              "seconds": 7.12
+            }
+          ]
+        },
+        {
+          "bar": 6,
+          "image": "res://assets/illustrated/campaign/stills/book-ch7-show.webp",
+          "from": [
+            0.58,
+            0.5,
+            1.0
+          ],
+          "to": [
+            0.44,
+            0.52,
+            1.1
+          ],
+          "lines": [
+            {
+              "bar": 6.25,
+              "text": "Nobody would believe us if we told them. So we decided to show them.",
+              "narration": "",
+              "seconds": 4.96
+            }
+          ]
+        }
+      ]
+    },
+    "ch8": {
+      "title": "No engine",
+      "before": "p_meeting",
+      "music": {
+        "file": "res://assets/audio/music/chapter-08-theme.mp3",
+        "bar": 0
+      },
+      "end_bar": 8,
+      "panels": [
+        {
+          "bar": 0.0,
+          "image": "res://assets/illustrated/campaign/stills/book-ch8-silence.webp",
+          "from": [
+            0.5,
+            0.55,
+            1.0
+          ],
+          "to": [
+            0.5,
+            0.5,
+            1.1
+          ],
+          "lines": [
+            {
+              "bar": 0.25,
+              "text": "There is no engine. For a long moment, nobody in that locked room said anything at all.",
+              "narration": "",
+              "seconds": 6.64
+            },
+            {
+              "bar": 2.543,
+              "text": "Two countries had faked a miracle, and a fleet had crossed the dark to steal it.",
+              "narration": "",
+              "seconds": 5.6
+            }
+          ]
+        },
+        {
+          "bar": 5,
+          "image": "res://assets/illustrated/campaign/stills/book-ch8-notebook.webp",
+          "from": [
+            0.5,
+            0.6,
+            1.1
+          ],
+          "to": [
+            0.5,
+            0.42,
+            1.02
+          ],
+          "lines": [
+            {
+              "bar": 5.25,
+              "text": "Then Dr. Wen opened Mom’s notebook and began to read.",
+              "narration": "",
+              "seconds": 4.0
+            }
+          ]
+        }
+      ]
+    },
+    "ch9": {
+      "title": "Back under the bay",
+      "before": "c9_gallery",
+      "music": {
+        "file": "res://assets/audio/music/chapter-09-theme.mp3",
+        "bar": 1
+      },
+      "end_bar": 12,
+      "panels": [
+        {
+          "bar": 1.0,
+          "image": "res://assets/illustrated/campaign/stills/book-ch9-aquarium.webp",
+          "from": [
+            0.5,
+            0.55,
+            1.0
+          ],
+          "to": [
+            0.5,
+            0.5,
+            1.1
+          ],
+          "lines": [
+            {
+              "bar": 1.25,
+              "text": "We went in through Nora’s aquarium, past the sleeping otters and the dark tanks, the way I had gone in alone.",
+              "narration": "",
+              "seconds": 6.72
+            }
+          ]
+        },
+        {
+          "bar": 4,
+          "image": "res://assets/illustrated/campaign/stills/book-ch9-tunnel.webp",
+          "from": [
+            0.42,
+            0.52,
+            1.08
+          ],
+          "to": [
+            0.56,
+            0.5,
+            1.0
+          ],
+          "lines": [
+            {
+              "bar": 4.25,
+              "text": "Stephen carried the rig. June carried the plan. Pell carried Biscuit, who refused to get her paws wet.",
+              "narration": "",
+              "seconds": 7.36
+            }
+          ]
+        },
+        {
+          "bar": 7,
+          "image": "res://assets/illustrated/campaign/stills/book-ch9-glow.webp",
+          "from": [
+            0.5,
+            0.6,
+            1.1
+          ],
+          "to": [
+            0.5,
+            0.42,
+            1.02
+          ],
+          "lines": [
+            {
+              "bar": 7.25,
+              "text": "At the end of the tunnel the amber light was waiting. Somewhere inside it, if Iris was right, Nora was awake.",
+              "narration": "",
+              "seconds": 7.84
+            }
+          ]
+        }
+      ]
+    },
+    "ch10": {
+      "title": "One hour",
+      "before": "c10_station",
+      "music": {
+        "file": "res://assets/audio/music/chapter-10-theme.mp3",
+        "bar": 1
+      },
+      "end_bar": 11,
+      "panels": [
+        {
+          "bar": 1.0,
+          "image": "res://assets/illustrated/campaign/stills/book-ch10-vigil.webp",
+          "from": [
+            0.5,
+            0.6,
+            1.1
+          ],
+          "to": [
+            0.5,
+            0.42,
+            1.02
+          ],
+          "lines": [
+            {
+              "bar": 1.25,
+              "text": "The Vigil hung over the bay like a second moon. Nobody in Bellwether went back to bed.",
+              "narration": "",
+              "seconds": 6.08
+            }
+          ]
+        },
+        {
+          "bar": 4,
+          "image": "res://assets/illustrated/campaign/stills/book-ch10-pier.webp",
+          "from": [
+            0.42,
+            0.52,
+            1.08
+          ],
+          "to": [
+            0.56,
+            0.5,
+            1.0
+          ],
+          "lines": [
+            {
+              "bar": 4.25,
+              "text": "Three hundred people stood on the pier in wet pajamas, looking up at the thing that had come to check on them.",
+              "narration": "",
+              "seconds": 6.8
+            }
+          ]
+        },
+        {
+          "bar": 7,
+          "image": "res://assets/illustrated/campaign/stills/book-ch10-hand.webp",
+          "from": [
+            0.5,
+            0.55,
+            1.0
+          ],
+          "to": [
+            0.5,
+            0.5,
+            1.1
+          ],
+          "lines": [
+            {
+              "bar": 7.25,
+              "text": "Stephen kept checking the name he had written on his hand. Frank. Dad. Every few seconds.",
+              "narration": "",
+              "seconds": 6.8
+            }
+          ]
+        }
+      ]
+    },
+    "home": {
+      "title": "Home",
+      "before": "epilogue",
+      "music": {
+        "file": "res://assets/audio/music/epilogue-bgm.mp3",
+        "bar": 0
+      },
+      "end_bar": 9,
+      "panels": [
+        {
+          "bar": 0.0,
+          "image": "res://assets/illustrated/campaign/stills/book-home-rise.webp",
+          "from": [
+            0.5,
+            0.6,
+            1.1
+          ],
+          "to": [
+            0.5,
+            0.42,
+            1.02
+          ],
+          "lines": [
+            {
+              "bar": 0.25,
+              "text": "For a while it just hung there over the water, as if it wanted one more look at us. Then it was gone.",
+              "narration": "",
+              "seconds": 7.6
+            }
+          ]
+        },
+        {
+          "bar": 3,
+          "image": "res://assets/illustrated/campaign/stills/book-home-towels.webp",
+          "from": [
+            0.42,
+            0.52,
+            1.08
+          ],
+          "to": [
+            0.56,
+            0.5,
+            1.0
+          ],
+          "lines": [
+            {
+              "bar": 3.25,
+              "text": "Three hundred and twelve people came home that morning. Most of them were still in pajamas.",
+              "narration": "",
+              "seconds": 5.76
+            }
+          ]
+        },
+        {
+          "bar": 6,
+          "image": "res://assets/illustrated/campaign/stills/book-home-tables.webp",
+          "from": [
+            0.5,
+            0.55,
+            1.0
+          ],
+          "to": [
+            0.5,
+            0.5,
+            1.1
+          ],
+          "lines": [
+            {
+              "bar": 6.25,
+              "text": "And down on the pier, Carmen started setting up tables.",
+              "narration": "",
+              "seconds": 3.76
+            }
+          ]
+        }
+      ]
     }
   }
 }

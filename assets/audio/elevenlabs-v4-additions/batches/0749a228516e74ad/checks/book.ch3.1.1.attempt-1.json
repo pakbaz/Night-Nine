@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "book.ch3.1.1",
+  "attempt": 1,
+  "plan_sha256": "0749a228516e74ad545702479ab3f92f62eef905045249bd271ab389f5b3f501",
+  "wav_sha256": "91fdd94d3a88ad864c3c5f52d3f0e3aa00f631de466993e55d727ed5fbbf907b",
+  "expected": "I had seen her. Nora, asleep in amber light, breathing a little behind the ship’s own rhythm.",
+  "recognized": "I had seen her, Nora, asleep in amber light, breathing a little behind the ship's own rhythm.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 6.96,
+  "sample_rate": 48000,
+  "peak": 0.25506591796875,
+  "rms": 0.03815282911230292,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

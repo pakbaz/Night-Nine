@@ -135,9 +135,20 @@ func run() -> void:
 			break
 		var group: Dictionary = catalog.chapters[scene.chapter]
 		var heard: Dictionary = planned(scene)
+		# A storybook that shares its scene's recording must hand it on, not restart it.
+		var book_deck: AudioStreamPlayer = player() if game.storybook.visible and game.score.current_file == heard.file else null
+		var book_at: float = book_deck.get_playback_position() if book_deck != null else 0.0
 		await clear_overlays()
 		await frames(2)
 		verify_track("bgm" if heard.role == "bgm" else "scene",heard)
+		if book_deck != null:
+			var kind: String = "bgm" if heard.role == "bgm" else "scene"
+			check(player() == book_deck and book_deck.playing and book_deck.get_playback_position() >= book_at,
+				"Carry the storybook's recording on into " + str(scene.id))
+			var settled: float = clampf(float(game.score.TARGET_LUFS[kind]) - float(heard.get("lufs", -16.0)), -24.0, 6.0)
+			await create_timer(float(game.score.FADE_SECONDS[kind]) + .4).timeout
+			check(game.score.active_index >= 0 and absf(game.score.trim[game.score.active_index] - settled) < .05,
+				"Settle the storybook's recording to the level of " + str(scene.id))
 		check(heard.file != catalog.credits.file, "Keep the ending reward music out of " + str(scene.id))
 		if scene.id == "p_bay":
 			await create_timer(.35).timeout

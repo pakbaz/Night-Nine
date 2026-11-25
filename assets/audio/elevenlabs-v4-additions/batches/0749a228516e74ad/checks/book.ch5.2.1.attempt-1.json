@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "book.ch5.2.1",
+  "attempt": 1,
+  "plan_sha256": "0749a228516e74ad545702479ab3f92f62eef905045249bd271ab389f5b3f501",
+  "wav_sha256": "404bf31b21f2297db60b1d405b3b218cf91be0d874d04d5a6cc0a4031e23ecbb",
+  "expected": "Twice a searchlight crossed the trees above me. Twice I held my breath and counted, the way Dad taught me to count after lightning.",
+  "recognized": "Twice a searchlight crossed the trees above me. Twice I held my breath and counted, the way Dad taught me to count after lightning.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 8.8,
+  "sample_rate": 48000,
+  "peak": 0.482421875,
+  "rms": 0.03330457834705701,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

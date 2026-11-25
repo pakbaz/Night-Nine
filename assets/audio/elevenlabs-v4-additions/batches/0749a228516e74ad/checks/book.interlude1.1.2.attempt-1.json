@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "book.interlude1.1.2",
+  "attempt": 1,
+  "plan_sha256": "0749a228516e74ad545702479ab3f92f62eef905045249bd271ab389f5b3f501",
+  "wav_sha256": "c1e9a6e098064e11d2fdce0fc7ab21b69c4dc2ce2689042f5d65c95ce2fc0b63",
+  "expected": "While June and I watched from the boathouse, two hundred and seventy-four people walked along the floor of the bay, toward a light.",
+  "recognized": "While June and I watched from the boathouse, 274 people walked along the floor of the bay toward a light.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 7.92,
+  "sample_rate": 48000,
+  "peak": 0.315460205078125,
+  "rms": 0.0381490699151088,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

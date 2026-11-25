@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "book.ch6.1.1",
+  "attempt": 1,
+  "plan_sha256": "0749a228516e74ad545702479ab3f92f62eef905045249bd271ab389f5b3f501",
+  "wav_sha256": "ca84a8776d8339f615ff06f14aa15932352dda6590017b3977348b3e288b38ce",
+  "expected": "I walked home that night with a man who had my face, my voice, and a year and a half of my life missing.",
+  "recognized": "I walked home that night with a man who had my face, my voice, and a year and a half of my life missing.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 6.96,
+  "sample_rate": 48000,
+  "peak": 0.33056640625,
+  "rms": 0.04023856654634288,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

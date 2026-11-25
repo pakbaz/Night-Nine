@@ -26553,7 +26553,7 @@
   "c10_station.ctx.03": {
    "id": "c10_station.ctx.03",
    "speaker": "steve",
-   "text": "Five weeks after Halcyon fired me, I sat at my old desk and stopped waiting for somebody else to take the microphone.",
+   "text": "Six weeks after Halcyon fired me, I sat at my old desk and stopped waiting for somebody else to take the microphone.",
    "audio": "c10_station.ctx.03",
    "status": "new",
    "delivery": "narration",
@@ -29701,6 +29701,326 @@
      "lines": [
       "One year after the ninth night, a package arrived at the station.",
       "From very, very far away."
+     ],
+     "status": "kept"
+    }
+   ],
+   "narrator": "steve"
+  },
+  "ch2": {
+   "title": "Into the water",
+   "before": "c2_aquarium",
+   "panels": [
+    {
+     "image": "res://assets/illustrated/campaign/stills/book-ch2-walkers.webp",
+     "lines": [
+      "Nobody swam. Nobody called for help. They walked into the bay in their good shoes, and the water closed over them.",
+      "Lyle Boone. Gus from the bakery. People I’d waved at my whole life."
+     ],
+     "status": "kept"
+    },
+    {
+     "image": "res://assets/illustrated/campaign/stills/book-ch2-footprints.webp",
+     "lines": [
+      "Then the light went out of the water. Mrs. Penhallow’s step was empty. Only the footprints were left."
+     ],
+     "status": "kept"
+    },
+    {
+     "image": "res://assets/illustrated/campaign/stills/book-ch2-call.webp",
+     "lines": [
+      "I dug out my flip phone. My hands shook so badly that I misdialed twice."
+     ],
+     "status": "kept"
+    }
+   ],
+   "narrator": "steve"
+  },
+  "ch3": {
+   "title": "Protective custody",
+   "before": "c3_house",
+   "panels": [
+    {
+     "image": "res://assets/illustrated/campaign/stills/book-ch3-amber.webp",
+     "lines": [
+      "I had seen her. Nora, asleep in amber light, breathing a little behind the ship’s own rhythm."
+     ],
+     "status": "kept"
+    },
+    {
+     "image": "res://assets/illustrated/campaign/stills/book-ch3-shallows.webp",
+     "lines": [
+      "Admiral left me in the shallows at first light, then swam back out into the dark water without me."
+     ],
+     "status": "kept"
+    },
+    {
+     "image": "res://assets/illustrated/campaign/stills/book-ch3-alone.webp",
+     "lines": [
+      "Getting off the ship was the easy part. The hard part was finding one person who would believe me."
+     ],
+     "status": "kept"
+    }
+   ],
+   "narrator": "steve"
+  },
+  "interlude1": {
+   "title": "Meanwhile, under the bay",
+   "before": "i1_archive",
+   "panels": [
+    {
+     "image": "res://assets/illustrated/campaign/stills/book-i1-seabed.webp",
+     "lines": [
+      "I didn’t learn the rest of that night until much later.",
+      "While June and I watched from the boathouse, two hundred and seventy-four people walked along the floor of the bay, toward a light."
+     ],
+     "status": "kept"
+    },
+    {
+     "image": "res://assets/illustrated/campaign/stills/book-i1-archivist.webp",
+     "lines": [
+      "Under the bay, in a hall of glass records, someone was waiting for them.",
+      "She had been keeping records for nine hundred years."
+     ],
+     "status": "kept"
+    }
+   ],
+   "narrator": "steve"
+  },
+  "ch4": {
+   "title": "Help is coming",
+   "before": "c4_safe",
+   "panels": [
+    {
+     "image": "res://assets/illustrated/campaign/stills/book-ch4-calls.webp",
+     "lines": [
+      "For two days June called in favors from people she trusted, and I copied every tape I owned. Twice."
+     ],
+     "status": "kept"
+    },
+    {
+     "image": "res://assets/illustrated/campaign/stills/book-ch4-photo.webp",
+     "lines": [
+      "She trusted Adrian Rook with her life. Twenty years ago, he had helped her bring a kidnapped child home."
+     ],
+     "status": "kept"
+    },
+    {
+     "image": "res://assets/illustrated/campaign/stills/book-ch4-hills.webp",
+     "lines": [
+      "Help is coming, she said. I wanted to believe that more than anything."
+     ],
+     "status": "kept"
+    }
+   ],
+   "narrator": "steve"
+  },
+  "ch5": {
+   "title": "The long walk",
+   "before": "c5_shack",
+   "panels": [
+    {
+     "image": "res://assets/illustrated/campaign/stills/book-ch5-creek.webp",
+     "lines": [
+      "The creek was colder than the bay. I followed it down through the dark, one stone at a time."
+     ],
+     "status": "kept"
+    },
+    {
+     "image": "res://assets/illustrated/campaign/stills/book-ch5-searchlight.webp",
+     "lines": [
+      "Twice a searchlight crossed the trees above me. Twice I held my breath and counted, the way Dad taught me to count after lightning."
+     ],
+     "status": "kept"
+    },
+    {
+     "image": "res://assets/illustrated/campaign/stills/book-ch5-firstlight.webp",
+     "lines": [
+      "At first light I could see the bay again. And on the bluff above it, a roof I knew."
+     ],
+     "status": "kept"
+    }
+   ],
+   "narrator": "steve"
+  },
+  "ch6": {
+   "title": "Two of us",
+   "before": "c6_iris",
+   "panels": [
+    {
+     "image": "res://assets/illustrated/campaign/stills/book-ch6-path.webp",
+     "lines": [
+      "I walked home that night with a man who had my face, my voice, and a year and a half of my life missing."
+     ],
+     "status": "kept"
+    },
+    {
+     "image": "res://assets/illustrated/campaign/stills/book-ch6-notebook.webp",
+     "lines": [
+      "Mom’s notebook sat on Dad’s workbench between us. Neither of us could read a word of it."
+     ],
+     "status": "kept"
+    },
+    {
+     "image": "res://assets/illustrated/campaign/stills/book-ch6-mirror.webp",
+     "lines": [
+      "But he knew how I take my coffee, and which stair creaks at Mom’s house. It was like meeting a brother I already was."
+     ],
+     "status": "kept"
+    }
+   ],
+   "narrator": "steve"
+  },
+  "interlude2": {
+   "title": "Meanwhile, Nora",
+   "before": "i2_nora",
+   "panels": [
+    {
+     "image": "res://assets/illustrated/campaign/stills/book-i2-van.webp",
+     "lines": [
+      "That night five fugitives and a beagle slept in Gus’s bakery van. It smelled of cinnamon and wet dog."
+     ],
+     "status": "kept"
+    },
+    {
+     "image": "res://assets/illustrated/campaign/stills/book-i2-ship.webp",
+     "lines": [
+      "Under the bay, the slow wake Iris had started was finishing.",
+      "Nora told me this part herself, much later. She still tells it better than I do."
+     ],
+     "status": "kept"
+    }
+   ],
+   "narrator": "steve"
+  },
+  "ch7": {
+   "title": "Wednesday",
+   "before": "c7_gate",
+   "panels": [
+    {
+     "image": "res://assets/illustrated/campaign/stills/book-ch7-tv.webp",
+     "lines": [
+      "On Wednesday morning, every television in Bellwether showed the same field of old antennas."
+     ],
+     "status": "kept"
+    },
+    {
+     "image": "res://assets/illustrated/campaign/stills/book-ch7-motorcade.webp",
+     "lines": [
+      "The President was driving up the coast to sign a peace accord. Under the bay, a bed was already made up for her."
+     ],
+     "status": "kept"
+    },
+    {
+     "image": "res://assets/illustrated/campaign/stills/book-ch7-show.webp",
+     "lines": [
+      "Nobody would believe us if we told them. So we decided to show them."
+     ],
+     "status": "kept"
+    }
+   ],
+   "narrator": "steve"
+  },
+  "ch8": {
+   "title": "No engine",
+   "before": "p_meeting",
+   "panels": [
+    {
+     "image": "res://assets/illustrated/campaign/stills/book-ch8-silence.webp",
+     "lines": [
+      "There is no engine. For a long moment, nobody in that locked room said anything at all.",
+      "Two countries had faked a miracle, and a fleet had crossed the dark to steal it."
+     ],
+     "status": "kept"
+    },
+    {
+     "image": "res://assets/illustrated/campaign/stills/book-ch8-notebook.webp",
+     "lines": [
+      "Then Dr. Wen opened Mom’s notebook and began to read."
+     ],
+     "status": "kept"
+    }
+   ],
+   "narrator": "steve"
+  },
+  "ch9": {
+   "title": "Back under the bay",
+   "before": "c9_gallery",
+   "panels": [
+    {
+     "image": "res://assets/illustrated/campaign/stills/book-ch9-aquarium.webp",
+     "lines": [
+      "We went in through Nora’s aquarium, past the sleeping otters and the dark tanks, the way I had gone in alone."
+     ],
+     "status": "kept"
+    },
+    {
+     "image": "res://assets/illustrated/campaign/stills/book-ch9-tunnel.webp",
+     "lines": [
+      "Stephen carried the rig. June carried the plan. Pell carried Biscuit, who refused to get her paws wet."
+     ],
+     "status": "kept"
+    },
+    {
+     "image": "res://assets/illustrated/campaign/stills/book-ch9-glow.webp",
+     "lines": [
+      "At the end of the tunnel the amber light was waiting. Somewhere inside it, if Iris was right, Nora was awake."
+     ],
+     "status": "kept"
+    }
+   ],
+   "narrator": "steve"
+  },
+  "ch10": {
+   "title": "One hour",
+   "before": "c10_station",
+   "panels": [
+    {
+     "image": "res://assets/illustrated/campaign/stills/book-ch10-vigil.webp",
+     "lines": [
+      "The Vigil hung over the bay like a second moon. Nobody in Bellwether went back to bed."
+     ],
+     "status": "kept"
+    },
+    {
+     "image": "res://assets/illustrated/campaign/stills/book-ch10-pier.webp",
+     "lines": [
+      "Three hundred people stood on the pier in wet pajamas, looking up at the thing that had come to check on them."
+     ],
+     "status": "kept"
+    },
+    {
+     "image": "res://assets/illustrated/campaign/stills/book-ch10-hand.webp",
+     "lines": [
+      "Stephen kept checking the name he had written on his hand. Frank. Dad. Every few seconds."
+     ],
+     "status": "kept"
+    }
+   ],
+   "narrator": "steve"
+  },
+  "home": {
+   "title": "Home",
+   "before": "epilogue",
+   "panels": [
+    {
+     "image": "res://assets/illustrated/campaign/stills/book-home-rise.webp",
+     "lines": [
+      "For a while it just hung there over the water, as if it wanted one more look at us. Then it was gone."
+     ],
+     "status": "kept"
+    },
+    {
+     "image": "res://assets/illustrated/campaign/stills/book-home-towels.webp",
+     "lines": [
+      "Three hundred and twelve people came home that morning. Most of them were still in pajamas."
+     ],
+     "status": "kept"
+    },
+    {
+     "image": "res://assets/illustrated/campaign/stills/book-home-tables.webp",
+     "lines": [
+      "And down on the pier, Carmen started setting up tables."
      ],
      "status": "kept"
     }
