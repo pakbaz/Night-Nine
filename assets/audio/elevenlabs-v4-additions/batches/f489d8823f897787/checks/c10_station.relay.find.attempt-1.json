@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c10_station.relay.find",
+  "attempt": 1,
+  "plan_sha256": "f489d8823f897787d07f726f8abb9e9251693c77164bbe22de94563be899f495",
+  "wav_sha256": "33f6431a433f00c803c8d9449c07f8b33465e3c4369af2c8b8405094eb864ca3",
+  "expected": "The official line sent back yesterday’s test signal. Cedar can repeat a test number but can’t see the field. Marsh, out past Sentinel Point, answered with a fresh wind reading. Marsh is our eyes, and Gull carries the live-show cues down the coast.",
+  "recognized": "The official line sent back yesterday's test signal. Cedar can repeat a test number, but can't see the field. Marsh, out past Sentinel Point, answered with a fresh wind reading. Marsh is our eyes, and Gull carries the live show cues down the coast.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 15.04,
+  "sample_rate": 48000,
+  "peak": 0.357177734375,
+  "rms": 0.04095102414665851,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c9_wake.helen.lead.03",
+  "attempt": 1,
+  "plan_sha256": "f489d8823f897787d07f726f8abb9e9251693c77164bbe22de94563be899f495",
+  "wav_sha256": "37179145eb02e9922ad9a9367c98455a1a5c681d59692db653a6b305bd7fa0ed",
+  "expected": "Up two steps. Down past home. Then back up, and hold that last note.",
+  "recognized": "Up two steps, down past home, then back up and hold that last note.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 6.88,
+  "sample_rate": 48000,
+  "peak": 0.46734619140625,
+  "rms": 0.056678061711904586,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

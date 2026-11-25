@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c1_escape.recap.01",
+  "attempt": 1,
+  "plan_sha256": "f489d8823f897787d07f726f8abb9e9251693c77164bbe22de94563be899f495",
+  "wav_sha256": "d9dd9e73629e0771b4a063f3236a792e43ec52f0e8e72ad64c745ff0f7648dc7",
+  "expected": "My list: one good morning, played twice. A whistle Admiral won’t answer. Nora’s credential used across the bay. A phone call about a notebook. A locked door.",
+  "recognized": "My list. One good morning played twice. A whistle Admiral won't answer. Nora's credential used across the bay. A phone call about a notebook. A locked door.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 12.24,
+  "sample_rate": 48000,
+  "peak": 0.41217041015625,
+  "rms": 0.03912976987512531,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

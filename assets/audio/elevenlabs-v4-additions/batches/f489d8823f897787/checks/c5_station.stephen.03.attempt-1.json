@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c5_station.stephen.03",
+  "attempt": 1,
+  "plan_sha256": "f489d8823f897787d07f726f8abb9e9251693c77164bbe22de94563be899f495",
+  "wav_sha256": "2fb74e43f2162ddeff1549fe0135c0f2e40e532473184fc6f6a583a3ed896a04",
+  "expected": "The tank slate said sixty-one was the memory index, not sixty-one percent of a person. Last stable binding: breakfast in Dad’s shack.",
+  "recognized": "The tank slate said 61 was the memory index, not 61% of a person. Last stable binding. Breakfast in Dad's shack.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 9.84,
+  "sample_rate": 48000,
+  "peak": 0.54254150390625,
+  "rms": 0.042598360718072194,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

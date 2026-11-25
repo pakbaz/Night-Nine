@@ -1,0 +1,431 @@
+{
+  "audio_id": "c10_town.recap.01",
+  "audio_sha256": "46a1a66ec5f8c6851c688b911e3ac025ff167439064f2fac9ba2bb33ee992fa4",
+  "file": "assets/audio/elevenlabs-v4-additions/masters/c10_town.recap.01.attempt-2.wav",
+  "production_plan_sha256": "f489d8823f897787d07f726f8abb9e9251693c77164bbe22de94563be899f495",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Mrs. Penhallow is part of the ship’s record keeper, the part that stayed ashore with us. She brought a shore dub of Veyr’s last wind in her bait bucket.",
+  "recognized": "Mrs. Penhallow is part of the ship's record keeper, the part that stayed ashore with us. She brought a shore dub of Vaer's last wind in her bait bucket.",
+  "word_edits": 1,
+  "request_id": null,
+  "trace_id": "9ec08d307c2fc42c1d76ee857e6d57f4",
+  "character_cost": "3",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Mrs. Penhallow is part of the ship's record keeper, the part that stayed ashore with us. She brought a shore dub of Vaer's last wind in her bait bucket.",
+    "words": [
+      {
+        "text": "Mrs.",
+        "start": 0.06,
+        "end": 0.2,
+        "type": "word",
+        "logprob": -0.0004368350034837931
+      },
+      {
+        "text": " ",
+        "start": 0.2,
+        "end": 0.44,
+        "type": "spacing",
+        "logprob": -0.2835923135280609
+      },
+      {
+        "text": "Penhallow",
+        "start": 0.44,
+        "end": 1.08,
+        "type": "word",
+        "logprob": -0.1265649046528981
+      },
+      {
+        "text": " ",
+        "start": 1.08,
+        "end": 1.14,
+        "type": "spacing",
+        "logprob": -2.861018856492592e-06
+      },
+      {
+        "text": "is",
+        "start": 1.14,
+        "end": 1.28,
+        "type": "word",
+        "logprob": -2.861018856492592e-06
+      },
+      {
+        "text": " ",
+        "start": 1.28,
+        "end": 1.34,
+        "type": "spacing",
+        "logprob": -5.245195097813848e-06
+      },
+      {
+        "text": "part",
+        "start": 1.34,
+        "end": 1.48,
+        "type": "word",
+        "logprob": -5.245195097813848e-06
+      },
+      {
+        "text": " ",
+        "start": 1.48,
+        "end": 1.52,
+        "type": "spacing",
+        "logprob": -1.1920928244535389e-07
+      },
+      {
+        "text": "of",
+        "start": 1.52,
+        "end": 1.58,
+        "type": "word",
+        "logprob": -1.1920928244535389e-07
+      },
+      {
+        "text": " ",
+        "start": 1.58,
+        "end": 1.64,
+        "type": "spacing",
+        "logprob": -1.1920928244535389e-07
+      },
+      {
+        "text": "the",
+        "start": 1.64,
+        "end": 1.72,
+        "type": "word",
+        "logprob": -1.1920928244535389e-07
+      },
+      {
+        "text": " ",
+        "start": 1.72,
+        "end": 1.78,
+        "type": "spacing",
+        "logprob": -0.00010513706365600228
+      },
+      {
+        "text": "ship's",
+        "start": 1.78,
+        "end": 2.04,
+        "type": "word",
+        "logprob": -7.074702595370279e-05
+      },
+      {
+        "text": " ",
+        "start": 2.04,
+        "end": 2.18,
+        "type": "spacing",
+        "logprob": -0.0029032959137111902
+      },
+      {
+        "text": "record",
+        "start": 2.18,
+        "end": 2.48,
+        "type": "word",
+        "logprob": -0.0029032959137111902
+      },
+      {
+        "text": " ",
+        "start": 2.48,
+        "end": 2.54,
+        "type": "spacing",
+        "logprob": -0.10082735121250153
+      },
+      {
+        "text": "keeper,",
+        "start": 2.54,
+        "end": 2.9,
+        "type": "word",
+        "logprob": -0.08643829319563727
+      },
+      {
+        "text": " ",
+        "start": 2.9,
+        "end": 3.2,
+        "type": "spacing",
+        "logprob": 0.0
+      },
+      {
+        "text": "the",
+        "start": 3.2,
+        "end": 3.28,
+        "type": "word",
+        "logprob": 0.0
+      },
+      {
+        "text": " ",
+        "start": 3.28,
+        "end": 3.32,
+        "type": "spacing",
+        "logprob": -1.1920922133867862e-06
+      },
+      {
+        "text": "part",
+        "start": 3.32,
+        "end": 3.52,
+        "type": "word",
+        "logprob": -1.1920922133867862e-06
+      },
+      {
+        "text": " ",
+        "start": 3.52,
+        "end": 3.56,
+        "type": "spacing",
+        "logprob": -9.536738616588991e-07
+      },
+      {
+        "text": "that",
+        "start": 3.56,
+        "end": 3.7,
+        "type": "word",
+        "logprob": -9.536738616588991e-07
+      },
+      {
+        "text": " ",
+        "start": 3.7,
+        "end": 3.78,
+        "type": "spacing",
+        "logprob": -1.6212332411669195e-05
+      },
+      {
+        "text": "stayed",
+        "start": 3.78,
+        "end": 3.96,
+        "type": "word",
+        "logprob": -1.6212332411669195e-05
+      },
+      {
+        "text": " ",
+        "start": 3.96,
+        "end": 4.019,
+        "type": "spacing",
+        "logprob": -0.00022182388056535274
+      },
+      {
+        "text": "ashore",
+        "start": 4.019,
+        "end": 4.4,
+        "type": "word",
+        "logprob": -0.00022182388056535274
+      },
+      {
+        "text": " ",
+        "start": 4.4,
+        "end": 4.44,
+        "type": "spacing",
+        "logprob": -1.7881377516459906e-06
+      },
+      {
+        "text": "with",
+        "start": 4.44,
+        "end": 4.58,
+        "type": "word",
+        "logprob": -1.7881377516459906e-06
+      },
+      {
+        "text": " ",
+        "start": 4.58,
+        "end": 4.66,
+        "type": "spacing",
+        "logprob": -9.536738616588991e-07
+      },
+      {
+        "text": "us.",
+        "start": 4.66,
+        "end": 4.92,
+        "type": "word",
+        "logprob": -1.6291918048712735e-06
+      },
+      {
+        "text": " ",
+        "start": 4.92,
+        "end": 5.3,
+        "type": "spacing",
+        "logprob": -4.410734163684538e-06
+      },
+      {
+        "text": "She",
+        "start": 5.3,
+        "end": 5.42,
+        "type": "word",
+        "logprob": -4.410734163684538e-06
+      },
+      {
+        "text": " ",
+        "start": 5.42,
+        "end": 5.44,
+        "type": "spacing",
+        "logprob": -5.245195097813848e-06
+      },
+      {
+        "text": "brought",
+        "start": 5.44,
+        "end": 5.64,
+        "type": "word",
+        "logprob": -5.245195097813848e-06
+      },
+      {
+        "text": " ",
+        "start": 5.64,
+        "end": 5.68,
+        "type": "spacing",
+        "logprob": -9.775113539944869e-06
+      },
+      {
+        "text": "a",
+        "start": 5.68,
+        "end": 5.76,
+        "type": "word",
+        "logprob": -9.775113539944869e-06
+      },
+      {
+        "text": " ",
+        "start": 5.76,
+        "end": 5.82,
+        "type": "spacing",
+        "logprob": -0.09079477936029434
+      },
+      {
+        "text": "shore",
+        "start": 5.82,
+        "end": 6.08,
+        "type": "word",
+        "logprob": -0.09079477936029434
+      },
+      {
+        "text": " ",
+        "start": 6.08,
+        "end": 6.12,
+        "type": "spacing",
+        "logprob": -0.009171617217361927
+      },
+      {
+        "text": "dub",
+        "start": 6.12,
+        "end": 6.38,
+        "type": "word",
+        "logprob": -0.009171617217361927
+      },
+      {
+        "text": " ",
+        "start": 6.38,
+        "end": 6.46,
+        "type": "spacing",
+        "logprob": -1.1920858014491387e-05
+      },
+      {
+        "text": "of",
+        "start": 6.46,
+        "end": 6.58,
+        "type": "word",
+        "logprob": -1.1920858014491387e-05
+      },
+      {
+        "text": " ",
+        "start": 6.58,
+        "end": 6.64,
+        "type": "spacing",
+        "logprob": -1.393147349357605
+      },
+      {
+        "text": "Vaer's",
+        "start": 6.64,
+        "end": 6.98,
+        "type": "word",
+        "logprob": -0.507536459859125
+      },
+      {
+        "text": " ",
+        "start": 6.98,
+        "end": 7.06,
+        "type": "spacing",
+        "logprob": -0.0005776405450887978
+      },
+      {
+        "text": "last",
+        "start": 7.06,
+        "end": 7.4,
+        "type": "word",
+        "logprob": -0.0005776405450887978
+      },
+      {
+        "text": " ",
+        "start": 7.4,
+        "end": 7.46,
+        "type": "spacing",
+        "logprob": -0.00045658653834834695
+      },
+      {
+        "text": "wind",
+        "start": 7.46,
+        "end": 7.78,
+        "type": "word",
+        "logprob": -0.00045658653834834695
+      },
+      {
+        "text": " ",
+        "start": 7.78,
+        "end": 7.84,
+        "type": "spacing",
+        "logprob": -1.1920922133867862e-06
+      },
+      {
+        "text": "in",
+        "start": 7.84,
+        "end": 7.92,
+        "type": "word",
+        "logprob": -1.1920922133867862e-06
+      },
+      {
+        "text": " ",
+        "start": 7.92,
+        "end": 7.94,
+        "type": "spacing",
+        "logprob": -1.5497195136049413e-06
+      },
+      {
+        "text": "her",
+        "start": 7.94,
+        "end": 8.06,
+        "type": "word",
+        "logprob": -1.5497195136049413e-06
+      },
+      {
+        "text": " ",
+        "start": 8.06,
+        "end": 8.119,
+        "type": "spacing",
+        "logprob": -0.0003723404952324927
+      },
+      {
+        "text": "bait",
+        "start": 8.119,
+        "end": 8.32,
+        "type": "word",
+        "logprob": -0.0003723404952324927
+      },
+      {
+        "text": " ",
+        "start": 8.32,
+        "end": 8.36,
+        "type": "spacing",
+        "logprob": -1.8000440832111053e-05
+      },
+      {
+        "text": "bucket.",
+        "start": 8.36,
+        "end": 8.74,
+        "type": "word",
+        "logprob": -1.9533095837687142e-05
+      }
+    ],
+    "transcription_id": "jdotTKYWgtGgjePg7lck",
+    "audio_duration_secs": 9.12
+  },
+  "listening_reviewed": false
+}

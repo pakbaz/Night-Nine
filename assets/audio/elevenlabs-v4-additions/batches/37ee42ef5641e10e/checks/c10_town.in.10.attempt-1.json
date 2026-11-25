@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c10_town.in.10",
+  "attempt": 1,
+  "plan_sha256": "37ee42ef5641e10e13ac9c353fbb733e0134849a370e8fb10cf65e8bd2593037",
+  "wav_sha256": "c3f22534f1ab8d4a188449e743e0b4ce6556a1838c67b456477aaaadec1efae0",
+  "expected": "That city was our home. Our star went dark. This is the last wind that ever blew through those streets.",
+  "recognized": "that city was our home our star went dark this is the last wind that ever blew through those streets",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 7.6,
+  "sample_rate": 48000,
+  "peak": 0.350921630859375,
+  "rms": 0.03980597957542555,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

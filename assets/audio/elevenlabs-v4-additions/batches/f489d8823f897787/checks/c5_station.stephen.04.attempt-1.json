@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c5_station.stephen.04",
+  "attempt": 1,
+  "plan_sha256": "f489d8823f897787d07f726f8abb9e9251693c77164bbe22de94563be899f495",
+  "wav_sha256": "7753c10c52beb39d6a9509558b4ea5c94907bc5c0158fdb2942cfb24b67776ca",
+  "expected": "Call me Stephen. One of us should sound like a grown-up.",
+  "recognized": "Call me Steven. One of us should sound like a grown-up.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 3.28,
+  "sample_rate": 48000,
+  "peak": 0.38702392578125,
+  "rms": 0.040663047022699225,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

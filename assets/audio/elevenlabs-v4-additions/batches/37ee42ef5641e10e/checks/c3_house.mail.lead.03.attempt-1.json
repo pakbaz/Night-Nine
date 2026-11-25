@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c3_house.mail.lead.03",
+  "attempt": 1,
+  "plan_sha256": "37ee42ef5641e10e13ac9c353fbb733e0134849a370e8fb10cf65e8bd2593037",
+  "wav_sha256": "dc9c274e4250fa3893c31fbef0f204a8fc363051faa87fb27927150375243244",
+  "expected": "Monday morning, I used the private car-to-station handset. Only my deputy was on that channel. I heard him answer.",
+  "recognized": "Monday morning, I used the private car to station handset. Only my deputy was on that channel. I heard him answer.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 7.68,
+  "sample_rate": 48000,
+  "peak": 0.47442626953125,
+  "rms": 0.06151596975867611,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

@@ -29,8 +29,8 @@
           "prompt": "How should Helen say it in English, and what should she note?",
           "instruction": "Helen’s glossary card: yanshi means a technical demonstration. Biaoyan means a performance, as on a stage. The delegate said: bijiao women de biaoyan. Say exactly what he said, and note anything that matters.",
           "rows": [
-            {"label": "Say it in English", "options": ["He proposes comparing our demonstrations", "He proposes comparing our performances", "He proposes testing which side is stronger"], "answer": 1},
-            {"label": "Note in shorthand", "options": ["He chose the stage word", "He agreed to a strength test", "Nothing to note"], "answer": 0}
+            {"label": "Say it in English", "feedback": "He said biaoyan. My glossary has a different word for a technical demonstration.", "options": ["He proposes comparing our demonstrations", "He proposes comparing our performances", "He proposes testing which side is stronger"], "answer": 1},
+            {"label": "Note in shorthand", "feedback": "I can note the word he chose. I can't put a motive in his mouth.", "options": ["He chose the stage word", "He agreed to a strength test", "Nothing to note"], "answer": 0}
           ],
           "hints": [
             "Find the last word he said on Helen’s glossary card.",
@@ -59,8 +59,8 @@
           "prompt": "Pick Helen’s question for both men, and the line for the public minutes.",
           "instruction": "Ask a question each man can answer honestly about his own room. In the public minutes, write only what both sides saw.",
           "rows": [
-            {"label": "Ask both delegates", "options": ["What produced the ring in your room?", "How did the other team produce its ring?", "How far did the other team move the target?"], "answer": 0},
-            {"label": "Write in the public minutes", "options": ["Two projectors, one in each room", "Both observers saw a ring of light", "Both targets moved the same distance"], "answer": 1}
+            {"label": "Ask both delegates", "feedback": "Each man can tell me what happened in his own room. Neither saw how the other room was set up.", "options": ["What produced the ring in your room?", "How did the other team produce its ring?", "How far did the other team move the target?"], "answer": 0},
+            {"label": "Write in the public minutes", "feedback": "Both observers saw the light. That doesn't mean they saw what made it.", "options": ["Two projectors, one in each room", "Both observers saw a ring of light", "Both targets moved the same distance"], "answer": 1}
           ],
           "hints": [
             "Each man knows his own room. Neither has seen inside the other’s.",
@@ -157,6 +157,7 @@
             "wen|Help me put her pages back in order.",
             "wen|This scrap is the American test. Two drum strikes, a missing beat, then a lamp flare.",
             "wen|This one is our test. Before we built it, we were sent a copy of the American test to study.",
+            "wen|Both teams began with the same open-radio handshake. It told every listener when the performance started.",
             "wen|Both tests went out over open radio. Anyone with a receiver could hear them.",
             "wen|And the minutes of the meeting at one table quote both tests. Your mother was in that room."
           ],
@@ -166,6 +167,7 @@
             "evidence": [
               "Scrap H, the American test: two drum strikes, a missing beat, then a lamp flare.",
               "Scrap W, the Chinese test: Wen’s team studied a copy of the American test before they built it.",
+              "Both teams used the same public handshake before the staged pulse.",
               "Both tests went out over open radio, so anyone listening could record them.",
               "The minutes of the meeting at one table quote both tests."
             ],
@@ -186,7 +188,7 @@
             "c8_lab.notebook.01",
             "steve|Heard this before. Mom heard that missing beat in the bay. In Dad’s reels."
           ],
-          "finding": "steve|America staged its test first, and China built its own from a copy, missing beat and all. Both went out over open radio, and something out there recorded them. Mom heard that same missing beat again, in the bay. The fleet came because of a show."
+          "finding": "steve|America staged its test first, and China built its own from a copy, missing beat and all. Both announced themselves with the same public handshake and went out over open radio, so something out there recorded them. Mom heard that missing beat again in the bay. The fleet came because of a show."
         },
         "props": {
           "difficulty": 1,
@@ -234,8 +236,8 @@
           "sounds": ["effect.ninth_night", "effect.wick", "effect.wick_high_ending"],
           "evidence_labels": ["Reel 07", "Reel 11", "Reel 14"],
           "rows": [
-            {"label": "Which reel matches the page?", "options": ["Reel 07", "Reel 11", "Reel 14"], "answer": 1},
-            {"label": "What can Steve write down?", "options": ["Same rhythm and pitch shape", "A word-for-word translation", "Same reel length only"], "answer": 0}
+            {"label": "Which reel matches the page?", "feedback": "Follow the last stroke across the gap. Does it land below both earlier tones?", "options": ["Reel 07", "Reel 11", "Reel 14"], "answer": 1},
+            {"label": "What can Steve write down?", "feedback": "Match the pitches and the rhythm. Mom didn't leave a translation.", "options": ["Same rhythm and pitch shape", "A word-for-word translation", "Same reel length only"], "answer": 0}
           ],
           "hints": [
             "Read each reel as a shape. Does each tone go up or down?",
@@ -272,7 +274,7 @@
           {
             "topic": "The walk over",
             "lines": [
-              "wen|I walked here from the hotel. An old woman with a dog said good morning to me in Mandarin.",
+              "wen|I walked here from the hotel. An old woman carrying a bait bucket said good morning to me in Mandarin.",
               "steve|In Mandarin? Out here in Bellwether?",
               "wen|Perfect Mandarin. Then she asked me if I needed any bait."
             ]
@@ -317,7 +319,7 @@
         "c8_beach.first is cut; line first.01 and second.01 are dropped."
       ],
       "context": [
-        "steve|Dawn on the beach. Saren came alone, the way he said he would: taller than the doorframes on his ship, and perfectly still."
+        "steve|The Prefect met me alone at dawn. He set a little Newton’s cradle on a flat rock and let one ball drop. He watched it instead of looking at me."
       ],
       "intro": [
         "c8_beach.in.01",
@@ -330,6 +332,7 @@
       "tasks": {
         "first": "DELETE",
         "second": {
+          "type": "tape",
           "difficulty": 2,
           "title": "Mom’s voice",
           "requires": [],
@@ -340,6 +343,25 @@
             {"new": "steve|I know every breath of her voicemail. Let me play it right next to this.", "direction": "taking Dad’s recorder out of his cardigan pocket"}
           ],
           "prompt": "Saren’s tape says: “Come out with us, kiddo. Tonight.” Play it next to Mom’s voicemail from the night of the boat. What is Saren’s tape?",
+          "instruction": "Line up “Come out with us, kiddo.” Compare the breath before “kiddo” and the gap before “Tonight.”",
+          "workbench_title": "DAD’S RECORDER  /  MOM’S VOICEMAIL",
+          "label_a": "Voicemail, the night of the boat",
+          "label_b": "Saren’s tape",
+          "expected_offset": 0.0,
+          "alignment_required": true,
+          "offset_feedback": "The word “kiddo” is still doubled. Steve lines up the shared breath first.",
+          "rows": [
+            {
+              "label": "Saren’s message",
+              "options": ["A new message from Mom", "Words cut from the voicemail and stitched together", "Mom reading words Saren wrote"],
+              "feedback": [
+                "A new message would carry a new breath. This breath is the voicemail’s.",
+                "The shared breath lines up, followed by a cut where four words used to be.",
+                "Every sound comes from the old voicemail; there is no new reading."
+              ],
+              "answer": 1
+            }
+          ],
           "options": ["A new message from Mom", "Words cut from the voicemail and stitched together", "Mom reading words Saren wrote"],
           "answer": 1,
           "wrong": {
@@ -357,7 +379,7 @@
             "steve|Same breath before ‘kiddo’. And a hole where four words used to be.",
             {"new": "steve|Rook kept this tape for an hour at the safe house. Long enough to copy it.", "direction": "quietly, putting it together"}
           ],
-          "finding": "steve|Saren’s message is Mom’s voicemail, cut and stitched: the same breath before ‘kiddo’, and a gap where ‘The bay is singing’ used to be. He has no message from her. He has my tape."
+          "finding": "steve|Saren’s message is Mom’s voicemail, cut and stitched: the same breath before ‘kiddo’, and a gap where ‘The bay is singing’ used to be. He has no message from her. He has the personal copy Rook made while he held my cassette."
         },
         "refuse": {
           "type": "beat",
@@ -467,9 +489,9 @@
           "prompt": "Which receipt will the fleet accept, and who does what?",
           "instruction": "The fleet trusts only what its own ship measured. Dock: a camera saw the lamps. Mast: the ship measured the lamps. Shore: the ship received numbers from our crew. Only a crew pass opens the antenna passage. The sleepers are in the Gallery.",
           "rows": [
-            {"label": "Which receipt counts?", "options": ["Dock", "Mast", "Shore"], "answer": 1},
-            {"label": "What does Stephen do?", "options": ["Wake the beds", "Open the antenna passage", "Watch the shore camera"], "answer": 1},
-            {"label": "What does everyone else do?", "options": ["Bring the sleepers out of the Gallery", "Wait for the camera receipt", "Read numbers to the ship"], "answer": 0}
+            {"label": "Which receipt counts?", "feedback": "Check who took the measurement. Receiving somebody else's numbers doesn't make them the ship's own.", "options": ["Dock", "Mast", "Shore"], "answer": 1},
+            {"label": "What does Stephen do?", "feedback": "Give the crew pass a job. Find the door no one else can open.", "options": ["Wake the beds", "Open the antenna passage", "Watch the shore camera"], "answer": 1},
+            {"label": "What does everyone else do?", "feedback": "Stephen has the passage covered. The sleepers still need a way out of the Gallery.", "options": ["Bring the sleepers out of the Gallery", "Wait for the camera receipt", "Read numbers to the ship"], "answer": 0}
           ],
           "hints": [
             "In each receipt, who did the measuring?",

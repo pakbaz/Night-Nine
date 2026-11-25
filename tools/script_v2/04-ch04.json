@@ -13,7 +13,7 @@
         "Walt Prior on the placements list pays off Chapter 3."
       ],
       "context": [
-        "steve|Adrian Rook arrived the next afternoon with four agents and two black SUVs. He was everything June had promised. Calm. Kind. Thorough.",
+        "steve|Adrian Rook arrived two afternoons later with four agents and two black SUVs. He was everything June had promised. Calm. Kind. Thorough.",
         "steve|He drove us to a Bureau safe house in the hills above the bay. An hour from town, with nobody else for miles.",
         "steve|I kept thinking about that text. If someone wanted to cut me off from the one man who could help, that’s exactly what they’d send.",
         "steve|On the drive, every station talked about President Ward. On November seventh she signs an accord with China at Sentinel Point."
@@ -47,9 +47,9 @@
           "prompt": "Where should Steve record, when should he press the button, and what should he keep?",
           "instruction": "Find a quiet spot close to Rook, start before his first word, and keep proof that the take was made in this house.",
           "rows": [
-            {"label": "Where to stand", "options": ["In the lounge", "At the office door", "Under June’s window"], "answer": 1},
-            {"label": "When to press record", "options": ["After Rook starts", "When Rook hangs up", "Before the music stops"], "answer": 2},
-            {"label": "What to keep", "options": ["Only the words", "The whole take"], "answer": 1}
+            {"label": "Where to stand", "feedback": "I want Rook close to the microphone. The singing and the generator need to stay in the background.", "options": ["In the lounge", "At the office door", "Under June’s window"], "answer": 1},
+            {"label": "When to press record", "feedback": "His first word lands right after the music stops. The tape needs to be moving already.", "options": ["After Rook starts", "When Rook hangs up", "Before the music stops"], "answer": 2},
+            {"label": "What to keep", "feedback": "June has to hear where I was standing. If I cut away the room, all she has is another voice.", "options": ["Only the words", "The whole take"], "answer": 1}
           ],
           "hints": [
             "Get close to Rook, away from the singing and the generator.",
@@ -60,6 +60,7 @@
           "finding": "steve|I have Rook’s line on Dad’s tape, from outside his door, with this house’s room sound around it. Nobody can say I copied it off June’s phone."
         },
         "match": {
+          "type": "tape",
           "difficulty": 2,
           "title": "Two takes",
           "requires": ["record"],
@@ -71,6 +72,29 @@
             "steve|Remember Nora’s good morning? Two days, same breath, same pause. People never do that. Recordings do."
           ],
           "prompt": "Play June’s voicemail and Steve’s take from the door. What do you hear?",
+          "instruction": "Line up “Sit tight” at the start. Compare the breath, the pause before June’s name and the click on the S.",
+          "tape": {
+            "recording_a": "res://assets/audio/voices/elevenlabs-v4-script-v2/recording.rook.wav",
+            "recording_b": "res://assets/audio/effects/rook-door.wav"
+          },
+          "workbench_title": "DAD’S RECORDER  /  DOOR AND VOICEMAIL",
+          "label_a": "Calder’s voicemail",
+          "label_b": "Safe-house door",
+          "expected_offset": 0.0,
+          "alignment_required": true,
+          "offset_feedback": "The opening consonant is still doubled. Steve lines up “Sit” before judging the room sound.",
+          "rows": [
+            {
+              "label": "Rook’s performance",
+              "options": ["A new take, spoken more slowly", "The same recording, played twice", "A shorter edit of the voicemail"],
+              "feedback": [
+                "The breath and pause do not move; slower speech would stretch them.",
+                "The waveform, breath and click coincide.",
+                "Both recordings contain the whole sentence."
+              ],
+              "answer": 1
+            }
+          ],
           "options": ["Rook saying it again, more slowly", "The same recording, played twice", "A shorter cut of the voicemail"],
           "answer": 1,
           "wrong": {
@@ -226,9 +250,9 @@
           "prompt": "Which room, which capsule, and what goes inside?",
           "instruction": "Send the capsule straight to June’s new room, with something she can hear for herself. The builder’s sketch shows ALDER opposite the linen cupboard and PINE facing the lift.",
           "rows": [
-            {"label": "Send to", "options": ["A: OAK", "B: PINE", "C: ALDER"], "answer": 2},
-            {"label": "Capsule", "options": ["Standard", "Blue maintenance"], "answer": 1},
-            {"label": "Put inside", "options": ["Rook’s voicemail only", "Steve’s take only", "Recorder, both takes, note"], "answer": 2}
+            {"label": "Send to", "feedback": "June moved. Use the room facing the linen cupboard on the builder's sketch, not her old room.", "options": ["A: OAK", "B: PINE", "C: ALDER"], "answer": 2},
+            {"label": "Capsule", "feedback": "Anything that goes through the sorting desk goes through Rook. Which capsule skips the desk?", "options": ["Standard", "Blue maintenance"], "answer": 1},
+            {"label": "Put inside", "feedback": "A note asks June to trust me. She needs both takes and something to play them on.", "options": ["Rook’s voicemail only", "Steve’s take only", "Recorder, both takes, note"], "answer": 2}
           ],
           "hints": [
             "June isn’t in her first room any more.",
@@ -257,9 +281,9 @@
           "prompt": "Which card, which mode, and where should the west team meet?",
           "instruction": "Move the whole west corridor for real, to a place with four seats away from Rook. A dry run only prints the route. A floor rehearsal moves people. The covered court seats three, the transport bay seats four, and Rook is using the front office.",
           "rows": [
-            {"label": "Card", "options": ["WHITE", "SILVER", "BLUE"], "answer": 2},
-            {"label": "Mode", "options": ["Dry run", "Floor rehearsal"], "answer": 1},
-            {"label": "West team meets at", "options": ["Covered court", "Transport bay", "Front office"], "answer": 1}
+            {"label": "Card", "feedback": "The escort signed for his corridor. One card moves just him; we need it to move the rest of us too.", "options": ["WHITE", "SILVER", "BLUE"], "answer": 2},
+            {"label": "Mode", "feedback": "A printed drill route still leaves me in this room. The people themselves have to move.", "options": ["Dry run", "Floor rehearsal"], "answer": 1},
+            {"label": "West team meets at", "feedback": "Count four seats, including mine. We can't pass Rook in the front office.", "options": ["Covered court", "Transport bay", "Front office"], "answer": 1}
           ],
           "hints": [
             "Who signed the ticket, and which corridor does he work in?",
@@ -273,7 +297,7 @@
           "finding": "steve|A BLUE drill, for real, on the escort’s own ticket. The whole west corridor, me included, goes to the transport bay, and the rules put me straight into my own transfer van. Rook stays in the east wing with June."
         },
         "van": {
-          "type": "rows",
+          "type": "board",
           "difficulty": 1,
           "title": "Transport van",
           "requires": ["fault"],
@@ -286,11 +310,32 @@
             "steve|We were on the old logging road down toward Bellwether. Rook would hear about the drill within minutes. I had less than that."
           ],
           "prompt": "When should Steve pull the handle, and which way should he jump?",
-          "instruction": "Pull the handle while the catch is off, and jump toward the softer side. On the gravel bend, the right side drops into a soft ditch, and the left side is a rock face.",
-          "rows": [
-            {"label": "Pull the handle", "options": ["At the canal bridge", "On the gravel bend", "At the weighbridge"], "answer": 1},
-            {"label": "Jump", "options": ["Left, onto rock", "Right, into the ditch"], "answer": 1}
-          ],
+          "board": {
+            "instruction": "Build the route Steve can see from the van, then place the catch actions. Which bend should he wait for before he pulls the handle?",
+            "evidence": [
+              "The escort releases the travel catch when the driver radios ‘slowing for gravel’, and sets it again at the next stop.",
+              "Driver’s route card: depot, water tower, rail underpass, gravel bend (slow), weighbridge (stop), highway.",
+              "Through the window Steve sees a white tank on legs, then a dark steel ceiling, then the driver reaches for the radio.",
+              "At the gravel bend the right side drops into a soft ditch; the left side is rock."
+            ],
+            "stages": [
+              {
+                "mode": "route",
+                "prompt": "Trace the van’s route.",
+                "slots": ["First landmark", "Next overhead", "Slow bend", "Next stop"],
+                "pieces": ["Gravel bend", "Water tower", "Railway underpass", "Weighbridge"],
+                "answer": [1, 2, 0, 3]
+              },
+              {
+                "mode": "match",
+                "prompt": "Place the catch actions.",
+                "slots": ["Catch released", "Catch set again", "Steve pulls the handle"],
+                "pieces": ["Weighbridge stop", "Gravel bend", "Driver radios ‘slowing’", "Railway underpass"],
+                "answer": [2, 0, 1]
+              }
+            ],
+            "wrong_text": "Steve waits for the route and the catch to agree. A landmark alone is not enough."
+          },
           "hints": [
             "The handle only works while the catch is off.",
             "The catch only comes off for gravel. Check which side is soft.",
@@ -304,8 +349,7 @@
         }
       },
       "recap": [
-        "steve|June has the proof, and she chose to stay with Rook so I could run.",
-        "steve|Now I was in a ditch in the hills above the bay with Dad’s recorder, a stolen radio and no plan. And the radio was still talking."
+        {"new": "steve|Now I was in a ditch in the hills above the bay with Dad’s recorder, a stolen radio and no plan. And the radio was still talking.", "audio": "c4_escape.recap.02"}
       ],
       "outro": [
         {"id": "c4_escape.out.01", "text": "All units. Steve Mercer, wanted for the abduction of Nora Reyes. And scan Calder tonight. The signing is in six days.", "delivery": "radio"},

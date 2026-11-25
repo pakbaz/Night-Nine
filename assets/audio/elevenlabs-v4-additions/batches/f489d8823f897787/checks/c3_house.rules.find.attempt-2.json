@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "audio_id": "c3_house.rules.find",
+  "attempt": 2,
+  "plan_sha256": "f489d8823f897787d07f726f8abb9e9251693c77164bbe22de94563be899f495",
+  "wav_sha256": "729cb10ebeb202545c2abc2757effe50ebe9954f13999eb9f6552fc1f3346520",
+  "expected": "June’s list has thirty-one names, and most of them are feelings. Two have records behind them: Lyle’s sign-in book, and Walt’s May 3 ledger backed by a sworn hearing transcript. Mrs. Penhallow isn’t on it.",
+  "recognized": "June's list has 31 names, and most of them are feelings. Two have records behind them: Lyle's sign-in book and Walt's May 3rd ledger, backed by a sworn hearing transcript. Mrs. Penhallow isn't on it.",
+  "local_recognized": "June's list has 31 names, and most of them are feelings. Two have records behind them. Lyle's sign-in book and Walt's May 3rd ledger backed by a sworn hearing transcript. Mrs. Penhalo isn't on it.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 14.08,
+  "sample_rate": 48000,
+  "peak": 0.37579345703125,
+  "rms": 0.04218085147647472,
+  "level_match_gain_db": 0.0,
+  "word_edits": 1,
+  "word_error_rate": 0.025,
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c3_house.rules.find.json",
+    "sha256": "98c62d419b533d207a07028883e02627a337cd71d8bb79e89b2a2bcb6ca24524",
+    "model": "scribe_v3",
+    "word_edits": 1,
+    "listening_reviewed": false
+  },
+  "status": "retake_required",
+  "failure_reason": "asr_mismatch"
+}

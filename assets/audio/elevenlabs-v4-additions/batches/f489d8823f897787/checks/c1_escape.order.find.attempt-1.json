@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c1_escape.order.find",
+  "attempt": 1,
+  "plan_sha256": "f489d8823f897787d07f726f8abb9e9251693c77164bbe22de94563be899f495",
+  "wav_sha256": "73bd9a08c6eac1a71d8511647184cecad688e596c54a54d959b7bcbee03fc4e5",
+  "expected": "Someone used Nora’s name and staff credential in the north wing while she was at her mother’s birthday, across the bay. And now Nora has locked me out on the balcony.",
+  "recognized": "Someone used Nora's name and staff credential in the north wing while she was at her mother's birthday, across the bay. And now, Nora has locked me out on the balcony.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 9.44,
+  "sample_rate": 48000,
+  "peak": 0.352874755859375,
+  "rms": 0.04797195427761635,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

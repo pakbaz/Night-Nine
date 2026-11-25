@@ -127,16 +127,7 @@ func hit(screen: Vector2) -> bool:
 	if not is_visible_in_tree() or not is_instance_valid(body) or not body.texture:
 		return false
 	var local: Vector2 = body.get_global_transform_with_canvas().affine_inverse() * screen
-	var rect: Rect2 = body.get_rect()
-	if not rect.has_point(local):
-		return false
-	var image: Image = body.texture.get_image()
-	if not image or image.is_empty():
-		return true
-	var uv: Vector2 = (local - rect.position) / rect.size
-	var pixel := Vector2i(clampi(int(uv.x * image.get_width()), 0, image.get_width() - 1),
-		clampi(int(uv.y * image.get_height()), 0, image.get_height() - 1))
-	return image.get_pixelv(pixel).a > .12
+	return body.is_pixel_opaque(local)
 
 func speak(source: AudioStreamPlayer, timing: Dictionary) -> void:
 	voice = source

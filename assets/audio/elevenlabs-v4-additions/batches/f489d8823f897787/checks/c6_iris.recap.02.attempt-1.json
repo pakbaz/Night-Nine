@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c6_iris.recap.02",
+  "attempt": 1,
+  "plan_sha256": "f489d8823f897787d07f726f8abb9e9251693c77164bbe22de94563be899f495",
+  "wav_sha256": "6c151d2738d85bea6754b4c3e2e4532db9028dbb777a188983c865f98b6ae4a8",
+  "expected": "June first. Then the President.",
+  "recognized": "June 1st, then the President.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 2.72,
+  "sample_rate": 48000,
+  "peak": 0.3040771484375,
+  "rms": 0.04069138008254823,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

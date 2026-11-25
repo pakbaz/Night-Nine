@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "plan_sha256": "37ee42ef5641e10e13ac9c353fbb733e0134849a370e8fb10cf65e8bd2593037",
+  "passed": [
+    "c10_live.recap.01",
+    "c10_live.second.lead.04",
+    "c10_report.in.05",
+    "c10_town.in.10",
+    "c10_town.recap.01",
+    "c10_town.wind.find",
+    "c3_house.mail.lead.03",
+    "c3_house.rules.find",
+    "c3_house.rules.lead.03",
+    "c8_beach.ctx.01"
+  ],
+  "retake_required": {}
+}

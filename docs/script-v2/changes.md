@@ -2,6 +2,10 @@
 
 Written 2026-11-20 for milestone M1. The source of truth is `tools/script_v2/*.json`. The readable script is `docs/script-v2/script.md`. How the tool works is in `docs/script-v2/README.md`.
 
+**Current release:** The sections below are dated production notes; their counts and open questions describe those builds. The playable revision has 34 scenes and 99 leads. See the [current walkthrough](../campaign-walkthrough.md) for the actual controls and solutions.
+
+The second continuity pass separates memory indexing from crew binding, dates the clinic and permit alibis, and distinguishes the Archivist’s original spool from the shore copy. Nora distinguishes the thirteen months Steve barely spoke from the five months she was asleep. The pier meeting now passes control from Stephen at the market to Steve. The recorder and receiver return throughout the investigation; the family wakes to recordings the player can audition, and the live broadcast runs on the mixing desk. All 73 settings rows now explain the evidence behind a wrong choice. The revision includes 79 new campaign voice takes, one storybook pickup, and new paintings for the family recorder, broadcast desk and aquarium work order.
+
 ## (a) Summary
 
 - The revision covers all 34 scenes and 101 leads: 88 puzzles and 13 non-graded beats. 39 are settings rows, 23 case boards, 17 choices, 7 listening compares, one tape alignment and one dial.

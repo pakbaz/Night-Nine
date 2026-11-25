@@ -12,6 +12,11 @@ bash "$PROJECT_ROOT/tools/godot.sh" --headless --editor --import --quit --log-fi
 python3 "$PROJECT_ROOT/tools/check-log.py" "$NIGHT_NINE_SAVE_DIR/campaign-import.log"
 bash "$PROJECT_ROOT/tools/godot.sh" --headless --script res://tests/test_campaign.gd --log-file "$NIGHT_NINE_SAVE_DIR/campaign-core.log"
 python3 "$PROJECT_ROOT/tools/check-log.py" "$NIGHT_NINE_SAVE_DIR/campaign-core.log"
+bash "$PROJECT_ROOT/tools/godot.sh" --headless --audio-driver Dummy --script res://tests/test_story_runtime_fixes.gd --log-file "$NIGHT_NINE_SAVE_DIR/story-runtime-fixes.log"
+python3 "$PROJECT_ROOT/tools/check-log.py" "$NIGHT_NINE_SAVE_DIR/story-runtime-fixes.log"
+(cd "$PROJECT_ROOT/tools" && python3 -m unittest test_story_runtime_sources.py)
+bash "$PROJECT_ROOT/tools/godot.sh" --headless --audio-driver Dummy --script res://tests/test_broadcast_desk.gd --log-file "$NIGHT_NINE_SAVE_DIR/broadcast-desk.log"
+python3 "$PROJECT_ROOT/tools/check-log.py" "$NIGHT_NINE_SAVE_DIR/broadcast-desk.log"
 CHAPTER_QA="$NIGHT_NINE_SAVE_DIR/chapter-replay-$$"
 mkdir -p "$CHAPTER_QA"
 NIGHT_NINE_SAVE_DIR="$CHAPTER_QA/save" NIGHT_NINE_QA_DIR="$CHAPTER_QA" bash "$PROJECT_ROOT/tools/godot.sh" --headless --audio-driver Dummy --script res://tests/test_chapter_replay.gd --log-file "$CHAPTER_QA/chapter-replay.log"
@@ -25,7 +30,9 @@ NIGHT_NINE_SAVE_DIR="$NIGHT_NINE_SAVE_DIR/walking-input" bash "$PROJECT_ROOT/too
 python3 "$PROJECT_ROOT/tools/check-log.py" "$NIGHT_NINE_SAVE_DIR/exploration-input.log"
 bash "$PROJECT_ROOT/tools/godot.sh" --headless --script res://tests/test_tape_recording.gd --log-file "$NIGHT_NINE_SAVE_DIR/tape-core.log" 2>&1 | tee "$NIGHT_NINE_SAVE_DIR/tape-core-console.log"
 python3 "$PROJECT_ROOT/tools/check-log.py" "$NIGHT_NINE_SAVE_DIR/tape-core.log" "$NIGHT_NINE_SAVE_DIR/tape-core-console.log"
-python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$PROJECT_ROOT/tmp/qa/tape-recording-results.json" 48
+python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$PROJECT_ROOT/tmp/qa/tape-recording-results.json" 51
+bash "$PROJECT_ROOT/tools/godot.sh" --headless --audio-driver Dummy --script res://tests/test_investigation_puzzles.gd --log-file "$NIGHT_NINE_SAVE_DIR/investigation-puzzles.log"
+python3 "$PROJECT_ROOT/tools/check-log.py" "$NIGHT_NINE_SAVE_DIR/investigation-puzzles.log"
 bash "$PROJECT_ROOT/tools/godot.sh" --headless --script res://tests/test_voice_assets.gd --log-file "$NIGHT_NINE_SAVE_DIR/voice-assets.log" 2>&1 | tee "$NIGHT_NINE_SAVE_DIR/voice-assets-console.log"
 python3 "$PROJECT_ROOT/tools/check-log.py" "$NIGHT_NINE_SAVE_DIR/voice-assets.log" "$NIGHT_NINE_SAVE_DIR/voice-assets-console.log"
 export NIGHT_NINE_QA_DIR="$PROJECT_ROOT/tmp/qa/extended-run-$$"
@@ -40,7 +47,7 @@ python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$NIGHT_NINE_QA_DIR/case-boards
 python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$NIGHT_NINE_QA_DIR/social-staging.json" 152
 python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$NIGHT_NINE_QA_DIR/small-talk.json" 23
 python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$NIGHT_NINE_QA_DIR/story-staging.json" 169
-python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$NIGHT_NINE_QA_DIR/bay-receiver.json" 20
+python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$NIGHT_NINE_QA_DIR/bay-receiver.json" 24
 if [[ "${1:-}" == "--render" ]]; then
   export NIGHT_NINE_QA_DIR="$PROJECT_ROOT/tmp/qa/campaign-run-$$"
   mkdir -p "$NIGHT_NINE_QA_DIR"

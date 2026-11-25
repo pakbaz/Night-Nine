@@ -18,6 +18,9 @@ const PIGMENT := preload("pigment.gdshader")
 var targets: Array[Vector2] = []
 var hit_sizes: Array[Vector2] = []
 var actors := {}
+static var people_book: Dictionary
+var people: Dictionary
+var painted_people := {}
 var dialogue_shot := {}
 var cinematic := false
 var style := ""
@@ -28,6 +31,7 @@ var distant := Node2D.new()
 var hull := Node2D.new()
 var cast_plane := Node2D.new()
 var props := Node2D.new()
+var prologue_foreground: Sprite2D
 var clock := 0.0
 var aim := HALF
 var zoom := 1.0
@@ -66,6 +70,11 @@ func build(scene: Dictionary, profile: String) -> void:
 	add_child(frame)
 	for plane: Node2D in [distant,hull,cast_plane,props]:
 		frame.add_child(plane)
+	if people_book.is_empty():
+		people_book = JSON.parse_string(FileAccess.get_file_as_string("res://content/scene-people.json"))
+	people = people_book.get(room_id,{})
+	for id: String in people.get("painted",{}):
+		painted_people[id] = art_polygon(people.painted[id])
 	build_art(scene)
 	set_quality(profile)
 	grade = ShaderMaterial.new()
@@ -138,6 +147,7 @@ func build_veyr() -> void:
 	for sprite: Node in actors.archivist.get_children():
 		sprite.material = surface
 	var rail := picture(props,ROOMS+"veyr-recorder.png",Vector2(-10,353),Vector2(1630,543))
+	prologue_foreground = rail
 	recorder = ShaderMaterial.new()
 	recorder.shader = RECORDER
 	rail.material = recorder
@@ -158,7 +168,7 @@ func build_meeting() -> void:
 	cast_marks["general_us"] = Vector2(230,358)
 	cast_marks["general_cn"] = Vector2(1395,369)
 	actor_at("helen",625,Vector2(754,845),Color("f1ddba"),Vector2(738,299))
-	picture(props,ROOMS+"meeting-foreground.png",Vector2(-12,230),Vector2(1624,755))
+	prologue_foreground = picture(props,ROOMS+"meeting-foreground.png",Vector2(-12,230),Vector2(1624,755))
 	targets.assign([Vector2(408,745),Vector2(824,733)])
 	hit_sizes.assign([Vector2(195,118),Vector2(190,108)])
 	meeting_recorder_mark=Vector2(1260,754)
@@ -173,10 +183,10 @@ func build_bay() -> void:
 	picture(hull,ROOMS+"bay-foreground.png",Vector2.ZERO,ART)
 	actor_at("frank",559,Vector2(541,747),Color("b9c9d8"),Vector2(507,270))
 	actor_at("helen",565,Vector2(1047,762),Color("c2cedc"),Vector2(1019,285))
-	var foreground := picture(props,ROOMS+"bay-foreground.png",Vector2.ZERO,ART)
+	prologue_foreground = picture(props,ROOMS+"bay-foreground.png",Vector2.ZERO,ART)
 	dial_material = ShaderMaterial.new()
 	dial_material.shader = HULL
-	foreground.material = dial_material
+	prologue_foreground.material = dial_material
 	build_needle()
 	targets.assign([Vector2(595,658),Vector2(1060,654)])
 	hit_sizes.assign([Vector2(190,115),Vector2(210,106)])
@@ -285,9 +295,50 @@ func sync_story(completed: Array, _seen: Array = []) -> void:
 	if room_id == "p_bay" and "p_bay.message" in done:
 		night_light = true
 
+func art_polygon(pairs: Array) -> PackedVector2Array:
+	var points := PackedVector2Array()
+	for p: Array in pairs:
+		points.append(Vector2(p[0],p[1])*ART)
+	return points
+
+func talk_body_visible(id: String) -> bool:
+	return cut_progress < 0 and (painted_people.has(id) or (actors.has(id) and actors[id].is_visible_in_tree()))
+
+# Silhouettes from boat_depth.gdshader's 711 × 400 coordinate space.
+static var boat_receiver := PackedVector2Array([Vector2(123,223),Vector2(147,211),Vector2(283,204),
+	Vector2(313,219),Vector2(315,317),Vector2(125,327)])
+static var boat_notebook := PackedVector2Array([Vector2(404,294),Vector2(463,272),Vector2(596,298),Vector2(564,342)])
+
+func foreground_covers(screen: Vector2) -> bool:
+	if not prologue_foreground:
+		return false
+	var local := prologue_foreground.to_local(screen)
+	if not prologue_foreground.is_pixel_opaque(local):
+		return false
+	if room_id != "p_bay":
+		return true
+	# Match boat_depth.gdshader: the ribs are drawn *behind* the seated pair.
+	var p := local / prologue_foreground.texture.get_size() * Vector2(711,400)
+	return (p.y >= 290.5 or (1.0-smoothstep(86,120,p.x))*smoothstep(277,289,p.y) >= 0.5
+		or Geometry2D.is_point_in_polygon(p,boat_receiver) or Geometry2D.is_point_in_polygon(p,boat_notebook)
+		or p.distance_to(Geometry2D.get_closest_point_to_segment(p,Vector2(160,205),Vector2(280,197))) <= 3.7
+		or p.distance_to(Geometry2D.get_closest_point_to_segment(p,Vector2(164,205),Vector2(164,214))) <= 2.5
+		or p.distance_to(Geometry2D.get_closest_point_to_segment(p,Vector2(273,198),Vector2(273,207))) <= 2.8)
+
 func talk_body_at_screen(screen: Vector2) -> String:
-	for id: String in actors:
+	if cut_progress >= 0 or not frame.get_global_rect().has_point(screen) or foreground_covers(screen):
+		return ""
+	var ordered := actors.keys()
+	ordered.reverse()
+	for id: String in ordered:
 		if actors[id].hit(screen):
+			return id
+	var at := distant.to_local(screen)
+	# The meeting plate has a slight overscan relative to the shared art space.
+	if room_id == "p_meeting":
+		at = (at-Vector2(-24,-13.5))/1.03
+	for id: String in painted_people:
+		if talk_body_visible(id) and Geometry2D.is_point_in_polygon(at,painted_people[id]):
 			return id
 	return ""
 

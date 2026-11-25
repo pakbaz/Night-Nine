@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c10_town.wind.find",
+  "attempt": 1,
+  "plan_sha256": "37ee42ef5641e10e13ac9c353fbb733e0134849a370e8fb10cf65e8bd2593037",
+  "wav_sha256": "ecad1dc834d512b3c0f44fd59e689b5ad5ef0cd7450b4b5a5d8caa4cb3202bf9",
+  "expected": "The pencil mark comes just after the last gust. That’s where I open the return. The wind is on tape. The people answering it are here.",
+  "recognized": "The pencil mark comes just after the last gust. That's where I open the return. The wind is on tape. The people answering it are here.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 9.52,
+  "sample_rate": 48000,
+  "peak": 0.36676025390625,
+  "rms": 0.03577827896832591,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

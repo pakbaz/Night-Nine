@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "audio_id": "c7_gate.out.06",
+  "attempt": 1,
+  "plan_sha256": "f489d8823f897787d07f726f8abb9e9251693c77164bbe22de94563be899f495",
+  "wav_sha256": "80497c31855023b543fac963b71ca8d7fd63a0fb78f49d5f4cda12ad5930ea42",
+  "expected": "In the fog between the antennas, an old woman was carrying a bait bucket. Mrs. Penhallow. Miles from her pier, again.",
+  "recognized": "In the fog between the antennas, an old woman was carrying a bait bucket. Mrs. Penhallow, miles from her pier again.",
+  "local_recognized": "In the fog between the antennas, an old woman was carrying a bake bucket. This is Penhalo, miles from her pier, again.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 8.88,
+  "sample_rate": 48000,
+  "peak": 0.38861083984375,
+  "rms": 0.04077472456833939,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c7_gate.out.06.json",
+    "sha256": "1d6eba63c569121fab4971f02fb6c6e4234eaceab62a9978f3af82c010bec201",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  },
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

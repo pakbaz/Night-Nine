@@ -1,0 +1,333 @@
+{
+  "audio_id": "c10_live.recap.01",
+  "audio_sha256": "3c6e40bc9acbe72115ba88e5503039523bd2a433620b8a9b21ec6ecab3fe6e25",
+  "file": "assets/audio/elevenlabs-v4-additions/masters/c10_live.recap.01.attempt-2.wav",
+  "production_plan_sha256": "f489d8823f897787d07f726f8abb9e9251693c77164bbe22de94563be899f495",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "The Veyr wind was a dub. The porch lights, field lamps, two grids, radios and three hundred and twelve human voices all answered it live.",
+  "recognized": "The bare wind was a dub. The porch lights, field lamps, two grids, radios, and 312 human voices all answered it live.",
+  "word_edits": 1,
+  "request_id": null,
+  "trace_id": "1d34a54608bb373bf911684f33704ea3",
+  "character_cost": "3",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "The bare wind was a dub. The porch lights, field lamps, two grids, radios, and 312 human voices all answered it live.",
+    "words": [
+      {
+        "text": "The",
+        "start": 0.08,
+        "end": 0.18,
+        "type": "word",
+        "logprob": -8.11782301752828e-05
+      },
+      {
+        "text": " ",
+        "start": 0.18,
+        "end": 0.24,
+        "type": "spacing",
+        "logprob": -0.8367570042610168
+      },
+      {
+        "text": "bare",
+        "start": 0.24,
+        "end": 0.52,
+        "type": "word",
+        "logprob": -0.8367570042610168
+      },
+      {
+        "text": " ",
+        "start": 0.52,
+        "end": 0.64,
+        "type": "spacing",
+        "logprob": -0.00014399446081370115
+      },
+      {
+        "text": "wind",
+        "start": 0.64,
+        "end": 1.02,
+        "type": "word",
+        "logprob": -0.00014399446081370115
+      },
+      {
+        "text": " ",
+        "start": 1.02,
+        "end": 1.08,
+        "type": "spacing",
+        "logprob": -2.264974000354414e-06
+      },
+      {
+        "text": "was",
+        "start": 1.1,
+        "end": 1.22,
+        "type": "word",
+        "logprob": -2.264974000354414e-06
+      },
+      {
+        "text": " ",
+        "start": 1.22,
+        "end": 1.28,
+        "type": "spacing",
+        "logprob": 0.0
+      },
+      {
+        "text": "a",
+        "start": 1.28,
+        "end": 1.38,
+        "type": "word",
+        "logprob": 0.0
+      },
+      {
+        "text": " ",
+        "start": 1.38,
+        "end": 1.44,
+        "type": "spacing",
+        "logprob": -0.0014968630857765675
+      },
+      {
+        "text": "dub.",
+        "start": 1.44,
+        "end": 1.8,
+        "type": "word",
+        "logprob": -0.00215955195017159
+      },
+      {
+        "text": " ",
+        "start": 1.8,
+        "end": 2.12,
+        "type": "spacing",
+        "logprob": -1.4305104514278355e-06
+      },
+      {
+        "text": "The",
+        "start": 2.12,
+        "end": 2.22,
+        "type": "word",
+        "logprob": -1.4305104514278355e-06
+      },
+      {
+        "text": " ",
+        "start": 2.22,
+        "end": 2.28,
+        "type": "spacing",
+        "logprob": -0.0003375437227077782
+      },
+      {
+        "text": "porch",
+        "start": 2.28,
+        "end": 2.54,
+        "type": "word",
+        "logprob": -0.0003375437227077782
+      },
+      {
+        "text": " ",
+        "start": 2.54,
+        "end": 2.62,
+        "type": "spacing",
+        "logprob": -0.00018737945356406271
+      },
+      {
+        "text": "lights,",
+        "start": 2.62,
+        "end": 2.98,
+        "type": "word",
+        "logprob": -0.00016079828895142003
+      },
+      {
+        "text": " ",
+        "start": 2.98,
+        "end": 3.34,
+        "type": "spacing",
+        "logprob": -1.5258672647178173e-05
+      },
+      {
+        "text": "field",
+        "start": 3.34,
+        "end": 3.6,
+        "type": "word",
+        "logprob": -1.5258672647178173e-05
+      },
+      {
+        "text": " ",
+        "start": 3.6,
+        "end": 3.68,
+        "type": "spacing",
+        "logprob": -0.00012933371181134135
+      },
+      {
+        "text": "lamps,",
+        "start": 3.68,
+        "end": 4.1,
+        "type": "word",
+        "logprob": -0.00010787743422232172
+      },
+      {
+        "text": " ",
+        "start": 4.1,
+        "end": 4.4,
+        "type": "spacing",
+        "logprob": -0.00322073046118021
+      },
+      {
+        "text": "two",
+        "start": 4.4,
+        "end": 4.58,
+        "type": "word",
+        "logprob": -0.00322073046118021
+      },
+      {
+        "text": " ",
+        "start": 4.58,
+        "end": 4.68,
+        "type": "spacing",
+        "logprob": -0.00010632903286023065
+      },
+      {
+        "text": "grids,",
+        "start": 4.68,
+        "end": 5.12,
+        "type": "word",
+        "logprob": -8.894528669619224e-05
+      },
+      {
+        "text": " ",
+        "start": 5.12,
+        "end": 5.46,
+        "type": "spacing",
+        "logprob": -5.352353764465079e-05
+      },
+      {
+        "text": "radios,",
+        "start": 5.46,
+        "end": 6.08,
+        "type": "word",
+        "logprob": -0.0002894355503875496
+      },
+      {
+        "text": " ",
+        "start": 6.08,
+        "end": 6.28,
+        "type": "spacing",
+        "logprob": -8.344646857949556e-07
+      },
+      {
+        "text": "and",
+        "start": 6.28,
+        "end": 6.42,
+        "type": "word",
+        "logprob": -8.344646857949556e-07
+      },
+      {
+        "text": " ",
+        "start": 6.42,
+        "end": 6.58,
+        "type": "spacing",
+        "logprob": -1.8000440832111053e-05
+      },
+      {
+        "text": "312",
+        "start": 6.58,
+        "end": 7.96,
+        "type": "word",
+        "logprob": -1.2914230486179198e-05
+      },
+      {
+        "text": " ",
+        "start": 7.96,
+        "end": 8.08,
+        "type": "spacing",
+        "logprob": -1.4662635294371285e-05
+      },
+      {
+        "text": "human",
+        "start": 8.08,
+        "end": 8.36,
+        "type": "word",
+        "logprob": -1.4662635294371285e-05
+      },
+      {
+        "text": " ",
+        "start": 8.36,
+        "end": 8.46,
+        "type": "spacing",
+        "logprob": -3.5523738915799186e-05
+      },
+      {
+        "text": "voices",
+        "start": 8.46,
+        "end": 9.0,
+        "type": "word",
+        "logprob": -3.5523738915799186e-05
+      },
+      {
+        "text": " ",
+        "start": 9.0,
+        "end": 9.28,
+        "type": "spacing",
+        "logprob": -6.401333666872233e-05
+      },
+      {
+        "text": "all",
+        "start": 9.28,
+        "end": 9.54,
+        "type": "word",
+        "logprob": -6.401333666872233e-05
+      },
+      {
+        "text": " ",
+        "start": 9.54,
+        "end": 9.64,
+        "type": "spacing",
+        "logprob": -7.748573807475623e-06
+      },
+      {
+        "text": "answered",
+        "start": 9.64,
+        "end": 9.96,
+        "type": "word",
+        "logprob": -7.748573807475623e-06
+      },
+      {
+        "text": " ",
+        "start": 9.96,
+        "end": 10.0,
+        "type": "spacing",
+        "logprob": -4.291525328881107e-06
+      },
+      {
+        "text": "it",
+        "start": 10.0,
+        "end": 10.12,
+        "type": "word",
+        "logprob": -4.291525328881107e-06
+      },
+      {
+        "text": " ",
+        "start": 10.12,
+        "end": 10.26,
+        "type": "spacing",
+        "logprob": -8.77341881277971e-05
+      },
+      {
+        "text": "live.",
+        "start": 10.26,
+        "end": 10.74,
+        "type": "word",
+        "logprob": -7.669607148272917e-05
+      }
+    ],
+    "transcription_id": "lZxbyWW41u1lDMPlUK3T",
+    "audio_duration_secs": 10.96
+  },
+  "listening_reviewed": false
+}

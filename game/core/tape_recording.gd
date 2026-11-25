@@ -12,47 +12,75 @@ var segments_a: Array = []
 var segments_b: Array = []
 var rate := 48000
 var expected_offset := -0.35
+var alignment_required := true
+var label_a := "SATURDAY"
+var label_b := "SUNDAY"
 var timeline_start := -0.8
 var timeline_end := 10.25
 var error := ""
 
 func configure(saturday: AudioStreamWAV, sunday: AudioStreamWAV, metadata: Dictionary) -> bool:
-	_clear()
-	if not _valid_stream(saturday) or not _valid_stream(sunday):
-		error = "This comparison requires both original mono PCM cassette recordings."
-		return false
-	if saturday.mix_rate != sunday.mix_rate:
-		error = "The cassette recordings use different sample rates."
-		return false
 	var tapes: Dictionary = metadata.get("tapes", {})
 	if not tapes.has("saturday") or not tapes.has("sunday"):
 		error = "The cassette segment notes are unavailable."
 		return false
-	segments_a = (tapes.saturday.get("segments", []) as Array).duplicate(true)
-	segments_b = (tapes.sunday.get("segments", []) as Array).duplicate(true)
-	if not _valid_segments(segments_a, float(tapes.saturday.get("seconds", 0.0))) \
-			or not _valid_segments(segments_b, float(tapes.sunday.get("seconds", 0.0))):
-		_clear()
-		error = "The cassette segment notes do not fit the recordings."
+	var first: Dictionary = tapes.saturday
+	var second: Dictionary = tapes.sunday
+	var options := {
+		"segments_a": first.get("segments", []),
+		"segments_b": second.get("segments", []),
+		"seconds_a": first.get("seconds", 0.0),
+		"seconds_b": second.get("seconds", 0.0),
+		"anchor_a": "Ident",
+		"anchor_b": "Ident",
+		"label_a": "SATURDAY",
+		"label_b": "SUNDAY"
+	}
+	return configure_pair(saturday, sunday, options)
+
+func configure_pair(first: AudioStreamWAV, second: AudioStreamWAV, metadata: Dictionary = {}) -> bool:
+	_clear()
+	if not _valid_stream(first) or not _valid_stream(second):
+		error = "This comparison requires both original mono PCM recordings."
 		return false
-	pcm_a = saturday.data.duplicate()
-	pcm_b = sunday.data.duplicate()
-	rate = saturday.mix_rate
+	if first.mix_rate != second.mix_rate:
+		error = "The recordings use different sample rates."
+		return false
+	var seconds_a := float(first.data.size() / 2) / first.mix_rate
+	var seconds_b := float(second.data.size() / 2) / second.mix_rate
+	segments_a = (metadata.get("segments_a", []) as Array).duplicate(true)
+	segments_b = (metadata.get("segments_b", []) as Array).duplicate(true)
+	if segments_a.is_empty():
+		segments_a = [{"label": str(metadata.get("label_a", "A")), "start": 0.0, "end": seconds_a}]
+	if segments_b.is_empty():
+		segments_b = [{"label": str(metadata.get("label_b", "B")), "start": 0.0, "end": seconds_b}]
+	if not _valid_segments(segments_a, float(metadata.get("seconds_a", seconds_a))) \
+			or not _valid_segments(segments_b, float(metadata.get("seconds_b", seconds_b))):
+		_clear()
+		error = "The segment notes do not fit the recordings."
+		return false
+	pcm_a = first.data.duplicate()
+	pcm_b = second.data.duplicate()
+	rate = first.mix_rate
 	samples_a = _decode(pcm_a)
 	samples_b = _decode(pcm_b)
 	peaks_a = _peaks(samples_a)
 	peaks_b = _peaks(samples_b)
-	var ident_a := _segment(segments_a, "Ident")
-	var ident_b := _segment(segments_b, "Ident")
-	if ident_a.is_empty() or ident_b.is_empty():
-		_clear()
-		error = "The cassette ident markers are unavailable."
-		return false
-	expected_offset = float(ident_a.start) - float(ident_b.start)
+	label_a = str(metadata.get("label_a", "A")).to_upper()
+	label_b = str(metadata.get("label_b", "B")).to_upper()
+	alignment_required = bool(metadata.get("alignment_required", true))
+	if metadata.has("expected_offset"):
+		expected_offset = float(metadata.expected_offset)
+	else:
+		var anchor_a := _segment(segments_a, str(metadata.get("anchor_a", "")))
+		var anchor_b := _segment(segments_b, str(metadata.get("anchor_b", "")))
+		expected_offset = float(anchor_a.start) - float(anchor_b.start) \
+			if not anchor_a.is_empty() and not anchor_b.is_empty() else 0.0
+	timeline_start = floorf((minf(0.0, expected_offset) - 0.25) * 4.0) / 4.0
 	timeline_end = ceilf((maxf(
 		float(samples_a.size()) / rate,
-		float(samples_b.size()) / rate
-	) + 0.8) * 4.0) / 4.0
+		float(samples_b.size()) / rate + maxf(0.0, expected_offset)
+	) + 0.25) * 4.0) / 4.0
 	return true
 
 func _clear() -> void:
@@ -65,6 +93,11 @@ func _clear() -> void:
 	peaks_b.clear()
 	segments_a.clear()
 	segments_b.clear()
+	alignment_required = true
+	label_a = "SATURDAY"
+	label_b = "SUNDAY"
+	timeline_start = -0.8
+	timeline_end = 10.25
 
 func _valid_stream(stream: AudioStreamWAV) -> bool:
 	return stream != null and stream.format == AudioStreamWAV.FORMAT_16_BITS \
@@ -113,7 +146,7 @@ func _peaks(samples: PackedFloat32Array) -> PackedVector2Array:
 
 func aligned(offset: float) -> bool:
 	# One centisecond of adjustment tolerance avoids a pixel-perfect input gate.
-	return is_finite(offset) and absf(offset - expected_offset) <= 0.015
+	return not alignment_required or (is_finite(offset) and absf(offset - expected_offset) <= 0.015)
 
 ## Inside the accepted tolerance the tapes click into exact alignment, so identical parts
 ## play and draw as one voice instead of two copies a centisecond apart.

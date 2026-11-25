@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "audio_id": "c10_live.second.lead.04",
+  "attempt": 1,
+  "plan_sha256": "f489d8823f897787d07f726f8abb9e9251693c77164bbe22de94563be899f495",
+  "wav_sha256": "efdc8c1effc9a0071a6269013ba697da06b709837b8d9bfad5637a91f013e114",
+  "expected": "Cue two. Bring me the real coast return. Then I’ll give Wen the grid.",
+  "recognized": "Q2, bring me the real coast return, then I'll give Wen the grid.",
+  "local_recognized": "Q2. Bring me the real Coast return. Then I'll give Wen the grid.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.64,
+  "sample_rate": 48000,
+  "peak": 0.42645263671875,
+  "rms": 0.05512868521622696,
+  "level_match_gain_db": 0.0,
+  "word_edits": 1,
+  "word_error_rate": 0.06666666666666667,
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c10_live.second.lead.04.json",
+    "sha256": "43f390aeb4718dbd2183304e4c9ec050cb2cb4eb11721c0002aee6e764b9907d",
+    "model": "scribe_v3",
+    "word_edits": 1,
+    "listening_reviewed": false
+  },
+  "status": "retake_required",
+  "failure_reason": "asr_mismatch"
+}

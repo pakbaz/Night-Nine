@@ -71,6 +71,9 @@ func clear_overlays() -> void:
 		if game.title_card.visible:
 			game.title_card.finish_now()
 		await frames(1)
+	if game.transitioning and is_instance_valid(game.stage) and game.stage.has_signal("arrival_walk_finished") and game.stage.arrival_step >= 0:
+		await game.stage.arrival_walk_finished
+		await frames(1)
 
 func planned(scene: Dictionary) -> Dictionary:
 	return catalog.get("scene_music",{}).get(scene.id,{})

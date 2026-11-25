@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c2_ship.escape.find",
+  "attempt": 1,
+  "plan_sha256": "f489d8823f897787d07f726f8abb9e9251693c77164bbe22de94563be899f495",
+  "wav_sha256": "9c1f6d2eb6200d30cfdc28ce7c23730d86814e877b562aa7a590a333a8075a54",
+  "expected": "The Prefect’s own voice opened the chair at the notch marked sixty-one. The memory index stopped at sixty-one percent; whatever it could bind would come later.",
+  "recognized": "The Prefect's own voice opened the chair at the notch marked 61. The memory index stopped at 61%. Whatever it could bind would come later.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 11.04,
+  "sample_rate": 48000,
+  "peak": 0.3221435546875,
+  "rms": 0.03556141259058638,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

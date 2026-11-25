@@ -225,6 +225,7 @@ def public_control_files(files, stage, all_scenes):
         "ui/hypothesis_notebook.gd",
         "ui/setting_row.gd",
         "ui/case_board.gd",
+        "ui/broadcast_desk.gd",
         "ui/closing_credits.gd",
         "ui/storybook.gd",
         "ui/title_card.gd",
@@ -316,11 +317,14 @@ def make_snapshot(stage, strict):
     fx = {"ninth_night", "ninth_night_loop"}
     cast = set(PROLOGUE_CAST)
     for scene in scenes:
-        used_lines.update(scene["intro"] + scene["outro"] + scene.get("recap", []))
+        used_lines.update(scene.get("context", []) + scene["intro"] + scene["outro"] + scene.get("recap", []))
+        for topic in scene.get("talk", []):
+            used_lines.update(topic["lines"])
         catalog_assets(files, scene)
         cast.update(scene["actors"])
         for t in scene["tasks"]:
             used_lines.update(t["lines"] + t.get("lead", []))
+            used_lines.update(t.get("optional_playback", {}).get("lines", []))
             if t.get("finding"):
                 used_lines.add(t["finding"])
             signals.update(t.get("sounds", []))
@@ -399,6 +403,10 @@ def make_snapshot(stage, strict):
     directions = {k: v for k, v in book.items() if k in scene_ids}
     landmarks = read(GAME / "content/illustrated-landmarks.json")
     files["game/content/illustrated-campaign.json"] = serialized(directions)
+    people = {k: v for k, v in read(GAME / "content/scene-people.json").items() if k in scene_ids}
+    files["game/content/scene-people.json"] = serialized(people)
+    for appearance in {mark[0] for scene in people.values() for mark in scene.get("figures", {}).values()}:
+        copy_sources(files, f"assets/illustrated/campaign/walk/{appearance}-idle.webp")
     files["game/content/illustrated-landmarks.json"] = serialized(
         {k: v for k, v in landmarks.items() if k in scene_ids}
     )
@@ -409,6 +417,9 @@ def make_snapshot(stage, strict):
         if floor.get("doors"):
             copy_sources(files, f"assets/illustrated/campaign/doors/{room_id}.webp")
     walking_roles = {role for layout in included_floors.values() for role in layout["spawn"]}
+    if "c1_flat" in included_floors:
+        # Iris uses Nora's walking sheet for the kitchen entrance.
+        copy_sources(files, "assets/illustrated/campaign/walk/nora.webp")
     resident_roles = {role for layout in included_floors.values() for role in layout.get("residents", {})}
     sprites = GAME / "assets/illustrated/campaign/walk"
     for role in sorted(walking_roles | resident_roles):

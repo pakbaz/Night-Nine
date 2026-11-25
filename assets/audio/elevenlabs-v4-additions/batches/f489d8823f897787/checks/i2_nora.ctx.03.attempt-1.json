@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "i2_nora.ctx.03",
+  "attempt": 1,
+  "plan_sha256": "f489d8823f897787d07f726f8abb9e9251693c77164bbe22de94563be899f495",
+  "wav_sha256": "ed3c6667cd1cef08406755a2f04f84b1a1afe88e2fa095f505473bf6a17e7cbf",
+  "expected": "I was frightened for about a minute. Then I did what I do at any party where nobody knows each other. I started learning names.",
+  "recognized": "I was frightened for about a minute. Then I did what I do at any party where nobody knows each other. I started learning names.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 8.24,
+  "sample_rate": 48000,
+  "peak": 0.525054931640625,
+  "rms": 0.061347780177365835,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

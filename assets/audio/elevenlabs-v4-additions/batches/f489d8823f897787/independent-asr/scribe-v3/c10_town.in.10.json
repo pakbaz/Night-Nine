@@ -1,0 +1,291 @@
+{
+  "audio_id": "c10_town.in.10",
+  "audio_sha256": "ba619abfe82b48c1341a8f592d0ede90ce18a33cb752eb044da888fb15e71db3",
+  "file": "assets/audio/elevenlabs-v4-additions/masters/c10_town.in.10.attempt-2.wav",
+  "production_plan_sha256": "f489d8823f897787d07f726f8abb9e9251693c77164bbe22de94563be899f495",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Veyr was our home, Steven. Our sun failed. That is the last wind that ever blew through our city.",
+  "recognized": "There was our home, Stephen. Our sun failed. That is the last wind that ever blew through our city.",
+  "word_edits": 1,
+  "request_id": null,
+  "trace_id": "74e40a660fbdf1a38ef858333e14f093",
+  "character_cost": "2",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "There was our home, Stephen. Our sun failed. That is the last wind that ever blew through our city.",
+    "words": [
+      {
+        "text": "There",
+        "start": 0.06,
+        "end": 0.38,
+        "type": "word",
+        "logprob": -0.616966962814331
+      },
+      {
+        "text": " ",
+        "start": 0.38,
+        "end": 0.44,
+        "type": "spacing",
+        "logprob": -2.3483953555114567e-05
+      },
+      {
+        "text": "was",
+        "start": 0.44,
+        "end": 0.58,
+        "type": "word",
+        "logprob": -2.3483953555114567e-05
+      },
+      {
+        "text": " ",
+        "start": 0.58,
+        "end": 0.66,
+        "type": "spacing",
+        "logprob": -3.933898824470816e-06
+      },
+      {
+        "text": "our",
+        "start": 0.66,
+        "end": 0.78,
+        "type": "word",
+        "logprob": -3.933898824470816e-06
+      },
+      {
+        "text": " ",
+        "start": 0.78,
+        "end": 0.88,
+        "type": "spacing",
+        "logprob": -3.9457496313843876e-05
+      },
+      {
+        "text": "home,",
+        "start": 0.88,
+        "end": 1.18,
+        "type": "word",
+        "logprob": -3.268656118962099e-05
+      },
+      {
+        "text": " ",
+        "start": 1.18,
+        "end": 1.34,
+        "type": "spacing",
+        "logprob": -0.0015829188050702214
+      },
+      {
+        "text": "Stephen.",
+        "start": 1.34,
+        "end": 1.78,
+        "type": "word",
+        "logprob": -0.0014251465472625569
+      },
+      {
+        "text": " ",
+        "start": 1.78,
+        "end": 1.78,
+        "type": "spacing",
+        "logprob": -1.3589766240329482e-05
+      },
+      {
+        "text": "Our",
+        "start": 2.26,
+        "end": 2.42,
+        "type": "word",
+        "logprob": -1.3589766240329482e-05
+      },
+      {
+        "text": " ",
+        "start": 2.42,
+        "end": 2.54,
+        "type": "spacing",
+        "logprob": -0.004018803592771292
+      },
+      {
+        "text": "sun",
+        "start": 2.54,
+        "end": 2.84,
+        "type": "word",
+        "logprob": -0.004018803592771292
+      },
+      {
+        "text": " ",
+        "start": 2.84,
+        "end": 2.92,
+        "type": "spacing",
+        "logprob": -0.0002431573811918497
+      },
+      {
+        "text": "failed.",
+        "start": 2.94,
+        "end": 3.4,
+        "type": "word",
+        "logprob": -0.0002643358561077288
+      },
+      {
+        "text": " ",
+        "start": 3.4,
+        "end": 3.4,
+        "type": "spacing",
+        "logprob": -5.483612312673358e-06
+      },
+      {
+        "text": "That",
+        "start": 3.92,
+        "end": 4.16,
+        "type": "word",
+        "logprob": -5.483612312673358e-06
+      },
+      {
+        "text": " ",
+        "start": 4.16,
+        "end": 4.24,
+        "type": "spacing",
+        "logprob": -9.536738616588991e-07
+      },
+      {
+        "text": "is",
+        "start": 4.24,
+        "end": 4.34,
+        "type": "word",
+        "logprob": -9.536738616588991e-07
+      },
+      {
+        "text": " ",
+        "start": 4.34,
+        "end": 4.4,
+        "type": "spacing",
+        "logprob": -2.3841855067985307e-07
+      },
+      {
+        "text": "the",
+        "start": 4.4,
+        "end": 4.52,
+        "type": "word",
+        "logprob": -2.3841855067985307e-07
+      },
+      {
+        "text": " ",
+        "start": 4.52,
+        "end": 4.62,
+        "type": "spacing",
+        "logprob": -5.722029527532868e-06
+      },
+      {
+        "text": "last",
+        "start": 4.62,
+        "end": 5.0,
+        "type": "word",
+        "logprob": -5.722029527532868e-06
+      },
+      {
+        "text": " ",
+        "start": 5.0,
+        "end": 5.08,
+        "type": "spacing",
+        "logprob": -6.341733387671411e-05
+      },
+      {
+        "text": "wind",
+        "start": 5.08,
+        "end": 5.32,
+        "type": "word",
+        "logprob": -6.341733387671411e-05
+      },
+      {
+        "text": " ",
+        "start": 5.32,
+        "end": 5.38,
+        "type": "spacing",
+        "logprob": -2.622600959512056e-06
+      },
+      {
+        "text": "that",
+        "start": 5.38,
+        "end": 5.6,
+        "type": "word",
+        "logprob": -2.622600959512056e-06
+      },
+      {
+        "text": " ",
+        "start": 5.6,
+        "end": 5.68,
+        "type": "spacing",
+        "logprob": -7.152531907195225e-06
+      },
+      {
+        "text": "ever",
+        "start": 5.7,
+        "end": 5.92,
+        "type": "word",
+        "logprob": -7.152531907195225e-06
+      },
+      {
+        "text": " ",
+        "start": 5.92,
+        "end": 5.98,
+        "type": "spacing",
+        "logprob": -6.782778655178845e-05
+      },
+      {
+        "text": "blew",
+        "start": 5.98,
+        "end": 6.24,
+        "type": "word",
+        "logprob": -6.782778655178845e-05
+      },
+      {
+        "text": " ",
+        "start": 6.24,
+        "end": 6.28,
+        "type": "spacing",
+        "logprob": -1.2516897186287679e-05
+      },
+      {
+        "text": "through",
+        "start": 6.28,
+        "end": 6.5,
+        "type": "word",
+        "logprob": -1.2516897186287679e-05
+      },
+      {
+        "text": " ",
+        "start": 6.5,
+        "end": 6.56,
+        "type": "spacing",
+        "logprob": -2.9802276912960224e-06
+      },
+      {
+        "text": "our",
+        "start": 6.56,
+        "end": 6.7,
+        "type": "word",
+        "logprob": -2.9802276912960224e-06
+      },
+      {
+        "text": " ",
+        "start": 6.7,
+        "end": 6.78,
+        "type": "spacing",
+        "logprob": -1.6331539882230572e-05
+      },
+      {
+        "text": "city.",
+        "start": 6.78,
+        "end": 7.1,
+        "type": "word",
+        "logprob": -0.000515021184401121
+      }
+    ],
+    "transcription_id": "34foVORc30rHuqUc7hfe",
+    "audio_duration_secs": 7.68
+  },
+  "listening_reviewed": false
+}

@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c10_town.lights.lead.01",
+  "attempt": 1,
+  "plan_sha256": "f489d8823f897787d07f726f8abb9e9251693c77164bbe22de94563be899f495",
+  "wav_sha256": "541390104290855de2879b1ecd96432bec7c19ff8416eb7f8a1ebaa602885242",
+  "expected": "Two street captains, one spare phone and two streets of porch lights. Easy.",
+  "recognized": "Two street captains, one spare phone, and two streets of porch lights. Easy.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 5.44,
+  "sample_rate": 48000,
+  "peak": 0.41510009765625,
+  "rms": 0.051706490580225514,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

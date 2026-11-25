@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c10_town.in.09",
+  "attempt": 1,
+  "plan_sha256": "f489d8823f897787d07f726f8abb9e9251693c77164bbe22de94563be899f495",
+  "wav_sha256": "2b45fe62f23dac2170478ac86565868af9f2ac6f052c8aadeab971bde0d841fd",
+  "expected": "On ninth nights I answered whatever shore phone rang. A few bars on the line kept my borrowed memories aligned. At the boathouse, you watched me do it.",
+  "recognized": "on ninth nights i answered whatever shore phone rang a few bars on the line kept my borrowed memories aligned at the boathouse you watched me do it",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 11.68,
+  "sample_rate": 48000,
+  "peak": 0.354736328125,
+  "rms": 0.04078216691693986,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

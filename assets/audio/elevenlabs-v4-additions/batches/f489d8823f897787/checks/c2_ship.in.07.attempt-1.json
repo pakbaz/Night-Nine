@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c2_ship.in.07",
+  "attempt": 1,
+  "plan_sha256": "f489d8823f897787d07f726f8abb9e9251693c77164bbe22de94563be899f495",
+  "wav_sha256": "2a12bd24563744cd858b0203f966186763356c4c668d0654a494b280c1b72056",
+  "expected": "The memory index proceeds from the oldest records. Binding runs separately. Index sixty-one percent. You are now nineteen. Congratulations on your driving test.",
+  "recognized": "The memory index proceeds from the oldest records. Binding runs separately. Index 61%. You are now 19. Congratulations on your driving test.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 13.04,
+  "sample_rate": 48000,
+  "peak": 0.9095458984375,
+  "rms": 0.15148761280993397,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

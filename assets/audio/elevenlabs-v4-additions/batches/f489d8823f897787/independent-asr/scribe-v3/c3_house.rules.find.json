@@ -1,0 +1,515 @@
+{
+  "audio_id": "c3_house.rules.find",
+  "audio_sha256": "729cb10ebeb202545c2abc2757effe50ebe9954f13999eb9f6552fc1f3346520",
+  "file": "assets/audio/elevenlabs-v4-additions/masters/c3_house.rules.find.attempt-2.wav",
+  "production_plan_sha256": "f489d8823f897787d07f726f8abb9e9251693c77164bbe22de94563be899f495",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "June’s list has thirty-one names, and most of them are feelings. Two have records behind them: Lyle’s sign-in book, and Walt’s May 3 ledger backed by a sworn hearing transcript. Mrs. Penhallow isn’t on it.",
+  "recognized": "June's list has 31 names, and most of them are feelings. Two have records behind them: Lyle's sign-in book and Walt's May 3rd ledger, backed by a sworn hearing transcript. Mrs. Penhallow isn't on it.",
+  "word_edits": 1,
+  "request_id": null,
+  "trace_id": "ee1963c3fca07eca5cce454e569220fa",
+  "character_cost": "4",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "June's list has 31 names, and most of them are feelings. Two have records behind them: Lyle's sign-in book and Walt's May 3rd ledger, backed by a sworn hearing transcript. Mrs. Penhallow isn't on it.",
+    "words": [
+      {
+        "text": "June's",
+        "start": 0.08,
+        "end": 0.4,
+        "type": "word",
+        "logprob": -0.00018224931401770542
+      },
+      {
+        "text": " ",
+        "start": 0.4,
+        "end": 0.48,
+        "type": "spacing",
+        "logprob": -1.156323378381785e-05
+      },
+      {
+        "text": "list",
+        "start": 0.48,
+        "end": 0.76,
+        "type": "word",
+        "logprob": -1.156323378381785e-05
+      },
+      {
+        "text": " ",
+        "start": 0.76,
+        "end": 0.82,
+        "type": "spacing",
+        "logprob": -1.6689286894688848e-06
+      },
+      {
+        "text": "has",
+        "start": 0.82,
+        "end": 1.1,
+        "type": "word",
+        "logprob": -1.6689286894688848e-06
+      },
+      {
+        "text": " ",
+        "start": 1.1,
+        "end": 1.14,
+        "type": "spacing",
+        "logprob": -1.7523612768854946e-05
+      },
+      {
+        "text": "31",
+        "start": 1.14,
+        "end": 1.68,
+        "type": "word",
+        "logprob": -8.22540732769994e-06
+      },
+      {
+        "text": " ",
+        "start": 1.68,
+        "end": 1.76,
+        "type": "spacing",
+        "logprob": -5.125986263010418e-06
+      },
+      {
+        "text": "names,",
+        "start": 1.76,
+        "end": 2.26,
+        "type": "word",
+        "logprob": -0.0012729830619567413
+      },
+      {
+        "text": " ",
+        "start": 2.26,
+        "end": 2.62,
+        "type": "spacing",
+        "logprob": -5.960462772236497e-07
+      },
+      {
+        "text": "and",
+        "start": 2.62,
+        "end": 2.82,
+        "type": "word",
+        "logprob": -5.960462772236497e-07
+      },
+      {
+        "text": " ",
+        "start": 2.82,
+        "end": 3.02,
+        "type": "spacing",
+        "logprob": -3.6954811548639555e-06
+      },
+      {
+        "text": "most",
+        "start": 3.02,
+        "end": 3.26,
+        "type": "word",
+        "logprob": -3.6954811548639555e-06
+      },
+      {
+        "text": " ",
+        "start": 3.26,
+        "end": 3.3,
+        "type": "spacing",
+        "logprob": 0.0
+      },
+      {
+        "text": "of",
+        "start": 3.3,
+        "end": 3.38,
+        "type": "word",
+        "logprob": 0.0
+      },
+      {
+        "text": " ",
+        "start": 3.38,
+        "end": 3.42,
+        "type": "spacing",
+        "logprob": -5.960462772236497e-07
+      },
+      {
+        "text": "them",
+        "start": 3.42,
+        "end": 3.54,
+        "type": "word",
+        "logprob": -5.960462772236497e-07
+      },
+      {
+        "text": " ",
+        "start": 3.54,
+        "end": 3.58,
+        "type": "spacing",
+        "logprob": -9.536738616588991e-07
+      },
+      {
+        "text": "are",
+        "start": 3.58,
+        "end": 3.74,
+        "type": "word",
+        "logprob": -9.536738616588991e-07
+      },
+      {
+        "text": " ",
+        "start": 3.74,
+        "end": 3.82,
+        "type": "spacing",
+        "logprob": -6.3774932641536e-05
+      },
+      {
+        "text": "feelings.",
+        "start": 3.82,
+        "end": 4.44,
+        "type": "word",
+        "logprob": -6.242397244528143e-05
+      },
+      {
+        "text": " ",
+        "start": 4.44,
+        "end": 4.78,
+        "type": "spacing",
+        "logprob": -8.49926145747304e-05
+      },
+      {
+        "text": "Two",
+        "start": 4.78,
+        "end": 5.04,
+        "type": "word",
+        "logprob": -8.49926145747304e-05
+      },
+      {
+        "text": " ",
+        "start": 5.04,
+        "end": 5.12,
+        "type": "spacing",
+        "logprob": -2.3841830625315197e-06
+      },
+      {
+        "text": "have",
+        "start": 5.12,
+        "end": 5.28,
+        "type": "word",
+        "logprob": -2.3841830625315197e-06
+      },
+      {
+        "text": " ",
+        "start": 5.28,
+        "end": 5.34,
+        "type": "spacing",
+        "logprob": -3.349725011503324e-05
+      },
+      {
+        "text": "records",
+        "start": 5.34,
+        "end": 5.72,
+        "type": "word",
+        "logprob": -3.349725011503324e-05
+      },
+      {
+        "text": " ",
+        "start": 5.72,
+        "end": 5.76,
+        "type": "spacing",
+        "logprob": -2.622600959512056e-06
+      },
+      {
+        "text": "behind",
+        "start": 5.76,
+        "end": 6.06,
+        "type": "word",
+        "logprob": -2.622600959512056e-06
+      },
+      {
+        "text": " ",
+        "start": 6.06,
+        "end": 6.12,
+        "type": "spacing",
+        "logprob": -8.344646857949556e-07
+      },
+      {
+        "text": "them:",
+        "start": 6.12,
+        "end": 6.3,
+        "type": "word",
+        "logprob": -0.12321958541842833
+      },
+      {
+        "text": " ",
+        "start": 6.3,
+        "end": 6.64,
+        "type": "spacing",
+        "logprob": -0.0005565524916164577
+      },
+      {
+        "text": "Lyle's",
+        "start": 6.66,
+        "end": 7.04,
+        "type": "word",
+        "logprob": -0.00037190919421921836
+      },
+      {
+        "text": " ",
+        "start": 7.04,
+        "end": 7.1,
+        "type": "spacing",
+        "logprob": -0.00017069313616957515
+      },
+      {
+        "text": "sign-in",
+        "start": 7.1,
+        "end": 7.44,
+        "type": "word",
+        "logprob": -0.0001021540097099205
+      },
+      {
+        "text": " ",
+        "start": 7.44,
+        "end": 7.54,
+        "type": "spacing",
+        "logprob": -2.396077979938127e-05
+      },
+      {
+        "text": "book",
+        "start": 7.54,
+        "end": 7.8,
+        "type": "word",
+        "logprob": -2.396077979938127e-05
+      },
+      {
+        "text": " ",
+        "start": 7.8,
+        "end": 8.0,
+        "type": "spacing",
+        "logprob": -0.03365384042263031
+      },
+      {
+        "text": "and",
+        "start": 8.0,
+        "end": 8.14,
+        "type": "word",
+        "logprob": -0.03365384042263031
+      },
+      {
+        "text": " ",
+        "start": 8.14,
+        "end": 8.2,
+        "type": "spacing",
+        "logprob": -0.00026794656878337264
+      },
+      {
+        "text": "Walt's",
+        "start": 8.22,
+        "end": 8.6,
+        "type": "word",
+        "logprob": -0.00017900854168336386
+      },
+      {
+        "text": " ",
+        "start": 8.6,
+        "end": 8.68,
+        "type": "spacing",
+        "logprob": -4.327203714638017e-05
+      },
+      {
+        "text": "May",
+        "start": 8.68,
+        "end": 8.84,
+        "type": "word",
+        "logprob": -4.327203714638017e-05
+      },
+      {
+        "text": " ",
+        "start": 8.84,
+        "end": 8.96,
+        "type": "spacing",
+        "logprob": -6.16293036728166e-05
+      },
+      {
+        "text": "3rd",
+        "start": 8.96,
+        "end": 9.18,
+        "type": "word",
+        "logprob": -2.8808381406027667e-05
+      },
+      {
+        "text": " ",
+        "start": 9.18,
+        "end": 9.28,
+        "type": "spacing",
+        "logprob": -0.0002611534437164664
+      },
+      {
+        "text": "ledger,",
+        "start": 9.28,
+        "end": 9.62,
+        "type": "word",
+        "logprob": -0.01835818006657064
+      },
+      {
+        "text": " ",
+        "start": 9.62,
+        "end": 9.8,
+        "type": "spacing",
+        "logprob": -2.5033637939486653e-05
+      },
+      {
+        "text": "backed",
+        "start": 9.8,
+        "end": 10.06,
+        "type": "word",
+        "logprob": -2.5033637939486653e-05
+      },
+      {
+        "text": " ",
+        "start": 10.06,
+        "end": 10.12,
+        "type": "spacing",
+        "logprob": -3.576278118089249e-07
+      },
+      {
+        "text": "by",
+        "start": 10.12,
+        "end": 10.22,
+        "type": "word",
+        "logprob": -3.576278118089249e-07
+      },
+      {
+        "text": " ",
+        "start": 10.22,
+        "end": 10.26,
+        "type": "spacing",
+        "logprob": -1.1920928244535389e-07
+      },
+      {
+        "text": "a",
+        "start": 10.26,
+        "end": 10.34,
+        "type": "word",
+        "logprob": -1.1920928244535389e-07
+      },
+      {
+        "text": " ",
+        "start": 10.34,
+        "end": 10.44,
+        "type": "spacing",
+        "logprob": -0.00011097769311163574
+      },
+      {
+        "text": "sworn",
+        "start": 10.44,
+        "end": 10.82,
+        "type": "word",
+        "logprob": -0.00011097769311163574
+      },
+      {
+        "text": " ",
+        "start": 10.82,
+        "end": 10.9,
+        "type": "spacing",
+        "logprob": -6.711257447022945e-05
+      },
+      {
+        "text": "hearing",
+        "start": 10.9,
+        "end": 11.18,
+        "type": "word",
+        "logprob": -6.711257447022945e-05
+      },
+      {
+        "text": " ",
+        "start": 11.18,
+        "end": 11.26,
+        "type": "spacing",
+        "logprob": -8.237022848334163e-05
+      },
+      {
+        "text": "transcript.",
+        "start": 11.26,
+        "end": 11.9,
+        "type": "word",
+        "logprob": -7.519630439260668e-05
+      },
+      {
+        "text": " ",
+        "start": 11.9,
+        "end": 12.18,
+        "type": "spacing",
+        "logprob": -0.00021920185827184469
+      },
+      {
+        "text": "Mrs.",
+        "start": 12.18,
+        "end": 12.32,
+        "type": "word",
+        "logprob": -0.00016577229678205185
+      },
+      {
+        "text": " ",
+        "start": 12.32,
+        "end": 12.54,
+        "type": "spacing",
+        "logprob": -0.4779786765575409
+      },
+      {
+        "text": "Penhallow",
+        "start": 12.54,
+        "end": 13.12,
+        "type": "word",
+        "logprob": -0.21371776667527026
+      },
+      {
+        "text": " ",
+        "start": 13.12,
+        "end": 13.2,
+        "type": "spacing",
+        "logprob": -5.185469490243122e-05
+      },
+      {
+        "text": "isn't",
+        "start": 13.2,
+        "end": 13.44,
+        "type": "word",
+        "logprob": -3.2471799931954594e-05
+      },
+      {
+        "text": " ",
+        "start": 13.44,
+        "end": 13.5,
+        "type": "spacing",
+        "logprob": -1.1920922133867862e-06
+      },
+      {
+        "text": "on",
+        "start": 13.5,
+        "end": 13.62,
+        "type": "word",
+        "logprob": -1.1920922133867862e-06
+      },
+      {
+        "text": " ",
+        "start": 13.62,
+        "end": 13.68,
+        "type": "spacing",
+        "logprob": -1.2159273865108844e-05
+      },
+      {
+        "text": "it.",
+        "start": 13.68,
+        "end": 13.78,
+        "type": "word",
+        "logprob": -4.8515682162057296e-05
+      }
+    ],
+    "transcription_id": "IjAnMyQ6mfzgGBKl3x5E",
+    "audio_duration_secs": 14.08
+  },
+  "listening_reviewed": false
+}

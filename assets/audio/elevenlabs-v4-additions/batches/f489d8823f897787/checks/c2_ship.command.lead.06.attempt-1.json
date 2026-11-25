@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c2_ship.command.lead.06",
+  "attempt": 1,
+  "plan_sha256": "f489d8823f897787d07f726f8abb9e9251693c77164bbe22de94563be899f495",
+  "wav_sha256": "a69f189f52201c20e70fba45bf6cdcca63afcc81be3f27190e23f85a844ae977",
+  "expected": "The tape keeps moving after the click. Blank tape, not leader. There’s room left.",
+  "recognized": "The tape keeps moving after the click. Blank tape, not leader. There's room left.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 6.16,
+  "sample_rate": 48000,
+  "peak": 0.74017333984375,
+  "rms": 0.030156735950074235,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

@@ -62,12 +62,17 @@ func _check_story_shape(state: NightCampaign) -> void:
 	# The tapes catch two mornings, but in the apartment Nora greets Steve once and leaves once.
 	var greetings := 0
 	var departures := 0
-	for task: Dictionary in scenes[_scene_index(state, "c1_flat")].tasks:
-		for id: String in task.get("lead", []) + task.lines:
-			var line: Dictionary = state.content.lines[id]
-			if line.speaker == "iris" and str(line.get("delivery", "live")) == "live":
-				greetings += int(str(line.text).begins_with("Good morning"))
-				departures += int(str(line.text).contains("feed Admiral and the otters"))
+	var flat: Dictionary = scenes[_scene_index(state, "c1_flat")]
+	var lines: Array = flat.context + flat.intro + flat.outro
+	for task: Dictionary in flat.tasks:
+		lines += task.get("lead", []) + task.lines
+	for topic: Dictionary in flat.talk:
+		lines += topic.lines
+	for id: String in lines:
+		var line: Dictionary = state.content.lines[id]
+		if line.speaker == "iris" and str(line.get("delivery", "live")) == "live":
+			greetings += int(str(line.text).begins_with("Good morning"))
+			departures += int(str(line.text).contains("feed Admiral and the otters"))
 	check(greetings == 1 and departures == 1, "In the apartment Nora says good morning once and leaves for the otters once")
 
 func _check_chapter_replay() -> void:
@@ -140,6 +145,18 @@ func _check_migration() -> void:
 	check(probe.restore(heard) and probe.data.seen == [first_line], "Forget transcript lines that were cut from the script")
 	heard.seen = [42]
 	check(not probe.validate(heard).is_empty(), "Still reject a malformed transcript")
+	var station := NightCampaign.new()
+	_reach_scene(station, "c10_station")
+	for id: String in ["c10_station.playlist", "c10_station.route"]:
+		var task: Dictionary = station.task_index[id]
+		station.choose(id, int(task.answer), task.puzzle.solution)
+	var old_desk: Dictionary = station.data.duplicate(true)
+	old_desk.erase("puzzle_scores")
+	old_desk.erase("puzzle_drafts")
+	old_desk.case_boards["c10_station.relay"] = {"stage": 0, "placements": [[2, -1, 1]]}
+	check(probe.restore(old_desk) and probe.current().id == "c10_station"
+		and probe.available("c10_station.relay") and probe.data.case_boards.is_empty()
+		and probe.data.done == old_desk.done, "An old relay board save reopens at the new receiver without losing progress")
 
 func _check_script_v2_runtime() -> void:
 	var state := NightCampaign.new()
@@ -198,6 +215,74 @@ func _check_script_v2_runtime() -> void:
 	check(state.reveal_answer(task.id) and state.answer_text(task.id).contains(task.options[int(task.answer)]), "Answer reveal is explicit and persistent")
 	var solved: Dictionary = state.choose(task.id, int(task.answer))
 	check(solved.ok and solved.finding == task.finding, "A solved task returns its finding line")
+
+func _reach_scene(state: NightCampaign, scene_id: String) -> void:
+	var target := _scene_index(state, scene_id)
+	while int(state.data.scene) < target:
+		_solve_current_scene(state,"Reach "+scene_id)
+		state.advance()
+
+func _solve_current_scene(state: NightCampaign, label: String) -> void:
+	while not state.can_leave():
+		var progressed:=false
+		for task: Dictionary in state.current().tasks:
+			if not state.available(task.id):
+				continue
+			if not task.actor.is_empty():
+				state.switch_actor(task.actor)
+			var solution: Array=task.get("puzzle",{}).get("solution",[]).duplicate()
+			check(state.choose(task.id,int(task.answer),solution).ok,label+" through "+task.id)
+			progressed=true
+		check(progressed,label+" has an available lead")
+		if not progressed:
+			return
+
+func _check_puzzle_save_state() -> void:
+	var state:=NightCampaign.new()
+	_reach_scene(state,"c3_house")
+	var passes:=0
+	while not state.available("c3_house.mail") and passes<state.current().tasks.size():
+		passes+=1
+		var progressed:=false
+		for task: Dictionary in state.current().tasks:
+			if task.id!="c3_house.mail" and state.available(task.id):
+				var solution: Array=task.get("puzzle",{}).get("solution",[]).duplicate()
+				check(state.choose(task.id,int(task.answer),solution).ok,"Reach Dale’s delivery")
+				progressed=true
+		if not progressed:
+			break
+	check(state.available("c3_house.mail"),"Stop before solving Dale’s delivery")
+	var old_choice_save: Dictionary=state.data.duplicate(true)
+	old_choice_save.misses["c3_house.mail"]=1
+	old_choice_save.missed_options["c3_house.mail"]=[0]
+	check(state.validate(old_choice_save).is_empty() and state.restore(old_choice_save),
+		"Restore an older choice save after Dale’s delivery becomes an order board")
+	var mail: Dictionary=state.task_index["c3_house.mail"]
+	check(state.choose(mail.id,int(mail.answer),mail.puzzle.solution).ok,"Solve the converted delivery board")
+	_solve_current_scene(state,"Finish the house")
+	check(state.advance(),"Finish the remaining house leads before the archive")
+	var power_id:="c3_archive.power"
+	var draft: Dictionary=state.board_draft(power_id)
+	draft.placements[0][0]=int(state.task_index[power_id].puzzle.stages[0].answer[0])
+	check(state.store_board(power_id,draft),"Store a partial evidence board on the changed power task")
+	state.record_puzzle_score(power_id,1,state.task_index[power_id].puzzle.solution.size())
+	var checkpoint_save: Dictionary=state.data.duplicate(true)
+	check(state.validate(checkpoint_save).is_empty(),"Validate partial board and puzzle score in a save")
+	var restored:=NightCampaign.new()
+	check(restored.restore(checkpoint_save)
+		and restored.board_draft(power_id).placements==draft.placements
+		and int(restored.data.puzzle_scores[power_id].best)==1,
+		"Restore partial board placement and scoring")
+	var row_id:="c3_archive.paper"
+	var values: Array=[]
+	for row: Dictionary in state.task_index[row_id].puzzle.rows:
+		values.append(-1)
+	values[0]=0
+	check(restored.store_puzzle_draft(row_id,{"values":values,"offset":0.0}),
+		"Store a retry draft for a row puzzle")
+	var retry_save: Dictionary=restored.data.duplicate(true)
+	check(restored.restore(retry_save) and restored.puzzle_draft(row_id).values==values,
+		"Restore row selections for a retry")
 
 func _check_storybook_caption_cleanup() -> void:
 	var STORYBOOK := load("res://ui/storybook.gd")
@@ -318,6 +403,7 @@ func _initialize() -> void:
 	_check_chapter_replay()
 	_check_migration()
 	_check_script_v2_runtime()
+	_check_puzzle_save_state()
 	_check_storybook_caption_cleanup()
 	_check_storybook_clock_hitch()
 	_check_storybook_narrates_every_caption()

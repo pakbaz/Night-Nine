@@ -112,19 +112,21 @@ func watch_dialogue(location: String) -> void:
 			if line.get("delivery","live")!="live":
 				for other: Node in game.stage.actors.values():
 					check(other.voice==null,"Listeners remain silent during "+id)
-			if id=="c1_pier.whistle.01":
+			if id=="c1_pier.in.01":
 				var painted: Vector2=game.stage.distant.to_global(game.stage.art_point(game.stage.directions.painted_creatures.admiral))
 				check(game.stage.dialogue_shot.type=="detail" and not game.stage.frame.get_global_rect().has_point(painted) and game.stage.creatures.admiral.visible,"Keep the original distant sea lion outside Admiral's isolated close-up")
 				await get_tree().create_timer(.82).timeout
 				await snapshot("c1_pier-admiral")
 			if id=="c10_live.out.04":
-				check(game.stage.illustration_insert.visible and game.stage.creatures.admiral.visible and not game.stage.creatures.biscuit.visible,"Stage one Admiral when Stephen sees the sandwich")
+				check(game.stage.shown_still().ends_with("/c10_live-pier.webp")
+					and game.stage.creatures.values().all(func(creature: Node): return not creature.visible),
+					"Show Admiral in the pier painting without a duplicate actor in the studio")
 			if id=="c6_jail.mail.01":
 				check(game.stage.creatures.size()==1 and game.stage.creatures.biscuit.visible,"Biscuit accompanies Pell at the jail")
 			for creature: String in game.stage.creatures:
 				if game.stage.creatures[creature].visible:
 					creature_cues[creature]=id
-		if id in ["c1_flat.in.01","c1_flat.in.02","c5_station.in.02","c8_beach.in.01","c9_gallery.talk.02","c10_report.out.01","epilogue.in.02"]:
+		if id in ["c1_flat.in.04","c1_flat.saturday.03","c5_station.in.02","c8_beach.in.01","c9_gallery.talk.02","c10_report.out.01","epilogue.in.02"]:
 			await get_tree().create_timer(.4).timeout
 			await snapshot(id)
 		await press_control(button("Continue",game.dialogue_panel))
@@ -149,7 +151,7 @@ func operate(task: Dictionary) -> void:
 		var captions := game.interaction.get_node("ReelTranscripts") as VBoxContainer
 		check(captions.visible and captions.get_child_count() == task.sounds.size(), "Read the actual reel transcripts without audio")
 		await press_control(reveal)
-	if task.has("evidence_labels"):
+	if task.has("evidence_labels") and task.get("puzzle",{}).get("presentation","")!="tape_alignment":
 		for index: int in task.sounds.size():
 			var listen := game.interaction.get_node("EvidencePlay%d" % index) as Button
 			var strip: Control = game.interaction.get_node_or_null("EvidenceTrace%d" % index)
@@ -163,6 +165,13 @@ func operate(task: Dictionary) -> void:
 				check(game.voice.playing and game.voice.stream != null, "Play capture " + str(index + 1) + " for " + task.id)
 			else:
 				check(not game.voice.playing,"Keep capture text-only "+str(index+1)+" for "+task.id)
+		if task.has("clip_captions"):
+			var toggle := button("Show sound captions", game.interaction) as CheckButton
+			check(is_instance_valid(toggle) and not toggle.button_pressed, "Sound descriptions start hidden for " + task.id)
+			await press_control(toggle)
+			var captions := game.interaction.get_node("SoundCaptions") as Label
+			check(captions.is_visible_in_tree() and captions.text.contains(str(task.clip_captions.back())), "Read sound descriptions for " + task.id)
+			await press_control(toggle)
 		if task.id == "c2_aquarium.guard":
 			await snapshot("c2_aquarium-corridor-evidence")
 	if task.id=="p_veyr.levels":
@@ -177,16 +186,28 @@ func operate(task: Dictionary) -> void:
 	elif task.get("puzzle",{}).get("presentation","")=="tape_alignment":
 		var tape: NightTapeCompare=game.tape_compare
 		tape.slider.grab_focus()
-		for step: int in 35:
-			await key(KEY_LEFT)
-		check(is_equal_approx(tape.slider.value,-.35),"Keyboard aligns Saturday and Sunday to the matching breath")
-		check(tape.row_choices.size()==task.puzzle.rows.size(),"Show one comparison row for every voice on the tapes")
+		var target_steps:=roundi((tape.recording.expected_offset-tape.slider.value)/.01)
+		for step: int in absi(target_steps):
+			await key(KEY_LEFT if target_steps<0 else KEY_RIGHT)
+		check(tape.recording.aligned(tape.slider.value),"Keyboard aligns the two evidence recordings")
+		check(tape.row_choices.size()==task.puzzle.rows.size(),"Show every authored comparison row")
 		for index: int in tape.row_choices.size():
 			tape.row_choices[index].select(int(task.puzzle.solution[index])+1)
 		await press_control(button("Play together",tape))
 		check(game.voice.playing and game.voice.stream==tape.active_stream,"Play the actual aligned voices")
-		await snapshot("c1_flat-tape-comparison")
+		await snapshot(str(task.id).replace(".","-")+"-tape-comparison")
 		await press_control(button("Record finding",tape))
+	elif task.get("puzzle",{}).get("presentation","")=="receiver":
+		var investigation_receiver=game.receiver
+		var receiver_data: Dictionary=task.puzzle.receiver
+		for index: int in investigation_receiver.choices.size():
+			investigation_receiver.choices[index].select(int(task.puzzle.solution[index])+1)
+		investigation_receiver.dial.value=float(receiver_data.target)
+		if bool(receiver_data.get("require_narrow",false)):
+			investigation_receiver.narrow.button_pressed=true
+		await wait_frames(3)
+		check(not investigation_receiver.record.disabled,"Tune the authored receiver for "+task.id)
+		await press_control(investigation_receiver.record)
 	elif task.get("puzzle",{}).get("presentation","")=="case_board":
 		if case_boards_played.is_empty() or task.id=="c8_beach.first":
 			await snapshot(str(task.id)+"-case-board")
@@ -195,6 +216,17 @@ func operate(task: Dictionary) -> void:
 		for sheet: Dictionary in task.puzzle.stages:
 			modes.append(sheet.mode)
 		case_boards_played[task.id]=modes
+	elif task.get("puzzle", {}).get("presentation", "") == "broadcast_desk":
+		var desk: Variant=game.interaction.get_node("BroadcastDesk")
+		desk.fader.grab_focus()
+		await key(KEY_RIGHT)
+		for step: int in task.puzzle.cues.size():
+			var cue: Dictionary = task.puzzle.cues[step]
+			var deadline := Time.get_ticks_msec() + 20000
+			while desk.lamp.text != cue.lamp and Time.get_ticks_msec() < deadline:
+				await get_tree().process_frame
+			check(desk.lamp.text == cue.lamp, "Live return for " + task.id)
+			await press_control(desk.keys[int(task.puzzle.solution[step])])
 	elif task.has("puzzle"):
 		for i: int in task.puzzle.rows.size():
 			var row: Control=game.puzzle_controls[i]
@@ -214,6 +246,10 @@ func operate(task: Dictionary) -> void:
 			check(game.puzzle_response.text==task.hints[0] and game.hint_button.text=="Hint 2 of 3",
 				"Open hint one only after the player accepts")
 		await press_control(button("Continue" if task.get("type","")=="beat" else task.options[task.answer],game.interaction))
+		if task.get("sound_bank", false):
+			var anchor: String = task.sounds[int(task.answer)].trim_prefix("effect.")
+			check(game.effect.playing and game.effect.stream.resource_path == game.sound_manifest[anchor].file,
+				"Send the selected recording to the bedside speaker for " + task.id)
 	if task.has("puzzle") or task.id=="p_bay.tune":
 		puzzle_count+=1
 
@@ -303,6 +339,11 @@ func clear_overlays() -> void:
 func verify_room(scene: Dictionary) -> void:
 	var slot: String = scene.id
 	await clear_overlays()
+	if scene.id == "c1_flat":
+		var deadline := Time.get_ticks_msec() + 8000
+		while not game.dialogue_panel.visible and Time.get_ticks_msec() < deadline:
+			await get_tree().process_frame
+		check(game.active_line == "c1_flat.in.04", "The kitchen opens with Nora, not the tape")
 	var chapter: bool = slot not in game.PAINTED_NIGHTS
 	var details: Dictionary={"hits":{},"chapter":scene.chapter,"music":game.score.current_file}
 	check(game.stage is Control and game.stage.find_children("*","Node3D",true,false).is_empty(),"Illustrated 2D scene "+slot)
@@ -382,6 +423,9 @@ func verify_room(scene: Dictionary) -> void:
 		var finding: String=task.get("finding","")
 		if not finding.is_empty():
 			check(finding in game.campaign.data.seen,"Play the finding before returning control for "+task.id)
+		if task.id == "c1_flat.control":
+			check("c1_flat.in.01" not in game.campaign.data.seen and game.campaign.can_leave(),
+				"Finish Chapter 1's kitchen without listening to the optional voicemail")
 		if task.id == "c1_flat.compare" and failures.is_empty():
 			await exercise_notebook()
 	check(game.transitioning,"The cleared scene starts its recap and departure automatically from "+slot)
@@ -561,7 +605,14 @@ func _run() -> void:
 		if partial_start.is_empty():
 			for creature: String in ["admiral","biscuit","wick"]:
 				check(creature_cues.has(creature),"Stage "+creature+" in a canonical scene")
-		check(game.saves.read_slot("autosave").state.finished,"Persist the final campaign state")
+		var final_save: Dictionary = game.saves.read_slot("autosave")
+		var saved_ending: bool = final_save.get("state", {}).get("finished", false)
+		if not saved_ending:
+			push_error("Ending autosave: write=%s, live=%s, read=%s, recovered=%s, scene=%s" % [
+				game.saves.last_error, game.campaign.validate(game.campaign.data),
+				final_save.get("error", ""), final_save.get("recovered", false),
+				final_save.get("state", {}).get("scene_id", "")])
+		check(saved_ending,"Persist the final campaign state")
 		check(game._load("autosave") and game.campaign.data.finished and game.end_card.visible,"Restore the completed game and end card")
 		await snapshot("ending")
 		await inspect_credits(game.end_card,true)

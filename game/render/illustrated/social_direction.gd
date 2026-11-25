@@ -4,7 +4,8 @@ extends RefCounted
 # Each pair is ordered screen-left to screen-right. Keep the camera on the
 # same side of the people throughout an exchange, including the reverse shot.
 const PARTNERS := {
-	"c1_flat": {"in":"steve iris"},
+	"c1_flat": {"in":"steve iris", "saturday.02":"steve iris", "saturday.03":"steve iris",
+		"saturday.04":"steve iris", "saturday.05":"steve iris"},
 	"c1_pier": {"in":"steve agnes", "door":"steve lyle_copy", "bait":"steve agnes", "out":"steve pell"},
 	"c1_dinner": {"in":"carmen rafa", "birthday":"mateo steve", "podcast":"tomas steve", "family":"iris luis", "out":"carmen steve"},
 	"c1_escape": {"in":"steve iris", "cross":"steve iris"},

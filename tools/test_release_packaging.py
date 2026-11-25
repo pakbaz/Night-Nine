@@ -312,6 +312,13 @@ for (const path of ['play.html', 'play']) {
                 files, _ = milestones.make_snapshot(stage, False)
                 scenes = json.loads(read_entry(files, "game/content/campaign.json"))["scenes"]
                 scene_ids = {scene["id"] for scene in scenes}
+                people = json.loads(read_entry(files, "game/content/scene-people.json"))
+                self.assertLessEqual(people.keys(), scene_ids)
+                for scene in people.values():
+                    for appearance, *_ in scene.get("figures", {}).values():
+                        sprite = f"game/assets/illustrated/campaign/walk/{appearance}-idle.webp"
+                        self.assertIn(sprite, files)
+                        self.assertIn(sprite+".import", files)
                 books = json.loads(read_entry(files, "game/content/storybook.json"))["books"]
                 self.assertIn("opening", books)
                 self.assertEqual("aftermath" in books, "c1_flat" in scene_ids)
@@ -343,6 +350,19 @@ for (const path of ['play.html', 'play']) {
         narration = json.loads(read_entry(files, "game/content/narration.json"))
         for resource in resources(narration):
             self.assertTrue("game/" + resource[6:] in files, resource)
+
+    def test_first_chapter_keeps_the_walk_in_optional_recorder_and_small_talk(self):
+        files, _ = milestones.make_snapshot(1, False)
+        campaign = json.loads(read_entry(files, "game/content/campaign.json"))
+        voices = json.loads(read_entry(files, "game/content/voice-manifest.json"))["takes"]
+        self.assertTrue("game/assets/illustrated/campaign/walk/nora.webp" in files)
+        for scene in campaign["scenes"]:
+            optional = [i for t in scene["tasks"] for i in t.get("optional_playback", {}).get("lines", [])]
+            topics = [i for topic in scene["talk"] for i in topic["lines"]]
+            for line_id in optional + topics + scene["context"]:
+                self.assertTrue(line_id in campaign["lines"], line_id)
+                take = voices[campaign["lines"][line_id]["audio"]]
+                self.assertTrue("game/" + take["file"][6:] in files, line_id)
 
     def test_snapshot_preserves_disabled_voice_gate_and_identity_metadata(self):
         original_read = milestones.read

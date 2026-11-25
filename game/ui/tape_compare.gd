@@ -5,6 +5,8 @@ signal stop_requested
 signal finding_requested(settings: Array)
 signal hint_requested
 signal wrong_attempt
+signal attempt_scored(right: int, total: int)
+signal draft_changed(draft: Dictionary)
 signal answer_requested
 signal closed
 var recording := NightTapeRecording.new()
@@ -19,13 +21,19 @@ var solution: Array = []
 var feedback: Label
 var goal: Label
 var background: Label
+var heading: Label
+var instruction: Label
 var hint_button: Button
 var answer_button: Button
+var play_a_button: Button
+var play_b_button: Button
 var voice: AudioStreamPlayer
 var active_stream: AudioStreamWAV
 var task_id := ""
 var paused := false
 var buttons: Array[BaseButton] = []
+var puzzle_data: Dictionary = {}
+var restoring := false
 
 func _ready() -> void:
 	set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
@@ -47,12 +55,12 @@ func _ready() -> void:
 	box.size_flags_horizontal=Control.SIZE_EXPAND_FILL
 	box.add_theme_constant_override("separation", 10)
 	scroll.add_child(box)
-	_label(box, "FRANK’S RECORDER  /  TWO MORNINGS", 26)
+	heading=_label(box, "FRANK’S RECORDER  /  TWO MORNINGS", 26)
 	goal=_label(box,"",18)
 	goal.modulate=Color("e9c276")
 	_label(box,"What Steve knows",16).name="KnowledgeHeading"
 	background=_label(box,"",16)
-	_label(box, "Move Sunday until the idents line up. Compare every voice, then record your finding.", 18)
+	instruction=_label(box, "Move Sunday until the idents line up. Compare every voice, then record your finding.", 18)
 	trace = NightTapeTrace.new()
 	box.add_child(trace)
 	trace.offset_changed.connect(_set_offset)
@@ -76,8 +84,8 @@ func _ready() -> void:
 	offset_mark.custom_minimum_size.x = 24
 	# The transport shares the slider's row so the whole comparison fits on one screen.
 	var transport := timing
-	_button(transport, "Play Saturday", func(): _play("a"))
-	_button(transport, "Play Sunday", func(): _play("b"))
+	play_a_button=_button(transport, "Play Saturday", func(): _play("a"))
+	play_b_button=_button(transport, "Play Sunday", func(): _play("b"))
 	_button(transport, "Play together", func(): _play("both"))
 	_button(transport, "Stop", _stop)
 	var overlay := CheckButton.new()
@@ -134,23 +142,48 @@ func _button(parent: Node, text: String, action: Callable) -> Button:
 
 func open_task(id: String, saturday: AudioStreamWAV, sunday: AudioStreamWAV, metadata: Dictionary,
 		player: AudioStreamPlayer, data: Dictionary,
-		goal_text: String = "", background_text: String = "", perspective: String = "Steve") -> bool:
-	if not recording.configure(saturday, sunday, metadata):
+		goal_text: String = "", background_text: String = "", perspective: String = "Steve",
+		progress: Dictionary = {}) -> bool:
+	puzzle_data = data
+	var configured := recording.configure(saturday, sunday, metadata) if metadata.has("tapes") \
+		else recording.configure_pair(saturday, sunday, {
+			"segments_a": data.get("segments_a", []),
+			"segments_b": data.get("segments_b", []),
+			"label_a": data.get("label_a", "Recording A"),
+			"label_b": data.get("label_b", "Recording B"),
+			"anchor_a": data.get("anchor_a", ""),
+			"anchor_b": data.get("anchor_b", ""),
+			"expected_offset": data.get("expected_offset", 0.0),
+			"alignment_required": data.get("alignment_required", true)
+		})
+	if not configured:
 		return false
 	voice = player
+	heading.text=str(data.get("workbench_title", "FRANK’S RECORDER  /  " + str(data.get("label_a", "TWO TAKES")).to_upper()))
+	instruction.text=str(data.get("instruction", "Line up the recordings, compare them, then record your finding."))
+	play_a_button.text="Play "+str(data.get("label_a", "recording A"))
+	play_b_button.text="Play "+str(data.get("label_b", "recording B"))
+	slider.tooltip_text = "Move %s in 0.01-second steps. Arrow keys also work." % recording.label_b.capitalize()
 	goal.text=goal_text
 	background.text=background_text
 	var heading:=find_child("KnowledgeHeading",true,false) as Label
 	heading.text="What %s knows" % perspective
 	trace.recording = recording
-	var previous: Array[int] = []
-	if task_id == id:
+	var same_task:=task_id==id
+	var previous: Array = []
+	if same_task:
 		for choice: OptionButton in row_choices:
-			previous.append(choice.selected)
+			previous.append(choice.selected - 1)
+	if progress.get("values") is Array:
+		previous = progress.values.duplicate()
+	restoring = true
 	_configure_rows(data.get("rows", []), data.get("solution", []), previous)
-	if task_id != id:
+	if not same_task:
 		task_id = id
-		_set_offset(0)
+	var starting_offset := 0.25 if recording.alignment_required and recording.aligned(0.0) else 0.0
+	var restored_offset := float(progress.get("offset", slider.value if same_task else starting_offset))
+	_set_offset(restored_offset)
+	restoring = false
 	feedback.text = "You can compare the waveforms with or without sound."
 	offset_mark.text = ""
 	show()
@@ -167,8 +200,10 @@ func _set_offset(value: float) -> void:
 		_stop()
 	slider.set_value_no_signal(selected)
 	trace.offset = selected
-	offset_label.text = "Sunday: %+.3f s" % selected
+	offset_label.text = "%s: %+.3f s" % [recording.label_b.capitalize(), selected]
 	trace.queue_redraw()
+	if not restoring and not task_id.is_empty():
+		_emit_draft()
 
 func _play(mode: String) -> void:
 	if paused:
@@ -183,7 +218,7 @@ func _stop() -> void:
 	trace.playhead = -100
 	trace.queue_redraw()
 
-func _configure_rows(rows: Array, answers: Array, previous: Array[int]) -> void:
+func _configure_rows(rows: Array, answers: Array, previous: Array) -> void:
 	for choice: OptionButton in row_choices:
 		buttons.erase(choice)
 	for child: Node in rows_box.get_children():
@@ -213,8 +248,11 @@ func _configure_rows(rows: Array, answers: Array, previous: Array[int]) -> void:
 		row_choices.append(choice)
 		row_marks.append(mark)
 		buttons.append(choice)
-		if index < previous.size():
-			choice.select(clampi(previous[index], 0, choice.item_count - 1))
+		choice.item_selected.connect(func(_selected: int):
+			if not restoring:
+				_emit_draft())
+		if index < previous.size() and int(previous[index]) >= 0:
+			choice.select(clampi(int(previous[index]) + 1, 0, choice.item_count - 1))
 
 func _submit() -> void:
 	if paused:
@@ -232,15 +270,49 @@ func _submit() -> void:
 	var offset_correct := recording.aligned(slider.value)
 	offset_mark.text = "✓" if offset_correct else "✗"
 	offset_mark.modulate = Color("8ce6ad") if offset_correct else Color("ff9b8f")
-	if offset_correct:
+	if offset_correct and recording.alignment_required:
 		right += 1
 	var total := row_choices.size() + 1
+	if not recording.alignment_required:
+		total -= 1
+		offset_correct = true
+		offset_mark.text = ""
 	if right == total:
 		feedback.text = "%d of %d right." % [right, total]
+		attempt_scored.emit(right, total)
 		finding_requested.emit(values)
 		return
-	feedback.text = "%d of %d right. Review the marked rows and offset." % [right, total]
+	var details: Array[String] = []
+	for index: int in row_choices.size():
+		if row_choices[index].selected - 1 != int(solution[index]):
+			var clue := _feedback_for(index, row_choices[index].selected - 1)
+			if not clue.is_empty():
+				details.append(clue)
+	if recording.alignment_required and not offset_correct:
+		details.append(str(puzzle_data.get("offset_feedback", "The two reference points do not line up yet.")))
+	feedback.text = "%d of %d right. %s" % [right, total,
+		" ".join(details) if not details.is_empty() else "Review the marked rows and offset."]
+	attempt_scored.emit(right, total)
 	wrong_attempt.emit()
+
+func _feedback_for(index: int, selected: int) -> String:
+	if index < 0 or index >= puzzle_data.get("rows", []).size():
+		return ""
+	var row: Dictionary = puzzle_data.rows[index]
+	var authored: Variant = row.get("feedback", "")
+	if authored is Array and selected >= 0 and selected < authored.size():
+		return str(authored[selected])
+	if authored is Dictionary and authored.has(str(selected)):
+		return str(authored[str(selected)])
+	if authored is String and not authored.is_empty():
+		return authored
+	return "%s: compare the pause and breath, not just the words." % str(row.get("label", "That row"))
+
+func _emit_draft() -> void:
+	var values: Array = []
+	for choice: OptionButton in row_choices:
+		values.append(choice.selected - 1)
+	draft_changed.emit({"values": values, "offset": slider.value})
 
 func set_paused(on: bool) -> void:
 	paused = on

@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c10_live.second.lead.05",
+  "attempt": 1,
+  "plan_sha256": "f489d8823f897787d07f726f8abb9e9251693c77164bbe22de94563be899f495",
+  "wav_sha256": "858529ebcb2d6886b1e893936dcc96cb5c795784a24dca957f798a6a0cf9cf09",
+  "expected": "I’m standing by. Wait for my green lamp.",
+  "recognized": "I'm standing by. Wait for my green lamp.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 3.12,
+  "sample_rate": 48000,
+  "peak": 0.7056884765625,
+  "rms": 0.09568727691693725,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

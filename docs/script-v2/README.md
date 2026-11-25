@@ -9,7 +9,7 @@ The base story is a pristine copy of the game content in `tools/script_v2/base/`
 ## Commands
 
 ```
-cd "/Users/pakbaz/code/Night Nine"
+# Run from the Git checkout (GitHub/Night-Nine in the production workspace).
 python3 tools/script_v2.py           # merge, validate, render docs/script-v2/
 python3 tools/script_v2.py --apply   # same, then write game/content/*.json (only if there are 0 errors)
 ```
@@ -57,9 +57,9 @@ Also: `tasks` (by task key), `task_order`, `delete` (base line ids you mean to d
 
 ### Task fields
 
-`title`, `type` (`beat`, `choice`, `compare`, `rows`, `tape`, `dial`, `board`), `difficulty`, `actor`, `requires` (task keys in the same scene), `goal`, `background` (shown as "What Steve knows"), `prompt`, `options`, `answer`, `wrong` (feedback per wrong option index), `hints` (exactly three), `lead` (lines played when the lead first opens), `lines` (lines played on success), `finding` (one narration line after success), `note` (notebook text, defaults to the finding), `evidence_labels`, `audition_labels`, `sounds`.
+`title`, `type` (`beat`, `choice`, `compare`, `rows`, `tape`, `dial`, `receiver`, `board`, `desk`), `difficulty`, `actor`, `requires` (task keys in the same scene), `goal`, `background` (shown for the current investigator), `prompt`, `options`, `answer`, `wrong` (feedback per wrong option index), `hints` (exactly three), `lead` (lines played when the lead first opens), `lines` (lines played on success), `finding` (one narration line after success), `note` (notebook text, defaults to the finding), `evidence_labels`, `audition_labels`, `sounds`.
 
-Rows puzzles use `instruction` and `rows`: `[{"label", "options", "answer"}]`.
+Rows puzzles use `instruction` and `rows`: `[{"label", "options", "answer", "feedback"}]`.
 Case boards use `board`: `{"instruction", "evidence", "stages", "wrong_text"}`. Each stage has `mode` (`order`, `match`, `route`), `prompt`, `slots`, `pieces` and `answer` (one piece index per slot). More pieces than slots means decoys.
 
 Optional task `art` is a resource path shown with the lead, puzzle and finding. Both task art and departure paintings are checked for missing files.

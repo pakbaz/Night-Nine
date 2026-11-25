@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c2_ship.in.04",
+  "attempt": 1,
+  "plan_sha256": "f489d8823f897787d07f726f8abb9e9251693c77164bbe22de94563be899f495",
+  "wav_sha256": "d24420b62c23a2fa64326e37daadaa2ebb0fbff441efff9775adc3a3393d161f",
+  "expected": "Lyle unlocked the old intake and walked me down the tunnel under the bay. At the end of it there was a ship.",
+  "recognized": "Lyle unlocked the old intake and walked me down the tunnel under the bay. At the end of it, there was a ship.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 6.8,
+  "sample_rate": 48000,
+  "peak": 0.448822021484375,
+  "rms": 0.04162573364542799,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

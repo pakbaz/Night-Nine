@@ -11,7 +11,7 @@ Line references inside an edit:
   "c1_flat.in.02"              keep an existing line (moving it if needed)
   "steve|Text."                a new line
   {"id": ..., "text": ...}      rewrite an existing line (also speaker, delivery, direction, display)
-  {"new": "speaker|Text.", ...} a new line with delivery, direction, display or audio
+  {"new": "speaker|Text.", ...} a new line; provide its old id when moving a previously authored take
 """
 import argparse
 import copy
@@ -32,7 +32,7 @@ CONTENT_DIR = ROOT / 'game' / 'content'
 LIVE = {None, 'live'}
 DELIVERIES = {'live', 'narration', 'phone', 'radio', 'intercom', 'broadcast', 'memory', 'voicemail',
               'recorded_playback', 'private_recording'}
-TYPES = {'beat', 'choice', 'rows', 'board', 'tape', 'dial', 'compare'}
+TYPES = {'beat', 'choice', 'rows', 'board', 'tape', 'dial', 'compare', 'receiver', 'desk'}
 ALIASES = {'stephen': 'steve', 'iris': 'nora', 'pell': 'dale', 'agnes_original': 'agnes',
            'rook_copy': 'rook', 'lyle_copy': 'lyle'}
 
@@ -124,7 +124,8 @@ class Merge:
                 self.lines[new].setdefault('delivery', 'narration')
             return new
         if 'new' in ref:
-            lid = self.next_id(prefix)
+            # A moved authored line keeps its transcript ID and recorded take.
+            lid = ref['id'] if 'id' in ref else self.next_id(prefix)
             new = self.new_line(lid, ref['new'], where, ref)
             if narration:
                 self.lines[new].setdefault('delivery', 'narration')
@@ -166,6 +167,8 @@ class Merge:
             return 'board'
         if p.get('presentation') == 'tape_alignment':
             return 'tape'
+        if p.get('presentation') == 'receiver':
+            return 'receiver'
         if p.get('rows'):
             return 'rows'
         if task.get('evidence_labels'):
@@ -184,7 +187,7 @@ class Merge:
             task['status'] = 'revised'
         base_type = self.task_type(task)
         for field in ('title', 'prompt', 'actor', 'kind', 'goal', 'background', 'difficulty', 'note', 'sounds',
-                      'evidence_labels', 'audition_labels', 'art'):
+                      'evidence_labels', 'audition_labels', 'clip_captions', 'sound_bank', 'art'):
             if field in edit:
                 task[field] = edit[field]
         if 'requires' in edit:
@@ -204,7 +207,11 @@ class Merge:
             task.pop('puzzle', None)
         if 'rows' in edit:
             puzzle = {'instruction': edit.get('instruction', (task.get('puzzle') or {}).get('instruction', ''))}
-            puzzle['rows'] = [{'label': r['label'], 'options': r['options']} for r in edit['rows']]
+            puzzle['rows'] = [
+                {'label': r['label'], 'options': r['options'],
+                 **({'feedback': r['feedback']} if 'feedback' in r else {})}
+                for r in edit['rows']
+            ]
             puzzle['solution'] = [r['answer'] for r in edit['rows']]
             keep = task.get('puzzle') or {}
             if ttype == 'tape':
@@ -216,11 +223,21 @@ class Merge:
                     for k in ('recording_a', 'recording_b', 'segments', 'recording', 'lead_a', 'lead_b'):
                         if k in keep:
                             puzzle[k] = keep[k]
+            elif ttype == 'receiver':
+                puzzle['presentation'] = 'receiver'
+                puzzle['receiver'] = copy.deepcopy(edit.get('receiver', keep.get('receiver', {})))
+            for field in ('feedback_voice', 'offset_feedback', 'workbench_title', 'label_a', 'label_b',
+                          'expected_offset', 'alignment_required'):
+                if field in edit:
+                    puzzle[field] = edit[field]
             task['puzzle'] = puzzle
         elif 'tape' in edit and ttype == 'tape':
             task.setdefault('puzzle', {})['presentation'] = 'tape_alignment'
             task['puzzle'].update(edit['tape'])
-        elif 'instruction' in edit and task.get('puzzle') and ttype in ('rows', 'tape', 'dial'):
+        elif 'receiver' in edit and ttype == 'receiver':
+            task.setdefault('puzzle', {})['presentation'] = 'receiver'
+            task['puzzle']['receiver'] = copy.deepcopy(edit['receiver'])
+        elif 'instruction' in edit and task.get('puzzle') and ttype in ('rows', 'tape', 'dial', 'receiver'):
             task['puzzle']['instruction'] = edit['instruction']
         if 'board' in edit and edit['board'] != 'keep':
             b = edit['board']
@@ -230,11 +247,25 @@ class Merge:
                               'rows': [{'label': slot, 'options': s['pieces']} for s in stages for slot in s['slots']]}
             if b.get('wrong_text'):
                 task['puzzle']['wrong_text'] = b['wrong_text']
+        if 'desk' in edit:
+            desk = edit['desk']
+            channels = desk['channels']
+            task['puzzle'] = {'presentation': 'broadcast_desk', 'instruction': edit['instruction'],
+                              'channels': channels, 'cues': desk['cues'],
+                              'rows': [{'label': cue['lamp'], 'options': channels} for cue in desk['cues']],
+                              'solution': [channels.index(cue['send']) for cue in desk['cues']]}
         if 'hints' in edit:
             task['hints'] = edit['hints']
             if task.get('puzzle'):
                 task['puzzle']['hints'] = edit['hints']
         task['lead'] = self.resolve_list(edit.get('lead', []), tid + '.lead', where, scene_id, tid)
+        if 'optional_playback' in edit:
+            playback = edit['optional_playback']
+            task['optional_playback'] = {
+                'title': playback['title'],
+                'objective': playback['objective'],
+                'lines': self.resolve_list(playback['lines'], tid + '.playback', where, scene_id, tid),
+            }
         if task['lead']:
             self.need('Lead-in conversation that plays when a lead is first opened, before its puzzle', tid)
         if 'lines' in edit:
@@ -333,6 +364,7 @@ def apply_display(content, rules):
     for i, scene in enumerate(content['scenes']):
         groups = [scene['context'], scene['intro'], scene['recap'], scene['outro']]
         groups += [topic['lines'] for topic in scene.get('talk', [])]
+        groups += [t['optional_playback']['lines'] for t in scene['tasks'] if 'optional_playback' in t]
         groups += [t.get('lead', []) + t['lines'] + ([t['finding']] if t.get('finding') else []) for t in scene['tasks']]
         for lid in (lid for g in groups for lid in g):
             line = content['lines'][lid]
@@ -360,6 +392,9 @@ def visible_text(scene, content):
     for topic in scene.get('talk', []):
         yield topic['id'] + '.topic', topic.get('topic', '')
     for t in scene['tasks']:
+        if 'optional_playback' in t:
+            yield t['id'] + '.playback', t['optional_playback']['title']
+            yield t['id'] + '.playback.objective', t['optional_playback']['objective']
         for field in ('title', 'goal', 'background', 'prompt', 'note'):
             yield f"{t['id']}.{field}", t.get(field, '')
         for o in t.get('options', []):
@@ -389,7 +424,7 @@ def visible_text(scene, content):
             yield lid, line.get('display_text') or line['text']
             yield lid + '.speaker', line.get('display_speaker') or content['cast'].get(line['speaker'], line['speaker'])
     for t in scene['tasks']:
-        for lid in t.get('lead', []) + t['lines'] + ([t['finding']] if t.get('finding') else []):
+        for lid in t.get('optional_playback', {}).get('lines', []) + t.get('lead', []) + t['lines'] + ([t['finding']] if t.get('finding') else []):
             line = content['lines'][lid]
             yield lid, line.get('display_text') or line['text']
             yield lid + '.speaker', line.get('display_speaker') or content['cast'].get(line['speaker'], line['speaker'])
@@ -451,7 +486,10 @@ def validate(content, edits, merge):
                 merge.issue('error', where, f"talk until names unknown task {topic['until']}")
             if speaker not in cast:
                 merge.issue('error', where, f'unknown talk speaker {speaker}')
-            elif speaker not in present:
+            elif speaker not in present and any(
+                    content['lines'][line_id]['speaker'] == speaker
+                    and content['lines'][line_id].get('delivery') in LIVE
+                    for line_id in topic.get('lines', [])):
                 merge.issue('error', where, f'talk speaker {speaker} is not present in {sid}')
         for where, art in [(sid, scene.get('departure_art'))] + [(t['id'], t.get('art')) for t in scene['tasks']]:
             if art and not (str(art).startswith('res://') and (ROOT / 'game' / str(art)[6:]).is_file()):
@@ -471,6 +509,10 @@ def validate(content, edits, merge):
                 if r not in ids:
                     merge.issue('error', where, f'requires unknown task {r}')
             typ = t['type']
+            if t.get('sound_bank') and len(t['options']) != len(t.get('sounds', [])):
+                merge.issue('error', where, 'each recorder send needs its own sound')
+            if 'clip_captions' in t and len(t['clip_captions']) != len(t.get('sounds', [])):
+                merge.issue('error', where, 'each evidence clip needs a matching sound caption')
             if typ == 'beat':
                 if len(t['options']) != 1:
                     merge.issue('error', where, 'a beat has exactly one option')
@@ -480,7 +522,7 @@ def validate(content, edits, merge):
                 missing = [i for i in range(len(t['options'])) if i != t['answer'] and not (t.get('wrong') or {}).get(str(i))]
                 if missing:
                     merge.issue('error', where, f'missing wrong-answer feedback for options {missing}')
-            if typ in ('rows', 'tape'):
+            if typ in ('rows', 'tape', 'receiver'):
                 p = t.get('puzzle') or {}
                 for r, a in zip(p.get('rows', []), p.get('solution', [])):
                     if not 0 <= a < len(r['options']) or len(r['options']) < 2:
@@ -519,7 +561,7 @@ def validate(content, edits, merge):
                         merge.issue('error', sid, f"spoiler '{rule['pattern']}' before {first or 'ever'} in {label}: {text[:90]}")
         groups = scene['context'] + scene['intro'] + scene['recap'] + scene['outro'] \
             + [lid for topic in scene.get('talk', []) for lid in topic['lines']] \
-            + [lid for t in scene['tasks'] for lid in t.get('lead', []) + t['lines']]
+            + [lid for t in scene['tasks'] for lid in t.get('lead', []) + t['lines'] + t.get('optional_playback', {}).get('lines', [])]
         for lid in groups:
             line = content['lines'][lid]
             if line['speaker'] not in cast:
@@ -685,6 +727,10 @@ def filter_illustrated_campaign(data, content, appearances=None):
         content_scene = next(s for s in content['scenes'] if s['id'] == scene_id)
         for topic in content_scene.get('talk', []):
             speaker = topic['speaker']
+            if not any(content['lines'][line_id]['speaker'] == speaker
+                       and content['lines'][line_id].get('delivery') in LIVE
+                       for line_id in topic.get('lines', [])):
+                continue
             profile = merged_appearances.get(speaker, portrait_aliases.get(speaker, speaker))
             folder = ROOT / 'game/assets/illustrated/cast' / profile
             metadata = folder / 'sprite.json'
@@ -906,6 +952,9 @@ def render(content, books, merge, casting, out_dir):
             md.append(f"### Lead {n}: {t['title']} (`{t['id']}`) · {t['type']}{diff}{who}{tag}")
             if t['requires']:
                 md.append(f"*Unlocks after:* {', '.join(t['requires'])}")
+            if 'optional_playback' in t:
+                md.append('\n**' + t['optional_playback']['title'] + ':**')
+                md.extend(say(lid) for lid in t['optional_playback']['lines'])
             if t.get('lead'):
                 md.append('\n**When the lead opens:**')
                 md.extend(say(lid) for lid in t['lead'])
@@ -924,7 +973,13 @@ def render(content, books, merge, casting, out_dir):
                         md.append(f"- {o}. *Wrong:* {(t.get('wrong') or {}).get(str(i), '(no feedback yet)')}")
             if p.get('instruction'):
                 md.append(f"\n**Instruction:** {p['instruction']}")
-            if t['type'] in ('rows', 'tape'):
+            if p.get('presentation') == 'broadcast_desk':
+                for cue in p['cues']:
+                    md.append(f"- {cue['lamp']} → {cue['send']}")
+            if t.get('clip_captions'):
+                md.extend(f"- {label}: {caption}" for label, caption in
+                          zip(t['evidence_labels'], t['clip_captions']))
+            if t['type'] in ('rows', 'tape', 'receiver'):
                 for r, a in zip(p.get('rows', []), p.get('solution', [])):
                     md.append(f"- {r['label']}: " + ' / '.join(('✓ ' if i == a else '') + o for i, o in enumerate(r['options'])))
             if t['type'] == 'board':
@@ -1031,6 +1086,8 @@ def write_walkthrough(content, path):
     for scene in content['scenes']:
         out += [f"## {scene['title']}", '']
         for task in scene['tasks']:
+            if 'optional_playback' in task:
+                out.append(f"- {task['title']}: {task['optional_playback']['title']}. Available before the lead unlocks.")
             actor = f" (as {cast.get(task['actor'], task['actor'])})" if task.get('actor') else ''
             puzzle = task.get('puzzle') or {}
             if puzzle.get('presentation') == 'case_board':

@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c9_gallery.recap.01",
+  "attempt": 1,
+  "plan_sha256": "f489d8823f897787d07f726f8abb9e9251693c77164bbe22de94563be899f495",
+  "wav_sha256": "22ae76e123e608adb8bc933b055ff051995c3235bd6dd551a49c7c894784c82d",
+  "expected": "Nora was on her feet. Iris was still herself. For the moment, that was enough.",
+  "recognized": "Nora was on her feet. Iris was still herself. For the moment, that was enough.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 5.76,
+  "sample_rate": 48000,
+  "peak": 0.314666748046875,
+  "rms": 0.03819515035188746,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

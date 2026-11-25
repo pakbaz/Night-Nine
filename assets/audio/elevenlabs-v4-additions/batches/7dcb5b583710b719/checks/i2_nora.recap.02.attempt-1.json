@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "i2_nora.recap.02",
+  "attempt": 1,
+  "plan_sha256": "7dcb5b583710b719fb2b6f93327f32b354b0cd2c28646fd9ba391e4718a63348",
+  "wav_sha256": "86efb788e91f1e46b676e7829958c8c2cee905e9d6f6df4d7df5d0fc914d4cfb",
+  "expected": "I counted thirteen months of silence before they took me. Five more went by while I slept. I still want to hear what he has to say.",
+  "recognized": "I counted 13 months of silence before they took me. Five more went by while I slept. I still want to hear what he has to say.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 9.12,
+  "sample_rate": 48000,
+  "peak": 0.518798828125,
+  "rms": 0.04891823847139911,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

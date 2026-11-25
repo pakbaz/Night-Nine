@@ -1,0 +1,54 @@
+{
+  "schema": 1,
+  "batch": "later-additions",
+  "model_id": "eleven_v4",
+  "output_format": "mp3_44100_192",
+  "inputs": {
+    "campaign": "d007f2c92853af92c3eabca170a9543622c76a6f3a4b8c6eb47e5671ee4b7843",
+    "storybook": "7bd0d4ec4839602c067cf0a29bfd5f88425229c73903aaf38c1be69313a17866",
+    "voice_manifest": "006b096849bedafedd36a7375119491d42e21cee223800a198c6aa07525d303a",
+    "casting": "cb91065c437c743d50eea2958d5149a6d0a35b9d20430a66cb8a548b921246db",
+    "existing_additions": "ff3c2b668194619aaf3bcad13f550ba9d6cd2f860ebc2c3d83b1c414964470eb"
+  },
+  "ordered_audio_ids": [
+    "c1_flat.saturday.find"
+  ],
+  "items": {
+    "c1_flat.saturday.find": {
+      "audio_id": "c1_flat.saturday.find",
+      "kind": "campaign",
+      "scene": "c1_flat",
+      "speaker": "steve",
+      "cast_role": "steve",
+      "voice_id": "vveagfomyMCJLZsOPRP2",
+      "text": "Saturday. Red tape. First the station, then Nora in the doorway. You can hear me answer her.",
+      "text_sha256": "7b87e4e897206d74f32549fad00e38528ae42a803ed79f016c4f3e6aa6dc48c2",
+      "synthesis_text": "Saturday. Red tape. First the station, then Nora in the doorway. You can hear me answer her.",
+      "synthesis_text_sha256": "7b87e4e897206d74f32549fad00e38528ae42a803ed79f016c4f3e6aa6dc48c2",
+      "delivery": "narration",
+      "direction": "",
+      "v4_audio_tag": "",
+      "previous_text": "Saturday, kitchen, quarter past seven. Dad always said to put the date on everything.",
+      "next_text": "The voice of the coast, now with zero humans!",
+      "voice_settings": {
+        "stability": 0.62,
+        "similarity_boost": 0.78
+      },
+      "language_code": "en",
+      "model_id": "eleven_v4",
+      "output_format": "mp3_44100_192",
+      "estimated_credit_rate": 1.0,
+      "estimated_credits": 92,
+      "attempt_seeds": [
+        1677675664,
+        1506550026,
+        2971653892
+      ]
+    }
+  },
+  "count": 1,
+  "characters": 92,
+  "request_characters": 92,
+  "estimated_credits": 92,
+  "plan_sha256": "069b2fbac41af9da5b55f3eb5c1e783b5988c99e06443f0a80c672972a4026d5"
+}

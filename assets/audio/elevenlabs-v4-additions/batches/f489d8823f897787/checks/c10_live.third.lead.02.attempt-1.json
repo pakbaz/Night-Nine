@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c10_live.third.lead.02",
+  "attempt": 1,
+  "plan_sha256": "f489d8823f897787d07f726f8abb9e9251693c77164bbe22de94563be899f495",
+  "wav_sha256": "03d2322b67c4fec7e784e92c4a42f4da2058a57632be87fba1a9d7fc5261e323",
+  "expected": "I’ll run the reel. Leave the tail on that last gust.",
+  "recognized": "I'll run the reel. Leave the tail on that last gust.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 3.76,
+  "sample_rate": 48000,
+  "peak": 0.41748046875,
+  "rms": 0.04182796236327019,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

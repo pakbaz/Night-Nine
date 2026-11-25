@@ -10,7 +10,7 @@ A painted point-and-click mystery set in Bellwether. Steve Mercer hears the same
 
 Play in a desktop browser with WebGL 2. There is no installer. To edit or test the source, open `game/project.godot` in Godot 4.7.2, wait for import, then press F5.
 
-Select **New game**. Click an object to investigate, or use **Objects** for a keyboard-accessible list. In rooms with a walkable floor, click a spot or use WASD to move. Open the notebook to review evidence, case theories and the transcript. After initial setup, you can play the full story offline.
+Select **New game**. Click an object to investigate or a person to talk. Press **I** for the keyboard-accessible list of objects and people. In rooms with a walkable floor, click a spot or use WASD to move. Open the notebook to review evidence, case theories and the transcript. After initial setup, you can play the full story offline.
 
 At a case board, read the case notes, choose an evidence piece, then choose its destination. You can also drag pieces or use Tab and Enter. Swap two pieces by choosing their occupied positions in turn. Your placements and confirmed stages are saved as you work. Use **Hint** for another clue.
 

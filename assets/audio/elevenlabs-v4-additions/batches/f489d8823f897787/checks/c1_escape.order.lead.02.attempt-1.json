@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c1_escape.order.lead.02",
+  "attempt": 1,
+  "plan_sha256": "f489d8823f897787d07f726f8abb9e9251693c77164bbe22de94563be899f495",
+  "wav_sha256": "6d945eba4f1f509b254973cc78d7e567f86d9b89a63fcd38d81f674ed4b5f84d",
+  "expected": "N. Reyes, Nora’s staff number, 20:30. She always said that north-wing clock runs fifteen minutes fast.",
+  "recognized": "N. Reyes, Nora's staff number, 2030. She always said that north wing clock runs 15 minutes fast.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 8.64,
+  "sample_rate": 48000,
+  "peak": 0.403045654296875,
+  "rms": 0.03728483024307116,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

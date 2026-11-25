@@ -1,0 +1,207 @@
+{
+  "audio_id": "c10_live.second.lead.04",
+  "audio_sha256": "78324819e24e6daf58596773dcca92626305503ddfa29867270ccdc429a52f95",
+  "file": "assets/audio/elevenlabs-v4-additions/masters/c10_live.second.lead.04.attempt-2.wav",
+  "production_plan_sha256": "f489d8823f897787d07f726f8abb9e9251693c77164bbe22de94563be899f495",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Cue two. Bring me the real coast return. Then I’ll give Wen the grid.",
+  "recognized": "Q2, bring me the real coast return, then I'll give Wen the grid.",
+  "word_edits": 1,
+  "request_id": null,
+  "trace_id": "4084a7e213383e5a19a935ec64c332cc",
+  "character_cost": "1",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Q2, bring me the real coast return, then I'll give Wen the grid.",
+    "words": [
+      {
+        "text": "Q2,",
+        "start": 0.06,
+        "end": 0.68,
+        "type": "word",
+        "logprob": -0.08358875098444211
+      },
+      {
+        "text": " ",
+        "start": 0.68,
+        "end": 1.06,
+        "type": "spacing",
+        "logprob": -8.785339014139026e-05
+      },
+      {
+        "text": "bring",
+        "start": 1.06,
+        "end": 1.24,
+        "type": "word",
+        "logprob": -8.785339014139026e-05
+      },
+      {
+        "text": " ",
+        "start": 1.24,
+        "end": 1.28,
+        "type": "spacing",
+        "logprob": -7.152555099310121e-07
+      },
+      {
+        "text": "me",
+        "start": 1.28,
+        "end": 1.38,
+        "type": "word",
+        "logprob": -7.152555099310121e-07
+      },
+      {
+        "text": " ",
+        "start": 1.38,
+        "end": 1.44,
+        "type": "spacing",
+        "logprob": -4.768370445162873e-07
+      },
+      {
+        "text": "the",
+        "start": 1.44,
+        "end": 1.56,
+        "type": "word",
+        "logprob": -4.768370445162873e-07
+      },
+      {
+        "text": " ",
+        "start": 1.56,
+        "end": 1.64,
+        "type": "spacing",
+        "logprob": -0.00021240839851088822
+      },
+      {
+        "text": "real",
+        "start": 1.64,
+        "end": 1.86,
+        "type": "word",
+        "logprob": -0.00021240839851088822
+      },
+      {
+        "text": " ",
+        "start": 1.86,
+        "end": 1.98,
+        "type": "spacing",
+        "logprob": -0.0713854432106018
+      },
+      {
+        "text": "coast",
+        "start": 1.98,
+        "end": 2.26,
+        "type": "word",
+        "logprob": -0.0713854432106018
+      },
+      {
+        "text": " ",
+        "start": 2.26,
+        "end": 2.32,
+        "type": "spacing",
+        "logprob": -0.0005719218170270324
+      },
+      {
+        "text": "return,",
+        "start": 2.32,
+        "end": 2.8,
+        "type": "word",
+        "logprob": -0.05027952820195684
+      },
+      {
+        "text": " ",
+        "start": 2.8,
+        "end": 3.14,
+        "type": "spacing",
+        "logprob": -8.702239938429557e-06
+      },
+      {
+        "text": "then",
+        "start": 3.14,
+        "end": 3.26,
+        "type": "word",
+        "logprob": -8.702239938429557e-06
+      },
+      {
+        "text": " ",
+        "start": 3.26,
+        "end": 3.28,
+        "type": "spacing",
+        "logprob": -3.2186455882765586e-06
+      },
+      {
+        "text": "I'll",
+        "start": 3.28,
+        "end": 3.38,
+        "type": "word",
+        "logprob": -7.927359376935783e-06
+      },
+      {
+        "text": " ",
+        "start": 3.38,
+        "end": 3.44,
+        "type": "spacing",
+        "logprob": -4.768360213347478e-06
+      },
+      {
+        "text": "give",
+        "start": 3.44,
+        "end": 3.62,
+        "type": "word",
+        "logprob": -4.768360213347478e-06
+      },
+      {
+        "text": " ",
+        "start": 3.62,
+        "end": 3.68,
+        "type": "spacing",
+        "logprob": -0.689059317111969
+      },
+      {
+        "text": "Wen",
+        "start": 3.68,
+        "end": 3.86,
+        "type": "word",
+        "logprob": -0.689059317111969
+      },
+      {
+        "text": " ",
+        "start": 3.86,
+        "end": 3.9,
+        "type": "spacing",
+        "logprob": -1.0251946150674485e-05
+      },
+      {
+        "text": "the",
+        "start": 3.9,
+        "end": 3.98,
+        "type": "word",
+        "logprob": -1.0251946150674485e-05
+      },
+      {
+        "text": " ",
+        "start": 3.98,
+        "end": 4.019,
+        "type": "spacing",
+        "logprob": -0.00017438798386137933
+      },
+      {
+        "text": "grid.",
+        "start": 4.019,
+        "end": 4.36,
+        "type": "word",
+        "logprob": -0.00014210913268470905
+      }
+    ],
+    "transcription_id": "F6j4flEiHXAUmi6d91TM",
+    "audio_duration_secs": 4.56
+  },
+  "listening_reviewed": false
+}

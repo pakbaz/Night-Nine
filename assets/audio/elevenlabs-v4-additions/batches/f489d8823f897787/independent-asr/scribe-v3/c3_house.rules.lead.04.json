@@ -1,0 +1,417 @@
+{
+  "audio_id": "c3_house.rules.lead.04",
+  "audio_sha256": "733b57396cc928f5fc4b33dde25e94b9c5ff8674f7b52166649914da3aa9de42",
+  "file": "assets/audio/elevenlabs-v4-additions/masters/c3_house.rules.lead.04.attempt-1.wav",
+  "production_plan_sha256": "f489d8823f897787d07f726f8abb9e9251693c77164bbe22de94563be899f495",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Walt moved to Washington in April. The clerk’s bound ledger puts him at her counter on May third while a sworn hearing transcript has him testifying in Washington.",
+  "recognized": "Walt moved to Washington in April. The clerk's bound ledger puts him at her counter on May 3rd, while a sworn hearing transcript has him testifying in Washington.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "85009fc5b7a4354d0e8cf97f568a57ff",
+  "character_cost": "3",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Walt moved to Washington in April. The clerk's bound ledger puts him at her counter on May 3rd, while a sworn hearing transcript has him testifying in Washington.",
+    "words": [
+      {
+        "text": "Walt",
+        "start": 0.12,
+        "end": 0.34,
+        "type": "word",
+        "logprob": -0.000896052282769233
+      },
+      {
+        "text": " ",
+        "start": 0.34,
+        "end": 0.42,
+        "type": "spacing",
+        "logprob": -3.182837463100441e-05
+      },
+      {
+        "text": "moved",
+        "start": 0.42,
+        "end": 0.62,
+        "type": "word",
+        "logprob": -3.182837463100441e-05
+      },
+      {
+        "text": " ",
+        "start": 0.62,
+        "end": 0.66,
+        "type": "spacing",
+        "logprob": 0.0
+      },
+      {
+        "text": "to",
+        "start": 0.66,
+        "end": 0.76,
+        "type": "word",
+        "logprob": 0.0
+      },
+      {
+        "text": " ",
+        "start": 0.76,
+        "end": 0.82,
+        "type": "spacing",
+        "logprob": -1.645074735279195e-05
+      },
+      {
+        "text": "Washington",
+        "start": 0.82,
+        "end": 1.42,
+        "type": "word",
+        "logprob": -1.645074735279195e-05
+      },
+      {
+        "text": " ",
+        "start": 1.42,
+        "end": 1.48,
+        "type": "spacing",
+        "logprob": -9.536738616588991e-07
+      },
+      {
+        "text": "in",
+        "start": 1.48,
+        "end": 1.6,
+        "type": "word",
+        "logprob": -9.536738616588991e-07
+      },
+      {
+        "text": " ",
+        "start": 1.6,
+        "end": 1.68,
+        "type": "spacing",
+        "logprob": -3.158996332786046e-05
+      },
+      {
+        "text": "April.",
+        "start": 1.68,
+        "end": 2.06,
+        "type": "word",
+        "logprob": -2.8272043133862706e-05
+      },
+      {
+        "text": " ",
+        "start": 2.06,
+        "end": 2.06,
+        "type": "spacing",
+        "logprob": -1.9073468138230965e-06
+      },
+      {
+        "text": "The",
+        "start": 2.66,
+        "end": 2.74,
+        "type": "word",
+        "logprob": -1.9073468138230965e-06
+      },
+      {
+        "text": " ",
+        "start": 2.74,
+        "end": 2.78,
+        "type": "spacing",
+        "logprob": -0.000851387856528163
+      },
+      {
+        "text": "clerk's",
+        "start": 2.78,
+        "end": 3.12,
+        "type": "word",
+        "logprob": -0.000613583654463972
+      },
+      {
+        "text": " ",
+        "start": 3.12,
+        "end": 3.2,
+        "type": "spacing",
+        "logprob": -0.0008390005677938461
+      },
+      {
+        "text": "bound",
+        "start": 3.2,
+        "end": 3.48,
+        "type": "word",
+        "logprob": -0.0008390005677938461
+      },
+      {
+        "text": " ",
+        "start": 3.48,
+        "end": 3.56,
+        "type": "spacing",
+        "logprob": -0.0002475670480635017
+      },
+      {
+        "text": "ledger",
+        "start": 3.56,
+        "end": 3.86,
+        "type": "word",
+        "logprob": -0.0002475670480635017
+      },
+      {
+        "text": " ",
+        "start": 3.86,
+        "end": 4.0,
+        "type": "spacing",
+        "logprob": -4.827859811484814e-05
+      },
+      {
+        "text": "puts",
+        "start": 4.0,
+        "end": 4.2,
+        "type": "word",
+        "logprob": -4.827859811484814e-05
+      },
+      {
+        "text": " ",
+        "start": 4.2,
+        "end": 4.22,
+        "type": "spacing",
+        "logprob": -4.768360213347478e-06
+      },
+      {
+        "text": "him",
+        "start": 4.22,
+        "end": 4.34,
+        "type": "word",
+        "logprob": -4.768360213347478e-06
+      },
+      {
+        "text": " ",
+        "start": 4.34,
+        "end": 4.38,
+        "type": "spacing",
+        "logprob": 0.0
+      },
+      {
+        "text": "at",
+        "start": 4.38,
+        "end": 4.46,
+        "type": "word",
+        "logprob": 0.0
+      },
+      {
+        "text": " ",
+        "start": 4.46,
+        "end": 4.48,
+        "type": "spacing",
+        "logprob": -1.5497195136049413e-06
+      },
+      {
+        "text": "her",
+        "start": 4.48,
+        "end": 4.6,
+        "type": "word",
+        "logprob": -1.5497195136049413e-06
+      },
+      {
+        "text": " ",
+        "start": 4.6,
+        "end": 4.68,
+        "type": "spacing",
+        "logprob": -6.496695277746767e-05
+      },
+      {
+        "text": "counter",
+        "start": 4.68,
+        "end": 5.06,
+        "type": "word",
+        "logprob": -6.496695277746767e-05
+      },
+      {
+        "text": " ",
+        "start": 5.06,
+        "end": 5.14,
+        "type": "spacing",
+        "logprob": -1.6689286894688848e-06
+      },
+      {
+        "text": "on",
+        "start": 5.14,
+        "end": 5.26,
+        "type": "word",
+        "logprob": -1.6689286894688848e-06
+      },
+      {
+        "text": " ",
+        "start": 5.26,
+        "end": 5.3,
+        "type": "spacing",
+        "logprob": -3.2066785934148356e-05
+      },
+      {
+        "text": "May",
+        "start": 5.3,
+        "end": 5.46,
+        "type": "word",
+        "logprob": -3.2066785934148356e-05
+      },
+      {
+        "text": " ",
+        "start": 5.46,
+        "end": 5.62,
+        "type": "spacing",
+        "logprob": -0.000285584683297202
+      },
+      {
+        "text": "3rd,",
+        "start": 5.62,
+        "end": 5.94,
+        "type": "word",
+        "logprob": -0.0007277295235326164
+      },
+      {
+        "text": " ",
+        "start": 5.94,
+        "end": 6.22,
+        "type": "spacing",
+        "logprob": -9.059865078597795e-06
+      },
+      {
+        "text": "while",
+        "start": 6.22,
+        "end": 6.34,
+        "type": "word",
+        "logprob": -9.059865078597795e-06
+      },
+      {
+        "text": " ",
+        "start": 6.34,
+        "end": 6.4,
+        "type": "spacing",
+        "logprob": -3.576278118089249e-07
+      },
+      {
+        "text": "a",
+        "start": 6.4,
+        "end": 6.48,
+        "type": "word",
+        "logprob": -3.576278118089249e-07
+      },
+      {
+        "text": " ",
+        "start": 6.48,
+        "end": 6.58,
+        "type": "spacing",
+        "logprob": -7.450303382938728e-05
+      },
+      {
+        "text": "sworn",
+        "start": 6.58,
+        "end": 6.9,
+        "type": "word",
+        "logprob": -7.450303382938728e-05
+      },
+      {
+        "text": " ",
+        "start": 6.9,
+        "end": 6.96,
+        "type": "spacing",
+        "logprob": -4.124556289752945e-05
+      },
+      {
+        "text": "hearing",
+        "start": 6.96,
+        "end": 7.26,
+        "type": "word",
+        "logprob": -4.124556289752945e-05
+      },
+      {
+        "text": " ",
+        "start": 7.26,
+        "end": 7.32,
+        "type": "spacing",
+        "logprob": -4.6967357775429264e-05
+      },
+      {
+        "text": "transcript",
+        "start": 7.32,
+        "end": 7.86,
+        "type": "word",
+        "logprob": -4.6967357775429264e-05
+      },
+      {
+        "text": " ",
+        "start": 7.86,
+        "end": 7.92,
+        "type": "spacing",
+        "logprob": -8.583032467868179e-06
+      },
+      {
+        "text": "has",
+        "start": 7.92,
+        "end": 8.06,
+        "type": "word",
+        "logprob": -8.583032467868179e-06
+      },
+      {
+        "text": " ",
+        "start": 8.06,
+        "end": 8.1,
+        "type": "spacing",
+        "logprob": -2.0265558760002023e-06
+      },
+      {
+        "text": "him",
+        "start": 8.1,
+        "end": 8.22,
+        "type": "word",
+        "logprob": -2.0265558760002023e-06
+      },
+      {
+        "text": " ",
+        "start": 8.22,
+        "end": 8.3,
+        "type": "spacing",
+        "logprob": -4.8636207793606445e-05
+      },
+      {
+        "text": "testifying",
+        "start": 8.3,
+        "end": 8.9,
+        "type": "word",
+        "logprob": -4.8636207793606445e-05
+      },
+      {
+        "text": " ",
+        "start": 8.9,
+        "end": 8.94,
+        "type": "spacing",
+        "logprob": -3.576278118089249e-07
+      },
+      {
+        "text": "in",
+        "start": 8.94,
+        "end": 9.04,
+        "type": "word",
+        "logprob": -3.576278118089249e-07
+      },
+      {
+        "text": " ",
+        "start": 9.04,
+        "end": 9.1,
+        "type": "spacing",
+        "logprob": -2.253030106658116e-05
+      },
+      {
+        "text": "Washington.",
+        "start": 9.1,
+        "end": 9.68,
+        "type": "word",
+        "logprob": -3.680146288719367e-05
+      }
+    ],
+    "transcription_id": "3cQWCygxQIYYmgpGZL2A",
+    "audio_duration_secs": 10.16
+  },
+  "listening_reviewed": false
+}

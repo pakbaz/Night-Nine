@@ -10,7 +10,8 @@
         "autorick"
       ],
       "actors": [
-        "steve"
+        "steve",
+        "stephen"
       ],
       "card": {
         "chapter": {
@@ -35,7 +36,7 @@
         "New sound assets for hold: effect.halcyon_hold_seattle and effect.halcyon_hold_denver. Different clerks, different ring counts, the same eight bars of hold music ending on the same note.",
         "The text message line uses display_text to show the message as typed.",
         "Iris is shown as “Nora’s copy” until out.03, where she names herself. From c6_jail on she is “Iris”.",
-        "Only Steve plays this scene. Stephen helps plan the alibi, then leaves for Gus’s bread window, so Steve meets Iris alone on the pier. Iris is not on the pier until the alibi is done.",
+        "Switch to Stephen to arrange his sighting at Gus’s bread window. When he leaves for the market, control returns to Steve. Iris is not on the pier until the alibi is done.",
         "The outro is Iris’s account of Sunday night: the crew retook her from the otter house for a reset, left her on a laundry cart in the Gallery, and she set a slow, reversible wake on Nora’s, Lyle Boone’s and Dale’s beds before riding out with the wash. This is how Nora wakes in Interlude 2.",
         "Iris then clears Steve of Nora’s abduction in front of the market. The search for Nora ends, but Steve is still wanted for fleeing federal custody."
       ],
@@ -67,7 +68,7 @@
         "alibi": {
           "difficulty": 2,
           "title": "Market corner",
-          "actor": "steve",
+          "actor": "stephen",
           "requires": [],
           "goal": "Give the town a sighting of Steve’s face across town at exactly 8:10.",
           "background": "At 8:10 Steve meets the texter on the pier. If someone in town sees Steve’s face somewhere else at that same minute, the search goes there instead. Stephen has three errands, and each one runs on a different clock.",
@@ -129,6 +130,7 @@
           "finding": "steve|At 8:10 by the radio, Stephen stood beside his own wanted poster at Gus’s bread window while Gus fixed the smudge. Half the town ran to the bakery, and nobody was watching the pier."
         },
         "takes": {
+          "type": "tape",
           "difficulty": 2,
           "title": "Iris’s recorder test",
           "requires": [
@@ -142,7 +144,7 @@
               "text": "I sent the message about Rook. No capitals, the way Nora texts. Please listen before you decide what I am."
             },
             "steve|You let me go on the balcony. And on the thirtieth you stopped at the waterline and walked home. I saw you.",
-            "iris|The first time I missed going below, it was an accident. I was chasing you. The second time, I chose.",
+            "iris|The first re-sync window passed while I was chasing you. I still escorted you below later, but the window had closed. The second time, I chose not to go.",
             "steve|Then say something for me. Twice. “I stayed because I wanted to.”",
             {
               "id": "c6_iris.takes.01",
@@ -154,6 +156,24 @@
             }
           ],
           "prompt": "Steve gives her the recorder and asks for the same words twice. What can he put in his notebook?",
+          "instruction": "Line up “I stayed” at the start, then compare the silence inside each reading.",
+          "workbench_title": "DAD’S RECORDER  /  IRIS’S TWO TAKES",
+          "label_a": "First reading",
+          "label_b": "Second reading",
+          "expected_offset": 0.0,
+          "alignment_required": false,
+          "rows": [
+            {
+              "label": "The pause after “stayed”",
+              "options": ["Falls in the same place", "Moves in the second reading", "Only the start time changes"],
+              "feedback": [
+                "The second waveform holds silence where the first keeps moving.",
+                "The pause moves inside the sentence; that cannot come from shifting one take.",
+                "Moving a whole take would move every sound equally, not change one internal gap."
+              ],
+              "answer": 1
+            }
+          ],
           "options": [
             "She played the first take again",
             "She chose how to say it each time",
@@ -223,8 +243,8 @@
         }
       },
       "recap": [
-        "steve|Nora’s copy sent the warning about Rook. She stopped going into the water, and she doesn’t replay any more. She chooses.",
-        "steve|Copies far from the bay stay in step on hold. Saren wants Mom’s notebook, and on Wednesday he wants the President.",
+        "steve|I came to the pier expecting a trap. Instead she gave me a test I could repeat and a warning I could check.",
+        "steve|June first. Then the President.",
         "steve|And she told me about June. They scanned her at the safe house. Her copy has run the Sheriff’s office since Friday, and the real June is locked in her own cell until the ninth night.",
         "steve|She also told me who could get us inside: the mail carrier. The spare key to June’s cell went back through the post. “He isn’t Dale,” she said. “But he loves June’s dog.”"
       ],
@@ -363,7 +383,7 @@
       ],
       "tasks": {
         "mail": {
-          "type": "rows",
+          "type": "board",
           "difficulty": 1,
           "title": "Pell’s sorting case",
           "requires": [],
@@ -377,32 +397,29 @@
             "pell|Each slot holds two entries. Slot one holds entries one and two, and so on.",
             "pell|County rule. When a cell is used, the spare key goes back to the clerk by registered post. The Sheriff wrote that rule. Her copy follows it exactly."
           ],
-          "prompt": "Which drawer, and which slot?",
-          "instruction": "Find the drawer for where the key is going, then the slot that holds entry 18. Each slot holds two entries: slot 1 holds 1 and 2, slot 2 holds 3 and 4, and so on.",
-          "rows": [
-            {
-              "label": "Drawer",
-              "options": [
-                "Counter",
-                "Returns",
-                "Jail"
-              ],
-              "answer": 2
-            },
-            {
-              "label": "Slot",
-              "options": [
-                "10",
-                "9",
-                "18"
-              ],
-              "answer": 1
-            }
-          ],
+          "prompt": "Route the returned key through Pell’s case, then use the same delivery to reach June privately.",
+          "board": {
+            "instruction": "Follow the labels on the carbon and register strip. Finish with the handoff only the woman in cell two can receive.",
+            "evidence": [
+              "Return carbon: ‘Destination JAIL · spare cell key · register 18.’ Pell files by destination, not by parcel status.",
+              "Register strip: slot 8 holds entries 15–16; slot 9 holds 17–18; slot 10 holds 19–20.",
+              "June’s own crossword is in the jail pile. A marked square posted through cell two reaches the prisoner without going over the radio."
+            ],
+            "stages": [
+              {
+                "mode": "route",
+                "prompt": "Trace the key and the private question.",
+                "slots": ["Destination drawer", "Register pocket", "Private handoff"],
+                "pieces": ["Jail", "Returns", "Slot 9", "Slot 10", "Marked crossword through cell two"],
+                "answer": [0, 2, 4]
+              }
+            ],
+            "wrong_text": "Pell checks the carbon. “Destination first. Then the printed register strip. Then the prisoner’s own post.”"
+          },
           "hints": [
             "Pell files by where a thing is going, not by what happened to it.",
-            "The returned key is entry 18. Two entries share each slot.",
-            "Slot 1 holds 1 and 2, slot 2 holds 3 and 4. Keep counting in pairs until you reach 18."
+            "The register strip prints entry 18 beside slot 9; there is nothing to calculate.",
+            "Jail drawer, slot 9, then post June’s marked crossword through cell two."
           ],
           "lines": [
             "c6_jail.mail.01",
@@ -438,11 +455,12 @@
             },
             "steve|I’ll ask them both which letter I circled today. Only one of them has seen it."
           ],
-          "prompt": "The June in cell two answers on a slip of paper. The June on the radio answers out loud. What should Steve ask, and whose answer should he accept?",
-          "instruction": "Ask about the square Steve circled, then accept the June who gives the right letter. 23 Across, ‘beyond imitation’, is INIMITABLE, shown as I _ I _ I _ A _ L _. Its first, second and last blanks cross 3 Down, 8 Down and 12 Down.",
+          "prompt": "The June in cell two answers on a slip of paper. The June on the radio answers out loud. What should Steve ask about the square he personally circled, and whose answer should he accept?",
+          "instruction": "Ask both Junes only: “Which letter did I circle?” Keep the crossing to yourself. Use Steve’s notebook to check their answers. 23 Across, ‘beyond imitation’, is INIMITABLE, shown as I _ I _ I _ A _ L _. Its first, second and last blanks cross 3 Down, 8 Down and 12 Down.",
           "rows": [
             {
-              "label": "Ask about the square at",
+              "label": "Privately check the crossing Steve circled",
+              "feedback": "I wrote the crossing in my notebook when I slipped the paper into the cell. Don't read those numbers over the radio.",
               "options": [
                 "17 Across and 8 Down",
                 "23 Across and 3 Down",
@@ -452,6 +470,7 @@
             },
             {
               "label": "Accept the June who says",
+              "feedback": "Write INIMITABLE across the pattern. Count the blanks, not the printed letters, to find the marked crossing.",
               "options": [
                 "M",
                 "T",
@@ -552,6 +571,7 @@
       ],
       "context": [
         "nora|I woke up in amber light, in a bed I didn’t choose, in a hall that went on forever.",
+        "nora|The bed panel said Monday, November fifth. That was how I learned five months had passed.",
         "nora|I was frightened for about a minute. Then I did what I do at any party where nobody knows each other. I started learning names."
       ],
       "intro": [
@@ -590,6 +610,7 @@
           "rows": [
             {
               "label": "Step out at count",
+              "feedback": "I heard boots at 2 and again at 14. Where does the far door shut on that second lap?",
               "options": [
                 "17",
                 "20",
@@ -599,6 +620,7 @@
             },
             {
               "label": "Reach cover at count",
+              "feedback": "I need four counts in the aisle after the door shuts, and I need to be clear before the boots return.",
               "options": [
                 "21",
                 "24",
@@ -692,6 +714,7 @@
           "rows": [
             {
               "label": "Branch",
+              "feedback": "I can't trade the sleepers' flow for a lower return. Check both readings on the same branch.",
               "options": [
                 "Amber",
                 "White",
@@ -701,6 +724,7 @@
             },
             {
               "label": "Dial to trust",
+              "feedback": "The upper dial is on an empty line. Check the pressure coming back from the beds.",
               "options": [
                 "Upper",
                 "Lower RETURN"
@@ -753,7 +777,7 @@
       },
       "recap": [
         "nora|I know every name in my row now. I have a route, a crew and a pump that behaves.",
-        "nora|The hardest part is the waiting. I have never waited quietly for anything. Between patrols I lie still and think about a man who went quiet for eighteen months."
+        "nora|I counted thirteen months of silence before they took me. Five more went by while I slept. I still want to hear what he has to say."
       ],
       "outro": [
         "i2_nora.out.01",

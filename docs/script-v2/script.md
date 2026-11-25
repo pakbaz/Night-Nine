@@ -91,6 +91,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 3. The phone should sit as close as it can to the sound Helen wants Steve to hear, not to Helen.
 
 **On success:**
+- **Helen Mercer**: Come out with us, kiddo. The bay is singing tonight. **MOV** `p_bay.out.01`
 - **Helen Mercer**: He should hear this for himself. There. Now he’ll tell us we recorded it wrong. **REV** `p_bay.message.01`
 
 **Finding:**
@@ -100,7 +101,6 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - *Frank Mercer: Eleven-forty. The note is climbing. Helen says it has a shape, like speech. We’re going to follow it out.* **NEW** `p_bay.recap.01`
 
 ### Departure
-- **Helen Mercer**: Come out with us, kiddo. The bay is singing tonight. `p_bay.out.01`
 - **Frank Mercer**: Helen. It’s tuning to us. `p_bay.out.02`
 
 **Next:** Black. The storybook “Eighteen months” plays, then Chapter 1.
@@ -110,7 +110,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - *Steve: In the morning, their boat drifted back to shore. Empty.* `book.aftermath.1.1`
 - *Steve: Dad’s radio was still on.* `book.aftermath.1.2`
 - *Steve: Nobody found them. That was eighteen months ago.* **REV** `book.aftermath.2.1`
-- *Steve: Mom called me from the boat that night. I kept her voicemail on a cassette. Most nights I play it at three in the morning. I don’t know what I’m listening for.* **REV** `book.aftermath.2.2`
+- *Steve: Mom called me from the boat that night. I dubbed her phone voicemail onto a cassette. Most nights I play it at three in the morning. I don’t know what I’m listening for.* **REV** `book.aftermath.2.2`
 - *Steve: A year ago a company called Halcyon Media bought KBWR.* **REV** `book.aftermath.3.1`
 - *Steve: Three weeks ago they replaced me with a machine called DJ AutoRick. It reads yesterday’s weather.* **REV** `book.aftermath.3.2`
 - *Steve: And then there’s Nora. Nora Reyes runs the animals at the aquarium and argues with everybody, me included.* **REV** `book.aftermath.4.1`
@@ -120,13 +120,13 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 ## Chapter 1: Good Morning, Sleepyhead (`c1_flat`)
 
-**Where:** Steve and Nora’s apartment · **When:** Saturday the 20th, three in the morning, then Sunday morning · **Present:** Steve Mercer, Nora Reyes
+**Where:** Steve and Nora’s apartment · **When:** Saturday the 20th at 7:15, then Sunday morning · **Present:** Steve Mercer, Nora Reyes
 
-**Chapter card:** Chapter 1, *Good Morning, Sleepyhead* · Saturday the 20th, three in the morning · Steve wants to save his mother’s last voicemail before the tape wears out.
+**Chapter card:** Chapter 1, *Good Morning, Sleepyhead* · Saturday the 20th, a quarter past seven · Dad’s recorder is running beside the kitchen radio. Nora has put the coffee on.
 
-**Objective:** Test Dad’s old recorder before you move Mom’s voicemail to a fresh tape.
+**Objective:** Time Dad’s recorder with the two morning tapes.
 
-**Coach tip:** Click the red cassette to begin. Click Nora if you want to chat. Press J to open Steve’s notebook.
+**Coach tip:** Start with the red cassette. Click Nora to chat, or the silver recorder to listen to Mom.
 
 **Revision notes:** C05, C09, U-stumble, U-relationships, U-narration
 
@@ -135,21 +135,20 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 > Implementation: Red cassette = Saturday, blue cassette = Sunday, silver recorder = the tape test, headphones and reels = the comparison. These match the painting.
 
 ### Opening
-- **Helen Mercer** (recorded_playback) [Mom’s voicemail, on Dad’s recorder]: Come out with us, kiddo. The bay is singing tonight. `c1_flat.in.01`
-- **Steve Mercer**: Three in the morning. Again. Well, Mom, it’s a fine night for it. `c1_flat.in.02`
-- **Steve Mercer**: Your tape’s wearing thin, Mom. I’ll move you to a fresh one. Just as soon as Dad’s recorder runs true. **NEW** `c1_flat.in.05`
-- *Steve Mercer: Dad’s recorder runs slow. Old belts. Everyone on it sounds a little sleepy.* **NEW** `c1_flat.in.06`
-- *Steve Mercer: There’s an easy test. KBWR still plays my old station ident at a quarter past seven every morning. I made that ident. It runs exactly twelve seconds.* **NEW** `c1_flat.in.07`
-- *Steve Mercer: Record it two mornings running. If it lasts twelve seconds both times, the machine runs true.* **NEW** `c1_flat.in.08`
+- **Nora Reyes**: Good morning, sleepyhead. `c1_flat.in.04`
+- **Steve Mercer**: Morning, Nor. **NEW** `c1_flat.saturday.02`
+- **Nora Reyes**: Coffee’s on the stove. I made it strong, the way you like it. **NEW** `c1_flat.saturday.03`
+- **Steve Mercer**: You hate it strong. **NEW** `c1_flat.saturday.04`
+- **Nora Reyes**: Strong is fine. Whatever you like. **NEW** `c1_flat.saturday.05`
 
 ### Small talk
-**Breakfast** · Nora Reyes · after `c1_flat.saturday`
+**Breakfast** · Nora Reyes
 - **Steve Mercer**: Want some toast before you go? **NEW** `c1_flat.talk.iris.1.01`
 - **Nora Reyes**: I ate already. There’s fruit in the blue bowl. **NEW** `c1_flat.talk.iris.1.02`
 - **Steve Mercer**: Since when do you eat breakfast? **NEW** `c1_flat.talk.iris.1.03`
 - **Nora Reyes**: For a while now. It’s good for you. **NEW** `c1_flat.talk.iris.1.04`
 
-**The otters** · Nora Reyes · after `c1_flat.saturday`
+**The otters** · Nora Reyes
 - **Steve Mercer**: How are the otter pups? **NEW** `c1_flat.talk.iris.2.01`
 - **Nora Reyes**: Growing. One of them bit a volunteer again. Only a little. **NEW** `c1_flat.talk.iris.2.02`
 - **Steve Mercer**: You used to say that was her best quality. **NEW** `c1_flat.talk.iris.2.03`
@@ -169,11 +168,16 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 ### Lead 1: The red cassette (`c1_flat.saturday`) · choice · difficulty 1
 
-**Goal:** Catch something on tape that never changes.
+**When the lead opens:**
+- *Steve Mercer: I kept the spare cassettes in my sock drawer. The little velvet box was still there. I took two tapes and shut the drawer.* **NEW** `c1_flat.in.09`
+- *Steve Mercer: There’s an easy test. KBWR still plays my old station ident at a quarter past seven every morning. I made that ident. It runs exactly twelve seconds.* **NEW** `c1_flat.in.07`
+- *Steve Mercer: Record it two mornings running. If it lasts twelve seconds both times, the machine runs true.* **NEW** `c1_flat.in.08`
 
-**What Steve knows:** To time Dad’s recorder, Steve needs a sound that is exactly the same every time it plays. The kitchen radio is tuned to KBWR, where AutoRick plays Steve’s twelve-second station ident at 7:15 every morning.
+**Goal:** Identify a timing reference on Saturday’s tape.
 
-**Prompt:** Saturday morning. What should the red cassette catch at a quarter past seven?
+**What Steve knows:** The red cassette caught the radio and the whole coffee conversation. Steve needs one sound on it that he can time again tomorrow.
+
+**Prompt:** Which sound on the red cassette can Steve use to check the recorder’s speed?
 
 - ✓ The KBWR station ident on the kitchen radio
 - Steve reading the same sentence aloud. *Wrong:* My voice changes every time I open my mouth. A reference can’t change.
@@ -185,16 +189,11 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 3. Only one of the three sounds comes off a station cart, exactly the same every morning.
 
 **On success:**
-- **DJ AutoRick** (radio) *(sound: effect.kbwr_ident, then AutoRick)*: Good morning, Bellwether! Yesterday will be sunny. **MOV** `c1_flat.in.03`
-- **Nora Reyes**: Good morning, sleepyhead. **MOV** `c1_flat.in.04`
-- **Steve Mercer**: Morning, Nor. **NEW** `c1_flat.saturday.02`
+- **DJ AutoRick** (recorded_playback) [Saturday’s radio, heard on the red cassette] *(sound: effect.kbwr_ident, then AutoRick)*: Good morning, Bellwether! Yesterday will be sunny. **MOV** `c1_flat.in.03`
 - **Steve Mercer**: Saturday, kitchen, quarter past seven. Dad always said to put the date on everything. `c1_flat.saturday.01`
-- **Nora Reyes**: Coffee’s on the stove. I made it strong, the way you like it. **NEW** `c1_flat.saturday.03`
-- **Steve Mercer**: You hate it strong. **NEW** `c1_flat.saturday.04`
-- **Nora Reyes**: Strong is fine. Whatever you like. **NEW** `c1_flat.saturday.05`
 
 **Finding:**
-- *Steve Mercer: Red cassette, Saturday, 7:15. My ident, AutoRick, Nora saying good morning on her way out, and me.* **NEW** `c1_flat.saturday.find`
+- *Steve Mercer: Saturday. Red tape. First the station, then Nora in the doorway. You can hear me answer her.* **NEW** `c1_flat.saturday.find`
 
 ### Lead 2: The blue cassette (`c1_flat.sunday`) · choice · difficulty 1
 *Unlocks after:* c1_flat.saturday
@@ -216,7 +215,6 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 **On success:**
 - **DJ AutoRick** (radio) *(sound: effect.kbwr_ident, then AutoRick)*: The voice of the coast, now with zero humans! **NEW** `c1_flat.sunday.03`
-- **Steve Mercer**: Morning, Nor. Blue tape, Sunday. Date on everything, Dad. **REV** `c1_flat.sunday.02`
 - **Nora Reyes**: I’m off to feed Admiral and the otters. Back by noon. **NEW** `c1_flat.sunday.04`
 - **Steve Mercer**: On a Sunday? You used to fight for every Sunday off. **NEW** `c1_flat.sunday.05`
 - **Nora Reyes**: The animals don’t know it’s Sunday, sleepyhead. **NEW** `c1_flat.sunday.06`
@@ -229,7 +227,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 **Goal:** Line the two cassettes up on the ident and time Dad’s recorder.
 
-**What Steve knows:** Steve puts the red cassette in one ear and the blue in the other. If the recorder runs true, the two idents will line up. The tapes also caught the rest of the kitchen: AutoRick on the radio, Nora on her way out, and Steve himself.
+**What Steve knows:** Steve puts the red cassette in one ear and the blue in the other. If the recorder runs true, the two idents will line up. Both tapes also caught AutoRick on the radio, Nora’s greeting and Steve’s reply.
 
 **Prompt:** Slide Sunday until the two idents line up. Then play both tapes and compare every voice on them.
 
@@ -254,6 +252,10 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 ### Lead 4: Dad’s recorder (`c1_flat.control`) · choice · difficulty 2
 *Unlocks after:* c1_flat.compare
+
+**Play Mom’s voicemail (optional):**
+- **Helen Mercer** (recorded_playback) [Mom’s voicemail, on Dad’s recorder]: Come out with us, kiddo. The bay is singing tonight. **MOV** `c1_flat.in.01`
+- **Steve Mercer**: Your tape’s wearing thin, Mom. I’ll move you to a fresh one. Just as soon as Dad’s recorder runs true. **NEW** `c1_flat.in.05`
 
 **When the lead opens:**
 - **Steve Mercer**: I need evidence. Being afraid of something doesn’t make it true. **MOV** `c1_flat.out.02`
@@ -389,8 +391,8 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 3. A fair test removes every excuse: the noise, and the water between them. Then Nora gets another try.
 
 **On success:**
-- **Steve Mercer** *(sound: effect.nora_whistle_flat)*: Nothing. He’s looking right at you. **NEW** `c1_pier.whistle.02`
-- **Steve Mercer** *(sound: effect.steve_whistle)*: ...He came for me. I can’t even whistle. **NEW** `c1_pier.whistle.03`
+- **Steve Mercer** *(sound: nora_whistle_flat)*: Nothing. He’s looking right at you. **NEW** `c1_pier.whistle.02`
+- **Steve Mercer** *(sound: steve_whistle)*: ...He came for me. I can’t even whistle. **NEW** `c1_pier.whistle.03`
 - **Nora Reyes**: He wants the rest of your sandwich. **NEW** `c1_pier.whistle.04`
 
 **Finding:**
@@ -495,6 +497,8 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 ### Opening
 - *Steve Mercer: La Marea. The Reyes family restaurant, and for four years my Sunday table.* **NEW** `c1_dinner.ctx.01`
 - *Steve Mercer: Luis still keeps Dad’s old chair at the bar. Nobody sits in it.* **NEW** `c1_dinner.ctx.02`
+- *Steve Mercer: A ring had been in my sock drawer for a year. I kept telling myself I would ask Nora after one of these dinners.* **NEW** `c1_dinner.ctx.03`
+- *Steve Mercer: Nora’s oldest dinner rule was that nobody touched her plate. That night Carmen moved it twice, and Nora only smiled.* **NEW** `c1_dinner.ctx.04`
 - **Carmen Reyes**: Your plate is warm, Steve. Sit. I’m her mother, so you can apologize to me while you eat. **REV** `c1_dinner.in.01`
 - **Rafa Reyes**: I kept the sauce separate. You used to like it that way. `c1_dinner.in.02`
 - **Carmen Reyes**: Nora, the mole. More chilies this time, or less? **NEW** `c1_dinner.in.03`
@@ -666,7 +670,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 > Implementation: Objective changes to the next step once c1_escape.order is solved.
 
-> Implementation: Art (recommended): an insert of the rain-soaked work order, Bellwether Aquarium letterhead, NORTH WING, signed N. Reyes, wall-clock time 20:30, dated on Carmen’s birthday.
+> Implementation: Art (recommended): an insert of the rain-soaked work order, Bellwether Aquarium letterhead, NORTH WING, signed N. Reyes beside her staff number, wall-clock time 20:30, dated on Carmen’s birthday.
 
 ### Opening
 - *Steve Mercer: Home. Nora took a phone call in the bedroom and closed the door. She never closes the door.* **NEW** `c1_escape.ctx.01`
@@ -676,30 +680,30 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 **When the lead opens:**
 - **Steve Mercer**: Something in the lining. Soaked. Aquarium letterhead... north wing? **NEW** `c1_escape.order.lead.01`
-- **Steve Mercer**: Signed at 20:30. Nora always said that north-wing clock runs fifteen minutes fast. **NEW** `c1_escape.order.lead.02`
+- **Steve Mercer**: N. Reyes, Nora’s staff number, 20:30. She always said that north-wing clock runs fifteen minutes fast. **NEW** `c1_escape.order.lead.02`
 - **Steve Mercer**: And the aquarium is across the bay. Eighteen minutes each way, even with every light green. **NEW** `c1_escape.order.lead.03`
 
-**Goal:** Work out whether Nora could have signed this work order.
+**Goal:** Work out whether Nora could have authorized this work order.
 
-**What Steve knows:** Something stiff fell out of the raincoat lining when Steve hung it on the balcony hook: an aquarium work order for the north wing, sealed for two years. Only the head aquarist signs for it, and that is Nora. It is signed in her name on Carmen’s birthday, at 20:30 by the aquarium wall clock.
+**What Steve knows:** Something stiff fell out of the raincoat lining when Steve hung it on the balcony hook: an aquarium work order for the north wing, sealed for two years. It is signed N. Reyes beside Nora’s head-aquarist staff number on Carmen’s birthday, at 20:30 by the aquarium wall clock. The staff number is the credential that authorizes the order.
 
-**Prompt:** Steve’s notes from dinner put Nora at La Marea that evening. Could she have slipped away to sign this?
+**Prompt:** Steve’s notes from dinner put Nora at La Marea that evening. Could she have used that credential herself?
 
 **Instruction:** First fix the time on the work order. Then check whether Nora had time for the trip.
 
 **Case notes:**
-1. The work order says 20:30 by the aquarium clock.
+1. The work order uses Nora’s staff number at 20:30 by the aquarium clock.
 2. The aquarium clock runs fifteen minutes fast.
 3. Carmen’s photos show Nora at La Marea at 20:04, 20:15 and 20:29. At 20:15 she is holding the kitchen check.
 4. Crossing the bay takes eighteen minutes each way.
 
-**Stage 1 (match):** When was the order really signed, and where was Nora then?
+**Stage 1 (match):** When was Nora’s credential really used, and where was Nora then?
 - Cards: 20:15, 20:30, 20:45, At La Marea, in Carmen’s photo, At the aquarium
-- Answer: Real time of the signature → 20:15; Where Nora was at that time → At La Marea, in Carmen’s photo
+- Answer: Real time of the authorization → 20:15; Where Nora was at that time → At La Marea, in Carmen’s photo
 
 **Stage 2 (match):** Could she get there and back between two photos?
-- Cards: 36 minutes, 18 minutes, 14 minutes, Nora could not have signed it, Nora slipped out between photos
-- Answer: Trip there and back → 36 minutes; Longest gap between photos → 14 minutes; So → Nora could not have signed it
+- Cards: 36 minutes, 18 minutes, 14 minutes, Nora could not have authorized it, Nora slipped out between photos
+- Answer: Trip there and back → 36 minutes; Longest gap between photos → 14 minutes; So → Nora could not have authorized it
 
 **Hints:**
 1. The aquarium clock runs fast. Take the extra minutes off.
@@ -707,15 +711,15 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 3. Add up the trip there and back. Is any gap between photos that long?
 
 **On success:**
-- **Steve Mercer**: Noon to midnight at La Marea. Mateo and Rafa both saw her. She couldn’t have been in the north wing. **REV** `c1_escape.order.01`
+- **Steve Mercer**: At 20:15 Nora was in Carmen’s photo, across the bay. Her staff credential was used in the north wing at that same minute. **REV** `c1_escape.order.01`
 - **Nora Reyes** [flat, through the bedroom window]: No. He does not know where the notebook is. Tonight? Understood. **MOV** `c1_escape.in.01`
 - **Steve Mercer**: What notebook? **NEW** `c1_escape.order.02`
 - **Steve Mercer**: Nora? The balcony door’s locked. From inside. **REV** `c1_escape.in.02`
 
 **Finding:**
-- *Steve Mercer: Someone signed Nora’s name in the north wing while she was at her mother’s birthday, across the bay. And now Nora has locked me out on the balcony.* **NEW** `c1_escape.order.find`
+- *Steve Mercer: Someone used Nora’s name and staff credential in the north wing while she was at her mother’s birthday, across the bay. And now Nora has locked me out on the balcony.* **NEW** `c1_escape.order.find`
 
-**Notebook:** Someone used Nora’s name in the north wing while she was at dinner. Nora locked Steve out on the balcony.
+**Notebook:** Someone used Nora’s name and staff credential in the north wing while she was at dinner. Nora locked Steve out on the balcony.
 
 ### Lead 2: Mr. Bell’s gate (`c1_escape.power`) · rows · difficulty 3
 *Unlocks after:* c1_escape.order
@@ -772,7 +776,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 **Notebook:** Nora watched Steve go and did nothing to stop him.
 
 ### Scene complete
-- *Steve Mercer: My list: one good morning, played twice. A whistle Admiral won’t answer. A signature Nora couldn’t have made. A phone call about a notebook. A locked door.* **NEW** `c1_escape.recap.01`
+- *Steve Mercer: My list: one good morning, played twice. A whistle Admiral won’t answer. Nora’s credential used across the bay. A phone call about a notebook. A locked door.* **NEW** `c1_escape.recap.01`
 - *Steve Mercer: And Tomás’s tapes say the bay sings tonight.* **NEW** `c1_escape.recap.02`
 - *Steve Mercer: So I went down to the beach. In Bellwether, that’s where you go when you can’t sleep.* **NEW** `c1_escape.recap.03`
 
@@ -789,7 +793,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 **Chapter card:** Chapter 2, *The Aquarium Is Closed* · Just after midnight · Steve wants to find out what happened to Nora.
 
-**Objective:** Get into the sealed north wing. The work order says Nora signed something there.
+**Objective:** Get into the sealed north wing. The work order carries Nora’s staff credential.
 
 **Coach tip:** Some leads come with recordings. Listen, or read the sound traces: a sound that repeats looks the same each time.
 
@@ -842,7 +846,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 **Goal:** Pick the corridor with nobody in it.
 
-**What Steve knows:** Steve hears a voice and footsteps behind each door. On Sunday morning, Nora’s good morning played twice, exactly the same. Since then he knows how to tell a person from a recording: a recording repeats exactly, and a person never does.
+**What Steve knows:** Steve hears a voice and footsteps behind each door. On the kitchen tapes, even the breath before Nora’s greeting matched across two different mornings. He listens for that kind of repetition here.
 
 **Prompt:** Steve records six seconds at each door. Which corridor can he cross without meeting anyone?
 
@@ -907,13 +911,13 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 ### Scene complete
 - *Steve Mercer: The north wing is no repair job. It’s a holding station, with cots, Nora’s real coat, and her voice on a tape from May.* **NEW** `c2_aquarium.recap.01`
-- *Steve Mercer: The woman who said good morning to me yesterday was not Nora. Nora was here, frightened, whistling for help. And I didn’t hear it for five months.* **NEW** `c2_aquarium.recap.02`
-- *Steve Mercer: If she was alive in May, she might be alive now.* **NEW** `c2_aquarium.recap.03`
+- *Steve Mercer: Nora was here, whistling for help. I didn’t hear her for five months.* **NEW** `c2_aquarium.recap.02`
 
 ### Departure
 - **Nora’s copy**: Steve. You shouldn’t be here. **NEW** `c2_aquarium.out.03`
 - **Lyle Boone**: Easy now, Steve. Nobody wants this to be hard. **NEW** `c2_aquarium.out.04`
-- **Steve Mercer**: Where is she? Where’s Nora? **NEW** `c2_aquarium.out.05`
+- **Lyle Boone**: The old intake is open. I have the service key. This way. **NEW** `c2_aquarium.out.05`
+- **Steve Mercer**: Where is she? Where’s Nora? **NEW** `c2_aquarium.out.06`
 
 **Next:** Through the old seawater intake tunnel, under the bay (c2_ship).
 
@@ -933,16 +937,16 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 > Implementation: Saren is heard only over the intercom here. His release command is the fixed recording recording.release.
 
-> Implementation: Film after the departure: a tank fills around a shape grown from the 61 percent scan. Steve never sees it.
+> Implementation: Film after the departure: a tank fills around a shape grown from the 61 percent memory index. Binding completes offscreen. Steve never sees it.
 
 ### Opening
-- *Steve Mercer: They walked me down the old intake tunnel, under the bay. At the end of it there was a ship.* **NEW** `c2_ship.in.04`
+- *Steve Mercer: Lyle unlocked the old intake and walked me down the tunnel under the bay. At the end of it there was a ship.* **NEW** `c2_ship.in.04`
 - *Steve Mercer: Glass corridors. Slow light. And a hum that was almost a tune.* **NEW** `c2_ship.in.05`
 - **Nora’s copy**: Please come with us. They want to know where your mother put her notebook. `c2_ship.in.01`
 - **Ship attendant**: Would peaceful human hold music assist your experience? `c2_ship.in.02`
 - **Steve Mercer**: I’d prefer the exit. Does that come with music too? `c2_ship.in.03`
 - **Ship attendant**: “You are the author of your own story.” This is from a human book. Is it helping? **NEW** `c2_ship.in.06`
-- **Ship attendant**: The scan proceeds from the oldest memories. You are now nineteen. Congratulations on your driving test. **NEW** `c2_ship.in.07`
+- **Ship attendant**: The memory index opens with the oldest records. Binding runs separately. Here is your driving test. Congratulations. You passed. **NEW** `c2_ship.in.07`
 
 ### Small talk
 **This place** · Nora’s copy
@@ -984,11 +988,12 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - **Steve Mercer** [a whisper]: Dad’s recorder was running in my pocket the whole time. **NEW** `c2_ship.command.lead.03`
 - **Steve Mercer** [a whisper]: The chair’s little lamp stayed dark when the attendant asked. It lit up for the voice on the intercom. **NEW** `c2_ship.command.lead.04`
 - **Steve Mercer** [a whisper]: Dad’s counter ticks once a second. The lamp lit at tick three. The buckle clicked at tick seven. **NEW** `c2_ship.command.lead.05`
-- **Ship attendant** [to Nora’s copy and the deputy, sending them back up the tunnel]: Thank you, escorts. It is nearly dawn, and the town will expect you at breakfast. **NEW** `c2_ship.command.lead.06`
+- **Steve Mercer** [a whisper]: The tape keeps moving after the click. Blank tape, not leader. There’s room left. **NEW** `c2_ship.command.lead.06`
+- **Ship attendant** [to Nora’s copy and the deputy, sending them back up the tunnel]: Thank you, escorts. It is nearly dawn, and the town will expect you at breakfast. **NEW** `c2_ship.command.lead.07`
 
 **Goal:** Get the exact command that opens the chair onto Dad’s tape.
 
-**What Steve knows:** Steve is strapped into the chair, and Dad’s recorder is running in his cardigan pocket. When a strap sticks, the attendant asks for a release and nothing happens. Then a calm voice on the intercom, the Prefect, gives the command, and the buckle opens.
+**What Steve knows:** Steve is strapped into the chair, and Dad’s recorder is running in his cardigan pocket. When a strap sticks, the attendant asks for a release and nothing happens. Then a calm voice on the intercom, the Prefect, gives the command, and the buckle opens. The cassette keeps turning onto blank tape after the click.
 
 **Prompt:** Steve has the moment on tape. Which voice opens the chair, and how long is the command?
 
@@ -1027,7 +1032,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 **Goal:** Open the chair with the Prefect’s own voice.
 
-**What Steve knows:** Nora’s copy and Lyle have gone back up the tunnel to town, and the scan has started again. The attendant stands by the chair with a slate. Dad’s recorder holds three voices from tonight: Nora’s spool, the attendant, and the Prefect’s four-second command. Steve can reach two microphone grilles. The attendant tested the hall speakers on the cracked grille. When Steve’s sleeve brushed the whole grille, the chair’s lamp blinked. The chair only listens while its lamp is lit.
+**What Steve knows:** Nora’s copy and Lyle have gone back up the tunnel to town, and the scan has started again. The attendant stands by the chair with a slate. Dad’s cassette caught three voices tonight: Nora’s intercom spool playing in the north wing, the attendant, and the Prefect’s four-second command. Steve still has the original spool. He can reach two microphone grilles. The attendant tested the hall speakers on the cracked grille. When Steve’s sleeve brushed the whole grille, the chair’s lamp blinked. The chair only listens while its lamp is lit.
 
 **Prompt:** Pick the recording, the grille and the moment.
 
@@ -1045,11 +1050,11 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - **The Prefect** (recorded_playback) [Dad’s recorder, held to the grille]: Release the restraint. Maintenance authorization. `c2_ship.escape.01`
 - **Ship attendant** [startled, turning away from the chair to the speaker column]: Prefect? I did not ask for a release. The scan is not finished. **NEW** `c2_ship.escape.03`
 - **Ship attendant** [at the speaker column, back to the chair]: Prefect, please repeat your instruction. The chair says you released it. **NEW** `c2_ship.escape.04`
-- **Steve Mercer**: It worked. Sixty-one percent of me, and all of me is getting out of this chair. **REV** `c2_ship.escape.02`
+- **Steve Mercer**: It worked. Index sixty-one percent, and all of me is getting out of this chair. **REV** `c2_ship.escape.02`
 - **Steve Mercer** [a whisper]: The attendant is busy arguing with the column. Quietly, now. **NEW** `c2_ship.escape.05`
 
 **Finding:**
-- *Steve Mercer: The Prefect’s own voice opened the chair, at the notch marked sixty-one. The scan stopped at sixty-one percent.* **NEW** `c2_ship.escape.find`
+- *Steve Mercer: The Prefect’s own voice opened the chair at the notch marked sixty-one. The memory index stopped at sixty-one percent; whatever it could bind would come later.* **NEW** `c2_ship.escape.find`
 
 ### Lead 3: The amber sleeper (`c2_ship.nora`) · board · difficulty 1
 *Unlocks after:* c2_ship.escape
@@ -1129,7 +1134,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 ### Scene complete
 - *Steve Mercer: There is a ship under the bay. Nora is asleep on it, alive, with hundreds of others. At the far end of the hall, one bed lay under frost, and something too tall to be human slept in it. The guards never looked at it.* **NEW** `c2_ship.recap.01`
-- *Steve Mercer: They tried to make another me. They got sixty-one percent.* **NEW** `c2_ship.recap.02`
+- *Steve Mercer: They tried to make another me. The memory index stopped at sixty-one percent. I didn’t know yet what the tank would bind from it.* **NEW** `c2_ship.recap.02`
 - *Steve Mercer: And the woman with Nora’s face, who locked me out on the balcony and then let me go, had walked me to that chair herself.* **NEW** `c2_ship.recap.03`
 
 ### Departure
@@ -1222,7 +1227,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 ### Lead 1: June’s crossword (`c3_house.crossword`) · rows · difficulty 2
 
 **When the lead opens:**
-- **Sheriff June Calder** [after Carmen has gone, closing the door]: You told me that chair copies the oldest memories first. And you got out at sixty-one percent. **NEW** `c3_house.crossword.lead.01`
+- **Sheriff June Calder** [after Carmen has gone, closing the door]: You told me that chair indexes the oldest memories first. And you stopped it at sixty-one percent. **NEW** `c3_house.crossword.lead.01`
 - **Sheriff June Calder**: I was at the station all morning, and Biscuit isn’t a witness. So you tell me. What could I ask you that the man at the market couldn’t answer? **NEW** `c3_house.crossword.lead.02`
 - **Sheriff June Calder**: Don’t tell me something sweet. Copies can be sweet. Don’t act strange. Grieving people act strange. **NEW** `c3_house.crossword.lead.03`
 - **Steve Mercer**: I called 911 on Sunday night, when people walked into the water. That was before the chair. **NEW** `c3_house.crossword.lead.04`
@@ -1230,11 +1235,11 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 **Goal:** Prove to June that you are the man she pulled out of the water.
 
-**What Steve knows:** June does the crossword every morning, in ink, a habit her late wife, Ruth, started. On the beach Steve told her about the chair: the attendant said the scan copies the oldest memories first, and Steve got out at sixty-one percent. A copy grown from that scan would have most of his life and none of the newest part.
+**What Steve knows:** June does the crossword every morning, in ink, a habit her late wife, Ruth, started. On the beach Steve told her about the chair: its memory index starts with the oldest records, and Steve stopped it at sixty-one percent. Binding is a separate step, but no copy from that index could contain the newest part of Sunday night.
 
 **Prompt:** June uncaps her pen over the crossword margin. What should she ask, and how will she know the answer is true?
 
-**Instruction:** The chair copies the oldest memories first. It stopped at sixty-one percent, so the copy has nothing from Sunday night. After midnight, the 911 line rings in June’s kitchen, and her machine records every call.
+**Instruction:** The chair indexes the oldest memories first. It stopped at sixty-one percent, before Sunday night entered the index. Binding happens later. After midnight, the 911 line rings in June’s kitchen, and her machine records every call.
 - What should June ask about?: Mom’s lullaby / His first radio show / ✓ His 911 call on Sunday
 - What does Steve write down?: “There’s a ship under the bay.” / ✓ “People are walking into the water, and they’re not coming back out.” / “Someone is trapped in the aquarium.”
 - How does June check it?: Lyle’s night log / ✓ Her call recording / The morning news
@@ -1262,8 +1267,8 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - **Sheriff June Calder**: Lyle’s on it. My own deputy. Fourteen years, and this summer he started filing his reports on time. **NEW** `c3_house.rules.lead.01`
 - **Sheriff June Calder**: We do this fairly. Otherwise we’re just frightened people making a list. `c3_house.rules.01`
 - **Sheriff June Calder**: Gus Albano. Thirty years of his grandmother’s recipes, and on Monday a new pastry in his window. **NEW** `c3_house.rules.lead.02`
-- **Sheriff June Calder**: Mateo’s coaching book. Lyle missed every game last spring. From June eleventh, he signed in at every one. **NEW** `c3_house.rules.lead.03`
-- **Sheriff June Calder**: Walt moved to Washington in April. His signature is on a permit here, dated a day he was testifying in Washington. **NEW** `c3_house.rules.lead.04`
+- **Sheriff June Calder**: Lyle signed a parking citation here in town. The same minute, a nurse took his blood pressure at a clinic two counties away. I spoke to her. **NEW** `c3_house.rules.lead.03`
+- **Sheriff June Calder**: Walt moved to Washington in April. The clerk’s bound ledger puts him at her counter on May third while a sworn hearing transcript has him testifying in Washington. **NEW** `c3_house.rules.lead.04`
 
 **Goal:** Help June decide which entries on her list would stand up as evidence.
 
@@ -1272,14 +1277,14 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 **Prompt:** June reads three entries aloud. Which ones would stand up in daylight?
 
 **Instruction:** June’s rule: a new habit proves nothing, because anyone can change. A dated record that puts someone where they could not have been is evidence.
-- Mateo’s book signs Lyle in from June 11: Proves nothing / ✓ Evidence
+- A local citation and a clinic visit two counties away at the same minute: Proves nothing / ✓ Evidence
 - Gus’s new pastry on Monday: ✓ Proves nothing / Evidence
-- Walt Prior’s permit, dated while he was in Washington: Proves nothing / ✓ Evidence
+- May 3 ledger and sworn hearing transcript put Walt in two cities: Proves nothing / ✓ Evidence
 
 **Hints:**
 1. Use June’s rule. Could any person do this on a good day?
-2. A new recipe is a new habit. A sign-in book and a signed permit have dates on paper.
-3. Ask of each entry: is there a date June could check in a book or a file?
+2. Turning up for every game could mean Lyle changed. Giving a ticket here while a nurse examines him elsewhere is different.
+3. Compare where each pair of records places its signer at the same time. A new recipe gives you no second location.
 
 **On success:**
 - **Sheriff June Calder**: Two I could take to a judge. And if I do, what do I tell Lyle’s boys? Mateo says they’ve never been happier. **NEW** `c3_house.rules.02`
@@ -1287,9 +1292,9 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - **Sheriff June Calder**: Agnes? She hasn’t changed in forty years. She still corrects my grammar. **NEW** `c3_house.rules.04`
 
 **Finding:**
-- *Steve Mercer: June’s list has thirty-one names, and most of them are feelings. Two are records: Lyle’s sign-in book and Walt Prior’s permit. Mrs. Penhallow isn’t on it.* **NEW** `c3_house.rules.find`
+- *Steve Mercer: Two names held up. The deputy and the permit signer each turned up in two places at once. Going to your boys’ games proves nothing.* **NEW** `c3_house.rules.find`
 
-### Lead 3: Dale’s delivery (`c3_house.mail`) · choice · difficulty 1
+### Lead 3: Dale’s delivery (`c3_house.mail`) · board · difficulty 1
 *Unlocks after:* c3_house.crossword
 
 **When the lead opens:**
@@ -1297,24 +1302,36 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - **Dale Kittredge**: A most diligent animal. I will return at the scheduled interval. `c3_house.mail.01`
 - **Sheriff June Calder**: She’s asleep, Dale. That is her schedule. **REV** `c3_house.mail.02`
 - **Sheriff June Calder**: On Monday the post office told me Dale had already brought your letters here. Before I’d called them. So I asked for the paperwork. **NEW** `c3_house.mail.lead.02`
-- **Sheriff June Calder**: At ten past six on Monday, I radioed the station to say you were here. Lyle was starting his shift. He answered. **NEW** `c3_house.mail.lead.03`
+- **Sheriff June Calder**: Monday morning, I used the private car-to-station handset. Only my deputy was on that channel. I heard him answer. **NEW** `c3_house.mail.lead.03`
 - **Sheriff June Calder**: Dale’s bag left the post office at four minutes past eight, with your letters already bundled for my house. **NEW** `c3_house.mail.lead.04`
 - **Sheriff June Calder**: I didn’t phone the post office until twelve past eight. And Carmen only heard from Nora at lunch. **NEW** `c3_house.mail.lead.05`
 
 **Goal:** Find out how Dale knew Steve was staying here.
 
-**What Steve knows:** Steve arrived at dawn on Monday. At 06:10 June radioed the station: ‘Bringing Mercer to my place. Tell nobody.’ Deputy Lyle Boone, starting his shift, answered. Dale’s bag left the post office at 08:04 with Steve’s letters already bundled for June’s house. He signed for June’s door at 08:08. June phoned the post office about Steve’s mail at 08:12. Carmen heard from Nora at lunchtime.
+**What Steve knows:** Steve arrived at dawn on Monday. At 06:10 June used the private car-to-station handset: ‘Bringing Mercer to my place. Tell nobody.’ The log shows Deputy Lyle Boone was the only person signed onto that channel, and he answered. Dale’s bag left the post office at 08:04 with Steve’s letters already bundled for June’s house. He signed for June’s door at 08:08. June phoned the post office about Steve’s mail at 08:12. Carmen heard from Nora at lunchtime.
 
 **Prompt:** Somebody told Dale before his bag left at 08:04. Who could have?
 
-- The post office. *Wrong:* The post office heard from June at 08:12. Dale’s bag had left at 08:04.
-- ✓ Deputy Lyle Boone
-- Carmen Reyes. *Wrong:* Carmen heard at lunchtime, from Nora. Dale had delivered hours before.
+**Instruction:** Put the four records in time order, then identify the only person who could hand Steve’s location to Dale before the bag left.
+
+**Case notes:**
+1. June’s radio log: 06:10, ‘Bringing Mercer to my place. Tell nobody.’ Deputy Lyle Boone acknowledged.
+2. Dispatch sheet: Dale’s bag left at 08:04 with Steve’s letters already bundled for June’s house.
+3. Door receipt: Dale signed at June’s house at 08:08.
+4. Post-office desk entry: June asked for Steve’s mail at 08:12. Carmen heard at lunchtime.
+
+**Stage 1 (order):** Build the morning timeline.
+- Cards: June radios Lyle, Dale’s bag leaves, Dale signs at June’s door, The post office learns Steve is there
+- Answer: First → June radios Lyle; Second → Dale’s bag leaves; Third → Dale signs at June’s door; Last → The post office learns Steve is there
+
+**Stage 2 (match):** Who could make the handoff before 08:04?
+- Cards: The post office, Deputy Lyle Boone, Carmen Reyes
+- Answer: Knew in time to tell Dale → Deputy Lyle Boone
 
 **Hints:**
 1. Line up who knew Steve was here, and when each of them found out.
 2. Dale’s bag left at 08:04. Besides June, who knew before then?
-3. Think about June’s radio call at 06:10. Who was on the other end?
+3. Think about June’s private handset call at 06:10. Who alone was signed onto the other end?
 
 **On success:**
 - **Steve Mercer**: He had my mail sorted for your house before anyone told the post office I was here. **NEW** `c3_house.mail.03`
@@ -1322,7 +1339,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - **Sheriff June Calder**: Then nobody tells Lyle where we go next. Or Dale. **NEW** `c3_house.mail.05`
 
 **Finding:**
-- *Steve Mercer: Dale had my letters bundled for June’s house at 08:04. The post office didn’t know until 08:12. The only other person who knew was Lyle, who took June’s call at ten past six. They talk to each other.* **NEW** `c3_house.mail.find`
+- *Steve Mercer: Dale had my letters bundled for June’s house at 08:04. The post office didn’t know until 08:12. The private channel log says only Lyle took June’s call at ten past six. He told Dale.* **NEW** `c3_house.mail.find`
 
 ### Scene complete
 - *Steve Mercer: June believes me. That makes one person.* **NEW** `c3_house.recap.01`
@@ -1452,23 +1469,23 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 **What Steve knows:** Meridian Labs says its engine at Sentinel Point will change the world. An engine like that would eat power. The archive keeps the utility’s meter rolls for Sentinel Point and for Pearl Laundry, the laundromat next door. Each roll prints a running total, like a car’s odometer.
 
-**Prompt:** Did Sentinel Point use more power than a laundromat last month?
+**Prompt:** What do the meter records prove, and what remains unverified?
 
-**Instruction:** Work out how much power each site used last month.
+**Instruction:** Separate what the utility records establish from what they cannot establish.
 
 **Case notes:**
-1. Pearl Laundry’s meter read 1,118 on the first of the month and 2,000 on the last.
-2. Sentinel Point’s meter read 3,460 on the first of the month and 4,100 on the last.
-3. Each meter keeps a running total, in the same units, like the miles on a car.
+1. Utility summary, Pearl Laundry: 882 metered units used last month.
+2. Utility summary, Sentinel Point: 640 metered units used last month.
+3. The utility summary covers power drawn through its grid meter. It does not inventory generators, batteries or another private supply.
 
-**Stage 1 (match):** Fill in June’s file.
-- Cards: 882 units, 640 units, 242 units, 4,100 units
-- Answer: How much did Pearl Laundry use? → 882 units; How much did Sentinel Point use? → 640 units; How much more did the laundromat use? → 242 units
+**Stage 1 (match):** Complete June’s evidence note.
+- Cards: Sentinel drew less grid power than Pearl Laundry, Sentinel has no other power source, Recorded grid use is modest; other supply is unverified, Meridian’s engine was switched off
+- Answer: The records prove → Sentinel drew less grid power than Pearl Laundry; The records do not prove → Sentinel has no other power source; Safe conclusion → Recorded grid use is modest; other supply is unverified
 
 **Hints:**
-1. Each roll is a running total. What matters is how far it moved.
-2. Subtract the first reading from the last, for each site.
-3. Pearl Laundry: 2,000 minus 1,118. Sentinel Point: 4,100 minus 3,460. Then take the smaller result from the larger.
+1. Start with the claim the two utility summaries can support directly.
+2. A grid meter measures the grid. What possible supplies sit outside that record?
+3. Sentinel drew less metered grid power; another supply remains unverified.
 
 **On success:**
 - **Steve Mercer**: A world-changing machine with a very modest dryer cycle. `c3_archive.power.01`
@@ -1526,9 +1543,10 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - **Sheriff June Calder**: Two hundred and seventy-four. My list had thirty-one. `c3_archive.out.01`
 - **Steve Mercer**: Mrs. Penhallow was on the boathouse steps, watching. She isn’t on your list. **NEW** `c3_archive.out.09`
 - **Sheriff June Calder**: She isn’t on anyone’s. Ninety-one years old, on a boathouse step at midnight. Counting. **NEW** `c3_archive.out.10`
-- **Sheriff June Calder**: I’m calling Adrian Rook. FBI. He owes me a favor from a kidnapping case twenty years ago. **NEW** `c3_archive.out.11`
+- *Steve Mercer: At four minutes past midnight, the boathouse phone rang once. Mrs. Penhallow answered, listened without speaking, and hung up.* **NEW** `c3_archive.out.11`
+- **Sheriff June Calder**: I’m calling Adrian Rook. FBI. He owes me a favor from a kidnapping case twenty years ago. **NEW** `c3_archive.out.12`
 - **Adrian Rook** (voicemail): Sit tight, June. `c3_archive.out.02`
-- *Steve Mercer: An hour later my flip phone buzzed. A text, from a number I didn’t know.* **NEW** `c3_archive.out.12`
+- *Steve Mercer: An hour later my flip phone buzzed. A text, from a number I didn’t know.* **NEW** `c3_archive.out.13`
 - **Steve Mercer** [reading the text aloud, slowly]: “he remembers june. that doesnt mean hes adrian.” No capitals. No apostrophes. *(spoken: “He remembers June. That doesn’t mean he’s Adrian.” No capitals. No apostrophes.)* **REV** `c3_archive.out.03`
 
 **Next:** Interlude 1 on the same ninth night, under the bay (i1_archive).
@@ -1804,7 +1822,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 > Implementation: Walt Prior on the placements list pays off Chapter 3.
 
 ### Opening
-- *Steve Mercer: Adrian Rook arrived the next afternoon with four agents and two black SUVs. He was everything June had promised. Calm. Kind. Thorough.* **NEW** `c4_safe.ctx.01`
+- *Steve Mercer: Adrian Rook arrived two afternoons later with four agents and two black SUVs. He was everything June had promised. Calm. Kind. Thorough.* **NEW** `c4_safe.ctx.01`
 - *Steve Mercer: He drove us to a Bureau safe house in the hills above the bay. An hour from town, with nobody else for miles.* **NEW** `c4_safe.ctx.02`
 - *Steve Mercer: I kept thinking about that text. If someone wanted to cut me off from the one man who could help, that’s exactly what they’d send.* **NEW** `c4_safe.ctx.03`
 - *Steve Mercer: On the drive, every station talked about President Ward. On November seventh she signs an accord with China at Sentinel Point.* **NEW** `c4_safe.ctx.04`
@@ -1876,7 +1894,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 **Finding:**
 - *Steve Mercer: I have Rook’s line on Dad’s tape, from outside his door, with this house’s room sound around it. Nobody can say I copied it off June’s phone.* **NEW** `c4_safe.record.find`
 
-### Lead 2: Two takes (`c4_safe.match`) · compare · difficulty 2
+### Lead 2: Two takes (`c4_safe.match`) · tape · difficulty 2
 *Unlocks after:* c4_safe.record
 
 **When the lead opens:**
@@ -1890,11 +1908,8 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 **Prompt:** Play June’s voicemail and Steve’s take from the door. What do you hear?
 
-**Recordings:** Calder’s voicemail · Safe-house door
-
-- Rook saying it again, more slowly. *Wrong:* The pace is the same. Every pause lands in exactly the same place.
-- ✓ The same recording, played twice
-- A shorter cut of the voicemail. *Wrong:* Nothing is missing. Both takes start and end on the same breath.
+**Instruction:** Line up “Sit tight” at the start. Compare the breath, the pause before June’s name and the click on the S.
+- Rook’s performance: A new take, spoken more slowly / ✓ The same recording, played twice / A shorter edit of the voicemail
 
 **Hints:**
 1. Compare the space between “tight” and “June”.
@@ -2043,7 +2058,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 **Finding:**
 - *Steve Mercer: A BLUE drill, for real, on the escort’s own ticket. The whole west corridor, me included, goes to the transport bay, and the rules put me straight into my own transfer van. Rook stays in the east wing with June.* **NEW** `c4_escape.fault.find`
 
-### Lead 3: Transport van (`c4_escape.van`) · rows · difficulty 1
+### Lead 3: Transport van (`c4_escape.van`) · board · difficulty 1
 *Unlocks after:* c4_escape.fault
 
 **When the lead opens:**
@@ -2058,9 +2073,21 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 **Prompt:** When should Steve pull the handle, and which way should he jump?
 
-**Instruction:** Pull the handle while the catch is off, and jump toward the softer side. On the gravel bend, the right side drops into a soft ditch, and the left side is a rock face.
-- Pull the handle: At the canal bridge / ✓ On the gravel bend / At the weighbridge
-- Jump: Left, onto rock / ✓ Right, into the ditch
+**Instruction:** Build the route Steve can see from the van, then place the catch actions. Which bend should he wait for before he pulls the handle?
+
+**Case notes:**
+1. The escort releases the travel catch when the driver radios ‘slowing for gravel’, and sets it again at the next stop.
+2. Driver’s route card: depot, water tower, rail underpass, gravel bend (slow), weighbridge (stop), highway.
+3. Through the window Steve sees a white tank on legs, then a dark steel ceiling, then the driver reaches for the radio.
+4. At the gravel bend the right side drops into a soft ditch; the left side is rock.
+
+**Stage 1 (route):** Trace the van’s route.
+- Cards: Gravel bend, Water tower, Railway underpass, Weighbridge
+- Answer: First landmark → Water tower; Next overhead → Railway underpass; Slow bend → Gravel bend; Next stop → Weighbridge
+
+**Stage 2 (match):** Place the catch actions.
+- Cards: Weighbridge stop, Gravel bend, Driver radios ‘slowing’, Railway underpass
+- Answer: Catch released → Driver radios ‘slowing’; Catch set again → Weighbridge stop; Steve pulls the handle → Gravel bend
 
 **Hints:**
 1. The handle only works while the catch is off.
@@ -2075,8 +2102,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - *Steve Mercer: On the gravel bend, with the catch off, I pulled the handle and jumped for the soft side. Mostly I fell. But I fell out of the van, with the escort’s radio in my hand.* **NEW** `c4_escape.van.find`
 
 ### Scene complete
-- *Steve Mercer: June has the proof, and she chose to stay with Rook so I could run.* **NEW** `c4_escape.recap.01`
-- *Steve Mercer: Now I was in a ditch in the hills above the bay with Dad’s recorder, a stolen radio and no plan. And the radio was still talking.* **NEW** `c4_escape.recap.02`
+- *Steve Mercer: Now I was in a ditch in the hills above the bay with Dad’s recorder, a stolen radio and no plan. And the radio was still talking.* **NEW** `c4_escape.recap.01`
 
 ### Departure
 - **Rook’s copy** (radio): All units. Steve Mercer, wanted for the abduction of Nora Reyes. And scan Calder tonight. The signing is in six days. **REV** `c4_escape.out.01`
@@ -2112,7 +2138,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - **Luis Reyes**: Eat first. `c5_shack.in.03`
 - **Steve Mercer**: Luis. They’re saying I took Nora. **NEW** `c5_shack.in.04`
 - **Luis Reyes**: Nora has been gone since Tuesday night. Carmen hasn’t slept. And I have known you since you were nine years old. **NEW** `c5_shack.in.05`
-- **Luis Reyes**: I’ve heard the bay sing since I was a boy. Your father was the only one who ever asked me what it sounded like. **NEW** `c5_shack.in.06`
+- **Luis Reyes**: I heard stories about the bay singing when I was a boy. I first heard it myself three years ago. Your father was the only one who asked what it sounded like. **NEW** `c5_shack.in.06`
 
 ### Small talk
 **Carmen** · Luis Reyes
@@ -2169,7 +2195,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 **Finding:**
 - *Steve Mercer: Dad’s “Done” answers Mom’s March 2 slip: he filed their tape between the Coltrane and the weather carts. The good stuff is the KBWR record library. Mom hid her notebook at my old station.* **NEW** `c5_shack.notes.find`
 
-### Lead 2: Frank’s receiver (`c5_shack.rig`) · rows · difficulty 2
+### Lead 2: Frank’s receiver (`c5_shack.rig`) · receiver · difficulty 2
 
 **When the lead opens:**
 - **Steve Mercer**: Dad’s receiver. Dead battery, and the dial’s slipped since he last used it. **NEW** `c5_shack.rig.lead.01`
@@ -2273,7 +2299,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 **Objective:** Get into the record library and find Mom’s notebook.
 
-**Revision notes:** C30, critic C30, C22, U-relationships, U-narration, U-timeline (Halcyon bought KBWR a year ago; Steve was let go three weeks ago)
+**Revision notes:** C30, critic C30, C22, U-relationships, U-narration, U-timeline (Halcyon bought KBWR a year ago; Steve was let go five weeks ago)
 
 > Implementation: Stephen’s lines before he names himself show the speaker as “Steve Mercer?” (line-level display).
 
@@ -2286,7 +2312,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 ### Opening
 - *Steve Mercer: KBWR, after midnight. No humans work here now. Just racks of machines, playing music to nobody.* **NEW** `c5_station.ctx.01`
 - *Steve Mercer: And my voice, on the station ident, still playing between the songs.* **NEW** `c5_station.ctx.02`
-- **DJ AutoRick**: Breaking news, folks: there’s a fella in our record library! `c5_station.in.01`
+- **DJ AutoRick**: Breaking news, folks: there’s a fella in our control room! **REV** `c5_station.in.01`
 - **Steve Mercer**: Two fellas. Somebody else is breathing in here. **NEW** `c5_station.in.03`
 
 ### Small talk
@@ -2382,7 +2408,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 **Goal:** Find out why Halcyon really let Steve go.
 
-**What Steve knows:** The office is full of paperwork from Halcyon Media Holdings, the company that bought KBWR a year ago and replaced Steve with AutoRick three weeks ago. Steve always thought it was about money.
+**What Steve knows:** The office is full of paperwork from Halcyon Media Holdings, the company that bought KBWR a year ago and replaced Steve with AutoRick five weeks ago. Steve always thought it was about money.
 
 **Prompt:** What do the duty sheets and the tower log say, side by side?
 
@@ -2438,7 +2464,8 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 **On success:**
 - **Steve Mercer?**: Sixty-one percent. That’s what the attendant said. I assumed the rest was a compliment. `c5_station.stephen.01`
-- **Stephen**: Call me Stephen. One of us should sound like a grown-up. **NEW** `c5_station.stephen.03`
+- **Steve Mercer?**: The tank slate said sixty-one was the memory index, not sixty-one percent of a person. Last stable binding: breakfast in Dad’s shack. **NEW** `c5_station.stephen.03`
+- **Stephen**: Call me Stephen. One of us should sound like a grown-up. **NEW** `c5_station.stephen.04`
 - **Steve Mercer**: Sit down. There’s something you need to know. `c5_station.stephen.02`
 
 **Finding:**
@@ -2446,7 +2473,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 ### Scene complete
 - *Steve Mercer: Mom’s notebook was in the blue sleeve, in a shorthand I can’t read. Halcyon cleared the building every ninth night so the tower could talk to the ship.* **NEW** `c5_station.recap.01`
-- *Steve Mercer: And the man with my face, the one Carmen saw at the market, was following me all week. Sixty-one percent of me, with nothing after the breakfast before the boat.* **NEW** `c5_station.recap.02`
+- *Steve Mercer: And the man with my face had a sixty-one-percent memory index, but his last stable binding ended at breakfast before the boat. Eighteen months of my life were missing.* **NEW** `c5_station.recap.02`
 
 ### Departure
 - **Steve Mercer**: They disappeared eighteen months ago. I said no to the boat trip. `c5_station.out.01`
@@ -2454,7 +2481,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - *Steve Mercer: I watched my own face learn it. Eighteen months, all at once.* **NEW** `c5_station.out.04`
 - **Stephen**: Then that explains what I saw when I woke up. Mom and Dad are on that ship, Steve. Row nine. They’re asleep. They’re alive. `c5_station.out.03`
 - **Steve Mercer**: You woke up on the ship. **NEW** `c5_station.out.05`
-- **Stephen**: In a glass tank, last Friday. Cold, wet and sixty-one percent. A very tall man gave me a crew pass, an earpiece and a job. **NEW** `c5_station.out.06`
+- **Stephen**: In a glass tank, last Friday. Cold, wet, with the index at sixty-one. A very tall man gave me a crew pass, an earpiece and a job. **NEW** `c5_station.out.06`
 - **Stephen**: Find the man with my face. Find Mom’s notebook. Report in every single night. **NEW** `c5_station.out.07`
 - **Steve Mercer**: Carmen saw you at the market. **NEW** `c5_station.out.08`
 - **Stephen**: She hugged me and said I looked well. I didn’t know why that made me want to cry. After that I watched June’s house all week. Today I followed you up the path to Dad’s shack. Twice. **NEW** `c5_station.out.09`
@@ -2490,7 +2517,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 > Implementation: Iris is shown as “Nora’s copy” until out.03, where she names herself. From c6_jail on she is “Iris”.
 
-> Implementation: Only Steve plays this scene. Stephen helps plan the alibi, then leaves for Gus’s bread window, so Steve meets Iris alone on the pier. Iris is not on the pier until the alibi is done.
+> Implementation: Switch to Stephen to arrange his sighting at Gus’s bread window. When he leaves for the market, control returns to Steve. Iris is not on the pier until the alibi is done.
 
 > Implementation: The outro is Iris’s account of Sunday night: the crew retook her from the otter house for a reset, left her on a laundry cart in the Gallery, and she set a slow, reversible wake on Nora’s, Lyle Boone’s and Dale’s beds before riding out with the wash. This is how Nora wakes in Interlude 2.
 
@@ -2539,7 +2566,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - **DJ AutoRick** (broadcast): Police are still looking for Steve Mercer. If you see him, tell him to smile! **NEW** `c6_iris.talk.autorick.1.01`
 - **Stephen**: He never smiles before ten. I can vouch for that personally. **NEW** `c6_iris.talk.autorick.1.02`
 
-### Lead 1: Market corner (`c6_iris.alibi`) · board · difficulty 2 · played as Steve Mercer
+### Lead 1: Market corner (`c6_iris.alibi`) · board · difficulty 2 · played as Stephen
 
 **When the lead opens:**
 - **Stephen**: Three errands, three clocks. Nobody in this town agrees what time it is. **NEW** `c6_iris.alibi.lead.01`
@@ -2578,13 +2605,13 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 **Finding:**
 - *Steve Mercer: At 8:10 by the radio, Stephen stood beside his own wanted poster at Gus’s bread window while Gus fixed the smudge. Half the town ran to the bakery, and nobody was watching the pier.* **NEW** `c6_iris.alibi.find`
 
-### Lead 2: Iris’s recorder test (`c6_iris.takes`) · compare · difficulty 2 · played as Steve Mercer
+### Lead 2: Iris’s recorder test (`c6_iris.takes`) · tape · difficulty 2 · played as Steve Mercer
 *Unlocks after:* c6_iris.alibi
 
 **When the lead opens:**
 - **Nora’s copy**: I sent the message about Rook. No capitals, the way Nora texts. Please listen before you decide what I am. **REV** `c6_iris.in.02`
 - **Steve Mercer**: You let me go on the balcony. And on the thirtieth you stopped at the waterline and walked home. I saw you. **NEW** `c6_iris.takes.lead.01`
-- **Nora’s copy**: The first time I missed going below, it was an accident. I was chasing you. The second time, I chose. **NEW** `c6_iris.takes.lead.02`
+- **Nora’s copy**: The first re-sync window passed while I was chasing you. I still escorted you below later, but the window had closed. The second time, I chose not to go. **NEW** `c6_iris.takes.lead.02`
 - **Steve Mercer**: Then say something for me. Twice. “I stayed because I wanted to.” **NEW** `c6_iris.takes.lead.03`
 - **Nora’s copy** [first take, into the recorder]: I stayed because I wanted to. `c6_iris.takes.01`
 - **Nora’s copy** [second take; she pauses in a new place]: I stayed... because I wanted to. `c6_iris.takes.02`
@@ -2595,11 +2622,8 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 **Prompt:** Steve gives her the recorder and asks for the same words twice. What can he put in his notebook?
 
-**Recordings:** First reading · Second reading
-
-- She played the first take again. *Wrong:* Listen to the pause. The second take waits where the first one didn’t.
-- ✓ She chose how to say it each time
-- She started the same take later. *Wrong:* Line them up and they still don’t match. The rhythm inside the phrase changes.
+**Instruction:** Line up “I stayed” at the start, then compare the silence inside each reading.
+- The pause after “stayed”: Falls in the same place / ✓ Moves in the second reading / Only the start time changes
 
 **Hints:**
 1. Listen past the words. Compare where each take goes quiet.
@@ -2648,8 +2672,8 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - *Steve Mercer: Both calls share the same eight bars of hold music, at the minute the water lit up. Copies near the bay go below; copies far away wait on hold. Saren wants Mom’s notebook, and on Wednesday he wants the President.* **NEW** `c6_iris.hold.find`
 
 ### Scene complete
-- *Steve Mercer: Nora’s copy sent the warning about Rook. She stopped going into the water, and she doesn’t replay any more. She chooses.* **NEW** `c6_iris.recap.01`
-- *Steve Mercer: Copies far from the bay stay in step on hold. Saren wants Mom’s notebook, and on Wednesday he wants the President.* **NEW** `c6_iris.recap.02`
+- *Steve Mercer: I came to the pier expecting a trap. Instead she gave me a test I could repeat and a warning I could check.* **NEW** `c6_iris.recap.01`
+- *Steve Mercer: June first. Then the President.* **NEW** `c6_iris.recap.02`
 - *Steve Mercer: And she told me about June. They scanned her at the safe house. Her copy has run the Sheriff’s office since Friday, and the real June is locked in her own cell until the ninth night.* **NEW** `c6_iris.recap.03`
 - *Steve Mercer: She also told me who could get us inside: the mail carrier. The spare key to June’s cell went back through the post. “He isn’t Dale,” she said. “But he loves June’s dog.”* **NEW** `c6_iris.recap.04`
 
@@ -2712,7 +2736,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - **Pell**: He complains about the rain, the dogs and the government. In that order. **NEW** `c6_jail.talk.pell.3.02`
 - **Pell**: I have his memories, but not his complaints. I find I do not miss them. **NEW** `c6_jail.talk.pell.3.03`
 
-### Lead 1: Pell’s sorting case (`c6_jail.mail`) · rows · difficulty 1 · played as Steve Mercer
+### Lead 1: Pell’s sorting case (`c6_jail.mail`) · board · difficulty 1 · played as Steve Mercer
 
 **When the lead opens:**
 - **Pell**: The cell key was returned to the post this morning. I filed it. **NEW** `c6_jail.mail.lead.01`
@@ -2726,16 +2750,23 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 **What Steve knows:** Pell files everything exactly by the rules. His sorting case has three drawers, labelled Counter, Returns and Jail. The jail’s cell key went back through the post this morning.
 
-**Prompt:** Which drawer, and which slot?
+**Prompt:** Route the returned key through Pell’s case, then use the same delivery to reach June privately.
 
-**Instruction:** Find the drawer for where the key is going, then the slot that holds entry 18. Each slot holds two entries: slot 1 holds 1 and 2, slot 2 holds 3 and 4, and so on.
-- Drawer: Counter / Returns / ✓ Jail
-- Slot: 10 / ✓ 9 / 18
+**Instruction:** Follow the labels on the carbon and register strip. Finish with the handoff only the woman in cell two can receive.
+
+**Case notes:**
+1. Return carbon: ‘Destination JAIL · spare cell key · register 18.’ Pell files by destination, not by parcel status.
+2. Register strip: slot 8 holds entries 15–16; slot 9 holds 17–18; slot 10 holds 19–20.
+3. June’s own crossword is in the jail pile. A marked square posted through cell two reaches the prisoner without going over the radio.
+
+**Stage 1 (route):** Trace the key and the private question.
+- Cards: Jail, Returns, Slot 9, Slot 10, Marked crossword through cell two
+- Answer: Destination drawer → Jail; Register pocket → Slot 9; Private handoff → Marked crossword through cell two
 
 **Hints:**
 1. Pell files by where a thing is going, not by what happened to it.
-2. The returned key is entry 18. Two entries share each slot.
-3. Slot 1 holds 1 and 2, slot 2 holds 3 and 4. Keep counting in pairs until you reach 18.
+2. The register strip prints entry 18 beside slot 9; there is nothing to calculate.
+3. Jail drawer, slot 9, then post June’s marked crossword through cell two.
 
 **On success:**
 - **Pell**: Correctly delivered. Biscuit may inspect the chain of custody. `c6_jail.mail.01`
@@ -2758,10 +2789,10 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 **What Steve knows:** June’s rule: memories can’t prove who you are, so you check the paperwork. Iris says the crew scanned June at the safe house. Her copy runs the office, and the real June has been locked in cell two since Friday. Steve posted June’s crossword, with one square circled, into cell two and nowhere else. Whoever is in that cell has seen it. Anyone else has to guess.
 
-**Prompt:** The June in cell two answers on a slip of paper. The June on the radio answers out loud. What should Steve ask, and whose answer should he accept?
+**Prompt:** The June in cell two answers on a slip of paper. The June on the radio answers out loud. What should Steve ask about the square he personally circled, and whose answer should he accept?
 
-**Instruction:** Ask about the square Steve circled, then accept the June who gives the right letter. 23 Across, ‘beyond imitation’, is INIMITABLE, shown as I _ I _ I _ A _ L _. Its first, second and last blanks cross 3 Down, 8 Down and 12 Down.
-- Ask about the square at: 17 Across and 8 Down / 23 Across and 3 Down / ✓ 23 Across and 8 Down
+**Instruction:** Ask both Junes only: “Which letter did I circle?” Keep the crossing to yourself. Use Steve’s notebook to check their answers. 23 Across, ‘beyond imitation’, is INIMITABLE, shown as I _ I _ I _ A _ L _. Its first, second and last blanks cross 3 Down, 8 Down and 12 Down.
+- Privately check the crossing Steve circled: 17 Across and 8 Down / 23 Across and 3 Down / ✓ 23 Across and 8 Down
 - Accept the June who says: ✓ M / T / A
 
 **Hints:**
@@ -2821,7 +2852,8 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 ### Opening
 - *Nora Reyes: I woke up in amber light, in a bed I didn’t choose, in a hall that went on forever.* **NEW** `i2_nora.ctx.01`
-- *Nora Reyes: I was frightened for about a minute. Then I did what I do at any party where nobody knows each other. I started learning names.* **NEW** `i2_nora.ctx.02`
+- *Nora Reyes: The bed panel said Monday, November fifth. That was how I learned five months had passed.* **NEW** `i2_nora.ctx.02`
+- *Nora Reyes: I was frightened for about a minute. Then I did what I do at any party where nobody knows each other. I started learning names.* **NEW** `i2_nora.ctx.03`
 - **Nora Reyes**: I can move my hand. That’s a start. `i2_nora.in.01`
 - **Dale Kittredge**: If this is a hospital, I’m changing hospitals. `i2_nora.in.02`
 - **Nora Reyes**: Names first. Complaints after we have a plan. `i2_nora.in.03`
@@ -2979,7 +3011,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 ### Scene complete
 - *Nora Reyes: I know every name in my row now. I have a route, a crew and a pump that behaves.* **NEW** `i2_nora.recap.01`
-- *Nora Reyes: The hardest part is the waiting. I have never waited quietly for anything. Between patrols I lie still and think about a man who went quiet for eighteen months.* **NEW** `i2_nora.recap.02`
+- *Nora Reyes: I counted thirteen months of silence before they took me. Five more went by while I slept. I still want to hear what he has to say.* **NEW** `i2_nora.recap.02`
 
 ### Departure
 - **Nora Reyes**: Helen. Frank. Steve is going to be so glad. `i2_nora.out.01`
@@ -3175,7 +3207,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 ### Departure
 - **Steve Mercer**: If they swap her, it happens between the hatch and the podium. **NEW** `c7_gate.out.04`
 - **Stephen**: So we watch the hatch. I’m very good at being looked at. **NEW** `c7_gate.out.05`
-- *Steve Mercer: In the fog between the antennas, an old woman was walking a dog. Mrs. Penhallow. Miles from her pier, again.* **NEW** `c7_gate.out.06`
+- *Steve Mercer: In the fog between the antennas, an old woman was carrying a bait bucket. Mrs. Penhallow. Miles from her pier, again.* **NEW** `c7_gate.out.06`
 
 **Next:** The ceremony (c7_swap).
 
@@ -3336,7 +3368,6 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 ### Scene complete
 - *Steve Mercer: Fourteen copies turned toward the sea at once, in front of everyone who mattered. The real President was in a service tunnel, with a bandaged wrist and June Calder.* **NEW** `c7_swap.recap.01`
 - *Steve Mercer: Iris told me later that the tone pulled at her too. She held on to June’s sleeve and counted Sunday dinners until it passed. Beside me, Stephen gripped the desk with both hands and did not turn.* **NEW** `c7_swap.recap.02`
-- *Steve Mercer: Rook’s copy slipped away into the fog. Before he went, he asked me one thing.* **NEW** `c7_swap.recap.03`
 
 ### Departure
 - **Rook’s copy**: Is he awake? The other one? `c7_swap.out.01`
@@ -3498,7 +3529,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - **Dr. Lin Wen**: Nobody refuses a cookie from the interpreter. It was very clever of her. **NEW** `c8_lab.talk.wen.1.03`
 
 **The walk over** · Dr. Lin Wen
-- **Dr. Lin Wen**: I walked here from the hotel. An old woman with a dog said good morning to me in Mandarin. **NEW** `c8_lab.talk.wen.2.01`
+- **Dr. Lin Wen**: I walked here from the hotel. An old woman carrying a bait bucket said good morning to me in Mandarin. **NEW** `c8_lab.talk.wen.2.01`
 - **Steve Mercer**: In Mandarin? Out here in Bellwether? **NEW** `c8_lab.talk.wen.2.02`
 - **Dr. Lin Wen**: Perfect Mandarin. Then she asked me if I needed any bait. **NEW** `c8_lab.talk.wen.2.03`
 
@@ -3523,8 +3554,9 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - **Dr. Lin Wen**: Help me put her pages back in order. **NEW** `c8_lab.notebook.lead.01`
 - **Dr. Lin Wen**: This scrap is the American test. Two drum strikes, a missing beat, then a lamp flare. **NEW** `c8_lab.notebook.lead.02`
 - **Dr. Lin Wen**: This one is our test. Before we built it, we were sent a copy of the American test to study. **NEW** `c8_lab.notebook.lead.03`
-- **Dr. Lin Wen**: Both tests went out over open radio. Anyone with a receiver could hear them. **NEW** `c8_lab.notebook.lead.04`
-- **Dr. Lin Wen**: And the minutes of the meeting at one table quote both tests. Your mother was in that room. **NEW** `c8_lab.notebook.lead.05`
+- **Dr. Lin Wen**: Both teams began with the same open-radio handshake. It told every listener when the performance started. **NEW** `c8_lab.notebook.lead.04`
+- **Dr. Lin Wen**: Both tests went out over open radio. Anyone with a receiver could hear them. **NEW** `c8_lab.notebook.lead.05`
+- **Dr. Lin Wen**: And the minutes of the meeting at one table quote both tests. Your mother was in that room. **NEW** `c8_lab.notebook.lead.06`
 
 **Goal:** Work out how the fleet found Earth.
 
@@ -3537,8 +3569,9 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 **Case notes:**
 1. Scrap H, the American test: two drum strikes, a missing beat, then a lamp flare.
 2. Scrap W, the Chinese test: Wen’s team studied a copy of the American test before they built it.
-3. Both tests went out over open radio, so anyone listening could record them.
-4. The minutes of the meeting at one table quote both tests.
+3. Both teams used the same public handshake before the staged pulse.
+4. Both tests went out over open radio, so anyone listening could record them.
+5. The minutes of the meeting at one table quote both tests.
 
 **Stage 1 (match):** Put one card on each question.
 - Cards: Anyone with a radio, After both tests, The American test, Only the two delegations, From a copy of the American test
@@ -3554,7 +3587,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - **Steve Mercer**: Heard this before. Mom heard that missing beat in the bay. In Dad’s reels. **NEW** `c8_lab.notebook.02`
 
 **Finding:**
-- *Steve Mercer: America staged its test first, and China built its own from a copy, missing beat and all. Both went out over open radio, and something out there recorded them. Mom heard that same missing beat again, in the bay. The fleet came because of a show.* **NEW** `c8_lab.notebook.find`
+- *Steve Mercer: America staged its test first, and China built its own from a copy, missing beat and all. Both announced themselves with the same public handshake and went out over open radio, so something out there recorded them. Mom heard that missing beat again in the bay. The fleet came because of a show.* **NEW** `c8_lab.notebook.find`
 
 ### Lead 2: The reactor (`c8_lab.props`) · choice · difficulty 1
 
@@ -3642,13 +3675,13 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 > Implementation: c8_beach.first is cut; line first.01 and second.01 are dropped.
 
 ### Opening
-- *Steve Mercer: Dawn on the beach. Saren came alone, the way he said he would: taller than the doorframes on his ship, and perfectly still.* **NEW** `c8_beach.ctx.01`
+- *Steve Mercer: The Prefect met me alone at dawn. He set a little Newton’s cradle on a flat rock and let one ball drop. He watched it instead of looking at me.* **NEW** `c8_beach.ctx.01`
 - **Prefect Saren**: Give me the notebook. Helen and Frank will walk out of the sea tomorrow morning. `c8_beach.in.01`
 - **Steve Mercer** [barely audible, to himself]: Mom. Dad. Home by breakfast. **NEW** `c8_beach.in.03`
 - **Steve Mercer**: I need a moment. `c8_beach.in.02`
 - **Prefect Saren**: Your mother would like a word. **NEW** `c8_beach.in.04`
 
-### Lead 1: Mom’s voice (`c8_beach.second`) · compare · difficulty 2
+### Lead 1: Mom’s voice (`c8_beach.second`) · tape · difficulty 2
 
 **When the lead opens:**
 - **Helen Mercer** (recorded_playback) [from a small device in Saren’s hand; a splice, made by editing recording.voicemail]: Come out with us, kiddo. Tonight. **NEW** `c8_beach.second.lead.01`
@@ -3660,11 +3693,8 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 **Prompt:** Saren’s tape says: “Come out with us, kiddo. Tonight.” Play it next to Mom’s voicemail from the night of the boat. What is Saren’s tape?
 
-**Recordings:** Voicemail, the night of the boat · Saren’s tape
-
-- A new message from Mom. *Wrong:* Listen to the breath before “kiddo”. It’s the same breath, from the same night.
-- ✓ Words cut from the voicemail and stitched together
-- Mom reading words Saren wrote. *Wrong:* Every sound in it comes from the voicemail, down to the breath.
+**Instruction:** Line up “Come out with us, kiddo.” Compare the breath before “kiddo” and the gap before “Tonight.”
+- Saren’s message: A new message from Mom / ✓ Words cut from the voicemail and stitched together / Mom reading words Saren wrote
 
 **Hints:**
 1. Play both tapes and listen for “kiddo” on each one.
@@ -3676,7 +3706,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - **Steve Mercer** [quietly, putting it together]: Rook kept this tape for an hour at the safe house. Long enough to copy it. **NEW** `c8_beach.second.03`
 
 **Finding:**
-- *Steve Mercer: Saren’s message is Mom’s voicemail, cut and stitched: the same breath before ‘kiddo’, and a gap where ‘The bay is singing’ used to be. He has no message from her. He has my tape.* **NEW** `c8_beach.second.find`
+- *Steve Mercer: Saren’s message is Mom’s voicemail, cut and stitched: the same breath before ‘kiddo’, and a gap where ‘The bay is singing’ used to be. He has no message from her. He has the personal copy Rook made while he held my cassette.* **NEW** `c8_beach.second.find`
 
 ### Lead 2: The notebook (`c8_beach.refuse`) · beat · difficulty 1
 *Unlocks after:* c8_beach.second
@@ -4062,8 +4092,8 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - *Steve Mercer: Stephen’s pass opened the inner pad. June saw the lamp light from the deck and called it in, and Stephen went on alone to the antenna with the rig. I stayed where I promised.* **NEW** `c9_gallery.antenna.find`
 
 ### Scene complete
-- *Steve Mercer: Nora is free. Iris paid for it with her own memory, and chose to.* **NEW** `c9_gallery.recap.01`
-- *Steve Mercer: Stephen is on his way to the antenna with the rig. Mom and Dad are somewhere in this hall, in row nine.* **NEW** `c9_gallery.recap.02`
+- *Steve Mercer: Nora was on her feet. Iris was still herself. For the moment, that was enough.* **NEW** `c9_gallery.recap.01`
+- *Steve Mercer: Stephen took the rig toward the antenna. Then Nora led me to row nine.* **NEW** `c9_gallery.recap.02`
 
 ### Departure
 - **Nora Reyes**: The ring. Where is it? `c9_gallery.out.01`
@@ -4094,6 +4124,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 ### Opening
 - *Steve Mercer: Row nine. Mom and Dad, side by side, the way they always slept. I’d brought every sound I had.* **NEW** `c9_wake.ctx.01`
+- *Steve Mercer: Iris stayed with the newly awake near Nora’s bed. Pell and Biscuit held the service hatch behind us.* **NEW** `c9_wake.ctx.02`
 - **Nora Reyes**: We’ve kept the service route open. Tell me who to wake first. `c9_wake.in.01`
 - **Steve Mercer**: I brought the sounds. I think they can hear us. `c9_wake.in.02`
 
@@ -4140,66 +4171,75 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - **Sheriff June Calder**: A man with your face, Adrian. He had your manners too, mostly. **NEW** `c9_wake.talk.rook.1.02`
 - **Adrian Rook**: Then he owes me a dry cleaning bill. **NEW** `c9_wake.talk.rook.1.03`
 
-### Lead 1: Frank’s bed (`c9_wake.frank`) · rows · difficulty 2
+### Lead 1: Frank’s bed (`c9_wake.frank`) · compare · difficulty 2
 
 **When the lead opens:**
 - **Steve Mercer**: Dad. It’s Steve. **NEW** `c9_wake.frank.lead.01`
 - *Steve Mercer: Nothing. He used to say a call sign is a name you can hear through static.* **NEW** `c9_wake.frank.lead.02`
-- **Nora Reyes**: There are three call cards in his tray. They all look almost the same. **NEW** `c9_wake.frank.lead.03`
-- **Steve Mercer**: Dad’s call sign is on his old cassette, in Morse. But the tape is scratched. It always loses the very last letter. **NEW** `c9_wake.frank.lead.04`
+- **Nora Reyes**: Give me the speaker. I can hold it against his ear. **NEW** `c9_wake.frank.lead.03`
+- **Steve Mercer**: Listen for the Morse. The Thursday club calling him in. **NEW** `c9_wake.frank.lead.04`
 
 **Goal:** Wake Dad with the one sound he always answers.
 
-**What Steve knows:** Frank always answered his call sign, K7BLW, faster than his own name. Nora found three call cards in his bedside tray. Dad’s cassette has the Thursday club sending his call sign in Morse code, one letter or number at a time. The cassette is scratched, and the scratch always loses the last one.
+**What Steve knows:** Frank always answered K7BLW on the Thursday net. Steve brought the club recording, a melody and a whistle. The penciled labels came off in the water.
 
-**Prompt:** Which card is Dad’s, and which letter has to be sent again?
+**Prompt:** Audition Steve’s recordings. Send the one Frank would answer through Nora’s speaker.
 
-**Instruction:** Dad’s call sign is K7BLW. The scratched cassette loses the last letter, so that one is sent again. The desk key: K is −·−, 7 is −−···, B is −···, L is ·−··, W is ·−−.
-- Which card is Dad’s?: K7BWL / K9BLW / ✓ K7BLW
-- Which letter is sent again?: L: ·−·· / ✓ W: ·−− / B: −···
+**Recordings:** Cassette A · Cassette B · Cassette C
+
+- Send cassette A. *Wrong:* That whistle calls Admiral, not Dad.
+- ✓ Send cassette B
+- Send cassette C. *Wrong:* Keep that tune for Mom. Dad is listening for his call sign.
+- Cassette A: Two whistled notes.
+- Cassette B: Short and long pulses in five groups: −·− / −−··· / −··· / ·−·· / ·−−.
+- Cassette C: A six-note tune ends on a held note.
 
 **Hints:**
-1. Compare each card with Dad’s call sign, one character at a time.
-2. Two cards are off by one character. For the second row, think about where the scratch is.
-3. The scratch loses whatever comes last. Read Dad’s call sign to its final letter, then find that letter in the desk key.
+1. What made Dad reach for his radio every Thursday?
+2. His friends sent letters as groups of short and long pulses.
+3. Listen to cassette B, or open its sound caption.
 
 **On success:**
 - **Frank Mercer** *(sound: k7blw)*: K7BLW receiving. Helen? Steve? `c9_wake.frank.01`
 - **Steve Mercer**: Right here, Dad. `c9_wake.frank.02`
 
 **Finding:**
-- *Steve Mercer: Dad’s card is K7BLW. The scratched cassette lost the last letter, the W: dot, dash, dash. I sent it again, and Dad answered his own call sign.* **NEW** `c9_wake.frank.find`
+- *Steve Mercer: Dad answered the Thursday net before he even opened his eyes.* **NEW** `c9_wake.frank.find`
 
-### Lead 2: Helen’s bed (`c9_wake.helen`) · rows · difficulty 2
+### Lead 2: Helen’s bed (`c9_wake.helen`) · compare · difficulty 2
 *Unlocks after:* c9_wake.frank
 
 **When the lead opens:**
 - **Frank Mercer**: Your mother. Play her the song, kiddo. I’ll write it down for you. **NEW** `c9_wake.helen.lead.01`
 - **Steve Mercer**: That’s the song in the hum. All this time, the ship was humming Mom’s lullaby. **NEW** `c9_wake.helen.lead.02`
-- **Frank Mercer**: It starts at home. Up once, then up again. Back down to the middle note, then home, and hold it. **NEW** `c9_wake.helen.lead.03`
+- **Frank Mercer**: Up two steps. Down past home. Then back up, and hold that last note. **NEW** `c9_wake.helen.lead.03`
 
 **Goal:** Wake Mom with the song she sang Steve every night until he was ten.
 
-**What Steve knows:** Helen sang Steve the same lullaby every night and never told him its words. Under the ship, the hum has been almost playing a tune Steve knew. Frank, awake now, draws the tune for him. The music box in the drawer numbers its notes: 1 is home, 3 is higher, 5 is highest.
+**What Steve knows:** Frank has woken up. He draws the shape of the tune Helen sang when Steve couldn’t sleep. Nora holds the speaker while Steve checks the remaining recordings.
 
-**Prompt:** Dad drew the tune: home, up, higher, back to the middle note, home, and hold. Which music-box cylinder plays it?
+**Prompt:** Match a tape to Frank’s drawing. Send it to Helen’s bedside speaker.
 
-**Instruction:** The cylinders number their notes: 1 is home, 3 is the middle note, 5 is the top. Pick the one that matches Dad’s drawing.
-- Which cylinder plays Mom’s song?: ✓ 1-3-5-3-1-1 / 1-3-5-5-1-1 / 1-5-3-3-1-1
+**Recordings:** Cassette A · Phone pickup · Cassette C
+
+- Send cassette A. *Wrong:* Only two notes. Dad drew a whole phrase.
+- Send phone pickup. *Wrong:* Eight even notes. Mom always held the last one.
+- ✓ Send cassette C
+- Cassette A: Two whistled notes.
+- Phone pickup: A connection beep, then eight even notes of hold music.
+- Cassette C: Six notes: home, up, higher, down, below home, then home and held.
 
 **Hints:**
-1. Read Dad’s drawing one step at a time, starting from home, which is 1.
-2. The tune climbs twice, so it starts 1, then 3, then 5.
-3. After the top note, the tune steps back to the middle note before it goes home. Only one cylinder does that.
+1. Look at the turn near the end of Dad’s pencil line.
+2. The tune dips, then comes back up and holds.
+3. Listen to cassette C, or open its sound caption.
 
 **On success:**
 - **Steve Mercer** *(sound: lullaby)*: You used to sing this when I couldn’t sleep. Now I need you to wake up. `c9_wake.helen.01`
 - **Helen Mercer**: Steven. Oh, my boy. `c9_wake.helen.02`
 
 **Finding:**
-- *Steve Mercer: Home, up, higher, back to the middle, then home and hold. Mom’s lullaby, the one the ship’s hum kept almost playing. She woke up singing the last note.* **NEW** `c9_wake.helen.find`
-
-**Notebook:** Cylinder 1-3-5-3-1-1: home, up, higher, back to the middle, then home, held. Mom’s lullaby, the one the ship’s hum kept almost playing. She woke up singing the last note.
+- *Steve Mercer: The tape ran out. Mom held the last note a little longer.* **NEW** `c9_wake.helen.find`
 
 ### Lead 3: Adrian Rook’s bed (`c9_wake.rook`) · beat · difficulty 1 · played as Nora Reyes
 
@@ -4264,8 +4304,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - *Steve Mercer: Mrs. Penhallow’s glasses, from the middle tray. Her bed tag says she’s been asleep in here for three years. So who has been selling me bait?* **NEW** `c9_wake.agnes.find`
 
 ### Scene complete
-- *Steve Mercer: Dad woke to his call sign, Mom to her lullaby, Adrian Rook to June’s voice, and Mrs. Penhallow to her reading glasses.* **NEW** `c9_wake.recap.01`
-- *Steve Mercer: Somewhere above us, Rook’s copy was losing the man he’d been pretending to be. And he was telling Saren everything he had left.* **NEW** `c9_wake.recap.02`
+- *Steve Mercer: Dad was shivering. I put his old cardigan around him. He found the hole in the cuff with his thumb, the way he always did.* **NEW** `c9_wake.recap.01`
 
 ### Departure
 - **Rook’s copy** (radio): I’m forgetting. Prefect, they’re at the antenna. They have a rig. `c9_wake.out.01`
@@ -4292,7 +4331,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 ### Opening
 - *Steve Mercer: They took the rig off Stephen and broke it over the rail. Then they took me.* **NEW** `c9_choir.in.04`
 - **Prefect Saren**: We will finish your scan. This time there will be no interruption. `c9_choir.in.01`
-- **Steve Mercer** [strapped into the scan chair, frightened]: The chair pulled at everything I knew. My dad’s name. It was... it’s on Stephen’s hand. Why is it on his hand? **NEW** `c9_choir.in.05`
+- **Steve Mercer** [strapped into the scan chair, frightened]: The chair dragged every memory past me, but it wasn’t erasing them. Across the rail, Stephen stared at his hand. Frank. Dad. His link was failing, not mine. **NEW** `c9_choir.in.05`
 - **The Choir**: Stop. `c9_choir.in.02`
 - *Steve Mercer: The straps opened. The crew let go of Stephen. Even Saren stepped back from the console.* **NEW** `c9_choir.in.06`
 - **Sheriff June Calder** [arriving with Helen, Frank and Nora, out of breath]: We followed you down from row nine. Nobody stopped us. The whole crew had stopped to listen. **NEW** `c9_choir.in.07`
@@ -4445,6 +4484,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 ### Opening
 - *Steve Mercer: One hour. The rig was in pieces, and all over town the copies were forgetting.* **NEW** `c10_station.ctx.01`
 - *Steve Mercer: Then I remembered Halcyon’s tower. Every ninth night for a year it had talked to the ship, alone.* **NEW** `c10_station.ctx.02`
+- *Steve Mercer: Five weeks after Halcyon fired me, I sat at my old desk and stopped waiting for somebody else to take the microphone.* **NEW** `c10_station.ctx.03`
 - **Stephen**: The rig is in pieces. We need another way onto their antenna. **NEW** `c10_station.in.04`
 - **Steve Mercer**: We don’t need the rig. KBWR’s tower already talks to the ship. **NEW** `c10_station.in.05`
 - **DJ AutoRick**: Good morning! Up next, another hour of uninterrupted favorites. `c10_station.in.01`
@@ -4548,35 +4588,25 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 **Finding:**
 - *Steve Mercer: Elm follows Shaw’s hand, live, the way it did at the rig. Return C is a measurement signed aboard the Long Patience, the only kind the fleet trusts. Elm into Return C.* **NEW** `c10_station.route.find`
 
-### Lead 3: Emergency radio (`c10_station.relay`) · board · difficulty 2
+### Lead 3: Emergency radio (`c10_station.relay`) · receiver · difficulty 2
 *Unlocks after:* c10_station.route
 
 **When the lead opens:**
 - **Frank Mercer**: K7BLW calling the Thursday club. We’re going to need a few more operators. **MOV** `c10_station.out.01`
 - **Frank Mercer**: The club sent signal three yesterday, without me. Today I’m sending signal four. Let’s see who keeps up. **NEW** `c10_station.relay.lead.01`
-- **Steve Mercer**: The official channel just sent back three. That’s yesterday’s cue. **NEW** `c10_station.relay.lead.02`
+- **Steve Mercer**: The official channel just sent back three. That’s yesterday’s test signal. **NEW** `c10_station.relay.lead.02`
 - **Thursday club operator** (radio): Gull here. Cedar and Marsh both say four. Marsh says the wind just turned west out at the Point. **NEW** `c10_station.relay.lead.03`
 - **Frank Mercer**: Ask them both about the wind again, Gull. **NEW** `c10_station.relay.lead.04`
 - **Thursday club operator** (radio): Marsh says it’s dropping now. Cedar said the same words as last time, exactly. **NEW** `c10_station.relay.lead.05`
 
 **Goal:** Find the operator who can actually see Sentinel Point.
 
-**What Steve knows:** Saren’s crew have jammed every official channel. Frank, in wet pajamas and his old cardigan, is at the station’s emergency set. His Thursday club is on the air: Gull on the coast, Marsh out past Sentinel Point, and Cedar. Frank sent cue three yesterday and cue four today.
+**What Steve knows:** Saren’s crew have jammed every official channel. Frank, in wet pajamas and the cardigan Steve put around him, is at the station’s emergency set. His Thursday club is on the air: Gull on the coast, Marsh out past Sentinel Point, and Cedar. Frank sent test signal three yesterday and test signal four today.
 
 **Prompt:** Who should confirm tonight’s changing cues?
 
-**Instruction:** Read each reply and decide who is really watching the field.
-
-**Case notes:**
-1. Frank sent cue three yesterday and cue four today.
-2. The jammed official line sent back cue three.
-3. Cedar sent back cue four. Asked about the wind twice, Cedar gave the same words both times.
-4. Marsh sent back cue four and gave a new wind reading each time he was asked.
-5. Marsh lives out past Sentinel Point.
-
-**Stage 1 (match):** Who sent each reply?
-- Cards: The official line, Cedar, Marsh
-- Answer: Who sent back yesterday’s cue? → The official line; Who has today’s cue but repeats old news? → Cedar; Who can really see Sentinel Point? → Marsh
+**Instruction:** Tune across the emergency channels. Reject the jammer, then log the operator whose reply changes with the field.
+- Reliable field operator: The official line / Cedar / ✓ Marsh
 
 **Hints:**
 1. A reply with yesterday’s number is out of date.
@@ -4588,7 +4618,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - **Thursday club operator** (radio): Understood. Sentinel Point, do you read? `c10_station.relay.02`
 
 **Finding:**
-- *Steve Mercer: The official line sent back yesterday’s cue. Cedar can repeat a cue but can’t see the field. Marsh, out past Sentinel Point, answered with a fresh wind reading. Marsh is our eyes, and Gull carries the cues down the coast.* **NEW** `c10_station.relay.find`
+- *Steve Mercer: The official line sent back yesterday’s test signal. Cedar can repeat a test number but can’t see the field. Marsh, out past Sentinel Point, answered with a fresh wind reading. Marsh is our eyes, and Gull carries the live-show cues down the coast.* **NEW** `c10_station.relay.find`
 
 ### Scene complete
 - *Steve Mercer: KBWR is live again, and the tower that carried the ship’s signals for a year will carry ours: Elm into Return C.* **NEW** `c10_station.recap.01`
@@ -4603,13 +4633,13 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 ## Chapter 10: Everybody has a part (`c10_town`)
 
-**Where:** Bellwether harbor and Sentinel Point · **Present:** Nora Reyes, Steve Mercer, Carmen Reyes, President Elena Ward, Agnes Penhallow, Dr. Lin Wen, Dr. Evelyn Shaw
+**Where:** Bellwether harbor and Sentinel Point · **Present:** Nora Reyes, Steve Mercer, Carmen Reyes, President Elena Ward, Agnes Penhallow, Dr. Evelyn Shaw
 
 **Objective:** Get the town, the lamps and the grid ready for one live show.
 
 **Revision notes:** C18, C23 (console becomes a beat), U-relationships, U-narration
 
-> Implementation: Mrs. Penhallow’s reveal opens the scene and repeats the Archivist’s Veyr line word for word (p_veyr.out.01).
+> Implementation: Mrs. Penhallow’s reveal opens the scene with the shore dub she made from the Archivist’s original Veyr take.
 
 > Implementation: Ward’s line goes out on television (broadcast).
 
@@ -4621,12 +4651,13 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - **President Elena Ward** (broadcast): Listen to your local radio. Tonight, we need you to take part. `c10_town.in.03`
 - *Steve Mercer: Mrs. Penhallow walked into the booth with her bait bucket. Nobody had told her where we were.* **NEW** `c10_town.in.04`
 - **Agnes Penhallow**: I brought something in my bucket. **MOV** `c10_town.out.01`
-- **Agnes Penhallow**: Wind through the western towers. Last evening. Original take. **NEW** `c10_town.in.05`
+- **Agnes Penhallow**: Wind through the western towers. Last evening. Shore dub from the original take. **NEW** `c10_town.in.05`
 - **Steve Mercer**: Mrs. Penhallow, I have never heard you say anything that wasn’t about bait. **NEW** `c10_town.in.06`
-- **Agnes Penhallow**: I recorded it a long time ago, Steven. Before I had hands that smelled of herring. **REV** `c10_town.out.03`
+- **Agnes Penhallow**: I made this dub before I came ashore, Steven. Before I had hands that smelled of herring. **REV** `c10_town.out.03`
 - **Steve Mercer**: You’re one of them. You’re the records officer Iris told me about. **NEW** `c10_town.in.07`
 - **Agnes Penhallow**: Part of her. The part that stayed for the people. **NEW** `c10_town.in.08`
-- **Agnes Penhallow**: Veyr was our home, Steven. Our sun failed. That is the last wind that ever blew through our city. **NEW** `c10_town.in.09`
+- **Agnes Penhallow**: On ninth nights I answered whatever shore phone rang. A few bars on the line kept my borrowed memories aligned. At the boathouse, you watched me do it. **NEW** `c10_town.in.09`
+- **Agnes Penhallow**: That city was our home. Our star went dark. This is the last wind that ever blew through those streets. **NEW** `c10_town.in.10`
 
 ### Small talk
 **The phone tree** · Nora Reyes
@@ -4669,9 +4700,9 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - **President Elena Ward**: Bandaged, and still mine. Thank you for that. **NEW** `c10_town.talk.ward.1.03`
 
 **Old rivals** · Dr. Lin Wen · after `c10_town.console`
-- **Dr. Lin Wen**: Nine years ago I would have unplugged her lamps. **NEW** `c10_town.talk.wen.1.01`
+- **Dr. Lin Wen** (radio): Nine years ago I would have unplugged her lamps. **NEW** `c10_town.talk.wen.1.01`
 - **Dr. Evelyn Shaw**: You tried. And my fake fooled more generals than yours. **NEW** `c10_town.talk.wen.1.02`
-- **Dr. Lin Wen**: It did not. My test fooled two admirals as well. **NEW** `c10_town.talk.wen.1.03`
+- **Dr. Lin Wen** (radio): It did not. My test fooled two admirals as well. **NEW** `c10_town.talk.wen.1.03`
 
 **The fog machine** · Dr. Evelyn Shaw
 - **Dr. Evelyn Shaw**: I brought the fog machine. Just in case. **NEW** `c10_town.talk.shaw.1.01`
@@ -4681,7 +4712,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 ### Lead 1: Phone tree (`c10_town.lights`) · rows · difficulty 1 · played as Nora Reyes
 
 **When the lead opens:**
-- **Nora Reyes**: Two street captains, one spare phone and six thousand porch lights. Easy. **NEW** `c10_town.lights.lead.01`
+- **Nora Reyes**: Two street captains, one spare phone and two streets of porch lights. Easy. **NEW** `c10_town.lights.lead.01`
 - **Nora Reyes**: Pier can see Orchard’s porch lights from the harbor. Orchard faces the hills, so they can’t see Pier at all. **NEW** `c10_town.lights.lead.02`
 - **Nora Reyes**: Both streets have the radio on. And Mateo wants one phone kept free for the fire crew. **NEW** `c10_town.lights.lead.03`
 
@@ -4722,7 +4753,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 3. Put Shaw’s lamp mark on the cue sheet.
 
 **On success:**
-- **Dr. Lin Wen**: Your timing is late. `c10_town.console.01`
+- **Dr. Lin Wen** (radio): Your timing is late. `c10_town.console.01`
 - **Dr. Evelyn Shaw**: Your lamps are dim. `c10_town.console.02`
 - **Steve Mercer**: Wonderful. You can both fix it while we’re on air. `c10_town.console.03`
 
@@ -4738,7 +4769,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 **Goal:** Give the fleet home as it was, then a voice answering now.
 
-**What Steve knows:** Mrs. Penhallow’s spool holds the last wind on Veyr, nine hundred years old. The Choir can answer from aboard the ship, live.
+**What Steve knows:** Mrs. Penhallow’s spool holds her shore dub of the last wind on Veyr, recorded nine hundred years ago. The Choir can answer from aboard the ship, live.
 
 **Prompt:** The spool plays home as it was. The Choir must answer live, right after it. When does the Choir’s return open?
 
@@ -4755,15 +4786,15 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - **Steve Mercer**: A recording can remind them of home. We’ll answer it with something happening now. `c10_town.wind.01`
 
 **Finding:**
-- *Steve Mercer: The Veyr wind plays through to Mrs. Penhallow’s pencil mark, after the last gust. Then the Choir’s return opens, live. Home as it was, then a voice answering them now.* **NEW** `c10_town.wind.find`
+- *Steve Mercer: The pencil mark comes just after the last gust. That’s where I open the return. The wind is on tape. The people answering it are here.* **NEW** `c10_town.wind.find`
 
 ### Scene complete
-- *Steve Mercer: Mrs. Penhallow is part of the ship’s record keeper, the part that stayed ashore with us. She brought me the last wind on Veyr in her bait bucket.* **NEW** `c10_town.recap.01`
-- *Steve Mercer: Every porch light in Bellwether is waiting for my cue. Shaw has the lamps, Wen has the grid, and the Choir will answer live.* **NEW** `c10_town.recap.02`
+- *Steve Mercer: The last sound of a whole city fit in the bottom of her bait bucket.* **NEW** `c10_town.recap.01`
+- *Steve Mercer: The porch lights on Pier and Orchard are waiting for my cue. Shaw has the lamps, Wen has the grid, and the Choir will answer live.* **NEW** `c10_town.recap.02`
 
 ### Departure
 - **Dr. Evelyn Shaw**: Lamps up. **NEW** `c10_town.out.04`
-- **Dr. Lin Wen**: Grid up. Late, but up. **NEW** `c10_town.out.05`
+- **Dr. Lin Wen** (radio): Grid up. Late, but up. **NEW** `c10_town.out.05`
 
 **Next:** Live, on every station (c10_live).
 
@@ -4784,10 +4815,10 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 ### Opening
 - **Steve Mercer**: Bellwether, this is Steve Mercer, live. I can’t do this alone, and for once I’m not going to try. `c10_live.in.01`
 - *Steve Mercer: I knocked over the microphone stand, caught it and kept going.* **NEW** `c10_live.in.04`
-- **Stephen**: Steve. Who’s... Frank. Dad. It’s on my hand. **REV** `c10_live.in.02`
+- **Stephen**: Steve. I know you. Dad’s name is... Frank. It’s on my hand. **REV** `c10_live.in.02`
 - **Steve Mercer**: It’s on mine too. Stay with me. **REV** `c10_live.in.03`
 
-### Lead 1: Cue one: a live reply (`c10_live.first`) · rows · difficulty 1
+### Lead 1: Cue one: a live reply (`c10_live.first`) · desk · difficulty 1
 
 **When the lead opens:**
 - **Nora Reyes**: Orchard is listening for you, Steve. The pier is watching Orchard. **NEW** `c10_live.first.lead.01`
@@ -4797,11 +4828,11 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 **What Steve knows:** The fleet’s instruments will be watching for a pattern that answers itself live. Nora’s phone tree is ready: Orchard hears KBWR, and Pier can see Orchard. Two Pier lamps are still glowing from the rehearsal.
 
-**Prompt:** Which street does Steve call, and what should release Shaw’s field lights?
+**Prompt:** Bring up the program fader. Give the first street its cue. Watch the return lamp before you send Shaw.
 
-**Instruction:** Call the street that starts from the radio. Release Shaw’s field lights only when you see a new reply.
-- Which street does Steve call?: Pier / ✓ Orchard / Sentinel field
-- When does Shaw switch on?: When the two old Pier lamps glow / At Orchard’s first flash / ✓ At a new Pier flash after Orchard
+**Instruction:** Set the fader to LINE. Press a channel key to send it live. The desk holds each reply until you are ready.
+- ON AIR · two steady rehearsal lamps at Pier → Orchard
+- RETURN · fresh flash at Pier → Shaw
 
 **Hints:**
 1. Remember Nora’s phone tree. Which street hears the radio, and which one watches?
@@ -4815,61 +4846,61 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 **Finding:**
 - *Steve Mercer: I called Orchard. When a fresh Pier flash answered Orchard’s change, I released Shaw’s lights. A reply, made live, that nobody could have recorded.* **NEW** `c10_live.first.find`
 
-### Lead 2: Cue two: the coast (`c10_live.second`) · rows · difficulty 2
+### Lead 2: Cue two: the coast (`c10_live.second`) · desk · difficulty 2
 *Unlocks after:* c10_live.first
 
 **When the lead opens:**
 - **Frank Mercer**: I logged all three faders, kiddo. One of them only looks connected. **NEW** `c10_live.second.lead.01`
 - **Frank Mercer**: With the coast plugged in, Reed and Bell both answered two beats late. With the coast unplugged, Reed went quiet. **NEW** `c10_live.second.lead.02`
 - **Frank Mercer**: Bell kept answering anyway. So Bell is only an echo inside the building. **NEW** `c10_live.second.lead.03`
-- **Steve Mercer**: The fourth signal goes out on beat forty. Shaw goes when the coast answers. Wen needs the next two beats. **NEW** `c10_live.second.lead.04`
-- **Dr. Lin Wen**: And my power crew needs everything back by the start of beat forty-five. **NEW** `c10_live.second.lead.05`
+- **Steve Mercer**: Coast next. Bring me a live reply before we switch on the grid. **NEW** `c10_live.second.lead.04`
+- **Dr. Lin Wen** (radio): I’m standing by. Wait for my green lamp. **NEW** `c10_live.second.lead.05`
 
 **Goal:** Fit Shaw and Wen around the coast’s real reply.
 
-**What Steve knows:** Frank logged three faders on Steve’s beat clock. Test at 10, coast plugged in: Booth 10, Reed 12, Bell 12. Test at 20, coast unplugged: Booth 20, Reed silent, Bell 22. Cue four leaves at 40, and the power crew needs everything back at the start of beat 45.
+**What Steve knows:** Frank pulled the coast plug at rehearsal. Reed went dead. Bell kept answering inside the booth. Shaw’s lamps are lit, and Wen is listening for a genuine coast reply.
 
-**Prompt:** Cue four goes out on beat 40. Which fader is the real coast, and which beats does Wen get?
+**Prompt:** Patch the coast onto the live program. Send Wen when her return lamp comes up.
 
-**Instruction:** The real coast goes quiet when the coast is unplugged. It answers two beats after a cue, and Shaw goes on that beat. Wen gets the next two beats, done before 45.
-- Which fader is the real coast?: Bell / Booth / ✓ Reed
-- Which beats does Wen get?: Beats 42 and 43 / Beats 44 and 45 / ✓ Beats 43 and 44
+**Instruction:** Set LINE level and press a patch key. Watch the desk for the coast’s reply.
+- PATCH · Shaw ready; coast line open → Reed
+- RETURN · coast answered; Wen green → Wen
 
 **Hints:**
 1. Which fader stopped answering when Frank unplugged the coast?
-2. The real coast answers two beats after a cue. Count on two beats from beat 40.
-3. Shaw takes the beat the coast answers on. Wen takes the two beats right after that one.
+2. An echo inside the building goes on answering without a cable.
+3. Patch Reed. Send Wen when the coast return comes up.
 
 **On success:**
 - **Steve Mercer**: Holding. Now, Wen. `c10_live.second.01`
-- **Dr. Lin Wen**: Grid response confirmed. Both networks. `c10_live.second.02`
+- **Dr. Lin Wen** (radio): Grid response confirmed. Both networks. `c10_live.second.02`
 - **Thursday club operator** (radio): The far relay has you. `c10_live.second.03`
 
 **Finding:**
-- *Steve Mercer: Reed went silent when the coast was unplugged, so Reed is the real coast return. Its reply landed at 42 for Shaw, and Wen took 43 and 44. Both grids answered, live.* **NEW** `c10_live.second.find`
+- *Steve Mercer: Reed brought the coast into the booth. Wen took the handoff. Both grids answered.* **NEW** `c10_live.second.find`
 
-### Lead 3: Cue three: listen (`c10_live.third`) · choice · difficulty 1
+### Lead 3: Cue three: listen (`c10_live.third`) · desk · difficulty 1
 *Unlocks after:* c10_live.second
 
 **When the lead opens:**
 - **Steve Mercer**: Last cue. The wind on Veyr, and then the Choir. Nobody talks over them. **NEW** `c10_live.third.lead.01`
-- **Steve Mercer**: Mrs. Penhallow marked the last gust at fifty. It keeps ringing until fifty-two. **NEW** `c10_live.third.lead.02`
-- **Dr. Lin Wen**: I confirm on beat fifty-one. Give me two beats to talk. **NEW** `c10_live.third.lead.03`
+- **Steve Mercer**: I’ll run the reel. Leave the tail on that last gust. **NEW** `c10_live.third.lead.02`
+- **Dr. Lin Wen** (radio): Watch my lamp. When it goes dark, the channel is theirs. **NEW** `c10_live.third.lead.03`
 
 **Goal:** Let the Choir speak with nothing in its way.
 
 **What Steve knows:** Last in the show comes the wind on Veyr, then the Choir, answering live. The fleet has not heard home in nine hundred years.
 
-**Prompt:** The last gust rings until beat 52. Wen talks on beats 51 and 52. The Choir should start on the first quiet beat. When does Steve open the Choir’s channel?
+**Prompt:** Send the wind from home. Leave the ending intact, then open a clear channel for the Choir.
 
-- 52. *Wrong:* At 52 the gust is still ringing and Wen is still talking.
-- ✓ 53
-- 54. *Wrong:* 54 is quiet, but it isn’t the first quiet beat. Count again from where Wen stops.
+**Instruction:** Bring up LINE. The monitor plays the reel on air; the return lamp follows its actual length.
+- STANDBY · reel threaded; Choir waiting → Wind reel
+- CLEAR · reel ended; Wen’s lamp dark → Choir
 
 **Hints:**
-1. When does the gust stop ringing, and when does Wen stop talking?
-2. Both the gust and Wen are still going on beat 52.
-3. Find the last beat that has any sound on it. The Choir starts on the beat after that.
+1. The reel is the invitation. The Choir is the reply.
+2. Watch the return lamp if you cannot hear the tail.
+3. Send Wind reel. Wait for CLEAR, then send Choir.
 
 **On success:**
 - **The Choir**: We are here. We have changed. Listen. `c10_live.third.01`
@@ -4877,10 +4908,10 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - *Steve Mercer: For the first time in nine hundred years, the fleet stopped to listen.* **NEW** `c10_live.third.03`
 
 **Finding:**
-- *Steve Mercer: The wind on Veyr rang out through 52. At 53, with nobody else on the line, the Choir answered. Nothing repeated, because nothing was recorded.* **NEW** `c10_live.third.find`
+- *Steve Mercer: The tape stopped. Three hundred and twelve voices came through the open channel.* **NEW** `c10_live.third.find`
 
 ### Scene complete
-- *Steve Mercer: Porch lights, field lamps, two national grids, a planet’s worth of radios and three hundred and twelve human voices. None of it recorded. All of it answering.* **NEW** `c10_live.recap.01`
+- *Steve Mercer: The wind was a dub. The porch lights, field lamps, two grids, radios and three hundred and twelve human voices all answered it live.* **NEW** `c10_live.recap.01`
 - *Steve Mercer: To the Vigil’s instruments, Earth had just tested an engine that could reach the fleet in an afternoon.* **NEW** `c10_live.recap.02`
 
 ### Departure
@@ -4916,6 +4947,8 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - **Prefect Saren**: I will not confirm this report. `c10_report.in.01`
 - **The Archivist**: To do so would violate every record we have kept. `c10_report.in.02`
 - **The Archivist**: For a year I told you the engine was in a notebook, Saren. So you would keep looking, instead of telling the fleet there was nothing here to fear. **NEW** `c10_report.in.04`
+- **The Archivist**: They first bound you in a cradle ship after our star went dark. Fear was your first record. **NEW** `c10_report.in.05`
+- **Prefect Saren**: I can still hear my mother in that ship. If you reconcile me, will I know her voice? **NEW** `c10_report.in.06`
 - **Agnes (shore echo)**: You have spent three years selling bait to people you like. Tell them what you learned. `c10_report.in.03`
 
 ### Lead 1: The open channel (`c10_report.echo`) · choice · difficulty 1
@@ -5010,8 +5043,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - *The Archivist: The danger, measured aboard our own ship. A home, surveyed empty three times. And three hundred and twelve people worth meeting. I have confirmed the report.* **NEW** `c10_report.report.find`
 
 ### Scene complete
-- *The Archivist: The report is confirmed. The fleet will measure an engine that does not exist, meet three hundred and twelve people, and learn of a home it was never told about.* **NEW** `c10_report.recap.01`
-- *The Archivist: I did not reconcile Saren. He will have to live with being wrong. So will I.* **NEW** `c10_report.recap.02`
+- *The Archivist: I did not reconcile Saren. He will have to live with being wrong. So will I.* **NEW** `c10_report.recap.01`
 
 ### Departure
 - **The Archivist**: They are dangerous, and they sing. Go around. `c10_report.out.01`
@@ -5178,7 +5210,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - **Rook’s copy**: I’ll have to find out who that is. `epilogue.bait.04`
 
 **Finding:**
-- *Steve Mercer: Two Mrs. Penhallows, one counter, and people are finally buying bait. One Adrian Rook stays. The other one is leaving town, to find out who he is.* **NEW** `epilogue.bait.find`
+- *Steve Mercer: Two Mrs. Penhallows, one counter, and people are finally buying bait. The Long Patience was already gone. One Adrian Rook stayed; the other took the morning ferry to find out who he was.* **NEW** `epilogue.bait.find`
 
 ### Lead 3: A new morning (`epilogue.coffee`) · beat
 *Unlocks after:* epilogue.neighbors, epilogue.bait
@@ -5329,17 +5361,21 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 - **Dr. Evelyn Shaw**: Lucky for us that you did. **NEW** `postcredits.talk.helen.1.02`
 - **Helen Mercer**: Not luck. An interpreter always keeps the last page. **NEW** `postcredits.talk.helen.1.03`
 
-### Lead 1: The new signal (`postcredits.answer`) · choice · difficulty 1
+### Lead 1: The new signal (`postcredits.answer`) · compare · difficulty 1
 
 **Goal:** Recognize the shape of the reply.
 
 **What Steve knows:** Helen copied Wick’s phrase onto the last page of her notebook from Frank’s tapes, and followed it in Row Zero. Wick sent a message home to Tirel.
 
-**Prompt:** Three in the morning. A real signal from deep space: two joined tones, the second climbing, a gap, then one long tone lower than both. Helen has three pages open.
+**Prompt:** Play the overnight capture and compare it with the archived reel. Which notebook page should Helen open?
+
+**Recordings:** Deep-space receiver · 03:00 · Archive · Reel 14
 
 - Page 9: three separate falling strokes. *Wrong:* Three separate strokes. Nothing is joined, and nothing climbs.
 - ✓ Page 12: two joined strokes rising, a gap, one long low stroke
 - Page 4: one long stroke, a gap, two joined strokes falling. *Wrong:* That shape starts with the long stroke and falls. This signal climbs first.
+- Deep-space receiver · 03:00: Two joined tones rise. After a gap, a long tone falls below both.
+- Archive · Reel 14: The opening tones rise together; after a gap, the long final tone is higher still.
 
 **Hints:**
 1. Follow the shape: joined, climbing, a gap, then low.

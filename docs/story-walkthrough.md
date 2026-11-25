@@ -8,6 +8,8 @@ Written 2026-11-20 from the applied script (`game/content/campaign.json`, versio
 
 > **November 22 revision.** Chapters 4 to 7 now explain how Steve gets into the van and away, where Stephen came from and why he sides with Steve, how Iris chooses her name, how the Sheriff's office rescue works and how they reach the President. See [changes.md, section (i)](script-v2/changes.md).
 
+> **November 24 revision.** This is the historical design walkthrough. For the current story, including optional conversations and revised clues, use the [applied script](script-v2/script.md). The [playable walkthrough](campaign-walkthrough.md) is generated from the same source as the game.
+
 ## How to read this
 
 - Scenes appear in play order. Each scene has a short account of what happens, then one row per lead (the game's word for a puzzle or story step).
@@ -49,11 +51,11 @@ The boat came back empty with Frank's radio still on. Steve keeps Mom's voicemai
 ## Chapter 1: Good Morning, Sleepyhead
 
 ### The apartment (`c1_flat`), Saturday the 20th to Sunday the 21st
-Steve plays the voicemail at 3 a.m. The tape is wearing thin. He wants to move it to a fresh tape, but Dad's recorder may run slow, so he plans to time it with his own 12-second KBWR station ident, which still airs at 7:15 every morning.
+Steve walks into the kitchen at 7:15. Nora follows him in: “Good morning, sleepyhead.” He answers, “Morning, Nor.” She’s made the coffee strong even though she hates it that way. Dad’s recorder was already running alongside the radio. Click the silver recorder to listen to Mom’s cassette, or go straight to the red tape. Listening to Mom is optional.
 
 | Lead | Type | Solution | Why it works |
 | --- | --- | --- | --- |
-| The red cassette (`c1_flat.saturday`) | Deduction | Record the KBWR ident on the kitchen radio. | A timing reference must be identical every time. Only a station cart is. |
+| The red cassette (`c1_flat.saturday`) | Deduction | Use the KBWR ident already on the tape. | A timing reference must be identical every time. Only a station cart is. |
 | The blue cassette (`c1_flat.sunday`) | Deduction | Same spot, same level, record at 7:15. | A fair test changes only the day. |
 | Two mornings, side by side (`c1_flat.compare`) | Deduction (tape) | Offset −0.35 s. The ident is twelve seconds on both, so the recorder runs true. Nora's greeting is identical, breath for breath. | Sunday's ident starts about a third of a second late. Once the idents line up, the greeting caught by accident lines up too. |
 | Dad's recorder (`c1_flat.control`) | Deduction | Cross out "The blue tape carried Saturday's sound over". | The squeak test shows only the new sound and nothing of Saturday, so the tape is clean. |
@@ -134,7 +136,7 @@ Four days later, which is how long a copy body takes to grow. June has kept Stev
 | Lead | Type | Solution | Why it works |
 | --- | --- | --- | --- |
 | June's crossword (`c3_house.crossword`) | Deduction (rows) | Ask about his 911 call on Sunday night. He writes "People are walking into the water, and they're not coming back out." June checks it against her own call recording. | The scan read his oldest memories and stopped before Sunday night. After midnight the 911 line rings in June's kitchen and her machine records it. |
-| June's list (`c3_house.rules`) | Deduction (rows) | Lyle's birthday: proves nothing. Mateo's coaching book: evidence. Gus's new pastry: proves nothing. Walt Prior's permit: evidence. | June's rule: kindness and odd behavior prove nothing; dated records do. |
+| June's list (`c3_house.rules`) | Deduction (rows) | Lyle's citation and clinic visit: evidence. Gus's new pastry: proves nothing. Walt's permit and sworn testimony: evidence. | A new habit can be ordinary. Each pair of records puts the same person in two places at once. |
 | Dale's delivery (`c3_house.mail`) | Deduction | Deputy Lyle Boone. | June radioed at 06:10 and Lyle answered. Dale's bag left at 08:04; the post office heard at 08:12; Carmen heard at lunch. |
 
 Then Steve fumbles the crossword ("marmite?") and spills June's coffee: "No copy is that bad at this." June has a list, "People who got better overnight", with thirty-one names, Lyle among them. Mrs. Penhallow is not on it: "She hasn't changed in forty years." Lyle passes Steve's whereabouts to Dale. June has keys to the Town Hall archive.
@@ -213,7 +215,7 @@ June's recorded reply comes back on Dad's tape: "I'll keep his attention. You ge
 ## Chapter 5: Wanted: Steve Mercer
 
 ### Frank's radio shack (`c5_shack`), Friday, November 2
-Steve comes down out of the trees at sunrise to his father's shack on the bluff and finally opens his parents' boxes. Luis Reyes brings food and does not call the Sheriff. Nora (the copy) has been gone since Tuesday night. Luis has heard the bay sing since he was a boy; Frank was the only one who asked what it sounded like.
+Steve comes down out of the trees at sunrise to his father's shack on the bluff and finally opens his parents' boxes. Luis Reyes brings food and does not call the Sheriff. Nora (the copy) has been gone since Tuesday night. Luis heard stories about the bay as a boy. He first heard it sing himself three years ago, and Frank asked what it sounded like.
 
 | Lead | Type | Solution | Why it works |
 | --- | --- | --- | --- |
@@ -251,7 +253,11 @@ Every night at nine Stephen tells the earpiece Steve has gone north. AutoRick br
 | Iris's recorder test (`c6_iris.takes`) | Deduction (compare) | She chose how to say it each time. | Her second take pauses in a new place; a replayed take would not. |
 | Halcyon lines (`c6_iris.hold`) | Deduction (compare) | Eight bars of hold music, ending on the same note. | Two offices, two clerks, different rings. The music is the shared part, taped at 00:04 on the 30th, when the water lit up. |
 
-The stranger is Nora's copy. She sent the warning about Rook, "no capitals, the way Nora texts". She missed going below on the 21st by accident, chasing Steve, and on the 30th by choice. "Before I was Nora, I was a junior crew member with a duty and a record. We call ourselves Veyri." Copies near the bay go below; far away they wait on hold. Saren believes Helen wrote down how the engine works; a records officer told him so. On Wednesday, at the signing, he means to put a copy of the President in her chair; her own physician scanned her weeks ago. June was scanned at the safe house; her copy took the Sheriff's desk this morning; the real June is in her own cell. "Those Sunday dinners happened to me." She chooses a name: Iris, after the flowers on the balcony. She shows Steve one of those irises, pressed flat in an envelope: the first thing she ever kept that nobody told her to keep. Stephen is the public decoy at Gus's bread window while Steve meets Iris alone on the pier; when an officer reaches the window, Stephen is already gone through the alley, so only one Steve is ever at the pier. Iris hid in the otter house from Tuesday; if the crew catches her again, they will reset her. She says her name again, and it comes out a little different. Then she explains the coming wake: on Sunday night the crew found her and took her below for a reset, and left her on a laundry cart in the Gallery while the shift bell rang. She set a slow, gentle, reversible wake on three beds (Nora, Lyle Boone and Dale) that finishes Monday night, then rode out with the wash. At the fish stalls, in Nora's coat, she tells half the market: "Steve didn't take me." The search for Nora is closed. She also tells Steve how to get into the Sheriff's office: the mail carrier, who takes the mail in the back way at four, "isn't Dale, but he loves June's dog".
+Play as Stephen to arrange the market sighting. When he leaves for Gus's bread window, control returns to Steve for the meeting on the pier. Nora's copy sent the warning about Rook, "no capitals, the way Nora texts". On the 21st she took Steve below after her re-sync window had closed. On the 30th she deliberately missed it. Copies near the bay go below; far away they wait on hold.
+
+Saren wants Helen's notebook. On Wednesday he means to put a copy of the President in her chair; her own physician scanned her weeks ago. June's copy has run the Sheriff's office since Friday. The real June is in her own cell. The mail carrier uses the back entrance at four. He "isn't Dale, but he loves June's dog".
+
+Nora's copy chooses the name Iris, after the flowers on the balcony. She shows Steve a pressed iris, the first thing she kept without being told. She hid in the otter house from Tuesday until the crew found her on Sunday night. While waiting for a reset, she set the beds of Nora, Lyle Boone and Dale to wake slowly on Monday night, then rode out with the wash. At the fish stalls she tells the market, "Steve didn't take me." The search for Nora ends; Steve is still wanted for fleeing custody.
 
 ### Two Sheriffs (`c6_jail`), Monday afternoon
 Just before four. Since Iris spoke up, the search for Nora is over; June's copy and Lyle's copy are out on the harbor calling the boats in, and June's copy is heard only on the front-desk radio. Stephen and Iris wait behind Gus's bakery next door. Steve walks in the front alone. Dale the mail carrier reports Steve's location to Biscuit, and names himself: Pell. He has worn Dale's face for a year and fed Biscuit twice a day; a reported Pell would be reset and forget her.
@@ -378,8 +384,8 @@ Iris opens the release herself and watches her own memory drain. Steve tells Nor
 
 | Lead | Type | Solution | Why it works |
 | --- | --- | --- | --- |
-| Frank's bed (`c9_wake.frank`) | Deduction (rows) | Card K7BLW; repeat ·−− (W). | Steve learned the call sign in Chapter 5. The five groups read K, 7, B, L, W against the desk key; the scratched head loses the last group. |
-| Helen's bed (`c9_wake.helen`) | Deduction (rows) | Cylinder 1-3-5-3-1-1. | Frank's pencilled shape: home, up, higher, back down through the first rise, home held. |
+| Frank's bed (`c9_wake.frank`) | Recorder | Send cassette B to Nora's speaker. | The short and long pulses spell Frank's Thursday call sign, K7BLW. |
+| Helen's bed (`c9_wake.helen`) | Recorder | Send cassette C. | Frank draws Helen's lullaby: two steps up, down past home, then back up to the held note. |
 | Adrian Rook's bed (`c9_wake.rook`, played as Nora) | Beat | Ask June to speak to him. | |
 | Row three (`c9_wake.agnes`, played as Nora) | Deduction (board) | III-1: O.T. ledger. III-2: glasses case. III-3: M.V. gloves. | Mrs. Penhallow is the shopkeeper in the middle bed; the glasses case has a bait-shop sticker; the inventory places the others. |
 
@@ -409,12 +415,12 @@ Steve realizes the KBWR tower has talked to the ship every ninth night for a yea
 | --- | --- | --- | --- |
 | AutoRick queue (`c10_station.playlist`) | Deduction (board) | 06:01 Ident; 06:03 Traffic; 06:05 Bulletin. | The ident clicks the latch without stopping the song; traffic waits; only the bulletin has a duty-host signature and hands the air to a human. |
 | Tower patch panel (`c10_station.route`) | Deduction (rows) | Elm into Return C. | Recall from the rig: Elm followed Shaw's hand. The fleet trusts only a measurement signed aboard its own ship. |
-| Emergency radio (`c10_station.relay`) | Deduction (board) | Official line: yesterday's cue. Cedar: current cue, stale observation. Marsh: current cue and fresh local observation. | Marsh answered a new question with something new, and he lives out past Sentinel Point. |
+| Emergency radio (`c10_station.relay`) | Receiver | Tune to Marsh and check his fresh local observation against the test signal. | The official line repeats yesterday's signal and Cedar gives a stale observation. |
 
 Frank, in wet pajamas, calls K7BLW's club. Gull relays down the coast; operators answer from every continent. "Hams never really switch off."
 
 ### Everybody has a part (`c10_town`)
-Nora runs the town's phone tree with her family. Ward asks the country to listen to local radio. Mrs. Penhallow walks into the booth with her bait bucket and says the Archivist's words from Veyr word for word: "Wind through the western towers. Last evening. Original take." She recorded it "before I had hands that smelled of herring". Steve: "You're the records officer Iris told me about." "Part of her. The part that stayed for the people." Veyr was their home; its sun failed; this is the last wind that blew through their city.
+Nora runs the town's phone tree with her family. Ward asks the country to listen to local radio. Mrs. Penhallow brings the last wind on Veyr to the booth in her bait bucket. The original reel stayed aboard the ship; she made a copy before she came ashore. Now Steve recognizes the records officer Iris told him about. On ninth nights, the shore phone kept her borrowed memories aligned.
 
 | Lead | Type | Solution | Why it works |
 | --- | --- | --- | --- |
@@ -429,11 +435,11 @@ Steve goes live: "I can't do this alone, and for once I'm not going to try." He 
 
 | Lead | Type | Solution | Why it works |
 | --- | --- | --- | --- |
-| Cue one (`c10_live.first`) | Deduction (rows) | Call Orchard; release Shaw on a new Pier flash after Orchard changes. | Nora's sightline from earlier; a lamp already lit proves nothing. |
-| Cue two (`c10_live.second`) | Deduction (rows) | Arm Reed; Wen gets beats 43 and 44. | Reed went silent when the coast was unplugged, so it is the real return; it replies two beats after cue four (40), at 42, which Shaw uses. |
-| Cue three (`c10_live.third`) | Deduction | Open at 53. | The gust rings through 52; Wen talks on 51 and 52; 53 is the first clear beat. |
+| Cue one (`c10_live.first`) | Live desk | Set LINE, send Orchard, then send Shaw on the fresh Pier flash. | Two lamps were already lit. A new flash proves someone saw Orchard's cue. |
+| Cue two (`c10_live.second`) | Live desk | Patch Reed. Give Wen the line when the coast answers. | Reed went silent when Frank unplugged the coast; Bell kept replaying its echo. |
+| Cue three (`c10_live.third`) | Live desk | Run the wind reel and let it finish. Send Choir on CLEAR. | The invitation is recorded. The people answering it are live. |
 
-The Choir answers: "We are here. We have changed. Listen." For the first time in nine hundred years the fleet stops to listen. Nothing repeats, because nothing is recorded. To the Vigil, Earth has tested an engine that could reach the fleet in an afternoon. Saren comes ashore and threatens on air to finish Steve's scan. "You're on air now, Prefect. Your whole fleet is listening." The town blocks the pier: June, the Reyes brothers, Carmen with a ladle, Pell with Biscuit, Stephen and two hundred copies. Mateo sits on Saren. Admiral steals his command crystal, thinking it is a sandwich. "Take me back to the ship. I will not sign anything."
+The Choir answers: "We are here. We have changed. Listen." For the first time in nine hundred years the fleet stops to listen. To the Vigil, Earth has tested an engine that could reach the fleet in an afternoon. Saren comes ashore and threatens on air to finish Steve's scan. "You're on air now, Prefect. Your whole fleet is listening." The town blocks the pier: June, the Reyes brothers, Carmen with a ladle, Pell with Biscuit, Stephen and two hundred copies. Mateo sits on Saren. Admiral steals his command crystal, thinking it is a sandwich. "Take me back to the ship. I will not sign anything."
 
 ### Go around (`c10_report`)
 Mrs. Penhallow takes the microphone and argues with herself on the open channel. The Archivist admits she told Saren the engine was in a notebook for a year so he would keep looking instead of telling the fleet there was nothing here to fear.

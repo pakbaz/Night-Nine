@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "audio_id": "c3_house.rules.lead.04",
+  "attempt": 1,
+  "plan_sha256": "f489d8823f897787d07f726f8abb9e9251693c77164bbe22de94563be899f495",
+  "wav_sha256": "733b57396cc928f5fc4b33dde25e94b9c5ff8674f7b52166649914da3aa9de42",
+  "expected": "Walt moved to Washington in April. The clerk’s bound ledger puts him at her counter on May third while a sworn hearing transcript has him testifying in Washington.",
+  "recognized": "Walt moved to Washington in April. The clerk's bound ledger puts him at her counter on May 3rd, while a sworn hearing transcript has him testifying in Washington.",
+  "local_recognized": "Walt moved to Washington in April. The clerk's bound ledger puts him at her counter on May 3, while a sworn hearing transcript has him testifying in Washington.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 10.16,
+  "sample_rate": 48000,
+  "peak": 0.49237060546875,
+  "rms": 0.06476283303864375,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c3_house.rules.lead.04.json",
+    "sha256": "acdd58cf0fb32759ec2b3d3d041ce7537b5d14b651b1028d42e800d864c41383",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  },
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

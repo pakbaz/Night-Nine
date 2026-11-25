@@ -71,6 +71,9 @@ func configure(room: Dictionary, roles: Array, plate: Texture2D, wide_file: Stri
 	authored_marks = marks
 	for id: String in marks:
 		var path := WALK + id + ".webp"
+		# On the first morning Iris is posing as Nora. Use Nora's stride for the entrance.
+		if room_id == "c1_flat" and id == "iris":
+			path = WALK + "nora.webp"
 		var idle_file := WALK + id + "-idle.webp"
 		if not ResourceLoader.exists(path) and not ResourceLoader.exists(idle_file):
 			continue
@@ -149,39 +152,23 @@ func select_actor(id: String) -> void:
 func has_actor() -> bool:
 	return bodies.has(active_actor)
 
-func body_at(at: Vector2) -> String:
-	var ordered: Array = bodies.keys()
-	ordered.sort_custom(func(a: String, b: String):
-		return bodies[a].body.position.y > bodies[b].body.position.y)
-	for id: String in ordered:
-		var person: Dictionary = bodies[id]
-		if not person.body.visible:
+func body_at(screen: Vector2, figures: Dictionary = {}) -> String:
+	# Match the floor's y-sort, including the furniture in front of a person.
+	var ordered := cast.get_children()
+	ordered.sort_custom(func(a: Node2D, b: Node2D):
+		return a.position.y > b.position.y if a.position.y != b.position.y else a.get_index() > b.get_index())
+	for node: Node2D in ordered:
+		if not node.is_visible_in_tree():
 			continue
-		var sprite: Sprite2D = person.sprite
-		if _sprite_hit(sprite, at):
+		if node is Polygon2D and Geometry2D.is_point_in_polygon(node.to_local(screen),node.polygon):
+			return ""
+		var id := str(node.name)
+		var sprite: Sprite2D = figures.get(id)
+		if bodies.has(id):
+			sprite = bodies[id].sprite
+		if sprite and sprite.is_pixel_opaque(sprite.to_local(screen)):
 			return id
 	return ""
-
-func _sprite_hit(sprite: Sprite2D, at: Vector2) -> bool:
-	if not sprite.texture:
-		return false
-	var local: Vector2 = sprite.to_local(at)
-	var rect: Rect2 = sprite.get_rect()
-	if not rect.has_point(local):
-		return false
-	var image: Image = sprite.texture.get_image()
-	if not image or image.is_empty():
-		return true
-	var cell := Vector2(image.get_width() / sprite.hframes, image.get_height() / sprite.vframes)
-	var uv: Vector2 = (local - rect.position) / rect.size
-	if sprite.flip_h:
-		uv.x = 1.0 - uv.x
-	var frame_x: int = sprite.frame % sprite.hframes
-	var frame_y: int = sprite.frame / sprite.hframes
-	var pixel := Vector2i(
-		clampi(int((frame_x + uv.x) * cell.x), 0, image.get_width() - 1),
-		clampi(int((frame_y + uv.y) * cell.y), 0, image.get_height() - 1))
-	return image.get_pixelv(pixel).a > .12
 
 func configure_navigation(room: Dictionary) -> void:
 	polygon = points(room.polygon)

@@ -1,21 +1,30 @@
 extends VBoxContainer
 ## Separate the time station and the chime to record the hum between them.
 signal tuned
-signal dial_moved(frequency: int)
+signal submitted(values: Array)
+signal draft_changed(draft: Dictionary)
+signal dial_moved(frequency: float)
 var dial := HSlider.new()
 var narrow := CheckButton.new()
 var frequency := Label.new()
 var description := Label.new()
 var record := Button.new()
+var choice_box := VBoxContainer.new()
+var choices: Array[OptionButton] = []
 var players: Array[AudioStreamPlayer] = []
 var lock_ready := false
 var paused := false
+var mode := "bay"
+var receiver_data: Dictionary = {}
+var target := 815.0
+var restoring := false
 ## Many voices holding one note: the choir under the bay, through the radio's bandwidth.
 const HUM := preload("res://assets/audio/effects/ninth_night_loop.wav")
 
 func _ready() -> void:
 	add_theme_constant_override("separation",8)
 	add_child(frequency)
+	add_child(choice_box)
 	dial.min_value=810
 	dial.max_value=820
 	dial.step=1
@@ -32,13 +41,60 @@ func _ready() -> void:
 	for stream: AudioStream in [station(false),station(true),HUM]:
 		var player := AudioStreamPlayer.new()
 		player.stream=stream
-		player.finished.connect(func(): if is_visible_in_tree() and not paused: player.play())
 		add_child(player)
 		players.append(player)
 	dial.value_changed.connect(func(_value: float): retune())
 	narrow.toggled.connect(func(_enabled: bool): retune())
-	record.pressed.connect(func(): if lock_ready: tuned.emit())
+	record.pressed.connect(func():
+		if not lock_ready:
+			return
+		if mode == "bay":
+			tuned.emit()
+		else:
+			var values: Array = []
+			for choice: OptionButton in choices:
+				values.append(choice.selected - 1)
+			values.append(_dial_answer())
+			submitted.emit(values))
 	visibility_changed.connect(set_preview)
+	retune()
+	set_preview()
+
+func configure(data: Dictionary, progress: Dictionary = {}) -> void:
+	for player: AudioStreamPlayer in players:
+		player.stop()
+	receiver_data = data
+	mode = str(data.get("mode", "bay"))
+	target = float(data.get("target", 815.0))
+	restoring = true
+	for child: Node in choice_box.get_children():
+		choice_box.remove_child(child)
+		child.queue_free()
+	choices.clear()
+	for row: Dictionary in data.get("choices", []):
+		var label := Label.new()
+		label.text = str(row.get("label", "Choose"))
+		choice_box.add_child(label)
+		var choice := OptionButton.new()
+		choice.add_item("Choose one")
+		for option: String in row.get("options", []):
+			choice.add_item(option)
+		choice_box.add_child(choice)
+		choice.item_selected.connect(func(_index: int): _choice_changed())
+		choices.append(choice)
+	dial.min_value = float(data.get("min", 810.0))
+	dial.max_value = float(data.get("max", 820.0))
+	dial.step = float(data.get("step", 1.0))
+	narrow.text = str(data.get("narrow_label", "Narrow bandwidth"))
+	narrow.visible = bool(data.get("show_narrow", true))
+	record.text = str(data.get("action", "Record the signal"))
+	var values: Array = progress.get("values", [])
+	for index: int in choices.size():
+		if index < values.size() and int(values[index]) >= 0:
+			choices[index].select(int(values[index]) + 1)
+	dial.value = float(progress.get("offset", data.get("start", dial.min_value)))
+	narrow.button_pressed = bool(data.get("start_narrow", false))
+	restoring = false
 	retune()
 	set_preview()
 
@@ -50,11 +106,20 @@ func set_preview() -> void:
 		else:
 			p.stop()
 
+func _exit_tree() -> void:
+	for player: AudioStreamPlayer in players:
+		player.stop()
+		player.stream=null
+	players.clear()
+
 func set_paused(on: bool) -> void:
 	paused=on
 	set_preview()
 
 func retune() -> void:
+	if mode != "bay":
+		_retune_authored()
+		return
 	var khz := int(dial.value)
 	var width := 1.25 if narrow.button_pressed else 4.8
 	var time_gain := .96*exp(-.5*pow((khz-810)/width,2.0))
@@ -75,6 +140,59 @@ func retune() -> void:
 	else:
 		description.text="Regular time pips over static." if time_gain>music_gain else "Two chimes over static."
 	dial_moved.emit(khz)
+
+func _retune_authored() -> void:
+	var value := float(dial.value)
+	var width := float(receiver_data.get("width_narrow", dial.step * 0.75)) if narrow.button_pressed \
+		else float(receiver_data.get("width_wide", maxf(dial.step, (dial.max_value - dial.min_value) * 0.35)))
+	var signal_gain := .96 * exp(-.5 * pow((value - target) / maxf(width, .0001), 2.0))
+	var left_gain := .72 * exp(-.5 * pow((value - dial.min_value) / maxf(width * 1.4, .0001), 2.0))
+	var right_gain := .72 * exp(-.5 * pow((value - dial.max_value) / maxf(width * 1.4, .0001), 2.0))
+	for i: int in players.size():
+		players[i].volume_db = linear_to_db(maxf(.0001, [left_gain, right_gain, signal_gain][i])) - 10.0
+	var unit := str(receiver_data.get("unit", ""))
+	var decimals := int(receiver_data.get("decimals", 0))
+	frequency.text = (String.num(value, decimals) + " " + unit).strip_edges()
+	var exact := absf(value - target) <= maxf(dial.step * .25, .0001)
+	var choices_ready := choices.all(func(choice: OptionButton): return choice.selected > 0)
+	lock_ready = exact and choices_ready and (narrow.button_pressed or not bool(receiver_data.get("require_narrow", false)))
+	record.disabled = not lock_ready
+	var descriptions: Dictionary = receiver_data.get("descriptions", {})
+	var key := _value_key(value)
+	if descriptions.has(key):
+		description.text = str(descriptions[key])
+	elif exact:
+		description.text = str(receiver_data.get("target_description", "A clear live reply comes through the static."))
+	else:
+		description.text = str(receiver_data.get("search_description", "Static and overlapping voices. Keep tuning."))
+	dial_moved.emit(value)
+	if not restoring:
+		_emit_draft()
+
+func _choice_changed() -> void:
+	retune()
+
+func _dial_answer() -> int:
+	var answers: Array = receiver_data.get("dial_options", [])
+	if answers.is_empty():
+		return 0
+	var best := 0
+	var distance := INF
+	for index: int in answers.size():
+		var next := absf(float(answers[index]) - dial.value)
+		if next < distance:
+			best = index
+			distance = next
+	return best
+
+func _emit_draft() -> void:
+	var values: Array = []
+	for choice: OptionButton in choices:
+		values.append(choice.selected - 1)
+	draft_changed.emit({"values": values, "offset": dial.value})
+
+func _value_key(value: float) -> String:
+	return String.num(value, int(receiver_data.get("decimals", 0)))
 
 static func station(chimes: bool) -> AudioStreamWAV:
 	const RATE := 16000

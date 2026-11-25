@@ -14,6 +14,11 @@ var evidence := ""
 var transcript := ""
 var note: LineEdit
 var save_delay := Timer.new()
+const CROSS_REACTIONS := {
+	"grief": "Steve, in the margin: Missing them changes what I fear. It does not change what the recorder caught.",
+	"just_agnes": "Steve, in the margin: I want this to be true. Wanting it is not evidence."
+}
+const AGNES_ACKNOWLEDGMENT := "Steve, in the margin: At the booth, Agnes caught me rereading this page. She only smiled. Took you long enough, Steven."
 
 func _ready() -> void:
 	size_flags_vertical = Control.SIZE_EXPAND_FILL
@@ -108,9 +113,16 @@ func _draw_page() -> void:
 		child.queue_free()
 	case_scroll.scroll_vertical = 0
 	var page: Dictionary = campaign.content.notebook_cases[selected_case]
+	if selected_case == "penhallow" and campaign.current().id == "c10_town" \
+			and bool(campaign.data.notebook.get("flags", {}).get("just_agnes_early", false)):
+		var acknowledgment := _line(sheet, AGNES_ACKNOWLEDGMENT)
+		acknowledgment.name = "AgnesAcknowledgment"
+		acknowledgment.modulate = Color("d9c69b")
 	for theory: Dictionary in campaign.available_theories(selected_case, campaign.data.done):
+		var entry := VBoxContainer.new()
+		sheet.add_child(entry)
 		var row := HBoxContainer.new()
-		sheet.add_child(row)
+		entry.add_child(row)
 		var statement := RichTextLabel.new()
 		statement.bbcode_enabled = true
 		statement.fit_content = true
@@ -131,6 +143,11 @@ func _draw_page() -> void:
 			button.set_pressed_no_signal(mark == action)
 			button.pressed.connect(_mark.bind(theory, action, button, statement))
 			row.add_child(button)
+		if CROSS_REACTIONS.has(str(theory.id)):
+			var reaction := _line(entry, str(CROSS_REACTIONS[theory.id]))
+			reaction.name = "Reaction_" + str(theory.id)
+			reaction.modulate = Color("aeb8ad")
+			reaction.visible = mark == "struck"
 	if not page.clues.is_empty():
 		_line(sheet, "Evidence in hand").modulate = Color("e7b781")
 		for id: String in page.clues:
@@ -158,7 +175,20 @@ func _mark(theory: Dictionary, action: String, button: Button, label: RichTextLa
 	var value := action if button.button_pressed else ""
 	if campaign.mark_theory(selected_case, theory.id, value):
 		_set_statement(label, theory.text, value)
+		var reaction := label.get_parent().get_parent().get_node_or_null("Reaction_" + str(theory.id)) as Label
+		if reaction:
+			reaction.visible = value == "struck"
+		if theory.id == "just_agnes" and value == "struck" and _before_scene("c10_town"):
+			campaign.data.notebook.flags["just_agnes_early"] = true
 		edited.emit()
+
+func _before_scene(id: String) -> bool:
+	var target := -1
+	for index: int in campaign.content.scenes.size():
+		if campaign.content.scenes[index].id == id:
+			target = index
+			break
+	return target >= 0 and int(campaign.data.scene) < target
 
 func _edit_note(value: String, id: String) -> void:
 	if campaign.write_case_note(id, value):

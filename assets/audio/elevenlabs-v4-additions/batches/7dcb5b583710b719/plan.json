@@ -1,0 +1,86 @@
+{
+  "schema": 1,
+  "batch": "later-additions",
+  "model_id": "eleven_v4",
+  "output_format": "mp3_44100_192",
+  "inputs": {
+    "campaign": "0866d5fa297340a6846da4e0d5546ddd2c8f7758fc72ee2c30868498d7560abf",
+    "storybook": "7bd0d4ec4839602c067cf0a29bfd5f88425229c73903aaf38c1be69313a17866",
+    "voice_manifest": "d9a313bbf73662be2615902574a49de8d62e3b3bf4a2f6737ef398dc06ae9a27",
+    "casting": "cb91065c437c743d50eea2958d5149a6d0a35b9d20430a66cb8a548b921246db",
+    "existing_additions": "da2c1766903e3cd82344dafa11746cb9ac5fa5a239d9fc756f2175458dc298b5"
+  },
+  "ordered_audio_ids": [
+    "c2_ship.in.07",
+    "i2_nora.recap.02"
+  ],
+  "items": {
+    "c2_ship.in.07": {
+      "audio_id": "c2_ship.in.07",
+      "kind": "campaign",
+      "scene": "c2_ship",
+      "speaker": "guard",
+      "cast_role": "guard",
+      "voice_id": "55AvudlJMfCwL9pocDVh",
+      "text": "The memory index opens with the oldest records. Binding runs separately. Here is your driving test. Congratulations. You passed.",
+      "text_sha256": "bbc6a0519fdb212bae98b904e56865fd31ce6ac0d2433d6686f8b99de3e8d078",
+      "synthesis_text": "The memory index opens with the oldest records. Binding runs separately. Here is your driving test. Congratulations. You passed.",
+      "synthesis_text_sha256": "bbc6a0519fdb212bae98b904e56865fd31ce6ac0d2433d6686f8b99de3e8d078",
+      "delivery": "live",
+      "direction": "",
+      "v4_audio_tag": "",
+      "previous_text": "“You are the author of your own story.” This is from a human book. Is it helping?",
+      "next_text": "This restraint is sticking. Release, please.",
+      "voice_settings": {
+        "stability": 0.46,
+        "similarity_boost": 0.78
+      },
+      "language_code": "en",
+      "model_id": "eleven_v4",
+      "output_format": "mp3_44100_192",
+      "estimated_credit_rate": 1.0,
+      "estimated_credits": 128,
+      "attempt_seeds": [
+        1917909449,
+        471113363,
+        3981896492
+      ]
+    },
+    "i2_nora.recap.02": {
+      "audio_id": "i2_nora.recap.02",
+      "kind": "campaign",
+      "scene": "i2_nora",
+      "speaker": "nora",
+      "cast_role": "nora",
+      "voice_id": "m8AHWg36LJTQWKmfeGVv",
+      "text": "I counted thirteen months of silence before they took me. Five more went by while I slept. I still want to hear what he has to say.",
+      "text_sha256": "59156e0ed2f320ef9c5155540e960ff64b9b90eb30b5e646a3b894aa52bb05c1",
+      "synthesis_text": "I counted thirteen months of silence before they took me. Five more went by while I slept. I still want to hear what he has to say.",
+      "synthesis_text_sha256": "59156e0ed2f320ef9c5155540e960ff64b9b90eb30b5e646a3b894aa52bb05c1",
+      "delivery": "narration",
+      "direction": "",
+      "v4_audio_tag": "",
+      "previous_text": "I know every name in my row now. I have a route, a crew and a pump that behaves.",
+      "next_text": "Helen. Frank. Steve is going to be so glad.",
+      "voice_settings": {
+        "stability": 0.62,
+        "similarity_boost": 0.78
+      },
+      "language_code": "en",
+      "model_id": "eleven_v4",
+      "output_format": "mp3_44100_192",
+      "estimated_credit_rate": 1.0,
+      "estimated_credits": 131,
+      "attempt_seeds": [
+        2199031633,
+        2125177932,
+        489614311
+      ]
+    }
+  },
+  "count": 2,
+  "characters": 259,
+  "request_characters": 259,
+  "estimated_credits": 259,
+  "plan_sha256": "7dcb5b583710b719fb2b6f93327f32b354b0cd2c28646fd9ba391e4718a63348"
+}

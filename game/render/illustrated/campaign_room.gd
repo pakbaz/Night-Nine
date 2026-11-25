@@ -1,6 +1,7 @@
 extends "res://render/illustrated/room.gd"
 ## Chapter camera, character and object staging in a shared 1600 by 900 art space.
 signal approach_finished(task_id: String)
+signal arrival_walk_finished
 const FLOOR := preload("exploration_floor.gd")
 const SOCIAL := preload("social_direction.gd")
 const FLOOR_BOOK := "res://content/illustrated-floor.json"
@@ -42,6 +43,10 @@ var location_landmarks := {}
 var high_detail := true
 var floor_stage: FLOOR
 var floor_directions := {}
+var talk_figures := {}
+var furniture: Polygon2D
+var arrival_step := -1
+var arrival_clock := 0.0
 var social_scan := 0.0
 var notice := {}
 var social_pair := PackedStringArray()
@@ -125,6 +130,7 @@ func build_art(scene: Dictionary) -> void:
 		props.move_child(foreground,-1)
 	if background:
 		build_story_layers()
+		build_talk_figures()
 	if room_id == "c2_ship":
 		# On the same art plane as the chair's evidence crop, behind its two escorts.
 		chair_scan = patch_rect(hull, Vector2.ZERO, ART, preload("chair_scan.gdshader"))
@@ -174,10 +180,70 @@ func build_art(scene: Dictionary) -> void:
 func art_point(pair: Array) -> Vector2:
 	return Vector2(pair[0],pair[1])*ART
 
+func start_arrival_walk() -> bool:
+	if directions.get("arrival_walk", []).is_empty():
+		return false
+	arrival_step = 0
+	arrival_clock = 0.0
+	advance_arrival_walk(0.0)
+	return true
+
+func advance_arrival_walk(delta: float) -> void:
+	var beat: Dictionary = directions.arrival_walk[arrival_step]
+	var id: String = beat.actor
+	var person: Dictionary = floor_stage.bodies[id]
+	var start := art_point(beat.from)
+	var finish := art_point(floor_stage.authored_marks[id])
+	arrival_clock += delta
+	var progress := clampf(arrival_clock / float(beat.seconds), 0.0, 1.0)
+	person.body.show()
+	person.body.position = start.lerp(finish, progress)
+	floor_stage.face_motion(person,finish - start)
+	floor_stage.phase = progress * start.distance_to(finish) / (floor_stage.height_at(finish) * .09)
+	floor_stage.draw_body(id,progress < 1.0)
+	if progress >= 1.0:
+		arrival_clock = 0.0
+		arrival_step += 1
+		if arrival_step == directions.arrival_walk.size():
+			arrival_step = -1
+			arrival_walk_finished.emit()
+
 func walking_view() -> bool:
 	return floor_stage != null and floor_stage.has_actor() and not cinematic and cut_progress < 0.0 and focus < 0 \
 		and not in_transit() \
 		and not active_layers().any(func(record: Dictionary): return not record.get("walking",true))
+
+func build_talk_figures() -> void:
+	var parent := floor_stage.cast if floor_stage else distant
+	for id: String in people.get("figures",{}):
+		var mark: Array = people.figures[id]
+		var sprite := Sprite2D.new()
+		sprite.name = id
+		sprite.texture = load(FLOOR.WALK + str(mark[0]) + "-idle.webp")
+		sprite.centered = false
+		sprite.offset = sprite.texture.get_size() * Vector2(-.5,-509.0/512.0)
+		sprite.position = art_point([mark[1],mark[2]])
+		sprite.scale = Vector2.ONE * float(mark[3])*ART.y / sprite.texture.get_height()
+		sprite.flip_h = mark.size()>4 and mark[4]
+		sprite.modulate = Color.WHITE.lerp(Color.from_string(directions.light,Color.WHITE),.14)
+		parent.add_child(sprite)
+		talk_figures[id] = sprite
+	if people.has("behind"):
+		furniture = Polygon2D.new()
+		furniture.polygon = art_polygon(people.behind)
+		var uv := PackedVector2Array()
+		for p: Vector2 in furniture.polygon:
+			uv.append(p/ART*background.texture.get_size())
+		furniture.texture = background.texture
+		furniture.uv = uv
+		distant.add_child(furniture)
+
+func exploring_room() -> bool:
+	return not cinematic and active_id.is_empty() and focus < 0 and cut_progress < 0 and not in_cutaway()
+
+func person_in_room(id: String) -> bool:
+	return actor_present(id) and FLOOR.revealed(people.get("after",{}).get(id,""),marks) \
+		and not FLOOR.departed(people.get("until",{}).get(id,""),marks)
 
 func layer_active(record: Dictionary) -> bool:
 	var until: String = record.get("until","")
@@ -291,18 +357,34 @@ func is_walking() -> bool:
 func walk_screen(screen: Vector2) -> bool:
 	return walking_view() and frame.get_global_rect().has_point(screen) and floor_stage.walk_to(distant.to_local(screen))
 
+func talk_body_visible(id: String) -> bool:
+	if not exploring_room() or not person_in_room(id):
+		return false
+	if talk_figures.has(id):
+		return talk_figures[id].is_visible_in_tree()
+	if floor_stage and floor_stage.visible and floor_stage.bodies.has(id):
+		return floor_stage.bodies[id].body.is_visible_in_tree()
+	return super.talk_body_visible(id)
+
 func talk_body_at_screen(screen: Vector2) -> String:
-	if not frame.get_global_rect().has_point(screen):
+	if not exploring_room() or not frame.get_global_rect().has_point(screen):
 		return ""
 	if walking_view():
-		var walker: String = floor_stage.body_at(distant.to_local(screen))
+		var walker: String = floor_stage.body_at(screen,talk_figures)
 		if not walker.is_empty():
 			return walker
-	# Painted portraits standing in the room, such as Carmen at La Marea.
-	for id: String in actors:
-		if actors[id].hit(screen):
-			return id
-	return ""
+	else:
+		if foreground and foreground.is_visible_in_tree() and foreground.is_pixel_opaque(foreground.to_local(screen)):
+			return ""
+		if furniture and furniture.visible and Geometry2D.is_point_in_polygon(furniture.to_local(screen),furniture.polygon):
+			return ""
+		var ids := talk_figures.keys()
+		ids.reverse()
+		for id: String in ids:
+			var sprite: Sprite2D = talk_figures[id]
+			if sprite.is_visible_in_tree() and sprite.is_pixel_opaque(sprite.to_local(screen)):
+				return id
+	return super.talk_body_at_screen(screen)
 
 func walk_task(id: String) -> bool:
 	return walking_view() and floor_stage.approach_task(id)
@@ -519,7 +601,7 @@ func show_cast(id: String) -> void:
 	var resident: String = directions.get("resident","")
 	# The opening narration is an establishing shot of the place, without its people.
 	var establishing: bool = active_id in scene_record.get("context",[])
-	if not resident.is_empty() and actor_visible(resident) and (id==resident or (id.is_empty() and not walking_view() and not in_cutaway() and not establishing)):
+	if not resident.is_empty() and actor_visible(resident) and (id==resident or (id.is_empty() and not walking_view() and not in_cutaway() and not establishing and not (exploring_room() and talk_figures.has(resident)))):
 		if resident not in visible_ids:
 			visible_ids.append(resident)
 	if room_id=="c9_gallery" and "c9_gallery.link" in done and (id in ["steve","nora"] or (id.is_empty() and not walking_view())):
@@ -560,7 +642,7 @@ func show_cast(id: String) -> void:
 
 func set_focus(index: int) -> void:
 	focus=index
-	if floor_stage or directions.get("cutaway",{}).has("inspect"):
+	if floor_stage or not talk_figures.is_empty() or directions.get("cutaway",{}).has("inspect"):
 		update_inserts()
 		if not cinematic:
 			show_cast("")
@@ -592,6 +674,10 @@ func hotspot_in_view(index: int) -> bool:
 
 func update_inserts() -> void:
 	show_room_state()
+	for id: String in talk_figures:
+		talk_figures[id].visible = exploring_room() and person_in_room(id)
+	if furniture:
+		furniture.visible = exploring_room()
 	if is_instance_valid(chair_scan):
 		chair_scan.visible = "c2_ship.escape" not in done
 	var away := in_cutaway()
@@ -856,6 +942,8 @@ func _process(delta: float) -> void:
 	if not art_ready or paused:
 		return
 	fade_arrival(delta)
+	if arrival_step >= 0:
+		advance_arrival_walk(delta)
 	dissolve_still(delta)
 	clock+=delta
 	if is_instance_valid(chair_scan) and chair_scan.visible:

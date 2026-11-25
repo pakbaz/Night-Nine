@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "audio_id": "c8_beach.ctx.01",
+  "attempt": 2,
+  "plan_sha256": "f489d8823f897787d07f726f8abb9e9251693c77164bbe22de94563be899f495",
+  "wav_sha256": "98e5aa277a75a0a9e056f1e8c5aded49ccafc61e2693af561fb3bb39eaf2d58f",
+  "expected": "Saren came alone at dawn. He set a little Newton’s cradle on the seawall and let one ball drop. He watched it instead of looking at me.",
+  "recognized": "Saren came alone at dawn. He set a little Newton's cradle on the sea wall and let one ball drop. He watched it instead of looking at me.",
+  "local_recognized": "sarin came alone at dawn he set a little newton's cradle on the seawall and let one ball drop he watched it instead of looking at me",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 9.36,
+  "sample_rate": 48000,
+  "peak": 0.390167236328125,
+  "rms": 0.038989437868897164,
+  "level_match_gain_db": 0.0,
+  "word_edits": 2,
+  "word_error_rate": 0.07142857142857142,
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c8_beach.ctx.01.json",
+    "sha256": "0ef58eb80d9c99e425fd8279177235f235412cffb197691888cf1138da545122",
+    "model": "scribe_v3",
+    "word_edits": 2,
+    "listening_reviewed": false
+  },
+  "status": "retake_required",
+  "failure_reason": "asr_mismatch"
+}

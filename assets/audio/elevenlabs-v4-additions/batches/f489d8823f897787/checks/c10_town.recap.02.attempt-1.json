@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c10_town.recap.02",
+  "attempt": 1,
+  "plan_sha256": "f489d8823f897787d07f726f8abb9e9251693c77164bbe22de94563be899f495",
+  "wav_sha256": "089b5bebc0bc9ce8152e9be3123e5b67255f0e4a33bd0a4f01cfebe07c7d0d77",
+  "expected": "The porch lights on Pier and Orchard are waiting for my cue. Shaw has the lamps, Wen has the grid, and the Choir will answer live.",
+  "recognized": "The porch lights on pier and orchard are waiting for my cue. Shaw has the lamps, Wen has the grid, and the choir will answer live.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 8.88,
+  "sample_rate": 48000,
+  "peak": 0.56793212890625,
+  "rms": 0.041805658941823635,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

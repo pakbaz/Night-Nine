@@ -1,0 +1,487 @@
+{
+  "audio_id": "c10_town.wind.find",
+  "audio_sha256": "f6fdd96465e38752690cde14363797658376aa57daf1e0b0cc6404327f679be5",
+  "file": "assets/audio/elevenlabs-v4-additions/masters/c10_town.wind.find.attempt-2.wav",
+  "production_plan_sha256": "f489d8823f897787d07f726f8abb9e9251693c77164bbe22de94563be899f495",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "The shore dub of Veyr’s wind plays through to Mrs. Penhallow’s pencil mark, after the last gust. Then the Choir’s return opens, live. Home as it was, then a voice answering them now.",
+  "recognized": "The sure dub of Verre's wind plays through to Mrs. Penhallow's pencil mark after the last gust. Then the choir's return opens, live, home as it was, then a voice answering the now.",
+  "word_edits": 3,
+  "request_id": null,
+  "trace_id": "a3720c99db88d657e3fed4ac2ee95c59",
+  "character_cost": "4",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "The sure dub of Verre's wind plays through to Mrs. Penhallow's pencil mark after the last gust. Then the choir's return opens, live, home as it was, then a voice answering the now.",
+    "words": [
+      {
+        "text": "The",
+        "start": 0.08,
+        "end": 0.18,
+        "type": "word",
+        "logprob": -5.245195097813848e-06
+      },
+      {
+        "text": " ",
+        "start": 0.18,
+        "end": 0.24,
+        "type": "spacing",
+        "logprob": -0.025188609957695007
+      },
+      {
+        "text": "sure",
+        "start": 0.24,
+        "end": 0.5,
+        "type": "word",
+        "logprob": -0.025188609957695007
+      },
+      {
+        "text": " ",
+        "start": 0.5,
+        "end": 0.58,
+        "type": "spacing",
+        "logprob": -0.005127375479787588
+      },
+      {
+        "text": "dub",
+        "start": 0.58,
+        "end": 0.84,
+        "type": "word",
+        "logprob": -0.005127375479787588
+      },
+      {
+        "text": " ",
+        "start": 0.84,
+        "end": 0.92,
+        "type": "spacing",
+        "logprob": -9.65590606938349e-06
+      },
+      {
+        "text": "of",
+        "start": 0.92,
+        "end": 1.04,
+        "type": "word",
+        "logprob": -9.65590606938349e-06
+      },
+      {
+        "text": " ",
+        "start": 1.04,
+        "end": 1.1,
+        "type": "spacing",
+        "logprob": -1.026140570640564
+      },
+      {
+        "text": "Verre's",
+        "start": 1.1,
+        "end": 1.48,
+        "type": "word",
+        "logprob": -0.5418096153897685
+      },
+      {
+        "text": " ",
+        "start": 1.48,
+        "end": 1.56,
+        "type": "spacing",
+        "logprob": -0.0068254657089710236
+      },
+      {
+        "text": "wind",
+        "start": 1.56,
+        "end": 1.92,
+        "type": "word",
+        "logprob": -0.0068254657089710236
+      },
+      {
+        "text": " ",
+        "start": 1.92,
+        "end": 2.06,
+        "type": "spacing",
+        "logprob": -2.1457441107486375e-05
+      },
+      {
+        "text": "plays",
+        "start": 2.06,
+        "end": 2.42,
+        "type": "word",
+        "logprob": -2.1457441107486375e-05
+      },
+      {
+        "text": " ",
+        "start": 2.42,
+        "end": 2.46,
+        "type": "spacing",
+        "logprob": -1.0251946150674485e-05
+      },
+      {
+        "text": "through",
+        "start": 2.46,
+        "end": 2.84,
+        "type": "word",
+        "logprob": -1.0251946150674485e-05
+      },
+      {
+        "text": " ",
+        "start": 2.84,
+        "end": 2.9,
+        "type": "spacing",
+        "logprob": -7.152555099310121e-07
+      },
+      {
+        "text": "to",
+        "start": 2.9,
+        "end": 2.98,
+        "type": "word",
+        "logprob": -7.152555099310121e-07
+      },
+      {
+        "text": " ",
+        "start": 2.98,
+        "end": 3.02,
+        "type": "spacing",
+        "logprob": -0.00016830935783218592
+      },
+      {
+        "text": "Mrs.",
+        "start": 3.02,
+        "end": 3.3,
+        "type": "word",
+        "logprob": -0.00013508315169019625
+      },
+      {
+        "text": " ",
+        "start": 3.3,
+        "end": 3.42,
+        "type": "spacing",
+        "logprob": -0.20372724533081055
+      },
+      {
+        "text": "Penhallow's",
+        "start": 3.42,
+        "end": 3.98,
+        "type": "word",
+        "logprob": -0.07450577293829239
+      },
+      {
+        "text": " ",
+        "start": 3.98,
+        "end": 4.04,
+        "type": "spacing",
+        "logprob": -0.00013028726971242577
+      },
+      {
+        "text": "pencil",
+        "start": 4.04,
+        "end": 4.36,
+        "type": "word",
+        "logprob": -0.00013028726971242577
+      },
+      {
+        "text": " ",
+        "start": 4.36,
+        "end": 4.42,
+        "type": "spacing",
+        "logprob": -0.00015639036428183317
+      },
+      {
+        "text": "mark",
+        "start": 4.42,
+        "end": 4.74,
+        "type": "word",
+        "logprob": -0.00015639036428183317
+      },
+      {
+        "text": " ",
+        "start": 4.74,
+        "end": 5.04,
+        "type": "spacing",
+        "logprob": -0.0007495454628951848
+      },
+      {
+        "text": "after",
+        "start": 5.04,
+        "end": 5.28,
+        "type": "word",
+        "logprob": -0.0007495454628951848
+      },
+      {
+        "text": " ",
+        "start": 5.28,
+        "end": 5.34,
+        "type": "spacing",
+        "logprob": -2.5510462364763953e-05
+      },
+      {
+        "text": "the",
+        "start": 5.34,
+        "end": 5.42,
+        "type": "word",
+        "logprob": -2.5510462364763953e-05
+      },
+      {
+        "text": " ",
+        "start": 5.42,
+        "end": 5.46,
+        "type": "spacing",
+        "logprob": -5.602820692729438e-06
+      },
+      {
+        "text": "last",
+        "start": 5.46,
+        "end": 5.76,
+        "type": "word",
+        "logprob": -5.602820692729438e-06
+      },
+      {
+        "text": " ",
+        "start": 5.76,
+        "end": 5.82,
+        "type": "spacing",
+        "logprob": -0.00025900822947733104
+      },
+      {
+        "text": "gust.",
+        "start": 5.82,
+        "end": 6.22,
+        "type": "word",
+        "logprob": -0.0005941192386671901
+      },
+      {
+        "text": " ",
+        "start": 6.22,
+        "end": 6.64,
+        "type": "spacing",
+        "logprob": -1.6927575416048057e-05
+      },
+      {
+        "text": "Then",
+        "start": 6.64,
+        "end": 6.92,
+        "type": "word",
+        "logprob": -1.6927575416048057e-05
+      },
+      {
+        "text": " ",
+        "start": 6.92,
+        "end": 6.98,
+        "type": "spacing",
+        "logprob": -0.00048828122089616954
+      },
+      {
+        "text": "the",
+        "start": 6.98,
+        "end": 7.08,
+        "type": "word",
+        "logprob": -0.00048828122089616954
+      },
+      {
+        "text": " ",
+        "start": 7.08,
+        "end": 7.14,
+        "type": "spacing",
+        "logprob": -0.0004337085410952568
+      },
+      {
+        "text": "choir's",
+        "start": 7.14,
+        "end": 7.62,
+        "type": "word",
+        "logprob": -0.00031270390013560245
+      },
+      {
+        "text": " ",
+        "start": 7.62,
+        "end": 7.66,
+        "type": "spacing",
+        "logprob": -1.811964830267243e-05
+      },
+      {
+        "text": "return",
+        "start": 7.66,
+        "end": 8.119,
+        "type": "word",
+        "logprob": -1.811964830267243e-05
+      },
+      {
+        "text": " ",
+        "start": 8.119,
+        "end": 8.24,
+        "type": "spacing",
+        "logprob": -9.65590606938349e-06
+      },
+      {
+        "text": "opens,",
+        "start": 8.24,
+        "end": 8.74,
+        "type": "word",
+        "logprob": -0.024430289825886575
+      },
+      {
+        "text": " ",
+        "start": 8.74,
+        "end": 9.06,
+        "type": "spacing",
+        "logprob": -0.00037531962152570486
+      },
+      {
+        "text": "live,",
+        "start": 9.06,
+        "end": 9.5,
+        "type": "word",
+        "logprob": -0.011300141643732785
+      },
+      {
+        "text": " ",
+        "start": 9.5,
+        "end": 10.0,
+        "type": "spacing",
+        "logprob": -0.00011514954530866817
+      },
+      {
+        "text": "home",
+        "start": 10.0,
+        "end": 10.34,
+        "type": "word",
+        "logprob": -0.00011514954530866817
+      },
+      {
+        "text": " ",
+        "start": 10.34,
+        "end": 10.44,
+        "type": "spacing",
+        "logprob": -1.3351351299206726e-05
+      },
+      {
+        "text": "as",
+        "start": 10.44,
+        "end": 10.54,
+        "type": "word",
+        "logprob": -1.3351351299206726e-05
+      },
+      {
+        "text": " ",
+        "start": 10.54,
+        "end": 10.6,
+        "type": "spacing",
+        "logprob": -7.152555099310121e-07
+      },
+      {
+        "text": "it",
+        "start": 10.6,
+        "end": 10.72,
+        "type": "word",
+        "logprob": -7.152555099310121e-07
+      },
+      {
+        "text": " ",
+        "start": 10.72,
+        "end": 10.8,
+        "type": "spacing",
+        "logprob": -2.9802276912960224e-06
+      },
+      {
+        "text": "was,",
+        "start": 10.8,
+        "end": 11.18,
+        "type": "word",
+        "logprob": -0.013740640130208703
+      },
+      {
+        "text": " ",
+        "start": 11.18,
+        "end": 11.48,
+        "type": "spacing",
+        "logprob": -1.7404405298293568e-05
+      },
+      {
+        "text": "then",
+        "start": 11.48,
+        "end": 11.82,
+        "type": "word",
+        "logprob": -1.7404405298293568e-05
+      },
+      {
+        "text": " ",
+        "start": 11.82,
+        "end": 11.9,
+        "type": "spacing",
+        "logprob": -1.7881377516459906e-06
+      },
+      {
+        "text": "a",
+        "start": 11.9,
+        "end": 11.96,
+        "type": "word",
+        "logprob": -1.7881377516459906e-06
+      },
+      {
+        "text": " ",
+        "start": 11.96,
+        "end": 12.04,
+        "type": "spacing",
+        "logprob": -1.3112935448589269e-05
+      },
+      {
+        "text": "voice",
+        "start": 12.04,
+        "end": 12.46,
+        "type": "word",
+        "logprob": -1.3112935448589269e-05
+      },
+      {
+        "text": " ",
+        "start": 12.46,
+        "end": 12.56,
+        "type": "spacing",
+        "logprob": -4.339123915997334e-05
+      },
+      {
+        "text": "answering",
+        "start": 12.56,
+        "end": 12.94,
+        "type": "word",
+        "logprob": -4.339123915997334e-05
+      },
+      {
+        "text": " ",
+        "start": 12.94,
+        "end": 12.98,
+        "type": "spacing",
+        "logprob": -0.003658151952549815
+      },
+      {
+        "text": "the",
+        "start": 12.98,
+        "end": 13.1,
+        "type": "word",
+        "logprob": -0.003658151952549815
+      },
+      {
+        "text": " ",
+        "start": 13.1,
+        "end": 13.18,
+        "type": "spacing",
+        "logprob": -0.00021634146105498075
+      },
+      {
+        "text": "now.",
+        "start": 13.18,
+        "end": 13.52,
+        "type": "word",
+        "logprob": -0.00017364032373734517
+      }
+    ],
+    "transcription_id": "nfLz9hirhqfNOUtrnu7q",
+    "audio_duration_secs": 13.92
+  },
+  "listening_reviewed": false
+}

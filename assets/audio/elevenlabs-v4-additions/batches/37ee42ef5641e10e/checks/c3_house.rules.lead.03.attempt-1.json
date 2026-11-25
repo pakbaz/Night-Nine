@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c3_house.rules.lead.03",
+  "attempt": 1,
+  "plan_sha256": "37ee42ef5641e10e13ac9c353fbb733e0134849a370e8fb10cf65e8bd2593037",
+  "wav_sha256": "a5d57fa2b87e2d1415eba296564ba5802292eb6ab8db0cab11d4295faa9a4a24",
+  "expected": "Lyle signed a parking citation here in town. The same minute, a nurse took his blood pressure at a clinic two counties away. I spoke to her.",
+  "recognized": "Lyle signed a parking citation here in town. The same minute, a nurse took his blood pressure at a clinic two counties away. I spoke to her.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 8.96,
+  "sample_rate": 48000,
+  "peak": 0.47039794921875,
+  "rms": 0.05938271655148687,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

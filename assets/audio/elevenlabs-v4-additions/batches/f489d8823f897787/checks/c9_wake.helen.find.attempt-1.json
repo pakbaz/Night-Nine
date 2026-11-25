@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c9_wake.helen.find",
+  "attempt": 1,
+  "plan_sha256": "f489d8823f897787d07f726f8abb9e9251693c77164bbe22de94563be899f495",
+  "wav_sha256": "5b61b9c64790c6458aeea3d09b98824969e697a566fa4f58d6ecd873cb402bf0",
+  "expected": "The tape ran out. Mom held the last note a little longer.",
+  "recognized": "the tape ran out. Mom held the last note a little longer.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.24,
+  "sample_rate": 48000,
+  "peak": 0.381561279296875,
+  "rms": 0.03612748194339405,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

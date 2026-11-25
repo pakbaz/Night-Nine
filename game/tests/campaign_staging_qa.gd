@@ -65,7 +65,7 @@ func _run() -> void:
 		game._skip_dialogue()
 	game._choose("c9_gallery.link", 0, [])
 	await wait_frames(3)
-	check(game.stage.actor_visible("nora"), "Release Nora after the canonical link choice")
+	check(not game.stage.actor_visible("nora"), "Keep Nora in the bed until she says she can move")
 	game._skip_dialogue()
 	check(game.stage.floor_stage.visible and game.stage.floor_stage.bodies.nora.body.visible,
 		"Stage Nora beside Steve on the gallery floor after she can move")

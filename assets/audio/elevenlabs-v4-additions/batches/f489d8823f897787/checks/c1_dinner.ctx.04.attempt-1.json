@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c1_dinner.ctx.04",
+  "attempt": 1,
+  "plan_sha256": "f489d8823f897787d07f726f8abb9e9251693c77164bbe22de94563be899f495",
+  "wav_sha256": "31e39c41e1dbb0e99fb805edef7d628b9185e59d27cd21855aa7cdb3b1f9a42f",
+  "expected": "Nora’s oldest dinner rule was that nobody touched her plate. That night Carmen moved it twice, and Nora only smiled.",
+  "recognized": "Nora's oldest dinner rule was that nobody touched her plate. That night, Carmen moved it twice, and Nora only smiled.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 8.24,
+  "sample_rate": 48000,
+  "peak": 0.415924072265625,
+  "rms": 0.038301699628252396,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

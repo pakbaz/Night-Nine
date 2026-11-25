@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c10_report.in.05",
+  "attempt": 1,
+  "plan_sha256": "37ee42ef5641e10e13ac9c353fbb733e0134849a370e8fb10cf65e8bd2593037",
+  "wav_sha256": "9982e4de18890147745e3e0782876bd96ae67ab623c115284a4c60daa305bd76",
+  "expected": "They first bound you in a cradle ship after our star went dark. Fear was your first record.",
+  "recognized": "They first bound you in a cradle ship after our star went dark. Fear was your first record.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 7.44,
+  "sample_rate": 48000,
+  "peak": 0.868988037109375,
+  "rms": 0.12783157564014086,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

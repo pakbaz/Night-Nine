@@ -78,9 +78,9 @@
           "prompt": "Who stands where, and when does Stephen go on?",
           "instruction": "Only a crew pass opens the inner door. Its lamp can only be seen from the observation deck. Steve stays by Nora. Stephen waits until someone sees the lamp light.",
           "rows": [
-            {"label": "Who opens the inner door?", "options": ["Stephen", "June", "Steve"], "answer": 0},
-            {"label": "Who watches from the deck?", "options": ["Stephen", "June", "Steve"], "answer": 1},
-            {"label": "When does Stephen go on?", "options": ["As soon as he shows the pass", "When June sees the lamp light", "When the lamp goes dark"], "answer": 1}
+            {"label": "Who opens the inner door?", "feedback": "My crew pass opens that door. Steve promised to stay with Nora.", "options": ["Stephen", "June", "Steve"], "answer": 0},
+            {"label": "Who watches from the deck?", "feedback": "I can't see the lamp from the door. Steve stays by the bed. Who is free to take the deck?", "options": ["Stephen", "June", "Steve"], "answer": 1},
+            {"label": "When does Stephen go on?", "feedback": "Wait for the lookout to see the lamp. Opening the inner door isn't the signal to move.", "options": ["As soon as he shows the pass", "When June sees the lamp light", "When the lamp goes dark"], "answer": 1}
           ],
           "hints": [
             "Each job needs something only one person has: a pass, a view of the lamp, or a promise to keep.",
@@ -94,8 +94,8 @@
         }
       },
       "recap": [
-        "steve|Nora is free. Iris paid for it with her own memory, and chose to.",
-        "steve|Stephen is on his way to the antenna with the rig. Mom and Dad are somewhere in this hall, in row nine."
+        "steve|Nora was on her feet. Iris was still herself. For the moment, that was enough.",
+        "steve|Stephen took the rig toward the antenna. Then Nora led me to row nine."
       ],
       "outro": [
         "c9_gallery.out.01",
@@ -210,64 +210,69 @@
         "The agnes finding plants the Chapter 10 question: the original Mrs. Penhallow has been asleep for three years."
       ],
       "context": [
-        "steve|Row nine. Mom and Dad, side by side, the way they always slept. I’d brought every sound I had."
+        "steve|Row nine. Mom and Dad, side by side, the way they always slept. I’d brought every sound I had.",
+        "steve|Iris stayed with the newly awake near Nora’s bed. Pell and Biscuit held the service hatch behind us."
       ],
       "intro": ["c9_wake.in.01", "c9_wake.in.02"],
       "delete": [],
       "task_order": ["frank", "helen", "rook", "agnes"],
       "tasks": {
         "frank": {
+          "type": "compare",
+          "sound_bank": true,
+          "art": "res://assets/illustrated/campaign/stills/c9_wake-family-recorder.webp",
           "difficulty": 2,
           "title": "Frank’s bed",
           "requires": [],
           "goal": "Wake Dad with the one sound he always answers.",
-          "background": "Frank always answered his call sign, K7BLW, faster than his own name. Nora found three call cards in his bedside tray. Dad’s cassette has the Thursday club sending his call sign in Morse code, one letter or number at a time. The cassette is scratched, and the scratch always loses the last one.",
+          "background": "Frank always answered K7BLW on the Thursday net. Steve brought the club recording, a melody and a whistle. The penciled labels came off in the water.",
           "lead": [
             "steve|Dad. It’s Steve.",
             {"new": "steve|Nothing. He used to say a call sign is a name you can hear through static.", "delivery": "narration"},
-            "nora|There are three call cards in his tray. They all look almost the same.",
-            "steve|Dad’s call sign is on his old cassette, in Morse. But the tape is scratched. It always loses the very last letter."
+            "nora|Give me the speaker. I can hold it against his ear.",
+            "steve|Listen for the Morse. The Thursday club calling him in."
           ],
-          "prompt": "Which card is Dad’s, and which letter has to be sent again?",
-          "instruction": "Dad’s call sign is K7BLW. The scratched cassette loses the last letter, so that one is sent again. The desk key: K is −·−, 7 is −−···, B is −···, L is ·−··, W is ·−−.",
-          "rows": [
-            {"label": "Which card is Dad’s?", "options": ["K7BWL", "K9BLW", "K7BLW"], "answer": 2},
-            {"label": "Which letter is sent again?", "options": ["L: ·−··", "W: ·−−", "B: −···"], "answer": 1}
-          ],
+          "prompt": "Audition Steve’s recordings. Send the one Frank would answer through Nora’s speaker.",
+          "sounds": ["effect.nora_whistle","effect.k7blw","effect.lullaby"],
+          "evidence_labels": ["Cassette A","Cassette B","Cassette C"],
+          "clip_captions": ["Two whistled notes.", "Short and long pulses in five groups: −·− / −−··· / −··· / ·−·· / ·−−.", "A six-note tune ends on a held note."],
+          "options": ["Send cassette A","Send cassette B","Send cassette C"], "answer": 1,
+          "wrong": {"0":"That whistle calls Admiral, not Dad.","2":"Keep that tune for Mom. Dad is listening for his call sign."},
           "hints": [
-            "Compare each card with Dad’s call sign, one character at a time.",
-            "Two cards are off by one character. For the second row, think about where the scratch is.",
-            "The scratch loses whatever comes last. Read Dad’s call sign to its final letter, then find that letter in the desk key."
+            "What made Dad reach for his radio every Thursday?",
+            "His friends sent letters as groups of short and long pulses.",
+            "Listen to cassette B, or open its sound caption."
           ],
           "lines": ["c9_wake.frank.01", "c9_wake.frank.02"],
-          "finding": "steve|Dad’s card is K7BLW. The scratched cassette lost the last letter, the W: dot, dash, dash. I sent it again, and Dad answered his own call sign."
+          "finding": "steve|Dad answered the Thursday net before he even opened his eyes."
         },
         "helen": {
-          "type": "rows",
+          "type": "compare",
+          "sound_bank": true,
+          "art": "res://assets/illustrated/campaign/stills/c9_wake-family-recorder.webp",
           "difficulty": 2,
           "title": "Helen’s bed",
           "requires": ["frank"],
           "goal": "Wake Mom with the song she sang Steve every night until he was ten.",
-          "background": "Helen sang Steve the same lullaby every night and never told him its words. Under the ship, the hum has been almost playing a tune Steve knew. Frank, awake now, draws the tune for him. The music box in the drawer numbers its notes: 1 is home, 3 is higher, 5 is highest.",
+          "background": "Frank has woken up. He draws the shape of the tune Helen sang when Steve couldn’t sleep. Nora holds the speaker while Steve checks the remaining recordings.",
           "lead": [
             "frank|Your mother. Play her the song, kiddo. I’ll write it down for you.",
             "steve|That’s the song in the hum. All this time, the ship was humming Mom’s lullaby.",
-            "frank|It starts at home. Up once, then up again. Back down to the middle note, then home, and hold it."
+            "frank|Up two steps. Down past home. Then back up, and hold that last note."
           ],
-          "prompt": "Dad drew the tune: home, up, higher, back to the middle note, home, and hold. Which music-box cylinder plays it?",
-          "instruction": "The cylinders number their notes: 1 is home, 3 is the middle note, 5 is the top. Pick the one that matches Dad’s drawing.",
-          "rows": [
-            {"label": "Which cylinder plays Mom’s song?", "options": ["1-3-5-3-1-1", "1-3-5-5-1-1", "1-5-3-3-1-1"], "answer": 0}
-          ],
+          "prompt": "Match a tape to Frank’s drawing. Send it to Helen’s bedside speaker.",
+          "sounds": ["effect.nora_whistle","effect.halcyon_hold_seattle","effect.lullaby"],
+          "evidence_labels": ["Cassette A","Phone pickup","Cassette C"],
+          "clip_captions": ["Two whistled notes.", "A connection beep, then eight even notes of hold music.", "Six notes: home, up, higher, down, below home, then home and held."],
+          "options": ["Send cassette A","Send phone pickup","Send cassette C"], "answer": 2,
+          "wrong": {"0":"Only two notes. Dad drew a whole phrase.","1":"Eight even notes. Mom always held the last one."},
           "hints": [
-            "Read Dad’s drawing one step at a time, starting from home, which is 1.",
-            "The tune climbs twice, so it starts 1, then 3, then 5.",
-            "After the top note, the tune steps back to the middle note before it goes home. Only one cylinder does that."
+            "Look at the turn near the end of Dad’s pencil line.",
+            "The tune dips, then comes back up and holds.",
+            "Listen to cassette C, or open its sound caption."
           ],
-          "sounds": ["effect.lullaby"],
           "lines": ["c9_wake.helen.01", "c9_wake.helen.02"],
-          "finding": "steve|Home, up, higher, back to the middle, then home and hold. Mom’s lullaby, the one the ship’s hum kept almost playing. She woke up singing the last note.",
-          "note": "Cylinder 1-3-5-3-1-1: home, up, higher, back to the middle, then home, held. Mom’s lullaby, the one the ship’s hum kept almost playing. She woke up singing the last note."
+          "finding": "steve|The tape ran out. Mom held the last note a little longer."
         },
         "rook": {
           "type": "beat",
@@ -329,8 +334,7 @@
         }
       },
       "recap": [
-        "steve|Dad woke to his call sign, Mom to her lullaby, Adrian Rook to June’s voice, and Mrs. Penhallow to her reading glasses.",
-        "steve|Somewhere above us, Rook’s copy was losing the man he’d been pretending to be. And he was telling Saren everything he had left."
+        "steve|Dad was shivering. I put his old cardigan around him. He found the hole in the cuff with his thumb, the way he always did."
       ],
       "outro": [
         {"id": "c9_wake.out.01", "delivery": "radio"},
@@ -437,7 +441,7 @@
       "intro": [
         {"new": "steve|They took the rig off Stephen and broke it over the rail. Then they took me.", "delivery": "narration"},
         "c9_choir.in.01",
-        {"new": "steve|The chair pulled at everything I knew. My dad’s name. It was... it’s on Stephen’s hand. Why is it on his hand?", "direction": "strapped into the scan chair, frightened"},
+        {"new": "steve|The chair dragged every memory past me, but it wasn’t erasing them. Across the rail, Stephen stared at his hand. Frank. Dad. His link was failing, not mine.", "direction": "strapped into the scan chair, frightened"},
         "c9_choir.in.02",
         {"new": "steve|The straps opened. The crew let go of Stephen. Even Saren stepped back from the console.", "delivery": "narration"},
         {"new": "calder|We followed you down from row nine. Nobody stopped us. The whole crew had stopped to listen.", "direction": "arriving with Helen, Frank and Nora, out of breath"},
@@ -504,8 +508,8 @@
           "prompt": "Wick sings 220 rising to 330, joined, then a short gap, then a long 165, lower than both. Which page matches, and how does the next phrase begin?",
           "instruction": "Pick the notebook page with the same shape as Wick’s phrase. Helen’s margin says the phrase starts again after the low note.",
           "rows": [
-            {"label": "Which page matches Wick?", "options": ["Page 9: three separate falling strokes", "Page 12: two joined strokes rising, a gap, one long low stroke", "Page 4: one long stroke, a gap, two joined strokes falling"], "answer": 1},
-            {"label": "How does the next phrase begin?", "options": ["With the long low stroke", "With a gap", "With two joined strokes"], "answer": 2}
+            {"label": "Which page matches Wick?", "feedback": "Trace the two joined notes with your finger. After the gap Wick goes lower, not higher.", "options": ["Page 9: three separate falling strokes", "Page 12: two joined strokes rising, a gap, one long low stroke", "Page 4: one long stroke, a gap, two joined strokes falling"], "answer": 1},
+            {"label": "How does the next phrase begin?", "feedback": "The low note ends the phrase. Read Helen's margin and go back to its first gesture.", "options": ["With the long low stroke", "With a gap", "With two joined strokes"], "answer": 2}
           ],
           "hints": [
             "Turn the numbers into a shape, the way you did at the lab: up, gap, down.",

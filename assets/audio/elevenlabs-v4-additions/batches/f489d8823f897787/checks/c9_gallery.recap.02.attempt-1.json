@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c9_gallery.recap.02",
+  "attempt": 1,
+  "plan_sha256": "f489d8823f897787d07f726f8abb9e9251693c77164bbe22de94563be899f495",
+  "wav_sha256": "da4fb7b237bdb3e872b4cbe2dd6995261c10d86f05dab966edd0550d1010c6cf",
+  "expected": "Stephen took the rig toward the antenna. Then Nora led me to row nine.",
+  "recognized": "Steven took the rig toward the antenna. Then Nora led me to row 9.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.8,
+  "sample_rate": 48000,
+  "peak": 0.33099365234375,
+  "rms": 0.045838499370379766,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

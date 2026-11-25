@@ -187,7 +187,7 @@
           {
             "id": "stand_in",
             "after": "c1_escape.order",
-            "text": "Someone else has been using Nora’s name."
+            "text": "Someone else has been using Nora’s name and staff credential."
           }
         ]
       },
@@ -204,7 +204,7 @@
           {
             "id": "maintenance",
             "after": "c2_aquarium.plan",
-            "text": "The work order was an ordinary repair with the wrong date on it."
+            "text": "Someone used Nora’s credential for an ordinary repair with the wrong date on it."
           },
           {
             "id": "missing_nora",

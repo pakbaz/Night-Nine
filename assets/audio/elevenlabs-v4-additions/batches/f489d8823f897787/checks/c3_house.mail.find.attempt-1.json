@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c3_house.mail.find",
+  "attempt": 1,
+  "plan_sha256": "f489d8823f897787d07f726f8abb9e9251693c77164bbe22de94563be899f495",
+  "wav_sha256": "0ffc37b54b0b67faaf7123b73ea068b09e67e6809f374a2eb7ff64e0009b84c4",
+  "expected": "Dale had my letters bundled for June’s house at 08:04. The post office didn’t know until 08:12. The private channel log says only Lyle took June’s call at ten past six. He told Dale.",
+  "recognized": "Dale had my letters bundled for June's house at 0804. The post office didn't know until 0812. The private channel log says only Lyle took June's call at 10 past 6. He told Dale.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 13.28,
+  "sample_rate": 48000,
+  "peak": 0.403564453125,
+  "rms": 0.04192245180662756,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

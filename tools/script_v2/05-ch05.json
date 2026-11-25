@@ -22,7 +22,7 @@
         "c5_shack.in.03",
         "steve|Luis. They’re saying I took Nora.",
         "luis|Nora has been gone since Tuesday night. Carmen hasn’t slept. And I have known you since you were nine years old.",
-        "luis|I’ve heard the bay sing since I was a boy. Your father was the only one who ever asked me what it sounded like."
+        "luis|I heard stories about the bay singing when I was a boy. I first heard it myself three years ago. Your father was the only one who asked what it sounded like."
       ],
       "delete": [],
       "task_order": ["notes", "rig", "club", "log"],
@@ -43,8 +43,8 @@
           "prompt": "Helen’s slip says the notebook is “with the good stuff”. What did that mean in this family?",
           "instruction": "Find the slip Frank was answering, then the place where those things are kept. March 2, Helen: “Put the anniversary tape with the good stuff.” March 3, Frank: “Done. It’s on the shelf between the Coltrane and the weather carts, next to the boy’s first night at the desk.” March 9, Helen: “Frank, there is soup in the refrigerator. The other container is paint.” Undated, Helen: “Steven. Notebook is with the good stuff. Your first night at the desk.”",
           "rows": [
-            {"label": "Frank’s “Done” answers", "options": ["The March 2 slip", "The March 9 slip", "The undated slip"], "answer": 0},
-            {"label": "“The good stuff” is", "options": ["Frank’s paint shelf", "The KBWR record library", "The kitchen pantry"], "answer": 1}
+            {"label": "Frank’s “Done” answers", "feedback": "Dad dated his answer March 3. Which earlier note actually asked him to put a tape away?", "options": ["The March 2 slip", "The March 9 slip", "The undated slip"], "answer": 0},
+            {"label": "“The good stuff” is", "feedback": "Where would Dad shelve a Coltrane record beside a weather cart and a tape of my first shift?", "options": ["Frank’s paint shelf", "The KBWR record library", "The kitchen pantry"], "answer": 1}
           ],
           "hints": [
             "Frank says “Done”. Which slip asked him to do something?",
@@ -55,6 +55,7 @@
           "finding": "steve|Dad’s “Done” answers Mom’s March 2 slip: he filed their tape between the Coltrane and the weather carts. The good stuff is the KBWR record library. Mom hid her notebook at my old station."
         },
         "rig": {
+          "type": "receiver",
           "difficulty": 2,
           "title": "Frank’s receiver",
           "requires": [],
@@ -68,9 +69,43 @@
           ],
           "prompt": "Which battery pack, and where should Steve set the dial to hear the club?",
           "instruction": "Pick the pack that matches the receiver card, then set the dial as high as Frank’s log says it reads. Receiver: 12 volts, centre positive, needs 400 mA. RED: 12 volts, centre positive, 300 mA. BLUE: 12 volts, centre positive, 800 mA. GREY: 12 volts, centre negative, 800 mA. Frank’s log: a 3.20 station showed at 3.25 on the dial, and a 3.40 station at 3.45. The club is on 3.56.",
+          "receiver": {
+            "mode": "drift",
+            "min": 3.51,
+            "max": 3.61,
+            "step": 0.05,
+            "start": 3.51,
+            "target": 3.61,
+            "unit": "MHz",
+            "decimals": 2,
+            "show_narrow": true,
+            "require_narrow": true,
+            "narrow_label": "Fine tuning",
+            "action": "Log the club frequency",
+            "choices": [
+              {"label": "Battery pack", "options": ["RED", "GREY", "BLUE"]}
+            ],
+            "dial_options": [3.51, 3.56, 3.61],
+            "descriptions": {
+              "3.51": "A weak carrier slides under the static. The dial correction has gone the wrong way.",
+              "3.56": "The club is close, but every voice is still off-centre. Frank’s log says the dial reads high.",
+              "3.61": "Gull’s call sign resolves through the static. Frank’s Thursday club is live."
+            },
+            "target_description": "Gull’s call sign resolves through the static. Frank’s Thursday club is live."
+          },
           "rows": [
-            {"label": "Battery pack", "options": ["RED", "GREY", "BLUE"], "answer": 2},
-            {"label": "Set the dial to", "options": ["3.51", "3.56", "3.61"], "answer": 2}
+            {
+              "label": "Battery pack",
+              "options": ["RED", "GREY", "BLUE"],
+              "feedback": ["RED cannot supply the required current.", "GREY reverses the centre pin.", "BLUE matches voltage, polarity and current."],
+              "answer": 2
+            },
+            {
+              "label": "Set the dial to",
+              "options": ["3.51", "3.56", "3.61"],
+              "feedback": ["That subtracts the receiver’s drift.", "That ignores the drift in Frank’s log.", "The dial reads 0.05 high, so the club resolves at 3.61."],
+              "answer": 2
+            }
           ],
           "hints": [
             "Check the centre pin and the current, not the colour.",
@@ -197,7 +232,7 @@
       "when": "Friday, November 2, night",
       "present": ["steve", "stephen", "autorick"],
       "objective": "Get into the record library and find Mom’s notebook.",
-      "changes": ["C30", "critic C30", "C22", "U-relationships", "U-narration", "U-timeline (Halcyon bought KBWR a year ago; Steve was let go three weeks ago)"],
+      "changes": ["C30", "critic C30", "C22", "U-relationships", "U-narration", "U-timeline (Halcyon bought KBWR a year ago; Steve was let go five weeks ago)"],
       "notes": [
         "Stephen’s lines before he names himself show the speaker as “Steve Mercer?” (line-level display).",
         "halcyon replaces the dated-stamps quiz with the early-night pattern: Halcyon sent Steve home on ninth nights so the tower could transmit unattended.",
@@ -209,7 +244,7 @@
         "steve|And my voice, on the station ident, still playing between the songs."
       ],
       "intro": [
-        "c5_station.in.01",
+        {"id": "c5_station.in.01", "text": "Breaking news, folks: there’s a fella in our control room!"},
         "steve|Two fellas. Somebody else is breathing in here."
       ],
       "delete": [],
@@ -230,9 +265,9 @@
           "prompt": "What should Steve queue, and where should he wait?",
           "instruction": "Queue two carts so Steve is already at the maintenance door when the ident starts. WEATHER lasts 40 seconds, IDENT 12 seconds and NEWS 1 minute 30. NEWS only plays on the hour. The walk from the console to the door takes 15 seconds.",
           "rows": [
-            {"label": "Play first", "options": ["WEATHER", "IDENT", "NEWS"], "answer": 0},
-            {"label": "Play second", "options": ["WEATHER", "IDENT", "NEWS"], "answer": 1},
-            {"label": "Wait at", "options": ["The console", "The maintenance door"], "answer": 1}
+            {"label": "Play first", "feedback": "I need fifteen seconds to walk there. The ident lasts twelve, and the news cart won't play off the hour.", "options": ["WEATHER", "IDENT", "NEWS"], "answer": 0},
+            {"label": "Play second", "feedback": "The door listens for the station ident. I want it to hear that after I've crossed the room.", "options": ["WEATHER", "IDENT", "NEWS"], "answer": 1},
+            {"label": "Wait at", "feedback": "Automation can run the console without me. Where do I need to be when the ident starts?", "options": ["The console", "The maintenance door"], "answer": 1}
           ],
           "hints": [
             "Can Steve cross the room before the ident ends?",
@@ -287,7 +322,7 @@
           "title": "Halcyon’s paperwork",
           "requires": ["automation"],
           "goal": "Find out why Halcyon really let Steve go.",
-          "background": "The office is full of paperwork from Halcyon Media Holdings, the company that bought KBWR a year ago and replaced Steve with AutoRick three weeks ago. Steve always thought it was about money.",
+          "background": "The office is full of paperwork from Halcyon Media Holdings, the company that bought KBWR a year ago and replaced Steve with AutoRick five weeks ago. Steve always thought it was about money.",
           "lead": [
             "steve|Halcyon Media Holdings. The company that fired me. Their filing is very tidy.",
             "steve|Three early nights in September. Halcyon said they were saving on my overtime.",
@@ -296,9 +331,9 @@
           "prompt": "What do the duty sheets and the tower log say, side by side?",
           "instruction": "Compare the dates. Halcyon sent Steve home at 23:30 on September 6, 15 and 24. The tower ran alone from 23:45 on those same nights. Steve’s last shift was September 28. Since then, the tower ran alone on October 3, 12, 21 and 30.",
           "rows": [
-            {"label": "Steve’s early nights were", "options": ["Every Friday", "Every ninth night", "Whenever ratings dropped"], "answer": 1},
-            {"label": "The tower transmits alone", "options": ["Every night since the sale", "Only once the building is empty", "Whenever AutoRick reads the news"], "answer": 1},
-            {"label": "Next unattended night", "options": ["November 3", "November 7", "November 8"], "answer": 2}
+            {"label": "Steve’s early nights were", "feedback": "September 6 to 15 is the same gap as 15 to 24. It wasn't a weekly shift change.", "options": ["Every Friday", "Every ninth night", "Whenever ratings dropped"], "answer": 1},
+            {"label": "The tower transmits alone", "feedback": "They sent me home at 23:30. The log starts the unattended run at 23:45. Which happened first?", "options": ["Every night since the sale", "Only once the building is empty", "Whenever AutoRick reads the news"], "answer": 1},
+            {"label": "Next unattended night", "feedback": "Start at the last October entry and carry the same gap into November.", "options": ["November 3", "November 7", "November 8"], "answer": 2}
           ],
           "hints": [
             "Count the days from September 6 to September 15.",
@@ -346,6 +381,7 @@
           ],
           "lines": [
             {"id": "c5_station.stephen.01", "display": "Steve Mercer?"},
+            {"new": "stephen|The tank slate said sixty-one was the memory index, not sixty-one percent of a person. Last stable binding: breakfast in Dad’s shack.", "display": "Steve Mercer?"},
             "stephen|Call me Stephen. One of us should sound like a grown-up.",
             "c5_station.stephen.02"
           ],
@@ -354,7 +390,7 @@
       },
       "recap": [
         "steve|Mom’s notebook was in the blue sleeve, in a shorthand I can’t read. Halcyon cleared the building every ninth night so the tower could talk to the ship.",
-        "steve|And the man with my face, the one Carmen saw at the market, was following me all week. Sixty-one percent of me, with nothing after the breakfast before the boat."
+        "steve|And the man with my face had a sixty-one-percent memory index, but his last stable binding ended at breakfast before the boat. Eighteen months of my life were missing."
       ],
       "outro": [
         "c5_station.out.01",
@@ -362,7 +398,7 @@
         {"new": "steve|I watched my own face learn it. Eighteen months, all at once.", "delivery": "narration"},
         "c5_station.out.03",
         "steve|You woke up on the ship.",
-        "stephen|In a glass tank, last Friday. Cold, wet and sixty-one percent. A very tall man gave me a crew pass, an earpiece and a job.",
+        "stephen|In a glass tank, last Friday. Cold, wet, with the index at sixty-one. A very tall man gave me a crew pass, an earpiece and a job.",
         "stephen|Find the man with my face. Find Mom’s notebook. Report in every single night.",
         "steve|Carmen saw you at the market.",
         "stephen|She hugged me and said I looked well. I didn’t know why that made me want to cry. After that I watched June’s house all week. Today I followed you up the path to Dad’s shack. Twice.",

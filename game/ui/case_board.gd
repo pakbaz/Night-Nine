@@ -4,6 +4,7 @@ signal draft_changed(draft: Dictionary)
 signal submitted(values: Array)
 signal hint_requested
 signal wrong_attempt
+signal attempt_scored(right: int, total: int)
 signal answer_requested
 signal closed
 
@@ -561,8 +562,15 @@ func check_step() -> void:
 		marks[i] = int(row[i]) == int(stage.answer[i])
 		if marks[i]:
 			right += 1
+	var completed_rows := 0
+	var total_rows := 0
+	for index: int in stages.size():
+		total_rows += stages[index].answer.size()
+		if index < stage_index:
+			completed_rows += stages[index].answer.size()
 	selected = -1
 	if right != row.size():
+		attempt_scored.emit(completed_rows + right, total_rows)
 		remember()
 		refresh_tiles()
 		if right == 0:
@@ -572,6 +580,7 @@ func check_step() -> void:
 		wrong_attempt.emit()
 		return
 	remembered.erase(task_id)
+	attempt_scored.emit(completed_rows + right, total_rows)
 	if stage_index + 1 < stages.size():
 		stage_index += 1
 		draft.stage = stage_index

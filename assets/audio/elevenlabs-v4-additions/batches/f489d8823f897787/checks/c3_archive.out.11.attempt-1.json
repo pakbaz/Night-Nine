@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c3_archive.out.11",
+  "attempt": 1,
+  "plan_sha256": "f489d8823f897787d07f726f8abb9e9251693c77164bbe22de94563be899f495",
+  "wav_sha256": "0721200493117603e35418d63a0176be9be4dcd76238420c4505ef62e0a6f007",
+  "expected": "At four minutes past midnight, the boathouse phone rang once. Mrs. Penhallow answered, listened without speaking, and hung up.",
+  "recognized": "At four minutes past midnight, the boathouse phone rang once. Mrs. Penhallow answered, listened without speaking, and hung up.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 8.8,
+  "sample_rate": 48000,
+  "peak": 0.412109375,
+  "rms": 0.035751293829988005,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

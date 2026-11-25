@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "audio_id": "c10_live.recap.01",
+  "attempt": 1,
+  "plan_sha256": "37ee42ef5641e10e13ac9c353fbb733e0134849a370e8fb10cf65e8bd2593037",
+  "wav_sha256": "2be46180e66ebc63235b9cbfd6fabe9666781247e0f6a95d179a3bb0dd3ac219",
+  "expected": "The wind was a dub. The porch lights, field lamps, two grids, radios and three hundred and twelve human voices all answered it live.",
+  "recognized": "The wind was a dub. The porch lights, field lamps, two grids, radios, and 312 human voices all answered it live.",
+  "local_recognized": "The Winged was a dub. The porch lights, field lamps, two grids, radios, and 312 human voices all answered it live.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 10.64,
+  "sample_rate": 48000,
+  "peak": 0.423431396484375,
+  "rms": 0.042962874428951,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c10_live.recap.01.json",
+    "sha256": "3f7cc5506e2fd68530dae291b3f1a2a6cfbdb8846b41f08fd75e84fa41568141",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  },
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

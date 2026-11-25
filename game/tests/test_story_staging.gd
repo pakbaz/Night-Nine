@@ -394,6 +394,8 @@ func run() -> void:
 	await enter("c6_iris")
 	check(not game.campaign.available("c6_iris.takes") and not game.stage.actor_visible("iris"), "The meeting waits for Stephen's market alibi")
 	check(game.stage.floor_stage.bodies.has("stephen") and game.stage.floor_stage.bodies.stephen.body.visible, "Stephen plans his market errand with Steve before he leaves")
+	check(game._next_actor() == "stephen" and game.campaign.task_index["c6_iris.alibi"].actor == "stephen",
+		"Switch to Stephen for the market sighting before handing the pier meeting back to Steve")
 	await enter("c6_iris", ["c6_iris.alibi"])
 	check(game.campaign.available("c6_iris.takes"), "Steve can keep the appointment after the market sighting")
 	check(not game.stage.floor_stage.bodies.stephen.body.visible and not game.stage.actor_visible("stephen"), "Stephen stays at the market while Steve meets Iris")

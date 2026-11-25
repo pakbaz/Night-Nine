@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c10_town.recap.01",
+  "attempt": 1,
+  "plan_sha256": "37ee42ef5641e10e13ac9c353fbb733e0134849a370e8fb10cf65e8bd2593037",
+  "wav_sha256": "8642675238f8fbc50e0b5d8272cf143bf2a775baa5e11796c069b471ce812cbd",
+  "expected": "The last sound of a whole city fit in the bottom of her bait bucket.",
+  "recognized": "The last sound of a whole city fit in the bottom of her bait bucket.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.72,
+  "sample_rate": 48000,
+  "peak": 0.347869873046875,
+  "rms": 0.038500406278090905,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

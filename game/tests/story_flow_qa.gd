@@ -199,7 +199,7 @@ func _run() -> void:
 	check(await until(func(): return game.storybook.visible, 9.0), "The aftermath follows the rising light")
 	await watch_book("06-aftermath", 2)
 	check(await until(func(): return game.title_card.visible, 3.0) and game.campaign.current().id == "c1_flat", "Chapter 1 opens with its card")
-	check(game.title_card.goal.text.contains("mother") and game.title_card.goal.text.contains("voicemail"), "The Chapter 1 card states Steve's revised goal")
+	check(game.title_card.goal.text.contains("kitchen radio") and game.title_card.goal.text.contains("coffee"), "The Chapter 1 card establishes the morning recording")
 	await wait(1.6)
 	await capture("07-chapter-1-card")
 	var bar_start: float = game.score.position()
@@ -208,6 +208,7 @@ func _run() -> void:
 	timing.append({"event": "Chapter 1 card length", "seconds": snappedf(game.score.position() - bar_start, .01)})
 	await until(func(): return not game.title_card.visible, 3.0)
 	await capture("08-chapter-1-arrival")
+	check(await until(func(): return game.active_line == "c1_flat.in.04", 5.0), "Nora greets Steve after they walk in")
 	await finish_dialogue()
 	# Flashback pages.
 	jump_to("p_veyr")

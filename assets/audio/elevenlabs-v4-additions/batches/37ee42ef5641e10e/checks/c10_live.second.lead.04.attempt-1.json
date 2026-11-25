@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c10_live.second.lead.04",
+  "attempt": 1,
+  "plan_sha256": "37ee42ef5641e10e13ac9c353fbb733e0134849a370e8fb10cf65e8bd2593037",
+  "wav_sha256": "c67273c02866be3cb754934d81525c7ebf406e823afc7c5415d94d7a5cd4feac",
+  "expected": "Coast next. Bring me a live reply before we switch on the grid.",
+  "recognized": "Coast next. Bring me a live reply before we switch on the grid.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 3.92,
+  "sample_rate": 48000,
+  "peak": 0.74896240234375,
+  "rms": 0.05181170524013191,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

@@ -45,9 +45,9 @@
           "prompt": "Pick the gate window, the driver, and where Steve rides.",
           "instruction": "Gate card. Red 11:10: on foot only, no vehicles. Blue 11:30: crew trucks roll through if the driver’s pass scans green. Gold 11:50: dogs search every vehicle. Stephen has a crew pass. Steve has none.",
           "rows": [
-            {"label": "Which window?", "options": ["Red, 11:10", "Blue, 11:30", "Gold, 11:50"], "answer": 1},
-            {"label": "Who drives?", "options": ["Steve", "Stephen"], "answer": 1},
-            {"label": "Where does Steve ride?", "options": ["In the cab", "Under the sound desk", "On foot at red"], "answer": 1}
+            {"label": "Which window?", "feedback": "The truck can't use a foot gate, and the dogs will search it. Find the shift that scans the driver.", "options": ["Red, 11:10", "Blue, 11:30", "Gold, 11:50"], "answer": 1},
+            {"label": "Who drives?", "feedback": "The guard scans the driver, not the truck. Which of us has the crew pass?", "options": ["Steve", "Stephen"], "answer": 1},
+            {"label": "Where does Steve ride?", "feedback": "Steve has nothing to show the guard. The sound desk gives him cover inside the truck.", "options": ["In the cab", "Under the sound desk", "On foot at red"], "answer": 1}
           ],
           "hints": [
             "The tape has to go in with the truck. Which window lets a truck in without a search?",
@@ -80,8 +80,8 @@
           "prompt": "Pick the hatch, and the receipt Pell brings back.",
           "instruction": "Press desk: stamps handouts for reporters. Stage door: signs for scenery. Delegation hatch: the clerk can call the President herself. The President signs the white sheet, and her pen presses through to the yellow carbon. The white sheet stays with her.",
           "rows": [
-            {"label": "Which hatch?", "options": ["Press desk", "Stage door", "Delegation hatch"], "answer": 2},
-            {"label": "What does Pell bring back?", "options": ["The white sheet", "The yellow carbon", "A press stamp"], "answer": 1}
+            {"label": "Which hatch?", "feedback": "A handout stamp won't get me her signature. I need the clerk who can call her to the hatch.", "options": ["Press desk", "Stage door", "Delegation hatch"], "answer": 2},
+            {"label": "What does Pell bring back?", "feedback": "She keeps the sheet she signed. Check what her pen left on the one underneath.", "options": ["The white sheet", "The yellow carbon", "A press stamp"], "answer": 1}
           ],
           "hints": [
             "The letter must reach the President’s own hand. Which hatch can bring her there?",
@@ -137,7 +137,7 @@
       "outro": [
         "steve|If they swap her, it happens between the hatch and the podium.",
         "stephen|So we watch the hatch. I’m very good at being looked at.",
-        {"new": "steve|In the fog between the antennas, an old woman was walking a dog. Mrs. Penhallow. Miles from her pier, again.", "delivery": "narration"}
+        {"new": "steve|In the fog between the antennas, an old woman was carrying a bait bucket. Mrs. Penhallow. Miles from her pier, again.", "delivery": "narration"}
       ],
       "next": "The ceremony (c7_swap).",
       "talk": {
@@ -321,8 +321,8 @@
           "prompt": "Pick the send for the tone, and the return for June’s reply.",
           "instruction": "The tone must reach the lectern and the back fence, but not the press van. June’s reply must reach Steve and Stephen, and nobody else. Sends: Amber goes to the lectern and the press van. Blue goes to the lectern, back fence and service steps. Green goes to the back fence and service steps. Returns: Copper goes to Steve, Stephen and the lectern. Slate goes to Steve and Stephen. Pearl goes to Steve alone.",
           "rows": [
-            {"label": "Send for the tone", "options": ["Amber", "Green", "Blue"], "answer": 2},
-            {"label": "Return for June’s reply", "options": ["Slate", "Pearl", "Copper"], "answer": 0}
+            {"label": "Send for the tone", "feedback": "Trace the lectern and the back fence together. Reject any send that also feeds the press van.", "options": ["Amber", "Green", "Blue"], "answer": 2},
+            {"label": "Return for June’s reply", "feedback": "Count both headsets. If the lectern gets June too, the return isn't private.", "options": ["Slate", "Pearl", "Copper"], "answer": 0}
           ],
           "hints": [
             "Do one row at a time. Start with where the tone must go.",
@@ -366,8 +366,7 @@
       },
       "recap": [
         "steve|Fourteen copies turned toward the sea at once, in front of everyone who mattered. The real President was in a service tunnel, with a bandaged wrist and June Calder.",
-        "steve|Iris told me later that the tone pulled at her too. She held on to June’s sleeve and counted Sunday dinners until it passed. Beside me, Stephen gripped the desk with both hands and did not turn.",
-        "steve|Rook’s copy slipped away into the fog. Before he went, he asked me one thing."
+        "steve|Iris told me later that the tone pulled at her too. She held on to June’s sleeve and counted Sunday dinners until it passed. Beside me, Stephen gripped the desk with both hands and did not turn."
       ],
       "outro": [
         "c7_swap.out.01",

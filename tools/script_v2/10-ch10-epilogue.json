@@ -36,7 +36,8 @@
       ],
       "context": [
         "steve|One hour. The rig was in pieces, and all over town the copies were forgetting.",
-        "steve|Then I remembered Halcyon’s tower. Every ninth night for a year it had talked to the ship, alone."
+        "steve|Then I remembered Halcyon’s tower. Every ninth night for a year it had talked to the ship, alone.",
+        "steve|Five weeks after Halcyon fired me, I sat at my old desk and stopped waiting for somebody else to take the microphone."
       ],
       "intro": [
         "stephen|The rig is in pieces. We need another way onto their antenna.",
@@ -125,6 +126,7 @@
           "rows": [
             {
               "label": "Which jack carries the live show?",
+              "feedback": "Watch for a change when Shaw moves her hand. A loop or a tester keeps its own time.",
               "options": [
                 "Elm",
                 "Ash",
@@ -134,6 +136,7 @@
             },
             {
               "label": "Which return will the fleet trust?",
+              "feedback": "Find the measurement taken aboard the ship. Forwarding our shore readings won't convince the fleet.",
               "options": [
                 "Return C: measured aboard the ship",
                 "Return A: booth echo",
@@ -153,54 +156,57 @@
           "finding": "steve|Elm follows Shaw’s hand, live, the way it did at the rig. Return C is a measurement signed aboard the Long Patience, the only kind the fleet trusts. Elm into Return C."
         },
         "relay": {
+          "type": "receiver",
           "difficulty": 2,
           "title": "Emergency radio",
           "requires": [
             "route"
           ],
           "goal": "Find the operator who can actually see Sentinel Point.",
-          "background": "Saren’s crew have jammed every official channel. Frank, in wet pajamas and his old cardigan, is at the station’s emergency set. His Thursday club is on the air: Gull on the coast, Marsh out past Sentinel Point, and Cedar. Frank sent cue three yesterday and cue four today.",
+          "background": "Saren’s crew have jammed every official channel. Frank, in wet pajamas and the cardigan Steve put around him, is at the station’s emergency set. His Thursday club is on the air: Gull on the coast, Marsh out past Sentinel Point, and Cedar. Frank sent test signal three yesterday and test signal four today.",
           "lead": [
             "c10_station.out.01",
             "frank|The club sent signal three yesterday, without me. Today I’m sending signal four. Let’s see who keeps up.",
-            "steve|The official channel just sent back three. That’s yesterday’s cue.",
+            "steve|The official channel just sent back three. That’s yesterday’s test signal.",
             {"new": "operator|Gull here. Cedar and Marsh both say four. Marsh says the wind just turned west out at the Point.", "delivery": "radio"},
             "frank|Ask them both about the wind again, Gull.",
             {"new": "operator|Marsh says it’s dropping now. Cedar said the same words as last time, exactly.", "delivery": "radio"}
           ],
           "prompt": "Who should confirm tonight’s changing cues?",
-          "board": {
-            "instruction": "Read each reply and decide who is really watching the field.",
-            "evidence": [
-              "Frank sent cue three yesterday and cue four today.",
-              "The jammed official line sent back cue three.",
-              "Cedar sent back cue four. Asked about the wind twice, Cedar gave the same words both times.",
-              "Marsh sent back cue four and gave a new wind reading each time he was asked.",
-              "Marsh lives out past Sentinel Point."
-            ],
-            "stages": [
-              {
-                "mode": "match",
-                "prompt": "Who sent each reply?",
-                "slots": [
-                  "Who sent back yesterday’s cue?",
-                  "Who has today’s cue but repeats old news?",
-                  "Who can really see Sentinel Point?"
-                ],
-                "pieces": [
-                  "The official line",
-                  "Cedar",
-                  "Marsh"
-                ],
-                "answer": [
-                  0,
-                  1,
-                  2
-                ]
-              }
-            ],
-            "wrong_text": "Frank shakes his head. “Somebody on that list can’t see a thing, kiddo.”"
+          "instruction": "Tune across the emergency channels. Reject the jammer, then log the operator whose reply changes with the field.",
+          "receiver": {
+            "mode": "relay",
+            "min": 0,
+            "max": 2,
+            "step": 1,
+            "start": 0,
+            "target": 2,
+            "unit": "",
+            "decimals": 0,
+            "show_narrow": true,
+            "require_narrow": true,
+            "narrow_label": "Reject the jammer",
+            "action": "Log the field operator",
+            "dial_options": [0, 1, 2],
+            "descriptions": {
+              "0": "OFFICIAL · heavy jamming, then yesterday’s test signal three repeating.",
+              "1": "CEDAR · test signal four, followed by the same wind sentence twice.",
+              "2": "MARSH · test signal four; west wind, then dropping on the second check."
+            },
+            "target_description": "MARSH · test signal four; west wind, then dropping on the second check."
           },
+          "rows": [
+            {
+              "label": "Reliable field operator",
+              "options": ["The official line", "Cedar", "Marsh"],
+              "feedback": [
+                "The official line is jammed and repeats yesterday’s test signal.",
+                "Cedar knows test signal four but repeats an old wind report word for word.",
+                "Marsh reports test signal four and a changing wind from Sentinel Point."
+              ],
+              "answer": 2
+            }
+          ],
           "hints": [
             "A reply with yesterday’s number is out of date.",
             "Sending back the right number only proves someone heard Frank. Seeing the field means saying something new.",
@@ -213,7 +219,7 @@
               "delivery": "radio"
             }
           ],
-          "finding": "steve|The official line sent back yesterday’s cue. Cedar can repeat a cue but can’t see the field. Marsh, out past Sentinel Point, answered with a fresh wind reading. Marsh is our eyes, and Gull carries the cues down the coast."
+          "finding": "steve|The official line sent back yesterday’s test signal. Cedar can repeat a test number but can’t see the field. Marsh, out past Sentinel Point, answered with a fresh wind reading. Marsh is our eyes, and Gull carries the live-show cues down the coast."
         }
       },
       "recap": [
@@ -296,7 +302,6 @@
         "carmen",
         "ward",
         "agnes",
-        "wen",
         "shaw"
       ],
       "objective": "Get the town, the lamps and the grid ready for one live show.",
@@ -307,7 +312,7 @@
         "U-narration"
       ],
       "notes": [
-        "Mrs. Penhallow’s reveal opens the scene and repeats the Archivist’s Veyr line word for word (p_veyr.out.01).",
+        "Mrs. Penhallow’s reveal opens the scene with the shore dub she made from the Archivist’s original Veyr take.",
         "Ward’s line goes out on television (broadcast).",
         "c10_town.out.02 is deleted (C18)."
       ],
@@ -324,15 +329,16 @@
           "delivery": "narration"
         },
         "c10_town.out.01",
-        "agnes|Wind through the western towers. Last evening. Original take.",
+        "agnes|Wind through the western towers. Last evening. Shore dub from the original take.",
         "steve|Mrs. Penhallow, I have never heard you say anything that wasn’t about bait.",
         {
           "id": "c10_town.out.03",
-          "text": "I recorded it a long time ago, Steven. Before I had hands that smelled of herring."
+          "text": "I made this dub before I came ashore, Steven. Before I had hands that smelled of herring."
         },
         "steve|You’re one of them. You’re the records officer Iris told me about.",
         "agnes|Part of her. The part that stayed for the people.",
-        "agnes|Veyr was our home, Steven. Our sun failed. That is the last wind that ever blew through our city."
+        "agnes|On ninth nights I answered whatever shore phone rang. A few bars on the line kept my borrowed memories aligned. At the boathouse, you watched me do it.",
+        "agnes|That city was our home. Our star went dark. This is the last wind that ever blew through those streets."
       ],
       "delete": [
         "c10_town.out.02"
@@ -350,7 +356,7 @@
           "goal": "Set up the porch lights so each street answers the one before it.",
           "background": "Nora is running the town with her family’s phone tree. Two streets will flash their porch lights: Pier and Orchard. The Pier captain can see Orchard’s lights. Orchard faces the hills and can’t see Pier. Both streets have KBWR on. Mateo wants one phone kept free for the fire crew.",
           "lead": [
-            "nora|Two street captains, one spare phone and six thousand porch lights. Easy.",
+            "nora|Two street captains, one spare phone and two streets of porch lights. Easy.",
             "nora|Pier can see Orchard’s porch lights from the harbor. Orchard faces the hills, so they can’t see Pier at all.",
             "nora|Both streets have the radio on. And Mateo wants one phone kept free for the fire crew."
           ],
@@ -359,6 +365,7 @@
           "rows": [
             {
               "label": "Which street starts?",
+              "feedback": "Orchard can't see Pier. Put the radio cue where it has to start the chain.",
               "options": [
                 "Pier",
                 "Orchard"
@@ -367,6 +374,7 @@
             },
             {
               "label": "What happens to the spare phone?",
+              "feedback": "The lights can answer each other. Leave the fire crew a way to call in.",
               "options": [
                 "Keep it free for the fire crew",
                 "Join both captains in a show call"
@@ -402,7 +410,10 @@
             "Put Shaw’s lamp mark on the cue sheet."
           ],
           "lines": [
-            "c10_town.console.01",
+            {
+              "id": "c10_town.console.01",
+              "delivery": "radio"
+            },
             "c10_town.console.02",
             "c10_town.console.03"
           ],
@@ -416,7 +427,7 @@
             "console"
           ],
           "goal": "Give the fleet home as it was, then a voice answering now.",
-          "background": "Mrs. Penhallow’s spool holds the last wind on Veyr, nine hundred years old. The Choir can answer from aboard the ship, live.",
+          "background": "Mrs. Penhallow’s spool holds her shore dub of the last wind on Veyr, recorded nine hundred years ago. The Choir can answer from aboard the ship, live.",
           "lead": [
             "agnes|There is a pencil mark after the last gust. I made it myself.",
             "steve|The fleet should hear home first. Then a voice answering them, live, that nobody recorded."
@@ -440,16 +451,19 @@
           "lines": [
             "c10_town.wind.01"
           ],
-          "finding": "steve|The Veyr wind plays through to Mrs. Penhallow’s pencil mark, after the last gust. Then the Choir’s return opens, live. Home as it was, then a voice answering them now."
+          "finding": "steve|The pencil mark comes just after the last gust. That’s where I open the return. The wind is on tape. The people answering it are here."
         }
       },
       "recap": [
-        "steve|Mrs. Penhallow is part of the ship’s record keeper, the part that stayed ashore with us. She brought me the last wind on Veyr in her bait bucket.",
-        "steve|Every porch light in Bellwether is waiting for my cue. Shaw has the lamps, Wen has the grid, and the Choir will answer live."
+        "steve|The last sound of a whole city fit in the bottom of her bait bucket.",
+        "steve|The porch lights on Pier and Orchard are waiting for my cue. Shaw has the lamps, Wen has the grid, and the Choir will answer live."
       ],
       "outro": [
         "shaw|Lamps up.",
-        "wen|Grid up. Late, but up."
+        {
+          "new": "wen|Grid up. Late, but up.",
+          "delivery": "radio"
+        }
       ],
       "next": "Live, on every station (c10_live).",
       "talk": {
@@ -529,9 +543,15 @@
             "topic": "Old rivals",
             "after": "console",
             "lines": [
-              "wen|Nine years ago I would have unplugged her lamps.",
+              {
+                "new": "wen|Nine years ago I would have unplugged her lamps.",
+                "delivery": "radio"
+              },
               "shaw|You tried. And my fake fooled more generals than yours.",
-              "wen|It did not. My test fooled two admirals as well."
+              {
+                "new": "wen|It did not. My test fooled two admirals as well.",
+                "delivery": "radio"
+              }
             ]
           }
         ],
@@ -584,7 +604,7 @@
         },
         {
           "id": "c10_live.in.02",
-          "text": "Steve. Who’s... Frank. Dad. It’s on my hand."
+          "text": "Steve. I know you. Dad’s name is... Frank. It’s on my hand."
         },
         {
           "id": "c10_live.in.03",
@@ -601,6 +621,8 @@
         "first": {
           "difficulty": 1,
           "title": "Cue one: a live reply",
+          "type": "desk",
+          "art": "res://assets/illustrated/campaign/stills/c10_live-cue-desk.webp",
           "lead": [
             "nora|Orchard is listening for you, Steve. The pier is watching Orchard.",
             "nora|Careful. Two Pier lamps are still on from the rehearsal. Don’t count those."
@@ -608,28 +630,15 @@
           "requires": [],
           "goal": "Start the show with a reply nobody could have recorded.",
           "background": "The fleet’s instruments will be watching for a pattern that answers itself live. Nora’s phone tree is ready: Orchard hears KBWR, and Pier can see Orchard. Two Pier lamps are still glowing from the rehearsal.",
-          "prompt": "Which street does Steve call, and what should release Shaw’s field lights?",
-          "instruction": "Call the street that starts from the radio. Release Shaw’s field lights only when you see a new reply.",
-          "rows": [
-            {
-              "label": "Which street does Steve call?",
-              "options": [
-                "Pier",
-                "Orchard",
-                "Sentinel field"
-              ],
-              "answer": 1
-            },
-            {
-              "label": "When does Shaw switch on?",
-              "options": [
-                "When the two old Pier lamps glow",
-                "At Orchard’s first flash",
-                "At a new Pier flash after Orchard"
-              ],
-              "answer": 2
-            }
-          ],
+          "prompt": "Bring up the program fader. Give the first street its cue. Watch the return lamp before you send Shaw.",
+          "instruction": "Set the fader to LINE. Press a channel key to send it live. The desk holds each reply until you are ready.",
+          "desk": {
+            "channels": ["Pier","Orchard","Shaw"],
+            "cues": [
+              {"lamp":"ON AIR · two steady rehearsal lamps at Pier", "send":"Orchard", "wrong":"Pier watches Orchard; only Orchard has its radio on."},
+              {"pending":"Orchard is flashing. Still no change at Pier.", "wait":1.5, "lamp":"RETURN · fresh flash at Pier", "send":"Shaw", "wrong":"Shaw’s crew is waiting for the fresh Pier reply."}
+            ]
+          },
           "hints": [
             "Remember Nora’s phone tree. Which street hears the radio, and which one watches?",
             "A lamp that was already on tells Steve nothing. Shaw needs a reply.",
@@ -644,83 +653,73 @@
         "second": {
           "difficulty": 2,
           "title": "Cue two: the coast",
+          "type": "desk",
+          "art": "res://assets/illustrated/campaign/stills/c10_live-cue-desk.webp",
           "lead": [
             "frank|I logged all three faders, kiddo. One of them only looks connected.",
             "frank|With the coast plugged in, Reed and Bell both answered two beats late. With the coast unplugged, Reed went quiet.",
             "frank|Bell kept answering anyway. So Bell is only an echo inside the building.",
-            "steve|The fourth signal goes out on beat forty. Shaw goes when the coast answers. Wen needs the next two beats.",
-            "wen|And my power crew needs everything back by the start of beat forty-five."
+            "steve|Coast next. Bring me a live reply before we switch on the grid.",
+            {"new":"wen|I’m standing by. Wait for my green lamp.", "delivery":"radio"}
           ],
           "requires": [
             "first"
           ],
           "goal": "Fit Shaw and Wen around the coast’s real reply.",
-          "background": "Frank logged three faders on Steve’s beat clock. Test at 10, coast plugged in: Booth 10, Reed 12, Bell 12. Test at 20, coast unplugged: Booth 20, Reed silent, Bell 22. Cue four leaves at 40, and the power crew needs everything back at the start of beat 45.",
-          "prompt": "Cue four goes out on beat 40. Which fader is the real coast, and which beats does Wen get?",
-          "instruction": "The real coast goes quiet when the coast is unplugged. It answers two beats after a cue, and Shaw goes on that beat. Wen gets the next two beats, done before 45.",
-          "rows": [
-            {
-              "label": "Which fader is the real coast?",
-              "options": [
-                "Bell",
-                "Booth",
-                "Reed"
-              ],
-              "answer": 2
-            },
-            {
-              "label": "Which beats does Wen get?",
-              "options": [
-                "Beats 42 and 43",
-                "Beats 44 and 45",
-                "Beats 43 and 44"
-              ],
-              "answer": 2
-            }
-          ],
+          "background": "Frank pulled the coast plug at rehearsal. Reed went dead. Bell kept answering inside the booth. Shaw’s lamps are lit, and Wen is listening for a genuine coast reply.",
+          "prompt": "Patch the coast onto the live program. Send Wen when her return lamp comes up.",
+          "instruction": "Set LINE level and press a patch key. Watch the desk for the coast’s reply.",
+          "desk": {
+            "channels":["Bell","Wen","Reed"],
+            "cues":[
+              {"lamp":"PATCH · Shaw ready; coast line open","send":"Reed","wrong":"Bell echoed even with its cable out. Wen needs the outside line first."},
+              {"pending":"Calling the coast…", "wait":1.6, "lamp":"RETURN · coast answered; Wen green","send":"Wen","wrong":"The coast has answered. Hand the open channel to Wen."}
+            ]
+          },
           "hints": [
             "Which fader stopped answering when Frank unplugged the coast?",
-            "The real coast answers two beats after a cue. Count on two beats from beat 40.",
-            "Shaw takes the beat the coast answers on. Wen takes the two beats right after that one."
+            "An echo inside the building goes on answering without a cable.",
+            "Patch Reed. Send Wen when the coast return comes up."
           ],
           "lines": [
             "c10_live.second.01",
-            "c10_live.second.02",
+            {"id":"c10_live.second.02","delivery":"radio"},
             {
               "id": "c10_live.second.03",
               "delivery": "radio"
             }
           ],
-          "finding": "steve|Reed went silent when the coast was unplugged, so Reed is the real coast return. Its reply landed at 42 for Shaw, and Wen took 43 and 44. Both grids answered, live."
+          "finding": "steve|Reed brought the coast into the booth. Wen took the handoff. Both grids answered."
         },
         "third": {
           "difficulty": 1,
           "title": "Cue three: listen",
+          "type": "desk",
+          "art": "res://assets/illustrated/campaign/stills/c10_live-cue-desk.webp",
           "lead": [
             "steve|Last cue. The wind on Veyr, and then the Choir. Nobody talks over them.",
-            "steve|Mrs. Penhallow marked the last gust at fifty. It keeps ringing until fifty-two.",
-            "wen|I confirm on beat fifty-one. Give me two beats to talk."
+            "steve|I’ll run the reel. Leave the tail on that last gust.",
+            {"new":"wen|Watch my lamp. When it goes dark, the channel is theirs.", "delivery":"radio"}
           ],
           "requires": [
             "second"
           ],
           "goal": "Let the Choir speak with nothing in its way.",
           "background": "Last in the show comes the wind on Veyr, then the Choir, answering live. The fleet has not heard home in nine hundred years.",
-          "prompt": "The last gust rings until beat 52. Wen talks on beats 51 and 52. The Choir should start on the first quiet beat. When does Steve open the Choir’s channel?",
-          "options": [
-            "52",
-            "53",
-            "54"
-          ],
-          "answer": 1,
-          "wrong": {
-            "0": "At 52 the gust is still ringing and Wen is still talking.",
-            "2": "54 is quiet, but it isn’t the first quiet beat. Count again from where Wen stops."
+          "prompt": "Send the wind from home. Leave the ending intact, then open a clear channel for the Choir.",
+          "instruction": "Bring up LINE. The monitor plays the reel on air; the return lamp follows its actual length.",
+          "desk": {
+            "channels":["Choir","Wind reel","Booth mic"],
+            "cues":[
+              {"lamp":"STANDBY · reel threaded; Choir waiting","send":"Wind reel","sound":"effect.veyr_wind","wrong":"Give them the sound of home first. Keep the booth mic closed."},
+              {"pending":"ON AIR · wind reel turning; Wen’s lamp lit","monitor":true,"lamp":"CLEAR · reel ended; Wen’s lamp dark","send":"Choir","wrong":"Home has had its turn. Open the channel for the people who heard it."}
+            ]
           },
+          "options":["Open the booth","Send the live program","Hold the microphone open"],"answer":1,
           "hints": [
-            "When does the gust stop ringing, and when does Wen stop talking?",
-            "Both the gust and Wen are still going on beat 52.",
-            "Find the last beat that has any sound on it. The Choir starts on the beat after that."
+            "The reel is the invitation. The Choir is the reply.",
+            "Watch the return lamp if you cannot hear the tail.",
+            "Send Wind reel. Wait for CLEAR, then send Choir."
           ],
           "lines": [
             "c10_live.third.01",
@@ -730,11 +729,11 @@
               "delivery": "narration"
             }
           ],
-          "finding": "steve|The wind on Veyr rang out through 52. At 53, with nobody else on the line, the Choir answered. Nothing repeated, because nothing was recorded."
+          "finding": "steve|The tape stopped. Three hundred and twelve voices came through the open channel."
         }
       },
       "recap": [
-        "steve|Porch lights, field lamps, two national grids, a planet’s worth of radios and three hundred and twelve human voices. None of it recorded. All of it answering.",
+        "steve|The wind was a dub. The porch lights, field lamps, two grids, radios and three hundred and twelve human voices all answered it live.",
         "steve|To the Vigil’s instruments, Earth had just tested an engine that could reach the fleet in an afternoon."
       ],
       "outro": [
@@ -791,6 +790,8 @@
         "c10_report.in.01",
         "c10_report.in.02",
         "archivist|For a year I told you the engine was in a notebook, Saren. So you would keep looking, instead of telling the fleet there was nothing here to fear.",
+        "archivist|They first bound you in a cradle ship after our star went dark. Fear was your first record.",
+        "saren|I can still hear my mother in that ship. If you reconcile me, will I know her voice?",
         "c10_report.in.03"
       ],
       "delete": [],
@@ -849,6 +850,7 @@
           "rows": [
             {
               "label": "Which world should the fleet hear about?",
+              "feedback": "One world answers our beacon. Another has no water. Neither meets the terms for a new home.",
               "options": [
                 "Sound 4",
                 "Reach 2",
@@ -858,6 +860,7 @@
             },
             {
               "label": "What shows the ground is empty?",
+              "feedback": "A silent receiver isn't a survey. Look for visits where someone actually checked the ground.",
               "options": [
                 "The channel was quiet once",
                 "An automated beacon replied",
@@ -931,8 +934,7 @@
         }
       },
       "recap": [
-        "archivist|The report is confirmed. The fleet will measure an engine that does not exist, meet three hundred and twelve people, and learn of a home it was never told about.",
-        "archivist|I did not reconcile Saren. He will have to live with being wrong. So will I."
+        {"new": "archivist|I did not reconcile Saren. He will have to live with being wrong. So will I.", "audio": "c10_report.recap.02"}
       ],
       "outro": [
         "c10_report.out.01",
@@ -983,7 +985,7 @@
         "bait": {
           "goal": "Visit the bait shop and the ferry.",
           "background": "Two Mrs. Penhallows now share one counter. At the ferry, Adrian Rook is saying goodbye to the man who wore his face.",
-          "finding": "steve|Two Mrs. Penhallows, one counter, and people are finally buying bait. One Adrian Rook stays. The other one is leaving town, to find out who he is."
+          "finding": "steve|Two Mrs. Penhallows, one counter, and people are finally buying bait. The Long Patience was already gone. One Adrian Rook stayed; the other took the morning ferry to find out who he was."
         },
         "coffee": {
           "goal": "Go home.",
@@ -1304,7 +1306,11 @@
           "art": "res://assets/illustrated/campaign/inserts/c8_lab-last-notebook-page.webp",
           "goal": "Recognize the shape of the reply.",
           "background": "Helen copied Wick’s phrase onto the last page of her notebook from Frank’s tapes, and followed it in Row Zero. Wick sent a message home to Tirel.",
-          "prompt": "Three in the morning. A real signal from deep space: two joined tones, the second climbing, a gap, then one long tone lower than both. Helen has three pages open.",
+          "type": "compare",
+          "prompt": "Play the overnight capture and compare it with the archived reel. Which notebook page should Helen open?",
+          "sounds": ["effect.wick","effect.wick_high_ending"],
+          "evidence_labels": ["Deep-space receiver · 03:00","Archive · Reel 14"],
+          "clip_captions": ["Two joined tones rise. After a gap, a long tone falls below both.", "The opening tones rise together; after a gap, the long final tone is higher still."],
           "options": [
             "Page 9: three separate falling strokes",
             "Page 12: two joined strokes rising, a gap, one long low stroke",

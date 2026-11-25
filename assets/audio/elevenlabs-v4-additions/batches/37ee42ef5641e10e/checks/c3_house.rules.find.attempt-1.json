@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c3_house.rules.find",
+  "attempt": 1,
+  "plan_sha256": "37ee42ef5641e10e13ac9c353fbb733e0134849a370e8fb10cf65e8bd2593037",
+  "wav_sha256": "c8f8e90a4640c911d521d78cdbc883109925fe8e5c4d9dde3e231bbc6ec624fc",
+  "expected": "Two names held up. The deputy and the permit signer each turned up in two places at once. Going to your boys’ games proves nothing.",
+  "recognized": "Two names held up. The deputy and the permit signer each turned up in two places at once. Going to your boys' games proves nothing.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 9.28,
+  "sample_rate": 48000,
+  "peak": 0.380615234375,
+  "rms": 0.04209371839674894,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

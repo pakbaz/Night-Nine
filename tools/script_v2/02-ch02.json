@@ -16,7 +16,7 @@
         }
       },
       "coach": "Some leads come with recordings. Listen, or read the sound traces: a sound that repeats looks the same each time.",
-      "objective": "Get into the sealed north wing. The work order says Nora signed something there.",
+      "objective": "Get into the sealed north wing. The work order carries Nora’s staff credential.",
       "changes": [
         "C10",
         "critic C10",
@@ -64,8 +64,8 @@
           "prompt": "The old plan and the newer notice disagree. Which route still reaches the north wing?",
           "instruction": "Trust the newer notice. Door 1 is bricked up, so the visitor hall goes nowhere. The service door opens into the pump room. Pump arrows: pipe N flows in, pipe E flows out, pipe S flows in.",
           "rows": [
-            {"label": "Which way in?", "options": ["Public tank entrance", "Service door", "Café door"], "answer": 1},
-            {"label": "Which pump-room pipe?", "options": ["Pipe N", "Pipe S", "Pipe E"], "answer": 2}
+            {"label": "Which way in?", "feedback": "That visitor plan predates the brickwork. Which entrance still opens straight into the pump room?", "options": ["Public tank entrance", "Service door", "Café door"], "answer": 1},
+            {"label": "Which pump-room pipe?", "feedback": "Hang on. The arrows on N and S point back at the pump. I need a pipe leading away from it.", "options": ["Pipe N", "Pipe S", "Pipe E"], "answer": 2}
           ],
           "hints": [
             "Where the old plan and the new notice disagree, trust the notice.",
@@ -81,7 +81,7 @@
           "difficulty": 2,
           "title": "Two service doors",
           "goal": "Pick the corridor with nobody in it.",
-          "background": "Steve hears a voice and footsteps behind each door. On Sunday morning, Nora’s good morning played twice, exactly the same. Since then he knows how to tell a person from a recording: a recording repeats exactly, and a person never does.",
+          "background": "Steve hears a voice and footsteps behind each door. On the kitchen tapes, even the breath before Nora’s greeting matched across two different mornings. He listens for that kind of repetition here.",
           "lead": [
             "steve|Someone’s behind both doors. Maybe only one of them is real.",
             "steve|A real person never steps or coughs the same way twice. A recording does it every time.",
@@ -172,12 +172,12 @@
       },
       "recap": [
         "steve|The north wing is no repair job. It’s a holding station, with cots, Nora’s real coat, and her voice on a tape from May.",
-        "steve|The woman who said good morning to me yesterday was not Nora. Nora was here, frightened, whistling for help. And I didn’t hear it for five months.",
-        "steve|If she was alive in May, she might be alive now."
+        "steve|Nora was here, whistling for help. I didn’t hear her for five months."
       ],
       "outro": [
         "iris|Steve. You shouldn’t be here.",
         "lyle_copy|Easy now, Steve. Nobody wants this to be hard.",
+        "lyle_copy|The old intake is open. I have the service key. This way.",
         "steve|Where is she? Where’s Nora?"
       ],
       "next": "Through the old seawater intake tunnel, under the bay (c2_ship)."
@@ -203,11 +203,11 @@
         "Lead c2_ship.intake is the brass intake hatch in the foreground floor. Steve walks to it past the attendant, who stands at the speaker column after the release.",
         "Nora's copy and Lyle are dismissed at the end of the command lead and leave when the command lead is done. Only the attendant is there for the escape.",
         "Saren is heard only over the intercom here. His release command is the fixed recording recording.release.",
-        "Film after the departure: a tank fills around a shape grown from the 61 percent scan. Steve never sees it."
+        "Film after the departure: a tank fills around a shape grown from the 61 percent memory index. Binding completes offscreen. Steve never sees it."
       ],
       "intro": [
         {
-          "new": "steve|They walked me down the old intake tunnel, under the bay. At the end of it there was a ship.",
+          "new": "steve|Lyle unlocked the old intake and walked me down the tunnel under the bay. At the end of it there was a ship.",
           "delivery": "narration"
         },
         {
@@ -218,7 +218,7 @@
         "c2_ship.in.02",
         "c2_ship.in.03",
         "guard|“You are the author of your own story.” This is from a human book. Is it helping?",
-        "guard|The scan proceeds from the oldest memories. You are now nineteen. Congratulations on your driving test."
+        "guard|The memory index opens with the oldest records. Binding runs separately. Here is your driving test. Congratulations. You passed."
       ],
       "task_order": [
         "command",
@@ -232,7 +232,7 @@
           "title": "The intercom",
           "requires": [],
           "goal": "Get the exact command that opens the chair onto Dad’s tape.",
-          "background": "Steve is strapped into the chair, and Dad’s recorder is running in his cardigan pocket. When a strap sticks, the attendant asks for a release and nothing happens. Then a calm voice on the intercom, the Prefect, gives the command, and the buckle opens.",
+          "background": "Steve is strapped into the chair, and Dad’s recorder is running in his cardigan pocket. When a strap sticks, the attendant asks for a release and nothing happens. Then a calm voice on the intercom, the Prefect, gives the command, and the buckle opens. The cassette keeps turning onto blank tape after the click.",
           "lead": [
             "guard|This restraint is sticking. Release, please.",
             {
@@ -250,6 +250,10 @@
             },
             {
               "new": "steve|Dad’s counter ticks once a second. The lamp lit at tick three. The buckle clicked at tick seven.",
+              "direction": "a whisper"
+            },
+            {
+              "new": "steve|The tape keeps moving after the click. Blank tape, not leader. There’s room left.",
               "direction": "a whisper"
             },
             {
@@ -314,7 +318,7 @@
             "command"
           ],
           "goal": "Open the chair with the Prefect’s own voice.",
-          "background": "Nora’s copy and Lyle have gone back up the tunnel to town, and the scan has started again. The attendant stands by the chair with a slate. Dad’s recorder holds three voices from tonight: Nora’s spool, the attendant, and the Prefect’s four-second command. Steve can reach two microphone grilles. The attendant tested the hall speakers on the cracked grille. When Steve’s sleeve brushed the whole grille, the chair’s lamp blinked. The chair only listens while its lamp is lit.",
+          "background": "Nora’s copy and Lyle have gone back up the tunnel to town, and the scan has started again. The attendant stands by the chair with a slate. Dad’s cassette caught three voices tonight: Nora’s intercom spool playing in the north wing, the attendant, and the Prefect’s four-second command. Steve still has the original spool. He can reach two microphone grilles. The attendant tested the hall speakers on the cracked grille. When Steve’s sleeve brushed the whole grille, the chair’s lamp blinked. The chair only listens while its lamp is lit.",
           "lead": [
             "guard|Fifty-eight percent. Fifty-nine. You are doing very well.",
             "steve|Dad’s recorder caught three voices tonight. Nora’s spool, the attendant, and the Prefect.",
@@ -324,9 +328,9 @@
           ],
           "prompt": "Pick the recording, the grille and the moment.",
           "rows": [
-            {"label": "Which recording?", "options": ["Nora’s spool", "The attendant", "The Prefect’s command"], "answer": 2},
-            {"label": "Which grille?", "options": ["The cracked grille", "The whole grille"], "answer": 1},
-            {"label": "When to press play?", "options": ["On an ordinary beat", "As the 61 notch starts", "When the 61 notch ends"], "answer": 1}
+            {"label": "Which recording?", "feedback": "The attendant talks to the chair, but whose voice did it actually take an order from?", "options": ["Nora’s spool", "The attendant", "The Prefect’s command"], "answer": 2},
+            {"label": "Which grille?", "feedback": "The cracked grille made a noise in the hall. Which one made the lamp on my chair blink?", "options": ["The cracked grille", "The whole grille"], "answer": 1},
+            {"label": "When to press play?", "feedback": "A regular blink buys me one second. I need four whole seconds for the command.", "options": ["On an ordinary beat", "As the 61 notch starts", "When the 61 notch ends"], "answer": 1}
           ],
           "audition_labels": ["Nora’s spool", "The attendant", "The Prefect’s command"],
           "instruction": "The chair obeys the voice it has obeyed before. It hears only the grille that makes its lamp blink, and only while the lamp is lit. The lamp stays lit one second on a beat and six seconds at the 61 notch. The command takes four seconds.",
@@ -347,14 +351,14 @@
             },
             {
               "id": "c2_ship.escape.02",
-              "text": "It worked. Sixty-one percent of me, and all of me is getting out of this chair."
+              "text": "It worked. Index sixty-one percent, and all of me is getting out of this chair."
             },
             {
               "new": "steve|The attendant is busy arguing with the column. Quietly, now.",
               "direction": "a whisper"
             }
           ],
-          "finding": "steve|The Prefect’s own voice opened the chair, at the notch marked sixty-one. The scan stopped at sixty-one percent."
+          "finding": "steve|The Prefect’s own voice opened the chair at the notch marked sixty-one. The memory index stopped at sixty-one percent; whatever it could bind would come later."
         },
         "nora": {
           "difficulty": 1,
@@ -499,7 +503,7 @@
       "delete": [],
       "recap": [
         "steve|There is a ship under the bay. Nora is asleep on it, alive, with hundreds of others. At the far end of the hall, one bed lay under frost, and something too tall to be human slept in it. The guards never looked at it.",
-        "steve|They tried to make another me. They got sixty-one percent.",
+        "steve|They tried to make another me. The memory index stopped at sixty-one percent. I didn’t know yet what the tank would bind from it.",
         "steve|And the woman with Nora’s face, who locked me out on the balcony and then let me go, had walked me to that chair herself."
       ],
       "outro": [

@@ -175,9 +175,15 @@ def main() -> None:
         "sunday_autorick": "c1_flat.sunday.03",
         "nora": "recording.greeting",
         "saturday_steve": "c1_flat.saturday.02",
-        "sunday_steve": "c1_flat.sunday.02",
     }.items():
         audio_ids[key], paths[key] = voice_for(line_id)
+    # The Sunday greeting survives only as evidence, not as a second live line.
+    frozen = json.loads((ROOT / "assets/audio/elevenlabs-v4-script-v2/approved-overlay.json").read_text())
+    sunday_id = "c1_flat.sunday.02"
+    take = frozen["campaign"]["takes"][sunday_id]
+    audio_ids["sunday_steve"], paths["sunday_steve"] = sunday_id, from_res(take["file"])
+    if not take["text"].startswith("Morning, Nor.") or sha256(paths["sunday_steve"]) != take["sha256"]:
+        raise ValueError("The approved Sunday evidence performance has changed")
     paths["ident"] = from_res(soundscape["kbwr_ident"]["file"])
     audio_ids["ident"] = "kbwr_ident"
 

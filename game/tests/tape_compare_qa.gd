@@ -91,18 +91,48 @@ func _run() -> void:
 	game.auto_dialogue = false
 	game.menu.hide()
 	game._load_stage(true)
-	# Chapter cards are timed in story_flow_qa.gd; this check starts at the first line.
 	if game.title_card.visible:
 		game.title_card.finish_now()
+	var floor_stage: Node = game.stage.floor_stage
+	var steve: Node2D = floor_stage.bodies.steve.body
+	var nora: Node2D = floor_stage.bodies.iris.body
+	var doorway := steve.position
+	check(steve.is_visible_in_tree() and not nora.is_visible_in_tree() and not game.dialogue_panel.visible,
+		"Steve comes through the kitchen door alone before anyone speaks")
+	var timeout := Time.get_ticks_msec() + 8000
+	while not nora.is_visible_in_tree() and Time.get_ticks_msec() < timeout:
+		await frames(1)
+	var nora_entry := nora.position
+	check(steve.position.distance_to(doorway) > 50 and nora.is_visible_in_tree() and not game.dialogue_panel.visible,
+		"Nora joins Steve after his walk-in")
+	while not game.dialogue_panel.visible and Time.get_ticks_msec() < timeout:
+		await frames(1)
+	check(nora.position.distance_to(nora_entry) > 30 and game.active_line == "c1_flat.in.04" and game.speaker.text == "NORA REYES",
+		"Nora walks in before her greeting, using her apparent name")
+	game._next_line()
+	check(game.words.text == "Morning, Nor.", "Steve answers the greeting")
+	game._next_line()
+	check(game.words.text.begins_with("Coffee"), "Coffee follows the greeting without an intervening tape or date")
 	game._skip_dialogue()
+	check("c1_flat.in.01" not in game.campaign.data.seen, "Helen does not play during the entrance")
+	check("Optional:" in game.objective.text, "The voicemail is offered as an optional objective")
+	await frames()
+	var recorder: Dictionary = game.campaign.task_index["c1_flat.control"]
+	await click(game.hotspots[game.campaign.current().tasks.find(recorder)])
+	await wait_for_approach()
+	check(game.active_line == "c1_flat.in.01" and game.voice.playing and game.voice.stream.resource_path.ends_with("/recording.voicemail.wav"),
+		"The silver recorder plays Helen's recording before its required puzzle unlocks")
+	game._skip_dialogue()
+	check("c1_flat.control" not in game.campaign.data.done and game.campaign.data.done.all(func(id: String): return not id.begins_with("c1_flat.")),
+		"Listening does not solve any kitchen lead")
+	check(game._load("autosave") and not game.dialogue_panel.visible and game.stage.arrival_step == -1 and "c1_flat.in.01" in game.campaign.data.seen,
+		"Restoring the autosave keeps the listen in the transcript without replaying it or the entrance")
+	check("Optional:" not in game.objective.text and "Time Dad’s recorder" in game.objective.text,
+		"After listening, only the required recorder objective remains")
 	for task: Dictionary in game.campaign.current().tasks:
 		if task.id == "c1_flat.compare":
 			break
 		game._choose(task.id, int(task.answer))
-		if task.id=="c1_flat.saturday":
-			while game.dialogue_panel.visible and game.active_line!="c1_flat.in.04":
-				game._next_line()
-			check(game.speaker.text == "NORA REYES", "Show Nora's apparent identity during the first greeting")
 		game._skip_dialogue()
 	await frames()
 	var compare_task: Dictionary=game.campaign.task_index["c1_flat.compare"]
@@ -123,15 +153,22 @@ func _run() -> void:
 	check("c1_flat.compare" not in game.campaign.data.done, "The voice rows alone cannot bypass alignment")
 	await capture("unaligned")
 	var trace := panel.trace
+	(panel.get_child(0) as ScrollContainer).ensure_control_visible(trace)
+	await frames(3)
 	var start := trace.get_global_transform_with_canvas() * Vector2(trace.size.x * 0.6, 210)
 	var local_delta := -0.35 / (panel.recording.timeline_end - panel.recording.timeline_start) * (trace.size.x - NightTapeTrace.LEFT - NightTapeTrace.RIGHT)
 	var finish := trace.get_global_transform_with_canvas() * Vector2(trace.size.x * 0.6 + local_delta, 210)
+	var hover := InputEventMouseMotion.new()
+	hover.position = start
+	get_viewport().push_input(hover,true)
+	await frames(1)
 	var down := InputEventMouseButton.new()
 	down.button_index = MOUSE_BUTTON_LEFT
 	down.pressed = true
 	down.position = start
 	get_viewport().push_input(down, true)
 	await frames(1)
+	check(trace.dragging, "The press reaches the visible Sunday waveform")
 	var move := InputEventMouseMotion.new()
 	move.position = finish
 	move.relative = finish - start

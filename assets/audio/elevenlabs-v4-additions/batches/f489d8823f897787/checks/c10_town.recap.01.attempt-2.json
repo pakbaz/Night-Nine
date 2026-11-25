@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "audio_id": "c10_town.recap.01",
+  "attempt": 2,
+  "plan_sha256": "f489d8823f897787d07f726f8abb9e9251693c77164bbe22de94563be899f495",
+  "wav_sha256": "46a1a66ec5f8c6851c688b911e3ac025ff167439064f2fac9ba2bb33ee992fa4",
+  "expected": "Mrs. Penhallow is part of the ship’s record keeper, the part that stayed ashore with us. She brought a shore dub of Veyr’s last wind in her bait bucket.",
+  "recognized": "Mrs. Penhallow is part of the ship's record keeper, the part that stayed ashore with us. She brought a shore dub of Vaer's last wind in her bait bucket.",
+  "local_recognized": "Mrs. Penhalo is part of the ship's record keeper, the part that stayed ashore with us. She brought a shore dub of Vare's last wind in her bait bucket.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 9.12,
+  "sample_rate": 48000,
+  "peak": 0.46795654296875,
+  "rms": 0.040595183318065886,
+  "level_match_gain_db": 0.0,
+  "word_edits": 1,
+  "word_error_rate": 0.03225806451612903,
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c10_town.recap.01.json",
+    "sha256": "39994e387ae128d5765f3ed5f9aa8df9779b7003c42bd517ec7a2bbad8b76294",
+    "model": "scribe_v3",
+    "word_edits": 1,
+    "listening_reviewed": false
+  },
+  "status": "retake_required",
+  "failure_reason": "asr_mismatch"
+}

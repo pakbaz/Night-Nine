@@ -35,7 +35,7 @@
         ],
         [
           "Nobody found them. That was eighteen months ago.",
-          "Mom called me from the boat that night. I kept her voicemail on a cassette. Most nights I play it at three in the morning. I don’t know what I’m listening for."
+          "Mom called me from the boat that night. I dubbed her phone voicemail onto a cassette. Most nights I play it at three in the morning. I don’t know what I’m listening for."
         ],
         [
           "A year ago a company called Halcyon Media bought KBWR.",
@@ -111,6 +111,7 @@
             "The phone should sit as close as it can to the sound Helen wants Steve to hear, not to Helen."
           ],
           "lines": [
+            "p_bay.out.01",
             {
               "id": "p_bay.message.01",
               "text": "He should hear this for himself. There. Now he’ll tell us we recorded it wrong."
@@ -123,7 +124,6 @@
         "frank|Eleven-forty. The note is climbing. Helen says it has a shape, like speech. We’re going to follow it out."
       ],
       "outro": [
-        "p_bay.out.01",
         "p_bay.out.02"
       ],
       "next": "Black. The storybook “Eighteen months” plays, then Chapter 1.",
@@ -159,7 +159,7 @@
       }
     },
     "c1_flat": {
-      "when": "Saturday the 20th, three in the morning, then Sunday morning",
+      "when": "Saturday the 20th at 7:15, then Sunday morning",
       "present": [
         "steve",
         "iris"
@@ -168,12 +168,12 @@
         "chapter": {
           "kicker": "Chapter 1",
           "title": "Good Morning, Sleepyhead",
-          "when": "Saturday the 20th, three in the morning",
-          "goal": "Steve wants to save his mother’s last voicemail before the tape wears out."
+          "when": "Saturday the 20th, a quarter past seven",
+          "goal": "Dad’s recorder is running beside the kitchen radio. Nora has put the coffee on."
         }
       },
-      "objective": "Test Dad’s old recorder before you move Mom’s voicemail to a fresh tape.",
-      "coach": "Click the red cassette to begin. Click Nora if you want to chat. Press J to open Steve’s notebook.",
+      "objective": "Time Dad’s recorder with the two morning tapes.",
+      "coach": "Start with the red cassette. Click Nora to chat, or the silver recorder to listen to Mom.",
       "changes": [
         "C05",
         "C09",
@@ -186,25 +186,17 @@
         "Red cassette = Saturday, blue cassette = Sunday, silver recorder = the tape test, headphones and reels = the comparison. These match the painting."
       ],
       "intro": [
-        {"id": "c1_flat.in.01", "delivery": "recorded_playback", "direction": "Mom’s voicemail, on Dad’s recorder"},
-        "c1_flat.in.02",
-        "steve|Your tape’s wearing thin, Mom. I’ll move you to a fresh one. Just as soon as Dad’s recorder runs true.",
-        {
-          "new": "steve|Dad’s recorder runs slow. Old belts. Everyone on it sounds a little sleepy.",
-          "delivery": "narration"
-        },
-        {
-          "new": "steve|There’s an easy test. KBWR still plays my old station ident at a quarter past seven every morning. I made that ident. It runs exactly twelve seconds.",
-          "delivery": "narration"
-        },
-        {
-          "new": "steve|Record it two mornings running. If it lasts twelve seconds both times, the machine runs true.",
-          "delivery": "narration"
-        }
+        "c1_flat.in.04",
+        {"id": "c1_flat.saturday.02", "new": "steve|Morning, Nor."},
+        {"id": "c1_flat.saturday.03", "new": "iris|Coffee’s on the stove. I made it strong, the way you like it."},
+        {"id": "c1_flat.saturday.04", "new": "steve|You hate it strong."},
+        {"id": "c1_flat.saturday.05", "new": "iris|Strong is fine. Whatever you like."}
       ],
       "delete": [
         "c1_flat.out.01",
-        "c1_flat.sunday.01"
+        "c1_flat.in.02",
+        "c1_flat.sunday.01",
+        "c1_flat.sunday.02"
       ],
       "task_order": [
         "saturday",
@@ -217,9 +209,14 @@
           "type": "choice",
           "difficulty": 1,
           "title": "The red cassette",
-          "goal": "Catch something on tape that never changes.",
-          "background": "To time Dad’s recorder, Steve needs a sound that is exactly the same every time it plays. The kitchen radio is tuned to KBWR, where AutoRick plays Steve’s twelve-second station ident at 7:15 every morning.",
-          "prompt": "Saturday morning. What should the red cassette catch at a quarter past seven?",
+          "goal": "Identify a timing reference on Saturday’s tape.",
+          "background": "The red cassette caught the radio and the whole coffee conversation. Steve needs one sound on it that he can time again tomorrow.",
+          "lead": [
+            {"id": "c1_flat.in.09", "new": "steve|I kept the spare cassettes in my sock drawer. The little velvet box was still there. I took two tapes and shut the drawer.", "delivery": "narration"},
+            {"id": "c1_flat.in.07", "new": "steve|There’s an easy test. KBWR still plays my old station ident at a quarter past seven every morning. I made that ident. It runs exactly twelve seconds.", "delivery": "narration"},
+            {"id": "c1_flat.in.08", "new": "steve|Record it two mornings running. If it lasts twelve seconds both times, the machine runs true.", "delivery": "narration"}
+          ],
+          "prompt": "Which sound on the red cassette can Steve use to check the recorder’s speed?",
           "options": [
             "The KBWR station ident on the kitchen radio",
             "Steve reading the same sentence aloud",
@@ -238,17 +235,13 @@
           "lines": [
             {
               "id": "c1_flat.in.03",
-              "delivery": "radio",
+              "delivery": "recorded_playback",
+              "direction": "Saturday’s radio, heard on the red cassette",
               "sfx": "effect.kbwr_ident, then AutoRick"
             },
-            "c1_flat.in.04",
-            "steve|Morning, Nor.",
-            "c1_flat.saturday.01",
-            "iris|Coffee’s on the stove. I made it strong, the way you like it.",
-            "steve|You hate it strong.",
-            "iris|Strong is fine. Whatever you like."
+            "c1_flat.saturday.01"
           ],
-          "finding": "steve|Red cassette, Saturday, 7:15. My ident, AutoRick, Nora saying good morning on her way out, and me."
+          "finding": "steve|Saturday. Red tape. First the station, then Nora in the doorway. You can hear me answer her."
         },
         "sunday": {
           "type": "choice",
@@ -281,10 +274,6 @@
               "delivery": "radio",
               "sfx": "effect.kbwr_ident, then AutoRick"
             },
-            {
-              "id": "c1_flat.sunday.02",
-              "text": "Morning, Nor. Blue tape, Sunday. Date on everything, Dad."
-            },
             "iris|I’m off to feed Admiral and the otters. Back by noon.",
             "steve|On a Sunday? You used to fight for every Sunday off.",
             "iris|The animals don’t know it’s Sunday, sleepyhead."
@@ -298,9 +287,11 @@
             "sunday"
           ],
           "goal": "Line the two cassettes up on the ident and time Dad’s recorder.",
-          "background": "Steve puts the red cassette in one ear and the blue in the other. If the recorder runs true, the two idents will line up. The tapes also caught the rest of the kitchen: AutoRick on the radio, Nora on her way out, and Steve himself.",
+          "background": "Steve puts the red cassette in one ear and the blue in the other. If the recorder runs true, the two idents will line up. Both tapes also caught AutoRick on the radio, Nora’s greeting and Steve’s reply.",
           "prompt": "Slide Sunday until the two idents line up. Then play both tapes and compare every voice on them.",
           "instruction": "First line up the ident. Then listen to each voice on both tapes and say how the two days compare.",
+          "feedback_voice": "early_awkward",
+          "offset_feedback": "The ident is still doubled. Steve nudges Sunday again.",
           "tape": {
             "recording_a": "res://assets/audio/effects/tape-saturday.wav",
             "recording_b": "res://assets/audio/effects/tape-sunday.wav",
@@ -314,6 +305,7 @@
                 "Same words, said a new way",
                 "Different words"
               ],
+              "feedback": "Steve winces. “Start with the ident. Dad cut one clean station mark onto both cassettes.”",
               "answer": 0
             },
             {
@@ -323,6 +315,7 @@
                 "Same words, said a new way",
                 "Different words"
               ],
+              "feedback": "AutoRick reads a different script each morning; the words, not just the breath, change.",
               "answer": 2
             },
             {
@@ -332,6 +325,7 @@
                 "Same words, said a new way",
                 "Different words"
               ],
+              "feedback": "Steve hears himself rush Sunday’s line. Same greeting, new performance.",
               "answer": 1
             },
             {
@@ -341,6 +335,7 @@
                 "Same words, said a new way",
                 "Different words"
               ],
+              "feedback": "Nora’s breath and the click before “morning” land on the same samples.",
               "answer": 0
             }
           ],
@@ -363,6 +358,14 @@
           "type": "choice",
           "difficulty": 2,
           "title": "Dad’s recorder",
+          "optional_playback": {
+            "title": "Play Mom’s voicemail (optional)",
+            "objective": "Optional: play Mom’s voicemail on the silver recorder.",
+            "lines": [
+              {"id": "c1_flat.in.01", "delivery": "recorded_playback", "direction": "Mom’s voicemail, on Dad’s recorder"},
+              {"id": "c1_flat.in.05", "new": "steve|Your tape’s wearing thin, Mom. I’ll move you to a fresh one. Just as soon as Dad’s recorder runs true."}
+            ]
+          },
           "requires": [
             "compare"
           ],
@@ -412,7 +415,6 @@
         "iris": [
           {
             "topic": "Breakfast",
-            "after": "saturday",
             "lines": [
               "steve|Want some toast before you go?",
               "iris|I ate already. There’s fruit in the blue bowl.",
@@ -422,7 +424,6 @@
           },
           {
             "topic": "The otters",
-            "after": "saturday",
             "lines": [
               "steve|How are the otter pups?",
               "iris|Growing. One of them bit a volunteer again. Only a little.",
@@ -501,6 +502,7 @@
             "steve|Your whistle, Nor. He always comes for that.",
             {
               "new": "iris|Watch.",
+              "cue": "harbor_winch",
               "sfx": "effect.harbor_winch under effect.nora_whistle_flat"
             },
             "steve|He didn’t even come up. The winch is going. He probably didn’t hear you."
@@ -524,11 +526,11 @@
           "lines": [
             {
               "new": "steve|Nothing. He’s looking right at you.",
-              "sfx": "effect.nora_whistle_flat"
+              "cue": "nora_whistle_flat"
             },
             {
               "new": "steve|...He came for me. I can’t even whistle.",
-              "sfx": "effect.steve_whistle"
+              "cue": "steve_whistle"
             },
             "iris|He wants the rest of your sandwich."
           ],
@@ -763,7 +765,9 @@
       ],
       "context": [
         "steve|La Marea. The Reyes family restaurant, and for four years my Sunday table.",
-        "steve|Luis still keeps Dad’s old chair at the bar. Nobody sits in it."
+        "steve|Luis still keeps Dad’s old chair at the bar. Nobody sits in it.",
+        "steve|A ring had been in my sock drawer for a year. I kept telling myself I would ask Nora after one of these dinners.",
+        "steve|Nora’s oldest dinner rule was that nobody touched her plate. That night Carmen moved it twice, and Nora only smiled."
       ],
       "intro": [
         {
@@ -843,6 +847,7 @@
           "rows": [
             {
               "label": "Last argument anyone remembers",
+              "feedback": "Wait. Tomás took the call in mid-May. Mateo still got a fight out of her on Memorial Day weekend.",
               "options": [
                 "Tomás’s show, May 17",
                 "Mateo’s driving fight, Memorial Day weekend",
@@ -852,6 +857,7 @@
             },
             {
               "label": "First time she simply agreed",
+              "feedback": "By Carmen’s birthday she’d been agreeing for months. When did Rafa first serve the mole without getting an argument?",
               "options": [
                 "The first Sunday in June",
                 "Carmen’s birthday, last month",
@@ -1054,7 +1060,7 @@
       ],
       "notes": [
         "Objective changes to the next step once c1_escape.order is solved.",
-        "Art (recommended): an insert of the rain-soaked work order, Bellwether Aquarium letterhead, NORTH WING, signed N. Reyes, wall-clock time 20:30, dated on Carmen’s birthday."
+        "Art (recommended): an insert of the rain-soaked work order, Bellwether Aquarium letterhead, NORTH WING, signed N. Reyes beside her staff number, wall-clock time 20:30, dated on Carmen’s birthday."
       ],
       "context": [
         "steve|Home. Nora took a phone call in the bedroom and closed the door. She never closes the door.",
@@ -1070,18 +1076,18 @@
           "difficulty": 2,
           "art": "res://assets/illustrated/campaign/inserts/c1_escape-north-wing-work-order.webp",
           "title": "The paper in the raincoat",
-          "goal": "Work out whether Nora could have signed this work order.",
-          "background": "Something stiff fell out of the raincoat lining when Steve hung it on the balcony hook: an aquarium work order for the north wing, sealed for two years. Only the head aquarist signs for it, and that is Nora. It is signed in her name on Carmen’s birthday, at 20:30 by the aquarium wall clock.",
+          "goal": "Work out whether Nora could have authorized this work order.",
+          "background": "Something stiff fell out of the raincoat lining when Steve hung it on the balcony hook: an aquarium work order for the north wing, sealed for two years. It is signed N. Reyes beside Nora’s head-aquarist staff number on Carmen’s birthday, at 20:30 by the aquarium wall clock. The staff number is the credential that authorizes the order.",
           "lead": [
             "steve|Something in the lining. Soaked. Aquarium letterhead... north wing?",
-            "steve|Signed at 20:30. Nora always said that north-wing clock runs fifteen minutes fast.",
+            "steve|N. Reyes, Nora’s staff number, 20:30. She always said that north-wing clock runs fifteen minutes fast.",
             "steve|And the aquarium is across the bay. Eighteen minutes each way, even with every light green."
           ],
-          "prompt": "Steve’s notes from dinner put Nora at La Marea that evening. Could she have slipped away to sign this?",
+          "prompt": "Steve’s notes from dinner put Nora at La Marea that evening. Could she have used that credential herself?",
           "board": {
             "instruction": "First fix the time on the work order. Then check whether Nora had time for the trip.",
             "evidence": [
-              "The work order says 20:30 by the aquarium clock.",
+              "The work order uses Nora’s staff number at 20:30 by the aquarium clock.",
               "The aquarium clock runs fifteen minutes fast.",
               "Carmen’s photos show Nora at La Marea at 20:04, 20:15 and 20:29. At 20:15 she is holding the kitchen check.",
               "Crossing the bay takes eighteen minutes each way."
@@ -1089,9 +1095,9 @@
             "stages": [
               {
                 "mode": "match",
-                "prompt": "When was the order really signed, and where was Nora then?",
+                "prompt": "When was Nora’s credential really used, and where was Nora then?",
                 "slots": [
-                  "Real time of the signature",
+                  "Real time of the authorization",
                   "Where Nora was at that time"
                 ],
                 "pieces": [
@@ -1118,7 +1124,7 @@
                   "36 minutes",
                   "18 minutes",
                   "14 minutes",
-                  "Nora could not have signed it",
+                  "Nora could not have authorized it",
                   "Nora slipped out between photos"
                 ],
                 "answer": [
@@ -1136,7 +1142,7 @@
             "Add up the trip there and back. Is any gap between photos that long?"
           ],
           "lines": [
-            {"id": "c1_escape.order.01", "text": "Noon to midnight at La Marea. Mateo and Rafa both saw her. She couldn’t have been in the north wing."},
+            {"id": "c1_escape.order.01", "text": "At 20:15 Nora was in Carmen’s photo, across the bay. Her staff credential was used in the north wing at that same minute."},
             {
               "id": "c1_escape.in.01",
               "direction": "flat, through the bedroom window"
@@ -1147,8 +1153,8 @@
               "text": "Nora? The balcony door’s locked. From inside."
             }
           ],
-          "finding": "steve|Someone signed Nora’s name in the north wing while she was at her mother’s birthday, across the bay. And now Nora has locked me out on the balcony.",
-          "note": "Someone used Nora’s name in the north wing while she was at dinner. Nora locked Steve out on the balcony."
+          "finding": "steve|Someone used Nora’s name and staff credential in the north wing while she was at her mother’s birthday, across the bay. And now Nora has locked me out on the balcony.",
+          "note": "Someone used Nora’s name and staff credential in the north wing while she was at dinner. Nora locked Steve out on the balcony."
         },
         "power": {
           "difficulty": 3,
@@ -1161,6 +1167,7 @@
           "rows": [
             {
               "label": "Selector before touching the pad",
+              "feedback": "Sorry, wrong switch. I need the stair bulb on so I can see the pad, but the motor off so it will take my thumbprint.",
               "options": [
                 "NORMAL",
                 "OFF",
@@ -1170,6 +1177,7 @@
             },
             {
               "label": "At the thumb pad",
+              "feedback": "The light went out when I lifted my thumb. The pad doesn't remember a tap.",
               "options": [
                 "Tap and let go",
                 "Press and keep pressure",
@@ -1179,6 +1187,7 @@
             },
             {
               "label": "While the pad is still pressed",
+              "feedback": "My thumb's in place. Now the motor has to start while it can still read the pad.",
               "options": [
                 "Switch to NORMAL",
                 "Switch to OFF",
@@ -1223,7 +1232,7 @@
         }
       },
       "recap": [
-        "steve|My list: one good morning, played twice. A whistle Admiral won’t answer. A signature Nora couldn’t have made. A phone call about a notebook. A locked door.",
+        "steve|My list: one good morning, played twice. A whistle Admiral won’t answer. Nora’s credential used across the bay. A phone call about a notebook. A locked door.",
         "steve|And Tomás’s tapes say the bay sings tonight.",
         "steve|So I went down to the beach. In Bellwether, that’s where you go when you can’t sleep."
       ],

@@ -58,7 +58,9 @@ contain line ids. Resolve each id through top-level `lines`.
 | --- | --- | --- | --- |
 | `id` | string | Stable task key, prefixed by scene id. | `"c2_ship.intake"` |
 | `title` | string | Hotspot/panel title. | `"The flooded intake"` |
-| `type` **new** | enum string | UI contract: `beat`, `choice`, `rows`, `board`, `tape`, `dial`, or `compare`. | `"choice"` |
+| `type` **new** | enum string | UI contract: `beat`, `choice`, `rows`, `board`, `tape`, `dial`, `receiver`, `desk`, or `compare`. | `"choice"` |
+| `sound_bank`, `clip_captions` | boolean, array | Send the selected recording to a bedside speaker. Optional captions describe what each clip sounds like without revealing the correct choice in the prompt. | `c9_wake.frank` |
+| `desk` | object | Ordered cue sheet: `channels` are physical patch keys; each cue names the ready lamp and the key to send. A `wait` holds the next lamp; `monitor` waits for the previous sound to finish. | `c10_live.third` |
 | `kind` | string | Story/gameplay semantic retained for specialized behavior. | `"playback"` |
 | `difficulty` **new** | integer | Authored relative difficulty. | `2` |
 | `actor` | string | Required playable actor, or `""`. | `"steve"` |

@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c10_station.relay.lead.02",
+  "attempt": 1,
+  "plan_sha256": "f489d8823f897787d07f726f8abb9e9251693c77164bbe22de94563be899f495",
+  "wav_sha256": "80428cb2337fd7e2625c46dd3c722497b72b69ede3b71e0ea7e060aa1b4b4536",
+  "expected": "The official channel just sent back three. That’s yesterday’s test signal.",
+  "recognized": "The official channel just sent back three. That's yesterday's test signal.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 4.64,
+  "sample_rate": 48000,
+  "peak": 0.366180419921875,
+  "rms": 0.04235293862865401,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

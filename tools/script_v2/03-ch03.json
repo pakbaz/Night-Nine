@@ -58,10 +58,10 @@
           "title": "June’s crossword",
           "requires": [],
           "goal": "Prove to June that you are the man she pulled out of the water.",
-          "background": "June does the crossword every morning, in ink, a habit her late wife, Ruth, started. On the beach Steve told her about the chair: the attendant said the scan copies the oldest memories first, and Steve got out at sixty-one percent. A copy grown from that scan would have most of his life and none of the newest part.",
+          "background": "June does the crossword every morning, in ink, a habit her late wife, Ruth, started. On the beach Steve told her about the chair: its memory index starts with the oldest records, and Steve stopped it at sixty-one percent. Binding is a separate step, but no copy from that index could contain the newest part of Sunday night.",
           "lead": [
             {
-              "new": "calder|You told me that chair copies the oldest memories first. And you got out at sixty-one percent.",
+              "new": "calder|You told me that chair indexes the oldest memories first. And you stopped it at sixty-one percent.",
               "direction": "after Carmen has gone, closing the door"
             },
             "calder|I was at the station all morning, and Biscuit isn’t a witness. So you tell me. What could I ask you that the man at the market couldn’t answer?",
@@ -70,10 +70,11 @@
             "calder|After midnight, the 911 line rings in my kitchen. My machine keeps every call. I haven’t played Sunday’s yet."
           ],
           "prompt": "June uncaps her pen over the crossword margin. What should she ask, and how will she know the answer is true?",
-          "instruction": "The chair copies the oldest memories first. It stopped at sixty-one percent, so the copy has nothing from Sunday night. After midnight, the 911 line rings in June’s kitchen, and her machine records every call.",
+          "instruction": "The chair indexes the oldest memories first. It stopped at sixty-one percent, before Sunday night entered the index. Binding happens later. After midnight, the 911 line rings in June’s kitchen, and her machine records every call.",
           "rows": [
             {
               "label": "What should June ask about?",
+              "feedback": "She needs something too recent for the chair to copy, and something she can check without taking my word for it.",
               "options": [
                 "Mom’s lullaby",
                 "His first radio show",
@@ -83,6 +84,7 @@
             },
             {
               "label": "What does Steve write down?",
+              "feedback": "Wait. What I told June later on the beach isn't what I said when I called for help.",
               "options": [
                 "“There’s a ship under the bay.”",
                 "“People are walking into the water, and they’re not coming back out.”",
@@ -92,6 +94,7 @@
             },
             {
               "label": "How does June check it?",
+              "feedback": "My handwriting can't tell her what I said that night. Something in her kitchen can.",
               "options": [
                 "Lyle’s night log",
                 "Her call recording",
@@ -134,14 +137,15 @@
             "calder|Lyle’s on it. My own deputy. Fourteen years, and this summer he started filing his reports on time.",
             "c3_house.rules.01",
             "calder|Gus Albano. Thirty years of his grandmother’s recipes, and on Monday a new pastry in his window.",
-            "calder|Mateo’s coaching book. Lyle missed every game last spring. From June eleventh, he signed in at every one.",
-            "calder|Walt moved to Washington in April. His signature is on a permit here, dated a day he was testifying in Washington."
+            "calder|Lyle signed a parking citation here in town. The same minute, a nurse took his blood pressure at a clinic two counties away. I spoke to her.",
+            "calder|Walt moved to Washington in April. The clerk’s bound ledger puts him at her counter on May third while a sworn hearing transcript has him testifying in Washington."
           ],
           "prompt": "June reads three entries aloud. Which ones would stand up in daylight?",
           "instruction": "June’s rule: a new habit proves nothing, because anyone can change. A dated record that puts someone where they could not have been is evidence.",
           "rows": [
             {
-              "label": "Mateo’s book signs Lyle in from June 11",
+              "label": "A local citation and a clinic visit two counties away at the same minute",
+              "feedback": "The deputy was handing someone a ticket here while a nurse had him on the exam table two counties away. Look at the times.",
               "options": [
                 "Proves nothing",
                 "Evidence"
@@ -150,6 +154,7 @@
             },
             {
               "label": "Gus’s new pastry on Monday",
+              "feedback": "A baker can try a recipe on Monday. Where's the second record that puts him somewhere else?",
               "options": [
                 "Proves nothing",
                 "Evidence"
@@ -157,7 +162,8 @@
               "answer": 0
             },
             {
-              "label": "Walt Prior’s permit, dated while he was in Washington",
+              "label": "May 3 ledger and sworn hearing transcript put Walt in two cities",
+              "feedback": "Walt could travel between the two cities. What he couldn't do is answer a hearing question while signing at the other counter.",
               "options": [
                 "Proves nothing",
                 "Evidence"
@@ -167,25 +173,25 @@
           ],
           "hints": [
             "Use June’s rule. Could any person do this on a good day?",
-            "A new recipe is a new habit. A sign-in book and a signed permit have dates on paper.",
-            "Ask of each entry: is there a date June could check in a book or a file?"
+            "Turning up for every game could mean Lyle changed. Giving a ticket here while a nurse examines him elsewhere is different.",
+            "Compare where each pair of records places its signer at the same time. A new recipe gives you no second location."
           ],
           "lines": [
             "calder|Two I could take to a judge. And if I do, what do I tell Lyle’s boys? Mateo says they’ve never been happier.",
             "steve|Is Mrs. Penhallow on it? She was on the beach at midnight on Sunday.",
             "calder|Agnes? She hasn’t changed in forty years. She still corrects my grammar."
           ],
-          "finding": "steve|June’s list has thirty-one names, and most of them are feelings. Two are records: Lyle’s sign-in book and Walt Prior’s permit. Mrs. Penhallow isn’t on it."
+          "finding": "steve|Two names held up. The deputy and the permit signer each turned up in two places at once. Going to your boys’ games proves nothing."
         },
         "mail": {
-          "type": "choice",
+          "type": "board",
           "difficulty": 1,
           "title": "Dale’s delivery",
           "requires": [
             "crossword"
           ],
           "goal": "Find out how Dale knew Steve was staying here.",
-          "background": "Steve arrived at dawn on Monday. At 06:10 June radioed the station: ‘Bringing Mercer to my place. Tell nobody.’ Deputy Lyle Boone, starting his shift, answered. Dale’s bag left the post office at 08:04 with Steve’s letters already bundled for June’s house. He signed for June’s door at 08:08. June phoned the post office about Steve’s mail at 08:12. Carmen heard from Nora at lunchtime.",
+          "background": "Steve arrived at dawn on Monday. At 06:10 June used the private car-to-station handset: ‘Bringing Mercer to my place. Tell nobody.’ The log shows Deputy Lyle Boone was the only person signed onto that channel, and he answered. Dale’s bag left the post office at 08:04 with Steve’s letters already bundled for June’s house. He signed for June’s door at 08:08. June phoned the post office about Steve’s mail at 08:12. Carmen heard from Nora at lunchtime.",
           "lead": [
             {
               "new": "pell|Good morning, Officer Biscuit.",
@@ -197,7 +203,7 @@
               "text": "She’s asleep, Dale. That is her schedule."
             },
             "calder|On Monday the post office told me Dale had already brought your letters here. Before I’d called them. So I asked for the paperwork.",
-            "calder|At ten past six on Monday, I radioed the station to say you were here. Lyle was starting his shift. He answered.",
+            "calder|Monday morning, I used the private car-to-station handset. Only my deputy was on that channel. I heard him answer.",
             "calder|Dale’s bag left the post office at four minutes past eight, with your letters already bundled for my house.",
             "calder|I didn’t phone the post office until twelve past eight. And Carmen only heard from Nora at lunch."
           ],
@@ -212,17 +218,43 @@
             "0": "The post office heard from June at 08:12. Dale’s bag had left at 08:04.",
             "2": "Carmen heard at lunchtime, from Nora. Dale had delivered hours before."
           },
+          "board": {
+            "instruction": "Put the four records in time order, then identify the only person who could hand Steve’s location to Dale before the bag left.",
+            "evidence": [
+              "June’s radio log: 06:10, ‘Bringing Mercer to my place. Tell nobody.’ Deputy Lyle Boone acknowledged.",
+              "Dispatch sheet: Dale’s bag left at 08:04 with Steve’s letters already bundled for June’s house.",
+              "Door receipt: Dale signed at June’s house at 08:08.",
+              "Post-office desk entry: June asked for Steve’s mail at 08:12. Carmen heard at lunchtime."
+            ],
+            "stages": [
+              {
+                "mode": "order",
+                "prompt": "Build the morning timeline.",
+                "slots": ["First", "Second", "Third", "Last"],
+                "pieces": ["June radios Lyle", "Dale’s bag leaves", "Dale signs at June’s door", "The post office learns Steve is there"],
+                "answer": [0, 1, 2, 3]
+              },
+              {
+                "mode": "match",
+                "prompt": "Who could make the handoff before 08:04?",
+                "slots": ["Knew in time to tell Dale"],
+                "pieces": ["The post office", "Deputy Lyle Boone", "Carmen Reyes"],
+                "answer": [1]
+              }
+            ],
+            "wrong_text": "Steve checks the stamps again. The handoff has to happen before Dale’s bag leaves."
+          },
           "hints": [
             "Line up who knew Steve was here, and when each of them found out.",
             "Dale’s bag left at 08:04. Besides June, who knew before then?",
-            "Think about June’s radio call at 06:10. Who was on the other end?"
+            "Think about June’s private handset call at 06:10. Who alone was signed onto the other end?"
           ],
           "lines": [
             "steve|He had my mail sorted for your house before anyone told the post office I was here.",
             "calder|Lyle took my call at ten past six.",
             "calder|Then nobody tells Lyle where we go next. Or Dale."
           ],
-          "finding": "steve|Dale had my letters bundled for June’s house at 08:04. The post office didn’t know until 08:12. The only other person who knew was Lyle, who took June’s call at ten past six. They talk to each other."
+          "finding": "steve|Dale had my letters bundled for June’s house at 08:04. The post office didn’t know until 08:12. The private channel log says only Lyle took June’s call at ten past six. He told Dale."
         }
       },
       "recap": [
@@ -389,6 +421,7 @@
           "rows": [
             {
               "label": "Which Bellwether record was made on the spot?",
+              "feedback": "The typed copy only tells me what someone entered later. Who handled the paper at the counter that day?",
               "options": [
                 "The ink ledger",
                 "The computer entry"
@@ -397,6 +430,7 @@
             },
             {
               "label": "Which Washington record was made on the spot?",
+              "feedback": "A later account can repeat a mistake. Look for Walt answering questions as the hearing was recorded.",
               "options": [
                 "The hearing transcript",
                 "The newspaper column"
@@ -405,6 +439,7 @@
             },
             {
               "label": "What do those two records show?",
+              "feedback": "Put a finger on each time. Walt would have to be in both cities at once.",
               "options": [
                 "Walt lied about his trip",
                 "One name in two places at once",
@@ -446,28 +481,28 @@
             "calder|Here are last month’s meter rolls. Sentinel Point, and Pearl Laundry next door.",
             "steve|They’re running totals, like the miles on a car. What counts is how far each one moved."
           ],
-          "prompt": "Did Sentinel Point use more power than a laundromat last month?",
+          "prompt": "What do the meter records prove, and what remains unverified?",
           "board": {
-            "instruction": "Work out how much power each site used last month.",
+            "instruction": "Separate what the utility records establish from what they cannot establish.",
             "evidence": [
-              "Pearl Laundry’s meter read 1,118 on the first of the month and 2,000 on the last.",
-              "Sentinel Point’s meter read 3,460 on the first of the month and 4,100 on the last.",
-              "Each meter keeps a running total, in the same units, like the miles on a car."
+              "Utility summary, Pearl Laundry: 882 metered units used last month.",
+              "Utility summary, Sentinel Point: 640 metered units used last month.",
+              "The utility summary covers power drawn through its grid meter. It does not inventory generators, batteries or another private supply."
             ],
             "stages": [
               {
                 "mode": "match",
-                "prompt": "Fill in June’s file.",
+                "prompt": "Complete June’s evidence note.",
                 "slots": [
-                  "How much did Pearl Laundry use?",
-                  "How much did Sentinel Point use?",
-                  "How much more did the laundromat use?"
+                  "The records prove",
+                  "The records do not prove",
+                  "Safe conclusion"
                 ],
                 "pieces": [
-                  "882 units",
-                  "640 units",
-                  "242 units",
-                  "4,100 units"
+                  "Sentinel drew less grid power than Pearl Laundry",
+                  "Sentinel has no other power source",
+                  "Recorded grid use is modest; other supply is unverified",
+                  "Meridian’s engine was switched off"
                 ],
                 "answer": [
                   0,
@@ -476,12 +511,12 @@
                 ]
               }
             ],
-            "wrong_text": "June taps the meter roll. “Show me how far each counter moved, Mercer.”"
+            "wrong_text": "June taps the utility heading. “Grid meter, Mercer. Don’t make it prove what it never measured.”"
           },
           "hints": [
-            "Each roll is a running total. What matters is how far it moved.",
-            "Subtract the first reading from the last, for each site.",
-            "Pearl Laundry: 2,000 minus 1,118. Sentinel Point: 4,100 minus 3,460. Then take the smaller result from the larger."
+            "Start with the claim the two utility summaries can support directly.",
+            "A grid meter measures the grid. What possible supplies sit outside that record?",
+            "Sentinel drew less metered grid power; another supply remains unverified."
           ],
           "lines": [
             "c3_archive.power.01"
@@ -511,6 +546,7 @@
           "rows": [
             {
               "label": "When is the next loud night?",
+              "feedback": "Tomás aired the shows when they were ready. The bay kept time on the nights he recorded them.",
               "options": [
                 "October 29",
                 "October 30",
@@ -520,6 +556,7 @@
             },
             {
               "label": "Where should they watch from?",
+              "feedback": "We need faces, not just the sound of footsteps. Which window overlooks the path without putting us on it?",
               "options": [
                 "The sea wall",
                 "The boathouse window",
@@ -529,6 +566,7 @@
             },
             {
               "label": "When should they be in place?",
+              "feedback": "If we turn up when the water glows, we've already missed the lamp and the walkers.",
               "options": [
                 "23:40",
                 "23:55",
@@ -573,6 +611,7 @@
         "c3_archive.out.01",
         "steve|Mrs. Penhallow was on the boathouse steps, watching. She isn’t on your list.",
         "calder|She isn’t on anyone’s. Ninety-one years old, on a boathouse step at midnight. Counting.",
+        {"new": "steve|At four minutes past midnight, the boathouse phone rang once. Mrs. Penhallow answered, listened without speaking, and hung up.", "delivery": "narration"},
         "calder|I’m calling Adrian Rook. FBI. He owes me a favor from a kidnapping case twenty years ago.",
         {
           "id": "c3_archive.out.02",
@@ -962,6 +1001,7 @@
           "rows": [
             {
               "label": "Turn the gain down by",
+              "feedback": "Our loudest gust reached −3 dB. Place the engines nine above that, then bring the peak just down to zero.",
               "options": [
                 "3 dB",
                 "6 dB",

@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "audio_id": "c3_house.mail.lead.03",
+  "attempt": 2,
+  "plan_sha256": "f489d8823f897787d07f726f8abb9e9251693c77164bbe22de94563be899f495",
+  "wav_sha256": "dc1c102c8324b6f679cef3ee0e5b884a6797f7b1198ebe9b49b16454ee4e5290",
+  "expected": "At ten past six on Monday, I used the private car-to-station handset. Lyle was the only one signed onto that channel. He answered.",
+  "recognized": "At 10 past 6:00 on Monday, I used the private car-to-station handset. Lyle was the only one signed on to that channel. He answered.",
+  "local_recognized": "At ten past six on Monday, I used the private car to station handset. Lyle was the only one signed on to that channel. He answered,",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 9.12,
+  "sample_rate": 48000,
+  "peak": 0.561126708984375,
+  "rms": 0.06442238737200755,
+  "level_match_gain_db": 0.0,
+  "word_edits": 3,
+  "word_error_rate": 0.12,
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/c3_house.mail.lead.03.json",
+    "sha256": "9c65e8a2bb7d016996a27079fc392c95aaecbe9d3183f121d89030fcdca2afc2",
+    "model": "scribe_v3",
+    "word_edits": 3,
+    "listening_reviewed": false
+  },
+  "status": "retake_required",
+  "failure_reason": "asr_mismatch"
+}

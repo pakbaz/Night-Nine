@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c3_archive.out.13",
+  "attempt": 1,
+  "plan_sha256": "f489d8823f897787d07f726f8abb9e9251693c77164bbe22de94563be899f495",
+  "wav_sha256": "b340336c677b5d1630a0291f06e2cf4deef01dd355124169e1f1e851c807c21f",
+  "expected": "An hour later my flip phone buzzed. A text, from a number I didn’t know.",
+  "recognized": "An hour later, my flip phone buzzed. A text from a number I didn't know.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 5.6,
+  "sample_rate": 48000,
+  "peak": 0.3131103515625,
+  "rms": 0.03706461748087514,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c9_wake.frank.lead.04",
+  "attempt": 1,
+  "plan_sha256": "f489d8823f897787d07f726f8abb9e9251693c77164bbe22de94563be899f495",
+  "wav_sha256": "c1c81aba93735425fa0fb32b8f19ef69f7ee47fe68074b4ce47888eee9c1df8a",
+  "expected": "Listen for the Morse. The Thursday club calling him in.",
+  "recognized": "Listen for the Morse, the Thursday club calling him in.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 3.44,
+  "sample_rate": 48000,
+  "peak": 0.3511962890625,
+  "rms": 0.044578028529938786,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

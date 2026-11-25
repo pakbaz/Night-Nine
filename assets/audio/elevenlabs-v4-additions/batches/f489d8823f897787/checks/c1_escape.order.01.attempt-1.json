@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c1_escape.order.01",
+  "attempt": 1,
+  "plan_sha256": "f489d8823f897787d07f726f8abb9e9251693c77164bbe22de94563be899f495",
+  "wav_sha256": "fb4c0f5d3e1143568b05b181fe6bd8132f156b8f8cce7382e8b7bca8ea405e9d",
+  "expected": "At 20:15 Nora was in Carmen’s photo, across the bay. Her staff credential was used in the north wing at that same minute.",
+  "recognized": "At 2015, Nora was in Carmen's photo across the bay. Her staff credential was used in the North Wing at that same minute.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 8.48,
+  "sample_rate": 48000,
+  "peak": 0.374359130859375,
+  "rms": 0.039092385535755884,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

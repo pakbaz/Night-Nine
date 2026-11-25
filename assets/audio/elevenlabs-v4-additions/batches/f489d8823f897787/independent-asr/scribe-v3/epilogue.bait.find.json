@@ -1,0 +1,487 @@
+{
+  "audio_id": "epilogue.bait.find",
+  "audio_sha256": "6b79ba7309bf0646d6da03b35f771d00d5b7385d23aaa0e01841b0758afffe78",
+  "file": "assets/audio/elevenlabs-v4-additions/masters/epilogue.bait.find.attempt-1.wav",
+  "production_plan_sha256": "f489d8823f897787d07f726f8abb9e9251693c77164bbe22de94563be899f495",
+  "model_id": "scribe_v3",
+  "request_fields": {
+    "model_id": "scribe_v3",
+    "language_code": "eng",
+    "tag_audio_events": "false",
+    "diarize": "false",
+    "temperature": "0",
+    "timestamps_granularity": "word"
+  },
+  "script_or_keyterm_prompt_sent": false,
+  "expected": "Two Mrs. Penhallows, one counter, and people are finally buying bait. The Long Patience was already gone. One Adrian Rook stayed; the other took the morning ferry to find out who he was.",
+  "recognized": "Two Mrs. Penhallows, one counter, and people are finally buying bait. The Long Patience was already gone. One Adrian Rook stayed, the other took the morning ferry to find out who he was.",
+  "word_edits": 0,
+  "request_id": null,
+  "trace_id": "d35bc86fc3fcd5c57882386b06e9f7a9",
+  "character_cost": "4",
+  "response": {
+    "language_code": "eng",
+    "language_probability": 1.0,
+    "text": "Two Mrs. Penhallows, one counter, and people are finally buying bait. The Long Patience was already gone. One Adrian Rook stayed, the other took the morning ferry to find out who he was.",
+    "words": [
+      {
+        "text": "Two",
+        "start": 0.06,
+        "end": 0.22,
+        "type": "word",
+        "logprob": -0.00046456989366561174
+      },
+      {
+        "text": " ",
+        "start": 0.22,
+        "end": 0.3,
+        "type": "spacing",
+        "logprob": -0.0041211447678506374
+      },
+      {
+        "text": "Mrs.",
+        "start": 0.3,
+        "end": 0.58,
+        "type": "word",
+        "logprob": -0.003093212948215296
+      },
+      {
+        "text": " ",
+        "start": 0.58,
+        "end": 0.7,
+        "type": "spacing",
+        "logprob": -0.47877898812294006
+      },
+      {
+        "text": "Penhallows,",
+        "start": 0.7,
+        "end": 1.44,
+        "type": "word",
+        "logprob": -0.2592057876966216
+      },
+      {
+        "text": " ",
+        "start": 1.44,
+        "end": 1.8,
+        "type": "spacing",
+        "logprob": -4.2676016164477915e-05
+      },
+      {
+        "text": "one",
+        "start": 1.8,
+        "end": 1.92,
+        "type": "word",
+        "logprob": -4.2676016164477915e-05
+      },
+      {
+        "text": " ",
+        "start": 1.92,
+        "end": 2.04,
+        "type": "spacing",
+        "logprob": -5.972207145532593e-05
+      },
+      {
+        "text": "counter,",
+        "start": 2.04,
+        "end": 2.46,
+        "type": "word",
+        "logprob": -0.00011458772951300489
+      },
+      {
+        "text": " ",
+        "start": 2.46,
+        "end": 2.7,
+        "type": "spacing",
+        "logprob": -0.000494715350214392
+      },
+      {
+        "text": "and",
+        "start": 2.7,
+        "end": 2.82,
+        "type": "word",
+        "logprob": -0.000494715350214392
+      },
+      {
+        "text": " ",
+        "start": 2.82,
+        "end": 2.92,
+        "type": "spacing",
+        "logprob": -8.344646857949556e-07
+      },
+      {
+        "text": "people",
+        "start": 2.94,
+        "end": 3.2,
+        "type": "word",
+        "logprob": -8.344646857949556e-07
+      },
+      {
+        "text": " ",
+        "start": 3.2,
+        "end": 3.26,
+        "type": "spacing",
+        "logprob": -4.529942543740617e-06
+      },
+      {
+        "text": "are",
+        "start": 3.26,
+        "end": 3.4,
+        "type": "word",
+        "logprob": -4.529942543740617e-06
+      },
+      {
+        "text": " ",
+        "start": 3.4,
+        "end": 3.6,
+        "type": "spacing",
+        "logprob": -1.311301275563892e-06
+      },
+      {
+        "text": "finally",
+        "start": 3.6,
+        "end": 4.0,
+        "type": "word",
+        "logprob": -1.311301275563892e-06
+      },
+      {
+        "text": " ",
+        "start": 4.0,
+        "end": 4.1,
+        "type": "spacing",
+        "logprob": -1.3589766240329482e-05
+      },
+      {
+        "text": "buying",
+        "start": 4.1,
+        "end": 4.36,
+        "type": "word",
+        "logprob": -1.3589766240329482e-05
+      },
+      {
+        "text": " ",
+        "start": 4.36,
+        "end": 4.44,
+        "type": "spacing",
+        "logprob": -1.168244216387393e-05
+      },
+      {
+        "text": "bait.",
+        "start": 4.44,
+        "end": 4.78,
+        "type": "word",
+        "logprob": -6.465141559601762e-05
+      },
+      {
+        "text": " ",
+        "start": 4.78,
+        "end": 5.08,
+        "type": "spacing",
+        "logprob": -3.123234637314454e-05
+      },
+      {
+        "text": "The",
+        "start": 5.08,
+        "end": 5.16,
+        "type": "word",
+        "logprob": -3.123234637314454e-05
+      },
+      {
+        "text": " ",
+        "start": 5.16,
+        "end": 5.2,
+        "type": "spacing",
+        "logprob": -6.9141146923357155e-06
+      },
+      {
+        "text": "Long",
+        "start": 5.2,
+        "end": 5.4,
+        "type": "word",
+        "logprob": -6.9141146923357155e-06
+      },
+      {
+        "text": " ",
+        "start": 5.4,
+        "end": 5.48,
+        "type": "spacing",
+        "logprob": -0.35385167598724365
+      },
+      {
+        "text": "Patience",
+        "start": 5.48,
+        "end": 6.0,
+        "type": "word",
+        "logprob": -0.35385167598724365
+      },
+      {
+        "text": " ",
+        "start": 6.0,
+        "end": 6.12,
+        "type": "spacing",
+        "logprob": -0.008222891949117184
+      },
+      {
+        "text": "was",
+        "start": 6.12,
+        "end": 6.32,
+        "type": "word",
+        "logprob": -0.008222891949117184
+      },
+      {
+        "text": " ",
+        "start": 6.32,
+        "end": 6.4,
+        "type": "spacing",
+        "logprob": -8.106198947643861e-06
+      },
+      {
+        "text": "already",
+        "start": 6.4,
+        "end": 6.76,
+        "type": "word",
+        "logprob": -8.106198947643861e-06
+      },
+      {
+        "text": " ",
+        "start": 6.76,
+        "end": 6.82,
+        "type": "spacing",
+        "logprob": -1.728519782773219e-05
+      },
+      {
+        "text": "gone.",
+        "start": 6.82,
+        "end": 7.16,
+        "type": "word",
+        "logprob": -1.592623084434308e-05
+      },
+      {
+        "text": " ",
+        "start": 7.16,
+        "end": 7.52,
+        "type": "spacing",
+        "logprob": -4.0649541915627196e-05
+      },
+      {
+        "text": "One",
+        "start": 7.52,
+        "end": 7.68,
+        "type": "word",
+        "logprob": -4.0649541915627196e-05
+      },
+      {
+        "text": " ",
+        "start": 7.68,
+        "end": 7.86,
+        "type": "spacing",
+        "logprob": -2.706014311115723e-05
+      },
+      {
+        "text": "Adrian",
+        "start": 7.86,
+        "end": 8.26,
+        "type": "word",
+        "logprob": -2.706014311115723e-05
+      },
+      {
+        "text": " ",
+        "start": 8.26,
+        "end": 8.38,
+        "type": "spacing",
+        "logprob": -0.0061984676867723465
+      },
+      {
+        "text": "Rook",
+        "start": 8.38,
+        "end": 8.58,
+        "type": "word",
+        "logprob": -0.0061984676867723465
+      },
+      {
+        "text": " ",
+        "start": 8.58,
+        "end": 8.74,
+        "type": "spacing",
+        "logprob": -0.0014943634159862995
+      },
+      {
+        "text": "stayed,",
+        "start": 8.74,
+        "end": 9.1,
+        "type": "word",
+        "logprob": -0.0835730309731194
+      },
+      {
+        "text": " ",
+        "start": 9.1,
+        "end": 9.32,
+        "type": "spacing",
+        "logprob": -0.5488620400428772
+      },
+      {
+        "text": "the",
+        "start": 9.32,
+        "end": 9.42,
+        "type": "word",
+        "logprob": -0.5488620400428772
+      },
+      {
+        "text": " ",
+        "start": 9.42,
+        "end": 9.5,
+        "type": "spacing",
+        "logprob": -8.344646857949556e-07
+      },
+      {
+        "text": "other",
+        "start": 9.5,
+        "end": 9.74,
+        "type": "word",
+        "logprob": -8.344646857949556e-07
+      },
+      {
+        "text": " ",
+        "start": 9.74,
+        "end": 9.86,
+        "type": "spacing",
+        "logprob": -1.0847986231965479e-05
+      },
+      {
+        "text": "took",
+        "start": 9.86,
+        "end": 10.0,
+        "type": "word",
+        "logprob": -1.0847986231965479e-05
+      },
+      {
+        "text": " ",
+        "start": 10.0,
+        "end": 10.04,
+        "type": "spacing",
+        "logprob": -1.2397689715726301e-05
+      },
+      {
+        "text": "the",
+        "start": 10.06,
+        "end": 10.14,
+        "type": "word",
+        "logprob": -1.2397689715726301e-05
+      },
+      {
+        "text": " ",
+        "start": 10.14,
+        "end": 10.18,
+        "type": "spacing",
+        "logprob": -8.344646857949556e-07
+      },
+      {
+        "text": "morning",
+        "start": 10.2,
+        "end": 10.52,
+        "type": "word",
+        "logprob": -8.344646857949556e-07
+      },
+      {
+        "text": " ",
+        "start": 10.52,
+        "end": 10.6,
+        "type": "spacing",
+        "logprob": -0.00010418349120300263
+      },
+      {
+        "text": "ferry",
+        "start": 10.6,
+        "end": 10.92,
+        "type": "word",
+        "logprob": -0.00010418349120300263
+      },
+      {
+        "text": " ",
+        "start": 10.92,
+        "end": 11.02,
+        "type": "spacing",
+        "logprob": -0.0033582027535885572
+      },
+      {
+        "text": "to",
+        "start": 11.02,
+        "end": 11.1,
+        "type": "word",
+        "logprob": -0.0033582027535885572
+      },
+      {
+        "text": " ",
+        "start": 11.1,
+        "end": 11.16,
+        "type": "spacing",
+        "logprob": -2.3841855067985307e-07
+      },
+      {
+        "text": "find",
+        "start": 11.16,
+        "end": 11.36,
+        "type": "word",
+        "logprob": -2.3841855067985307e-07
+      },
+      {
+        "text": " ",
+        "start": 11.36,
+        "end": 11.4,
+        "type": "spacing",
+        "logprob": -2.7418097943154862e-06
+      },
+      {
+        "text": "out",
+        "start": 11.4,
+        "end": 11.54,
+        "type": "word",
+        "logprob": -2.7418097943154862e-06
+      },
+      {
+        "text": " ",
+        "start": 11.54,
+        "end": 11.58,
+        "type": "spacing",
+        "logprob": 0.0
+      },
+      {
+        "text": "who",
+        "start": 11.58,
+        "end": 11.7,
+        "type": "word",
+        "logprob": 0.0
+      },
+      {
+        "text": " ",
+        "start": 11.7,
+        "end": 11.76,
+        "type": "spacing",
+        "logprob": -1.4305104514278355e-06
+      },
+      {
+        "text": "he",
+        "start": 11.76,
+        "end": 11.88,
+        "type": "word",
+        "logprob": -1.4305104514278355e-06
+      },
+      {
+        "text": " ",
+        "start": 11.88,
+        "end": 11.96,
+        "type": "spacing",
+        "logprob": -4.291525328881107e-06
+      },
+      {
+        "text": "was.",
+        "start": 11.96,
+        "end": 12.34,
+        "type": "word",
+        "logprob": -4.6491513785440475e-06
+      }
+    ],
+    "transcription_id": "VEjE6PwImHi7R6F9K3kx",
+    "audio_duration_secs": 12.8
+  },
+  "listening_reviewed": false
+}

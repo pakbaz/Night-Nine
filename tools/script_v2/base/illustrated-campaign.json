@@ -22,8 +22,12 @@
       "c1_flat.in.03": "c1_flat.control"
     },
     "bridge": "res://assets/illustrated/campaign/bridges/c1_flat-c1_pier.webp",
+    "arrival_walk": [
+      {"actor": "steve", "from": [0.75, 0.565], "seconds": 1.35},
+      {"actor": "iris", "from": [0.75, 0.565], "seconds": 1.0}
+    ],
     "reveal_after": {
-      "iris": "c1_flat.saturday"
+      "iris": "c1_flat.in.04"
     }
   },
   "c1_pier": {
@@ -708,7 +712,7 @@
       "iris": "c6_iris.alibi"
     },
     "leave_after": {
-      "stephen": "c6_iris.alibi"
+      "stephen": "c6_iris.alibi.02"
     },
     "stills": [
       {
@@ -1103,7 +1107,7 @@
       "c9_gallery.talk.guard.1.03"
     ],
     "reveal_after": {
-      "nora": "c9_gallery.link"
+      "nora": "c9_gallery.link.02"
     },
     "inserts": {
       "c9_gallery.in.01": "c9_gallery.link",
@@ -1113,7 +1117,7 @@
     "layers": [
       {
         "file": "res://assets/illustrated/campaign/layers/c9_gallery-nora-held.webp",
-        "until": "c9_gallery.link",
+        "until": "c9_gallery.link.02",
         "painted": [
           "nora"
         ]
@@ -1280,7 +1284,6 @@
     "company": [
       "nora",
       "carmen",
-      "wen",
       "shaw",
       "steve",
       "agnes"

@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c10_town.out.03",
+  "attempt": 1,
+  "plan_sha256": "f489d8823f897787d07f726f8abb9e9251693c77164bbe22de94563be899f495",
+  "wav_sha256": "f07255943e5be2d66df7bcfbc4fa17d21fc15936c21d52d745fae4cdde9de10a",
+  "expected": "I made this dub before I came ashore, Steven. Before I had hands that smelled of herring.",
+  "recognized": "i made this dub before i came ashore stephen before i had hands that smelled of herring",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 6.48,
+  "sample_rate": 48000,
+  "peak": 0.392333984375,
+  "rms": 0.047614723363358834,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

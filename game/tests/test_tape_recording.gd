@@ -131,6 +131,23 @@ func _initialize() -> void:
 	check(not invalidated.configure(invalid, sunday, metadata)
 		and invalidated.playback("a", 0) == null,
 		"Clear previous tapes when a new source fails validation")
+	var rook := load("res://assets/audio/voices/elevenlabs-v4-script-v2/recording.rook.wav") as AudioStreamWAV
+	var rook_door := load("res://assets/audio/effects/rook-door.wav") as AudioStreamWAV
+	var iris_first := load("res://assets/audio/voices/elevenlabs-v4-script-v2/c6_iris.takes.01.wav") as AudioStreamWAV
+	var iris_second := load("res://assets/audio/voices/elevenlabs-v4-script-v2/c6_iris.takes.02.wav") as AudioStreamWAV
+	var voicemail := load("res://assets/audio/voices/elevenlabs-v4-script-v2/recording.voicemail.wav") as AudioStreamWAV
+	var splice := load("res://assets/audio/voices/elevenlabs-v4-script-v2/recording.saren_splice.wav") as AudioStreamWAV
+	var generic := NightTapeRecording.new()
+	check(generic.configure_pair(rook,rook_door,{"label_a":"Calder voicemail","label_b":"Safe-house door"})
+		and generic.aligned(0.0) and generic.label_b=="SAFE-HOUSE DOOR"
+		and generic.samples_a!=generic.samples_b,
+		"Compare Rook’s actual take with Steve’s room recording at the door")
+	check(generic.configure_pair(iris_first,iris_second,{"label_a":"First reading","label_b":"Second reading"})
+		and generic.samples_a.size()!=generic.samples_b.size() and generic.peaks_a!=generic.peaks_b,
+		"Compare Iris’s actual takes with the changed internal pause")
+	check(generic.configure_pair(voicemail,splice,{"label_a":"Voicemail","label_b":"Saren’s tape"})
+		and generic.samples_b.size()<generic.samples_a.size() and generic.playback("both",0.0)!=null,
+		"Compare the actual shorter voicemail splice")
 	_finish(model, metadata)
 
 func _finish(model: NightTapeRecording, metadata: Dictionary) -> void:

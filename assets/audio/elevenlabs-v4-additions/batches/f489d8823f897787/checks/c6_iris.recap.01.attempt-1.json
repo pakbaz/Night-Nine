@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c6_iris.recap.01",
+  "attempt": 1,
+  "plan_sha256": "f489d8823f897787d07f726f8abb9e9251693c77164bbe22de94563be899f495",
+  "wav_sha256": "493726f5895c16b0899bb0d01a8fe313292f163dd70c994e77cca3a77341b0e8",
+  "expected": "I came to the pier expecting a trap. Instead she gave me a test I could repeat and a warning I could check.",
+  "recognized": "I came to the pier expecting a trap. Instead, she gave me a test I could repeat and a warning I could check.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 7.52,
+  "sample_rate": 48000,
+  "peak": 0.359771728515625,
+  "rms": 0.0336070763945101,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

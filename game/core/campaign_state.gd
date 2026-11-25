@@ -26,6 +26,8 @@ func _init() -> void:
 		for task: Dictionary in scene.tasks:
 			task_index[task.id] = task
 			task_scene[task.id] = i
+			for line_id: String in task.get("optional_playback", {}).get("lines", []):
+				line_scene[line_id] = i
 			for line_group: String in ["lead", "lines"]:
 				for line_id: String in task.get(line_group, []):
 					line_scene[line_id] = i
@@ -39,7 +41,8 @@ func reset() -> void:
 		"scene": 0, "scene_id": content.scenes[0].id, "chapter": content.scenes[0].chapter,
 		"actor": content.scenes[0].actors[0], "done": [],
 		"seen": [], "finished": false, "hints": {}, "walk_positions": {},
-		"notebook": {"marks": {}, "notes": {}}, "case_boards": {},
+		"notebook": {"marks": {}, "notes": {}, "flags": {}}, "case_boards": {},
+		"puzzle_drafts": {}, "puzzle_scores": {},
 		"misses": {}, "post_hint_misses": {}, "missed_options": {}, "revealed": []}
 	changed.emit()
 
@@ -96,6 +99,7 @@ func chapter_checkpoint(scene_index: int, source: Variant = null) -> Dictionary:
 			revealed.append(id)
 	var marks: Dictionary = {}
 	var notes: Dictionary = {}
+	var flags: Dictionary = {}
 	var notebook: Dictionary = candidate.get("notebook", {})
 	for case_id: String in content.get("notebook_cases", {}):
 		var theories: Array = available_theories(case_id, completed)
@@ -104,12 +108,16 @@ func chapter_checkpoint(scene_index: int, source: Variant = null) -> Dictionary:
 		for theory: Dictionary in theories:
 			if notebook.get("marks", {}).has(theory.id):
 				marks[theory.id] = notebook.marks[theory.id]
+	for flag: Variant in notebook.get("flags", {}):
+		if flag is String and notebook.flags[flag] is bool:
+			flags[flag] = notebook.flags[flag]
 	var checkpoint: Dictionary = {
 		"schema": 2, "game": "night-nine", "content": content.version,
 		"scene": scene_index, "scene_id": str(scene.id), "chapter": str(scene.chapter),
 		"actor": str(scene.actors[0]), "done": done, "seen": seen,
 		"finished": false, "hints": hints, "walk_positions": {},
-		"notebook": {"marks": marks, "notes": notes}, "case_boards": {},
+		"notebook": {"marks": marks, "notes": notes, "flags": flags}, "case_boards": {},
+		"puzzle_drafts": {}, "puzzle_scores": {},
 		"misses": {}, "post_hint_misses": {}, "missed_options": {}, "revealed": revealed
 	}
 	return checkpoint if validate(checkpoint).is_empty() else {}
@@ -144,6 +152,7 @@ func choose(task_id: String, answer: int, puzzle_input: Array = []) -> Dictionar
 			"offer_answer": answer_available(task_id)}
 	data.done.append(task_id)
 	data.case_boards.erase(task_id)
+	data.puzzle_drafts.erase(task_id)
 	for field: String in ["misses", "post_hint_misses", "missed_options"]:
 		data[field].erase(task_id)
 	changed.emit()
@@ -237,6 +246,29 @@ func settings_marks(task_id: String, values: Array) -> Array[bool]:
 		var value: Variant = values[i] if i < values.size() else null
 		marks.append(typeof(value) in [TYPE_INT, TYPE_FLOAT] and is_finite(float(value)) and float(value) == float(int(solution[i])))
 	return marks
+
+func puzzle_draft(task_id: String) -> Dictionary:
+	if data.get("puzzle_drafts", {}).has(task_id):
+		return data.puzzle_drafts[task_id].duplicate(true)
+	return {}
+
+func store_puzzle_draft(task_id: String, draft: Dictionary) -> bool:
+	if not available(task_id) or not _valid_puzzle_draft(task_id, draft):
+		return false
+	data.puzzle_drafts[task_id] = draft.duplicate(true)
+	changed.emit()
+	return true
+
+func record_puzzle_score(task_id: String, right: int, total: int) -> void:
+	if not task_index.has(task_id) or total <= 0 or right < 0 or right > total:
+		return
+	var previous: Dictionary = data.get("puzzle_scores", {}).get(task_id, {})
+	data.puzzle_scores[task_id] = {
+		"attempts": int(previous.get("attempts", 0)) + 1,
+		"best": maxi(int(previous.get("best", 0)), right),
+		"total": total
+	}
+	changed.emit()
 
 func switch_actor(actor: String) -> bool:
 	if actor not in current().actors:
@@ -341,7 +373,16 @@ func migrate(candidate: Variant) -> Variant:
 		return candidate
 	var source_version: String = str(candidate.get("content", ""))
 	if source_version == str(content.version):
-		return _forget_cut_lines(candidate)
+		var current_save := _forget_cut_lines(candidate)
+		# The previous release stored placements for these puzzles, but the
+		# relay is now a receiver and the utility board asks different questions.
+		if not candidate.has("puzzle_drafts") and not candidate.has("puzzle_scores") \
+				and candidate.get("case_boards") is Dictionary:
+			for id: String in ["c10_station.relay", "c3_archive.power"]:
+				if candidate.case_boards.has(id) and candidate.get("scene") == task_scene[id]:
+					current_save = current_save.duplicate(true)
+					current_save.case_boards.erase(id)
+		return current_save
 	if source_version not in ["campaign-1", "campaign-2"]:
 		return candidate
 	var order: Array = []
@@ -371,7 +412,8 @@ func migrate(candidate: Variant) -> Variant:
 		"scene": target, "scene_id": content.scenes[target].id, "chapter": content.scenes[target].chapter,
 		"actor": candidate.get("actor", content.scenes[target].actors[0]), "done": [],
 		"seen": [], "finished": false, "hints": {}, "walk_positions": {},
-		"notebook": {"marks": {}, "notes": {}}, "case_boards": {},
+		"notebook": {"marks": {}, "notes": {}, "flags": {}}, "case_boards": {},
+		"puzzle_drafts": {}, "puzzle_scores": {},
 		"misses": {}, "post_hint_misses": {}, "missed_options": {}, "revealed": []
 	}
 	var done: Array = []
@@ -442,7 +484,11 @@ func migrate(candidate: Variant) -> Variant:
 			for theory: Dictionary in theories:
 				if candidate.notebook.get("marks", {}).has(theory.id):
 					marks[theory.id] = candidate.notebook.marks[theory.id]
-		moved.notebook = {"marks": marks, "notes": notes}
+		var flags: Dictionary = {}
+		for flag: Variant in candidate.notebook.get("flags", {}):
+			if flag is String and candidate.notebook.flags[flag] is bool:
+				flags[flag] = candidate.notebook.flags[flag]
+		moved.notebook = {"marks": marks, "notes": notes, "flags": flags}
 	return moved
 
 ## A line cut from the script stays in the transcript of saves that heard it. The
@@ -465,9 +511,15 @@ func restore(candidate: Variant) -> bool:
 	if not data.has("walk_positions"):
 		data.walk_positions = {}
 	if not data.has("notebook"):
-		data.notebook = {"marks": {}, "notes": {}}
+		data.notebook = {"marks": {}, "notes": {}, "flags": {}}
+	elif not data.notebook.has("flags"):
+		data.notebook.flags = {}
 	if not data.has("case_boards"):
 		data.case_boards = {}
+	if not data.has("puzzle_drafts"):
+		data.puzzle_drafts = {}
+	if not data.has("puzzle_scores"):
+		data.puzzle_scores = {}
 	for field: String in ["misses", "post_hint_misses", "missed_options"]:
 		if not data.has(field):
 			data[field] = {}
@@ -482,7 +534,7 @@ func validate(candidate: Variant) -> String:
 	candidate = migrate(candidate)
 	var allowed := ["schema", "game", "content", "scene", "scene_id", "chapter", "actor", "done", "seen",
 		"finished", "hints", "walk_positions", "notebook", "case_boards", "misses",
-		"post_hint_misses", "missed_options", "revealed"]
+		"post_hint_misses", "missed_options", "revealed", "puzzle_drafts", "puzzle_scores"]
 	if not candidate is Dictionary:
 		return "Invalid campaign state."
 	for key: Variant in candidate:
@@ -587,7 +639,47 @@ func validate(candidate: Variant) -> String:
 		for required: String in task_index[task_id].requires:
 			if not completed.has(required):
 				return "Case board prerequisite missing."
+	var puzzle_drafts: Variant = candidate.get("puzzle_drafts", {})
+	if not puzzle_drafts is Dictionary or puzzle_drafts.size() > content.scenes[at].tasks.size():
+		return "Invalid puzzle drafts."
+	for task_id: Variant in puzzle_drafts:
+		if not task_id is String or task_scene.get(task_id, -1) != at or completed.has(task_id) \
+				or not _valid_puzzle_draft(task_id, puzzle_drafts[task_id]):
+			return "Invalid puzzle draft."
+	var scores: Variant = candidate.get("puzzle_scores", {})
+	if not scores is Dictionary or scores.size() > task_index.size():
+		return "Invalid puzzle scores."
+	for task_id: Variant in scores:
+		if not task_id is String or not task_index.has(task_id) or int(task_scene[task_id]) > at:
+			return "Invalid puzzle score."
+		var score: Variant = scores[task_id]
+		if not score is Dictionary or score.size() != 3:
+			return "Invalid puzzle score."
+		for key: String in ["attempts", "best", "total"]:
+			var value: Variant=score.get(key)
+			if not (value is int or value is float) or not is_finite(value) or value!=int(value):
+				return "Invalid puzzle score."
+		if score.attempts < 0 or score.total <= 0 or score.best < 0 or score.best > score.total:
+			return "Invalid puzzle score."
 	return ""
+
+func _valid_puzzle_draft(task_id: String, draft: Variant) -> bool:
+	if not task_index.has(task_id) or not draft is Dictionary:
+		return false
+	for key: Variant in draft:
+		if key not in ["values", "offset"]:
+			return false
+	var rows: Array = task_index[task_id].get("puzzle", {}).get("rows", [])
+	var values: Variant = draft.get("values", [])
+	if not values is Array or values.size() > rows.size():
+		return false
+	for index: int in values.size():
+		var value: Variant = values[index]
+		if not (value is int or value is float) or not is_finite(value) or value!=int(value) \
+				or value < -1 or value >= rows[index].options.size():
+			return false
+	var offset: Variant = draft.get("offset", 0.0)
+	return (offset is int or offset is float) and is_finite(offset) and absf(float(offset)) <= 5.0
 
 func board_draft(id: String) -> Dictionary:
 	if data.case_boards.has(id):
@@ -670,7 +762,8 @@ func write_case_note(case_id: String, note: String) -> bool:
 	return true
 
 func _valid_notebook(book: Variant, completed: Dictionary) -> bool:
-	if not book is Dictionary or book.size() != 2 or not book.get("marks") is Dictionary or not book.get("notes") is Dictionary:
+	if not book is Dictionary or book.size() not in [2, 3] or not book.get("marks") is Dictionary \
+			or not book.get("notes") is Dictionary or not book.get("flags", {}) is Dictionary:
 		return false
 	var marks: Dictionary = {}
 	var pages: Dictionary = {}
@@ -685,5 +778,10 @@ func _valid_notebook(book: Variant, completed: Dictionary) -> bool:
 			return false
 	for id: Variant in book.notes:
 		if not pages.has(id) or not book.notes[id] is String or book.notes[id].length() > NOTE_LIMIT:
+			return false
+	if book.get("flags", {}).size() > 64:
+		return false
+	for flag: Variant in book.get("flags", {}):
+		if not flag is String or flag.is_empty() or flag.length() > 64 or not book.flags[flag] is bool:
 			return false
 	return true

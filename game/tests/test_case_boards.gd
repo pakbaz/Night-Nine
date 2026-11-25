@@ -267,8 +267,8 @@ func run() -> void:
 				decoy_count+=row.pieces.size()-row.slots.size()
 				merged.append_array(row.answer)
 			check(merged==p.solution,"Canonical finding for "+str(task.id))
-	check(case_count==23 and stage_count==25 and placement_count==79,"Campaign packages the revised board inventory")
-	check(decoy_count==21,"Campaign packages authored decoy pieces")
+	check(case_count==25 and stage_count==29 and placement_count==91,"Campaign packages the revised board inventory")
+	check(decoy_count==26,"Campaign packages authored decoy pieces")
 	await fresh_room("c1_pier.bait")
 	var id: String=game.case_board.task_id
 	var board: Control=game.case_board

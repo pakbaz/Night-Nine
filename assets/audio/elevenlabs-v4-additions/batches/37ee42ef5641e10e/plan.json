@@ -1,0 +1,342 @@
+{
+  "schema": 1,
+  "batch": "later-additions",
+  "model_id": "eleven_v4",
+  "output_format": "mp3_44100_192",
+  "inputs": {
+    "campaign": "8d1ef7d6020a8bc79955d9d0017db8ea4516a82c7ae8f10ca0fd7c84252e6028",
+    "storybook": "7bd0d4ec4839602c067cf0a29bfd5f88425229c73903aaf38c1be69313a17866",
+    "voice_manifest": "2158de2f387693dc94333d555b3b53a6d8c6e3977a0ef52c55974c7f4de2fa4d",
+    "casting": "cb91065c437c743d50eea2958d5149a6d0a35b9d20430a66cb8a548b921246db",
+    "existing_additions": "ec4761d011d1cccfa63d5ce028c0dc317a24fcc4b4f541dee7255ae056a8ecd4"
+  },
+  "ordered_audio_ids": [
+    "c10_live.recap.01",
+    "c10_live.second.lead.04",
+    "c10_report.in.05",
+    "c10_town.in.10",
+    "c10_town.recap.01",
+    "c10_town.wind.find",
+    "c3_house.mail.lead.03",
+    "c3_house.rules.find",
+    "c3_house.rules.lead.03",
+    "c8_beach.ctx.01"
+  ],
+  "items": {
+    "c10_live.recap.01": {
+      "audio_id": "c10_live.recap.01",
+      "kind": "campaign",
+      "scene": "c10_live",
+      "speaker": "steve",
+      "cast_role": "steve",
+      "voice_id": "vveagfomyMCJLZsOPRP2",
+      "text": "The wind was a dub. The porch lights, field lamps, two grids, radios and three hundred and twelve human voices all answered it live.",
+      "text_sha256": "c039f127b6316458ac5b1709abf7b6baebd6d2cb92b7b50c37fb5d1a687a005b",
+      "synthesis_text": "The wind was a dub. The porch lights, field lamps, two grids, radios and three hundred and twelve human voices all answered it live.",
+      "synthesis_text_sha256": "c039f127b6316458ac5b1709abf7b6baebd6d2cb92b7b50c37fb5d1a687a005b",
+      "delivery": "narration",
+      "direction": "",
+      "v4_audio_tag": "",
+      "previous_text": "The tape stopped. Three hundred and twelve voices came through the open channel.",
+      "next_text": "To the Vigil’s instruments, Earth had just tested an engine that could reach the fleet in an afternoon.",
+      "voice_settings": {
+        "stability": 0.62,
+        "similarity_boost": 0.78
+      },
+      "language_code": "en",
+      "model_id": "eleven_v4",
+      "output_format": "mp3_44100_192",
+      "estimated_credit_rate": 1.0,
+      "estimated_credits": 132,
+      "attempt_seeds": [
+        1125441908,
+        1560978666,
+        1804026444
+      ]
+    },
+    "c10_live.second.lead.04": {
+      "audio_id": "c10_live.second.lead.04",
+      "kind": "campaign",
+      "scene": "c10_live",
+      "speaker": "steve",
+      "cast_role": "steve",
+      "voice_id": "vveagfomyMCJLZsOPRP2",
+      "text": "Coast next. Bring me a live reply before we switch on the grid.",
+      "text_sha256": "c47adb0f8927f4b3938b41cba658fe1b46b9b1c92592d7006eddef1de8b56422",
+      "synthesis_text": "Coast next. Bring me a live reply before we switch on the grid.",
+      "synthesis_text_sha256": "c47adb0f8927f4b3938b41cba658fe1b46b9b1c92592d7006eddef1de8b56422",
+      "delivery": "live",
+      "direction": "",
+      "v4_audio_tag": "",
+      "previous_text": "Bell kept answering anyway. So Bell is only an echo inside the building.",
+      "next_text": "I’m standing by. Wait for my green lamp.",
+      "voice_settings": {
+        "stability": 0.46,
+        "similarity_boost": 0.78
+      },
+      "language_code": "en",
+      "model_id": "eleven_v4",
+      "output_format": "mp3_44100_192",
+      "estimated_credit_rate": 1.0,
+      "estimated_credits": 63,
+      "attempt_seeds": [
+        1342615602,
+        2657347984,
+        2634256294
+      ]
+    },
+    "c10_report.in.05": {
+      "audio_id": "c10_report.in.05",
+      "kind": "campaign",
+      "scene": "c10_report",
+      "speaker": "archivist",
+      "cast_role": "archivist",
+      "voice_id": "6HXfTcSnxaoT6uM4pTRP",
+      "text": "They first bound you in a cradle ship after our star went dark. Fear was your first record.",
+      "text_sha256": "d1c3d1148f7529db38e070084abc5f746d35e3d702e2de55a725b745b901fe3b",
+      "synthesis_text": "They first bound you in a cradle ship after our star went dark. Fear was your first record.",
+      "synthesis_text_sha256": "d1c3d1148f7529db38e070084abc5f746d35e3d702e2de55a725b745b901fe3b",
+      "delivery": "live",
+      "direction": "",
+      "v4_audio_tag": "",
+      "previous_text": "For a year I told you the engine was in a notebook, Saren. So you would keep looking, instead of telling the fleet there was nothing here to fear.",
+      "next_text": "I can still hear my mother in that ship. If you reconcile me, will I know her voice?",
+      "voice_settings": {
+        "stability": 0.46,
+        "similarity_boost": 0.78
+      },
+      "language_code": "en",
+      "model_id": "eleven_v4",
+      "output_format": "mp3_44100_192",
+      "estimated_credit_rate": 1.0,
+      "estimated_credits": 91,
+      "attempt_seeds": [
+        4062178836,
+        750362802,
+        1426396208
+      ]
+    },
+    "c10_town.in.10": {
+      "audio_id": "c10_town.in.10",
+      "kind": "campaign",
+      "scene": "c10_town",
+      "speaker": "agnes",
+      "cast_role": "agnes",
+      "voice_id": "jVMsZEw3hfmEAe9OUUtS",
+      "text": "That city was our home. Our star went dark. This is the last wind that ever blew through those streets.",
+      "text_sha256": "813b023cafe7e9719e62fe2a61e757594bfa61dff05fd962fd5669fd69d4539a",
+      "synthesis_text": "That city was our home. Our star went dark. This is the last wind that ever blew through those streets.",
+      "synthesis_text_sha256": "813b023cafe7e9719e62fe2a61e757594bfa61dff05fd962fd5669fd69d4539a",
+      "delivery": "live",
+      "direction": "",
+      "v4_audio_tag": "",
+      "previous_text": "On ninth nights I answered whatever shore phone rang. A few bars on the line kept my borrowed memories aligned. At the boathouse, you watched me do it.",
+      "next_text": "Two street captains, one spare phone and two streets of porch lights. Easy.",
+      "voice_settings": {
+        "stability": 0.46,
+        "similarity_boost": 0.78
+      },
+      "language_code": "en",
+      "model_id": "eleven_v4",
+      "output_format": "mp3_44100_192",
+      "estimated_credit_rate": 1.0,
+      "estimated_credits": 103,
+      "attempt_seeds": [
+        2042738540,
+        657752615,
+        451041660
+      ]
+    },
+    "c10_town.recap.01": {
+      "audio_id": "c10_town.recap.01",
+      "kind": "campaign",
+      "scene": "c10_town",
+      "speaker": "steve",
+      "cast_role": "steve",
+      "voice_id": "vveagfomyMCJLZsOPRP2",
+      "text": "The last sound of a whole city fit in the bottom of her bait bucket.",
+      "text_sha256": "87c80b9561607b3a1541635f3be8fac07e0d40f493decbca31726ff683e2fde9",
+      "synthesis_text": "The last sound of a whole city fit in the bottom of her bait bucket.",
+      "synthesis_text_sha256": "87c80b9561607b3a1541635f3be8fac07e0d40f493decbca31726ff683e2fde9",
+      "delivery": "narration",
+      "direction": "",
+      "v4_audio_tag": "",
+      "previous_text": "The pencil mark comes just after the last gust. That’s where I open the return. The wind is on tape. The people answering it are here.",
+      "next_text": "The porch lights on Pier and Orchard are waiting for my cue. Shaw has the lamps, Wen has the grid, and the Choir will answer live.",
+      "voice_settings": {
+        "stability": 0.62,
+        "similarity_boost": 0.78
+      },
+      "language_code": "en",
+      "model_id": "eleven_v4",
+      "output_format": "mp3_44100_192",
+      "estimated_credit_rate": 1.0,
+      "estimated_credits": 68,
+      "attempt_seeds": [
+        3631777445,
+        21948453,
+        3134005648
+      ]
+    },
+    "c10_town.wind.find": {
+      "audio_id": "c10_town.wind.find",
+      "kind": "campaign",
+      "scene": "c10_town",
+      "speaker": "steve",
+      "cast_role": "steve",
+      "voice_id": "vveagfomyMCJLZsOPRP2",
+      "text": "The pencil mark comes just after the last gust. That’s where I open the return. The wind is on tape. The people answering it are here.",
+      "text_sha256": "f1bc95d2e5bb11fd2d4f71fe15702927c98e987e74098f3cda2cabde1a4b5584",
+      "synthesis_text": "The pencil mark comes just after the last gust. That’s where I open the return. The wind is on tape. The people answering it are here.",
+      "synthesis_text_sha256": "f1bc95d2e5bb11fd2d4f71fe15702927c98e987e74098f3cda2cabde1a4b5584",
+      "delivery": "narration",
+      "direction": "",
+      "v4_audio_tag": "",
+      "previous_text": "A recording can remind them of home. We’ll answer it with something happening now.",
+      "next_text": "The last sound of a whole city fit in the bottom of her bait bucket.",
+      "voice_settings": {
+        "stability": 0.62,
+        "similarity_boost": 0.78
+      },
+      "language_code": "en",
+      "model_id": "eleven_v4",
+      "output_format": "mp3_44100_192",
+      "estimated_credit_rate": 1.0,
+      "estimated_credits": 134,
+      "attempt_seeds": [
+        2263420413,
+        204214767,
+        3085214147
+      ]
+    },
+    "c3_house.mail.lead.03": {
+      "audio_id": "c3_house.mail.lead.03",
+      "kind": "campaign",
+      "scene": "c3_house",
+      "speaker": "calder",
+      "cast_role": "calder",
+      "voice_id": "wa4sQVgbDDzUDEzJwch3",
+      "text": "Monday morning, I used the private car-to-station handset. Only my deputy was on that channel. I heard him answer.",
+      "text_sha256": "c274170d2dd192933b98f1ac8982ded6a4591b2651d3179e21f916e47e2d4cc7",
+      "synthesis_text": "Monday morning, I used the private car-to-station handset. Only my deputy was on that channel. I heard him answer.",
+      "synthesis_text_sha256": "c274170d2dd192933b98f1ac8982ded6a4591b2651d3179e21f916e47e2d4cc7",
+      "delivery": "live",
+      "direction": "",
+      "v4_audio_tag": "",
+      "previous_text": "On Monday the post office told me Dale had already brought your letters here. Before I’d called them. So I asked for the paperwork.",
+      "next_text": "Dale’s bag left the post office at four minutes past eight, with your letters already bundled for my house.",
+      "voice_settings": {
+        "stability": 0.46,
+        "similarity_boost": 0.78
+      },
+      "language_code": "en",
+      "model_id": "eleven_v4",
+      "output_format": "mp3_44100_192",
+      "estimated_credit_rate": 1.0,
+      "estimated_credits": 114,
+      "attempt_seeds": [
+        4029325064,
+        201626325,
+        1461834257
+      ]
+    },
+    "c3_house.rules.find": {
+      "audio_id": "c3_house.rules.find",
+      "kind": "campaign",
+      "scene": "c3_house",
+      "speaker": "steve",
+      "cast_role": "steve",
+      "voice_id": "vveagfomyMCJLZsOPRP2",
+      "text": "Two names held up. The deputy and the permit signer each turned up in two places at once. Going to your boys’ games proves nothing.",
+      "text_sha256": "e70f621836ef724449699ead0519e8c8096c1213ea129710254cab0f9957b02a",
+      "synthesis_text": "Two names held up. The deputy and the permit signer each turned up in two places at once. Going to your boys’ games proves nothing.",
+      "synthesis_text_sha256": "e70f621836ef724449699ead0519e8c8096c1213ea129710254cab0f9957b02a",
+      "delivery": "narration",
+      "direction": "",
+      "v4_audio_tag": "",
+      "previous_text": "Agnes? She hasn’t changed in forty years. She still corrects my grammar.",
+      "next_text": "Good morning, Officer Biscuit.",
+      "voice_settings": {
+        "stability": 0.62,
+        "similarity_boost": 0.78
+      },
+      "language_code": "en",
+      "model_id": "eleven_v4",
+      "output_format": "mp3_44100_192",
+      "estimated_credit_rate": 1.0,
+      "estimated_credits": 131,
+      "attempt_seeds": [
+        267117801,
+        2112415639,
+        268030979
+      ]
+    },
+    "c3_house.rules.lead.03": {
+      "audio_id": "c3_house.rules.lead.03",
+      "kind": "campaign",
+      "scene": "c3_house",
+      "speaker": "calder",
+      "cast_role": "calder",
+      "voice_id": "wa4sQVgbDDzUDEzJwch3",
+      "text": "Lyle signed a parking citation here in town. The same minute, a nurse took his blood pressure at a clinic two counties away. I spoke to her.",
+      "text_sha256": "bb44c670e7821d2e42ba0a8bdc6e2bf88ae6f72ece89a2b4d2578e8287c5799b",
+      "synthesis_text": "Lyle signed a parking citation here in town. The same minute, a nurse took his blood pressure at a clinic two counties away. I spoke to her.",
+      "synthesis_text_sha256": "bb44c670e7821d2e42ba0a8bdc6e2bf88ae6f72ece89a2b4d2578e8287c5799b",
+      "delivery": "live",
+      "direction": "",
+      "v4_audio_tag": "",
+      "previous_text": "Gus Albano. Thirty years of his grandmother’s recipes, and on Monday a new pastry in his window.",
+      "next_text": "Walt moved to Washington in April. The clerk’s bound ledger puts him at her counter on May third while a sworn hearing transcript has him testifying in Washington.",
+      "voice_settings": {
+        "stability": 0.46,
+        "similarity_boost": 0.78
+      },
+      "language_code": "en",
+      "model_id": "eleven_v4",
+      "output_format": "mp3_44100_192",
+      "estimated_credit_rate": 1.0,
+      "estimated_credits": 140,
+      "attempt_seeds": [
+        3645647177,
+        3386617965,
+        4140430726
+      ]
+    },
+    "c8_beach.ctx.01": {
+      "audio_id": "c8_beach.ctx.01",
+      "kind": "campaign",
+      "scene": "c8_beach",
+      "speaker": "steve",
+      "cast_role": "steve",
+      "voice_id": "vveagfomyMCJLZsOPRP2",
+      "text": "The Prefect met me alone at dawn. He set a little Newton’s cradle on a flat rock and let one ball drop. He watched it instead of looking at me.",
+      "text_sha256": "71da1a6cd879b8fcf928b478ace422056cbde16495653c736987db109e69d94a",
+      "synthesis_text": "The Prefect met me alone at dawn. He set a little Newton’s cradle on a flat rock and let one ball drop. He watched it instead of looking at me.",
+      "synthesis_text_sha256": "71da1a6cd879b8fcf928b478ace422056cbde16495653c736987db109e69d94a",
+      "delivery": "narration",
+      "direction": "",
+      "v4_audio_tag": "",
+      "previous_text": null,
+      "next_text": "Give me the notebook. Helen and Frank will walk out of the sea tomorrow morning.",
+      "voice_settings": {
+        "stability": 0.62,
+        "similarity_boost": 0.78
+      },
+      "language_code": "en",
+      "model_id": "eleven_v4",
+      "output_format": "mp3_44100_192",
+      "estimated_credit_rate": 1.0,
+      "estimated_credits": 143,
+      "attempt_seeds": [
+        2924177033,
+        1349493094,
+        1414464333
+      ]
+    }
+  },
+  "count": 10,
+  "characters": 1119,
+  "request_characters": 1119,
+  "estimated_credits": 1119,
+  "plan_sha256": "37ee42ef5641e10e13ac9c353fbb733e0134849a370e8fb10cf65e8bd2593037"
+}

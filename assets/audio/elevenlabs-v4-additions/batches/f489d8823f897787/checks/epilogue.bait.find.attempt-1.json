@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "audio_id": "epilogue.bait.find",
+  "attempt": 1,
+  "plan_sha256": "f489d8823f897787d07f726f8abb9e9251693c77164bbe22de94563be899f495",
+  "wav_sha256": "6b79ba7309bf0646d6da03b35f771d00d5b7385d23aaa0e01841b0758afffe78",
+  "expected": "Two Mrs. Penhallows, one counter, and people are finally buying bait. The Long Patience was already gone. One Adrian Rook stayed; the other took the morning ferry to find out who he was.",
+  "recognized": "Two Mrs. Penhallows, one counter, and people are finally buying bait. The Long Patience was already gone. One Adrian Rook stayed, the other took the morning ferry to find out who he was.",
+  "local_recognized": "There's two Mrs. Penhallows, one counter, and people are finally buying bait! The long patience was already gone. One Adrian Rook stayed, the other took the morning ferry to find out who he was.",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 12.8,
+  "sample_rate": 48000,
+  "peak": 0.376373291015625,
+  "rms": 0.04059633592942247,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "independent_asr": {
+    "file": "independent-asr/scribe-v3/epilogue.bait.find.json",
+    "sha256": "4eb4d05d188bacd8f41a78c9a6d93c674dce78a55fee9f036edd5dc0299e97ee",
+    "model": "scribe_v3",
+    "word_edits": 0,
+    "listening_reviewed": false
+  },
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

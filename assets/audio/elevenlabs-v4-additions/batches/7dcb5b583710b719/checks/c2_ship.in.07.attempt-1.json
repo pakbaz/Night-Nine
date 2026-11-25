@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "audio_id": "c2_ship.in.07",
+  "attempt": 1,
+  "plan_sha256": "7dcb5b583710b719fb2b6f93327f32b354b0cd2c28646fd9ba391e4718a63348",
+  "wav_sha256": "ad64682d919b817cc829c43b026aeaf07fd0ea43edf6327d48355cda6177ffd7",
+  "expected": "The memory index opens with the oldest records. Binding runs separately. Here is your driving test. Congratulations. You passed.",
+  "recognized": "The memory index opens with the oldest records. Binding runs separately. Here is your driving test. Congratulations! You passed!",
+  "transcript_comparison": "strict normalized English spoken forms",
+  "seconds": 10.56,
+  "sample_rate": 48000,
+  "peak": 0.934600830078125,
+  "rms": 0.1469693842620187,
+  "level_match_gain_db": 0.0,
+  "word_edits": 0,
+  "word_error_rate": 0.0,
+  "status": "automated_qa_passed",
+  "failure_reason": null
+}

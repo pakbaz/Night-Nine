@@ -1,0 +1,17 @@
+{
+  "operation": "text_to_speech",
+  "plan_sha256": "f489d8823f897787d07f726f8abb9e9251693c77164bbe22de94563be899f495",
+  "audio_id": "c10_town.lights.lead.01",
+  "attempt": 1,
+  "voice_id": "m8AHWg36LJTQWKmfeGVv",
+  "model_id": "eleven_v4",
+  "text_sha256": "a3db76e6a9df0ab2f98347bf384807e4ba3e1f77a55bf5b4286d160cf6ce28a0",
+  "synthesis_text_sha256": "a3db76e6a9df0ab2f98347bf384807e4ba3e1f77a55bf5b4286d160cf6ce28a0",
+  "request_id": "oup7K24ls2ouBOFeHFr8",
+  "trace_id": "17f175c1c27ab97aa72f871f360a654a",
+  "character_cost": 33,
+  "output_format": "mp3_44100_192",
+  "audio_sha256": "3c5b212fcc9aae1def307e7e4c41ba5cf3fd55c67613c908b2dc091d3a2230e6",
+  "response_bytes": 132327,
+  "seed": 2210966088
+}

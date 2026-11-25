@@ -104,6 +104,32 @@ func run() -> void:
 	receiver.dial.value = 815
 	await frames(90)
 	check(absf(stage.needle.rotation - stage.needle_angle()) < deg_to_rad(1.0), "The needle settles where the dial points")
+	var submitted:={"values":[]}
+	receiver.submitted.connect(func(values: Array): submitted.values=values)
+	receiver.configure({
+		"mode":"drift","min":3.51,"max":3.61,"step":.05,"target":3.61,
+		"unit":"MHz","decimals":2,"require_narrow":true,
+		"choices":[{"label":"Battery","options":["RED","GREY","BLUE"]}],
+		"dial_options":[3.51,3.56,3.61],
+		"descriptions":{"3.61":"Gull’s call sign resolves through the static."}
+	})
+	receiver.choices[0].select(3)
+	receiver.dial.value=3.61
+	receiver.narrow.button_pressed=true
+	await frames(2)
+	check(not receiver.record.disabled and receiver.frequency.text=="3.61 MHz","Reuse the receiver for Frank’s slipped dial")
+	receiver.record.pressed.emit()
+	check(submitted.values==[2,2],"Submit the battery and corrected club frequency")
+	receiver.configure({
+		"mode":"relay","min":0,"max":2,"step":1,"target":2,"require_narrow":true,
+		"dial_options":[0,1,2],
+		"descriptions":{"0":"OFFICIAL · heavy jamming.","2":"MARSH · west wind, then dropping."}
+	})
+	check(receiver.description.text.contains("jamming"),"Hear the official channel’s jammer")
+	receiver.dial.value=2
+	receiver.narrow.button_pressed=true
+	await frames(2)
+	check(receiver.description.text.contains("MARSH") and not receiver.record.disabled,"Isolate Marsh’s changing field report")
 	var receipt := FileAccess.open(output.path_join("bay-receiver.json"), FileAccess.WRITE)
 	receipt.store_string(JSON.stringify({"checks": checks, "failures": failures}, "\t") + "\n")
 	receipt.close()

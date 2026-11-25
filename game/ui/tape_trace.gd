@@ -60,9 +60,9 @@ func _draw() -> void:
 			draw_line(Vector2(clipped_start, caption_y - 11), Vector2(clipped_end, caption_y - 11), color, 2)
 			draw_string(font, Vector2(clipped_start + 3, caption_y + 5), str(item.label),
 				HORIZONTAL_ALIGNMENT_LEFT, maxf(0, clipped_end - clipped_start - 4), 13, color)
-	draw_string(font, Vector2(LEFT, 24), "A  /  SATURDAY", HORIZONTAL_ALIGNMENT_LEFT, -1, 16, amber)
+	draw_string(font, Vector2(LEFT, 24), "A  /  " + recording.label_a, HORIZONTAL_ALIGNMENT_LEFT, -1, 16, amber)
 	draw_string(font, Vector2(260 if overlay else LEFT, 47 if overlay else 155),
-		"B  /  SUNDAY - drag to move", HORIZONTAL_ALIGNMENT_LEFT, -1, 16, teal)
+		"B  /  " + recording.label_b + " - drag to move", HORIZONTAL_ALIGNMENT_LEFT, -1, 16, teal)
 	if playhead >= recording.timeline_start and playhead <= recording.timeline_end:
 		var x := time_x(playhead)
 		draw_line(Vector2(x, 30), Vector2(x, 270), Color("fff7dd"), 2)
