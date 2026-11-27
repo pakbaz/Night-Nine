@@ -68,7 +68,7 @@
         },
         {
           "bar": 7.5,
-          "image": "res://assets/illustrated/campaign/rooms/c5_shack.webp",
+          "image": "res://assets/illustrated/campaign/stills/book-frank-radio.webp",
           "from": [
             0.35,
             0.6,
@@ -350,16 +350,16 @@
         },
         {
           "bar": 36.0,
-          "image": "res://assets/illustrated/campaign/inserts/c1_pier.webp",
+          "image": "res://assets/illustrated/campaign/stills/epilogue-new-face.webp",
           "from": [
-            0.55,
-            0.45,
-            1.12
-          ],
-          "to": [
-            0.45,
+            0.5,
             0.5,
             1.0
+          ],
+          "to": [
+            0.46,
+            0.42,
+            1.12
           ],
           "lines": [
             {
@@ -372,7 +372,7 @@
         },
         {
           "bar": 39.5,
-          "image": "res://assets/illustrated/campaign/rooms/c5_shack.webp",
+          "image": "res://assets/illustrated/campaign/stills/book-frank-radio.webp",
           "from": [
             0.45,
             0.55,

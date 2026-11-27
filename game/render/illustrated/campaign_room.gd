@@ -67,6 +67,13 @@ var chair_scan: ColorRect
 ## Lines of this scene already heard, and every lead or line a story state can wait for.
 var heard: Array = []
 var marks: Array = []
+## Leads already finished when the room was built.
+var settled: Array = []
+var story_synced := false
+## Set before a departure when the next scene opens on black (a storybook or a title card):
+## the departing film then fades out instead of handing its last frame to the next room.
+var opens_dark := false
+const DEPARTURE_FADE_SECONDS := 1.1
 
 static var direction_book: Dictionary
 static var landmark_book: Dictionary
@@ -528,7 +535,45 @@ func actor_visible(id: String) -> bool:
 	# People painted into a story layer have no separate portrait while it shows.
 	if active_layers().any(func(record: Dictionary): return id in record.get("painted",[])):
 		return false
+	# People painted into the room itself are already there; they need no portrait either.
+	if painted_in_room(id):
+		return false
 	return id in directions.company and actor_present(id)
+
+## A person painted into the room's own picture (not one a story layer brings in).
+func painted_in_room(id: String) -> bool:
+	if not painted_people.has(id):
+		return false
+	var layers: Variant = directions.get("layers",[])
+	return not (layers is Array and layers.any(func(record: Dictionary): return id in record.get("painted",[])))
+
+## The head of a painted person: the top fifth of their outline, in art space.
+func painted_head(id: String) -> Rect2:
+	var outline: PackedVector2Array = painted_people[id]
+	var top := INF
+	var bottom := -INF
+	for point: Vector2 in outline:
+		top = minf(top,point.y)
+		bottom = maxf(bottom,point.y)
+	var band := top+(bottom-top)*.2
+	var head := Rect2()
+	var found := false
+	for point: Vector2 in outline:
+		if point.y <= band:
+			head = head.expand(point) if found else Rect2(point,Vector2.ZERO)
+			found = true
+	head.position.y = top
+	head.end.y = band
+	return head
+
+## Painted faces are never cut by the top of the frame: hold the camera low enough
+## that every painted head stays in view. The painting moves .87 as far as the camera.
+func keep_painted_heads(target: Vector2, magnitude: float) -> Vector2:
+	var plane_scale := 1.0+(magnitude-1.0)*.87
+	for id: String in painted_people:
+		var top := painted_head(id).position.y
+		target.y = minf(target.y,HALF.y+(top-4.0+HALF.y/plane_scale-HALF.y)/.87)
+	return target
 
 ## A person the story still hides, or who has left, is not in the scene at all.
 func actor_present(id: String) -> bool:
@@ -706,16 +751,21 @@ func update_inserts() -> void:
 				floor_creatures[role.id].visible=visible_now and exploring
 
 ## A layer or a person can wait for a lead to be done or for one line to be heard.
-## Every line of a finished lead counts as heard.
+## Every line of a lead finished before this visit counts as heard (older saves did not log
+## each line). A lead finished during the visit waits for its lines to play or be skipped,
+## so a person stands up, or walks out, on the line that says so.
 func refresh_marks() -> void:
 	marks = done + heard
 	for task: Dictionary in scene_record.get("tasks",[]):
-		if task.id in done:
+		if task.id in done and task.id in settled:
 			marks += task.get("lead",[]) + task.get("lines",[])
 			if not str(task.get("finding","")).is_empty():
 				marks.append(task.finding)
 
 func sync_story(completed: Array, seen: Array = []) -> void:
+	if not story_synced:
+		story_synced = true
+		settled = completed.duplicate()
 	done=completed
 	for id: String in seen:
 		if id.begins_with(room_id + ".") and id not in heard:
@@ -756,6 +806,8 @@ func begin_dialogue(line: Dictionary, voice: AudioStreamPlayer, _take: Dictionar
 			camera_goal = HALF.lerp(camera_goal,.55)
 	else:
 		camera_goal=targets[focus] if focus>=0 and focus<targets.size() else (closing_mark if line.id in scene_record.outro else opening)
+		if not recorded and detail.is_empty() and painted_in_room(id):
+			camera_goal=painted_head(id).get_center()
 	if actors.get(current_speaker)==null:
 		var inserts: Dictionary=directions.get("inserts",{})
 		var group: String=str(line.id).get_basename()
@@ -776,7 +828,7 @@ func begin_dialogue(line: Dictionary, voice: AudioStreamPlayer, _take: Dictionar
 			aim=camera_goal.clamp(HALF-bounds,HALF+bounds)
 			transform_planes()
 	if shot_type=="arrival":
-		aim=HALF.lerp(opening,.22)
+		aim=keep_painted_heads(HALF.lerp(opening,.22),1.18)
 		zoom=1.18
 	if active_id in SOCIAL.WIDE_LINES and social_pair.size() == 2 and floor_stage:
 		var a: Dictionary = floor_stage.bodies.get(social_pair[0],{})
@@ -872,7 +924,8 @@ func begin_departure_cut() -> void:
 			chapter_film = CHAPTER_FILM.new()
 			frame.add_child(chapter_film)
 			chapter_film.configure(film_book[room_id],high_detail)
-		return
+		if not opens_dark:
+			return
 	curtain=ColorRect.new()
 	curtain.name="FadeToNextScene"
 	curtain.color=Color(0.012,0.018,0.024,0)
@@ -898,8 +951,11 @@ func departure_duration() -> float:
 
 func set_departure_progress(value: float) -> void:
 	cut_progress=clampf(value,0.0,1.0)
+	if is_instance_valid(curtain):
+		# A film into a storybook or a title card ends on black, as they open on black.
+		var fade_from := 1.0 - minf(.32, DEPARTURE_FADE_SECONDS / maxf(departure_duration(), .1)) if not chapter_frames.is_empty() else .68
+		curtain.color.a=smoothstep(fade_from,1.0,cut_progress)
 	if chapter_frames.is_empty():
-		curtain.color.a=smoothstep(.68,1.0,cut_progress)
 		return
 	# Hold the first drawing, then let the moving light, hand or figure travel
 	# between two corresponding poses. Keep the final frame for the next room.
@@ -995,6 +1051,8 @@ func _process(delta: float) -> void:
 	for id: String in creatures:
 		if creatures[id].visible:
 			creatures[id].animate(clock)
+	if str(dialogue_shot.get("type","")) != "detail":
+		target = keep_painted_heads(target,magnitude)
 	move_camera(delta,target,magnitude)
 	if background:
 		# Clip tiny alignment differences at the prop's feathered perimeter; each

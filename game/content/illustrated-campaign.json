@@ -572,6 +572,7 @@
         "file": "res://assets/illustrated/campaign/stills/c4_safe-feed-3.webp",
         "lines": [
           "c4_safe.screens.01",
+          "c4_safe.screens.02",
           "c4_safe.screens.find",
           "c4_safe.recap.01"
         ]
@@ -602,14 +603,6 @@
         "cut": true
       },
       "c4_safe.screens.lead.05": {
-        "target": [
-          0.84,
-          0.32
-        ],
-        "zoom": 2.4,
-        "cut": true
-      },
-      "c4_safe.screens.02": {
         "target": [
           0.84,
           0.32
@@ -775,8 +768,8 @@
     "detail_shots": {
       "c5_station.sleeve.01": {
         "target": [
-          0.4,
-          0.49
+          0.31,
+          0.74
         ],
         "zoom": 2.6,
         "cut": true
@@ -1237,12 +1230,9 @@
       {
         "file": "res://assets/illustrated/campaign/stills/c8_lab-spliced-voice.webp",
         "lines": [
-          "c8_lab.out.03",
-          "c8_lab.out.01",
-          "c8_lab.out.04",
-          "c8_lab.out.05",
-          "c8_lab.out.02",
-          "c8_lab.out.06"
+          "c8_lab.lastpage.01",
+          "c8_lab.lastpage.02",
+          "c8_lab.lastpage.find"
         ]
       }
     ],
@@ -1315,15 +1305,8 @@
       {
         "file": "res://assets/illustrated/campaign/stills/c8_rig-theatrical-reactor.webp",
         "lines": [
-          "c8_rig.rig.01",
-          "c8_rig.rig.02",
           "c8_rig.rig.find",
-          "c8_rig.recap.01",
-          "c8_rig.recap.02",
-          "c8_rig.out.01",
-          "c8_rig.out.02",
-          "c8_rig.out.03",
-          "c8_rig.out.04"
+          "c8_rig.recap.01"
         ]
       }
     ],
@@ -1624,10 +1607,22 @@
     ],
     "bridge": "res://assets/illustrated/campaign/bridges/c10_station-c10_town.webp",
     "inserts": {
-      "c10_station.in.01": "c10_station.playlist",
-      "c10_station.in.03": "c10_station.playlist",
-      "c10_station.playlist.01": "c10_station.playlist",
-      "c10_station.talk.autorick.1.02": "c10_station.playlist"
+      "c10_station.in.01": [
+        0.53,
+        0.45
+      ],
+      "c10_station.in.03": [
+        0.53,
+        0.45
+      ],
+      "c10_station.playlist.01": [
+        0.53,
+        0.45
+      ],
+      "c10_station.talk.autorick.1.02": [
+        0.53,
+        0.45
+      ]
     },
     "appearances": {
       "frank": "frank_standing",
@@ -1832,10 +1827,6 @@
       {
         "file": "res://assets/illustrated/campaign/stills/c10_report-departure.webp",
         "lines": [
-          "c10_report.out.01",
-          "c10_report.out.02",
-          "c10_report.out.03",
-          "c10_report.out.04",
           "c10_report.out.05",
           "c10_report.out.06"
         ]

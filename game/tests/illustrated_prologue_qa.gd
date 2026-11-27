@@ -15,7 +15,8 @@ func verify_native_line() -> void:
 		return
 	var preferred: String = game.voice_manifest.takes[audio_id].file
 	var actual: String = game.voice.stream.resource_path if game.voice.stream else ""
-	check(actual==preferred and actual.begins_with("res://assets/audio/voices/elevenlabs-v4-script-v2/"),
+	check(actual==preferred and (actual.begins_with("res://assets/audio/voices/elevenlabs-v4-script-v2/")
+		or actual.begins_with("res://assets/audio/voices/elevenlabs-v4-additions/")),
 		"Play the approved recording for "+game.active_line)
 	recordings[game.active_line]=actual
 
@@ -157,7 +158,8 @@ func _run() -> void:
 				await click(game.receiver.record)
 			elif task.id == "p_veyr.levels":
 				check(button("Apply settings",game.interaction).disabled,"Unselected recorder gain")
-				await click(button("−3 dB",game.interaction))
+				# Cutting only 3 dB leaves the engines in the red.
+				await click(button("3 dB",game.interaction))
 				await click(button("Apply settings",game.interaction))
 				check(not task.id in game.campaign.data.done, "Overloading the recorder can be retried")
 				await click(button("6 dB",game.interaction))

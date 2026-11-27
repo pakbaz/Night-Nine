@@ -127,6 +127,10 @@ const TEXT_SECONDS_BASE := 1.4
 const TEXT_SECONDS_PER_CHARACTER := 0.055
 const TEXT_SECONDS_MIN := 2.2
 const TEXT_SECONDS_MAX := 9.0
+const STATUS_FONT_SIZE := 18
+const STATUS_TWO_LINE_FONT_SIZE := 15
+## Follows a finding on the same status line, so a long finding still fits in two lines.
+const NEW_THEORY_NOTE := "A new hypothesis is available in Steve’s notebook."
 const DELIVERY_STYLES := {
 	"live": {"label": "", "color": Color("647b77"), "text": Color("e9e5d7"), "italic": false},
 	"narration": {"label": "NARRATION", "color": Color("b7976e"), "text": Color("f1d9ae"), "italic": true},
@@ -369,12 +373,13 @@ func _build_ui() -> void:
 	toolbar.add_child(actor_bar)
 	_button(toolbar,"Notebook",_open_journal)
 	_button(toolbar,"Menu",func(): menu.show(); _pause_audio(true))
-	status = _label(root,"",18)
+	status = _label(root,"",STATUS_FONT_SIZE)
 	status.set_anchors_and_offsets_preset(Control.PRESET_BOTTOM_WIDE)
 	status.offset_left = 42
-	status.offset_top = -42
+	status.offset_top = -48
 	status.offset_right = -42
-	status.offset_bottom = -10
+	status.offset_bottom = -2
+	status.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
 	status.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	dialogue_panel = _panel(root)
 	dialogue_panel.set_anchors_and_offsets_preset(Control.PRESET_BOTTOM_WIDE)
@@ -2255,7 +2260,7 @@ func _choose(id: String, answer: int, puzzle_input: Array = []) -> void:
 	var unlocked := theories_after.keys().filter(func(theory_id: Variant): return not theories_before.has(theory_id))
 	var note: String = str(campaign.task_index[id].note)
 	if not unlocked.is_empty():
-		note += "\nA new hypothesis is available in Steve’s notebook."
+		note += " " + NEW_THEORY_NOTE
 	_status(note)
 	_save("autosave")
 	_refresh()
@@ -2473,9 +2478,11 @@ func _end_departure_dialogue() -> void:
 	if skipping_departure:
 		_advance_scene()
 		return
+	var next_index := int(campaign.data.scene) + 1
+	if "opens_dark" in stage:
+		stage.opens_dark = _opens_dark(next_index)
 	stage.begin_departure_cut()
 	cut_duration=stage.departure_duration() if stage.has_method("departure_duration") else LIGHT_BEAT
-	var next_index := int(campaign.data.scene) + 1
 	var chapter_id: String = campaign.current().chapter
 	var chapter_ending: bool = next_index >= campaign.content.scenes.size() or chapter_id != campaign.content.scenes[next_index].chapter
 	# The film lasts whole bars of its music, so the next card starts on a bar line.
@@ -2507,6 +2514,13 @@ func _advance_scene(dissolve: bool=false) -> void:
 		_open_credits()
 		return
 	_enter_next_scene(dissolve)
+
+## The next scene opens on black when a storybook or a title card comes first (or the story ends).
+func _opens_dark(next_index: int) -> bool:
+	if next_index >= campaign.content.scenes.size() or campaign.current().id == "one_year":
+		return true
+	var next_scene: Dictionary = campaign.content.scenes[next_index]
+	return not _book_before(str(next_scene.id)).is_empty() or not next_scene.get("card", {}).is_empty()
 
 func _enter_next_scene(dissolve: bool=false) -> void:
 	if replaying_chapter:
@@ -2742,6 +2756,12 @@ func _unhandled_key_input(event: InputEvent) -> void:
 			_open_journal()
 
 func _status(message: String) -> void:
+	# The status line shares the 50 px band under the painting. A message that needs
+	# a second line is set smaller, so both lines fit in the band.
+	var width: float = status.size.x if status.size.x > 1.0 else status.get_parent_area_size().x - 84.0
+	var one_line: bool = "\n" not in message and status.get_theme_font("font").get_string_size(
+		message, HORIZONTAL_ALIGNMENT_LEFT, -1, STATUS_FONT_SIZE).x <= width
+	status.add_theme_font_size_override("font_size", STATUS_FONT_SIZE if one_line else STATUS_TWO_LINE_FONT_SIZE)
 	status.text=message
 
 func _notification(what: int) -> void:

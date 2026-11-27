@@ -254,16 +254,24 @@ class ScriptV2StagingTests(unittest.TestCase):
             ('c1_flat', 'c1_flat.compare.01', 'c1_flat-same-waveform.webp'),
             ('c3_archive', 'c3_archive.cycle.01', 'c3_archive-reel-eleven.webp'),
             ('c8_lab', 'c8_lab.in.01', 'p_meeting-sentinel.webp'),
-            ('c8_lab', 'c8_lab.out.01', 'c8_lab-spliced-voice.webp'),
+            ('c8_lab', 'c8_lab.lastpage.find', 'c8_lab-spliced-voice.webp'),
             ('c8_beach', 'c8_beach.in.01', 'c8_beach-standoff.webp'),
-            ('c8_rig', 'c8_rig.rig.01', 'c8_rig-theatrical-reactor.webp'),
+            ('c8_rig', 'c8_rig.rig.find', 'c8_rig-theatrical-reactor.webp'),
             ('c10_town', 'c10_town.in.04', 'c10_town-wind-bucket.webp'),
             ('c10_town', 'c10_town.in.10', 'p_veyr-dying-star.webp'),
             ('c10_live', 'c10_live.first.01', 'c10_live-harbor-lights.webp'),
             ('c10_report', 'c10_report.echo.01', 'c10_report-on-air.webp'),
-            ('c10_report', 'c10_report.out.04', 'c10_report-departure.webp'),
+            ('c10_report', 'c10_report.out.05', 'c10_report-departure.webp'),
         ):
             self.assertIn(expected_file, still_for(self.staging[sid].get('stills', []), line_id), line_id)
+        # Agnes appears by the reactor and Saren broadcasts in the lab itself; Stephen's lines play in the workshop.
+        for sid, line_id, painting in (('c8_lab', 'c8_lab.out.01', 'c8_lab-spliced-voice.webp'),
+                                      ('c8_lab', 'c8_lab.out.06', 'c8_lab-spliced-voice.webp'),
+                                      ('c8_rig', 'c8_rig.out.01', 'c8_rig-theatrical-reactor.webp')):
+            self.assertNotIn(painting, still_for(self.staging[sid].get('stills', []), line_id), line_id)
+        # The town watches the ship rise only after the fleet has turned, not while the Archivist is still talking.
+        for line_id in ('c10_report.out.01', 'c10_report.out.02', 'c10_report.out.03', 'c10_report.out.04'):
+            self.assertNotIn('c10_report-departure.webp', still_for(self.staging['c10_report'].get('stills', []), line_id), line_id)
 
     def test_gate_keeps_the_wanted_man_out_of_sight_until_the_truck_is_through(self):
         scene, tasks, lines = self.scene('c7_gate')

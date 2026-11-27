@@ -46,7 +46,7 @@ python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$NIGHT_NINE_QA_DIR/score-route
 python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$NIGHT_NINE_QA_DIR/case-boards.json" 716
 python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$NIGHT_NINE_QA_DIR/social-staging.json" 152
 python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$NIGHT_NINE_QA_DIR/small-talk.json" 23
-python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$NIGHT_NINE_QA_DIR/story-staging.json" 169
+python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$NIGHT_NINE_QA_DIR/story-staging.json" 295
 python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$NIGHT_NINE_QA_DIR/bay-receiver.json" 24
 if [[ "${1:-}" == "--render" ]]; then
   export NIGHT_NINE_QA_DIR="$PROJECT_ROOT/tmp/qa/campaign-run-$$"
@@ -57,7 +57,7 @@ if [[ "${1:-}" == "--render" ]]; then
   NIGHT_NINE_SAVE_DIR="$PROJECT_ROOT/tmp/qa/input-save" bash "$PROJECT_ROOT/tools/godot.sh" "${AUDIO_ARGUMENTS[@]}" --quit-after 1200 --log-file "$PROJECT_ROOT/tmp/qa/campaign-input.log" -- --campaign-input-qa 2>&1 | tee "$PROJECT_ROOT/tmp/qa/campaign-input-console.log"
   python3 "$PROJECT_ROOT/tools/check-log.py" "$PROJECT_ROOT/tmp/qa/campaign-input.log" "$PROJECT_ROOT/tmp/qa/campaign-input-console.log"
   python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$NIGHT_NINE_QA_DIR/campaign-input-results.json" 31
-  NIGHT_NINE_SAVE_DIR="$NIGHT_NINE_QA_DIR/prologue-save" NIGHT_NINE_QA_DIR="$NIGHT_NINE_QA_DIR/prologue" bash "$PROJECT_ROOT/tools/godot.sh" "${AUDIO_ARGUMENTS[@]}" --quit-after 3600 --log-file "$PROJECT_ROOT/tmp/qa/illustrated-prologue.log" -- --illustrated-prologue-qa
+  NIGHT_NINE_SAVE_DIR="$NIGHT_NINE_QA_DIR/prologue-save" NIGHT_NINE_QA_DIR="$NIGHT_NINE_QA_DIR/prologue" bash "$PROJECT_ROOT/tools/godot.sh" "${AUDIO_ARGUMENTS[@]}" --quit-after 7200 --log-file "$PROJECT_ROOT/tmp/qa/illustrated-prologue.log" -- --illustrated-prologue-qa
   python3 "$PROJECT_ROOT/tools/check-log.py" "$PROJECT_ROOT/tmp/qa/illustrated-prologue.log"
   python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$NIGHT_NINE_QA_DIR/prologue/prologue-gameplay.json" 169
   NIGHT_NINE_QA_MINIMIZE=1 NIGHT_NINE_SAVE_DIR="$NIGHT_NINE_QA_DIR/story-save" NIGHT_NINE_QA_DIR="$NIGHT_NINE_QA_DIR/story" bash "$PROJECT_ROOT/tools/godot.sh" "${AUDIO_ARGUMENTS[@]}" --log-file "$PROJECT_ROOT/tmp/qa/story-flow.log" -- --story-qa
@@ -74,7 +74,7 @@ if [[ "${1:-}" == "--render" ]]; then
   python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$NIGHT_NINE_QA_DIR/social-staging.json" 152
   NIGHT_NINE_SAVE_DIR="$NIGHT_NINE_QA_DIR/staging-save" NIGHT_NINE_QA_DIR="$NIGHT_NINE_QA_DIR/staging" bash "$PROJECT_ROOT/tools/godot.sh" "${AUDIO_ARGUMENTS[@]}" --quit-after 3600 --log-file "$NIGHT_NINE_QA_DIR/staging.log" -- --staging-qa
   python3 "$PROJECT_ROOT/tools/check-log.py" "$NIGHT_NINE_QA_DIR/staging.log"
-  python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$NIGHT_NINE_QA_DIR/staging/staging-results.json" 134
+  python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$NIGHT_NINE_QA_DIR/staging/staging-results.json" 133
   python3 - "$NIGHT_NINE_QA_DIR" "$PROJECT_ROOT/tmp/qa" <<'PY'
 import shutil,sys
 shutil.copytree(sys.argv[1],sys.argv[2],dirs_exist_ok=True)

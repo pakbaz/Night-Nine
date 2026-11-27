@@ -114,6 +114,26 @@ func solve(id: String) -> void:
 	game._refresh()
 	await frames(2)
 
+## Solve a lead through the real path and play its lines: true when `before` holds until
+## the line that changes the room starts, and stops holding once that line plays.
+func stays_until(id: String, line_id: String, before: Callable) -> bool:
+	var task: Dictionary = game.campaign.task_index[id]
+	if not task.actor.is_empty():
+		game.campaign.switch_actor(task.actor)
+	game._choose(id, int(task.answer), task.get("puzzle", {}).get("solution", []))
+	await frames(2)
+	var held: bool = id in game.campaign.data.done
+	while game.dialogue_panel.visible and game.active_line != line_id:
+		held = held and before.call()
+		game._next_line()
+		await frames(1)
+	await frames(2)
+	var changed: bool = game.active_line == line_id and not before.call()
+	while game.dialogue_panel.visible:
+		game._next_line()
+		await frames(1)
+	return held and changed
+
 ## The kind of shot a line is played in.
 func shot_during(line_id: String) -> Dictionary:
 	game._speak([line_id], Callable())
@@ -123,6 +143,40 @@ func shot_during(line_id: String) -> Dictionary:
 		game._next_line()
 	await frames(2)
 	return shot
+
+## Play one line and list the painted people who also appear as a separate portrait.
+func painted_twice_during(line_id: String) -> Array:
+	game._speak([line_id], Callable())
+	await frames(3)
+	var stage: Node = game.stage
+	var twice: Array = stage.painted_people.keys().filter(func(id: String): return stage.actors.has(id) and stage.actors[id].visible)
+	while game.dialogue_panel.visible:
+		game._next_line()
+	await frames(2)
+	return twice
+
+## The bounding box of a person painted into the room, in art space.
+func painted_box(id: String) -> Rect2:
+	var outline: PackedVector2Array = game.stage.painted_people[id]
+	var box := Rect2(outline[0], Vector2.ZERO)
+	for point: Vector2 in outline:
+		box = box.expand(point)
+	return box
+
+## Step through the dialogue that is playing; list lines whose settled camera cuts off
+## the top of a painted head.
+func lines_cutting_head(head_top: float) -> Array:
+	var cut: Array = []
+	while game.dialogue_panel.visible:
+		for step: int in 3:
+			game.stage._process(2.0)
+		# The top edge of the frame, measured on the painting itself.
+		var view_top: float = game.stage.distant.to_local(game.stage.frame.get_global_rect().position).y
+		if game.stage.shown_still().is_empty() and view_top > head_top + 2.0:
+			cut.append(game.active_line)
+		game._next_line()
+		await frames(1)
+	return cut
 
 ## Where the camera aims while a line plays, in art space.
 func aim_during(line_id: String) -> Vector2:
@@ -402,6 +456,15 @@ func run() -> void:
 	check(layer_shown("c9_gallery-nora-held") and not await portrait_during("c9_gallery.in.01", "nora"), "Nora is held in her bed, not standing beside it")
 	await enter("c9_gallery", ["c9_gallery.link"])
 	check(not layer_shown("c9_gallery-nora-held"), "Once Iris breaks the link, Nora is up")
+	# Solved in play, the lead's own lines free Nora: she stays held until she says she can move.
+	await enter("c9_gallery")
+	check(await stays_until("c9_gallery.link", "c9_gallery.link.02",
+		func(): return layer_shown("c9_gallery-nora-held") and not game.stage.actor_present("nora")),
+		"Nora stays held in her bed until she says she can move")
+	# Stephen gives his own good-morning line at the bakery before he slips out the back.
+	await enter("c6_iris")
+	check(await stays_until("c6_iris.alibi", "c6_iris.alibi.02", func(): return game.stage.actor_present("stephen")),
+		"Stephen stays for his own line and leaves as Steve tells how he got out")
 	# June is behind the bars of cell two until Steve proves which June is real.
 	await enter("c6_iris")
 	check(not game.campaign.available("c6_iris.takes") and not game.stage.actor_visible("iris"), "The meeting waits for Stephen's market alibi")
@@ -541,6 +604,68 @@ func run() -> void:
 				passage = blocker
 		check(not passage.is_empty() and not game.stage.floor_stage.solids.any(func(solid: PackedVector2Array): return solid == game.stage.floor_stage.points(passage.polygon)),
 			"The open doorway in %s can be walked through" % case[0])
+
+	# People painted into a room are already on screen. When they talk, no second,
+	# pasted portrait of them appears, and the camera turns to the painted person.
+	var people: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://content/scene-people.json"))
+	var directions_all: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://content/illustrated-campaign.json"))
+	for scene: Dictionary in game.campaign.content.scenes:
+		var painted: Dictionary = people.get(scene.id, {}).get("painted", {}).duplicate()
+		# People painted by a story layer appear with it (actor_visible already covers that).
+		var layers: Variant = directions_all.get(scene.id, {}).get("layers", [])
+		for layer: Dictionary in (layers if layers is Array else []):
+			for id: String in layer.get("painted", []):
+				painted.erase(id)
+		if painted.is_empty():
+			continue
+		var line_ids: Array = scene.get("context", []) + scene.intro
+		for task: Dictionary in scene.tasks:
+			line_ids += task.get("lead", []) + task.lines
+		line_ids += scene.outro
+		var heard_from: Array = []
+		var probes: Array = scene.intro.duplicate()
+		for line_id: String in line_ids:
+			var speaker: String = game.campaign.content.lines[line_id].speaker
+			if painted.has(speaker) and speaker not in heard_from:
+				heard_from.append(speaker)
+				probes.append(line_id)
+		if heard_from.is_empty():
+			continue
+		await enter(scene.id)
+		if game.stage.get("directions") == null:
+			# Prologue rooms animate their painted people in place (painted_delegate.gd).
+			continue
+		for line_id: String in probes:
+			var twice: Array = (await painted_twice_during(line_id)).filter(func(id: String): return painted.has(id))
+			check(twice.is_empty(), "%s: no pasted portrait of %s, who is painted in the room (%s)" % [scene.id, twice, line_id])
+		# The camera turns to the first painted person who speaks aloud in the room
+		# (narration and recorded voices are heard, not shown).
+		var staging: Dictionary = directions_all.get(scene.id, {})
+		for line_id: String in line_ids:
+			var line: Dictionary = game.campaign.content.lines[line_id]
+			if not painted.has(line.speaker) or line.get("delivery", "live") != "live" or line_id in staging.get("off_camera_lines", []) \
+					or staging.get("inserts", {}).has(line_id) or staging.get("detail_shots", {}).has(line_id):
+				continue
+			var box := painted_box(line.speaker)
+			var goal: Vector2 = await aim_during(line_id)
+			check(goal.x >= box.position.x and goal.x <= box.end.x and goal.y <= box.position.y + box.size.y * .5,
+				"%s: the camera turns to painted %s while they talk (%s)" % [scene.id, line.speaker, line_id])
+			break
+	# Pushing in on the shack's desk keeps Luis's painted face in frame.
+	await enter("c5_shack")
+	var luis_top: float = painted_box("luis").position.y
+	for task: Dictionary in game.campaign.current().tasks:
+		if not task.actor.is_empty():
+			game.campaign.switch_actor(task.actor)
+		game._inspect_on_arrival(task.id)
+		await frames(3)
+		var cut: Array = await lines_cutting_head(luis_top)
+		game._choose(task.id, int(task.answer), task.get("puzzle", {}).get("solution", []))
+		await frames(3)
+		cut += await lines_cutting_head(luis_top)
+		game.root.get_node("InteractionPanel").hide()
+		game.stage.set_focus(-1)
+		check(task.id in game.campaign.data.done and cut.is_empty(), "Luis's face stays in frame while Steve works on %s: %s" % [task.id, cut])
 
 	var receipt := FileAccess.open(output.path_join("story-staging.json"), FileAccess.WRITE)
 	receipt.store_string(JSON.stringify({"checks": checks, "failures": failures}, "\t") + "\n")

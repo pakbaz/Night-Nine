@@ -144,7 +144,9 @@ func _run() -> void:
 	check(not game.dialogue_panel.visible,"Mouse skips arrival dialogue")
 	await click(game.hotspots[0])
 	check(game.dialogue_panel.visible and game.active_line=="p_veyr.shield.01","First opening plays the lead-in")
-	await key(KEY_ENTER)
+	# The lead-in sets up the levels puzzle over several lines; Enter steps through each one.
+	for line: String in game.campaign.task_index["p_veyr.levels"].lead:
+		await key(KEY_ENTER)
 	check(game.root.get_node("InteractionPanel").visible,"Enter advances the lead-in to the puzzle")
 	check(button("Back",game.interaction)!=null and game.interaction.find_child("Goal",true,false)!=null
 		and game.interaction.find_child("Background",true,false)!=null,"Puzzle shows its goal and background")

@@ -18,6 +18,32 @@ CROPS = {
 }
 
 
+def textured_figure(rgb):
+    """Figure mask for a light-clothed study on smooth paper."""
+    # The paper is a soft left-to-right gradient; model it from both edge columns.
+    left = rgb[:, :3].mean(axis=1)
+    right = rgb[:, -4:].mean(axis=1)
+    across = np.linspace(0, 1, rgb.shape[1])[None, :, None]
+    paper = left[:, None, :]*(1-across) + right[:, None, :]*across
+    distance = np.linalg.norm(rgb-paper, axis=2)
+    lum = rgb @ np.array([.299, .587, .114])
+    mean = ndimage.uniform_filter(lum, 5)
+    texture = np.sqrt(np.maximum(ndimage.uniform_filter(lum*lum, 5)-mean*mean, 0))
+    mask = (distance > 24) | (texture > 8)
+    mask = ndimage.binary_closing(ndimage.binary_opening(mask, iterations=1), iterations=3, border_value=0)
+    labels, _ = ndimage.label(mask)
+    mask = labels == np.bincount(labels.ravel())[1:].argmax()+1
+    # Enclosed gaps that are plain paper stay open; anything else inside is clothing.
+    plain = (distance < 20) & (texture < 5)
+    holes, count = ndimage.label(~mask)
+    edge = set(np.unique(np.concatenate([holes[0], holes[-1], holes[:, 0], holes[:, -1]])))
+    for hole in range(1, count+1):
+        region = holes == hole
+        if hole not in edge and plain[region].mean() < .9:
+            mask |= region
+    return ndimage.binary_erosion(mask, iterations=1)
+
+
 def cutout(name, bounds):
     im = Image.open(CAST / "references" / (name + ".png")).convert("RGB")
     im = im.crop(tuple(round(n * dim) for n, dim in zip(bounds, im.size * 2)))
@@ -38,16 +64,11 @@ def cutout(name, bounds):
     labels, _ = ndimage.label(ndimage.binary_closing(mask, iterations=1, border_value=0))
     largest = np.bincount(labels.ravel())[1:].argmax()+1
     mask = labels == largest
-    # The chefs' white coats fade into the paper. Trace their outer silhouettes
-    # rather than punching holes in jackets, aprons, or faces.
-    chef = {
-        "gus": [(.19,.10),(.23,.04),(.32,.008),(.42,.006),(.55,.04),(.60,.10),(.60,.13),(.74,.15),(.85,.21),(.93,.25),(.96,.33),(.99,.37),(.96,.42),(.88,.45),(.94,.57),(.96,.74),(.86,.76),(.88,.93),(.96,.96),(.92,.98),(.68,.98),(.59,.955),(.52,.79),(.48,.94),(.44,.996),(.17,.996),(.12,.96),(.12,.78),(.06,.76),(.085,.50),(.115,.44),(.02,.42),(.008,.36),(.03,.255),(.09,.205),(.25,.16)],
-        "rafa": [(.30,.13),(.28,.09),(.31,.045),(.37,.023),(.52,.022),(.60,.047),(.65,.095),(.62,.14),(.76,.16),(.88,.19),(.96,.245),(.94,.32),(.90,.36),(.78,.37),(.81,.45),(.90,.60),(.88,.69),(.77,.69),(.77,.92),(.82,.95),(.86,.98),(.82,.996),(.60,.997),(.55,.96),(.49,.76),(.32,.96),(.25,.993),(.014,.994),(.006,.97),(.07,.92),(.12,.68),(.07,.67),(.09,.48),(.14,.37),(.075,.34),(.07,.27),(.12,.20),(.23,.171),(.34,.153)],
-    }
-    if name in chef:
-        hull = Image.new("1", im.size)
-        ImageDraw.Draw(hull).polygon([(x*im.width, y*im.height) for x,y in chef[name]], fill=1)
-        mask |= np.asarray(hull)
+    # The chefs' white coats are close to the paper colour, so colour alone punches
+    # holes in them. Paper is also smooth: keep what differs from it in colour or
+    # in texture, and keep the plain paper showing between their legs.
+    if name in ("gus", "rafa"):
+        mask = textured_figure(rgb)
     # Fill tiny interior paint specks without filling daylight between arms and waist.
     holes, _ = ndimage.label(~mask)
     sizes = np.bincount(holes.ravel())

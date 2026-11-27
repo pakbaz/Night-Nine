@@ -81,7 +81,7 @@ func click_person(id: String) -> bool:
 			"epilogue:carmen":Vector2(.315,.42),"epilogue:dale":Vector2(.395,.38),
 			"epilogue:agnes_original":Vector2(.495,.37),"epilogue:rook":Vector2(.61,.35),
 			"epilogue:rook_copy":Vector2(.65,.35),"epilogue:gus":Vector2(.70,.36),"epilogue:helen":Vector2(.805,.36),
-			"one_year:nora":Vector2(.10,.42),"one_year:stephen":Vector2(.68,.25),"one_year:tomas":Vector2(.91,.26),
+			"one_year:nora":Vector2(.09,.47),"one_year:stephen":Vector2(.65,.27),"one_year:tomas":Vector2(.86,.30),
 		}
 		var mark: Vector2 = marks[game.campaign.current().id + ":" + id]
 		samples.append(stage.distant.to_global(mark*stage.ART))

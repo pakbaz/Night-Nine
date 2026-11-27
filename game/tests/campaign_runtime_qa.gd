@@ -433,7 +433,7 @@ func verify_room(scene: Dictionary) -> void:
 			check(game.dialogue_panel.visible and is_instance_valid(finding_art) and finding_art.is_visible_in_tree(),
 				"Keep task art visible through the finding for "+task.id)
 		if task.id=="c9_gallery.link":
-			check(game.stage.actor_visible("nora"),"Nora appears after the uncoupling")
+			check(not game.stage.actor_present("nora"),"Nora stays in the bed until she says she can move")
 		if task.id=="c6_iris.takes":
 			await press_control(button("Menu",game.root))
 			await press_control(button("Save game",game.menu))
@@ -441,6 +441,8 @@ func verify_room(scene: Dictionary) -> void:
 			await press_control(button("Load saved game",game.menu))
 			check(game.campaign.current().id==slot and task.id in game.campaign.data.done and game.active_line==last_line,"Restore the same chapter task and interrupted speech")
 		await watch_dialogue(slot)
+		if task.id=="c9_gallery.link":
+			check(game.stage.actor_visible("nora"),"Nora appears after the uncoupling")
 		var finding: String=task.get("finding","")
 		if not finding.is_empty():
 			check(finding in game.campaign.data.seen,"Play the finding before returning control for "+task.id)

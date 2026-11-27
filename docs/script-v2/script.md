@@ -4003,7 +4003,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 
 ## Chapter 9: The Long Patience (`c9_gallery`)
 
-**Where:** The Gallery, third ninth night · **When:** Thursday, November 8, night: the third ninth night · **Present:** Steve Mercer, Stephen, Nora Reyes, Iris, Sheriff June Calder, Veyri attendant
+**Where:** The Gallery · **When:** Thursday, November 8, night: the third ninth night · **Present:** Steve Mercer, Stephen, Nora Reyes, Iris, Sheriff June Calder, Veyri attendant
 
 **Chapter card:** Chapter 9, *The Long Patience* · The third ninth night · Steve wants to wake the sleepers and get the signal into the ship.
 

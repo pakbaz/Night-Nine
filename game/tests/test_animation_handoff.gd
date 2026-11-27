@@ -54,6 +54,27 @@ func run() -> void:
 		if is_instance_valid(film):
 			film.free()
 		await process_frame
+	# A film that leads into a storybook or a title card ends on black, as those open on black;
+	# a bridge inside a chapter stays bright so the next room dissolves out of it.
+	for leaving_case: Array in [["c1_escape", true], ["c1_flat", false]]:
+		var leaving := STAGE.new()
+		root.add_child(leaving)
+		leaving.build(scene(leaving_case[0]), "high")
+		leaving.opens_dark = leaving_case[1]
+		leaving.begin_departure_cut()
+		leaving.set_departure_progress(.5)
+		var halfway: float = leaving.curtain.color.a if is_instance_valid(leaving.curtain) else 0.0
+		leaving.set_departure_progress(1.0)
+		var ending: float = leaving.curtain.color.a if is_instance_valid(leaving.curtain) else 0.0
+		if leaving_case[1]:
+			check(halfway < .05 and ending > .99 and leaving.curtain.get_index() == leaving.frame.get_child_count() - 1,
+				"End the " + str(leaving_case[0]) + " film on black before the next chapter opens")
+		else:
+			check(ending < .01, "Keep the " + str(leaving_case[0]) + " bridge bright for the next room's dissolve")
+		if is_instance_valid(leaving.chapter_film):
+			leaving.chapter_film.free()
+		leaving.queue_free()
+		await process_frame
 	var report := {"checks": checks, "failures": failures}
 	var directory := OS.get_environment("NIGHT_NINE_QA_DIR")
 	if not directory.is_empty():

@@ -93,7 +93,7 @@ STORYBOOKS = {
             {'bar': 4, 'image': IMAGES + 'campaign/rooms/c10_station.webp', 'from': [0.5, 0.55, 1.14], 'to': [0.6, 0.45, 1.02], 'lines': [
                 {'bar': 4.4, 'text': 'I’m Steve Mercer. For years I ran the night shift at KBWR, the town radio station.'},
                 {'bar': 6, 'text': 'Nobody hears the night engineer. The night engineer hears everything.'}]},
-            {'bar': 8, 'image': IMAGES + 'campaign/rooms/c5_shack.webp', 'from': [0.35, 0.6, 1.1], 'to': [0.45, 0.55, 1.0], 'lines': [
+            {'bar': 8, 'image': IMAGES + 'campaign/stills/book-frank-radio.webp', 'from': [0.35, 0.6, 1.1], 'to': [0.45, 0.55, 1.0], 'lines': [
                 {'bar': 8.4, 'text': 'My dad, Frank, taught me how to listen.'},
                 {'bar': 9.4, 'text': 'Ham radio, every night. Strangers from all over the world, all of them his friends.'}]},
             {'bar': 11, 'image': IMAGES + 'rooms/meeting.png', 'from': [0.5, 0.45, 1.0], 'to': [0.5, 0.5, 1.12], 'lines': [
@@ -137,10 +137,10 @@ STORYBOOKS = {
             {'bar': 31, 'image': IMAGES + 'campaign/rooms/epilogue.webp', 'from': [0.45, 0.5, 1.0], 'to': [0.55, 0.5, 1.12], 'lines': [
                 {'bar': 31.3, 'text': 'Before the ship left, the Choir gave the copies one last gift. They don’t need the ninth night anymore.'},
                 {'bar': 32.7, 'text': 'More than two hundred of them stayed. Bellwether has a lot of new neighbors with familiar faces.'}]},
-            {'bar': 34, 'image': IMAGES + 'campaign/inserts/c1_pier.webp', 'from': [0.55, 0.45, 1.12], 'to': [0.45, 0.5, 1.0], 'lines': [
+            {'bar': 34, 'image': IMAGES + 'campaign/stills/epilogue-new-face.webp', 'from': [0.5, 0.5, 1.0], 'to': [0.46, 0.42, 1.12], 'lines': [
                 {'bar': 34.3, 'text': 'Sunday dinner is still at six. Iris comes too.'},
                 {'bar': 35.6, 'text': 'Nora hasn’t forgiven her for the kidnapping. She tells her so, and passes her the bread.'}]},
-            {'bar': 37, 'image': IMAGES + 'campaign/rooms/c5_shack.webp', 'from': [0.45, 0.55, 1.0], 'to': [0.35, 0.6, 1.12], 'lines': [
+            {'bar': 37, 'image': IMAGES + 'campaign/stills/book-frank-radio.webp', 'from': [0.45, 0.55, 1.0], 'to': [0.35, 0.6, 1.12], 'lines': [
                 {'bar': 37.3, 'text': 'Mom and Dad came home. Dad is back on the radio every Thursday.'},
                 {'bar': 38.6, 'text': 'There’s a new note on the kitchen table every morning. Most of them are about paint.'}]},
             {'bar': 40, 'image': IMAGES + 'title.webp', 'from': [0.72, 0.46, 1.6], 'to': [0.75, 0.38, 1.72], 'lines': [

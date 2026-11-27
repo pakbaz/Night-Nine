@@ -81,6 +81,28 @@ func _run() -> void:
 		"The full lab finding and Continue button fit in the staged caption")
 	game._skip_dialogue()
 
+	# The status line lives in the band under the painting. Every hint and every finding note,
+	# with the notebook's new-hypothesis line, has to show whole inside that band.
+	var band := Rect2(0.0, game.root.size.y - 50.0, game.root.size.x, 50.0)
+	var messages: Array[String] = []
+	for scene: Dictionary in game.campaign.content.scenes:
+		if not str(scene.get("coach", "")).is_empty():
+			messages.append(str(scene.coach))
+		for task: Dictionary in scene.tasks:
+			messages.append(str(task.note) + " " + game.NEW_THEORY_NOTE)
+	var overflowing: Array[String] = []
+	for message: String in messages:
+		game._status(message)
+		await frames(1)
+		var shown: Rect2 = game.status.get_global_rect()
+		if not band.encloses(shown) or game.status.get_line_count() > 2:
+			overflowing.append(message.get_slice("\n", 0).left(60))
+	check(overflowing.is_empty(), "Every hint and finding fits in the status band: " + str(overflowing))
+	game._status("")
+	# A departure film fades to black only when the next scene opens on black, with a storybook or a card.
+	check(game._opens_dark(scene_index("c2_aquarium")) and game._opens_dark(scene_index("p_veyr"))
+		and not game._opens_dark(scene_index("c1_pier")), "Fade a departure to black only into a storybook or a card")
+
 	await enter_scene("c1_pier", [], [], true)
 	var arrival: Dictionary = game.campaign.current()
 	check(game.active_line == arrival.context[0], "A new scene speaks context before its intro")
