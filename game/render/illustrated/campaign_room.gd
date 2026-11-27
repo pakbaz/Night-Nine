@@ -626,6 +626,10 @@ func get_performer(id: String) -> Node2D:
 	return performer
 
 func show_cast(id: String) -> void:
+	# Once the departure has begun the room dissolves away with the people already in it;
+	# nobody steps in over the departure painting.
+	if cut_progress >= 0.0 and active_id.is_empty():
+		return
 	var visible_ids: Array[String] = []
 	if not id.is_empty() and actor_visible(id):
 		visible_ids.append(id)
@@ -889,7 +893,6 @@ func show_departure_art(path: String) -> void:
 
 func begin_departure_cut() -> void:
 	cut_progress=0.0
-	show_cast("")
 	var authored_departure: String=scene_record.get("departure_art","")
 	if not authored_departure.is_empty():
 		show_departure_art(authored_departure)
@@ -914,8 +917,10 @@ func begin_departure_cut() -> void:
 		layer.modulate.a = 0.0
 		chapter_frames.append(layer)
 	if not chapter_frames.is_empty():
-		if is_instance_valid(story_still) and story_still.texture == chapter_frames[0].texture:
-			still_target = 1.0
+		# A story painting on screen holds under the departure painting until that has
+		# dissolved in over it, so the room never shows through between the two.
+		if is_instance_valid(story_still) and story_still.visible:
+			still_target = 1.0 if story_still.texture == chapter_frames[0].texture else story_still.modulate.a
 		if chapter_frames.size()==2:
 			set_keyframe_quality()
 		if film_book.is_empty():

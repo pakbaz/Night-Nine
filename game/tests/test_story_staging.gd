@@ -337,6 +337,30 @@ func run() -> void:
 			var film: ShaderMaterial = game.stage.chapter_film.action
 			check(film.get_shader_parameter("warp") == false, "The %s film adds light, not distortion" % scene_id)
 
+	# Nobody's figure appears over a departure painting. Leaving the antenna room, the painting
+	# of the ship rising holds until the fleet painting has dissolved in over it, so neither a
+	# portrait nor the room behind it shows through.
+	await enter("c10_report")
+	game._speak(["c10_report.out.06"], game._end_departure_dialogue)
+	await create_timer(.9).timeout
+	var rising: TextureRect = game.stage.story_still
+	check(is_instance_valid(rising) and rising.modulate.a > .99, "The ship rises over the pier on the last line of the antenna room")
+	game._next_line()
+	check(game.light_remaining > 0.0 and not game.stage.chapter_frames.is_empty(), "Leaving the antenna room starts the fleet painting")
+	var crossing: Array = []
+	var room_through := 0.0
+	for sample: int in 8:
+		for id: String in game.stage.actors:
+			var person: Node = game.stage.actors[id]
+			if is_instance_valid(person) and person.is_visible_in_tree() and id not in crossing:
+				crossing.append(id)
+		if is_instance_valid(rising) and not game.stage.chapter_frames.is_empty():
+			var fleet: TextureRect = game.stage.chapter_frames[0]
+			room_through = maxf(room_through, (1.0 - fleet.modulate.a) * (1.0 - (rising.modulate.a if rising.visible else 0.0)))
+		await create_timer(.2).timeout
+	check(crossing.is_empty(), "Nobody's figure appears over the fleet painting as it dissolves in %s" % [crossing])
+	check(room_through < .05, "The antenna room does not show through between the ship rising and the fleet (%.2f)" % room_through)
+
 	# Transitions: rooms fade up from the dark, story paintings dissolve in and out,
 	# and a location's ambience crossfades into the next one.
 	await enter("c2_ship", ["c2_ship.command", "c2_ship.escape", "c2_ship.nora"])
@@ -693,23 +717,29 @@ func run() -> void:
 		check(task.id in game.campaign.data.done and cut.is_empty(), "Luis's face stays in frame while Steve works on %s: %s" % [task.id, cut])
 
 	# The player starts beside the leads, never on one: at the first playable frame of every
-	# walkable room no task marker is drawn over the player's own figure.
+	# walkable room no task marker is drawn over the player's own figure. And when a room is
+	# left, it dissolves away with the people already in it: nobody steps in over the departure.
 	for scene: Dictionary in game.campaign.content.scenes:
 		await enter(scene.id)
 		var stage: Node = game.stage
-		if stage.get("floor_stage") == null or not stage.walking_view():
-			continue
-		for settle: int in 3:
-			stage._process(2.0)
-		game._process(.001)
-		var walker: String = stage.floor_stage.active_actor
-		var box := figure_box(stage.floor_stage.bodies[walker].sprite).grow(6.0)
-		var covered: Array = []
-		for index: int in game.hotspots.size():
-			var pin: Button = game.hotspots[index]
-			if pin.visible and box.has_point(pin.get_global_rect().get_center()):
-				covered.append(scene.tasks[index].id)
-		check(box.has_area() and covered.is_empty(), "%s: %s starts clear of every task marker %s" % [scene.id, walker, covered])
+		if stage.get("floor_stage") != null and stage.walking_view():
+			for settle: int in 3:
+				stage._process(2.0)
+			game._process(.001)
+			var walker: String = stage.floor_stage.active_actor
+			var box := figure_box(stage.floor_stage.bodies[walker].sprite).grow(6.0)
+			var covered: Array = []
+			for index: int in game.hotspots.size():
+				var pin: Button = game.hotspots[index]
+				if pin.visible and box.has_point(pin.get_global_rect().get_center()):
+					covered.append(scene.tasks[index].id)
+			check(box.has_area() and covered.is_empty(), "%s: %s starts clear of every task marker %s" % [scene.id, walker, covered])
+		var present: Array = stage.actors.keys().filter(func(id: String): return stage.actors[id].visible)
+		game._end_departure_dialogue()
+		await frames(2)
+		var stepped_in: Array = stage.actors.keys().filter(func(id: String):
+			return is_instance_valid(stage.actors[id]) and stage.actors[id].visible and id not in present)
+		check(stepped_in.is_empty(), "%s: nobody appears over the departure painting %s" % [scene.id, stepped_in])
 
 	var receipt := FileAccess.open(output.path_join("story-staging.json"), FileAccess.WRITE)
 	receipt.store_string(JSON.stringify({"checks": checks, "failures": failures}, "\t") + "\n")
