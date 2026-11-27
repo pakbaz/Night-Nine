@@ -48,27 +48,124 @@ def resources(value):
 
 def write_offline_worker(site):
     worker = site / "play.service.worker.js"
-    worker.write_text(
-        "const CACHE_VERSION = 'export';\n"
-        "const CACHE_PREFIX = 'old';\n"
-        "const CACHED_FILES = [\"play.html\",\"play.js\"];\n"
-        "const CACHEABLE_FILES = [\"play.wasm\",\"play.pck\"];\n"
-        "const FULL_CACHE = CACHED_FILES.concat(CACHEABLE_FILES);\n"
-        "function remember(event, cache, response) {\n"
-        "  cache.put(event.request, response.clone());\n"
-        "}\n"
-        "async function cachedNavigation(event, cache) {\n"
-        "  const isNavigate = event.request.mode === 'navigate';\n"
-        "  let cached = await cache.match(event.request);\n"
-        "  if (cached != null) {\n"
-        "    return cached;\n"
-        "  }\n"
-        "  return null;\n"
-        "}\n")
+    shutil.copyfile(ROOT / "tools/fixtures/service-worker/play.service.worker.js", worker)
     (site / "chunks.json").write_text('{"release":"test"}')
     (site / "night-nine-loader.js").write_text("loader")
     (site / "loading-screen-music.mp3").write_bytes(b"take-one")
     return worker
+
+
+# Plays a built service worker in Node: a site that can publish a new release or go
+# offline, the browser's caches, and the install, activate and fetch events.
+WORKER_HARNESS = r"""
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import vm from 'node:vm';
+
+const scope = 'https://night-nine.test/game/';
+const at = (path) => new URL(path, scope).href;
+let online = true;
+let release = '';
+const publish = (name) => { release = name; };
+// Pages answers play.html by redirecting to the clean /play address.
+async function network(request) {
+    if (!online) {
+        throw new TypeError('Failed to fetch');
+    }
+    let path = new URL(request.url || request, scope).pathname.slice(new URL(scope).pathname.length);
+    const redirected = path === 'play.html';
+    if (redirected) {
+        path = 'play';
+    }
+    const page = path === '' || path === 'play' || path.endsWith('.html');
+    const body = path === 'chunks.json' ? JSON.stringify({release}) : `${path || 'index'} ${release}`;
+    const response = new Response(body, {status: 200, headers: {'Content-Type': page ? 'text/html' : 'text/plain'}});
+    if (redirected) {
+        Object.defineProperty(response, 'redirected', {value: true});
+    }
+    return response;
+}
+const copy = (response) => {
+    const twin = response.clone();
+    if (response.redirected) {
+        Object.defineProperty(twin, 'redirected', {value: true});
+    }
+    return twin;
+};
+class FakeCache {
+    entries = new Map();
+    async match(request) {
+        const response = this.entries.get(at(request.url || request));
+        return response ? copy(response) : undefined;
+    }
+    async put(request, response) {
+        this.entries.set(at(request.url || request), response);
+    }
+    async addAll(paths) {
+        for (const path of paths) {
+            await this.put(path, await network(at(path)));
+        }
+    }
+}
+const storage = new Map();
+const caches = {
+    async open(name) {
+        if (!storage.has(name)) {
+            storage.set(name, new FakeCache());
+        }
+        return storage.get(name);
+    },
+    async keys() { return [...storage.keys()]; },
+    async delete(name) { return storage.delete(name); },
+    async match(request) {
+        for (const cache of storage.values()) {
+            const response = await cache.match(request);
+            if (response) {
+                return response;
+            }
+        }
+        return undefined;
+    },
+};
+const listeners = {};
+const worker = {skippedWaiting: false, claimed: false};
+const self = {
+    registration: {scope, navigationPreload: {enable: async () => {}}},
+    origin: new URL(scope).origin,
+    addEventListener: (type, listener) => { listeners[type] = listener; },
+    fetch: network,
+    skipWaiting: async () => { worker.skippedWaiting = true; },
+    clients: {claim: async () => { worker.claimed = true; }, get: async () => undefined, matchAll: async () => []},
+};
+vm.runInContext(readFileSync(process.argv[1], 'utf8'),
+    vm.createContext({self, caches, fetch: network, URL, Response, Headers, console}));
+async function lifecycle(type) {
+    const pending = [];
+    listeners[type]({waitUntil: (promise) => pending.push(promise)});
+    await Promise.all(pending);
+}
+// A page load when navigate is true; otherwise a file the game page asks for.
+async function visit(path, navigate = false) {
+    const pending = [];
+    let answer;
+    listeners.fetch({
+        request: {url: at(path), mode: navigate ? 'navigate' : 'cors', referrer: navigate ? '' : at('play')},
+        preloadResponse: Promise.resolve(undefined),
+        respondWith: (promise) => { answer = promise; },
+        waitUntil: (promise) => pending.push(promise),
+    });
+    assert.ok(answer, `The worker answers ${path}`);
+    const response = await answer;
+    await Promise.all(pending);
+    return response;
+}
+"""
+
+
+def run_worker(test, worker, scenario):
+    result = subprocess.run(["node", "--input-type=module", "-e", WORKER_HARNESS + scenario, str(worker)],
+                            capture_output=True, text=True)
+    test.assertEqual(result.returncode, 0, result.stdout + result.stderr)
 
 
 class ReleasePackagingTests(unittest.TestCase):
@@ -230,7 +327,7 @@ ctx.currentTime = 6.75; near(music.getPlaybackPosition(), 2 + 0.2 * 2, 'offset a
             worker = write_offline_worker(site)
             build_pages.prepare_offline_cache(site)
             result = worker.read_text()
-            self.assertRegex(result, r"const CACHE_VERSION = 'export\\|nn-[0-9a-f]{16}';")
+            self.assertRegex(result, r"const CACHE_VERSION = '1795778690\|4653383\|nn-[0-9a-f]{16}';")
             self.assertIn("const CACHEABLE_FILES = [];", result)
             self.assertIn("'chunks.json', 'night-nine-loader.js'", result)
             self.assertIn("'loading-screen-music.mp3'", result)
@@ -247,38 +344,55 @@ ctx.currentTime = 6.75; near(music.getPlaybackPosition(), 2 + 0.2 * 2, 'offset a
             site = Path(directory)
             worker = write_offline_worker(site)
             build_pages.prepare_offline_cache(site)
-            result = subprocess.run(["node", "--input-type=module", "-e", """
-import assert from 'node:assert/strict';
-import {readFileSync} from 'node:fs';
-import vm from 'node:vm';
-const context = {
-    URL, Response,
-    self: {registration: {scope: 'https://night-nine.test/game/'}},
-    cache: {
-        async match(request) {
-            const url = new URL(request.url || request);
-            if (!url.pathname.endsWith('/play.html')) return undefined;
-            const response = new Response('<html>Night Nine</html>', {
-                headers: {'Content-Type': 'text/html'}, status: 200,
-            });
-            Object.defineProperty(response, 'redirected', {value: true});
-            return response;
-        },
-    },
-};
-vm.createContext(context);
-vm.runInContext(readFileSync(process.argv[1], 'utf8'), context);
+            run_worker(self, worker, """
+publish('first');
+await lifecycle('install');
+await lifecycle('activate');
+online = false;
 for (const path of ['play.html', 'play']) {
-    context.event = {request: {url: 'https://night-nine.test/game/' + path, mode: 'navigate'}};
-    const response = await vm.runInContext('cachedNavigation(event, cache)', context);
-    assert.ok(response, `Serve cached ${path} without needing the network`);
+    const response = await visit(path, true);
     assert.equal(response.redirected, false, 'Manual navigations cannot use followed redirect responses');
-    assert.equal(response.status, 200);
+    assert.equal(response.status, 200, `Open ${path} from the cache without the network`);
     assert.equal(response.headers.get('Content-Type'), 'text/html');
-    assert.equal(await response.text(), '<html>Night Nine</html>');
+    assert.equal(await response.text(), 'play first');
 }
-""", str(worker)], capture_output=True, text=True)
-            self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+""")
+
+    @unittest.skipUnless(shutil.which("node"), "Node.js is required for the service worker test.")
+    def test_returning_player_gets_the_release_on_the_server(self):
+        with tempfile.TemporaryDirectory(dir=ROOT) as directory:
+            site = Path(directory)
+            worker = write_offline_worker(site)
+            build_pages.prepare_offline_cache(site)
+            run_worker(self, worker, """
+publish('first');
+await lifecycle('install');
+await lifecycle('activate');
+publish('second');
+const manifest = await (await visit('chunks.json')).json();
+assert.equal(manifest.release, 'second', 'A returning player gets the chunk list on the server, not the cached one');
+assert.equal(await (await visit('night-nine-loader.js')).text(), 'night-nine-loader.js second');
+assert.equal(await (await visit('play.js')).text(), 'play.js second');
+assert.equal(await (await visit('play', true)).text(), 'play second');
+online = false;
+const offline = await (await visit('chunks.json')).json();
+assert.equal(offline.release, 'second', 'Offline, the game uses the chunk list it last saw online');
+assert.equal((await visit('play', true)).status, 200, 'The game page still opens offline');
+""")
+
+    @unittest.skipUnless(shutil.which("node"), "Node.js is required for the service worker test.")
+    def test_new_release_takes_over_open_pages(self):
+        with tempfile.TemporaryDirectory(dir=ROOT) as directory:
+            site = Path(directory)
+            worker = write_offline_worker(site)
+            build_pages.prepare_offline_cache(site)
+            run_worker(self, worker, """
+publish('second');
+await lifecycle('install');
+assert.ok(worker.skippedWaiting, 'A new release does not wait until every open tab is closed');
+await lifecycle('activate');
+assert.ok(worker.claimed, 'The new worker takes over open pages, so Retry or a reload gets the new release');
+""")
 
     def test_complete_release_contains_runtime_dependencies(self):
         files, meta = milestones.make_snapshot(10, False)

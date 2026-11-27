@@ -84,6 +84,32 @@ def prepare_offline_cache(site):
             "\t\t\t\t\t\t\tstatus: cached.status, statusText: cached.statusText, headers: cached.headers,\n"
             "\t\t\t\t\t\t})\n"
             "\t\t\t\t\t\t: cached;", 1)
+    # Godot's worker answers from its cache first, and a new worker waits until every tab
+    # is closed, so a returning player got the previous release, or a failed load once
+    # its parts were gone from the site. Ask the network first and let a new release take
+    # over open pages at once; the cache stays the offline copy.
+    for original, patched in (
+        ("event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(CACHED_FILES)));",
+         "event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(CACHED_FILES))"
+         ".then(() => self.skipWaiting()));"),
+        ("return ('navigationPreload' in self.registration) ? "
+         "self.registration.navigationPreload.enable() : Promise.resolve();",
+         "return (('navigationPreload' in self.registration) ? "
+         "self.registration.navigationPreload.enable() : Promise.resolve())\n"
+         "\t\t\t.then(() => self.clients.claim());"),
+        ("\t\t\t\t// Try to use cache first\n"
+         "\t\t\t\tconst cache = await caches.open(CACHE_NAME);\n",
+         "\t\t\t\tconst cache = await caches.open(CACHE_NAME);\n"
+         "\t\t\t\ttry {\n"
+         "\t\t\t\t\treturn await fetchAndCache(event, cache, isCacheable);\n"
+         "\t\t\t\t} catch (e) {\n"
+         "\t\t\t\t\t// Offline: answer from the cache below.\n"
+         "\t\t\t\t}\n"),
+    ):
+        if patched not in text:
+            if text.count(original) != 1:
+                raise ValueError("Unexpected Godot service worker; cannot make updates reach returning players.")
+            text = text.replace(original, patched, 1)
     worker.write_text(text)
 
 
