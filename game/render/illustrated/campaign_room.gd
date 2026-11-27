@@ -568,12 +568,40 @@ func painted_head(id: String) -> Rect2:
 
 ## Painted faces are never cut by the top of the frame: hold the camera low enough
 ## that every painted head stays in view. The painting moves .87 as far as the camera.
-func keep_painted_heads(target: Vector2, magnitude: float) -> Vector2:
+## While a room is being established, the camera also slides sideways the least distance
+## that leaves every painted face whole, either inside the frame or out of it.
+func keep_painted_heads(target: Vector2, magnitude: float, sideways: bool = false) -> Vector2:
 	var plane_scale := 1.0+(magnitude-1.0)*.87
 	for id: String in painted_people:
 		var top := painted_head(id).position.y
 		target.y = minf(target.y,HALF.y+(top-4.0+HALF.y/plane_scale-HALF.y)/.87)
+	if sideways:
+		target.x = whole_faces_aim(target.x,plane_scale,magnitude)
 	return target
+
+## The camera aim nearest to `aim_x` at which neither side of the frame falls across a painted
+## face (with a little air), within the range that keeps the painting filling the frame.
+func whole_faces_aim(aim_x: float, plane_scale: float, magnitude: float) -> float:
+	var half := HALF.x/plane_scale
+	var reach := HALF.x*(1.0-1.0/magnitude)
+	var blocked: Array[Vector2] = []
+	for id: String in painted_people:
+		if painted_in_room(id):
+			var head := painted_head(id)
+			for edge: float in [-half,half]:
+				blocked.append(Vector2(HALF.x+(head.position.x-16.0-edge-HALF.x)/.87,HALF.x+(head.end.x+16.0-edge-HALF.x)/.87))
+	var clear := func(x: float) -> bool:
+		return x >= HALF.x-reach-.01 and x <= HALF.x+reach+.01 and blocked.all(func(span: Vector2): return x <= span.x or x >= span.y)
+	if clear.call(aim_x):
+		return aim_x
+	var best := aim_x
+	var shift := INF
+	for span: Vector2 in blocked:
+		for x: float in [span.x,span.y,HALF.x-reach,HALF.x+reach]:
+			if clear.call(x) and absf(x-aim_x) < shift:
+				best = x
+				shift = absf(x-aim_x)
+	return best
 
 ## A person the story still hides, or who has left, is not in the scene at all.
 func actor_present(id: String) -> bool:
@@ -833,7 +861,7 @@ func begin_dialogue(line: Dictionary, voice: AudioStreamPlayer, _take: Dictionar
 			aim=camera_goal.clamp(HALF-bounds,HALF+bounds)
 			transform_planes()
 	if shot_type=="arrival":
-		aim=keep_painted_heads(HALF.lerp(opening,.22),1.18)
+		aim=keep_painted_heads(HALF.lerp(opening,.22),1.18,true)
 		zoom=1.18
 	if active_id in SOCIAL.WIDE_LINES and social_pair.size() == 2 and floor_stage:
 		var a: Dictionary = floor_stage.bodies.get(social_pair[0],{})
@@ -1058,7 +1086,8 @@ func _process(delta: float) -> void:
 		if creatures[id].visible:
 			creatures[id].animate(clock)
 	if str(dialogue_shot.get("type","")) != "detail":
-		target = keep_painted_heads(target,magnitude)
+		var establishing: bool = cinematic and (str(dialogue_shot.get("type","")) == "arrival" or active_id in scene_record.get("context",[]))
+		target = keep_painted_heads(target,magnitude,establishing)
 	move_camera(delta,target,magnitude)
 	if background:
 		# Clip tiny alignment differences at the prop's feathered perimeter; each

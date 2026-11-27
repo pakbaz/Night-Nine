@@ -220,6 +220,21 @@ func figure_box(sprite: Sprite2D) -> Rect2:
 	var b: Vector2 = sprite.get_global_transform() * (corner + high)
 	return Rect2(a, Vector2.ZERO).expand(b)
 
+## Painted people whose head is cut by the left or right edge of the frame, measured on the painting.
+func faces_cut_at_sides() -> Array:
+	var stage: Node = game.stage
+	var view: Rect2 = stage.frame.get_global_rect()
+	var left: float = stage.distant.to_local(view.position).x
+	var right: float = stage.distant.to_local(view.end).x
+	var cut: Array = []
+	for id: String in stage.painted_people:
+		if not stage.painted_in_room(id):
+			continue
+		var head: Rect2 = stage.painted_head(id)
+		if (head.position.x < left and head.end.x > left) or (head.position.x < right and head.end.x > right):
+			cut.append(id)
+	return cut
+
 ## Where the camera aims while a line plays, in art space.
 func aim_during(line_id: String) -> Vector2:
 	game._speak([line_id], Callable())
@@ -786,6 +801,32 @@ func run() -> void:
 		game.root.get_node("InteractionPanel").hide()
 		game.stage.set_focus(-1)
 		check(task.id in game.campaign.data.done and cut.is_empty(), "Luis's face stays in frame while Steve works on %s: %s" % [task.id, cut])
+	# The establishing shots of a room never rest on a painted face sliced by the side of the
+	# frame: the opening narration plays as one sequence, and both the opening frame and the
+	# framing each line settles on are checked. (A pan may sweep across a face on its way.)
+	for scene_id: String in game.campaign.content.scenes.map(func(scene: Dictionary): return scene.id):
+		if not people.get(scene_id, {}).has("painted"):
+			continue
+		await enter(scene_id)
+		if not game.stage.has_method("painted_head"):
+			# Prologue rooms animate their painted people in place (painted_delegate.gd).
+			continue
+		var establishing: Array = game.campaign.current().get("context", [])
+		if establishing.is_empty():
+			establishing = game.campaign.current().intro.slice(0, 1)
+		game._speak(establishing, Callable())
+		await frames(1)
+		var sliced: Array = []
+		if game.stage.shown_still().is_empty() and not faces_cut_at_sides().is_empty():
+			sliced.append("%s opens on %s" % [game.active_line, faces_cut_at_sides()])
+		while game.dialogue_panel.visible:
+			for step: int in 10:
+				game.stage._process(.45)
+			if game.stage.shown_still().is_empty() and not faces_cut_at_sides().is_empty():
+				sliced.append("%s settles on %s" % [game.active_line, faces_cut_at_sides()])
+			game._next_line()
+			await frames(1)
+		check(sliced.is_empty(), "%s: the establishing shots keep painted faces whole at the sides %s" % [scene_id, sliced])
 
 	# The player starts beside the leads, never on one: at the first playable frame of every
 	# walkable room no task marker is drawn over the player's own figure. And when a room is
