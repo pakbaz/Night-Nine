@@ -560,10 +560,11 @@
         ]
       },
       {
-        "file": "res://assets/illustrated/campaign/bridges/c4_safe-c4_escape.webp",
+        "file": "res://assets/illustrated/campaign/stills/c4_safe-office-door.webp",
         "lines": [
           "c4_safe.record.lead.05",
           "c4_safe.record.01",
+          "c4_safe.record.02",
           "c4_safe.record.find",
           "c4_safe.recap.02"
         ]
@@ -1749,12 +1750,17 @@
           "c10_live.first.01",
           "c10_live.first.02",
           "c10_live.first.find",
+          "c10_live.recap.01",
+          "c10_live.recap.02"
+        ]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/stills/c10_live-fleet-listens.webp",
+        "lines": [
           "c10_live.third.01",
           "c10_live.third.02",
           "c10_live.third.03",
-          "c10_live.third.find",
-          "c10_live.recap.01",
-          "c10_live.recap.02"
+          "c10_live.third.find"
         ]
       },
       {
@@ -1765,11 +1771,16 @@
         ]
       },
       {
-        "file": "res://assets/illustrated/campaign/stills/c10_live-pier.webp",
+        "file": "res://assets/illustrated/campaign/stills/c10_live-standoff.webp",
         "lines": [
           "c10_live.out.07",
           "c10_live.out.02",
-          "c10_live.out.03",
+          "c10_live.out.03"
+        ]
+      },
+      {
+        "file": "res://assets/illustrated/campaign/stills/c10_live-pier.webp",
+        "lines": [
           "c10_live.out.08",
           "c10_live.out.09",
           "c10_live.out.04",
@@ -1820,14 +1831,8 @@
       {
         "file": "res://assets/illustrated/campaign/stills/c10_report-on-air.webp",
         "lines": [
-          "c10_report.echo.01",
-          "c10_report.echo.02",
-          "c10_report.echo.find",
-          "c10_report.report.01",
-          "c10_report.report.02",
-          "c10_report.report.03",
-          "c10_report.report.find",
-          "c10_report.recap.01"
+          "c10_report.echo.lead.01",
+          "c10_report.echo.01"
         ]
       },
       {

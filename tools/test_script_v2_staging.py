@@ -66,6 +66,26 @@ class ScriptV2StagingTests(unittest.TestCase):
             bare.append(f"{here['id']} -> {after['id']}")
         self.assertEqual(bare, [])
 
+    def test_a_story_still_shows_one_task(self):
+        # A painting shows one moment; reusing it for another task's lines (outside the
+        # scene's intro, outro and recap) shows that moment again for something else.
+        mixed = []
+        for scene in self.content['scenes']:
+            tasks = {task['id'] for task in scene['tasks']}
+            for still in self.staging.get(scene['id'], {}).get('stills', []):
+                shown = {task for task in tasks for item in still['lines']
+                         if item == task or item.startswith(task + '.')}
+                if len(shown) > 1:
+                    mixed.append(f"{scene['id']}: {still['file'].rsplit('/', 1)[-1]} {sorted(shown)}")
+        self.assertEqual(mixed, [])
+
+    def test_a_scene_does_not_show_its_way_out_before_it_leaves(self):
+        # The bridge painting is the walk to the next place; as a still inside the
+        # scene it plays the same picture for an earlier moment.
+        early = [f"{sid}: {still['lines']}" for sid, staging in self.staging.items()
+                 for still in staging.get('stills', []) if staging.get('bridge') == still['file']]
+        self.assertEqual(early, [])
+
     def test_missing_painting_is_rejected(self):
         def change(staging):
             staging['c2_ship']['stills'][0]['file'] = 'res://assets/illustrated/campaign/stills/missing.webp'
