@@ -352,7 +352,7 @@ func check_storybooks() -> void:
 					if box.intersects(view) and not view.encloses(box):
 						problems.append("%s sliced at %d/16" % [region, step])
 			check(problems.is_empty(), "Storybook %s panel %d keeps its subject whole and clear of the words %s" % [name, index + 1, problems.slice(0, 3)])
-	check(annotated >= 30, "Storybook panels say what they are about (%d marked)" % annotated)
+	check(annotated >= 35, "Storybook panels say what they are about (%d marked)" % annotated)
 	book_ui.queue_free()
 
 func run() -> void:

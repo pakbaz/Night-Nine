@@ -149,7 +149,7 @@ STORYBOOKS = {
             {'bar': 44, 'image': IMAGES + 'campaign/rooms/one_year.webp', 'from': [0.4, 0.5, 1.12], 'to': [0.55, 0.45, 1.0], 'lines': [
                 {'bar': 44.3, 'text': 'KBWR has live hosts again. Two of them.'},
                 {'bar': 45.6, 'text': 'Stephen and I still argue about which one of us is the upgrade.'}]},
-            {'bar': 47, 'image': IMAGES + 'campaign/stills/book-after-package.webp', 'from': [0.5, 0.5, 1.0], 'to': [0.5, 0.44, 1.14], 'lines': [
+            {'bar': 47, 'image': IMAGES + 'campaign/stills/book-after-package.webp', 'from': [0.5, 0.5, 1.0], 'to': [0.5, 0.56, 1.14], 'lines': [
                 {'bar': 47.3, 'text': 'One year after the ninth night, a package arrived at the station.'},
                 {'bar': 48.8, 'text': 'From very, very far away.'}]},
         ],
