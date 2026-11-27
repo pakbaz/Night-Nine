@@ -111,7 +111,7 @@ STORYBOOKS = {
         'music': {'file': 'res://assets/audio/music/prologue-theme.mp3', 'bar': 37, 'continue': True},
         'end_bar': 52,
         'panels': [
-            {'bar': 37, 'image': IMAGES + 'campaign/rooms/c8_beach.webp', 'from': [0.5, 0.5, 1.12], 'to': [0.62, 0.62, 1.22], 'lines': [
+            {'bar': 37, 'image': IMAGES + 'campaign/stills/book-aftermath-boat.webp', 'from': [0.56, 0.52, 1.0], 'to': [0.6, 0.5, 1.12], 'lines': [
                 {'bar': 37.3, 'text': 'In the morning, their boat drifted back to shore. Empty.'},
                 {'bar': 38.7, 'text': 'Dad’s radio was still on.'}]},
             {'bar': 40, 'image': IMAGES + 'campaign/rooms/c1_escape.webp', 'from': [0.55, 0.5, 1.0], 'to': [0.45, 0.5, 1.1], 'lines': [
@@ -120,7 +120,7 @@ STORYBOOKS = {
             {'bar': 43, 'image': IMAGES + 'campaign/wide/c5_station.webp', 'from': [0.5, 0.5, 1.12], 'to': [0.5, 0.45, 1.0], 'lines': [
                 {'bar': 43.3, 'text': 'Three weeks ago, a company called Halcyon Media bought KBWR.'},
                 {'bar': 44.6, 'text': 'They replaced me with a machine called DJ AutoRick. He reads yesterday’s weather.'}]},
-            {'bar': 46, 'image': IMAGES + 'campaign/inserts/c1_pier.webp', 'from': [0.5, 0.5, 1.0], 'to': [0.6, 0.45, 1.14], 'lines': [
+            {'bar': 46, 'image': IMAGES + 'campaign/stills/book-aftermath-nora.webp', 'from': [0.6, 0.42, 1.12], 'to': [0.56, 0.46, 1.0], 'lines': [
                 {'bar': 46.3, 'text': 'And then there’s Nora. Nora Reyes runs the aquarium and argues with everybody, me included.'},
                 {'bar': 47.7, 'text': 'Now that I’m home in the mornings, I get to hear her say good morning.'}]},
             {'bar': 49, 'image': IMAGES + 'title.webp', 'from': [0.74, 0.4, 1.62], 'to': [0.5, 0.5, 1.0], 'lines': [
@@ -149,7 +149,7 @@ STORYBOOKS = {
             {'bar': 44, 'image': IMAGES + 'campaign/rooms/one_year.webp', 'from': [0.4, 0.5, 1.12], 'to': [0.55, 0.45, 1.0], 'lines': [
                 {'bar': 44.3, 'text': 'KBWR has live hosts again. Two of them.'},
                 {'bar': 45.6, 'text': 'Stephen and I still argue about which one of us is the upgrade.'}]},
-            {'bar': 47, 'image': IMAGES + 'campaign/films/one_year.webp', 'from': [0.5, 0.55, 1.0], 'to': [0.62, 0.42, 1.15], 'lines': [
+            {'bar': 47, 'image': IMAGES + 'campaign/stills/book-after-package.webp', 'from': [0.5, 0.5, 1.0], 'to': [0.5, 0.44, 1.14], 'lines': [
                 {'bar': 47.3, 'text': 'One year after the ninth night, a package arrived at the station.'},
                 {'bar': 48.8, 'text': 'From very, very far away.'}]},
         ],

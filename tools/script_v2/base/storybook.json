@@ -170,16 +170,16 @@
       "panels": [
         {
           "bar": 37,
-          "image": "res://assets/illustrated/campaign/rooms/c8_beach.webp",
+          "image": "res://assets/illustrated/campaign/stills/book-aftermath-boat.webp",
           "from": [
-            0.5,
-            0.5,
-            1.12
+            0.56,
+            0.52,
+            1.0
           ],
           "to": [
-            0.62,
-            0.62,
-            1.22
+            0.6,
+            0.5,
+            1.12
           ],
           "lines": [
             {
@@ -254,16 +254,16 @@
         },
         {
           "bar": 47.0,
-          "image": "res://assets/illustrated/campaign/inserts/c1_pier.webp",
+          "image": "res://assets/illustrated/campaign/stills/book-aftermath-nora.webp",
           "from": [
-            0.5,
-            0.5,
-            1.0
+            0.6,
+            0.42,
+            1.12
           ],
           "to": [
-            0.6,
-            0.45,
-            1.14
+            0.56,
+            0.46,
+            1.0
           ],
           "lines": [
             {
@@ -456,16 +456,16 @@
         },
         {
           "bar": 50.5,
-          "image": "res://assets/illustrated/campaign/films/one_year.webp",
+          "image": "res://assets/illustrated/campaign/stills/book-after-package.webp",
           "from": [
             0.5,
-            0.55,
+            0.5,
             1.0
           ],
           "to": [
-            0.62,
-            0.42,
-            1.15
+            0.5,
+            0.44,
+            1.14
           ],
           "lines": [
             {
