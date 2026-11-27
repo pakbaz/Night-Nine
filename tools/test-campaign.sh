@@ -45,7 +45,7 @@ python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$NIGHT_NINE_QA_DIR/animation-h
 python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$NIGHT_NINE_QA_DIR/score-route.json" 404
 python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$NIGHT_NINE_QA_DIR/case-boards.json" 716
 python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$NIGHT_NINE_QA_DIR/social-staging.json" 152
-python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$NIGHT_NINE_QA_DIR/small-talk.json" 23
+python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$NIGHT_NINE_QA_DIR/small-talk.json" 345
 python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$NIGHT_NINE_QA_DIR/story-staging.json" 295
 python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$NIGHT_NINE_QA_DIR/bay-receiver.json" 24
 if [[ "${1:-}" == "--render" ]]; then

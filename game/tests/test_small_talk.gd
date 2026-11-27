@@ -77,10 +77,10 @@ func click_person(id: String) -> bool:
 			"c1_dinner:rafa":Vector2(.83,.21),"c1_dinner:tomas":Vector2(.89,.40),
 			"c5_shack:luis":Vector2(.74,.28),
 			"c10_station:wen":Vector2(.31,.24),"c10_station:stephen":Vector2(.53,.22),"c10_station:frank":Vector2(.82,.38),
-			"epilogue:lyle":Vector2(.17,.35),"epilogue:lyle_copy":Vector2(.225,.35),
-			"epilogue:carmen":Vector2(.315,.42),"epilogue:dale":Vector2(.395,.38),
-			"epilogue:agnes_original":Vector2(.495,.37),"epilogue:rook":Vector2(.61,.35),
-			"epilogue:rook_copy":Vector2(.65,.35),"epilogue:gus":Vector2(.70,.36),"epilogue:helen":Vector2(.805,.36),
+			"epilogue:lyle":Vector2(.112,.269),"epilogue:lyle_copy":Vector2(.16,.269),
+			"epilogue:carmen":Vector2(.273,.324),"epilogue:dale":Vector2(.365,.254),
+			"epilogue:agnes_original":Vector2(.475,.298),"epilogue:rook":Vector2(.605,.265),
+			"epilogue:rook_copy":Vector2(.675,.263),"epilogue:gus":Vector2(.778,.279),"epilogue:helen":Vector2(.873,.312),
 			"one_year:nora":Vector2(.09,.47),"one_year:stephen":Vector2(.65,.27),"one_year:tomas":Vector2(.86,.30),
 		}
 		var mark: Vector2 = marks[game.campaign.current().id + ":" + id]
@@ -402,6 +402,31 @@ func run() -> void:
 			var ratio := float(mark[3]) / expected
 			check(ratio >= 0.85 and ratio <= 1.15,
 				"%s:%s height matches room depth perspective (%.3f vs %.3f, ratio=%.2f)" % [sid, pid, float(mark[3]), expected, ratio])
+	# Nobody standing nearer the camera is drawn smaller than a person painted farther back.
+	for sid: String in people_all:
+		if not floors_all.has(sid) or not people_all[sid].has("painted"):
+			continue
+		var layout: Dictionary = floors_all[sid]
+		var depth_curve: Array = layout.depth
+		var standing: Dictionary = layout.get("spawn", {}).duplicate()
+		standing.merge(layout.get("residents", {}))
+		for pid: String in people_all[sid].get("figures", {}):
+			var figure: Array = people_all[sid].figures[pid]
+			standing[pid] = [figure[1], figure[2]]
+		for pid: String in people_all[sid].painted:
+			var top := INF
+			var feet := -INF
+			for point: Array in people_all[sid].painted[pid]:
+				top = minf(top, float(point[1]))
+				feet = maxf(feet, float(point[1]))
+			for who: String in standing:
+				var y := float(standing[who][1])
+				if y <= feet + 0.02:
+					continue
+				var t := clampf((y - float(depth_curve[0])) / (float(depth_curve[2]) - float(depth_curve[0])), 0.0, 1.0)
+				var nearer := lerpf(float(depth_curve[1]), float(depth_curve[3]), t)
+				check(nearer >= (feet - top) * 0.95,
+					"%s: %s standing nearer (feet %.2f, height %.2f) is not smaller than painted %s farther back (height %.2f)" % [sid, who, y, nearer, pid, feet - top])
 	# Standing cast sprites keep complete unclipped heads (never sliced flat at the top edge).
 	for who: String in ["shaw", "ward", "rook", "lyle"]:
 		var head_img: Image = (load("res://assets/illustrated/campaign/walk/%s-idle.webp" % who) as Texture2D).get_image()
