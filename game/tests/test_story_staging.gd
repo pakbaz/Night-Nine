@@ -178,6 +178,31 @@ func lines_cutting_head(head_top: float) -> Array:
 		await frames(1)
 	return cut
 
+## The tight box around the visible pixels of a walking figure, in screen space.
+func figure_box(sprite: Sprite2D) -> Rect2:
+	var image: Image = sprite.texture.get_image()
+	if image.is_compressed():
+		image.decompress()
+	var cell := Vector2i(image.get_width() / sprite.hframes, image.get_height() / sprite.vframes)
+	var origin := Vector2i(sprite.frame % sprite.hframes, sprite.frame / sprite.hframes) * cell
+	var low := Vector2(INF, INF)
+	var high := Vector2(-INF, -INF)
+	for y: int in range(0, cell.y, 2):
+		for x: int in range(0, cell.x, 2):
+			if image.get_pixel(origin.x + x, origin.y + y).a > .25:
+				low = low.min(Vector2(x, y))
+				high = high.max(Vector2(x + 2, y + 2))
+	if low.x == INF:
+		return Rect2()
+	if sprite.flip_h:
+		var left := cell.x - high.x
+		high.x = cell.x - low.x
+		low.x = left
+	var corner: Vector2 = sprite.get_rect().position
+	var a: Vector2 = sprite.get_global_transform() * (corner + low)
+	var b: Vector2 = sprite.get_global_transform() * (corner + high)
+	return Rect2(a, Vector2.ZERO).expand(b)
+
 ## Where the camera aims while a line plays, in art space.
 func aim_during(line_id: String) -> Vector2:
 	game._speak([line_id], Callable())
@@ -666,6 +691,25 @@ func run() -> void:
 		game.root.get_node("InteractionPanel").hide()
 		game.stage.set_focus(-1)
 		check(task.id in game.campaign.data.done and cut.is_empty(), "Luis's face stays in frame while Steve works on %s: %s" % [task.id, cut])
+
+	# The player starts beside the leads, never on one: at the first playable frame of every
+	# walkable room no task marker is drawn over the player's own figure.
+	for scene: Dictionary in game.campaign.content.scenes:
+		await enter(scene.id)
+		var stage: Node = game.stage
+		if stage.get("floor_stage") == null or not stage.walking_view():
+			continue
+		for settle: int in 3:
+			stage._process(2.0)
+		game._process(.001)
+		var walker: String = stage.floor_stage.active_actor
+		var box := figure_box(stage.floor_stage.bodies[walker].sprite).grow(6.0)
+		var covered: Array = []
+		for index: int in game.hotspots.size():
+			var pin: Button = game.hotspots[index]
+			if pin.visible and box.has_point(pin.get_global_rect().get_center()):
+				covered.append(scene.tasks[index].id)
+		check(box.has_area() and covered.is_empty(), "%s: %s starts clear of every task marker %s" % [scene.id, walker, covered])
 
 	var receipt := FileAccess.open(output.path_join("story-staging.json"), FileAccess.WRITE)
 	receipt.store_string(JSON.stringify({"checks": checks, "failures": failures}, "\t") + "\n")
