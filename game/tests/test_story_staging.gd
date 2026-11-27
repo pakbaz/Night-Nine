@@ -155,6 +155,20 @@ func painted_twice_during(line_id: String) -> Array:
 	await frames(2)
 	return twice
 
+## Play one line and report whether two people share the shot face to face: both on screen,
+## one on each side, each looking toward the other.
+func face_to_face_during(line_id: String, first: String, second: String) -> bool:
+	game._speak([line_id], Callable())
+	await frames(3)
+	var a: Node = game.stage.actors.get(first)
+	var b: Node = game.stage.actors.get(second)
+	var facing: bool = a != null and b != null and a.visible and b.visible and a.look_side != 0.0 \
+		and a.look_side == signf(b.position.x - a.position.x) and b.look_side == signf(a.position.x - b.position.x)
+	while game.dialogue_panel.visible:
+		game._next_line()
+	await frames(2)
+	return facing
+
 ## The bounding box of a person painted into the room, in art space.
 func painted_box(id: String) -> Rect2:
 	var outline: PackedVector2Array = game.stage.painted_people[id]
@@ -360,6 +374,17 @@ func run() -> void:
 		await create_timer(.2).timeout
 	check(crossing.is_empty(), "Nobody's figure appears over the fleet painting as it dissolves in %s" % [crossing])
 	check(room_through < .05, "The antenna room does not show through between the ship rising and the fleet (%.2f)" % room_through)
+	# The Prefect is in the antenna room. He stands across the room from the Archivist while
+	# she works, and the two of them argue face to face.
+	await enter("c10_report")
+	var prefect: Dictionary = game.stage.floor_stage.bodies.get("saren", {})
+	check(not prefect.is_empty() and prefect.body.is_visible_in_tree() and prefect.sprite.texture.resource_path.ends_with("/saren-idle.webp"),
+		"Saren stands in the antenna room while the Archivist works")
+	if not prefect.is_empty():
+		var keeper: Vector2 = game.stage.floor_stage.bodies.archivist.body.position
+		check(prefect.left == (keeper.x < prefect.body.position.x), "Saren faces the Archivist across the room")
+	for line_id: String in ["c10_report.in.01", "c10_report.in.02", "c10_report.in.06"]:
+		check(await face_to_face_during(line_id, "saren", "archivist"), "Saren and the Archivist argue face to face: " + line_id)
 
 	# Transitions: rooms fade up from the dark, story paintings dissolve in and out,
 	# and a location's ambience crossfades into the next one.

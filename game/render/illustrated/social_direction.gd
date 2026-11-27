@@ -31,6 +31,7 @@ const PARTNERS := {
 	"c9_choir": {"note":"frank steve"},
 	"c10_town": {"in":"nora carmen","console":"wen shaw","out":"steve agnes"},
 	"c10_live": {"in":"steve stephen"},
+	"c10_report": {"in":"archivist saren", "report":"archivist saren"},
 	"epilogue": {"in":"iris nora","out":"steve nora","neighbors.01":"lyle lyle_copy",
 		"neighbors.02":"pell dale","neighbors.03":"pell dale","bait.01":"agnes_original agnes",
 		"bait.02":"agnes_original agnes","bait.03":"rook rook_copy","bait.04":"rook rook_copy"},
