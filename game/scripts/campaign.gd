@@ -123,6 +123,8 @@ var auto_dialogue := true
 var line_remaining := 0.0
 var active_line := ""
 var reaction_active := false
+## The place name is due but waits for a flashback painting to dissolve back to the room.
+var dateline_waiting := false
 const TEXT_SECONDS_BASE := 1.4
 const TEXT_SECONDS_PER_CHARACTER := 0.055
 const TEXT_SECONDS_MIN := 2.2
@@ -2381,8 +2383,9 @@ func _dialogue_layout(staged: bool) -> void:
 	var scene := campaign.current()
 	var morning := active_line == "postcredits.answer.01"
 	var show_dateline: bool = staged and (active_line in _opening_lines() or morning)
+	dateline_waiting = show_dateline and stage.has_method("showing_flashback") and stage.showing_flashback()
 	actor.visible=not staged and scene.actors.size()>1 and not campaign.data.finished
-	title.get_parent().visible = not staged or show_dateline
+	title.get_parent().visible = not staged or (show_dateline and not dateline_waiting)
 	objective.visible = not staged
 	if show_dateline:
 		title.text = "Sentinel Point, the following morning" if morning else scene.place
@@ -2627,6 +2630,10 @@ func _process(delta: float) -> void:
 	if not is_instance_valid(stage):
 		return
 	_sync_score_mix()
+	if dateline_waiting and dialogue_panel.visible \
+			and not (stage.has_method("showing_flashback") and stage.showing_flashback()):
+		dateline_waiting = false
+		title.get_parent().show()
 	if stage.has_method("tick_walk") and _can_walk():
 		var direction := Vector2(
 			int(Input.is_physical_key_pressed(KEY_D))-int(Input.is_physical_key_pressed(KEY_A)),

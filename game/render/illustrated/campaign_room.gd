@@ -347,6 +347,16 @@ func shown_still() -> String:
 		return story_still.texture.resource_path
 	return ""
 
+## A still marked "flashback" shows another time or place than the room. It counts until it
+## has dissolved away completely, so the room's place name waits for the room itself.
+func showing_flashback() -> bool:
+	if not is_instance_valid(story_still) or not story_still.visible:
+		return false
+	for still: Dictionary in directions.get("stills", []):
+		if str(still.file) == story_still.texture.resource_path:
+			return still.get("flashback", false)
+	return false
+
 func dissolve_still(delta: float) -> void:
 	if not is_instance_valid(story_still) or not story_still.visible:
 		return

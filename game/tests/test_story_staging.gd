@@ -911,6 +911,52 @@ func run() -> void:
 		game.root.get_node("InteractionPanel").hide()
 		game.stage.set_focus(-1)
 		check(task.id in game.campaign.data.done and cut.is_empty(), "Luis's face stays in frame while Steve works on %s: %s" % [task.id, cut])
+	# The place name belongs to the room, not to a memory: while an opening line plays over a
+	# flashback painting (another night, another place) the place label is not drawn over it;
+	# it appears with the room itself.
+	var flashback_stills := {}
+	for scene_id: String in directions_all:
+		for record: Dictionary in directions_all[scene_id].get("stills", []):
+			if record.get("flashback", false):
+				flashback_stills[scene_id + ":" + str(record.file).get_file()] = true
+	for reported: String in ["c2_aquarium:c1_escape-beach-procession.webp", "c3_house:c2_ship-dawn-beach.webp",
+			"c7_gate:c7_gate-planning.webp", "c7_gate:c7_gate-bakers.webp", "c8_lab:p_meeting-sentinel.webp",
+			"c10_town:p_veyr-dying-star.webp"]:
+		check(flashback_stills.has(reported), "The flashback painting %s is marked as one" % reported)
+	for scene: Dictionary in game.campaign.content.scenes:
+		await enter(scene.id)
+		if not game.stage.has_method("shown_still"):
+			continue
+		game._speak(game._opening_lines(), Callable())
+		await frames(1)
+		var over_memory: Array = []
+		var room_seen := false
+		var named_with_room := false
+		while game.dialogue_panel.visible:
+			var line: String = game.active_line
+			var started_at := Time.get_ticks_msec()
+			# Hold the line while a flashback painting dissolves in or out, as the player sees it.
+			while true:
+				var painting: TextureRect = game.stage.get("story_still")
+				var memory: bool = is_instance_valid(painting) and painting.visible \
+					and flashback_stills.has(scene.id + ":" + painting.texture.resource_path.get_file())
+				var named: bool = game.title.get_parent().visible and game.title.text == scene.place
+				if named and memory and line not in over_memory:
+					over_memory.append(line)
+				var room: bool = game.stage.shown_still().is_empty()
+				var settled: bool = not memory or is_equal_approx(painting.modulate.a, 0.0 if room else 1.0)
+				if not settled and Time.get_ticks_msec() - started_at < 2000:
+					await frames(1)
+					continue
+				if room and line in game._opening_lines():
+					room_seen = true
+					named_with_room = named_with_room or named
+				break
+			game._next_line()
+			await frames(1)
+		check(over_memory.is_empty(), "%s: the place name is not drawn over a flashback painting %s" % [scene.id, over_memory])
+		check(named_with_room or not room_seen, "%s: the place name appears with the room itself" % scene.id)
+
 	# The establishing shots of a room never rest on a painted face sliced by the side of the
 	# frame: the opening narration plays as one sequence, and both the opening frame and the
 	# framing each line settles on are checked. (A pan may sweep across a face on its way.)
