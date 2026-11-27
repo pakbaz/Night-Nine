@@ -52,7 +52,7 @@
   "c8_lab": {"figures":{"wen":["wen",0.42,0.65,0.39],"shaw":["shaw",0.705,0.635,0.37,true]}},
   "c8_rig": {"figures":{"shaw":["shaw",0.315,0.675,0.315],"wen":["wen",0.45,0.63,0.27],"ward":["ward",0.685,0.675,0.31,true]}},
   "c9_gallery": {"figures":{"calder":["calder",0.79,0.857,0.475,true]},"remote":{"guard":"Intercom"},"until":{"stephen":"c9_gallery.antenna"}},
-  "c9_wake": {"figures":{"frank":["frank_standing",0.165,0.839,0.438],"helen":["helen_field",0.423,0.719,0.343],"rook":["rook_pajamas",0.765,0.665,0.296,true]}},
+  "c9_wake": {"figures":{"frank":["frank_standing",0.165,0.839,0.633],"helen":["helen_field",0.423,0.719,0.576],"rook":["rook_pajamas",0.765,0.665,0.551,true]}},
   "c9_choir": {"figures":{"calder":["calder",0.32,0.65,0.295],"frank":["frank_standing",0.39,0.67,0.328],"helen":["helen_field",0.64,0.665,0.32,true],"nora":["nora",0.72,0.64,0.285,true]},"after":{"calder":"c9_choir.in.09","frank":"c9_choir.in.09","helen":"c9_choir.in.09","nora":"c9_choir.in.09"}},
   "c10_station": {
     "painted": {

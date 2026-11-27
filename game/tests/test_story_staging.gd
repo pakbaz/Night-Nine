@@ -1,6 +1,9 @@
 extends SceneTree
 ## Story staging: the room shows what the story says is happening at each moment.
 const SOCIAL := preload("res://render/illustrated/social_direction.gd")
+## Crown and chin of each sleeper's head in the row-nine pods, measured on the painting (art space).
+const SLEEPER_HEADS := {"frank": [Vector2(122, 360), Vector2(181, 403)], "helen": [Vector2(612, 371), Vector2(675, 414)],
+	"rook": [Vector2(1010, 362), Vector2(1064, 409)], "agnes": [Vector2(1372, 381), Vector2(1427, 423)]}
 var game: Node
 var failures: Array[String] = []
 var checks := 0
@@ -535,6 +538,16 @@ func run() -> void:
 	await enter("c9_wake")
 	for who: String in ["frank", "helen", "rook", "agnes"]:
 		check(layer_shown("c9_wake-%s-asleep" % who), "Row nine shows %s asleep in the pod" % who)
+	# Whoever stands at a pod to wake its sleeper is drawn at the sleeper's scale. The standing
+	# cast is drawn about seven heads tall, so a person standing in front of a pod has a head
+	# at least the size of the sleeper's painted head, and not much bigger.
+	for who: String in SLEEPER_HEADS:
+		var painted: Array = SLEEPER_HEADS[who]
+		var sleeper_head: float = painted[0].distance_to(painted[1])
+		var stand: Vector2 = game.stage.floor_stage.point(game.stage.floor_directions.approach[who])
+		var standing_head: float = game.stage.floor_stage.height_at(stand) / 7.0
+		check(standing_head >= sleeper_head * .85 and standing_head <= sleeper_head * 1.35,
+			"Someone waking %s stands at the scale of the sleepers in the pods (head %.0f px, sleeper %.0f px)" % [who, standing_head, sleeper_head])
 	await enter("c9_wake", ["c9_wake.frank"])
 	check(not layer_shown("c9_wake-frank-asleep") and layer_shown("c9_wake-helen-asleep"), "Frank's pod opens once he wakes; Helen still sleeps")
 	await enter("c9_gallery")
