@@ -179,7 +179,7 @@ func _run() -> void:
 	await watch_book("01-opening", 2)
 	check(opening_mix_checked, "Check the opening narration and music mix")
 	check(await until(func(): return game.title_card.visible, 3.0), "The prologue card follows the backstory")
-	check(game.score.current_file.ends_with("prologue-bgm.mp3"), "The bay brings in its own music under the card")
+	check(game.score.current_file.ends_with("prologue-bgm-variation.mp3"), "The bay brings in its own music under the card")
 	await wait(1.6)
 	await capture("02-prologue-card")
 	await until(func(): return not game.title_card.visible, 12.0)

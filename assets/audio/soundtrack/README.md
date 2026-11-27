@@ -14,6 +14,10 @@ We decoded every recording as 48 kHz stereo MP3 at 128 kb/s and checked each gam
 
 The original **Epilogue (BGM)** now plays in the epilogue, so all 30 earlier recordings remain in the game alongside Take 2. The short **Epilogue** theme still plays once on the end card after the final radio signal. `tools/ending_reward.py` applies the same routing in both content generators.
 
+## The bay's own music
+
+Since November 26, 2026, **Prologue Background Music (Variation)** plays under the Prologue, *The Bay Is Singing*. Its original MP3 is preserved as `game/assets/audio/music/prologue-bgm-variation.mp3` (175.8 seconds, -15.1 LUFS integrated, -0.3 dBTP true peak). We measured its bar grid at 76 BPM, the same as the Three Nights theme, so the Prologue card still opens on a bar line. Veyr and Sentinel Point keep the Three Nights BGM.
+
 ## First loading screen
 
 **Night Nine Loading Theme (Mysterious Take 1)** is preserved as `site/loading-screen-music.mp3`, outside the game pack so it can play during the download. Its integrated loudness is -16.88 LUFS. The browser uses a fixed 35% gain, with no dynamic volume riding, only on the first successful load per browser and site path. Playback ends when the loading overlay closes and never resumes over the intro narration. Browsers allow sound only after a click, so the landing page's **Play in browser** click starts the music with the download; opening the game page directly waits for the first click or key press.

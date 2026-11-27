@@ -72,9 +72,11 @@ func _check_story_shape(state: NightCampaign) -> void:
 				check(not str(line.text).is_empty() and (str(line.get("narration","")).is_empty()
 					or ResourceLoader.exists(str(line.narration))),"Caption does not depend on recorded narration: "+str(line.text))
 	check(str(books.opening.before) == str(scenes[0].id), "The opening storybook comes first")
+	var measured: Array = music.extras.values()
 	for group: Dictionary in music.chapters.values():
-		for track: Dictionary in group.values():
-			check(float(track.get("bpm", 0)) >= 60.0 and float(track.get("bpm", 0)) <= 120.0, "Bar grid for " + str(track.file))
+		measured.append_array(group.values())
+	for track: Dictionary in measured:
+		check(float(track.get("bpm", 0)) >= 60.0 and float(track.get("bpm", 0)) <= 120.0, "Bar grid for " + str(track.file))
 	for id: String in music.departures:
 		check(_scene_index(state, id) >= 0, "Departure music belongs to a scene " + id)
 	for scene: Dictionary in scenes:
@@ -84,6 +86,9 @@ func _check_story_shape(state: NightCampaign) -> void:
 	check(music.scene_music.c1_flat.file == music.chapters["Chapter 1"].bgm.file and music.scene_music.c1_pier.file == music.chapters["Chapter 1"].theme.file
 		and music.scene_music.c1_escape.file.ends_with("tape-anomaly.mp3") and music.scene_music.c10_live.file == music.title.file,
 		"The Chapter 1 BGM for the morning, its theme at the harbor, Tape Anomaly for the ninth night; the main title for the finale")
+	check(music.scene_music.p_bay.file.ends_with("prologue-bgm-variation.mp3") and music.scene_music.p_bay.role == "bgm"
+		and music.scene_music.p_veyr.file == music.chapters.Prologue.bgm.file and music.scene_music.p_meeting.file == music.chapters.Prologue.bgm.file,
+		"The bay plays the Prologue BGM variation; Veyr and Sentinel Point keep the Three Nights BGM")
 	# The tapes catch two mornings, but in the apartment Nora greets Steve once and leaves once.
 	var greetings := 0
 	var departures := 0

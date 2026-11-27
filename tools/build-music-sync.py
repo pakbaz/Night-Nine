@@ -15,7 +15,8 @@ Music plan (November 23, 2026):
 - SCENE_TRACKS chooses by mood where the default does not fit: the quieter
   BGMs score sneaking, suspicion and quiet work, and the driving or melodic
   themes score escapes and emotional peaks.
-- The three flashback "nights" keep the Three Nights BGM wherever they sit.
+- The three flashback "nights" keep the Three Nights BGM wherever they sit,
+  except the bay itself: the Prologue plays its own BGM variation.
 - Bellwether Bay (Tape Anomaly) scores the ninth night that ends Chapter 1.
 - The main title scores the live broadcast, the ship rising and the last
   departure. Mysterious Take 2 is reserved for the completion credit film.
@@ -40,13 +41,15 @@ RES = 'res://assets/audio/music/'
 
 EXTRA_TRACKS = {
     'tape_anomaly': {'file': RES + 'tape-anomaly.mp3', 'lufs': -19.2, 'title': 'Bellwether Bay (Tape Anomaly)'},
+    'prologue_variation': {'file': RES + 'prologue-bgm-variation.mp3', 'lufs': -15.1,
+                           'title': 'Prologue Background Music (Variation)'},
     'ending_reward': {'file': RES + 'epilogue-bgm.mp3', 'lufs': -16.8},
 }
 
 # Scenes whose music is chosen by hand. Values: (track key, start bar or None).
 # A track key is "Chapter/bgm", "Chapter/theme", "title" or an EXTRA_TRACKS key.
 SCENE_TRACKS = {
-    'p_bay': ('Prologue/bgm', None),
+    'p_bay': ('prologue_variation', None),
     'p_veyr': ('Prologue/bgm', None),
     'p_meeting': ('Prologue/bgm', None),
     # The morning tape test at home, the busy Sunday harbor on the theme, the uneasy ninth night.

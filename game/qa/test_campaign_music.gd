@@ -239,7 +239,7 @@ func run() -> void:
 	for name: String in DirAccess.get_files_at("res://assets/audio/music"):
 		if name.ends_with(".mp3"):
 			mp3s += 1
-	check(recordings.size()==mp3s and mp3s==31, "Hear all 31 supplied in-game recordings")
+	check(recordings.size()==mp3s and mp3s==32, "Hear all 32 supplied in-game recordings")
 	var file := FileAccess.open(report_dir.path_join("score-route.json"),FileAccess.WRITE)
 	file.store_string(JSON.stringify({"checks":checks,"failures":errors,"stream_count":recordings.size(),"recordings":recordings.keys(),"audio_driver":AudioServer.get_driver_name()},"  ")+"\n")
 	file.close()
