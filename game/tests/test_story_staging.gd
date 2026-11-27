@@ -385,6 +385,17 @@ func run() -> void:
 		check(prefect.left == (keeper.x < prefect.body.position.x), "Saren faces the Archivist across the room")
 	for line_id: String in ["c10_report.in.01", "c10_report.in.02", "c10_report.in.06"]:
 		check(await face_to_face_during(line_id, "saren", "archivist"), "Saren and the Archivist argue face to face: " + line_id)
+	# Agnes is ninety-one. Standing with June and Tomás in the archive she is a small, elderly
+	# woman, clearly shorter than the Sheriff and the young man beside her.
+	await enter("c3_archive", ["c3_archive.paper", "c3_archive.power"])
+	game.stage._process(.1)
+	var statures := {}
+	for who: String in ["agnes", "calder", "tomas"]:
+		var standing: Sprite2D = game.stage.talk_figures.get(who)
+		if standing != null and standing.is_visible_in_tree():
+			statures[who] = figure_box(standing).size.y
+	check(statures.size() == 3 and statures.agnes <= statures.calder * .88 and statures.agnes <= statures.tomas * .88,
+		"Agnes stands clearly shorter than June and Tomás in the archive %s" % statures)
 
 	# Transitions: rooms fade up from the dark, story paintings dissolve in and out,
 	# and a location's ambience crossfades into the next one.
