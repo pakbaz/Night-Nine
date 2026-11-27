@@ -636,7 +636,7 @@ func show_cast(id: String) -> void:
 	social_pair = SOCIAL.dialogue_pair(room_id,active_id,id)
 	var scanning := is_instance_valid(chair_scan) and chair_scan.visible
 	if scanning:
-		social_pair = PackedStringArray(["iris","lyle_copy"])
+		social_pair = PackedStringArray(["lyle_copy","iris"])
 	if active_id == "c9_gallery.out.03" and "c9_gallery.link" in done:
 		social_pair = PackedStringArray(["steve","nora"])
 	if social_pair.size() == 2:
@@ -678,8 +678,9 @@ func show_cast(id: String) -> void:
 				var left := member == social_pair[0]
 				var mark := Vector2(ART.x * (.305 if left else .70), float(person.get_meta("solo_eyes").y))
 				if scanning:
-					# Keep the intercom column (x=0.51) and scan chair completely clear.
-					mark = ART * (Vector2(.15,.48) if left else Vector2(.33,.45))
+					# Lyle and Iris wait together between Nora's capsule and the speaker column:
+					# the sleeper, the intercom (x=0.51), the scan chair and the Objects button stay clear.
+					mark = ART * (Vector2(.322,.45) if left else Vector2(.431,.48))
 				cast_marks[member] = mark
 				person.take_mark(mark,1.0 if left else -1.0,"speaker" if member == id else "listener",clock)
 			else:

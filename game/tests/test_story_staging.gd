@@ -260,6 +260,28 @@ func run() -> void:
 	check(layer_shown("c2_ship-attendant-chair"), "The attendant stands at the scan chair with a slate")
 	check(not layer_shown("c2_ship-attendant-column") and not layer_shown("c2_ship-hatch-flooding"), "The attendant is painted in one place at a time")
 	check(not occluders_show("c2_ship-attendant-column"), "The speaker column shows no attendant while they are at the chair")
+	# While Steve is strapped in, the two escorts wait together between Nora's capsule and the
+	# speaker column. Their portraits leave the sleeper, the leads' markers and the Objects button clear.
+	# (The floor hatch, which stays locked until they leave, is still behind Lyle: clearing it too
+	# needs the pair painted into the room at its own scale.)
+	game._process(.001)
+	await frames(1)
+	var escorts: Array = ["iris", "lyle_copy"].map(func(id: String): return game.stage.actors.get(id))
+	var on_escort := func(point: Vector2) -> bool:
+		return escorts.any(func(person: Variant): return is_instance_valid(person) and person.hit(point))
+	check(escorts.all(func(person: Variant): return is_instance_valid(person) and person.is_visible_in_tree()),
+		"Both escorts wait in the scan chamber while Steve is strapped in")
+	for lead: String in ["c2_ship.command", "c2_ship.escape", "c2_ship.nora"]:
+		var spot: Control = game.hotspots[game.campaign.current().tasks.find(game.campaign.task_index[lead])]
+		check(spot.visible and not on_escort.call(spot.position + spot.size * .5), "No escort stands over the marker for " + lead)
+	check(not [Vector2(150, 480), Vector2(165, 495), Vector2(172, 512)].any(func(face: Vector2): return on_escort.call(game.stage.distant.to_global(face))),
+		"Nora's sleeping face stays in view in her capsule")
+	var objects_button: Rect2 = game.object_list.get_global_rect()
+	var button_on_escort := false
+	for x: int in range(int(objects_button.position.x), int(objects_button.end.x), 6):
+		for y: int in range(int(objects_button.position.y), int(objects_button.end.y), 6):
+			button_on_escort = button_on_escort or on_escort.call(Vector2(x, y))
+	check(game.object_list.visible and not button_on_escort, "The Objects button is not drawn over an escort")
 	game._speak(["c2_ship.command.lead.06"], Callable())
 	await frames(3)
 	var scanner: ColorRect = game.stage.hull.get_node_or_null("ChairScan")
