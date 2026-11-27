@@ -106,7 +106,9 @@ func configure(room: Dictionary, roles: Array, plate: Texture2D, wide_file: Stri
 			var pose_file := WALK + pose_prefix + "-" + kind + ".webp"
 			if ResourceLoader.exists(pose_file):
 				poses[kind] = load(pose_file)
-		bodies[id] = {"body":body,"sprite":sprite,"shadow":shadow,"sheet":sheet,"idle":idle,"poses":poses,"left":false,"facing":"side"}
+		bodies[id] = {"body":body,"sprite":sprite,"shadow":shadow,"sheet":sheet,"idle":idle,"poses":poses,
+			# A mark may name the way someone faces: [x, y, true] looks screen-left.
+			"left":marks[id].size() > 2 and bool(marks[id][2]),"facing":"side"}
 		draw_body(id,false)
 	for layer: Dictionary in room.get("occluders",[]):
 		var occluder := Polygon2D.new()

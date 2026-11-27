@@ -25,7 +25,7 @@
     "figures":{
       "calder":["calder",0.59,0.69,0.47,true],
       "tomas":["tomas",0.745,0.69,0.47],
-      "agnes":["agnes",0.425,0.69,0.47]
+      "agnes":["agnes",0.425,0.69,0.40]
     },
     "after":{"agnes":"c3_archive.power.lead.03"},
     "behind":[[0.0,0.542],[0.35,0.538],[0.455,0.538],[0.482,0.528],[0.495,0.505],[0.515,0.505],[0.528,0.528],[0.555,0.538],[0.742,0.542],[0.752,0.530],[0.768,0.500],[0.768,0.405],[0.785,0.376],[0.808,0.376],[0.822,0.408],[0.842,0.408],[0.855,0.340],[0.885,0.306],[0.928,0.306],[0.955,0.350],[0.966,0.430],[0.960,0.520],[0.972,0.545],[1.0,0.548],[1.0,1.0],[0.0,1.0]]
@@ -52,7 +52,7 @@
   "c8_lab": {"figures":{"wen":["wen",0.42,0.65,0.39],"shaw":["shaw",0.705,0.635,0.37,true]}},
   "c8_rig": {"figures":{"shaw":["shaw",0.315,0.675,0.315],"wen":["wen",0.45,0.63,0.27],"ward":["ward",0.685,0.675,0.31,true]}},
   "c9_gallery": {"figures":{"calder":["calder",0.79,0.857,0.475,true]},"remote":{"guard":"Intercom"},"until":{"stephen":"c9_gallery.antenna"}},
-  "c9_wake": {"figures":{"frank":["frank_standing",0.165,0.839,0.438],"helen":["helen_field",0.423,0.719,0.343],"rook":["rook_pajamas",0.765,0.665,0.296,true]}},
+  "c9_wake": {"figures":{"frank":["frank_standing",0.165,0.839,0.633],"helen":["helen_field",0.423,0.719,0.576],"rook":["rook_pajamas",0.765,0.665,0.551,true]}},
   "c9_choir": {"figures":{"calder":["calder",0.32,0.65,0.295],"frank":["frank_standing",0.39,0.67,0.328],"helen":["helen_field",0.64,0.665,0.32,true],"nora":["nora",0.72,0.64,0.285,true]},"after":{"calder":"c9_choir.in.09","frank":"c9_choir.in.09","helen":"c9_choir.in.09","nora":"c9_choir.in.09"}},
   "c10_station": {
     "painted": {

@@ -347,6 +347,16 @@ func shown_still() -> String:
 		return story_still.texture.resource_path
 	return ""
 
+## A still marked "flashback" shows another time or place than the room. It counts until it
+## has dissolved away completely, so the room's place name waits for the room itself.
+func showing_flashback() -> bool:
+	if not is_instance_valid(story_still) or not story_still.visible:
+		return false
+	for still: Dictionary in directions.get("stills", []):
+		if str(still.file) == story_still.texture.resource_path:
+			return still.get("flashback", false)
+	return false
+
 func dissolve_still(delta: float) -> void:
 	if not is_instance_valid(story_still) or not story_still.visible:
 		return
@@ -568,12 +578,40 @@ func painted_head(id: String) -> Rect2:
 
 ## Painted faces are never cut by the top of the frame: hold the camera low enough
 ## that every painted head stays in view. The painting moves .87 as far as the camera.
-func keep_painted_heads(target: Vector2, magnitude: float) -> Vector2:
+## While a room is being established, the camera also slides sideways the least distance
+## that leaves every painted face whole, either inside the frame or out of it.
+func keep_painted_heads(target: Vector2, magnitude: float, sideways: bool = false) -> Vector2:
 	var plane_scale := 1.0+(magnitude-1.0)*.87
 	for id: String in painted_people:
 		var top := painted_head(id).position.y
 		target.y = minf(target.y,HALF.y+(top-4.0+HALF.y/plane_scale-HALF.y)/.87)
+	if sideways:
+		target.x = whole_faces_aim(target.x,plane_scale,magnitude)
 	return target
+
+## The camera aim nearest to `aim_x` at which neither side of the frame falls across a painted
+## face (with a little air), within the range that keeps the painting filling the frame.
+func whole_faces_aim(aim_x: float, plane_scale: float, magnitude: float) -> float:
+	var half := HALF.x/plane_scale
+	var reach := HALF.x*(1.0-1.0/magnitude)
+	var blocked: Array[Vector2] = []
+	for id: String in painted_people:
+		if painted_in_room(id):
+			var head := painted_head(id)
+			for edge: float in [-half,half]:
+				blocked.append(Vector2(HALF.x+(head.position.x-16.0-edge-HALF.x)/.87,HALF.x+(head.end.x+16.0-edge-HALF.x)/.87))
+	var clear := func(x: float) -> bool:
+		return x >= HALF.x-reach-.01 and x <= HALF.x+reach+.01 and blocked.all(func(span: Vector2): return x <= span.x or x >= span.y)
+	if clear.call(aim_x):
+		return aim_x
+	var best := aim_x
+	var shift := INF
+	for span: Vector2 in blocked:
+		for x: float in [span.x,span.y,HALF.x-reach,HALF.x+reach]:
+			if clear.call(x) and absf(x-aim_x) < shift:
+				best = x
+				shift = absf(x-aim_x)
+	return best
 
 ## A person the story still hides, or who has left, is not in the scene at all.
 func actor_present(id: String) -> bool:
@@ -626,13 +664,17 @@ func get_performer(id: String) -> Node2D:
 	return performer
 
 func show_cast(id: String) -> void:
+	# Once the departure has begun the room dissolves away with the people already in it;
+	# nobody steps in over the departure painting.
+	if cut_progress >= 0.0 and active_id.is_empty():
+		return
 	var visible_ids: Array[String] = []
 	if not id.is_empty() and actor_visible(id):
 		visible_ids.append(id)
 	social_pair = SOCIAL.dialogue_pair(room_id,active_id,id)
 	var scanning := is_instance_valid(chair_scan) and chair_scan.visible
 	if scanning:
-		social_pair = PackedStringArray(["iris","lyle_copy"])
+		social_pair = PackedStringArray(["lyle_copy","iris"])
 	if active_id == "c9_gallery.out.03" and "c9_gallery.link" in done:
 		social_pair = PackedStringArray(["steve","nora"])
 	if social_pair.size() == 2:
@@ -674,8 +716,9 @@ func show_cast(id: String) -> void:
 				var left := member == social_pair[0]
 				var mark := Vector2(ART.x * (.305 if left else .70), float(person.get_meta("solo_eyes").y))
 				if scanning:
-					# Keep the intercom column (x=0.51) and scan chair completely clear.
-					mark = ART * (Vector2(.15,.48) if left else Vector2(.33,.45))
+					# Lyle and Iris wait together between Nora's capsule and the speaker column:
+					# the sleeper, the intercom (x=0.51), the scan chair and the Objects button stay clear.
+					mark = ART * (Vector2(.322,.45) if left else Vector2(.431,.48))
 				cast_marks[member] = mark
 				person.take_mark(mark,1.0 if left else -1.0,"speaker" if member == id else "listener",clock)
 			else:
@@ -828,7 +871,7 @@ func begin_dialogue(line: Dictionary, voice: AudioStreamPlayer, _take: Dictionar
 			aim=camera_goal.clamp(HALF-bounds,HALF+bounds)
 			transform_planes()
 	if shot_type=="arrival":
-		aim=keep_painted_heads(HALF.lerp(opening,.22),1.18)
+		aim=keep_painted_heads(HALF.lerp(opening,.22),1.18,true)
 		zoom=1.18
 	if active_id in SOCIAL.WIDE_LINES and social_pair.size() == 2 and floor_stage:
 		var a: Dictionary = floor_stage.bodies.get(social_pair[0],{})
@@ -889,7 +932,6 @@ func show_departure_art(path: String) -> void:
 
 func begin_departure_cut() -> void:
 	cut_progress=0.0
-	show_cast("")
 	var authored_departure: String=scene_record.get("departure_art","")
 	if not authored_departure.is_empty():
 		show_departure_art(authored_departure)
@@ -914,8 +956,10 @@ func begin_departure_cut() -> void:
 		layer.modulate.a = 0.0
 		chapter_frames.append(layer)
 	if not chapter_frames.is_empty():
-		if is_instance_valid(story_still) and story_still.texture == chapter_frames[0].texture:
-			still_target = 1.0
+		# A story painting on screen holds under the departure painting until that has
+		# dissolved in over it, so the room never shows through between the two.
+		if is_instance_valid(story_still) and story_still.visible:
+			still_target = 1.0 if story_still.texture == chapter_frames[0].texture else story_still.modulate.a
 		if chapter_frames.size()==2:
 			set_keyframe_quality()
 		if film_book.is_empty():
@@ -1052,7 +1096,8 @@ func _process(delta: float) -> void:
 		if creatures[id].visible:
 			creatures[id].animate(clock)
 	if str(dialogue_shot.get("type","")) != "detail":
-		target = keep_painted_heads(target,magnitude)
+		var establishing: bool = cinematic and (str(dialogue_shot.get("type","")) == "arrival" or active_id in scene_record.get("context",[]))
+		target = keep_painted_heads(target,magnitude,establishing)
 	move_camera(delta,target,magnitude)
 	if background:
 		# Clip tiny alignment differences at the prop's feathered perimeter; each

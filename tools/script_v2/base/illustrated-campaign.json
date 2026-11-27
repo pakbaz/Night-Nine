@@ -245,7 +245,8 @@
         "lines": [
           "c2_aquarium.in.01",
           "c2_aquarium.in.02"
-        ]
+        ],
+        "flashback": true
       },
       {
         "file": "res://assets/illustrated/campaign/stills/c2_aquarium-pump-room.webp",
@@ -433,7 +434,8 @@
         "file": "res://assets/illustrated/campaign/stills/c2_ship-dawn-beach.webp",
         "lines": [
           "c3_house.ctx.01"
-        ]
+        ],
+        "flashback": true
       }
     ],
     "bridge": "res://assets/illustrated/campaign/bridges/c3_house-c3_archive.webp"
@@ -1043,14 +1045,16 @@
           "c7_gate.in.04",
           "c7_gate.in.05",
           "c7_gate.in.06"
-        ]
+        ],
+        "flashback": true
       },
       {
         "file": "res://assets/illustrated/campaign/stills/c7_gate-bakers.webp",
         "lines": [
           "c7_gate.in.07",
           "c7_gate.recap.03"
-        ]
+        ],
+        "flashback": true
       },
       {
         "file": "res://assets/illustrated/campaign/stills/c7_gate-under-desk.webp",
@@ -1197,7 +1201,8 @@
           "c8_lab.notebook.01",
           "c8_lab.notebook.02",
           "c8_lab.notebook.find"
-        ]
+        ],
+        "flashback": true
       },
       {
         "file": "res://assets/illustrated/campaign/stills/c8_lab-spliced-voice.webp",
@@ -1641,7 +1646,8 @@
         "file": "res://assets/illustrated/campaign/stills/p_veyr-dying-star.webp",
         "lines": [
           "c10_town.in.10"
-        ]
+        ],
+        "flashback": true
       }
     ]
   },

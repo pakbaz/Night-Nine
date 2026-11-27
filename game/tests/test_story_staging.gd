@@ -1,6 +1,9 @@
 extends SceneTree
 ## Story staging: the room shows what the story says is happening at each moment.
 const SOCIAL := preload("res://render/illustrated/social_direction.gd")
+## Crown and chin of each sleeper's head in the row-nine pods, measured on the painting (art space).
+const SLEEPER_HEADS := {"frank": [Vector2(122, 360), Vector2(181, 403)], "helen": [Vector2(612, 371), Vector2(675, 414)],
+	"rook": [Vector2(1010, 362), Vector2(1064, 409)], "agnes": [Vector2(1372, 381), Vector2(1427, 423)]}
 var game: Node
 var failures: Array[String] = []
 var checks := 0
@@ -155,6 +158,20 @@ func painted_twice_during(line_id: String) -> Array:
 	await frames(2)
 	return twice
 
+## Play one line and report whether two people share the shot face to face: both on screen,
+## one on each side, each looking toward the other.
+func face_to_face_during(line_id: String, first: String, second: String) -> bool:
+	game._speak([line_id], Callable())
+	await frames(3)
+	var a: Node = game.stage.actors.get(first)
+	var b: Node = game.stage.actors.get(second)
+	var facing: bool = a != null and b != null and a.visible and b.visible and a.look_side != 0.0 \
+		and a.look_side == signf(b.position.x - a.position.x) and b.look_side == signf(a.position.x - b.position.x)
+	while game.dialogue_panel.visible:
+		game._next_line()
+	await frames(2)
+	return facing
+
 ## The bounding box of a person painted into the room, in art space.
 func painted_box(id: String) -> Rect2:
 	var outline: PackedVector2Array = game.stage.painted_people[id]
@@ -178,6 +195,46 @@ func lines_cutting_head(head_top: float) -> Array:
 		await frames(1)
 	return cut
 
+## The tight box around the visible pixels of a walking figure, in screen space.
+func figure_box(sprite: Sprite2D) -> Rect2:
+	var image: Image = sprite.texture.get_image()
+	if image.is_compressed():
+		image.decompress()
+	var cell := Vector2i(image.get_width() / sprite.hframes, image.get_height() / sprite.vframes)
+	var origin := Vector2i(sprite.frame % sprite.hframes, sprite.frame / sprite.hframes) * cell
+	var low := Vector2(INF, INF)
+	var high := Vector2(-INF, -INF)
+	for y: int in range(0, cell.y, 2):
+		for x: int in range(0, cell.x, 2):
+			if image.get_pixel(origin.x + x, origin.y + y).a > .25:
+				low = low.min(Vector2(x, y))
+				high = high.max(Vector2(x + 2, y + 2))
+	if low.x == INF:
+		return Rect2()
+	if sprite.flip_h:
+		var left := cell.x - high.x
+		high.x = cell.x - low.x
+		low.x = left
+	var corner: Vector2 = sprite.get_rect().position
+	var a: Vector2 = sprite.get_global_transform() * (corner + low)
+	var b: Vector2 = sprite.get_global_transform() * (corner + high)
+	return Rect2(a, Vector2.ZERO).expand(b)
+
+## Painted people whose head is cut by the left or right edge of the frame, measured on the painting.
+func faces_cut_at_sides() -> Array:
+	var stage: Node = game.stage
+	var view: Rect2 = stage.frame.get_global_rect()
+	var left: float = stage.distant.to_local(view.position).x
+	var right: float = stage.distant.to_local(view.end).x
+	var cut: Array = []
+	for id: String in stage.painted_people:
+		if not stage.painted_in_room(id):
+			continue
+		var head: Rect2 = stage.painted_head(id)
+		if (head.position.x < left and head.end.x > left) or (head.position.x < right and head.end.x > right):
+			cut.append(id)
+	return cut
+
 ## Where the camera aims while a line plays, in art space.
 func aim_during(line_id: String) -> Vector2:
 	game._speak([line_id], Callable())
@@ -187,6 +244,116 @@ func aim_during(line_id: String) -> Vector2:
 		game._next_line()
 	await frames(2)
 	return goal
+
+## The lines a caption wraps into on screen, laid out at its own width with its own font.
+func wrapped_lines(label: Label) -> PackedStringArray:
+	var paragraph := TextParagraph.new()
+	paragraph.break_flags = TextServer.BREAK_MANDATORY | TextServer.BREAK_WORD_BOUND | TextServer.BREAK_ADAPTIVE
+	paragraph.add_string(label.text, label.get_theme_font("font"), label.get_theme_font_size("font_size"))
+	paragraph.width = label.size.x
+	var lines := PackedStringArray()
+	for i: int in paragraph.get_line_count():
+		var span: Vector2i = paragraph.get_line_range(i)
+		lines.append(label.text.substr(span.x, span.y - span.x).strip_edges())
+	return lines
+
+## WCAG relative luminance of a colour.
+func luminance(color: Color) -> float:
+	var channel := func(value: float) -> float:
+		return value / 12.92 if value <= .04045 else pow((value + .055) / 1.055, 2.4)
+	return .2126 * channel.call(color.r) + .7152 * channel.call(color.g) + .0722 * channel.call(color.b)
+
+## How dark the gradient shades drawn under `over` make a point, from 0 (clear) to 1 (black).
+func shade_at(book: Control, over: Control, point: Vector2) -> float:
+	var clear := 1.0
+	for node: Node in book.get_children():
+		if node == over:
+			break
+		var shade := node as TextureRect
+		if shade == null or not shade.visible or not shade.texture is GradientTexture2D:
+			continue
+		var fill: GradientTexture2D = shade.texture
+		var area := shade.get_global_rect()
+		if not area.has_point(point):
+			continue
+		var uv := (point - area.position) / area.size
+		var axis: Vector2 = fill.fill_to - fill.fill_from
+		var t: float = uv.distance_to(fill.fill_from) / axis.length() if fill.fill == GradientTexture2D.FILL_RADIAL \
+			else (uv - fill.fill_from).dot(axis) / axis.length_squared()
+		clear *= 1.0 - fill.gradient.sample(clampf(t, 0.0, 1.0)).a * shade.modulate.a * shade.self_modulate.a
+	return 1.0 - clear
+
+## The screen box of a region of a storybook picture, given as fractions of the picture.
+func picture_box(picture: TextureRect, region: Array) -> Rect2:
+	var corner := picture.global_position + Vector2(region[0], region[1]) * picture.size
+	return Rect2(corner, Vector2(region[2] - region[0], region[3] - region[1]) * picture.size)
+
+## Storybooks: captions wrap evenly, the book's title reads over any picture, and every panel
+## keeps what it is about (faces, the things the captions name) whole, in frame and clear of the
+## captions and the title for the whole of its camera move. A subject the painting itself runs
+## off may touch that edge of the picture, but the camera never crops it further. A "whole"
+## region (a face at the side, the title logo) is either entirely in the frame or entirely out.
+func check_storybooks() -> void:
+	var book_ui: Control = load("res://ui/storybook.gd").new()
+	root.add_child(book_ui)
+	var books: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://content/storybook.json")).books
+	var view := Rect2(Vector2.ZERO, book_ui.size)
+	var annotated := 0
+	for name: String in books:
+		var book: Dictionary = books[name]
+		book_ui.play(book, null)
+		await frames(2)
+		var title: Label = book_ui.heading
+		var font: Font = title.get_theme_font("font")
+		var title_size := Vector2(font.get_string_size(title.text.to_upper(), HORIZONTAL_ALIGNMENT_LEFT, -1,
+			title.get_theme_font_size("font_size")).x, title.get_line_height())
+		var title_box := Rect2(title.global_position, title_size)
+		var worst := INF
+		for gx: int in 9:
+			for gy: int in 3:
+				var behind := 1.0 - shade_at(book_ui, title, title_box.position + title_box.size * Vector2(gx / 8.0, gy / 2.0))
+				worst = minf(worst, (luminance(title.get_theme_color("font_color")) + .05) / (luminance(Color(behind, behind, behind)) + .05))
+		check(worst >= 4.5, "Storybook %s: the title reads at 4.5:1 or better even over a white picture (%.1f:1)" % [name, worst])
+		for index: int in book.panels.size():
+			var panel: Dictionary = book.panels[index]
+			book_ui._enter(index)
+			await frames(2)
+			var stranded: Array = []
+			for caption: Label in book_ui.captions:
+				var lines := wrapped_lines(caption)
+				if lines.size() > 1 and lines[-1].split(" ", false).size() < 2:
+					stranded.append(lines[-1])
+			check(stranded.is_empty(), "Storybook %s panel %d: no caption leaves one word alone on its last line %s" % [name, index + 1, stranded])
+			if not panel.has("keep") and not panel.has("whole"):
+				continue
+			annotated += 1
+			var slot: int = book_ui.front
+			var picture: TextureRect = book_ui.layers[slot]
+			var begin: float = book_ui._time_of(float(panel.bar))
+			var finish: float = maxf(begin + 1.0, book_ui.end_time - 3.2) if index + 1 >= book.panels.size() \
+				else book_ui._time_of(float(book.panels[index + 1].bar)) + book_ui.CROSSFADE
+			var problems: Array = []
+			for step: int in 17:
+				book_ui._frame(slot, lerpf(begin, finish, step / 16.0))
+				var art := Rect2(picture.global_position, picture.size)
+				for region: Array in panel.get("keep", []):
+					var box := picture_box(picture, region)
+					var room := view.grow(-4.0)
+					# Only the painting's own edge may cut a subject that runs off it.
+					var cut: bool = (box.position.x < room.position.x and (region[0] > .005 or art.position.x < -.5)) \
+						or (box.position.y < room.position.y and (region[1] > .005 or art.position.y < -.5)) \
+						or (box.end.x > room.end.x and (region[2] < .995 or art.end.x > view.end.x + .5)) \
+						or (box.end.y > room.end.y and (region[3] < .995 or art.end.y > view.end.y + .5))
+					var covered: bool = box.intersects(title_box.grow(8.0)) or book_ui.captions.any(func(caption: Label): return box.intersects(caption.get_global_rect()))
+					if cut or covered:
+						problems.append("%s %s at %d/16" % [region, "cut" if cut else "covered", step])
+				for region: Array in panel.get("whole", []):
+					var box := picture_box(picture, region)
+					if box.intersects(view) and not view.encloses(box):
+						problems.append("%s sliced at %d/16" % [region, step])
+			check(problems.is_empty(), "Storybook %s panel %d keeps its subject whole and clear of the words %s" % [name, index + 1, problems.slice(0, 3)])
+	check(annotated >= 30, "Storybook panels say what they are about (%d marked)" % annotated)
+	book_ui.queue_free()
 
 func run() -> void:
 	var output := OS.get_environment("NIGHT_NINE_QA_DIR")
@@ -218,6 +385,28 @@ func run() -> void:
 	check(layer_shown("c2_ship-attendant-chair"), "The attendant stands at the scan chair with a slate")
 	check(not layer_shown("c2_ship-attendant-column") and not layer_shown("c2_ship-hatch-flooding"), "The attendant is painted in one place at a time")
 	check(not occluders_show("c2_ship-attendant-column"), "The speaker column shows no attendant while they are at the chair")
+	# While Steve is strapped in, the two escorts wait together between Nora's capsule and the
+	# speaker column. Their portraits leave the sleeper, the leads' markers and the Objects button clear.
+	# (The floor hatch, which stays locked until they leave, is still behind Lyle: clearing it too
+	# needs the pair painted into the room at its own scale.)
+	game._process(.001)
+	await frames(1)
+	var escorts: Array = ["iris", "lyle_copy"].map(func(id: String): return game.stage.actors.get(id))
+	var on_escort := func(point: Vector2) -> bool:
+		return escorts.any(func(person: Variant): return is_instance_valid(person) and person.hit(point))
+	check(escorts.all(func(person: Variant): return is_instance_valid(person) and person.is_visible_in_tree()),
+		"Both escorts wait in the scan chamber while Steve is strapped in")
+	for lead: String in ["c2_ship.command", "c2_ship.escape", "c2_ship.nora"]:
+		var spot: Control = game.hotspots[game.campaign.current().tasks.find(game.campaign.task_index[lead])]
+		check(spot.visible and not on_escort.call(spot.position + spot.size * .5), "No escort stands over the marker for " + lead)
+	check(not [Vector2(150, 480), Vector2(165, 495), Vector2(172, 512)].any(func(face: Vector2): return on_escort.call(game.stage.distant.to_global(face))),
+		"Nora's sleeping face stays in view in her capsule")
+	var objects_button: Rect2 = game.object_list.get_global_rect()
+	var button_on_escort := false
+	for x: int in range(int(objects_button.position.x), int(objects_button.end.x), 6):
+		for y: int in range(int(objects_button.position.y), int(objects_button.end.y), 6):
+			button_on_escort = button_on_escort or on_escort.call(Vector2(x, y))
+	check(game.object_list.visible and not button_on_escort, "The Objects button is not drawn over an escort")
 	game._speak(["c2_ship.command.lead.06"], Callable())
 	await frames(3)
 	var scanner: ColorRect = game.stage.hull.get_node_or_null("ChairScan")
@@ -311,6 +500,52 @@ func run() -> void:
 		if is_instance_valid(game.stage.chapter_film):
 			var film: ShaderMaterial = game.stage.chapter_film.action
 			check(film.get_shader_parameter("warp") == false, "The %s film adds light, not distortion" % scene_id)
+
+	# Nobody's figure appears over a departure painting. Leaving the antenna room, the painting
+	# of the ship rising holds until the fleet painting has dissolved in over it, so neither a
+	# portrait nor the room behind it shows through.
+	await enter("c10_report")
+	game._speak(["c10_report.out.06"], game._end_departure_dialogue)
+	await create_timer(.9).timeout
+	var rising: TextureRect = game.stage.story_still
+	check(is_instance_valid(rising) and rising.modulate.a > .99, "The ship rises over the pier on the last line of the antenna room")
+	game._next_line()
+	check(game.light_remaining > 0.0 and not game.stage.chapter_frames.is_empty(), "Leaving the antenna room starts the fleet painting")
+	var crossing: Array = []
+	var room_through := 0.0
+	for sample: int in 8:
+		for id: String in game.stage.actors:
+			var person: Node = game.stage.actors[id]
+			if is_instance_valid(person) and person.is_visible_in_tree() and id not in crossing:
+				crossing.append(id)
+		if is_instance_valid(rising) and not game.stage.chapter_frames.is_empty():
+			var fleet: TextureRect = game.stage.chapter_frames[0]
+			room_through = maxf(room_through, (1.0 - fleet.modulate.a) * (1.0 - (rising.modulate.a if rising.visible else 0.0)))
+		await create_timer(.2).timeout
+	check(crossing.is_empty(), "Nobody's figure appears over the fleet painting as it dissolves in %s" % [crossing])
+	check(room_through < .05, "The antenna room does not show through between the ship rising and the fleet (%.2f)" % room_through)
+	# The Prefect is in the antenna room. He stands across the room from the Archivist while
+	# she works, and the two of them argue face to face.
+	await enter("c10_report")
+	var prefect: Dictionary = game.stage.floor_stage.bodies.get("saren", {})
+	check(not prefect.is_empty() and prefect.body.is_visible_in_tree() and prefect.sprite.texture.resource_path.ends_with("/saren-idle.webp"),
+		"Saren stands in the antenna room while the Archivist works")
+	if not prefect.is_empty():
+		var keeper: Vector2 = game.stage.floor_stage.bodies.archivist.body.position
+		check(prefect.left == (keeper.x < prefect.body.position.x), "Saren faces the Archivist across the room")
+	for line_id: String in ["c10_report.in.01", "c10_report.in.02", "c10_report.in.06"]:
+		check(await face_to_face_during(line_id, "saren", "archivist"), "Saren and the Archivist argue face to face: " + line_id)
+	# Agnes is ninety-one. Standing with June and Tomás in the archive she is a small, elderly
+	# woman, clearly shorter than the Sheriff and the young man beside her.
+	await enter("c3_archive", ["c3_archive.paper", "c3_archive.power"])
+	game.stage._process(.1)
+	var statures := {}
+	for who: String in ["agnes", "calder", "tomas"]:
+		var standing: Sprite2D = game.stage.talk_figures.get(who)
+		if standing != null and standing.is_visible_in_tree():
+			statures[who] = figure_box(standing).size.y
+	check(statures.size() == 3 and statures.agnes <= statures.calder * .88 and statures.agnes <= statures.tomas * .88,
+		"Agnes stands clearly shorter than June and Tomás in the archive %s" % statures)
 
 	# Transitions: rooms fade up from the dark, story paintings dissolve in and out,
 	# and a location's ambience crossfades into the next one.
@@ -479,6 +714,16 @@ func run() -> void:
 	await enter("c9_wake")
 	for who: String in ["frank", "helen", "rook", "agnes"]:
 		check(layer_shown("c9_wake-%s-asleep" % who), "Row nine shows %s asleep in the pod" % who)
+	# Whoever stands at a pod to wake its sleeper is drawn at the sleeper's scale. The standing
+	# cast is drawn about seven heads tall, so a person standing in front of a pod has a head
+	# at least the size of the sleeper's painted head, and not much bigger.
+	for who: String in SLEEPER_HEADS:
+		var painted: Array = SLEEPER_HEADS[who]
+		var sleeper_head: float = painted[0].distance_to(painted[1])
+		var stand: Vector2 = game.stage.floor_stage.point(game.stage.floor_directions.approach[who])
+		var standing_head: float = game.stage.floor_stage.height_at(stand) / 7.0
+		check(standing_head >= sleeper_head * .85 and standing_head <= sleeper_head * 1.35,
+			"Someone waking %s stands at the scale of the sleepers in the pods (head %.0f px, sleeper %.0f px)" % [who, standing_head, sleeper_head])
 	await enter("c9_wake", ["c9_wake.frank"])
 	check(not layer_shown("c9_wake-frank-asleep") and layer_shown("c9_wake-helen-asleep"), "Frank's pod opens once he wakes; Helen still sleeps")
 	await enter("c9_gallery")
@@ -695,6 +940,105 @@ func run() -> void:
 		game.root.get_node("InteractionPanel").hide()
 		game.stage.set_focus(-1)
 		check(task.id in game.campaign.data.done and cut.is_empty(), "Luis's face stays in frame while Steve works on %s: %s" % [task.id, cut])
+	# The place name belongs to the room, not to a memory: while an opening line plays over a
+	# flashback painting (another night, another place) the place label is not drawn over it;
+	# it appears with the room itself.
+	var flashback_stills := {}
+	for scene_id: String in directions_all:
+		for record: Dictionary in directions_all[scene_id].get("stills", []):
+			if record.get("flashback", false):
+				flashback_stills[scene_id + ":" + str(record.file).get_file()] = true
+	for reported: String in ["c2_aquarium:c1_escape-beach-procession.webp", "c3_house:c2_ship-dawn-beach.webp",
+			"c7_gate:c7_gate-planning.webp", "c7_gate:c7_gate-bakers.webp", "c8_lab:p_meeting-sentinel.webp",
+			"c10_town:p_veyr-dying-star.webp"]:
+		check(flashback_stills.has(reported), "The flashback painting %s is marked as one" % reported)
+	for scene: Dictionary in game.campaign.content.scenes:
+		await enter(scene.id)
+		if not game.stage.has_method("shown_still"):
+			continue
+		game._speak(game._opening_lines(), Callable())
+		await frames(1)
+		var over_memory: Array = []
+		var room_seen := false
+		var named_with_room := false
+		while game.dialogue_panel.visible:
+			var line: String = game.active_line
+			var started_at := Time.get_ticks_msec()
+			# Hold the line while a flashback painting dissolves in or out, as the player sees it.
+			while true:
+				var painting: TextureRect = game.stage.get("story_still")
+				var memory: bool = is_instance_valid(painting) and painting.visible \
+					and flashback_stills.has(scene.id + ":" + painting.texture.resource_path.get_file())
+				var named: bool = game.title.get_parent().visible and game.title.text == scene.place
+				if named and memory and line not in over_memory:
+					over_memory.append(line)
+				var room: bool = game.stage.shown_still().is_empty()
+				var settled: bool = not memory or is_equal_approx(painting.modulate.a, 0.0 if room else 1.0)
+				if not settled and Time.get_ticks_msec() - started_at < 2000:
+					await frames(1)
+					continue
+				if room and line in game._opening_lines():
+					room_seen = true
+					named_with_room = named_with_room or named
+				break
+			game._next_line()
+			await frames(1)
+		check(over_memory.is_empty(), "%s: the place name is not drawn over a flashback painting %s" % [scene.id, over_memory])
+		check(named_with_room or not room_seen, "%s: the place name appears with the room itself" % scene.id)
+
+	# The establishing shots of a room never rest on a painted face sliced by the side of the
+	# frame: the opening narration plays as one sequence, and both the opening frame and the
+	# framing each line settles on are checked. (A pan may sweep across a face on its way.)
+	for scene_id: String in game.campaign.content.scenes.map(func(scene: Dictionary): return scene.id):
+		if not people.get(scene_id, {}).has("painted"):
+			continue
+		await enter(scene_id)
+		if not game.stage.has_method("painted_head"):
+			# Prologue rooms animate their painted people in place (painted_delegate.gd).
+			continue
+		var establishing: Array = game.campaign.current().get("context", [])
+		if establishing.is_empty():
+			establishing = game.campaign.current().intro.slice(0, 1)
+		game._speak(establishing, Callable())
+		await frames(1)
+		var sliced: Array = []
+		if game.stage.shown_still().is_empty() and not faces_cut_at_sides().is_empty():
+			sliced.append("%s opens on %s" % [game.active_line, faces_cut_at_sides()])
+		while game.dialogue_panel.visible:
+			for step: int in 10:
+				game.stage._process(.45)
+			if game.stage.shown_still().is_empty() and not faces_cut_at_sides().is_empty():
+				sliced.append("%s settles on %s" % [game.active_line, faces_cut_at_sides()])
+			game._next_line()
+			await frames(1)
+		check(sliced.is_empty(), "%s: the establishing shots keep painted faces whole at the sides %s" % [scene_id, sliced])
+
+	# The player starts beside the leads, never on one: at the first playable frame of every
+	# walkable room no task marker is drawn over the player's own figure. And when a room is
+	# left, it dissolves away with the people already in it: nobody steps in over the departure.
+	for scene: Dictionary in game.campaign.content.scenes:
+		await enter(scene.id)
+		var stage: Node = game.stage
+		if stage.get("floor_stage") != null and stage.walking_view():
+			for settle: int in 3:
+				stage._process(2.0)
+			game._process(.001)
+			var walker: String = stage.floor_stage.active_actor
+			var box := figure_box(stage.floor_stage.bodies[walker].sprite).grow(6.0)
+			var covered: Array = []
+			for index: int in game.hotspots.size():
+				var pin: Button = game.hotspots[index]
+				if pin.visible and box.has_point(pin.get_global_rect().get_center()):
+					covered.append(scene.tasks[index].id)
+			check(box.has_area() and covered.is_empty(), "%s: %s starts clear of every task marker %s" % [scene.id, walker, covered])
+		var present: Array = stage.actors.keys().filter(func(id: String): return stage.actors[id].visible)
+		game._end_departure_dialogue()
+		await frames(2)
+		var stepped_in: Array = stage.actors.keys().filter(func(id: String):
+			return is_instance_valid(stage.actors[id]) and stage.actors[id].visible and id not in present)
+		check(stepped_in.is_empty(), "%s: nobody appears over the departure painting %s" % [scene.id, stepped_in])
+
+	await check_storybooks()
 
 	var receipt := FileAccess.open(output.path_join("story-staging.json"), FileAccess.WRITE)
 	receipt.store_string(JSON.stringify({"checks": checks, "failures": failures}, "\t") + "\n")

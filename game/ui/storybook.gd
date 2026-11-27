@@ -46,6 +46,7 @@ var veil: ColorRect
 var skip_button: Button
 var guide: Label
 var heading: Label
+var title_shade: TextureRect
 
 func _init() -> void:
 	name = "Storybook"
@@ -98,6 +99,26 @@ func _init() -> void:
 	caption_box.offset_right = 610
 	caption_box.offset_top = -300
 	caption_box.offset_bottom = -92
+	# The book's title runs along the foot of the page, beside the reading guide, where the
+	# caption shade and its own soft shade keep it legible and it never sits on a face.
+	title_shade = TextureRect.new()
+	title_shade.name = "BookTitleShade"
+	title_shade.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	var corner := Gradient.new()
+	corner.set_color(0, Color(0.0, 0.03, 0.04, .62))
+	corner.add_point(.45, Color(0.0, 0.03, 0.04, .5))
+	corner.set_color(corner.get_point_count() - 1, Color(0.0, 0.03, 0.04, 0.0))
+	var spread := GradientTexture2D.new()
+	spread.gradient = corner
+	# An ellipse from the bottom-left corner that fades out at the shade's top and right edges.
+	spread.fill = GradientTexture2D.FILL_RADIAL
+	spread.fill_from = Vector2(0.0, 1.0)
+	spread.fill_to = Vector2(0.0, 0.0)
+	title_shade.texture = spread
+	title_shade.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+	title_shade.stretch_mode = TextureRect.STRETCH_SCALE
+	add_child(title_shade)
+	title_shade.set_anchors_and_offsets_preset(Control.PRESET_BOTTOM_LEFT)
 	heading = Label.new()
 	heading.name = "BookTitle"
 	heading.add_theme_font_size_override("font_size", 17)
@@ -107,7 +128,10 @@ func _init() -> void:
 	heading.add_theme_constant_override("shadow_outline_size", 7)
 	heading.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	add_child(heading)
-	heading.position = Vector2(46, 34)
+	heading.set_anchors_and_offsets_preset(Control.PRESET_BOTTOM_LEFT)
+	heading.offset_left = 46
+	heading.offset_top = -54
+	heading.offset_bottom = -28
 	guide = Label.new()
 	guide.name = "Guide"
 	guide.text = "Space or click: next picture"
@@ -160,6 +184,7 @@ func play(story: Dictionary, music: Node) -> void:
 	holding = false
 	narration_log.clear()
 	heading.text = str(book.get("title", ""))
+	_place_footer()
 	var cue: Dictionary = book.get("music", {})
 	music_driven = score != null and score.play_story(str(cue.get("file", "")), float(cue.get("bar", 0)), bool(cue.get("continue", false)))
 	track = score.track_for_file(str(cue.get("file", ""))) if score != null else {}
@@ -168,6 +193,42 @@ func play(story: Dictionary, music: Node) -> void:
 	fallback_clock = start_time
 	veil.color.a = 1.0
 	show()
+
+## The title sits at the foot of the page with the reading guide after it, over its own shade.
+func _place_footer() -> void:
+	var title_width := heading.get_minimum_size().x if not heading.text.is_empty() else 0.0
+	heading.offset_right = heading.offset_left + title_width
+	guide.offset_left = heading.offset_left + (title_width + 30.0 if title_width > 0.0 else 0.0)
+	guide.offset_right = guide.offset_left + guide.get_minimum_size().x
+	title_shade.offset_top = -190.0
+	title_shade.offset_bottom = 0.0
+	title_shade.offset_left = 0.0
+	title_shade.offset_right = guide.offset_right * 1.5
+
+## The narrowest width that still fits a caption on as many lines as the caption band allows,
+## so a wrapped caption's lines come out even and the last one never strands a single word.
+## A caption that fits on one line is as wide as its words.
+func _even_width(caption: Label) -> float:
+	var widest := caption_box.size.x
+	var lines_at := func(width: float) -> int:
+		var paragraph := TextParagraph.new()
+		paragraph.break_flags = TextServer.BREAK_MANDATORY | TextServer.BREAK_WORD_BOUND | TextServer.BREAK_ADAPTIVE
+		paragraph.add_string(caption.text, caption.get_theme_font("font"), caption.get_theme_font_size("font_size"))
+		paragraph.width = width
+		return paragraph.get_line_count()
+	var lines: int = lines_at.call(widest)
+	if lines < 2:
+		var single := caption.get_theme_font("font").get_string_size(caption.text, HORIZONTAL_ALIGNMENT_LEFT, -1, caption.get_theme_font_size("font_size")).x
+		return minf(widest, ceilf(single) + 2.0)
+	var narrow := widest / lines
+	var wide := widest
+	while wide - narrow > 1.0:
+		var middle := (narrow + wide) * .5
+		if lines_at.call(middle) > lines:
+			narrow = middle
+		else:
+			wide = middle
+	return ceilf(wide)
 
 func _time_of(bar: float) -> float:
 	if track.is_empty():
@@ -281,7 +342,6 @@ func _enter(panel_index: int) -> void:
 		caption.text = str(line.text)
 		caption.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 		caption.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-		caption.custom_minimum_size.x = 1180
 		caption.add_theme_font_size_override("font_size", 30)
 		caption.add_theme_color_override("font_color", Color("f1ead8"))
 		caption.add_theme_color_override("font_shadow_color", Color(0, 0, 0, .9))
@@ -291,6 +351,8 @@ func _enter(panel_index: int) -> void:
 		caption.modulate.a = 0.0
 		caption.set_meta("line", line)
 		caption_box.add_child(caption)
+		caption.custom_minimum_size.x = _even_width(caption)
+		caption.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
 		captions.append(caption)
 		caption_times.append(_time_of(float(line.bar)))
 
