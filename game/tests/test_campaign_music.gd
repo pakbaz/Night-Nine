@@ -125,6 +125,14 @@ func run() -> void:
 	var screen: Vector2 = game.get_viewport().get_visible_rect().size
 	check(game.fullscreen_button.is_visible_in_tree() and game.fullscreen_button.get_parent().layer > game.root.get_parent().layer
 		and corner.end.x > screen.x - 20 and corner.position.y < 20, "Keep the full screen button in the top-right corner, above the story")
+	for i: int in 240:
+		if game.voice.playing:
+			break
+		await frames(1)
+	var told: String = game.voice.stream.resource_path if game.voice.stream != null else ""
+	check(game.voice.playing and told.contains("book.opening") and absf(game._voice_gain_db(told)) > .5
+		and is_equal_approx(game.voice.volume_db, linear_to_db(game.voice_level) + game._voice_gain_db(told)),
+		"Steve narrates the backstory at the dialogue level")
 	recordings[game.score.current_file] = true
 	await clear_overlays()
 	for scene: Dictionary in game.campaign.content.scenes:
@@ -155,6 +163,10 @@ func run() -> void:
 			if game.voice_manifest.get("enabled",true):
 				check(game.voice.playing and game.score.duck_target_db <= -9.0 and game.score.duck_db < -3.0,
 					"Play approved dialogue and duck the score beneath it")
+				var spoken: String = game.voice.stream.resource_path
+				check(absf(game._voice_gain_db(spoken)) > .5
+					and is_equal_approx(game.voice.volume_db, linear_to_db(game.voice_level) + game._voice_gain_db(spoken)),
+					"Play the bay's first line at the dialogue level")
 			else:
 				check(not game.voice.playing and game.score.duck_db > -3.0,
 					"Keep text-only dialogue silent without falsely ducking the score")

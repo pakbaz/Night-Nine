@@ -66,10 +66,40 @@ func _initialize() -> void:
 	enabled_probe.takes[probe_id].file = "res://missing-recording-for-test.wav"
 	check(not _manifest_files(enabled_probe).is_empty(),"Enabled voice mode rejects a missing file")
 	_check_recording_evidence(content,takes,bool(manifest.enabled))
+	_check_voice_levels(takes,narration,player)
 	var report := {"checks":checks,"failures":failures,"takes":takes.size(),"dialogue_lines":content.lines.size()}
 	player.free()
 	print(JSON.stringify(report))
 	quit(0 if failures.is_empty() else 1)
+
+## Every spoken clip has a current level measurement, and the game plays them at one dialogue level.
+func _check_voice_levels(takes: Dictionary, narration: Dictionary, player: Node) -> void:
+	player.voice_levels = {"res://quiet.wav": {"lufs": -28.0, "peak": -9.0}, "res://loud.wav": {"lufs": -15.0, "peak": -1.0},
+		"res://peaky.wav": {"lufs": -30.0, "peak": -2.0}}
+	check(is_equal_approx(player._voice_gain_db("res://quiet.wav"), 8.0), "Raise a quiet take to the dialogue level")
+	check(is_equal_approx(player._voice_gain_db("res://loud.wav"), -5.0), "Lower a loud take to the dialogue level")
+	check(is_equal_approx(player._voice_gain_db("res://peaky.wav"), 4.0), "Stop a boost before the take's peaks clip")
+	check(is_zero_approx(player._voice_gain_db("res://not-a-voice.wav")), "Leave unmeasured sounds, like the tape puzzle, at their own level")
+	var table: Variant = JSON.parse_string(FileAccess.get_file_as_string("res://content/voice-levels.json")) if FileAccess.file_exists("res://content/voice-levels.json") else {}
+	player.voice_levels = table.get("clips", {}) if table is Dictionary else {}
+	var files := {}
+	for take: Dictionary in takes.values():
+		files[str(take.file)] = true
+	for book: Array in narration.books.values():
+		for clip: Dictionary in book:
+			files[str(clip.file)] = true
+	var matched := 0
+	for path: String in files:
+		var level: Dictionary = player.voice_levels.get(path, {})
+		check(not level.is_empty() and str(level.get("sha256", "")) == FileAccess.get_sha256(path).substr(0, 16), "Current level measurement for " + path)
+		if level.is_empty():
+			continue
+		var gain: float = player._voice_gain_db(path)
+		check(float(level.lufs) + gain <= player.VOICE_TARGET_LUFS + .05 and float(level.peak) + gain <= player.VOICE_PEAK_CEILING_DB + .05,
+			"Play " + path + " no louder than the dialogue level, with headroom")
+		if absf(float(level.lufs) + gain - player.VOICE_TARGET_LUFS) <= 2.0:
+			matched += 1
+	check(matched >= files.size() * .97, "Match nearly every spoken clip to one dialogue level (" + str(matched) + " of " + str(files.size()) + ")")
 
 func _manifest_files(manifest: Dictionary) -> Array[String]:
 	var missing: Array[String] = []

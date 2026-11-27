@@ -18,6 +18,8 @@ The first command prints a one-line total and `N errors, M warnings`. Keep it at
 
 `--apply` writes the revised scenes, lines, cast, storybooks, notebook cases and dependent catalogs (narration, voice manifest, lip sync, staging, hotspots, films, music) into `game/content/`. Applying twice produces identical content. Scene-specific portraits and the ending reward music also survive this regeneration.
 
+After you record, replace or add takes, run `python3 tools/build-voice-levels.py`. It measures every spoken clip into `game/content/voice-levels.json`, and the game plays each clip at one dialogue level (-20 LUFS) instead of the level its voice came out of ElevenLabs. The voice test fails while a take has no current measurement.
+
 ## Files
 
 | File | What it holds |

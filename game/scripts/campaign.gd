@@ -104,6 +104,15 @@ var queue: Array = []
 var queue_done: Callable
 var voice_manifest: Dictionary = {}
 var lipsync_manifest: Dictionary = {}
+## Spoken clips play at one dialogue level. content/voice-levels.json holds each
+## clip's measured loudness and true peak (tools/build-voice-levels.py).
+const VOICE_TARGET_LUFS := -20.0
+## A boost stops before a clip's peaks pass this level at the voice player; the master bus sits 6 dB lower.
+const VOICE_PEAK_CEILING_DB := 2.0
+const VOICE_MAX_BOOST_DB := 10.0
+const VOICE_MAX_CUT_DB := 8.0
+var voice_levels: Dictionary = {}
+var voice_level := .9
 var selected_task := ""
 var performance_status := ""
 var settings := ConfigFile.new()
@@ -172,6 +181,8 @@ func _ready() -> void:
 		profile = "high"
 	voice_manifest = JSON.parse_string(FileAccess.get_file_as_string("res://content/voice-manifest.json"))
 	lipsync_manifest = JSON.parse_string(FileAccess.get_file_as_string("res://content/lipsync-manifest.json"))
+	if FileAccess.file_exists("res://content/voice-levels.json"):
+		voice_levels = JSON.parse_string(FileAccess.get_file_as_string("res://content/voice-levels.json")).get("clips", {})
 	sound_manifest = JSON.parse_string(FileAccess.get_file_as_string("res://assets/audio/soundscape-manifest.json"))
 	if FileAccess.file_exists("res://content/storybook.json"):
 		storybooks = JSON.parse_string(FileAccess.get_file_as_string("res://content/storybook.json")).get("books", {})
@@ -421,7 +432,7 @@ func _build_ui() -> void:
 	tape_compare.play_requested.connect(func(stream: AudioStreamWAV):
 		effect.stop()
 		voice.stop()
-		voice.stream = stream
+		_set_voice_stream(stream)
 		voice.play()
 		tape_playback = true)
 	tape_compare.stop_requested.connect(func(): voice.stop(); tape_playback = false)
@@ -479,7 +490,7 @@ func _build_ui() -> void:
 		var clip: String = line.get("narration", "")
 		if not clip.is_empty() and ResourceLoader.exists(clip):
 			tape_playback = false
-			voice.stream = load(clip)
+			_set_voice_stream(load(clip), clip)
 			voice.play())
 	storybook.page_turned.connect(func(): voice.stop())
 	title_card = TITLE_CARD.new()
@@ -802,7 +813,9 @@ func _build_menu() -> void:
 	_volume_control("Overall volume","master",1.0,func(value: float):
 		AudioServer.set_bus_volume_db(0,-6.0 + linear_to_db(maxf(.0001,value)))
 		AudioServer.set_bus_mute(0,value <= 0.0))
-	_volume_control("Voice volume","voice",.9,func(value: float): voice.volume_linear = value)
+	_volume_control("Voice volume","voice",.9,func(value: float):
+		voice_level = value
+		voice.volume_db = linear_to_db(maxf(value, .00001)) + _voice_gain_db(voice.stream.resource_path if voice.stream != null else ""))
 	music_volume = _volume_control("Music volume","music",.85,func(value: float): score.volume = value)
 	var names := CheckButton.new()
 	names.text = "Always show object names"
@@ -2411,10 +2424,23 @@ func _play_audio(id: String, take: Dictionary = {}) -> float:
 	var stream:=load(path) as AudioStream
 	if not stream:
 		return 0.0
-	voice.stream=stream
+	_set_voice_stream(stream, path)
 	_sync_score_mix(true)
 	voice.play()
 	return voice.stream.get_length()
+
+## How far to raise or lower a spoken clip so every voice sits at one level.
+## Unmeasured sounds, like the tape puzzle's recordings, keep their own level.
+func _voice_gain_db(path: String) -> float:
+	var level: Dictionary = voice_levels.get(path, {})
+	if level.is_empty():
+		return 0.0
+	var gain := clampf(VOICE_TARGET_LUFS - float(level.lufs), -VOICE_MAX_CUT_DB, VOICE_MAX_BOOST_DB)
+	return minf(gain, VOICE_PEAK_CEILING_DB - float(level.peak))
+
+func _set_voice_stream(stream: AudioStream, path: String = "") -> void:
+	voice.stream = stream
+	voice.volume_db = linear_to_db(maxf(voice_level, .00001)) + _voice_gain_db(path)
 
 func _play_effect(id: String) -> float:
 	effect.stop()

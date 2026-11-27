@@ -86,4 +86,6 @@ The first recordings showed four problems, now fixed:
 
 All three reels now sit within 0.5 LU of each other, with peaks at least 7 dB below full scale. A few single-second dips remain where a line pauses over a soft bar of music.
 
+On November 26, 2026 a new opening reel measured -29.0 LUFS. The re-recorded voices had come out of ElevenLabs at very different levels: Steve near -28 LUFS, Nora near -24 and the Archivist near -16, so one line could be 16 dB louder than the line before it. The game now plays every spoken clip at -20 LUFS from measured levels (`tools/build-voice-levels.py`), and never boosts a clip into its peaks. The opening reel measures -24.3 LUFS, with the narrated backstory, the Prologue card and the first lines on the boat within 1 LU of each other.
+
 [Tone map](tone-map.md) · [Cleanup record](cleanup-2026-11-18.md) · [Story rework source](../tools/story_rework.py) · [Storybook data](../game/content/storybook.json) · [Updated transcript](campaign-transcript.md)
