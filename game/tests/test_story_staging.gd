@@ -245,6 +245,116 @@ func aim_during(line_id: String) -> Vector2:
 	await frames(2)
 	return goal
 
+## The lines a caption wraps into on screen, laid out at its own width with its own font.
+func wrapped_lines(label: Label) -> PackedStringArray:
+	var paragraph := TextParagraph.new()
+	paragraph.break_flags = TextServer.BREAK_MANDATORY | TextServer.BREAK_WORD_BOUND | TextServer.BREAK_ADAPTIVE
+	paragraph.add_string(label.text, label.get_theme_font("font"), label.get_theme_font_size("font_size"))
+	paragraph.width = label.size.x
+	var lines := PackedStringArray()
+	for i: int in paragraph.get_line_count():
+		var span: Vector2i = paragraph.get_line_range(i)
+		lines.append(label.text.substr(span.x, span.y - span.x).strip_edges())
+	return lines
+
+## WCAG relative luminance of a colour.
+func luminance(color: Color) -> float:
+	var channel := func(value: float) -> float:
+		return value / 12.92 if value <= .04045 else pow((value + .055) / 1.055, 2.4)
+	return .2126 * channel.call(color.r) + .7152 * channel.call(color.g) + .0722 * channel.call(color.b)
+
+## How dark the gradient shades drawn under `over` make a point, from 0 (clear) to 1 (black).
+func shade_at(book: Control, over: Control, point: Vector2) -> float:
+	var clear := 1.0
+	for node: Node in book.get_children():
+		if node == over:
+			break
+		var shade := node as TextureRect
+		if shade == null or not shade.visible or not shade.texture is GradientTexture2D:
+			continue
+		var fill: GradientTexture2D = shade.texture
+		var area := shade.get_global_rect()
+		if not area.has_point(point):
+			continue
+		var uv := (point - area.position) / area.size
+		var axis: Vector2 = fill.fill_to - fill.fill_from
+		var t: float = uv.distance_to(fill.fill_from) / axis.length() if fill.fill == GradientTexture2D.FILL_RADIAL \
+			else (uv - fill.fill_from).dot(axis) / axis.length_squared()
+		clear *= 1.0 - fill.gradient.sample(clampf(t, 0.0, 1.0)).a * shade.modulate.a * shade.self_modulate.a
+	return 1.0 - clear
+
+## The screen box of a region of a storybook picture, given as fractions of the picture.
+func picture_box(picture: TextureRect, region: Array) -> Rect2:
+	var corner := picture.global_position + Vector2(region[0], region[1]) * picture.size
+	return Rect2(corner, Vector2(region[2] - region[0], region[3] - region[1]) * picture.size)
+
+## Storybooks: captions wrap evenly, the book's title reads over any picture, and every panel
+## keeps what it is about (faces, the things the captions name) whole, in frame and clear of the
+## captions and the title for the whole of its camera move. A subject the painting itself runs
+## off may touch that edge of the picture, but the camera never crops it further. A "whole"
+## region (a face at the side, the title logo) is either entirely in the frame or entirely out.
+func check_storybooks() -> void:
+	var book_ui: Control = load("res://ui/storybook.gd").new()
+	root.add_child(book_ui)
+	var books: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://content/storybook.json")).books
+	var view := Rect2(Vector2.ZERO, book_ui.size)
+	var annotated := 0
+	for name: String in books:
+		var book: Dictionary = books[name]
+		book_ui.play(book, null)
+		await frames(2)
+		var title: Label = book_ui.heading
+		var font: Font = title.get_theme_font("font")
+		var title_size := Vector2(font.get_string_size(title.text.to_upper(), HORIZONTAL_ALIGNMENT_LEFT, -1,
+			title.get_theme_font_size("font_size")).x, title.get_line_height())
+		var title_box := Rect2(title.global_position, title_size)
+		var worst := INF
+		for gx: int in 9:
+			for gy: int in 3:
+				var behind := 1.0 - shade_at(book_ui, title, title_box.position + title_box.size * Vector2(gx / 8.0, gy / 2.0))
+				worst = minf(worst, (luminance(title.get_theme_color("font_color")) + .05) / (luminance(Color(behind, behind, behind)) + .05))
+		check(worst >= 4.5, "Storybook %s: the title reads at 4.5:1 or better even over a white picture (%.1f:1)" % [name, worst])
+		for index: int in book.panels.size():
+			var panel: Dictionary = book.panels[index]
+			book_ui._enter(index)
+			await frames(2)
+			var stranded: Array = []
+			for caption: Label in book_ui.captions:
+				var lines := wrapped_lines(caption)
+				if lines.size() > 1 and lines[-1].split(" ", false).size() < 2:
+					stranded.append(lines[-1])
+			check(stranded.is_empty(), "Storybook %s panel %d: no caption leaves one word alone on its last line %s" % [name, index + 1, stranded])
+			if not panel.has("keep") and not panel.has("whole"):
+				continue
+			annotated += 1
+			var slot: int = book_ui.front
+			var picture: TextureRect = book_ui.layers[slot]
+			var begin: float = book_ui._time_of(float(panel.bar))
+			var finish: float = maxf(begin + 1.0, book_ui.end_time - 3.2) if index + 1 >= book.panels.size() \
+				else book_ui._time_of(float(book.panels[index + 1].bar)) + book_ui.CROSSFADE
+			var problems: Array = []
+			for step: int in 17:
+				book_ui._frame(slot, lerpf(begin, finish, step / 16.0))
+				var art := Rect2(picture.global_position, picture.size)
+				for region: Array in panel.get("keep", []):
+					var box := picture_box(picture, region)
+					var room := view.grow(-4.0)
+					# Only the painting's own edge may cut a subject that runs off it.
+					var cut: bool = (box.position.x < room.position.x and (region[0] > .005 or art.position.x < -.5)) \
+						or (box.position.y < room.position.y and (region[1] > .005 or art.position.y < -.5)) \
+						or (box.end.x > room.end.x and (region[2] < .995 or art.end.x > view.end.x + .5)) \
+						or (box.end.y > room.end.y and (region[3] < .995 or art.end.y > view.end.y + .5))
+					var covered: bool = box.intersects(title_box.grow(8.0)) or book_ui.captions.any(func(caption: Label): return box.intersects(caption.get_global_rect()))
+					if cut or covered:
+						problems.append("%s %s at %d/16" % [region, "cut" if cut else "covered", step])
+				for region: Array in panel.get("whole", []):
+					var box := picture_box(picture, region)
+					if box.intersects(view) and not view.encloses(box):
+						problems.append("%s sliced at %d/16" % [region, step])
+			check(problems.is_empty(), "Storybook %s panel %d keeps its subject whole and clear of the words %s" % [name, index + 1, problems.slice(0, 3)])
+	check(annotated >= 30, "Storybook panels say what they are about (%d marked)" % annotated)
+	book_ui.queue_free()
+
 func run() -> void:
 	var output := OS.get_environment("NIGHT_NINE_QA_DIR")
 	if output.is_empty() or OS.get_environment("NIGHT_NINE_SAVE_DIR").is_empty():
@@ -852,6 +962,8 @@ func run() -> void:
 		var stepped_in: Array = stage.actors.keys().filter(func(id: String):
 			return is_instance_valid(stage.actors[id]) and stage.actors[id].visible and id not in present)
 		check(stepped_in.is_empty(), "%s: nobody appears over the departure painting %s" % [scene.id, stepped_in])
+
+	await check_storybooks()
 
 	var receipt := FileAccess.open(output.path_join("story-staging.json"), FileAccess.WRITE)
 	receipt.store_string(JSON.stringify({"checks": checks, "failures": failures}, "\t") + "\n")
