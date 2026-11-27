@@ -16,10 +16,12 @@ CROPS = {
     "gus": (0, 0, 1, .94), "rook": (0, 0, 1, .94), "shaw": (0, 0, .78, 1),
     "wen": (.11, 0, .70, 1), "ward": (0, 0, .60, 1),
 }
+# The shoes and the shadow painted under them sit in this bottom share of a figure.
+FOOT = .085
 
 
-def textured_figure(rgb):
-    """Figure mask for a light-clothed study on smooth paper."""
+def paper_contrast(rgb):
+    """Distance from the paper and local texture of a study on smooth paper."""
     # The paper is a soft left-to-right gradient; model it from both edge columns.
     left = rgb[:, :3].mean(axis=1)
     right = rgb[:, -4:].mean(axis=1)
@@ -29,19 +31,68 @@ def textured_figure(rgb):
     lum = rgb @ np.array([.299, .587, .114])
     mean = ndimage.uniform_filter(lum, 5)
     texture = np.sqrt(np.maximum(ndimage.uniform_filter(lum*lum, 5)-mean*mean, 0))
-    mask = (distance > 24) | (texture > 8)
-    mask = ndimage.binary_closing(ndimage.binary_opening(mask, iterations=1), iterations=3, border_value=0)
-    labels, _ = ndimage.label(mask)
-    mask = labels == np.bincount(labels.ravel())[1:].argmax()+1
-    # Enclosed gaps that are plain paper stay open; anything else inside is clothing.
+    return distance, texture
+
+
+def close_clothing(rgb, mask):
+    """Enclosed gaps that are plain paper stay open; anything else inside is clothing."""
+    distance, texture = paper_contrast(rgb)
     plain = (distance < 20) & (texture < 5)
+    mask = mask.copy()
     holes, count = ndimage.label(~mask)
     edge = set(np.unique(np.concatenate([holes[0], holes[-1], holes[:, 0], holes[:, -1]])))
     for hole in range(1, count+1):
         region = holes == hole
         if hole not in edge and plain[region].mean() < .9:
             mask |= region
-    return ndimage.binary_erosion(mask, iterations=1)
+    return mask
+
+
+def textured_figure(rgb):
+    """Figure mask for a light-clothed study on smooth paper."""
+    distance, texture = paper_contrast(rgb)
+    mask = (distance > 24) | (texture > 8)
+    mask = ndimage.binary_closing(ndimage.binary_opening(mask, iterations=1), iterations=3, border_value=0)
+    labels, _ = ndimage.label(mask)
+    mask = labels == np.bincount(labels.ravel())[1:].argmax()+1
+    return ndimage.binary_erosion(close_clothing(rgb, mask), iterations=1)
+
+
+def ground_shadow(rgb, mask, paper):
+    """The cast shadow painted on the floor around the shoes: paper darkened by a smooth wash."""
+    rows = np.where(mask.any(axis=1))[0]
+    zone = np.zeros_like(mask)
+    zone[int(rows.max() - (rows.max()-rows.min())*FOOT):] = True
+    # A wash keeps the paper's hue at a lower value and has no strokes, however steeply it shades.
+    shade = (rgb @ paper)/(paper @ paper)
+    toned = (shade > .4) & (shade < 1.08) & (np.linalg.norm(rgb - shade[..., None]*paper, axis=2) < 16)
+    lum = rgb @ np.array([.299, .587, .114])
+    detail = np.sqrt(np.maximum(ndimage.uniform_filter((lum - ndimage.gaussian_filter(lum, 1))**2, 3), 0))
+    wash = toned & (detail < 5)
+    # Paper-toned slivers the shoe closes around (welts, highlights, scuffs) stay with the shoe.
+    shoe = ndimage.binary_closing(mask & ~toned, iterations=2)
+    # Only wash that daylight reaches is shadow; then take its soft rim, short of the shoe.
+    shadow = ndimage.binary_propagation(zone & ~mask, mask=zone & (~mask | (wash & ~shoe))) & mask
+    for _ in range(2):
+        shadow |= ndimage.binary_dilation(shadow) & mask & zone & toned & ~shoe
+    return shadow
+
+
+def clean_fringe(rgb, mask, paper, depth=3):
+    """Repaint the paper-tinted rim and alpha spill with the colour from just inside the figure."""
+    solid = ndimage.distance_transform_edt(mask) > depth
+    nearest = ndimage.distance_transform_edt(~solid, return_indices=True)[1]
+    figure = rgb[nearest[0], nearest[1]]
+    # A rim pixel that lies between the figure colour and the paper is a blend of the two.
+    span = figure - paper
+    share = ((rgb - paper)*span).sum(axis=2)/np.maximum((span*span).sum(axis=2), 1)
+    off_line = np.linalg.norm(rgb - paper - share[..., None]*span, axis=2)
+    tinted = mask & ~solid & (share > -.15) & (share < .92) & (off_line < 18)
+    out = rgb.copy()
+    out[tinted] = figure[tinted]
+    # The blurred alpha spills just past the mask: give it the colour of the edge it extends.
+    edge = ndimage.distance_transform_edt(~mask, return_indices=True)[1]
+    return out[edge[0], edge[1]]
 
 
 def cutout(name, bounds):
@@ -73,19 +124,15 @@ def cutout(name, bounds):
     holes, _ = ndimage.label(~mask)
     sizes = np.bincount(holes.ravel())
     mask |= (holes > 0) & (sizes[holes] < im.width*im.height*.0015)
-    # Strip the painted pale-grey paper cast shadow around the shoes in the foot band.
-    ys_nonzero = np.where(mask.any(axis=1))[0]
-    foot_top = int(ys_nonzero.max() - (ys_nonzero.max() - ys_nonzero.min()) * 0.085)
-    lum = 0.299 * rgb[..., 0] + 0.587 * rgb[..., 1] + 0.114 * rgb[..., 2]
-    sat = rgb.max(axis=2) - rgb.min(axis=2)
-    foot_zone = np.zeros_like(mask)
-    foot_zone[foot_top:, :] = True
-    puddle = foot_zone & (lum > 135) & (sat < 36)
-    mask &= ~puddle
+    mask &= ~ground_shadow(rgb, mask, bg)
+    # Carmen's apron, tea towel and dish are as pale as the paper: close the holes colour cuts in them.
+    if name == "carmen":
+        mask = close_clothing(rgb, mask)
     labels, _ = ndimage.label(mask)
     largest = np.bincount(labels.ravel())[1:].argmax() + 1
     mask = labels == largest
     alpha = Image.fromarray((mask*255).astype(np.uint8)).filter(ImageFilter.GaussianBlur(.65))
+    im = Image.fromarray(clean_fringe(rgb, mask, bg).astype(np.uint8))
     im.putalpha(alpha)
     return im.crop(alpha.getbbox())
 
@@ -97,19 +144,60 @@ def register(im, name):
     frame.save(OUT / (name+"-idle.webp"), quality=94, method=6, exact=True)
 
 
-def standing_portrait(name, reference, hips, width):
-    """Join the approved full-head portrait onto the standing trousers from the reference sheet."""
+def fade_join(upper, lower, top, left, feet, taper=12):
+    """Blend a master cut mid-thigh into reference trousers placed `top` rows down its height."""
+    u = np.asarray(upper, dtype=float).copy()
+    l = np.asarray(lower, dtype=float).copy()
+    # The reference as it lies under the master's bottom band, in the master's coordinates.
+    under = np.zeros_like(u)
+    rows = min(upper.height - top, lower.height)
+    x0, x1 = max(left, 0), min(left + lower.width, upper.width)
+    under[top:top+rows, x0:x1] = l[:rows, x0-left:x1-left]
+    y = np.arange(upper.height)[:, None]
+    band = np.broadcast_to(y >= top, u.shape[:2])
+    # Paper left opaque between the master's thighs, open at its cut edge, is not trousers.
+    lum = u[..., :3] @ np.array([.299, .587, .114])
+    sat = u[..., :3].max(axis=2) - u[..., :3].min(axis=2)
+    paper = band & (lum > 140) & (sat < 16)
+    paper = ndimage.binary_propagation(paper & (y == upper.height-1), mask=paper)
+    u[ndimage.binary_dilation(paper) & band, 3] = 0
+    # Tone the reference trousers to the master's where both cover the band; the shoes keep theirs.
+    both = band & (u[..., 3] > 250) & (under[..., 3] > 250)
+    gain = u[both, :3].mean(axis=0)/under[both, :3].mean(axis=0)
+    trousers = np.clip((lower.height - feet - np.arange(lower.height))/12 + .5, 0, 1)[:, None, None]
+    l[..., :3] = np.clip(l[..., :3]*(1 + (gain - 1)*trousers), 0, 255)
+    # Over the trousers the master fades out across the band; where nothing lies underneath,
+    # its silhouette tapers off over the last few rows instead of ending in a step.
+    cover = under[..., 3]/255
+    fade = np.clip((upper.height - y)/(upper.height - top), 0, 1)
+    tail = np.clip((upper.height - y)/taper, 0, 1)
+    u[..., 3] *= fade*cover + tail*(1 - cover)
+    return (Image.fromarray(np.round(u).astype(np.uint8)),
+            Image.fromarray(np.round(l).astype(np.uint8)))
+
+
+def standing_portrait(name, reference, hips, width, blend=0):
+    """Join the approved full-head portrait onto the standing trousers from the reference sheet.
+
+    A master cut mid-thigh meets the reference within one garment: with `blend`, tone those
+    trousers to the master's and cross-fade the two over that many rows, not a hard paste."""
     upper = Image.open(CAST/"masters"/(name+".png")).convert("RGBA")
     upper = upper.crop(upper.getbbox())
     upper.thumbnail((380, 330), Image.Resampling.LANCZOS)
-    lower = reference.crop((0, round(hips*reference.height), reference.width, reference.height))
-    waist = lower.getchannel("A").crop((0, 0, lower.width, 2)).getbbox()
+    cut = round(hips*reference.height)
+    waist = reference.getchannel("A").crop((0, cut, reference.width, cut+2)).getbbox()
     seam = upper.getchannel("A").crop((0, upper.height-2, upper.width, upper.height)).getbbox()
     scale = (seam[2]-seam[0])*width/(waist[2]-waist[0])
+    rise = int(np.ceil(blend/scale))
+    lower = reference.crop((0, cut-rise, reference.width, reference.height))
     lower = lower.resize((round(lower.width*scale), round(lower.height*scale)), Image.Resampling.LANCZOS)
-    out = Image.new("RGBA", (max(upper.width, lower.width)+100, upper.height+lower.height-6))
-    out.alpha_composite(lower, (round(50+(seam[0]+seam[2])/2-(waist[0]+waist[2])*scale/2),upper.height-6))
-    out.alpha_composite(upper,(50,0))
+    top = upper.height - 6 - round(rise*scale)
+    left = round((seam[0]+seam[2])/2-(waist[0]+waist[2])*scale/2)
+    if blend:
+        upper, lower = fade_join(upper, lower, top, left, round(FOOT*reference.height*scale))
+    out = Image.new("RGBA", (max(upper.width, lower.width)+100, top+lower.height))
+    out.alpha_composite(lower, (50+left, top))
+    out.alpha_composite(upper, (50, 0))
     return out.crop(out.getbbox())
 
 
@@ -128,6 +216,7 @@ if __name__ == "__main__":
             register(standing_portrait(who, cutout(ref, CROPS[ref]), fraction, width), who)
         else:
             register(cutout(who, box), who)
-    for name, ref, fraction, width in [("frank_standing","luis",.62,.94),
-                                       ("helen_field","wen",.56,.78), ("iris_epilogue","shaw",.57,.96)]:
-        register(standing_portrait(name, cutout(ref, CROPS[ref]), fraction, width), name)
+    # iris_epilogue's standing figure is a full-length painting kept as the runtime sprite.
+    # Frank's master ends mid-thigh, so his trousers are blended into Luis's legs.
+    for name, ref, fraction, width, blend in [("frank_standing","luis",.62,.94,24), ("helen_field","wen",.56,.78,0)]:
+        register(standing_portrait(name, cutout(ref, CROPS[ref]), fraction, width, blend), name)

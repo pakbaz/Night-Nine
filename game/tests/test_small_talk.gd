@@ -165,6 +165,128 @@ func coverage() -> void:
 		for pair: String in expected:
 			check(tested.has(pair) or channels.has(pair), "Reach the authored contact: "+pair)
 
+func walk_sprite(who: String) -> Image:
+	return (load("res://assets/illustrated/campaign/walk/%s-idle.webp" % who) as Texture2D).get_image()
+
+func luminance(c: Color) -> float:
+	return 0.299 * c.r + 0.587 * c.g + 0.114 * c.b
+
+# The light grey of the paper the cast studies were painted on, and of the shadow painted on it.
+func paper_grey(c: Color) -> bool:
+	return c.a > 0.5 and luminance(c) > 0.4 and maxf(c.r, maxf(c.g, c.b)) - minf(c.r, minf(c.g, c.b)) < 0.12
+
+# First and last rows holding opaque paint.
+func painted_rows(img: Image) -> Vector2i:
+	var rows := Vector2i(-1, -1)
+	for y: int in img.get_height():
+		for x: int in img.get_width():
+			if img.get_pixel(x, y).a > 0.5:
+				rows = Vector2i(y if rows.x < 0 else rows.x, y)
+				break
+	return rows
+
+# Paper grey lying on the floor in the bottom 24 rows: only more of it or open air beneath it in
+# its column. Shoe highlights and light soles rest on a dark tread; a painted cast shadow does not.
+func floor_shadow(img: Image) -> int:
+	var bottom := painted_rows(img).y
+	var count := 0
+	for x: int in img.get_width():
+		var on_floor := true
+		for y: int in range(img.get_height() - 1, bottom - 25, -1):
+			var c := img.get_pixel(x, y)
+			if c.a <= 0.5:
+				on_floor = true
+			elif paper_grey(c):
+				count += int(on_floor)
+			else:
+				on_floor = false
+	return count
+
+# Paint in the bottom 15 rows under the daylight that shows between the legs just above the shoes.
+func paint_between_feet(img: Image) -> int:
+	var bottom := painted_rows(img).y
+	var legs := PackedByteArray()
+	legs.resize(img.get_width())
+	var span := Vector2i(-1, -1)
+	for x: int in img.get_width():
+		for y: int in range(bottom - 40, bottom - 30):
+			if img.get_pixel(x, y).a > 0.5:
+				legs[x] = 1
+				span = Vector2i(x if span.x < 0 else span.x, x)
+				break
+	var count := 0
+	for x: int in range(span.x, span.y + 1):
+		if legs[x] == 0:
+			for y: int in range(bottom - 14, bottom + 1):
+				count += int(img.get_pixel(x, y).a > 0.5)
+	return count
+
+# Clear pixels above a row that the figure encloses, with no clear path out to the frame edge.
+func enclosed_clear(img: Image, above: int) -> int:
+	var w := img.get_width()
+	var h := img.get_height()
+	var outside := PackedByteArray()
+	outside.resize(w * h)
+	var queue: Array[Vector2i] = []
+	for x: int in w:
+		queue.append_array([Vector2i(x, 0), Vector2i(x, h - 1)])
+	for y: int in h:
+		queue.append_array([Vector2i(0, y), Vector2i(w - 1, y)])
+	var head := 0
+	while head < queue.size():
+		var p := queue[head]
+		head += 1
+		if p.x < 0 or p.y < 0 or p.x >= w or p.y >= h or outside[p.y * w + p.x] == 1 or img.get_pixel(p.x, p.y).a >= 0.5:
+			continue
+		outside[p.y * w + p.x] = 1
+		queue.append_array([p + Vector2i.RIGHT, p + Vector2i.LEFT, p + Vector2i.DOWN, p + Vector2i.UP])
+	var count := 0
+	for y: int in above:
+		for x: int in w:
+			count += int(outside[y * w + x] == 0 and img.get_pixel(x, y).a < 0.5)
+	return count
+
+# Soft-edge pixels next to the solid figure, as (those clearly lighter than it, all of them).
+func light_rim(img: Image) -> Vector2i:
+	var rim := Vector2i.ZERO
+	var w := img.get_width()
+	var h := img.get_height()
+	for y: int in h:
+		for x: int in w:
+			var c := img.get_pixel(x, y)
+			if c.a <= 0.1 or c.a >= 0.9:
+				continue
+			var inner := c
+			for n: Vector2i in [Vector2i(x, y - 1), Vector2i(x, y + 1), Vector2i(x - 1, y), Vector2i(x + 1, y)]:
+				if n.x >= 0 and n.y >= 0 and n.x < w and n.y < h and img.get_pixel(n.x, n.y).a > inner.a:
+					inner = img.get_pixel(n.x, n.y)
+			if inner.a >= 0.9:
+				rim += Vector2i(int(luminance(c) - luminance(inner) > 0.12), 1)
+	return rim
+
+# Largest change of the mean figure colour between rows two apart, over a share of the figure
+# height, as (change, row). Only solid pixels away from the outline are compared.
+func row_jump(img: Image, from: float, to: float) -> Vector2:
+	var rows := painted_rows(img)
+	var worst := Vector2(0, -1)
+	for y: int in range(int(rows.x + from * (rows.y - rows.x)), int(rows.x + to * (rows.y - rows.x))):
+		var above := Vector3.ZERO
+		var below := Vector3.ZERO
+		var n := 0
+		for x: int in range(2, img.get_width() - 2):
+			var solid := true
+			for p: Vector2i in [Vector2i(x - 2, y), Vector2i(x, y), Vector2i(x + 2, y), Vector2i(x - 2, y + 2), Vector2i(x, y + 2), Vector2i(x + 2, y + 2)]:
+				solid = solid and img.get_pixel(p.x, p.y).a > 0.95
+			if solid:
+				var a := img.get_pixel(x, y)
+				var b := img.get_pixel(x, y + 2)
+				above += Vector3(a.r, a.g, a.b)
+				below += Vector3(b.r, b.g, b.b)
+				n += 1
+		if n >= 20 and (below - above).length() / n > worst.x:
+			worst = Vector2((below - above).length() / n, y)
+	return worst
+
 func run() -> void:
 	var output := OS.get_environment("NIGHT_NINE_QA_DIR")
 	if output.is_empty() or OS.get_environment("NIGHT_NINE_SAVE_DIR").is_empty():
@@ -297,6 +419,22 @@ func run() -> void:
 				if head_img.get_pixel(x, top_y).a > 0.25:
 					top_span += 1
 		check(top_y >= 0 and top_span <= 24, "%s-idle.webp keeps an unclipped crown of hair (top_span=%d)" % [who, top_span])
+	# Cut-out cast stand on each room's own floor: no paper shadow, see-through holes, halo or splice seam.
+	for who: String in ["ward", "helen_field", "shaw", "rook"]:
+		var slab := floor_shadow(walk_sprite(who))
+		check(slab < 20, "%s-idle.webp carries no pale ground shadow beside its shoes (%d pixels)" % [who, slab])
+	var smear := paint_between_feet(walk_sprite("shaw"))
+	check(smear < 20, "shaw-idle.webp leaves the floor clear between her boots (%d pixels)" % smear)
+	var carmen_img := walk_sprite("carmen")
+	var carmen_rows := painted_rows(carmen_img)
+	var apron_holes := enclosed_clear(carmen_img, int(lerpf(carmen_rows.x, carmen_rows.y, 0.75)))
+	check(apron_holes < 20, "carmen-idle.webp has no see-through holes in her dish, towel and apron (%d pixels)" % apron_holes)
+	var rook_rim := light_rim(walk_sprite("rook"))
+	check(rook_rim.x < 0.08 * rook_rim.y,
+		"rook-idle.webp has no light outline (%d of %d edge pixels lighter than the figure)" % [rook_rim.x, rook_rim.y])
+	var frank_seam := row_jump(walk_sprite("frank_standing"), 0.55, 0.85)
+	check(frank_seam.x < 0.05,
+		"frank_standing-idle.webp has no seam across the thighs (largest row colour jump %.3f at row %d)" % [frank_seam.x, frank_seam.y])
 	# In c8_rig, Ward and Shaw stand on the open reflective floor clear of both side desks.
 	var rig_blockers: Array = floors_all["c8_rig"].blockers
 	for who: String in ["shaw", "ward"]:
