@@ -446,6 +446,35 @@ func run() -> void:
 	var outro_shot: String = await shown_during("c1_escape.out.03")
 	check(outro_shot.ends_with("stills/c1_escape-beach-procession.webp"), "Steve watches the procession from the beach")
 
+	# Steve reaches the shack alone; Luis is at the desk only once he walks in with food.
+	await arrive("c5_shack")
+	var shack_plate: Image = (load("res://assets/illustrated/campaign/rooms/c5_shack.webp") as Texture2D).get_image()
+	var luis_layer: Image = (load("res://assets/illustrated/campaign/layers/c5_shack-luis.webp") as Texture2D).get_image()
+	var luis_head: Rect2 = game.stage.painted_head("luis")
+	var to_pixels: Vector2 = Vector2(shack_plate.get_size()) / game.stage.ART
+	var plate_differs := 0.0
+	var sampled := 0
+	for y: int in range(int(luis_head.position.y * to_pixels.y), int(luis_head.end.y * to_pixels.y), 3):
+		for x: int in range(int(luis_head.position.x * to_pixels.x), int(luis_head.end.x * to_pixels.x), 3):
+			var painted: Color = luis_layer.get_pixel(x, y)
+			if painted.a > .9:
+				var bare: Color = shack_plate.get_pixel(x, y)
+				plate_differs += absf(painted.r - bare.r) + absf(painted.g - bare.g) + absf(painted.b - bare.b)
+				sampled += 1
+	check(sampled > 200 and plate_differs / sampled > .25,
+		"The shack's own painting is empty where Luis's layer paints him (difference %.2f over %d px)" % [plate_differs / maxi(sampled, 1), sampled])
+	var shack_empty: bool = game.dialogue_panel.visible
+	while game.dialogue_panel.visible and game.active_line != "c5_shack.in.01":
+		shack_empty = shack_empty and not layer_shown("c5_shack-luis") and not game.stage.actor_visible("luis")
+		game._next_line()
+		await frames(1)
+	await frames(2)
+	check(shack_empty and game.active_line == "c5_shack.in.01" and layer_shown("c5_shack-luis")
+		and not game.stage.actor_visible("luis"), "Luis appears at the desk when he speaks his first line")
+	while game.dialogue_panel.visible:
+		game._next_line()
+		await frames(1)
+
 	# Sleepers are seen asleep, and each wakes when Steve reaches them.
 	await enter("c9_wake")
 	for who: String in ["frank", "helen", "rook", "agnes"]:

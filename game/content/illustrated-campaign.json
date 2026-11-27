@@ -728,6 +728,12 @@
       0.45
     ],
     "bridge": "res://assets/illustrated/campaign/bridges/c5_shack-c5_station.webp",
+    "layers": [
+      {
+        "file": "res://assets/illustrated/campaign/layers/c5_shack-luis.webp",
+        "after": "c5_shack.in.01"
+      }
+    ],
     "off_camera_lines": [
       "c5_shack.club.01"
     ],
