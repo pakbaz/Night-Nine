@@ -73,7 +73,7 @@ func _ready() -> void:
 	slider.max_value = 0.75
 	slider.step = 0.01
 	slider.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	slider.custom_minimum_size.y = 40
+	slider.custom_minimum_size = Vector2(240, 40)
 	slider.tooltip_text = "Move Sunday in 0.01-second steps. Arrow keys also work."
 	timing.add_child(slider)
 	slider.value_changed.connect(_set_offset)
@@ -82,8 +82,10 @@ func _ready() -> void:
 	offset_label.custom_minimum_size.x = 185
 	offset_mark = _label(timing, "", 23)
 	offset_mark.custom_minimum_size.x = 24
-	# The transport shares the slider's row so the whole comparison fits on one screen.
-	var transport := timing
+	var transport := HFlowContainer.new()
+	transport.add_theme_constant_override("h_separation", 12)
+	transport.add_theme_constant_override("v_separation", 8)
+	box.add_child(transport)
 	play_a_button=_button(transport, "Play Saturday", func(): _play("a"))
 	play_b_button=_button(transport, "Play Sunday", func(): _play("b"))
 	_button(transport, "Play together", func(): _play("both"))
@@ -238,6 +240,10 @@ func _configure_rows(rows: Array, answers: Array, previous: Array) -> void:
 		label.custom_minimum_size.x = 190
 		var choice := OptionButton.new()
 		choice.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		choice.custom_minimum_size.x = 160
+		choice.fit_to_longest_item = false
+		choice.clip_text = true
+		choice.text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS
 		choice.add_item("Choose one")
 		for text: String in data.get("options", []):
 			choice.add_item(text)

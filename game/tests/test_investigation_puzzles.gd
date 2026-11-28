@@ -19,6 +19,58 @@ func solve_scene(state: NightCampaign) -> void:
 			check(state.choose(task.id,int(task.answer),task.get("puzzle",{}).get("solution",[])).ok,
 				"Solve prerequisite "+task.id)
 
+func verify_tape_layout(panel: NightTapeCompare, player: AudioStreamPlayer, state: NightCampaign) -> void:
+	root.content_scale_mode = Window.CONTENT_SCALE_MODE_DISABLED
+	root.content_scale_size = Vector2i.ZERO
+	var presentation: Node = load("res://scripts/campaign.gd").new()
+	panel.theme = presentation._theme()
+	presentation.free()
+	var takes: Dictionary = JSON.parse_string(FileAccess.get_file_as_string(
+		"res://content/voice-manifest.json")).takes
+	for window_size: Vector2i in [Vector2i(1440, 900), Vector2i(960, 600)]:
+		root.size = window_size
+		for id: String in ["c6_iris.takes", "c8_beach.second"]:
+			var task: Dictionary = state.task_index[id]
+			check(panel.open_task(id, load(takes[task.sounds[0]].file), load(takes[task.sounds[1]].file), {},
+				player, task.puzzle), "Open " + id + " at " + str(window_size))
+			for choice: OptionButton in panel.row_choices:
+				choice.select(choice.item_count - 1)
+			for frame: int in 4:
+				await process_frame
+			(panel.get_child(0) as ScrollContainer).ensure_control_visible(panel.slider)
+			for frame: int in 3:
+				await process_frame
+			check(panel.slider.size.x >= 240.0, id + " keeps a usable slider at " + str(window_size))
+			for control: Control in [panel.slider, panel.play_a_button, panel.play_b_button]:
+				var rect := control.get_global_rect()
+				check(rect.position.x >= 0 and rect.end.x <= window_size.x,
+					id + " keeps " + control.get_class() + " within the window")
+			if id == "c8_beach.second":
+				check(panel.row_choices.size() == 3, "Voicemail shows the breath, gap and message questions")
+			var rect := panel.slider.get_global_rect()
+			var start := rect.position + Vector2(rect.size.x * .35, rect.size.y * .5)
+			var finish := rect.position + Vector2(rect.size.x * .7, rect.size.y * .5)
+			var down := InputEventMouseButton.new()
+			down.position = start
+			down.button_index = MOUSE_BUTTON_LEFT
+			down.pressed = true
+			root.push_input(down, true)
+			await process_frame
+			var before: float = panel.slider.value
+			var move := InputEventMouseMotion.new()
+			move.position = finish
+			move.relative = finish - start
+			move.button_mask = MOUSE_BUTTON_MASK_LEFT
+			root.push_input(move, true)
+			await process_frame
+			var up := InputEventMouseButton.new()
+			up.position = finish
+			up.button_index = MOUSE_BUTTON_LEFT
+			root.push_input(up, true)
+			await process_frame
+			check(panel.slider.value > before + .25 and is_equal_approx(panel.trace.offset, panel.slider.value),
+				id + " supports mouse dragging at " + str(window_size))
+
 func _initialize() -> void:
 	var state:=NightCampaign.new()
 	solve_scene(state)
@@ -91,6 +143,7 @@ func _initialize() -> void:
 	panel._set_offset(panel.recording.expected_offset)
 	check(panel.recording.aligned(panel.slider.value), "The two actual door recordings can be aligned")
 
+	await verify_tape_layout(panel, player, state)
 	print(JSON.stringify({"checks":checks,"failures":failures}))
 	panel.free()
 	player.free()
