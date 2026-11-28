@@ -3674,6 +3674,7 @@
       },
       {
         "id": "parked_vehicle",
+        "after": "c7_gate.badge",
         "polygon": [
           [
             0.7,

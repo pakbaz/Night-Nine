@@ -328,6 +328,17 @@ class ScriptV2StagingTests(unittest.TestCase):
         for topic_id in ('c7_gate.talk.shaw.1', 'c7_gate.talk.shaw.2'):
             self.assertEqual(talk[topic_id].get('after'), 'c7_gate.truck.02', 'Steve chats with Shaw once they have met')
         self.assertIn('were right under', lines['c7_gate.talk.stephen.3.02']['text'], 'Steve is out from under the desk')
+        self.assertTrue(lines['c7_gate.badge.02']['text'].startswith('You again.'),
+                        'Rook’s copy has just met Stephen at the gate, so he knows him at the window')
+        # The truck waits outside the gate, so it is painted inside the fence only once it rolls through.
+        van = [layer for layer in self.staging['c7_gate'].get('layers', []) if layer.get('after') == 'c7_gate.badge']
+        self.assertEqual([layer['file'] for layer in van],
+                         ['res://assets/illustrated/campaign/layers/c7_gate-van-parked.webp'])
+        self.assertEqual(self.staging['c7_gate'].get('hotspot_after', {}).get('truck'), 'c7_gate.badge',
+                         'the truck has no marker on the empty road before it comes through')
+        floor = json.loads((script_v2.BASE_DIR / 'illustrated-floor.json').read_text())['c7_gate']
+        parked = next(blocker for blocker in floor['blockers'] if blocker['id'] == 'parked_vehicle')
+        self.assertEqual(parked.get('after'), 'c7_gate.badge', 'nobody bumps into the truck before it is there')
 
     def test_gallery_aisle_is_guarded_until_nora_has_timed_the_patrol(self):
         floor = json.loads((script_v2.BASE_DIR / 'illustrated-floor.json').read_text())['i2_nora']

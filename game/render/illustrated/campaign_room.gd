@@ -764,7 +764,12 @@ func in_transit() -> bool:
 	return cutaway.has("onboard_task") and cutaway.after in done
 
 func hotspot_in_view(index: int) -> bool:
-	return not in_transit() or scene_record.tasks[index].id == directions.cutaway.onboard_task
+	var task_id: String = scene_record.tasks[index].id
+	# An object a story layer brings in later has nothing to point at until then.
+	var arrives: String = str(directions.get("hotspot_after",{}).get(task_id.get_slice(".",1),""))
+	if not arrives.is_empty() and arrives not in marks:
+		return false
+	return not in_transit() or task_id == directions.cutaway.onboard_task
 
 func update_inserts() -> void:
 	show_room_state()

@@ -1,0 +1,54 @@
+{
+  "schema": 1,
+  "batch": "later-additions",
+  "model_id": "eleven_v4",
+  "output_format": "mp3_44100_192",
+  "inputs": {
+    "campaign": "5fbfbdae746353aa55014d40421fd99a7a06561354b60a1d81a48264227f73b5",
+    "storybook": "aca24d47e939d41212a64abce61c015079e386ff96a5922eff2c2e38b93f575c",
+    "voice_manifest": "09570dadf43790117bd5f04913c443ea862ca19db5a029ec95f761ac9a96646c",
+    "casting": "cb91065c437c743d50eea2958d5149a6d0a35b9d20430a66cb8a548b921246db",
+    "existing_additions": "0fad2561e3b26ef0aca1e98812f8c148f594b413a7c0d09efb66f72a7af4ca06"
+  },
+  "ordered_audio_ids": [
+    "c7_gate.badge.02"
+  ],
+  "items": {
+    "c7_gate.badge.02": {
+      "audio_id": "c7_gate.badge.02",
+      "kind": "campaign",
+      "scene": "c7_gate",
+      "speaker": "rook_copy",
+      "cast_role": "rook",
+      "voice_id": "iPYqcpY8j8Ap4jUf28I3",
+      "text": "You again. You still look like this poster.",
+      "text_sha256": "9779434e279e4096f8883fb06df49ea9d6ae5210bef49f870bf8e82a1871a13f",
+      "synthesis_text": "You again. You still look like this poster.",
+      "synthesis_text_sha256": "9779434e279e4096f8883fb06df49ea9d6ae5210bef49f870bf8e82a1871a13f",
+      "delivery": "live",
+      "direction": "at the driver’s window, holding up a wanted poster",
+      "v4_audio_tag": "",
+      "previous_text": "And I have no pass at all. So the guard can’t be allowed to see me.",
+      "next_text": "I get that a lot. Scan me.",
+      "voice_settings": {
+        "stability": 0.46,
+        "similarity_boost": 0.78
+      },
+      "language_code": "en",
+      "model_id": "eleven_v4",
+      "output_format": "mp3_44100_192",
+      "estimated_credit_rate": 1.0,
+      "estimated_credits": 43,
+      "attempt_seeds": [
+        3563700588,
+        1292238613,
+        3374717870
+      ]
+    }
+  },
+  "count": 1,
+  "characters": 43,
+  "request_characters": 43,
+  "estimated_credits": 43,
+  "plan_sha256": "dab68d82f2a4c0c2092ddcaa0c1e6f45f985be544eebfa67ea97b6f8df1bcb7d"
+}

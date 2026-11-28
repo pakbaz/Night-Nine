@@ -1075,6 +1075,9 @@ def validate_staging(staging, content, merge):
         for who, wait in scene.get('leave_after', {}).items():
             if wait not in marks:
                 merge.issue('error', scene_id, f"departure of {who} waits for {wait}, which is not a lead or line of {scene_id}")
+        for task_key, wait in scene.get('hotspot_after', {}).items():
+            if f'{scene_id}.{task_key}' not in marks or wait not in marks:
+                merge.issue('error', scene_id, f"marker for {task_key} waits for {wait}; both must be leads or lines of {scene_id}")
 
 
 def write_walkthrough(content, path):

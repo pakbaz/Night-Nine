@@ -241,6 +241,15 @@ func verify_campaign(campaign: NightCampaign, layouts: Dictionary) -> void:
 			if scene.id=="c6_jail":
 				verify_jail_staging(stage)
 			stage.approach_finished.connect(func(id: String): last_arrival=id)
+			# An object the story brings in later (the sound truck at the gate) has no marker until then.
+			for i: int in scene.tasks.size():
+				var waits: String = str(stage.directions.get("hotspot_after",{}).get(str(scene.tasks[i].id).get_slice(".",1),""))
+				if waits.is_empty():
+					continue
+				stage.sync_story(before_scene)
+				check(not stage.hotspot_in_view(i),str(scene.tasks[i].id)+" has no marker before "+waits)
+				stage.sync_story(before_scene+[waits])
+				check(stage.hotspot_in_view(i),str(scene.tasks[i].id)+" is marked once "+waits+" is done")
 			var room_results := {}
 			var room_trace := {}
 			for id: String in scene.actors:

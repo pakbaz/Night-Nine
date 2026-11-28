@@ -1125,6 +1125,15 @@
         0.28
       ]
     },
+    "layers": [
+      {
+        "file": "res://assets/illustrated/campaign/layers/c7_gate-van-parked.webp",
+        "after": "c7_gate.badge"
+      }
+    ],
+    "hotspot_after": {
+      "truck": "c7_gate.badge"
+    },
     "reveal_after": {
       "ward": "c7_gate.post",
       "steve": "c7_gate.badge"

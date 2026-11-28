@@ -3174,7 +3174,7 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 3. The man with no pass must stay out of the guard’s sight. Where in the truck can he hide?
 
 **On success:**
-- **Rook’s copy** [at the gate, holding up a wanted poster]: You look like this poster. **NEW** `c7_gate.badge.02`
+- **Rook’s copy** [at the driver’s window, holding up a wanted poster]: You again. You still look like this poster. **NEW** `c7_gate.badge.02`
 - **Stephen**: I get that a lot. Scan me. **NEW** `c7_gate.badge.03`
 - **Rook’s copy**: Saren’s hunter. Any luck? **NEW** `c7_gate.badge.04`
 - **Stephen**: He’s very close. I can feel it. **NEW** `c7_gate.badge.05`

@@ -20573,6 +20573,28 @@
         "attempt": 1,
         "asr_report": "assets/audio/elevenlabs-v4-additions/batches/0749a228516e74ad/checks/c10_station.ctx.03.attempt-1.json",
         "word_error_rate": 0.0
+      },
+      "c7_gate.badge.02": {
+        "id": "c7_gate.badge.02",
+        "text": "You again. You still look like this poster.",
+        "text_hash": "9779434e279e4096",
+        "speaker": "rook_copy",
+        "identity": "rook",
+        "voice_id": "iPYqcpY8j8Ap4jUf28I3",
+        "model": "eleven_v4",
+        "file": "res://assets/audio/voices/elevenlabs-v4-additions/c7_gate.badge.02.wav",
+        "sha256": "24438220f1f185b86790b9156a5784525c92aaf2c40be931ef2331d11fbdae38",
+        "seconds": 3.52,
+        "status": "automated_qa_passed",
+        "sample_rate": 48000,
+        "peak": 0.234893798828125,
+        "rms": 0.025193494520464484,
+        "provider": "ElevenLabs API",
+        "request_id": "PiKvPjPXZq3F3zDcJpLg",
+        "plan_sha256": "dab68d82f2a4c0c2092ddcaa0c1e6f45f985be544eebfa67ea97b6f8df1bcb7d",
+        "attempt": 1,
+        "asr_report": "assets/audio/elevenlabs-v4-additions/batches/dab68d82f2a4c0c2/checks/c7_gate.badge.02.attempt-1.json",
+        "word_error_rate": 0.0
       }
     }
   },
