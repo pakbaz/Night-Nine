@@ -27,17 +27,22 @@ func verify_tape_layout(panel: NightTapeCompare, player: AudioStreamPlayer, stat
 	presentation.free()
 	var takes: Dictionary = JSON.parse_string(FileAccess.get_file_as_string(
 		"res://content/voice-manifest.json")).takes
-	for window_size: Vector2i in [Vector2i(1440, 900), Vector2i(960, 600)]:
+	for window_size: Vector2i in [Vector2i(1600, 1000), Vector2i(1440, 900), Vector2i(960, 600)]:
 		root.size = window_size
 		for id: String in ["c6_iris.takes", "c8_beach.second"]:
 			var task: Dictionary = state.task_index[id]
 			check(panel.open_task(id, load(takes[task.sounds[0]].file), load(takes[task.sounds[1]].file), {},
-				player, task.puzzle), "Open " + id + " at " + str(window_size))
+				player, task.puzzle, task.goal, task.background),
+				"Open " + id + " at " + str(window_size))
 			for choice: OptionButton in panel.row_choices:
 				choice.select(choice.item_count - 1)
 			for frame: int in 4:
 				await process_frame
-			(panel.get_child(0) as ScrollContainer).ensure_control_visible(panel.slider)
+			var scroll: ScrollContainer = panel.get_child(0)
+			if window_size == Vector2i(1600, 1000):
+				check(scroll.get_child(0).size.y <= scroll.size.y,
+					id + " fits all questions and controls on the default screen")
+			scroll.ensure_control_visible(panel.slider)
 			for frame: int in 3:
 				await process_frame
 			check(panel.slider.size.x >= 240.0, id + " keeps a usable slider at " + str(window_size))

@@ -53,7 +53,7 @@ func _ready() -> void:
 	add_child(scroll)
 	var box := VBoxContainer.new()
 	box.size_flags_horizontal=Control.SIZE_EXPAND_FILL
-	box.add_theme_constant_override("separation", 10)
+	box.add_theme_constant_override("separation", 8)
 	scroll.add_child(box)
 	heading=_label(box, "FRANK’S RECORDER  /  TWO MORNINGS", 26)
 	goal=_label(box,"",18)
