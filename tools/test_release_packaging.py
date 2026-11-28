@@ -177,7 +177,7 @@ class ReleasePackagingTests(unittest.TestCase):
 
     def test_play_button_uses_the_cloudflare_route_without_a_redirect(self):
         landing = (ROOT / "site/index.html").read_text()
-        link = re.search(r'<a class="play" href="([^"]+)">', landing)
+        link = re.search(r'<a class="play" href="([^"]+)"', landing)
         self.assertIsNotNone(link)
         self.assertEqual(urljoin("https://night-nine.test/", link.group(1)),
                          "https://night-nine.test/play")
@@ -317,9 +317,15 @@ ctx.currentTime = 6.75; near(music.getPlaybackPosition(), 2 + 0.2 * 2, 'offset a
 
     def test_post_processed_html_loads_chunk_loader_before_engine(self):
         source = '<script src="play.js"></script>'
-        result = build_pages.inject_chunk_loader(source)
-        self.assertIn('<script src="night-nine-loader.js"></script>', result)
+        result = build_pages.inject_chunk_loader(source, "abc123")
+        self.assertIn('<script src="night-nine-loader.js" data-release="abc123"></script>', result)
         self.assertLess(result.index("night-nine-loader.js"), result.index("play.js"))
+
+    def test_landing_and_game_pages_name_the_release_for_the_loading_music(self):
+        # The loading music plays again whenever a release must be downloaded again.
+        landing = (ROOT / "site/index.html").read_text()
+        self.assertIn('data-release="@@RELEASE@@"', landing)
+        self.assertIn("link.dataset.release", landing)
 
     def test_offline_worker_caches_shell_but_not_unsplit_payloads(self):
         with tempfile.TemporaryDirectory(dir=ROOT) as directory:

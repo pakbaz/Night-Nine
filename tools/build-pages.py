@@ -149,12 +149,12 @@ def patch_web_audio_position(site):
     library.write_text(text)
 
 
-def inject_chunk_loader(page):
+def inject_chunk_loader(page, release):
     marker = '<script src="play.js"></script>'
     if page.count(marker) != 1:
         raise ValueError("Unexpected Godot HTML shell; cannot install the chunk loader.")
-    return page.replace(
-        marker, '<script src="night-nine-loader.js"></script>\n\t\t' + marker, 1)
+    loader = f'<script src="night-nine-loader.js" data-release="{html.escape(release, quote=True)}"></script>'
+    return page.replace(marker, loader + '\n\t\t' + marker, 1)
 
 
 def prune_unapproved_voice_assets(game):
@@ -226,8 +226,7 @@ def build(repo, output, godot, template, source_url, archive_path, source_archiv
             commit = subprocess.check_output(["git", "-C", str(repo), "rev-parse", "HEAD"], text=True).strip()
             source_url = f"https://github.com/{github}/archive/{commit}.zip"
         page = (snapshot / "site/index.html").read_text().replace("@@SIZE@@", str(round(size)))
-        (site / "index.html").write_text(page.replace("@@EDITABLE_SOURCE@@", html.escape(source_url, quote=True)))
-        (site / "play.html").write_text(inject_chunk_loader((site / "play.html").read_text()))
+        page = page.replace("@@EDITABLE_SOURCE@@", html.escape(source_url, quote=True))
         patch_web_audio_position(site)
         for name in ("night-nine-loader.js", "loading-screen-music.mp3", "_headers"):
             shutil.copyfile(snapshot / "site" / name, site / name)
@@ -237,6 +236,9 @@ def build(repo, output, godot, template, source_url, archive_path, source_archiv
         shutil.copyfile(game / "LICENSES.txt", site / "THIRD-PARTY.txt")
         (site / ".nojekyll").touch()
         run(sys.executable, snapshot / "tools/split-site.py", site)
+        release = json.loads((site / "chunks.json").read_text())["release"]
+        (site / "index.html").write_text(page.replace("@@RELEASE@@", html.escape(release, quote=True)))
+        (site / "play.html").write_text(inject_chunk_loader((site / "play.html").read_text(), release))
         prepare_offline_cache(site)
         run(sys.executable, snapshot / "tools/check-site.py", site)
         if archive_path:

@@ -10,6 +10,8 @@
 	let progressTotal = 0;
 	const progressByFile = new Map();
 	const firstLoadKey = `night-nine:loaded:${new URL('.', document.baseURI).pathname}`;
+	// build-pages.py names the release on this script; a new release downloads again.
+	const release = document.currentScript?.dataset?.release || '1';
 	let loadingActive = true;
 	let loadingMusic;
 	let musicPending = false;
@@ -97,7 +99,7 @@
 			return;
 		}
 		try {
-			window.localStorage.setItem(firstLoadKey, '1');
+			window.localStorage.setItem(firstLoadKey, release);
 		} catch (error) {
 			console.warn('Night Nine could not remember the completed first load.', error);
 		}
@@ -112,7 +114,7 @@
 
 	function isFirstLoad() {
 		try {
-			return window.localStorage.getItem(firstLoadKey) !== '1';
+			return window.localStorage.getItem(firstLoadKey) !== release;
 		} catch (error) {
 			console.warn('Night Nine loading music is disabled because browser storage is unavailable.', error);
 			return false;

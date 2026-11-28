@@ -32,7 +32,7 @@
     <h1>Night Nine</h1>
     <p>Steve Mercer heard the same greeting twice, down to the breath between words. Listen for yourself in Bellwether Bay.</p>
     <nav aria-label="Game and downloads">
-      <a class="play" href="play">Play in browser</a>
+      <a class="play" href="play" data-release="@@RELEASE@@">Play in browser</a>
       <a href="@@EDITABLE_SOURCE@@">Playable source and art masters</a>
       <a href="LICENSE.txt">License</a>
       <a href="MEDIA.txt">Art and audio credits</a>
@@ -57,9 +57,11 @@
         return;
       }
       const firstLoadKey = `night-nine:loaded:${new URL('.', document.baseURI).pathname}`;
+      // The loading music plays the first time each release downloads in this browser.
+      const release = link.dataset.release || '1';
       function isFirstLoad() {
         try {
-          return window.localStorage.getItem(firstLoadKey) !== '1';
+          return window.localStorage.getItem(firstLoadKey) !== release;
         } catch (error) {
           return false;
         }

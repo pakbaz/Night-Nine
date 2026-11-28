@@ -29,7 +29,7 @@ async function makeManifest(parts) {
 	};
 }
 
-function browser(serve, {storage = new Map(), play = async () => {}, chunks = manifest, host} = {}) {
+function browser(serve, {storage = new Map(), play = async () => {}, chunks = manifest, host, release} = {}) {
 	const requests = [];
 	const stored = new Map();
 	const listeners = new Map();
@@ -76,6 +76,7 @@ function browser(serve, {storage = new Map(), play = async () => {}, chunks = ma
 	const label = {textContent: '', style: {}};
 	const document = {
 		baseURI: 'https://night-nine.test/play.html',
+		currentScript: release === undefined ? null : {dataset: {release}},
 		body,
 		getElementById(id) {
 			if (id === 'status-progress') return progress;
@@ -153,12 +154,13 @@ async function load(serve) {
 const landingSource = readFileSync(new URL('../site/index.html', import.meta.url), 'utf8')
 	.match(/<script>([\s\S]*?)<\/script>/)[1];
 
-function landing({storage = new Map()} = {}) {
+function landing({storage = new Map(), release} = {}) {
 	const audio = [];
 	const frames = [];
 	let onClick;
 	const link = {
 		href: 'https://night-nine.test/play',
+		dataset: release === undefined ? {} : {release},
 		addEventListener(name, callback) {
 			if (name === 'click') onClick = callback;
 		},
@@ -243,6 +245,21 @@ const tests = {
 		await revisit.fetch('https://night-nine.test/play.wasm');
 		assert.equal(revisit.label.textContent, '100%');
 		assert.ok(!revisit.created.some((element) => element.tagName === 'audio'));
+	},
+	async 'a new release plays the loading music again and stays silent once it has opened'() {
+		// Players who loaded an earlier build have the old '1' marker; a new release downloads again.
+		const storage = new Map([['night-nine:loaded:/', '1']]);
+		const page = browser(() => good, {storage, release: 'release-2'});
+		await settle();
+		const audio = page.created.find((element) => element.tagName === 'audio');
+		assert.ok(audio, 'Play the loading music while a new release downloads');
+		assert.equal(audio.paused, false);
+		page.finish();
+		assert.equal(storage.get('night-nine:loaded:/'), 'release-2');
+		const revisit = browser(() => good, {storage, release: 'release-2'});
+		await settle();
+		assert.ok(!revisit.created.some((element) => element.tagName === 'audio'),
+			'A release that already opened in this browser loads from the cache in silence');
 	},
 	async 'starts blocked music on the first page gesture without showing a button'() {
 		let allowed = false;
@@ -368,8 +385,15 @@ const tests = {
 		assert.equal(page.window.nightNineLaunchMusic, null);
 		assert.equal(page.frames[0].contentWindow.focused, true);
 	},
+	async 'the landing Play click starts the music again for a new release'() {
+		const page = landing({storage: new Map([['night-nine:loaded:/', '1']]), release: 'release-2'});
+		page.click();
+		assert.equal(page.audio.length, 1);
+		assert.equal(page.audio[0].playCalls, 1);
+		assert.equal(page.window.nightNineLaunchMusic, page.audio[0]);
+	},
 	async 'later visits and modified clicks keep the landing page silent'() {
-		const revisit = landing({storage: new Map([['night-nine:loaded:/', '1']])});
+		const revisit = landing({storage: new Map([['night-nine:loaded:/', 'release-2']]), release: 'release-2'});
 		revisit.click();
 		assert.equal(revisit.audio.length, 0);
 		assert.equal(revisit.frames.length, 1);

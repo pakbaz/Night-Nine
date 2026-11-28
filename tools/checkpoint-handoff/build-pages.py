@@ -86,7 +86,7 @@ def build(repo, output, godot, template, source_url, archive_path):
                 github = match.group(1)
             commit = subprocess.check_output(["git", "-C", str(repo), "rev-parse", "HEAD"], text=True).strip()
             source_url = f"https://github.com/{github}/archive/{commit}.zip"
-        page = (snapshot / "site/index.html").read_text().replace("@@SIZE@@", str(round(size)))
+        page = (snapshot / "site/index.html").read_text().replace("@@SIZE@@", str(round(size))).replace("@@RELEASE@@", "")
         (site / "index.html").write_text(page.replace("@@EDITABLE_SOURCE@@", html.escape(source_url, quote=True)))
         shutil.copyfile(snapshot / "art/night-nine.jpg", site / "cover.jpg")
         shutil.copyfile(snapshot / "LICENSE", site / "LICENSE.txt")
