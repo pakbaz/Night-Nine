@@ -3750,6 +3750,8 @@ Legend: **NEW** new line, **REV** rewritten, **MOV** moved from another place, u
 **Prompt:** Saren’s tape says: “Come out with us, kiddo. Tonight.” Play it next to Mom’s voicemail from the night of the boat. What is Saren’s tape?
 
 **Instruction:** Line up “Come out with us, kiddo.” Compare the breath before “kiddo” and the gap before “Tonight.”
+- The breath before “kiddo”: ✓ The same breath as the voicemail / A fresh breath, recorded new / No breath at all
+- The gap before “Tonight”: The pause Mom left in the voicemail / ✓ A cut where words were taken out / Mom stopping to think
 - Saren’s message: A new message from Mom / ✓ Words cut from the voicemail and stitched together / Mom reading words Saren wrote
 
 **Hints:**

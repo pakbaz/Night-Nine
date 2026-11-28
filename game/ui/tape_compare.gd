@@ -180,7 +180,7 @@ func open_task(id: String, saturday: AudioStreamWAV, sunday: AudioStreamWAV, met
 	_configure_rows(data.get("rows", []), data.get("solution", []), previous)
 	if not same_task:
 		task_id = id
-	var starting_offset := 0.25 if recording.alignment_required and recording.aligned(0.0) else 0.0
+	var starting_offset := 0.25 if recording.alignment_required and absf(recording.expected_offset) < 0.25 else 0.0
 	var restored_offset := float(progress.get("offset", slider.value if same_task else starting_offset))
 	_set_offset(restored_offset)
 	restoring = false

@@ -202,6 +202,23 @@ func _run() -> void:
 	check(is_instance_valid(acknowledgment) and acknowledgment.visible,
 		"Agnes gets an optional unvoiced acknowledgment in c10_town after the early flag")
 
+	game.casebook.hide()
+	await enter_scene("c8_beach")
+	for attempt: int in 20:
+		if not game.dialogue_panel.visible:
+			break
+		game._skip_dialogue()
+		await frames(2)
+	var beach: Dictionary = game.campaign.task_index["c8_beach.second"]
+	game._open_task(beach.id)
+	var rows: Array = beach.puzzle.get("rows", [])
+	check(game.tape_compare.visible and game.tape_compare.row_choices.size() == 3 and rows.size() == 3
+		and str(rows[0].label).contains("breath") and str(rows[1].label).contains("Tonight"),
+		"Mom’s voicemail asks about the breath, the gap before “Tonight” and the message itself")
+	check(absf(game.tape_compare.slider.value - game.tape_compare.recording.expected_offset) >= 0.1,
+		"Saren’s tape opens well away from the voicemail so Steve has to line it up")
+	game.tape_compare.close()
+
 	print(JSON.stringify({"checks": checks, "failures": failures}))
 	game.queue_free()
 	await frames(6)

@@ -155,6 +155,15 @@ func _initialize() -> void:
 	check(not iris.alignment_required and is_equal_approx(iris.effective_offset(0.3), 0.3)
 		and iris.playback("both", 0.3).data != iris.playback("both", 0.0).data,
 		"The slider moves Iris’s second take even though alignment is not scored")
+	var beach_puzzle: Dictionary = campaign.task_index["c8_beach.second"].puzzle
+	var beach := NightTapeRecording.new()
+	beach.configure_pair(voicemail, splice, beach_puzzle)
+	var shift := roundi(beach.expected_offset * beach.rate)
+	var largest_gap := 0.0
+	for index: int in range(roundi(0.05 * beach.rate), roundi(1.1 * beach.rate)):
+		largest_gap = maxf(largest_gap, absf(beach.samples_b[index] - beach.samples_a[index + shift]))
+	check(shift >= 0 and largest_gap < 0.001,
+		"At the accepted offset, Saren’s “Come out with us, kiddo” lies exactly on the voicemail")
 	_finish(model, metadata)
 
 func _finish(model: NightTapeRecording, metadata: Dictionary) -> void:

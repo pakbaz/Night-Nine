@@ -8205,6 +8205,32 @@
             "instruction": "Line up “Come out with us, kiddo.” Compare the breath before “kiddo” and the gap before “Tonight.”",
             "rows": [
               {
+                "label": "The breath before “kiddo”",
+                "options": [
+                  "The same breath as the voicemail",
+                  "A fresh breath, recorded new",
+                  "No breath at all"
+                ],
+                "feedback": [
+                  "Lined up, the breath lands exactly on the voicemail’s breath. Same night, same breath.",
+                  "A fresh breath would sit apart from the voicemail. This one lands right on top of it.",
+                  "Listen again just before “kiddo”. There is a breath, and it matches."
+                ]
+              },
+              {
+                "label": "The gap before “Tonight”",
+                "options": [
+                  "The pause Mom left in the voicemail",
+                  "A cut where words were taken out",
+                  "Mom stopping to think"
+                ],
+                "feedback": [
+                  "On the voicemail, Mom keeps talking there. Saren’s tape goes quiet.",
+                  "Right after “kiddo” the two tapes part ways. Four words are missing before “Tonight”.",
+                  "A pause to think would be on the voicemail too. There, Mom keeps talking."
+                ]
+              },
+              {
                 "label": "Saren’s message",
                 "options": [
                   "A new message from Mom",
@@ -8219,6 +8245,8 @@
               }
             ],
             "solution": [
+              0,
+              1,
               1
             ],
             "presentation": "tape_alignment",
@@ -8226,7 +8254,7 @@
             "workbench_title": "DAD’S RECORDER  /  MOM’S VOICEMAIL",
             "label_a": "Voicemail, the night of the boat",
             "label_b": "Saren’s tape",
-            "expected_offset": 0.0,
+            "expected_offset": 0.035,
             "alignment_required": true,
             "hints": [
               "Play both tapes and listen for “kiddo” on each one.",

@@ -30,7 +30,7 @@ NIGHT_NINE_SAVE_DIR="$NIGHT_NINE_SAVE_DIR/walking-input" bash "$PROJECT_ROOT/too
 python3 "$PROJECT_ROOT/tools/check-log.py" "$NIGHT_NINE_SAVE_DIR/exploration-input.log"
 bash "$PROJECT_ROOT/tools/godot.sh" --headless --script res://tests/test_tape_recording.gd --log-file "$NIGHT_NINE_SAVE_DIR/tape-core.log" 2>&1 | tee "$NIGHT_NINE_SAVE_DIR/tape-core-console.log"
 python3 "$PROJECT_ROOT/tools/check-log.py" "$NIGHT_NINE_SAVE_DIR/tape-core.log" "$NIGHT_NINE_SAVE_DIR/tape-core-console.log"
-python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$PROJECT_ROOT/tmp/qa/tape-recording-results.json" 51
+python3 "$PROJECT_ROOT/tools/check-qa-result.py" "$PROJECT_ROOT/tmp/qa/tape-recording-results.json" 53
 bash "$PROJECT_ROOT/tools/godot.sh" --headless --audio-driver Dummy --script res://tests/test_investigation_puzzles.gd --log-file "$NIGHT_NINE_SAVE_DIR/investigation-puzzles.log"
 python3 "$PROJECT_ROOT/tools/check-log.py" "$NIGHT_NINE_SAVE_DIR/investigation-puzzles.log"
 bash "$PROJECT_ROOT/tools/godot.sh" --headless --script res://tests/test_voice_assets.gd --log-file "$NIGHT_NINE_SAVE_DIR/voice-assets.log" 2>&1 | tee "$NIGHT_NINE_SAVE_DIR/voice-assets-console.log"
