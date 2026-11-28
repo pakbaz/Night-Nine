@@ -149,9 +149,10 @@ func aligned(offset: float) -> bool:
 	return not alignment_required or (is_finite(offset) and absf(offset - expected_offset) <= 0.015)
 
 ## Inside the accepted tolerance the tapes click into exact alignment, so identical parts
-## play and draw as one voice instead of two copies a centisecond apart.
+## play and draw as one voice instead of two copies a centisecond apart. Unscored
+## comparisons never snap, so the second take follows the slider.
 func effective_offset(offset: float) -> float:
-	return expected_offset if aligned(offset) else offset
+	return expected_offset if alignment_required and aligned(offset) else offset
 
 func playback(mode: String, offset: float) -> AudioStreamWAV:
 	if samples_a.is_empty() or samples_b.is_empty() \

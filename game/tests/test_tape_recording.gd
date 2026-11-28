@@ -148,6 +148,13 @@ func _initialize() -> void:
 	check(generic.configure_pair(voicemail,splice,{"label_a":"Voicemail","label_b":"Saren’s tape"})
 		and generic.samples_b.size()<generic.samples_a.size() and generic.playback("both",0.0)!=null,
 		"Compare the actual shorter voicemail splice")
+	var campaign := NightCampaign.new()
+	var iris_puzzle: Dictionary = campaign.task_index["c6_iris.takes"].puzzle
+	var iris := NightTapeRecording.new()
+	iris.configure_pair(iris_first, iris_second, iris_puzzle)
+	check(not iris.alignment_required and is_equal_approx(iris.effective_offset(0.3), 0.3)
+		and iris.playback("both", 0.3).data != iris.playback("both", 0.0).data,
+		"The slider moves Iris’s second take even though alignment is not scored")
 	_finish(model, metadata)
 
 func _finish(model: NightTapeRecording, metadata: Dictionary) -> void:
